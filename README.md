@@ -108,8 +108,8 @@ linear, quotient trivializations transported exactly to the dependent total spac
 presentation packaged as named topology-coherent Mathlib `FiberBundle` and `VectorBundle` values
 with a named `C∞` vector-bundle mixin, an exact smooth-section interface, pointwise and smooth
 adjoint-bundle-valued differential-form carriers, an exact degree-zero form/section bridge, and
-smooth principal local sections with projection-right-inverse tangent lifts, and the adjoint action
-packaged as a
+smooth principal local sections with projection-right-inverse tangent lifts and proved
+lift-independence for horizontal principal two-forms, and the adjoint action packaged as a
 smooth invertible operator family, alongside an explicit positive
 adjoint-invariant
 Lie-algebra inner-product certificate, are

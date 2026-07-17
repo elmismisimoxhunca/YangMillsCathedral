@@ -841,6 +841,23 @@ Verified:
 - Lift-independence, representative-independence, and curvature descent remain pending; no
   connection or curvature witness is constructed.
 
+## 2026-07-17 — forty-eighth mathematical stone: horizontal lift independence
+
+Verified:
+
+- `PrincipalTwoForm.IsHorizontal.eq_update_of_verticalDifference` proves that changing one tangent
+  argument by a vector with zero projection differential leaves a horizontal two-form unchanged.
+- `.eq_of_projection_eq` derives equality for any two ordered tangent-lift pairs at the same
+  total-space point when their projected base vectors agree.
+- `.eq_localTangentLift` specializes this to arbitrary lifts versus the exact designated local
+  tangent lifts.
+- The proof uses alternating-map linearity and the intrinsic projection differential; it does not
+  assume a descended form or caller-supplied independence certificate.
+- Hostile probes reject value changes under vertical replacement, disagreement between equal
+  projections, and disagreement with designated local lifts.
+- Representative independence and curvature descent remain pending; no connection, curvature, or
+  descended-form witness is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
