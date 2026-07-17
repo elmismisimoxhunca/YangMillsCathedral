@@ -525,6 +525,24 @@ Verified:
 - Smoothness and manifold-atlas packaging remain pending; no `FiberBundle`, `VectorBundle`, or
   smooth adjoint bundle is claimed.
 
+## 2026-07-17 — thirtieth mathematical stone: smooth adjoint overlap formulas
+
+Verified:
+
+- `adjointBundleTransitionGroup_contMDiffOn` derives smoothness of the actual group-valued overlap
+  coordinate `k₁₂(b)` from the designated smooth principal transition.
+- `adjointBundleTransitionCoordinates` states the associated overlap in the declared normed model
+  as `(b,X) ↦ (b, Ad(k₁₂(b))X)`.
+- `adjointBundleTransitionCoordinates_contMDiffOn` derives its `C∞` regularity by composing the
+  principal transition with the previously proved joint smooth adjoint action.
+- `adjointBundleTransition_eq_coordinates` ties the smooth model formula pointwise to the exact
+  totalized quotient transition on its natural overlap; no smooth surrogate is disconnected from
+  the quotient maps.
+- Hostile probes reject nonsmooth group coordinates, nonsmooth associated transitions, and a
+  disconnected smooth formula.
+- This provides overlap regularity only. A charted-space/groupoid atlas, manifold instance,
+  `FiberBundle`, `VectorBundle`, sections, and curvature descent remain pending.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

@@ -102,8 +102,10 @@ adjoint map in model coordinates is derived from Mathlib's `ContMDiffAt.mfderiv`
 packages as an open partial homeomorphism using that derived regularity and promotes exactly to
 Mathlib's generic `Bundle.Trivialization` interface on the same quotient carrier and topology.
 The ordered associated overlap is then derived exactly as `(b,X) ↦ (b, Ad(k₁₂(b))X)` from the
-actual principal transition, with inverse and fiberwise real-linearity laws. Neither a `FiberBundle`
-nor smooth vector-bundle structure is attributed to those coordinates.
+actual principal transition, with inverse and fiberwise real-linearity laws. Its model-coordinate
+formula is proved `C∞` by composing the designated smooth principal overlap with the derived smooth
+adjoint action. Neither a `FiberBundle` nor smooth vector-bundle structure is attributed to those
+coordinates.
 `PrincipalTwoForm.IsHorizontal`, `.IsRightAdEquivariant`, and the connection-indexed
 `PrincipalCurvatureStructureCertificate` state (1.15) and (1.14) intrinsically without accepting an
 unrelated curvature field. This is a requirement surface: automatic derivation from the current

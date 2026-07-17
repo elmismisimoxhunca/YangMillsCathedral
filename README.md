@@ -99,7 +99,8 @@ curvature formula, intrinsic curvature horizontality/right-adjoint-equivariance 
 the adjoint associated-bundle orbit quotient with its quotient topology, base projection, and
 representative-independent local coordinates, topological local trivializations backed by derived
 adjoint regularity, their exact promotion to Mathlib's generic bundle-trivialization interface, and
-derived fiberwise-linear overlap formulas, alongside an explicit positive adjoint-invariant
+derived fiberwise-linear overlap formulas with proved model-coordinate smoothness, alongside an
+explicit positive adjoint-invariant
 Lie-algebra inner-product certificate, are
 implemented. No
 concrete gauge-group, connection, invariant-inner-product, curvature, or structure-certificate witness,
