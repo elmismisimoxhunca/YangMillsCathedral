@@ -9,7 +9,7 @@ committed before higher layers depend on it.
 - [x] Pin and verify the Clay/Jaffe–Witten source artifact.
 - [x] Record the no-solution mission, provenance law and dependency architecture.
 - [ ] Establish a writable standalone remote.
-- [ ] Add declaration-level source and legacy-integration ledgers.
+- [x] Add declaration-level source and legacy-integration ledgers.
 
 ## Phase 1 — dimensions and signatures
 
