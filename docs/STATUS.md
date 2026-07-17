@@ -635,6 +635,23 @@ Verified:
 - This bridge is deliberately set-level. No total-space topology, topology-coherence theorem,
   homeomorphism, fiber algebra, `FiberBundle`, `VectorBundle`, or smooth bundle is claimed.
 
+## 2026-07-17 — thirty-sixth mathematical stone: dependent topology coherence
+
+Verified:
+
+- `dependentTotalSpaceTopology` is explicitly the topology induced from the established quotient
+  topology along the exact dependent-package forgetting map.
+- `dependentTotalSpaceHomeomorphQuotient` upgrades the carrier equivalence to a homeomorphism under
+  that named topology; no independent topology choice is accepted.
+- Its forward and inverse maps remain exactly the previously proved forgetting and packaging maps.
+- The homeomorphism preserves the bundle base exactly.
+- Both topology and homeomorphism are named values rather than global instances, preventing a
+  hidden topology diamond before Mathlib bundle packaging is complete.
+- Hostile probes reject a disconnected topology, disconnected homeomorphism, base movement, and
+  discontinuous forgetting.
+- No fiber algebra, `FiberBundle`, `VectorBundle`, smooth bundle, section, or descended curvature is
+  claimed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

@@ -55,6 +55,8 @@ import YangMills.Geometry.AdjointBundleSmoothAtlas
 import YangMills.Geometry.AdjointBundleSmoothAtlasProbes
 import YangMills.Geometry.AdjointBundleDependentFiber
 import YangMills.Geometry.AdjointBundleDependentFiberProbes
+import YangMills.Geometry.AdjointBundleDependentFiberTopology
+import YangMills.Geometry.AdjointBundleDependentFiberTopologyProbes
 import YangMills.Geometry.PrincipalBundleTorsor
 import YangMills.Geometry.PrincipalBundleTorsorProbes
 import YangMills.Geometry.PrincipalBundleMap

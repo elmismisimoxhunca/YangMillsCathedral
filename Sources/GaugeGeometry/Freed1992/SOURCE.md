@@ -112,8 +112,9 @@ promoted charts form a named covering charted-space atlas on the same quotient t
 pairwise changes are proved compatible with Mathlib's smooth fiberwise-linear groupoid, yielding a
 named `C∞` manifold structure on the same quotient carrier and topology. No global atlas/manifold
 instance is installed. The quotient fibers are additionally packaged as a dependent family with a
-base-preserving carrier equivalence back to the same quotient; no topology is yet assigned to that
-dependent total-space presentation, and no `FiberBundle` or smooth vector-bundle structure is
+base-preserving carrier equivalence back to the same quotient. Its named topology is then pulled
+back from the quotient, making that equivalence a base-preserving homeomorphism without installing
+a competing global topology instance. No `FiberBundle` or smooth vector-bundle structure is
 attributed to it.
 `PrincipalTwoForm.IsHorizontal`, `.IsRightAdEquivariant`, and the connection-indexed
 `PrincipalCurvatureStructureCertificate` state (1.15) and (1.14) intrinsically without accepting an
