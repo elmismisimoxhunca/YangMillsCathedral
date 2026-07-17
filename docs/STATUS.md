@@ -170,6 +170,20 @@ Verified:
 - Every smooth principal bundle has the identity smooth gauge transformation.
 - Hostile probes reject nonsmooth forward/inverse maps, base movement, and failed equivariance.
 
+## 2026-07-17 — tenth mathematical stone: typed pointwise differential forms
+
+Verified:
+
+- `ManifoldDifferentialForm I M V k` is a degree-indexed family of continuous alternating maps on
+  tangent spaces, with the form degree fixed by `Fin k`.
+- Pullback takes an explicit `C∞` map proof, uses Mathlib's manifold derivative, and preserves the
+  same degree in its result type.
+- One-form evaluation and two-form alternation are exposed; equal two-form arguments vanish.
+- Every degree has a concrete zero form, and pullback preserves zero.
+- Hostile probes reject a nonalternating two-form and a nonzero pullback of zero.
+- The module explicitly does not claim smooth dependence on the base point or provide an exterior
+  derivative.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
