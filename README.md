@@ -106,8 +106,8 @@ carrier equivalence with an explicitly topology-coherent total-space homeomorphi
 vector-space structures on every dependent fiber with every designated associated coordinate proved
 linear, quotient trivializations transported exactly to the dependent total space, and that
 presentation packaged as named topology-coherent Mathlib `FiberBundle` and `VectorBundle` values
-with a named `C∞` vector-bundle mixin, an exact smooth-section interface, and a pointwise
-adjoint-bundle-valued differential-form carrier, and the adjoint action packaged as a
+with a named `C∞` vector-bundle mixin, an exact smooth-section interface, and pointwise and smooth
+adjoint-bundle-valued differential-form carriers, and the adjoint action packaged as a
 smooth invertible operator family, alongside an explicit positive
 adjoint-invariant
 Lie-algebra inner-product certificate, are

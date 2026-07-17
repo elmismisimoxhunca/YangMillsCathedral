@@ -73,6 +73,8 @@ import YangMills.Geometry.AdjointBundleSection
 import YangMills.Geometry.AdjointBundleSectionProbes
 import YangMills.Geometry.AdjointBundleDifferentialForm
 import YangMills.Geometry.AdjointBundleDifferentialFormProbes
+import YangMills.Geometry.AdjointBundleSmoothDifferentialForm
+import YangMills.Geometry.AdjointBundleSmoothDifferentialFormProbes
 import YangMills.Geometry.PrincipalBundleTorsor
 import YangMills.Geometry.PrincipalBundleTorsorProbes
 import YangMills.Geometry.PrincipalBundleMap

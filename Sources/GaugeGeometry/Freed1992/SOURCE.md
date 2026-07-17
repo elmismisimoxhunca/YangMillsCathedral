@@ -126,8 +126,9 @@ continuity packages a named `VectorBundle`. The same exact operator families pac
 Mathlib `ContMDiffVectorBundle ∞` mixin; no global bundle instance is installed. Dependent sections
 and smoothness in that exact atlas are defined, with a selected-coordinate criterion and smooth zero
 section. Pointwise adjoint-bundle-valued differential forms are now typed as continuous alternating
-maps into the actual dependent quotient fiber, with exact designated coordinates. Smoothness and
-curvature descent remain pending.
+maps into the actual dependent quotient fiber, with exact designated coordinates. Smoothness is
+then defined by evaluation on locally smooth tangent fields in every designated exact chart; the
+smooth zero form is derived. Tangent lifts and curvature descent remain pending.
 `PrincipalTwoForm.IsHorizontal`, `.IsRightAdEquivariant`, and the connection-indexed
 `PrincipalCurvatureStructureCertificate` state (1.15) and (1.14) intrinsically without accepting an
 unrelated curvature field. This is a requirement surface: automatic derivation from the current

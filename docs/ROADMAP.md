@@ -61,7 +61,8 @@ committed before higher layers depend on it.
 - [x] Package the exact atlas as a named `C∞` vector-bundle mixin.
 - [x] Define dependent adjoint-bundle sections and their exact smooth local-coordinate criterion.
 - [x] Define pointwise adjoint-bundle-valued differential forms in actual dependent fibers.
-- [ ] Add smooth adjoint-bundle-valued forms and curvature-descent infrastructure.
+- [x] Define smooth adjoint-bundle-valued forms by exact local field evaluation.
+- [ ] Add tangent-lift and curvature-descent infrastructure.
 - [ ] Derive structural curvature laws automatically and prove gauge covariance and Bianchi.
 
 ## Phase 3 — classical Yang–Mills semantics

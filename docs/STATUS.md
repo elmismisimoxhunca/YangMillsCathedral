@@ -792,6 +792,23 @@ Verified:
 - Smooth adjoint-valued forms, covariant differentiation, tangent lifts, and curvature descent remain
   pending; no principal curvature has been claimed to descend.
 
+## 2026-07-17 — forty-fifth mathematical stone: smooth adjoint-valued forms
+
+Verified:
+
+- `DifferentialForm.coordinateEvaluation` evaluates a varying-fiber form on tangent fields and uses
+  the existing transported chart; on its base set, `coordinateEvaluation_eq_inCoordinates` proves
+  this is exactly the quotient-derived continuous-linear coordinate.
+- `DifferentialForm.IsSmooth` requires smooth coordinate evaluation for every designated principal
+  atlas chart, every subset of its base set, and every locally smooth tuple of tangent fields.
+- `DifferentialForm.Smooth` bundles that exact pointwise carrier with its local smoothness proof.
+- `DifferentialForm.Smooth.zero` derives the smooth zero form without constructing a bundle of
+  alternating maps or replacing the adjoint topology.
+- Hostile probes reject replacement chart coordinates, omitted designated charts, a replacement zero
+  carrier, and nonsmoothness of the named zero form.
+- Covariant differentiation, tangent lifts, the horizontal-equivariant correspondence, and curvature
+  descent remain pending; no curvature field witness is introduced.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
