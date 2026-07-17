@@ -14,6 +14,8 @@ import YangMills.Geometry.LieGroup
 import YangMills.Geometry.LieGroupProbes
 import YangMills.Geometry.PrincipalBundleTorsor
 import YangMills.Geometry.PrincipalBundleTorsorProbes
+import YangMills.Geometry.PrincipalBundleMap
+import YangMills.Geometry.PrincipalBundleMapProbes
 import YangMills.Audit
 
 /-!

@@ -107,6 +107,22 @@ Verified:
 - The module and ledger explicitly deny that this algebraic core supplies topology or smooth local
   triviality.
 
+## 2026-07-17 — sixth mathematical stone: algebraic bundle maps and gauge automorphisms
+
+Verified:
+
+- `PrincipalBundleTorsorMap` couples one base map to one total map and requires projection
+  compatibility and right-action equivariance.
+- Identity and composition are defined with named evaluation laws and positive probes; same-fiber
+  points map to same-fiber points.
+- `TorsorGaugeTransformation` is an actual total-space equivalence over the identity base map, not
+  an arbitrary endomorphism.
+- Gauge transformations carry a proved group structure with identity, composition, inverse, and
+  pointwise evaluation laws; an explicit forgetful bridge produces their underlying bundle map.
+- Hostile probes reject projection mismatch, failed equivariance, base movement, and noninjective
+  gauge candidates; identity and inverse probes give positive consistency evidence.
+- Every name and ledger row labels this as algebraic: no smooth gauge transformation is claimed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
