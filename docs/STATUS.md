@@ -581,6 +581,23 @@ Verified:
   groupoid. It constructs no gauge group, bundle witness, connection, curvature, or Yang–Mills
   field.
 
+## 2026-07-17 — thirty-third mathematical stone: smooth transition equivalences
+
+Verified:
+
+- `adjointBundleOverlapDomain_eq` identifies the exact associated overlap source with
+  `(first.baseSet ∩ second.baseSet) × univ`; no smaller or fiber-dependent source is substituted.
+- `adjointBundleTransitionEquiv b` packages the actual ordered principal overlap coordinate as the
+  previously derived continuous linear adjoint equivalence.
+- The forward operator-valued transition family is `C∞` on the base-set intersection.
+- The inverse operator-valued transition family is `C∞` on the same intersection.
+- Both results are derived from the designated smooth principal overlap and the general smooth
+  forward/inverse adjoint-equivalence families, not stored as atlas assumptions.
+- Hostile probes reject malformed overlap sources, disconnected operators, and nonsmooth forward
+  or inverse transition-equivalence families.
+- These are the precise source and operator inputs required by `contMDiffFiberwiseLinear`; groupoid
+  membership and the quotient manifold structure remain pending.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

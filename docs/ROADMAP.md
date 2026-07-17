@@ -49,6 +49,7 @@ committed before higher layers depend on it.
 - [x] Prove smoothness of the exact model-coordinate adjoint transitions.
 - [x] Build a named covering charted-space atlas on the quotient with explicit model transport.
 - [x] Package the coordinate adjoint as a smooth continuous-linear-equivalence family.
+- [x] Derive exact overlap-source coherence and smooth transition-equivalence families.
 - [ ] Prove fiberwise-linear groupoid compatibility and the quotient manifold structure.
 - [ ] Bridge the quotient to dependent fibers and package a smooth adjoint vector bundle.
 - [ ] Add adjoint-bundle-valued form and curvature-descent infrastructure.

@@ -78,6 +78,67 @@ def adjointBundleTransitionCoordinates (z : B × EG) : B × EG :=
   (z.1, YangMills.Mathematics.lieGroupAdjointCoordinates (I := IG)
     (principalBundleTransition first second (z.1, (1 : G))).2 z.2)
 
+/-- The fiber operator of the associated transition as a continuous linear equivalence. -/
+def adjointBundleTransitionEquiv (b : B) : EG ≃L[ℝ] EG :=
+  YangMills.Mathematics.lieGroupAdjointCoordinatesEquiv (I := IG)
+    (principalBundleTransition first second (b, (1 : G))).2
+
+include smoothBundle first_mem second_mem in
+/-- The forward operator-valued transition family is smooth on the intersection of the two base
+sets. -/
+theorem adjointBundleTransitionEquiv_contMDiffOn :
+    ContMDiffOn IB 𝓘(ℝ, EG →L[ℝ] EG) ∞
+      (fun b : B => (adjointBundleTransitionEquiv (IG := IG) first second b).toContinuousLinearMap)
+      (first.baseSet ∩ second.baseSet) := by
+  let baseDomain := first.baseSet ∩ second.baseSet
+  let totalDomain : Set (B × EG) := adjointBundleOverlapDomain (I := IG) first second
+  have zeroInput : ContMDiffOn IB (IB.prod 𝓘(ℝ, EG)) ∞
+      (fun b : B => (b, (0 : EG))) baseDomain :=
+    contMDiffOn_id.prodMk contMDiffOn_const
+  have zeroMaps : Set.MapsTo (fun b : B => (b, (0 : EG))) baseDomain totalDomain := by
+    intro b hb
+    change (b, (0 : EG)) ∈ adjointBundleOverlapDomain (I := IG) first second
+    rw [adjointBundleOverlapDomain_eq (I := IG) first second]
+    exact ⟨hb, Set.mem_univ _⟩
+  have groupOnBase : ContMDiffOn IB IG ∞
+      (fun b : B => (principalBundleTransition first second (b, (1 : G))).2) baseDomain := by
+    have groupOnTotal := adjointBundleTransitionGroup_contMDiffOn
+      smoothBundle first second first_mem second_mem
+    simpa [Function.comp_def, totalDomain, baseDomain] using
+      groupOnTotal.comp zeroInput zeroMaps
+  have composed :=
+    (YangMills.Mathematics.lieGroupAdjointCoordinatesEquiv_contMDiff
+      (I := IG) (G := G)).comp_contMDiffOn groupOnBase
+  simpa [adjointBundleTransitionEquiv, Function.comp_def] using composed
+
+include smoothBundle first_mem second_mem in
+/-- The inverse operator-valued transition family is smooth on the same base intersection. -/
+theorem adjointBundleTransitionEquiv_symm_contMDiffOn :
+    ContMDiffOn IB 𝓘(ℝ, EG →L[ℝ] EG) ∞
+      (fun b : B =>
+        (adjointBundleTransitionEquiv (IG := IG) first second b).symm.toContinuousLinearMap)
+      (first.baseSet ∩ second.baseSet) := by
+  let baseDomain := first.baseSet ∩ second.baseSet
+  let totalDomain : Set (B × EG) := adjointBundleOverlapDomain (I := IG) first second
+  have zeroInput : ContMDiffOn IB (IB.prod 𝓘(ℝ, EG)) ∞
+      (fun b : B => (b, (0 : EG))) baseDomain :=
+    contMDiffOn_id.prodMk contMDiffOn_const
+  have zeroMaps : Set.MapsTo (fun b : B => (b, (0 : EG))) baseDomain totalDomain := by
+    intro b hb
+    change (b, (0 : EG)) ∈ adjointBundleOverlapDomain (I := IG) first second
+    rw [adjointBundleOverlapDomain_eq (I := IG) first second]
+    exact ⟨hb, Set.mem_univ _⟩
+  have groupOnBase : ContMDiffOn IB IG ∞
+      (fun b : B => (principalBundleTransition first second (b, (1 : G))).2) baseDomain := by
+    have groupOnTotal := adjointBundleTransitionGroup_contMDiffOn
+      smoothBundle first second first_mem second_mem
+    simpa [Function.comp_def, totalDomain, baseDomain] using
+      groupOnTotal.comp zeroInput zeroMaps
+  have composed :=
+    (YangMills.Mathematics.lieGroupAdjointCoordinatesEquiv_symm_contMDiff
+      (I := IG) (G := G)).comp_contMDiffOn groupOnBase
+  simpa [adjointBundleTransitionEquiv, Function.comp_def] using composed
+
 include smoothBundle first_mem second_mem in
 /-- The model-coordinate associated transition is smooth on its natural overlap domain. -/
 theorem adjointBundleTransitionCoordinates_contMDiffOn :

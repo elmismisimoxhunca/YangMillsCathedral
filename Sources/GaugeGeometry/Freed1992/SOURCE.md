@@ -102,9 +102,10 @@ adjoint map in model coordinates is derived from Mathlib's `ContMDiffAt.mfderiv`
 packages as an open partial homeomorphism using that derived regularity and promotes exactly to
 Mathlib's generic `Bundle.Trivialization` interface on the same quotient carrier and topology.
 The ordered associated overlap is then derived exactly as `(b,X) ↦ (b, Ad(k₁₂(b))X)` from the
-actual principal transition, with inverse and fiberwise real-linearity laws. Its model-coordinate
-formula is proved `C∞` by composing the designated smooth principal overlap with the derived smooth
-adjoint action. The coordinate adjoint is also packaged as a continuous linear equivalence with
+actual principal transition, with inverse and fiberwise real-linearity laws. Its source is proved to
+be exactly the intersection of the two base domains times the whole fiber. Its model-coordinate
+formula and forward/inverse operator-equivalence families are proved `C∞` by composing the
+designated smooth principal overlap with the derived smooth adjoint action. The coordinate adjoint is also packaged as a continuous linear equivalence with
 smooth forward and inverse operator families. After explicit transport through the canonical
 tangent-model equivalence, the
 promoted charts form a named covering charted-space atlas on the same quotient topology. No global

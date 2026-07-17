@@ -53,6 +53,37 @@ theorem nonsmooth_adjointBundle_transitionGroup_blocked
     smoothBundle first second first_mem second_mem)
 
 include smoothBundle first_mem second_mem in
+/-- The forward continuous-linear-equivalence transition family cannot fail operator-valued
+smoothness on the base overlap. -/
+theorem nonsmooth_adjointBundle_transitionEquiv_blocked
+    (nonsmooth : ¬ContMDiffOn IB 𝓘(ℝ, EG →L[ℝ] EG) ∞
+      (fun b : B =>
+        (adjointBundleTransitionEquiv (IG := IG) first second b).toContinuousLinearMap)
+      (first.baseSet ∩ second.baseSet)) : False :=
+  nonsmooth (adjointBundleTransitionEquiv_contMDiffOn
+    smoothBundle first second first_mem second_mem)
+
+include smoothBundle first_mem second_mem in
+/-- The inverse equivalence family cannot fail operator-valued smoothness on the same overlap. -/
+theorem nonsmooth_adjointBundle_transitionEquiv_inverse_blocked
+    (nonsmooth : ¬ContMDiffOn IB 𝓘(ℝ, EG →L[ℝ] EG) ∞
+      (fun b : B =>
+        (adjointBundleTransitionEquiv (IG := IG) first second b).symm.toContinuousLinearMap)
+      (first.baseSet ∩ second.baseSet)) : False :=
+  nonsmooth (adjointBundleTransitionEquiv_symm_contMDiffOn
+    smoothBundle first second first_mem second_mem)
+
+omit [IsTopologicalGroup G] in
+/-- The transition equivalence cannot use a fiber operator disconnected from the actual principal
+overlap coordinate. -/
+theorem disconnected_adjointBundle_transitionEquiv_blocked
+    (b : B) (X : EG)
+    (mismatch : adjointBundleTransitionEquiv (IG := IG) first second b X ≠
+      YangMills.Mathematics.lieGroupAdjointCoordinates (I := IG)
+        (principalBundleTransition first second (b, (1 : G))).2 X) : False :=
+  mismatch rfl
+
+include smoothBundle first_mem second_mem in
 /-- The exact model-coordinate fiberwise-adjoint transition cannot fail smoothness. -/
 theorem nonsmooth_adjointBundle_transitionCoordinates_blocked
     (nonsmooth : ¬ContMDiffOn (IB.prod 𝓘(ℝ, EG)) (IB.prod 𝓘(ℝ, EG)) ∞

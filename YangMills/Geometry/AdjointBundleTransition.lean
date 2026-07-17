@@ -60,6 +60,50 @@ theorem mem_adjointBundleOverlapDomain_iff (z : B × GroupLieAlgebra I G) :
   Iff.rfl
 
 omit [IsTopologicalGroup G] [LieGroup I ∞ G] in
+/-- The associated overlap domain is exactly the product of the two principal base sets with the
+whole model fiber. -/
+theorem adjointBundleOverlapDomain_eq :
+    adjointBundleOverlapDomain (I := I) first second =
+      (first.baseSet ∩ second.baseSet) ×ˢ
+        (Set.univ : Set (GroupLieAlgebra I G)) := by
+  ext z
+  change (z.1, (1 : G)) ∈ principalBundleOverlapDomain first second ↔
+    z.1 ∈ first.baseSet ∩ second.baseSet ∧ z.2 ∈ Set.univ
+  let p₀ : P := first.toPartialHomeomorph.symm (z.1, (1 : G))
+  constructor
+  · intro hz
+    have firstTarget : (z.1, (1 : G)) ∈ first.toPartialHomeomorph.target := hz.1
+    have p₀FirstSource : p₀ ∈ first.toPartialHomeomorph.source :=
+      first.toPartialHomeomorph.map_target firstTarget
+    have firstP₀ : first p₀ = (z.1, (1 : G)) :=
+      first.toPartialHomeomorph.right_inv firstTarget
+    have baseP₀ := first.base_coordinate p₀ p₀FirstSource
+    rw [firstP₀] at baseP₀
+    have p₀SecondSource : p₀ ∈ second.toPartialHomeomorph.source := hz.2
+    have secondBase : torsor.projection p₀ ∈ second.baseSet := by
+      rw [second.source_eq] at p₀SecondSource
+      exact p₀SecondSource
+    have firstBase : z.1 ∈ first.baseSet := by
+      rw [first.target_eq] at firstTarget
+      exact firstTarget.1
+    exact ⟨⟨firstBase, baseP₀ ▸ secondBase⟩, Set.mem_univ _⟩
+  · rintro ⟨⟨firstBase, secondBase⟩, -⟩
+    have firstTarget : (z.1, (1 : G)) ∈ first.toPartialHomeomorph.target := by
+      rw [first.target_eq]
+      exact ⟨firstBase, Set.mem_univ _⟩
+    have p₀FirstSource : p₀ ∈ first.toPartialHomeomorph.source :=
+      first.toPartialHomeomorph.map_target firstTarget
+    have firstP₀ : first p₀ = (z.1, (1 : G)) :=
+      first.toPartialHomeomorph.right_inv firstTarget
+    have baseP₀ := first.base_coordinate p₀ p₀FirstSource
+    rw [firstP₀] at baseP₀
+    refine ⟨firstTarget, ?_⟩
+    change p₀ ∈ second.toPartialHomeomorph.source
+    rw [second.source_eq]
+    change torsor.projection p₀ ∈ second.baseSet
+    exact baseP₀ ▸ secondBase
+
+omit [IsTopologicalGroup G] [LieGroup I ∞ G] in
 /-- The associated overlap domain is open. -/
 theorem isOpen_adjointBundleOverlapDomain :
     IsOpen (adjointBundleOverlapDomain (I := I) first second) := by

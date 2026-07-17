@@ -31,6 +31,15 @@ variable
     (bundle : TopologicalPrincipalBundleData torsor)
     (first second : PrincipalBundleLocalTrivialization torsor)
 
+omit [IsTopologicalGroup G] [LieGroup I ∞ G] in
+/-- The associated overlap source cannot differ from the intersection of base chart domains times
+the whole fiber. -/
+theorem malformed_adjointBundle_overlapDomain_blocked
+    (mismatch : adjointBundleOverlapDomain (I := I) first second ≠
+      (first.baseSet ∩ second.baseSet) ×ˢ
+        (Set.univ : Set (GroupLieAlgebra I G))) : False :=
+  mismatch (adjointBundleOverlapDomain_eq (I := I) first second)
+
 /-- An associated overlap transition cannot move the base coordinate. -/
 theorem baseMoving_adjointBundle_transition_blocked
     (z : B × GroupLieAlgebra I G)
