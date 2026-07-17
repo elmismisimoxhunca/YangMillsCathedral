@@ -57,6 +57,20 @@ No new repository build depends on these paths.
 The legacy declaration remains rejected as canonical. Only its universal-any-`G` direction and
 anti-triviality intent were mined; no legacy code is imported.
 
+## Rebuilt stone: algebraic bundle maps and gauge automorphisms
+
+| Item | Evidence |
+|---|---|
+| Legacy declaration considered | `periodicGaugeTransform`, `ClayStatement.lean:920–924`, quarry hash `e10ac614a0742a4bf8533dab26ef225a7af99e06078699ea6238de01323851f6` |
+| Authoritative evidence | Freed printed p. 7, extracted lines 361–371, and printed p. 8, extracted lines 376–380 |
+| Defect / category boundary | The legacy declaration is the correct local formula for a **lattice link configuration**, but it has no base manifold, principal bundle, total-space automorphism, or smooth equivariance. It cannot serve as a continuum gauge transformation. |
+| New declarations | `YangMills.Geometry.PrincipalBundleTorsorMap` and `YangMills.Geometry.TorsorGaugeTransformation` in `YangMills/Geometry/PrincipalBundleMap.lean` |
+| Repair / shape change | Built independently from Freed's bundle-map definition. One base map and total map are coupled by projection compatibility and equivariance; gauge transformations are invertible automorphisms over the identity and form a group. Smoothness is explicitly deferred. No lattice formula or legacy code is imported. |
+| Hostile and positive evidence | Projection-mismatch, nonequivariant, base-moving, and noninjective candidates are rejected. Identity/composition bundle maps, the gauge identity/inverse, and the gauge-to-bundle-map bridge are exercised positively. |
+| Validation | Focused builds, complete `lake build`, four source manifests, source audit, kernel audit over 261 declarations, and `git diff --check` passed. Two independent read-only reviews reported no blockers. |
+| Implementation commit | `e4cb030` (`Define algebraic bundle maps and gauge automorphisms`) |
+| Residual debt | Smooth local triviality and smoothness of maps are still absent. The legacy lattice transformation remains reserved for the optional lattice layer and must later receive Wilson/Osterwalder–Seiler provenance. |
+
 ## Required row format for accepted stones
 
 Every future integration row must record:
