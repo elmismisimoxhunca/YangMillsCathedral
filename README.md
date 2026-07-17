@@ -106,8 +106,9 @@ carrier equivalence with an explicitly topology-coherent total-space homeomorphi
 vector-space structures on every dependent fiber with every designated associated coordinate proved
 linear, quotient trivializations transported exactly to the dependent total space, and that
 presentation packaged as named topology-coherent Mathlib `FiberBundle` and `VectorBundle` values
-with a named `C∞` vector-bundle mixin, an exact smooth-section interface, pointwise and smooth
-adjoint-bundle-valued differential-form carriers, an exact degree-zero form/section bridge, and
+with a named `C∞` vector-bundle mixin, an exact smooth-section interface, smooth form evaluation
+along maps under explicit ambient extensions, pointwise and smooth adjoint-bundle-valued
+differential-form carriers, an exact degree-zero form/section bridge, and
 smooth principal local sections with projection-right-inverse tangent lifts that preserve smooth
 base fields, and proved lift and representative independence plus pointwise dependent-fiber descent for horizontal
 right-equivariant principal two-forms and the exact certified principal curvature, and the adjoint

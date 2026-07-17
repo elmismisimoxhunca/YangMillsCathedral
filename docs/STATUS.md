@@ -925,6 +925,21 @@ Verified:
 - No ambient extension, pullback-smoothness certificate, or descended-curvature smoothness claim is
   introduced. Smoothness of principal-form evaluation along the local section remains pending.
 
+## 2026-07-17 — fifty-third mathematical stone: smooth form evaluation along maps
+
+Verified:
+
+- `ManifoldDifferentialForm.IsSmooth.eval_comp_of_ambientFields` proves smooth evaluation of a
+  fixed-value smooth form on fields along a smooth map when they agree with ambient smooth fields on
+  a containing target set.
+- `.eval_comp` supplies the exact restriction specialization.
+- The proof is derived from the existing ambient-field smoothness predicate and Mathlib
+  `ContMDiffOn.comp`; no new regularity certificate or extension existence assumption is hidden in a
+  model record.
+- Hostile probes reject loss of smoothness for explicit ambient extensions and their restrictions.
+- Construction of ambient principal-chart extensions for the local lifted fields remains pending,
+  so smoothness of descended curvature is still not claimed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
