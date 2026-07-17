@@ -442,12 +442,35 @@ Verified:
 - These are set-level coordinate laws only. Continuity, local-homeomorphism/vector-bundle packaging,
   smoothness, sections, descended curvature, and Yang–Mills fields remain pending.
 
+## 2026-07-17 — twenty-sixth mathematical stone: conditional topological adjoint trivializations
+
+Verified:
+
+- `lieGroupAdjointCoordinates` transports the derivative-defined `Ad(g)` to the declared normed
+  model without replacing the intrinsic tangent Lie algebra.
+- `ContinuousLieGroupAdjointData` isolates only continuity of `g ↦ Ad(g)` in those coordinates;
+  joint continuity of `(g,X) ↦ Ad(g)X` and `(g,X) ↦ Ad(g⁻¹)X` is derived.
+- No general inhabitant of this certificate is supplied by the repository. Its eventual general proof
+  is explicitly reusable parameter-dependent manifold-derivative infrastructure debt, not a
+  Yang–Mills assumption hidden as an axiom.
+- Given the certificate, the representative coordinate is continuous on the principal chart source,
+  and quotient-map locality derives continuity of `AdjointBundle.localCoordinate` on its associated
+  open source.
+- The inverse map is continuous on `baseSet × g` directly from the principal partial homeomorphism
+  and quotient representative map.
+- `AdjointBundle.localTrivialization` packages the exact existing forward/inverse maps, sources,
+  targets, inverse laws, openness, and continuity as an `OpenPartialHomeomorph`.
+- Hostile probes reject discontinuous adjoint actions, disconnected coordinate maps, malformed
+  sources/targets, and substituted forward/inverse maps.
+- No adjoint-regularity witness, smooth vector-bundle structure, section, descended curvature, or
+  Yang–Mills field is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
   `SU(n)` API does not supply the complete manifold/compactness/connectedness/tangent-simplicity
   chain, so positive consistency infrastructure remains open.
-- No general smooth bundle-map, continuous local adjoint trivialization, smooth
+- No general smooth bundle-map, unconditional continuous local adjoint trivialization, smooth
   adjoint-vector-bundle/descent layer, concrete principal-connection/curvature/structure-certificate
   witness, automatic curvature horizontality/equivariance theorem, Bianchi/gauge-covariance result,
   symmetry-group, quantum-theory, acceptance, existence, or mass-gap declaration exists.

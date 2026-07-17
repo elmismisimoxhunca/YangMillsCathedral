@@ -97,8 +97,8 @@ finite-dimensional tangent-bracket continuity/smoothness bridges, smooth differe
 regularity, pointwise and smooth principal connection-form definitions, the derived principal
 curvature formula, intrinsic curvature horizontality/right-adjoint-equivariance certificate semantics,
 the adjoint associated-bundle orbit quotient with its quotient topology, base projection, and
-representative-independent set-level local coordinates, and an explicit positive adjoint-invariant
-Lie-algebra inner-product certificate are implemented. No
+representative-independent local coordinates and conditional topological local trivializations, and
+an explicit positive adjoint-invariant Lie-algebra inner-product certificate are implemented. No
 concrete gauge-group, connection, invariant-inner-product, curvature, or structure-certificate witness,
 symmetry group, reconstruction bridge, quantum-theory witness, Yang–Mills existence claim, or
 mass-gap claim is present.

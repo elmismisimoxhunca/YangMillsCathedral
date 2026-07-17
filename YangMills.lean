@@ -12,6 +12,8 @@ import YangMills.Mathematics.LieAlgebraSimplicity
 import YangMills.Mathematics.LieAlgebraSimplicityProbes
 import YangMills.Mathematics.LieGroupAdjoint
 import YangMills.Mathematics.LieGroupAdjointProbes
+import YangMills.Mathematics.LieGroupAdjointRegularity
+import YangMills.Mathematics.LieGroupAdjointRegularityProbes
 import YangMills.Mathematics.LieGroupContinuousBracket
 import YangMills.Mathematics.LieGroupContinuousBracketProbes
 import YangMills.Mathematics.LieGroupSmoothBracket
@@ -39,6 +41,8 @@ import YangMills.Geometry.AdjointBundleTopology
 import YangMills.Geometry.AdjointBundleTopologyProbes
 import YangMills.Geometry.AdjointBundleLocalCoordinates
 import YangMills.Geometry.AdjointBundleLocalCoordinatesProbes
+import YangMills.Geometry.AdjointBundleLocalTrivialization
+import YangMills.Geometry.AdjointBundleLocalTrivializationProbes
 import YangMills.Geometry.PrincipalBundleTorsor
 import YangMills.Geometry.PrincipalBundleTorsorProbes
 import YangMills.Geometry.PrincipalBundleMap

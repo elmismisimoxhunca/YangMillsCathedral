@@ -42,7 +42,9 @@ committed before higher layers depend on it.
 - [x] Construct and probe the set-level adjoint associated-bundle orbit quotient.
 - [x] Equip the adjoint bundle with its quotient topology and derive its quotient projection.
 - [x] Derive representative-independent adjoint-bundle local coordinate and inverse laws.
-- [ ] Prove local-coordinate continuity and package topological/smooth vector-bundle trivializations.
+- [x] Isolate joint adjoint continuity and conditionally package topological local trivializations.
+- [ ] Derive the adjoint-regularity certificate from parameter-dependent manifold differentiation.
+- [ ] Package smooth adjoint-vector-bundle trivializations.
 - [ ] Add adjoint-bundle-valued form and curvature-descent infrastructure.
 - [ ] Derive structural curvature laws automatically and prove gauge covariance and Bianchi.
 
