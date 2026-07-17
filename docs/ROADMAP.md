@@ -24,6 +24,7 @@ committed before higher layers depend on it.
 - [x] Pin authoritative principal-bundle, connection and curvature sources.
 - [x] Define compact-simple Lie-group semantics and global-form policy.
 - [x] Adopt and source-map Mathlib's ideal/non-abelian Lie-algebra simplicity interface.
+- [x] Define and probe the reusable fiberwise torsor core (not a full principal bundle).
 - [ ] Define principal bundles, gauge transformations, connections and curvature.
 - [ ] Prove structural curvature and gauge-covariance results.
 

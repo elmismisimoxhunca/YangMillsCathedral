@@ -12,6 +12,8 @@ import YangMills.Mathematics.LieAlgebraSimplicity
 import YangMills.Mathematics.LieAlgebraSimplicityProbes
 import YangMills.Geometry.LieGroup
 import YangMills.Geometry.LieGroupProbes
+import YangMills.Geometry.PrincipalBundleTorsor
+import YangMills.Geometry.PrincipalBundleTorsorProbes
 import YangMills.Audit
 
 /-!

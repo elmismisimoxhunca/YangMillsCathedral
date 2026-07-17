@@ -92,13 +92,28 @@ Verified:
   not use it as evidence for Yang–Mills existence, action semantics, or a mass gap.
 - No geometry declaration was added merely because the source is now available.
 
+## 2026-07-17 — fifth mathematical stone: fiberwise principal torsors
+
+Verified:
+
+- `PrincipalBundleTorsorData G B P` stores one projection and one right action, avoiding unrelated
+  action/projection witnesses.
+- Every base point has a fiber, fibers are exactly right-action orbits, and the solving group
+  element between two points in one fiber is unique.
+- Surjectivity, transitivity, freeness, and the set-level orbit/fiber equivalence are derived.
+- The product family `B × G → B` supplies a concrete trivial-torsor constructor.
+- Hostile probes reject empty total carriers over nonempty bases, missing fibers, base-moving and
+  law-breaking actions, nonidentity stabilizers, and nontransitive fibers.
+- The module and ledger explicitly deny that this algebraic core supplies topology or smooth local
+  triviality.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
   `SU(n)` API does not supply the complete manifold/compactness/connectedness/tangent-simplicity
   chain, so positive consistency infrastructure remains open.
-- No principal-bundle, connection, curvature, symmetry-group, quantum-theory, acceptance,
-  existence, or mass-gap declaration exists.
+- No topological/smooth principal-bundle local-triviality layer, connection, curvature,
+  symmetry-group, quantum-theory, acceptance, existence, or mass-gap declaration exists.
 - No Yang–Mills acceptance declaration exists.
 - No standalone Git remote exists or has been pushed. The tested candidate
   `git@github.com:elmismisimoxhunca/lean-yangmills-adaly.git` does not exist, and the available SSH

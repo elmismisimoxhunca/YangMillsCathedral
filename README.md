@@ -88,6 +88,7 @@ lakefile.toml         pinned dependencies
 
 The standalone foundation, Euclidean dimension index, separate Euclidean/Minkowski quadratic
 forms, source-facing Lie-algebra simplicity layer, and compact-connected-simple Lie-group
-certificate type and semantics are implemented. No concrete gauge-group witness, symmetry group,
-reconstruction bridge, principal-bundle geometry, quantum-theory witness, Yang–Mills existence
-claim, or mass-gap claim is present.
+certificate type and semantics, and the fiberwise torsor core of a principal bundle are
+implemented. No concrete gauge-group witness, symmetry group, smooth principal-bundle/local-
+triviality layer, connection or curvature, reconstruction bridge, quantum-theory witness,
+Yang–Mills existence claim, or mass-gap claim is present.

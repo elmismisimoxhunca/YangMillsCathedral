@@ -64,8 +64,11 @@ Searchable extraction: `Sources/GaugeGeometry/Freed1992/classical_chern_simons_p
 
 | Source locator | Requirement | Classification | Lean declaration | Status / decision |
 |---|---|---|---|---|
-| Freed p. 6 §1; text 318–319 | principal bundle has a free right action and quotient base | Reusable definition | — | Source pinned; Mathlib lacks the complete interface, so implementation is pending |
-| Freed p. 7 §1; text 323–348 | fibers are simply transitive right `G`-spaces and the bundle is locally trivial | Reusable definition | — | Pending principal-bundle layer |
+| Freed p. 6 §1; text 318–319 | principal bundle has a right group action and quotient projection | Reusable definition | `YangMills.Geometry.PrincipalBundleTorsorData.projection`, `.rightAction`, `.right_one`, `.right_mul`, `.projection_rightAction` | Fiberwise algebraic core only; quotient topology and smooth structure remain pending |
+| Freed pp. 6–7 §1; text 318–348 | projection fibers are exactly free/transitive right-action orbits | Derived theorem from the torsor fields | `sameFiber_iff_existsUnique_rightAction`, `rightAction_injective`, `projection_surjective` | Set-level orbit/fiber result only; no quotient topology is claimed |
+| Freed p. 7 §1; text 323–348 | every fiber is a nonempty simply transitive right `G`-space | Reusable definition | `PrincipalBundleTorsorData.fiber_nonempty`, `.fiber_unique` | Fiber core implemented |
+| Freed p. 7 §1; text 342–348 | principal bundles are locally trivial | Reusable definition | — | Explicitly pending topological/smooth local-triviality layer |
+| Freed p. 7 §1; text 323–348 | same-fiber points are related by a group element | Derived theorem from unique transitivity | `sameFiber_transitive` | Derived algebraic result |
 | Freed p. 7 §1; text 361–371 | smooth equivariant bundle maps; gauge transformations are automorphisms over the base identity | Reusable definition / distinction | — | Pending principal-bundle layer |
 | Freed p. 8 §1; text 376–380 | gauge transformations form a group; pullback along a base map remains distinct | Reusable definition / distinction | — | Pending principal-bundle layer |
 | Freed p. 8 §1, (1.9)–(1.12); text 381–398 | connection form has vertical normalization and right equivariance | Reusable definition | — | Pending differential-form and principal-connection infrastructure |
@@ -73,8 +76,12 @@ Searchable extraction: `Sources/GaugeGeometry/Freed1992/classical_chern_simons_p
 | Freed p. 9 §1, (1.18)–(1.19); text 434–447 | gauge action on connections is affine; curvature transforms by the adjoint action | Bridge / derived covariance | — | Pending pullback and gauge-action infrastructure |
 
 Freed's paper concerns Chern–Simons theory; only its general §1 connection geometry is used here.
-It is not a source for the Yang–Mills action, quantum existence, or a mass gap. No declaration in
-this section is canonical yet, and no arbitrary placeholder proposition has been introduced.
+It is not a source for the Yang–Mills action, quantum existence, or a mass gap.
+`PrincipalBundleTorsorData.trivial` is positive consistency evidence for the algebraic fiber
+interface. Hostile probes reject empty/missing fibers, base-moving or law-breaking actions,
+nonidentity stabilizers, and nontransitive fibers. This structure is deliberately not called a
+principal bundle: topology, smooth local triviality, bundle maps, connections, and curvature remain
+open rather than being hidden in a placeholder proposition.
 
 ## Dimension-foundation decisions
 
