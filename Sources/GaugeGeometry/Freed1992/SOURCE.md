@@ -129,7 +129,9 @@ section. Pointwise adjoint-bundle-valued differential forms are now typed as con
 maps into the actual dependent quotient fiber, with exact designated coordinates. Smoothness is
 then defined by evaluation on locally smooth tangent fields in every designated exact chart; the
 smooth zero form is derived. Degree-zero forms are proved exactly equivalent to dependent sections,
-including smoothness in both presentations. Tangent lifts and curvature descent remain pending.
+including smoothness in both presentations. Every designated principal chart now supplies a smooth
+local section and a tangent lift proved right-inverse to the actual projection differential.
+Lift/representative independence and curvature descent remain pending.
 `PrincipalTwoForm.IsHorizontal`, `.IsRightAdEquivariant`, and the connection-indexed
 `PrincipalCurvatureStructureCertificate` state (1.15) and (1.14) intrinsically without accepting an
 unrelated curvature field. This is a requirement surface: automatic derivation from the current

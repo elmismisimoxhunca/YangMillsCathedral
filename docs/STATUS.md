@@ -824,6 +824,23 @@ Verified:
   replacement degree-zero coordinates.
 - No nonzero section or form is constructed; tangent lifts and curvature descent remain pending.
 
+## 2026-07-17 — forty-seventh mathematical stone: principal local tangent lifts
+
+Verified:
+
+- `principalBundleLocalSection` fixes group coordinate `1` in an actual designated principal chart.
+- `principalBundleLocalSection_projection` proves exact base preservation on the chart domain, and
+  `principalBundleLocalSection_contMDiffOn` derives smoothness from the supplied smooth principal
+  trivialization inverse.
+- `principalBundleLocalTangentLift` is the manifold derivative of that exact local section.
+- `principalBundleProjectionDifferential_comp_localTangentLift` proves its composition with the
+  actual bundle-projection differential is the identity; `.rightInverse` exposes the pointwise lift
+  law.
+- Hostile probes reject base-moving or nonsmooth local sections, tangent lifts disconnected from the
+  projection, and nonidentity projection/lift compositions.
+- Lift-independence, representative-independence, and curvature descent remain pending; no
+  connection or curvature witness is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

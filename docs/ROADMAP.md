@@ -63,7 +63,8 @@ committed before higher layers depend on it.
 - [x] Define pointwise adjoint-bundle-valued differential forms in actual dependent fibers.
 - [x] Define smooth adjoint-bundle-valued forms by exact local field evaluation.
 - [x] Prove the exact degree-zero form/section carrier and smoothness bridge.
-- [ ] Add tangent-lift and curvature-descent infrastructure.
+- [x] Derive smooth principal local sections and projection-right-inverse tangent lifts.
+- [ ] Add lift-independence, representative-independence, and curvature descent.
 - [ ] Derive structural curvature laws automatically and prove gauge covariance and Bianchi.
 
 ## Phase 3 — classical Yang–Mills semantics
