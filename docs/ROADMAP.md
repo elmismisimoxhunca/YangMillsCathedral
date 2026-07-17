@@ -39,6 +39,8 @@ committed before higher layers depend on it.
 - [x] Add arbitrary-manifold one-form exterior-derivative certification.
 - [x] Define principal curvature from a certified derivative and the smooth bracket-wedge.
 - [x] State and probe intrinsic curvature horizontality/right-adjoint-equivariance certificates.
+- [x] Construct and probe the set-level adjoint associated-bundle orbit quotient.
+- [ ] Add smooth adjoint-vector-bundle/descent infrastructure.
 - [ ] Derive structural curvature laws automatically and prove gauge covariance and Bianchi.
 
 ## Phase 3 — classical Yang–Mills semantics

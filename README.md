@@ -96,7 +96,8 @@ an arbitrary-manifold one-form Cartan certificate, a smoothly closed Lie-bracket
 finite-dimensional tangent-bracket continuity/smoothness bridges, smooth differential-form
 regularity, pointwise and smooth principal connection-form definitions, the derived principal
 curvature formula, intrinsic curvature horizontality/right-adjoint-equivariance certificate semantics,
-and an explicit positive adjoint-invariant Lie-algebra inner-product certificate are implemented. No
+the set-level adjoint associated-bundle orbit quotient, and an explicit positive adjoint-invariant
+Lie-algebra inner-product certificate are implemented. No
 concrete gauge-group, connection, invariant-inner-product, curvature, or structure-certificate witness,
 symmetry group, reconstruction bridge, quantum-theory witness, Yang–Mills existence claim, or
 mass-gap claim is present.

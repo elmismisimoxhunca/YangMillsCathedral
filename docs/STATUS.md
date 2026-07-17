@@ -388,14 +388,32 @@ Verified:
   gauge covariance also remain pending.
 - No structure-certificate witness, connection, or curvature is constructed.
 
+## 2026-07-17 — twenty-third mathematical stone: set-level adjoint bundle
+
+Verified:
+
+- `adjointBundleRightAction` acts on `P × g` by `(p,X)·g = (p·g, Ad(g⁻¹)X)` and satisfies the exact
+  identity and multiplication laws.
+- `adjointBundleSetoid` proves the same-orbit relation reflexive, symmetric, and transitive rather
+  than postulating a quotient relation.
+- `AdjointBundle` is the resulting quotient carrier `P ×_G g`; its projection to the original base
+  is derived from principal-action invariance.
+- `mk_rightAction` and `mk_eq_mk_iff` prove the exact representative identification and characterize
+  class equality by an actual group-orbit witness.
+- Hostile probes reject wrong action order, missing diagonal identification, disconnected quotient
+  equality, and base-moving representative changes.
+- This is only a set-level associated bundle. No topology, smooth vector-bundle atlas, section,
+  descended curvature, connection, or Yang–Mills field is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
   `SU(n)` API does not supply the complete manifold/compactness/connectedness/tangent-simplicity
   chain, so positive consistency infrastructure remains open.
-- No general smooth bundle-map layer, concrete principal-connection/curvature/structure-certificate
-  witness, automatic curvature horizontality/equivariance theorem, Bianchi/gauge-covariance result, symmetry-group,
-  quantum-theory, acceptance, existence, or mass-gap declaration exists.
+- No general smooth bundle-map or smooth adjoint-vector-bundle/descent layer, concrete
+  principal-connection/curvature/structure-certificate
+  witness, automatic curvature horizontality/equivariance theorem, Bianchi/gauge-covariance result,
+  symmetry-group, quantum-theory, acceptance, existence, or mass-gap declaration exists.
 - No Yang–Mills acceptance declaration exists.
 - No standalone Git remote exists or has been pushed. The tested candidate
   `git@github.com:elmismisimoxhunca/lean-yangmills-adaly.git` does not exist, and the available SSH

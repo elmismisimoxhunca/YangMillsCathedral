@@ -33,6 +33,8 @@ import YangMills.Geometry.LieGroup
 import YangMills.Geometry.LieGroupProbes
 import YangMills.Geometry.InvariantInnerProduct
 import YangMills.Geometry.InvariantInnerProductProbes
+import YangMills.Geometry.AdjointBundle
+import YangMills.Geometry.AdjointBundleProbes
 import YangMills.Geometry.PrincipalBundleTorsor
 import YangMills.Geometry.PrincipalBundleTorsorProbes
 import YangMills.Geometry.PrincipalBundleMap
