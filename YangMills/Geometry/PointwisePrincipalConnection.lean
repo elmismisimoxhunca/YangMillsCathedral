@@ -7,13 +7,15 @@ Authors: Sebastian Rodrigo
 import YangMills.Geometry.SmoothPrincipalBundle
 import YangMills.Mathematics.LieGroupAdjoint
 import YangMills.Mathematics.ManifoldDifferentialForms
+import YangMills.Mathematics.SmoothManifoldDifferentialForms
 
 /-!
-# Pointwise principal connection-form conditions
+# Pointwise and smooth principal connection-form conditions
 
-This module states the vertical-normalization and adjoint-equivariance conditions of a principal
-connection one-form. The form carrier is still pointwise: smooth-section regularity is deliberately
-not hidden here, so this is not yet the final principal-connection interface.
+This module first isolates the vertical-normalization and adjoint-equivariance conditions of a
+principal connection one-form, then promotes that exact pointwise form with an explicit smoothness
+proof. Keeping both stages visible prevents algebraic conditions from silently standing in for
+smooth-section regularity.
 -/
 
 namespace YangMills.Geometry
@@ -110,6 +112,46 @@ theorem fundamentalVector_injective
     _ = Y := connection.vertical_normalization p Y
 
 end PointwisePrincipalConnectionData
+
+/-- A genuine smooth principal connection form.
+
+This promotes the pointwise normalization/equivariance record by requiring local smoothness under
+evaluation on locally smooth tangent-vector fields. -/
+structure PrincipalConnectionData
+    (smoothBundle : SmoothPrincipalBundleData IB IG IP torsor bundle) where
+  /-- Pointwise connection-form data. -/
+  pointwise : PointwisePrincipalConnectionData smoothBundle
+  /-- Smooth-section regularity of the Lie-algebra-valued one-form. -/
+  form_smooth : pointwise.form.IsSmooth
+    (YangMills.Mathematics.groupLieAlgebraModelEquiv IG)
+
+namespace PrincipalConnectionData
+
+variable {smoothBundle : SmoothPrincipalBundleData IB IG IP torsor bundle}
+
+/-- Bundle the underlying form with its smoothness proof without changing its identity. -/
+def toSmoothForm (connection : PrincipalConnectionData smoothBundle) :
+    YangMills.Mathematics.SmoothManifoldDifferentialForm IP P (GroupLieAlgebra IG G)
+      (YangMills.Mathematics.groupLieAlgebraModelEquiv IG) 1 where
+  toForm := connection.pointwise.form
+  smooth := connection.form_smooth
+
+/-- A smooth principal connection retains vertical normalization. -/
+theorem vertical_normalization (connection : PrincipalConnectionData smoothBundle) (p : P)
+    (X : GroupLieAlgebra IG G) :
+    connection.pointwise.form.evalOne p (principalFundamentalVector smoothBundle p X) = X :=
+  connection.pointwise.vertical_normalization p X
+
+/-- A smooth principal connection retains exact right equivariance. -/
+theorem right_equivariant (connection : PrincipalConnectionData smoothBundle)
+    (p : P) (g : G) (v : TangentSpace IP p) :
+    connection.pointwise.form.evalOne (torsor.rightAction p g)
+        (principalRightTranslationDifferential smoothBundle p g v) =
+      YangMills.Mathematics.lieGroupAdjoint IG g⁻¹
+        (connection.pointwise.form.evalOne p v) :=
+  connection.pointwise.right_equivariant p g v
+
+end PrincipalConnectionData
 
 end
 

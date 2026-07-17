@@ -7,10 +7,11 @@ Authors: Sebastian Rodrigo
 import YangMills.Geometry.PointwisePrincipalConnection
 
 /-!
-# Hostile probes for pointwise principal connection forms
+# Hostile probes for pointwise and smooth principal connection forms
 
-These probes independently enforce vertical normalization, infinitesimal freeness, and the
-`Ad(g⁻¹)` right-equivariance convention. Smooth-section regularity remains outside this layer.
+These probes independently enforce vertical normalization, infinitesimal freeness, the
+`Ad(g⁻¹)` right-equivariance convention, and the separate smoothness obligation required by the
+promoted principal-connection record.
 -/
 
 namespace YangMills.Geometry.Probes
@@ -75,5 +76,26 @@ theorem wrong_connection_equivariance_blocked
         (principalRightTranslationDifferential smoothBundle p g v) ≠
       YangMills.Mathematics.lieGroupAdjoint IG g⁻¹ (connection.form.evalOne p v)) : False :=
   mismatch (connection.right_equivariant p g v)
+
+/-- Pointwise connection conditions cannot substitute for smooth-section regularity. -/
+theorem nonsmooth_principalConnection_blocked
+    (connection : PrincipalConnectionData smoothBundle)
+    (nonsmooth : ¬connection.pointwise.form.IsSmooth
+      (YangMills.Mathematics.groupLieAlgebraModelEquiv IG)) : False :=
+  nonsmooth connection.form_smooth
+
+/-- Promotion to a smooth form preserves the exact pointwise connection form. -/
+theorem principalConnection_smoothForm_coherent
+    (connection : PrincipalConnectionData smoothBundle) :
+    connection.toSmoothForm.toForm = connection.pointwise.form :=
+  rfl
+
+/-- The full connection still rejects broken vertical normalization. -/
+theorem broken_smoothConnection_normalization_blocked
+    (connection : PrincipalConnectionData smoothBundle)
+    (p : P) (X : GroupLieAlgebra IG G)
+    (mismatch : connection.pointwise.form.evalOne p
+      (principalFundamentalVector smoothBundle p X) ≠ X) : False :=
+  mismatch (connection.vertical_normalization p X)
 
 end YangMills.Geometry.Probes

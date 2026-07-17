@@ -75,5 +75,8 @@ inverse. This makes the categorical automorphism/diffeomorphism interpretation e
 formalization guard, not a claim that Freed separately lists inverse smoothness as an additional
 axiom in the cited sentence. The reusable tangent adjoint map is defined, under an explicit `C∞`
 Lie-group requirement, as the derivative at the identity of Freed's group conjugation; its identity,
-multiplication, and inverse laws are proved before it is used in
-connection-form equivariance.
+multiplication, and inverse laws are proved before it is used in connection-form equivariance.
+Connection-form smoothness is stated locally by evaluation on locally smooth tangent-vector fields,
+with an explicit value-coordinate bridge for the intrinsic tangent Lie algebra. This promotes the
+same pointwise form satisfying (1.9)–(1.10); it does not construct a connection or anticipate the
+curvature formula.

@@ -25,6 +25,16 @@ variable
     {I : ModelWithCorners ℝ E H}
     {G : Type uG} [Group G] [TopologicalSpace G] [ChartedSpace H G]
 
+/-- The Lie-algebra value-coordinate bridge is the canonical model identification. -/
+theorem groupLieAlgebraModelEquiv_apply (X : GroupLieAlgebra I G) :
+    groupLieAlgebraModelEquiv I X = X :=
+  rfl
+
+/-- The inverse coordinate bridge returns the same intrinsic tangent vector. -/
+theorem groupLieAlgebraModelEquiv_symm_apply (X : E) :
+    (groupLieAlgebraModelEquiv (G := G) I).symm X = X :=
+  rfl
+
 /-- The identity adjoint map cannot be replaced by a nonidentity map. -/
 theorem nonidentity_adjoint_one_blocked [LieGroup I ∞ G]
     (mismatch : lieGroupAdjoint I (1 : G) ≠

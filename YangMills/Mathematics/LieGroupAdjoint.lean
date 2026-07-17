@@ -32,6 +32,16 @@ variable
 def lieGroupConjugation (g : G) : G → G :=
   fun h => g * h * g⁻¹
 
+set_option backward.isDefEq.respectTransparency false in
+/-- The intrinsic tangent Lie algebra is canonically and continuously linearly identified with
+Mathlib's chosen normed model space. The fields make that identification explicit rather than
+relying at use sites on the definitional implementation of tangent spaces by the model type. -/
+def groupLieAlgebraModelEquiv : GroupLieAlgebra I G ≃L[ℝ] E where
+  toFun X := X
+  invFun X := X
+  map_add' := by simp
+  map_smul' := by simp
+
 /-- Conjugation is smooth in a smooth Lie group. -/
 theorem lieGroupConjugation_smooth [LieGroup I ∞ G] (g : G) :
     ContMDiff I I ∞ (lieGroupConjugation g) := by

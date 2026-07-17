@@ -76,7 +76,7 @@ Searchable extraction: `Sources/GaugeGeometry/Freed1992/classical_chern_simons_p
 | Freed p. 7 §1; text 364–371 | gauge transformations are smooth bundle automorphisms over the base identity | Reusable definition / forgetful bridge | `YangMills.Geometry.TorsorGaugeTransformation`, `.toTorsorMap`; `YangMills.Geometry.SmoothGaugeTransformation`, then `.toGauge.toTorsorMap` | Algebraic automorphism and forward/inverse smoothness are tied to one fixed smooth principal bundle; explicit inverse smoothness enforces the categorical automorphism/diffeomorphism reading rather than merely a smooth bijection |
 | Freed p. 8 §1; text 376–377 | gauge transformations form a group | Derived algebraic/smooth structure | `Group (TorsorGaugeTransformation bundle)`, `Group (SmoothGaugeTransformation smoothBundle)` | Identity, composition, inverse, smooth closure, and evaluation laws implemented and probed |
 | Freed p. 8 §1; text 377–380 | extension of structure group and pullback along a base map | Reusable definition / distinction | — | Explicitly pending; not conflated with gauge automorphisms |
-| Freed p. 8 §1, (1.9)–(1.10); text 381–390 | connection is a Lie-algebra-valued one-form with vertical normalization and right equivariance | Reusable definition / pointwise staging | `YangMills.Geometry.PointwisePrincipalConnectionData`; `principalFundamentalVector`, `principalRightTranslationDifferential` | Degree-one carrier, vertical normalization, and exact `Ad(g⁻¹)` tangent equivariance implemented; smooth-section regularity is still required before calling this a principal connection |
+| Freed p. 8 §1, (1.9)–(1.10); text 381–390 | connection is a smooth Lie-algebra-valued one-form with vertical normalization and right equivariance | Reusable definition / staged promotion | `YangMills.Geometry.PointwisePrincipalConnectionData`, `PrincipalConnectionData`; `principalFundamentalVector`, `principalRightTranslationDifferential`; `ManifoldDifferentialForm.IsSmooth`, `SmoothManifoldDifferentialForm`; `groupLieAlgebraModelEquiv` | Pointwise conditions and local smooth-section regularity are tied without changing the underlying form; no concrete connection witness is asserted |
 | Freed p. 8 §1, (1.11)–(1.12); text 390–398 | tangent vectors to the affine space of connections are horizontal, equivariant adjoint-bundle-valued one-forms | Reusable definition / affine-space structure | — | Explicitly pending; not claimed by the pointwise connection record |
 | Freed p. 8 §1, (1.13)–(1.16); text 399–419 | curvature is a Lie-algebra-valued two-form; formula, horizontality/equivariance, and Bianchi identity | Definition / derived theorem | `ManifoldDifferentialForm` supplies the typed degree-two carrier; `evalTwo_same` enforces alternation | Exterior derivative, wedge-bracket, curvature, and Bianchi layers remain pending |
 | Freed p. 9 §1, (1.18)–(1.19); text 434–447 | gauge action on connections is affine; curvature transforms by the adjoint action | Bridge / derived covariance | — | Pending pullback and gauge-action infrastructure |
@@ -93,23 +93,29 @@ the product bundle is a concrete positive model. The smooth layer requires manif
 smooth projection/action, and both smooth directions for every atlas chart; the smooth product
 bundle is a positive model. A named overlap-transition theorem is not yet packaged, although these
 chart fields provide its inputs. Smooth gauge automorphisms require both forward and inverse
-smoothness and retain projection/equivariance laws. General smooth bundle maps, connections, and
-curvature remain open rather than being hidden in a placeholder proposition. A quotient-map theorem
-for the projection is also still to be packaged.
+smoothness and retain projection/equivariance laws. General smooth bundle maps and curvature remain
+open rather than being hidden in a placeholder proposition; the smooth connection-form definition
+is staged below. A quotient-map theorem for the projection is also still to be packaged.
 
 `ManifoldDifferentialForm I M V k` is reusable mathematics: a pointwise family of continuous
 alternating `k`-linear maps on tangent spaces with values in a real topological module whose
 addition and scalar action are continuous. Its pullback is defined only with an explicit smooth
 map proof and preserves degree. The carrier intentionally does **not** claim that the family varies
 smoothly with the base point; no exterior derivative is present yet. Zero and alternation probes
-prevent the new carrier from being mistaken for the completed connection/curvature API.
+prevent the pointwise carrier from being mistaken for the completed connection/curvature API.
+`SmoothManifoldDifferentialForm` adds local, coordinate-respecting regularity by requiring smooth
+evaluation on every tuple of locally smooth tangent fields, after an explicit continuous-linear
+value-coordinate bridge. `isSmooth_iff_valueCoordinates` proves independence from the chosen
+continuously linearly equivalent normed value model. The zero form gives positive consistency
+evidence.
 
-`PointwisePrincipalConnectionData` is likewise staging infrastructure, not the final connection:
-orbit and right-translation derivatives are taken only after their maps are proved smooth, vertical
-normalization forces infinitesimal freeness, and equivariance uses the separately proved
-`Ad(g⁻¹)` action. Its hostile equivariance theorem is a requirement-presence guard; a concrete
-example separating `Ad(g⁻¹)` from `Ad(g)` awaits a concrete nonabelian group witness. No concrete
-connection form is supplied yet, and no smooth-section claim is made.
+`PointwisePrincipalConnectionData` remains useful staging infrastructure: orbit and right-translation
+derivatives are taken only after their maps are proved smooth, vertical normalization forces
+infinitesimal freeness, and equivariance uses the separately proved `Ad(g⁻¹)` action.
+`PrincipalConnectionData` promotes that exact form with `SmoothManifoldDifferentialForm.IsSmooth`;
+its `toSmoothForm` bridge is definitionally coherent. The hostile equivariance theorem is a
+requirement-presence guard; a concrete example separating `Ad(g⁻¹)` from `Ad(g)` awaits a concrete
+nonabelian group witness. No concrete connection form is supplied yet.
 
 ## Dimension-foundation decisions
 

@@ -14,6 +14,8 @@ import YangMills.Mathematics.LieGroupAdjoint
 import YangMills.Mathematics.LieGroupAdjointProbes
 import YangMills.Mathematics.ManifoldDifferentialForms
 import YangMills.Mathematics.ManifoldDifferentialFormsProbes
+import YangMills.Mathematics.SmoothManifoldDifferentialForms
+import YangMills.Mathematics.SmoothManifoldDifferentialFormsProbes
 import YangMills.Geometry.LieGroup
 import YangMills.Geometry.LieGroupProbes
 import YangMills.Geometry.PrincipalBundleTorsor

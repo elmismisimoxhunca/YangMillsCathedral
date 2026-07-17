@@ -212,13 +212,32 @@ Verified:
 - This remains explicitly pointwise: no smooth dependence of the form and no concrete connection
   witness are claimed.
 
+## 2026-07-17 — thirteenth mathematical stone: smooth principal connection definition
+
+Verified:
+
+- `ManifoldDifferentialForm.IsSmooth` tests local form evaluation on every tuple of locally smooth
+  tangent-vector fields, avoiding a false product topology on a raw dependent family.
+- An explicit continuous-linear value-coordinate bridge handles intrinsic tangent Lie-algebra
+  values; `groupLieAlgebraModelEquiv` identifies them with Mathlib's normed model, and
+  `isSmooth_iff_valueCoordinates` proves that equivalent coordinate choices do not alter the
+  smoothness predicate.
+- `SmoothManifoldDifferentialForm` bundles the exact pointwise form with this local regularity, and
+  every degree has a smooth zero form as positive infrastructure evidence.
+- `PrincipalConnectionData` promotes one unchanged `PointwisePrincipalConnectionData` form with
+  smooth-section regularity; `toSmoothForm` is definitionally coherent.
+- Hostile probes reject a failed local evaluation, concretely reject the nonsmooth absolute-value
+  degree-zero form, exercise both directions of the Lie-algebra coordinate bridge, reject missing
+  connection smoothness, and reject broken normalization after promotion.
+- No concrete principal connection is constructed, and no curvature is inferred.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
   `SU(n)` API does not supply the complete manifold/compactness/connectedness/tangent-simplicity
   chain, so positive consistency infrastructure remains open.
-- No general smooth bundle-map layer, connection, curvature, symmetry-group, quantum-theory,
-  acceptance, existence, or mass-gap declaration exists.
+- No general smooth bundle-map layer, concrete principal-connection witness, curvature,
+  symmetry-group, quantum-theory, acceptance, existence, or mass-gap declaration exists.
 - No Yang–Mills acceptance declaration exists.
 - No standalone Git remote exists or has been pushed. The tested candidate
   `git@github.com:elmismisimoxhunca/lean-yangmills-adaly.git` does not exist, and the available SSH
