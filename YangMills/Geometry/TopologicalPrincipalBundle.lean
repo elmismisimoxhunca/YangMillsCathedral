@@ -106,6 +106,71 @@ theorem source_iUnion_eq_univ (bundle : TopologicalPrincipalBundleData torsor) :
   intro p
   exact Set.mem_iUnion.mpr ⟨torsor.projection p, bundle.mem_source_trivializationAt p⟩
 
+/-- A locally trivial principal-bundle projection is an open map. -/
+theorem projection_isOpenMap (bundle : TopologicalPrincipalBundleData torsor) :
+    IsOpenMap torsor.projection := by
+  classical
+  apply IsOpenMap.of_sections
+  intro p
+  let chart := bundle.trivializationAt (torsor.projection p)
+  let coordinate : G := (chart.toPartialHomeomorph p).2
+  let fallback : B → P := fun b => Classical.choose (torsor.fiber_nonempty b)
+  let localSection : B → P := fun b => if b ∈ chart.baseSet then
+    chart.toPartialHomeomorph.symm (b, coordinate) else fallback b
+  have p_mem_source : p ∈ chart.toPartialHomeomorph.source :=
+    bundle.mem_source_trivializationAt p
+  have projection_p_mem : torsor.projection p ∈ chart.baseSet :=
+    bundle.mem_baseSet_trivializationAt (torsor.projection p)
+  have pair_mem_target (b : B) (hb : b ∈ chart.baseSet) :
+      (b, coordinate) ∈ chart.toPartialHomeomorph.target := by
+    rw [chart.target_eq]
+    exact ⟨hb, Set.mem_univ coordinate⟩
+  refine ⟨localSection, ?_, ?_, ?_⟩
+  · have inverse_continuousAt : ContinuousAt chart.toPartialHomeomorph.symm
+        (torsor.projection p, coordinate) :=
+      chart.toPartialHomeomorph.continuousOn_symm.continuousAt
+        (chart.toPartialHomeomorph.open_target.mem_nhds
+          (pair_mem_target (torsor.projection p) projection_p_mem))
+    have pair_continuous : ContinuousAt (fun b : B => (b, coordinate))
+        (torsor.projection p) :=
+      continuousAt_id.prodMk continuousAt_const
+    have local_continuous : ContinuousAt
+        (fun b : B => chart.toPartialHomeomorph.symm (b, coordinate))
+        (torsor.projection p) := by
+      simpa [Function.comp_def] using
+        inverse_continuousAt.comp_of_eq pair_continuous rfl
+    apply local_continuous.congr_of_eventuallyEq
+    filter_upwards [chart.isOpen_baseSet.mem_nhds projection_p_mem] with b hb
+    simp only [localSection, hb, if_true]
+  · simp only [localSection, projection_p_mem, if_true]
+    have pair_eq : (torsor.projection p, coordinate) = chart.toPartialHomeomorph p := by
+      apply Prod.ext
+      · exact (chart.base_coordinate p p_mem_source).symm
+      · rfl
+    rw [pair_eq]
+    exact chart.toPartialHomeomorph.left_inv p_mem_source
+  · intro b
+    by_cases hb : b ∈ chart.baseSet
+    · simp only [localSection, hb, if_true]
+      have inverse_mem_source := chart.toPartialHomeomorph.map_target (pair_mem_target b hb)
+      calc
+        torsor.projection (chart.toPartialHomeomorph.symm (b, coordinate)) =
+            (chart.toPartialHomeomorph (chart.toPartialHomeomorph.symm (b, coordinate))).1 :=
+          (chart.base_coordinate _ inverse_mem_source).symm
+        _ = b := by rw [chart.toPartialHomeomorph.right_inv (pair_mem_target b hb)]
+    · simp only [localSection, hb, if_false, fallback]
+      exact Classical.choose_spec (torsor.fiber_nonempty b)
+
+/-- A locally trivial principal-bundle projection is an open quotient map. -/
+theorem projection_isOpenQuotientMap (bundle : TopologicalPrincipalBundleData torsor) :
+    IsOpenQuotientMap torsor.projection :=
+  ⟨torsor.projection_surjective, bundle.projection_continuous, bundle.projection_isOpenMap⟩
+
+/-- In particular, the base topology is the quotient topology induced by the projection. -/
+theorem projection_isQuotientMap (bundle : TopologicalPrincipalBundleData torsor) :
+    Topology.IsQuotientMap torsor.projection :=
+  bundle.projection_isOpenQuotientMap.isQuotientMap
+
 /-- The global product torsor carries the expected topological principal-bundle structure. -/
 def trivial (G : Type uG) (B : Type uB)
     [Group G] [TopologicalSpace G] [IsTopologicalGroup G] [TopologicalSpace B] :

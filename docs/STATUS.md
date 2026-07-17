@@ -231,6 +231,23 @@ Verified:
   connection smoothness, and reject broken normalization after promotion.
 - No concrete principal connection is constructed, and no curvature is inferred.
 
+## 2026-07-17 — fourteenth mathematical stone: derived bundle quotient and overlap maps
+
+Verified:
+
+- Local sections extracted from the selected equivariant trivializations prove that every
+  topological principal-bundle projection is open.
+- Continuity, surjectivity, and openness then give explicit `IsOpenQuotientMap` and
+  `Topology.IsQuotientMap` theorems rather than an unrelated quotient-topology witness field.
+- `principalBundleOverlapDomain` and `principalBundleTransition` name the actual change of local
+  product coordinates obtained by composing one inverse chart with another chart.
+- Designated smooth atlas charts yield `transition_smoothOn`; the overlap domain is open, the
+  transition preserves the base coordinate, and reversing the ordered transition recovers the
+  original coordinate.
+- Hostile probes reject nonopen/nonquotient projections, nonopen overlap domains, nonsmooth
+  designated overlap transitions, reversed/malformed transition behavior, and base-moving
+  transitions.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

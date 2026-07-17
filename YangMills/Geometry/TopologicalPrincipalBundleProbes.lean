@@ -85,6 +85,18 @@ theorem selected_trivializations_cover
     p ∈ ⋃ b : B, (bundle.trivializationAt b).toPartialHomeomorph.source :=
   Set.mem_iUnion.mpr ⟨torsor.projection p, bundle.mem_source_trivializationAt p⟩
 
+/-- Local triviality forces the projection to be open, not merely continuous and surjective. -/
+theorem nonopen_projection_blocked
+    (bundle : TopologicalPrincipalBundleData torsor)
+    (nonopen : ¬IsOpenMap torsor.projection) : False :=
+  nonopen bundle.projection_isOpenMap
+
+/-- The bundle base carries the quotient topology induced by the projection. -/
+theorem nonquotient_projection_blocked
+    (bundle : TopologicalPrincipalBundleData torsor)
+    (nonquotient : ¬Topology.IsQuotientMap torsor.projection) : False :=
+  nonquotient bundle.projection_isQuotientMap
+
 /-- The trivial product bundle is positive consistency evidence for the full topological interface. -/
 theorem trivial_topologicalPrincipalBundle_exists
     (G : Type uG) (B : Type uB)

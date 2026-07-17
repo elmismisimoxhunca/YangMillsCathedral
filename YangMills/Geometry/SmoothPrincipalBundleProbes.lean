@@ -81,6 +81,41 @@ theorem selected_smooth_trivialization
   ⟨smoothBundle.trivialization_smooth _ (bundle.trivializationAt_mem_atlas b),
     smoothBundle.inverse_trivialization_smooth _ (bundle.trivializationAt_mem_atlas b)⟩
 
+/-- A designated overlap transition cannot fail smoothness on its natural domain. -/
+theorem nonsmooth_overlap_transition_blocked
+    (smoothBundle : SmoothPrincipalBundleData IB IG IP torsor bundle)
+    (first second : PrincipalBundleLocalTrivialization torsor)
+    (first_mem : first ∈ bundle.trivializationAtlas)
+    (second_mem : second ∈ bundle.trivializationAtlas)
+    (nonsmooth : ¬ContMDiffOn (IB.prod IG) (IB.prod IG) ∞
+      (principalBundleTransition first second)
+      (principalBundleOverlapDomain first second)) : False :=
+  nonsmooth (smoothBundle.transition_smoothOn first second first_mem second_mem)
+
+omit [IsTopologicalGroup G] in
+/-- The overlap domain cannot be malformed into a nonopen coordinate domain. -/
+theorem nonopen_overlap_domain_blocked
+    (first second : PrincipalBundleLocalTrivialization torsor)
+    (nonopen : ¬IsOpen (principalBundleOverlapDomain first second)) : False :=
+  nonopen (isOpen_principalBundleOverlapDomain first second)
+
+omit [IsTopologicalGroup G] in
+/-- Reversing the ordered transition must recover the original local coordinate. -/
+theorem wrong_overlap_transition_direction_blocked
+    (first second : PrincipalBundleLocalTrivialization torsor) (z : B × G)
+    (memOverlap : z ∈ principalBundleOverlapDomain first second)
+    (mismatch : principalBundleTransition second first
+      (principalBundleTransition first second z) ≠ z) : False :=
+  mismatch (principalBundleTransition_reverse first second z memOverlap)
+
+omit [IsTopologicalGroup G] in
+/-- An overlap transition cannot move the base coordinate. -/
+theorem base_moving_overlap_transition_blocked
+    (first second : PrincipalBundleLocalTrivialization torsor) (z : B × G)
+    (memOverlap : z ∈ principalBundleOverlapDomain first second)
+    (movesBase : (principalBundleTransition first second z).1 ≠ z.1) : False :=
+  movesBase (principalBundleTransition_fst first second z memOverlap)
+
 /-- The product principal bundle is positive consistency evidence for the smooth interface. -/
 theorem trivial_smoothPrincipalBundle_exists
     (IB : ModelWithCorners ℝ EB HB)

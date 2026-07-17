@@ -28,7 +28,7 @@ committed before higher layers depend on it.
 - [x] Define algebraic bundle maps and gauge automorphisms (smoothness still pending).
 - [x] Define and probe topological equivariant local trivializations.
 - [x] Define and probe smooth principal-bundle compatibility.
-- [ ] Package quotient-map and smooth overlap-transition theorems.
+- [x] Package quotient-map and smooth overlap-transition theorems.
 - [x] Define and probe smooth gauge transformations.
 - [x] Define and probe the Lie-group adjoint action needed by connection equivariance.
 - [x] Define and probe typed pointwise manifold differential forms and pullback.

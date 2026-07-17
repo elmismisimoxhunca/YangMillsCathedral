@@ -89,8 +89,9 @@ lakefile.toml         pinned dependencies
 The standalone foundation, Euclidean dimension index, separate Euclidean/Minkowski quadratic
 forms, source-facing Lie-algebra simplicity layer, and compact-connected-simple Lie-group
 certificate type and semantics, the fiberwise torsor core, algebraic bundle maps/gauge
-automorphisms, topological and smooth equivariant local trivializations, smooth gauge
-automorphisms, the Lie-group adjoint action, a typed pointwise manifold differential-form carrier,
+automorphisms, topological and smooth equivariant local trivializations, derived open-quotient
+projection and smooth overlap-transition theorems, smooth gauge automorphisms, the Lie-group adjoint
+action, a typed pointwise manifold differential-form carrier,
 smooth differential-form regularity, and pointwise and smooth principal connection-form definitions
 are implemented. No concrete gauge-group or connection witness, symmetry group, curvature,
 reconstruction bridge, quantum-theory witness, Yang–Mills existence claim, or mass-gap claim is

@@ -66,8 +66,8 @@ Searchable extraction: `Sources/GaugeGeometry/Freed1992/classical_chern_simons_p
 |---|---|---|---|---|
 | Freed p. 6 §1, (1.4); text 302–316 | Freed writes `Ad_g = L_g ∘ R_{g⁻¹}` on the group; Lean obtains the tangent-Lie-algebra adjoint by differentiating this conjugation at the identity | Reusable definition / explicit group-to-tangent bridge | `YangMills.Mathematics.lieGroupConjugation`, `.lieGroupAdjoint` | The derivative definition requires the `C∞` `LieGroup` instance, so Mathlib's fallback derivative for a nonsmooth map cannot enter |
 | Freed p. 6 §1, (1.4); text 302–316 | adjoint respects identity, multiplication, and inverse | Derived theorem | `lieGroupAdjoint_one`, `lieGroupAdjoint_mul`, `lieGroupAdjoint_inv_apply`, `lieGroupAdjoint_apply_inv` | Proved from smooth conjugation and Mathlib's manifold chain rule; hostile probes fix order and inverse behavior |
-| Freed p. 6 §1; text 318–319 | principal bundle has a right group action and quotient projection | Reusable definition | `YangMills.Geometry.PrincipalBundleTorsorData.projection`, `.rightAction`, `.right_one`, `.right_mul`, `.projection_rightAction` | Algebraic, topological, and smooth layers implemented below; an explicit quotient-map theorem remains pending |
-| Freed pp. 6–7 §1; text 318–348 | projection fibers are exactly free/transitive right-action orbits | Derived theorem from the torsor fields | `sameFiber_iff_existsUnique_rightAction`, `rightAction_injective`, `projection_surjective` | Set-level orbit/fiber result only; no quotient topology is claimed |
+| Freed p. 6 §1; text 318–319 | principal bundle has a right group action and quotient projection | Reusable definition / derived topology theorem | `YangMills.Geometry.PrincipalBundleTorsorData.projection`, `.rightAction`, `.right_one`, `.right_mul`, `.projection_rightAction`; `TopologicalPrincipalBundleData.projection_isOpenMap`, `.projection_isOpenQuotientMap`, `.projection_isQuotientMap` | Local triviality proves that the continuous surjective projection is open and hence induces the quotient topology; this is not stored as an independent witness field |
+| Freed pp. 6–7 §1; text 318–348 | projection fibers are exactly free/transitive right-action orbits | Derived theorem from the torsor fields | `sameFiber_iff_existsUnique_rightAction`, `rightAction_injective`, `projection_surjective` | Set-level orbit/fiber identification is independent of, and combined later with, the derived quotient-topology theorem |
 | Freed p. 7 §1; text 323–348 | every fiber is a nonempty simply transitive right `G`-space | Reusable definition | `PrincipalBundleTorsorData.fiber_nonempty`, `.fiber_unique` | Fiber core implemented |
 | Freed p. 7 §1; text 342–348 | principal bundles are locally trivial | Reusable definition | `YangMills.Geometry.PrincipalBundleLocalTrivialization`, `TopologicalPrincipalBundleData.trivializationAtlas`, `.trivializationAt`, `.exists_atlas_trivialization_mem_source`; `SmoothPrincipalBundleData.trivialization_smooth`, `.inverse_trivialization_smooth` | Equivariant topological atlas and both smooth chart directions implemented |
 | Freed pp. 6–7 §1; text 318–348 | make structure-group topology and projection/action continuity/smoothness explicit when realizing Freed's differentiable principal-bundle conventions | Project staging requirements, not a verbatim list from Freed | `IsTopologicalGroup G`; `TopologicalPrincipalBundleData.projection_continuous`, `.rightAction_continuous`; `SmoothPrincipalBundleData.projection_smooth`, `.rightAction_smooth` | Explicit strengthening/formalization decision implemented |
@@ -91,11 +91,14 @@ inverse laws provide positive checks. Topological probes reject discontinuous pr
 uncovered or out-of-atlas charts, malformed chart domains/codomains, and failed local equivariance;
 the product bundle is a concrete positive model. The smooth layer requires manifold structures,
 smooth projection/action, and both smooth directions for every atlas chart; the smooth product
-bundle is a positive model. A named overlap-transition theorem is not yet packaged, although these
-chart fields provide its inputs. Smooth gauge automorphisms require both forward and inverse
-smoothness and retain projection/equivariance laws. General smooth bundle maps and curvature remain
-open rather than being hidden in a placeholder proposition; the smooth connection-form definition
-is staged below. A quotient-map theorem for the projection is also still to be packaged.
+bundle is a positive model. `principalBundleOverlapDomain`, `principalBundleTransition`, and
+`SmoothPrincipalBundleData.transition_smoothOn` package the derived smooth overlap map; its domain
+is open, its first coordinate is fixed, and reversing the ordered transition is proved to recover the
+original coordinate. Smooth gauge automorphisms require both forward and inverse smoothness
+and retain projection/equivariance laws. General smooth bundle maps and curvature remain open rather
+than being hidden in a placeholder proposition; the smooth connection-form definition is staged
+below. Local sections derived from the selected trivializations prove the projection is an open
+quotient map.
 
 `ManifoldDifferentialForm I M V k` is reusable mathematics: a pointwise family of continuous
 alternating `k`-linear maps on tangent spaces with values in a real topological module whose
