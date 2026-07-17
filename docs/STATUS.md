@@ -54,6 +54,9 @@ Verified:
 
 Not yet achieved:
 
+- Hall's open Lie-group notes and Aharony–Seiberg–Tachikawa's global-form paper are pinned with
+  exact locators. They support the next Lie-algebra/group design but do not yet create a canonical
+  group certificate.
 - No symmetry-group, gauge-geometry, quantum-theory, acceptance, existence, or mass-gap
   declaration exists.
 - No Yang–Mills acceptance declaration exists.

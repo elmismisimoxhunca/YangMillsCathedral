@@ -22,6 +22,17 @@ Searchable extraction: `Sources/Clay/yangmills_official.txt`
 | p. 6 §4; text 277–280 | For every compact simple gauge group, a nontrivial QFT on `ℝ⁴` exists and has positive gap | Final acceptance proposition | — | Pending all lower layers; no inhabitant asserted |
 | p. 6 §4; text 279–280 | Axiomatic properties at least as strong as references [45, 35] | Comparative requirement | — | Pending verified Wightman and corrected OS source maps |
 
+## Gauge-group convention evidence
+
+| Source locator | Evidence | Formalization consequence | Status |
+|---|---|---|---|
+| Clay p. 6 §4; text 277–280 | Universal quantifier over “any compact simple gauge group G” | Preserve `G` as a quantified group; do not restrict the final target to one example family | Pinned; exact phrase does not define connectedness/global form |
+| Hall 2000, printed p. 115 §7; extracted 6092–6095 | Simple Lie algebra has no ideals except zero/whole and has dimension at least two | Use Mathlib `LieAlgebra.IsSimple`, which also explicitly requires non-abelianness; do not use abstract group simplicity | Pinned mathematical context; Hall passage is in complex semisimple section |
+| Aharony–Seiberg–Tachikawa 2013, printed pp. 1–2; extracted 44–65 and 84–119 | Lie algebra and global gauge group are distinct; connected groups are quotients of the universal cover by a subgroup of its center; global form changes physical data | Keep group/global form explicit; do not silently replace by the simply connected cover or `SU(N)` | Pinned; connectedness is an explicit project convention, not claimed as verbatim Clay wording |
+
+No compact-simple gauge-group Lean certificate is canonical yet. It requires the reviewed Mathlib
+Lie-group/tangent-Lie-algebra bridge and anti-vacuity evidence.
+
 ## Dimension-foundation decisions
 
 | Lean declaration | Meaning | Source / decision | Classification | Hostile evidence |

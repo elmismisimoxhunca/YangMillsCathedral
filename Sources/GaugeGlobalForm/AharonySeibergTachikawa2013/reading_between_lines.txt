@@ -1,0 +1,2186 @@
+                                                                                    WIS/03/13-APR-DPPA, UT-13-15, IPMU13-0081
+
+
+
+
+                                                                Reading between the lines of
+arXiv:1305.0318v5 [hep-th] 26 Dec 2022
+
+
+
+
+                                                              four-dimensional gauge theories
+
+
+                                                               Ofer Aharony1,2 , Nathan Seiberg2 and Yuji Tachikawa3
+
+                                               1
+                                                   Department of Particle Physics and Astrophysics, Weizmann Institute of Science,
+                                                                               Rehovot 76100, Israel
+                                          2
+                                              School of Natural Sciences, Institute for Advanced Study, Princeton, NJ, 08540, USA
+                                         3
+                                              Department of Physics, University of Tokyo, 7-3-1 Hongo, Tokyo, 113-0033, Japan and
+                                                            IPMU, University of Tokyo, Kashiwa, Chiba 277-8583, Japan
+
+
+
+                                         Starting with a choice of a gauge group in four dimensions, there is often freedom in
+                                         the choice of magnetic and dyonic line operators. Different consistent choices of these
+                                         operators correspond to distinct physical theories, with the same correlation functions of
+                                         local operators in R4 . In some cases these choices are permuted by shifting the θ-angle
+                                         by 2π. In other cases they are labeled by new discrete θ-like parameters. Using this
+                                         understanding we gain new insight into the dynamics of four-dimensional gauge theories
+                                         and their phases. The existence of these distinct theories clarifies a number of issues
+                                         in electric/magnetic dualities of supersymmetric gauge theories, both for the conformal
+                                         N = 4 theories and for the low-energy dualities of N = 1 theories.
+
+
+
+
+                                         May 2013
+1. Introduction
+
+    In this paper we study the line operators in four-dimensional gauge theories. The
+analysis of a gauge theory starts by choosing a Lie algebra g and a gauge group G. This
+determines the allowed Wilson line operators in the theory – they are in one to one corre-
+spondence with the representations of G. Below we will analyze the consistency conditions
+on the magnetic and dyonic line operators. Typically there are several distinct choices for
+the same G. These different choices correspond to distinct physical theories.
+    In some cases (like G = SU (N )/ZN ) these different choices can be labeled by extend-
+ing the range of the θ-angle – the different theories are permuted by shifting the θ-angle
+by 2π. In other cases (like G = SO(N ) with N > 4) the distinct choices are labeled by
+new discrete θ-like parameters.
+    The correlation functions of local operators in R4 depend only on the choice of the
+Lie algebra g of the gauge group G. They are independent of the global structure of G
+and the different choices of line operators. So naively these subtleties are of no interest
+for a four-dimensional physicist. However, we will argue that they have several important
+consequences. First, these subtleties affect the correlation functions of line operators in
+the theory. Therefore, they affect the phase structure of the theory on R4 . Second, these
+subtleties become more dramatic when we compactify the theory. For example, we will see
+that the choices of G and of these parameters have important consequences even for local
+dynamics on R3 × S1 . In particular, these different theories can have a different number of
+vacua (and, in supersymmetric theories, different Witten indices) on R3 × S1 . The simple
+reason for the difference between R4 and R3 × S1 is that wrapping a line operator around
+the S1 leads to a local operator in R3 . These issues play an important role in the relation
+between IR dualities of four dimensional gauge theories and those of three dimensional
+gauge theories [1].
+    Using this understanding, we revisit a number of issues associated with elec-
+tric/magnetic duality in four dimensions. In particular, starting with some N = 4 su-
+persymmetric Yang-Mills (SYM) theory, we can vary its coupling constant and look for
+various dual weak coupling limits. We will show that in some situations we uncover dis-
+tinct theories that have so far been viewed as identical. Similarly, a number of phenomena
+involving the IR duality of N = 1 supersymmetric gauge theories [2,3] will be clarified.
+Specifically, the duality of SO(N ) gauge theories with Nf vectors turns out to be partic-
+ularly rich and interesting.
+
+                                             1
+    In this rather extensive introduction, we will use gauge theories with gauge algebra
+su(2) as examples to illustrate the main features of our discussions. The following sections
+contain the generalization of our analysis to other gauge groups.
+
+1.1. The line operators
+
+    Let us begin by analyzing the line operators. Consider a four dimensional gauge theory
+based on the Lie algebra g and the gauge group G. We will only discuss connected gauge
+                                                                            e and the
+groups in this paper. We denote the universal cover of the gauge group G by G,
+          e by C. The gauge group is the quotient G = G/H,
+center of G                                           e    with H ⊂ C a subgroup of
+the center. We will refer to these groups as electric groups.
+    For a given gauge algebra g, the choice of the gauge group G determines some of the
+properties of the gauge theory:
+ 1. The allowed matter fields must be in representations of G; i.e. they should be invariant
+    under H. Note that the allowed representations are determined by G rather than the
+    other way around. In particular, if H is nontrivial, a theory based on G differs from
+                      e even if no matter fields are present.
+    a theory based on G,
+ 2. The Wilson line observables are labeled by representations of G; i.e. they should be
+    invariant under H. Unlike the choice of matter fields, the Wilson line representations
+    include all representations of G, regardless of whether dynamical matter fields in these
+    representations are present. In terms of the weight lattice Λw of g, the Wilson lines are
+    in one to one correspondence with points in ΛG            G
+                                                 w /W, where Λw ⊂ Λw is the sublattice
+    of weights of G, and W is the Weyl group.
+ 3. The gauge bundles we should sum over are also affected by the choice of G. The
+                                                                           e the different
+    bundles are labeled by certain discrete choices. If the gauge group is G,
+    bundles are labeled by the instanton number ℓ ∈ Z. If the gauge group is G, there
+                                                             e bundles. For these, the
+    are additional distinct bundles – G bundles that are not G
+    instanton number ℓ can be rational rather than integer. One parameter that labels
+    distinct theories with the same gauge group G is the θ-angle, which determines how
+    to sum the contributions of the bundles with various values of ℓ. Their weights are
+                                           e then the periodicity of θ is 2π. Otherwise it
+    the phase eiℓθ . If the gauge group is G
+    can be larger. Below we will consider additional characteristics of the bundles such as
+    their Stiefel-Whitney classes w2 and w4 , and we will show that the sum over different
+    bundles can lead to new discrete θ-like parameters, that distinguish between distinct
+    theories with the same gauge group G.
+
+                                             2
+    In addition to the Wilson line operators, there are also ’t Hooft line operators. Let us
+denote by g∗ the Langlands-dual (GNO-dual [4]) Lie algebra of g, and by G    e∗ the simply-
+connected group with Lie algebra g∗ . Then, ’t Hooft lines are labeled by points in Λmw /W,
+where Λmw is the magnetic weight lattice, i.e. the weight lattice of g∗ , which is the dual
+of the root lattice of g. More generally, we can have dyonic line operators carrying both
+electric and magnetic charges. They are labeled by a pair of weights [5]
+
+                                      (λe , λm ) ∈ Λw × Λmw                                    (1.1)
+
+with the identification
+                              (λe , λm ) ∼ (wλe , wλm ),      w∈W                              (1.2)
+
+where W is the Weyl group both of g and g∗ , and it acts on the two lattices in (1.1). This
+labeling contains more information than a pair of representations of g and g∗ , which are
+labeled by (Λw /W) × (Λmw /W) [5].
+                               e
+     Given the gauge group G = G/H, which line operators labeled by (λe , λm ) are present
+in the theory? First, when the gauge group is G we should include all lines (λe , 0) with
+λe ∈ ΛG
+      w /W. In particular, the lines (re , 0), with re a root, should be present. They
+represent the world lines of gauge fields. Similarly, the purely magnetic lines (λe = 0, rm )
+with rm a root of g∗ must be present. Furthermore, if (λe , λm ) and (λ′e , λ′m ) are present,
+then so is (λe + λ′e , λm + λ′m ) 1 . Also, if (λe , λm ) is present, then so is the orientation-
+reversed line (−λe , −λm ).
+      Therefore, we can consider the charges (λe , λm ) modulo the root lattice of g × g∗ .
+Recalling that the weight lattice modulo the root lattice of the algebra g is the center C
+              e and that G
+of the group G,            e and G e∗ have the same center, we see that we can organize
+the line operators into classes labeled by a pair2 (ze , zm ) ∈ C × C. The properties above
+imply that if one element in a class exists, so do all the elements (λe , λm ) in that class.
+And, the allowed classes should be closed under multiplication and inversion.
+      As we mentioned above, the choice of a gauge group G implies that the lines (λe , 0)
+with λe ∈ ΛG
+           w /W a weight of the group G should be present. This means that we should
+include all classes (ze , zm = 0), where the ze are the center charges that are invariant under
+
+  1
+      This is related to the operator product expansion of line operators, discussed in [6].
+  2
+      Throughout our discussion we will carelessly ignore the distinction between elements of an
+Abelian discrete group and the characters of that group.
+
+                                                  3
+  H. A crucial point is that even after this choice is made, there are still distinct theories,
+  labeled by the complete choice of classes of allowed line operators (ze , zm ) [7].
+         The allowed choices for which line operators are present are restricted by a version
+  of the Dirac quantization condition [5,7]. The correlation function of two lines γ and γ ′
+  should depend only on the positions and representations of γ and γ ′ . If we hold γ fixed, and
+  move the path γ ′ such that it loops around γ (along a surface that has nontrivial linking
+  number with γ) and then comes back to the same position, then the correlation function
+  is multiplied by a phase. For the correlation function to be well-defined, this phase must
+  be equal to one. This phase depends on the charges (ze , zm ) and (ze′ , zm
+                                                                            ′
+                                                                              ) of the two lines
+  as follows. Let us consider the case when C = Zk ; the case of C = Z2 × Z2 will be treated
+  in section 5, and the general case in section 6.3. For C = Zk the representations of lines
+  are specified by
+                                      (ze , zm ) = (n, m) mod k .                                  (1.3)
+
+  Then, the condition that there is no nontrivial phase as the family of curves γ ′ links γ once
+  is given by
+                                        nm′ − mn′ = 0 mod k .                                      (1.4)
+
+  This condition guarantees that the correlation functions of line operators are local3 .
+
+
+  1.2. Example: the line operators for g = su(2)
+
+         As a first example, consider gauge theories based on the Lie algebra g = su(2), with
+  center C = Z2 . Let us first consider the simply-connected case:
+SU (2) Here, the spectrum of operators includes Wilson lines in the fundamental representa-
+         tion (λe , λm ) = (1, 0), or (ze , zm ) = (1, 0). Locality determines the remaining lines to
+         be (λe , λm ) with λe ∈ Z, λm ∈ 2Z, so no other nontrivial representations of the center
+         are allowed.
+  Let us instead start with the electric gauge group G = SO(3). The purely electric lines
+  are now (λe , λm = 0) with λe ∈ 2Z. This set of lines can be completed in two different
+  ways, leading to two distinct theories [7]:
+
+     3
+         Similar conditions are present also for field theories with no known Lagrangian, such as the
+  so-called class S theories, where the line operators still have a similar classification [8,7]. We will
+  not discuss such theories here.
+
+                                                    4
+SO(3)+ Here the line operators are (λe , λm ) with λe ∈ 2Z, λm ∈ Z. In other words, they
+          have (ze , zm ) = (0, 0) or (ze , zm ) = (0, 1), including the ’t Hooft line operator in the
+          fundamental representation of the dual gauge group.
+SO(3)− Here the line operators are (λe , λm ) with λe , λm ∈ Z such that λe + λm ∈ 2Z; they
+          have (ze , zm ) = (0, 0) or (ze , zm ) = (1, 1). In particular, the purely electric line (1, 0)
+          and the purely magnetic line (0, 1) are not present, but the dyonic line (1, 1) is present.
+
+
+
+
+                    SU (2)                       SO(3)+                        SO(3)−
+
+             Figure 1: The weights of line operators of gauge theories with g = su(2).
+
+
+    The weights of the available line operators of the three choices, SU (2) and SO(3)± , are
+    shown in Figure 1. There, the horizontal axis is for λe and the vertical axis is for λm . The
+    shaded regions in the figure give the Z2 charges.
+          We presented the two SO(3) theories through their different line operators. Alterna-
+    tively, they can be described by shifting θ by 2π :
+
+                                          SO(3)θ+ = SO(3)θ+2π
+                                                         −    .                                    (1.5)
+
+    Indeed, the Witten effect shows that under θ → θ + 2π, (λe , λm ) → (λe + λm , λm ), which
+    leads to (1.5). This means that when G = SO(3) the periodicity of θ is 4π. This is due
+    to the fact that on spin manifolds4 , the instanton number of SO(3) gauge theories is a
+    multiple of 12 . Naively, the shift of θ by 2π does not change the local physics. But since the
+    insertion of the line operators in R4 creates a nontrivial topology, it allows us to distinguish
+    θ from θ + 2π locally on R4 . Note that the insertion of lines in R4 keeps it a spin manifold,
+    and therefore shifting θ by 4π maps the theory to itself, relabeling the line operators.
+          As we will see amply below, we cannot always map one choice of line operators to
+    another by a shift of the conventional θ-angle. For example, in section 3 we will see that
+    SO(N )+ and SO(N )− are not related by a shift of the θ-angle when N ≥ 5.
+
+      4
+          On non-spin manifolds there can be “quarter instantons” and the periodicity of θ is 8π.
+
+                                                      5
+1.3. Analogies with 2d orbifolds and other constructions
+
+      The discussion so far is reminiscent of orbifolds in two-dimensional field theories.
+There we start with a system with a global discrete symmetry Γ. The orbifold is con-
+structed by turning Γ into a gauge symmetry. This has the effect of projecting on the
+Γ-invariant states and adding the twisted sector states. This is similar to our discussion
+above. Starting with a gauge theory based on the simply connected group G      e we have
+                                                                       e
+Wilson lines for all representations of g. When the gauge group is G = G/H we project
+on Wilson lines associated with representations that are invariant under H. The various
+magnetic and dyonic lines are similar to the twisted sector states. The set of allowed oper-
+ators in the orbifold is restricted by mutual locality. This is analogous to the use of Dirac
+quantization on the lines. In two dimensions the need to add the twisted sector states
+follows from modular invariance. In four dimensions we will also argue that the spectrum
+of line operators should be complete, including a maximal set of allowed charges5 . Finally,
+it is common in orbifolds that the details of the twisted sector can depend on additional
+data – discrete torsion [9,10]. This is analogous to our different distinct theories with the
+same gauge group G. We will see in section 6 that the choice of the line operators of four-
+dimensional gauge theories corresponds to a phase in the path integral that is very similar
+to the one that distinguishes theories with discrete torsion. The analogy with orbifolds
+becomes more complete in sections 6.1 and 6.4. Just as orbifolds correspond to gauging Γ,
+we will show that by gauging an appropriate symmetry we can move between our different
+theories.
+      Unlike two-dimensional orbifolds, our different theories with the same gauge algebra
+g have the same local operators, and they differ only in their line and surface operators.
+Similar phenomena were described in [11,12] (see also [13-15]). The phenomena described
+in these papers have two complementary descriptions. First, it is a modification of the
+sum over different bundles. Second, it is equivalent to coupling a quantum field theory
+to a discrete gauge symmetry. The latter symmetry can be an ordinary gauge symmetry
+whose holonomies are associated with lines, or it can be a higher form symmetry whose
+holonomies are associated with surfaces or higher dimensional generalizations of them. Our
+discussion in section 6.4 will make the analogy clearer by presenting our construction in
+terms of gauging and correspondingly, there will be holonomies on lines and surfaces.
+  5
+      For example, in our su(2) example above, this means that we cannot have a theory with only
+the (ze = 0, zm = 0) line operators.
+
+                                               6
+1.4. The classification of phases of gauge theories
+
+    Now let us come back to the study of four-dimensional gauge theories. It is standard
+to characterize the phases of gauge theories using the expectation values of line operators.
+Let us start by discussing a situation when the theory has a mass gap; i.e. there are no
+massless excitations above the ground state. If the gauge group is simply connected and
+all Wilson lines are present, a Higgs phase is characterized by the fact that the expectation
+values of all the Wilson lines exhibit a perimeter law. If some Wilson lines have an area
+law, we say that the theory is confining.
+                                e
+     If the gauge group is G = G/H    with a nontrivial H, then some Wilson lines are not
+present, and therefore we have fewer diagnostics of electric confinement. But in that case
+we can use the magnetic and dyonic lines we discussed above to characterize the phases.
+    As above, we label the lines by their classes (ze , zm ) ∈ C × C, where C is the center
+   e Clearly, all the lines in a given class have the same behavior, area law or perimeter
+of G.
+law. We refer to a class with an area law as confined. It is straightforward to multiply
+these lines. If (ze , zm ) and (ze′ , zm
+                                       ′
+                                         ) are not confined, i.e. they have a perimeter law, then
+                                                             ′
+so does their product. If (ze , zm ) is confined and (ze′ , zm ) is not, then their product is
+confined. But the product of two confined classes might not be confined. For example, the
+fundamental Wilson line in an SU (N ) pure gauge theory is confined, but its N -th power
+is not. (More subtle examples, where the t-th power of this Wilson line is not confined,
+where t is a divisor of N , were studied in [16,17].)
+    It is often the case that the long distance dynamics involves a topological theory.
+For example, the theory could be gapped, but there may be an unbroken discrete gauge
+symmetry at long distance. One way this can happen is when the original gauge group G is
+Higgsed, but an unbroken discrete subgroup remains unbroken. Another possibility, which
+we will demonstrate shortly, is of an unbroken discrete gauge group of magnetic degrees
+of freedom. A discrete gauge theory (see [12] for a recent review) with gauge group Zk
+has Wilson line operators and surface operators carrying charges n = 0, · · · , k − 1. As we
+will see, some of the line operators that have a perimeter law become Wilson lines of this
+discrete gauge group at long distances.
+    There are also various Coulomb phases. They can be ordinary Coulomb, free electric
+and free magnetic phases (see e.g. [18]). These phases can be easily incorporated into our
+discussion, but we will not do it here. Additional characteristics of phases were discussed
+in [16], but we will not pursue them here.
+
+                                               7
+1.5. The phases of N = 1 SYM theories with g = su(2)
+
+    Let us demonstrate this general discussion in the dynamics of N = 1 supersymmetric
+pure gauge su(2) theories. These theories are characterized by the complex instanton
+factor
+                                                       2
+                                                 − 8π2 +iθ
+                                   η = Λ6 ∼ e      g         ,                         (1.6)
+
+where g is the Yang-Mills coupling constant (evaluated at a scale which we have set to
+one), and θ is the θ-angle. Classically the theory has a U (1)R symmetry under which the
+gauginos λ are charged, but in the quantum theory this is broken to a discrete subgroup
+by an anomaly.
+    The theory with G = SU (2) has two vacua, in which the discrete Z4 global R-
+symmetry is spontaneously broken to Z2 . These vacua are characterized by the vacuum
+expectation value (VEV) of the gaugino bilinear,
+                                                       1
+                                       hλλi = ±η 2 .                                   (1.7)
+
+It is clear from this expression that the two vacua are exchanged under θ → θ + 2π (which
+is equivalent to the Z4 global symmetry transformation). When this theory is obtained
+via a mass deformation of the N = 2 pure SYM theory, these two vacua arise from the
+condensation of a magnetic monopole or a dyon [19], and hence the Wilson line in the
+fundamental representation (and all lines with (ze , zm ) = (1, 0)) exhibits confinement in
+both vacua.
+    How does this story change in the theory with G = SO(3)? First, in this theory we no
+longer have the Z4 global symmetry, which is associated with the shift θ → θ +2π. Instead,
+the anomaly free R-symmetry is a Z2 symmetry, associated with shifting θ → θ + 4π.
+This symmetry (taking λ → −λ) is part of the Lorentz group, given by a 2π rotation in
+spacetime. Second, it is clear that the theory still has the same two vacua as the SU (2)
+theory, but since these two vacua are related by θ → θ+2π, they are now inequivalent. The
+difference between the two vacua can be seen by probing the behavior of the line operators.
+The SO(3)+ theory has purely magnetic line operators with charge (λe , λm ) = (0, 1). In
+one of the two vacua dyons condense. Since they have both electric and magnetic charges,
+these ’t Hooft lines have an area law – they are confined. In the other vacuum, the
+condensed particles are purely magnetic. Hence the same line operators have a perimeter
+law. In fact, the charge of the condensed monopole is twice that of the loop operator, and
+is given by (λe , λm ) = (0, 2). Therefore, at low energy we find in this vacuum an unbroken
+
+                                             8
+Z2 gauge theory, acting by ±1 on the magnetic line with charge (λe , λm ) = (0, 1) (or, more
+generally, on all lines with (ze , zm ) = (0, 1)). This is an explicit example of our comment
+above about an unbroken discrete gauge symmetry which appears out of the magnetic
+degrees of freedom. The situation is similar in the SO(3)− theory, except that the two
+vacua are exchanged.
+
+1.6. Non-supersymmetric pure Yang-Mills theories with g = su(2)
+
+    We can perform an analogous analysis also for the non-supersymmetric pure gauge
+theory with gauge groups SU (2) or SO(3). One way to obtain this theory is by adding a
+gluino mass mg to the N = 1 supersymmetric theory discussed above, which generically
+splits the two vacua, and taking the limit of large |mg |. Consider first the case |mg | ≪ |Λ|.
+Since we have a mass gap, the dynamics in each vacuum is essentially the same as above,
+                                                                      1
+and their vacuum energy is a positive number times ± Re(mg η 2 ) [20,21]. Thus, in the
+(unique) vacuum of the resulting theory, the SU (2) theory confines (exhibits an area law
+for its nontrivial line operator), while (depending on the phase of mg and on the value of
+the θ-angle) one of the SO(3) theories has a perimeter law for its nontrivial line operator,
+with an unbroken Z2 gauge symmetry, while the other SO(3) has an area law. In the
+SO(3) gauge theory the θ-angle still has periodicity 4π, such that the two theories (and
+the two low-energy behaviors) are exchanged by θ → θ + 2π.
+    We conjecture that the same picture holds also in the limit of large mg , where we
+obtain the pure non-supersymmetric Yang-Mills theory. We do not know how to prove
+this, since there may be phase transitions as a function of mg /Λ. However, let us assume
+that the standard picture of SU (2) dynamics is correct, namely that the pure SU (2) theory
+confines (the minimal Wilson line exhibits an area law), and that there is no remaining
+low-energy discrete gauge symmetry in this case (which seems plausible). Moreover, let
+us assume that confinement arises from the condensation of some magnetically charged
+particles (which may or may not carry also some electric charge). Since this condensation
+is a local phenomenon, it should be the same in the SU (2) and SO(3) theories; in particular
+both the electric and magnetic charges of the condensing particles must be roots of su(2).
+The assumption that there is no remaining low-energy discrete symmetry in SU (2) implies
+that the minimal charge of a condensing particle is not a multiple of any lower charge in the
+root lattice. However, the form of the charge lattice implies that this charge should either
+be two times one of the charges of the line operators in the class (ze , zm ) = (0, 1), or two
+times that of one of the line operators in the class (ze , zm ) = (1, 1). Thus, either the SO(3)+
+
+                                               9
+theory exhibits a perimeter law for its nontrivial line operator and an unbroken Z2 gauge
+symmetry, and the SO(3)− theory exhibits an area law for its nontrivial line operator,
+or the other way around. Generically we would expect to get one type of behavior for
+|θ| < π, and the opposite behavior for π < |θ| < 2π. Using the results of the next sections,
+there are straightforward generalizations of this picture to general SO(N ) and SU (N )/Zk
+groups.
+    The distinction between gapped phases of theories with g = su(2) is sometimes loosely
+phrased as a distinction between confining phases, where a monopole condenses, and
+“obliquely confining” phases, where a dyon condenses [22]. Our discussion above im-
+plies a somewhat different distinction. For G = SU (2) one can identify confinement, but
+one cannot distinguish different confining phases. For G = SO(3) there is no good order
+parameter for confinement. In this case there are two distinct phases, one with a perime-
+ter law for the “disorder” line operator and an unbroken Z2 discrete gauge symmetry, and
+one with an area law. However, the relation between this distinction and the traditional
+distinction between confining phases is different in SO(3)+ and in SO(3)− , and in any
+case a local observer cannot tell which of these theories she has (due to (1.5)). We suggest
+that, as in the Higgs/confinement characterization [23,24], the proper distinction between
+phases should use the behavior of the non-trivial line operators, rather than the identity
+of the condensed particles. Furthermore, one should use only the lines that exist in the
+theory.
+
+1.7. Compactification on S1
+
+    Our discussion also has important consequences when the theory is placed on R3 × S1 .
+The N = 1 supersymmetric pure SU (2) theory has two vacua in four dimensions, and
+continues to have two vacua in the compactified theory [25]. However, this is not the case
+in the SO(3)± theories. The vacuum with the area law is fully gapped and remains a
+vacuum in the compactified theory. But the vacuum with the unbroken Z2 gauge theory
+is split to two vacua in the compactified theory. These two vacua differ by the expectation
+value of the Z2 “Wilson line” wrapping the S1 in the low energy theory. This line is the
+nontrivial line operator of the microscopic SO(3) theory. This is an explicit example of the
+phenomenon mentioned above, that the number of supersymmetric vacua on R3 × S1 (and
+also the Witten index) depends on the global properties. More details about this splitting
+of vacua will appear in [1].
+
+                                            10
+1.8. Outline
+
+    The rest of the paper is split into two parts. In sections 2-5, we generalize the dis-
+cussions so far about g = su(2) to other gauge groups, and analyze the consequences
+for dualities of supersymmetric gauge theories. We provide ample examples to illustrate
+the analysis. Theories with g = E6 , E7 behave almost exactly the same as those with
+g = su(3), su(2), respectively, so we do not analyze these cases separately. In section 6,
+we will re-analyze our problem from the point of view of the Euclidean path integrals.
+These two parts can be read almost separately.
+    More detailed contents of the paper are as follows. In section 2, we discuss the lines
+and the dynamics of gauge theories with g = su(N ). When G = SU (N )/ZN , we see that
+the different choices of line operators are permuted by θ → θ + 2π. However, this is not
+the case for general SU (N )/Zk groups. We discuss the properties of the N confined vacua
+of the N = 1 SYM theory, and the S-duality properties of the N = 4 SYM theory.
+    In section 3, we similarly discuss the properties of gauge theories with G = Spin(N )
+and G = SO(N ). We see that with N ≥ 5 there is a choice of line operators which cannot
+be obtained from the naive one by a shift of the standard θ-angle, and we discuss the
+implications for the pure N = 1 SYM theory, and for the IR duality of SQCD theories.
+    In section 4, we work out the properties of gauge theories with g = sp(N ). We find
+the theories we denote by G = Sp(N ), G = (Sp(N )/Z2 )+ and G = (Sp(N )/Z2 )− . We
+discuss N = 4 theories with these gauge groups and their S-duality properties, and in
+particular how they map to N = 4 theories with g = so(2N + 1).
+    In section 5 we study the peculiarities of theories with g = so(N ) with even N . In
+this case, the choices N = 4d + 2, N = 8d, and N = 8d + 4 give rise to slightly different
+behaviors.
+    In section 6, we show how these choices of line operators can be seen from the point of
+view of the Euclidean path integral. We see that there are discrete analogues of θ-angles
+which we can add to the Lagrangian, which reproduce the possible mutually-local sets of
+line operators. We also indicate how the analysis in the previous sections can be generalized
+to product gauge algebras. Finally, we study the surface operators associated to the center
+and to π1 of the gauge group, and discuss how the different theories we discuss (including
+theories with the same algebra but different gauge groups) may be related by coupling
+them to discrete Zk gauge theories.
+
+                                             11
+2. su(N ) gauge theories
+
+     Let us start by considering gauge theories with gauge algebra g = su(N ). Here the
+center is C = ZN , so the possible gauge group is G = SU (N )/H with H ⊂ C = ZN ,
+namely H = Zk with k a divisor of N . If the gauge group is SU (N ), the allowed purely
+electric line operators are in (ze , zm ) = (n, 0) with arbitrary n = 0, · · · , N − 1. Clearly,
+the locality condition (1.4) shows that all the line operators are in these classes. In other
+words, all the magnetically charged lines must be associated with the magnetic root lattice.
+The situation is more interesting when H is nontrivial. We study various choices of H in
+turn.
+
+2.1. SU (N )/ZN
+
+     Consider first the special case H = C = ZN . Now the purely electric line operators
+must be in (ze , zm ) = (0, 0), and additional classes of line operators are possible.
+
+
+
+
+        (SU (4)/Z4 )0         (SU (4)/Z4 )1         (SU (4)/Z4 )2          (SU (4)/Z4 )3
+
+        Figure 2: The Z4 charges of line operators in the theories (SU (4)/Z4 )0,1,2,3.
+
+
+     If N is prime, every operator with zm 6= 0 can be raised to a power to find an operator
+with zm = 1. So, without loss of generality, we can assume that a line with (ze , zm ) = (n, 1)
+exists. Any other line (ze , zm ) = (n′ , 1) with n′ 6= n then does not satisfy (1.4), and cannot
+be present. Multiplying the operators in (ze , zm ) = (n, 1) leads to operators in the set
+
+                              Ln = {(ze , zm ) = (nm, m) mod N }                           (2.1)
+
+with m = 0, 1, · · · , N − 1. Clearly, no other classes of operators can exist. Hence, for every
+n = 0, 1, · · · , N − 1 we have a distinct theory (SU (N )/ZN )n , whose line operators have
+charges in Ln given by (2.1). This generalizes the case of SO(3) = SU (2)/Z2 that we
+discussed above. The charges of line operators of (SU (4)/Z4 )0,1,2,3 are shown in Figure 2
+to illustrate the lattices Ln .
+
+                                               12
+      If N is not prime, the sets Ln of line operators are still valid choices, but are there
+additional possibilities? For example, for N = 4 we can also have a theory with line
+operators in the classes
+                                   (ze , zm ) = (0, 0),   (0, 2) .                          (2.2)
+
+But we can still add to this list additional line operators without violating mutual locality.
+In a consistent quantum field theory, the set of line operators has to be maximal and
+complete.6 Then, if the gauge group is really SU (N )/ZN so that no lines (ze 6= 0, zm = 0)
+are present, there is necessarily a line operator with zm = 1. We conclude that even for
+N that is not prime, the only theories whose gauge group is precisely G = SU (N )/ZN are
+the ones with line operators in one of the sets Ln (2.1).
+      The N distinct theories that we found have an interesting relation to the θ parameter.
+Because of the Witten effect, the electric charges of magnetically charged particles are
+shifted as a function of θ. In our case, the electric weight λe is shifted by (see [26])
+
+                                         λe → λe + λm ,                                     (2.3)
+
+when θ → θ + 2π. In terms of our labels with (ze , zm ) this means that
+
+                                         ze → ze + zm .                                     (2.4)
+
+In the SU (N )/ZN theories, the sets Ln of operators (2.1) are transformed as Ln → Ln+1 .
+      We see that the shift of θ by 2π does not permute the operators in a given
+(SU (N )/ZN )n theory. Instead, it permutes the different theories. We can label the dis-
+tinct theories by θ ∈ [0, 2π) and n = 0, · · · , N − 1 as above, or equivalently, we can label
+them by θ ∈ [0, 2πN )
+
+                        (SU (N )/ZN )θ+2π
+                                     n    = (SU (N )/ZN )θ(n+1) mod N .                     (2.5)
+
+      The fact that the SU (N )/ZN theory has an extended range of θ is known [27], and it
+is associated with the existence of SU (N )/ZN bundles on spin manifolds with fractional
+instanton number ℓ ∈ N1 Z. But it is usually dismissed as a subtlety that is present only
+when the theory is placed on compact spaces. Now we see that this extended range of θ
+can be detected even when the theory is formulated on R4 (see also [7]). The spectrum of
+line operators in the theory detects this subtlety.
+  6
+     Such a completeness requirement is familiar in two-dimensional field theory, and it often
+follows from imposing modular invariance. Similarly, our discussion of the Euclidean path integral
+in section 6 implies that if we put a theory with a non-maximal spectrum of line operators on T4 ,
+it would not be invariant under modular transformations of T4 .
+
+                                                 13
+2.2. Dynamics in pure N = 1 SYM theories with gauge groups SU (N ) and SU (N )/ZN
+
+    This understanding of the line operators has significant consequences for the dynamics
+of the theory. For concreteness, consider the N = 1 pure SYM theory. The SU (N ) theory
+has a discrete Z2N R-symmetry acting on the gauginos, generated by γ, γ 2N = 1, which
+is associated with a shift of θ by 2π. The generator γ N is also in the Lorentz group – it is
+a 2π rotation. The theory is characterized by the complex instanton factor
+                                                        2
+                                                  − 8π2 +iθ
+                                   η = Λ3N ∼ e      g         .                          (2.6)
+
+The quantum theory has N vacua, associated with the spontaneous breaking of the global
+Z2N symmetry to Z2 . They are characterized by
+                                                     1
+                                       hλλi = ǫN η N ,                                   (2.7)
+
+with ǫN an N -th root of unity. The fractional power here signifies that these vacua are
+permuted by θ → θ + 2π. The interesting line operators in this theory are the Wilson
+line in the fundamental representation W in the class (ze , zm ) = (1, 0) and its powers in
+(ze , zm ) = (n, 0). ’t Hooft line operators exist, but they are associated with roots. W
+exhibits an area law in all these vacua, signaling confinement.
+    How does this story change when the gauge group is SU (N )/ZN ? Clearly, the spec-
+trum of particles, the local operators and their correlation functions in R4 cannot be
+modified. They are invariant under θ → θ + 2π. Hence, this theory should still have N
+vacua that are permuted by this shift. However, now we know that for a given θ ∈ [0, 2π)
+there are actually N distinct theories differing by their line operators (2.1). Since the gen-
+erator γ of the Z2N symmetry of the SU (N ) theory shifts θ by 2π, and since this operation
+is not a symmetry of the set of line operators (it maps the theory with n to the theory with
+n + 1), the SU (N )/ZN theory cannot have a Z2N R-symmetry. Its only global symmetry
+is a Z2 subgroup, which is part of the Lorentz group.
+    Since the SU (N )/ZN theory does not have a discrete symmetry relating its N vacua,
+the correlation functions of line operators in these vacua can be different. One way to see
+that this is indeed the case, is to view this N = 1 SYM theory as a mass deformation of
+the N = 2 pure SYM theory. The N vacua of the N = 1 theory originate from N multi-
+monopole points on the moduli space of the N = 2 theory. The electric and magnetic
+charges of the monopoles that condense there are the same for G = SU (N )/ZN as for
+G = SU (N ). Their electric and magnetic charges are all in the root lattice.
+
+                                             14
+    Let us examine the physics of the N vacua. Without loss of generality we can con-
+sider the SU (N )/ZN theory with n = 0. In this theory the basic ’t Hooft operator H
+has the charge (λe , λm ) = (0, 1), corresponding to a magnetic weight in the fundamental
+representation. Let us first assume that N is prime. Then, in one of the N vacua the
+charge of the condensed monopoles is (λe , λm ) = (0, N ), and is aligned with the charges
+of H. Therefore, H exhibits a perimeter law. This perimeter law signifies the fact that
+the magnetic gauge group is Higgsed to ZN , and at low energies we have a ZN gauge
+symmetry. In the remaining N − 1 vacua the condensed dyons carry nontrivial electric
+charges, and therefore H exhibits an area law, as do all the other line operators carrying
+nontrivial center charges.
+    If N is not prime, the discussion is a bit more involved. Consider the k-th vacuum.
+By shifting θ by 2πk, the condensed dyons in that vacuum become purely magnetic. After
+that shift the nontrivial line operator H belongs to the class (ze , zm ) = (k, 1). For k 6= 0
+this line still exhibits an area law. However, the line operator H N/l with l = gcd(N, k)
+belongs to the class (ze , zm ) = (0, N/l), and therefore its charges are aligned with those
+of the condensed monopoles. Hence, H N/l exhibits a perimeter law signaling the breaking
+of the magnetic gauge symmetry to Zl . We conclude that in the k-th vacuum there is an
+unbroken Zl gauge symmetry. The line operator associated with this symmetry is H N/l ,
+and we will discuss the surface operators related to it in section 6.4 below.
+    This understanding of the N vacua leads to interesting consequences when the theory
+is placed on R3 × S1 . If the gauge group is SU (N ), the four-dimensional theory has
+N confining vacua, which are related by a symmetry. The compactified theory has the
+same N vacua. However, if the gauge group is SU (N )/ZN , some of the vacua have an
+unbroken Zl gauge symmetry. Such a vacuum leads to l vacua in the compactified theory.
+So, the total number of supersymmetric vacua of SU (N )/ZN SYM theories on a circle is
+PN
+  k=1 gcd(N, k). For prime values of N , this is 2N − 1.
+
+
+2.3. SU (N )/Zk with k a divisor of N
+
+    Let us classify the allowed sets of charges of line operators when the gauge group is
+G = SU (N )/Zk . Let us write kk ′ = N . The purely electric line operators have the charges
+proportional to (ze , zm ) = (k, 0) mod N . The line operator with minimal magnetic charge
+has the charge (ze , zm ) = (n, k ′ ) mod N for some n; clearly n can be chosen from 0 to k −1.
+Our completeness requirement implies that one, and exactly one, of these line operators
+
+                                              15
+             (SU (4)/Z2 )0              (SU (4)/Z2 )1                       SU (4)
+
+ Figure 3: The Z4 charges of line operators in the theories (SU (4)/Z2 )0,1 and SU (4).
+
+must appear. The locality does not place any further condition on n. Thus, we see that
+the allowed choices of the sets of charges of line operators are
+
+                       Lk,n = {(ze , zm ) = e(k, 0) + m(n, k ′ ) mod N },               (2.8)
+
+where e and m are integers, and n = 0, 1, . . . , k − 1. With this extended notation, the set
+Ln in (2.1) is LN,n . We denote by (SU (N )/Zk )n the SU (N )/Zk theory with line operators
+given by Lk,n . As examples, we show the cases (SU (4)/Z2 )0,1 in Figure 3 (compare to
+Figure 2).
+    The shift of the θ-angle by 2π sends (ze , zm ) to (ze + zm , zm ). Therefore this sends
+Lk,n → Lk,n+k′ . In other words, we have
+
+                         (SU (N )/Zk )θ+2π
+                                      n    = (SU (N )/Zk )θn+k′ mod k .                 (2.9)
+
+When gcd(k, k ′ ) = 1, this implies that every choice of n can be reached by shifting the
+standard θ-angle θ. However, when gcd(k, k ′ ) = l 6= 1, however, the shift of θ only maps
+the theory (SU (N )/Zk )n to other theories with the same (n mod l), and there are l sets of
+theories that are not related by shifts of the θ-angle. This is our first example of theories
+with the same gauge group, which are distinguished by a “discrete θ-angle” that is not
+related to the original θ-angle; we will discuss the Euclidean path integral realization of
+this distinction in section 6 below. This can happen if and only if N has some prime factor
+that appears more than once in its decomposition into primes (namely, N is not square-
+free). The first example is N = 4, where the (SU (4)/Z2 )0 and (SU (4)/Z2 )1 theories are
+not related by shifting the θ-angle.
+    It is possible to generalize our previous analysis of the behavior of the different vacua
+of the N = 1 pure SYM theory to all these theories, but we will not do this here.
+
+                                               16
+2.4. S-duality of N = 4 supersymmetric theories
+
+      Let us consider now the transformation under S-duality of N = 4 SYM theories.
+When the gauge group is U (N ), the theory is invariant under an SL(2, Z) transformation,
+which maps the complex gauge coupling
+
+                                                θ  4πi
+                                          τ=      + 2                                      (2.10)
+                                               2π   g
+
+to τ → (aτ + b)/(cτ + d), with a, b, c, d integers satisfying ad − bc = 1. This transformation
+group is generated by T which takes θ → θ + 2π or τ → τ + 1, and by a generator S which
+takes τ → −1/τ .
+      Let us now consider N = 4 SYM theories with gauge algebra g = su(N ). The
+magnetic dual algebra in this case is also g∗ = su(N ). Usually it is stated that the theory
+with G = SU (N ) is mapped by the S generator to the theory with G = SU (N )/ZN , but we
+found that there are N variations of the latter theory, so the full story is more complicated7 .
+In general we found above that there are distinct theories (SU (N )/Zk )n mod k , differing
+by the global structure of the gauge group and by the set of charges of the line operators
+Lk,n .
+      Let us consider how the S-duality acts on this set of theories8 . We already discussed
+above how the T generator maps a given theory to another theory with the same k, but
+with a possibly different value of n. The S generator acts on the weights (λe , λm ) of the
+line operator as
+                                S:    (λe , λm )    7→     (λm , −λe ).                    (2.11)
+
+Therefore, it takes the set L of conjugacy classes of charges of line operators to the set L∗
+of charges of the dual theory, given by
+
+                             (ze , zm ) ∈ L   ⇐⇒         (zm , −ze ) ∈ L∗ .                (2.12)
+
+For example, when the original theory is (SU (N )/Zk )0 with the set Lk,0 of charges, the dual
+set of charges is precisely Lk′ ,0 where kk ′ = N . Therefore the dual theory is (SU (N )/Zk′ )0 .
+This is what is usually stated as the change in the global structure of the gauge group under
+S-duality.
+  7
+      The case of g = su(2) was discussed in [28,7].
+  8
+      In theories with extended supersymmetry there are also BPS versions of line operators and
+surface operators, which are labeled by additional parameters. We do not discuss these here.
+
+                                                   17
+       It is not difficult to generalize this to the full set of theories that we discussed above.
+Given Lk,n , the lattice (Lk,n )∗ must again be of the form Lk∗ ,n∗ , determining the S-dual
+of (SU (N )/Zk )n to be (SU (N )/Zk∗ )n∗ . The numbers k ∗ and n∗ can be determined by
+finding the minimal charges of the form
+
+                                (0, k ∗ ),   (−N/k ∗ , n∗ ) ∈ Lk,n .                       (2.13)
+
+First, the charge of the form (0, k ∗ ) can be found by choosing e and m in (2.8) to be
+e = −n/gcd(n, k), m = k/gcd(n, k). Here we use the convention gcd(0, k) = k. Then, we
+have
+                               k ∗ = kk ′ /gcd(n, k) = N/gcd(n, k).                        (2.14)
+
+We can find integers e0 and m0 such that e0 k + m0 n = gcd(k, n). Then, n∗ = −m0 k ′ .
+       It is interesting to ask whether the full SL(2, Z) group maps all these different theories
+to each other or not. For prime values of N the answer is clearly yes; the S generator maps
+SU (N ) to (SU (N )/ZN )0 , and the T generator then relates this to all the other theories.
+However, in general the answer is no. If there is some k such that gcd(k, N/k) = l, then
+the (SU (N )/Zk )0 has electric and magnetic charges that are all multiples of l, and this is
+still the case also after we perform any SL(2, Z) transformation. Thus, these theories sit
+in separate orbits of SL(2, Z) from the SU (N ) and SU (N )/ZN theories.
+       In fact, this is the only case where separate orbits exist; namely, if N is square-
+free (every prime factor in the decomposition of N into primes appears once), then all
+the different theories we discussed are in the same orbit of SL(2, Z). To see this, note
+first that the SU (N ) gauge theory is mapped to itself under the subgroup of SL(2, Z)
+that is generated by T and by ST N S. This subgroup is denoted by Γ0 (N ). The space
+of couplings of the SU (N ) theory that are inequivalent is thus a fundamental domain of
+Γ0 (N ). However, we know that every SL(2, Z) transformation relates our SU (N ) theory to
+one of the other theories, and that every fundamental domain of SL(2, Z) contains precisely
+one value of the coupling which is related by SL(2, Z) to weak coupling (τ → i∞). So,
+the number of different weak coupling limits that an SU (N ) gauge theory has, or, in other
+words, the number of inequivalent theories that it maps to under the full SL(2, Z) group,
+is given by the number of fundamental domains of SL(2, Z) inside the fundamental domain
+of Γ0 (N ). This number, called the index of Γ0 (N ), is equal to
+                                                      Y         1
+                                 index(Γ0 (N )) = N         (1 + ),                        (2.15)
+                                                                p
+                                                      p|N
+
+
+                                                18
+                                                                                                      (SU (3)/Z3 )1
+                                                                                              T
+                                                               S
+   su(3):                           T         SU (3)                    (SU (3)/Z3 )0                     T         S
+                                                                                              T       (SU (3)/Z3 )2
+                                               T (SU (4)/Z4 )1 T
+                          S                                                                           S
+   su(4):        SU (4)       (SU (4)/Z4 )0                S                        (SU (4)/Z4 )2         (SU (4)/Z2 )−       (SU (4)/Z2 )+
+                                               T (SU (4)/Z4 )3 T
+                   T                                                                                            T                 S,T
+                                                                            T
+
+                                                                         SU (6)
+
+                                                                            S
+
+                                                                    (SU (6)/Z6 )0
+                                                       T                                          T
+
+                                                                                S
+                              (SU (6)/Z6 )5                                                                   (SU (6)/Z6 )1
+
+
+                                                                            T
+                                                   (SU (6)/Z3 )1                       (SU (6)/Z3 )2
+   su(6):
+                                                                        T            T
+
+                                                                    (SU (6)/Z3 )0
+
+                                      T                                     S                                    T
+
+                                                       S            (SU (6)/Z2 )0                 S
+
+                                                                            T
+
+                                                                    (SU (6)/Z2 )1
+
+                                                                            S
+                                                               T                            T
+                                      (SU (6)/Z6 )4                 (SU (6)/Z6 )3                   (SU (6)/Z6 )2
+
+
+      Figure 4: S-duality orbits of the N = 4 SYM theory with g = su(3), su(4), su(6).
+
+where the product runs over all the prime factors of N . On the other hand, the total number
+                                      P
+of distinct theories that we found is k|N k, where the sum goes over all the divisors k of
+N . It is easy to check that these two numbers are the same if and only if N is square-free.
+In this case all the different theories we discussed are related by SL(2, Z) transformations,
+while otherwise this is not the case. The first value of N exhibiting separate SL(2, Z)
+orbits is N = 4, where the (SU (4)/Z2 )0 theory is mapped to itself under the full SL(2, Z)
+group, while the other 6 theories are permuted.
+       To illustrate the discussions so far, we show the duality orbits of N = 4 theories with
+g = su(3), g = su(4) and g = su(6) in Figure 4.9 As discussed, we see that there is just
+  9
+       Some of the arrows in the su(6) case were wrongly oriented in previous versions. The authors
+thank Francesco Benini for pointing out the issue.
+
+                                                                   19
+one orbit for g = su(3) and g = su(6), but there are two orbits for g = su(4).
+    The distinctions between the different theories that we discuss here are important
+when computing the partition functions of N = 4 SYM on compact manifolds, and using
+them to test S-duality [27,29,30]. We will discuss the precise way to compute these partition
+functions in section 6.
+    The AdS/CFT correspondence [31] maps the N = 4 SYM theory with g = su(N )
+to the type IIB string theory on AdS5 × S 5 . In this context the distinction between the
+different theories we discuss arises from the need to carefully quantize the topological
+theory                                    Z
+                                     N
+                                 S=                  BRR ∧ dBNS                           (2.16)
+                                    2πi       AdS5
+
+that arises in the type IIB string theory at low energies [32,33,34]. One possibility is
+to make the U (1) gauge field (dual to the singleton modes in the bulk, including the
+two-forms BRR and BNS ) dynamical, so that the gauge theory becomes a U (N ) theory
+(see e.g. [35,36]). Similar issues arise also in the 6d AN (2, 0) SCFT, dual to M theory on
+AdS7 ×S 4 , where the surface operator [37] is not mutually local with respect to itself. Such
+theories, containing operators that are not mutually local, are analogous to holomorphic
+blocks of 2d conformal field theories. They are not standard consistent local quantum
+field theories by themselves, but can be viewed either as generalizations of local quantum
+field theories where the expectation values are elements of a vector space rather than
+well-defined numbers [33] (see also [38,39,40,41], and [42] and references therein), or as
+building blocks for constructing consistent local quantum field theories. Consistent string
+constructions must lead to completely local theories, and this places further constraints on
+them [43].
+
+
+
+3. so(N ) gauge theories
+
+3.1. The theories
+
+    For odd N the center C of Spin(N ) is Z2 , where the Z2 charge is carried by all the
+spinor representations. The dual group in this case is g∗ = sp((N − 1)/2) = usp(N − 1),
+which also has a Z2 center carried by the fundamental (vector) representation. The possible
+lines are in the sets (ze , zm ) with ze = 0, 1 and zm = 0, 1. The Spin(N ) theory has line
+operators with (ze , zm ) = (0, 0) and (ze , zm ) = (1, 0). There are two different theories with
+SO(N ) gauge group, generalizing our previous discussion for N = 3. The SO(N )+ theory
+
+                                                20
+has line operators with (ze , zm ) = (0, 0) and (ze , zm ) = (0, 1), while the SO(N )− theory
+has lines with (ze , zm ) = (0, 0) and (ze , zm ) = (1, 1).
+     For even N the dual magnetic group is g∗ = so(N ), and the center C of Spin(N )
+depends on (N mod 4). It is Z2 × Z2 for (N = 0 mod 4) and it is Z4 for (N = 2 mod 4).
+Correspondingly, the representations are split into four classes, which are the vector class,
+the adjoint (trivial) class, and two spinor classes. In section 5 we will discuss the Spin(N )
+and Spin(N )/H theories for all these cases in detail. Here we will focus on a particular
+quotient SO(N ) = Spin(N )/Z2 , which has electric Wilson lines in the trivial class and
+in the vector class. Mutual locality requires the lines that are not purely electric to have
+magnetic charges in the vector class. One can then either choose these lines to be purely
+magnetic, or dyonic with spinor electric charges. Correspondingly, there are two theories
+SO(N )± , just as in the case when N is odd.
+     Up to now the situation is very similar to the discussion for N = 3 around (1.5).
+However, the N = 3 and N = 4 cases are somewhat different than higher values of N .
+For N = 3 we saw that the shift of θ by 2π exchanges the two theories. For N = 4, we
+have SO(4) = [SU (2) × SU (2)]/Z2 , and therefore there are actually two θ-angles, θs with
+s = 1, 2, one for each SU (2) factor. In this case the Witten effect gives an action on line
+operators that implies
+                                       θ1 ,θ2        θ1 +2π,θ2
+                                  SO(4)+      = SO(4)−         .                         (3.1)
+
+     For higher values of N the two SO(N ) theories are not related by a shift of θ, but
+rather
+
+                                    SO(N )θ± = SO(N )θ+2π
+                                                     ±    .                              (3.2)
+
+This can be seen by examining the roots and weights of so(N ) and its Langlands duals
+usp(N − 1) (for odd N ) or so(N ) (for even N ), and by examining the shift of the electric
+charges under a shift of θ. Equivalently, the same conclusion follows from the fact that
+these theories do not have half-instantons [44], so they must be invariant under θ → θ +2π.
+Note that in the SO(4) theory a configuration which has a half-integer instanton number
+in the first SU (2), and a half-integer instanton number in the second SU (2), can be present
+as long as the sum of the two instanton numbers is an integer.
+
+                                                 21
+3.2. The pure N = 1 SYM theory
+
+    As in the previous examples, we consider now the implications for the N = 1 pure
+SYM theory. The Spin(N ) theory with N > 4 has a discrete Z2(N−2) R-symmetry acting
+on the gauginos. The theory is characterized by the instanton factor η = Λ3(N−2) . It has
+(N − 2) vacua with
+                                           1        1
+                                  hλλi =     (16η) N −2 ǫN−2 ,                            (3.3)
+                                           2
+with ǫN−2 an N − 2-th root of unity. (We use here the conventions of [3,18].) These vacua
+are associated with the breaking of Z2(N−2) to Z2 , which is in the Lorentz group.
+    Again, N = 3 and N = 4 are slightly different. We have already discussed N = 3
+above. For N = 4, Spin(4) = SU (2)×SU (2) so the global symmetry is Z4 ×Z4 (a separate
+                                                                      1
+Z4 for each factor), and there are four vacua with h(λλ)s i = ǫ2 (s)ηs2 , where s = 1, 2 labels
+the two SU (2) factors and ηs = Λ6s are their instanton factors. The effective superpotential
+in these vacua is
+                                           1           1
+                                 W = 2η12 ǫ2 (1) + 2η22 ǫ2 (2) .                          (3.4)
+
+Something special happens for η1 = η2 . Then, in the two vacua with ǫ2 (1) = ǫ2 (2) =
+±1 the superpotential is nonzero, and in the other two with ǫ2 (1) = −ǫ2 (2) = ±1 the
+superpotential vanishes. This point was crucial in [3,18] and will be important below.
+    Both for even and odd N , the nontrivial Wilson line in the spinor representation
+exhibits an area law in all of these vacua. For even N the Wilson line in the vector
+representation is also confined. (For odd N it is screened by the gluons, because they are
+in the same conjugacy class.)
+    For N > 4, the SO(N )± theories are invariant under θ → θ + 2π, so they also have
+the Z2(N−2) symmetry and N − 2 vacua. But the dynamics of the vacua are different.
+Using the notation of odd N (with an obvious interpretation for even values of N ) in all
+the vacua of the SO(N )+ theory the nontrivial line with (ze , zm ) = (0, 1) has a perimeter
+law associated with an unbroken Z2 gauge symmetry. On the other hand, in all the vacua
+of the SO(N )− theory the nontrivial line with (ze , zm ) = (1, 1) has an area law. For even
+values of N , the Wilson line in the vector representation also has an area law in all these
+cases.
+    Correspondingly, the Spin(N ) theory on R3 × S1 has (N − 2) vacua. The SO(N )+
+theory on R3 × S1 has 2(N − 2) vacua, while the SO(N )− theory has (N − 2) vacua.
+
+                                               22
+      Again, the case of N = 4 is slightly different. In the SO(4)± theories, the global
+symmetry10 is not Z4 × Z4 symmetry but rather Z4 × Z2 . The four vacua of the Spin(4)
+theory, labeled by ǫ2 (s) = ±1, are still present. In the SO(4)+ theory, the two vacua
+with ǫ2 (1) = ǫ2 (2) = ±1 exhibit a perimeter law for the nontrivial ’t Hooft line operator,
+associated with an unbroken Z2 gauge symmetry. In the other two vacua, that have
+ǫ2 (1) = −ǫ2 (2) = ±1, this line operator is confined. This situation is reversed in the
+SO(4)− theory. The Wilson line in the vector representation is confined in all of these
+cases. Correspondingly, the two SO(4) theories both have 6 supersymmetric vacua on
+R3 × S 1 .
+
+3.3. N = 1 with vectors – duality
+
+      We saw above that when we include in the spectrum of line operators the Wilson line in
+the vector representation, the discussion of odd and even values of N is very similar. This
+is the case in particular whenever we have dynamical fields in the vector representation,
+which can screen the Wilson lines in the vector representation.
+      The dynamics of the N = 1 supersymmetric SO(N ) gauge theory for different numbers
+of colors N and flavors Nf was analyzed in detail in [3,18,45]. In that discussion the focus
+was on the local structure. We saw above that each of these theories comes in three
+versions: Spin(N ), SO(N )+ , and SO(N )− . Here we will extend the analysis to take this
+fact into account, focusing on the case of Nf ≥ N .
+      For these values of Nf it was found that the so(N ) theory with Nf chiral multiplets Qi
+(i = 1, · · · , Nf ) in the vector representation and no superpotential is dual at low energies
+to an so(Nf − N + 4) theory with Nf chiral multiplets qi in the vector representation,
+singlet mesons M ij (i, j = 1, · · · , Nf ), and a tree level superpotential [2,3,18]
+
+                                               1
+                                       W =       M ij qi qj .                               (3.5)
+                                              2µ
+
+The parameter µ is related to the instanton factors η and ηe of the two theories through
+
+                                          1
+                                    ηe
+                                     η=     8
+                                              (−1)Nf −Nc µNf .                              (3.6)
+                                          2
+ 10
+      Note that the symmetry group in this case is not a standard supersymmetry algebra with an
+R-symmetry and a global symmetry that commutes with supersymmetry; this is related to the
+fact that the local dynamics of these theories is a sum of separate SU (2) theories, with separate
+super-Poincaré symmetries acting on each one.
+
+                                                 23
+We claim that taking the global structure into account this duality actually maps
+
+                              Spin(N ) ←→ SO(Nf − N + 4)−
+                              SO(N )+ ←→ SO(Nf − N + 4)+                                  (3.7)
+                              SO(N )− ←→ Spin(Nf − N + 4)
+
+The discussion in [46] can be interpreted as indicating a duality between Spin(N ) and
+SO(Nf − N + 4), but it did not take into account the two different SO(N ) theories, and
+therefore did not discuss the SO(N )+ ←→ SO(Nf − N + 4)+ duality. Note that, for
+N, Nf − N + 4 > 4, the periodicity of the θ-angle in all three theories is 2π (3.2), consistent
+with (3.6); we will discuss what happens for lower values of N and Nf − N + 4 in the next
+subsection.
+    We start with the mapping for Nf ≥ N > 4; one can flow from here to lower values of
+Nf and N by turning on mass terms and Higgsing. The original so(N ) theory has a moduli
+space of vacua labeled (partly) by M ij = Qi Qj , which satisfies rank(M ) ≤ N . Consider the
+component of the moduli space where rank(M ) = N , so that the gauge group is completely
+broken. For every such value of M we have two supersymmetric vacua, differing by the
+sign of the vacuum expectation value of a baryon operator B = QN . For large hM i the
+theory is weakly coupled, and it is clear that in the Spin(N ) theory, the spinor Wilson line
+has a perimeter law (related to a Z2 gauge symmetry), while the nontrivial line operators
+of the SO(N )± theories exhibit an area law.
+    In the dual theory, with the same expectation values of M , N of the flavors become
+massive, so at low energies there is an so(Nf − N + 4) theory with (Nf − N ) massless
+flavors q. Ignoring the superpotential for a moment, we can give expectation values to
+these flavors, and break the gauge group to so(4), with equal instanton factors ηlow for its
+two su(2) factors, proportional to powers of the various VEVs. Now we can repeat the
+analysis around (3.4) of this low energy effective theory. The theory has four vacua. Two
+                                                                                   √
+of them, with ǫ2 (1) = ǫ2 (2) = ±1 have a nonzero superpotential proportional to ηlow ,
+which in our case leads to a runaway behavior with no supersymmetric vacuum. The other
+two vacua, the ones with ǫ2 (1) = −ǫ2 (2) = ±1, have a vanishing superpotential, and we
+can identify them with the two vacua that we found above [3] (for a given expectation
+value of M , and after fixing the expectation value of q using the superpotential). When
+the gauge group is Spin(Nf − N + 4), the nontrivial line operator is a spinor Wilson line,
+which is confined in these vacua. When the gauge group is SO(Nf − N + 4)± there is
+
+                                              24
+also a single nontrivial line operator. Our discussion of the line operators of SO(4) at the
+end of section 3.2 implies that this line operator has an area law in the SO(Nf − N + 4)+
+theory, and a perimeter law in the SO(Nf − N + 4)− theory, where there is an unbroken
+gauged Z2 symmetry as discussed above. We conclude that the Spin(N ) theory must map
+to the SO(Nf − N + 4)− theory. Since performing the duality twice should lead us back
+to the original theory, we find the mapping (3.7).
+    We can test this result by turning on masses for all the flavors of the so(N ) theory.
+In the original theory we flow at low energies to the (N − 2) vacua of the pure so(N ) SYM
+theory, discussed in the previous subsection. As we discussed there, the Spin(N ) and
+SO(N )− theories exhibit an area law for their nontrivial line operator, while the SO(N )+
+theory exhibits a perimeter law.
+    Let us check what happens in the dual theory [3,18], which now has the tree level
+superpotential
+                                        1             1
+                              W =         M ij qi qj + mij M ij ,                      (3.8)
+                                       2µ             2
+where the second term in (3.8) is the mass term we turned on in the original so(N ) theory.
+We should find the (N − 2) vacua of the original theory in this theory.
+    Classically, the equations of motion of M ij from (3.8) lead to qi qj = −µmij , so we
+must have nonzero VEVs for qi such that qi qj has rank Nf , but this is impossible since
+Nf > Nf − N + 4. Thus, there are no classical vacua. To find supersymmetric vacua,
+let us explore the region in field space with generic nonzero M . Here the dual quarks
+qi are massive and they can be integrated out. The low energy theory is a pure gauge
+so(Nf − N + 4) theory with scale ηelow = ηeµ−Nf det(M ). Gaugino condensation in this
+pure gauge theory leads to an effective superpotential
+
+                     1                                             1
+           Wef f =     (Nf − N + 2)(16µ−Nf ηe det(M ))1/(Nf −N+2) + mij M ij .         (3.9)
+                     2                                             2
+
+The equations of motion of M now lead to (N − 2) supersymmetric vacua with
+                                       Nf −N Nf
+                                                           (N 1−2)  ij
+                                   (−1)      µ     det(m)            1
+                  hM ij i = ǫN−2
+                                            16eη                     m
+                                                      ij                           (3.10)
+                                                 1     1
+                          = ǫN−2 (16η det(m)) (N −2)         ,
+                                                      m
+
+where ǫN−2 is an (N − 2)-th root of one. These (N − 2) vacua map exactly (including
+the value of the superpotential) to those of the original theory. In these vacua again the
+
+                                               25
+nontrivial line operators of the Spin(Nf − N + 4) and SO(Nf − N + 4)− theories exhibit an
+area law (as in our analysis of the previous subsection), while that of the SO(Nf − N + 4)+
+theory exhibits a perimeter law. This is consistent with our mapping (3.7).
+    The mapping (3.7) is also consistent with the relation between the N = 1 duality and
+the low-energy dynamics of N = 2 supersymmetric gauge theories [47,48] (see also [49,50]
+and references therein). The moduli space of the N = 2 SQCD theory with g = so(N ) and
+Nf /2 fundamental hypermultiplets contains (for Nf < 2N −4) a point where the low-energy
+theory is an g = so(Nf − N + 4) theory with Nf /2 fundamental hypermultiplets. Upon
+breaking to N = 1 supersymmetry by adding a mass term for the adjoint chiral superfield,
+the physics at this point has two different descriptions, which realize a deformation of
+the N = 1 duality described above by a quartic superpotential for the quarks. In this
+realization, the so(Nf − N + 4) theory originates from a subgroup of the so(N ) theory,
+so the allowed electric weights of line operators in the so(Nf − N + 4) theory should be
+a subset of the allowed weights in the so(N ) theory (when viewing so(Nf − N + 4) as a
+subalgebra of so(N )). This is consistent with our mapping (3.7), that maps all the lines
+with spinorial electric charges to other lines with spinorial electric charges.
+
+3.4. Triality for Nf = N − 1 and for Nf = N
+
+    In the cases of Nf = N and Nf = N − 1, we obtain so(3) and so(4) theories on
+the right-hand side of (3.7), and in these theories the SO(N )+ and SO(N )− theories are
+related by shifting the θ-angle, as we saw in (1.5), (3.1). This gives us an extra relation
+also between the so(N ) theories on the left-hand side; in [3,45] this was called a triality for
+the case of Nf = N − 1. In our language it generally involves relations between 4 different
+theories.
+    Let us start with the case of so(N ) with Nf = N − 1. According to [3], the dual
+description of this is as above, but with an extra term in the superpotential; this theory is
+equivalent at low energies to an so(3) theory with singlets M and with
+
+                                      1               1
+                               W =      M ij qi qi −     det(M ),                        (3.11)
+                                     2µ              64η
+
+and with a scale
+                                               µ2(N−1)
+                                        ηe =            .                                (3.12)
+                                                214 η 2
+For example, the Spin(N ) theory with Nf = N − 1 is equivalent to the SO(3)− theory
+with this superpotential. But, we know that the latter theory is also equivalent to an
+
+                                                26
+SO(3)+ theory with θe shifted by 2π. By the duality (3.7), and using the relation (3.12),
+this is equivalent to an SO(N )+ theory in which we shift the θ-angle by π, taking η → −η,
+except that this shift would give us an extra minus sign in the last term of (3.11), which
+we do not get here. So, we find [3] that the Spin(N ) theory with Nf = N − 1 and with
+coupling constant η is equivalent at low energies to an SO(N )+ theory with coupling (−η)
+and with an extra superpotential
+                                            1
+                                   W =−        det(M ).                               (3.13)
+                                           32η
+The spinor Wilson line of the Spin(N ) theory is mapped by this duality to the ’t Hooft
+line of the SO(N )+ theory. Similarly, since the shift by 2π takes the Spin(3) theory to
+itself, we find that the SO(N )− theory with coupling η is equivalent to another SO(N )−
+theory with coupling (−η), and with the same superpotential (3.13). Despite appearances,
+and even though the nontrivial dyonic line of the SO(N )− theory maps to itself, this is a
+strong/weak coupling duality, as can be seen by mapping the supersymmetric vacua [3].
+In particular, vacua in which electrically-charged particles condense are exchanged with
+vacua in which magnetically-charged particles condense.
+    We can now repeat the same story for Nf = N , where the dual theory has only the first
+term in the superpotential (3.11). The complication here is that to relate the two different
+so(4) theories we need to shift the θ-angle of one of the su(2) subgroups of so(4) by 2π
+(see (3.1)), and this does not map just to a change of the θ-angle in the original theory.
+Using the fact that the difference between the operators (Wα2 ) of the two su(2) groups
+maps to the baryon operator B = QN (with the color and flavor indices all contracted
+anti-symmetrically) [3], similar arguments to those of the previous paragraph imply that
+the Spin(N ) theory with Nf = N flavors and coupling η is equivalent at low energies to
+an SO(N )+ theory with coupling (−η) and with an extra superpotential
+
+                                         W = βB.                                      (3.14)
+
+A similar relation holds for two SO(N )− theories. It is not clear how to directly find the
+value of β, since the operator mapping is only known near the point β = 0. However, we
+can find this coefficient by adding a mass term, and flowing to the duality described in the
+previous paragraph; upon integrating out the massive quark, the superpotential propor-
+tional to B becomes precisely the superpotential proportional to det(M ) of (3.13). This
+                                   √
+consideration implies that β = ±i/4 η; the two choices are related by charge conjugation
+(which, for so(4), exchanges the two su(2) factors).
+
+                                            27
+4. g = sp(N )
+
+4.1. The theories
+
+     In this section we consider theories based on the Lie algebra g = sp(N ) ≡ usp(2N ).
+Its center is C = Z2 , with the fundamental (vector) representation charged under the
+center, so we will be interested in two gauge groups Sp(N ) ≡ U Sp(2N ) and Sp(N )/Z2 .
+The dual algebra is g∗ = so(2N + 1), with a nontrivial center representation carried by its
+spinor weights.
+     The classes of line operators are labeled by two elements of Z2 : (ze , zm ). If the gauge
+group is Sp(N ), the allowed lines are in (ze , zm ) = (0, 0) and (ze , zm ) = (1, 0). When the
+gauge group is Sp(N )/Z2 , the lines in (ze , zm ) = (1, 0) are not present. Instead, we have
+two options: add the lines in (ze , zm ) = (0, 1) or add the lines in (ze , zm ) = (1, 1). We
+refer to the first option with the purely magnetic lines as (Sp(N )/Z2 )+ , and to the second
+option with the dyonic line as (Sp(N )/Z2 )− . These options with this terminology are
+consistent with our discussion of Sp(1)/Z2 = SO(3) around (1.5), and with our discussion
+of Sp(2)/Z2 = SO(5) in section 3.1.
+     Let us study how the shift of θ by 2π affects these options. The weight lattice of
+sp(N ) is ZN . An element λe = (vi ) ∈ ZN is in the adjoint class if the sum of vi is even.
+Otherwise it is in the vector class. In the dual so(2N + 1) we use a normalization of the
+weights which is twice the natural normalization; this is needed in order for the shift of θ
+to act in a nice way, given that there is a factor of 2 between the length of the short and
+long roots [29,51]. The magnetic weight lattice is then a sub-lattice of ZN . An element
+λm = (wi ) ∈ ZN is in the magnetic weight lattice if all the wi are even or if all of them are
+odd. In the first case it is in the adjoint class, and in the second case it is in the spinor class.
+The line with nonzero magnetic charge of the Sp(N )/Z2 theory has the magnetic weight
+λm = (1, 1, · · · , 1). In our current normalization the shift of θ by 2π changes λe → λe +λm .
+Since λe = (1, 1, · · · , 1) is in the trivial class for even N , and in the vector class for odd N ,
+we see that
+                                                   θ+2π
+                      (Sp(N )/Z2 )θ+ = (Sp(N )/Z2 )−             for odd N,
+                                                                                               (4.1)
+                                                   θ+2π
+                      (Sp(N )/Z2 )θ± = (Sp(N )/Z2 )±             for even N.
+
+Hence, for odd N we can absorb the ± label in extending the range of θ to be in [0, 4π)
+(as in SU (N )/ZN ). However, for even N the periodicity of θ is still 2π and the two classes
+of theories are not continuously connected, as in SO(N ) (indeed, SO(5) is equivalent to
+
+                                                 28
+Sp(2)/Z2 ). This fact is consistent with the discussion in [44], which shows the existence of
+half instantons for Sp(N )/Z2 with odd N , and the absence of such instantons for even N .
+     Before ending this sub-section we would like to comment on the Sp(N ) vs. Sp(Nf )
+theories of [52] (see also [53]). These two theories are obtained by a shift of θ by π. Hence,
+even using the traditional classification of theories based on θ ∈ [0, 2π) they are not new,
+and they should not be confused with the theories we discuss above.
+
+4.2. Pure N = 1 SYM theories
+
+    Next we examine the consequences of this discussion for the N = 1 pure SYM theory.
+The Sp(N ) gauge theory has a global Z2(N+1) R-symmetry, and its instanton factor is
+η = Λ3(N+1) . The quantum theory has N + 1 vacua with [54]
+
+                                                        1
+                                    hλλi = ǫN+1 (2η) N +1 ,                              (4.2)
+
+with ǫN+1 an N +1’st root of unity. In these vacua the Z2(N+1) symmetry is spontaneously
+broken to Z2 . These vacua are related by shifting θ by 2π. In all of these vacua the Wilson
+lines in (ze , zm ) = (1, 0) exhibit an area law, signaling confinement.
+    The (Sp(N )/Z2 )± theories also have these N + 1 vacua, and the vacua are still related
+by shifting θ by 2π. But the details depend on whether N is even or odd.
+    For even N the theory with θ is the same as the theory with θ +2π, and hence all these
+vacua are related by the Z2(N+1) symmetry. The nontrivial line operators exhibit area law
+in all the vacua of the (Sp(N )/Z2 )− theory, and they exhibit a perimeter law associated
+with an unbroken gauge Z2 symmetry in all the vacua of the (Sp(N )/Z2 )+ theory.
+    For odd N the N +1 vacua are not all related by a symmetry. The discrete R-symmetry
+of the (Sp(N )/Z2 )± theories is only ZN+1 . This discrete symmetry is spontaneously broken
+to Z2 , which is in the Lorentz group. The N + 1 vacua are split into two orbits of the
+discrete symmetry, with (N + 1)/2 vacua in each. In the vacua in one orbit the nontrivial
+line operators of (Sp(N )/Z2 )+ exhibit an area law, and those of (Sp(N )/Z2 )− have a
+perimeter law associated with an unbroken Z2 gauge symmetry. The two behaviors are
+exchanged in the vacua of the other orbit.
+    Repeating the argument for SU (N )/ZN , this discussion suggests that the Sp(N )
+theory on R3 × S1 has N + 1 vacua. For even N the (Sp(N )/Z2 )− theory has N + 1 vacua,
+while the (Sp(N )/Z2 )+ has 2(N + 1) vacua. For odd N , both of the (Sp(N )/Z2 )± theories
+have 3(N + 1)/2 vacua.
+
+                                              29
+                                                          S
+                                             Sp(N )               SO(2N + 1)+
+
+                                               T                        T
+
+                                         S                                        S
+                          Spin(2N + 1)       (Sp(N )/Z2 )+        (Sp(N )/Z2 )−       SO(2N + 1)−
+        even N
+                               T                      T                T                  T
+
+                                         S                    T                   S
+                          Spin(2N + 1)       (Sp(N )/Z2 )+        (Sp(N )/Z2 )−       SO(2N + 1)−
+         odd N
+                               T                                                          T
+
+
+   Figure 5: S-duality orbits of the N = 4 SYM theory with g = so(2N + 1), sp(N ).
+
+4.3. S-duality in N = 4 SYM
+
+    The N = 4 SYM theory has an S-duality transformation exchanging g = sp(N ) and
+g∗ = spin(2N + 1). The generator of the S-duality group in this case takes τ → −1/(2τ ),
+and the mapping of the electric and magnetic weights also involves an extra factor of 2; by
+an abuse of notation we will refer to this generator as S. The full duality group in this case
+is not SL(2, Z); it is generated by the S generator and by τ → τ + 1. We already discussed
+how τ → τ + 1 permutes the different theories, and it is easy to determine how various
+choices of line operators are mapped to each other under the S generator. Let us denote
+by L ⊂ Z2 × Z2 the set of charges of line operators of the original sp(N ) theory. The set
+L contains only one element in addition to (ze , zm ) = (0, 0). The Sp(N ) theory contains
+(ze , zm ) = (1, 0). Thus, the dual theory contains lines with charges (ze , zm ) = (0, 1),
+meaning that is an SO(2N + 1)+ theory. The (Sp(N )/Z2 )+ theory contains (ze , zm ) =
+(0, 1). Then, the dual theory contains lines with charges (ze , zm ) = (1, 0), meaning that
+this is an Spin(2N + 1) theory. Finally, the (Sp(N )/Z2 )− theory contains lines with
+(ze , zm ) = (1, 1). Therefore, the dual theory contains lines with charges (1, 1), and this is
+an SO(2N + 1)− theory. The full transformations of these theories under S-duality are
+described in Figure 5. For even values of N there are three separate orbits, each containing
+two theories. For odd values of N there is one orbit containing the Sp(N ) and SO(2N +1)+
+theories, and the other four theories are in a second orbit.
+
+
+5. g = so(N ) for even N
+
+    In section 3 we already studied Spin(N ) and SO(N ). However, when N is even there
+are additional possibilities of gauge group G for g = so(N ). The discussion depends on
+
+                                                   30
+whether N is divisible by 4 or not. Note that in these cases the magnetic dual algebra is
+also g = so(N ).
+
+
+5.1. N = 2 mod 4
+
+    Let us begin with the simpler case when N is not divisible by 4, N > 2. Then, the
+          e = Spin(N ) is C = Z4 . The two spinor representations transform as (±i) under
+center of G
+the generator of the center. The possible groups are Spin(N ), Spin(N )/Z2 = SO(N ) or
+Spin(N )/Z4 . The first two cases were discussed already in section 3.
+      Let us consider then G = Spin(N )/Z4 = SO(N )/Z2 . The class of charges of line
+operators is characterized by (ze , zm ) ∈ Z4 × Z4 . The only purely electric lines have
+(ze , zm ) = (0, 0). The maximality of the set of line operators requires the existence of a
+line with charge (ze , zm ) = (n, 1), where n = 0, 1, 2, 3. Every choice is allowed by mutual
+locality. So, we have the four theories (Spin(N )/Z4 )n mod 4 . By the Witten effect, shifting
+θ by 2π sends (ze , zm ) to (ze ± zm , ze ), where the sign is + when N ≡ −2 mod 8 and −
+when N ≡ +2 mod 8.11 This shifts n by ±1, or in other words we have
+
+
+                       (Spin(N )/Z4 )θ+2π
+                                     n    = (Spin(N )/Z4 )θn±1 mod 4 .                    (5.1)
+
+
+As a special case note that for Spin(6) = SU (4) this agrees with our discussion of
+SU (N )/ZN groups in section 2.1. The θ-angle has periodicity 8π, consistent with the
+existence of quarter-instantons in this case [44].
+      In the N = 1 SYM theory with the Spin(N )/Z4 gauge groups, the global symmetry
+is Z(N−2)/2 , and the (N − 2) vacua spontaneously break this to Z2 . The vacua are split
+into 4 classes. In each class the basic line operator of one of the (Spin(N )/Z4 ) theories has
+a perimeter law, associated with a discrete Z4 gauge symmetry, the line operator of one
+of the other theories has a perimeter law associated with a discrete Z2 gauge symmetry,
+and those of the other two theories have an area law. Thus, when we compactify these
+theories on R3 × S1 , they have (N − 2) + (N − 2)/2 + (N − 2)/4 + (N − 2)/4 = 2(N − 2)
+supersymmetric vacua.
+
+ 11
+      The authors thank Ho Tat Lam for noticing a small error in the previous version of the
+paper. The dependence of the sign on N modulo 8 will be explained in the discussions around
+(6.13) below.
+
+                                              31
+5.2. N = 0 mod 4: centers and charges
+
+     Next, let us come to the more interesting case when N is a multiple of 4. In this case
+there are two inequivalent spinor representations, that are not complex conjugates. The
+          e = Spin(N ) is now ZS × ZC . Here the generator of ZS acts on one spinor
+center of G                           2      2                               2
+representation by (−1) and on the other representation by (+1), and the action of the
+generator of ZC
+              2 on the first spinor representation is by (+1) and on the second by (−1).
+The vector representation appears in the product of the two spinor representations, so
+it transforms as (−1) under both Z2 ’s. Let us denote the diagonal subgroup of ZS2 ×
+ZC     V
+ 2 as Z2 . We now have the following possibilities for the quotients: G = Spin(N ),
+G = Spin(N )/ZV2 = SO(N ), G = Spin(N )/ZS2 = Ss(N ), G = Spin(N )/Z2C = Sc(N ),
+and G = Spin(N )/(Z2 × Z2 ) = SO(N )/Z2 . The Sc(N ) theory is related to the Ss(N )
+theory by the Z2 outer-automorphism of Spin(N ), so it does not need to be treated
+separately. Nevertheless, the two theories have different spectra of line operators, and it
+will be useful to distinguish them when we discuss the action of S-duality later. The group
+Ss(N ) is sometimes called the semispin group in the mathematical literature. We note in
+passing that Ss(32) is the gauge group of the Type I superstring in ten dimensions.
+     The weight lattice, both electric and magnetic, is given by the union of ZN/2 and
+(ZN/2 + ( 21 , 12 , · · · , 12 , 21 )). The weights are divided into four classes forming Z2 × Z2 .
+The adjoint class (0, 0) contains elements of ZN/2 such that the sum of their coordinates
+is even, and the vector class (1, 1) contains the other elements of ZN/2 (in particular
+λV = (1, 0, · · · , 0)). The two spinor classes (1, 0) and (0, 1) include the weight vectors
+                     1 1             1 1                     1 1             1 1
+              λS = (+ , + , · · · , + , + ),          λC = (+ , + , · · · , + , − ),         (5.2)
+                     2 2             2 2                     2 2             2 2
+respectively (and all other weight vectors given by these weights plus elements of the adjoint
+class). Note that λS · λS = λC · λC is even when N = 8d, and is odd when N = 8d + 4,
+whereas λS · λC is odd when N = 8d and even when N = 8d + 4. This will lead to some
+differences between these two cases.
+     The classes of charges of line operators are now labeled by
+
+                       (ze,S , ze,C ; zm,S , zm,C ) ∈ (Z2 × Z2 ) × (Z2 × Z2 ).               (5.3)
+
+The inner product determining the mutual locality condition is then
+              ′           ′           ′           ′
+        ze,S zm,S − zm,S ze,S + ze,C zm,C − zm,C ze,C = 0 mod 2, (N = 8d + 4)
+                                                                                             (5.4)
+              ′           ′           ′           ′
+        ze,S zm,C − zm,C ze,S + ze,C zm,S − zm,S ze,C = 0 mod 2. (N = 8d)
+
+                                                 32
+For N > 4, shifting the θ-angle by 2π modifies the charges according to
+
+              (ze,S , ze,C ; zm,S , zm,C ) → (ze,S + zm,S , ze,C + zm,C ; zm,S , zm,C ).   (5.5)
+
+All the classes are periodic under θ → θ + 4π, consistent with the fact that these theories
+have half-instantons but do not have quarter-instantons [44].
+
+5.3. N = 0 mod 4: Possible choices of lines
+
+    After these preparations, it is straightforward to classify all possible sets of charges
+of line operators (we discuss here the cases of N > 4). The cases G = Spin(N ) and
+G = SO(N ) have already been discussed in section 3. We found SO(N )± there.
+    Let us next consider G = Spin(N )/ZS2 = Ss(N ). The purely electric lines have charges
+in the classes (0, 0; 0, 0) and (1, 0; 0, 0). The maximality of the set of charges requires that
+there are lines with charges
+
+                                  (0, n; 0, 1) (if N = 8d + 4),
+                                                                                           (5.6)
+                                  (0, n; 1, 0) (if N = 8d).
+
+Here n can be either 0 or 1, and correspondingly we have theories Ss(N )± . The effect of
+the θ-angle is easy to see:
+
+                           Ss(N )θ+2π
+                                 +    = Ss(N )θ−          (if N = 8d + 4),
+                                                                                           (5.7)
+                           Ss(N )θ+2π
+                                 ±    = Ss(N )θ±          (if N = 8d).
+
+Note that our discussion, including the last line, is consistent with (3.2) when N = 8, as
+Ss(8) and SO(8) are then equivalent by an outer automorphism of Spin(8).
+    Let us finally consider the case G = Spin(N )/Z2 × Z2 = SO(N )/Z2 . The purely
+electric lines have charges (0, 0; 0, 0). The maximality of the set of charges then requires
+that there are lines with charges
+
+                               (nSS , nSC ; 1, 0),     (nCS , nCC ; 0, 1),                 (5.8)
+
+for some numbers {nSS , nSC , nCS , nCC } which can be 0 or 1. The mutual locality imposes
+the constraint
+                                  nSC = nCS          (if N = 8d + 4),
+                                                                                           (5.9)
+                                  nSS = nCC          (if N = 8d),
+
+                                                     33
+                                                        SO(N )+
+
+                                                          S,T
+
+                                                 T (Spin(N )/Z4 )1 T
+                          S                                                              S
+   odd d:      Spin(N )        (Spin(N )/Z4 )0           S             (Spin(N )/Z4 )2       SO(N )−
+                                                 T (Spin(N )/Z4 )3 T
+                   T                                                                           T
+
+                                                 T (Spin(N )/Z4 )1 T
+                          S                                                              S
+  even d:      Spin(N )        (Spin(N )/Z4 )0           S             (Spin(N )/Z4 )2       SO(N )−
+                                                 T (Spin(N )/Z4 )3 T
+                   T                                                                           T
+
+
+        Figure 6: S-duality orbits of the N = 4 SYM theories with g = so(4d + 2).
+
+and nothing else. In total, we find eight theories. We label them as (SO(N )/Z2 ) nnSS nnSC
+                                                                                                CS   CC
+with the understanding that the relation (5.9) is satisfied. Under the shift of the θ-angle
+by 2π, we have
+                       (SO(N )/Z2 )θ+2π                  θ
+                                   nSS nSC = (SO(N )/Z2 ) nSS +1,nSC                             (5.10)
+                                      nCS nCC                     nCS    ,nCC +1
+
+and the eight theories fall into four orbits under the shift of θ.
+      The generalization of our previous discussions of N = 1 SYM to all of these cases is
+straightforward.
+
+5.4. N = 4
+
+      The S-duality of N = 4 SYM maps the gauge algebra so(N ) to itself when N is even,
+but it permutes the global structures and the choice of lines.
+      When N = 4d + 2, the structure is exactly as in su(4) ≃ so(6). Therefore, under the
+S-generator we have the mapping:
+                                 Spin(N )         ←→ (Spin(N )/Z4 )0
+                                 SO(N )−          ←→ (Spin(N )/Z4 )2                             (5.11)
+                              (Spin(N )/Z4 )1     ←→ (Spin(N )/Z4 )3
+
+while SO(N )+ is left invariant. Including the shift of theta discussed above, this implies
+that (as for su(4)) six of the theories are in one orbit of SL(2, Z), while the SO(N )+ theory
+is invariant under the full SL(2, Z) duality group. The orbits are shown in Figure 6.12
+ 12
+      The authors thank Ho Tat Lam for noticing a small error in the previous version of the paper,
+where we mistakenly used the same duality orbits for even d and odd d.
+
+                                                   34
+             Spin(N )           S       (SO(N )/Z2 ) ++ T (SO(N )/Z2 ) −+
+                                                      ++                         +−
+
+
+
+
+                      T                                                  S
+
+             SO(N )−            S       (SO(N )/Z2 ) −− T (SO(N )/Z2 ) +−
+                                                      −−                         −+
+
+
+
+
+                T                                               S
+             Ss(N )−            S       (SO(N )/Z2 ) ++ T (SO(N )/Z2 ) −+
+                                                      −+                         −−
+
+
+
+
+                T                                               S
+             Sc(N )−            S       (SO(N )/Z2 ) +− T (SO(N )/Z2 ) −−
+                                                      ++                         +−
+
+
+
+
+                      T                                                  S
+                                                S,T
+
+                                              SO(N )+
+
+            S,T              Ss(N )+                           Sc(N )+           S,T
+
+ Figure 7: S-duality orbits of the N = 4 SYM theories with g = so(8d).
+
+             Spin(N )           S       (SO(N )/Z2 ) ++ T (SO(N )/Z2 ) −+
+                                                      ++                         +−
+
+
+
+
+                      T                                                  S
+
+             SO(N )−            S       (SO(N )/Z2 ) −− T (SO(N )/Z2 ) +−
+                                                      −−                         −+
+
+
+
+
+                      T                                                  S
+
+             Ss(N )+                T      Ss(N )−         S     (SO(N )/Z2 ) ++
+                                                                                 +−
+
+
+                  S                                                          T
+             Sc(N )+                       Sc(N )−               (SO(N )/Z2 ) −+
+                                                                                 ++
+                                    T                      S
+                                                S,T
+                          (SO(N )/Z2 ) +−               (SO(N )/Z2 ) −−
+                                         −−                              −+
+
+
+
+                                              SO(N )+
+
+                                                S,T
+
+Figure 8: S-duality orbits of the N = 4 SYM theories with g = so(8d + 4).
+
+                                                35
+      When N = 4d, the 15 possible theories are generally permuted by the full S-duality
+group. For N = 8d, three theories are invariant under the full SL(2, Z), which are the
+SO(N )+ , Ss(N )+ and Sc(N )+ theories. The other 12 theories fall into 4 separate orbits,
+each containing 3 different theories. For example, the Spin(N ) theory is mapped by the
+S generator to the (SO(N )/Z2 ) 00 theory, which is mapped by the T generator to the
+                                    00
+
+(SO(N )/Z2 ) 10 theory, which is mapped to itself by the S generator. The orbits are given
+              01
+
+in Figure 7. For N = 8d + 4, the only theory which is fully invariant under SL(2, Z) is
+the SO(N )+ theory. The other theories are divided into two orbits containing 3 theories
+(one of which contains Spin(N ), and the other contains SO(N )− ), one orbit of size 6,
+and another orbit of size 2 (containing the (SO(N )/Z2 ) 01 and (SO(N )/Z2 ) 11 theories,
+                                                              11                    10
+
+which map to each other under T , and to themselves under S). The orbits are shown in
+Figure 8.13
+
+
+
+6. Summing over bundles in the Euclidean path integral
+
+      When the spatial slice of the spacetime of our gauge theories is a nontrivial 3-manifold,
+the states in the Hilbert space are characterized by discrete electric and magnetic charges
+related to the center of the covering group (see [44] and references therein). As we will
+discuss below, different charges are allowed in different theories of the types we discussed
+above, with different Hilbert spaces. Correspondingly, the Euclidean partition functions
+of these different theories on general 4-manifolds are different(though they are the same
+on S4 and S3 × S1 ). In this last section, we discuss how the Euclidean partition function
+distinguishes the different theories (with different sets of line operators), using the standard
+θ-angle θ, and in some cases its discrete generalizations. We begin in section 6.1 with an
+analysis of the Euclidean path integral and the possible θ-angles that appear in it. In
+section 6.2 we show how to map these θ-angles to the theories we discussed in the previous
+sections. In section 6.3 we generalize to the case where the center contains more than
+one factor. In section 6.4 we discuss surface operators, and their relation to the Zk gauge
+theories that we encountered above.
+ 13
+      Previous versions had a couples of typos in the duality orbits of SO(N )− in Figure 7 (cor-
+rected in v2) and Figure 8 (corrected in v5). The authors thank Oren Bergman and Sebastian
+Rauch for corrections.
+
+                                               36
+6.1. θ-angles in the Euclidean path integral
+
+      The standard θ-angle θ we are familiar with is a phase iθℓ in the action, where ℓ is the
+instanton number. We always use the physicists’ normalization of the instanton number,
+where a small instanton (that exists on any space) has instanton number 1. For a theory
+with simply-connected gauge group G, e the instanton number is integer on any manifold,
+and θ has 2π periodicity. When the gauge group G is not simply connected, the instanton
+number can be fractional on a nontrivial manifold, or in the presence of a line operator.
+Then, the periodicity of the θ-angle is 2πx, where x is an integer determined by G. This
+x can further depend on whether we allow non-spin manifolds or not; in this paper we
+assume for simplicity that every four-dimensional manifold we deal with is spin.
+      When the gauge group G is not simply connected, the gauge bundle has additional
+characteristic classes, other than the instanton number. Let us begin with the example of
+G = Spin(N )/Z2 = SO(N ). In this case we have the Stiefel-Whitney classes w2,4 of the
+gauge bundle, which are cohomology classes of degree 2 and 4 defined in Z2 , in addition to
+the integer-valued Pontryagin class p1 (related to the instanton number) which is of degree
+4. It is known (see [55] and references therein) that these classes are related by
+
+                                   p1 = P(w2 ) + 2w4      mod 4.                               (6.1)
+
+Here, on the right-hand side, we use the Pontryagin square operation P, which sends a
+degree-2d mod-2 class to a degree-4d mod-4 class:
+
+                            H 2d (X, Z2 ) ∋ v 7→ P(v) ∈ H 4d (X, Z4 ).                         (6.2)
+
+This is a generalization of the usual square v 2 , in the sense that
+
+                                        P(v) = v 2 mod 2.                                      (6.3)
+
+Furthermore, by 2w4 , we mean the image of w4 under the homomorphism 2 : H 4 (X, Z2 ) →
+H 4 (X, Z4 ) coming from the homomorphism Z2 → Z4 sending 1 mod 2 to 2 mod 4.14 In
+
+ 14
+      This is not the standard notation in mathematics, but can be justified e.g. by considering
+w4 as a cochain in C 2 (X, Z2 ), lifting it to C 2 (X, Z), multiplying it by 2 there, and reducing it
+to C 2 (X, Z4 ). The notation P(w2 )/2 below is not standard in mathematics either, for which we
+also provided a definition in this version. The authors thank Greg Moore for a discussion on these
+points.
+
+                                                 37
+the following, we write the integral of P(w2 ) over the manifold simply as P(w2 ), to lighten
+the notation.
+    For G = SO(N ) with N ≥ 4, p1 = 2ℓ, where ℓ is the instanton number. On a spin
+manifold the intersection product is even. Therefore P(w2 ) is 0 or 2 mod 4. We then define
+P(w2 )/2 to be 0 or 1 mod 2, respectively. The equation (6.1) then says that ℓ can only be
+integer, and that P(w2 )/2 is even or odd if (w4 − ℓ) is even or odd. Therefore, the θ-angle
+θ is defined modulo 2π, and P(w2 )/2 (or, equivalently, w4 ) gives rise to an independent
+discrete θ-angle; we can weigh the configurations in our Euclidean path integral by a phase
+
+                                     P(w2 )
+                         iθℓ + inπ          ,     θ ∼ θ + 2π, n = 0, 1.                 (6.4)
+                                       2
+
+    For G = SO(3), w4 = 0 and p1 = 4ℓ, where ℓ is the instanton number. Again, P(w2 )
+is defined mod 4 and is even. Then, (6.1) says that ℓ can be half-integer, and P(w2 )/2 is
+even or odd according to whether ℓ is integer or half-integer. Therefore, the θ-angle θ is
+defined modulo 4π, and P(w2 )/2 does not give an independent discrete θ-angle. The term
+we can write in the action is then
+
+                                      iθℓ,      θ ∼ θ + 4π .                            (6.5)
+
+Note that we can still equivalently use (6.4) instead.
+    In principle we can study possible types of discrete θ-angles by having a look at all
+the degree-4 characteristic classes of non-simply-connected groups G. More mathemati-
+cally, this corresponds to the classification of H 4 (BG, U (1)), where BG is the classifying
+space and H 4 refers to the standard singular cohomology. (For a readable account on
+BG, see e.g. [56].) Instantons that can be put on an open set of R4 are measured by the
+                              e which gives a natural subgroup of H 4 (BG, U (1)). When
+homotopy group π3 (G) = π3 (G),
+H 4 (BG, U (1)) is ≃ Z, the usual θ-angle with enlarged periodicity covers all the possible
+choices of the phase in the Lagrangian. When this group has more structure, we need
+additional discrete θ-angles to fully describe possible phases in the Lagrangian. Unfortu-
+nately we could not find a comprehensive discussion of H 4 (BG, U (1)) in the mathematics
+literature, although scattered results on many G’s can be found.
+     Instead, we can proceed by following [57,44]. Let G e be a simple simply-connected
+                                                               e k or G/Z
+group. Then its quotient by a subgroup of the center is either G/Z    e 2 × Z2 ; the
+                        e = Spin(4d). Fix a closed spin four-manifold X. Consider a
+latter only occurs when G
+
+                                                 38
+                                                e
+G-bundle on it. It cannot always be lifted to a G-bundle. This obstruction is controlled
+by
+                                            w2 ∈ H 2 (X, Zk )                                     (6.6)
+         e k and by
+when G = G/Z
+                                          (1)   (2)
+                                        w2 , w2 ∈ H 2 (X, Z2 )                                    (6.7)
+
+when G = G/Z e 2 × Z2 .15 Let us consider two G-bundles E, E ′ with the same w2 . Then
+                                                                                e (see
+their difference can be measured by an integer instanton number in π3 (G) ≃ π3 (G)
+e.g. footnote 14 of [44]). In other words, the instanton number mod 1 is uniquely deter-
+mined by w2 , and the phase including the contributions from various characteristic classes
+can always be written as
+                                 2nπ P(w2 )
+                       iθℓ + i              ,   θ ∼ θ + 2π, n = 0, 1, . . . , k − 1               (6.8)
+                                  k    2
+         e k , and
+when G = G/Z
+
+                X             (j)
+                           P(w2 )          (1)  (2)
+      iθℓ + i       nj π          + in12 πw2 · w2 ,        θ ∼ θ + 2π,    n1 , n12 , n2 = 0, 1    (6.9)
+                             2
+                j
+
+         e 2 × Z2 . In order for (6.8) to be well-defined, we need a squaring operation
+when G = G/Z
+P(w2 ) such that P(w2 )/2 is well-defined modulo k. For even values of k we use here the
+general Pontryagin square operation [58], which sends
+
+                               H 2d (X, Zk ) ∋ v → P(v) ∈ H 4d (X, Z2k ).                        (6.10)
+
+P(w2 )/2 is then defined in Zk , since our manifold X is spin. For odd values of k, by an
+abuse of notation we also denote by P(v) the standard cup product
+
+                             H 2d (X, Zk ) ∋ v → P(v) = v 2 ∈ H 4d (X, Zk ).                     (6.11)
+ 15                                                                                e bundle and
+      These obstruction classes, controlling whether a G bundle can be lifted to a G
+taking values in H 2 (X, Zk ), are often called (generalized) Stiefel-Whitney classes in physics liter-
+ature. This usage is not standard in mathematics, where the Stiefel-Whitney classes instead refer
+to characteristic classes wk ∈ H k (X, Z2 ) associated to a real bundle. There, w2 is related to the
+lifting of an SO bundle to a Spin bundle but other wk ’s are not. The degree-2 class controlling
+the lifting from P SU (N ) to U (N ) or SU (N ) is sometimes called the Brauer class in mathematical
+literature, but unfortunately there seems to be no standard mathematical terminology for the
+                                        e The authors thank Dan Freed and Michael Hopkins for
+class controlling the lifting from G to G.
+the correspondences on these issues.
+
+                                                      39
+    Here, since k is odd, 2 is invertible modulo k, and therefore P(v)/2 is again defined modulo
+    k. As in the SO(N ) case, we expect that adding the characteristic class w4 to (6.8) should
+    not add any additional information; it would be interesting to verify this by a careful
+    analysis of the relevant bundles.
+          In some cases, as in the SO(3) theory we discussed above, the term proportional to
+    P(w2 )/2 can be replaced by a change in the periodicity of θ. This can be found by referring
+    to the computation in [44] of the instanton number mod 1 in terms of w2 , for the case
+               e
+    where G = G/C   where C is the full center. For reference we list the results here. When
+    e 6= Spin(4d), the fractional part of the instanton number is equal to
+    G
+
+                                                 P(w2 )
+                                           ℓ=s             mod 1,                               (6.12)
+                                                   2
+    where s is given by16
+                                      e
+                                      G                       C         s
+                               SU (N )                        ZN        1/N
+                              Spin(N )     (N = 2d + 1)       Z2        0
+                              Spin(N )     (N = 8d + 2)       Z4        −1/4
+                              Spin(N )     (N = 8d + 6)       Z4        +1/4                    (6.13)
+                                Sp(N )     (N = 2d)           Z2        0
+                                Sp(N )     (N = 2d + 1)       Z2        1/2
+                                      E6                      Z3        2/3
+                                      E7                      Z2        1/2
+
+    Here Spin(N ) is understood to have N ≥ 5. The analogous statement for the group
+    G = Spin(N )/Z2 × Z2 is
+                    ( 1 (1)    (2)
+                        w · w2
+                      2 2
+                                     mod 1                          for N = 8d
+                ℓ= 1         (1)           (2)                                                  (6.14)
+                      2
+                         P(w2    )/2 + P(w 2   )/2          mod 1    for N = 8d + 4 .
+
+    For example, Sp(N )/Z2 has the following properties that can be verified using [60]:
+N even: The periodicity of the θ-angle is 2π, P(w2 ) is linearly independent of the instanton
+          number, and the difference between the instanton number and P(w2 )/2 should be an
+          independent mod-2 degree-4 characteristic class w4 .
+     16
+          The authors thank Ho Tat Lam for noticing a small error in the previous version of the paper,
+    where s was stated to be +1/4 for both N = 8d + 2 and N = 8d + 6. For more details, see the
+    footnote in Sec. 2.3.5 of [59].
+
+                                                      40
+N odd: The periodicity of the θ-angle is 4π, P(w2 )/2 is determined by the instanton number,
+        and there should not be an independent mod-2 degree-4 characteristic class w4 .
+   Similarly, the periodicity of the θ-angle for SU (3)/Z3 and for E7 /Z2 is 6π and 4π, respec-
+   tively, and there should not be an independent w4 mod 3 or mod 2, respectively. This is
+   also true [61,62].
+       It is straightforward to generalize this analysis to arbitrary semi-simple groups. The
+                                   Q
+   universal covering group G e =      e
+                                     j Gj is the product of simple simply-connected groups,
+                                                      Q
+   and the gauge group G can be written as G = G/  e
+                                                         i Zki . For each Zki , we have a Stiefel-
+                           (i)
+   Whitney class w2 defined mod ki . Then, the most general form of the θ-angles is
+                       X                  X 2ni π P(w2 (i) )         X      2ni1 ,i2 π     (i )   (i )
+                   i         θj ℓ j + i                        +i                         w2 1 · w2 2    (6.15)
+                       j                   i
+                                               ki      2             i <i
+                                                                          gcd(ki1 , ki2 )
+                                                                     1   2
+
+
+   where θj ∼ θj + 2π, ni = 0, . . . , ki − 1, ni1 ,i2 = 0, . . . , gcd(ki1 , ki2 ) − 1, and the cup product
+     (i )   (i )                                           (i ,i )
+   w2 1 · w2 2 is taken after reducing both w2 1 2 modulo gcd(ki1 , ki2 ).
+
+   6.2. θ-angles and line operators
+
+        We want to understand how the values of the discrete θ-angles that we found above
+   are related to the different choices of line operators, which we described in the previous
+   sections. The analysis is essentially a generalization of the discussion in [44] of discrete
+   electric and magnetic charges associated with the center of the gauge group, incorporating
+                                                                 e k . The generalization to
+   our discrete θ-angles. For simplicity we discuss the case G = G/Z
+   G = Spin(4n)/Z2 × Z2 and to general semi-simple groups is straightforward.
+        Consider the insertion of a straight line operator in R4 . The topology of spacetime in
+   the presence of this line operator is S2 × (0, ∞)r × Rt . Here S2 is the sphere surrounding
+   the line, r is the radial direction with appropriate boundary conditions at r → 0, ∞, and t
+   is the direction along the line, which we view as the Euclidean time direction. The discrete
+   magnetic charge carried by this line operator is given by
+                                            Z
+                                       m = 2 w2 ∈ Zk ,                                                   (6.16)
+                                             S
+   where m is precisely the magnetic charge zm of the line operator that we defined before.
+        The discrete electric charge of this configuration should equal to the electric charge
+   ze of the line operator. As defined in [44], it is given by the eigenvalue of a gauge trans-
+   formation
+                                   g : (0, ∞)r → G,        g(r = 0) = g(r = ∞) = 1                       (6.17)
+
+                                                               41
+which belongs to the homotopy class of the generator of π1 (G) = Zk . In the path integral
+formalism, this is measured by the phase assigned to a gauge configuration on
+
+                               S2 × (0, ∞)r × [0, β]t =: S2 × T2 ,                      (6.18)
+
+where the configurations at t = 0 and t = β are identified by the gauge transformation
+specified by m.
+             b This is defined by having a G-bundle with
+                                        Z
+                                   m
+                                   b =      w2 ∈ Zk .                                   (6.19)
+                                         T2
+
+We then have w2 = m[S2 ] + m[T
+                           b 2 ] and
+                                  Z
+                                        P(w2 )
+                                                  b ∈ Zk .
+                                               = mm                                     (6.20)
+                                      2
+                                   S ×T   2
+                                          2
+
+
+
+
+With the generalized θ-angles (6.8) in the action, this gives the phase
+
+                                                 n
+                                              2πi mm.
+                                                   b                                    (6.21)
+                                                 k
+
+This means that the discrete electric charge of the setup is nm ∈ Zk . Thus, the theory
+with a discrete theta parameter n includes line operators with magnetic charge zm = m
+and electric charge ze = nm mod k.
+                                                   e = SU (N ) and kk ′ = N . Then the
+      For concreteness let us set G = SU (N )/Zk , G
+analysis so far says that the line operators with minimal magnetic charge have the charge
+(ze , zm ) = (n, k ′ ) ∈ ZN × ZN , reproducing the charge lattice Ln in (2.1) when k = N , or
+Lk,n in (2.8) in the general case. Therefore we see that the subscript n in (SU (N )/Zk )n
+is indeed the coefficient n in the path integral phase (6.8).
+      We can also repeat the same discussion in the Hamiltonian formalism of [44], putting
+the theory on some spatial 3-manifold Y . In this formalism every two-cycle is associated
+with a magnetic charge mi in Zk , associated with w2 , and every one-cycle is associated
+with an electric charge ei in Zk , defined through a gauge transformation as above. The
+Hilbert space is divided into sectors labeled by the discrete charges of all the one-cycles and
+two-cycles. We claim that in a theory with given line operators, the Hilbert space includes
+those sectors such that for every pair of a one-cycle and dual two-cycle, their charges
+(ei , mi ) must be among the charges of the allowed line operators17 . This is because the
+
+ 17
+      We do not discuss manifolds with torsion cycles here.
+
+                                                42
+insertion of a topologically trivial line operator with charges (ze , zm ) creates around it
+charges (e, m) equal to those of the line operator as discussed above, while the insertion of
+a line operator wrapped around a one-cycle shifts the associated (ei , mi ) by (ze , zm ). As
+an example, the theory with gauge group Ge contains only the sectors (ei , mi = 0), while
+the theory with gauge group G and index 0 contains only the sectors with Zk charges
+(ei = 0, mi ).
+     In [44], the Witten index of the pure N = 1 SYM theory was computed for all
+simple gauge groups and for each sector (ei , mi ). If we want to count, say, the number of
+supersymmetric vacua of the pure N = 1 SYM theory on R3 × S1 for one of the theories
+that we described in the previous sections, we need to sum the Witten index over the
+charges (e, m) (associated to the S1 and to the dual 2-cycle) that are in the list of charges
+of allowed line operators. This precisely agrees with the counting of vacua that we derived
+in the previous sections.
+     To relate to our Euclidean discussion, we consider the same theory on Y × S1 . Every
+one-cycle becomes a two-cycle when including the S1 , and the magnetic charge m
+                                                                              b i on that
+2-cycle is precisely the discrete Fourier transform of its electric charge ei . The phase coming
+                                                               P
+from the P(w2 ) term in the path integral is exactly 2πn i mi m       b i /k, which is equivalent
+to saying that in the sector with magnetic charge mi we project onto the electric charge
+ei = nmi . As we described above, in some cases we can replace the parameter n by
+extending the range of the standard θ-angle, but in general it is not possible to do this.
+
+
+6.3. Lattice of charges of line operators and θ-angles: the general case
+                                                                                         Q
+                                                                                    e
+     To study the effect of the phases in the path integral in the general case G = G/     i Zki ,
+including the case G = Spin(4d)/(Z2 × Z2 ), it is better to first study the most general
+charge lattice.
+    Let Ge =Q G er , where G
+                           er are simple and simply-connected groups. Let Cr be the
+                 r
+          er . When G
+center of G         er is Spin(4d), we need to decompose Cr = Z2 × Z2 . We write
+
+                                            Y          Y
+                                    C=          Cr =       Zas .                          (6.22)
+                                            r          s
+
+
+Take a subgroup
+                                       Y                   Y
+                                 H=         Zki ⊂ C =          Zas ,                      (6.23)
+                                        i                  s
+
+
+                                                 43
+                                           e
+and consider a theory with gauge group G = G/H. Note that Zki here can be various
+nontrivial subgroups of combinations of Zas in (6.22). The charge of a line operator belongs
+to a class
+                                          (ze , zm ) ∈ C × C,                                     (6.24)
+
+where we have
+
+        ze = (n1 mod a1 , n2 mod a2 , . . .),         zm = (m1 mod a1 , m2 mod a2 , . . .).       (6.25)
+
+We choose the basis of the magnetic charges so that the inner product determining the
+mutual locality is
+                                  X ns m′ − ms n′
+                                             s              s
+                                                                = 0 mod 1.                        (6.26)
+                                    s
+                                                 as
+
+In view of (5.4), this means that we take, for example,
+
+                                                                   e = Spin(8d + 4)),
+              (n1 , n2 ; m1 , m2 ) = (ze,S , ze,C ; zm,S , zm,C ) (G
+                                                                                                  (6.27)
+                                                                   e = Spin(8d)).
+              (n1 , n2 ; m1 , m2 ) = (ze,S , ze,C ; zm,C , zm,S ) (G
+                                                                                                  Q
+    Purely electric lines have charges ze ∈ Γ ⊂ C, where Γ is the set of classes where             i Zki
+acts trivially. The mutual locality and the maximality of the set of the charges then require
+                        Q
+that zm in (6.24) is in i Zki ⊂ C. Denote the generator of Zki by gi ∈ C. For each i
+there is a line with magnetic charge gi and we need to choose its electric charge νi ∈ C.
+Since we can multiply by purely electric line operators, we can classify the allowed charges
+                                                                              Q
+νi modulo elements of Γ. These can be represented by an element of C/Γ = j Zkj , which
+we denote by νij modulo kj . Recall, i labels the line and j labels which Zkj subgroup of
+the H we are considering. These numbers completely specify the allowed charges. Next,
+mutual locality requires that
+                                          νij   νji
+                                              =     mod 1.                                        (6.28)
+                                          kj    ki
+The general solution to this is given by
+
+                 νij   νji      nij
+                     =     =               ,            nij = 0, 1, . . . , gcd(kj , ki ) − 1.    (6.29)
+                 kj    ki    gcd(kj , ki )
+
+    Therefore, the most general choice of the set of charges of line operators is specified
+by numbers
+
+                ni ≡ νii = 0, 1, . . . , ki − 1,         nij = 0, 1, . . . , gcd(ki , kj ) − 1.   (6.30)
+
+                                                       44
+They nicely match the parameters in the most general phase in the path integral (6.15).
+Repeating the analysis in section 6.2, it is easy to see that indeed the phase (6.15) repro-
+duces the charges of the dyonic line operators described above.
+    Let us verify that for G = Spin(N )/Z2 × Z2 (when N is divisible by 4) this repro-
+duces our previous statements in section 5.3. The discrete θ-angles are given in (6.9), by
+n11 , n12 = n21 , n22 , all taking the values 0 or 1. Using (6.27) and (6.26), we see that we
+have line operators with charges
+
+                      (n11 , n12 ; 1, 0),   (n21 , n11 ; 0, 1) (N = 8d + 4) ,
+                                                                                              (6.31)
+                      (n12 , n11 ; 1, 0),   (n22 , n21 ; 0, 1) (N = 8d) ,
+
+which indeed satisfy the constraint (5.9). Also, the modulo-1 equality of the instanton
+                                                                      (1)   (2)
+number and the combination of the Stiefel-Whitney classes w2 , w2                 in (6.14) correctly
+translate to the shift of the parameters nSS , nCS , nSC and nCC in (5.10).
+
+6.4. Surface operators
+
+    In our gauge theories we can also define various surface operators. The ones that are
+most interesting for us are the ones associated with the center of the gauge group.
+    Let us consider surface operators in a gauge group G with a nontrivial center C, for
+example SU (N ) with its center ZN . We can define a surface operator associated with
+every element g ∈ C. An insertion of this surface operator on some surface M is defined
+by requiring that when we go around the surface and come back to the same point, the
+gauge transformation parameter is multiplied by g. This is nontrivial, since the gauge
+transformation involved is not periodic in G, but all the gauge invariant operators (local
+operators and line operators) are still well-defined in the presence of this surface operator.
+Every Wilson line is associated with a representation of G and hence an element in the
+center g ′ ∈ C. The expectation value of a Wilson line with g ′ and a surface operator with g
+then depends on their linking number q through a phase. For C = Zk it is exp(2πigg ′ q/k).
+    Next, let us consider the surface operators when the gauge group G has a nontrivial
+first homotopy group π1 (G), for example G = SU (N )/ZN . We can construct here a surface
+operator that is S-dual to the one of the previous paragraph (see section 4.3 of [63]). In this
+case there is a Stiefel-Whitney class w2 associated with bundles of this group, which gives
+an element of the center when integrated over surfaces, and we can define an insertion of a
+surface operator on M to modify the path integral by a phase; when π1 (G) = Zk this phase
+          R
+is exp(2πi M w2 /k). As in the previous paragraph, the expectation values of ’t Hooft lines
+
+                                                 45
+carrying center charges and of these surface operators depends on their linking number
+through a phase (which is in Zk for π1 (G) = Zk ).
+      We saw in the previous sections that in some cases we get at low energies discrete
+Zk gauge theories. Such gauge theories have line operators and surface operators, labeled
+by an element of Zk . They obey a similar relation to the one described in the previous
+two paragraphs; the correlation function of a line operator and a surface operator has a
+Zk phase given by the product of their charges and of the linking number of the line with
+the surface. One way to realize such a discrete gauge theory is to have a 1-form potential
+A and a 2-form potential B, with standard quantization of their fluxes (such that their
+integrals over closed cycles are integer multiples of 2π), and with an action [35,12]
+                                                    Z
+                                           k
+                                       S=                B ∧ dA.                           (6.32)
+                                          2πi
+
+In this realization, the Zk line operators are Wilson lines of A, and the Zk surface operators
+are given by exponentials of integrals of B. When we flow from any of our gauge theories to
+a Zk gauge theory, the basic line operator of that gauge theory becomes the line operator of
+this Zk theory, and the surface operators described in the previous two paragraphs become
+the surface operators of this Zk theory.
+      We can use this discussion also to relate the different theories discussed above. For
+instance, suppose we have an SU (N )/ZN theory and we want to turn it into an SU (N )
+theory. We can couple the SU (N )/ZN theory to a ZN gauge theory (realized by A and B
+fields as above), and add to the action a term
+                                             Z
+                                                 d4 xB ∧ w2 .                              (6.33)
+
+The field B then serves as a Lagrange multiplier that sets the discrete magnetic charge to
+zero18 . The magnetic line operators of the SU (N )/ZN theory are no longer allowed since
+they are not gauge-invariant under gauge transformations of B, and the surface operators
+of the SU (N )/ZN theory become trivial. On the other hand, we introduce new line and
+surface operators from the ZN gauge theory, which behave like line and surface operators
+of SU (N ). In a similar way, one can go from an SU (N ) theory to an SU (N )/ZN theory,
+by coupling a ZN gauge theory such that the B field of the ZN theory makes the surface
+
+ 18
+      Note that the equation of motion of A implies that B is flat, and that as in other places we
+ignore possible issues related to torsion.
+
+                                                    46
+operators of the SU (N ) theory trivial. By similar manipulations we can relate all the
+theories we discussed above (that have the same Lie algebra g), by coupling them to an
+appropriate discrete gauge theory.
+
+Acknowledgments
+    We would like to thank T. Dumitrescu, G. Festuccia, D. Freed, D. Gaiotto, S. Gi-
+acomelli, J. Gomis, K. Intriligator, T. Okuda, S. Razamat, M. Strassler, S. Sugimoto,
+B. Willett, and E. Witten for many useful discussions. We would like to thank G. W. Moore
+in particular, for helpful discussions and also for his detailed and thoughtful comments on
+the draft. We would also like to thank Oren Bergman for pointing out an important typo
+in a previous version of this paper. OA is the Samuel Sebba Professorial Chair of Pure
+and Applied Physics, and he is supported in part by a grant from the Rosa and Emilio
+Segre Research Award, by an Israel Science Foundation center for excellence grant, by the
+German-Israeli Foundation (GIF) for Scientific Research and Development, and by the
+Minerva foundation with funding from the Federal German Ministry for Education and
+Research. OA gratefully acknowledges support from an IBM Einstein Fellowship at the
+Institute for Advanced Study. The work of NS was supported in part by DOE grant DE-
+FG02-90ER40542 and by the United States-Israel Binational Science Foundation (BSF)
+under grant number 2010/629. YT’s research is supported in part by MEXT/JSPS grant
+KAKENHI-25870159, and in part by the WPI research initiative through IPMU, Univer-
+sity of Tokyo. Any opinions, findings, and conclusions or recommendations expressed in
+this material are those of the authors and do not necessarily reflect the views of the funding
+agencies.
+
+References
+[1] O. Aharony, S. S. Razamat, N. Seiberg and B. Willett, “3d dualities from 4d dual-
+    ities,” JHEP 1307, 149 (2013). [arXiv:1305.3924 [hep-th]]. O. Aharony, S. S. Raza-
+    mat, N. Seiberg and B. Willett,“3d dualities from 4d dualities for orthogonal groups,”
+    [arXiv:1307.0511 [hep-th]].
+[2] N. Seiberg, “Electric–magnetic duality in supersymmetric nonAbelian gauge theories,”
+    Nucl. Phys. B 435, 129 (1995). [hep-th/9411149].
+[3] K. A. Intriligator and N. Seiberg, “Duality, monopoles, dyons, confinement and oblique
+    confinement in supersymmetric SO(Nc ) gauge theories,” Nucl. Phys. B 444, 125
+    (1995). [hep-th/9503179].
+[4] P. Goddard, J. Nuyts and D. I. Olive, “Gauge Theories and Magnetic Charge,” Nucl.
+    Phys. B 125, 1 (1977).
+
+                                             47
+ [5] A. Kapustin, “Wilson-’t Hooft operators in four-dimensional gauge theories and S-
+     duality,” Phys. Rev. D 74, 025005 (2006). [hep-th/0501015].
+ [6] A. Kapustin and N. Saulina, “The Algebra of Wilson-’t Hooft operators,” Nucl. Phys.
+     B 814, 327 (2009). [arXiv:0710.2097 [hep-th]].
+ [7] D. Gaiotto, G. W. Moore and A. Neitzke, “Framed BPS States,” [arXiv:1006.0146
+     [hep-th]].
+ [8] N. Drukker, D. R. Morrison and T. Okuda, “Loop operators and S-duality from curves
+     on Riemann surfaces,” JHEP 0909, 031 (2009). [arXiv:0907.2593 [hep-th]].
+ [9] C. Vafa, “Modular Invariance and Discrete Torsion on Orbifolds,” Nucl. Phys. B 273,
+     592 (1986).
+[10] C. Vafa and E. Witten, “On orbifolds with discrete torsion,” J. Geom. Phys. 15, 189
+     (1995). [hep-th/9409188].
+[11] N. Seiberg, “Modifying the Sum Over Topological Sectors and Constraints on Super-
+     gravity,” JHEP 1007, 070 (2010). [arXiv:1005.0002 [hep-th]].
+[12] T. Banks and N. Seiberg, “Symmetries and Strings in Field Theory and Gravity,”
+     Phys. Rev. D 83, 084019 (2011). [arXiv:1011.5120 [hep-th]].
+[13] T. Pantev and E. Sharpe, “GLSM’s for gerbes (and other toric stacks),” Adv. Theor.
+     Math. Phys. 10, 77 (2006) [arXiv:hep-th/0502053].
+[14] T. Pantev and E. Sharpe, “Notes on gauging noneffective group actions,” arXiv:hep-
+     th/0502027.
+[15] A. Caldararu, J. Distler, S. Hellerman, T. Pantev and E. Sharpe, “Non-birational
+     twisted derived equivalences in abelian GLSMs,” arXiv:0709.3855 [hep-th].
+[16] F. Cachazo, N. Seiberg and E. Witten, “Phases of N = 1 supersymmetric gauge
+     theories and matrices,” JHEP 0302, 042 (2003). [hep-th/0301006].
+[17] K. Konishi and Y. Ookouchi, “On Confinement Index,” Nucl. Phys. B 827, 59 (2010).
+     [arXiv:0909.3781 [hep-th]].
+[18] K. A. Intriligator and N. Seiberg, “Lectures on supersymmetric gauge theories
+     and electric–magnetic duality,” Nucl. Phys. Proc. Suppl. 45BC, 1 (1996). [hep-
+     th/9509066].
+[19] N. Seiberg and E. Witten, “Electric-magnetic duality, monopole condensation, and
+     confinement in N = 2 supersymmetric Yang-Mills theory,” Nucl. Phys. B 426, 19
+     (1994), [Erratum-ibid. B 430, 485 (1994)]. [hep-th/9407087].
+[20] N. J. Evans, S. D. H. Hsu and M. Schwetz, “Phase transitions in softly broken N=2
+     SQCD at nonzero theta angle,” Nucl. Phys. B 484, 124 (1997). [hep-th/9608135].
+[21] K. Konishi, “Confinement, supersymmetry breaking and theta parameter dependence
+     in the Seiberg-Witten model,” Phys. Lett. B 392, 101 (1997). [hep-th/9609021].
+[22] G. ’t Hooft, “Topology of the Gauge Condition and New Confinement Phases in
+     Nonabelian Gauge Theories,” Nucl. Phys. B 190, 455 (1981).
+
+                                           48
+[23] T. Banks and E. Rabinovici, “Finite Temperature Behavior of the Lattice Abelian
+     Higgs Model,” Nucl. Phys. B 160, 349 (1979).
+[24] E. H. Fradkin and S. H. Shenker, “Phase Diagrams of Lattice Gauge Theories with
+     Higgs Fields,” Phys. Rev. D 19, 3682 (1979).
+[25] N. Seiberg and E. Witten, “Gauge dynamics and compactification to three-dimensions,”
+     In Saclay 1996, The mathematical beauty of physics 333-366. [hep-th/9607163].
+[26] M. Henningson, “Wilson-’t Hooft operators and the theta angle,” JHEP 0605, 065
+     (2006). [hep-th/0603188].
+[27] C. Vafa and E. Witten, “A strong coupling test of S duality,” Nucl. Phys. B 431, 3
+     (1994). [hep-th/9408074].
+[28] S. Gukov and E. Witten, “Gauge Theory, Ramification, And The Geometric Langlands
+     Program,” [hep-th/0612073].
+[29] L. Girardello, A. Giveon, M. Porrati and A. Zaffaroni, “S duality in N=4 Yang-Mills
+     theories with general gauge groups,” Nucl. Phys. B 448, 127 (1995). [hep-th/9502057].
+[30] S. Wu, “S-duality in Vafa-Witten theory for non-simply laced gauge groups,” JHEP
+     0805, 009 (2008). [arXiv:0802.2047 [hep-th]].
+[31] J. M. Maldacena, “The Large N limit of superconformal field theories and supergrav-
+     ity,” Adv. Theor. Math. Phys. 2, 231 (1998). [hep-th/9711200].
+[32] O. Aharony and E. Witten, “Anti-de Sitter space and the center of the gauge group,”
+     JHEP 9811, 018 (1998). [hep-th/9807205].
+[33] E. Witten, “AdS / CFT correspondence and topological field theory,” JHEP 9812,
+     012 (1998). [hep-th/9812012].
+[34] O. Aharony, S. S. Gubser, J. M. Maldacena, H. Ooguri and Y. Oz, “Large N field
+     theories, string theory and gravity,” Phys. Rept. 323, 183 (2000). [hep-th/9905111].
+[35] J. M. Maldacena, G. W. Moore and N. Seiberg, “D-brane charges in five-brane back-
+     grounds,” JHEP 0110, 005 (2001). [hep-th/0108152].
+[36] D. Belov and G. W. Moore, “Conformal blocks for AdS5 singletons,” [hep-th/0412167].
+[37] O. J. Ganor, “Six-dimensional tensionless strings in the large N limit,” Nucl. Phys. B
+     489, 95 (1997). [hep-th/9605201].
+[38] G. Segal, “The definition of conformal field theory,” unpublished preprint from late
+     1980s, reprinted in Topology, geometry and quantum field theory, London Math. Soc.
+     Lecture Note 308 421–577, 2004.
+[39] G. W. Moore, “Anomalies, Gauss laws, and Page charges in M-theory,” Comptes
+     Rendus Physique 6, 251 (2005). [hep-th/0409158].
+[40] E. Witten, “Geometric Langlands From Six Dimensions,” [arXiv:0905.2720 [hep-th]].
+[41] D. S. Freed and C. Teleman, “Relative quantum field theory,” [arXiv:1212.1692 [hep-
+     th]].
+[42] G. Moore, “Overview of the theory of self-dual fields” and “The RR charge of an
+     orientifold”, which are available through http://www.physics.rutgers.edu/˜gmoore/ .
+
+                                            49
+[43] N. Seiberg and W. Taylor, “Charge Lattices and Consistency of 6D Supergravity,”
+     JHEP 1106, 001 (2011). [arXiv:1103.0019 [hep-th]].
+[44] E. Witten, “Supersymmetric index in four-dimensional gauge theories,” Adv. Theor.
+     Math. Phys. 5, 841 (2002). [hep-th/0006010].
+[45] K. A. Intriligator and N. Seiberg, “Phases of N = 1 supersymmetric gauge theories
+     and electric-magnetic triality,” In Los Angeles 1995, Future perspectives in string
+     theory 270-282. [hep-th/9506084].
+[46] M. J. Strassler, “Duality, phases, spinors and monopoles in SO(N ) and spin(N ) gauge
+     theories,” JHEP 9809, 017 (1998). [hep-th/9709081].
+[47] P. C. Argyres, M. R. Plesser and N. Seiberg, “The Moduli space of vacua of N=2
+     SUSY QCD and duality in N=1 SUSY QCD,” Nucl. Phys. B 471, 159 (1996). [hep-
+     th/9603042].
+[48] P. C. Argyres, M. R. Plesser and A. D. Shapere, “N=2 moduli spaces and N=1
+     dualities for SO(nc ) and U Sp(2nc ) superQCD,” Nucl. Phys. B 483, 172 (1997). [hep-
+     th/9608129].
+[49] M. Shifman and A. Yung, “Confronting Seiberg’s Duality with r Duality in N = 1
+     Supersymmetric QCD,” Phys. Rev. D 86, 065003 (2012). [arXiv:1204.4164 [hep-th]].
+[50] M. Shifman and A. Yung, “Detailing N=1 Seiberg’s Duality through the Seiberg-
+     Witten Solution of N=2,” [arXiv:1304.0822 [hep-th]].
+[51] P. C. Argyres, A. Kapustin and N. Seiberg, “On S-duality for non-simply-laced gauge
+     groups,” JHEP 0606, 043 (2006). [hep-th/0603048].
+[52] E. Witten, “Baryons and branes in anti-de Sitter space,” JHEP 9807, 006 (1998).
+     [hep-th/9805112].
+[53] A. Hanany and B. Kol, “On orientifolds, discrete torsion, branes and M theory,” JHEP
+     0006, 013 (2000). [hep-th/0003025].
+[54] K. A. Intriligator and P. Pouliot, “Exact superpotentials, quantum vacua and dual-
+     ity in supersymmetric Sp(Nc ) gauge theories,” Phys. Lett. B 353, 471 (1995). [hep-
+     th/9505006].
+[55] E. Thomas, “On the Cohomology of the Real Grassmann Complexes and the Char-
+     acteristic Classes of n-Plane Bundles,” Trans. Amer. Math. Soc. 96, 67–89 (1960)
+[56] R. Dijkgraaf and E. Witten, “Topological Gauge Theories and Group Cohomology,”
+     Commun. Math. Phys. 129, 393 (1990).
+[57] A. Dold and H. Whitney, “Classification of oriented sphere bundles over a 4-complex,”
+     Ann. of Math. 2nd Ser. 69, 667–677 (1959)
+[58] W. Browder and E. Thomas, “Axioms for the generalized Pontryagin cohomology
+     operations,” Quart. J. Math. Oxford, 2nd ser., 13 55–60 (1962)
+[59] C. Cordova, D. S. Freed, H. T. Lam and N. Seiberg, “Anomalies in the Space of
+     Coupling Constants and Their Dynamical Applications II,” [arXiv:1905.13361 [hep-
+     th]].
+
+                                            50
+[60] A. Borel, “Sur L’Homologie et la Cohomologie des Groupes de Lie Compacts Con-
+     nexes,” Jour. Amer. Math. 76, 273–342 (1954)
+[61] A. Kono, M. Mimura, and N. Shimada, “Cohomology of classifying spaces of certain
+     associative H-spaces,” J. Math. Kyoto. U. 15 607–617 (1975)
+[62] A. Kono, and M. Mimura, “On the cohomology mod 2 of the classifying space of
+     AdE7 ,” J. Math. Kyoto. U. 18 535–541 (1978)
+[63] S. Gukov and E. Witten, “Rigid Surface Operators,” Adv. Theor. Math. Phys. 14
+     (2010). [arXiv:0804.1561 [hep-th]].
+
+
+
+
+                                         51
+
