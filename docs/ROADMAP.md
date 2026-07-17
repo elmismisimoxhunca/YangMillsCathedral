@@ -79,6 +79,7 @@ committed before higher layers depend on it.
 ## Phase 3 — classical Yang–Mills semantics
 
 - [x] Define and probe the adjoint-invariant positive Lie-algebra inner product.
+- [x] Induce its chart-independent positive pairing on actual adjoint quotient fibers.
 - [ ] Define the Euclidean action from descended curvature, metric/Hodge, volume and coupling data.
 - [ ] Interpret gauge-invariant local curvature polynomials and covariant derivatives.
 - [ ] Separate local observables from nonlocal Wilson observables.

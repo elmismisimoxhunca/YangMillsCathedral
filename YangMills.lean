@@ -63,6 +63,8 @@ import YangMills.Geometry.AdjointBundleFiberAlgebra
 import YangMills.Geometry.AdjointBundleFiberAlgebraProbes
 import YangMills.Geometry.AdjointBundleFiberLinearity
 import YangMills.Geometry.AdjointBundleFiberLinearityProbes
+import YangMills.Geometry.AdjointBundleInvariantPairing
+import YangMills.Geometry.AdjointBundleInvariantPairingProbes
 import YangMills.Geometry.AdjointBundleDependentTrivialization
 import YangMills.Geometry.AdjointBundleDependentTrivializationProbes
 import YangMills.Geometry.AdjointBundleFiberBundle

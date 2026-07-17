@@ -1001,6 +1001,20 @@ Verified:
 - No connection, exterior-derivative datum, or structure certificate witness is constructed; this
   is a conditional descent theorem and not an existence claim.
 
+## 2026-07-17 — fifty-eighth mathematical stone: invariant adjoint-fiber pairing
+
+Verified:
+
+- `AdjointBundle.fiberPairing` transports the explicit invariant Lie-algebra pairing to every actual
+  dependent adjoint quotient fiber through the exact selected coordinate.
+- `fiberPairingInChart_eq` proves every designated chart computes the same scalar by the exact
+  adjoint coordinate transition and adjoint invariance.
+- The induced pairing is symmetric, nonnegative on the diagonal, and positive definite with respect
+  to the named transported fiber zero.
+- Hostile probes reject chart dependence, negative quadratic values, and nonzero zero-norm values.
+- No global inner-product instance or normalization is installed. Metric/Hodge contraction,
+  integration, coupling, and the action remain separate pending data.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

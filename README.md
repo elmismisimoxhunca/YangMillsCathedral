@@ -116,8 +116,8 @@ right-equivariant principal two-forms and smooth descent for the exact certified
 curvature, and the adjoint
 action packaged as a
 smooth invertible operator family, alongside an explicit positive
-adjoint-invariant
-Lie-algebra inner-product certificate, are
+adjoint-invariant Lie-algebra inner-product certificate inducing a chart-independent positive
+pairing on every actual adjoint quotient fiber, are
 implemented. No
 concrete gauge-group, connection, invariant-inner-product, curvature, or structure-certificate witness,
 symmetry group, reconstruction bridge, quantum-theory witness, Yang–Mills existence claim, or
