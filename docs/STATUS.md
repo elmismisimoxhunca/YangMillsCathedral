@@ -278,6 +278,25 @@ Verified:
   verifies the project's usual `C∞` context and its explicit smoothness downgrade.
 - No concrete gauge group, connection, exterior derivative, or curvature is constructed.
 
+## 2026-07-17 — seventeenth mathematical stone: local-model exterior derivative
+
+Verified:
+
+- `NormedSpaceDifferentialForm` names Mathlib's native continuous alternating coefficient family on
+  a real normed vector space.
+- `NormedSpaceDifferentialForm.exteriorDerivative` packages Mathlib's Fréchet-derivative
+  `extDeriv` and raises degree by exactly one.
+- The derivative of a zero-form is tied to `fderiv`; the zero form differentiates to zero.
+- For `C∞` coefficient families, the second exterior derivative is zero, and the operation obeys
+  Mathlib's sufficiently smooth pullback theorem.
+- `toManifoldForm` gives a definitionally coherent view in the project's pointwise manifold form
+  carrier on a normed model space; `toManifoldForm_pullback` proves agreement of the `fderiv` and
+  `mfderiv` pullback constructions.
+- Hostile probes enforce degree, zero-form semantics, nilpotence, exterior-derivative naturality,
+  and both evaluation and pullback bridge coherence.
+- This is local-model infrastructure only: no arbitrary-manifold exterior derivative, curvature,
+  connection witness, or Yang–Mills field is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

@@ -18,6 +18,8 @@ import YangMills.Mathematics.LieBracketWedge
 import YangMills.Mathematics.LieBracketWedgeProbes
 import YangMills.Mathematics.ManifoldDifferentialForms
 import YangMills.Mathematics.ManifoldDifferentialFormsProbes
+import YangMills.Mathematics.NormedSpaceExteriorDerivative
+import YangMills.Mathematics.NormedSpaceExteriorDerivativeProbes
 import YangMills.Mathematics.SmoothManifoldDifferentialForms
 import YangMills.Mathematics.SmoothManifoldDifferentialFormsProbes
 import YangMills.Geometry.LieGroup

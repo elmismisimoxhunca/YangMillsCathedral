@@ -85,4 +85,6 @@ same pointwise form satisfying (1.9)–(1.10); it does not construct a connectio
 self-wedge evaluates to twice the pointwise bracket, making the factor `1/2` in (1.13) explicit.
 Joint continuity is derived for Mathlib's actual finite-dimensional Lie-group tangent bracket by
 transport through the canonical normed model coordinates.
-The exterior-derivative and curvature declarations remain pending.
+Mathlib's normed-space `extDeriv`, its nilpotence theorem, and its pullback theorem are packaged as
+local-model infrastructure. Globalization to arbitrary manifolds and the curvature declaration
+remain pending.
