@@ -652,6 +652,25 @@ Verified:
 - No fiber algebra, `FiberBundle`, `VectorBundle`, smooth bundle, section, or descended curvature is
   claimed.
 
+## 2026-07-17 — thirty-seventh mathematical stone: dependent fiber algebra
+
+Verified:
+
+- `fiberModelEquiv` identifies any dependent quotient fiber with the declared normed model through
+  an explicit designated associated trivialization containing the base point.
+- `selectedFiberModelEquiv` uses exactly the principal bundle's explicit selected chart at each base
+  point.
+- `fiberAddCommGroup` and `fiberModule` transport additive commutative group and real module
+  structures through that same selected equivalence.
+- `selectedFiberLinearEquiv` proves that the selected coordinate is a real linear equivalence under
+  the named transported structures.
+- All algebra structures are named values rather than global instances, preserving visibility of
+  the selected atlas data.
+- Hostile probes reject broken fiber-coordinate round trips, nonadditive or nonscalar coordinates,
+  and a nonzero image of fiber zero.
+- Linearity of every other designated trivialization and `FiberBundle`/`VectorBundle` packaging
+  remain pending; no smooth bundle, section, or descended curvature is claimed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

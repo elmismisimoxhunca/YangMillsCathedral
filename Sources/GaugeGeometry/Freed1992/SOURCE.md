@@ -114,8 +114,9 @@ named `C∞` manifold structure on the same quotient carrier and topology. No gl
 instance is installed. The quotient fibers are additionally packaged as a dependent family with a
 base-preserving carrier equivalence back to the same quotient. Its named topology is then pulled
 back from the quotient, making that equivalence a base-preserving homeomorphism without installing
-a competing global topology instance. No `FiberBundle` or smooth vector-bundle structure is
-attributed to it.
+a competing global topology instance. Every dependent fiber then receives named real vector-space
+structures transported through the explicitly selected associated coordinate. Linearity of all
+other designated charts, `FiberBundle`, and smooth vector-bundle structure remain pending.
 `PrincipalTwoForm.IsHorizontal`, `.IsRightAdEquivariant`, and the connection-indexed
 `PrincipalCurvatureStructureCertificate` state (1.15) and (1.14) intrinsically without accepting an
 unrelated curvature field. This is a requirement surface: automatic derivation from the current
