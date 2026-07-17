@@ -65,7 +65,8 @@ committed before higher layers depend on it.
 - [x] Prove the exact degree-zero form/section carrier and smoothness bridge.
 - [x] Derive smooth principal local sections and projection-right-inverse tangent lifts.
 - [x] Prove lift-independence for horizontal principal two-forms.
-- [ ] Add representative-independence and curvature descent.
+- [x] Prove adjoint-quotient representative independence under right translation.
+- [ ] Construct and verify curvature descent.
 - [ ] Derive structural curvature laws automatically and prove gauge covariance and Bianchi.
 
 ## Phase 3 — classical Yang–Mills semantics

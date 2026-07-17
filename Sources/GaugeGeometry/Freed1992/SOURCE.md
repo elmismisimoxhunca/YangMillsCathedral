@@ -132,7 +132,9 @@ smooth zero form is derived. Degree-zero forms are proved exactly equivalent to 
 including smoothness in both presentations. Every designated principal chart now supplies a smooth
 local section and a tangent lift proved right-inverse to the actual projection differential.
 Horizontality is proved to make two-form evaluation independent of tangent-lift choices at a fixed
-total-space point. Representative independence and curvature descent remain pending.
+total-space point. Right adjoint equivariance is then proved to identify the resulting values in the
+actual adjoint orbit quotient across right-related representatives, including replacement lifts with
+matching projections. Construction and smoothness of the descended base form remain pending.
 `PrincipalTwoForm.IsHorizontal`, `.IsRightAdEquivariant`, and the connection-indexed
 `PrincipalCurvatureStructureCertificate` state (1.15) and (1.14) intrinsically without accepting an
 unrelated curvature field. This is a requirement surface: automatic derivation from the current

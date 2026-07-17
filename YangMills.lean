@@ -97,6 +97,8 @@ import YangMills.Geometry.PrincipalCurvatureStructure
 import YangMills.Geometry.PrincipalCurvatureStructureProbes
 import YangMills.Geometry.PrincipalTwoFormLiftIndependence
 import YangMills.Geometry.PrincipalTwoFormLiftIndependenceProbes
+import YangMills.Geometry.PrincipalTwoFormRepresentativeIndependence
+import YangMills.Geometry.PrincipalTwoFormRepresentativeIndependenceProbes
 import YangMills.Audit
 
 /-!

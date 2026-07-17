@@ -858,6 +858,23 @@ Verified:
 - Representative independence and curvature descent remain pending; no connection, curvature, or
   descended-form witness is constructed.
 
+## 2026-07-17 — forty-ninth mathematical stone: right-action representative independence
+
+Verified:
+
+- `principalBundleProjectionDifferential_comp_rightTranslationDifferential` proves that the
+  differential of actual right translation preserves projected tangent vectors.
+- `PrincipalTwoForm.IsRightAdEquivariant.mk_rightTranslation` combines exact right equivariance with
+  `AdjointBundle.mk_rightAction` to prove equality in the actual adjoint orbit quotient.
+- `.mk_eq_of_rightTranslation_and_projection_eq` combines this with horizontality to allow arbitrary
+  replacement lifts having matching projections at the translated representative.
+- These are derived theorems from the existing structural predicates; no caller-supplied quotient
+  equality or descended-form witness is accepted.
+- Hostile probes reject altered projection differentials, changed quotient representatives, and
+  dependence on right-related representatives or matching replacement lifts.
+- Construction and smoothness of the descended base two-form remain pending; no curvature descent is
+  claimed yet.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
