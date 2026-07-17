@@ -671,6 +671,23 @@ Verified:
 - Linearity of every other designated trivialization and `FiberBundle`/`VectorBundle` packaging
   remain pending; no smooth bundle, section, or descended curvature is claimed.
 
+## 2026-07-17 — thirty-eighth mathematical stone: all designated fiber coordinates are linear
+
+Verified:
+
+- `fiberCoordinateChangeLinearEquiv` is the exact model-coordinate adjoint action of the principal
+  overlap from the selected chart to an arbitrary requested designated chart.
+- `fiberModelEquiv_eq_coordinateChange` derives, from the quotient transition formula, that each
+  requested fiber coordinate is precisely that linear change after the selected coordinate.
+- `fiberModelLinearEquiv` packages every designated fiber coordinate as a real linear equivalence
+  for the named transported fiber structures.
+- `fiberModelLinearEquiv_apply` proves its underlying map is the original quotient-derived
+  coordinate, preventing replacement by an unrelated linear surrogate.
+- Hostile probes reject disconnected linear replacements and nonadditive or nonscalar behavior in
+  arbitrary designated coordinates.
+- Dependent-space bundle trivializations, per-fiber topology, `FiberBundle`/`VectorBundle`
+  packaging, and smooth bundle claims remain pending.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

@@ -54,7 +54,8 @@ committed before higher layers depend on it.
 - [x] Construct the dependent-fiber carrier and base-preserving equivalence to the quotient.
 - [x] Pull back the quotient topology and prove a base-preserving total-space homeomorphism.
 - [x] Transport named real vector-space structures to every dependent fiber.
-- [ ] Prove all designated trivializations are fiberwise linear and package a smooth vector bundle.
+- [x] Prove every designated associated fiber coordinate is linear for those structures.
+- [ ] Promote dependent trivializations and package a topology-coherent smooth vector bundle.
 - [ ] Add adjoint-bundle-valued form and curvature-descent infrastructure.
 - [ ] Derive structural curvature laws automatically and prove gauge covariance and Bianchi.
 

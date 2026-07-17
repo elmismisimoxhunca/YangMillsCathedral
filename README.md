@@ -103,7 +103,8 @@ derived fiberwise-linear overlap formulas with smooth forward/inverse operator f
 source coherence, a named covering quotient chart atlas with explicit tangent-model transport and
 proved smooth fiberwise-linear groupoid/manifold compatibility, a base-preserving dependent-fiber
 carrier equivalence with an explicitly topology-coherent total-space homeomorphism and named real
-vector-space structures on every dependent fiber, and the adjoint action packaged as a
+vector-space structures on every dependent fiber with every designated associated coordinate proved
+linear, and the adjoint action packaged as a
 smooth invertible operator family, alongside an explicit positive
 adjoint-invariant
 Lie-algebra inner-product certificate, are
