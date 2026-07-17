@@ -156,12 +156,26 @@ Verified:
 - Hostile probes independently reject nonsmooth projection/action, nonsmooth charts, and nonsmooth
   inverse charts; selected charts inherit both directions.
 
+## 2026-07-17 — ninth mathematical stone: smooth gauge transformations
+
+Verified:
+
+- `SmoothGaugeTransformation` is tied to one fixed `SmoothPrincipalBundleData` and retains one
+  underlying algebraic gauge automorphism.
+- Both the total-space equivalence and its inverse are required to be `C∞`; a forward-smooth
+  bijection alone is insufficient.
+- Identity, composition, and inverse close to a proved group, with pointwise evaluation laws.
+- Projection preservation and right-action equivariance are inherited through the explicit
+  algebraic bridge.
+- Every smooth principal bundle has the identity smooth gauge transformation.
+- Hostile probes reject nonsmooth forward/inverse maps, base movement, and failed equivariance.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
   `SU(n)` API does not supply the complete manifold/compactness/connectedness/tangent-simplicity
   chain, so positive consistency infrastructure remains open.
-- No smooth gauge-transformation layer, connection, curvature, symmetry-group, quantum-theory,
+- No general smooth bundle-map layer, connection, curvature, symmetry-group, quantum-theory,
   acceptance, existence, or mass-gap declaration exists.
 - No Yang–Mills acceptance declaration exists.
 - No standalone Git remote exists or has been pushed. The tested candidate

@@ -71,8 +71,8 @@ Searchable extraction: `Sources/GaugeGeometry/Freed1992/classical_chern_simons_p
 | Freed pp. 6–7 §1; text 318–348 | make structure-group topology and projection/action continuity/smoothness explicit when realizing Freed's differentiable principal-bundle conventions | Project staging requirements, not a verbatim list from Freed | `IsTopologicalGroup G`; `TopologicalPrincipalBundleData.projection_continuous`, `.rightAction_continuous`; `SmoothPrincipalBundleData.projection_smooth`, `.rightAction_smooth` | Explicit strengthening/formalization decision implemented |
 | Freed p. 7 §1; text 323–348 | same-fiber points are related by a group element | Derived theorem from unique transitivity | `sameFiber_transitive` | Derived algebraic result |
 | Freed p. 7 §1; text 361–364 | equivariant bundle maps cover a declared base map | Reusable definition | `YangMills.Geometry.PrincipalBundleTorsorMap` | Algebraic covering/equivariance core implemented; smoothness remains pending |
-| Freed p. 7 §1; text 364–371 | gauge transformations are bundle automorphisms over the base identity | Reusable definition / forgetful bridge | `YangMills.Geometry.TorsorGaugeTransformation`, `.toTorsorMap` | Invertible algebraic core and coherent forgetting to a bundle map implemented; smoothness remains pending |
-| Freed p. 8 §1; text 376–377 | gauge transformations form a group | Derived algebraic structure | `Group (TorsorGaugeTransformation bundle)` | Identity, composition, inverse, and evaluation laws implemented and probed |
+| Freed p. 7 §1; text 364–371 | gauge transformations are smooth bundle automorphisms over the base identity | Reusable definition / forgetful bridge | `YangMills.Geometry.TorsorGaugeTransformation`, `.toTorsorMap`; `YangMills.Geometry.SmoothGaugeTransformation`, then `.toGauge.toTorsorMap` | Algebraic automorphism and forward/inverse smoothness are tied to one fixed smooth principal bundle; explicit inverse smoothness enforces the categorical automorphism/diffeomorphism reading rather than merely a smooth bijection |
+| Freed p. 8 §1; text 376–377 | gauge transformations form a group | Derived algebraic/smooth structure | `Group (TorsorGaugeTransformation bundle)`, `Group (SmoothGaugeTransformation smoothBundle)` | Identity, composition, inverse, smooth closure, and evaluation laws implemented and probed |
 | Freed p. 8 §1; text 377–380 | extension of structure group and pullback along a base map | Reusable definition / distinction | — | Explicitly pending; not conflated with gauge automorphisms |
 | Freed p. 8 §1, (1.9)–(1.12); text 381–398 | connection form has vertical normalization and right equivariance | Reusable definition | — | Pending differential-form and principal-connection infrastructure |
 | Freed p. 8 §1, (1.13)–(1.16); text 399–419 | curvature formula, horizontality/equivariance, and Bianchi identity | Definition / derived theorem | — | Pending exterior derivative, wedge-bracket, and curvature layer |
@@ -89,9 +89,10 @@ uncovered or out-of-atlas charts, malformed chart domains/codomains, and failed 
 the product bundle is a concrete positive model. The smooth layer requires manifold structures,
 smooth projection/action, and both smooth directions for every atlas chart; the smooth product
 bundle is a positive model. A named overlap-transition theorem is not yet packaged, although these
-chart fields provide its inputs. Smoothness of gauge maps, connections, and curvature remain open
-rather than being hidden in a placeholder proposition. A quotient-map theorem for the projection is also
-still to be packaged.
+chart fields provide its inputs. Smooth gauge automorphisms require both forward and inverse
+smoothness and retain projection/equivariance laws. General smooth bundle maps, connections, and
+curvature remain open rather than being hidden in a placeholder proposition. A quotient-map theorem
+for the projection is also still to be packaged.
 
 ## Dimension-foundation decisions
 

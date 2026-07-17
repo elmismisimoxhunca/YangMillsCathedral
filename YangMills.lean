@@ -20,6 +20,8 @@ import YangMills.Geometry.TopologicalPrincipalBundle
 import YangMills.Geometry.TopologicalPrincipalBundleProbes
 import YangMills.Geometry.SmoothPrincipalBundle
 import YangMills.Geometry.SmoothPrincipalBundleProbes
+import YangMills.Geometry.SmoothGaugeTransformation
+import YangMills.Geometry.SmoothGaugeTransformationProbes
 import YangMills.Audit
 
 /-!

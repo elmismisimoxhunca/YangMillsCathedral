@@ -63,3 +63,7 @@ not import that specialization into its global-form policy.
 Mathlib currently has no principal-bundle/connection-form/curvature stack matching these locators.
 New code must therefore expose freeness, fiber transitivity, local triviality, smooth equivariance,
 form degree, and pullback/gauge covariance rather than hiding them in an arbitrary proposition.
+The smooth gauge-automorphism layer requires smoothness of both an invertible total map and its
+inverse. This makes the categorical automorphism/diffeomorphism interpretation explicit; it is a
+formalization guard, not a claim that Freed separately lists inverse smoothness as an additional
+axiom in the cited sentence.

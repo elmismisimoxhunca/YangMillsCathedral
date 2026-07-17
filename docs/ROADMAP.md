@@ -29,7 +29,8 @@ committed before higher layers depend on it.
 - [x] Define and probe topological equivariant local trivializations.
 - [x] Define and probe smooth principal-bundle compatibility.
 - [ ] Package quotient-map and smooth overlap-transition theorems.
-- [ ] Define smooth gauge transformations, connections and curvature.
+- [x] Define and probe smooth gauge transformations.
+- [ ] Define connections and curvature.
 - [ ] Prove structural curvature and gauge-covariance results.
 
 ## Phase 3 — classical Yang–Mills semantics
