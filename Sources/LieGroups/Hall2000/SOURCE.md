@@ -9,7 +9,24 @@
   `curl --proto '=https' --tlsv1.2 -fL --retry 3`.
 - Text produced by `pdftotext -layout` 25.03.0.
 
-## Load-bearing locator
+## Load-bearing locators
+
+Printed p. 15, §§3–3.1; extracted text lines 811–837:
+
+- compact matrix Lie groups are identified with compact subsets in the usual topological sense;
+- `O(n)`, `SO(n)`, `U(n)`, `SU(n)`, and `Sp(n)` are listed as compact examples.
+
+Printed p. 16, §4; extracted text lines 860–875:
+
+- connectedness is presented through paths for matrix Lie groups;
+- the notes explicitly state that connectedness and path-connectedness agree for matrix Lie groups;
+- a disconnected group decomposes into components.
+
+Printed p. 21, §7, Definition 2.14; extracted text lines 1090–1139:
+
+- a Lie group is a differentiable manifold and a group;
+- product and inversion are differentiable;
+- the local manifold model is finite dimensional.
 
 Printed p. 115, §7; extracted text lines 6087–6099:
 
@@ -18,16 +35,19 @@ Printed p. 115, §7; extracted text lines 6087–6099:
   whole algebra;
 - a semisimple Lie algebra is a direct sum of simple Lie algebras.
 
-This passage is in a section on complex semisimple Lie algebras. The ideal/no-proper-ideal and
+The last passage is in a section on complex semisimple Lie algebras. The ideal/no-proper-ideal and
 non-abelian content is used as authoritative mathematical context for reviewing Mathlib's generic
 `LieAlgebra.IsSimple`; it is not by itself a source for every real compact-Lie-algebra theorem.
 
 ## Formalization decision
 
-The project will use Mathlib's existing `LieAlgebra.IsSimple`, whose definition requires every Lie
-ideal to be bottom or top and explicitly requires non-abelianness. It will not introduce abstract
-group simplicity under the same name.
+The project uses Mathlib's existing `LieAlgebra.IsSimple`, whose definition requires every Lie
+ideal to be bottom or top and explicitly requires non-abelianness. It does not introduce abstract
+group simplicity under the same name. Its Lie-group certificate uses a finite-dimensional real
+smooth manifold with smooth multiplication and inversion, topological compactness, and explicit
+connectedness. Hausdorff and second-countable assumptions make the manifold convention explicit;
+they are formalization choices rather than quotations from Hall.
 
 The Hall notes do not interpret the Clay phrase “compact simple gauge group” or decide connectedness
-and global form. Those decisions require the Clay source plus the separately pinned gauge-global-
-form literature.
+and global form. Those decisions use the Clay source plus the separately pinned gauge-global-form
+literature. In particular, the project does not require simple connectedness.

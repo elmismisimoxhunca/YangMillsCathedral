@@ -10,6 +10,8 @@ import YangMills.Foundation.Signatures
 import YangMills.Foundation.SignaturesProbes
 import YangMills.Mathematics.LieAlgebraSimplicity
 import YangMills.Mathematics.LieAlgebraSimplicityProbes
+import YangMills.Geometry.LieGroup
+import YangMills.Geometry.LieGroupProbes
 import YangMills.Audit
 
 /-!

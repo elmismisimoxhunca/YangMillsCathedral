@@ -39,9 +39,23 @@ The reusable Lie-algebra layer now exposes the selected Mathlib semantics:
 | `YangMills.Mathematics.isSimple_ideal_eq_bot_or_eq_top` | every Lie ideal is zero or whole | Derived theorem | `proper_nonzero_ideal_blocked` |
 | `YangMills.Mathematics.isSimple_to_nontrivial` | a simple Lie algebra has nontrivial carrier | Derived theorem | `subsingleton_simpleLieAlgebra_blocked` |
 
-No compact-simple gauge-group Lean certificate is canonical yet. It requires the reviewed Mathlib
-Lie-group/tangent-Lie-algebra bridge, compactness, connectedness, global-form preservation, and
-positive consistency evidence.
+The source-facing group layer is now explicit:
+
+| Lean declaration | Meaning | Source / decision | Classification | Hostile evidence |
+|---|---|---|---|---|
+| `YangMills.Geometry.HasSimpleGroupLieAlgebra` | Mathlib's real tangent `GroupLieAlgebra` is simple | Hall p. 115 §7 for ideal semantics; Mathlib tangent/bracket bridge is implementation infrastructure | Definition / bridge predicate | abelian and proper-ideal probes below |
+| `YangMills.Geometry.CompactSimpleGaugeGroupData` type parameters | `G` is a Hausdorff second-countable `C∞` Lie group on a finite-dimensional real model `E` | Hall p. 21 §7, Definition 2.14; Hausdorff/second-countable assumptions are explicit project manifold conventions | Definition prerequisites | the record cannot be formed without the corresponding instances |
+| `CompactSimpleGaugeGroupData.compact` | the whole carrier is compact | Clay p. 6 §4; Hall p. 15 §3 identifies the topological compactness notion in the matrix setting | Model requirement | `noncompact_gaugeGroup_blocked` |
+| `CompactSimpleGaugeGroupData.connected` | the whole carrier is connected | Explicit project convention; Hall p. 16 §4 distinguishes components and relates connected/path-connected matrix groups | Model requirement / strengthening of terse Clay wording | `disconnected_gaugeGroup_blocked` |
+| `CompactSimpleGaugeGroupData.nontrivial` | the group carrier is nontrivial | Explicit anti-vacuity guard; retained until a reusable tangent-to-carrier theorem eliminates the redundant field | Model requirement / specification debt made visible | `subsingleton_gaugeGroup_blocked` |
+| `CompactSimpleGaugeGroupData.simple_lieAlgebra` | “simple” means the real tangent Lie algebra is non-abelian and has no proper nonzero ideal | Hall p. 115 §7 plus selected Mathlib semantics; never abstract-group simplicity | Model requirement | `abelian_groupLieAlgebra_blocked`, `proper_nonzero_groupLieIdeal_blocked` |
+| explicit carrier parameter `G` | global form is preserved and no simply connected cover or `SU(N)` restriction is inserted | Aharony–Seiberg–Tachikawa pp. 1–2, extracted 44–65 and 84–119 | Formalization constraint | API retains `G`; no quotient/cover field or coercion exists |
+
+`HasAbelianGroupLieAlgebra` and `HasProperNonzeroGroupLieIdeal` are precise mutation predicates for
+the hostile suite, not alternative admissibility conditions. The project currently has no concrete
+inhabitant of `CompactSimpleGaugeGroupData`: Mathlib supplies algebraic matrix `SU(n)` but not the
+needed manifold, compactness, connectedness, tangent identification, and simplicity chain. This is
+open positive-consistency infrastructure, not an existence claim about Yang–Mills theory.
 
 ## Dimension-foundation decisions
 

@@ -65,20 +65,36 @@ Verified:
 - This reusable layer makes no claim that a group is compact, connected, smooth, or physically
   admissible.
 
+## 2026-07-17 — fourth mathematical stone: compact-simple gauge-group semantics
+
+Verified:
+
+- `CompactSimpleGaugeGroupData G E` preserves the actual carrier `G` and requires a
+  finite-dimensional real smooth Lie-group model without replacing `G` by a universal cover.
+- Hausdorff and second-countable manifold conventions, topological compactness, connectedness,
+  carrier nontriviality, and tangent-Lie-algebra simplicity are explicit.
+- The `C∞`-to-`GroupLieAlgebra` regularity/completeness bridge is implemented from Mathlib rather
+  than hidden as an axiom.
+- Hostile probes independently reject noncompact, disconnected, subsingleton, abelian-tangent, and
+  proper-nonzero-ideal mutations.
+- Connectedness is labelled as a project strengthening of the terse Clay wording; abstract-group
+  simplicity and simple connectedness are not imposed.
+
 Not yet achieved:
 
-- Hall's open Lie-group notes and Aharony–Seiberg–Tachikawa's global-form paper are pinned with
-  exact locators. They support the next Lie-algebra/group design but do not yet create a canonical
-  group certificate.
-- No symmetry-group, gauge-geometry, quantum-theory, acceptance, existence, or mass-gap
-  declaration exists.
+- No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
+  `SU(n)` API does not supply the complete manifold/compactness/connectedness/tangent-simplicity
+  chain, so positive consistency infrastructure remains open.
+- No principal-bundle, connection, curvature, symmetry-group, quantum-theory, acceptance,
+  existence, or mass-gap declaration exists.
 - No Yang–Mills acceptance declaration exists.
 - No standalone Git remote exists or has been pushed. The tested candidate
   `git@github.com:elmismisimoxhunca/lean-yangmills-adaly.git` does not exist, and the available SSH
   credential was scoped to the retired repository. Local commits can proceed; remote publication
   remains an explicit infrastructure blocker.
-- Only the Clay source is pinned in the new repository. All additional sources remain to be
-  independently acquired and verified.
+- Clay, Hall, and Aharony–Seiberg–Tachikawa artifacts are pinned. Principal-bundle, curvature,
+  OS/Wightman, spectral, observable, and lattice sources remain to be independently acquired and
+  verified before their corresponding declarations become canonical.
 
-The absence of an acceptance declaration is intentional at initialization: no placeholder theorem
-or arbitrary structure is introduced merely to make the project appear advanced.
+The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
+structure is introduced merely to make the project appear advanced.
