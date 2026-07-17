@@ -105,8 +105,8 @@ proved smooth fiberwise-linear groupoid/manifold compatibility, a base-preservin
 carrier equivalence with an explicitly topology-coherent total-space homeomorphism and named real
 vector-space structures on every dependent fiber with every designated associated coordinate proved
 linear, quotient trivializations transported exactly to the dependent total space, and that
-presentation packaged as a named topology-coherent Mathlib `FiberBundle`, and the adjoint action
-packaged as a
+presentation packaged as named topology-coherent Mathlib `FiberBundle` and `VectorBundle` values,
+and the adjoint action packaged as a
 smooth invertible operator family, alongside an explicit positive
 adjoint-invariant
 Lie-algebra inner-product certificate, are

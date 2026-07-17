@@ -723,6 +723,24 @@ Verified:
   selected chart from the atlas.
 - `VectorBundle`, smooth bundle, section, and descended-curvature claims remain pending.
 
+## 2026-07-17 — forty-first mathematical stone: exact dependent vector bundle
+
+Verified:
+
+- `dependentModelBundleTrivialization_isLinear` proves every transported designated chart is
+  fiberwise real-linear for the named selected-coordinate algebra.
+- `dependentModelBundleTrivialization_coordChangeL` identifies Mathlib's ordered coordinate change
+  exactly with the already derived continuous-linear adjoint transition, in the first-to-second
+  direction.
+- `dependentVectorBundle` derives operator-norm continuity from smooth principal transition data and
+  packages the preserved total topology, named fiber topology/algebra, and exact transported atlas
+  as a named Mathlib `VectorBundle` value.
+- No `VectorPrebundle`-generated topology and no global topology, algebra, `FiberBundle`, or
+  `VectorBundle` instance is installed.
+- Hostile probes reject nonlinear designated charts, replacement or reversed coordinate changes,
+  and discontinuous operator-valued changes between atlas charts.
+- The smooth vector-bundle mixin, sections, and descended-curvature claims remain pending.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
