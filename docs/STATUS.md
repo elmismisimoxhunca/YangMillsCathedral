@@ -370,13 +370,31 @@ Verified:
 - No particular invariant pairing, integral, metric, Hodge star, coupling, action value, or
   Yang–Mills field is constructed.
 
+## 2026-07-17 — twenty-second mathematical stone: curvature structure certificates
+
+Verified:
+
+- `PrincipalTwoForm.IsHorizontal` detects vertical tangent arguments by the derivative of the actual
+  bundle projection and requires vanishing on any such insertion.
+- `PrincipalTwoForm.IsRightAdEquivariant` evaluates pullback through the derivative of the actual
+  principal right action and compares it with `Ad(g⁻¹)` on the intrinsic tangent Lie algebra.
+- `PrincipalCurvatureStructureCertificate` is indexed by one connection and one exterior-derivative
+  certificate and applies (1.14)–(1.15) only to their exact derived `curvatureForm`; no disconnected
+  two-form field can be substituted.
+- Zero-form consistency probes and hostile nonhorizontal/nonequivariant probes validate the exact
+  predicate shapes.
+- This is explicitly a certificate surface, not an automatic proof of (1.14)–(1.15). Deriving those
+  laws from the Cartan certificate and connection laws remains manifold-calculus debt; Bianchi and
+  gauge covariance also remain pending.
+- No structure-certificate witness, connection, or curvature is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
   `SU(n)` API does not supply the complete manifold/compactness/connectedness/tangent-simplicity
   chain, so positive consistency infrastructure remains open.
-- No general smooth bundle-map layer, concrete principal-connection/curvature witness,
-  curvature horizontality/equivariance/Bianchi/gauge-covariance result, symmetry-group,
+- No general smooth bundle-map layer, concrete principal-connection/curvature/structure-certificate
+  witness, automatic curvature horizontality/equivariance theorem, Bianchi/gauge-covariance result, symmetry-group,
   quantum-theory, acceptance, existence, or mass-gap declaration exists.
 - No Yang–Mills acceptance declaration exists.
 - No standalone Git remote exists or has been pushed. The tested candidate

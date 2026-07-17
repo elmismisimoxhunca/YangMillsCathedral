@@ -90,5 +90,9 @@ Mathlib's normed-space `extDeriv`, its nilpotence theorem, and its pullback theo
 local-model infrastructure. For arbitrary manifolds, a certified `1 → 2` interface requires a
 smooth two-form to satisfy the exact within-set Cartan formula against every pair of local smooth
 vector fields and proves compatibility with Mathlib's `extDerivWithin`. Given such a certificate
-for the same smooth principal connection, `curvatureForm` now derives exactly (1.13). A canonical
-general-degree operator, horizontality/equivariance, Bianchi, and gauge covariance remain pending.
+for the same smooth principal connection, `curvatureForm` derives exactly (1.13).
+`PrincipalTwoForm.IsHorizontal`, `.IsRightAdEquivariant`, and the connection-indexed
+`PrincipalCurvatureStructureCertificate` state (1.15) and (1.14) intrinsically without accepting an
+unrelated curvature field. This is a requirement surface: automatic derivation from the current
+Cartan certificate and connection laws remains pending, as do a canonical general-degree operator,
+Bianchi, and gauge covariance.

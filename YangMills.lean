@@ -47,6 +47,8 @@ import YangMills.Geometry.PointwisePrincipalConnection
 import YangMills.Geometry.PointwisePrincipalConnectionProbes
 import YangMills.Geometry.PrincipalCurvature
 import YangMills.Geometry.PrincipalCurvatureProbes
+import YangMills.Geometry.PrincipalCurvatureStructure
+import YangMills.Geometry.PrincipalCurvatureStructureProbes
 import YangMills.Audit
 
 /-!
