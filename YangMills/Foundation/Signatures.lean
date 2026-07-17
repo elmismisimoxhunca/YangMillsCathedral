@@ -56,6 +56,18 @@ def minkowskiWeight (d : EuclideanDimension) (i : d.CoordinateIndex) : ℝ :=
 def minkowskiQuadraticForm (d : EuclideanDimension) : QuadraticForm ℝ d.CoordinateVector :=
   QuadraticMap.weightedSumSquares ℝ d.minkowskiWeight
 
+private theorem spanSubset_empty (ι : Type*) [Fintype ι] :
+    (Pi.spanSubset ℝ (∅ : Set ι) : Submodule ℝ (ι → ℝ)) = ⊥ := by
+  ext v
+  simp only [Pi.mem_spanSubset_iff, Set.mem_empty_iff_false, not_false_eq_true,
+    Submodule.mem_bot]
+  constructor
+  · intro hv
+    funext i
+    exact hv i trivial
+  · intro hv i _
+    exact congrFun hv i
+
 /-- Evaluation of the Euclidean form as a sum of coordinate squares. -/
 theorem euclideanQuadraticForm_apply (d : EuclideanDimension) (p : d.CoordinateVector) :
     d.euclideanQuadraticForm p = ∑ i, (p i) ^ 2 := by
@@ -66,6 +78,33 @@ theorem euclideanQuadraticForm_nonneg (d : EuclideanDimension) (p : d.Coordinate
     0 ≤ d.euclideanQuadraticForm p := by
   rw [d.euclideanQuadraticForm_apply]
   exact Finset.sum_nonneg fun _ _ => sq_nonneg _
+
+/-- The Euclidean quadratic form has zero radical. -/
+theorem euclideanQuadraticForm_nondegenerate (d : EuclideanDimension) :
+    d.euclideanQuadraticForm.Nondegenerate := by
+  rw [QuadraticMap.nondegenerate_iff_radical_eq_bot]
+  calc
+    d.euclideanQuadraticForm.radical = Pi.spanSubset ℝ {i | (1 : ℝ) = 0} := by
+      simpa [euclideanQuadraticForm] using
+        (QuadraticForm.radical_weightedSumSquares (𝕜 := ℝ)
+          (w := fun _ : d.CoordinateIndex => (1 : ℝ)))
+    _ = ⊥ := by
+      simpa using spanSubset_empty d.CoordinateIndex
+
+/-- The mostly-minus Minkowski quadratic form has zero radical in every supported dimension. -/
+theorem minkowskiQuadraticForm_nondegenerate (d : EuclideanDimension) :
+    d.minkowskiQuadraticForm.Nondegenerate := by
+  rw [QuadraticMap.nondegenerate_iff_radical_eq_bot]
+  calc
+    d.minkowskiQuadraticForm.radical = Pi.spanSubset ℝ {i | d.minkowskiWeight i = 0} := by
+      simpa [minkowskiQuadraticForm] using
+        (QuadraticForm.radical_weightedSumSquares (𝕜 := ℝ) (w := d.minkowskiWeight))
+    _ = ⊥ := by
+      have zeroWeights : {i | d.minkowskiWeight i = 0} = ∅ := by
+        ext i
+        by_cases hi : i.val = 0 <;> simp [minkowskiWeight, hi]
+      rw [zeroWeights]
+      exact spanSubset_empty d.CoordinateIndex
 
 /-- Every Euclidean coordinate basis vector has quadratic value one. -/
 @[simp] theorem euclideanQuadraticForm_basisVector

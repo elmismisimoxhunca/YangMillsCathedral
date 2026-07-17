@@ -21,6 +21,16 @@ theorem negative_euclidean_value_blocked
     (h : d.euclideanQuadraticForm p < 0) : False := by
   exact (not_lt_of_ge (d.euclideanQuadraticForm_nonneg p)) h
 
+/-- A proposed degeneracy of the Euclidean form contradicts its computed radical. -/
+theorem degenerate_euclideanQuadraticForm_blocked
+    (d : EuclideanDimension) (h : ¬d.euclideanQuadraticForm.Nondegenerate) : False :=
+  h d.euclideanQuadraticForm_nondegenerate
+
+/-- A proposed degeneracy of the Minkowski form contradicts its computed radical. -/
+theorem degenerate_minkowskiQuadraticForm_blocked
+    (d : EuclideanDimension) (h : ¬d.minkowskiQuadraticForm.Nondegenerate) : False :=
+  h d.minkowskiQuadraticForm_nondegenerate
+
 /-- The chosen Minkowski convention rejects a nonpositive time-basis value. -/
 theorem nonpositive_minkowski_time_basis_blocked
     (d : EuclideanDimension)
