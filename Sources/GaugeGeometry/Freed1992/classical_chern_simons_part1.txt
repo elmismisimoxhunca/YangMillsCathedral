@@ -1,0 +1,2908 @@
+                                                          Classical Chern-Simons Theory, Part 1
+
+
+
+                                                                          Daniel S. Freed
+
+                                                                    Department of Mathematics
+                                                                    University of Texas at Austin
+arXiv:hep-th/9206021v1 4 Jun 1992
+
+
+
+
+                                                                              June 4, 1992
+
+
+
+                                        The formulations of Classical Mechanics by Lagrange and Hamilton are the mod-
+                                    ern foundation of classical physics [Ar]. Not only do these theories describe the mo-
+                                    tion of systems of particles, but Maxwell’s theory of electromagnetism, as well as
+                                    other field theories, can also be formulated in Lagrangian and Hamiltonian terms.
+                                    A Lagrangian field theory is defined by a local functional of the fields, called the
+                                    lagrangian, and its integral over spacetime,1 called the action. The classical so-
+                                    lutions of the field theory are the critical points of the action. In particular, the
+                                    minima satisfy the “least action principle” of Maupertius.2 The Hamiltonian the-
+                                    ory is defined by a function, the hamiltonian, on phase space, or more generally
+                                    on a symplectic manifold. The classical motion of the system is then described by
+                                    Hamilton’s equations, whose solutions are integral curves of the symplectic gradient
+                                    vector field of the hamiltonian. For many mechanical systems of particles, which
+                                    should be regarded as 0 + 1 dimensional field theories, there is both a Lagrangian
+                                    and Hamiltonian formulation. Then the relationship between them is expressed
+                                    by the Legendre transform, if the lagrangian is nondegenerate. A typical example
+                                    is the motion of a particle on a Riemannian manifold M . The action of the La-
+                                    grangian theory is the energy of a path in M . The hamiltonian is the norm square
+                                    function on the tangent bundle T M , which obtains a symplectic structure from
+                                    the metric. For higher dimensional field theories the Hamiltonian formulation only
+                                    makes sense on spacetimes which are globally a product of space and time, that
+                                    is, on (d + 1)-dimensional manifolds which are the product of a d-manifold with a
+                                    1-manifold. A field on this product manifold is a path of fields in space. Symmetry
+                                    plays an important role in classical physics; many mechanical systems admit groups
+
+                                       The author is supported by NSF grant DMS-8805684, an Alfred P. Sloan Research Fellowship,
+                                    a Presidential Young Investigators award, and by the O’Donnell Foundation.
+                                       1 Here we refer to relativistic field theories with the Euclidean signature. A theory has a fixed
+
+                                    dimension d + 1 for the “spacetimes”, which consist of d space dimensions and 1 time dimension.
+                                    Since we are in the Euclidean framework, the term ‘spacetime’ is a misnomer, but we use it
+                                    anyway.
+                                       2 See [Fey,§19] for a delightful exposition. Feynman is adamant that the principle of least
+
+                                    action is the fundamental physical principle of classical field theories; his path integral is the
+                                    corresponding approach to quantum field theories.
+
+                                                                                                                 Typeset by AMS-TEX
+                                                                                     1
+of symmetries. Noether discovered that symmetries are linked to conservation prin-
+ciples. This leads to the study of Noether currents in the Lagrangian theory and
+moment maps in the Hamiltonian theory.
+   The Chern-Simons form of a connection, introduced in [CS], can be viewed as
+the lagrangian of a classical field theory. In this paper we study the 3 = 2 + 1 di-
+mensional case. We are principally motivated by recent work of Witten [W], who
+demonstrates that the quantization of this classical theory leads to new topolog-
+ical invariants. Our study of the classical theory clarifies certain features which
+are reflected in the quantum theory. In the course of our study we found that
+the classical Chern-Simons theory has many subtle aspects which provoke some
+refinements of the usual mathematical formulations of field theories. However, one
+should be aware that the Chern-Simons theory differs from most field theories in
+two important respects. First, the theory is topological (generally covariant) in
+that it is defined on oriented manifolds without any choice of metric. Hence it
+admits diffeomorphism groups as symmetries, whereas the usual examples admit
+only isometries. Second, the lagrangian (1.26) involves only first powers of first
+derivatives of the fields, which leads to a first order Euler-Lagrange equation (3.4);
+the usual examples involve second derivatives or first derivatives squared, and so
+lead to second order equations of motion.
+   Everything is derived from the action. This principle, articulated by many the-
+oretical physicists, places the Lagrangian formulation ahead of the Hamiltonian
+formulation. In fact, the latter is derived from the former. In many field theories
+one writes down the action and verifies its fundamental properties immediately; by
+contrast in §2 we take many pages to define the Chern-Simons action. If X is a
+closed, oriented 3-manifold, then the action is a complex number with unit norm.
+This is the exponential of 2πi times the usual action, which is a real number de-
+termined modulo the integers. The fact that the action not a real number, but is
+only defined up to integers, leads to the interesting geometry of the theory. The
+reality of the action, which implies that the exponential has unit norm, reflects
+the unitarity of the theory. If X has a nonempty boundary, then the action is an
+element of unit norm in an abstract metrized complex line which depends on the
+restriction of the field to ∂X. We call this line the Chern-Simons line.3 Thus the
+Lagrangian theory assigns a metrized line to every field on a space (closed, oriented
+2-manifold) Y , and a unit element in the line of the boundary field for every field
+on a spacetime (compact, oriented 3-manifold) X. In most field theories these lines
+are canonically trivial; the nontriviality of these lines in the Chern-Simons theory
+is why this theory illuminates the mathematical structure of classical field theory
+so vividly. We remark that it is crucial to construct these lines precisely, and not
+just up to isomorphism. The characteristic properties of the Lagrangian theory
+are spelled out in Theorem 2.19, which is an axiomatization of topological classical
+    3 Instead of complex lines with inner products we can restrict to the elements of unit norm,
+
+which form a principal homogeneous space for the circle group. Many discussions of classical
+and quantum Chern-Simons theory replace the Chern-Simons line bundle (over the moduli space
+of flat connections; see below) with a determinant line bundle. Although these two bundles
+may be isomorphic if appropriately chosen, the Chern-Simons action leads directly to the Chern-
+Simons line bundle, not the determinant line bundle. From this perspective the determinant line
+bundle is extraneous to the theory. Observe that the Chern-Simons line bundle is defined by a
+cohomology class in H 4 (BG), whereas the determinant line bundle is defined by a representation
+of G. However, the determinant line bundle most likely enters into another theory, whose action
+is the η invariant of Atiyah-Patodi-Singer.
+                                               2
+field theory. The Chern-Simons action is invariant under a large symmetry group
+(of gauge transformations), which we discuss below.
+    The most important property of a Lagrangian field theory is locality. Fields are
+local; they can be cut and pasted. (A formal statement looks very similar to the
+definition of a sheaf.) The action is local in that it adds when we glue fields together.
+We call this a gluing law ; it is stated precisely in Theorem 2.19(d). All of our
+constructions in this paper are local, and so lead to gluing laws: Theorem 2.19(d),
+Proposition 4.4(d), Proposition 4.11, Theorem 4.26(d), and Proposition 5.29.
+    So far we have discussed general properties of field theories. Chern-Simons theory
+is a gauge theory, so in §1 we review the geometry of connections on principal
+bundles with compact structure group G. Our exposition is slanted toward field
+theory. For example, we emphasize cutting and pasting of connections. At the end
+of this section we introduce the Chern-Simons 3-form of a connection, which is our
+lagrangian. Chern-Simons forms are parametrized by invariant bilinear forms on
+the Lie algebra of G. To get an action which is well-defined up to integers, we
+must restrict to a certain lattice of integral forms. For simple, simply connected
+groups like SU (2) these forms (or cohomology classes) are parametrized by the
+integers (6.2). This integer is usually called the “level” of the theory. This is
+sufficient to define the Chern-Simons action if G is connected and simply connected,
+as we assume throughout this paper. But for a general compact Lie group G
+we need to choose a refinement of this bilinear form to define the Chern-Simons
+action. This is (up to isomorphism) a cohomology class in H 4 (BG) = H 4 (BG; Z),
+where BG is the classifying space of G; the integral bilinear forms are in natural
+1:1 correspondence with the image of H 4 (BG) in H 4 (BG; R). The theories for
+arbitrary compact Lie groups are the subject of Part 2 of this paper [F2]. The
+importance of the general case in the study of rational conformal field theories
+has been emphasized by Moore and Seiberg [MS]. The definition of the action for
+the general case was sketched by Dijkgraaf and Witten [DW]. However, they use
+singular cochains, and it is not possible to discuss smoothness (of the Chern-Simons
+line bundle, for example) in their framework.
+    The classical solutions in Chern-Simons theory are flat connections. We derive
+the Euler-Lagrange equations at the beginning of §3, where we also discuss a lit-
+tle of the geometry of the space of flat connections. Mostly in §3 we study the
+Chern-Simons action on product manifolds4 X = [0, 1] × Y ; that is, we study the
+Hamiltonian theory. Then the action can be interpreted as the parallel transport
+of a unitary connection on the Chern-Simons line bundle formed over the space of
+fields on the boundary (Proposition 3.17). The abstract argument of Appendix B
+shows that the existence of this connection depends only on the basic properties of
+the action, in particular the gluing law, not on particular features of this theory, and
+so should exist in any Lagrangian field theory. However, our proof in §3 proceeds by
+direct calculation. The curvature of this connection (times i/2π) is the symplectic
+structure (3.18) of the Hamiltonian theory.5 Notice that the symplectic form auto-
+matically satisfies an integrality condition, the integrality condition in “geometric
+quantization” theory, as it is the curvature of a line bundle. Since the Chern-Simons
+    4 We write ‘[0, 1]’ first in this product so that the orientations work out properly. This should
+
+be done quite generally for homotopies and bordisms.
+    5 This geometric point of view on the relationship between the Lagrangian and Hamiltonian
+
+theories appears to be well-known (see [Ax], for example), though it is not often expressed in the
+literature.
+                                                 3
+theory is topological, the hamiltonian function is identically zero—there is no local
+motion. The symmetries in the theory—gauge transformations—lift to the Chern-
+Simons line bundle over the space of fields; this lift is constructed directly from
+the Chern-Simons action. From this lift one computes a moment map (3.19) for
+the symmetry on the space of fields. Not only does the Lagrangian formulation
+guarantee the existence of a moment map, but it also constructs one (via this ac-
+tion on the line bundle) in situations where the moment map is not unique.6 The
+space of classical solutions on the infinite cylinder [0, ∞) × Y is also a symplectic
+manifold, in this case the symplectic quotient of the space of fields. The space of
+classical solutions on an arbitrary 3-manifold with boundary, which is not neces-
+sarily a product, maps onto a Lagrangian submanifold of the symplectic manifold
+attached to the boundary (Proposition 3.27). Not only the symplectic form, but
+also the Chern-Simons line bundle with connection are trivial on this submanifold.
+The Hamiltonian theory is then the assignment of a symplectic manifold to every
+space Y and a Lagrangian submanifold to every spacetime X.
+   One feature of the Chern-Simons theory which is not usually considered in stan-
+dard field theories is the geometry of the theory on spaces (as opposed to space-
+times) with boundary, here 2-manifolds with boundary. In the quantum theory [W]
+these are especially important and lead to an “exact solution” of the path integral.
+In §4 and §5 we construct the classical theory on surfaces with boundary. Our
+constructions depend on a closely related (1 + 1) dimensional field theory, the Wess-
+Zumino-Witten theory, which is discussed in Appendix A. In these constructions we
+generalize the theory on closed surfaces and so construct complex lines associated
+to connections on surfaces with boundary. To accomplish this we must introduce
+certain trivializing data on the boundary of the surface. Hence in §4 we make a
+digression into the geometry of connections on the circle. In particular, we discuss
+the universal bundle and properties of the holonomy map (Lemma 4.18). We then
+construct the Chern-Simons lines, but only if we suitably restrict the values of the
+boundary holonomies (Theorem 4.26). These lines fit together to form a (Chern-
+Simons) line bundle over the moduli space of flat connections on the surface with
+boundary, now with fixed boundary holonomies. We discuss this moduli space at
+the end of §4 and derive a formula for its dimension (4.44). In §5 we construct a
+connection on the Chern-Simons line bundle and compute its curvature (Proposi-
+tion 5.9). This line bundle and connection depends on the trivializing boundary
+data. This dependence will be more clear in Part 2, where we also construct geomet-
+ric objects similar to line bundles with connection which exist without restriction
+on the boundary holonomies.
+   In many ways the classical Chern-Simons theory unifies the gauge-theoretic geo-
+metrical objects in low dimensions that are associated with a compact Lie group G
+and an integral bilinear form on its Lie algebra:7 a characteristic class of G bundles
+over a closed oriented 4-manifold, the Chern-Simons invariant of a connection over
+a closed oriented 3-manifold, and the line bundle with connection over the moduli
+space of flat connections on a closed oriented 2-manifold. There are corresponding
+geometric objects over manifolds with boundary, as we discussed earlier. There is
+even something one can say in 1 dimension, but this is more complicated. These
+    6 This occurs in Chern-Simons theory if the center of the gauge group G has positive dimension,
+
+which does not happen in the groups we consider here, but certainly there are compact Lie groups
+(e.g. G = T, the circle group) where this occurs. They will be considered in Part 2.
+    7 More precisely, a class in H 4 (BG).
+
+                                                4
+constructions are all fit in nicely with smooth Deligne cohomology.8 In fact, they
+can be constructed by integration of Deligne cocycles over these various manifolds.
+We develop this integration theory in [F1], and discuss the Chern-Simons theory
+from this point of view in Part 2 of this paper [F2]. Finally, then, the Chern-Simons
+theory looks like standard field theories—the action is an integral over spacetime.
+A different integration theory (for singular cocycles) can be used when the gauge
+group is finite [FQ]. There is probably an analogous integration theory for K-theory
+and superconnections. The outstanding question is to construct integration theo-
+ries which give the corresponding objects in quantum Chern-Simons theory. (When
+the gauge group is finite, the standard path integral is a finite sum, and the theory
+can be constructed directly [FQ].)
+   We conclude with a final comment about the symmetries in Chern-Simons theory,
+or more generally in any classical gauge theory. Namely, the symmetries form a
+groupoid rather than a group. A groupoid is a “group with states”. In gauge theory
+the states are the various principal bundles over a given manifold, and the group
+elements are isomorphisms between principal bundles (which cover the identity
+map on the base). For each principal bundle the automorphisms form a group—
+the group of gauge transformations. However, the larger symmetry of the groupoid
+enters since there is no canonical identification of two isomorphic bundles with
+connections; in other words, connections have automorphisms. This is particularly
+important when we glue together bundles and connections. This extra symmetry
+has nontrivial consequences, some of which are manifest in the quantum theory,
+and we find that they justify our use of categorical language.
+   Several closely related manuscripts appeared while this work was in progress.
+Among them is Axelrod’s thesis [Ax], which also treats the classical Chern-Simons
+theory (and other topics). He considers more examples of classical theories, and
+he goes further towards formulating axioms for classical topological field theories
+in general. Daskalopoulos and Wentworth [DasW] also construct line bundles with
+connection over the moduli spaces of flat connections on a surface with bound-
+ary. Their connection differs from ours; they found a relationship between bound-
+ary holonomies and representations that our connection does not exhibit (cf. §5).
+Chang [Ch] constructs a determinant line bundle with connection over these moduli
+spaces.
+   Over the two years this work has been in progress, I talked to many people
+about the contents of this paper. I thank all of them, and especially single out
+Scott Axelrod, Joseph Bernstein, Sheldon Chang, George Daskalopoulos, Frank
+Quinn, Karen Uhlenbeck, Alan Weinstein, and Richard Wentworth for illuminating
+conversations. This paper grew out of lectures given at the University of Texas
+in the spring of 1990. I thank the audience for their feedback. I’d also thank the
+Aspen Center for Physics and the Regional Geometry Institute in Park City for
+their hospitality while some of this work was carried out. Finally, my thinking
+about field theories has been stimulated greatly by Graeme Segal’s work in this
+area.
+
+
+
+
+  8 Gawȩdzki [Ga] treated the action in Wess-Zumino-Witten theory using smooth Deligne coho-
+
+mology. Related ideas also appear in work of Brylinski.
+                                             5
+                       §1 Connections on principal bundles
+   In this section we review some basics about Lie groups and connections on princi-
+pal bundles. We consider arbitrary compact Lie groups. Although subsequent sec-
+tions of this paper only treat connected and simply connected groups, in Part 2 [F2]
+we take up the general case. Beyond textbook material, which we review to establish
+notation, we discuss carefully how to cut and paste connections (Proposition 1.24).
+This establishes the fact that connections can serve as local fields in a field theory.
+Then we introduce the lagrangian, the Chern-Simons form (1.26), and state its
+basic properties (Proposition 1.27). This form is only defined on the total space
+of a bundle, not on the base, and this leads to some of the rich geometry of the
+theory. Since connections have automorphisms, we use the language of categories
+to describe the space of all connections.
+   Let G be a compact Lie group. The identity component G0 is a normal subgroup
+with quotient the finite group Γ = π0 G of components:
+
+(1.1)                             1−
+                                   → G0 −
+                                        →G−
+                                          →Γ−
+                                            → 1.
+
+Then there is a finite covering
+
+(1.2)                             1−
+                                   →A−
+                                     →Gf0 −
+                                          → G0 −
+                                               →1
+
+for some finite abelian group A such that
+
+(1.3)                             f0 ∼
+                                  G  = T × K1 × · · · × Ks ,
+
+where T is a torus and Ki are connected, simply connected simple groups. The
+basic examples of compact Lie groups are finite groups, the circle group T, and
+the connected, simply connected simple groups (of type A,B,C,D,E,F,G); equa-
+tions (1.1) and (1.2) show that all others are products of these up to finite covers
+and finite extensions.
+   The Lie algebra g of G is the vector space of left invariant vector fields on G
+endowed with the Lie bracket. The Lie algebras of G, G0 , and G f0 coincide. There
+is a natural g-valued 1-form θ on G which assigns to each vector its left invariant
+extension.9 This Maurer-Cartan form satisfies
+
+                                        L∗g θ = θ,
+(1.4)
+                                        Rg∗ θ = Adg−1 θ,
+
+where Lg : G → G is left multiplication by g ∈ G, the map Rg : G → G is right
+multiplication, and Adg = Lg ◦ Rg−1 is the adjoint map. Its differential satisfies the
+Maurer-Cartan equation
+                                      1
+                                dθ + [θ ∧ θ] = 0;
+                                      2
+it is a simple consequence of the relationship of d to the Lie bracket.
+    A principal G bundle P → X is a manifold P with a free right G action; the
+quotient X is then also a manifold. Notice that if G is finite, then P is a regular
+  9 It is often denoted g −1 dg for matrix groups.
+
+                                                 6
+covering space of X.10 In general, the fiber Px over x is a space on which G acts
+simply transitively by right multiplication. Hence for each p ∈ Px there is an
+isomorphism of right G-spaces
+
+                                      τp : G −→ Px
+                                           g 7−→ p · g.
+
+The “coordinate change” τp−1   ′ τp = Lg , where g ∈ G is the unique element with
+
+p′ = p · g. Hence left invariant tensors on G induce tensors on Px . Thus we identify
+Tp Px ∼
+      = g for all p ∈ Px . Dually, the Maurer-Cartan form θ induces a form θx on Px
+which satisfies
+
+                                     Rg∗ θx = Adg−1 θx ,
+                                           1
+(1.5)                              dθx + [θx ∧ θx ] = 0.
+                                           2
+
+Here Rg : Px → Px is the right action of g ∈ G. If there is a global section s : X → P
+then P is trivial; the map
+
+                                  τs : X × G −→ P
+                                        hx, gi 7−→ s(x) · g
+
+is a trivialization. Any principal G bundle is locally trivial.
+   Suppose h : G ֒→ G′ is an inclusion of compact Lie groups and P → X a principal
+G bundle. Then the induced G′ bundle PG′ → X is the quotient
+(1.6)                     .
+PG′ = P ×G G′ = P × G′ hp, g ′ i ∼ hp · g, h(g −1 )g ′ i,   p ∈ P, g ′ ∈ G′ , g ∈ G.
+
+There is a natural inclusion
+
+                                     hP : P −→ PG′
+(1.7)
+                                           p 7−→ hp, ei
+
+which covers the identity map on X.
+   A map of principal G bundles ϕ : P ′ → P is a smooth map of manifolds which
+commutes with the G action. Hence it induces a map ϕ̄ : X ′ → X on the quotient
+spaces. When X ′ = X and ϕ̄ is the identity we term ϕ a morphism of principal
+bundles over X. If, in addition, P ′ = P then ϕ is termed an automorphism of P ,
+or a gauge transformation. In this case there is an associated map
+
+                                       gϕ : P −→ G
+
+defined by the equation
+
+(1.8)                                ϕ(p) = p · gϕ (p).
+   10 However, the categories of principal bundles and regular covering spaces differ: Maps of
+
+principal bundles commute with the group action, whereas maps of covering spaces need not.
+                                              7
+Clearly maps of principal G bundles compose, and the set of gauge transformations
+of P forms a group GP . If h : G ֒→ G1 is an inclusion, and ϕ : P ′ → P a map, then
+there is an induced map PG′ 1 → PG1 on the G1 extensions. Also, if P → X is a
+principal G bundle and ϕ̄ : X ′ → X a smooth map, then there is an induced bundle
+ϕ̄∗ P → X ′ and a bundle map ϕ : ϕ̄∗ P → P covering ϕ̄.
+    A connection on P → X is a g-valued 1-form Θ such that
+
+(1.9)                                 i∗x Θ = θx ,
+(1.10)                             Rg∗ Θ = Adg−1 Θ,
+
+where ix : Px ֒→ P is the inclusion of the fiber over x ∈ X and Rg : P → P is
+the right translation by g ∈ G. Connections can be constructed locally using local
+trivializations. Since (1.9) and (1.10) are convex conditions, local connections patch
+together via a partition of unity into global connections. Hence connections exist.
+In fact, (1.9) and (1.10) are affine conditions, so the set AP of all connections on P
+is an affine subspace of Ω1P (g), the vector space of g-valued 1-forms on P . A tangent
+vector to the space of connections is a g-valued 1-form Θ on P such that
+
+(1.11)                                 i∗x Θ̇ = 0,
+(1.12)                             Rg∗ Θ̇ = Adg−1 Θ̇.
+
+The vector space of forms satisfying (1.11) and (1.12) is denoted Ω1X (gP ), since Θ̇ is
+the lift to P of a 1-form on X transforming in the adjoint bundle gP = P ×G g.
+The curvature Ω of a connection Θ is the g-valued 2-form
+                                         1
+(1.13)                           Ω = dΘ + [Θ ∧ Θ];
+                                         2
+it satisfies
+
+(1.14)                             Rg∗ Ω = Adg−1 Ω,
+(1.15)                                 i∗x Ω = 0.
+
+(This last equation follows from (1.5).) Hence the curvature is an element of Ω2X (gP ).
+Differentiating (1.13) we obtain the Bianchi identity
+
+(1.16)                            dΩ + [Θ ∧ Ω] = 0.
+
+Introduce the covariant derivative
+
+                                   dΘ = d + ad(Θ).
+
+Then the Bianchi identity can be rewritten as
+
+                                       dΘ Ω = 0.
+
+   Suppose h : G → G′ is an inclusion and Θ a G connection on P → X. Then
+there is an induced G′ connection ΘG′ on PG′ → X. Namely, define the g′ -valued
+1-form
+                                                      
+(1.17)                 (ΘG′ )hp,g′ i = ḣ Ad(g′ )−1 Θp + (θ′ )g′
+                                           8
+on P × G′ , where θ′ is the Maurer-Cartan form on G′ , and ḣ : g ֒→ g′ the induced
+inclusion of Lie algebras. From (1.4) and (1.10) we see that (1.17) vanishes along the
+orbits of the right G action on P × G′ and
+                                          is invariant under that action, so passes
+to a g′ -valued 1-form on PG′ = P × G′ G (cf. (1.6)). Properties (1.9) and (1.10)
+are easily verified, so ΘG′ is a connection. The pullback of ΘG′ under the natural
+map hP : P → PG′ (1.7) can be identified with the original connection Θ.
+    Let ϕ : P ′ → P be a map of principal bundles and Θ a connection on P ; then
+ϕ (Θ) is a connection on P ′ . In particular, the group GP of gauge transformations
+  ∗
+
+acts (on the right) on the space of connections AP . Suppose ϕ : P → P is a
+gauge transformation with associated map gϕ : P → G (1.8). Let φϕ = gϕ∗ (θ) be
+the pullback of the Maurer-Cartan form. Then a basic equation in the theory of
+connections asserts
+
+(1.18)                            ϕ∗ (Θ) = Adgϕ−1 Θ + φϕ .
+
+By contrast the curvature transforms as a tensor:
+
+(1.19)                                ϕ∗ (Ω) = Adgϕ−1 Ω.
+
+An automorphism of a connection Θ is a gauge transformation which satisfies
+ϕ∗ (Θ) = Θ. Equation (1.18) is then a first order differential equation for ϕ, which
+asserts that gϕ is parallel. Since parallel sections over connected manifolds are
+determined by their value at a single point, we have proved the following.
+Proposition 1.20. If ϕ is an automorphism of Θ, then gϕ is parallel. In par-
+ticular, if X is connected and ϕ is the identity at some point of X, then ϕ is the
+identity on X.
+   We will often encounter connections over cylinders. The following lemma gives
+a standard form for such connections.
+Lemma 1.21. Suppose Q → Y is a G bundle over a manifold Y , and [0, ∞)×Q →
+[0, ∞)× Y the pullback to the cylinder over Y . Let Θ be a connection on [0, ∞)× Q,
+which we write as
+
+              Θ = ηt + ξt dt,        t ∈ [0, ∞),       ηt ∈ Ω1Q (g),   ξt ∈ Ω0Q (g).
+
+Then there exists a unique gauge transformation ϕ of [0, ∞) × Q which satisfies
+
+(1.22)                                      ϕ {0}×Q = id,
+(1.23)                                      ϕ∗ (Θ) = η̃t .
+
+In other words, the transformed connection has no dt component.11
+Proof. Let gt : Q → G be the map associated to ϕ {t}×Q , and φt = gt∗ (θ). Then
+(1.22) asserts g0 = id, and by (1.18) we see that (1.23) is equivalent to
+
+                                                      ∂
+                                   Adg−1 ξt + φt (       ) = 0.
+                                        t             ∂t
+   11 A section s of [0, ∞)×Q with the property that s∗ Θ has no dt component is called a temporal
+
+gauge; it exists if Q is trivializable.
+                                                  9
+In more usual notation this reads
+
+                                                  ∂g
+                                 g −1 ξg + g −1      = 0,
+                                                  ∂t
+
+which has a unique solution with initial condition g0 = id by the standard theory
+of first order ordinary differential equations.
+  We apply this lemma to glue connections over manifolds with boundary along
+boundaries where the connections agree.
+Proposition 1.24. Suppose P → X is a G bundle over an oriented manifold X,
+and Y ֒→ X is an oriented codimension one submanifold. Let X cut be the manifold
+obtained by cutting X along Y . There is a gluing map ḡ : X cut → X which is
+a diffeomorphism off of Y and maps two distinct submanifolds Y1 , Y2 of ∂X cut
+diffeomorphically onto Y . Let P cut = ḡ ∗ P be the cut bundle and g : P cut → P the
+gluing map. Now suppose Θcut is a connection on P cut such that there exists a
+connection η on P Y with g ∗ (η) = Θ Y1 ⊔Y2 . Then η extends to a connection Θ
+on X such that g ∗ (Θ) is gauge equivalent to Θcut . The gauge equivalence class of Θ
+is uniquely determined.
+The hypothesis asserts that Θcut Y1 and Θcut Y2 agree under the given identifica-
+tion of the bundles. Just as a smooth function on X cut whose restrictions to Y1
+and Y2 agree does not necessarily glue into a smooth function on X, since the
+resulting function may not be smooth in the transverse direction, so too the con-
+nection Θcut does not glue directly. Proposition 1.24 asserts that we can glue
+smoothly if we make a gauge transformation.
+Proof. Choose tubular neighborhoods Ni ∼      = [0, ∞) × Yi of Yi in X cut and bundle
+                    ∼
+isomorphisms P Ni = [0, ∞) × P Yi . Let ϕi be the gauge transformations over Ni
+guaranteed by Lemma 1.21. Let ρ1 : [0, 1] → [0, 1] be a monotone increasing smooth
+function with ρ1 (t) = t for 0 ≤ t ≤ 0.5 and ρ1 ([0.9, 1]) = 1. Let ρ2 : [0, 1] → [0, 1]
+be a monotone increasing smooth function with ρ2 ([0, 0.1]) = 0 and ρ2 ([0.9, 1]) = 1.
+Define ϕ̃i by                                 
+                                  ϕi ρ1 (t), y ,  0 ≤ t ≤ 1;
+                                 
+                     ϕ̃i (t, y) = ϕi (2 − ρ2 t), y , 1 ≤ t ≤ 2;
+                                 
+                                 
+                                   id,                 2 ≤ t,
+and extend ϕ̃i to a smooth gauge transformation ϕ̃ on X cut which is the identity
+outside of Ni . Then ϕ̃∗ (Θcut ) glues to form a smooth connection Θ on X, since
+near Yi the transverse component of ϕ̃∗ (Θcut ) vanishes.
+   Let h·i : g ⊗ g → R be an Ad-invariant symmetric bilinear form on the Lie
+algebra g. Since
+
+(1.25)                           g∼
+                                  = t ⊕ k1 ⊕ · · · ⊕ ks
+
+is a direct sum of an abelian Lie algebra t with simple Lie algebras ki , from (1.1)–
+(1.3), the invariant form also decomposes as a direct sum. Any invariant form on ki
+is a multiple of the Killing form bi , and any symmetric form on t is invariant. Thus
+the space of forms on g is S 2 t∗ ⊕ Rb1 ⊕ · · · ⊕ Rbs .
+                                           10
+   Suppose Θ is a G connection on P → X with curvature Ω. Let hΩ ∧ Ωi be
+the Chern-Weil 4-form associated with the bilinear form h·i. It follows from (1.14)
+and (1.15) that this form on P is the lift of a 4-form on X, which we also denote hΩ∧
+Ωi. Furthermore, a simple computation using (1.16) shows that this form is closed.
+The fundamental result of Chern-Weil theory is that the de Rham cohomology
+class of this form is a certain characteristic class of P . The form hΩ ∧ Ωi is gauge
+invariant by (1.19) and the fact that h·i is Ad-invariant.
+   The Chern-Simons form [CS] is an antiderivative of hΩ ∧ Ωi on P . Set
+                                             1
+(1.26)                   α = α(Θ) = hΘ ∧ Ωi − hΘ ∧ [Θ ∧ Θ]i.
+                                             6
+Proposition                1.27. The          3-form        α           satisfies:
+(a)          i∗x α           =            − 16 hθx   ∧      [θx     ∧       θx ]i;
+(b)               dα                 =                   hΩ       ∧           Ωi;
+(c)                  Rg∗ α                         =                           α;
+(d ) If ϕ : P ′ → P is a bundle map and Θ a connection on P , then α(ϕ∗ Θ) =
+ϕ∗ α(Θ).
+(e) If ϕ : P → P is a gauge transformation with associated map g = gϕ : P → G,
+and φ = φϕ = ϕ∗ (θ), then
+
+                                                 1
+(1.28)                ϕ∗ α = α + dhAdg−1 Θ ∧ φi − hφ ∧ [φ ∧ φ]i.
+                                                 6
+
+Proof. (a) and (c) follow easily from (1.9), (1.10), (1.14), (1.15), and the Ad-
+invariance of h·, ·i. (d) is also trivial. (b) and (e) require some calculation; we
+illustrate (b) and leave (e) to the reader:
+                                      1
+            dα = hdΘ ∧ Ωi − hΘ ∧ dΩi − hdΘ ∧ [Θ ∧ Θ]i
+                                      2
+                       1                              1
+               = h(Ω − [Θ ∧ Θ]) ∧ Ωi + hΘ ∧ [Θ ∧ Ω]i − hΩ ∧ [Θ ∧ Θ]i
+                       2                              2
+               = hΩ ∧ Ωi.
+
+Here we use
+
+(1.29)               h[Θ ∧ Θ] ∧ [Θ ∧ Θ]i = h[[Θ ∧ Θ] ∧ Θ] ∧ Θi = 0
+
+which follows from Ad-invariance and the Jacobi identity.
+   It is useful for us to think about all connections at once. In a technical sense
+we shouldn’t think of the set of connections since the set of “all” of anything leads
+to contradictions. Also, we want to account for the automorphisms of connections,
+since that is our basic symmetry. Thus we consider the category of all connec-
+tions and morphisms of connections. As the word ‘category’ is anathema for many
+mathematicians and most physicists, but is a useful concept for us, we insert a few
+general remarks. The simplest algebraic structure on a set S is a binary associative
+composition law S × S → S. Such a structure is termed a monoid .12 The simplest
+   12 If there is an identity element as well, S is termed a semigroup. If, in addition, there are
+
+inverses, then S is a group, which is perhaps the most familiar algebraic type. Categories are
+usually defined as generalizations of semigroups, but we will not insist on identity elements.
+                                               11
+example is the set of natural numbers under addition. A category C is nothing more
+than a “monoid with states”. Thus there is a collection Obj(C) of objects (states)
+and for each pair of objects C1 , C2 there is a set of morphisms Mor(C1 , C2 ). A
+                                            ϕ
+morphism is represented by an arrow C1 −    → C2 from the initial state to a final
+                                 ϕ                    ϕ′
+state. Two morphisms C1 −     → C2 and C1′ −→ C2′ compose if and only if C2 = C1′ ,
+and the composition law is assumed associative. A monoid is then a category with
+a single object. Notice that we don’t assume that Obj(C) is a set, but we do assume
+that Mor(C1 , C2 ) is a set for every pair of morphisms.
+                                                             G
+   Let X be a fixed manifold. Define the category CX = CX       of G connections as
+follows. An object in CX is a connection Θ on a principal G bundle P → X. A
+               ϕ
+morphism Θ′ −  → Θ is a bundle map ϕ : P ′ → P covering the identity map on X (i.e.,
+a bundle morphism) such that Θ′ = ϕ∗ Θ. Notice that the category CX contains
+                     id
+identity maps Θ −→ Θ and that every morphism is invertible. Such a category is
+termed a groupoid . The category CX carries a topology.13 The objects form a union
+of affine spaces
+                                                      G
+(1.30)                                Obj(CX ) =           AP ,
+                                                       P
+
+where {P } is the collection of all principal G bundles over X. The set of morphisms
+between two connections is also a topological space in a natural way.
+   There is an obvious equivalence relation on CX —two connections Θ, Θ′ are equiv-
+                                                  ϕ
+alent if and only if there exists a morphism Θ −  → Θ′ . We denote the set of equiva-
+lence classes by CX . Let {Pi } be a set of representatives of topological equivalence
+classes of G bundles over X. Then there is a noncanonical isomorphism
+                                             G             
+                                     CX ∼
+                                        =            APi       GPi
+                                             {Pi }
+
+
+as a disjoint union.
+   Heuristically, a groupoid is a “group with states”. In gauge theory this notion
+provides an illuminating formalism in which to keep track of the symmetry. If
+all G bundles over X are isomorphic (which occurs if G is connected and simply
+connected and dim X ≤ 3, for example), then we might fix P → X and consider
+the space of fields to be AP with the group of gauge transformations GP acting
+as symmetries. This is the usual picture. Or more generally we might fix a set of
+representatives for the different topological types. However, this is not adequate.
+Consider a situation in which we have two isomorphic bundles P → X and P ′ → X ′
+we wish to identify, as when we glue connections. The glued connection, perhaps
+even its equivalence class, depends on the particular identification we choose. As
+there is no canonical identification, we need to keep track of all possible identi-
+fications. This is an additional symmetry and justifies our consideration of the
+category of bundles rather than simply a set of representatives.
+   A functor F : C1 → C2 generalizes the notion of a homomorphism of monoids.
+                                                                                 ϕ
+Namely, F is a map Obj(C1 ) → Obj(C2 ), and F assigns to each morphism C1 −     →
+    13 Here we ignore whatever technical complications might arise from the fact that the collection
+
+of all principal bundles is not a set. I hope that readers who are capable of identifying these
+difficulties are also capable of coping with them.
+                                                12
+                        F (ϕ)
+C2 a morphism F (C1 ) −−−→ F(C2 ) such that composition is preserved. (If the
+categories have identity maps, then these must also be preserved.) Let h : G ֒→ G′
+be an inclusion of groups. Then our previous remarks about extensions of structure
+group are summarized by the statement that h induces a functor
+                                                 ′
+                                       G     G
+(1.31)                          hX : C X −→ CX
+
+for any manifold X.
+
+
+
+
+                                        13
+                             §2 The Chern-Simons Action
+    In this section we integrate the Chern-Simons lagrangian (1.26) over spacetime
+(a compact, oriented 3-manifold) to construct the Chern-Simons action. Since the
+Chern-Simons form lives on the total space of a bundle, and not on the base, we
+choose a section of the bundle to define the action.14 On closed 3-manifolds the
+integral is independent of the section, up to an integer, if we make the appropriate
+integrality hypothesis on the bilinear form (Hypothesis 2.5). If the 3-manifold
+has a boundary, then the integral depends only on the restriction of the section
+over the boundary, and the dependence is encoded in a cocycle (2.15). The Wess-
+Zumino-Witten action (2.13) enters in the formula for this cocycle; we develop
+its properties in Appendix A. The cocycle determines a hermitian complex line
+which only depends on the restriction of the connection to the boundary. We
+term this line the “Chern-Simons line”. These lines vary smoothly, so form a line
+bundle over smooth families of connections (Proposition 2.17). This line bundle
+and cocycle were also considered in [RSW] In Theorem 2.19 we state carefully the
+properties of the Chern-Simons action. This can be viewed as an axiomatization
+of a local (topological) classical Lagrangian field theory, in the spirit of Segal’s
+axioms for conformal field theory [S] and Atiyah’s axioms for topological quantum
+field theory [A]. The crucial gluing law, which is an assertion of the locality of the
+action, is (2.27).
+    From now on we fix a connected, simply connected, compact Lie group G and
+an invariant form h·i on its Lie algebra g. We single out simply connected groups
+because of the following topological fact.
+Lemma 2.1. If G is simply connected, then any principal G bundle over a manifold
+of dimension ≤ 3 admits a global section, hence is trivializable.
+The proof uses π0 G = π1 G = π2 G = 0 and elementary obstruction theory. Suppose
+Θ is a connection on a principal G bundle P → X, where X is a closed, oriented
+3-manifold. Let p : X → P be a section. Recall the Chern-Simons form α = α(Θ) ∈
+Ω3P (1.26). Define
+                                                Z
+(2.2)                             SX (p, Θ) =           p∗ α(Θ).
+                                                    X
+
+
+Proposition 2.3. Let ϕ : P → P be a gauge transformation with associated map
+gϕ : P → G. Set g = gϕ p : X → G and let φg = g ∗ θ be the pullback of the Maurer-
+Cartan form. Then
+                                                             Z
+                                                                   1
+(2.4)       SX (ϕp, Θ) = SX (p, ϕ∗ Θ) = SX (p, Θ) −                  hφg ∧ [φg ∧ φg ]i.
+                                                                 X 6
+
+
+
+Proof. The first equality is immediate from (2.2). The second equality follows
+from (1.28) and Stokes’ theorem.
+We now make the following integrality hypothesis on the bilinear form h·i.
+
+   14 In this paper we restrict ourselves to trivializable bundles (cf. Lemma 2.1). The extension
+
+to nontrivializable bundles is carried out in Part 2 [F2].
+                                               14
+Hypothesis 2.5. Assume that the closed form − 61 hθ∧[θ∧θ]i represents an integral
+class in H 3 (G; R).
+Then the integral in (2.4) is an integer. Since any two sections of P are related by
+a gauge transformation, it follows that
+
+(2.6)                         SX (Θ) = SX (p, Θ) (mod 1)
+
+is independent of the section p. This is the Chern-Simons action on closed mani-
+folds.
+    We can also deduce the independence of (2.6) on the section from the fact that the
+Chern-Simons form is closed (cf. Proposition 1.27(b)). Thus (2.2) doesn’t change
+under homotopies of p. Then the integrality of the restriction of the cohomology
+class of the Chern-Simons form to the fiber gives the rest.
+Proposition 2.7. Let X be a closed oriented 3-manifold. The Chern-Simons ac-
+tion
+                             SX : CX −→ R/Z
+is                    smooth 15                   and                   satisfies:
+(a) (Functoriality) If ϕ : P ′ → P is any bundle map covering an orientation pre-
+serving diffeomorphism ϕ̄ : X ′ → X, and Θ is a connection on P , then
+
+                                     SX ′ (ϕ∗ Θ) = SX (Θ).
+
+(b) (Orientation) Let −X denote X with the opposite orientation. Then
+
+                                     S−X (Θ) = −SX (Θ).
+
+(c) (Additivity) If X = X1 ⊔X2 is a disjoint union, and Θi are connections over Xi ,
+then
+                      SX1 ⊔X2 (Θ1 ⊔ Θ2 ) = SX1 (Θ1 ) + SX2 (Θ2 ).
+It follows from (a) that there is an induced action
+
+                                       SX : CX −→ R/Z
+
+defined on the fields modulo symmetries. We will often write the action as e2πiSX (Θ) ,
+in which case (c) appears as a multiplicative property.
+Proof. The smoothness follows since α(Θ) is a smooth function of Θ (1.26). For (a),
+let p′ : X ′ → P ′ be a section and p = ϕp′ ϕ̄−1 the induced section of P . Then by
+Proposition 1.27(d)
+                      Z                       Z
+                            −1 ∗ ′ ∗ ∗             ∗
+          SX (p, Θ) =    (ϕ̄ ) p ϕ α(Θ) =        p′ α(ϕ∗ Θ) = SX ′ (p′ , ϕ∗ Θ).
+                         X                           X′
+
+Assertions (b) and (c) follow from standard properties of integration of differential
+forms on oriented manifolds.
+   15 We will not bother with technicalities regarding the smooth structure of infinite dimensional
+
+manifolds here; they are well-understood. Rather, we will usually verify smoothness for a family
+of connections parametrized by a smooth manifold U , which the reader can take to be finite
+dimensional.
+                                                15
+   The Chern-Simons action of a connection which extends over a 4-manifold can
+be computed by integrating the Chern-Weil form. Let Θ̃ be a connection on a
+principal G bundle P̃ → W over a compact oriented 4-manifold W , and denote the
+curvature of Θ̃ by Ω̃. Then the action of the restriction ∂ Θ̃ to the boundary is
+                                         Z
+(2.8)                     S∂W (∂ Θ̃) =         hΩ̃ ∧ Ω̃i (mod 1).
+                                           W
+
+
+This follows from Proposition 1.27(b) and Stokes’ theorem.
+   The Chern-Simons functional also behaves well under extension of structure
+group.
+
+Proposition 2.9. Let k : G ֒→ G′ be an inclusion of connected, simply connected,
+compact Lie groups, and X a closed oriented 3-manifold. Suppose h·i′ is an integral
+form on g′ which restricts to h·i on g. Then for any G connection Θ over X, its
+extension Θ′ to a G′ connection satisfies SX (Θ′ ) = SX (Θ).
+
+In fancier language, Proposition 2.9 asserts that the diagram
+
+                                               h
+                               CX (G1 ) −−−X−→ CX (G′1 )
+                                                 
+                                  
+                               SX y
+                                                  S
+                                                  y X
+                                  R/Z                   R/Z
+
+commutes, where hX is the functor which extends G connections to G′ connec-
+tions (1.31).
+
+Proof. Let P → X be the G bundle carrying Θ and P ′ → X its G′ extension.
+There is an inclusion hP : P ֒→ P ′ . Recall from (1.17) that h∗P Θ′ = ḣ(Θ). Since
+ḣ∗ (h·i′ ) = h·i it follows from (1.26) that h∗P α(Θ′ ) = α(Θ). Fix a section p : X → P ;
+then hP ◦ p is a section of P ′ . Now
+                                  Z                     Z
+             SX (hP ◦ p, Θ′ ) =       p∗ h∗P α(Θ′ ) =       p∗ α(Θ) = SX (p, Θ).
+                                  X                     X
+
+
+
+  Next, we consider compact oriented 3-manifolds X with nonempty boundary.
+Suppose Θ is a G connection on P → X. We retain the definition (2.2). But now
+Proposition 2.3 is replaced by
+
+Proposition 2.10. Let ϕ : P → P be a gauge transformation with associated map
+gϕ : P → G. Set g = gϕ p : X → G and let φg = g ∗ θ be the pullback of the Maurer-
+Cartan form. Then
+(2.11)                                 Z                       Z
+                     ∗                             ∗               1
+SX (ϕp, Θ) = SX (p, ϕ Θ) = SX (p, Θ) +     hAdg−1 p Θ ∧ φg i −       hφg ∧ [φg ∧ φg ]i.
+                                        ∂X                       X 6
+
+
+It is no longer true that the last two terms in (2.11) vanish modulo integers, but
+rather
+                                               16
+Lemma 2.12. With Hypothesis 2.5 the functional
+                         Z
+                               1
+(2.13)        W∂X (g) =     − hφg ∧ [φg ∧ φg ]i (mod 1)
+                          X    6
+depends only on the restriction of g : X → G to ∂X.
+W∂X (g) is called the Wess-Zumino-Witten functional ; it is the action of a 1+1 di-
+mensional field theory. In Appendix A we sketch the development of this theory.
+Proof. If g ′ : X ′ → G and there is an orientation reversing diffeomorphism ∂X ∼=
+∂X ′ under which the restrictions of g and g ′ coincide, then these maps patch to-
+gether into a closed oriented (singular) 3-chain g̃ : X ′ − X → G. Then
+                                        Z
+                                                1
+(2.14)           W∂X (g ′ ) − W∂X (g) =       − hφg ∧ [φg ∧ φg ]i ∈ Z
+                                          ′
+                                         X −X   6
+
+is an integer by Hypothesis 2.5.
+Therefore, the Chern-Simons action (2.2) depends in a controlled manner on the
+restriction of p to ∂X. We make sense of this by defining a metrized complex
+line L∂Θ attached to the restriction ∂Θ of Θ to ∂X. The Chern-Simons invariant
+of Θ takes values in L∂Θ . (Compare with the discussion at the beginning of this
+section.) Notice that we are only concerned with the elements in L∂Θ of unit norm,
+which form a principal homogeneous space for the circle group T. It is easy to
+go back and forth between the T-space and the metrized line, which we do freely
+(usually without changing the notation).
+   We remark that we could also treat this dependence on boundary values by
+examining homotopies of sections and using the fact that the Chern-Simons form
+is closed; we leave this approach to the reader.
+   First, we abstract the construction of vector spaces (in this case lines) in situa-
+tions where one must make a choice (here the choice of a section on the boundary).
+We suppose that the set of possible choices and isomorphisms of these choices form
+a groupoid C. Let L be the category whose objects are metrized complex lines
+and whose morphisms are unitary isomorphisms.16 Suppose we have a functor
+F : C → L. Define VF to be the inner product space of invariant sections of the
+functor F : An element v ∈ VF is a collection {v(C) ∈ F(C)}C∈Obj(C) such that
+        ψ
+if C1 −→ C2 is a morphism, then F (ψ)v(C1 ) = v(C2 ). Suppose C is connected ,
+that is, there exists a morphism between any two objects. Then dim VF = 0 or
+dim VF = 1, the latter occurring if and only if F has no holonomy, i.e., F (ψ) = id
+                                 ψ
+for every automorphism C −  → C. The terminology comes from the example of a
+metrized line bundle L → M with unitary connection over a manifold M . Form
+a category C(M ) whose objects are the points of M and whose morphisms are
+piecewise smooth unparametrized paths in M . The category C(M ) is connected if
+and only if M is connected. The functor F assigns the fiber Lm to m and parallel
+transport to paths. The inner product space VF is then the space of flat sections.
+The functor has no holonomy if and only if the connection has no holonomy.
+   16 Alternatively we can think of L as the category whose objects are principal homogeneous T-
+
+spaces, where T is the circle group. The elements of unit norm in a metrized line form a principal
+homogeneous T-space. The tensor product of complex lines is then a product on the category of
+T-spaces.
+                                               17
+   Fix a G connection η on Q → Y , where Y is an oriented closed 2-manifold. By
+Lemma 2.1 the bundle Q is trivializable. Let CQ be the category whose objects
+are sections q : Y → Q. For any two sections q, q ′ there is a unique morphism
+   ψ
+q−→ q ′ , where ψ : Q → Q is the gauge transformation such that q ′ = ψq. Define
+the functor Fη : CQ → L by Fη (q) = C for all q, where C has its standard metric,
+           ψ
+and Fη (q − → q ′ ) is multiplication by cY (q ∗ η, gψ q), where gψ : Q → G is the map
+associated to ψ, and cY is the cocycle y
+(2.15)                  Z
+                                                       
+   cY (a, g) = exp 2πi hAdg−1 a ∧ φg i + WY (g) ,            a ∈ Ω1Y (g), g : Y → G.
+                        Y
+
+That Fη is a functor follows from the cocycle identity
+
+(2.16)                      cY (a, g1 g2 ) = cY (a, g1 )cY (ag1 , g2 ),
+
+where
+                                     ag = Adg−1 a + φg .
+We leave the verification of (2.16) to the reader, who may wish to consult (A.10)
+and (A.8). Since CQ is connected and Fη has no holonomy (there are no nontrivial
+automorphisms), we obtain the desired metrized line Lη = LY,η of invariant sec-
+tions. From the construction we see that a section q : Y → Q induces a trivialization
+Lη ∼= C.
+   It is important to observe that these “Chern-Simons lines” vary smoothly in
+smooth families of connections.
+Proposition 2.17. Suppose ηu is a smooth family of connections on Q → Y for
+u varying over a smooth manifold U . Then the lines Lηu form a smooth hermitian
+line bundle over U .
+The line bundle is trivialized by a section q : Y → Q. Transition functions between
+different trivializations are smooth since the map
+
+                                    u 7−→ cY (q ∗ ηu , gψ q)
+
+is smooth, as formula (2.15) clearly shows. Notice that the elements of unit norm
+form a circle bundle over U .
+   Return now to the connection Θ over the 3-manifold X. Equation (2.11) shows
+that
+                                ∂p 7−→ e2πiSX (p,Θ)
+defines an invariant section of unit norm
+
+(2.18)                                e2πiSX (Θ) ∈ L∂Θ ,
+
+where ∂Θ is the restriction of Θ to ∂X and ∂p is the restriction of the section p
+to ∂X. This is the Chern-Simons invariant for manifolds with boundary. In good
+Bourbaki style we allow either X or ∂X to be the empty set ∅ in (2.18): Set L∅ = C
+and S∅ ≡ 0. The following theorem generalizes Proposition 2.7 and expresses what
+we mean by the statement “SX is the action of a local Lagrangian field theory”.
+                                                18
+Theorem 2.19. Let G be a connected, simply connected compact Lie group and
+h·i : g ⊗ g → R an invariant form on its Lie algebra g which satisfies the integrality
+condition Hypothesis 2.5. Then the assignments
+
+                            η 7−→ Lη ,               η ∈ CY ,
+(2.20)
+                            Θ 7−→ e2πiSX (Θ) ,       Θ ∈ CX ,
+
+defined above for closed oriented 2-manifolds Y and compact oriented 3-manifolds X
+are                      smooth                     and                    satisfy:
+(a) (Functoriality) If ψ : Q′ → Q is a bundle map covering an orientation pre-
+serving diffeomorphism ψ : Y ′ → Y , and η is a connection on Q, then there is an
+induced isometry
+
+(2.21)                             ψ ∗ : Lη −→ Lψ∗ η
+
+and these compose properly. If ϕ : P ′ → P is a bundle map covering an orientation
+preserving diffeomorphism ϕ̄ : X ′ → X, and Θ is a connection on P , then
+                                                     ∗
+(2.22)                   (∂ϕ)∗ e2πiSX (Θ) = e2πiSX ′ (ϕ Θ) ,
+
+where ∂ϕ : ∂P ′     →      ∂P is the induced                map    over     the   boundary.
+(b) (Orientation) There is a natural isometry
+
+(2.23)                               L−Y,η ∼
+                                           = LY,η ,
+
+and
+
+(2.24)                         e2πiS−X (Θ) = e2πiSX (Θ) .
+
+(c) (Additivity) If Y = Y1 ⊔ Y2 is a disjoint union, and ηi are connections over Yi ,
+then there is a natural isometry
+
+(2.25)                           Lη1 ⊔η2 ∼
+                                         = Lη1 ⊗ Lη2 .
+
+If X = X1 ⊔ X2 is a disjoint union, and Θi are connections over Xi , then
+
+(2.26)            e2πiSX1 ⊔X2 (Θ1 ⊔Θ2 ) = e2πiSX1 (Θ1 ) ⊗ e2πiSX2 (Θ2 ) .
+
+(d ) (Gluing) Suppose Y ֒→ X is a closed, oriented submanifold and X cut is the
+manifold obtained by cutting X along Y . Then ∂X cut = ∂X ⊔ Y ⊔ −Y . Suppose
+Θ is a connection over X, with Θcut the induced connection over X cut , and η the
+restriction of Θ to Y . Then
+                                                      cut
+                                                           
+(2.27)                   e2πiSX (Θ) = Trη e2πiSX cut (Θ ) ,
+
+where Trη is the contraction
+
+                      Trη : L∂Θcut ∼
+                                   = L∂Θ ⊗ Lη ⊗ Lη −→ L∂Θ
+                                            19
+using the hermitian metric on Lη .
+   Several comments are in order. From a functorial point of view: (a) implies that
+η 7→ Lη defines a functor
+
+(2.28)                                  CY → L
+
+and that each X determines an invariant section e2πiSX (·) of the composite functor
+CX → C∂X → L, where the first arrow is restriction to the boundary. From down
+here on earth: To each bundle Q → Y over a closed, oriented 2-manifold there is
+associated a smooth line bundle LQ → AQ over the space of connections, and the
+action of gauge transformations GQ on AQ lifts to LQ . Furthermore, a bundle P →
+X over a compact, oriented 3-manifold determines a restriction map AP → A∂P and
+so an induced line bundle LP → AP ; the action of gauge transformations GP on AP
+lifts to LP . Then e2πiSX (·) is an invariant section of LP . These line bundles and
+sections are smooth, by Proposition 2.17. Although (c) looks like a multiplicative
+property, it expresses the additivity of the classical action SX . However, SX is
+not defined if ∂X 6= ∅, which is why we use the exponential notation e2πiSX (·) .
+Theorem 2.19 expresses in a (necessarily) complicated way the fact that SX is a
+local functional of local fields defined as the integral of a local expression (c), (d);
+is invariant under symmetries of the fields (a); and is unitary (b).
+Proof. The smoothness of η 7→ Lη is Proposition 2.17. Suppose Θu is a smooth fam-
+ily of connections parametrized by a smooth manifold U . Fix a section p : X → P ;
+its restriction to ∂X determines a smooth trivialization of the lines L∂Θu . Relative
+to this trivialization e2πiSX (Θu ) is the function e2πiSX (p,Θu ) , which is smooth in u
+since u 7→ α(Θu ) is smooth. For (a), fix a section q ′ : Y ′ → Q′ and so an isometry
+       = C. The induced section q = ψq ′ ψ̄ −1 : Y → Q induces an isometry Lη ∼
+Lψ ∗ η ∼                                                                            = C.
+Relative to these trivializations we define ψ ∗ : Lη → Lψ∗ η to be the identity map
+C → C. A routine check shows that this definition is independent of the choice
+of section q ′ .17 Equation (2.22) is proved similarly using a trivialization of P ′ .
+For (2.23) we observe that the cocycle (2.15) changes sign when the orientation
+of Y is reversed. Similarly, the integral in (2.2) changes sign if the orientation of X
+is reversed, from which (2.24) follows (after fixing a trivialization). The statements
+in (c) follow from the fact that the integral
+                                            R   overR a disjoint union is the sum of the
+integrals, and in (d) from the fact that X cut = X . We leave details to the reader.
+   Proposition 2.9 extends to manifolds with boundary.
+Proposition 2.29. Let k : G ֒→ G′ be an inclusion of connected, simply connected,
+compact Lie groups. Suppose h·i′ is an integral form on g′ which restricts to h·i
+on g. Then if η is a G connection over a closed, oriented 2-manifold Y , and η ′ its
+G′ extension, there is a natural isometry
+
+(2.30)                              kη : Lη −→ Lη′ .
+
+If Θ is a G connection over a compact, oriented 3-manifold X, and Θ′ its G′ ex-
+tension, then                                    ′
+                         k∂Θ e2πiSX (Θ) = e2πiSX (Θ ) .
+
+   17 For this we need the functoriality of the Wess-Zumino-Witten action, which is proved
+
+by (2.14).
+                                           20
+In categorical terms, k induces a natural transformation from the functor CYG → L
+                    k      ′
+to the functor CYG −−→
+                     Y
+                         CYG −→ L (cf. (2.28), (1.31)). For each X this induces a
+                                G       G              G      G′      G′
+natural transformation from CX     → C∂X      → L to CX   → CX   → C∂X   → L which
+preserves the invariant sections e2πiSX (·) . Though the language is complicated, the
+proof is straightforward, and we omit it.
+
+
+
+
+                                         21
+            §3 Classical Solutions and the Hamiltonian Theory
+   The classical solutions in a Lagrangian field theory are the critical points of the
+action, which are computed by a standard calculus of variations argument. In the
+Chern-Simons theory these are the flat connections (up to equivalence). A standard
+result in differential geometry (Proposition 3.5) shows that this space is determined
+by the fundamental group. The Hamiltonian theory pertains to spacetimes which
+are globally products of a space (here a closed, oriented 2-manifold) with time
+(the positive reals, say). In the Chern-Simons theory the classical solutions are
+constant in time, i.e., the hamiltonian function vanishes (Proposition 3.16). So
+the space of classical solutions is the moduli space of flat connections on a bundle
+over a 2-manifold, which has been the object of much study recently. The Chern-
+Simons lines defined in §2 descend to form a hermitian line bundle over this moduli
+space. Furthermore, the Chern-Simons action defines a connection on this circle
+bundle whose curvature is a symplectic form (Proposition 3.17). This is the phase
+space of the Hamiltonian theory. We also prove some simple facts about the action
+of the stabilizer of a connection on the Chern-Simons line (Proposition 3.25 and
+Proposition 3.26).
+   Our first order of business is to calculate the differential of the action SX on a
+closed oriented 3-manifold. Recall that the configuration space of fields is a disjoint
+union of affine spaces (1.30).
+                                                                 d
+Proposition 3.1. Let Θt be a path in CX . Denote Θ = Θ0 and Θ̇ = dt t=0
+                                                                        Θt .
+Then
+                                          Z
+                       d
+(3.2)                         SX (Θt ) = 2 hΩ ∧ Θ̇i,
+                       dt t=0              X
+
+where Ω is the curvature of Θ.
+The reader should check that the integrand, which is ostensibly a 3-form on P , is
+the lift of a 3-form on X.
+Proof. The connections Θs form a single connection Θ on each cylinder [0, t] × X
+with curvature Ωs + ds ∧ Θ̇s , where Ωs is the curvature of Θs . Then (2.8) implies
+that for each t,
+                                          Z t Z
+(3.3)                S(Θt ) − S(Θ0 ) = 2     dt hΩs ∧ Θ̇s i.
+                                                  0    X
+
+The proposition follows by differentiating (3.3) at t = 0.
+  It follows that dSX (Θ) = 0 if and only if Ω = 0, i.e., if and only if Θ is flat.
+Notice that the Euler-Lagrange equation
+
+(3.4)                                      Ω=0
+
+is first order.18 Since the action is invariant under symmetries, by Proposition 2.7(a),
+so is the space of solutions to the Euler-Lagrange equation. In this case that fact
+is also obvious directly. Let
+                                         MX ⊂ CX
+   18 A typical field theory has an action of the form S
+                                                                        R
+                                                           X (f )   =       X
+                                                                                |df |2 , and then the Euler-
+Lagrange equation is second order.
+                                             22
+be the space of equivalence classes of solutions to (3.4).
+   Since (3.4) is a local condition and is defined in any dimension, the space MX of
+equivalence classes of flat connections is defined for any manifold X. Nevertheless,
+we derive these spaces directly from the Chern-Simons action for certain 2- and
+3-manifolds, as this is the procedure which generalizes to arbitrary field theories.
+First, we note some general facts about flat connections, which in the context of
+Chern-Simons theory reflect the topological nature of the action.
+Proposition 3.5. Let X be any smooth manifold. Choose a basepoint xi in each
+component of X. Then the holonomy provides a natural identification
+                                 Y                       
+(3.6)                    MX =          Hom π1 (X, xi ), G /G
+                                   i
+
+
+which is independent of the basepoints.
+                                   
+Here G acts on Hom π1 (X, xi ), G /G by conjugation. We omit the proof, which is
+standard
+   The space MX is typically not a manifold. If Y is a compact oriented 2-manifold,
+then MY is a stratified space whose stratum of top dimension is a smooth mani-
+fold [G]. Suppose Θ is a flat connection on P → X (in any dimension), and consider
+the covariant derivative dΘ in the adjoint representation. It defines a complex
+
+                                          d
+(3.7)                      → Ω0X (gP ) −→
+                          0−            Θ
+                                          Ω1X (gp ) −
+                                                    → ···
+                                                                               
+since d2Θ = 0. We denote the cohomology groups of this complex by H • X; g(Θ) .
+If Θ represents a smooth point of MX , then the tangent space at that point is
+                                                  
+(3.8)                         T Θ MX ∼
+                                     = H 1 X; g(Θ) .
+
+  If Y is a compact oriented 2-manifold, then for a flat connection η there is a
+nondegenerate pairing
+                                                   
+                         H 0 Y ; g(η) ⊗ H 2 Y ; g(η) −→ R.
+                                     
+The zeroth cohomology H 0 Y ; g(η) is the Lie algebra of the centralizer Zη of η
+in the group of gauge transformations. For example, it vanishes if η is irreducible,
+since then Zη is isomorphic to the center of G, which is finite. In any case the index
+theorem gives
+                                     
+(3.9)       dim MY = dim H 1 Y ; g(η) = − dim G · χ(Y ) + 2 dim Zη .
+
+Of course, this is a formula for the dimension of the moduli space only at smooth
+points η; at other points this is a formal dimension. At smooth points η the right
+hand side gives a formula for dim MY . Note in particular that MY has even
+dimension. This is explained by the theorem of Narasimhan and Seshadri [NS],
+which identifies MY as a complex manifold (of stable bundles) when Y is endowed
+with a complex structure.
+   The following lemma also reflects the topological nature of flat connections.
+                                           23
+Lemma 3.10. Suppose Θ is a flat connection on P → X, for some manifold X,
+and ϕi : P ′ → P, i = 0, 1 are bundle maps. Then if ϕ̄0 : X ′ → X is (pseudo)isotopic
+to ϕ̄1 : X ′ → X, the connections ϕ∗0 Θ and ϕ∗1 Θ are gauge equivalent.
+Proof. This follows directly from Proposition 3.5, since ϕ̄0 and ϕ̄1 induce the same
+map on π1 . Alternatively, let ϕ : [0, 1] × P ′ → [0, 1] × P be a bundle map covering
+a pseudoisotopy ϕ̄ : [0, 1] × X ′ → [0, 1] × X. Then by Lemma 1.21 there is a unique
+gauge transformation ϕ̃ : [0, 1] × P ′ → [0, 1] × P ′ such that ϕ̃0 = id and ϕ̃∗ ϕ∗ Θ = ηt
+has no dt component, where t is the coordinate on [0, 1]. The curvature of ϕ̃∗ ϕ∗ Θ
+is
+
+(3.11)                                   Ωt − η̇t ∧ dt,
+
+where Ωt is the curvature of ηt . But (3.11) vanishes, since Θ is flat. Hence η̇t = 0,
+from which η0 = η1 . In other words ϕ∗0 Θ = η0 = η1 = ϕ̃∗1 (ϕ∗1 Θ), which proves the
+lemma.
+   Now consider a compact oriented 3-manifold X, possibly with nonempty bound-
+ary. For η ∈ C∂X we define
+
+                               CX (η) = { Θ ∈ CX : ∂Θ = η }
+
+as the category of fields with boundary value η. Morphisms in CX (η) are required
+to be the identity over ∂X.
+Proposition 3.12. Let Θt be a path in CX (η). Then
+                                                      Z
+                               d
+                                      SX (Θt ) = 2         hΩ ∧ Θ̇i.
+                               dt t=0                  X
+
+
+We omit the derivation, which is similar to the derivation of (3.2), except for two
+points: (i) the cylinder [0, t] × X needs to be smoothed at the corners; and (ii) the
+action on [0, t] × ∂X is zero since the connection is constant there. The critical
+points form the moduli space of flat connections MX (η) ⊂ CX (η) which restrict
+to η on the boundary. This space is nonempty only if η is flat.
+   We next form the union MX of the MX (η).19 For this we need to divide out the
+                                             ψ
+symmetries on the boundary. Let η ′ −  → η be a morphism in C∂X . We claim that
+there is an induced functor CX (η ′ ) → CX (η) which maps MX (η ′ ) isomorphically
+onto MX (η). For suppose Θ is a connection on P → X with ∂Θ = η. Choose
+a bundle P ′ → X and a morphism ϕ : P ′ → P such that ∂ϕ = ψ. Then the
+induced functor maps the equivalence class of ϕ∗ Θ (in CX (η ′ )) to the equivalence
+class of Θ. A routine check shows that this is independent of the choice of ϕ.
+The functor is defined in a similar manner on morphisms in CX (η ′ ). Therefore,
+there is a functor η 7→ MX (η) from C∂X to the category of (singular) manifolds.
+Then MX is the space of invariant sections of this functor. We repeat that MX is
+simply the moduli space of flat connections on X, so is given by (3.6); its topology
+    19 Of course, M
+                   X is simply the moduli space of flat connections on X. The algebraic exercise
+in this paragraph is our understanding of the role that symmetries play in the classical theory on
+manifolds with boundary. Similar considerations also enter in the quantum theory.
+                                                 24
+and manifold structure should be understood from that point of view. Finally, the
+restriction to ∂X gives a diagram
+
+                                      MX −−−−→ CX
+                                               
+(3.13)                                         
+                                       y        y
+                                      M∂X −−−−→ C∂X
+If η is a flat connection over ∂X, then the fiber of (3.13) over the equivalence class
+of η in M∂X is isomorphic to MX (η).
+   If Y is a closed oriented 2-manifold, then MY ⊂ CY is the moduli space of flat
+connections. Again we wish to “derive” this space from the Chern-Simons action.
+Thus we consider the Hamiltonian formulation of the theory, i.e., study the action
+on the cylinder X = [0, ∞) × Y . This “spacetime” X is the product of “space” Y
+and “time” [0, ∞). In the Hamiltonian formulation we rewrite the space of fields
+as a space of paths.
+Proposition 3.14. Let {Q} be a set of representatives for the equivalence classes
+of G bundles over Y . Then there is an identification
+                                 G                    
+(3.15)                C[0,∞)×Y =     Map [0, ∞), AQ      GQ .
+                                        {Q}
+
+
+Proof. If Θ ∈ C[0,∞)×Y is a connection on P → [0, ∞) × Y , then ∂P ∼        = Q for
+a unique Q ∈ {Q}. Since [0, ∞) is contractible there is an isomorphism P ∼        =
+[0, ∞) × Q, and by Lemma 1.21 we can choose an isomorphism which takes Θ to a
+path ηt of connections on Q. As this is unique up to an overall gauge transformation
+on Q, the assertion follows.
+   The classical solutions on [0, ∞) × Y are completely determined by their initial
+value.20
+Proposition 3.16. The restriction to the boundary M[0,∞)×Y ⊂ C[0,∞)×Y →
+C{0}×Y is an isomorphism of M[0,∞)×Y onto the moduli space MY of flat con-
+nections over Y .
+Proof. Suppose Θ is a flat connection over [0, ∞)×Y . After a gauge transformation
+this is a path ηt in CY . But the proof of Lemma 3.10 shows that ηt is constant.
+Thus η0 determines the gauge equivalence class of Θ.
+   One fundamental idea in the Hamiltonian formulation of classical mechanics, is
+that the fields over a cylinder are paths in a symplectic manifold .21 Furthermore,
+the space of classical solutions also carries a symplectic structure. For Chern-Simons
+theory the identification (3.15) indicates that the purported symplectic structure
+on each AQ is GQ invariant. These assertions form the next proposition. Recall
+that the lines Lη attached to η ∈ CY vary smoothly with η. So for each Q they
+form a smooth hermitian line bundle LQ → AQ .
+    20 Contrast with the usual case of a second order Euler-Lagrange equation, where both an
+
+initial value and an initial derivative must be specified.
+    21 Many physicists who subscribe to the “symplectic philosophy” emphasize that in a local field
+
+theory the symplectic structure is derived from the lagrangian. That is our approach. (See [GS]
+for a survey of symplectic geometry in physics.)
+                                                25
+Proposition 3.17. Fix a G bundle Q → Y over a closed oriented 2-manifold.
+Then the Chern-Simons action defines a unitary connection on the hermitian line
+bundle LQ → AQ . The curvature of this connection times i/2π is
+                                  Z
+(3.18)          ω(η̇1 , η̇2 ) = −2 hη̇1 ∧ η̇2 i, η̇1 , η̇2 ∈ T AQ .
+                                         Y
+
+If h·i is nondegenerate, then ω is a symplectic form. The action of GQ on AQ
+lifts to LQ , and the lifted action preserves the metric and connection. The induced
+moment map is
+                                           Z
+(3.19)                           µξ (η) = 2 hΩ(η) ∧ ξi,
+                                                Y
+
+where ξ ∈ Ω0Y (gQ ) is an infinitesimal gauge transformation. Over subsets of AQ
+where GQ acts freely, then (a subset of ) the moduli space MQ of flat connections is
+the symplectic quotient AQ //GQ . There is an induced line bundle LQ → MQ with
+metric and connection, and i/2π times its curvature is the induced symplectic form
+on MQ .
+That a nondegeneracy hypothesis on the lagrangian is necessary to obtain a non-
+degenerate symplectic structure is standard in classical mechanics [Ar]. The sym-
+plectic structure of AQ is well-known [AB], and the symplectic form on MQ can be
+defined using cohomology [G]. Here, though, we see both structures arising directly
+from the Chern-Simons action in 3 dimensions.
+Proof. Let ηt be a smooth path in AQ . Then ηt determines a connection η on
+[0, 1] × Q → [0, 1] × Y . Now ∂(η) = η1 ⊔ η0 is a connection on Q ⊔ Q → Y ⊔ −Y .
+Then L∂(η) ∼ = Lη0 ⊗ Lη1 by the properties in Theorem 2.19. Using the metric
+on Lη0 , we identify Lη0 ⊗ Lη1 as the line of linear maps Lη0 → Lη1 . Let
+
+(3.20)                     PT(ηt ) = e2πiS[0,1]×Y (η) : Lη0 −→ Lη1
+
+be the Chern-Simons action of η. Note that PT(ηt ) is unitary, since the corre-
+sponding element of Lη0 ⊗ Lη1 has unit norm. We claim that PT(ηt ) is the parallel
+transport of a connection on LQ → AQ .
+   Fix a section q : Y → Q. Then from the construction of lines in §2 (see (2.15))
+this induces a (unitary) trivialization sq : AQ → LQ . Consider the connection η
+over [0, 1] × Y . Using the formula (3.11) for its curvature, we see that the Chern-
+Simons form is
+                             q ∗ α(η) = −q ∗ hηt ∧ η̇t i ∧ dt.
+Hence from (2.2) the action relative to the section q is
+                                         Z 1 Z
+(3.21)               S[0,1]×Y (q, η) = −     dt   q ∗ hηt ∧ η̇t i.
+                                                 0       Y
+
+This motivates us to introduce the (connection) 1-form θq on AQ defined by22
+                                             Z
+(3.22)                     (θq )η (η̇) = 2πi   q ∗ hη ∧ η̇i.
+                                                     Y
+
+    22 Notice that parallel transport is the integral of minus the connection form relative to some
+
+trivialization.
+                                                26
+We must check that this transforms properly under gauge transformations. If
+ψ : Q → Q is a gauge transformation, then
+
+                                   sψq (η) = cY (q ∗ η, gψ q)−1 sq (η)
+
+according to (2.15). On the other hand, we easily compute from (1.18) that
+
+(3.23)                        Z
+         (θψq )η (η̇) = 2πi        q ∗ hψ ∗ η ∧ ψ ∗ η̇i
+                              ZY                                    Z
+                    = 2πi     q ∗ hAdg−1 η ∧ Adg−1 η̇i + 2πi                 q ∗ hφg ∧ Adg−1 η̇i
+                                      ψ         ψ                                 ψ       ψ
+                            Y                                            Y
+                                    Z
+                    = (θq )η − 2πi hAdg−1 (q ∗ η̇) ∧ φg i,
+                                           Y
+
+where g = gψ q. But from (2.15) we see that the logarithmic differential of the
+cocycle with respect to η,
+                                             Z
+                  dcY (q ∗ η, gψ q)(η̇)
+                                        = 2πi hAdg−1 (q ∗ η̇) ∧ φg i,
+                     cY (q ∗ η, gψ q)         Y
+
+is minus the last term in (3.23). It follows that the set of forms {θq }, where
+q ranges over trivializations of Q → Y , defines a unitary connection on LQ → AQ .
+Furthermore, as the logarithm of the parallel transport is the integral of minus the
+connection form, we see from (3.21) that the Chern-Simons action (3.20) is the
+parallel transport of this connection. The curvature times i/2π is
+                                                             Z
+                                    i
+                   ω(η̇1 , η̇2 ) =    (dθq )(η̇1 , η̇2 ) = −2 hη̇1 ∧ η̇2 i.
+                                   2π                         Y
+
+If h·i is nondegenerate, then so is ω. Since the curvature of a line bundle is also
+closed, it follows that ω is a symplectic form.
+   Now (2.21) is a lift of the GQ action on AQ to LQ . Furthermore, (2.22) shows
+that this lift preserves the parallel transport (3.20), hence the connection. (It
+also preserves the metric, so acts on the associated circle bundle with connection.)
+It follows that the GQ action on AQ preserves the curvature ω, so is symplectic.
+We compute a moment map for this action using the lift to LQ .23 In general, if
+L → M is a hermitian line bundle (or circle bundle) over a symplectic manifold,
+and ρ : G → Aut(L) is a G action on L preserving the metric and connection, then
+the moment map of the quotient G action on M is
+
+                                                i              
+(3.24)                    µξ (m) = −              · vert ρ̇(ξ)ℓ ,   ξ ∈ g,
+                                               2π
+where ℓ ∈ Lm is a point of unit norm, ρ̇(ξ) is the vector field on L corresponding
+to ξ ∈ g, and vert(·) is the vertical part of a vector computed with respect to
+the connection on L. Notice that it is exactly the obstruction to descending the
+    23 For a general symplectic group action there may be many moment maps, if one exists at
+
+all. Here the lift of the action to LQ , which is ultimately derived directly from the Chern-Simons
+action, singles one out.
+                                                          27
+connection form to the quotient L/G. We compute this in our situation using the
+trivialization sq : AQ → LQ given by a section q : Y → Q. Set a = q ∗ η. Then a
+gauge transformation ψ : Q → Q corresponds to a map g = gψ q : Y → G. It acts
+as multiplication by e2πicY (a,g) from the (trivialized) fiber at η to the fiber at ψ ∗ η.
+An infinitesimal gauge transformation corresponds to a map ξ : Y → g, and it acts
+as multiplication by the derivative, which we compute from (2.15) to be
+                                        Z
+                                     2πi ha ∧ dξi.
+                                             Y
+
+On the other hand, the connection form in this trivialization is (3.22), and us-
+ing this we compute the infinitesimal parallel transport in the direction ξ to be
+multiplication by                   Z
+                                     −2πi        ha ∧ da ξi,
+                                             Y
+where da ξ = dξ + [a ∧ ξ] is the covariant derivative. The difference times −i/2π is
+                      Z                          Z
+                         ha ∧ (2dξ + [a ∧ ξ]) = 2 hΩ(η) ∧ ξi,
+                          Y                               Y
+
+where Ω(η) is the curvature of η. Hence by (3.24) the moment map is (3.19),
+as desired. Since the flat connections are the zeros of µ, the space of equivalence
+classes MQ of flat connections is the symplectic quotient AQ //GQ , if GQ acts freely.
+The line bundle, together with its metric and connection, pass to a bundle LQ →
+MQ on the quotient. The symplectic form (3.18) also passes to the quotient. Its
+de Rham cohomology class is an integral24 element of H 2 (MQ ; R), since it is the
+first Chern class of LQ .
+   The connection can also be deduced from the gluing law and diffeomorphism
+invariance of the action. We give this argument in the proof of Proposition 5.9,
+where we also calculate the curvature and holonomy directly from the action. The
+simplest case of the Chern-Weil theorem asserts that i/2π times the curvature of
+a line bundle represents the first Chern class in real cohomology. This applies here
+to LQ over the symplectic quotient. We refine this in Part 2 to calculate the first
+Chern class in integral cohomology.
+   We remark that this connection is consistent with the isomorphism (2.30) asso-
+ciated to a change of gauge group; this follows from Proposition 2.9.
+   In general GQ does not act freely on AQ ; the stabilizer at η ∈ AQ is the sub-
+group Zη of parallel gauge transformations (cf. Proposition 1.20). The value of
+such a gauge transformation at y ∈ Y , which lies in Aut(Qy ), commutes with the
+holonomy group at y. There is an action of Zη on the line Lη .
+Proposition 3.25. The action of Zη on Lη is constant on components of Zη , and
+so factors through an action of the finite group π0 (Zη ) on Lη .
+Proof. If ψ ∈ Zη then we form the bundle Qψ → S 1 × Y with connection ηψ by
+gluing the ends of [0, 1] × Q using ψ. According to (3.20) the action of ψ on Lη
+is e2πiSS1 ×Y (ηψ ) . But if ψ and ψ ′ are connected by a path in Zη , then ηψ ∼
+                                                                               = ηψ ′ .
+   Along these lines we also have the following.
+   24 Thus the symplectic form satisfies the integrality constraint in the geometric quantization
+
+theory.
+                                                 28
+Proposition 3.26. The center Z ⊂ G acts trivially on Lη for all η ∈ AQ .
+Combining these two propositions we see that the action of Zη on Lη factors through
+an action of π0 (Zη /Z).
+Proof. Suppose g ∈ Z, which we identify as a constant function on Y . Let q : Y → Q
+be any section and a = q ∗ η. Then the action of g on Lη is multiplication by the
+cocycle cY (a, g) in (2.15), which is easily seen to be the identity.
+  Next, let X be an arbitrary compact oriented 3-manifold with boundary, and
+consider the diagram (3.13).
+Proposition 3.27. The image of rX : MX → M∂X is a Lagrangian submanifold.
+                                                                         ∗
+More precisely, the action e2πiSX (·) is a flat section of the pullback rX L∂X → M∂X ,
+                                                ∗
+and therefore the induced symplectic form rX ω vanishes.
+Just as the symplectic form ω satisfies an integrality condition—it is i/2π times
+the curvature of a line bundle—so too does the Lagrangian submanifold MX →
+M∂X satisfy an “integrality condition”—the pullback line bundle with connection
+is trivial. (This gives a restriction on the holonomy, for example.) We use the term
+“Lagrangian submanifold” imprecisely. Rather, we should assert that MX → M∂X
+is “a Lagrangian map”. Jeffrey and Weitsman also obtain this result [JW]; they
+use the term “Bohr-Sommerfeld orbits” for these special Lagrangian submanifolds.
+Proof. If S 1 → MX is a loop of flat connections Θt , there is a corresponding
+                                                           ∗
+connection Θ over S 1 × X. Now the log holonomy of rX        L∂X around S 1 is the
+action SS 1 ×∂X (Θ), by (3.20). The curvature of Θ is (3.11)
+
+(3.28)                               Ω = −Θ̇t ∧ dt.
+Hence from (2.8),                          Z
+                          SS 1 ×∂X (Θ) =            hΩ ∧ Ωi = 0.
+                                           S 1 ×X
+      ∗
+So rX   L∂X is flat. The more precise statement that e2πiSX (·) is a flat section is
+slightly more intricate. Suppose Θt is a path of flat connections on X, and consider
+the induced connection on [0, 1] × X. The action of its restriction to [0, 1] × ∂X de-
+termines the parallel transport (3.20), whereas the restriction to {t} × X is SX (Θt ).
+The curvature is still given by (3.28), so that hΩ ∧ Ωi ≡ 0. Then equation (2.8)
+applied to [0, 1] × X implies that e2πiSX (Θ1 ) is obtained from e2πiSX (Θ0 ) by parallel
+transport. This proves that the section is flat.
+    It remains to show that 2 dim(image rX ) = dim M∂X . Suppose Θ is a flat
+connection on X representing a smooth point of MX and whose restriction ∂Θ
+to ∂X represents a smooth point of M∂X . Then according to (3.8) we must show
+                                                                                
+   2 dim image (rX )∗ : H 1 X; g(Θ) → dim H 1 ∂X; g(Θ) = dim H 1 ∂X; g(Θ) .
+In fact, the image of (rX )∗ is a Lagrangian subspace. When Θ is trivial the argument
+is standard. Consider the commutative diagram
+                                (rX )∗
+                    H 1 (X)    −−−−→ H 1 (∂X) −−−−→ H 2 (X, ∂X)
+                                                       
+                       ∼                ∼              ∼
+                       y=                y=              y=
+                                                       i
+                  H2 (X, ∂X) −−−−→ H1 (∂X) −−−−→              H1 (X)
+                                           29
+where the coefficients are in a vector space. The rows are exact and the vertical
+isomorphisms are Poincaré duality. By exactness we have image (rX )∗ ∼   = ker i.
+Also, i and (rX )∗ are adjoint maps, from which image (rX )∗ ∼   = (ker i)◦ is the
+annihilator of ker i. It follows that image (rX )∗ is Lagrangian, as claimed. The
+same argument works if Θ is nontrivial, provided we prove that the complex (3.7)
+on ∂X defined by d∂Θ also satisfies Poincaré duality. This is shown in [G] using
+group cohomology. There is also a proof in de Rham theory modeled after [BT,§5].
+   In summary, the Hamiltonian theory consists of the assignments
+
+                                    Y 7−→ MY
+                                                X     r
+                                    X 7−→ (MX −−→ M∂X )
+
+of a symplectic manifold to each closed oriented 2-manifold and a Lagrangian map
+to each compact oriented 3-manifold. These assignments obey functoriality, ori-
+entation, additivity, and gluing laws analogous to those in Theorem 2.19. More
+precisely, one should consider instead the hermitian line bundle with connection
+                                                  ∗
+LY → MY and the section e2πiSX (·) : MX → rX        L∂X . Then there is little differ-
+ence between the Hamiltonian theory and the Lagrangian theory.25 We leave the
+precise formulation of these assertions to the reader (cf. [Ax,§3]).
+
+
+
+
+    25 This somewhat startling conclusion is only valid for topological theories. In theories with lo-
+
+cal motion there is a nonzero hamiltonian function which must be incorporated into the formalism.
+                                                 30
+                              §4 Surfaces with boundary
+   In the quantum Chern-Simons theory [W] a key role is played by surfaces with
+boundary. Ultimately, explicit computations depend on their use. In this section we
+develop the classical analogue of this structure. Based on Theorem 2.19 we might
+guess that there exists a metrized line Lη depending smoothly on a connection η over
+a surface with boundary, and that these lines satisfy a gluing law which constructs
+the line of a closed surface by cutting and pasting. However, there is a topological
+obstruction which obstructs such a construction.26 This will be elucidated in Part 2
+of the paper [F2].27 Here we add some “trivializing data” on the boundary of
+the surface which allows us to construct the desired lines; these lines then obey
+a gluing law. There is also a gluing law for the Chern-Simons action where we
+cut along manifolds with corners (Proposition 4.11). The corresponding quantum
+gluing law [S], [Wal] is quite powerful. In the middle of this section we include a
+long digression about the geometry of connections over the circle. This is essentially
+a universal choice of trivializing data for each isomorphism class of bundle over the
+circle. Then we construct a smooth line bundle over the space of connections
+(and basepoints) on the surface with boundary, provided we suitably restrict the
+boundary holonomies (Theorem 4.26). As in §2 these line bundles descend to
+various moduli spaces of flat connections. One of these, by a theorem of Mehta and
+Seshadri [MeS], can be identified with the moduli space of stable parabolic bundles
+when the surface carries a complex structure. We compute the dimension of these
+moduli spaces (4.43), (4.44) even at reducible connections. The index calculation in
+Lemma 4.40, Corollary 4.41, and Proposition 4.42 may be of independent interest.
+In §5 we construct connections on the line bundles over these moduli spaces.
+   We begin by mimicking the construction of Lη in Theorem 2.19. To make sense of
+the Wess-Zumino-Witten term on a surface with boundary we rely on the discussion
+in Appendix A. In particular, we use the lines Kγ which make up a central extension
+of the loop group.
+   Suppose Y is a compact oriented 2-manifold and Q → Y a principal G bundle.
+Let S∂Q be the space of sections r : ∂Y → ∂Q of ∂Q → ∂Y . It is a principal
+homogeneous space for the action of the group of gauge transformations G∂Q . Then
+for each connection η ∈ AQ we construct a metrized line Lη,r which varies smoothly
+in η and r. To do this define the cocycle
+(4.1)               Z
+                                      
+cY (a, g) = exp 2πi hAdg−1 a ∧ φg i e2πiWY (g) ∈ K∂g ,       a ∈ Ω1Y (g), g : Y → G
+                        Y
+
+as in (2.15). Notice that this cocycle takes values in the Wess-Zumino-Witten
+line K∂g (cf. Proposition A.1), where ∂g : ∂Y → G is the restriction of g to the
+boundary. The cocycle identity
+
+(4.2)                        cY (a, g1 g2 ) = cY (a, g1 ) cY (ag1 , g2 )
+   26 I thank George Daskalopoulos and Sheldon Chang for (separately) pointing this out to me.
+    27 The analogy with Theorem 2.19 is illuminating. For a closed 3-manifold the Chern-Simons
+
+invariant is a complex number, whereas for a 3-manifold with boundary it is an element in a
+complex line. Now for a closed 2-manifold the Chern-Simons functional constructs a complex
+line, whereas for a 2-manifold with boundary it constructs a . . . The differential-geometric object
+which replaces the dots in the previous sentence together with its generalizations form the subject
+of [F1].
+                                                 31
+holds for these cocycles, as the reader may verify. (Equation (A.7) enters this
+calculation.) Let CQ be the category whose objects are sections q : Y → Q. We do
+not require that these sections restrict to r on the boundary; rather the quotient
+by r is a map r−1 ∂q : ∂Y → G. In other words, ∂q = r·(r−1 ∂q), where · is the action
+of G on the principal bundle Q. Now for any two sections q, q ′ there is a unique
+               ψ
+morphism q −  → q ′ which is the gauge transformation ψ : Q → Q with q ′ = ψq.
+Define a functor Fη,r : CQ → L by
+
+(4.3)                                 Fη (q) = Kr−1 ∂q
+
+            ψ
+and Fη (q − → q ′ ) equals multiplication by cY (q ∗ η, q −1 q ′ ). Here q −1 q ′ : Y → G is the
+unique function so that q ′ = q · (q −1 q ′ ). The multiplication is via the isomorphism
+(cf. (A.2))
+                           Kr−1 ∂q ⊗ K(∂q)−1 (∂q′ ) −→ Kr−1 ∂q′ .
+That Fη is a functor follows from the cocycle identity (4.2) and the associativity
+law (A.3). Define Lη,r to be the line of invariant sections of Fη .
+Proposition 4.4. Let G be a connected, simply connected compact Lie group and
+h·i an invariant form on its Lie algebra g which satisfies the integrality condition
+Hypothesis 2.5. Suppose Y is a compact oriented 2-manifold and Q → Y a principal
+G bundle. Then the assignment
+
+                         η, r 7−→ Lη,r ,        η ∈ AQ ,     r ∈ S∂Q ,
+
+of a metrized line to a connection η on a G bundle Q → Y and section r : ∂Y → ∂Q
+is smooth, agrees with the corresponding assignment (2.20) if ∂Y = ∅, and satisfies:
+(a) (Functoriality) If ψ : Q′ → Q is a bundle map covering an orientation preserving
+diffeomorphism ψ : Y ′ → Y , then there is an induced isometry
+
+(4.5)                             ψ ∗ : Lη,r −→ Lψ∗ η,ψ−1 r
+
+and                   these                   compose                                properly.
+(b) (Orientation) There is a natural isometry
+
+(4.6)                                L−Y ;η,r ∼
+                                              = LY ;η,r .
+
+(c) (Additivity) If Y = Y1 ⊔ Y2 is a disjoint union, ηi are connections over Yi , and
+ri are sections over ∂Yi , then there is a natural isometry
+
+(4.7)                         Lη1 ⊔η2 ,r1 ⊔r2 ∼
+                                              = Lη1 ,r1 ⊗ Lη2 ,r2 .
+
+(d ) (Gluing) Suppose S ֒→ Y is a closed oriented codimension one submanifold
+and Y cut the manifold obtained by cutting along S. Then ∂Y cut = ∂Y ⊔ S ⊔ −S.
+Furthermore, if Q → Y is a bundle, and Qcut → Y cut the cut bundle, then there
+is an identification of Qcut S and Qcut −S . Fix trivializations rS , r−S over these
+boundary pieces which agree under this identification. Suppose η is a connection
+on Q and η cut the induced connection on Qcut. Then for any trivialization r∂Y
+of ∂Q there is an isometry
+
+(4.8)                           Lηcut ,r∂Y ⊔rS ⊔r−S ∼
+                                                    = Lη,r∂Y .
+                                               32
+(e) (Change of Trivialization) If r′ is another trivialization over ∂Y , then there is
+an isometry
+
+(4.9)                             Lη,r′ ∼
+                                        = Kr′−1 r ⊗ Lη,r .
+
+These compose in a natural way for three trivializations r, r′ , r′′ .
+Proof. For smoothness note that a section q : Y → Q induces an isomorphism
+Lη,r ∼ = Kr−1 ∂q , and the lines Kr−1 ∂q vary smoothly in r by Proposition A.1. Now
+if q ′ is any other section then the patching function is cY (q ∗ η, q −1 q ′ ), which is
+independent of r and varies smoothly in η by the explicit formula (4.1). Also, note
+that if ∂Y = ∅ then the construction given here for Lη,r reduces to the construction
+of lines in §2.
+   Next, if ψ : Q′ → Q is the bundle map in (a), fix a section q : Y → Q. This
+induces the section ψ −1 q : Y → Q′ . Notice that (ψ −1 r)−1 ∂(ψ −1 q) = r−1 ∂q, since
+ψ −1 is a gauge transformation. Then relative to the resulting isomorphisms Lη,r ∼     =
+Kr−1 ∂q and Lψ∗ η,ψ−1 r ∼  = K(ψ−1 r)−1 ∂(ψ−1 q) = Kr−1 ∂q we define (4.5) to be the
+identity map. It is easy to check that this is independent of the choice of q.
+   Equations (4.6) and (4.7) are routine. For (4.8) fix a section q : Y → Q, which
+induces isomorphisms
+              Lηcut ,r∂Y ⊔rS ⊔r−S ∼
+                                  = K(r∂Y )−1 ∂q ⊗ K(rS )−1 ∂q ⊗ K(r−S )−1 ∂q
+(4.10)
+                          Lη,r ∼
+                             ∂Y   = K(r )−1 ∂q .
+                                        ∂Y
+
+
+(In the first equation ‘∂q’ stands for the restriction of q to the appropriate piece of
+the boundary.) Now the orientation and additivity properties in Proposition A.1
+give a trivialization of K(rS )−1 ∂q ⊗K(r−S )−1 ∂q . Then the isometries in (4.10) combine
+to give the isometry (4.8). It is easy to check that this is independent of the
+section q : Y → Q using the gluing law for the Wess-Zumino-Witten functional
+(Proposition A.9). Finally, relative to a section q : Y → Q the isometry (4.9)
+becomes the isometry
+                               Kr′−1 ∂q ∼
+                                        = Kr′−1 r ⊗ Kr−1 ∂q
+of (A.2), which again transforms properly under change of trivializing section.
+   The following gluing law for the Chern-Simons action generalizes Theorem 2.19(d)
+to “manifolds with corners”. Such manifolds can be smoothed out uniquely up to
+diffeomorphism by “straightening the angle” [CF].
+Proposition 4.11. Let X be a compact oriented 3-manifold and Y a compact
+oriented 2-manifold with boundary. Suppose Y ֒→ X is an embedding onto a neat
+submanifold of X; that is, Y ∩∂X = ∂Y and Y is transverse to ∂X. Let X cut be the
+manifold with corners obtained by cutting X along Y . Then ∂X cut = ∂X ∪ Y ∪ −Y
+where the union is over ∂Y ⊔ −∂Y . Suppose Θ is a connection over X. Let Θcut be
+the induced connection over X cut, let η be the restriction of Θ to Y , and let (∂Θ)cut
+be ∂Θ cut along ∂Y ֒→ ∂X. Then for any trivialization r over ∂Y , we have
+                                                       cut
+                                                            
+                         e2πiSX (Θ) = Trη e2πiSX cut (Θ ) ,
+
+where Trη is the contraction
+
+            Trη : L∂Θcut ∼
+                         = L(∂Θ)cut ,r ⊗ Lη,r ⊗ Lη,r −→ L(∂Θ)cut ,r ∼
+                                                                    = L∂Θ
+                                             33
+using the hermitian metric on Lη,r and the isomorphism (4.8).
+We omit the proof, which contains no new ideas.
+   Let AQ be the space of all connections on a fixed bundle Q → Y , let GQ be the
+space of gauge transformations, and let SQ be the space of sections. Assume that
+∂Y 6= ∅. Then the group GQ × Map(∂Y, G) acts on AQ × SQ via the action
+(4.12)
+hψ, γi·hη, ri = hψ ∗ η, ψ −1 r·γi, ψ ∈ GQ , γ ∈ Map(∂Y, G), η ∈ AQ , r ∈ SQ .
+
+Proposition 4.4 asserts that the lines Lη,r form a smooth line bundle L → AQ × SQ ,
+                                                                               \ G)
+but the action (4.12) only lifts to an action of the central extension GQ × Map(∂Y,
+defined in (A.5). So we do not obtain a line bundle over the quotient AQ /GQ . From
+this point of view the central extension is the obstruction to the existence of that line
+bundle. In fact, there are topological obstructions to the existence of a line bundle
+over AQ /GQ which obeys the desired gluing law. So we must content ourselves
+with a bundle over a subset of this quotient. Furthermore, we introduce additional
+choices on the boundary to construct the line bundle.
+   We first digress to discuss connections over the circle. Without extra effort we
+consider connections for arbitrary compact Lie groups G. Let S 1 = [0, 1] 0 ∼ 1 be
+the standard circle with basepoint 0 ∈ S 1 . We consider principal bundles R → S 1
+with a fixed basepoint in R over the basepoint in S 1 . There is a category CS′ 1 of
+connections on pointed bundles; morphisms are required to preserve the basepoints.
+Then there are no nontrivial automorphisms of a connection in this category, since
+any automorphism which fixes the basepoint is the identity, according to Proposi-
+tion 1.20. It follows that if θ1 ∼= θ2 are isomorphic connections, there is a unique
+(pointed) isomorphism between them. It is precisely to obtain this rigidity prop-
+erty that we introduce basepoints. Now the basepoint determines a holonomy
+map CS′ 1 → G. Since isomorphic connections have the same holonomy, there is
+an induced map on the equivalence classes CS′ 1 → G. It is an easy consequence
+of Lemma 1.21 that this latter map is 1 : 1; that is, a connection with basepoint
+over S 1 is determined up to isomorphism by its holonomy. There is a universal
+bundle and connection. Define
+                                      
+(4.13)              R=G×R×G               hh, s, gi ∼ hh, s + 1, h−1 gi.
+
+This is a G bundle R → G × S 1 via projection onto the first two factors. Better,
+it is a family of pointed G bundles Rh → S 1 over S 1 parametrized by h ∈ G;
+the basepoint in Rh is {hh, 0, ei}, where e ∈ G is the identity. The Maurer-Cartan
+form θ on G, lifted to {h}×R×G, drops to a connection θRh on Rh with holonomy h.
+There exist connections θR on R which restricts to θRh on each slice Rh ; we
+construct one explicitly below (4.14). Summarizing, if θ is any (pointed) connection
+over S 1 , then there is a unique isomorphism θ ∼= θRh for some h.
+   We now explicitly construct the connection θR . Let θ be the Maurer-Cartan form
+on G, lifted to G × (−0.1, 1.1) × G via projection onto the third factor, and θh the
+Maurer-Cartan form lifted via projection onto the first factor. Fix a smooth
+                                                                             cutoff
+function ρ : (−0.1, 1.1) → [0, 1] so that ρ (−0.1, 0.1] = 0 and ρ [0.9, 1.1) = 1. Set
+
+                        (θR )hh,s,gi = θ + ρ(s) Adg−1 h θh
+(4.14)
+                                   = g −1 dg + ρ(s)g −1 dhh−1 g,
+                                             34
+where the second expression makes sense for matrix groups. Then an easy calcula-
+tion with the gluing function in (4.13) shows that (4.14) determines a connection
+form on R. The restriction to a slice Rh is θRh . From (1.13) we compute the
+curvature 2-form on G × S 1 :
+                                                  1             
+(4.15)         ΩR = ρ′ (s)ds ∧ Adg−1 h θh +         ρ(s)2 − ρ(s) Adg−1 h [θh ∧ θh ].
+                                                  2
+For an integral form h·i on the Lie algebra g, we compute the Chern-Weil 4-form
+on G × S 1 as
+                                              
+              hΩR ∧ ΩR i = ρ′ (s) ρ(s)2 − ρ(s) ds ∧ hθh ∧ [θh ∧ θh ]i,
+
+in view of (1.29). Finally, note that
+               Z                 Z 1
+                                                            
+                    hΩR ∧ ΩR i =      ds ρ′ (s) ρ(s)2 − ρ(s) ∧ hθh ∧ [θh ∧ θh ]i
+                  1
+(4.16)          S                  0
+                                    1
+                               = − hθh ∧ [θh ∧ θh ]i.
+                                    6
+By Hypothesis 2.5 this 3-form on G represents an integral cohomology class in H 3 (G; R).
+Proposition 4.17. The bundle R → G × S 1 is nontrivial if G ∼   6= 1.
+Proof. According to (1.25) the Lie algebra g decomposes as a sum of an abelian alge-
+bra and simple algebras. If there is a simple summand, then we choose h·i : g⊗g → R
+to be its Killing form. It follows from (4.16) that hΩR ∧ ΩR i represents a nonzero
+cohomology class in H 4 (G × S 1 ). By Chern-Weil theory this is a characteristic
+class of R → G × S 1 , and so the bundle is nontrivial. If g is abelian, then a similar
+argument can be made using a 2-form hΩR i built from a trace h·i : g → R on g. If
+G is a finite group, then the slice Rh → S 1 is nontrivial if h 6= 1.
+   We also record the following lemma about holonomy. Let R → S be a principal
+G bundle over an oriented, connected 1-manifold. Though S is diffeomorphic to a
+circle, we do not need a fixed parametrization. Fix a basepoint s ∈ S. Then the
+space of connections and basepoints in the fiber is AR × Rs , and the holonomy is
+a smooth map
+                               hol : AR × Rs −→ G.
+Lemma                                                                                4.18.
+(i) hol is a submersion, i.e., d holhη,bi is surjective for all η ∈ AR ,           b ∈ Rs .
+(ii) If ḃ ∈ Tb (Rs ) ∼
+                      = g, and hol(η, b) = h, then
+
+(4.19)                    h−1 d holhη,bi (0, ḃ) = (1 − Adh−1 )(ḃ).
+
+(iii) Let gR be the adjoint bundle of R, and suppose ζ ∈ Ω0S (gR ). With respect to
+the basepoint b ∈ Rs we identify ζ(s) as an element of g. Then if hol(η, b) = h,
+                                                                 
+(4.20)              h−1 d holhη,bi (dη ζ, 0) = (1 − Adh−1 ) −ζ(s) .
+
+(iv ) Suppose hol(η, b) = h and ζ ∈ Ω0S (gR ) with dη ζ = 0. Then
+                                                             Z
+(4.21)                h ζ(s) ⊗ h−1 d holhη,bi (η̇ , ḃ) i = − hζ ∧ η̇i.
+                                                             S
+                                             35
+Of course, (i) implies that hol−1 (h) is a manifold for each h ∈ G. In (iii) note that
+the covariant derivative is a map
+
+                                                   dη
+(4.22)                                   Ω0S (gR ) −→ Ω1S (gR ).
+
+The domain Ω0S (gR ) is the Lie algebra of the group of gauge transformations GR ,
+the codomain Ω1S (gR ) is the tangent space to the affine space AR of connections,
+and dη is the infinitesimal action of gauge transformations on connections. Here
+dη is Fredholm; its kernel is the space of covariant constant sections, which can be
+identified with the invariants of Adh by evaluation at the basepoint. Assertions (i)
+and (iii) imply that h−1 d holhη,ri induces an isomorphism of the cokernel of (4.22)
+with the coinvariants of Adh , i.e., an isomorphism coker dη ∼
+                                                             = coker(1 − Adh ).
+Proof. Cut the circle S at the basepoint s to obtain an interval S cut and a bundle
+Rcut → S cut . Then a connection on R determines and is determined by a (horizon-
+tal) section of Rcut . Since the fibers over the endpoints of S cut are identified, we
+can compare the section at these two endpoints by an element of G; this is the ho-
+lonomy. Relative to a local trivialization near the terminal endpoint, (i) translates
+to the obvious statement that evaluation at the endpoint is a submersion from the
+space of paths in a connected manifold A to A. Notice that we can fix the basepoint,
+which is the value of the section at the initial endpoint, for this argument.
+   For (ii) suppose bt is a curve of basepoints with tangent ḃ. Write bt = bgt for a
+curve gt ∈ G. Then the holonomy of η with respect to bt is gt−1 hgt . Differentiate
+to deduce (4.19).
+   For (iii) let ϕt be a curve in GR with tangent ζ. Then ϕ∗t η is a path of connections
+with tangent dη ζ. But
+                                hol(ϕ∗t η, b) = hol(η, ϕ−1
+                                                        t b),
+
+and the tangent to the path ϕt−1 (b) is −ζ(s). So (iii) follows from (ii).
+  To prove (iv) we first note that (4.19) implies
+                                                                             
+h ζ(s)⊗h−1 d holhη,bi (0, ḃ) i = h ζ(s)⊗(1−Adh−1 )(ḃ) i = h (1−Adh−1 ) ζ(s) ⊗ ḃ i = 0.
+
+In the last step we use the fact that ζ is parallel, so commutes with the holonomy.
+Hence we may set ḃ = 0. Let ηt be a path of connections on R with initial velocity η̇,
+and bt a path in Rs with initial velocity ḃ. We cut at the basepoint s ∈ S to obtain
+a path of connections on Rcut → S cut . Let r be a flat section of Rcut relative to η
+with initial value b, and define gt : S cut → G so that rgt is a flat section of Rcut
+relative to ηt with initial value b. Then from (1.18) and the fact that (rgt )∗ ηt = 0
+we deduce r∗ η̇ = −dr∗ η ġ. Therefore, by Stokes’ theorem we have
+         Z                 Z                            Z
+(4.23)        hζ ∧ η̇i =           hr∗ ζ ∧ r∗ η̇i = −           hr∗ ζ ∧ dr∗ η ġi = −hr∗ ζ ⊗ ġi ∂S cut .
+          S                S cut                        S cut
+
+
+At the initial point of S cut we have ġ = 0, whereas at the terminal point ġ =
+h−1 d holη,b (η̇ , ḃ). Thus (4.23) implies (4.21).
+  Return now to the case of a connected and simply connected group G. Since the
+bundle R → G × S 1 is not trivial, we cannot continuously trivialize the bundles
+                                                   36
+Rh → S 1 simultaneously for all h ∈ G. Hence restrict to a subset V ⊂ G where
+this is possible, and thus choose a smooth trivialization
+
+(4.24)                             r : V × S 1 → R,
+
+i.e., a smooth family of trivializations rh : S 1 → Rh . Our constructions in the next
+paragraphs and in §5 depend on the trivializations rh through (4.9).
+    To use these standard trivializations on 2-manifolds we must identify boundary
+components with the standard circle. Let Y be a compact oriented 2-manifold, and
+fix a diffeomorphism S 1 → (∂Y )i for each component of ∂Y . We do not require
+that these boundary parametrizations preserve orientation, and so we distinguish
+‘+’ boundary components and ‘−’ boundary components according to whether the
+parametrization preserves or reverses the orientation. The images of the basepoint
+in S 1 give a basepoint on each component of ∂Y . We consider connections η on bun-
+dles Q → Y together with basepoints bi ∈ Q (∂Y )i over the basepoints on the (∂Y )i .
+We denote the collection of basepoints as b = hb1 , . . . , bk i. Bundle morphisms are
+required to preserve the basepoints. These connections on bundles with basepoints
+together with these morphisms form a category CY′ of pointed connections.
+    Now suppose hη, bi ∈ CY′ is a pointed connection on Q → Y . Then the restriction
+of η to any boundary component (∂Y )i is isomorphic to a standard connection θRhi ,
+where hi ∈ G is the holonomy of η around (∂Y )i , computed with respect to the
+basepoint. Hence there is a unique pointed isomorphism Q (∂Y ) ∼           = Rhi which
+                                                                         i
+pulls θRhi back to the restriction of η. Assume that all of the boundary holonomies
+fall within the distinguished subset V ⊂ G. Then the trivializations rhi chosen
+above induce a trivialization r(η, b) : ∂Y → ∂Q of Q over the boundary. Now let
+
+(4.25)                             Lη,b = Lη,r(η,b)
+
+be the line defined above relative to this distinguished trivialization.
+Theorem 4.26. Let G be a connected, simply connected compact Lie group and
+h·i an invariant bilinear form on its Lie algebra g which satisfies the integrality
+Hypothesis 2.5. Fix a subset V ⊂ G over which we choose a smooth trivializa-
+tion (4.24). Suppose Y is a compact oriented 2-manifold with parametrized bound-
+ary. Let CY′ (V ) denote the subset of pointed connections whose boundary holonomies
+all lie in V . Then the assignment
+
+(4.27)                   hη, bi −→ Lη,b ,        hη, bi ∈ CY′ (V ),
+
+of a metrized line to such pointed connections is smooth and agrees with the corre-
+sponding assignment (2.20) if ∂Y = ∅. It satisfies the functoriality property (2.21)
+for bundle maps which preserve the basepoints and the boundary parametrizations.
+Furthermore, it satisfies the orientation property (2.23) and the additivity prop-
+erty         (2.25).                            Finally,          it        satisfies:
+(d ) (Gluing) Suppose S ֒→ Y is a closed, oriented codimension one submanifold
+and Y cut the manifold obtained by cutting along S. Then ∂Y cut = ∂Y ⊔ S ⊔ −S
+and we use parametrizations which agree on S and −S. Suppose hη, bi is a pointed
+connection over Y and hη cut , bcut i the induced pointed connection over Y cut . (We
+choose basepoints which agree over S and −S to form bcut from b.) Then there is
+a natural isometry
+                                   Lη,b ∼= Lηcut ,bcut .
+                                            37
+Proof. For smoothness, it suffices to remark that the holonomy is a smooth func-
+tion of a connection. For the functoriality suppose ψ : Q′ → Q is a bundle map
+preserving the basepoints and the boundary parametrizations. Let R′ , R be the
+restrictions of Q′ , Q to some boundary components which correspond under ψ,
+and let ψh : R → Rh be the unique pointed map with ψh∗ (θRh ) = η R . Then
+ψh ψ : R′ → Rh satisfies (ψh ψ)∗ (θRh ) = ψ ∗ η R′ . Now the functoriality follows
+from (4.5). The other properties follow directly from the corresponding properties
+in Proposition 4.4.
+   Fix a bundle Q → Y together with parametrizations of the components of ∂Y =
+⊔ki=1 (∂Y )i . Let yi be the basepoint of (∂Y )i . The holonomy is a map
+
+(4.28)                holQ : AQ × Qy1 × · · · × Qyk −→ G × · · · × G.
+
+Here Qyi is the fiber of Q over yi , the space of basepoints at yi . Let
+
+                                AQ;V,...,V = hol−1
+                                                Q (V × · · · × V ).
+
+Theorem 4.26 asserts the existence of a smooth line bundle
+
+(4.29)                                  LQ;V,...,V → AQ;V,...,V .
+
+Furthermore, the map (4.28) is invariant under the GQ action, and Theorem 4.26
+asserts that this action lifts to the line bundle L. Notice that this GQ action is free,
+since we include basepoints.
+   There is a larger symmetry group which acts when the boundary holonomies are
+fixed. Fix h1 , . . . , hk ∈ V ⊂ G and let
+                                                    −1
+                                 AQ;h1 ,...,hk = holQ  (h1 , . . . , hk );
+
+by Lemma 4.18(i) this is a smooth manifold. Consider the restriction
+
+(4.30)                               LQ;h1 ,...,hk −→ AQ;h1 ,...,hk
+
+of LQ;V,...,V to this space. Let Zhi ⊂ G be the centralizer of hi . A result of Bott
+and Taubes [BTau,Prop. 10.2] asserts that Zhi is connected.28 If hi is a regular
+element of G, then Zhi is a maximal torus in G. Let Zhi act on the fiber Qyi via
+the right principal bundle action of G. Then the group
+
+(4.31)                         GQ;h1 ,...,hk = GQ × Zh1 × · · · × Zhk
+
+acts on hol−1
+           Q (h1 , . . . , hk ) via the formula
+
+
+(4.32)     hη; b1 , . . . , bk i · hψ; g1 , . . . , gk i = hψ ∗ η; ψ −1 (b1 ) · g1 , . . . , ψ −1 (bk ) · gk i,
+
+where η ∈ AQ , ψ ∈ GQ , bi ∈ Qyi , and gi ∈ Zhi . In general this action is
+neither free nor effective. We determine the stabilizer at hη; b1 , . . . , bk i in case Y has
+no closed components. Any gauge transformation that preserves η is parallel, by
+Proposition 1.20, and its value in Aut(Qy ) at y ∈ Y commutes with the holonomy
+   28 This depends on the fact that G is connected and simply connected.
+
+                                                       38
+group at y. Let Zη ⊂ GQ be the subgroup of all such ψ. Evaluation at the
+basepoint bi gives an embedding Zη ֒→ G, and it is easy to see that the image is
+contained in Zhi . This gives an embedding of Zη in GQ;h1 ,...,hk , and the image is
+the stabilizer of hη; b1 , . . . , bk i. Notice that the kernel of the action, which is the
+intersection of these stabilizers, contains the center Z ⊂ G, which sits in GQ as the
+subgroup of global gauge transformations.
+   Let Aflat
+           Q;h1 ,...,hk denote the space of flat connections in AQ;h1 ,...,hk . This is not
+necessarily a manifold, but the subset of irreducible flat connections A∗,flat    Q;h1 ,...,hk
+does form a submanifold. In any case the group of gauge transformations GQ acts
+freely, if Y has no closed components, and we denote the quotient by
+                                                                
+(4.33)                          M′Y ;h1 ,...,hk = Aflat
+                                                   Q;h1 ,...,hk   GQ .
+
+The prime reminds us of the basepoints. This quotient is independent of the choice
+of bundle Q → Y up to canonical diffeomorphism, since all G bundles over Y
+are isomorphic (they are all trivial). It is easy to see that up to noncanonical
+diffeomorphism this moduli space only depends on the conjugacy classes of the hi .
+Thus we can restrict hi to be in a maximal torus of G. If we divide out by the full
+symmetry group (4.31), we obtain a smaller moduli space
+                                                           
+(4.34)                  MY ;h̄1 ,...,h̄k = Aflat
+                                            Q;h1 ,...,hk       GQ;h1 ,...,hk .
+
+This moduli space depends only on the conjugacy classes h̄i of the hi . It is the
+space of equivalence classes of flat connections on Q whose boundary holonomies
+are conjugate to the hi . Notice that no basepoints are needed to describe this
+moduli space. There is a map
+
+(4.35)                         M′Y ;h1 ,...,hk −→ MY ;h̄1 ,...,h̄k .
+
+The fiber over a connection η is the set of basepoints with respect to which the
+boundary holonomies equal the hi . The group
+
+(4.36)                             Z h = Z h1 × · · · × Z hk
+
+acts on the fiber with kernel Zη . If η is irreducible, then Zη ∼
+                                                                = Z is the group of
+global gauge transformations, which is isomorphic to the center of G; it is a normal
+subgroup of Zh . Thus over the subspace
+
+(4.37)                          M∗Y ;h̄1 ,...,h̄k ⊂ MY ;h̄1 ,...,h̄k
+
+of irreducible connections, (4.35) is a principal bundle with structure group Zh /Z.
+   To determine the tangent space to M′Y ;h1 ,...,hk at hη; b1 , . . . , bk i we examine
+the differential of the equations which assert that η is flat and that the boundary
+holonomies are h1 , . . . , hk . This leads to the complex
+(4.38)
+                     dη ⊕evb                         dη ⊕h−1 d holhη,bi
+    → Ω0Y (gQ ) −−−−→ Ω1Y (gQ ) ⊕ g⊕k −−−−−−−−−−−→ Ω2Y (gQ ) ⊕ g⊕k −
+  0 −                                                              → 0.
+
+Here evb is evaluation at the basepoints. The fact that (4.38) is a complex follows
+from (4.19) and (4.20). We identify the cohomology of (4.38) with the compactly
+                                                39
+                                            ◦
+supported cohomology of the interior Y with coefficients in gQ , i.e., with the coho-
+mology of the complex
+                                       dη                dη
+(4.39)               → Ω0◦ (gQ )c −→ Ω1◦ (gQ )c −→ Ω2◦ (gQ )c −
+                    0−                                        →0
+                            Y                Y                    Y
+                                                        ◦
+of compactly supported differential forms on Y with coefficients in gQ . Let H̃ • =
+                                                              ◦       
+H̃ • (Y ; η, b) denote the cohomology of (4.38) and Hc• = Hc• Y ; g(η) the cohomology
+of (4.39).
+Lemma 4.40. The inclusion of (4.39) into (4.38) induces an isomorphism H̃ • ∼      =
+Hc• on cohomology.
+A more direct approach might be to show that H̃ • is a de Rham model for the
+twisted relative cohomology H • Y, ∂Y ; g(η) . The following would be a de Rham
+proof of excision in that context.
+Proof. A simple check shows that the inclusion commutes with the differentials.
+We first show that the induced map on cohomology is injective. At degree 0 there
+is nothing to check. For degree 1 suppose η̇ ∈ Ω1◦ (gQ )c is closed and maps to
+                                                                  Y
+zero in H̃ 1 . Then there exists ζ ∈ Ω0Y (gQ ) such that η̇ = dη ζ and ζb = 0. Since
+η̇ = 0 near ∂Y we see that ζ is parallel near ∂Y , and then the condition ζb = 0
+implies ζ = 0 near ∂Y . Thus ζ has compact support, and so η̇ vanishes in Hc1 .
+For degree 2 suppose τ ∈ Ω2◦ (gQ )c is closed and maps to zero in H̃ 2 . Then there
+                                 Y
+exists hη̇ , ḃi ∈ Ω1Y (gQ ) ⊕ g⊕k such that dη η̇ = τ and h−1 d holhη,bi (η̇ , ḃ) = 0. Now
+(4.19) implies that h−1 d holhη,bi (η̇, 0) is in the image of 1 − Adh−1 , and then the
+remarks following Lemma 4.18 imply that ∂ η̇ is in the image of dη on ∂Y . Extending
+away from the boundary we construct ζ ∈ Ω0Y (gQ ) such that η̇ = dη ζ near ∂Y . So
+τ = dη (η̇ − dη ζ) and η̇ − dη ζ ∈ Ω1◦ (gQ )c , whence τ vanishes in Hc2 .
+                                      Y
+   It remains to show that the inclusion of (4.39) into (4.38) induces a surjection
+on cohomology. The only possible cohomology of (4.38) in degree 0 occurs on
+closed components of Y , since a flat section of gQ which vanishes at a basepoint
+vanishes identically on the component of Y containing the basepoint. The compact
+cohomology and ordinary cohomology agree on closed components, so we are done.
+For degree 1 suppose hη̇ , ḃi ∈ Ω1Y (gQ ) ⊕ g⊕k satisfies
+                                                      dη η̇ = 0
+                                  h−1 d holhη,bi (η̇ , ḃ) = 0.
+
+As above we can find ζ ∈ Ω0Y (gQ ) so that η̇ = dη ζ near ∂Y . We can alter any
+choice of ζ by a parallel section near the boundary, and in this way we arrange that
+ζb = ḃ. Then hη̇ − dη ζ, 0i is cohomologous to hη̇ , ḃi, and η̇ − dη ζ ∈ Ω1◦ (gQ )c has
+                                                                            Y
+compact support. This completes the proof for degree 1. There is nothing to prove
+in degree 2.
+  Since the compact cohomology and the ordinary cohomology are in (Poincaré)
+duality, we deduce the following.
+Corollary 4.41. If Y has no closed components, then
+                                H̃ 0 (Y ; η, b) = 0
+                                                                
+                          dim H̃ 2 (Y ; η, b) = dim H 0 Y ; g(η) .
+                                                 40
+                       
+Note that H 0 Y ; g(η) is the Lie algebra of Zη , the subgroup of gauge transforma-
+tions which fix η.
+   Lemma 4.40 implies that the index of (4.38) is the index of (4.39), which by
+Poincaré duality is the Euler characteristic of Y with coefficients in gQ . (Since
+(4.38) differs from the twisted de Rham complex by a finite dimensional operator
+of index 0, this also follows directly.)
+Proposition 4.42. The index of (4.38) is
+         dim H̃ 0 (Y ; η, b) − dim H̃ 1 (Y ; η, b) + dim H̃ 2 (Y ; η, b) = dim G · χ(Y ).
+
+Proof. 29 By the de Rham theorem this twisted Euler characteristic can be com-
+puted using other models of cohomology, e.g. cellular theory. It suffices to consider
+the case where Y is connected. Fix a basepoint y ∈ Y and a trivialization of the
+fiber of gQ at y. Choose a finite CW structure on Y , and let C̃• (Y ) be the cellular
+chain complex of the universal cover of Y ; it is a finite dimensional module over
+the group algebra R[π1 (Y, y)]. Since the flat connection η determines a represen-
+                                                                                
+tation of π1 (Y, y) on g, we can form a cochain complex Homπ1 (Y,y) C̃• (Y ), g . Its
+cohomology is the cohomology of Y with coefficients in gQ (twisted by the flat
+connection η). By counting dimensions we see that its Euler characteristic, which
+equals the Euler characteristic of its cohomology, is dim G · χ(Y ).
+  Combining Proposition 4.42 with Corollary 4.41 we obtain a formula for the
+dimension of the moduli space M′Y ;h1 ,...,hk (4.33) at a smooth point, assuming that
+Y has no closed components:
+(4.43)         dim M′Y ;h1 ,...,hk = dim H̃ 1 (Y ; η, b) = − dim G · χ(Y ) + dim Zη .
+From the discussion following (4.35) we see that the dimension of MY ;h̄1 ,...,h̄k (4.34)
+is
+                                                 X
+        dim MY ;h̄1 ,...,h̄k = − dim G · χ(Y ) −   dim Zhi + 2 dim Zη
+                                                        i
+(4.44)                                                 X
+                              = − dim G · χ(Y ) +               (dim G − dim Zhi ) + 2 dim Zη
+                                                            i
+
+at the connection η. Here Y is the compactification of Y obtained by gluing in
+standard disks. The second equation in (4.44) makes clear that dim MY ;h̄1 ,...,h̄k is
+an even number. This is explained by the theorem of Mehta and Seshadri [MeS],
+which identifies dim MY ;h̄1 ,...,h̄k as a complex manifold (of stable parabolic bundles)
+when Y is endowed with a complex structure.30
+   The passage from (4.43) to (4.44) and the map (4.35) are illuminated by the
+exact cohomology sequence of the pair (Y, ∂Y ), modified using excision:
+(4.45)
+                           j                        δ           ◦            i         
+0 −−−−→ H 0 Y ; g(η) −−−−→ H 0 ∂Y ; g(η) −−−−→ Hc1 Y ; g(η) −−−−→ H 1 Y ; g(η)
+                                                                 
+                 ∼                         ∼                     ∼
+                 y=                         y=                     y=
+                                j                               δ
+0 −−−−→         Lie Zη      −−−−→       ⊕ Lie Zhi      −−−−→ Tη M′Y ;h1 ,...,hk
+   29 I thank Frank Quinn for pointing out this proof. My original proof, based on Atiyah-Patodi-
+
+Singer, was much less elementary.
+   30 There is a recent gauge theoretic proof of the Mehta-Seshadri theorem by Jonathan Poritz [Po].
+
+                                                41
+We still assume that Y has no closed components. The formal tangent space
+Tη MY ;h̄1 ,...,h̄k is the quotient of the formal tangent space Tη M′Y ;h1 ,...,hk by the
+image of δ.
+   Theorem 4.26 states that the bundle (4.30) descends to the quotient M′Y ;h1 ,...,hk .
+In fact, this bundle also descends further to the moduli space MY ;h̄1 ,...,h̄k .
+Proposition 4.46. The action of GQ;h1 ,...,hk on Aflat    Q;h1 ,...,hk lifts to the line bundle
+LQ;h1 ,...,hk → Aflat
+                 Q;h1 ,...,hk . The center Z ֒→ GQ;h1 ,...,hk acts trivially.
+
+Proof. If g ∈ Zhi , then the change of basepoint gi → bi g changes the fiber Lη over
+a connection η according to (4.9). The Wess-Zumino-Witten line Kg which enters
+is canonically trivial (A.4) since g is constant, and this trivialization is compatible
+with multiplication in Zhi . This gives a lift of the Zhi action to LQ;h1 ,...,hk , as
+desired.
+   An element of the center Z is represented as a constant map g : Y → G. Fix a
+section q : Y → Q and let a = q ∗ η. Then the action of g on Lη is multiplication by
+cY (a, g) (4.1), which is trivial. (We use the trivialization (A.4) here.)
+
+
+
+
+                                              42
+             §5 Hamiltonian Theory on Surfaces with Boundary
+   As in §3 we use the Chern-Simons functional on paths of connections over a sur-
+face, now possibly with boundary, to define a connection on a line bundle (4.30) over
+the space of connections (Proposition 5.9). Rather than proceed by direct calcula-
+tion, we use the abstract construction of a connection from its holonomy explained
+in Appendix B. Just as the construction of the bundle depends on the choice of
+trivializing section (4.24), so too does the connection.31 This line bundle with con-
+nection descends to the moduli spaces M′Y ;h1 ,...,hk (4.33) and M∗Y ;h̄1 ,...,h̄k (4.37).
+Because our constructions are local, these line bundles obey a gluing law (Proposi-
+tion 5.29). The analogue of this gluing law in the quantum theory leads to a modular
+functor [S], from which one obtains the Verlinde algebra [V]. For details in the case
+of a finite gauge group, see [FQ]. One can twist the line bundle over M∗Y ;h̄1 ,...,h̄k by
+representations of the centralizers of the boundary holonomies. These twisted line
+bundles (5.31) are considered by Daskalopoulos and Wentworth [DasW]. They only
+construct them for certain conjugacy classes of the fixed boundary holonomies, but
+we find no such restriction on the holonomy.32
+   Let Y be a compact oriented 2-manifold with parametrized boundary. Fix a
+G bundle Q → Y . Now a path of connections and basepoints hηt , bt i on Q deter-
+mines a connection η and a path b of basepoints on [0, 1] × Q. The connection η
+has no dt component. Restricting to the boundary we obtain a unique map to the
+universal bundle
+                                                      ϕ
+                                  [0, 1] × ∂Q −−−−→           R
+                                                             
+(5.1)                                                        
+                                        y                     y
+                                                      ϕ̄
+                                  [0, 1] × ∂Y −−−−→ G × S 1
+
+which restricted to a boundary component (∂Q)i and a fixed t satisfies ϕ∗ (θRhi (t) ) =
+∂ηi (t) and preserves the basepoints. Here hi (t) is the holonomy around (∂Q)i . The
+pullback of the universal connection is
+
+(5.2)                                 ϕ∗ (θR ) = ∂η + ξdt
+
+for some ξ : [0, 1]×∂Q → g. An easy argument shows that for fixed t the infinitesimal
+gauge transformation ξt ∈ Ω0∂Y (gQ ) depends only on the first derivative hη̇ t , ḃt i
+of hηt , bt i. So we have a function
+
+(5.3)                   ξ : T (AQ × Qy1 × · · · × Qyk ) −→ Ω0∂Y (gQ ).
+
+Now from (5.2) we compute the curvature of ϕ∗ (θR ) to be
+
+                                        dt ∧ (∂ η̇ − dη ξ),
+
+   31 We can also construct a connection on (4.29) where the boundary holonomies are allowed to
+
+vary over a subset V ⊂ G on which the universal bundle is trivialized. Then the connection also
+depends on a choice of universal connection (4.14). We omit that here, but return to it in Part 2
+where we can make better sense of the dependence on these choices.
+   32 If we did not include the 1-form (5.8) in our connection, then we would find their restriction.
+
+                                                 43
+where dη is the covariant derivative. On the other hand this curvature is the pull-
+back of (4.15) under (5.1). In particular, if the boundary holonomies are constant
+in t, then this curvature vanishes and
+
+(5.4)                                             ∂ η̇ = dη ξ.
+
+   Fix a subset V ⊂ G and a trivialization (4.24) of the universal bundle over V . (In
+a moment we will fix the boundary holonomies.) Then for a path hηt , bt i ∈ AQ;V,...,V
+with boundary holonomies in V we obtain from (5.1) a section
+
+(5.5)                         r(η, b) : [0, 1] × ∂Y −→ [0, 1] × ∂Q.
+
+These sections glue properly when we glue together paths. According to the con-
+struction (4.25) and (4.3) of the lines (4.27), and the trivialization (A.4), the sec-
+tion (5.5) induces an isometry
+
+(5.6)                                    L[0,1]×∂Y ;∂η,b0 ,b1 ∼
+                                                              =C
+
+These isometries are compatible with gluing and gauge transformations.
+  Now fix the boundary holonomies to be h1 , . . . , hk ∈ V . Then the pullback
+
+(5.7)               a = r(η, b)∗ ∂η ∈ Ω1∂Y (g),                        hη, bi ∈ AQ;h1 ,...,hk ,
+
+is independent of hη, bi. Define the 1-form α ∈ Ω1AQ;h ,...,h by
+                                                                                1       k
+
+                                                           Z
+(5.8)                              α(η̇ , ḃ) = 2πi                 hξ(η̇ , ḃ) ∧ ai.
+                                                               ∂Y
+
+This 1-form enters in the following extension of Proposition 3.17.
+Proposition 5.9. Fix a G bundle Q → Y over a compact oriented 2-manifold with
+parametrized boundary ∂Y = ⊔ki=1 (∂Y )i . Choose also a universal connection (4.14)
+and a trivialization (4.24) of the universal bundle over points h1 , . . . , hk ∈ G. Then
+the Chern-Simons action, modified by the 1-form (5.8), defines a unitary connection
+on the hermitian line bundle (4.30). The curvature of this connection times i/2π is
+                                                       Z                            Z
+(5.10)        ωhη,bi (η̇ 1 , ḃ1 ; η̇ 2 , ḃ2 ) = −2       hη̇1 ∧ η̇2 i + 2                 hξ1 ∧ dη ξ2 i,
+                                                       Y                            ∂Y
+
+
+where ξi = ξhη,bi (η̇ i , ḃi ) is defined by (5.3). The action of GQ on AQ;h1 ,...,hk lifts
+to LQ;h1 ,...,hk , and the lifted action preserves the metric and connection. The in-
+duced “moment map” is
+                                                           Z
+(5.11)                                 µξ (η) = 2               hΩ(η) ∧ ξi,
+                                                           Y
+
+
+where ξ ∈ Ω0Y (gQ ) is an infinitesimal gauge transformation.
+We do not have a good geometric explanation of the “correction” 1-form (5.8). Even
+if h·i is nondegenerate, the form ω is degenerate; the kernel consists of variations
+                                                           44
+where η̇ = 0 and ḃ is arbitrary. The “moment map” (5.11) is still well-defined as
+the obstruction to descending the connection to the quotient by GQ .
+   We remark that Chang [Ch] constructs a connection on a determinant line bundle
+with similar formulas for the curvature and moment map.
+   One can give a proof of Proposition 5.9 by calculations similar to those in the
+proof of Proposition 3.17. For this one needs detailed geometry of the Wess-Zumino-
+Witten line bundle, explained in Appendix A. We opt for an easier route, based on
+the gluing law in Proposition 4.11 and the theorem in Appendix B which constructs
+a connection from the parallel transport.
+Proof. Let hηt , bt i be a smooth path in AQ;h1 ,...,hk . As above we obtain a con-
+nection η on [0, 1] × Q → [0, 1] × Y . The boundary ∂(η) = η1 ⊔ η0 ⊔ ∂ηt is a
+connection on Q ⊔ Q ⊔ [0, 1] × ∂Q → Y ⊔ −Y ⊔ −[0, 1] × ∂Y . Using the inverse of
+the trivialization (5.6) we identify the Chern-Simons action on η as a map
+
+(5.12)                   PT(ηt ) = e2πiS[0,1]×Y (η) : Lη0 ,b0 −→ Lη1 ,b1 .
+
+PT(·) is a smooth function of the path, since the Chern-Simons action is smooth.
+For constant paths (5.12) is the identity map, since then the connection η bounds
+a connection on D2 × Y which is constant in the D2 factor. Furthermore, PT(·) is
+reparametrization invariant by the functoriality property (2.22). The generalized
+gluing law Proposition 4.11 and the gluing law for the trivializations (5.6) imply that
+(5.12) composes properly when we glue paths; in the terminology of Appendix B,
+it is an additive function. Hence the hypotheses of Corollary B.6 are satisfied,
+and this theorem asserts the existence of a connection on LQ;h1 ,...,hk → AQ;h1 ,...,hk
+with parallel transport (5.12).33 Notice that (B.3) is an explicit formula for the
+connection form.
+   However, this is not the connection we want. The connection on LQ;h1 ,...,hk we
+consider is this connection plus the 1-form α defined in (5.8). We will now show that
+the curvature and moment map of this modified connection are (5.10) and (5.11).
+   To verify the curvature formula (5.10), fix x, y small and consider the connection
+
+(5.13)                                   η + sxη̇1 + ty η̇2
+
+on the bundle [0, 1]s ×[0, 1]t ×Q. Choose basepoints which agree with b at s = t = 0,
+have derivative ḃ1 and ḃ2 along the s and t directions and have constant boundary
+holonomies. Let
+                         γx,y : ∂([0, 1] × [0, 1]) −→ AQ;h1 ,...,hk
+
+be the resulting map on the boundary of the s, t rectangle. Then by the calculus
+of differential forms we see that the curvature of the connection on LQ;h1 ,...,hk
+evaluated in the directions hη̇ 1 , ḃ1 i, hη̇ 2 , ḃ2 i is
+
+                        d      d
+(5.14)             −                 log hol(γx,y ) + dα(η̇ 1 , ḃ1 ; η̇ 2 , ḃ2 ),
+                       dx x=0 dy y=0
+
+    33 Clearly this argument generalizes to an axiomatic framework, where one deduces the Hamil-
+
+tonian theory (symplectic structure) from the general properties of the action. We will not attempt
+this here (but see [Ax,§3]).
+                                                  45
+where hol(γx,y ) is the holonomy around the loop. Equation (5.12) defines this holo-
+nomy as the exponential of 2πi times the Chern-Simons action, which we compute
+using (2.8) applied to W = [0, 1] × [0, 1] × Y . Note
+
+(5.15)              ∂W = ∂([0, 1] × [0, 1]) × Y ∪ [0, 1] × [0, 1] × ∂Y.
+
+Now the curvature of (5.13) is
+
+(5.16)                        Ω = Ωs,t + x ds ∧ η̇1 + y dt ∧ η̇2 ,
+
+where Ωs,t is the curvature of (5.13) restricted to Y × {s} × {t}. A straightforward
+computation shows
+                     Z                              Z
+(5.17)                            hΩ ∧ Ωi = −2xy hη̇1 ∧ η̇2 i.
+                          [0,1]×[0,1]×Y                           Y
+
+
+   It remains to calculate the action on [0, 1] × [0, 1] × ∂Y (c.f. (5.15)) and the
+contribution from dα in (5.14). The definition (5.12) instructs us to use the trivi-
+alization (5.6), and so to calculate the action on X = [0, 1] × [0, 1] × ∂Y relative to
+the canonical section r on ∂X. In fact, we may as well use r over all of X. Consider
+the connection (5.13) on [0, 1] × [0, 1] × ∂Q. (We now omit the ‘∂’ from the notation
+for the connection.) As in (5.2) we have
+
+                        r∗ (η + sxη̇1 + ty η̇2 ) = a − xξ1 ds − yξ2 dt,
+
+where a, defined in (5.7), is independent of s and t, and ξ1 , ξ2 : X → g are defined
+by (5.3). From (5.16) we see that
+
+(5.18)                             r∗ (Ω) = xds ∧ η̇1 + ydt ∧ η̇2 .
+
+The action relative to the trivialization r is computed from (1.26) and (2.2):
+(5.19)                      Z                  Z
+SX (r, η + sxη̇1 + ty η̇2 ) = xy                  ds∧dt        −hξ1 ∧ η̇2 i+ hξ2 ∧ η̇1 i+ h[ξ1 , ξ2 ]∧ai.
+                                    [0,1]×[0,1]           ∂Y
+
+
+Combining (5.17) and (5.19), substituting (5.4), and using Stokes’ theorem we see
+that
+                                        Z            Z                  Z
+   i d       d
+−                   log hol(γx,y ) = −2 hη̇1 ∧η̇2 i+     2hξ1 ∧dη ξ2 i−     h[ξ1 , ξ2 ]∧ai.
+  2π dx x=0 dy y=0                       Y            ∂Y                 ∂Y
+
+                        i
+It is easy to see that 2π dα in (5.14) cancels the last term, thereby proving (5.10).
+    Next, we verify (5.11). Suppose ξ ∈ Ω0Y (gQ ) and ψt ∈ GQ is a path of gauge
+transformations with ψ0 = id and ψ̇0 = ξ. Consider the path hψt∗ η, ψt−1 bi ∈
+AQ;h1 ,...,hk . Now the path ψt∗ η forms a connection η on [0, x] × Y . Fix a section
+q : Y → Q which has ∂q = r(η, b), and let q : [0, x] × Y → [0, x] × Q be the
+section ψt−1 q. According to (3.24) and (5.12) the moment map is
+
+                             d                        i
+(5.20)         µξ (η) = −      x=0
+                                   S[0,x]×Y (q, η) −    α(dη ξ, ξ basepoints ).
+                            dx                       2π
+                                                    46
+Now
+                                        q∗ η = q ∗ η − ξdt,
+
+from which the pullback of the curvature Ω of η is
+
+                                    q∗ Ω = Ω + dt ∧ dη ξ,
+
+where Ω = Ω(η) is the curvature of η. A short computation shows
+                                  Z x     h Z              Z                                i
+(5.21)        S[0,x]×Y (q, η) =         dt −2 hΩ ∧ ξ(t)i +                        hξ(t) ∧ ai .
+                                   0               Y                         ∂Y
+
+
+We deduce (5.11) easily from (5.20) and (5.21). This completes the proof of Propo-
+sition 5.9.
+Corollary 5.22. The line bundle with connection in Proposition 5.9 descends to
+a line bundle with connection
+                                                                                  
+(5.23)              LY ;h1 ,...,hk −→ M′Y ;h1 ,...,hk = Aflat
+                                                         Q;h1 ,...,hk                 GQ
+
+over the moduli space (4.33). The curvature times i/2π is given by (5.10).
+This follows directly from the fact that the “moment map” (5.11), which is the
+obstruction to descending the connection, vanishes on the space Aflat   Q;h1 ,...,hk of flat
+connections. The quotient line bundle with connection is independent of Q up to
+canonical diffeomorphism.
+   We next show that this connection descends to MY ;h̄1 ,...,h̄k , the moduli space of
+flat connections whose boundary holonomies are conjugate to the hi (cf. (4.34)), at
+least over the irreducible connections.
+Proposition 5.24. The lift of GQ;h1 ,...,hk to LQ;h1 ,...,hk → Aflat
+                                                                Q;h1 ,...,hk , defined in
+Proposition 4.46, is parallel with respect to the connection on LQ;h1 ,...,hk defined in
+Proposition 5.9 and preserves that connection as well.
+Proof. By Proposition 5.9 we need only consider the action of the subgroup Zh (4.36).
+An easy argument shows that it preserves the holonomy along paths, hence pre-
+serves the connection, so we need only check that the action is parallel.
+   Suppose hη, bi ∈ AQ;h1 ,...,hk . Fix a section q : Y → Q such that ∂q = r(η, b).
+Now let λ ∈ Lie(Zhi ) for some fixed i, and consider the path gt = etλ ∈ Zhi . Recall
+that Zhi is connected, so every element can be written eλ for some λ. Acting
+on hη, bi we obtain the path
+
+(5.25)                         t 7−→ hη; b1 , . . . , bi gt , . . . , bk i
+
+in AQ;h1 ,...,hk . The connection on [0, 1] × Q it is independent of the first factor,
+but the basepoint on the ith boundary component varies. Now the constant section
+q : [0, 1] × Y → [0, 1] × Q does not induce the (inverse) trivialization (5.6) on [0, 1] ×
+(∂Y )i , as required by (5.12). Instead, we need to use the section qgt . Note that
+e2πiW[0,1]×(∂Y )i (gt ) induces the trivialization (A.4) of Kgt on the boundary. Hence
+                                                  47
+the parallel transport (5.12) of the lift of (5.25) to LQ;h1 ,...,hk , computed relative to
+the trivialization of LQ;h1 ,...,hk induced by q, is (cf. (4.1))
+                                                                          
+         c−[0,1]×(∂Y )i (r∗ (∂η), gt ) = c[0,1]×(∂Y )i (rgt )∗ (∂η), gt−1
+                                                     Z 1 Z                             
+                                       = exp −2πi        dt         hAdgt a ∧ gt−1 ġt i
+                                                           0      (∂Y )i
+                                               Z 1Z                           
+                                     = exp −2πi                         ha ∧ λi .
+                                                           0   (∂Y )i
+
+
+This is canceled by the correction 1-form (5.8).
+    The space A∗,flat
+                 Q;h1 ,...,hk of irreducible flat connections is a manifold, and GQ;h1 ,...,hk acts
+with constant stabilizer Z (cf. the discussion following (4.32)). Since Z acts triv-
+ially on the line bundle LQ;h1 ,...,hk → A∗,flat
+                                               Q;h1 ,...,hk by Proposition 4.46, it follows from
+Proposition 5.24 that this line bundle with connection descends to a line bundle
+with connection
+
+(5.26)                          LY ;h̄1 ,...,h̄k −→ M∗Y ;h̄1 ,...,h̄k
+
+over the moduli space of irreducible flat connections with boundary holonomies
+conjugate to the hi .
+Proposition 5.27. If h·i is a nondegenerate form on g, then the curvature of (5.26)
+is a symplectic form on M∗Y ;h̄1 ,...,h̄k .
+Proof. By Lemma 4.40 we can realize tangent vectors at η to M∗Y ;h̄1 ,...,h̄k by com-
+pactly supported forms η̇, and evaluated on two such forms the curvature (5.10)
+is
+                                               Z
+(5.28)                     ωη (η̇1 , η̇2 ) = −2 hη̇1 ∧ η̇2 i.
+                                                       Y
+
+
+If h·i is nondegenerate, then Poincaré duality (for twisted coefficients) implies that
+ωη induces a nondegenerate pairing
+                                ◦                     
+                            Hc1 Y ; g(η) ⊗ H 1 Y ; g(η) −→ R;
+
+here we do not require that η̇2 in (5.28) have compact support. The exact se-
+                                                                                 ◦       
+quence (4.45) implies that ωη is also nondegenerate as a bilinear pairing on Hc1 Y ; g(η) / im δ ∼
+                                                                                                 =
+Tη M∗Y ;h̄1 ,...,h̄k .
+   As with all of our constructions there is a gluing law for the connection con-
+structed in Proposition 5.9. One consequence of the basepoints, which rigidify the
+connection over the boundary, is that gluing is well-defined for the pointed moduli
+space (5.23). It is not, however, well-defined once we remove the basepoint (5.26).
+Proposition 5.29. Suppose Q → Y is a G bundle over a compact oriented 2-
+manifold with parametrized boundary. Fix boundary holonomies, which we collec-
+tively denote h∂Y . Now suppose S ֒→ Y is a closed oriented codimension one
+                                                 48
+submanifold, and Qcut → Y cut the cut bundle. Fix holonomies hS for the compo-
+nents of S, and denote by h−S their inverses. Then (4.8) leads to a diagram of
+maps
+
+                           LQcut ;h∂Y ,hS ,h−S −−−−→ LQ;h∂Y
+                                                      
+                                                      
+(5.30)                             y                   y
+                          M′Y cut ;h∂Y ,hS ,h−S −−−−→ M′Y ;h∂Y
+
+which is compatible with the connection constructed in Corollary 5.22.
+There is a corresponding gluing law for the connection in Proposition 5.9; it is
+proved using the gluing law Proposition 4.11 for the action and the definition (5.12),
+(5.8) of the connection. Then (5.30) is the quotient by GQ .
+   We also remark that this connection is compatible with change of gauge group,
+as in Proposition 2.9 and Proposition 2.29. However, we must be careful to use
+compatible trivializations of the universal bundles of connections over the circle.
+   Finally, we construct twistings of the line bundle (5.26). Recall that the map (4.35),
+restricted to the subspace of irreducible connections, is a principal bundle with
+structure group Zh /Z, where Zh is defined in (4.36). Suppose
+
+                                       λ : Zh /Z 7−→ T
+
+is a unitary representation. Then there is an induced hermitian line bundle34
+
+                                    Lλ −→ M∗Y ;h̄1 ,...,h̄k .
+
+In the quantum Chern-Simons theory one considers the tensor product bundles
+
+(5.31)                      LY ;h̄1 ,...,h̄k ⊗ Lλ −→ M∗Y ;h̄1 ,...,h̄k
+
+for various λ. We do not find a relationship between the holonomies hi and the
+representation λ, as was found in [DasW,§5].
+
+
+
+
+   34 We did not succeed in finding a unitary connection on L . Perhaps one should be induced
+                                                              λ
+from a connection on (4.35), but we did not find a connection there either.
+                                               49
+                                 §6 Special Cases
+    We first note some special features of the Hamiltonian theory (§3) on surfaces of
+genus 0 and genus 1. We also state the usual formula (6.3) for the Chern-Simons
+functional when G = SU (2).
+    The 2-sphere Y = S 2 is simply connected, so according to Proposition 3.5 the
+moduli space MY consists of a single point. Of course, the dimension formula (3.9)
+predicts that dim MY = 0. The line corresponding to a trivial connection is canon-
+ically trivial (over any surface).
+    If Y = S 1 × S 1 is a torus, then π1 (S 1 × S 1 , ∗) ∼
+                                                        = Z × Z for the standard base-
+point ∗ ∈ S 1 × S 1 . Hence Hom π1 (S 1 × S 1 , ∗), G is given by the set of commuting
+pairs of elements g1 , g2 ∈ G. We can simultaneously conjugate both elements into
+a fixed maximal torus T ⊂ G, since they commute. Then the normalizer N (T ) acts
+by conjugation on pairs of elements in T , with T ⊂ N (T ) acting trivially. Thus the
+quotient Weyl group W = N (T )/T acts, and
+                                                      
+(6.1)                           MS 1 ×S 1 ≈ T × T         W.
+
+Note that for a generic connection η on the torus the centralizer Zη is isomorphic to
+the maximal torus T . If the holonomies are both singular elements of G, then the
+centralizer is bigger. Thus the W action degenerates at pairs of singular points of G
+(fixed by the same element of W ). Away from these singular points (3.9) predicts
+the proper formula for the dimension of (6.1).
+   We now specialize to G = SU2 . Fix the standard maximal torus T of diagonal
+matrices. The nontrivial element of the Weyl group W ∼       = Z/2Z acts on T by
+permuting the elements in a diagonal matrix. The fixed points are 1, −1 ∈ T , so
+there are four singular points in (6.1).
+   The integral forms on g = su2 are parametrized by an integer k:
+
+                                        k
+(6.2)                  ha ⊗ bi = −          Tr(ab),       a, b ∈ su2 .
+                                       8π 2
+
+Then the Chern-Simons functional (2.2) takes the form
+                                       Z
+                                 k                   2
+(6.3)              SX (A) = −             Tr(A ∧ dA + A ∧ A ∧ A),
+                                8π 2    X            3
+
+where A ∈ Ω3X (su2 ) is the connection form relative to some trivialization.
+
+
+
+
+                                             50
+         §A Appendix: Classical Wess-Zumino-Witten Theory35
+   The Wess-Zumino-Witten functional (2.13) is the action of a 1 + 1 dimensional
+topological classical field theory. It arises in the Chern-Simons theory as a term
+in the cocycle which measures the dependence of the Chern-Simons action on the
+boundary trivialization. In this appendix we briefly study it as a field theory in its
+own right. In fact, it is simpler than the Chern-Simons theory and is a nice first
+example of the geometry of classical field theory. Our main interest, however, is in
+the metrized lines Kγ attached to loops γ : S 1 → G, which together form a central
+extension of the loop group. We restrict ourselves to connected, simply connected,
+compact Lie groups G endowed with an integral bilinear form h·i : g ⊗ g → R on
+the Lie algebra. There is a theory for arbitrary compact G endowed with a class
+in H 3 (G); this can be constructed using the techniques of Part 2 (cf. [Ga]). Our
+constructions of the lines here is quite simple, based on the fact that every field
+on a “space” is the boundary of a field on some “spacetime”. This procedure is
+elaborated in [Ax,§4] in a more general context.
+   For Y a closed oriented 2-manifold, equation (2.13) defines a function WY (g) on
+the space of (piecewise) smooth maps g : Y → G; this is the content of Lemma 2.12.
+To generalize to 2-manifolds with boundary, we must construct lines attached to
+the boundary fields.
+Proposition A.1. Let S be a closed oriented 1-manifold (union of circles). Then
+for each smooth map γ : S → G there is attached a metrized complex line Kγ =
+KS,γ . The assignment γ 7→ Kγ is smooth; satisfies functoriality, orientation, and
+additivity conditions analogous to (2.21), (2.23), and (2.25); and for γ1 , γ2 : S → G
+with pointwise product γ1 γ2 there is an isometry
+
+(A.2)                             Kγ1 ⊗ Kγ2 −→ Kγ1 γ2 .
+
+Furthermore, for three loops γ1 , γ2 , γ3 we have the commutative diagram
+
+                        Kγ1 ⊗ Kγ2 ⊗ Kγ3 −−−−→ Kγ1 ⊗ Kγ2 γ3
+                                                  
+                                                  
+(A.3)                          y                   y
+                           K γ1 γ2 ⊗ K γ3     −−−−→        K γ1 γ2 γ3
+
+Finally, if γ is a constant loop then there is a trivialization
+
+(A.4)                                       Kγ ∼
+                                               =C
+
+which respects (A.2).
+It follows from (A.2) and (A.3) that the set of elements of unit norm in the lines Kγ
+                 \G) which is a central extension of the loop group:
+form a group Map(S,
+
+(A.5)                    →T−
+                        1−    \G) −
+                           → Map(S, → Map(S, G) −
+                                                → 1.
+
+This construction of the central extension first appeared in Mickelsson [M]. The last
+assertion means that this central extension is split over the constant loops. The
+  35 I thank Jacek Brodzki for discussions about material in this section.
+
+                                               51
+functoriality means that the group of orientation preserving diffeomorphisms Diff + (S)
+           \G). For more on this central extension, see [PS,§4].
+acts on Map(S,
+Proof. We only sketch the constructions. Fix an oriented 2-manifold D with ∂D =
+S. Let Cγ be the category of extensions Γ : D → G of γ : S → G; it is nonempty by
+our assumptions on the topology of G. Endow Cγ with a unique morphism between
+any two objects. Define a functor Fγ : Cγ → L by Fγ (Γ) = C and Fγ (Γ0 → Γ1 ) is
+multiplication by
+                                                     
+(A.6)                     exp 2πiWDdouble (Γ0 ∪ −Γ1 ) .
+
+Here Ddouble is the double of D and Γ0 ∪ −Γ1 is the (piecewise smooth) map which
+is Γ0 on one copy of D and Γ1 on the other, with the indicated orientations. It is
+easy to check that Fγ is a functor; its invariant sections form the line Kγ .
+   To construct the isometry (A.2) fix extensions Γ1 , Γ2 of γ1 , γ2 . Then Γ1 Γ2 is
+an extension of γ1 γ2 . These extensions trivialize the lines in (A.2), and relative to
+these trivializations the isometry (A.2) is multiplication by
+                     Z                                 Z
+                                                                              
+(A.7)       exp 2πi hΓ1 θ ∧ AdΓ2 Γ2 θi = exp 2πi hΓ−1
+                           ∗          ∗                                    −1
+                                                             1 dΓ1 ∧ dΓ2 Γ2 i ,
+                      D                                      D
+
+where θ is the Maurer-Cartan form on G. This calculation proceeds from the
+following formula. For any 3-manifold X and g : X → G a smooth map, we set
+
+                  1                             1
+          ω(g) = − hg ∗ θ ∧ [g ∗ θ ∧ g ∗ θ]i = − hg −1 dg ∧ [g −1 dg ∧ g −1 dg]i,
+                  6                             6
+the Wess-Zumino-Witten lagrangian. Then for g1 , g2 : X → G we have
+
+(A.8)                     ω(g1 g2 ) = ω(g1 ) + ω(g2 ) + dσ(g1 , g2 ),
+
+where
+                σ(g1 , g2 ) = dhg1∗ θ ∧ Adg2 g2∗ θi = dhg1−1 dg1 ∧ dg2 g2−1 i.
+    For the functoriality, suppose f : S ′ → S is a diffeomorphism, γ : S → G a map,
+and γ ′ = γ ◦ f . Then an extension Γ : D → G gives a trivialization Kγ ∼   = C. Let
+D′ be the 2-manifold D′ = S ′ ∪f D. Then ∂D′ = S ′ and γ ′ extends to a map
+Γ′ : D′ → G which agrees with Γ on D. Now Γ′ gives a trivialization Kγ ′ ∼      = C.
+Relative to these trivializations we define f ∗ : Kγ → Kγ ′ to be the identity.
+    The trivialization for constant γ comes from the constant extension Γ.
+Proposition A.9. Let Y be a compact oriented 2-manifold with boundary and
+g : Y → G a (piecewise) smooth map. Then the action
+
+                                    e2πiWY (g) ∈ K∂Y,∂g
+
+is defined and satisfies functoriality, orientation, additivity, and gluing conditions
+analogous to (2.22), (2.24), (2.26), and (2.27). In addition, if g1 , g2 : Y → G with
+pointwise product g1 g2 , then
+                                    Z
+(A.10)     e2πiWY (g1 g2 ) = exp(2πi hg1∗ θ ∧ Adg2 g2∗ θi) e2πiWY (g1 ) ⊗ e2πiWY (g2 ) .
+                                        Y
+                                              52
+To compute the action we choose an oriented 2-manifold D with ∂D = ∂Y and
+extend γ = ∂g to Γ : D → G. Then we apply formula (2.13) to g∪−Γ : Y ∪−D → G.
+The dependence on the extension transforms by the cocycle (A.6).
+   One consequence of (A.10) is
+                                         −1
+                             e2πiWY (g        )
+                                                  = e2πiW−Y (g) .
+
+  We record here the differential of the Wess-Zumino-Witten functional. For
+any manifold M we identify the tangent space to Map(M, G) at any point with
+Map(M, g) = Ω0M (g) via left translation.
+Proposition A.11. Let Y be a closed oriented 2-manifold. Suppose g : Y → G
+and Ξ ∈ Ω0Y (g). Set Φ = g ∗ θ ∈ Ω1Y (g), where θ is the Maurer-Cartan form on G.
+Then
+                                            Z
+(A.12)                      d(WY )g (Ξ) =     hΞ ∧ dΦi.
+                                                       Y
+
+If Y has nonempty boundary, then the same formula serves to compute the co-
+variant derivative of the action (relative to some trivialization) with respect to the
+connection defined below.
+Proof. Let X be an oriented 3-manifold with ∂X = Y . We extend g, Φ, Ξ over X
+without introducing new notation. Let Γt be a path of maps X → G with Γ−1 Γ̇ = Ξ,
+where we use the Leibnitz notation for the derivative at t = 0. Set Φt = Γ∗t θ. Then
+we calculate
+                                         1
+                                 dΦ = − [Φ ∧ Φ]
+(A.13)                                   2
+                                 dΞ = Φ̇ + [Ξ ∧ Φ].
+
+Now the Wess-Zumino-Witten lagrangian is
+                           1               1
+                          − hΦ ∧ [Φ ∧ Φ]i = hΦ ∧ dΦi.
+                           6               3
+Some calculation with (A.13) shows
+
+                          d      1
+                                   hΦ ∧ dΦi = dhΞ ∧ dΦi,
+                          dt t=0 3
+and then (A.12) follows by Stokes’ theorem.
+  The analogue of Proposition 3.17 is the following.
+Proposition A.14. Fix a closed oriented 1-manifold S. Then the Wess-Zumino-
+Witten action defines a unitary connection α on the hermitian line bundle K →
+Map(S, G). The curvature of α times i/2π is
+                                 Z
+(A.15)          τγ (ξ1 , ξ2 ) = − h[ξ1 , ξ2 ] ∧ φi, ξ1 , ξ2 ∈ Ω0S (g),
+                                 S
+
+            ∗
+where φ = γ θ is the pullback of the Maurer-Cartan form by γ : S → G. The central
+            \G) acts on K by both left and right multiplication. The action of
+extension Map(S,
+                                                  53
+the center preserves the connection α. Left multiplication by γ0 : S → G changes α
+by the 1-form
+                                       Z
+(A.16)                     λγ (ξ) = 2πi hγ0∗ θ ∧ Adγ ξi.
+                                              S
+
+Right multiplication by γ0 : S → G changes α by the 1-form
+                                        Z
+(A.17)                      ργ (ξ) = 2πi hξ ∧ Adγ0 γ0∗ θi.
+                                              S
+
+
+Note that since the center of Map(S,\G) preserves α, the action of an element in
+   \G) depends only on its image in Map(S, G). Formulas (A.16) and (A.17)
+Map(S,
+give the difference between the pullback of α and α. Also, the curvature (A.15) is
+the transgression of − 61 hθ ∧ [θ ∧ θ]i ∈ Ω3G to Map(S, G).
+Proof. We use ‘α’ to denote both the connection (a 1-form on the circle bundle of
+unit vectors in K) and its local expression on Map(S, G) relative to a trivialization.
+We suppose that for each γ : S → G in some open set in the loop group we are given
+a smoothly varying extension Γ : D → G, where ∂D = S, and so a trivialization
+of K over that subset. Note that these extensions determine extensions of tangent
+vectors as well. Now if γt is a path in this subset, and γ : [0, 1]×S → G the resulting
+map, then36
+                                            Z 1         Z
+(A.18)                   W[0,1]×S (γ) = −          dt       hΓ−1 Γ̇ ∧ dΦi,
+                                              0         D
+
+where Φ = Γ∗t θ is the pullback of the Maurer-Cartan form by the extension Γt of γt .
+Consider the (connection) 1-form37
+                            Z
+(A.19)         αγ (ξ) = 2πi hΞ ∧ dΦi,        γ : S → G, ξ ∈ Ω0S (g),
+                                D
+
+where Γ : D → G and Ξ ∈ Ω0D (g) are the given extensions of γ and ξ, and Φ = Γ∗ θ.
+If Γ̃ is a different extension of γ, and it induces the extension Ξ̃ of ξ, then the
+trivialization of K changes by the inverse of the cocycle (A.6). The logarithmic
+differential of this cocycle is computed by (A.12) as
+                                Z               Z
+                         −2πi hΞ̃ ∧ dΦ̃i + 2πi hΞ ∧ dΦi,
+                                  D                          D
+
+which is precisely −(α̃ − α), minus the difference of the connection forms relative to
+the two trivializations. This consistency shows that α defines a unitary connection
+on K → Map(S, G).
+   36 The sign in (A.18) caused the author great confusion. It is simply explained by the obser-
+
+vation
+                       ∂(−[0, 1] × D) = −{1} × D ∪ {0} × D ∪ [0, 1] × S.
+
+    37 Recall that parallel transport is the integral of minus the connection form relative to a
+
+trivialization.
+                                              54
+  Now if ξ1 , ξ2 ∈ Ω0S (g) with extensions Ξ1 , Ξ2 ∈ Ω0D (g), then the derivative of
+hΞ2 ∧ dΦi in the direction Ξ1 is
+
+                        hΞ2 ∧ dΦ̇i = hΞ2 ∧ −d[Ξ1 , Φ]i
+                                   = h[dΞ1 , Ξ2 ] ∧ Φi + h[Ξ1 , Ξ2 ] ∧ dΦi
+
+by (A.13). Hence the curvature times i/2π is
+                        Z
+ i                                                                                                       
+   dαγ (ξ1 , ξ2 ) = −        h[dΞ1 , Ξ2 ] ∧ Φi + h[Ξ1 , Ξ2 ] ∧ dΦi − h[dΞ2 , Ξ1 ] ∧ Φi + h[Ξ2 , Ξ1 ] ∧ dΦi − h[Ξ1 , Ξ2 ] ∧ dΦi
+2π
+                        ZD
+                =−    h[dΞ1 , Ξ2 ] ∧ Φi + h[Ξ1 , dΞ2 ] ∧ Φi + h[Ξ1 , Ξ2 ] ∧ dΦi
+                   ZD
+                = − h[ξ1 , ξ2 ] ∧ φi.
+                         S
+
+   The assertion about the action of the center is one of the defining properties of
+a connection form on a circle bundle—it is invariant under the T action. Formu-
+las (A.16) and (A.17) follow most easily by computing the parallel transport (A.18)
+along γ0 γ and γγ0 , using (A.10). Alternatively, compute directly with (A.19), but
+include a factor (A.7) for the identification of tensor products.
+
+
+
+
+                                               55
+               §B Appendix: Functions of paths and 1-forms
+    Let N be a smooth manifold, possibly infinite dimensional, and P(N ) the space
+of smooth parametrized paths ℓ : [0, 1] → N . Then P(N ) is also a smooth manifold;
+a tangent to a path ℓ is a vector field v(t) ∈ Tℓ(t) N along ℓ. A function g : P(N ) → R
+                                                                               
+is invariant under reparametrization if g(ℓ̃) = g(ℓ), where ℓ̃(t) = ℓ s(t) for some
+diffeomorphism s : [0, 1] → [0, 1] which fixes the endpoints. Suppose g is such a
+function, ℓ is any path, and ti are chosen with 0 = t0 ≤ t1 ≤ · · · ≤ tM = 1. Let
+ℓi = ℓ [ti−1 ,ti ] . Then we call g additive if
+                                                 M
+                                                 X
+                                        g(ℓ) =         g(ℓi ),
+                                                 i=1
+
+where g(ℓi ) makes sense as g is invariant under reparametrization. A point path is
+a constant function ℓ : [0, 1] → N .
+Proposition B.1. Suppose g : P(N ) → R is a smooth function such that: (i)
+g vanishes on point paths; (ii) g is invariant under reparametrization; and (iii) g is
+additive. Then there is a smooth 1-form θ on N such that
+                                             Z
+(B.2)                                 g(ℓ) = θ.
+                                                       ℓ
+
+Proof. Let π : T N → N be the projection, and define the linear inclusion
+                                   i : T N −→ T P(N )
+                                           v 7−→ (t 7→ tv),
+where t 7→ tv is a tangent vector to the constant path at π(v). Now set
+                                                
+(B.3)                             θ(v) = dg i(v) .
+Since g is smooth, so is θ; and θ is linear since i and dg are. Hence θ is a smooth
+1-form on N . Fix a path ℓ and a large integer M . Set ℓi = ℓ [ i−1 , i ] . Then by
+                                                                   M  M
+additivity,
+                                                 M
+                                                 X
+(B.4)                                   g(ℓ) =         g(ℓi ).
+                                                 i=1
+
+Reparametrize ℓi by
+                                        t+i−1
+                         ℓi (t) = ℓ(          ),             0 ≤ t ≤ 1,
+                                          M
+and set
+                                    ǫt + i − 1
+                         ℓǫi (t) = ℓ(          ),     0 ≤ t ≤ 1.
+                                        M
+Then ǫ 7→ ℓǫ , 0 ≤ ǫ ≤ 1, is a smooth path in P(N ) from the point path at ℓ( i−1M )
+                                                    t    i−1
+to ℓi . The tangent to this path at ǫ = 0 is t 7→ M ℓ̇( M ). By Taylor’s theorem and
+the definition (B.3) of θ,
+                                    1        i−1          1
+(B.5)                      g(ℓi ) =    θ ℓ̇(      ) + O( 2 ).
+                                    M         M           M
+Finally, combine (B.4) and (B.5) and take M → ∞ to obtain (B.2).
+                                                 56
+Corollary B.6. Let L → M be a smooth hermitian line bundle. Suppose that for
+each path ℓ̄ ∈ P(M ) there is given an isometry
+
+(B.7)                          PT(ℓ) : Lℓ̄(0) −→ Lℓ̄(1)
+
+depending smoothly on ℓ such that: (i) PT is the identity map on point paths; (ii)
+PT is invariant under reparametrization; and (iii) PT is additive. Then there is a
+unitary connection on L for which PT is the parallel transport.
+Proof. Let N ⊂ L be the vectors of unit norm. Then N → M is a circle bundle.
+If ℓ ∈ P(N ) is a smooth path in N , then its projection ℓ̄ is a smooth path in M .
+Using the parallel transport (B.7) we find an element PT(ℓ̄)ℓ(0) ∈ Lℓ̄(1) of unit
+norm. Hence it differs from ℓ(1) by an element h(ℓ) ∈ C of unit norm:
+
+(B.8)                         ℓ(1) = PT(ℓ̄)ℓ(0) · h(ℓ),
+
+where the multiplication · occurs in the fiber Lℓ̄(1) . In other words, h determines a
+smooth function
+                                  h : P(N ) −→ T
+into the unit complex numbers. The hypotheses imply: (i) h ≡ 1 on point paths;
+(ii) h is invariant under reparametrization; and (iii) h is additive. In addition, we
+claim that h has a logarithm; that is, there exists a function g : P(N ) → iR with
+h(ℓ) = eg(ℓ) . This is because P(N ) retracts onto the space of constant paths and
+h ≡ 1 on constant paths. Therefore, by Proposition B.1 there exists a smooth
+(imaginary) 1-form θ on N such that
+                                              R
+                                    h(ℓ) = e ℓ θ .
+
+From (B.8) it is obvious that the restriction of θ to a fiber of the circle bundle
+N → M is the standard Maurer-Cartan form on the circle. Similarly, from (B.8)
+we see that h is invariant under the circle action on N , whence θ is also. Therefore,
+θ is a connection on N and (B.7) is the associated parallel transport.
+
+
+
+
+                                         57
+                                       References
+[A]    M. F. Atiyah, Topological quantum field theory, Publ. Math. Inst. Hautes Etudes Sci.
+       (Paris) 68 (1989), 175–186.
+[AB]   M. F. Atiyah, R. Bott, The Yang-Mills equations over Riemann surfaces, Philos. Trans.
+       Roy. Soc. London Ser. A 308 (1983), 523–615.
+[Ar]   V. I. Arnold, Mathematical Methods of Classical Mechanics, Second Edition, Springer-
+       Verlag, New York, 1989.
+[Ax]   S. Axelrod, Geometric quantization of Chern-Simons gauge theory, Princeton thesis
+       (1991).
+[BTau] R. Bott, C. Taubes, On the rigidity theorems of Witten, Jour. Amer. Math Soc. 2 (1989),
+       137–186.
+[BT]   R. Bott, L. W. Tu, Differential Forms in Algebraic Topology, Springer-Verlag, New York,
+       1982.
+[Ch]   S. X.-D. Chang, Determinant line bundles and Riemann surfaces with boundaries (preprint).
+[CS]   S. S. Chern, J. Simons, Characteristic forms and geometric invariants, Ann. Math. 99
+       (1974), 48–69.
+[CF]   P. E. Conner, E. E. Floyd, The Relationship of Cobordism to K-Theories, Lecture Notes
+       in Mathematics, vol. 28, Springer-Verlag, 1966.
+[DasW] G. Daskalopoulos, R. Wentworth, Geometric quantization for the moduli space of vector
+       bundles with parabolic structure (preprint).
+[DW]   R. Dijkgraaf, E. Witten, Topological gauge theories and group cohomology, Commun.
+       Math. Phys. 129 (1990), 393–429.
+[Fey]  R. P. Feynman, R. B. Leighton, M. Sands, The Feynman Lectures on Physics, Volume 2,
+       Addison-Wesley, Reading, Massachusetts, 1964.
+[F1]   D. S. Freed, Higher line bundles (in preparation).
+[F2]   D. S. Freed, Classical Chern-Simons theory, Part 2 (in preparation).
+[FQ]   D. S. Freed, F. Quinn, Chern-Simons theory with finite gauge group, Commun. Math.
+       Phys. (to appear).
+[G]    W. M. Goldman, The symplectic nature of fundamental groups of surfaces, Adv. in Math.
+       54 (1984), 200–225.
+[Ga]   K. Gawȩdzki, Topological actions in two-dimensional quantum field theories, ??? (G. ’t
+       Hooft et. al., eds.), Plenum Press, 1988, pp. 101–141.
+[GS]   V. Guillemin, S. Sternberg, Symplectic Techniques in Physics, Cambridge University
+       Press, New York, 1984.
+[JW]   L. C. Jeffrey, J. Weitsman, Bohr-Sommerfeld orbits in the moduli space of flat connections
+       and the Verlinde dimension formula (preprint).
+[MeS] V. Mehta, C. Seshadri, Moduli of vector bundles on curves with parabolic structures,
+       math. Ann 248 (1980), 205–239.
+[M]    J. Mickelsson, Kac-Moody groups and the Dirac determinant line bundle, Topological
+       and geometrical methods in field theory (Espoo, 1986), World Sci. Publishing, Teaneck,
+       NJ, 1986.
+[MS]   G. Moore, N. Seiberg, Taming the conformal zoo, Physics Letters B 220 (1989), 422–30.
+[NS]   M. S. Narasimhan, C. S. Seshadri, Stable and unitary vector bundles on compact Riemann
+       surfaces, Ann. Math. 65 (1965), 540–67.
+[Po]   J. A. Poritz, The moduli space of stable vector bundles on a punctured Riemann surface
+       (in preparation).
+[PS]   A. Pressley, G. Segal, Loop Groups, Oxford University Press, New York, 1986.
+[RSW] T. R. Ramadas, I. M. Singer, J. Weitsman, Some comments on Chern-Simons gauge
+       theory, Commun. Math. Phys. 126 (1989), 409.
+[S]    G. Segal, The definition of conformal field theory (preprint).
+[V]    E. Verlinde, Fusion rules and modular transformations in 2d conformal field theory, Nucl.
+       Phys. B 300 (1988), 360.
+[Wal]  K. Walker, On Witten’s 3-manifold invariants (preprint).
+[W]    E. Witten, Quantum field theory and the Jones polynomial, Commun. Math. Phys. 121
+       (1989), 351–399.
+
+      Department of Mathematics, University of Texas, Austin, TX 78712
+      E-mail address: dafr@math.utexas.edu
+                                              58
+

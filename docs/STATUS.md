@@ -80,6 +80,18 @@ Verified:
 - Connectedness is labelled as a project strengthening of the terse Clay wording; abstract-group
   simplicity and simple connectedness are not imposed.
 
+## 2026-07-17 — gauge-geometry provenance stone
+
+Verified:
+
+- Daniel Freed's versioned `hep-th/9206021v1` PDF and reproducible Poppler text extraction are
+  pinned and hashed.
+- Printed pp. 6–9, §1 supply exact locators for principal bundles, gauge transformations,
+  connection forms, curvature, Bianchi identity, and gauge covariance.
+- The ledger confines this Chern–Simons paper to its general connection-geometry review and does
+  not use it as evidence for Yang–Mills existence, action semantics, or a mass gap.
+- No geometry declaration was added merely because the source is now available.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
@@ -92,7 +104,7 @@ Not yet achieved:
   `git@github.com:elmismisimoxhunca/lean-yangmills-adaly.git` does not exist, and the available SSH
   credential was scoped to the retired repository. Local commits can proceed; remote publication
   remains an explicit infrastructure blocker.
-- Clay, Hall, and Aharony–Seiberg–Tachikawa artifacts are pinned. Principal-bundle, curvature,
+- Clay, Hall, Aharony–Seiberg–Tachikawa, and Freed artifacts are pinned. Yang–Mills action,
   OS/Wightman, spectral, observable, and lattice sources remain to be independently acquired and
   verified before their corresponding declarations become canonical.
 

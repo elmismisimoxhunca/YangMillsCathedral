@@ -1,0 +1,65 @@
+# Freed principal-bundle and connection source pin
+
+## Identity
+
+- Daniel S. Freed, **Classical Chern-Simons theory, Part 1**.
+- arXiv:hep-th/9206021v1 (1992).
+- Published in *Advances in Mathematics* 113 (1995), 237–303.
+- DOI: <https://doi.org/10.1006/aima.1995.1039>.
+- Versioned artifact URL: <https://arxiv.org/pdf/hep-th/9206021v1>.
+- Retrieved at the UTC time in `FETCH_TIMESTAMP.txt` with
+  `curl --proto '=https' --tlsv1.2 -fL --retry 3`.
+- Text produced by `pdftotext -layout` 25.03.0.
+
+## Load-bearing locators
+
+Printed p. 6, §1; extracted text lines 318–319:
+
+- a principal `G`-bundle `P → X` is described by a manifold `P` with a free right `G`-action and
+  quotient `X`.
+
+Printed p. 7, §1; extracted text lines 323–348:
+
+- each fiber is a simply transitive right `G`-space;
+- principal bundles are locally trivial.
+
+Printed p. 7, §1; extracted text lines 361–371:
+
+- a principal-bundle map is smooth and equivariant;
+- an automorphism over the identity of the base is a gauge transformation.
+
+Printed p. 8, §1; extracted text lines 376–380:
+
+- gauge transformations form a group;
+- pullback bundles along smooth base maps are distinguished from gauge automorphisms.
+
+Printed p. 8, §1, equations (1.9)–(1.16); extracted text lines 381–419:
+
+- a connection is a Lie-algebra-valued one-form satisfying vertical normalization and right
+  equivariance;
+- curvature is `Ω = dΘ + 1/2 [Θ ∧ Θ]` in equation (1.13);
+- curvature is horizontal and equivariant;
+- equation (1.16) is the Bianchi identity.
+
+Printed p. 9, §1, equations (1.18)–(1.19); extracted text lines 434–447:
+
+- bundle maps pull back connections;
+- gauge transformations act affinely on connection forms;
+- curvature transforms tensorially by the adjoint action.
+
+## Formalization decision
+
+This source will control the reusable principal-bundle, gauge-transformation, principal-connection,
+curvature, Bianchi, and gauge-covariance interfaces. Freed's compact-group setting is compatible
+with the gauge-group layer, but the general mathematical definitions will be packaged independently
+of the eventual Yang–Mills acceptance record.
+
+The paper's subject is Chern–Simons theory. Section 1 explicitly reviews general principal-bundle
+connection geometry and is used only for those definitions and identities. It is not evidence for a
+four-dimensional Yang–Mills construction, an action functional, quantum existence, or a mass gap.
+The paper notes that later parts specialize to connected simply connected groups; the project does
+not import that specialization into its global-form policy.
+
+Mathlib currently has no principal-bundle/connection-form/curvature stack matching these locators.
+New code must therefore expose freeness, fiber transitivity, local triviality, smooth equivariance,
+form degree, and pullback/gauge covariance rather than hiding them in an arbitrary proposition.

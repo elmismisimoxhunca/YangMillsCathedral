@@ -21,7 +21,7 @@ committed before higher layers depend on it.
 ## Phase 2 — gauge geometry
 
 - [x] Pin authoritative Lie-algebra simplicity and gauge-global-form sources.
-- [ ] Pin authoritative principal-bundle, connection and curvature sources.
+- [x] Pin authoritative principal-bundle, connection and curvature sources.
 - [x] Define compact-simple Lie-group semantics and global-form policy.
 - [x] Adopt and source-map Mathlib's ideal/non-abelian Lie-algebra simplicity interface.
 - [ ] Define principal bundles, gauge transformations, connections and curvature.

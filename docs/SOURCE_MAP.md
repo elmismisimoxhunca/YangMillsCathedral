@@ -57,6 +57,25 @@ inhabitant of `CompactSimpleGaugeGroupData`: Mathlib supplies algebraic matrix `
 needed manifold, compactness, connectedness, tangent identification, and simplicity chain. This is
 open positive-consistency infrastructure, not an existence claim about Yang–Mills theory.
 
+## Principal-bundle and connection evidence
+
+Artifact: `Sources/GaugeGeometry/Freed1992/classical_chern_simons_part1.pdf`
+Searchable extraction: `Sources/GaugeGeometry/Freed1992/classical_chern_simons_part1.txt`
+
+| Source locator | Requirement | Classification | Lean declaration | Status / decision |
+|---|---|---|---|---|
+| Freed p. 6 §1; text 318–319 | principal bundle has a free right action and quotient base | Reusable definition | — | Source pinned; Mathlib lacks the complete interface, so implementation is pending |
+| Freed p. 7 §1; text 323–348 | fibers are simply transitive right `G`-spaces and the bundle is locally trivial | Reusable definition | — | Pending principal-bundle layer |
+| Freed p. 7 §1; text 361–371 | smooth equivariant bundle maps; gauge transformations are automorphisms over the base identity | Reusable definition / distinction | — | Pending principal-bundle layer |
+| Freed p. 8 §1; text 376–380 | gauge transformations form a group; pullback along a base map remains distinct | Reusable definition / distinction | — | Pending principal-bundle layer |
+| Freed p. 8 §1, (1.9)–(1.12); text 381–398 | connection form has vertical normalization and right equivariance | Reusable definition | — | Pending differential-form and principal-connection infrastructure |
+| Freed p. 8 §1, (1.13)–(1.16); text 399–419 | curvature formula, horizontality/equivariance, and Bianchi identity | Definition / derived theorem | — | Pending exterior derivative, wedge-bracket, and curvature layer |
+| Freed p. 9 §1, (1.18)–(1.19); text 434–447 | gauge action on connections is affine; curvature transforms by the adjoint action | Bridge / derived covariance | — | Pending pullback and gauge-action infrastructure |
+
+Freed's paper concerns Chern–Simons theory; only its general §1 connection geometry is used here.
+It is not a source for the Yang–Mills action, quantum existence, or a mass gap. No declaration in
+this section is canonical yet, and no arbitrary placeholder proposition has been introduced.
+
 ## Dimension-foundation decisions
 
 | Lean declaration | Meaning | Source / decision | Classification | Hostile evidence |
