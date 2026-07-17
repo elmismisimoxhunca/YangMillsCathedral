@@ -75,6 +75,8 @@ import YangMills.Geometry.AdjointBundleDifferentialForm
 import YangMills.Geometry.AdjointBundleDifferentialFormProbes
 import YangMills.Geometry.AdjointBundleSmoothDifferentialForm
 import YangMills.Geometry.AdjointBundleSmoothDifferentialFormProbes
+import YangMills.Geometry.AdjointBundleDegreeZeroForm
+import YangMills.Geometry.AdjointBundleDegreeZeroFormProbes
 import YangMills.Geometry.PrincipalBundleTorsor
 import YangMills.Geometry.PrincipalBundleTorsorProbes
 import YangMills.Geometry.PrincipalBundleMap

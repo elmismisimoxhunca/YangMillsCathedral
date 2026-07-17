@@ -62,6 +62,7 @@ committed before higher layers depend on it.
 - [x] Define dependent adjoint-bundle sections and their exact smooth local-coordinate criterion.
 - [x] Define pointwise adjoint-bundle-valued differential forms in actual dependent fibers.
 - [x] Define smooth adjoint-bundle-valued forms by exact local field evaluation.
+- [x] Prove the exact degree-zero form/section carrier and smoothness bridge.
 - [ ] Add tangent-lift and curvature-descent infrastructure.
 - [ ] Derive structural curvature laws automatically and prove gauge covariance and Bianchi.
 

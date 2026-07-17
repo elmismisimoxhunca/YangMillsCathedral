@@ -809,6 +809,21 @@ Verified:
 - Covariant differentiation, tangent lifts, the horizontal-equivariant correspondence, and curvature
   descent remain pending; no curvature field witness is introduced.
 
+## 2026-07-17 — forty-sixth mathematical stone: degree-zero form/section coherence
+
+Verified:
+
+- `DifferentialForm.ofSection` and `.toSection` identify dependent adjoint sections with degree-zero
+  adjoint-bundle-valued forms using Mathlib's empty-index continuous alternating map.
+- `toSection_ofSection` and `ofSection_toSection` prove exact carrier round trips.
+- `coordinateEvaluation_ofSection` proves that degree-zero form coordinates are exactly the existing
+  transported section coordinates on every designated chart domain.
+- `isSmooth_ofSection_iff` proves both directions between local field-evaluation smoothness and
+  Mathlib total-space smoothness of the corresponding section.
+- Hostile probes reject changed round trips, smoothness disconnected in either direction, and
+  replacement degree-zero coordinates.
+- No nonzero section or form is constructed; tangent lifts and curvature descent remain pending.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
