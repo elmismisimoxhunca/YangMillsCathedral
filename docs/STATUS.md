@@ -264,6 +264,20 @@ Verified:
   term order, factor two, alternation, and the zero case.
 - No exterior derivative, curvature, connection witness, or Yang–Mills field is constructed.
 
+## 2026-07-17 — sixteenth mathematical stone: tangent Lie-bracket continuity bridge
+
+Verified:
+
+- `instContinuousLieBracketGroupLieAlgebra` transports Mathlib's tangent Lie bracket to the
+  finite-dimensional normed model, packages its two linear variables as continuous linear maps,
+  and transports joint continuity back to the intrinsic tangent Lie algebra.
+- The bridge uses the actual `GroupLieAlgebra` bracket, not a parallel user-supplied operation.
+- Probes force the bracket continuity theorem and confirm that tangent-Lie-algebra-valued one-forms
+  reach the concrete bracket-wedge construction, including its zero case.
+- Finite-dimensionality internally supplies Mathlib's formal `CompleteSpace` prerequisite; a probe
+  verifies the project's usual `C∞` context and its explicit smoothness downgrade.
+- No concrete gauge group, connection, exterior derivative, or curvature is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
