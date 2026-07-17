@@ -894,6 +894,22 @@ Verified:
 - Specialization to the certified principal curvature and smoothness of the descended base form
   remain pending; neither is claimed by this generic pointwise construction.
 
+## 2026-07-17 — fifty-first mathematical stone: certified pointwise curvature descent
+
+Verified:
+
+- `PrincipalConnectionData.pointwiseBaseCurvature` specializes the generic pointwise descent to the
+  exact `connection.curvatureForm exterior`, not a caller-selected principal form.
+- `pointwiseBaseCurvature_eq` makes that definitional tie explicit.
+- `_quotient` exposes the exact selected local-section/lift representative of the derived curvature.
+- `_quotient_eq_rightRelated` uses the structure certificate indexed by that same curvature to prove
+  agreement with every right-related presentation and matching lift tuple.
+- `_evalTwo_same` proves alternation survives descent.
+- Hostile probes reject unrelated principal forms, replacement quotient representatives,
+  right-related certificate mismatches, and loss of alternation.
+- Smoothness of the descended base curvature remains pending; no connection, exterior-derivative
+  datum, or structure certificate witness is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

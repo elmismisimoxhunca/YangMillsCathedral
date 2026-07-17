@@ -135,8 +135,10 @@ Horizontality is proved to make two-form evaluation independent of tangent-lift 
 total-space point. Right adjoint equivariance is then proved to identify the resulting values in the
 actual adjoint orbit quotient across right-related representatives, including replacement lifts with
 matching projections. A pointwise dependent-fiber base form is now constructed from the selected
-local section/lifts and proved to agree with all such right-related presentations. Specialization to
-the certified curvature and smoothness of the descended base form remain pending.
+local section/lifts and proved to agree with all such right-related presentations. This construction
+is specialized to the exact curvature derived from one connection and exterior-derivative datum,
+with presentation independence supplied by its indexed structure certificate. Smoothness of the
+descended base curvature remains pending.
 `PrincipalTwoForm.IsHorizontal`, `.IsRightAdEquivariant`, and the connection-indexed
 `PrincipalCurvatureStructureCertificate` state (1.15) and (1.14) intrinsically without accepting an
 unrelated curvature field. This is a requirement surface: automatic derivation from the current

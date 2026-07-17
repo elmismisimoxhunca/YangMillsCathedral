@@ -67,7 +67,8 @@ committed before higher layers depend on it.
 - [x] Prove lift-independence for horizontal principal two-forms.
 - [x] Prove adjoint-quotient representative independence under right translation.
 - [x] Construct the pointwise dependent-fiber descent of horizontal equivariant two-forms.
-- [ ] Specialize to certified curvature and prove smoothness of the descended form.
+- [x] Specialize pointwise descent to the exact certified principal curvature.
+- [ ] Prove smoothness of the descended curvature form.
 - [ ] Derive structural curvature laws automatically and prove gauge covariance and Bianchi.
 
 ## Phase 3 — classical Yang–Mills semantics
