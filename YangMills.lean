@@ -16,6 +16,8 @@ import YangMills.Geometry.PrincipalBundleTorsor
 import YangMills.Geometry.PrincipalBundleTorsorProbes
 import YangMills.Geometry.PrincipalBundleMap
 import YangMills.Geometry.PrincipalBundleMapProbes
+import YangMills.Geometry.TopologicalPrincipalBundle
+import YangMills.Geometry.TopologicalPrincipalBundleProbes
 import YangMills.Audit
 
 /-!

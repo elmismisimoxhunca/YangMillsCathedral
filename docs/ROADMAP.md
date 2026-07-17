@@ -26,7 +26,8 @@ committed before higher layers depend on it.
 - [x] Adopt and source-map Mathlib's ideal/non-abelian Lie-algebra simplicity interface.
 - [x] Define and probe the reusable fiberwise torsor core (not a full principal bundle).
 - [x] Define algebraic bundle maps and gauge automorphisms (smoothness still pending).
-- [ ] Define principal bundles, smooth gauge transformations, connections and curvature.
+- [x] Define and probe topological equivariant local trivializations.
+- [ ] Define smooth principal bundles, smooth gauge transformations, connections and curvature.
 - [ ] Prove structural curvature and gauge-covariance results.
 
 ## Phase 3 — classical Yang–Mills semantics

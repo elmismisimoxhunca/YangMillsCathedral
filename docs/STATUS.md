@@ -123,13 +123,30 @@ Verified:
   gauge candidates; identity and inverse probes give positive consistency evidence.
 - Every name and ledger row labels this as algebraic: no smooth gauge transformation is claimed.
 
+## 2026-07-17 — seventh mathematical stone: topological principal bundles
+
+Verified:
+
+- `PrincipalBundleLocalTrivialization` is an open partial homeomorphism to `baseSet × G` whose
+  source is exactly the projection preimage and whose coordinates preserve projection and right
+  multiplication.
+- `TopologicalPrincipalBundleData` requires continuous projection/action and a designated atlas
+  with a selected chart covering every base point.
+- Selected chart sources are proved to cover the entire total carrier, and right action preserves
+  each applicable chart source.
+- The global product `B × G → B` gives a concrete topological principal-bundle constructor for any
+  topological group.
+- Hostile probes independently reject discontinuity, selected charts outside the designated atlas,
+  missing coverage, malformed source/target sets, and failed local equivariance.
+- No smooth chart compatibility, smooth gauge map, connection, or curvature is inferred.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
   `SU(n)` API does not supply the complete manifold/compactness/connectedness/tangent-simplicity
   chain, so positive consistency infrastructure remains open.
-- No topological/smooth principal-bundle local-triviality layer, connection, curvature,
-  symmetry-group, quantum-theory, acceptance, existence, or mass-gap declaration exists.
+- No smooth principal-bundle compatibility layer, smooth gauge transformation, connection,
+  curvature, symmetry-group, quantum-theory, acceptance, existence, or mass-gap declaration exists.
 - No Yang–Mills acceptance declaration exists.
 - No standalone Git remote exists or has been pushed. The tested candidate
   `git@github.com:elmismisimoxhunca/lean-yangmills-adaly.git` does not exist, and the available SSH
