@@ -44,7 +44,9 @@ committed before higher layers depend on it.
 - [x] Derive representative-independent adjoint-bundle local coordinate and inverse laws.
 - [x] Isolate joint adjoint continuity and conditionally package topological local trivializations.
 - [x] Derive smooth adjoint regularity from parameter-dependent manifold differentiation.
-- [ ] Package smooth adjoint-vector-bundle trivializations.
+- [x] Promote quotient charts to Mathlib's generic bundle-trivialization interface.
+- [ ] Build a smooth fiberwise-linear atlas on the quotient carrier.
+- [ ] Bridge the quotient to dependent fibers and package a smooth adjoint vector bundle.
 - [ ] Add adjoint-bundle-valued form and curvature-descent infrastructure.
 - [ ] Derive structural curvature laws automatically and prove gauge covariance and Bianchi.
 

@@ -99,8 +99,9 @@ also induces representative-independent set-level coordinates `(π(p), Ad(k)X)` 
 at group coordinate `1`, with both local inverse laws proved. Smoothness of the parameter-dependent
 adjoint map in model coordinates is derived from Mathlib's `ContMDiffAt.mfderiv`; the retained
 `ContinuousLieGroupAdjointData` interface therefore has a canonical general inhabitant. Each chart
-packages as an open partial homeomorphism using that derived regularity. Smooth vector-bundle
-structure is not attributed to those coordinates.
+packages as an open partial homeomorphism using that derived regularity and promotes exactly to
+Mathlib's generic `Bundle.Trivialization` interface on the same quotient carrier and topology.
+Neither a `FiberBundle` nor smooth vector-bundle structure is attributed to those coordinates.
 `PrincipalTwoForm.IsHorizontal`, `.IsRightAdEquivariant`, and the connection-indexed
 `PrincipalCurvatureStructureCertificate` state (1.15) and (1.14) intrinsically without accepting an
 unrelated curvature field. This is a requirement surface: automatic derivation from the current

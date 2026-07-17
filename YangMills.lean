@@ -43,6 +43,8 @@ import YangMills.Geometry.AdjointBundleLocalCoordinates
 import YangMills.Geometry.AdjointBundleLocalCoordinatesProbes
 import YangMills.Geometry.AdjointBundleLocalTrivialization
 import YangMills.Geometry.AdjointBundleLocalTrivializationProbes
+import YangMills.Geometry.AdjointBundleTrivialization
+import YangMills.Geometry.AdjointBundleTrivializationProbes
 import YangMills.Geometry.PrincipalBundleTorsor
 import YangMills.Geometry.PrincipalBundleTorsorProbes
 import YangMills.Geometry.PrincipalBundleMap

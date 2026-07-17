@@ -486,6 +486,25 @@ Verified:
 - This is reusable manifold calculus only. It constructs no gauge group, principal bundle,
   connection, curvature, or Yang–Mills field.
 
+## 2026-07-17 — twenty-eighth mathematical stone: generic adjoint-bundle trivializations
+
+Verified:
+
+- `AdjointBundle.bundleTrivialization` promotes each canonical quotient local homeomorphism to
+  Mathlib's `Bundle.Trivialization` interface without changing the adjoint quotient carrier or its
+  quotient topology.
+- The promoted base set, source, target, forward coordinate, inverse coordinate, and projection law
+  are definitionally tied to the existing principal chart and representative-independent adjoint
+  coordinates.
+- The principal bundle's selected chart at each base point induces a selected associated
+  trivialization covering that point.
+- Selected associated trivialization sources cover the entire adjoint quotient.
+- Hostile probes reject malformed base sets, shrunken sources, truncated fibers, disconnected maps,
+  missed points, and an empty selected cover.
+- This is deliberately only generic bundle-trivialization packaging. No `FiberBundle`,
+  `VectorBundle`, charted manifold, smooth vector bundle, section, or descended curvature is
+  claimed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
