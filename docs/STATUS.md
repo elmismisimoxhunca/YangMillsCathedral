@@ -336,13 +336,32 @@ Verified:
 - This remains a certified `1 → 2` interface: no canonical general-degree arbitrary-manifold
   exterior derivative, principal curvature, connection witness, or Yang–Mills field is constructed.
 
+## 2026-07-17 — twentieth mathematical stone: derived principal curvature
+
+Verified:
+
+- Addition and real scalar multiplication preserve `SmoothManifoldDifferentialForm.IsSmooth` and
+  retain the exact pointwise operations.
+- `PrincipalConnectionExteriorDerivativeData` ties a Cartan certificate to the unchanged smooth
+  one-form of one `PrincipalConnectionData`; it cannot name an unrelated connection form.
+- `PrincipalConnectionData.curvatureForm` derives a smooth degree-two form as
+  `dΘ + 1/2 [Θ ∧ Θ]`, exactly Freed (1.13).
+- `curvatureForm_apply` uses the proved factor-two self-wedge normalization to reduce pointwise
+  evaluation to `dΘ(v₀,v₁) + [Θ(v₀), Θ(v₁)]`.
+- Hostile probes reject nonsmooth, formula-disconnected, factor-confused, and nonalternating
+  curvature candidates; no standalone curvature witness field exists.
+- No principal connection, exterior-derivative certificate for a nonzero connection, curvature
+  witness, horizontality/equivariance theorem, Bianchi identity, gauge covariance, or Yang–Mills
+  field is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
   `SU(n)` API does not supply the complete manifold/compactness/connectedness/tangent-simplicity
   chain, so positive consistency infrastructure remains open.
-- No general smooth bundle-map layer, concrete principal-connection witness, curvature,
-  symmetry-group, quantum-theory, acceptance, existence, or mass-gap declaration exists.
+- No general smooth bundle-map layer, concrete principal-connection/curvature witness,
+  curvature horizontality/equivariance/Bianchi/gauge-covariance result, symmetry-group,
+  quantum-theory, acceptance, existence, or mass-gap declaration exists.
 - No Yang–Mills acceptance declaration exists.
 - No standalone Git remote exists or has been pushed. The tested candidate
   `git@github.com:elmismisimoxhunca/lean-yangmills-adaly.git` does not exist, and the available SSH

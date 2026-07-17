@@ -25,6 +25,8 @@ import YangMills.Mathematics.NormedSpaceExteriorDerivative
 import YangMills.Mathematics.NormedSpaceExteriorDerivativeProbes
 import YangMills.Mathematics.SmoothManifoldDifferentialForms
 import YangMills.Mathematics.SmoothManifoldDifferentialFormsProbes
+import YangMills.Mathematics.SmoothManifoldDifferentialFormOperations
+import YangMills.Mathematics.SmoothManifoldDifferentialFormOperationsProbes
 import YangMills.Mathematics.SmoothLieBracketWedge
 import YangMills.Mathematics.SmoothLieBracketWedgeProbes
 import YangMills.Geometry.LieGroup
@@ -41,6 +43,8 @@ import YangMills.Geometry.SmoothGaugeTransformation
 import YangMills.Geometry.SmoothGaugeTransformationProbes
 import YangMills.Geometry.PointwisePrincipalConnection
 import YangMills.Geometry.PointwisePrincipalConnectionProbes
+import YangMills.Geometry.PrincipalCurvature
+import YangMills.Geometry.PrincipalCurvatureProbes
 import YangMills.Audit
 
 /-!

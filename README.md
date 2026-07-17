@@ -92,10 +92,9 @@ certificate type and semantics, the fiberwise torsor core, algebraic bundle maps
 automorphisms, topological and smooth equivariant local trivializations, derived open-quotient
 projection and smooth overlap-transition theorems, smooth gauge automorphisms, the Lie-group adjoint
 action, a typed pointwise manifold differential-form carrier, local-model exterior derivative and
-an arbitrary-manifold one-form Cartan certificate, a smoothly closed Lie-bracket wedge and
-finite-dimensional tangent-bracket continuity/smoothness
-bridges, smooth differential-form regularity, and
-pointwise and smooth principal connection-form definitions
-are implemented. No concrete gauge-group or connection witness, symmetry group, curvature,
-reconstruction bridge, quantum-theory witness, Yang–Mills existence claim, or mass-gap claim is
-present.
+an arbitrary-manifold one-form Cartan certificate, a smoothly closed Lie-bracket wedge,
+finite-dimensional tangent-bracket continuity/smoothness bridges, smooth differential-form
+regularity, pointwise and smooth principal connection-form definitions, and the derived principal
+curvature formula are implemented. No concrete gauge-group, connection, or curvature witness,
+symmetry group, reconstruction bridge, quantum-theory witness, Yang–Mills existence claim, or
+mass-gap claim is present.
