@@ -31,6 +31,8 @@ import YangMills.Mathematics.SmoothLieBracketWedge
 import YangMills.Mathematics.SmoothLieBracketWedgeProbes
 import YangMills.Geometry.LieGroup
 import YangMills.Geometry.LieGroupProbes
+import YangMills.Geometry.InvariantInnerProduct
+import YangMills.Geometry.InvariantInnerProductProbes
 import YangMills.Geometry.PrincipalBundleTorsor
 import YangMills.Geometry.PrincipalBundleTorsorProbes
 import YangMills.Geometry.PrincipalBundleMap

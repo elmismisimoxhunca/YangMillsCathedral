@@ -354,6 +354,22 @@ Verified:
   witness, horizontality/equivariance theorem, Bianchi identity, gauge covariance, or Yang–Mills
   field is constructed.
 
+## 2026-07-17 — twenty-first mathematical stone: invariant Lie-algebra inner products
+
+Verified:
+
+- `InvariantInnerProductData` records a continuous symmetric positive-definite real bilinear pairing
+  on the intrinsic tangent Lie algebra. Continuity, bilinear symmetry, and positive definiteness are
+  explicit project strengthenings of Clay's terser “invariant quadratic form” wording.
+- Invariance quantifies over `lieGroupAdjoint` for every element of the same explicit group carrier,
+  preserving the gauge group's global form.
+- The associated quadratic value is nonnegative, detects zero exactly, and is adjoint invariant.
+- `positiveScale` proves that positive normalization changes remain admissible; the checker does not
+  pretend Clay's `Tr` convention canonically fixes a scale.
+- Hostile probes reject degenerate, asymmetric, negative, and adjoint-noninvariant pairings.
+- No particular invariant pairing, integral, metric, Hodge star, coupling, action value, or
+  Yang–Mills field is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
@@ -367,9 +383,10 @@ Not yet achieved:
   `git@github.com:elmismisimoxhunca/lean-yangmills-adaly.git` does not exist, and the available SSH
   credential was scoped to the retired repository. Local commits can proceed; remote publication
   remains an explicit infrastructure blocker.
-- Clay, Hall, Aharony–Seiberg–Tachikawa, and Freed artifacts are pinned. Yang–Mills action,
-  OS/Wightman, spectral, observable, and lattice sources remain to be independently acquired and
-  verified before their corresponding declarations become canonical.
+- Clay, Hall, Aharony–Seiberg–Tachikawa, and Freed artifacts are pinned. Clay equation (1) now
+  anchors the action formula and invariant quadratic form, but additional metric/Hodge/integration
+  infrastructure remains pending. OS/Wightman, spectral, observable, and lattice sources remain to
+  be independently acquired and verified before their corresponding declarations become canonical.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

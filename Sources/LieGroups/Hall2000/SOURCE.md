@@ -28,6 +28,13 @@ Printed p. 21, §7, Definition 2.14; extracted text lines 1090–1139:
 - product and inversion are differentiable;
 - the local manifold model is finite dimensional.
 
+Printed pp. 81–82, Proposition 5.17; extracted text lines 4410–4444:
+
+- averaging an arbitrary inner product over a compact group's finite-dimensional representation
+  with finite Haar measure produces an invariant positive inner product;
+- the notes state the result for compact matrix Lie groups and use it to prove complete
+  reducibility.
+
 Printed p. 115, §7; extracted text lines 6087–6099:
 
 - an ideal `I` satisfies `[X,Y] ∈ I` for every `X ∈ g` and `Y ∈ I`;
@@ -46,7 +53,10 @@ ideal to be bottom or top and explicitly requires non-abelianness. It does not i
 group simplicity under the same name. Its Lie-group certificate uses a finite-dimensional real
 smooth manifold with smooth multiplication and inversion, topological compactness, and explicit
 connectedness. Hausdorff and second-countable assumptions make the manifold convention explicit;
-they are formalization choices rather than quotations from Hall.
+they are formalization choices rather than quotations from Hall. Likewise,
+`InvariantInnerProductData` asks for the positive adjoint-invariant pairing whose finite-dimensional
+compact-representation construction is exemplified by Hall Proposition 5.17; the project does not
+claim that the pinned notes prove that construction for its full non-matrix manifold API.
 
 The Hall notes do not interpret the Clay phrase “compact simple gauge group” or decide connectedness
 and global form. Those decisions use the Clay source plus the separately pinned gauge-global-form

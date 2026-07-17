@@ -42,7 +42,8 @@ committed before higher layers depend on it.
 
 ## Phase 3 — classical Yang–Mills semantics
 
-- [ ] Define the invariant inner product and Euclidean action from curvature.
+- [x] Define and probe the adjoint-invariant positive Lie-algebra inner product.
+- [ ] Define the Euclidean action from descended curvature, metric/Hodge, volume and coupling data.
 - [ ] Interpret gauge-invariant local curvature polynomials and covariant derivatives.
 - [ ] Separate local observables from nonlocal Wilson observables.
 - [ ] Add nontrivial positive examples and hostile disconnected-curvature probes.

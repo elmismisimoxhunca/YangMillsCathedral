@@ -27,8 +27,11 @@ review showed that it was a 404 response rather than source content.
 
 ## Load-bearing locators
 
-The printed/PDF page number is six.
+Printed and PDF page locators below refer to the source-of-record artifact.
 
+- PDF p. 2, equation (1), text lines 46–65: classical curvature, Yang–Mills equations, and
+  Lagrangian `1/(4g²) ∫ Tr F ∧ ∗F`, with `Tr` identified as an invariant quadratic form on the
+  Lie algebra of `G`.
 - PDF p. 5, §3: Wightman framework, Poincaré representation, self-adjoint translation generators,
   vacuum, positive energy, covariance and locality.
 - PDF p. 6, §4, text lines 263–271: local fields corresponding to gauge-invariant local
@@ -51,5 +54,8 @@ numbers are convenience locators; the PDF page is authoritative.
 The headline sentence is not the complete acceptance surface: the preceding §4 requirements and
 its footnote are load-bearing. The Clay document also intentionally does not provide a formal
 definition of every term, including the precise global-form convention for “compact simple gauge
-group.” Such choices must be recorded as formalization decisions supported by additional primary
-or authoritative sources. They must not be silently attributed verbatim to Clay.
+group.” In equation (1), it says only that `Tr` is an invariant quadratic form; continuity, a
+symmetric bilinear presentation, and positive definiteness are additional project formalization
+requirements, with compact-representation evidence supplied separately by Hall Proposition 5.17.
+Such choices must be recorded as formalization decisions supported by additional primary or
+authoritative sources. They must not be silently attributed verbatim to Clay.

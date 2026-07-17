@@ -94,7 +94,8 @@ projection and smooth overlap-transition theorems, smooth gauge automorphisms, t
 action, a typed pointwise manifold differential-form carrier, local-model exterior derivative and
 an arbitrary-manifold one-form Cartan certificate, a smoothly closed Lie-bracket wedge,
 finite-dimensional tangent-bracket continuity/smoothness bridges, smooth differential-form
-regularity, pointwise and smooth principal connection-form definitions, and the derived principal
-curvature formula are implemented. No concrete gauge-group, connection, or curvature witness,
+regularity, pointwise and smooth principal connection-form definitions, the derived principal
+curvature formula, and an explicit positive adjoint-invariant Lie-algebra inner-product certificate
+are implemented. No concrete gauge-group, connection, invariant-inner-product, or curvature witness,
 symmetry group, reconstruction bridge, quantum-theory witness, Yang–Mills existence claim, or
 mass-gap claim is present.
