@@ -41,6 +41,46 @@ def lieGroupAdjointCoordinates (g : G) : E →L[ℝ] E :=
       (groupLieAlgebraModelEquiv (G := G) I).symm.toContinuousLinearMap))
 
 omit [IsTopologicalGroup G] in
+/-- The model-coordinate adjoint map as a continuous linear equivalence. Its inverse is the same
+coordinate construction at the inverse group element. -/
+def lieGroupAdjointCoordinatesEquiv (g : G) : E ≃L[ℝ] E where
+  toFun := lieGroupAdjointCoordinates (I := I) g
+  invFun := lieGroupAdjointCoordinates (I := I) g⁻¹
+  map_add' := (lieGroupAdjointCoordinates (I := I) g).map_add
+  map_smul' := (lieGroupAdjointCoordinates (I := I) g).map_smul
+  left_inv X := by
+    let coordinates := groupLieAlgebraModelEquiv (G := G) I
+    change coordinates
+      (lieGroupAdjoint I g⁻¹ (lieGroupAdjoint I g (coordinates.symm X))) = X
+    rw [lieGroupAdjoint_inv_apply]
+    exact coordinates.apply_symm_apply X
+  right_inv X := by
+    let coordinates := groupLieAlgebraModelEquiv (G := G) I
+    change coordinates
+      (lieGroupAdjoint I g (lieGroupAdjoint I g⁻¹ (coordinates.symm X))) = X
+    rw [lieGroupAdjoint_apply_inv]
+    exact coordinates.apply_symm_apply X
+  continuous_toFun := (lieGroupAdjointCoordinates (I := I) g).continuous
+  continuous_invFun := (lieGroupAdjointCoordinates (I := I) g⁻¹).continuous
+
+omit [IsTopologicalGroup G] in
+/-- The forward continuous linear map of the coordinate equivalence is the existing coordinate
+adjoint map. -/
+@[simp]
+theorem lieGroupAdjointCoordinatesEquiv_apply (g : G) (X : E) :
+    lieGroupAdjointCoordinatesEquiv (I := I) g X =
+      lieGroupAdjointCoordinates (I := I) g X :=
+  rfl
+
+omit [IsTopologicalGroup G] in
+/-- The inverse coordinate equivalence is adjoint action by the inverse group element. -/
+@[simp]
+theorem lieGroupAdjointCoordinatesEquiv_symm_apply (g : G) (X : E) :
+    (lieGroupAdjointCoordinatesEquiv (I := I) g).symm X =
+      lieGroupAdjointCoordinates (I := I) g⁻¹ X :=
+  rfl
+
+omit [IsTopologicalGroup G] in
 /-- When both tangent-space base maps are constantly the same point, Mathlib's coordinate transport
 for a family of continuous linear maps reduces to that family itself. -/
 theorem inTangentCoordinates_const_const (x₀ : G) (φ : G → E →L[ℝ] E) (g : G) :
@@ -80,6 +120,35 @@ theorem lieGroupAdjointCoordinates_contMDiff :
   intro x
   ext X
   rfl
+
+omit [IsTopologicalGroup G] in
+/-- The forward operator family of coordinate adjoint equivalences is smooth. -/
+theorem lieGroupAdjointCoordinatesEquiv_contMDiff :
+    ContMDiff I 𝓘(ℝ, E →L[ℝ] E) ∞
+      (fun g : G => (lieGroupAdjointCoordinatesEquiv (I := I) g).toContinuousLinearMap) := by
+  have function_eq :
+      (fun g : G => (lieGroupAdjointCoordinatesEquiv (I := I) g).toContinuousLinearMap) =
+        (fun g : G => lieGroupAdjointCoordinates (I := I) g) := by
+    funext g
+    ext X
+    rfl
+  rw [function_eq]
+  exact lieGroupAdjointCoordinates_contMDiff (I := I) (G := G)
+
+omit [IsTopologicalGroup G] in
+/-- The inverse operator family is smooth and is exactly the coordinate adjoint at `g⁻¹`. -/
+theorem lieGroupAdjointCoordinatesEquiv_symm_contMDiff :
+    ContMDiff I 𝓘(ℝ, E →L[ℝ] E) ∞
+      (fun g : G => (lieGroupAdjointCoordinatesEquiv (I := I) g).symm.toContinuousLinearMap) := by
+  have function_eq :
+      (fun g : G =>
+        (lieGroupAdjointCoordinatesEquiv (I := I) g).symm.toContinuousLinearMap) =
+        (fun g : G => lieGroupAdjointCoordinates (I := I) g⁻¹) := by
+    funext g
+    ext X
+    rfl
+  rw [function_eq]
+  exact (lieGroupAdjointCoordinates_contMDiff (I := I) (G := G)).comp contMDiff_id.inv
 
 omit [IsTopologicalGroup G] in
 /-- Joint smoothness of the model-coordinate adjoint evaluation. -/

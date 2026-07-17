@@ -104,7 +104,9 @@ Mathlib's generic `Bundle.Trivialization` interface on the same quotient carrier
 The ordered associated overlap is then derived exactly as `(b,X) ↦ (b, Ad(k₁₂(b))X)` from the
 actual principal transition, with inverse and fiberwise real-linearity laws. Its model-coordinate
 formula is proved `C∞` by composing the designated smooth principal overlap with the derived smooth
-adjoint action. After explicit transport through the canonical tangent-model equivalence, the
+adjoint action. The coordinate adjoint is also packaged as a continuous linear equivalence with
+smooth forward and inverse operator families. After explicit transport through the canonical
+tangent-model equivalence, the
 promoted charts form a named covering charted-space atlas on the same quotient topology. No global
 atlas instance, compatibility groupoid, `FiberBundle`, or smooth vector-bundle structure is
 attributed to those coordinates.

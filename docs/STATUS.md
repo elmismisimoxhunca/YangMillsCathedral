@@ -564,6 +564,23 @@ Verified:
 - No fiberwise-linear compatibility groupoid, `IsManifold`, `FiberBundle`, `VectorBundle`, section,
   or descended curvature is claimed. Those remain separate pending stones.
 
+## 2026-07-17 — thirty-second mathematical stone: smooth invertible adjoint operators
+
+Verified:
+
+- `lieGroupAdjointCoordinatesEquiv g` packages the existing coordinate adjoint map as a continuous
+  linear equivalence of the declared normed model.
+- Its inverse is definitionally the coordinate adjoint at `g⁻¹`; the two inverse laws are derived
+  from the already proved intrinsic `Ad(g⁻¹) ∘ Ad(g)` and `Ad(g) ∘ Ad(g⁻¹)` identities.
+- The forward continuous-linear-map family is exactly `lieGroupAdjointCoordinates` and is `C∞`.
+- The inverse continuous-linear-map family is also `C∞`, by composing the same derived regularity
+  theorem with smooth group inversion.
+- Hostile probes reject disconnected forward or inverse maps, broken inverse behavior, and
+  nonsmooth forward or inverse operator families.
+- This is reusable Lie-group infrastructure needed by Mathlib's `contMDiffFiberwiseLinear`
+  groupoid. It constructs no gauge group, bundle witness, connection, curvature, or Yang–Mills
+  field.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

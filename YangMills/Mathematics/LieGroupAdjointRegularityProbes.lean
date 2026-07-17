@@ -26,6 +26,45 @@ variable
     [ChartedSpace H G] [LieGroup I ∞ G]
 
 omit [IsTopologicalGroup G] in
+/-- The coordinate adjoint equivalence cannot use a disconnected forward map. -/
+theorem disconnected_lieGroupAdjoint_equiv_forward_blocked
+    (g : G) (X : E)
+    (mismatch : lieGroupAdjointCoordinatesEquiv (I := I) g X ≠
+      lieGroupAdjointCoordinates (I := I) g X) : False :=
+  mismatch (lieGroupAdjointCoordinatesEquiv_apply (I := I) g X)
+
+omit [IsTopologicalGroup G] in
+/-- Its inverse is forced to be the coordinate adjoint at the inverse group element. -/
+theorem disconnected_lieGroupAdjoint_equiv_inverse_blocked
+    (g : G) (X : E)
+    (mismatch : (lieGroupAdjointCoordinatesEquiv (I := I) g).symm X ≠
+      lieGroupAdjointCoordinates (I := I) g⁻¹ X) : False :=
+  mismatch (lieGroupAdjointCoordinatesEquiv_symm_apply (I := I) g X)
+
+omit [IsTopologicalGroup G] in
+/-- The packaged inverse must actually undo the forward coordinate adjoint. -/
+theorem broken_lieGroupAdjoint_coordinateEquiv_inverse_blocked
+    (g : G) (X : E)
+    (mismatch : (lieGroupAdjointCoordinatesEquiv (I := I) g).symm
+      (lieGroupAdjointCoordinatesEquiv (I := I) g X) ≠ X) : False :=
+  mismatch ((lieGroupAdjointCoordinatesEquiv (I := I) g).symm_apply_apply X)
+
+omit [IsTopologicalGroup G] in
+/-- The forward equivalence family cannot fail operator-valued smoothness. -/
+theorem nonsmooth_lieGroupAdjoint_coordinateEquiv_blocked
+    (nonsmooth : ¬ContMDiff I 𝓘(ℝ, E →L[ℝ] E) ∞
+      (fun g : G => (lieGroupAdjointCoordinatesEquiv (I := I) g).toContinuousLinearMap)) : False :=
+  nonsmooth (lieGroupAdjointCoordinatesEquiv_contMDiff (I := I) (G := G))
+
+omit [IsTopologicalGroup G] in
+/-- The inverse equivalence family cannot fail operator-valued smoothness. -/
+theorem nonsmooth_lieGroupAdjoint_coordinateEquiv_inverse_blocked
+    (nonsmooth : ¬ContMDiff I 𝓘(ℝ, E →L[ℝ] E) ∞
+      (fun g : G =>
+        (lieGroupAdjointCoordinatesEquiv (I := I) g).symm.toContinuousLinearMap)) : False :=
+  nonsmooth (lieGroupAdjointCoordinatesEquiv_symm_contMDiff (I := I) (G := G))
+
+omit [IsTopologicalGroup G] in
 /-- General smooth adjoint regularity cannot be replaced by a nonsmooth operator-valued map. -/
 theorem nonsmooth_lieGroupAdjoint_coordinateMap_blocked
     (nonsmooth : ¬ContMDiff I 𝓘(ℝ, E →L[ℝ] E) ∞

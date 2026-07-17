@@ -48,6 +48,7 @@ committed before higher layers depend on it.
 - [x] Derive exact fiberwise-linear adjoint transition formulas and inverse laws.
 - [x] Prove smoothness of the exact model-coordinate adjoint transitions.
 - [x] Build a named covering charted-space atlas on the quotient with explicit model transport.
+- [x] Package the coordinate adjoint as a smooth continuous-linear-equivalence family.
 - [ ] Prove fiberwise-linear groupoid compatibility and the quotient manifold structure.
 - [ ] Bridge the quotient to dependent fibers and package a smooth adjoint vector bundle.
 - [ ] Add adjoint-bundle-valued form and curvature-descent infrastructure.
