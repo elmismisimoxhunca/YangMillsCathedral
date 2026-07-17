@@ -424,13 +424,31 @@ Verified:
 - No local vector-bundle trivialization, smooth structure, section, descended curvature, or
   Yang–Mills field is constructed.
 
+## 2026-07-17 — twenty-fifth mathematical stone: adjoint-bundle local coordinates
+
+Verified:
+
+- A principal chart with group coordinate `k` sends `(p,X)` to `(π(p), Ad(k)X)`; outside the chart
+  source the representative function is extended by zero only to define a total quotient lift.
+- `adjointBundleChartRepresentative_invariant` proves that the coordinate is unchanged by the exact
+  diagonal relation `(p,X)·g = (p·g, Ad(g⁻¹)X)`, including the inverse-order cancellation.
+- `AdjointBundle.localCoordinate` therefore descends to the quotient rather than selecting a
+  representative.
+- `localCoordinateInverse` uses the canonical local representative `chart⁻¹(b,1)`, and both local
+  inverse laws are proved on `projection⁻¹(baseSet)` and `baseSet × g`.
+- The coordinate's first component is proved to be the associated-bundle projection.
+- Hostile probes reject representative dependence, a malformed off-source zero extension or
+  `Ad(k)` formula, base movement, and either broken local inverse law.
+- These are set-level coordinate laws only. Continuity, local-homeomorphism/vector-bundle packaging,
+  smoothness, sections, descended curvature, and Yang–Mills fields remain pending.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
   `SU(n)` API does not supply the complete manifold/compactness/connectedness/tangent-simplicity
   chain, so positive consistency infrastructure remains open.
-- No general smooth bundle-map or local topological/smooth adjoint-vector-bundle/descent layer, concrete
-  principal-connection/curvature/structure-certificate
+- No general smooth bundle-map, continuous local adjoint trivialization, smooth
+  adjoint-vector-bundle/descent layer, concrete principal-connection/curvature/structure-certificate
   witness, automatic curvature horizontality/equivariance theorem, Bianchi/gauge-covariance result,
   symmetry-group, quantum-theory, acceptance, existence, or mass-gap declaration exists.
 - No Yang–Mills acceptance declaration exists.

@@ -94,8 +94,10 @@ for the same smooth principal connection, `curvatureForm` derives exactly (1.13)
 The set-level `AdjointBundle` implements Freed's displayed `g_P = P ×_G g` as the orbit quotient
 for `(p,X)·g = (p·g, Ad(g⁻¹)X)`, including the induced base projection and exact representative
 relation. The total carrier now has the induced quotient topology, and its projection is proved a
-continuous quotient map onto the already declared base topology. Local vector-bundle
-trivializations and smooth structure are not attributed to that quotient yet.
+continuous quotient map onto the already declared base topology. Each existing principal chart
+also induces representative-independent set-level coordinates `(π(p), Ad(k)X)` and an inverse based
+at group coordinate `1`, with both local inverse laws proved. Continuity/local-homeomorphism
+packaging and smooth vector-bundle structure are not attributed to those coordinates yet.
 `PrincipalTwoForm.IsHorizontal`, `.IsRightAdEquivariant`, and the connection-indexed
 `PrincipalCurvatureStructureCertificate` state (1.15) and (1.14) intrinsically without accepting an
 unrelated curvature field. This is a requirement surface: automatic derivation from the current

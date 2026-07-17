@@ -41,7 +41,9 @@ committed before higher layers depend on it.
 - [x] State and probe intrinsic curvature horizontality/right-adjoint-equivariance certificates.
 - [x] Construct and probe the set-level adjoint associated-bundle orbit quotient.
 - [x] Equip the adjoint bundle with its quotient topology and derive its quotient projection.
-- [ ] Add local topological/smooth adjoint-vector-bundle trivializations and descent infrastructure.
+- [x] Derive representative-independent adjoint-bundle local coordinate and inverse laws.
+- [ ] Prove local-coordinate continuity and package topological/smooth vector-bundle trivializations.
+- [ ] Add adjoint-bundle-valued form and curvature-descent infrastructure.
 - [ ] Derive structural curvature laws automatically and prove gauge covariance and Bianchi.
 
 ## Phase 3 — classical Yang–Mills semantics

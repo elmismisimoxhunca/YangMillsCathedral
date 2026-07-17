@@ -37,6 +37,8 @@ import YangMills.Geometry.AdjointBundle
 import YangMills.Geometry.AdjointBundleProbes
 import YangMills.Geometry.AdjointBundleTopology
 import YangMills.Geometry.AdjointBundleTopologyProbes
+import YangMills.Geometry.AdjointBundleLocalCoordinates
+import YangMills.Geometry.AdjointBundleLocalCoordinatesProbes
 import YangMills.Geometry.PrincipalBundleTorsor
 import YangMills.Geometry.PrincipalBundleTorsorProbes
 import YangMills.Geometry.PrincipalBundleMap
