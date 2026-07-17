@@ -59,3 +59,8 @@ symmetric bilinear presentation, and positive definiteness are additional projec
 requirements, with compact-representation evidence supplied separately by Hall Proposition 5.17.
 Such choices must be recorded as formalization decisions supported by additional primary or
 authoritative sources. They must not be silently attributed verbatim to Clay.
+
+The current classical layer uses the conventional `1/2 * sum_ij` contraction in Mathlib's chosen
+orthonormal basis for an explicitly supplied smooth Riemannian metric. It does not yet prove basis
+independence or identify that construction with a general manifold Hodge star. No integration
+measure is called Riemannian volume without a future compatibility theorem.

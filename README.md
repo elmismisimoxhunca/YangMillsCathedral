@@ -117,7 +117,9 @@ curvature, and the adjoint
 action packaged as a
 smooth invertible operator family, alongside an explicit positive
 adjoint-invariant Lie-algebra inner-product certificate inducing a chart-independent positive
-pairing on every actual adjoint quotient fiber, are
+pairing on every actual adjoint quotient fiber, and a named smooth Euclidean metric interface whose
+chosen tangent-fiber orthonormal contraction gives a nonnegative pointwise scalar for the exact
+smoothly descended curvature (without claiming a general Hodge-star theorem or metric volume), are
 implemented. No
 concrete gauge-group, connection, invariant-inner-product, curvature, or structure-certificate witness,
 symmetry group, reconstruction bridge, quantum-theory witness, Yang–Mills existence claim, or

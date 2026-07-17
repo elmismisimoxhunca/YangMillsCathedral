@@ -1012,8 +1012,29 @@ Verified:
 - The induced pairing is symmetric, nonnegative on the diagonal, and positive definite with respect
   to the named transported fiber zero.
 - Hostile probes reject chart dependence, negative quadratic values, and nonzero zero-norm values.
-- No global inner-product instance or normalization is installed. Metric/Hodge contraction,
-  integration, coupling, and the action remain separate pending data.
+- No global inner-product instance or normalization is installed. Metric contraction, integration,
+  coupling, and the action remain separate.
+
+## 2026-07-17 — fifty-ninth mathematical stone: chosen Euclidean curvature contraction
+
+Verified:
+
+- `EuclideanMetricData` names an explicit smooth positive-definite metric on the base tangent bundle
+  without installing it globally and without bundling an unrelated measure.
+- `chosenOrthonormalTwoFormContraction` computes the conventional `1/2 * sum_ij` contraction using
+  Mathlib's standard orthonormal basis in each metric tangent fiber and the exact invariant pairing
+  on the actual adjoint quotient fiber.
+- `chosenOrthonormalCurvatureDensity` is definitionally tied to
+  `connection.smoothBaseCurvature exterior certificate`, and
+  `chosenOrthonormalCurvatureDensity_eq_pointwiseBaseCurvature` exposes its exact pointwise carrier,
+  preserving the same connection, exterior-derivative datum, and same-index structure certificate.
+- The contraction and exact curvature density are proved pointwise nonnegative.
+- Hostile probes reject a negative pointwise scalar; unrelated curvature, invariant-pairing, or
+  metric substitutions that change the contraction; and chart dependence in the underlying exact
+  quotient-fiber pairing.
+- No basis-independence or general manifold Hodge-star theorem is asserted. Integration measure,
+  coupling, integrability, and the action remain downstream work; no measure is called Riemannian
+  volume.
 
 Not yet achieved:
 
@@ -1030,8 +1051,9 @@ Not yet achieved:
   credential was scoped to the retired repository. Local commits can proceed; remote publication
   remains an explicit infrastructure blocker.
 - Clay, Hall, Aharony–Seiberg–Tachikawa, and Freed artifacts are pinned. Clay equation (1) now
-  anchors the action formula and invariant quadratic form, but additional metric/Hodge/integration
-  infrastructure remains pending. OS/Wightman, spectral, observable, and lattice sources remain to
+  anchors the action formula, invariant quadratic form, and chosen orthonormal curvature
+  contraction, but basis independence, a general Hodge-star bridge, and integration/action
+  infrastructure remain pending. OS/Wightman, spectral, observable, and lattice sources remain to
   be independently acquired and verified before their corresponding declarations become canonical.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary

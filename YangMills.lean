@@ -117,6 +117,8 @@ import YangMills.Geometry.PrincipalCurvaturePointwiseDescent
 import YangMills.Geometry.PrincipalCurvaturePointwiseDescentProbes
 import YangMills.Geometry.PrincipalCurvatureSmoothDescent
 import YangMills.Geometry.PrincipalCurvatureSmoothDescentProbes
+import YangMills.Classical.EuclideanCurvatureDensity
+import YangMills.Classical.EuclideanCurvatureDensityProbes
 import YangMills.Audit
 
 /-!
