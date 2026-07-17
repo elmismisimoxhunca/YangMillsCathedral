@@ -58,7 +58,7 @@ committed before higher layers depend on it.
 - [x] Transport quotient trivializations exactly to the topology-coherent dependent total space.
 - [x] Package the preserved topology and transported atlas as a named Mathlib `FiberBundle`.
 - [x] Package the exact linear atlas as a named Mathlib `VectorBundle`.
-- [ ] Package the smooth vector-bundle mixin.
+- [x] Package the exact atlas as a named `C∞` vector-bundle mixin.
 - [ ] Add adjoint-bundle-valued form and curvature-descent infrastructure.
 - [ ] Derive structural curvature laws automatically and prove gauge covariance and Bianchi.
 

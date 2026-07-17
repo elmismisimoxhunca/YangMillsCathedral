@@ -122,7 +122,8 @@ total-space homeomorphism, with per-fiber topologies induced from selected coord
 fiber inclusions are then proved inducing and the preserved topology plus transported atlas are
 packaged as a named Mathlib `FiberBundle`. Every transported chart is proved linear, its Mathlib
 coordinate change is identified exactly with the derived adjoint operator, and operator-norm
-continuity packages a named `VectorBundle`. Smooth vector-bundle structure remains pending.
+continuity packages a named `VectorBundle`. The same exact operator families package a named
+Mathlib `ContMDiffVectorBundle ∞` mixin; no global bundle instance is installed.
 `PrincipalTwoForm.IsHorizontal`, `.IsRightAdEquivariant`, and the connection-indexed
 `PrincipalCurvatureStructureCertificate` state (1.15) and (1.14) intrinsically without accepting an
 unrelated curvature field. This is a requirement surface: automatic derivation from the current

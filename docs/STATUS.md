@@ -741,6 +741,22 @@ Verified:
   and discontinuous operator-valued changes between atlas charts.
 - The smooth vector-bundle mixin, sections, and descended-curvature claims remain pending.
 
+## 2026-07-17 — forty-second mathematical stone: smooth dependent vector-bundle mixin
+
+Verified:
+
+- `dependentContMDiffVectorBundle` packages Mathlib's `ContMDiffVectorBundle ∞` mixin for the same
+  named fiber algebra, preserved quotient-induced topology, `FiberBundle`, and `VectorBundle`.
+- Every mixin obligation is discharged by the existing smooth adjoint operator family after exact
+  identification with Mathlib's ordered `coordChangeL`; no surrogate transition is introduced.
+- Atlas quantification is exact because arbitrary Mathlib atlas memberships are unpacked back to the
+  transported designated principal charts.
+- No global instance, replacement topology, section, connection, curvature, or Yang–Mills field is
+  introduced.
+- Hostile probes reject omission of the mixin and nonsmooth coordinate changes between any two
+  designated atlas charts.
+- Sections, descended adjoint-bundle-valued forms, and curvature descent remain pending.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
