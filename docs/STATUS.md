@@ -450,9 +450,8 @@ Verified:
   model without replacing the intrinsic tangent Lie algebra.
 - `ContinuousLieGroupAdjointData` isolates only continuity of `g ↦ Ad(g)` in those coordinates;
   joint continuity of `(g,X) ↦ Ad(g)X` and `(g,X) ↦ Ad(g⁻¹)X` is derived.
-- No general inhabitant of this certificate is supplied by the repository. Its eventual general proof
-  is explicitly reusable parameter-dependent manifold-derivative infrastructure debt, not a
-  Yang–Mills assumption hidden as an axiom.
+- At this stone the certificate made parameter-dependent manifold differentiation debt explicit;
+  the next stone discharges that debt generally from pinned Mathlib infrastructure.
 - Given the certificate, the representative coordinate is continuous on the principal chart source,
   and quotient-map locality derives continuity of `AdjointBundle.localCoordinate` on its associated
   open source.
@@ -462,16 +461,38 @@ Verified:
   targets, inverse laws, openness, and continuity as an `OpenPartialHomeomorph`.
 - Hostile probes reject discontinuous adjoint actions, disconnected coordinate maps, malformed
   sources/targets, and substituted forward/inverse maps.
-- No adjoint-regularity witness, smooth vector-bundle structure, section, descended curvature, or
-  Yang–Mills field is constructed.
+- No smooth vector-bundle structure, section, descended curvature, or Yang–Mills field is
+  constructed.
+
+## 2026-07-17 — twenty-seventh mathematical stone: derived smooth adjoint regularity
+
+Verified:
+
+- `inTangentCoordinates_const_const` proves that Mathlib's tangent-hom coordinate transport reduces
+  to the original family when both tangent base maps are the same constant point.
+- `lieGroupAdjointCoordinates_contMDiff` specializes Mathlib's parameter-dependent
+  `ContMDiffAt.mfderiv` theorem to the jointly smooth conjugation family and constant identity
+  evaluation point.
+- Consequently `g ↦ Ad(g)` is `C∞` in the declared normed model coordinates, without a
+  finite-dimensional assumption.
+- Joint model-coordinate evaluation `(g,X) ↦ Ad(g)X` and its inverse-parameter form
+  `(g,X) ↦ Ad(g⁻¹)X` are derived smooth.
+- `continuousLieGroupAdjointData` canonically inhabits the retained compact continuity interface;
+  adjoint regularity is no longer an external requirement or open debt.
+- `AdjointBundle.canonicalLocalTrivialization` consequently packages every principal chart without
+  caller-supplied regularity data while retaining the exact coordinate maps.
+- Hostile probes reject nonsmooth operator families, nonsmooth joint evaluation, and discontinuity
+  of the canonical certificate.
+- This is reusable manifold calculus only. It constructs no gauge group, principal bundle,
+  connection, curvature, or Yang–Mills field.
 
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
   `SU(n)` API does not supply the complete manifold/compactness/connectedness/tangent-simplicity
   chain, so positive consistency infrastructure remains open.
-- No general smooth bundle-map, unconditional continuous local adjoint trivialization, smooth
-  adjoint-vector-bundle/descent layer, concrete principal-connection/curvature/structure-certificate
+- No general smooth bundle-map, smooth adjoint-vector-bundle/descent layer, concrete
+  principal-connection/curvature/structure-certificate
   witness, automatic curvature horizontality/equivariance theorem, Bianchi/gauge-covariance result,
   symmetry-group, quantum-theory, acceptance, existence, or mass-gap declaration exists.
 - No Yang–Mills acceptance declaration exists.

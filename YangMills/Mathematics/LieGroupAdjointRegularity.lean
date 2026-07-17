@@ -5,17 +5,17 @@ Authors: Sebastian Rodrigo
 -/
 
 import YangMills.Mathematics.LieGroupAdjoint
+import Mathlib.Geometry.Manifold.ContMDiffMFDeriv
 
 /-!
-# Regularity certificate for the Lie-group adjoint representation
+# Regularity of the Lie-group adjoint representation
 
 The adjoint map was defined as the manifold derivative of conjugation and its algebraic laws were
-proved previously. The pinned Mathlib API does not directly expose the parameter-dependent theorem
-needed here in the project's intrinsic tangent coordinates. This file isolates that remaining general
-manifold-calculus fact as an explicit continuity certificate for the map `g ↦ Ad(g)`.
+proved previously. Mathlib's parameter-dependent manifold-derivative theorem proves that this map
+varies smoothly in the group parameter after transport to the declared normed model coordinates.
 
-No gauge group or certificate inhabitant is constructed. The interface is reusable and independent
-of principal bundles and Yang--Mills theory.
+This is reusable manifold calculus. No gauge group, principal bundle, or Yang--Mills field is
+constructed.
 -/
 
 namespace YangMills.Mathematics
@@ -40,11 +40,77 @@ def lieGroupAdjointCoordinates (g : G) : E →L[ℝ] E :=
     ((lieGroupAdjoint I g).comp
       (groupLieAlgebraModelEquiv (G := G) I).symm.toContinuousLinearMap))
 
-/-- Explicit certificate that the derivative-defined adjoint representation varies continuously in
-the group parameter. This should eventually be discharged by reusable parameter-dependent manifold
-derivative infrastructure. -/
+omit [IsTopologicalGroup G] in
+/-- When both tangent-space base maps are constantly the same point, Mathlib's coordinate transport
+for a family of continuous linear maps reduces to that family itself. -/
+theorem inTangentCoordinates_const_const (x₀ : G) (φ : G → E →L[ℝ] E) (g : G) :
+    inTangentCoordinates I I (fun _ : G => x₀) (fun _ : G => x₀) φ g = φ := by
+  funext x
+  rw [inTangentCoordinates_eq]
+  · ext X
+    rw [ContinuousLinearMap.comp_apply, ContinuousLinearMap.comp_apply]
+    rw [(tangentBundleCore I G).coordChange_self,
+      (tangentBundleCore I G).coordChange_self]
+    all_goals
+      rw [tangentBundleCore_baseSet]
+      exact mem_chart_source H x₀
+  · exact mem_chart_source H x₀
+  · exact mem_chart_source H x₀
+
+omit [IsTopologicalGroup G] in
+set_option backward.isDefEq.respectTransparency false in
+/-- The derivative-defined adjoint representation varies smoothly in model coordinates. This is a
+specialization of Mathlib's parameter-dependent `ContMDiffAt.mfderiv` theorem to jointly smooth
+conjugation and the constant identity evaluation point. -/
+theorem lieGroupAdjointCoordinates_contMDiff :
+    ContMDiff I 𝓘(ℝ, E →L[ℝ] E) ∞
+      (fun g : G => lieGroupAdjointCoordinates (I := I) g) := by
+  intro g
+  let conjugationFamily : G → G → G := fun a b => a * b * a⁻¹
+  have familySmooth : ContMDiff (I.prod I) I ∞ (Function.uncurry conjugationFamily) := by
+    exact (contMDiff_fst.mul contMDiff_snd).mul contMDiff_fst.inv
+  have derivativeSmooth :=
+    (familySmooth.contMDiffAt (x := (g, 1))).mfderiv conjugationFamily
+      (fun _ : G => (1 : G)) (contMDiffAt_const (x := g))
+      (m := (∞ : WithTop ℕ∞)) (by simp)
+  dsimp [conjugationFamily] at derivativeSmooth
+  simp only [mul_one, mul_inv_cancel] at derivativeSmooth
+  rw [inTangentCoordinates_const_const (I := I) 1] at derivativeSmooth
+  refine derivativeSmooth.congr_of_eventuallyEq (Filter.Eventually.of_forall ?_)
+  intro x
+  ext X
+  rfl
+
+omit [IsTopologicalGroup G] in
+/-- Joint smoothness of the model-coordinate adjoint evaluation. -/
+theorem lieGroupAdjointCoordinates_action_contMDiff :
+    ContMDiff (I.prod 𝓘(ℝ, E)) 𝓘(ℝ, E) ∞
+      (fun z : G × E => lieGroupAdjointCoordinates (I := I) z.1 z.2) := by
+  have operatorSmooth : ContMDiff (I.prod 𝓘(ℝ, E)) 𝓘(ℝ, E →L[ℝ] E) ∞
+      (fun z : G × E => lieGroupAdjointCoordinates (I := I) z.1) :=
+    (lieGroupAdjointCoordinates_contMDiff (I := I) (G := G)).comp contMDiff_fst
+  exact operatorSmooth.clm_apply contMDiff_snd
+
+omit [IsTopologicalGroup G] in
+/-- Joint smoothness also holds after inversion in the group parameter. -/
+theorem lieGroupAdjointCoordinates_inverseAction_contMDiff :
+    ContMDiff (I.prod 𝓘(ℝ, E)) 𝓘(ℝ, E) ∞
+      (fun z : G × E => lieGroupAdjointCoordinates (I := I) z.1⁻¹ z.2) := by
+  have inverseSmooth : ContMDiff (I.prod 𝓘(ℝ, E)) I ∞ (fun z : G × E => z.1⁻¹) :=
+    contMDiff_fst.inv
+  have operatorSmooth : ContMDiff (I.prod 𝓘(ℝ, E)) 𝓘(ℝ, E →L[ℝ] E) ∞
+      (fun z : G × E => lieGroupAdjointCoordinates (I := I) z.1⁻¹) :=
+    (lieGroupAdjointCoordinates_contMDiff (I := I) (G := G)).comp inverseSmooth
+  exact operatorSmooth.clm_apply contMDiff_snd
+
+/-- Continuity certificate retained as a compact interface for the topological associated-bundle
+layer. Its canonical inhabitant is derived below; it is not model data or an open assumption. -/
 structure ContinuousLieGroupAdjointData : Prop where
   map_continuous : Continuous (fun g : G => lieGroupAdjointCoordinates (I := I) g)
+
+/-- Every smooth Lie group has the adjoint-continuity certificate. -/
+def continuousLieGroupAdjointData : ContinuousLieGroupAdjointData (I := I) (G := G) where
+  map_continuous := (lieGroupAdjointCoordinates_contMDiff (I := I) (G := G)).continuous
 
 namespace ContinuousLieGroupAdjointData
 

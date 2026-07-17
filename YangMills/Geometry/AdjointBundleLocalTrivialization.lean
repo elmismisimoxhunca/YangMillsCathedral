@@ -10,12 +10,13 @@ import YangMills.Mathematics.LieGroupAdjointRegularity
 /-!
 # Topological local trivializations of the adjoint bundle
 
-Assuming the explicitly isolated adjoint-regularity certificate for the derivative-defined adjoint
-action, every designated principal-bundle chart induces an open partial homeomorphism between the
-adjoint quotient over its base set and `baseSet × g`.
+The compact certificate-parameterized construction records the exact dependency on continuity of
+the derivative-defined adjoint action. The generally derived canonical certificate then gives every
+designated principal-bundle chart an open partial homeomorphism between the adjoint quotient over
+its base set and `baseSet × g`, without model-supplied regularity data.
 
-This closes the topological local-triviality layer only. It neither constructs the adjoint regularity
-certificate nor supplies smooth vector-bundle charts, sections, descended curvature, or fields.
+This closes the topological local-triviality layer only. It does not supply smooth vector-bundle
+charts, sections, descended curvature, or fields.
 -/
 
 namespace YangMills.Geometry
@@ -193,6 +194,15 @@ def AdjointBundle.localTrivialization
   open_target := AdjointBundle.isOpen_localTarget chart
   continuousOn_toFun := AdjointBundle.localCoordinate_continuousOn chart bundle adjointRegularity
   continuousOn_invFun := AdjointBundle.localCoordinateInverse_continuousOn chart
+
+/-- Canonical topological local trivialization using the generally derived smooth adjoint
+regularity. No regularity witness is required from a proposed model. -/
+def AdjointBundle.canonicalLocalTrivialization
+    (bundle : TopologicalPrincipalBundleData torsor) :
+    OpenPartialHomeomorph (AdjointBundle (I := I) torsor)
+      (B × GroupLieAlgebra I G) :=
+  AdjointBundle.localTrivialization (I := I) chart bundle
+    (YangMills.Mathematics.continuousLieGroupAdjointData (I := I) (G := G))
 
 end
 

@@ -42,6 +42,22 @@ theorem discontinuous_adjointBundle_localCoordinate_blocked
       (AdjointBundle.localSource (I := I) chart)) : False :=
   discontinuous (AdjointBundle.localCoordinate_continuousOn chart bundle adjointRegularity)
 
+/-- The canonical trivialization is available without caller-supplied regularity data and retains
+its exact source. -/
+theorem canonical_adjointBundle_trivialization_source
+    (bundle : TopologicalPrincipalBundleData torsor) :
+    (AdjointBundle.canonicalLocalTrivialization (I := I) chart bundle).source =
+      AdjointBundle.projection torsor ⁻¹' chart.baseSet :=
+  rfl
+
+/-- The canonical trivialization cannot substitute a disconnected forward map. -/
+theorem disconnected_canonical_adjointBundle_forward_blocked
+    (bundle : TopologicalPrincipalBundleData torsor)
+    (z : AdjointBundle (I := I) torsor)
+    (mismatch : AdjointBundle.canonicalLocalTrivialization (I := I) chart bundle z ≠
+      AdjointBundle.localCoordinate (I := I) chart z) : False :=
+  mismatch rfl
+
 omit [IsTopologicalGroup G] in
 /-- The inverse coordinate map cannot fail continuity on `baseSet × g`. -/
 theorem discontinuous_adjointBundle_localInverse_blocked

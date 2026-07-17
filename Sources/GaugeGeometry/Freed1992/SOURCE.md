@@ -96,10 +96,11 @@ for `(p,X)·g = (p·g, Ad(g⁻¹)X)`, including the induced base projection and 
 relation. The total carrier now has the induced quotient topology, and its projection is proved a
 continuous quotient map onto the already declared base topology. Each existing principal chart
 also induces representative-independent set-level coordinates `(π(p), Ad(k)X)` and an inverse based
-at group coordinate `1`, with both local inverse laws proved. Joint continuity of the
-parameter-dependent adjoint map is isolated as `ContinuousLieGroupAdjointData`; conditional on that
-explicit certificate, each chart packages as an open partial homeomorphism. No inhabitant of the
-certificate is supplied, and smooth vector-bundle structure is not attributed to those coordinates.
+at group coordinate `1`, with both local inverse laws proved. Smoothness of the parameter-dependent
+adjoint map in model coordinates is derived from Mathlib's `ContMDiffAt.mfderiv`; the retained
+`ContinuousLieGroupAdjointData` interface therefore has a canonical general inhabitant. Each chart
+packages as an open partial homeomorphism using that derived regularity. Smooth vector-bundle
+structure is not attributed to those coordinates.
 `PrincipalTwoForm.IsHorizontal`, `.IsRightAdEquivariant`, and the connection-indexed
 `PrincipalCurvatureStructureCertificate` state (1.15) and (1.14) intrinsically without accepting an
 unrelated curvature field. This is a requirement surface: automatic derivation from the current

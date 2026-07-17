@@ -26,6 +26,27 @@ variable
     [ChartedSpace H G] [LieGroup I ∞ G]
 
 omit [IsTopologicalGroup G] in
+/-- General smooth adjoint regularity cannot be replaced by a nonsmooth operator-valued map. -/
+theorem nonsmooth_lieGroupAdjoint_coordinateMap_blocked
+    (nonsmooth : ¬ContMDiff I 𝓘(ℝ, E →L[ℝ] E) ∞
+      (fun g : G => lieGroupAdjointCoordinates (I := I) g)) : False :=
+  nonsmooth (lieGroupAdjointCoordinates_contMDiff (I := I) (G := G))
+
+omit [IsTopologicalGroup G] in
+/-- Joint model-coordinate evaluation inherits the proved smoothness. -/
+theorem nonsmooth_lieGroupAdjoint_coordinateAction_blocked
+    (nonsmooth : ¬ContMDiff (I.prod 𝓘(ℝ, E)) 𝓘(ℝ, E) ∞
+      (fun z : G × E => lieGroupAdjointCoordinates (I := I) z.1 z.2)) : False :=
+  nonsmooth (lieGroupAdjointCoordinates_action_contMDiff (I := I) (G := G))
+
+omit [IsTopologicalGroup G] in
+/-- The canonical certificate rules out discontinuity without caller-supplied regularity data. -/
+theorem discontinuous_canonical_lieGroupAdjoint_blocked
+    (discontinuous : ¬Continuous
+      (fun g : G => lieGroupAdjointCoordinates (I := I) g)) : False :=
+  discontinuous (continuousLieGroupAdjointData (I := I) (G := G)).map_continuous
+
+omit [IsTopologicalGroup G] in
 /-- The certificate cannot coexist with a discontinuous joint adjoint action. -/
 theorem discontinuous_lieGroupAdjoint_action_blocked
     (data : ContinuousLieGroupAdjointData (I := I) (G := G))
