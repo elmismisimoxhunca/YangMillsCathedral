@@ -51,7 +51,8 @@ committed before higher layers depend on it.
 - [x] Package the coordinate adjoint as a smooth continuous-linear-equivalence family.
 - [x] Derive exact overlap-source coherence and smooth transition-equivalence families.
 - [x] Prove fiberwise-linear groupoid compatibility and the quotient manifold structure.
-- [ ] Bridge the quotient to dependent fibers and package a smooth adjoint vector bundle.
+- [x] Construct the dependent-fiber carrier and base-preserving equivalence to the quotient.
+- [ ] Prove topology coherence and package a smooth adjoint vector bundle.
 - [ ] Add adjoint-bundle-valued form and curvature-descent infrastructure.
 - [ ] Derive structural curvature laws automatically and prove gauge covariance and Bianchi.
 

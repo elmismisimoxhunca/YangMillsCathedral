@@ -618,6 +618,23 @@ Verified:
 - No dependent fiber family, `FiberBundle`, `VectorBundle`, section, descended curvature, or
   Yang–Mills field is constructed.
 
+## 2026-07-17 — thirty-fifth mathematical stone: dependent adjoint fibers
+
+Verified:
+
+- `AdjointBundle.Fiber b` is the subtype of the actual orbit quotient lying over `b`; it does not
+  introduce a replacement associated-bundle carrier.
+- `totalSpaceToQuotient` forgets only the dependent packaging, while `quotientToTotalSpace` places
+  each quotient point over its actual projection.
+- `totalSpaceEquivQuotient` proves these maps form a canonical carrier equivalence between
+  Mathlib's dependent `Bundle.TotalSpace` shape and the original quotient.
+- The equivalence preserves the base projection exactly, and every dependent fiber is nonempty by
+  the already proved surjectivity of the quotient projection.
+- Hostile probes reject base movement, broken round trips, noninjective forgetting, and empty
+  dependent fibers.
+- This bridge is deliberately set-level. No total-space topology, topology-coherence theorem,
+  homeomorphism, fiber algebra, `FiberBundle`, `VectorBundle`, or smooth bundle is claimed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

@@ -101,7 +101,8 @@ representative-independent local coordinates, topological local trivializations 
 adjoint regularity, their exact promotion to Mathlib's generic bundle-trivialization interface, and
 derived fiberwise-linear overlap formulas with smooth forward/inverse operator families and exact
 source coherence, a named covering quotient chart atlas with explicit tangent-model transport and
-proved smooth fiberwise-linear groupoid/manifold compatibility, and the adjoint action packaged as a
+proved smooth fiberwise-linear groupoid/manifold compatibility, a base-preserving dependent-fiber
+carrier equivalence, and the adjoint action packaged as a
 smooth invertible operator family, alongside an explicit positive
 adjoint-invariant
 Lie-algebra inner-product certificate, are
