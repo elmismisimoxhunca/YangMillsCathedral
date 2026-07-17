@@ -64,11 +64,11 @@ Searchable extraction: `Sources/GaugeGeometry/Freed1992/classical_chern_simons_p
 
 | Source locator | Requirement | Classification | Lean declaration | Status / decision |
 |---|---|---|---|---|
-| Freed p. 6 §1; text 318–319 | principal bundle has a right group action and quotient projection | Reusable definition | `YangMills.Geometry.PrincipalBundleTorsorData.projection`, `.rightAction`, `.right_one`, `.right_mul`, `.projection_rightAction` | Algebraic core implemented; topological atlas implemented below; an explicit quotient-map theorem and smooth structure remain pending |
+| Freed p. 6 §1; text 318–319 | principal bundle has a right group action and quotient projection | Reusable definition | `YangMills.Geometry.PrincipalBundleTorsorData.projection`, `.rightAction`, `.right_one`, `.right_mul`, `.projection_rightAction` | Algebraic, topological, and smooth layers implemented below; an explicit quotient-map theorem remains pending |
 | Freed pp. 6–7 §1; text 318–348 | projection fibers are exactly free/transitive right-action orbits | Derived theorem from the torsor fields | `sameFiber_iff_existsUnique_rightAction`, `rightAction_injective`, `projection_surjective` | Set-level orbit/fiber result only; no quotient topology is claimed |
 | Freed p. 7 §1; text 323–348 | every fiber is a nonempty simply transitive right `G`-space | Reusable definition | `PrincipalBundleTorsorData.fiber_nonempty`, `.fiber_unique` | Fiber core implemented |
-| Freed p. 7 §1; text 342–348 | principal bundles are locally trivial | Reusable definition | `YangMills.Geometry.PrincipalBundleLocalTrivialization`, `TopologicalPrincipalBundleData.trivializationAtlas`, `.trivializationAt`, `.exists_atlas_trivialization_mem_source` | Equivariant topological local triviality and atlas coverage implemented; smooth compatibility remains pending |
-| Freed pp. 6–7 §1; text 318–348 | structure group, projection, and right action are topological at the staging layer | Formalization staging requirement implied by the later smooth definition | `IsTopologicalGroup G` prerequisite; `TopologicalPrincipalBundleData.projection_continuous`, `.rightAction_continuous` | Implemented explicitly; no smoothness inferred |
+| Freed p. 7 §1; text 342–348 | principal bundles are locally trivial | Reusable definition | `YangMills.Geometry.PrincipalBundleLocalTrivialization`, `TopologicalPrincipalBundleData.trivializationAtlas`, `.trivializationAt`, `.exists_atlas_trivialization_mem_source`; `SmoothPrincipalBundleData.trivialization_smooth`, `.inverse_trivialization_smooth` | Equivariant topological atlas and both smooth chart directions implemented |
+| Freed pp. 6–7 §1; text 318–348 | make structure-group topology and projection/action continuity/smoothness explicit when realizing Freed's differentiable principal-bundle conventions | Project staging requirements, not a verbatim list from Freed | `IsTopologicalGroup G`; `TopologicalPrincipalBundleData.projection_continuous`, `.rightAction_continuous`; `SmoothPrincipalBundleData.projection_smooth`, `.rightAction_smooth` | Explicit strengthening/formalization decision implemented |
 | Freed p. 7 §1; text 323–348 | same-fiber points are related by a group element | Derived theorem from unique transitivity | `sameFiber_transitive` | Derived algebraic result |
 | Freed p. 7 §1; text 361–364 | equivariant bundle maps cover a declared base map | Reusable definition | `YangMills.Geometry.PrincipalBundleTorsorMap` | Algebraic covering/equivariance core implemented; smoothness remains pending |
 | Freed p. 7 §1; text 364–371 | gauge transformations are bundle automorphisms over the base identity | Reusable definition / forgetful bridge | `YangMills.Geometry.TorsorGaugeTransformation`, `.toTorsorMap` | Invertible algebraic core and coherent forgetting to a bundle map implemented; smoothness remains pending |
@@ -86,10 +86,12 @@ nonidentity stabilizers, and nontransitive fibers. Algebraic map/gauge probes re
 mismatch, failed equivariance, base movement, and noninjective automorphisms; the identity and
 inverse laws provide positive checks. Topological probes reject discontinuous projection/action,
 uncovered or out-of-atlas charts, malformed chart domains/codomains, and failed local equivariance;
-the product bundle is a concrete positive model. These structures are deliberately not called
-smooth principal bundles or smooth gauge transformations: smooth chart compatibility, smoothness
-of maps, connections, and curvature remain open rather than being hidden in a placeholder
-proposition. A quotient-map theorem for the projection is also still to be packaged.
+the product bundle is a concrete positive model. The smooth layer requires manifold structures,
+smooth projection/action, and both smooth directions for every atlas chart; the smooth product
+bundle is a positive model. A named overlap-transition theorem is not yet packaged, although these
+chart fields provide its inputs. Smoothness of gauge maps, connections, and curvature remain open
+rather than being hidden in a placeholder proposition. A quotient-map theorem for the projection is also
+still to be packaged.
 
 ## Dimension-foundation decisions
 

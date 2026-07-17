@@ -18,6 +18,8 @@ import YangMills.Geometry.PrincipalBundleMap
 import YangMills.Geometry.PrincipalBundleMapProbes
 import YangMills.Geometry.TopologicalPrincipalBundle
 import YangMills.Geometry.TopologicalPrincipalBundleProbes
+import YangMills.Geometry.SmoothPrincipalBundle
+import YangMills.Geometry.SmoothPrincipalBundleProbes
 import YangMills.Audit
 
 /-!

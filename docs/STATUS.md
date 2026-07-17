@@ -140,13 +140,29 @@ Verified:
   missing coverage, malformed source/target sets, and failed local equivariance.
 - No smooth chart compatibility, smooth gauge map, connection, or curvature is inferred.
 
+## 2026-07-17 — eighth mathematical stone: smooth principal bundles
+
+Verified:
+
+- `SmoothPrincipalBundleData` is layered over a fixed topological principal bundle and generic
+  Mathlib models with corners.
+- Base, structure group, and total carrier have explicit manifold structures; the structure group
+  is a `C∞` Lie group.
+- Projection and uncurried right action are smooth.
+- Every designated atlas chart and its inverse are smooth on their exact source/target domains,
+  providing coherent inputs for a future named overlap-transition theorem rather than unrelated
+  transition witnesses.
+- The smooth product bundle is a concrete positive inhabitant.
+- Hostile probes independently reject nonsmooth projection/action, nonsmooth charts, and nonsmooth
+  inverse charts; selected charts inherit both directions.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
   `SU(n)` API does not supply the complete manifold/compactness/connectedness/tangent-simplicity
   chain, so positive consistency infrastructure remains open.
-- No smooth principal-bundle compatibility layer, smooth gauge transformation, connection,
-  curvature, symmetry-group, quantum-theory, acceptance, existence, or mass-gap declaration exists.
+- No smooth gauge-transformation layer, connection, curvature, symmetry-group, quantum-theory,
+  acceptance, existence, or mass-gap declaration exists.
 - No Yang–Mills acceptance declaration exists.
 - No standalone Git remote exists or has been pushed. The tested candidate
   `git@github.com:elmismisimoxhunca/lean-yangmills-adaly.git` does not exist, and the available SSH
