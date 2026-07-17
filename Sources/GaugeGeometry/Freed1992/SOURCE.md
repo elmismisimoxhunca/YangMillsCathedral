@@ -13,6 +13,13 @@
 
 ## Load-bearing locators
 
+Printed p. 6, §1, equation (1.4); extracted text lines 302–316:
+
+- the Lie algebra is identified with left-invariant vector fields;
+- left/right translation and conjugation define the adjoint transformation appearing in the
+  Maurer–Cartan equivariance law;
+- the Maurer–Cartan equation is recorded.
+
 Printed p. 6, §1; extracted text lines 318–319:
 
 - a principal `G`-bundle `P → X` is described by a manifold `P` with a free right `G`-action and
@@ -66,4 +73,7 @@ form degree, and pullback/gauge covariance rather than hiding them in an arbitra
 The smooth gauge-automorphism layer requires smoothness of both an invertible total map and its
 inverse. This makes the categorical automorphism/diffeomorphism interpretation explicit; it is a
 formalization guard, not a claim that Freed separately lists inverse smoothness as an additional
-axiom in the cited sentence.
+axiom in the cited sentence. The reusable tangent adjoint map is defined, under an explicit `C∞`
+Lie-group requirement, as the derivative at the identity of Freed's group conjugation; its identity,
+multiplication, and inverse laws are proved before it is used in
+connection-form equivariance.

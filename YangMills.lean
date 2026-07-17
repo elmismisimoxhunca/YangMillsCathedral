@@ -10,6 +10,8 @@ import YangMills.Foundation.Signatures
 import YangMills.Foundation.SignaturesProbes
 import YangMills.Mathematics.LieAlgebraSimplicity
 import YangMills.Mathematics.LieAlgebraSimplicityProbes
+import YangMills.Mathematics.LieGroupAdjoint
+import YangMills.Mathematics.LieGroupAdjointProbes
 import YangMills.Mathematics.ManifoldDifferentialForms
 import YangMills.Mathematics.ManifoldDifferentialFormsProbes
 import YangMills.Geometry.LieGroup

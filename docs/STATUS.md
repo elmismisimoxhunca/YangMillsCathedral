@@ -184,6 +184,18 @@ Verified:
 - The module explicitly does not claim smooth dependence on the base point or provide an exterior
   derivative.
 
+## 2026-07-17 — eleventh mathematical stone: Lie-group adjoint action
+
+Verified:
+
+- `lieGroupAdjoint I g` is the continuous linear derivative at the identity of conjugation by `g`.
+- Conjugation smoothness is derived from the existing `C∞` Lie-group operations.
+- The adjoint map at the identity is the identity map.
+- Group multiplication becomes continuous-linear-map composition in the correct order.
+- Adjoint action by `g⁻¹` is proved to be both a left and right inverse to action by `g`.
+- Hostile probes reject wrong identity, multiplication-order, and inverse behavior.
+- This reusable layer introduces no connection or gauge-field witness.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
