@@ -63,6 +63,8 @@ import YangMills.Geometry.AdjointBundleFiberLinearity
 import YangMills.Geometry.AdjointBundleFiberLinearityProbes
 import YangMills.Geometry.AdjointBundleDependentTrivialization
 import YangMills.Geometry.AdjointBundleDependentTrivializationProbes
+import YangMills.Geometry.AdjointBundleFiberBundle
+import YangMills.Geometry.AdjointBundleFiberBundleProbes
 import YangMills.Geometry.PrincipalBundleTorsor
 import YangMills.Geometry.PrincipalBundleTorsorProbes
 import YangMills.Geometry.PrincipalBundleMap

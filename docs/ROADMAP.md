@@ -56,7 +56,8 @@ committed before higher layers depend on it.
 - [x] Transport named real vector-space structures to every dependent fiber.
 - [x] Prove every designated associated fiber coordinate is linear for those structures.
 - [x] Transport quotient trivializations exactly to the topology-coherent dependent total space.
-- [ ] Package the resulting `FiberBundle`, `VectorBundle`, and smooth vector-bundle mixin.
+- [x] Package the preserved topology and transported atlas as a named Mathlib `FiberBundle`.
+- [ ] Package the `VectorBundle` and smooth vector-bundle mixin.
 - [ ] Add adjoint-bundle-valued form and curvature-descent infrastructure.
 - [ ] Derive structural curvature laws automatically and prove gauge covariance and Bianchi.
 

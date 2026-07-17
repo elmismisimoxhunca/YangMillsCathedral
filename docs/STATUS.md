@@ -706,6 +706,23 @@ Verified:
 - `FiberBundle`, `VectorBundle`, smooth bundle, section, and descended-curvature claims remain
   pending.
 
+## 2026-07-17 — fortieth mathematical stone: topology-coherent dependent fiber bundle
+
+Verified:
+
+- `continuous_totalSpaceMk` derives continuity of each dependent fiber inclusion from the preserved
+  quotient topology and exact selected quotient trivialization.
+- `isInducing_totalSpaceMk` proves each fiber inclusion induces exactly the named selected-coordinate
+  fiber topology, using the transported trivialization restricted to its source.
+- `dependentFiberBundle` packages the preserved total topology, named fiber topologies, and exact
+  transported atlas as a Mathlib `FiberBundle` value.
+- No `FiberPrebundle`-generated topology is used and no global bundle instance is installed.
+- The selected trivialization at each base point is exactly the transported principal selected chart,
+  and the atlas contains precisely transported designated principal-atlas charts.
+- Hostile probes reject noninducing fiber inclusions, replacement selected charts, and omission of a
+  selected chart from the atlas.
+- `VectorBundle`, smooth bundle, section, and descended-curvature claims remain pending.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
