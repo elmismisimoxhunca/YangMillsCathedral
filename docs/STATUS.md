@@ -957,6 +957,20 @@ Verified:
 - The generic form-evaluation theorem can now consume these extensions. Its specialization to
   certified curvature and the final descended-curvature smoothness proof remain pending.
 
+## 2026-07-17 — fifty-fifth mathematical stone: smooth principal-form local evaluation
+
+Verified:
+
+- `principalBundleLocalTangentLift_formEvaluation_contMDiffOn` proves that a smooth fixed-value
+  differential form on the principal total space evaluates smoothly on exact local lifts of any
+  tuple of smooth base tangent fields.
+- The proof obtains one explicit ambient field per tangent argument and applies the reusable
+  along-map evaluation theorem to the exact local section.
+- Smoothness is retained on arbitrary `s ⊆ chart.baseSet`; no openness overclaim is made.
+- A hostile probe rejects loss of smoothness for the exact principal form and exact local lifts.
+- The theorem is generic and introduces no connection, curvature, or regularity certificate.
+  Presentation-independent coordinate rewriting and descended-curvature smoothness remain pending.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

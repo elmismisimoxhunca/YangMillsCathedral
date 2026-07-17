@@ -135,7 +135,8 @@ lift is identified with Mathlib's tangent map within the chart domain and proved
 tangent fields to smooth fields along the local section. Reusable calculus now proves smooth form
 evaluation along a smooth map whenever those along-map fields admit explicit ambient smooth
 extensions. Such extensions are now constructed for the exact local tangent lifts by transporting a
-base field with zero group component through the inverse principal chart. Horizontality
+base field with zero group component through the inverse principal chart. Consequently, every
+smooth fixed-value principal form is now proved to evaluate smoothly on the exact local lifts. Horizontality
 is proved to make two-form evaluation independent of tangent-lift choices at a fixed
 total-space point. Right adjoint equivariance is then proved to identify the resulting values in the
 actual adjoint orbit quotient across right-related representatives, including replacement lifts with
