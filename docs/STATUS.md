@@ -757,6 +757,22 @@ Verified:
   designated atlas charts.
 - Sections, descended adjoint-bundle-valued forms, and curvature descent remain pending.
 
+## 2026-07-17 — forty-third mathematical stone: dependent adjoint sections
+
+Verified:
+
+- `AdjointBundle.Section` is the dependent choice of an element in the actual quotient fiber over
+  each base point, and `Section.totalSpace` has definitionally fixed base projection.
+- `Section.IsSmooth` is Mathlib smoothness of that exact total-space map after only local
+  installation of the named algebra, preserved topology, and exact smooth vector-bundle structures.
+- `Section.isSmooth_iff_selectedCoordinate` derives an exact pointwise local criterion in the
+  designated principal chart selected at each base point.
+- `Section.zero` and `Section.zero_isSmooth` provide only the expected consistency zero section; no
+  nonzero field, connection, curvature, or Yang–Mills witness is asserted.
+- Hostile probes reject base-moving section realizations, smoothness disconnected from the selected
+  exact coordinate, and a nonsmooth zero section.
+- Adjoint-bundle-valued differential forms and curvature descent remain pending.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

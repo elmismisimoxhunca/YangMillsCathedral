@@ -69,6 +69,8 @@ import YangMills.Geometry.AdjointBundleVectorBundle
 import YangMills.Geometry.AdjointBundleVectorBundleProbes
 import YangMills.Geometry.AdjointBundleSmoothVectorBundle
 import YangMills.Geometry.AdjointBundleSmoothVectorBundleProbes
+import YangMills.Geometry.AdjointBundleSection
+import YangMills.Geometry.AdjointBundleSectionProbes
 import YangMills.Geometry.PrincipalBundleTorsor
 import YangMills.Geometry.PrincipalBundleTorsorProbes
 import YangMills.Geometry.PrincipalBundleMap
