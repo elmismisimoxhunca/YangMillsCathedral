@@ -297,6 +297,24 @@ Verified:
 - This is local-model infrastructure only: no arbitrary-manifold exterior derivative, curvature,
   connection witness, or Yang–Mills field is constructed.
 
+## 2026-07-17 — eighteenth mathematical stone: smooth bracket-wedge closure
+
+Verified:
+
+- `SmoothLieBracketCoordinates` states smoothness of a Lie bracket in an explicit normed value
+  model, strengthening mere joint continuity exactly where smooth form closure needs it.
+- `ManifoldDifferentialForm.IsSmooth.lieBracketWedgeOne` proves that the existing pointwise
+  antisymmetrized bracket-wedge of two smooth one-forms is a smooth two-form.
+- `SmoothManifoldDifferentialForm.lieBracketWedgeOne` bundles the derived proof without changing the
+  underlying pointwise operation.
+- `groupLieAlgebraCoordinateBracketCLM` exposes the transported finite-dimensional bracket as two
+  continuous linear variables, and `instSmoothLieBracketCoordinatesGroupLieAlgebra` derives
+  smoothness for Mathlib's actual tangent bracket.
+- Hostile probes enforce smoothness closure, pointwise/bundled coherence, factor-two self-wedge
+  normalization, zero behavior, and the usual finite-dimensional `C∞` group integration path.
+- No exterior-derivative certificate, curvature, connection witness, or Yang–Mills field is
+  constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

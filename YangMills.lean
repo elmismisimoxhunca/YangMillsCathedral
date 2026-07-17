@@ -14,6 +14,7 @@ import YangMills.Mathematics.LieGroupAdjoint
 import YangMills.Mathematics.LieGroupAdjointProbes
 import YangMills.Mathematics.LieGroupContinuousBracket
 import YangMills.Mathematics.LieGroupContinuousBracketProbes
+import YangMills.Mathematics.LieGroupSmoothBracket
 import YangMills.Mathematics.LieBracketWedge
 import YangMills.Mathematics.LieBracketWedgeProbes
 import YangMills.Mathematics.ManifoldDifferentialForms
@@ -22,6 +23,8 @@ import YangMills.Mathematics.NormedSpaceExteriorDerivative
 import YangMills.Mathematics.NormedSpaceExteriorDerivativeProbes
 import YangMills.Mathematics.SmoothManifoldDifferentialForms
 import YangMills.Mathematics.SmoothManifoldDifferentialFormsProbes
+import YangMills.Mathematics.SmoothLieBracketWedge
+import YangMills.Mathematics.SmoothLieBracketWedgeProbes
 import YangMills.Geometry.LieGroup
 import YangMills.Geometry.LieGroupProbes
 import YangMills.Geometry.PrincipalBundleTorsor

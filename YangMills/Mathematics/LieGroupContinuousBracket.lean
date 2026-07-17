@@ -24,6 +24,30 @@ open scoped Manifold ContDiff
 universe uE uH uG
 
 set_option backward.isDefEq.respectTransparency false in
+/-- The finite-dimensional tangent bracket, transported to the normed model and curried as two
+continuous linear variables. -/
+noncomputable def groupLieAlgebraCoordinateBracketCLM
+    {E : Type uE} {H : Type uH}
+    [NormedAddCommGroup E] [NormedSpace ℝ E] [FiniteDimensional ℝ E]
+    [TopologicalSpace H]
+    {I : ModelWithCorners ℝ E H}
+    {G : Type uG} [Group G] [TopologicalSpace G] [ChartedSpace H G]
+    [LieGroup I (minSmoothness ℝ 3) G] :
+    letI : CompleteSpace E := FiniteDimensional.complete ℝ E
+    E →L[ℝ] E →L[ℝ] E := by
+  let coordinates := groupLieAlgebraModelEquiv (G := G) I
+  let bracketLinear : E →ₗ[ℝ] E →ₗ[ℝ] E := LinearMap.mk₂ ℝ
+    (fun x y => coordinates ⁅coordinates.symm x, coordinates.symm y⁆)
+    (by intro x y z; simp [add_lie])
+    (by intro c x y; simp)
+    (by intro x y z; simp [lie_add])
+    (by intro c x y; simp)
+  let bracketInner : E →ₗ[ℝ] (E →L[ℝ] E) :=
+    (LinearMap.toContinuousLinearMap : (E →ₗ[ℝ] E) ≃ₗ[ℝ] (E →L[ℝ] E)).comp
+      bracketLinear
+  exact LinearMap.toContinuousLinearMap bracketInner
+
+set_option backward.isDefEq.respectTransparency false in
 /-- The tangent Lie algebra of a sufficiently smooth finite-dimensional real Lie group has a
 jointly continuous bracket. -/
 noncomputable instance instContinuousLieBracketGroupLieAlgebra
@@ -36,17 +60,8 @@ noncomputable instance instContinuousLieBracketGroupLieAlgebra
     letI : CompleteSpace E := FiniteDimensional.complete ℝ E
     ContinuousLieBracket (GroupLieAlgebra I G) := by
   let coordinates := groupLieAlgebraModelEquiv (G := G) I
-  let bracketLinear : E →ₗ[ℝ] E →ₗ[ℝ] E := LinearMap.mk₂ ℝ
-    (fun x y => coordinates ⁅coordinates.symm x, coordinates.symm y⁆)
-    (by intro x y z; simp [add_lie])
-    (by intro c x y; simp)
-    (by intro x y z; simp [lie_add])
-    (by intro c x y; simp)
-  let bracketInner : E →ₗ[ℝ] (E →L[ℝ] E) :=
-    (LinearMap.toContinuousLinearMap : (E →ₗ[ℝ] E) ≃ₗ[ℝ] (E →L[ℝ] E)).comp
-      bracketLinear
   let bracketContinuousLinear : E →L[ℝ] E →L[ℝ] E :=
-    LinearMap.toContinuousLinearMap bracketInner
+    groupLieAlgebraCoordinateBracketCLM (I := I) (G := G)
   have bracket_coordinates_continuous : Continuous fun pair : E × E =>
       coordinates ⁅coordinates.symm pair.1, coordinates.symm pair.2⁆ := by
     exact (bracketContinuousLinear.continuous.comp continuous_fst).clm_apply continuous_snd
