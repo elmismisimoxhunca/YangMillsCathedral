@@ -24,9 +24,23 @@ Verified:
   axioms.
 - The retired `LeanMillenniumPrizeProblems` clone is absent and is not a dependency.
 
+## 2026-07-15 — first mathematical stone: dimensions
+
+Verified:
+
+- `EuclideanDimension` admits exactly natural dimensions one through four.
+- The four named dimensions have spatial arithmetic `0`, `1`, `2`, and `3` respectively, without
+  asserting reconstruction.
+- Mathlib Euclidean spacetime carriers have the declared real finrank.
+- Hostile probes reject zero, values above four, equality of dimensions two and four, and a linear
+  equivalence between their spacetime carriers.
+- The complete build imports the production module and probes before running the kernel axiom
+  audit.
+
 Not yet achieved:
 
-- No mathematical foundation module beyond the empty library root exists.
+- No signature, gauge-geometry, quantum-theory, acceptance, existence, or mass-gap declaration
+  exists.
 - No Yang–Mills acceptance declaration exists.
 - No standalone Git remote exists or has been pushed. The tested candidate
   `git@github.com:elmismisimoxhunca/lean-yangmills-adaly.git` does not exist, and the available SSH

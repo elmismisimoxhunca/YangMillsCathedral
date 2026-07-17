@@ -22,6 +22,18 @@ Searchable extraction: `Sources/Clay/yangmills_official.txt`
 | p. 6 §4; text 277–280 | For every compact simple gauge group, a nontrivial QFT on `ℝ⁴` exists and has positive gap | Final acceptance proposition | — | Pending all lower layers; no inhabitant asserted |
 | p. 6 §4; text 279–280 | Axiomatic properties at least as strong as references [45, 35] | Comparative requirement | — | Pending verified Wightman and corrected OS source maps |
 
+## Dimension-foundation decisions
+
+| Lean declaration | Meaning | Source / decision | Classification | Hostile evidence |
+|---|---|---|---|---|
+| `YangMills.EuclideanDimension` | Euclidean spacetime dimension restricted to `1 ≤ d ≤ 4` | Project scope decision; Clay p. 6 §4 fixes the four-dimensional endpoint but does not require lower-dimensional contracts | Definition | `zero_dimension_blocked`, `dimension_above_four_blocked` |
+| `EuclideanDimension.one` through `.four` | The four supported named dimensions | Project bookkeeping | Definition | exhaustive `eq_one_or_eq_two_or_eq_three_or_eq_four` |
+| `EuclideanDimension.spatialDimension` | Arithmetic `d - 1`, used only after selecting one coordinate as time | Formalization decision; does not assert OS reconstruction | Definition | `one_has_no_spatial_coordinate` |
+| `EuclideanDimension.Spacetime` | Mathlib real Euclidean coordinate space indexed by `d` | Mathlib primitive; Clay p. 6 fixes `d = 4` for the final target | Definition | `finrank_spacetime`, `no_linearEquiv_two_four` |
+
+Dimensions one through three remain consistency regimes requested by this project, not claims in the
+Clay problem statement. Their physical contracts require separate sources before introduction.
+
 ## Non-source project declarations
 
 | Lean declaration | Purpose | Authority | Axiom status |

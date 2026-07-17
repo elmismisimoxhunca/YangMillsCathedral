@@ -86,4 +86,5 @@ lakefile.toml         pinned dependencies
 
 ## Current status
 
-Foundation initialization. No Yang–Mills existence claim is present.
+The standalone foundation and Euclidean dimension index are implemented. No gauge geometry,
+quantum-theory witness, Yang–Mills existence claim, or mass-gap claim is present.
