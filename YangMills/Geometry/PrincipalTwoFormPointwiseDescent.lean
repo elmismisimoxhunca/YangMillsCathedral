@@ -15,7 +15,8 @@ each base point, then transported into the actual dependent adjoint quotient fib
 pointwise base form is proved to have the expected quotient representative and, under horizontality
 and right adjoint equivariance, to agree with any right-related representative and matching lifts.
 
-Smoothness of the descended form is not yet asserted.
+Smoothness is deliberately separate here and is derived downstream under the corresponding
+principal-form smoothness hypothesis.
 -/
 
 namespace YangMills.Geometry

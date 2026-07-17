@@ -138,15 +138,16 @@ extensions. Such extensions are now constructed for the exact local tangent lift
 base field with zero group component through the inverse principal chart. Consequently, every
 smooth fixed-value principal form is now proved to evaluate smoothly on the exact local lifts.
 Using horizontality and right adjoint equivariance, this evaluation is transported across arbitrary
-designated presentations to package a smooth adjoint-bundle-valued descended two-form. Horizontality
+designated presentations to package a smooth adjoint-bundle-valued descended two-form. Applied to
+the indexed structure certificate, this now packages smooth descent of the exact derived curvature. Horizontality
 is proved to make two-form evaluation independent of tangent-lift choices at a fixed
 total-space point. Right adjoint equivariance is then proved to identify the resulting values in the
 actual adjoint orbit quotient across right-related representatives, including replacement lifts with
 matching projections. A pointwise dependent-fiber base form is now constructed from the selected
 local section/lifts and proved to agree with all such right-related presentations. This construction
 is specialized to the exact curvature derived from one connection and exterior-derivative datum,
-with presentation independence supplied by its indexed structure certificate. Smoothness of the
-descended base curvature remains pending.
+with presentation independence supplied by its indexed structure certificate. The exact pointwise
+base curvature is now proved smooth and packaged without changing its carrier.
 `PrincipalTwoForm.IsHorizontal`, `.IsRightAdEquivariant`, and the connection-indexed
 `PrincipalCurvatureStructureCertificate` state (1.15) and (1.14) intrinsically without accepting an
 unrelated curvature field. This is a requirement surface: automatic derivation from the current

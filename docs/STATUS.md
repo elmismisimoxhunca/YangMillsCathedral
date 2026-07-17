@@ -987,6 +987,20 @@ Verified:
 - No smooth principal form or structural certificate is constructed. Specialization to the exact
   certified curvature remains pending.
 
+## 2026-07-17 — fifty-seventh mathematical stone: smooth certified-curvature descent
+
+Verified:
+
+- `PrincipalConnectionData.pointwiseBaseCurvature_isSmooth` specializes generic smooth descent to
+  the exact `connection.curvatureForm exterior` and its same-index structure certificate.
+- `smoothBaseCurvature` packages the result as a smooth adjoint-bundle-valued two-form.
+- `smoothBaseCurvature_toForm` and `_toForm_eq_selected` prove that packaging retains the exact
+  pointwise descent of the exact derived curvature.
+- Hostile probes reject loss of smoothness, replacement of the pointwise carrier, and substitution
+  of an unrelated principal two-form.
+- No connection, exterior-derivative datum, or structure certificate witness is constructed; this
+  is a conditional descent theorem and not an existence claim.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

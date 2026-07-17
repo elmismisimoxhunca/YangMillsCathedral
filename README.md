@@ -112,7 +112,7 @@ differential-form carriers, an exact degree-zero form/section bridge, and
 smooth principal local sections with projection-right-inverse tangent lifts that preserve smooth
 base fields and admit exact chart-local ambient extensions supporting smooth principal-form
 evaluation, and proved lift and representative independence plus smooth dependent-fiber descent for smooth horizontal
-right-equivariant principal two-forms and pointwise descent for the exact certified principal
+right-equivariant principal two-forms and smooth descent for the exact certified principal
 curvature, and the adjoint
 action packaged as a
 smooth invertible operator family, alongside an explicit positive

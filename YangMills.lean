@@ -113,6 +113,8 @@ import YangMills.Geometry.PrincipalTwoFormSmoothDescent
 import YangMills.Geometry.PrincipalTwoFormSmoothDescentProbes
 import YangMills.Geometry.PrincipalCurvaturePointwiseDescent
 import YangMills.Geometry.PrincipalCurvaturePointwiseDescentProbes
+import YangMills.Geometry.PrincipalCurvatureSmoothDescent
+import YangMills.Geometry.PrincipalCurvatureSmoothDescentProbes
 import YangMills.Audit
 
 /-!

@@ -14,7 +14,7 @@ connection and its exterior-derivative data. A `PrincipalCurvatureStructureCerti
 horizontality and right adjoint equivariance for that same curvature, yielding presentation
 independence in the actual adjoint quotient.
 
-Smoothness of the descended curvature remains pending.
+Smoothness is deliberately separate here and is derived downstream from this unchanged carrier.
 -/
 
 namespace YangMills.Geometry
