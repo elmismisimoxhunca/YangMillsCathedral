@@ -773,6 +773,25 @@ Verified:
   exact coordinate, and a nonsmooth zero section.
 - Adjoint-bundle-valued differential forms and curvature descent remain pending.
 
+## 2026-07-17 — forty-fourth mathematical stone: pointwise adjoint-valued forms
+
+Verified:
+
+- `fiberModelContinuousLinearEquiv` packages every designated exact fiber coordinate as a continuous
+  linear equivalence for the named algebra and quotient-coherent topology; its underlying map is
+  proved unchanged.
+- `AdjointBundle.DifferentialForm` defines a degree-`k` pointwise form at `b` as a continuous
+  alternating map from `TangentSpace IB b` into the actual dependent adjoint quotient fiber over
+  `b`.
+- `DifferentialForm.inCoordinates` postcomposes with the exact designated coordinate, and
+  `inCoordinates_apply` exposes exact quotient-coordinate evaluation.
+- `projection_apply`, `zero`, `zero_apply`, and `evalTwo_same` derive base preservation, the
+  pointwise zero form, and degree-two alternation without adding a field witness.
+- Hostile probes reject base-moving values, replacement coordinates, nonalternating two-forms, and
+  nonzero evaluations of the named zero form.
+- Smooth adjoint-valued forms, covariant differentiation, tangent lifts, and curvature descent remain
+  pending; no principal curvature has been claimed to descend.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
