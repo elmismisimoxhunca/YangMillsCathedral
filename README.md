@@ -98,8 +98,9 @@ regularity, pointwise and smooth principal connection-form definitions, the deri
 curvature formula, intrinsic curvature horizontality/right-adjoint-equivariance certificate semantics,
 the adjoint associated-bundle orbit quotient with its quotient topology, base projection, and
 representative-independent local coordinates, topological local trivializations backed by derived
-adjoint regularity, and their exact promotion to Mathlib's generic bundle-trivialization interface,
-alongside an explicit positive adjoint-invariant Lie-algebra inner-product certificate, are
+adjoint regularity, their exact promotion to Mathlib's generic bundle-trivialization interface, and
+derived fiberwise-linear overlap formulas, alongside an explicit positive adjoint-invariant
+Lie-algebra inner-product certificate, are
 implemented. No
 concrete gauge-group, connection, invariant-inner-product, curvature, or structure-certificate witness,
 symmetry group, reconstruction bridge, quantum-theory witness, Yang–Mills existence claim, or

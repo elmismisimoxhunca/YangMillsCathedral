@@ -505,6 +505,26 @@ Verified:
   `VectorBundle`, charted manifold, smooth vector bundle, section, or descended curvature is
   claimed.
 
+## 2026-07-17 — twenty-ninth mathematical stone: exact adjoint overlap transitions
+
+Verified:
+
+- `adjointBundleOverlapDomain` is the open base-dependent domain on which the principal overlap at
+  group coordinate `1` is defined.
+- `adjointBundleTransition` is the actual composition of the second promoted quotient coordinate
+  with the inverse of the first; no independent transition witness is accepted.
+- `adjointBundleTransition_eq` proves the exact formula
+  `(b,X) ↦ (b, Ad(k₁₂(b))X)`, where `k₁₂(b)` is the group component of the actual ordered principal
+  transition at `(b,1)`.
+- Reversing the ordered associated transition recovers the original coordinate through the proved
+  quotient-coordinate inverse laws.
+- Base preservation, zero preservation, additivity, and real-linearity of the fiber map are derived
+  from the same adjoint continuous linear map.
+- Hostile probes reject base movement, a disconnected fiber operator, a broken reverse transition,
+  zero translation, nonadditivity, and failure of scalar compatibility.
+- Smoothness and manifold-atlas packaging remain pending; no `FiberBundle`, `VectorBundle`, or
+  smooth adjoint bundle is claimed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

@@ -45,6 +45,8 @@ import YangMills.Geometry.AdjointBundleLocalTrivialization
 import YangMills.Geometry.AdjointBundleLocalTrivializationProbes
 import YangMills.Geometry.AdjointBundleTrivialization
 import YangMills.Geometry.AdjointBundleTrivializationProbes
+import YangMills.Geometry.AdjointBundleTransition
+import YangMills.Geometry.AdjointBundleTransitionProbes
 import YangMills.Geometry.PrincipalBundleTorsor
 import YangMills.Geometry.PrincipalBundleTorsorProbes
 import YangMills.Geometry.PrincipalBundleMap
