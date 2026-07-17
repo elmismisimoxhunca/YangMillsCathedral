@@ -99,6 +99,8 @@ import YangMills.Geometry.PrincipalTwoFormLiftIndependence
 import YangMills.Geometry.PrincipalTwoFormLiftIndependenceProbes
 import YangMills.Geometry.PrincipalTwoFormRepresentativeIndependence
 import YangMills.Geometry.PrincipalTwoFormRepresentativeIndependenceProbes
+import YangMills.Geometry.PrincipalTwoFormPointwiseDescent
+import YangMills.Geometry.PrincipalTwoFormPointwiseDescentProbes
 import YangMills.Audit
 
 /-!

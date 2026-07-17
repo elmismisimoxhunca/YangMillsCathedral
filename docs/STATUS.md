@@ -875,6 +875,25 @@ Verified:
 - Construction and smoothness of the descended base two-form remain pending; no curvature descent is
   claimed yet.
 
+## 2026-07-17 — fiftieth mathematical stone: pointwise principal two-form descent
+
+Verified:
+
+- `AdjointBundle.fiberModelEquiv_localSection_mk` identifies the exact designated coordinate of a
+  quotient point represented at the chart's local section.
+- `PrincipalTwoForm.selectedBaseForm` constructs a continuous alternating degree-two map into each
+  actual dependent adjoint quotient fiber using the selected local tangent lift and exact fiber
+  continuous-linear equivalence.
+- `selectedBaseForm_coordinate` and `_quotient` prove its unchanged model coordinate and exact
+  quotient representative.
+- `selectedBaseForm_quotient_eq_rightRelated` proves that horizontality and right adjoint
+  equivariance make the pointwise value agree with every right-related representative and matching
+  lift tuple.
+- Hostile probes reject replacement coordinates, unrelated quotient representatives, and
+  right-related presentation mismatches.
+- Specialization to the certified principal curvature and smoothness of the descended base form
+  remain pending; neither is claimed by this generic pointwise construction.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

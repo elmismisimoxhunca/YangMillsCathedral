@@ -134,7 +134,9 @@ local section and a tangent lift proved right-inverse to the actual projection d
 Horizontality is proved to make two-form evaluation independent of tangent-lift choices at a fixed
 total-space point. Right adjoint equivariance is then proved to identify the resulting values in the
 actual adjoint orbit quotient across right-related representatives, including replacement lifts with
-matching projections. Construction and smoothness of the descended base form remain pending.
+matching projections. A pointwise dependent-fiber base form is now constructed from the selected
+local section/lifts and proved to agree with all such right-related presentations. Specialization to
+the certified curvature and smoothness of the descended base form remain pending.
 `PrincipalTwoForm.IsHorizontal`, `.IsRightAdEquivariant`, and the connection-indexed
 `PrincipalCurvatureStructureCertificate` state (1.15) and (1.14) intrinsically without accepting an
 unrelated curvature field. This is a requirement surface: automatic derivation from the current
