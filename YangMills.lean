@@ -35,6 +35,8 @@ import YangMills.Geometry.InvariantInnerProduct
 import YangMills.Geometry.InvariantInnerProductProbes
 import YangMills.Geometry.AdjointBundle
 import YangMills.Geometry.AdjointBundleProbes
+import YangMills.Geometry.AdjointBundleTopology
+import YangMills.Geometry.AdjointBundleTopologyProbes
 import YangMills.Geometry.PrincipalBundleTorsor
 import YangMills.Geometry.PrincipalBundleTorsorProbes
 import YangMills.Geometry.PrincipalBundleMap

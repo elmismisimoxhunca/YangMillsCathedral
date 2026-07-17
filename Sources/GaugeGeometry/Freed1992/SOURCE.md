@@ -93,7 +93,9 @@ vector fields and proves compatibility with Mathlib's `extDerivWithin`. Given su
 for the same smooth principal connection, `curvatureForm` derives exactly (1.13).
 The set-level `AdjointBundle` implements Freed's displayed `g_P = P ×_G g` as the orbit quotient
 for `(p,X)·g = (p·g, Ad(g⁻¹)X)`, including the induced base projection and exact representative
-relation. No topology or smooth vector-bundle structure is attributed to that quotient yet.
+relation. The total carrier now has the induced quotient topology, and its projection is proved a
+continuous quotient map onto the already declared base topology. Local vector-bundle
+trivializations and smooth structure are not attributed to that quotient yet.
 `PrincipalTwoForm.IsHorizontal`, `.IsRightAdEquivariant`, and the connection-indexed
 `PrincipalCurvatureStructureCertificate` state (1.15) and (1.14) intrinsically without accepting an
 unrelated curvature field. This is a requirement surface: automatic derivation from the current

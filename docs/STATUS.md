@@ -405,12 +405,31 @@ Verified:
 - This is only a set-level associated bundle. No topology, smooth vector-bundle atlas, section,
   descended curvature, connection, or Yang–Mills field is constructed.
 
+## 2026-07-17 — twenty-fourth mathematical stone: adjoint-bundle quotient topology
+
+Verified:
+
+- Mathlib's generic `Quotient` topology installs exactly the coinduced topology from the
+  representative carrier `P × g`; no competing project-specific topology instance is introduced.
+- `mk_isQuotientMap` and `mk_continuous` expose the representative-class map as the defining
+  continuous quotient map.
+- `projection_continuous` derives continuity from the original principal projection through the
+  quotient universal property.
+- Continuous zero classes over principal points prove associated-fiber nonemptiness without choosing
+  a global section of the principal bundle.
+- `projection_isQuotientMap` derives the declared base topology from the already proved principal
+  quotient projection; it is not stored as an unrelated topology witness.
+- Hostile probes reject a nonquotient representative map, discontinuous/nonquotient base projection,
+  empty associated fibers, and a base-moving zero class.
+- No local vector-bundle trivialization, smooth structure, section, descended curvature, or
+  Yang–Mills field is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
   `SU(n)` API does not supply the complete manifold/compactness/connectedness/tangent-simplicity
   chain, so positive consistency infrastructure remains open.
-- No general smooth bundle-map or smooth adjoint-vector-bundle/descent layer, concrete
+- No general smooth bundle-map or local topological/smooth adjoint-vector-bundle/descent layer, concrete
   principal-connection/curvature/structure-certificate
   witness, automatic curvature horizontality/equivariance theorem, Bianchi/gauge-covariance result,
   symmetry-group, quantum-theory, acceptance, existence, or mass-gap declaration exists.

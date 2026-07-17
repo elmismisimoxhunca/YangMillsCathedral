@@ -40,7 +40,8 @@ committed before higher layers depend on it.
 - [x] Define principal curvature from a certified derivative and the smooth bracket-wedge.
 - [x] State and probe intrinsic curvature horizontality/right-adjoint-equivariance certificates.
 - [x] Construct and probe the set-level adjoint associated-bundle orbit quotient.
-- [ ] Add smooth adjoint-vector-bundle/descent infrastructure.
+- [x] Equip the adjoint bundle with its quotient topology and derive its quotient projection.
+- [ ] Add local topological/smooth adjoint-vector-bundle trivializations and descent infrastructure.
 - [ ] Derive structural curvature laws automatically and prove gauge covariance and Bianchi.
 
 ## Phase 3 — classical Yang–Mills semantics
