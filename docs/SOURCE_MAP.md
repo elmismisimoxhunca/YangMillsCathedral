@@ -34,6 +34,20 @@ Searchable extraction: `Sources/Clay/yangmills_official.txt`
 Dimensions one through three remain consistency regimes requested by this project, not claims in the
 Clay problem statement. Their physical contracts require separate sources before introduction.
 
+## Signature-foundation decisions
+
+| Lean declaration | Meaning | Source / decision | Classification | Hostile evidence |
+|---|---|---|---|---|
+| `EuclideanDimension.CoordinateVector` | Algebraic real coordinate vectors with no selected topology or form | Project definition over the dimension index | Definition | Forms are added separately rather than hidden in the carrier |
+| `EuclideanDimension.euclideanQuadraticForm` | All-positive sum-of-squares form | Standard mathematical convention; Clay p. 5 distinguishes Euclidean spacetime but does not state this formula | Formalization definition | `negative_euclidean_value_blocked` |
+| `EuclideanDimension.minkowskiQuadraticForm` | Mostly-minus form with coordinate zero positive | Clay p. 5 §3, text 227–232 requires Minkowski signature and translation generators; `(+,-,…,-)` is an explicit project convention | Formalization definition | `nonpositive_minkowski_time_basis_blocked`, `nonnegative_minkowski_spatial_basis_blocked` |
+| `EuclideanDimension.spatialIndexSucc` | Places spatial indices after coordinate zero | Project coordinate convention; no reconstruction asserted | Definition | spatial-basis negative-value theorem |
+| `one_euclideanQuadraticForm_eq_minkowskiQuadraticForm` | In `d = 1`, no spatial weight distinguishes the two algebraic forms | Derived from the definitions; does not identify theories | Derived theorem | exact proof |
+| `euclideanQuadraticForm_ne_minkowskiQuadraticForm` | From `d = 2` onward, a spatial basis vector separates the forms | Derived from the definitions | Derived theorem | 2D and 4D identification-blocking probes |
+
+No Lorentz group, Euclidean group, analytic continuation, or OS bridge is claimed by these
+quadratic-form declarations.
+
 ## Non-source project declarations
 
 | Lean declaration | Purpose | Authority | Axiom status |

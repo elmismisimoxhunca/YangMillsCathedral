@@ -6,6 +6,8 @@ Authors: Sebastian Rodrigo
 
 import YangMills.Foundation.Dimensions
 import YangMills.Foundation.DimensionsProbes
+import YangMills.Foundation.Signatures
+import YangMills.Foundation.SignaturesProbes
 import YangMills.Audit
 
 /-!

@@ -15,7 +15,7 @@ committed before higher layers depend on it.
 
 - [x] Define Euclidean spacetime dimensions `1 ≤ d ≤ 4`.
 - [x] Define spatial dimension as `d - 1` only in reconstruction contexts.
-- [ ] Define Euclidean and Minkowski signatures without identifying their objects.
+- [x] Define Euclidean and Minkowski quadratic forms without identifying them or asserting reconstruction.
 - [x] Add hostile probes for out-of-range and dimension-confused witnesses.
 
 ## Phase 2 — gauge geometry

@@ -37,10 +37,25 @@ Verified:
 - The complete build imports the production module and probes before running the kernel axiom
   audit.
 
+## 2026-07-17 — second mathematical stone: signatures
+
+Verified:
+
+- A coordinate-vector carrier is introduced without silently selecting a metric or topology.
+- The positive Euclidean sum-of-squares form and mostly-minus Minkowski form are separate
+  dimension-indexed declarations.
+- Coordinate zero has positive Minkowski weight; every available spatial basis direction has
+  negative weight.
+- The Euclidean form is nonnegative.
+- In dimension one the algebraic forms agree because no spatial coordinate exists; this is not
+  presented as equivalence of Euclidean and Minkowski theories.
+- From dimension two onward the forms are proved unequal, with dedicated 2D and 4D hostile probes.
+- No group action, analytic continuation, or reconstruction claim is introduced.
+
 Not yet achieved:
 
-- No signature, gauge-geometry, quantum-theory, acceptance, existence, or mass-gap declaration
-  exists.
+- No symmetry-group, gauge-geometry, quantum-theory, acceptance, existence, or mass-gap
+  declaration exists.
 - No Yang–Mills acceptance declaration exists.
 - No standalone Git remote exists or has been pushed. The tested candidate
   `git@github.com:elmismisimoxhunca/lean-yangmills-adaly.git` does not exist, and the available SSH
