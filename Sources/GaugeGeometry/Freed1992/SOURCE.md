@@ -108,9 +108,10 @@ formula and forward/inverse operator-equivalence families are proved `C∞` by c
 designated smooth principal overlap with the derived smooth adjoint action. The coordinate adjoint is also packaged as a continuous linear equivalence with
 smooth forward and inverse operator families. After explicit transport through the canonical
 tangent-model equivalence, the
-promoted charts form a named covering charted-space atlas on the same quotient topology. No global
-atlas instance, compatibility groupoid, `FiberBundle`, or smooth vector-bundle structure is
-attributed to those coordinates.
+promoted charts form a named covering charted-space atlas on the same quotient topology. Their
+pairwise changes are proved compatible with Mathlib's smooth fiberwise-linear groupoid, yielding a
+named `C∞` manifold structure on the same quotient carrier and topology. No global atlas/manifold
+instance, `FiberBundle`, or smooth vector-bundle structure is attributed to those coordinates.
 `PrincipalTwoForm.IsHorizontal`, `.IsRightAdEquivariant`, and the connection-indexed
 `PrincipalCurvatureStructureCertificate` state (1.15) and (1.14) intrinsically without accepting an
 unrelated curvature field. This is a requirement surface: automatic derivation from the current

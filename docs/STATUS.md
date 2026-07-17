@@ -598,6 +598,26 @@ Verified:
 - These are the precise source and operator inputs required by `contMDiffFiberwiseLinear`; groupoid
   membership and the quotient manifold structure remain pending.
 
+## 2026-07-17 — thirty-fourth mathematical stone: smooth quotient manifold atlas
+
+Verified:
+
+- `AdjointBundle.productHasGroupoid` proves pairwise compatibility of every two designated model
+  charts with Mathlib's `contMDiffFiberwiseLinear B EG IB ∞` structure groupoid.
+- Each compatibility proof uses the exact base overlap, actual ordered principal transition,
+  continuous-linear-equivalence fiber operator, smooth forward and inverse operator families, and
+  the exact transported quotient-chart composition.
+- `AdjointBundle.modelIsManifold` composes this fiberwise-linear groupoid with the base manifold
+  groupoid to provide a named `C∞` manifold structure on the existing adjoint quotient.
+- Both the groupoid and manifold structures are named values, not global instances; explicit
+  principal-bundle atlas data remains visible.
+- The original representative quotient-map theorem coexists with the named manifold structure,
+  confirming that no replacement carrier or topology was introduced.
+- Hostile probes reject designated transitions outside the fiberwise-linear groupoid and verify the
+  availability of the named manifold together with the original quotient map.
+- No dependent fiber family, `FiberBundle`, `VectorBundle`, section, descended curvature, or
+  Yang–Mills field is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

@@ -100,8 +100,8 @@ the adjoint associated-bundle orbit quotient with its quotient topology, base pr
 representative-independent local coordinates, topological local trivializations backed by derived
 adjoint regularity, their exact promotion to Mathlib's generic bundle-trivialization interface, and
 derived fiberwise-linear overlap formulas with smooth forward/inverse operator families and exact
-source coherence, a named covering
-quotient chart atlas with explicit tangent-model transport, and the adjoint action packaged as a
+source coherence, a named covering quotient chart atlas with explicit tangent-model transport and
+proved smooth fiberwise-linear groupoid/manifold compatibility, and the adjoint action packaged as a
 smooth invertible operator family, alongside an explicit positive
 adjoint-invariant
 Lie-algebra inner-product certificate, are

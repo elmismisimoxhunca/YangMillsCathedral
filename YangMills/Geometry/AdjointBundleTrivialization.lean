@@ -84,6 +84,16 @@ theorem AdjointBundle.modelBundleTrivialization_apply
     Bundle.Trivialization.transFiberHomeomorph_apply]
   rfl
 
+/-- The inverse model-coordinate trivialization first applies the inverse tangent-model bridge and
+then the intrinsic quotient-coordinate inverse. -/
+@[simp]
+theorem AdjointBundle.modelBundleTrivialization_symm_apply
+    (z : B × E) :
+    (AdjointBundle.modelBundleTrivialization (I := I) bundle chart).toOpenPartialHomeomorph.symm z =
+      AdjointBundle.localCoordinateInverse (I := I) chart
+        (z.1, (YangMills.Mathematics.groupLieAlgebraModelEquiv (G := G) I).symm z.2) :=
+  rfl
+
 /-- Its inverse is the exact canonical representative map based at group coordinate `1`. -/
 @[simp]
 theorem AdjointBundle.bundleTrivialization_symm_apply

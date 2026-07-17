@@ -51,6 +51,8 @@ import YangMills.Geometry.SmoothAdjointBundleTransition
 import YangMills.Geometry.SmoothAdjointBundleTransitionProbes
 import YangMills.Geometry.AdjointBundleChartedSpace
 import YangMills.Geometry.AdjointBundleChartedSpaceProbes
+import YangMills.Geometry.AdjointBundleSmoothAtlas
+import YangMills.Geometry.AdjointBundleSmoothAtlasProbes
 import YangMills.Geometry.PrincipalBundleTorsor
 import YangMills.Geometry.PrincipalBundleTorsorProbes
 import YangMills.Geometry.PrincipalBundleMap

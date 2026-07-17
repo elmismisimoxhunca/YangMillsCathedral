@@ -138,6 +138,41 @@ theorem adjointBundleTransition_eq
   · exact baseP₀.symm
   · rfl
 
+set_option backward.isDefEq.respectTransparency false in
+/-- Exact change of the explicitly transported model-fiber trivializations. This theorem makes the
+`tangent model ↔ intrinsic Lie algebra` transport visible on both chart directions. -/
+theorem adjointBundleModelTransition_eq
+    (z : B × E)
+    (hz : z ∈ (adjointBundleOverlapDomain (I := I) first second : Set (B × E))) :
+    (AdjointBundle.modelBundleTrivialization (I := I) bundle second)
+      ((AdjointBundle.modelBundleTrivialization (I := I) bundle first).toOpenPartialHomeomorph.symm z) =
+      (z.1, YangMills.Mathematics.lieGroupAdjointCoordinates (I := I)
+        (principalBundleTransition first second (z.1, (1 : G))).2 z.2) := by
+  let coordinates := YangMills.Mathematics.groupLieAlgebraModelEquiv (G := G) I
+  let p₀ : P := first.toPartialHomeomorph.symm (z.1, (1 : G))
+  have hzIntrinsic :
+      (z.1, coordinates.symm z.2) ∈ adjointBundleOverlapDomain (I := I) first second := by
+    rw [adjointBundleOverlapDomain_eq (I := I) first second] at hz ⊢
+    exact ⟨hz.1, Set.mem_univ _⟩
+  have firstTarget : (z.1, (1 : G)) ∈ first.toPartialHomeomorph.target := hzIntrinsic.1
+  have p₀FirstSource : p₀ ∈ first.toPartialHomeomorph.source :=
+    first.toPartialHomeomorph.map_target firstTarget
+  have p₀SecondSource : p₀ ∈ second.toPartialHomeomorph.source := hzIntrinsic.2
+  have firstP₀ : first p₀ = (z.1, (1 : G)) :=
+    first.toPartialHomeomorph.right_inv firstTarget
+  have baseP₀ := first.base_coordinate p₀ p₀FirstSource
+  rw [firstP₀] at baseP₀
+  rw [AdjointBundle.modelBundleTrivialization_symm_apply,
+    AdjointBundle.modelBundleTrivialization_apply]
+  change ((AdjointBundle.localCoordinate (I := I) second
+      (AdjointBundle.mk torsor p₀ (coordinates.symm z.2))).1,
+    coordinates (AdjointBundle.localCoordinate (I := I) second
+      (AdjointBundle.mk torsor p₀ (coordinates.symm z.2))).2) = _
+  rw [AdjointBundle.localCoordinate_mk second p₀ (coordinates.symm z.2) p₀SecondSource]
+  apply Prod.ext
+  · exact baseP₀.symm
+  · rfl
+
 /-- The associated transition fixes the base coordinate. -/
 theorem adjointBundleTransition_fst
     (z : B × GroupLieAlgebra I G)
