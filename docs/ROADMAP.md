@@ -70,7 +70,8 @@ committed before higher layers depend on it.
 - [x] Construct the pointwise dependent-fiber descent of horizontal equivariant two-forms.
 - [x] Specialize pointwise descent to the exact certified principal curvature.
 - [x] Prove smooth fixed-value form evaluation along maps from ambient smooth extensions.
-- [ ] Construct local ambient extensions and prove smoothness of the descended curvature form.
+- [x] Construct smooth chart-local ambient extensions of exact principal tangent lifts.
+- [ ] Apply those extensions and prove smoothness of the descended curvature form.
 - [ ] Derive structural curvature laws automatically and prove gauge covariance and Bianchi.
 
 ## Phase 3 — classical Yang–Mills semantics

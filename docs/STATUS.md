@@ -940,6 +940,23 @@ Verified:
 - Construction of ambient principal-chart extensions for the local lifted fields remains pending,
   so smoothness of descended curvature is still not claimed.
 
+## 2026-07-17 — fifty-fourth mathematical stone: ambient local-lift extensions
+
+Verified:
+
+- `exists_principalBundleLocalTangentLift_ambientField` extends a smooth base tangent field to a
+  smooth tangent field on the exact principal-chart subset
+  `chart.source ∩ projection ⁻¹' s`.
+- The construction uses the product-coordinate field `(v, 0)`, Mathlib's canonical product tangent
+  equivalence, and the tangent map within the exact inverse principal chart.
+- Its restriction at group coordinate `1` is proved equal to the derivative-based
+  `principalBundleLocalTangentLift`, using tangent-map composition rather than an unrelated lift.
+- Zero totalization outside the source is only dependent typing infrastructure; no smoothness is
+  claimed there.
+- Hostile probes reject nonexistence and universal disagreement with the exact local lift.
+- The generic form-evaluation theorem can now consume these extensions. Its specialization to
+  certified curvature and the final descended-curvature smoothness proof remain pending.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
