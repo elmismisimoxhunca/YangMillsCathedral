@@ -64,6 +64,7 @@ committed before higher layers depend on it.
 - [x] Define smooth adjoint-bundle-valued forms by exact local field evaluation.
 - [x] Prove the exact degree-zero form/section carrier and smoothness bridge.
 - [x] Derive smooth principal local sections and projection-right-inverse tangent lifts.
+- [x] Prove exact local tangent lifts preserve smooth base tangent fields.
 - [x] Prove lift-independence for horizontal principal two-forms.
 - [x] Prove adjoint-quotient representative independence under right translation.
 - [x] Construct the pointwise dependent-fiber descent of horizontal equivariant two-forms.

@@ -87,6 +87,8 @@ import YangMills.Geometry.SmoothPrincipalBundle
 import YangMills.Geometry.SmoothPrincipalBundleProbes
 import YangMills.Geometry.PrincipalBundleLocalTangentLift
 import YangMills.Geometry.PrincipalBundleLocalTangentLiftProbes
+import YangMills.Geometry.PrincipalBundleLocalTangentLiftSmooth
+import YangMills.Geometry.PrincipalBundleLocalTangentLiftSmoothProbes
 import YangMills.Geometry.SmoothGaugeTransformation
 import YangMills.Geometry.SmoothGaugeTransformationProbes
 import YangMills.Geometry.PointwisePrincipalConnection

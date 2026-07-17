@@ -910,6 +910,21 @@ Verified:
 - Smoothness of the descended base curvature remains pending; no connection, exterior-derivative
   datum, or structure certificate witness is constructed.
 
+## 2026-07-17 — fifty-second mathematical stone: smooth local lifted fields
+
+Verified:
+
+- `principalBundleLocalTangentLift_eq_tangentMapWithin` identifies the derivative-based exact local
+  lift with Mathlib's tangent map within the open principal-chart domain.
+- `principalBundleLocalTangentLift_contMDiffOn` proves that applying this lift to a smooth base
+  tangent field yields a smooth tangent field along the exact local section.
+- `principalBundleLocalTangentLift_totalSpace_proj` records that the lifted field remains based at
+  that local section.
+- Hostile probes reject replacement tangent-map values, nonsmooth lifted fields, and moved
+  tangent-bundle base points.
+- No ambient extension, pullback-smoothness certificate, or descended-curvature smoothness claim is
+  introduced. Smoothness of principal-form evaluation along the local section remains pending.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

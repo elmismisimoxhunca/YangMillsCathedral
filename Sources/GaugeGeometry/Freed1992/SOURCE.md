@@ -130,8 +130,9 @@ maps into the actual dependent quotient fiber, with exact designated coordinates
 then defined by evaluation on locally smooth tangent fields in every designated exact chart; the
 smooth zero form is derived. Degree-zero forms are proved exactly equivalent to dependent sections,
 including smoothness in both presentations. Every designated principal chart now supplies a smooth
-local section and a tangent lift proved right-inverse to the actual projection differential.
-Horizontality is proved to make two-form evaluation independent of tangent-lift choices at a fixed
+local section and a tangent lift proved right-inverse to the actual projection differential. The
+lift is identified with Mathlib's tangent map within the chart domain and proved to carry smooth base
+tangent fields to smooth fields along the local section. Horizontality is proved to make two-form evaluation independent of tangent-lift choices at a fixed
 total-space point. Right adjoint equivariance is then proved to identify the resulting values in the
 actual adjoint orbit quotient across right-related representatives, including replacement lifts with
 matching projections. A pointwise dependent-fiber base form is now constructed from the selected
