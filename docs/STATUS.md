@@ -315,6 +315,27 @@ Verified:
 - No exterior-derivative certificate, curvature, connection witness, or Yang–Mills field is
   constructed.
 
+## 2026-07-17 — nineteenth mathematical stone: manifold one-form Cartan certificates
+
+Verified:
+
+- `ManifoldTangentField.IsSmoothOn` names the same tangent-bundle section regularity used by smooth
+  differential forms.
+- `oneFormCartanExpressionCoordinates` states
+  `D(ω(Y))·X - D(ω(X))·Y - ω([X,Y])` using `mfderivWithin` and Mathlib's intrinsic
+  `mlieBracketWithin`, with an explicit normed value-coordinate bridge.
+- Swapping the two vector fields negates the expression.
+- `SmoothManifoldOneFormExteriorDerivativeCertificate` ties one smooth two-form to that exact
+  formula on every open, uniquely differentiable local set and every pair of smooth tangent fields.
+- Two certificates agree on every admissible local field test; the zero one-form has a concrete
+  zero certificate.
+- `extDerivWithin_eq_oneFormCartanExpression` proves compatibility with Mathlib's normed-space
+  exterior derivative and `lieBracketWithin` formula.
+- Hostile probes reject malformed formulas, a missing nonzero bracket term, wrong swap sign, and
+  disconnected certificate derivatives.
+- This remains a certified `1 → 2` interface: no canonical general-degree arbitrary-manifold
+  exterior derivative, principal curvature, connection witness, or Yang–Mills field is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

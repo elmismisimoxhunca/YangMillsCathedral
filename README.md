@@ -91,8 +91,9 @@ forms, source-facing Lie-algebra simplicity layer, and compact-connected-simple 
 certificate type and semantics, the fiberwise torsor core, algebraic bundle maps/gauge
 automorphisms, topological and smooth equivariant local trivializations, derived open-quotient
 projection and smooth overlap-transition theorems, smooth gauge automorphisms, the Lie-group adjoint
-action, a typed pointwise manifold differential-form carrier, local-model exterior derivative, a
-smoothly closed Lie-bracket wedge and finite-dimensional tangent-bracket continuity/smoothness
+action, a typed pointwise manifold differential-form carrier, local-model exterior derivative and
+an arbitrary-manifold one-form Cartan certificate, a smoothly closed Lie-bracket wedge and
+finite-dimensional tangent-bracket continuity/smoothness
 bridges, smooth differential-form regularity, and
 pointwise and smooth principal connection-form definitions
 are implemented. No concrete gauge-group or connection witness, symmetry group, curvature,

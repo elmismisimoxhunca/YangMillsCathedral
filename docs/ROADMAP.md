@@ -36,7 +36,8 @@ committed before higher layers depend on it.
 - [x] Add and probe local smooth-section regularity for differential forms.
 - [x] Promote the pointwise form to a smooth principal connection definition.
 - [x] Add continuous and smooth wedge/bracket infrastructure.
-- [ ] Add arbitrary-manifold exterior-derivative certification and define curvature.
+- [x] Add arbitrary-manifold one-form exterior-derivative certification.
+- [ ] Define principal curvature from a certified derivative and the smooth bracket-wedge.
 - [ ] Prove structural curvature and gauge-covariance results.
 
 ## Phase 3 — classical Yang–Mills semantics
