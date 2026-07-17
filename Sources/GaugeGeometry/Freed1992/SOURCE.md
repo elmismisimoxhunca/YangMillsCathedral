@@ -117,7 +117,9 @@ back from the quotient, making that equivalence a base-preserving homeomorphism 
 a competing global topology instance. Every dependent fiber then receives named real vector-space
 structures transported through the explicitly selected associated coordinate. Every other
 designated associated coordinate is then proved to differ by the exact adjoint linear transition.
-Dependent trivialization promotion, `FiberBundle`, and smooth vector-bundle structure remain pending.
+The established quotient trivializations are then transported exactly across the base-preserving
+total-space homeomorphism, with per-fiber topologies induced from selected coordinates. `FiberBundle`
+instance packaging and smooth vector-bundle structure remain pending.
 `PrincipalTwoForm.IsHorizontal`, `.IsRightAdEquivariant`, and the connection-indexed
 `PrincipalCurvatureStructureCertificate` state (1.15) and (1.14) intrinsically without accepting an
 unrelated curvature field. This is a requirement surface: automatic derivation from the current

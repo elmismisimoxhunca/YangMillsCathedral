@@ -688,6 +688,24 @@ Verified:
 - Dependent-space bundle trivializations, per-fiber topology, `FiberBundle`/`VectorBundle`
   packaging, and smooth bundle claims remain pending.
 
+## 2026-07-17 — thirty-ninth mathematical stone: dependent trivializations
+
+Verified:
+
+- `fiberTopology` pulls each dependent fiber topology back through its exact selected model
+  coordinate, and `selectedFiberModelHomeomorph` packages that coordinate as a homeomorphism.
+- `dependentModelBundleTrivialization` transports each established quotient trivialization across
+  the exact base-preserving dependent-total-space homeomorphism.
+- Forward maps remain the original quotient-derived coordinates after package forgetting; inverse
+  maps are exact quotient packaging after the original inverse coordinate.
+- Base domains remain exactly those of the corresponding principal charts.
+- Total-space and fiber topologies remain named structures, with only local instance installation;
+  no generated topology silently replaces the quotient-induced topology.
+- Hostile probes reject disconnected fiber topologies or homeomorphisms, replacement dependent
+  coordinates, and changed base domains.
+- `FiberBundle`, `VectorBundle`, smooth bundle, section, and descended-curvature claims remain
+  pending.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
