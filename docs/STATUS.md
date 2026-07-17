@@ -543,6 +543,27 @@ Verified:
 - This provides overlap regularity only. A charted-space/groupoid atlas, manifold instance,
   `FiberBundle`, `VectorBundle`, sections, and curvature descent remain pending.
 
+## 2026-07-17 — thirty-first mathematical stone: named quotient chart atlas
+
+Verified:
+
+- `AdjointBundle.modelBundleTrivialization` explicitly transports each intrinsic tangent-Lie-algebra
+  fiber coordinate through `groupLieAlgebraModelEquiv`; the atlas does not rely silently on
+  Mathlib's implementation-level tangent/model definitional equality.
+- `AdjointBundle.productChartedSpace` defines a named `ChartedSpace (B × EG)` directly on the
+  existing orbit quotient and existing quotient topology, using exactly the transported promoted
+  charts from the designated principal atlas.
+- Its selected chart at an associated point is the transported chart selected by the principal
+  atlas at that point's projection; selected sources cover every quotient point.
+- `AdjointBundle.modelChartedSpace` composes the product atlas with the base charted structure to
+  obtain the standard `ModelProd HB EG` model.
+- Both charted structures are named values rather than global instances, so distinct explicit
+  principal-bundle atlas data cannot silently compete for one quotient type.
+- Hostile probes reject disconnected selected charts, missed points, omitted designated charts, an
+  empty atlas, and bypassing the explicit tangent-model bridge.
+- No fiberwise-linear compatibility groupoid, `IsManifold`, `FiberBundle`, `VectorBundle`, section,
+  or descended curvature is claimed. Those remain separate pending stones.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

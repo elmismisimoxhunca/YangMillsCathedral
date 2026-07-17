@@ -55,12 +55,33 @@ def AdjointBundle.bundleTrivialization :
   proj_toFun := fun z hz =>
     AdjointBundle.localCoordinate_fst (I := I) chart z hz
 
+/-- The promoted trivialization transported explicitly from the intrinsic tangent Lie algebra to
+the declared normed model. This avoids relying on the implementation-level definitional equality of
+tangent fibers with their model. -/
+def AdjointBundle.modelBundleTrivialization :
+    Bundle.Trivialization E (AdjointBundle.projection (I := I) torsor) :=
+  (AdjointBundle.bundleTrivialization (I := I) bundle chart).transFiberHomeomorph
+    (YangMills.Mathematics.groupLieAlgebraModelEquiv (G := G) I).toHomeomorph
+
 /-- The bundle trivialization uses the exact quotient local-coordinate map. -/
 @[simp]
 theorem AdjointBundle.bundleTrivialization_apply
     (z : AdjointBundle (I := I) torsor) :
     AdjointBundle.bundleTrivialization (I := I) bundle chart z =
       AdjointBundle.localCoordinate (I := I) chart z :=
+  rfl
+
+/-- The model-coordinate trivialization applies the explicit tangent-model bridge to the intrinsic
+fiber coordinate. -/
+@[simp]
+theorem AdjointBundle.modelBundleTrivialization_apply
+    (z : AdjointBundle (I := I) torsor) :
+    AdjointBundle.modelBundleTrivialization (I := I) bundle chart z =
+      ((AdjointBundle.localCoordinate (I := I) chart z).1,
+        YangMills.Mathematics.groupLieAlgebraModelEquiv (G := G) I
+          (AdjointBundle.localCoordinate (I := I) chart z).2) := by
+  rw [AdjointBundle.modelBundleTrivialization,
+    Bundle.Trivialization.transFiberHomeomorph_apply]
   rfl
 
 /-- Its inverse is the exact canonical representative map based at group coordinate `1`. -/

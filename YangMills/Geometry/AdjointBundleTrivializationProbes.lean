@@ -56,6 +56,15 @@ theorem disconnected_adjointBundle_bundleTrivialization_forward_blocked
       AdjointBundle.localCoordinate (I := I) chart z) : False :=
   mismatch rfl
 
+/-- The model-coordinate promotion cannot bypass the explicit tangent-model equivalence. -/
+theorem disconnected_adjointBundle_modelTrivialization_blocked
+    (z : AdjointBundle (I := I) torsor)
+    (mismatch : AdjointBundle.modelBundleTrivialization (I := I) bundle chart z ≠
+      ((AdjointBundle.localCoordinate (I := I) chart z).1,
+        YangMills.Mathematics.groupLieAlgebraModelEquiv (G := G) I
+          (AdjointBundle.localCoordinate (I := I) chart z).2)) : False :=
+  mismatch (AdjointBundle.modelBundleTrivialization_apply (I := I) bundle chart z)
+
 /-- The promoted inverse remains the canonical representative map. -/
 theorem disconnected_adjointBundle_bundleTrivialization_inverse_blocked
     (z : B × GroupLieAlgebra I G)

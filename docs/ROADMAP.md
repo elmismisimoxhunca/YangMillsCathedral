@@ -47,7 +47,8 @@ committed before higher layers depend on it.
 - [x] Promote quotient charts to Mathlib's generic bundle-trivialization interface.
 - [x] Derive exact fiberwise-linear adjoint transition formulas and inverse laws.
 - [x] Prove smoothness of the exact model-coordinate adjoint transitions.
-- [ ] Build a smooth fiberwise-linear atlas on the quotient carrier.
+- [x] Build a named covering charted-space atlas on the quotient with explicit model transport.
+- [ ] Prove fiberwise-linear groupoid compatibility and the quotient manifold structure.
 - [ ] Bridge the quotient to dependent fibers and package a smooth adjoint vector bundle.
 - [ ] Add adjoint-bundle-valued form and curvature-descent infrastructure.
 - [ ] Derive structural curvature laws automatically and prove gauge covariance and Bianchi.
