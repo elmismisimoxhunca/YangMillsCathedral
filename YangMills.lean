@@ -26,6 +26,8 @@ import YangMills.Geometry.SmoothPrincipalBundle
 import YangMills.Geometry.SmoothPrincipalBundleProbes
 import YangMills.Geometry.SmoothGaugeTransformation
 import YangMills.Geometry.SmoothGaugeTransformationProbes
+import YangMills.Geometry.PointwisePrincipalConnection
+import YangMills.Geometry.PointwisePrincipalConnectionProbes
 import YangMills.Audit
 
 /-!

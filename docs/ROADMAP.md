@@ -32,8 +32,9 @@ committed before higher layers depend on it.
 - [x] Define and probe smooth gauge transformations.
 - [x] Define and probe the Lie-group adjoint action needed by connection equivariance.
 - [x] Define and probe typed pointwise manifold differential forms and pullback.
+- [x] Define and probe pointwise principal connection normalization/equivariance.
 - [ ] Add smooth-section regularity, exterior derivative, and wedge/bracket infrastructure.
-- [ ] Define connections and curvature.
+- [ ] Promote the pointwise form to a smooth principal connection and define curvature.
 - [ ] Prove structural curvature and gauge-covariance results.
 
 ## Phase 3 — classical Yang–Mills semantics

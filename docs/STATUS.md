@@ -196,6 +196,22 @@ Verified:
 - Hostile probes reject wrong identity, multiplication-order, and inverse behavior.
 - This reusable layer introduces no connection or gauge-field witness.
 
+## 2026-07-17 — twelfth mathematical stone: pointwise principal connection conditions
+
+Verified:
+
+- Principal orbit maps and fixed-element right translations are proved smooth before their
+  manifold derivatives define fundamental vectors and translated tangent vectors.
+- `PointwisePrincipalConnectionData` stores a Lie-algebra-valued degree-one form.
+- Vertical normalization recovers each infinitesimal generator and derives injectivity of the
+  fundamental-vector map.
+- Right equivariance uses exactly `Ad(g⁻¹)` and the derivative of right translation, matching
+  Freed's equations (1.9)–(1.10).
+- Hostile probes reject broken normalization, noninjective infinitesimal action, and the wrong
+  equivariance law.
+- This remains explicitly pointwise: no smooth dependence of the form and no concrete connection
+  witness are claimed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

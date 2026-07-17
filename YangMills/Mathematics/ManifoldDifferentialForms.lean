@@ -28,7 +28,8 @@ variable
     {E' : Type uE'} {H' : Type uH'}
     [NormedAddCommGroup E'] [NormedSpace ℝ E'] [TopologicalSpace H']
     {M' : Type uM'} [TopologicalSpace M']
-    {V : Type uV} [NormedAddCommGroup V] [NormedSpace ℝ V]
+    {V : Type uV} [AddCommGroup V] [Module ℝ V] [TopologicalSpace V]
+    [IsTopologicalAddGroup V] [ContinuousSMul ℝ V]
 
 /-- A degree-`k`, `V`-valued pointwise differential form on a charted manifold.
 
@@ -36,7 +37,8 @@ Each value is a continuous alternating `k`-linear map on the tangent space. No s
 regularity is hidden in this carrier. -/
 abbrev ManifoldDifferentialForm
     (I : ModelWithCorners ℝ E H) (M : Type uM) [TopologicalSpace M] [ChartedSpace H M]
-    (V : Type uV) [NormedAddCommGroup V] [NormedSpace ℝ V] (k : ℕ) :=
+    (V : Type uV) [AddCommGroup V] [Module ℝ V] [TopologicalSpace V]
+    [IsTopologicalAddGroup V] [ContinuousSMul ℝ V] (k : ℕ) :=
   (x : M) → ContinuousAlternatingMap ℝ (TangentSpace I x) V (Fin k)
 
 /-- Pull back a pointwise differential form along a smooth map using Mathlib's manifold derivative. -/

@@ -26,7 +26,8 @@ variable
     {E' : Type uE'} {H' : Type uH'}
     [NormedAddCommGroup E'] [NormedSpace ℝ E'] [TopologicalSpace H']
     {M' : Type uM'} [TopologicalSpace M']
-    {V : Type uV} [NormedAddCommGroup V] [NormedSpace ℝ V]
+    {V : Type uV} [AddCommGroup V] [Module ℝ V] [TopologicalSpace V]
+    [IsTopologicalAddGroup V] [ContinuousSMul ℝ V]
 
 /-- Every degree has a concrete zero pointwise form. -/
 theorem zero_differentialForm_exists
