@@ -52,6 +52,19 @@ Verified:
 - From dimension two onward the forms are proved unequal, with dedicated 2D and 4D hostile probes.
 - No group action, analytic continuation, or reconstruction claim is introduced.
 
+## 2026-07-17 — third mathematical stone: Lie-algebra simplicity
+
+Verified:
+
+- The project adopts Mathlib's existing `LieAlgebra.IsSimple` rather than inventing a competing
+  meaning of “simple.”
+- A proved source-facing equivalence exposes its two requirements: every Lie ideal is zero or whole,
+  and the bracket is non-abelian.
+- Derived theorems and hostile probes reject abelian and subsingleton carriers and proper nonzero
+  ideals.
+- This reusable layer makes no claim that a group is compact, connected, smooth, or physically
+  admissible.
+
 Not yet achieved:
 
 - Hall's open Lie-group notes and Aharony–Seiberg–Tachikawa's global-form paper are pinned with

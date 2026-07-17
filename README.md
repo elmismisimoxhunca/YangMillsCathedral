@@ -86,6 +86,7 @@ lakefile.toml         pinned dependencies
 
 ## Current status
 
-The standalone foundation, Euclidean dimension index, and separate Euclidean/Minkowski quadratic
-forms are implemented. No symmetry group, reconstruction bridge, gauge geometry, quantum-theory
-witness, Yang–Mills existence claim, or mass-gap claim is present.
+The standalone foundation, Euclidean dimension index, separate Euclidean/Minkowski quadratic
+forms, and source-facing Lie-algebra simplicity layer are implemented. No compact gauge-group
+certificate, symmetry group, reconstruction bridge, gauge geometry, quantum-theory witness,
+Yang–Mills existence claim, or mass-gap claim is present.

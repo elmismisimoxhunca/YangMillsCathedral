@@ -30,8 +30,18 @@ Searchable extraction: `Sources/Clay/yangmills_official.txt`
 | Hall 2000, printed p. 115 §7; extracted 6092–6095 | Simple Lie algebra has no ideals except zero/whole and has dimension at least two | Use Mathlib `LieAlgebra.IsSimple`, which also explicitly requires non-abelianness; do not use abstract group simplicity | Pinned mathematical context; Hall passage is in complex semisimple section |
 | Aharony–Seiberg–Tachikawa 2013, printed pp. 1–2; extracted 44–65 and 84–119 | Lie algebra and global gauge group are distinct; connected groups are quotients of the universal cover by a subgroup of its center; global form changes physical data | Keep group/global form explicit; do not silently replace by the simply connected cover or `SU(N)` | Pinned; connectedness is an explicit project convention, not claimed as verbatim Clay wording |
 
+The reusable Lie-algebra layer now exposes the selected Mathlib semantics:
+
+| Lean declaration | Meaning | Classification | Hostile evidence |
+|---|---|---|---|
+| `YangMills.Mathematics.lieAlgebra_isSimple_iff_ideals_and_nonabelian` | `LieAlgebra.IsSimple` is exactly ideal-triviality plus non-abelianness | Derived interface theorem over Mathlib | exact bidirectional proof |
+| `YangMills.Mathematics.isSimple_not_isLieAbelian` | simplicity excludes abelian brackets | Derived theorem | `abelian_simpleLieAlgebra_blocked` |
+| `YangMills.Mathematics.isSimple_ideal_eq_bot_or_eq_top` | every Lie ideal is zero or whole | Derived theorem | `proper_nonzero_ideal_blocked` |
+| `YangMills.Mathematics.isSimple_to_nontrivial` | a simple Lie algebra has nontrivial carrier | Derived theorem | `subsingleton_simpleLieAlgebra_blocked` |
+
 No compact-simple gauge-group Lean certificate is canonical yet. It requires the reviewed Mathlib
-Lie-group/tangent-Lie-algebra bridge and anti-vacuity evidence.
+Lie-group/tangent-Lie-algebra bridge, compactness, connectedness, global-form preservation, and
+positive consistency evidence.
 
 ## Dimension-foundation decisions
 
