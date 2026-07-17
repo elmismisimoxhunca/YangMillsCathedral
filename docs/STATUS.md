@@ -971,6 +971,22 @@ Verified:
 - The theorem is generic and introduces no connection, curvature, or regularity certificate.
   Presentation-independent coordinate rewriting and descended-curvature smoothness remain pending.
 
+## 2026-07-17 — fifty-sixth mathematical stone: smooth principal two-form descent
+
+Verified:
+
+- `PrincipalTwoForm.selectedBaseForm_inCoordinates` identifies the selected pointwise descent in
+  every designated chart with principal-form evaluation at that chart's own section and lifts.
+- The proof relates the internally selected `trivializationAt` section to the requested chart section
+  by the actual torsor action, uses exact dependent transports, and invokes horizontality plus right
+  adjoint equivariance for presentation independence.
+- `selectedBaseForm_isSmooth` combines that coordinate identity with smooth exact-lift evaluation.
+- `selectedBaseFormSmooth` packages the result without changing the pointwise quotient carrier.
+- Hostile probes reject arbitrary-chart coordinate replacement, loss of smoothness, and carrier
+  replacement during packaging.
+- No smooth principal form or structural certificate is constructed. Specialization to the exact
+  certified curvature remains pending.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

@@ -72,7 +72,8 @@ committed before higher layers depend on it.
 - [x] Prove smooth fixed-value form evaluation along maps from ambient smooth extensions.
 - [x] Construct smooth chart-local ambient extensions of exact principal tangent lifts.
 - [x] Prove smooth principal-form evaluation on exact local tangent lifts.
-- [ ] Transfer that evaluation through presentation independence and prove smoothness of the descended curvature form.
+- [x] Transfer that evaluation through presentation independence to smooth generic two-form descent.
+- [ ] Specialize smooth descent to the exact certified curvature form.
 - [ ] Derive structural curvature laws automatically and prove gauge covariance and Bianchi.
 
 ## Phase 3 — classical Yang–Mills semantics
