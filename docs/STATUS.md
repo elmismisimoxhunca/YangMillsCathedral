@@ -248,6 +248,22 @@ Verified:
   designated overlap transitions, reversed/malformed transition behavior, and base-moving
   transitions.
 
+## 2026-07-17 — fifteenth mathematical stone: continuous Lie-bracket wedge
+
+Verified:
+
+- `ContinuousLieBracket` isolates joint bracket continuity as standard reusable topological
+  Lie-algebra infrastructure.
+- A continuous alternating one-form is coherently converted to a continuous linear map in its sole
+  input.
+- `ContinuousAlternatingMap.lieBracketWedgeOne` constructs a genuine continuous alternating
+  two-form by antisymmetrizing both bracket orders.
+- The self-wedge evaluates to `2 • [α(v₀), α(v₁)]`, explicitly validating the normalization paired
+  with the factor `1/2` in Freed (1.13).
+- The operation lifts pointwise to manifold differential forms; hostile probes enforce continuity,
+  term order, factor two, alternation, and the zero case.
+- No exterior derivative, curvature, connection witness, or Yang–Mills field is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

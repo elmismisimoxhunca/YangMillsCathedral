@@ -80,5 +80,7 @@ Lie-group requirement, as the derivative at the identity of Freed's group conjug
 multiplication, and inverse laws are proved before it is used in connection-form equivariance.
 Connection-form smoothness is stated locally by evaluation on locally smooth tangent-vector fields,
 with an explicit value-coordinate bridge for the intrinsic tangent Lie algebra. This promotes the
-same pointwise form satisfying (1.9)–(1.10); it does not construct a connection or anticipate the
-curvature formula.
+same pointwise form satisfying (1.9)–(1.10); it does not construct a connection. Reusable
+`lieBracketWedgeOne` infrastructure antisymmetrizes the two bracket orders and proves that the
+self-wedge evaluates to twice the pointwise bracket, making the factor `1/2` in (1.13) explicit.
+The exterior-derivative and curvature declarations remain pending.

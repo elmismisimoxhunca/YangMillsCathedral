@@ -12,6 +12,8 @@ import YangMills.Mathematics.LieAlgebraSimplicity
 import YangMills.Mathematics.LieAlgebraSimplicityProbes
 import YangMills.Mathematics.LieGroupAdjoint
 import YangMills.Mathematics.LieGroupAdjointProbes
+import YangMills.Mathematics.LieBracketWedge
+import YangMills.Mathematics.LieBracketWedgeProbes
 import YangMills.Mathematics.ManifoldDifferentialForms
 import YangMills.Mathematics.ManifoldDifferentialFormsProbes
 import YangMills.Mathematics.SmoothManifoldDifferentialForms
