@@ -121,9 +121,9 @@ pairing on every actual adjoint quotient fiber and packaging that exact pairing 
 a reusable canonical-tensor theorem proving
 basis independence of bilinear quadratic contraction without installing a codomain inner-product
 instance, an exact degree-two alternating-map-to-bilinear adapter, and a named smooth Euclidean
-metric interface whose chosen tangent-fiber orthonormal
-contraction gives a nonnegative pointwise scalar for the exact
-smoothly descended curvature, together with an integrable real-valued Euclidean action relative to
+metric interface whose pointwise contraction of exact smoothly descended curvature is constructed
+canonically, proved equal to every orthonormal-basis sum, and proved nonnegative, together with an
+integrable real-valued Euclidean action relative to
 an explicitly designated Borel measure and positive coupling (without claiming a general Hodge-star
 theorem or metric volume), are implemented. No
 concrete gauge-group, connection, invariant-inner-product, curvature, or structure-certificate witness,

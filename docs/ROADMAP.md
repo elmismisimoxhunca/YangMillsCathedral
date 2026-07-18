@@ -85,8 +85,8 @@ committed before higher layers depend on it.
   of the chosen orthonormal basis.
 - [x] Package the exact quotient-coherent adjoint-fiber pairing as a bilinear map.
 - [x] Prove an exact degree-two alternating-map-to-bilinear adapter.
-- [ ] Apply the adapter in each dependent adjoint fiber and connect the exact curvature contraction
-  to the canonical-tensor theorem.
+- [x] Apply the adapter in each dependent adjoint fiber and prove the exact curvature contraction
+  equals the canonical-tensor contraction and every orthonormal-basis sum.
 - [ ] Connect the resulting canonical contraction to a general Hodge-star interface.
 - [x] Define and probe the integrable Euclidean action relative to a designated Borel measure and
   positive coupling, with Clay's outer normalization explicit.

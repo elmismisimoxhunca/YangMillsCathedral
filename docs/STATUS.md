@@ -1104,9 +1104,27 @@ Verified:
   value of every continuous degree-two alternating map.
 - Hostile probes reject algebraic or continuous value replacement and failure of first-argument
   additivity.
-- This is reusable general mathematics. Applying the adapter with the named local structures on
-  each dependent adjoint fiber and proving equality with the committed chosen contraction remain
-  pending; no Hodge-star or volume claim is made.
+- This is reusable general mathematics. Its dependent-fiber specialization was left to the next
+  stone; no Hodge-star or volume claim is made.
+
+## 2026-07-17 — sixty-fourth mathematical stone: canonical curvature contraction
+
+Verified:
+
+- `EuclideanMetricData.canonicalTwoFormContraction` applies the canonical covariant tensors to the
+  exact degree-two bilinear adapter and exact adjoint-fiber pairing linear map, with all metric and
+  fiber structures installed locally.
+- `canonicalTwoFormContraction_eq_orthonormalSum` proves every orthonormal basis, with arbitrary
+  finite index type, computes the conventional `1/2 * sum_ij` quotient-fiber pairing.
+- `canonicalTwoFormContraction_eq_chosen` proves the earlier standard-basis construction is exactly
+  this basis-free canonical contraction.
+- `canonicalCurvatureDensity` specializes only to
+  `connection.smoothBaseCurvature exterior certificate`; it is proved equal to the earlier exact
+  chosen curvature scalar and pointwise nonnegative.
+- Hostile probes reject canonical/chosen disagreement, basis-dependent sums, negative canonical
+  curvature values, and substitution of an unrelated two-form that changes the contraction.
+- Basis dependence of the exact pointwise contraction is closed. No general Hodge-star theorem,
+  volume form, or metric-induced measure is claimed.
 
 Not yet achieved:
 
@@ -1126,8 +1144,8 @@ Not yet achieved:
   anchors the action formula, invariant quadratic form, and chosen orthonormal curvature
   contraction and relative-to-designated-measure action. Generic bilinear contraction is now proved
   basis-independent, the exact dependent adjoint-fiber pairing is packaged bilinearly, and the
-  generic degree-two adapter is available. Its local dependent-curvature application and resulting
-  exact specialization, a general Hodge-star bridge, and metric-volume compatibility remain
+  generic degree-two adapter is applied to the exact curvature. The resulting pointwise contraction
+  is now basis-independent, but a general Hodge-star bridge and metric-volume compatibility remain
   pending. OS/Wightman, spectral,
   observable, and lattice sources remain to
   be independently acquired and verified before their corresponding declarations become canonical.
