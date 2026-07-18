@@ -2475,6 +2475,27 @@ Implemented and verified:
   derivative inhabitant, adjoint-valued-form extension, positive curvature-tensor order, Bianchi
   theorem, polynomial interpretation, theory, or mass gap is constructed.
 
+## 2026-07-18 — one-hundred-thirty-fifth stone: proper complex Lorentz kinematics
+
+Implemented and verified:
+
+- `complexMinkowskiBilinearForm` is the exact complex-bilinear, non-Hermitian extension of the
+  mostly-minus form.
+- `ProperComplexLorentzTransformation` requires a continuous complex-linear automorphism preserving
+  that form and having determinant one.
+- Identity, composition and inverse are constructed and proved to retain both laws, yielding a named
+  group without assuming a transformation-group topology.
+- `actConfiguration` gives the exact simultaneous action on every finite relative configuration,
+  with multiplication, inversion and fixed-transformation continuity.
+- Four-dimensional complex negation is constructed with determinant `(-1)^4 = 1` and proved
+  nonidentity, blocking an identity-only surrogate.
+- Hostile probes reject determinant-minus-one and form-nonpreserving automorphisms.
+- Streater–Wightman supplies the four-dimensional source. Dimensions one through three are explicit
+  project consistency infrastructure rather than a verbatim source quantifier.
+- “Proper” currently records determinant one only. No group topology, connectedness theorem,
+  complex Lie/analytic structure, real-Lorentz embedding, extended-tube orbit, continuation datum,
+  theory, or mass gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

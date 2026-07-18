@@ -222,7 +222,9 @@ committed before higher layers depend on it.
 - [x] Connect full correlators to relative tempered distributions through exact consecutive-
   difference/normalized-anchor Schwartz lifts, require independence of every normalized anchor, and
   use that exact relative distribution as the polynomially bounded tube boundary.
-- [ ] Define extended-tube continuation.
+- [x] Define determinant-one proper complex Lorentz kinematics preserving the exact complex-bilinear
+  mostly-minus form, with group action, continuity and a nonidentity four-dimensional element.
+- [ ] Add the transformation-group topology/analytic structure and define extended-tube continuation.
 - [x] Define the first explicit Euclidean/Minkowski bridge: reverse strict Euclidean point order,
   Wick-rotate `τ ↦ -iτ`, and prove all consecutive relative coordinates lie in the backward tube.
 - [x] Require exact genuinely integrable Euclidean/Wightman correlator-value continuation on every

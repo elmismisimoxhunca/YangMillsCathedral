@@ -225,7 +225,11 @@ remain open. Normalized algebraic smeared vacuum correlators are extracted from 
 finite field words, with
 one- and two-point operator order locked to the same selected vacuum and field. A separate interface
 requires an actual full-product tempered distribution at every arity and exact coherence on every
-finite pure Schwartz tensor. The exact-sign open backward tube `ξ - iη`, `η ∈ V₊°`, is constructed
+finite pure Schwartz tensor. Determinant-one complex-linear automorphisms preserving the exact
+complex-bilinear mostly-minus form now form a named proper complex Lorentz group acting
+simultaneously on finite relative configurations; four-dimensional complex negation is an explicit
+nonidentity element. Group topology, connectedness, analytic structure, and the extended orbit
+remain pending. The exact-sign open backward tube `ξ - iη`, `η ∈ V₊°`, is constructed
 and proved nonempty in dimensions 1–4. A separate interface requires genuine holomorphy there,
 integrable regularized tube-function pairings for every strict direction tuple, and convergence in
 the tempered-distribution topology as all directions jointly approach zero. A strengthened
