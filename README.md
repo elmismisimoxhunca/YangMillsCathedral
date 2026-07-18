@@ -147,7 +147,9 @@ kernel agreement. The finite convolution component is defined at every natural a
 zero-arity endpoints. An unrestricted finite Schwartz-sequence carrier is separate from the strict
 positive-time domain, with an exact forgetful map. Finite-support closure is proved and the
 convolution is packaged in that unrestricted carrier; direct-sum topology and any required joint
-continuity remain pending. `(E4)` is also absent. No
+continuity remain pending. Exact reverse-conjugation on scalar Schwartz components is implemented
+and kept distinct from Euclidean time reflection; finite-sequence lifting and `(E2)` remain pending.
+`(E4)` is also absent. No
 concrete gauge-group, connection, invariant-inner-product, curvature, or structure-certificate witness,
 symmetry group, reconstruction bridge, quantum-theory witness, Yang–Mills existence claim, or
 mass-gap claim is present.

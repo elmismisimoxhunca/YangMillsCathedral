@@ -129,6 +129,8 @@ committed before higher layers depend on it.
   nonzero internal singleton-bump split.
 - [x] Prove finite support for the convolution family and package it in the unrestricted carrier.
 - [ ] Install any needed direct-sum/continuous bilinear topology.
+- [x] Construct the exact reverse-conjugate involution on scalar Schwartz components.
+- [ ] Lift reverse-conjugation and Euclidean time reflection to finite sequences, then define `(E2)`.
 - [ ] Establish the strict subspace's embedding/sufficiency/density/completion relation to OS-I's
   derivative-vanishing ordered spaces; install the per-arity induced and finite-sequence direct-sum
   topologies while keeping the positive-half-space completed tensor product distinct; construct the

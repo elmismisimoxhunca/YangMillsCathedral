@@ -1498,6 +1498,24 @@ Implemented and verified:
 - No reflection positivity theorem, Euclidean theory, reconstruction, Wightman theory, existence
   theorem, or mass-gap witness is introduced.
 
+## 2026-07-18 — eighty-fifth stone: reverse-conjugate Schwartz involution
+
+Implemented and verified:
+
+- `conjugateScalarSchwartz` uses `Complex.conjCLE` as continuous real-linear postcomposition on the
+  exact scalar Schwartz carrier.
+- `reverseConjugateScalarSchwartz` first applies exact `Fin.revPerm` argument reversal and then
+  conjugates the complex value, matching OS-I's printed `f*` convention.
+- The pointwise formula, involutivity, additivity, conjugate scalar compatibility, zero behavior, and
+  preservation/reflection of nonvanishing are proved.
+- Hostile probes expose nonidentity two-point reversal and show that `i` times the real positive-time
+  bump evaluates to `-i` after reverse-conjugation, preventing a fake identity/conjugation-free map.
+- This operation remains separate from first-coordinate Euclidean time reflection `Θ`.
+- Finite-sequence lifting, the combined reflected-star operation, direct-sum topology, and `(E2)`
+  remain pending.
+- No reflection positivity theorem, Euclidean theory, reconstruction, Wightman theory, existence
+  theorem, or mass-gap witness is introduced.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
