@@ -158,7 +158,9 @@ committed before higher layers depend on it.
 - [ ] Transport positivity and clustering across the source-carrier/topology comparison and expose
   source-facing `(E2)` and `(E4)`.
 - [ ] Prove the source-facing OS-II `(E0′)` bridge and define complete Euclidean/Schwinger data.
-- [ ] Define proper-orthochronous Poincaré and Wightman data independently.
+- [x] Define proper-orthochronous Lorentz/Poincaré affine kinematics independently of the Euclidean
+  Schwinger surface.
+- [ ] Define the Poincaré cover/topological-group interface and Wightman data independently.
 - [ ] Define common invariant domains and operator-valued tempered distributions.
 - [ ] Add explicit OS reconstruction and correlator coherence.
 

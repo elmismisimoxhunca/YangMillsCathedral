@@ -22,6 +22,19 @@ is not represented as a direct Princeton publisher download.
 
 Printed pages and section numbers are authoritative; text lines refer to the retained extraction.
 
+- Printed p. 9, §1-3; PDF page 19; extraction lines 494–528, equations `(1-4)`–`(1-6)`:
+  - fixes the four-dimensional mostly-minus scalar product;
+  - defines Lorentz transformations as invertible linear spacetime maps preserving it;
+  - records closure and inverse at the source level.
+- Printed p. 10; PDF page 20; extraction lines 529–575, equations `(1-7)`–`(1-9)`:
+  - classifies components by `det Λ` and the sign of `Λ⁰₀`;
+  - calls determinant-one transformations proper and positive-time-component transformations
+    orthochronous;
+  - exhibits time and space inversion as excluded components.
+- Printed p. 14; PDF page 24; extraction lines 686–706, equations `(1-22)`–`(1-23)`:
+  - defines inhomogeneous/Poincaré elements as translation–Lorentz pairs;
+  - gives affine action `x ↦ Λx + a` and the semidirect-product multiplication law;
+  - identifies the inhomogeneous `SL(2,ℂ)` group used later for spinorial representations.
 - Printed p. 96, §3-1; PDF page 106; extraction lines 4058–4109: fields are operator-valued
   distributions and the axioms for fields and field theory begin.
 - Printed p. 97; PDF page 107; extraction lines 4110–4134, axiom `0`:

@@ -1724,6 +1724,22 @@ Implemented and verified:
 - No inhabitant is constructed. This is not a source-facing OS theory, `(E0′)` bridge,
   reconstruction datum, existence theorem, or mass-gap witness.
 
+## 2026-07-18 — ninety-seventh stone: proper-orthochronous Poincaré kinematics
+
+Implemented and verified:
+
+- `Minkowski.ProperOrthochronousLorentzTransformation` packages an invertible real-linear map that
+  preserves the mostly-minus Minkowski quadratic form, has determinant one, and sends the selected
+  future time basis to a vector with positive time component.
+- Identity is constructed; transformed time/spatial basis vectors retain Minkowski values `1` and
+  `-1`; time reversal and determinant-minus-one substitutions are rejected.
+- `Minkowski.ProperOrthochronousPoincareTransformation` adds an independent translation and acts by
+  the exact affine formula `x ↦ Λx+a`; identity, pure translation, and action injectivity are proved.
+- Hostile probes move the origin by the nonzero time basis and retain Minkowski value one, preventing
+  an ignored translation or Euclidean-signature substitution.
+- This independent Minkowski layer introduces no group closure theorem, Poincaré cover, Hilbert
+  representation, field, common domain, spectrum, reconstruction, existence theorem, or mass gap.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

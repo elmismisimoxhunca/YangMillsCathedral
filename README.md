@@ -166,8 +166,11 @@ The exact connected factorization expression and zero-limit predicate are define
 supplied direction on the strict Mathlib subdomain, but are not identified with source-facing `(E4)`
 before the carrier/topology comparison. Growth, `(E1)`, `(E3)`, strict positivity, and clustering are
 assembled around one normalized family and direction in a non-source-facing candidate record; no
-inhabitant is constructed. No
-concrete gauge-group, connection, invariant-inner-product, curvature, or structure-certificate witness,
+inhabitant is constructed. Independently, proper-orthochronous Lorentz and affine Poincaré
+kinematics are now defined for the mostly-minus Minkowski form, with properness, time orientation,
+and nontrivial translation probes; no Poincaré cover representation or Wightman theory is yet
+packaged. No concrete gauge-group, connection, invariant-inner-product, curvature, or
+structure-certificate witness,
 symmetry group, reconstruction bridge, quantum-theory witness, Yang–Mills existence claim, or
 mass-gap claim is present.
 
