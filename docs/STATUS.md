@@ -1633,6 +1633,26 @@ Implemented and verified:
 - No source-facing `(E2)`, Euclidean theory, reconstruction, Wightman theory, existence theorem, or
   mass-gap witness is introduced.
 
+## 2026-07-18 — ninety-second stone: coordinate continuity criterion
+
+Implemented and verified:
+
+- Exact component extraction through arbitrary finite sequence sums is proved for the named module.
+- Every finite-stage sequence is proved equal to the finite sum of all its natural coordinate
+  injections.
+- `continuous_linearMap_from_scalarFiniteSchwartzSequence_iff_coordinates` proves that a
+  complex-linear map out of the preliminary finite-stage final topology is continuous iff every
+  exact coordinate composite is continuous.
+- The target may be any topological complex module with continuous addition; finite-stage
+  continuity follows from the finite coordinate sum and the topology's universal property.
+- Hostile probes expose arity zero, the explicit nonzero bump arity, both criterion directions, and
+  reject any globally continuous map with a discontinuous coordinate composite.
+- This is an exact theorem for the project's current Mathlib carrier/topology, not an identification
+  with OS-I's diagonal-sensitive source spaces or printed locally convex direct sum.
+- Joint sequence algebra continuity, source-space comparison, and convolution continuity remain
+  pending. No source-facing `(E2)`, reconstruction, existence theorem, or mass-gap witness is
+  introduced.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

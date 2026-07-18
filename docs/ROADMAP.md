@@ -133,8 +133,9 @@ committed before higher layers depend on it.
   finite sequence carrier.
 - [x] Bundle every generating finite-stage map as a continuous complex-linear map.
 - [x] Construct the exact continuous linear natural coordinate injections.
-- [ ] Prove the linear coordinate-injection continuity criterion, joint sequence addition/scalar
-  continuity, and compare the
+- [x] Prove the exact linear coordinate-injection continuity criterion for the preliminary
+  finite-stage final topology.
+- [ ] Prove joint sequence addition/scalar continuity and compare the
   finite-stage final topology with OS-I's locally convex direct sum, and prove any needed product
   continuity.
 - [x] Construct the exact reverse-conjugate involution on scalar Schwartz components.

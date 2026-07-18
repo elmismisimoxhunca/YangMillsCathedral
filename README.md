@@ -151,9 +151,10 @@ convolution is packaged in that unrestricted carrier. A named finite-stage final
 exact stagewise universal property are implemented without a global instance. Named additive-group
 and complex-module structures are transported from dependent finite support and likewise require
 local installation. Every generating finite-stage map and every exact natural coordinate injection
-is bundled as a continuous complex-linear map; the linear coordinate-injection criterion, joint
-sequence addition/scalar continuity, identification with OS-I's locally convex direct sum, and
-convolution continuity remain pending. Exact reverse-conjugation on scalar Schwartz components is implemented
+is bundled as a continuous complex-linear map. The exact linear coordinate-injection continuity
+criterion is proved for the preliminary finite-stage final topology; joint sequence addition/scalar
+continuity, source-space and locally convex direct-sum identification with OS-I, and convolution
+continuity remain pending. Exact reverse-conjugation on scalar Schwartz components is implemented
 and kept distinct from Euclidean time reflection. Both operations are lifted to exact finite
 sequences and combined in the source order `Θ f*`. The exact algebraic Schwinger evaluation and
 nonnegative-real form are defined on the current strict Mathlib subdomain, but are deliberately not
