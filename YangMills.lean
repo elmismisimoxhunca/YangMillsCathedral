@@ -216,6 +216,8 @@ import YangMills.Minkowski.WightmanTubeGeometry
 import YangMills.Minkowski.WightmanTubeGeometryProbes
 import YangMills.Minkowski.WightmanTubeBoundaryValue
 import YangMills.Minkowski.WightmanTubeBoundaryValueProbes
+import YangMills.Minkowski.WightmanTubePolynomialGrowth
+import YangMills.Minkowski.WightmanTubePolynomialGrowthProbes
 import YangMills.Audit
 
 /-!

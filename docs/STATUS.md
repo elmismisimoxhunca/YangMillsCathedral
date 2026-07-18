@@ -2013,6 +2013,24 @@ Implemented and verified:
 - Relative-coordinate correlator coherence, polynomial bounds, extended-tube continuation,
   reconstruction, and every analytic inhabitant remain pending.
 
+## 2026-07-18 — one-hundred-thirteenth stone: Wightman tube polynomial growth
+
+Implemented and verified:
+
+- `IsPolynomiallyBoundedOnWightmanTube` requires one radial bound `C(1+‖ξ‖)^N`, `C ≥ 0`, uniformly
+  while the strict imaginary direction ranges over any chosen compact subset.
+- `PolynomiallyBoundedWightmanTubeBoundaryValueData` extends the exact same holomorphic tube
+  function and weak distributional boundary data with that growth requirement.
+- Every singleton strict direction, including the explicit unit-time direction, receives a concrete
+  polynomial bound.
+- Hostile probes expose compact-direction uniformity and prove that the certified bound cannot be
+  undersized anywhere on its covered compact direction set.
+- The radial form is an explicit project normal form for the same finite-dimensional growth class
+  as Streater–Wightman's arbitrary polynomial `P_K`; both comparison directions remain pending and
+  no definitional identification is claimed.
+- No polynomially bounded analytic datum, boundary value, correlator inhabitant, reconstruction, or
+  physical theory is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

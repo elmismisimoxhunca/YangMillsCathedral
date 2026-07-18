@@ -188,8 +188,10 @@ committed before higher layers depend on it.
 - [x] Construct the exact-sign open backward tube `ξ - iη`, `η ∈ V₊°`, and prove explicit
   nonemptiness/strictness in dimensions 1–4.
 - [x] Package genuine tube holomorphy and all-direction tempered-distribution boundary convergence,
-  with exact integrable tube-function regularizations; relative-coordinate correlator coherence,
-  polynomial bounds, and extended-tube continuation remain pending.
+  with exact integrable tube-function regularizations.
+- [x] Require uniform radial polynomial growth on every compact strict imaginary-direction set as an
+  explicit normal form; comparison with arbitrary source polynomials, relative-coordinate
+  correlator coherence, and extended-tube continuation remain pending.
 - [ ] Add explicit OS reconstruction and correlator coherence.
 
 ## Phase 5 — translations and mass gap

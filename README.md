@@ -196,9 +196,11 @@ requires an actual full-product tempered distribution at every arity and exact c
 finite pure Schwartz tensor. The exact-sign open backward tube `ξ - iη`, `η ∈ V₊°`, is constructed
 and proved nonempty in dimensions 1–4. A separate interface requires genuine holomorphy there,
 integrable regularized tube-function pairings for every strict direction tuple, and convergence in
-the tempered-distribution topology as all directions jointly approach zero. Relative-coordinate
-coherence, polynomial bounds, extended-tube continuation, reconstruction, and observable
-interpretation remain pending, and no analytic or correlator datum is constructed. No concrete gauge-group, connection, invariant-inner-product, curvature, or
+the tempered-distribution topology as all directions jointly approach zero. A strengthened
+interface additionally requires uniform radial polynomial growth over every compact strict
+imaginary-direction set. Relative-coordinate coherence, comparison with the source's arbitrary
+polynomial normal form, extended-tube continuation, reconstruction, and observable interpretation
+remain pending, and no analytic or correlator datum is constructed. No concrete gauge-group, connection, invariant-inner-product, curvature, or
 structure-certificate witness,
 symmetry group, reconstruction bridge, quantum-theory witness, Yang–Mills existence claim, or
 mass-gap claim is present.
