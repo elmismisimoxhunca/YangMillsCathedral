@@ -1,0 +1,270 @@
+  VOLUME )0, NUMBER 26               PHYSICAL REVIEW LETTERS                                              25 JUNE 1973
+
+   ~4Y. Nambu and G. Jona-Lasino, Phys. Rev. 122, 345          '6W. A. Bardeen, H. Fritzsch, and M. Gell-Mann,
+ (1961); S. Coleman and E. Weinberg, Phys. Rev. D 7,          CERN Report No. CERN-TH-1538, 1972 {to be pub-
+ 1888 (1973).                                                lished) .
+   ' K. Symanzik (to be published) has recently suggested      ' H. Georgi and S. L. Glashow, Phys. Rev. Lett. 28,
+ that one consider a A. @4 theory with a negative A, to       1494 (1972); S. Weinberg, Phys, Rev. D 5, 1962 (1972).
+ achieve UV stability at A=0. However, one can show,           ' For a review of this program, see S. L. Adler, in
+ using the renormalization-group  equations, that in such    Proceedings of the Sixteenth International Conference
+ theory the ground-state energy is unbounded from below      on High Energy Physics, National Accelerator Labora-
+ (S. Coleman, private communication) .                       tory, Batavia, Illinois, 1972 (to be published).
+
+
+
+
+                          Reliable Perturbative      Results for Strong Interactions?*
+
+                                                  H. David Politzer
+              Jefferson Physical   I.aboxatomes, Hazard University,  Cambridge,   Massachusetts   02138
+                                                 (Received 3 May 1973)
+
+                An explicit calculation shows perturbation theory to be arbitrarily good for the deep
+              Euclidean Green's functions of any Yang-Mills theory and of many Yang-Mills theories
+              with fermions. Under the hypothesis that spontaneous symmetry breakdown is of dynami-
+              cal origin, these symmetric Green's functions are the asymptotic forms of the physical-
+              ly significant spontaneously broken solution, whose coupling could be strong.
+
+    Renormalization-group     techniques hold great          goes to zero, compensating for the fact that
+
+  coupling problems in field theory.   "
+  promise for studying short-distance and strong-
+                                          Symanzik'
+  has emphasized the role that perturbation theory
+                                                             there are more and more of them. But the large-
+                                                             r' divergence represents a real breakdown of
+                                                             perturbation theory. It is commonly said that
+  might play in approximating the otherwise un-              for momenta such that e'1n(p'/m') -1, higher
+ known functions that occur in these discussions.            orders become comparable, and hence a calcu-
+ But specific models in four dimensions that had             lation to any finite order is meaningless in this
+ been investigated yielded (in this context) dis-            domain. The renormalization group technique
+ appointing results. ' This note reports an in-              shows that the effective coupling grows with mo-
+ triguing contrary finding for any generalized               me nta.
+ Yang-Mills theory and theories including a wide               The behavior in the two momentum regimes is
+ class of fermion representations.      For these            reversed in a Yang-Mills theory. The effective
+ one-coupling-constant     theories (or generaliza-         coupling goes to zero for large momenta, but
+ tions involving product groups) the coefficient            as p"s approach zero, higher-order corrections
+ function in the Callan-Symanzik equations com-             become comparable. Thus perturbation theory
+ monly called P(g) is negative near g=0.                    tells nothing about the mass-shell structure of
+    The constrast with quantum electrodynamics              the symmetric theory. Even for arbitrarily
+(QED) might be illuminating.       Renormalization          small g, there is no sense in which the interact-
+of QED must be carried out at off-mass-shell                ing theory is a small perturbation on a free mul-
+points because of infrared divergences. For                 tiplet of massless vector mesons. The truly
+small e', we expect perturbation theory to be               catastrophic infrared problem makes a sym-
+good in some neighborhood of the normalization              metric particle interpretation impossible. Thus,
+point. But what about the inevitable logarithms             though one can well approximate asymptotic
+of momenta that grow as we approach the mass                Green's functions, to what particle states do
+shell or as some momenta go to infinity? In                 they    refer?
+QED, the mass-shell divergences do not occur                  Consider theories defined by the Lagrangian
+in observable predictions, when we take due
+account of the experimental situation. The re-                 2 = —4Eq, 'E'"'+i iy, y D;; g;,
+normalization-group     technique' provides a some-         where
+what opaque analysis of this situation. Loosely
+speaking, ' the effective coupling of soft photons                            s ~ o++f ~&~~ &~ ~
+VOLUME 30, NUMBER 26                 P H Y SI CAL RE V I E%' LETT ER S                                  25 JUNa 1975
+
+                                                              Equation (2) describes how finite renormaliza-
+                                                              tions accompanied by a change in g and a rescal-
+                                                              ing of the fields leave the I""'" unchanged. Con-
+thef'"   are the group structure constants, and               sider gauges defined by e in the zeroth-order
+the T' ar e r epr esentation matric es cor respond-           propagator
+ing to the fermion multiplet.    (One may be inter-                               g   p p   p + p p
+ested in models with massless fermions because                      Pv        )       p2         p4
+of their group structure or because they have
+the same asymptotic forms' as massive theo-                   The generalized   Ward identities' imply that there
+ries. ) The normalizations of the conventionally              are no higher-order corrections to the longitu-
+defined irreducible vertices for n mesons and                 dinal part. But if the fields are rescaled as in
+n' fermions,   I'"'",   must refer to some mass               Eq. (2), n must be changed to leave I' invariant.
+)if. The renormalization-group     equation reads             Hence n should occur in Eq. (2) much as g does,
+                                                              and one would have to study the I'"'" for arbi-
+
+           +P(g) —
+         —                                                    trary n to determine the coefficient functions
+                   +ny (g)+n'y&(g) I'"'" =0.
+         8       8                     n'n
+    M                                               (2)       perturbatively.   But for n =0 initially, it re-
+                                                              mains zero under finite renormalizations;      so it
+Putting it in this form makes use of the first                suffices to study the theory in a Landau gauge.
+available simplification, proper choice of gauge.                To first order, the meson inverse propagator
+                                                          1
+                                                              is
+    r„,"'(p, —p) = &"(—g„,p'+p„p, )[1+ ( c, —' c, )(g/4m)'ln(-p'/M')j,
+                                             —",     —,
+
+
+where
+
+    f„4 f„„=2c, 6„, tr(T'T') = 2c, 6„,
+                   [For SU(2), c, =1, c,(isodoublet) = 4, and c,(isotriplet) = l.j To first order (only),
+the fermion self-energy is proportional to the self-energy in massless QED, which vanishes in the
+Landau gauge. Similarly, the contribution to the fermion-vector three-point vertex correction pro-
+portional to the first-order QED correction needs no subtractions and contains no reference to M.
+Calculation of the remaining correction, involving the meson self-coupling, yields
+    r&;,'"(0,p, p) =gT; y„-[1 —'c, (g/4~)' ln( —p'/M') j.                                                       (4)
+Applying   Eq. (2) to these functions at their normalization       points yields
+
+    y4 (g) = 0+ O(g'),             , c, ——,' c2)(g/4m)'+ O(g'),
+                         y~(g) = ( —"                               p(g) = —( —
+                                                                              ", c, —2 c2)g(g/4w)'+ O(g').
+
+It is also apparent, by inspecting the graphs, that to this order the coupling constants of product
+groups do not enter into each other's I6 functions.
+   For the case where there are no fermions, the coefficient functions can be obtained by setting c, =0.
+(Even though the fermion-vector vertex, which had been used implicitly to define g, is no longer pres-
+ent, it can be simulated by introducing two multiplets of spinor fields with the same group transfor-
+mations but opposite statistics. The physical effects of internal fermions are canceled by the ghosts
+—  spinor fields with Bose statistics. ) Alternatively, one can study the corrections to the three-meson
+vertex. Define I" by
+
+
+The normalization condition is F( 1,g )       =1-
+    r, „,""(P, P, o)=f"'(P,g„—, +P„g,„-2P,g, „)gF(p /M',
+(up to a phase convention. ) To first order
+                                                                         ).
+
+                                                              structed from the straightforward perturbative
+    F = 1+ —                                                  ones, involving a momentum —scale-dependent
+           67c, (g/42)' in(-p2/M')                  (6)
+                                                              effective coupling g'(g, t), where t = 2 ln(s/M')
+which yields the same P as described above.                   and s sets the scale, e. g. , s =Q( —p, '). g'(g, t)
+
+turbation theory   '
+  The renormalization-group    "improved" per-
+                    extends results valid near the
+normalization point by effectively moving that
+                                                              is defined by
+                                                                  8 g'/at = p(g'),
+                                                                                                                 c
+
+point. The improved vertex functions are con-                      g'(g, o) =g.
+
+                                                                                                               1347
+  VoLUME 30, NUMBER 26             PHYSI CAI, REVIE W LETTERS                                        25 JvNE 1973
+
+  For the approximate ti's derived above,   P = —bgs,     berg. ' The model is defined by
+                                                              &=   4~ &&+ ~.[(f»)'- (&,e)'1
+       g" ~g'/(1 + 2bg~t).                                and the stipulation   that the momentum     integrals
+                                                          are cut off at some Euclidean mass squared A'.
+  Thus for a pure meson theory or for theories in-        Define a scalar
+  cluding not too many fermions (in the sense that
+  c2 & '4'c, ), g' goes to zero for asymptotic mo-            V(~) =a. F(~)((x)
+  menta, i. e. , t-   ~. The I'"'"n' show a well-de-      and an analogous pseudoscalar, which one can
+  fined slow approach to quasifree field values.         do because of the cutoff. A study of the Green's
+     It is worth remembering that successive or-         functions in the one-loop approximation yields
+ ders of perturbation theory give the behavior of        all the original results. But the existence of the
+ P for infinitesimal@ and, strictly speaking, say        vacuum-degenerate     solution requires the dimen-
+ nothing about finite g. Making a polynomial fit         sionless parameter characterizing the theory to
+ to a perturbative result for P is pure conjecture.                    )
+                                                         satisfy go A 2~ . But this is the condition that
+    Hypothesizing that P stays negative (at least        the one-loop correction to fermion-fermion scat-
+ into the domain of strong coupling constant) re-        tering be at least as important as the tree ap-
+ lates all theories defined by Eq. (1) [with g less       proximation.
+ than the first zero of p(g)] to the model with g            The situation is similar in the renormalizable
+ arbitrarily small by a change in mass scale.             models. Xp' is stable for small A. because the
+ They all share the same asymptotic Green's               one-loop corrections are small. But in mass-
+ functions, differing only by how large is asymp-         less scalar QED, photon-loop corrections of
+ totic.                                                   order e4 can dominate over the lowest order y-
+     To utilize this result, we make the following        y scattering (order A. ) for both A and e arbitrar-
+  hypothesis: The gauge symmetry breaks down              ily small. The requirement is just that A. &e'.
+  spontaneously as a result of the dynamics. Con-        In this light, the problem with the Nambu-Jona-
+  sequently, the fields obtain (in general massive)      Lasinio model is not its nonrenormalizability
+ particle interpretation     —
+                             the Higgs phenomenon.       but that in the domain of largeg, A, where spon-
+ As yet, nothing is known about the particle spec-       taneous breakdown is alleged to occur, higher
+ trum, the low-energy dynamics, or particles             loop corrections are likely to dominate. (In the
+ describable only by composite fields. But the           framework of the original solution, more com-
+ Callan-Symanzik analysis says that the asymp-           plex infinite chains and self-energy graphs dom-
+ totic Green's functions for the "dressed" fun-          inate over the ones studied. ) In theories defined
+ damental fermion and vector fields are the sym-        by Eq. (1), composite scalar densities can also
+ metric functions discussed above. '                    be defined and studied in perturbation theory.
+    [An alternative is to introduce fundamental          But the condition that the one-loop approxima-
+ scalar fields, in terms of which the group trans-      tion imply vacuum degeneracy requires that the
+ formation properties of the vacuum can be stud-        expansion parameter be large, rendering the ap-
+ ied. ' But these theories are not in general ultra-    plication of perturbation theory suspect.
+ violet stable in terms of the additional coupling          The author thanks Sidney Coleman and Erick
+ constants that must be introduced. Particular          Weinberg, who have offered insights and advice
+
+ spontaneously asymmetric have been found.    "
+ models which are ultraviolet stable as well as         freely, and the latter especially for his help in
+                                                        the computations.
+ But gauge theories of fermions (only) have aes-
+thetic attractions, including the possibility of a
+dynamical determination of the dimensionless              *Work supported in part by the U. S. Air Force Office
+coupling constant. ~]                                   of Scientific Research under Contract No. F44620-70-
+   Hypotheses of this type go back to the work of       C-0030.
+Nambu and collaborators.     "   In the renormaliza-        Of central importance is the work reviewed in K. Wil-
+                                                         son and J. Kogut, "The Benormalization Group and the
+ble massless theories including scalars that have
+been studied, ' infrared instability is a necessary
+                                                        e Expansion" (to be published); K. Johnson and M. Ba-
+                                                        ker, "Some Speculations on High Energy Quantum Elec-
+condition for spontaneous symmetry breakdown. '         trodynamics" (to be published); S. Adler, Phys. Hev.
+The model of Nambu and Jona- Lasinio can be             D 5, 3021 (1972).
+treated by the methods of Coleman and Wein-               K. Symanzik, DESY Report No. DESY 72/73, 1972
+
+1348
+VOLUME 30, NUMBER 26                      PHYSICAL RKVIKW LKTTERS                                              25 JUNE 1973
+
+(to be published), and references therein.                         (1971), which also include details of Feynman rules,
+  3A. Zee, "Study of the Benormalization Group for                 regularization,        etc.
+Small Coupling Constants" (to be published).                             Configurationswhere the symmetric theory has in-
+   N. N. Bogoliubov and D. V. Shirkov, Introduction to             frared singularities not present in the massive case
+fhe 7'heoxy of Quantized I"ie«s (Interscience, New                 are discussed in detail by Symanzik (Bef. 2).
+York, 1959).                                                         ~Coleman and Weinberg, Bef. 5.
+                                                                    10
+   Definitions of the relevant quantities will be given,              D. Gross and F. Wilczek, preceding    Letter [Phys.
+but for the general theory and derivations see Refs. 1.,           Bev. Lett. BO, 1348 (1973)].
+2, and 4; S. Coleman, in the Proceedings of the 1971 In-             Y. Nambu and G. Jona-Lasinio,        Phys. Bev. 122, 345
+ternational Summer School "Ettore Majorana" (Academ-                (X961).
+ic, New York, to be published); S. Coleman and E. Wein-              "A.y4 theory with      «0
+                                                                                            is ultraviolet stable (Bet. 2}
+berg, Phys. Rev. D '7, 1888 (1973), whose conventions              and hence infrared unstable but cannot be physically in-
+we follow.                                                         terpreted in perturbation theory. Using the computa-
+   Asymptotic refers to a particular set of Euclidean              tions of Bef. 9, for ~ &0 "improved" perturbation theory
+momenta as they are collectively scaled upward.                    is arbitrarilv good for large field strengths. In particu-
+    E. g. , B. W. Lee and J. Zinn-Justin, Phys. Bev. D             lar, the potential whose minimum determines the vac-
+ 5, 3121 (1972); G. 't Hooft, Nucl. Phys. B33, 173                 uum decreases without bound for large field.
+
+
+
+
+                                                       ERRATA
+
+
+                              PRECESSION OF POSITIVE MUONS IN NICKEL
+                              AND IRON.   M. L. G. Foy, Neil Heiman, W. J.
+                              Kossler, and C. E. Stronach [Phys. Rev. Lett.
+                              30, 1064 (1973)].
+                                                 the last sentence which reads
+                                    In the abstract,
+                                   the internal fields are: = 150 6 for Ni and
+                                    ~ ~
+
+                                ~" should read
+                              ~ ~
+                                                       "
+                                                      the internal fields are:
+                                                           ~   ~
+
+
+                              = 1500 G for Nx and          .
+
+                              HADRON PRODUCTION BY ELECTRON-POSI-
+                              TRON ANNIHILATION AT 4-GeV CENTER- OF-
+                              MASS ENERGY. A. Litke, G. Hanson, A. Hof-
+                              mann„J. Koch, L. Law, M. E. Law, J. Leong,
+                              R. Little, R. Madaras, H. Newman, J. M. Pater-
+                              son, R. Pordes, K. Strauch, G. Tarnopolsky, and
+                              Richard Wilson [Phys. Rev. Lett. 30, 1189 (1973)].
+                               In press, a sentence was truncated on page
+                              1190„second column, first paragraph. It should
+                              read "~ 31 two-prong, 29 three-prong,
+                                           ~ ~
+                                                                                          20
+                              four-prong, and 8 five-prong events. "
+
+
+
+
+                                                                                                                       1349
+

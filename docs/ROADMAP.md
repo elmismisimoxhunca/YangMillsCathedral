@@ -94,6 +94,8 @@ committed before higher layers depend on it.
 - [x] Prove positive rescaling of the named invariant pairing scales the exact fiber pairing and
   canonical curvature scalar by the same factor.
 - [ ] Construct metric-volume semantics and prove compatibility with the designated measure.
+- [x] Pin and visually verify Wilson's primary operator-product-expansion source.
+- [x] Pin and visually verify the independent Gross–Wilczek and Politzer asymptotic-freedom papers.
 - [ ] Interpret gauge-invariant local curvature polynomials and covariant derivatives.
 - [ ] Separate local observables from nonlocal Wilson observables.
 - [ ] Add nontrivial positive examples and hostile disconnected-curvature probes.

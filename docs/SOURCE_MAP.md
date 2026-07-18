@@ -32,6 +32,14 @@ Searchable extraction: `Sources/Clay/yangmills_official.txt`
 | Osterwalder–Seiler 1978, p. 448, Theorem 2.1 | Reflection positivity for gauge-invariant positive-time lattice observables | Finite-cutoff model requirement | — | Must remain distinct from continuum OS reflection positivity and connect only through an explicit continuum bridge |
 | Osterwalder–Seiler 1978, p. 455, Theorem 3.5 | Strong-coupling uniform exponential clustering for finitely supported bond observables | Lower/regulated consistency evidence | — | This lattice “mass gap” is not the Clay continuum mass gap and cannot inhabit the final contract without continuum, reconstruction, and physical spectral bridges |
 
+## Observable and ultraviolet-consistency evidence
+
+| Source locator | Requirement | Classification | Lean declaration | Status / decision |
+|---|---|---|---|---|
+| Wilson 1969, pp. 1499–1500, §II, equations (2.1)–(2.4) | Short-distance products expand into local fields with singular coefficient functions; coincident products are not primitive; domains and finite-order truncation remain visible | Observable/OPE requirement | — | Primary APS article is hash-pinned and visually verified under `Sources/Observables/Wilson1969/`; typed observable and OPE declarations remain pending |
+| Gross–Wilczek 1973, pp. 1343–1344, equations (1)–(9) | Running coupling, beta function, ultraviolet fixed-point/asymptotic behavior, and gauge/matter dependence | Perturbative consistency requirement | — | Primary APS article is hash-pinned and visually verified under `Sources/Renormalization/GrossWilczek1973/`; no finite-order coefficient may stand in for the continuum theory |
+| Politzer 1973, pp. 1346–1347, equations (1)–(7) | Independent leading-beta-function and deep-Euclidean asymptotic analysis, with explicit mass-shell caveat | Perturbative consistency requirement | — | Primary APS article is hash-pinned and visually verified under `Sources/Renormalization/Politzer1973/`; ultraviolet control does not imply existence or a mass gap |
+
 ## Gauge-group convention evidence
 
 | Source locator | Evidence | Formalization consequence | Status |

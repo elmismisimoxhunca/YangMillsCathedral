@@ -135,4 +135,6 @@ Primary OS-I and correcting OS-II article scans, Wightman's 1956 paper, and the 
 edition of Streater–Wightman are hash-pinned with exact text extractions. Load-bearing OS-II and
 Wightman-axiom pages were visually verified. Wilson 1974 and Osterwalder–Seiler 1978 lattice sources
 are also pinned and visually checked without identifying finite-cutoff results with the continuum
-target. Source acquisition constructs no Euclidean, lattice, or Wightman theory.
+target. Wilson's 1969 OPE paper and the independent Gross–Wilczek/Politzer 1973 asymptotic-freedom
+papers are pinned as observable and ultraviolet-consistency evidence. Source acquisition constructs
+no Euclidean, lattice, observable, renormalized, or Wightman theory.

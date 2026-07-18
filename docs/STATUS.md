@@ -1210,6 +1210,23 @@ Verified:
 - No lattice regulator, continuum limit, confinement theorem, Euclidean theory, or mass-gap witness
   is constructed by source acquisition.
 
+## 2026-07-18 — seventieth evidence stone: OPE and ultraviolet sources
+
+Verified:
+
+- Wilson's 1969 *Non-Lagrangian Models of Current Algebra*, DOI `10.1103/PhysRev.179.1499`, is
+  hash-pinned with exact extraction and visually verified operator-product pages. The source rejects
+  primitive coincident products and keeps local-field families, coefficient singularities,
+  matrix-element domains, and finite-order truncation visible.
+- The independent Gross–Wilczek and Politzer 1973 asymptotic-freedom papers, DOIs
+  `10.1103/PhysRevLett.30.1343` and `10.1103/PhysRevLett.30.1346`, are hash-pinned with exact
+  extractions and visually verified renormalization-group/beta-function pages.
+- The source map classifies asymptotic freedom only as perturbative ultraviolet consistency. Neither
+  a negative leading coefficient nor deep-Euclidean control supplies a continuum construction,
+  mass-shell spectrum, existence theorem, or mass gap.
+- No observable algebra, OPE, running coupling, renormalization bridge, quantum theory, or mass-gap
+  witness is constructed by source acquisition.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
@@ -1233,9 +1250,10 @@ Not yet achieved:
   bridge and metric-volume compatibility remain pending. OS-I, correcting OS-II, Wightman 1956,
   and Streater–Wightman source artifacts are now acquired and verified; their Lean requirement
   surfaces remain unimplemented. Wilson and Osterwalder–Seiler lattice sources are likewise pinned,
-  but lattice declarations and all continuum bridges remain unimplemented. Spectral-theorem and
-  observable source packages also remain to be completed before corresponding declarations become
-  canonical.
+  but lattice declarations and all continuum bridges remain unimplemented. Wilson's OPE paper and
+  the Gross–Wilczek/Politzer asymptotic-freedom papers are pinned, but their typed observable and
+  ultraviolet-consistency declarations remain unimplemented. A spectral-theorem source package
+  also remains to be completed before corresponding declarations become canonical.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

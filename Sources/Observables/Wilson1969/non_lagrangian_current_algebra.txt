@@ -1,0 +1,1172 @@
+ PH YSI CAL      REVIEW                              VOLUME          179, NUMBER           5                       25 MARCH       1969
+
+                                  Non-Lagrangian             Models of Current Algebra*
+                                                         KKgNK'rig   G. %&LSON)
+                               I.aboratory of Euclear Studies, Cornell University, Ithaca, Eevjfj York 444'50
+                                                      (Received 25 November     1968)
+
+                 An alternative is proposed to specific Lagrangian models of current algebra. In this alternative there are
+              no explicit canonical fields, and operator products at the same point Lsay, j„(x)j&(x)g have no meaning.
+              Instead, it is assumed that scale invariance is a broken symmetry of strong interactions, as proposed by
+              Kastrup and Mack. Also, a generalization of equal-time commutators is assumed: Operator products at
+              short distances have expansions involving local Gelds multiplying singular functions. It is assumed that the
+              dominant fields are the SU(3) &&SU(3) currents and the SU(3) XSU(3) multiplet containing the pion field.
+              It is assumed that the pion field scales like a field of dimension 6, where d, is unspecified within the range
+              1&6(4; the value of 6 is a consequence of renormalization. These hypotheses imply several qualitative
+              predictions: The second Weinberg sum rule does not hold for the difference of the E* and axial-X* propa-
+              gators, even for exact SU(2})&SU(2};electromagnetic corrections require one subtraction proportional to
+                  I
+              the = 1, =O 0 field; q
+                        I,             ~             ~
+                                            3m. and m 0  2y are allowed by current algebra. Octet dominance of nonleptonic
+              weak processes can be understood, and a new form of superconvergence relation is deduced as a consequence.
+              A generalization of the Bjorken limit is proposed.
+
+
+                      I. INTRODUCTION                                   "operator-product. expansions" for products of two (or
+                                                                        more) local fields near the same point. For example,
+       'HERE are a number    of problems in strong inter-
+                                                                        one can construct expansions for products such as
+        actions which involve the short-distance behavior
+ of the SU(3)&(SU(3) currents but which cannot be                                                    j
+                                                                        j„(x)j„(y) or j„(x)j„(y) (z) when y and z are near x.
+                                                                       These expansions contain functions m'hich are singular
+solved by Gell-Mann's current algebra' alone. These
+                                                                        when y=x or y is on the light cone through x. These
+problems include the convergence or divergence of
+                                                                        expansions give a more detailed picture of the short-
+Weinberg sum rules, ' divergences in radiative correc-
+                                                                        distance behavior of products than one gets if one only
+tions to strong interactions, the nature of the Bjorken
+                                                                       knows equal-time commutators. These expansions origi-
+limit, ' etc. Various models have been proposed to
+                                                                       nated in detailed studies of renormalization in pertur-
+handle these problems, such as the algebra of fields, 4
+                                                                       bation theory. ' The importance of scale invariance for
+the quark model, or the 0. model. ' These models give
+                                                                        the analysis of short-distance behavior is apparent in
+conflicting answers to some of the problems mentioned.
+                                                                       the power-counting       arguments of Dyson and in the
+One therefore must consider what further alternatives
+                                                                       relation betw'een the renormalizability of an interaction
+to these models exist, and hence to get an idea of the                 and its dimension, pointed out by Umezawa et al. "
+range of answers possible to the problems listed.
+                                                                           Scale invariance is sometimes thought of as a feature
+   This paper presents a framework in which one can
+                                                                       special to certain strictly Lagrangian theories. However,
+discuss some alternatives to specific Lagrangian models.
+                                                                       an analysis of the Thirring model' shows tha, t scale
+The present framework does not involve Lagrangians:
+                                                                       invariance can persist in a theory where, for example,
+There are no canonical fields in the formalism, and
+                                                                       the canonical commutators have been destroyed by
+operator products at the same point, for example, the
+                                                                       renormalization     effects. (The Thirring model involves
+product j„(x)j&(x) of two currents, have no meaning.
+                                                                       a spinor field in one space, one time dimension with a
+To replace the Lagrangian methods of analyzing short-                  Fermi coupling. ) While scale invariance persists, the
+distance behavior, two hypotheses are proposed. The
+                                                                       scaling laws for particular fields change as the coupling
+first is that the strong interactions become scale-in-
+                                                                       constant changes. This will be assumed to hold for
+variant at short distances. This was proposed by Kas-
+                                                                       strong interactions also, so that the scaling laws for
+trup and Mac. ' This means that scale invariance is a
+                                                                       strongly interacting fields will be assumed to differ
+broken symmetry in the same sense as chiral SU(3)
+                                                                       (because of renormalization effects) from free fields.
+XSU(3). The other hypothesis is that there exist                          The hypotheses of this paper leave much to be deter-
+  * Supported in part by the OfFice of Naval Research,                 mined; nevertheless, when combined in a simple way
+  f' The author thanks the Alfred P. Sloan Foundation for support.     with current algebra, one can make a, number of qualita-
+     M. Gell-Mann, Phys. Rev. 125, 1067 (1962); Physics 1, 63          tive predictions. The applications considered in this
+(1964).
+  ' S. Weinberg, Phys. Rev. Letters 18, 507 (1967); S. Glashow,
+H. Schnitzer, and S. Weinberg, ibid. 19, 139 (1967); T. Das,               J. Valatin Proc. Roy. Soc. (London) A222, 93 (1954); A222
+V. Mathur, and S. Okubo, ibid. 18, 761 (1967).                         228 (1954); A)25, 535 (1954); A226, 254 (1954); W. Zimmermann,
+  ' J. D. Bjorken, Phys. Rev. 148, 1467 (1966).                        Nuovo Cimento 10, 597 (1958); K. Nishijima, Phys. Rev. 111,
+  '-
+     T. D. Lee, S. steinberg, and B. Zumino, Phys. Rev. Letters        995 (1958); R. Haag, ibg'd. 112, 668 {1958);R. Brandt, Ann. Phys.
+18, 1029 (1967).                                                       (N. Y.) 44, 221 (1967); W. Zimmermann, Commun. Math. Phys.
+  ' M. Levy, Nuovo Cimento 52A, 23 (1967); M. Gell-Mann and            6, 161 (1967).
+M. Levy, ibm. 16, 705 (1960).                                             ' S. Sakata H. Umezawa, and S. Kamefuchi, Progr. Theoret.
+  ' G. Mack, Nucl. Phys. B5, 499 (1968), and references cited          Phys. (Kyoto 7, 377 (1952); H. Umezawa, ibM 7, 551 (1952). .
+therein.                                                                  s See K. Johnson, Nuovo Cimento 20, 773 (1961).
+
+                                                             179      1499
+|500                                      KENNETH            G. WI LSON                                                   179
+
+paper include the validity of Keinberg sum rules, di-        more fields close. to the same point. (These statements
+vergences in radiative corrections to strong interactions,   will be demonstrated     in a separate paper. ) One ran
+   —            "—                            weak inter-    compute the equal-time commutator of A and 8, given
+g + 3x and m.      + 2y decay, nonleptonic
+actions, and the Bjorken limit.                              the operator-product      expansion for A (x)B(y) (see
+   This paper is only a summary of the ideas involved        below); one can also compute equal-time commuta, tors
+in the two hypotheses and a survey of their applica-         of any time derivatives of A and       8.
+tions. Many details, some of considerable complexity,           There are several reasons for using operator-product
+have been omitted.                                           expansions in place of equal-time cornmutators to des-
+   Operator-product expansions are introduced in Sec.        cribe the short-distance behavior of a field theory. One
+II. Scale invariance applied to operator-product ex-         reason is that equal-time commutators can involve in-
+pansions is explained in. Sec. III. The scale-invariant      finite constants, whereas the expansion coefficients
+part of strong interactions is discussed in Sec. IV. The     C„(x—   y) cannot. For example, the Schwinger term in
+effect of mass terms in the Lagrangian (the mass terms       the commutator of tw'o quark currents contains a di-
+are to be treated as interaction I,agrangians in the sense   vergent constant.      "
+                                                                                   In contrast, the functions C„(x—     y)
+of perturbation theory) is considered in Sec. V. A speci-    must be distributions in the four-vector x —    y since the
+fic set of mass terms is proposed in Sec. VI. The appli-     operators A (x) and B(y) are, and a distribution cannot
+cations are analyzed in Sec. VII. Section VIII contains      contain infinite constants.     " A related result is the
+final comments.                                              following: The Bjorken limit, formulated in terms of
+                                                             equal-time commutators, predicts that Fourier trans-
+     II. OPERATOR-PRODUCT           EXPANSIONS               forms of amplitudes, such as (n~ TA(x)B(0) ~P), will be-
+                                                             have as a power series in the transform variable qo '
+  An equal-time commutator of two local fields A(x)                                                      '
+                                                             when qo is large, q being held fixed. Kith the more
+and B(x) is expected to be of the general form               general operator-product     expansion it is found that
+        LA(xp, x),B(xp,   y))=+„D (x—y)0 (x),        (2.1)   fractional powers of qo are also possible; they occur in
+                                                             the Thirring Inodel in one space and one time dimen-
+where the 0„(x) are a set of local fields at x Lincluding    sion. ' Other advantages of the operator-product          ex-
+the unit operator I  which for the purposes of this paper    pansions are: They are manifestly covariant, they exist
+is a local Geld 00(x) =I; it is local because it commutes    for T products of operators, and one can give a simple
+with the other local fields for spacelike separation).       discussion of symmetry-breaking     e6ects to all orders.
+The functions D„(x—y) are 8 functions or derivatives            One can relate the operator-product        expansion of
+of 8 functions.                                              A(x)B(y) to the equal-time commutator of A and B.
+   The generalization proposed here is that an ordinary      Suppose Co(x —  y) behaves as L(x —  y)' —ie(xo — yo)) & for
+product A(x)B(y) has an expansion when the four-             some power p. (If A and B are not Lorentz scalars, there
+vector y is near x, of the form                              would also be a polynomial in the components of x —       y. )
+            A (x)B(y) =    P C (x —y)0„(x) .         (2.2)   The ie comes in because intermediate states have only
+                                                             positive energies and only intermediate states of very
+Here the functions C„(x—   y) depend on a four-vector,       large energies (larger than the fixed initial- and final-
+not a three-vector. Instead of being 6 functions, they       state energies) contribute to the light-cone singularity.
+involve powers of x — y. They can have singularities— on     These high-energy states are exponentially damped if
+the light cone of the form L(x —  y)' —ie(x, — y, )) &, p    one gives xo a negative imaginary part. So (x —           y)'
+being any real number (it need not be an integer).           becomes     (xo —   — ' —(x —y) '. The commutator
+                                                                              yo ie)
+They also involve logarithms of (x —  y)'. The complete      LA(x), B(y)) for y near x (but not equal times) has
+expansion in general involves an infinite number of          an expansion
+local fields 0„(x) but to any finite order in x —y only a,
+finite number of fields contribute. The expansion is
+valid in the weak sense: One must sandwich the product
+A (x)B(y) between fixed final and initial states (n~ and
+ tP). The expansion is then valid for y su%ciently close
+                                                             where Eo(x
+                                                                          LA (x),
+
+                                                                             y)   is—
+                                                                      Ep(z) = EL( —
+                                                                                    Bb))= Z- &-(x —y) 0.(*),
+
+                                                                                   z'+iezp)    —& — z'
+                                                                                                   (         iezp—
+                                                                                                                 )
+                                                                                                                         (2.3)
+
+
+                                                                                                                     ')—(2.4)
+to x.
+   These operator-product expansions exist for the free      and E is a constant. The second term comes from the
+scalar and spinor 6eld theories and for renormalized         product B(y)A(x): It makes Eo(z) vanish for spacelike
+interacting fields to all orders in perturbation theory.     z. One can convert Zo(z) into a sum of 8 functions in z,
+In every case they are valid for any elementary or           for any nonzero but smaH zo. One uses the definition of a
+composite local fields: A (x) and B(y) can be elementary       "The calculation is similar to that of J. Schwinger, Phys. Rev.
+scalar or spinor fields or local currents or the stress-     I.etters 3, 296 (1959).
+                                                               "The Wightman
+energy tensor or any local Wick product in a free-fieM
+theory. Similar expansions exist for T products or com-
+                                                               "This is a consequence
+                                                                                 axioms are assumed.
+                                                                                       of the analysis of Sec. VII plus known
+                                                             properties of the Thirring model; see K. Johnson, Nuovo Cimento
+mutators at small distances or products of three or          20, 773 (&96j.).
+                    NON —LAGRANGIAN                                          MODELS OF CURRENT                           ALGEB RA
+
+8 function                                                                                ing finite-mass  vector-meson theories") by the exact
+
+                        &'(z)z (z) = z (0),                                      (2 5)
+                                                                                          and broken symmetries of the theory. The most crucial
+                                                                                          of these symmetries is broken scale invariance. ' The        "
+                                                                                          free scalar and spinor field theories with zero mass are
+                                                                                          exactly scale-invariant. Mass terms and renormalizable
+                  LV~'(z)1p(z) =                          (0)
+                                                        Vp—       «c             (2.6)    interactions" break the symmetry but the ghost of
+                                                                                          scale invariance still governs the behavior of the singular
+                                                                                          functions.  " Exact scale invariance means that the 6eld
+where p(z) is a differentiable
+—
+                                                        function         of z, and   J;   theory is invariant to a one-parameter group of trans-
+= J'd's. One writes                                                                       formations U(s). The local fields 0„(x) transform as
+                                                                                                           Ut(s) O„(x)U(s) = s     " O„(sx) .            (3.1)
+        p(z) I:p(a) =     Lp(0)+z Vp(0)+                             3~p(a) .    (2 7)
+                                                                                          In free-field theories the constant d(n) is the dimension
+                                                                                          of the field O„(x), that is, O„(x) has dimension nz"'"'
+It makes sense to expand p(z) in a Taylor series because                                  in mass units. For example, a free spinor field f(x) is
+Ep($) vanishes unless z & j sp . One now sees that the
+                               ~   ~                ~
+                                                                                          transformed to sp"p(sx), the power of s being deter-
+function Ep(a) is equivalent to a sum of 8 functions:                                     mined so that the canonical commutation rules are
+                                                                                          invariant. A free spinor field has dimension m' 2, again
+                                                                                          because of the canonical commutation rules. It is im-
+where                                                                                     portant for the dimension of P that there is no dimen-
+                                                                                          sional constant in the canonical commutation rule. One
+                Fp(ap) =           Ep(sp, z),                                    (2.9)    can always change the dimension of             f
+                                                                                                                                    by multiplying
+                                                                                          it by a power of a mass m but this puts a dimensional
+                                                                                          constant into the commutation rule. Multiplying P by
+                Fi(sp)   =—                 X~   p(sp, z) z,    etc. ,          (2. 10)   a constant does not change its transformation proper-
+                                                                                          ties to U(s).
+                                                                                             In an exactly scale-invariant theory the behavior of
+                                                                                          the function C„(x—
+The dependence     of the function Fp(sp), etc. , on ap is
+                                                                                                               y) is determined except for a con-
+determined    by dimensional analysis to be                                               stant by scale invariance. Performing a scale transfor-
+                   ~p(ap) = fpap                 '~',                           (2.11)    rnation on Eq. (2.2), one has
+
+                   Fi(sp) = fixp-'~+', etc. ,                                   (2. 12)        s~ 4+saA   (sx)B(sy) = Q „C„(x—y) s"&"~O„(sx) . (3.2)
+
+where fp and fj are constants (proportional to E)                                         Expanding the left-hand side,
+Actually fi vanishes because of rotational symmetry,                                      s""+~a Q„C„(sx—   sy)O„(sx) =        P C„(x—y)s" " O (sx) .
+but there will be tensor quantities fz. . etc. , which do        .                                                                                      (3.3)
+not vanish.
+   The equal-time commutator is obtained by letting                                       If the fields O„(x) are linearly independent             (this can
+zp —+ 0. The coefficient of 5P(x                   —
+                                 y)I in the commutator                                    always be arranged),       one must have
+is Pp(0), which is
+                                                                                                       C~(sx —sy) = s ~~ a+ ~"'C~(x —y) .               (3 4)
+                           if      5             p(1.
+                                                                                          This equation says that C„(x—      y) must be homogeneous
+                                   if            p=1 5                                    of order —
+                         fp,                                                                            d~ — da+d(n) in x —    y. The Lorentz trans-
+                                       if        p&1 5.                                   formation properties of C (x —      y) then determine the
+                                                                                          behavior of C„(x—
+Similarly, the coefficient of V;V,4'(x —  y)I is nonzero if                                                     y) completely except for one or more
+                                                                                          constants )one, if C (x —   y) must be a scalarj. In par-
+p~& 2.5 and infinite if    p)
+                            2.5. This analysis is based on
+                                                                                          ticular, the strength of the light-cone singularity is de-
+a particular definition of the equal-time commutator
+(the limit for ap  ~ 0 of the unequal-time commutator).
+                                                                                          termined by the dimension d~+dzz d(n) C—          „can . be
+                                                                                          singular only if d~+da~& d(n) and becomes more singu-
+It may not apply to other definitions. It is clear that the                               lar the larger d~+da is relative to d(n).
+operator-product expansions have greater flexibility in
+                                                                                             In a, free-field theory the fields O„(x) that occur in
+the form of the coefficient C„(x—   y) than do the equal-                                 operator-product expansions are the free field itself, its
+tirne commutators unless one permits in6nite coefhcients
+in the equal-time commutators.                                                               "The short-distance behavior of vector-meson theories is com-
+                                                                                          plicated by the longitudinal part of the vector-meson propagator.
+                                                                                          The analysis of this paper would have to be rnodiGed to take this
+                III. SCALE XNVARIANCE                                                     into account; this the author has not done.
+                                                                                           . '4 Scale invariance in free-Geld theories is discussed (as part of
+  The nature      of the singularities                          of the functions          the conformal group) by J. YVess, Nuovo Cimento 18, 1086 (1960).
+                                                                                             '5 Treated in perturbation theory.
+C„(x—y) is determined in known field theories (exclud-                                      "See Sec. V.
+i502                                        KENNETH             G. WI LSON                                                         179
+derivatives (of any order), and all possible local Wick         metry in an exactly scale-invariant             theory. Then there
+products. For a free scalar field p(x), examples of fields      will be 6elds A (x) satisfying
+0„(x) are
+                                                                                         t   A(x), ej=qA(x)                       (3.7)
+$(x), V'„V„V p(x), :qpo(x):, V„:qp(x)V,Q(x)V p(x):, etc.
+                                                                for some constant q. This equation is invariant                to scale
+It is usually desirable to use a linearly independent     set   transformations only if Q is invariant:
+of these 6elds, so that one would exclude V„V&g(x) and
+ :g(x) V„V&p(x): and others which are fixed by the free-                                     Ut()QU() =e                          (3.8)
+field equation. The set of fields O„(x) for a free-scalar-      If Q is the space integral of a current jo(x), then jo(x)
+field theory can be ordered by dimension, starting with         must transform as
+the unit operator (dimension zero) and the scalar 6eld
+g(x) itself (dimension 1). There are two fields of dimen-                         U   t(s) jo(x) U(s) = s' jo(sx) .               (3.9)
+sion 2 LV„&(x) and:P'(x):         j.
+                                   The number of 6elds          Consider    the unequal-time         commutator       of j„(y) with
+multiplies rapidly as the dimension increases, but never-       A(x) which, for x near y, has an operator-product               ex-
+theless there are only a finite number of linearly inde-        pansion
+pendent local fields of dimension D or less, for any finite                                      —y)O„(x) .
+                                                                            [A (x),j„(y)g= Q„E„„(x                              (3.10)
+bound D. This is true also of the free-spinor-field theory.
+The ordering by dimension is a useful concept because           Since j„is a conserved current, IS „„(x y) is co—
+                                                                                                                nserved.
+                     —
+the functions C„(x y) become less singular as the di-           This means that the integrals
+                                  —
+mension d(m) increases. Co(x y) is the most singular
+function (if it does not vanish identically), and only a                                           &.o(zo, z)
+                            —
+finite number of the C„(x y) can be at all singular.
+   One can construct explicit operator-product expan-
+sions in a free-field theory. An illustration will suffice.     are independent of time. Hence they cannot diverge
+Consider the product:p'(x)::@'(y):. It can be written           for zo —+ 0. At equal times (xo=yo) one has
+
+by Wick's theorem:                                                        LA (x), jo(y)$= Pn k~&o(x      —y)On(x)+ST       ~    (3 11)
+:4'(*)::4'(y):=2LD( —y)3'I+4D(* —y):4(*)4(y):                   where the Schwinger terms (ST) involve derivatives of
+                                 +:e'(*)V'(y):, (3 5)           8 functions whose coefFicients may be divergent. To be
+                                                                consistent with Eq. (3.7), one must have
+where D is one of the free-field singular functions. It
+scales as (x — y) o. Expand the Wick products           in a                           qA (x)   = P „k.O. (x) .                 (3.12)
+Taylor series in y —x, for example,
+                                                                Note that k„can be a nonzero constant only if K„o(z)
+:4( )4(y): =:4'( ):+(y—*),:4(*)V"4( ):+             . , (3.6)   scales as 2: ', which means O„has the same dimension
+                                                                as A(x).
+and likewise for: p'(x)@'(y): . One then has an expansion          A similar analysis of the translation generator E„
+of the desired form, except that the set of operators           shows that E„has dimension 1 and the local stress-
+involved is not linearly independent         Dor example,       energy tensor has dimension 4.
+ : P(x) V„V&g(x): is includedj.  The final step is to reduce
+the operators to a linearly independent set, which is
+                                                                          IV. HADRON SKELETON THEORY
+formally straightforw'ard     but in practice rather com-
+plicated. The resulting expansion has all the properties           Field theories with exact scale invariance are not
+discussed here.                                                 physically interesting, since they cannot have finite-
+    In an exactly scale-invariant theory the singularities      mass particles. But one can hypothesize that there exists
+of the functions C (x —   y) are determined by pure sym-        a scale-invariant theory which becomes the theory of
+metry considerations (scale invariance and Lorentz in-          strong interactions when one adds mass terms to the
+variance), except for constants. If there are internal          Lagrangian. This leads to the idea of broken scale in-
+symmetries, some of these constants will be zero. The           variance proposed by Kastrup and Mack. ' This idea
+scale-invariance requirements override any other con-           will now be explained in detail. In this section the scale-
+siderations; for example, one cannot demand that the            invariant theory underlying strong interactions will be
+equal-time commutators of all local fields be finite. If        discussed, and in Secs. V and VI the e6'ect of mass terms
+A(x) and B(y) are fields of high dimension, then their          will be considered.
+commutator will contain terrifyingly singular functions            It is assumed that the strong interactions contain
+leading to an equal-time commutator with many deriva-           some arbitrary fundamental parameters just as the mass
+tives of 8 functions and many divergent constants.              and charge of the electron are fundamental parameters
+    The current commutators are a special case, where           in electrodynamics. However, the greater complication
+equal-time commutators must exist (apart from Schwin-           of strong interactions means that the parameters of
+ger terms). Let Q be the generator of an internal sym-          strong interactions are not physical masses and coupling
+                     NON —LAGRANGIAN                       MODELS OF CURRENT                           ALGEB RA                  I503
+
+constants; they show up explicitly only in the short-
+distance behavior of strong interactions. Implicitly, they                                       t   x„8,p(x) —x.8„p(x)].        (4.2)
+determine all of strong interactions, but to calculate
+physical masses and coupling constants one has to solve
+                                                                        Given that 8„, is traceless, symmetric, and conserved,
+the strong interactions, which is not possible at present.
+                                                                        these generators are also conserved.
+ In physics these parameters have particular values, but
+the theory of strong interactions is assumed to be self-
+                                                                           The skeleton theory is presumed to have operator-
+consistent for any values of the parameters. In particu-                product expansions like Eq. (2.2). The coeKcients
+                                                                        C (x —   y) are determined except for constants by scale
+lar, if all the parameters are zero, it will be assumed that
+all partial symmetries become exact. The theory with
+                                                                        invariance and other symmetries. No proposal will be
+all free parameters set equal to zero will be called the                made here for determining these constants. However, it
+"skeleton theory.     " It is assumed that the skeleton                 will be assumed that these constants are all unique and
+                                                                        dimensionless. '8 Then dimensional analysis of the oper-
+theory is a theory with all physical masses equal to
+                                                                        ator-product expansion shows that the dimension of a
+zero, which is exactly scale-invariant, and exactly in-
+                              "
+variant to P, C, PCT, SU(3) XSU(3), and baryon                          local field A (x) is the same as its scale-invariance quan-
+                                                                        turn number d~. There are also operator-product expan-
+number. The quark model suggests there should also be
+                                                                        sions for products of three local fields A i(x)32(y)A3(z),
+an "axial baryon number"' but this will not be con-
+                                                                        or even more. In this case, the expansion functions
+sidered here for the sake of expediency. Many of the
+complications of the finite-mass theory should be absent
+                                                                        C (x —   y, x — s) can depend in an arbitrarily complicated
+from the zero-mass theory: All 6nite-mass thresholds                    way    on  the ratio (x —y)'/(x — s)' without violating any
+                                                                        invariance. No procedure will be offered for determining
+are gone, replaced by a continuum starting from mass
+zero. If there are Regge families of particles, the whole               the dependence on such dimensionless arguments.
+family is telescoped into the zero-mass point. A two-                       It will be assumed that the fields O„(x) of the basis
+point function G(z), which could be extremely compli-                   are ordered by dimension. For any given dimension
+cated in the finite-mass theory, is now a simple power                  there will be one or more multiplets of 6elds labeled
+of s because of scale invariance.                                       by their i.orentz representation, baryon number, SU(3)
+   The skeleton theory has a set of local fields. This set              XSU(3) representation, and P and C properties. Of
+divides into two linear spaces: the space of local Bose
+                                                                        particular importance are the fields of low dimension,
+                                                                        since these fields have the most singular coefFicients in
+fields and the space of local Fermi 6elds. Each set can
+                                                                        operator-product expansions. As a result, they will de-
+be defined as the set of fields which commute with the
+                                                                        termine singularities in radiative corrections, conver-
+SU(3) XSU(3) currents for spacelike separations. A
+                                                                        gence of Weinberg sum rules, etc. In practice, it is the
+linear combination of such fields is also a local field, so
+that these sets define linear spaces. Each space will be                fields of dimension 4 or less that are important.    " There
+                                                                        are several fields that mls/ have dimension 4 or less.
+assumed to have a countable linearly independent basis.
+The two bases will be lumped together and denoted by                    First, there are the SU(3)XSU(3) currents and the
+                                                                        baryon current. These will be assumed to satisfy Gell-
+(O (x)}, How the basis is constructed is largely ar-                    Mann's current algebra in the skeleton theory as well
+bitrary, and there will be many equally valid choices
+                                                                        as the physical theory. So the currents have dimension
+of basis. However, it is convenient to de6ne subsets of
+                                                                        3. The stress-energy tensor has dimension 4. There must
+6elds which belong to particular irreducible representa-
+                                                                        also be an SU(3) XSU(3) multiplet including the pion
+tions of the symmetries and choose the basis fields from
+                                                                        field, with a dimension 6 less than 4, and greater than or
+these subsets. In practice, it is convenient to let a par-
+                                                                        equal to 1. The dimensional restriction is necessary to
+ticular O„(x) be an individual field and not a multiplet;
+                                                                        make partial conservation         of axial-vector current
+it might be a component of a vector field, for example.
+                                                                        (PCAC) work when SU(3) XSU(3) is broken; this will
+   The skeleton theory is especially elegant if the stress-
+energy tensor 8„„ofthe skeleton is a traceless symmetric
+                                                                                             "
+                                                                        be explained later. This multiplet will be assumed to
+                                                                        be an irredubible multiplet transforming as the (3,3)
+tensor, so that it belongs to an irreducible representa-
+tion of the I.orentz group. This is the case for the quark
+                                                                        6(3,3) representation of SU(3)XSU(3).s' All these
+                                                                        properties are true of the SU(3)XSU(3) 0 model in
+model. It makes scale invariance and I.orentz invariance
+                                                                        which the pion-field multiplet has dimension 1, and
+automatic, given translational invariance, because the
+                                                                        the quark model in which the pion field has dimension
+generators of scale transformations and I.orentz trans-
+formations become
+                                                                           "For each field 0 (x) there is one arbitrary normalization
+                                                                        factor, which one chooses to be a dimensionless constant.
+                                                                           "An exception is in the problem of nonleptonic weak inter-
+                                                               (4. 1)   actions where the crucial question is the dimension of the 6rst
+                                                                        local 6eld in the basis with the quantum numbers assumed for
+                                                                        the nonleptonic weak Hamiltonian. See Sec. VII K.
+  '7 Since I'CT is automatic in a local-field theory, it can and will      "See the end of Sec. Vl.
+be ignored.                                                                "This was proposed by Gell-Mann (Ref. I).
+i504                                             KENNE. r H G. WI LSON
+  "
+3. Here no assumption       will be made about the dimen-             field, super-renormalizable    interactions (which require
+sion 6 beyond the restriction 1(6&4.                                  subtractions only in low orders of perturbation theory),
+   Are there other fields besides the ones mentioned                  renormalizable interactions, and nonrenormalizable           in-
+above with dimension 4 or less? It will become evident                teractions. Each interaction corresponds to a local
+that this is a vital question. The author has no way to               Lagrangian density scalar to Lorentz transformations
+answer it conclusively. As an ad hoc approach, it will                and invariant to exact internal symmetries. Clearly any
+be assumed, to start with, that there are no other fields             Lagrangian density must be a linear combination of the
+of dimension 4 or less. An extra field Lan SU(3) && SU(3)             basis of local fields f 0 (x)}, so that it is logical to use
+singlet scalar field] will be proposed later because it is            the subset of fields from the basis which are scalars and
+needed as a mass term in the Lagrangian.                              exact to internal symmetries as the specific interactions.
+   In free-field models Lthe SU(3) &&SU(3) 0 model or                 One then has a basis (2;(z)} of possibe interactions,
+the free-quark model] the basis set of fields (0„(x)}                                                            }.
+                                                                      culled from the complete basis (0 (x) It was shown by
+can be constructed from Wick products and derivatives                 Urnezawa et at. ' that a renormalizable interaction must
+of the elementary fields. Thus, in the quark model, the               have dimension 4 or less. If it has dimension less than
+fieMs of dimension 4 or less and zero baryon number are               4, it is a super-renormalizable interaction (e.g. , the:    g:
+fields of the form: gnP: or: V„gng: or:Po.'i7„$:, where               interaction of a scalar field). Free-field mass terms (for
+n is any spin and SU(3) matrix and              f "
+                                                is the quark          scalar or spinor fields) have dimension less than 4.
+field. These fields all have dimension 3 or 4. A study'4                 As long as interactions on a free-field theory are
+of the Thirring model has convinced the author that                   treated in perturbation theory, one finds that operator-
+the dimensions of fields in free-field models have little             product expansions at small distances )like Eq. (2.2)]
+or no bearing on the dimensions of fields in strong inter-            exist in the presence of interaction, but that the different
+actions. In the Thirring model there is a single dimen-               types of interaction have profoundly different effects
+sionless coupling constant X and the theory is scale-                 on the expansion coefficients C„(s). If one has only
+invariant for all values of X. In the free-field limit of the         mass terms and super-renormalizable        interactions, then
+Thirring model the spinor field         f
+                                       has dimension 2 as             the dominant term in C (s), for z small, is the skeleton
+                                                                      term; terms depending on the free-field mass or the
+expected from the canonical commutation rules in one
+space dimension. However, the dimension varies con-                   coupling constant are smaller by a power of s. If one "
+tinuously with X and approaches ~ as X approaches                     has a renormalizable interaction, the interaction gen-
+2'. This is a consequence of renormalization; after re-               erates terms logarithmically       more singular than the
+normalization the field does not satisfy canonical com-               skeleton term. Finally, a nonrenormalizable        interaction
+mutation rules and hence does not have to have dimen-                 treated in lowest order generates a term more singular
+sion ~. However, the Thirring model has charge and                    by a power of s than the skeleton term. For every type
+axial-charge conservation and the equal-time commuta-                 of interaction or mass term, the functions C„(x—        y) can
+tors of the charges with the spinor field force the cor-              be written as a power series in the coupling constant or
+responding currents to have dimension 1, which they do.               mass (only to first order for nonrenormalizable          inter-
+This is the same as the dimension of the product Py„f,                actions). The wrath-order term in the series scales as
+only in the free-field limit. So in thinking about the                s"(4 "') relative to the skeleton term, where d; is the
+dimensions of operators in the strong interactions we                 dimension of the interaction. There can also be loga-
+do not assume that there are elementary fields satisfying             rithms of (z)'/m', where m is the free-field mass.
+canonical commutation rules and do not assume that                       Similar conclusions apply to interactions on the
+the other local fields have the same dimensions as                    hadron skeleton. One defines the basis of possible in-
+products of elementary fields. It is also not assumed                 teractions as the subset of fields (2;(x) } from the basis
+that fields exist with the same dimension as the product              (0„}    which are Lorentz scalars, even to P and C, and
+of two pion fields or the product of two currents. (The               haveI=      V=o. (One excludes the unit operator and
+latter assumption affects the theory of nonleptonic weak              all derivatives of fields from this list, since these are not
+interactions.  ") This leaves one with enormous flexi-                meaningful interactions. ) There are three types of in-
+bility in choosing dimensions of fields.
+                                                                                                                  "
+                                                                      teractions, depending on their dimensions: Generalized
+                                                                      mass terms have dimension less than 4, renormalizable
+         V. MASS TERMS: GENERALITIES                                  interactions, if any, have dimension 4 exactly, and non-
+                                                                      renormalizable interactions have dimension greater than
+   Now consider the problem of interactions, that is,
+                                                                      4. A general perturbation formula can be set up to
+departures from the skeleton theory. If the skeleton                  describe any of these interactions. To avoid innumerable
+theory were a free-fieM theory, there would be four                   complications of perturbation theory to all orders one
+types of interactions: mass terms quadratic in the free
+                                                                         "This was pointed out by J. Kstberg, Ph. D. thesis, Cornell
+   -" The diQ'erence in dimension affects t.he behavior of the pion   University (unpublished) .
+field, in particular its operator products at short distances. This      ~' One cannot distinguish  between mass terms and super-
+was noted by M. Gell-Mann, Phys. Rev. 125, 1067 (1962); Ref. 20.      renormalizable interactions in a strongly interacting theory be-
+   '3 There is also the unit operator.                                cause one does not write local 6elds as products of elementary
+   '4 The results stated below can be gleaned from Ref. 12.           fields.
+                    NON —LAGRANGIAN                    MODELS OF CURRENT                         ALGEB RA
+writes only a first-order formula giving the change in              the equal-time commutators associated with the sym-
+anv local (Heisenberg) field O„(x) when any coupling                rnetry. 29 However, the number of subtractions needed
+constant is changed. That is, if (X,} are the set of                in Eq. (5.1) is unchanged by the presence of interaction,
+coupling constants associated with the interactions                 so that one has a renormalizable interaction in the con-
+f Z;), one obtains a formula for RO, (r)/RX;, The usual             ventional sense. Nonrenormnlizable       interactions pro--
+(unrenormalized) formula is                                         duce expansion functions more singular by a power of
+                                                                    x—   y than the skeleton terms and hence force one to
+                                                                    make extra subtractions due to the interaction in Eq.
+                                                            (5.1)    (5.1), so that they are nonrenormalizable in the con-
+                                                                    ventional sense.
+where $ g„» means the retarded commutator (yp(xp).                     It will now be assumed that the interactions on the
+This formula has to be corrected both for nonadiabatic              hadron skeleton theory are all generalized mass terms.
+ effects (when physical particle masses vary with X;) and           This means that scale invariance, as well as SU(3)
+for ultraviolet singularities at x=y. The nonadiabatic              XSU(3), is a broken symmetry. This is an ad hoc as-
+ eRects are easily accounted for and will not be con-               sumption motivated in part by the success of broken
+siderd here. The ultraviolet singularities can be analyzed          SU(3) XSU(3) and in part because it is hard to use the
+using the operator-product expansion for the commuta-               ideas of this paper if renormalizable or unrenormalizable
+tor I 0„(x),Z;(y)] and the singular terms can then be               interactions are permitted (this is not true if the renor-
+removed by subtraction. One can then show" that oper-               malizable or nonrenormalizable interactions are present
+ator-product expansions continue to hold in the pres-               but small; thus electrodynamic and weak corrections to
+ence of the perturbation and obtain formulas for deriva-            strong interactions do not create difliculties).
+tives of expansion tunctions such as BC„(s)/BX;. These                 In order that all terms in a given expansion function
+formulas will not be quoted here. These formulas can                C„(x—   y) have the same dimensions, one must assign
+be used to show that the expansion functions have                   each coupling constant X; the dimension m~"&, w'here
+power series in all interactions. One finds as in the free-         d; is the dimension of 2;. So all generalized mass terms
+field case that the eth-order term scales as s"(4             ""    have coupling constants which carry dimensions; hence,
+relative to the skeleton term, where d; is the dimension            it is possible for physical masses to be generated by any
+of the interaction. There may also be logarithms of                 generalized mass term.
+ —
+x y. One can avoid logarithms of physical masses
+(which depend in a very complicated way on the cou-                               VI. HADRON MASS TERMS
+pling constants X;) by introducing an arbitrary subtrac-                Consider now the possible generalized mass terms in
+tion constant u, so that logarithms have the form
+       —                       —                                    strong interactions. Given the list of fields of dimension
+inL(x y)'/a'$, not lnL(x y)'/m'7, in the expansion
+functions.  " If this is done, it is no longer possible to
+                                                                    less than 4 assumed earlier, the only possibilities are
+                                                                    two fields from the pion-field multiplet. These are 0.8
+choose the subtractions for Eq. (5.1), so that the vacuum           and op, where op is the       I=
+                                                                                                  V=O, SU(3)-octet scalar
+expectation value (0~0 (x) 0) vanishes.
+                                 ~
+                                                                    field, and op is the SU(3)-singlet scalar 6eld. Assume
+    The generalized mass terms, with d;(4, give correc-             that there is an SU(3) XSU(3) singlet field, w(x), also
+tions to expansion functions smaller by a power of s
+                                                                    with dimension less than 4. The need for this will be
+than the skeleton term. In this case, the divergences               seen shortly. Then the interaction Lagrangian can be
+in Eq. (5.1) are primarily due to the skeleton theory.              written"
+Also, the equal-time commutators of symmetry genera-
+                                                                                 Zr(x) = Apo'p(x)+Xpo'p(x)+Aro(x)      .        (6.1)
+tors are to some extent unaffected by the presence of
+generalized mass terms Lmore precisely, the equal-time                 One would like an order-of-magnitude      estimate for
+commutator of a current j„(y) with a local field A (x)              each term in Zr. The term Xpop(x) is the SU(3)-breaking
+is changed only by fields of dimension less than A itself      j.   term; this is known to cause energy separations within
+So generalized mass terms are the logical choice of in-             a multiplet of 450 MeV (the N* decuplet) or less. As
+teraction when one wants a symmetry of the skeleton                 a mean energy, say Xsa.8 300 MeV. This is a relatively
+to be a broken symmetry of the theory with interaction.             small energy, since it is now known that one should
+   The renormalizable interactions produce corrections              measure energies relative to m, or maybe mz, and not
+to expansion functions which are logarithmically more               m . One can get an estimate on the Zoo. o term but by a
+singular than the skeleton terms. Hence, if an inter-               more indirect argument. One knows that in the limit
+action is not invariant to a symmetry, it can destroy
+                                                                       2' This is related to observations of K. Johnson and F. E. Low,
+  27 This paragraph summarizes a very complex analysis.             Progr. Theoret. Phys. (Kyoto) Suppl. 37-38, 74 (1966).
+  '8 This possibility was noted by M. Gell-Mann and F. E. Low,         "The SU(3))&5U(3)-symmetry-breaking terms are as pro-
+Phys. Rev. 95, 1300 (1954). It is essential to the subsequent       posed by M. Gell-Mann, Phys. Rev. 125, 1067 (1962), Kq. (5.21).
+analysis that logarithms do not involve the couplings );. This is   For further discussion of this choice of symmetry breaking, see
+because such logarithms would destroy the spurion analysis of       S. L. Glashow and S. Weinberg, Phys. Rev. Letters 20, 224 (1968),
+SU(3) &(SU(3)-symmetry breaking used in Sec. VII, for which a       and M. Gell-Mann, R. J. Oakes, and S. Renner, Phys. Rev. 175,
+pure power series in ); is essential.                               2195 (1968).
+i506                                         KENNETH               G. WI LS ON                                                 179
+
+of exact SU(2) XSU(2) symmetry the pion mass must                                     VII. APPI, ICATIONS
+            "
+be zero. So the SU(2)XSU(2)-breaking term must
+                                                                                     A. Weinberg Sum Ru1es
+raise the pion mass from 0 to 140 MeU; in other words,
+the SU(2) XSU(2)-breaking term is smaller than even                   To illustrate the applications of the operator-product
+the SU(3)-breaking term. To discuss SU(2) XSU(2)                   expansions, consider first the question of convergence
+breaking, one must express both 0 o and 0.8 in terms of an         of Weinberg sum rules. ' Let A„„(x) be an arbitrary linear
+SU(2)+SU(2)-violating operator os Lbelonging to the                combination of vector and axial-vector meson propaga-
+(2, 2) representation)  and SU(2) XSU(2)-conserving                tors, and G„„(p) be its Fourier transform. The first
+                                                                   Weinberg sum rule holds for G„„(p) if h„,(x) is less
+Geld 0ro:
+                          309       30&o,            (6 2)         singular than x ' as x —       "
+                                                                                             + 0. The second sum rule holds
+                                                                   if it is less singular than x . More precisely, one can
+                 -.=(~-:)-.+ v-:)".                                get the second sum rule if either the g„„ term or the
+Since O.o and 08 are part of a single irreducible repre-           x„x„term in A„„(x) is less singular than x '. So one needs
+sentation of SU(3)XSU(3), this decomposition of os                 the short-distance behavior of the product TV„(x)
+and os by SU(2) X SU(2) representation is unique. Now               X U, a(0) and TA„(x)A„a(0) for x near 0; n and. P are
+one has                                                            SU(3) indices. The behavior is needed to order x '.
+                                                                   Since U„and A„have dimension 3, one will need to
+),   .-.+).-.= E—(4-:)).+(v'l)). j-.                               expand in terms of operators 0 of dimension 4 or less.
+                             +L(V's))is+(4s) ~slants               Since one wants the vacuum expectation value of the
+If m were zero, the coeKcient of 0-9 would be zero.                 T product, one needs only operators 0 with a nonzero
+                                                                   vacuum expectation value. The only possibilities are
+With m only 140 MeU, the coefIicient of 0-9 should be
+roughly zero, that is,
+                                                                    I  0'p 08 and m. Terms involving m will always be less
+
+                                                                   singular than terms involving I, so that m will be
+                        )p     (Q-,')Xs.                 (6.5)     ignored. Let O.o and 0-8 be the vacuum expectation
+                                                                   values (0~os(x) (0) and (Q(as(x) (0). The linear com-
+The error turns out to be of order m ', which even                 bination D„„(x) has an expansion
+compared to (300 MeV)s is small. This means the
+SU(3)-symmetric term Xsos represents an energy of,                             g„„(x) H„„(x)+Hi„„(x)as+Hs„„(x)os               (7.1)
+perhaps, 200 MeV. This is why another mass term is
+needed to change the p, nucleon, and other heavier               for x small, with unknown functions H, H~, and H2.
+particles from mass zero (in the skeleton theory) to                 The quantity A„„(x) is a vacuum expectation value
+their observed masses. This requires energies of order           of a linear combination of T products. The linear com-
+i BeV, so that Xm should be of order 1 SeV.                      bination of T products can be chosen to belong to a
+    Given the interaction Lagrangian, one      can  derive  the  particular irreducible representation of SU(3) X SU(3).
+PCAC formula. It follows from Eq. (5.1) (even in re-             The     currents themselves belong to (8, 1)Q(1,8),' so
+normalized form), that if j„(x) is a conserved current           the product of two currents can belong to (1,1), (8, 1)
+in the skeleton theory and Z~ contains only        generalized    (1, 8), (10,1) (1, 10) Q(10,1) (1, 10), (27, 1) Q3(1,27),
+mass terms, then                                                  or (8,8). When one takes the vacuum expectation value,
+                                                                  the decuplet representation disappears. The propagator
+                  &"j.( ) ='Eo("),~.( )1,                  (6.6) combinations which correspond to the other representa-
+                                                                                       Table I. To determine the singularity
+where Q(xs) is the charge associated with          j„.  In the tions are listed in
+                                                                  of  H(g),  Hi(x),  and Hs(x) for each linear combination,
+case of the strangeness-conserving     isovector axial-vector
+                                                                  one can do a spurion analysis. If A„„(x) belongs to the
+current A„, one obtains
+                                                                  same representation of SU(3) XSU(3) as o.s, then Hi(x)
+            V 3 „(x)= P — -', v3),+(v2/v3)Xo]g(x),         (6.7) will have a skeleton term. If not, one must find out how
+                                                                  many powers of the symmetry-breaking           parameters A. o
+where p is the pion field.                                        and Xs   are  needed  for Hi(x) not  to be  zero. This is de-
+    One can now see why the pion field must have dimen-           termined by a spurion analysis with the spurion repre-
+ sion 6 less than 4. The reason is that the pion Geld must        senting the symmetry-breaking      interaction. The spurion
+ be in the same SU(3)XSU(3) representation as the belongs to (3,3) 63 (3,3). Combining one spurion with o.s
+SU(3) XSU(3)-breaking terms in Zr, due to Eq. (6.6). or os, which also belong to (3,3)$ (3,3), one can produce
+ But the Lagrangian contains only generalized mass all representations except (27, 1)Q) (1,27): To produce
+ terms in order not to jeopardize the current commuta-            the latter requires three spurions at least. The skeleton
+ tion relations. The lower bound A~& 1 is an elementary            term in Hi(x) would have behaved as x s+a (6 for two
+ consequence of the Kallen-Lehmann representation.                 currents, 5 for the dimension of the o field). With one
+                                                                   spurion, one has one power of Xp or A, s, and correspond-
+      "Y.Nambu and G. Jona-Lasinio, Phys. Rev. 122, 345 (3961);
+                                                                        "This would mean h~„(g) being less singular   than g„,/g' and
+ 124, 246 (1961). See also S. L. Adler and R. F. Dashen, Current
+ A/gebras (W. A. Benjamin, Inc. , New York, 1968).                  g„x„/g'.
+179                   NON —LAGRANGIAN                           MODELS OF CURRENT                            ALGEB RA                     i507
+  TABLE I. Combinations     of vector and axial-vector meson                          B. Divergence in Radiative Corrections
+propagators, associated SU(3) XSU(3) and SU(2) XSU(2) repre-
+sentations, and maximum singularity of H, II'&, and II2.        '                As a second example, consider the question of di-
+  &p, (x)      SU(3) XSU(3) SU(2) XSU(2)                                      vergences in the radiative corrections to strong inter-
+   —A i                                                              —2       actions. Consider only the second-order radiative cor-
+  p                (8,8)       (3 3)                  2—2A
+E~ —                                                                 —2       rections; these are described by an effective interaction
+    E~~            (8, 8)      (2 2)                  2—2d
+                                                      2—             —2       Lagrangian
+ 07   D            (8,8)       {i,t)                    2A
+    x                                                 2—             —2
+              (8, 1)Q+ (1,8)   (1,1)                                                        Zr(0) = e'
+                                                        2A
+                                                                                                             Tj„(x)j„(0)D""(x),           (7 2)
+             (27, 1) 0+ (1,2&) 11,1)                 rO   —4~       6—2A
+    8              (1,1)       (1,1)                      —6         —2
+    x: 3(p+A i) —2(E*+Eg*)—((p+D)                                                                                                 current and
+    y: (p+A&) — 4(E*+Ez*)+3(a&+D)
+                                                                              where   j„(x) is the hadron electromagnetic
+      s' p+A 1+X*+Eg*+a)+D                                                    D""(x) is the photon propagator.           The divergences     in
+                                                                              radiative corrections come from divergences in the x
+  a Shorthand: p is the p propagator, D is the axial propagator counterpart   integral at x=0; they occur if the T product is as
+                                                                              singular as x '. One is concerned only with the isospin-1
+to co propagator, the column labeled H gives most singular power of x in
+not baryon current.
+                                            I
+H(x), and co is the propagator made from = V=0 SU(3)-octet current,
+                                                                              and -2 parts of Zr(0). So one needs only fields in the
+      a factor xta (apart from logarithms). Hence                             expansion of the T product which carry isospin. To
+                                                                              cause a singularity x ' or greater, these fields must have
+ingly
+Hi(x) scales as x ' apart from logarithms, except for
+                                                                              dimension 4 or less. So one writes
+the linear combination of propagators associated with
+the (27, 1) 6(1,27) representation. The same is true of                                                          0.(0),
+                                                                                            Tj„(x)j„(0)= Q„C„„„(x)                        (7 3)
+Hr(x). The complete results are shown in Table I. One
+sees from Table I that the second steinberg sum rule                          with the sum over 0 (0) so restricted. Finally, the
+can hold only for the (27, 1) $(1,27) combination. How-                       integrals of C„„„(x)D&"(x)over x will vanish because of
+ever, as pointed out by Weinberg, ' it should be a good                       Lorentz invariance unless 0„(0) is a scalar field. So one
+approximation to go to the exact SU(2)XSU(2) limit                            s restricted to the    I= I,
+                                                                                                     1, = 0 scalar field 0.3 in the pion-
+(Xs — v2)(()). Then the operator-product        expansion of                  field multiplet. So the only possible divergent term in
+Eq. (7.1) must obey SU(2) XSU(2). But the fields (rp                          &r(0) has the form
+and o.s belong to the (1,1) and (2, 2) representations of
+SU(2) XSU(2), so that. they cannot appear in the ex-
+pansion of the p —     A~ linear combination. So the orig-
+                                                                                                        c„,(~) D""(z)),(0) .              (7.4)
+inal second Weinberg sum rule converges in the exact
+SU(2)XSU(2) limit. This is not true of any of the                             The behavior of C„.(x) is found by a spurion analysis to
+SU(3) XSU(3) generalizations           Lexcept the (27, 1)                    be x ', except in the case of exact SU(2) XSU(2) sym-
+6  (1,27) term, if it converges without the SU(2)
+                  j."
+                                                                              metry, when it is identically zero. This means that, for
+X SU(2) limit        All the SU(3) XSU(3) sum rules con-                      finite pion mass, C„„(x) has a factor m '. The standard
+verge in the exact SU(3)XSU(3) limit; how good an                             procedure for obtaining a finite effective Lagrangian is
+approximation this would be to physics, I do not know.                        to subtract the offending term and add an arbitrary
+If 6 is 3 or larger, then even the first Weinberg sum                         constant times cr3.
+rule does not converge, except for the (27, 1) $(1,27)
+combination. This whole analysis is modified if there
+are scalar fields of dimension 4 or less belonging to the                     Z (0) = '     (Tj„( ) j„(0)—C„„( ) (0) jD""( )+ f (0),
+(8,8), (8, 1)(E)(1,8), or (27, 1) $(1,27) representations of                                                                              (7 3)
+SU(3)XSU(3). Such fields would destroy the second
+steinberg sum rule for the relevant linear combinations
+of propagators, whether or not SU(3) XSU(3) is exact.
+                                                                              where   fis an arbitrary constant. The o.,(0) term is the
+                                                                              tadpole term proposed by Coleman and Glashow. ~4 If
+   "This contradicts the assumptions of S. L. Glashow and S.                  there are other isospin-1 or isospin-2 scalar fields with
+Weinberg, Phys. Rev. Letters 20, 224 (1968), In particular,                   dimension 4 or less, they too can cause divergences in
+Glashow and Weinberg assume the second Weinberg sum rule                      radiative corrections.
+for the difference of the     J~ and Eg~
+                                           propagators, which con-
+tradicts the analysis of this paper. Note, also, that the symmetry-
+breaking mechanism of this paper is more complicated than that
+of T. Das, V. S. Mathur, and S. Okubo, ibid. 19, 470 (1967);
+                                                                                                    C. q —+ a+mom     Decay
+Das et a/. propose that the second Weinberg sum rule should be
+violated in first order of SU(3) breaking at least for differences               Two specific problems involving electromagnetic cor-
+of vector-meson propagators, but hold in second-order SU{3)                   rections will be considered here: the p —+ 3x decay and
+breaking. In the present paper, the violation of the second Wein-             the x'~2p decay. I'irst, consider the g~3m decay.
+berg sum rule is caused by a combination of first-order SU(3)
+XSU(3) breaking in the Lagrangian and violation of SU(3)                      Experimentally the amplitude for g          ~
+                                                                                                                      3z is well fitted
+)&SU(3) in the vacuum expectation values of the 0. fields, which
+means one can have violation of the Weinberg sum rule even in
+second order of SU(3) breaking.                                                 '4 S. Coleman and    S. L. Glashow, Phys. Rev. 134, 8671 (5964).
+1508                                                 KENNETH           G. WI LSON
+
+by the formula'"                                                       netic Lagrangian, which is necessary if it is to account
+                                                                       for the p —
+  gI rl   ~ ~++7ro+rr )=A„(1            rN   sa(Ss —
+                                             —      S„)j, (7.6)
+                                                                                  +3m decay.
+
+where                                                                                           D. mo —+ yy Problem
+                      Ss= Lq(9) —q(~') 1',                   (7.7)
+                                                                         The decay 7r' — + 2y has been shown by Veltman and
+                                                             (7 g)     Sutherland" to be forbidden by current algebra and
+                       g=   —0.2~0.015,                      (7.9)     gauge invariance. The invariant amplitude for ~' decay
+                                                                       can be written
+and q(ti) and q(~s) are the t1 and m' four-momenta. It
+was shown by Sutherland" that the amplitude A should
+vanish when any pion four-momentum              goes to zero.
+                                                                                                              .
+                                                                                              T„,(p, k) = e„, pp k&T(k'),                     (7.10)
+                                                                       where p is one of the photon momenta and k is the 7r'
+If the ~+ four-momentum goes to zero, then q(t1) q(ir')    —           momentum. The photon momenta will be kept on the
+must equal q(ir ), and Ss is m '. In this case, Kq. (7.6)              mass shell Lps= (k —  p)'=0/. The argument of Veltman
+gives an amplitude less than 0.1A„, in good agreement                  and Sutherland predicts that T(0) will be zero. Bell
+with Sutherland's prediction. But when the x' four-
+momentum goes to zero, 50 becomes M„' and the TI            ~
+                                                            3z
+                                                                       and Jackiw4t have recently pointed out that there exists
+                                                                       a specific calculation of'T(0) in the tr model, and that
+amplitude is about 3A„.                                                T(0) does not vanish. The calculation is an old calcu-
+   Sutherland's calculation assumed the unsubtracted                   lation of Steinberger. 4'
+form (7.2) for the effective electrodynamic Lagrangian.
+                                                                          The resolution of this contradiction is in a break-
+With the subtracted form (7.5) the calculation is dif-
+          "
+ferent. Sutherland's argument applies to the first term
+                                                                       down of the usual arguments that one uses in writing
+                                                                       Ward identities. Namely, one is used to taking a matrix
+in Kq. (7.5) but not to the term fos(0). The field &rs
+commutes with the charged axial-vector currents but
+                                                                       element such as (A Tj„(x)i7 I              j.
+                                                                                                        (y) 8& and rewriting it
+                                                                                                                       I
+
+
+
+
+not with the neutral axial-vector current. LThe relevant               ~. (~ Tj.(x)j-(x) I&&+~(xo —ys)(~ IL j.(*) job)) I&&.
+                                                                                  I
+
+
+SU(3) XSU(3) commutators are given by Gell-Mann. t]
+As a result, one still predicts that the q —  +       3'
+                                                    amplitude          But in the case of the m- —+ 2y amplitude, which involves
+
+vanishes for zero x+ momentum but not for zero m                       the matrix element (QI Tj „(x)j,(y) 7 2 (s) 0&, extra              I
+
+
+momentum.       This agrees with experiment.            When           terms arise when V is brought outside the matrix ele-
+q(mrs)  ~ 0, the t1 —+ 3tr amplitude   will be proportional            ment. The extra terms involve the singularity at x=y
+to the subtraction constant        f.
+                                    Since        f
+                                             is an unknown             =0 and involve complicated integrals. The author has
+parameter, it can be chosen to fit the p —        + 3~ decay           not evaluated these integrals even in the 0-model ex-
+amplitude. There remains a problem in                g~
+                                                    3m decay,          ample, let alone strong interactions; however, one can
+namely, its relation to the K and x mass differences                   argue that they do not obviously vanish in either case.
+obtained by erst taking two pions to zero momentum                        A brief account of the analysis will now be given.
+in the g —  +3m- amplitude,    which reduces it to the g-z             The ~ —  + 2p amplitude can be written
+
+electromagnetic mixing amplitude, then relating the
+mixing amplitude via SU(3) to the
+              "                               E
+                                            and ir mass dif-
+ferences. This analysis does not work very w'ell, but                  T„„(p,k) = (k"-—m. ') (F.m, ') '   .   —            i1& xgzk   z
+
+
+it involves more dubious approximations than the
+simple current-algebra calculation.          "                                                  X(QI Tj„(x)j„(0)r7"A (s) 0),          I
+                                                                                                                                              (7.11)
+   It has been proposed that the tadpole contributions
+to electromagnetic corrections be obtained dynamic-                    where       F„ is the PCAC constant,
+    —
+ally in terms, say, of the 22 Regge-pole contribution
+to the virtual forward Compton amplitude.             "
+                                                   It remains                                 V-A „(x)= Z.m. 'y(x),                           (7.12)
+to be seen whether such a term has a different SU(2)
+                                                                       @ is the ir' field, and A          is the neutral axial-vector field.
+ XSU(2) behavior from the unsubtracted electromag-                     The quantity        T(0) can be extracted from the formula
+   3~The value for a is taken from M. Gormley, E. Hyman,
+W. Lee, T. Nash, J. Peoples, C. Schulz, and S. Stein, Phys. Rev.                                                                              (7.13)
+Letters 21, 402 (1968}.
+   "D.   G. Sutherland, Phys. Letters 23, 384 (1966).
+   '7 S. K, Hose and A. M. Zimmerman,
+                                                                                M. Veltman, Proc. Roy. Soc. (London) A301, 107 (1967);
+                                              Nuovo Cimento 43A,       D. G. Sutherland, Nucl. Phys. B2, 433 (1967). For related work
+11C)5 (l966); R. Ramachandran,
+                  .                  ibid. 47A, 669 (1967); R. H.      on the ~pm system, see R. Perrin, Phys. Rev. 170, 1367 (1968);
+41aham, l . O'Raifeartaigh, and S. Paksava, ibid. 4SA, 830 (1967);     S. G. Brown and G. B. West, ibid. 174, 1777 (1968); R. Arnowitt,
+&. T. Chiu, J. Schechter, and Y. Ueda, Phys. Rev. 161, 1612            M. H. Friedman, and P. Nath, Northeastern            University
+(1967); D. G. Sutherland, Nucl. Phys. B2, 433 (1967). For a             (unpublished).
+review of other theories of g —+ 3m. decay, see J. S. Bell and D. G.          "J.S. Bell and R. Jackiw, Nuovo Cimento (to be published).
+Sutherland, ibid. B4, 315 (1968).                                      I wish to thank Dr. Jackiw for very helpful discussions    on the
+   '      S. L. Adler and R. L. Dashen (Ref. 31), p. 137.                     —+2y problem.    See also   S. L. Adler, Phys. Rev. 177, 2426
+   ' See
+                                                                       71-'
+
+      S. Okubo, Phys. Rev. Letters 18, 256 (1967); D. J. Gross          (1969); his conclusions are equivalent to ours.
+and H, Pageis, Phys. Rev, 172, 1381 (1968).                               42
+                                                                             J. Steinberger, Phys. Rev. 76, 1180 (1949).
+179                     NON —LAGRANGIAN                                 MODELS OF CURRENT                          ALGEBRA                          1509
+
+So                                                                                   where
+
+es-pT(o) = F='               x.sp(n~ Tj„(x)j„(O)V-a. (s) n).            j
+                                                                                                                 V, "[x spF„„.(x,s)],              (7.20)
+                                                                            (7 14)
+                                                                                     and I2 and I3 are analogous. The z integral can be writ-
+In the   -model calculation in lowest-order perturbation
+          O.                                                                         ten in terms of surface integrals on the surfaces zo
+theory, this matrix element involves the currents of a                                       and so= xone". Consider, for example, the sur-
+free charged Dirac field        f:                                                   face integrals at so= xone". They are
+
+                       j.(x) =:0(x)VA (*):                                  (7.15)
+                      a.(x) = 'i:lt (x)~.~,lt (x): .
+                               —,                                           (7.16)                                                                 (7.21)
+These currents commute for equal times (except for                                   The x integral must be broken into two parts. In one
+c-number Schwinger terms which cannot aGect the                                      part, x is restricted to be far away from the origin,
+three-current matrix element), just as the currents
+and   3  of strong interactions do. Also, the free-field
+                                                                                j inside the integral without making much error ~and
+                                                                                     compared to e". With this restriction one can let e" 0
+                                                                                                                                                   3
+
+current j„(x) is conserved and A (x) is partially con-                               the integrand reduces to an equal-time commutator
+served. Furthermore, T(0) is defined by a convergent                                 which vanishes. This is no longer true if x is of order
+integral; in fact, if one rotates the xo and zo integrals                            e" or smaller, for then F„„(x,s) has a nontrivial de-
+to the imaginary axis (thus going over to a Euclidean                                pendence on the variable s a, s well as x —    s 44 (this is
+metric), the integral for T(0) is absolutely convergent.                             evident in the case of free-field currents), and one can
+(This can be verified explicitly for the free-field currents,                        no longer replace e" by zero. Actual evaluation of the
+and is a consequence of the hypotheses of this paper for                             integral is now nontrivial.
+the currents of strong interactions. ) Consider the effect                              The difFiculty caused by x being of order e" is avoided
+of the conventional rules for interchanging a T product                              if one requires that e be much larger than e",' then x
+with a gradient. One can simply bring V' outside the                                 is always Inuch larger than e". In this event, the surface
+T product because all equal-time commutators are                                     terms at zo=xo&e" approximately cancel. Likewise, if
+zero. Define                                                                                                              ~
+                                                                                     e))e', the surface terms at so= e' approximately cancel.
+                   .
+                F„, (x,s) = (Q~ Tj„(x)j,(0)A.(z) 0),      ~
+                                                                            (7.17)   To be precise,
+                                                                                                     lim(e'   ~ 0) lim(e" —0)Ii —0
+                                                                                                                               &                   (7.22)
+and consider the following identity:
+                                                                                     for fixed nonzero e. (If the currents j„and A had a
+x.spV, F„„.( , x)=sV', Lx„spF„„.(x,s)]—(V', +V', )                                   nonzero equal-time commutator, I» w'ould have reduced
+   X[x„s„F„p]+7',fLx„s„F. p$+x s„(V. +'rI, ")F„p                                     to an equal-time commutator term. ) So one can make
+                                                x„s„V'        I~'
+                                                                    p.—(7.18)
+                                                                                                                  —
+                                                                                     Ij vanish by letting e &0 be the last limit that one
+                                                                                     takes. Similarly, I& vanishes if e" —    +0 last, and I3
+The first three terms are total derivatives; the last two                            vanishes if e' —+ 0 last. Unfortunately,   these three re-
+terms vanish according to the conventional analysis                                  quirements are incompatible. If one lets e" —     +0 last,
+because of the conservation of j„.The integrals of the                               eliminating I2, then I~ and I3 need not be zero. In this
+first three terms are zero; hence T(0) should vanish.                                case, Ii reduces to the expression (7.21) with x unre-
+   This type of argument. treats cavalierly the intrinsic                            stricted (so that Ii now depends only on e"). Only
+singularities of F„„(x,s) when two or more operators                                 small x and s (of order e") are important in the integral:
+are evaluated at the same point. To set up a more                                    If either x or s is large compared to e", the term at
+careful treatment, the first step is to define the integral                          zp= xp+ e cancels the term at zs= xp —    e . For x and s
+                                                                                     of order e", F„„(x,s) scales as (e") ' because of scale
+(7.14) such that the singular points do not occur in the
+range of integration. This is easy to do: One calculates                             invariance at short distances.        "
+                                                                                                                        With this scaling law
+the integral excluding the regions xo
+ ~xs —zs~      (e",
+                                          e, ss
+                                            ~     ~
+                                                     e(
+               for small but finite e, e', and e". Then
+                                                                ~   ~
+                                                                        (            for F„„,the integral (7.21) is independent of e".
+                                                                                        4' This is a consequence of the fact that P„„(x,s) is not more
+one takes the limits e —  +0, ~' —+0, and e" —    +0. The                            singular than (x —           ~
+                                                                                                          s) 3 for s    x, x/0. The details of the analysis
+                                                                                     use the operator-product        expansion for Tj„(x)A„(s) and the
+integral, being absolutely convergent, is independent                                techniques of Sec. II.
+of the order that one takes these limits.                                               44 In the free-field case
+                                                                                                                    F„„(x,s) includes a propagator 5~(s).
+   One now calculates the integral for finite e, e', and e"                          When x is large and s is near x, one can approximate S~(s) by
+using the identity (7.18). Because the singular points of                            S~(x); this approximation is essential in relating (7.21) to an
+                                                                                     equal-time commutator. But when x and s —           x are both ~e",
+F„,„(x,s) are excluded from the range of integration,                                this approximation is no good.
+the identity holds without question, and the la, st two                                 "The (e") scaling law for F„„(x,s) can be seen explicitly
+                                                                                                      9
+
+                                                                                     in the free-field example. For strong interactions the hadronic
+terms are zero. One is left with                                                     skeleton contribution to F„„(x,s) scales as (c") ' by dimensional
+                                                                                     analysis; 6nite mass corrections are less singular and can be
+                   e„,„p T(0) = F    '(Ii+ Is+ Is),                         (7.19)   neglected.
+1510                                           KE NNETH              G. WI LSON
+
+   The conclusion of this analysis is that, if one takes             condition
+the limits e —   +0, e' —+0, and then e"      ~0  last, I~ is
+                                                                                                W~"(x M) =g""              (7.24)
+zero and I~ and I3 approach constants, but there is no
+reason to suppose that I~ and I3 are zero: On the con-
+trary, in the case of free-field currents, T(0) is not zero,         This condition arises if the same cutoR function occurs
+so that one of I~ or I3 must be nonzero. 4'                          in semileptonic weak decays. The cutoff mass M will
+   For T(0) not to be zero, it is crucial that F„„(x,s)              be assumed to be large compared to typical strong-
+scales as (e") ' when x and z are of order e". If F„„(x,z)           interaction masses, i.e., 3f))1 GeV.
+were less singular than this for x and z —      +0, then Iy             Because W""(x,M) has a short range in position space,
+and I3 would vanish in the limit c" —     + 0 because of the         the integral in (7.23) involves only small x, and in this
+small range of integration (x, s e"). In this case, T(0)             region one can write an operator-product expansion for
+would have to be zero. The author suspects that                        j,        j,
+                                                                     T w(x) s(0). This will have the form
+F„, (x,z) will be less singular than e" ' in the algebra                          Tj„(x)j„s(0)= +„C „„(x)0(0),             (7.25)
+of fields. 4~ Then the Sutherland argument would apply
+to   ~'~   pp decay in the algebra of fields. This would             which, substituted    in Eq. (7.23), gives
+make the algebra of fields in bad contradiction w'ith
+the observed ~'   ~                                                          Zw(0) = sv2G cos8 sin8 Q„C„(M)O„(0), (7.26)
+                     yy decay rate, which agrees well with
+                                                                     w'ith
+the Steinberger formula.
+   There is no proof that a theory of strong interactions                             C„(M) =      C.„„w(x)W~" (x,M) .     (7 27)
+satisfying scale invariance at short distances will give
+the numerical ~ ~7p rate correctly, but at least it
+will not be in error by a factor of m ' (m ' in the ampli-           Because of exact symmetry requirements the 6elds
+tude and m ' in the decay ra. te).                                   O„(0) that contribute to Eq. (7.26) must be scalar or
+                                                                     pseudoscalar 6elds with AY=1, ~I, = —   » and hI= 2
+                                                                     ol
+           E. Nonleytonic Weak Interactions                             The leading term in C„„„w(x), for any given n and
+   The eRective Lagrangian for weak interactions can                 small x, scales as x"'"&, where n(rr) depends on the di-
+be analyzed qualitatively, using the hypotheses of this              mension of 0 (d„) and the number of symmetry-break-
+paper. Octet dominance in nonleptonic decays can be                  ing spurions needed to make C „„w(x) nonzero. If no
+understood without introducing neutral currents and                  spurions are needed, then
+some new "four-dimensional"       superconvergence  re-
+                                                                                                n(ir) = d.   —6.           (7.2g)
+lations are proposed. Violation of CI' is ignored.
+   Consider the AI'= 1 component of the eRective weak-               By dimensional      analysis, C (M) behaves as
+interaction Hamiltonian. It will be assumed to have                                         C, (M)      M-'"'.             (7.29)
+the form
+                                                                        In free-field models of current algebra there are an
+Zw(0)=s&2G cos8sin8                                                  infinite number of SU(3)&&SU(3) multiplets of scalar
+                              Tj „g (x)j„8(0) W&"( Mx),
+                                                                     and pseudoscalar fields which can contribute to the
+                                                          (7.23)     expansion (7.26) for Zw(0). But if M is large, the coefFi-
+                                                                     cients C (M) will be very different for different multi-
+where G is the Fermi constant, 0 is the Cabibbo angle,               plets because different multiplets usually have different
+j„s  is the nonstrange weak current with 2 Q = 1, and  —             values for n(tr). So only one or a few multiplets will
+j, s the AY= 1, AQ= 1 strangeness-changing current.
+    is                                                               dominate in Eq. (7.26); apart from symmetry-breaking
+The function W""(x,M) might be a W-meson propagator                  considerations, the multiplet of lowest dimension will
+(apart from a scale factor), or it might be a more com-              have the largest coefFicient. The P-o. multiplet is the
+plicated function. M is the eRective cutoff mass of                  multiplet of lowest dimension, by assumption. The rele-
+W""(x,M), i.e. , W&"(x,M) falls off exponentially when               vant fields for Eq. (7.26) are the AY= 1 o and @ fields;
+xM is large and spacelike; it is assumed that dimen-                 however, these fields are both divergences (of the
+sionally WI'"(x, M) is of the form M'W""(xM). The func-              strangeness-changing   vector and axial-vector currents),
+tion W&" (x,M) is assumed to satisfy the normaliza, tion             so they will not contribute to any decay process. 4'
+                                                                     Hence one must go beyond the list of fields proposed
+                                                                     in Sec. IV.
+      The ambiguity in Ii associated with different limiting pro-       In the free-quark model, the next scalar and pseudo-
+cedures is analogous to the ambiguity in the I'ourier transform
+of F„„(x,s) already pointed out by Bell and Iackiw (Ref. 41) and     scalar multiplets with appropriate quantum numbers
+Adler (Ref. 41).                                                     have dimension 6 (Wick products of two currents).
+   47 Field algebraists claim that the vacuum expectation value
+of two currents (Q~ Tj„(x)j„(0)~B) is less singular at x=0 in the       48 See S. L. Adler and R. F. Dashen  (Ref. 31), p. 133; C.
+algebra of fields than it is in an approximately scale-invariant     Bouchiat, J, Iliopoulos, and J. Prentki, CERN Report No.
+theory such as the quark model. See J. Dooher, Phys. Rev. I etters   Th. 908 (unpublished); S. Nussinov and G. Preparata, Phys,
+19, 600 (1967); M. B. Halpern and G. Segre, r'Nd 19, 611 (1967).      .
+                                                                     Rev.   175, 2180 (1968).
+179                   NON —LAGRANGIAN                    MODELS OF CURRENT                               ALGEBRA
+There are several irreducible multiplets with the same                ~B) are one-baryon states (for example, (A) might be
+(dimension   — in fact, all multiplets contained in the              a nucleon and ~B) a Z state); j„tv(0) is a nonstrange
+product of two currents. In strong interactions, the                 current and js&(0) a strangeness-changing  current. It is
+author considers such degeneracy in dimension unlikely:              assumed that the product of currents at the same point
+Renormalization     effects should be different for each             exists. It is calculated by putting in a complete set of
+different irreducible SU(3) X SU(3) multiplet. This                  intermediate    states; in practice only a few single-
+means that one can hope that a single SU(3) XSU(3)                   particle or resonance states are kept. Define 3IIAB(q)
+multiplet will dominate Eq. (7.26). The experimental                 to be the sum over those intermediate states with mo-
+fact of octet dominance indicates that the dominant                  mentum q relative to the initial state; then one corn-
+multiplet should contain only SU(3) octets and singlets;             putes first MAB(q), and one has
+this means that the dominant multiplet must be either
+             9
+an (8, 1) (1,8) or a (3,3) Q (3,3) multiplet. The author                                     M AB — 3IAB(q) .                            (7.31)
+knows of no way to distinguish these two possibilities,
+but will guess that the dominant multiplet is (8, 1)
+(I) (1,8) . This mutliplet    will be denoted rr' rti' I-ts.            To compare with the operator-product analysis, some
+dimension will be called 6'. Neglecting other multiplets             further assumptions will be made. Assume that 6' is
+in Eq. (7.26), and denoting the AY=1 I, = —       , fields
+                                                  —'                 either equal to 6 or slightly smaller. This means that
+by trs' and Ps', the effective weak 6 V= 1 Lagrangian is             for the o.' —   '
+                                                                                  it multiplet the constant tr(tr) is almost zero.
+                                                                     Assume that for all other scalar-pseudoscalar multiplets
+Zs (0) = 2&2G cos8 sing aM' a'Pirs'(0) —rt 2'(0)], (7.30)            (except o.-iti), tr(22) is appreciably above zero. Then one
+where a is an unknow'n constant depending only on
+                                                                     can write an expansion for the ordinary product
+strong interactions. The combination o.s'-ps' results                j»(x) j&~(0):
+from assuming pure chiral weak currents (equal vector                j. ()j."(0)=B () -(0)+B.(*)~.(0)—
+and axial-vector Cabibbo angles).                                                      +B'( )L -'(0) 0-'(0)l,                            (7.32)
+   Formula (7.30) is not expected to be exact, but the
+error will depend inversely as some power of the weak                where its is 4 or 5. The functions Bi(x) and B2(x) scale
+cutoff SI. The ratio of E+ to Eog. lifetimes should de-
+                                                                               '
+                                                                     as x for small x (see Sec. VII A), B'(x) as x 2+a'
+pend on the weak cutoff M, since the F+ decay will be                The o.-P multiplet must be considered because the
+determined by a multiplet containing AI= —,fields which              baryon states ~A) and B) do not have the same energy.
+                                                                                                    ~
+
+
+
+
+will appear as one of the corrections to Eq. (7.30).4'               The error in Eq. (7.32) goes to zero as x -+ 0. As a re-
+Equation (7.30) predicts octet dominance in all strange-             sult, one can write the following momentum-space
+ness-changing weak processes. It must be made clear                  formula:
+that octet dominance is not a prediction of the hypothe-
+ses of this paper. The above analysis simply allows one                   L~AB(q)       Bl(q)trAB        B2(q)rtiAB
+to incorporate the experimentally observed octet domi-
+nance into the theory without introducing neutral cur-                                                  B'(q) (a AB'      AB')
+                                                                                                                         y—      j= 0, —
+                                                                                                                                       (7.33)
+rents into the current-current Lagrangian.
+                                                                     where Bi(q), etc. , are the Fourier transforms                  of Bi(x),
+   The factor M~A' in Eq. (7.30) means that nonlep-
+                                                                     etc. , and
+tonic decays can be enhanced or suppressed compared
+                                                                                    ~AB (A ~~„(=0) ~B), etc.                             (7.34)
+to semileptonic processes, depending on the value of 6'.
+However, recent calculations" using a local current-                 Because the integral converges, one can hope that only
+current weak Lagrangian suggest that neither enhance-                moderate values of q are the most important values
+ment nor suppression occurs. The relation of these                   and cut if off at a not too large              q,
+                                                                                                         . Then one has
+be discussed.    "
+calculations to the operator-product analysis will now
+                                                                       9'max
+
+                                                                               NAB(q)     Brl(qmsx)rrAB+BI2(qmax)4'AB
+   The calculations of Ref. 50 involve (for baryon
+decays) eliminating     the pion by current algebra,                                            +Br (qma, ) (&AB             ifiAB ) i   (7 35)
+after which one has a matrix element of the form                     where
+                                                                                                            @max
+(A jstv(0) js&(0) ~B) (denoted MAB), where ~A) and
+    ~
+
+                                                                                    Bri(q, ) =                     Bi(q), etc.           (7.36)
+  "V. S. Mathur and P. Olesen, Phys. Rev. Letters 20, 1527
+(1968). LThe specific mechanism of these authors for making the
+violation of AI= —'
+                 , be cutoff-dependent does not work (Ref. 48). ]    Now Brt(qm~ ) and Brs(qm, ) behave as         ' for large
+                                                                                                                             q,
+  '0 Y. Hara, Progr. Theoret. Phys. (Kyoto) 37, 710 (1967); Y. T.
+                                                                     q,  , owing to the behavior x
+                                                                                                      ' of Bi(x) and B2(x).
+Chiu and     J. Schechter,   Phys. Rev. Letters   16, 1022 (1966);   For very large q, , Br'(q, „) behaves as qm, ~t~a'l,
+Y. T. Chiu, J. Schechter, and Y. Ueda, Phys. Rev. 150, 1201
+(1966); 157, 1317 (1967); S. Biswas, A. Kumar, and R, Saxena,        but for not too large     q,
+                                                                                              , Br'(q, „) is approximately 1
+                                                                                              ~1
+Phys. Rev. Letters 17, 268 (1966); S. Nussinov and. G. Preparata     due to (x)a' ' being    except at very small x.
+  "I wish to thank Professor J. Schechter for raising this
+(Ref. 48).
+                                                                        What one needs for calculating wea¹interaction
+question.                                                            matrix elements are the matrix elements oAB' and gAB'.
+                                             KENNETH            G. WI LSON
+
+So one must somehow eliminate           the matrix elements     then a fractional       power dominates   R„(q) unless   6 is
+(rda and ada )n Eq. (7.35). One can do th)s by gon)g            an in tt;.,ger or half-integer.
+to the exact SU(3) XSU(3) limit. The matrix elements
+0 dQ and @da do not vanish   in this limit but the functions                     VIII. FINAL COMMENTS
+B((x) and B,(x) do Lbecause        jj
+                                    and o-p belong to              What is proposed here is a new language for describ-
+orthogonal SU(3) XSU(3) multiplets]. If Br'(q
+approximately   1, then Eq. (7.35) gives the desired
+                                                       „)
+                                                       is       ing the short;-distance behavior of fields in strong inter-
+                                                                actions. One talks about operator-product expansions
+matrix elements. If 6' is somewhat different from 6, the        for products of operators near the same point, instead
+matrix element cr~~' would differ from the matrix ele-          of equal-time commutators. One discusses the dimen-
+ments needed for the weak-decay calculations only by            sion of an operator instead of how it is formed from
+a universal factor depending on q, „,. and M, but not           products of ca, nonical fields. Analyses of divergences in
+the states A and B. Even if one cannot elimina, te the          radiative corrections, etc. , are ca, rried out in position
+~» matrix elements, one can derive sum rules where              space rather than momentum space. Furthermore, one
+fT», etc. , all vanish, namely, by taking the linea, r com-     has qualitative rules for the strength of SU(3) XSU(3)-
+bination of Z to nucleon matrix elements w'hich projects        symmetry-violating     corrections at short distances. To
+out the AI= ~ part of the current-current, product. Call        the extent that one can ana, lyze problems at short dis-
+this linear. combination Mx~;(q); then we predict               tances using only the SU(3) XSU(3) currents and the
+                                                                o.-Q multiplet,   the hypotheses of this paper have the
+                                                                elegance of simplicity, once one is used to the language.
+                         3fx~;(q) =0.                  (7.37)
+                                                                Even in the nonleptonic weak interactions, where a
+                                                                new rnultiplet o'     is int-roduced, one can. easily obtain
+                                                                                     &f&'
+
+One might call this a four-dimensional superconvergence         a rapport between theory and the experimentally ob-
+relation. The author is not prepared to discuss the             served octet dominance. The results of the hypotheses
+validity in practice of either Eq. (7.35) or (7.37).            are all qualitative, but with them one can resolve some
+                                                                of the qualitative difficulties with previous current-
+                     F. Bjorken Limit                           algebra calculations of q         —
+                                                                                                3x and m'~ 2y decay.
+                                                                                                  &
+
+
+  As a 6nal application, consider        the Bjorken limit. '      There are formidable obstacles to be overcome before
+The problem is to determine the behavior of an ampli-           the hypotheses of this paper can be made quantitative.
+tude                                                            This is best seen by returning to the x' —    + 2p problem.
+                                                                To calculate the vr' —   + 2y rate, one needs to know the
+                                                                vertex function (Ql Tj„(x)j„(0)A (a) 0) when x and s
+                                                                                                          l
+
+
+
+
+                                                                are small. One needs this matrix element for the hadron
+         —
+when qp &~ with q 6xed. With the operator-product               skeleton theory. However, if one knows this matrix
+expansion, there is no need to keep q fixed; one only has       element for small x and s, one knows it for alt x and s
+to have g' large. Then the integral is domina, ted by the       in the ha, dron skeleton theory due to scale invariance.
+behavior of the T product for small x; if C (x) are             It is hard to imagine that one could have a complete
+expansion functions for the T product. , then                   formula for this vertex function without having a com-
+                                                                plete solution of the hardon skeleton theory. The pros-
+                                                                pects for obtaining such a solution seem dim at present.
+          T d(q)   p (nlO (0) lp) e"'C„(x),            {7.39)
+                                                                                   ACKNOWLEDGMENTS
+which can be written
+                                                                 Discussions with Professor K. Johnson were crucial
+             T.,(q)=Z„z„(q)( lo. (o) IP).              (7.4o) for an early stage of this work. In the general 6eld-
+
+term scaling as
+                                          4—
+By dimensional analysis, R„(q) contains a skeleton
+
+                   g (q)~qdd+ds d(n)
+for large q. There are also 6nite mass corrections which
+                                                              theoretic work, I have been helped by conversations
+                                                              with   Professor W. Zimmermann, Professor K. Syman-
+                                                           — zik, Professor D. Boulware, and many others. In ap-
+                                                              plications to strong interactions, I have used conver-
+                                                              sations with Professor S. Glashow, Professor J. Bjorken,
+are smaller. Because of I.orentz invariance, each term        Professor W. Weisberger, Professor J. Schechter, Dr.
+in E„(q) will be a power of q', not necessarily an integra, l D.
+                                                                  Sutherland, Dr. S Brown, Dr. G. West, and Dr. R.
+power, multiplying a polynomial in q. There may also          Jackiw. Talks with Professor K. Gottfried and others
+be logarithms of q'. To obtain the Bjorken limit specifi-     at Cornell were helpful throughout this w'ork. The
+cally, one can let qp~~ with q held fixed, w'hich means       author has also benefited from talks with Professor
+that q' is replaced by qp' to a, 6rst approximation, and      B. Josephson, Professor J. I anger, Professor B. Widom,
+one gets an expansion in terms of gp, but one may get         and Professor M. Fisher about critical phenomena in
+fractional powers of qp ' in the expansion. The frac- classical
+tional pow'ers are seldom of importance when A and 8
+                                                                          statistical mechanics.      "
+are two currents. They will be important if A and 8 E."See,              e.g. , L. Kadanoff, W. Gotze, D. Hamblen, R. Hecht,
+                                                                  A. S. Lewis, V. V. Palciauskas, M. Rayl, J. Swift, D. Aspnes,
+are both from the P-o multiplet and 0 (0) is a current;       and J. Kane, Rev. Mod. Phys. 39, 395 {1967).
+

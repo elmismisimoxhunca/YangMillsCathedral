@@ -1,0 +1,285 @@
+VOLUME 30, NUMBER 26                  PHYSICAL REVIEW LKTTKRS                                                 25 JUNE 1975
+
+
+
+                            Ultraviolet    Behavior    of Non-Abelian Gauge Theories*
+                                        David     J. Gross t and Frank Wilczek
+                     Joseph Henry Laboratories,     Princeton University, Princeton,   Nese J'casey   08540
+                                                   (Received 27 April 1973)
+
+                 It is shown that a wide class of non-Abelian gauge theories have, up to calculable loga-
+              rithmic corrections, free-field-theory asymptotic behavior. It is suggested that Bjorken
+              scaling may be obtained from strong-interaction dynamics based on non-Abelian gauge
+              symmetry.
+
+  Non-Abelian gauge theories have received much attention recently as a means of constructing unified
+and renormalizable theories of the weak and electromagnetic interactions.
+                                                                            ' In this note we report on
+an investigation of the ultraviolet (UV) asymptotic behavior of such theories. We have found that they
+possess the remarkable feature, perhaps unique among renormalizable theories, of asymptotically ap-
+proaching free-field theory. Such asymptotically free theories will exhibit, for matrix elements of
+currents between on-mass-shell states, Bjorken scaling. We therefore suggest that one should look to
+a non-Abelian gauge theory of the strong interactions to provide the explanation for Bjorken scaling,
+which has so far eluded field-theoretic understanding.
+
+equations, "
+  The UV behavior of renormalizable field theories can be discussed using the renormalization-group
+               which for a theory involving one field (say gq') are
+    [m&/em+ P(g) 8/Sg -ny(g)11",»~"i(g;           P„... , P„) =0.                                                     (1)
+       is the asymptotic part of the one-particle-irreducible     renormalized r&-particle Green's function,
+P(g) and y(g'j are finite functions of the renormalized coupling constant g, and m is either the renor-
+malized mass or, in the case of massless particles, the Euclidean momentum at which the theory is
+renormalized. ' If we set P, =Aq, ', whe. re q.o are (nonexceptional) Euclidean momenta, then (1) deter-
+mines the A dependence of r "~:
+    r " (g; P,.) = ~'I ~" (g(g, f); q;) exp [-n f, y (g(g, t')) dt'],                                                 (2)
+where t=lnA. , D is the dimension         (in mass units) of I ~"', and g, the invariant      coupling constant,   is the
+solution of
+    dg/d ~ = P(g),    g(g, o) =g.
+The UV behavior of I" i (A. -+ ~) is determined by the large-f behavior of g which in turn is controlled
+                            ~
+
+
+
+by the zeros of P: P(g&)=0. These fixed points of the renormalization-group       equations are said to be
+UV stable [infrared (IR) stable] if g -g~ as f -+ ~ ( —~) for g(0) near g~. If the physical coupling con-
+stant is in the domain of attraction of a UV-stable fixed point, then
+    I' " (g P, ) =     A~ "& ~&I' " (g    q, )exp{-n. f, [y(g(g, f)) —y(gz)]dt];                                       (4)
+
+so that y(g&) is the anomalous dimension of the
+field. As Wilson has stressed, the UV behavior                    vanish, one obtains naive scaling up to finite and
+is determined by the theory at the fixed point (g                 calculable powers of ink. , and the structure of
+=g,).'                                                            operator products at short distances is that of
+   In general, the dimensions of operators at a                   free-field theory. ' Therefore, the existence of
+fixed point are not canonical, i.e., y(gz) e0. If                 such a fixed point, for a theory of the strong in-
+we wish to explain Bjorken scaling, we must as-                   teractions, might explain Bjorken scaling and the
+sume the existence of a tower of operators with                   success of naive light-cone or parton-model rela-
+canonical dimensions. Recently, it has been ar-                   tions. Unfortunately, it appears that the fixed
+gued for all but gauge theories, that this can only
+
+                                               "
+occur if the fixed point is at the origin, g&= 0, so
+that the theory is asymptotically free.      In that
+                                                                                            "
+                                                                  point at the origin, which is common to all theo-
+                                                                  ries, is not UV stable.      The only exception
+                                                                  would seem to be non-Abelian gauge theories,
+case the anomalous dimensions of all operators                    which hitherto have not been explored in this re-
+
+                                                                                                                     1343
+ VOLUME 30, NUMBER 26                              PHYSICAL REVIEW LKTTKRS                                  25 JUNE 1973
+
+ gard.                                                            tion is given by L~= ttI(z y-5 g—y B'l8'}/+ mass
+   Let us consider a Yang-Mills theory given by                   terms, where M' are the matrices of some rep-
+ the Lagrangian                                                   resentation A of the gauge group C. The only ef-
+                        a~ a P                                    fect of the fermions is to change the value of
+                   pp
+                                                                  P(g) by the amount"
+                                                                                        '
+                                                                      P~(R} = (g'/16m') —, T(A),
+ where the C„, are the structure constants of
+                                                                  where Tr(M'M') = T(A)5, ~, T(A) = C( A)d(R)/x,
+ some (semisimple) Lie group G. Since the theory
+                                                                  d(A) is the dimension of the representation A,
+ is massless, the renormalization is performed                    and r is the order of the group, i.e., the number
+ at an (arbitrary) Euclidean point. For example,                   of generators, and C, (A) is the quadratic Casimir
+ the wave-function renormalization   constant Z, (g,
+                                                                   operator of the representation. Although the fer-
+ A/I) will be defined in terms of the unrenormal-
+ ized vector-meson propagator D '' (in the Lan-
+                                                                   mions tend to destabilize the origin, there is
+                                                   „,             room to spare. For example, in the case of
+ da. u gauge),
+                                                                  SU(3): P „= —ll, whereas P~(3) =~, P~(8) = 4,
+                                                                  etc. , so that one could accomodate as many as
+                                                           (6)    sixteen triplets. One can therefore construct
+                                                                  many asymptotically free theories with fermions.
+  (For a thorough discussion of the renormalization               The vector mesons, however, will remain mass-
+ see the work of Lee and Zinn-Justin. ") The re-
+                                                                  less until the gauge symmetry is spontaneously
+                          equations for this theory are
+ normalization-group
+ easily derived.        "
+                      In the Landau gauge they are
+                                                                  broken. One might hope that this would be a con-
+                                                                  sequence of the dynamics,    "but at the present the
+ identical with (1). In order to investigate the sta-
+                                                                  only known way of achieving this is to introduce
+ bility of the origin, it is sufficient to calculate P
+                                                                  scalar Higgs mesons, whose nonvanishing vacuum
+ to lowest order in perturbation theory. To this
+                                                                  expectation values break the symmetry.
+ order we have
+                                                                    The introduction of scalar mesons has a very
+                                                                 destabilizing effect on the UV stability of the ori-
+                                                                 gin. Their contribution to P(g) is small; a sca, lar
+                                                                 meson transforming under a complex (real) rep-
+where A is a UV cutoff, and Z, the charge-renor-
+                                                                 resentation A of the gauge group adds to P a
+malization constant. In Abelian gauge theories
+                                                                 term equal to z (-,') of Eq. (9). The problem with
+~, = Z, = 1 -g'C ink (C & 0), as a consequence of                scalar mesons is that they necessarily have
+gauge invariance and the Kallen-Lehman repre-                    their own quartic couplings, and one must deal
+sentation, and thus P (g) =—g~ which leads to IR
+                                                                 with a new coupling constant. Consider the La-
+stability at g = 0. Non-Abelian theories have no
+                                                                 grangian for the coupling of scalars belonging to
+such requirement;    Z, and Z, are gauge dependent               a representation A of G:
+and can be greater tha, n 1. Thus P(g), which
+must be gauge independent in lowest order, could
+have any sign at g= 0. We have calculated Z, and
+                                                                 where V(p) contains cubic, quadratic, and linear
+  3 for the above Lagrangian,   and we f ind that'
+                                                                 terms in y (which have no effect on the UV be-
+       P y = —(g'/16vr')~~~      C, (G) + 0(g'),                 havior of the theory) plus, perhaps, additional
+                                                                 quartic terms invariant under G. The renormal-
+where C, (G) is the quadratic Casimir operator of                ization-group equations have an additional term,
+the adjoint representation of the group G:
+&&c„,=C, (G) 5,~ [e.g. , C, (SU(N)) =N]. The solu-
+                                                        g„c„,     P ~(g, A) 8/BA, and one must investigate the UU
+                                                                 stability of the origin (g= A = 0) with respect to
+tion of (3) is then g'(t) =g'/(1 —2P~g 'A, and g                 both g and A. [if there are other quartic invariants
+-0   as    t-~as long as the physical coupling con-              in V(y) there will be additional coupling constants
+stant g is in the domain of attraction of the ori-
+gin.   "                                                         to consider]. The structure of the renormaliza-
+                                                                 tion-group equation for g is unchanged to lowest
+   We have thus established that for all non-Abel-               order, whereas for the coupling constant     I —
+                                                                                                                = A/g'
+ian gauge theories based on semisimple Lie                       we have"
+groups the origin is UV stable. It is easy to in-
+corporate fermions into such a theory without de-                   dr(r, f, g')/df=g '[Xr'+Br+ C]
+stroying the UV stability. The fermion interac-                  (where we have neglected terms of order g", g'I',
+
+1344
+VOLUME 30, NUMBER 26               PHYSICAL REVIEW LETTERS                                           25 JUNE 1973
+
+g'I"2, and g'I'). In the absence of vector mesons        neutral, and the structure of the operator product
+(g = 0) this equation is UV unstable at A = 0, since     expansion of electromagnetic or weak currents is
+A. is strictly positive and A. must be positive.
+                                                "        (assuming that the strong coupling constant is in
+The vector mesons contribute to B and C and              the doma, in of attraction of the origin. ) essentially
+tend to stabilize the origin. If the right-hand side     that of the free quark model (up to calculable
+of {11)has positive zeros (C &0, B&0, and 8'             logarithmic corrections).    "
+& 4AC), then for I less than the larger zero of             Finally, we note that theories of the weak and
+(11) we will have that A -+ 0 as   t-~.    We have in-   electromagnetic interactions, built on semisim-
+vestigated the structure of these equations for a        ple Lie groups,   " will be asymptotically free if
+large class of gauge theories and representations        we again ignore the complications due to the
+of the scalar mesons. We have found many ex-             Higgs particles. This suggests that the program
+amples of theories which contain scalar mesons           of Baker, Johnson, Willey, and Adler" to calcu-
+and are UV stable.  "    These include (a) SU(N) if      late the fine-structure constant as the value of
+the scalar mesons belong to the adjoint represen-        the UV-stable fixed point in quantum electrody-
+tation for N ~ 6; (b) SU(N) @SU(N) if the sca, lars      namics might fail for such theories.
+belong to the (N, N) representation for N~ 5;
+(c) SU(N) with the scalars transforming as a sym-
+metric tensor for 8' ~ 9; and many others. In all
+of these models it is necessary for the theory to         *Research supported by the U.S. Air Force Office of
+contain a large number of fermions in order to           Scientific Research under Contract No. F-44620-71-C-
+make P, small; otherwise g approaches zero too           0180.
+rapidly for the vector mesons to stabilize the            )Alfred  P. Sloan Foundation Research Fellow.
+                                                           'S. Weinberg, Phys. Rev. Lett, 19, 1264 (1967). For
+scalar couplings.                                        an extensive review as well as a list of references, see
+   Unfortunately,   in none of these models can the      B. W. Lee, in Proceedings of the Sixteenth International
+gauge symmetry be totally broken by the Higgs            Conference on High Energy Physics, National Accelera-
+mechanism. The requirement that the interac-             tor Laboratory, Batavia, Illinois, 1972 (to be published).
+tions of the scalar mesons be renormalizable so             M. Gell-Mann and F. E. Low, Phys. Rev. 95, 1300
+severely constrains the form of Lagrangian that          (1954).
+                                                            3C. G. Callan, Phys. Rev. D 2, 1541 (1970); K. Syman-
+the ground state invariably is invariant under
+                                                         zik, Commun. Math. Phys. 18, 227 (1970).
+some non-Abelian subgroup of the gauge group.                The basic assumption underlying the derivation and
+If one tries to overcome this by larger represen-        utilization of the renormalization group equations is
+tations for the scalar mesons, UV instability in-        that the large Euclidean momentum behavior of the theo-
+evitably occurs.                                         ry is the same as the sum, to all orders, of the leading
+   It thus appears to be very difficult to retain UV     powers in perturbation theory,
+stability and break the gauge symmetry by ex-              5K. Wilson, Phys. Rev. D 3, 1818 (1971).
+plicitly introducing Higgs mesons. Since the                G. Parisi, to be published.
+Higgs mesons are so restrictive, we would pre-
+                                                           VC. G. Callan and D. J.  Gross, to be published.
+                                                            A. Zee, to be published.
+fer to believe that spontaneous symmetry break-
+ing would arise dynamically.   "    This is suggested
+                                                            S. Coleman and D. J, Gross, to be published.
+                                                          '08. W. Lee and  J. Zinn-Justin, Phys, Rev. D 5, 3121
+by the IR instability of the theories, which as-         (1972).
+sures us that perturbation theory is not trust-            "Full details will be given in a forthcoming publica-
+worthy with respect to the stability of the sym-         tion: D. J. Gross and F. Wilczek, to be published.
+metric theory nor to its particle content.                 "After completion of this calculation we were informed
+   With this hope in mind one can construct many         of an independent calculation of P for gauge theories
+                                                         coupled to fermions by H. D. Politzer tprivate commun-
+interesting models of the strong interactions.           ication, and following Letter, Phys, Rev. Lett. 30, 1346
+One particularly appealing model is based on             (1973)].
+three triplets" of fermions, with Gell-Mann's              '3K. Wilson has suggested that the coupling constants
+SU(3) SSU(3) as a. global symmetry and an SU(3)          of the strong interactions are determined to be IR-
+"color" gauge group to provide the strong inter-         stable fixed points. For nongauge theories the IR stabil-
+actions. That is, the generators of the strong-          ity of the origin in four-dimensional field theories im-
+interaction gauge group commute with ordinary            plies that theories so constructed are trivial, at least
+                                                         in a domain about the origin. Our results suggest that
+SU(3) I3SU(3) currents and mix quarks with the           non-Abelian gauge theories might possess IR-stable
+same isospin and hypercharge but different               fixed points at nonvanishing values of the coupling con-
+        "
+"color. In such a model the vector mesons are            stants.
+
+                                                                                                             1345
+  VOLUME )0, NUMBER 26               PHYSICAL REVIEW LETTERS                                              25 JUNE 1973
+
+   ~4Y. Nambu and G. Jona-Lasino, Phys. Rev. 122, 345          '6W. A. Bardeen, H. Fritzsch, and M. Gell-Mann,
+ (1961); S. Coleman and E. Weinberg, Phys. Rev. D 7,          CERN Report No. CERN-TH-1538, 1972 {to be pub-
+ 1888 (1973).                                                lished) .
+   ' K. Symanzik (to be published) has recently suggested      ' H. Georgi and S. L. Glashow, Phys. Rev. Lett. 28,
+ that one consider a A. @4 theory with a negative A, to       1494 (1972); S. Weinberg, Phys, Rev. D 5, 1962 (1972).
+ achieve UV stability at A=0. However, one can show,           ' For a review of this program, see S. L. Adler, in
+ using the renormalization-group  equations, that in such    Proceedings of the Sixteenth International Conference
+ theory the ground-state energy is unbounded from below      on High Energy Physics, National Accelerator Labora-
+ (S. Coleman, private communication) .                       tory, Batavia, Illinois, 1972 (to be published).
+
+
+
+
+                          Reliable Perturbative      Results for Strong Interactions?*
+
+                                                  H. David Politzer
+              Jefferson Physical   I.aboxatomes, Hazard University,  Cambridge,   Massachusetts   02138
+                                                 (Received 3 May 1973)
+
+                An explicit calculation shows perturbation theory to be arbitrarily good for the deep
+              Euclidean Green's functions of any Yang-Mills theory and of many Yang-Mills theories
+              with fermions. Under the hypothesis that spontaneous symmetry breakdown is of dynami-
+              cal origin, these symmetric Green's functions are the asymptotic forms of the physical-
+              ly significant spontaneously broken solution, whose coupling could be strong.
+
+    Renormalization-group     techniques hold great          goes to zero, compensating for the fact that
+
+  coupling problems in field theory.   "
+  promise for studying short-distance and strong-
+                                          Symanzik'
+  has emphasized the role that perturbation theory
+                                                             there are more and more of them. But the large-
+                                                             r' divergence represents a real breakdown of
+                                                             perturbation theory. It is commonly said that
+  might play in approximating the otherwise un-              for momenta such that e'1n(p'/m') -1, higher
+ known functions that occur in these discussions.            orders become comparable, and hence a calcu-
+ But specific models in four dimensions that had             lation to any finite order is meaningless in this
+ been investigated yielded (in this context) dis-            domain. The renormalization group technique
+ appointing results. ' This note reports an in-              shows that the effective coupling grows with mo-
+ triguing contrary finding for any generalized               me nta.
+ Yang-Mills theory and theories including a wide               The behavior in the two momentum regimes is
+ class of fermion representations.      For these            reversed in a Yang-Mills theory. The effective
+ one-coupling-constant     theories (or generaliza-         coupling goes to zero for large momenta, but
+ tions involving product groups) the coefficient            as p"s approach zero, higher-order corrections
+ function in the Callan-Symanzik equations com-             become comparable. Thus perturbation theory
+ monly called P(g) is negative near g=0.                    tells nothing about the mass-shell structure of
+    The constrast with quantum electrodynamics              the symmetric theory. Even for arbitrarily
+(QED) might be illuminating.       Renormalization          small g, there is no sense in which the interact-
+of QED must be carried out at off-mass-shell                ing theory is a small perturbation on a free mul-
+points because of infrared divergences. For                 tiplet of massless vector mesons. The truly
+small e', we expect perturbation theory to be               catastrophic infrared problem makes a sym-
+good in some neighborhood of the normalization              metric particle interpretation impossible. Thus,
+point. But what about the inevitable logarithms             though one can well approximate asymptotic
+of momenta that grow as we approach the mass                Green's functions, to what particle states do
+shell or as some momenta go to infinity? In                 they    refer?
+QED, the mass-shell divergences do not occur                  Consider theories defined by the Lagrangian
+in observable predictions, when we take due
+account of the experimental situation. The re-                 2 = —4Eq, 'E'"'+i iy, y D;; g;,
+normalization-group     technique' provides a some-         where
+what opaque analysis of this situation. Loosely
+speaking, ' the effective coupling of soft photons                            s ~ o++f ~&~~ &~ ~
+
