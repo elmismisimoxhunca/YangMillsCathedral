@@ -226,8 +226,10 @@ committed before higher layers depend on it.
   mostly-minus form, with group action, continuity and a nonidentity four-dimensional element.
 - [x] Construct the exact open invariant extended-tube orbit, prove ordinary-tube inclusion and
   strict four-dimensional enlargement, and keep zero excluded at positive arity.
-- [ ] Add the transformation-group topology/analytic structure and define single-valued holomorphic
-  extended-tube continuation with its covariance law.
+- [x] Package single-valued scalar holomorphic extended-tube continuation with exact restriction,
+  invariance, orbit-source independence and an all-arity bridge to the same relative correlator chain.
+- [ ] Add the transformation-group topology/analytic structure and derive the continuation and
+  covariance theorem rather than merely requiring its conclusion.
 - [x] Define the first explicit Euclidean/Minkowski bridge: reverse strict Euclidean point order,
   Wick-rotate `τ ↦ -iτ`, and prove all consecutive relative coordinates lie in the backward tube.
 - [x] Require exact genuinely integrable Euclidean/Wightman correlator-value continuation on every

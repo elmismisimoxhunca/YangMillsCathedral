@@ -2512,8 +2512,28 @@ Implemented and verified:
   the original backward tube, proving strict enlargement and blocking a fixed-tube surrogate.
 - The source is four-dimensional; dimensions one through three remain project consistency
   infrastructure.
-- This is domain geometry only. No transformation-group analytic structure, single-valued
-  holomorphic continuation, extended covariance law, correlator datum, theory, or mass gap is
+- This is domain geometry only. No transformation-group analytic structure, continuation datum,
+  correlator datum, theory, or mass gap is constructed.
+
+## 2026-07-18 — one-hundred-thirty-seventh stone: connected extended-tube continuation interface
+
+Implemented and verified:
+
+- `PolynomiallyBoundedWightmanExtendedTubeContinuationData` requires one ambient function
+  holomorphic on the exact extended tube, equal to the exact polynomially bounded ordinary-tube
+  function on its original domain, and invariant under proper complex Lorentz transformations.
+- Function semantics make the candidate single-valued; restriction plus invariance derive exact
+  values at every orbit presentation and presentation independence.
+- The explicit four-dimensional point outside the ordinary tube is forced to have the exact
+  standard ordinary-source value.
+- `ScalarWightmanRelativeExtendedAnalyticCorrelatorData` requires this continuation at every arity
+  for exactly `relative.analyticBoundary n`, tying it to the same relative tempered distribution,
+  full correlator, field, domain, vacuum and physical representation.
+- Hostile probes reject disconnected extension values and unrelated relative boundaries, and expose
+  all-arity complex-Lorentz invariance and orbit-source values.
+- This packages the scalar conclusion of Streater–Wightman Theorem 2-11 as uninhabited acceptance
+  data. It does not derive continuation from ordinary covariance or formalize the source path lemma.
+- No transformation-group analytic structure, continuation/correlator datum, theory, or mass gap is
   constructed.
 
 Not yet achieved:

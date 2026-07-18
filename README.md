@@ -230,8 +230,10 @@ complex-bilinear mostly-minus form now form a named proper complex Lorentz group
 simultaneously on finite relative configurations; four-dimensional complex negation is an explicit
 nonidentity element. The exact extended tube is now the open invariant union of all simultaneous
 proper-complex-Lorentz images; a negated standard point proves strict four-dimensional enlargement.
-Group topology, connectedness, analytic structure, and holomorphic continuation remain pending. The
-exact-sign open backward tube `ξ - iη`, `η ∈ V₊°`, is constructed
+An uninhabited scalar interface now requires a single-valued holomorphic invariant extension and
+attaches one at every arity to the exact same relative-distribution/full-correlator/field chain.
+Group topology, connectedness, analytic structure, and derivation of the continuation theorem remain
+pending. The exact-sign open backward tube `ξ - iη`, `η ∈ V₊°`, is constructed
 and proved nonempty in dimensions 1–4. A separate interface requires genuine holomorphy there,
 integrable regularized tube-function pairings for every strict direction tuple, and convergence in
 the tempered-distribution topology as all directions jointly approach zero. A strengthened
@@ -247,8 +249,8 @@ same reverse-Wick analytic function. Nonzero test values are proved to map into 
 integrand vanishes outside its preimage. Requiring absolute integrability for all such strict
 Schwartz tests strengthens OS-I's initial compact-support formula, and the carrier support itself
 also remains stronger than OS-I: the exact
-source-space comparison, arbitrary-polynomial comparison, extended-tube continuation,
-reconstruction, and observable interpretation remain pending, and no continuation or correlator
+source-space comparison, arbitrary-polynomial comparison, derivation or inhabitation of the
+extended-tube continuation interface, reconstruction, and full observable interpretation remain pending, and no continuation or correlator
 datum is constructed. No concrete gauge-group, connection, invariant-inner-product, curvature, or
 structure-certificate witness,
 symmetry group, source-facing reconstruction theorem, quantum-theory witness, Yang–Mills existence
