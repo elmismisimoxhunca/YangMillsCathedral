@@ -1054,8 +1054,28 @@ Verified:
 - Hostile probes reject a non-Borel measurable structure, nonpositive coupling, nonintegrable exact
   scalar, negative action, unrelated integrand or measure substitutions that change the value, and
   a disconnected caller-supplied action value.
-- The designated measure is not described as Riemannian volume. Basis independence, a general
-  Hodge-star bridge, and metric-volume compatibility remain explicit debt.
+- The designated measure is not described as Riemannian volume. Basis independence for the exact
+  dependent curvature contraction, a general Hodge-star bridge, and metric-volume compatibility
+  remain explicit debt.
+
+## 2026-07-17 — sixty-first mathematical stone: canonical bilinear contraction
+
+Verified:
+
+- `Mathematics.canonicalBilinearQuadraticContraction` contracts two copies of a bilinear map against
+  two canonical covariant tensors and then applies an explicit bilinear scalar pairing.
+- The codomain requires only a named bilinear `LinearMap`; no codomain norm or inner-product
+  instance is installed, so different pairing normalizations remain compatible.
+- `canonicalBilinearQuadraticContraction_eq_sum` proves that every orthonormal basis computes the
+  canonical tensor contraction as the familiar double sum.
+- `orthonormalBilinearQuadraticContraction_independent` proves those double sums agree for any two
+  orthonormal bases.
+- Hostile probes reject disagreement with the canonical tensor value, dependence on bases even
+  with different index types, and substitution of an unrelated bilinear map that changes the
+  contraction.
+- This is reusable general mathematics. Specialization to the dependent adjoint fiber requires a
+  fiber-pairing linear map and a degree-two alternating-form-to-bilinear adapter; no Hodge-star or
+  volume claim is made.
 
 Not yet achieved:
 
@@ -1073,8 +1093,9 @@ Not yet achieved:
   remains an explicit infrastructure blocker.
 - Clay, Hall, Aharony–Seiberg–Tachikawa, and Freed artifacts are pinned. Clay equation (1) now
   anchors the action formula, invariant quadratic form, and chosen orthonormal curvature
-  contraction and relative-to-designated-measure action, but basis independence, a general
-  Hodge-star bridge, and metric-volume compatibility remain pending. OS/Wightman, spectral,
+  contraction and relative-to-designated-measure action. Generic bilinear contraction is now proved
+  basis-independent, but its exact dependent adjoint-curvature specialization, a general Hodge-star
+  bridge, and metric-volume compatibility remain pending. OS/Wightman, spectral,
   observable, and lattice sources remain to
   be independently acquired and verified before their corresponding declarations become canonical.
 

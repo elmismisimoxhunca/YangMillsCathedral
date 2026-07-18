@@ -117,8 +117,10 @@ curvature, and the adjoint
 action packaged as a
 smooth invertible operator family, alongside an explicit positive
 adjoint-invariant Lie-algebra inner-product certificate inducing a chart-independent positive
-pairing on every actual adjoint quotient fiber, and a named smooth Euclidean metric interface whose
-chosen tangent-fiber orthonormal contraction gives a nonnegative pointwise scalar for the exact
+pairing on every actual adjoint quotient fiber, a reusable canonical-tensor theorem proving
+basis independence of bilinear quadratic contraction without installing a codomain inner-product
+instance, and a named smooth Euclidean metric interface whose chosen tangent-fiber orthonormal
+contraction gives a nonnegative pointwise scalar for the exact
 smoothly descended curvature, together with an integrable real-valued Euclidean action relative to
 an explicitly designated Borel measure and positive coupling (without claiming a general Hodge-star
 theorem or metric volume), are implemented. No

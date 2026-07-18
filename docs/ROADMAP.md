@@ -81,7 +81,10 @@ committed before higher layers depend on it.
 - [x] Define and probe the adjoint-invariant positive Lie-algebra inner product.
 - [x] Induce its chart-independent positive pairing on actual adjoint quotient fibers.
 - [x] Define and probe the positive chosen-orthonormal contraction of exact descended curvature.
-- [ ] Prove basis independence and connect the contraction to a general Hodge-star interface.
+- [x] Prove a reusable canonical-tensor theorem making bilinear quadratic contraction independent
+  of the chosen orthonormal basis.
+- [ ] Connect the adjoint-fiber curvature contraction to the canonical-tensor theorem.
+- [ ] Connect the resulting canonical contraction to a general Hodge-star interface.
 - [x] Define and probe the integrable Euclidean action relative to a designated Borel measure and
   positive coupling, with Clay's outer normalization explicit.
 - [ ] Construct metric-volume semantics and prove compatibility with the designated measure.
