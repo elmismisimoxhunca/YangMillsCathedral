@@ -183,8 +183,11 @@ from dimension two onward, while dimension one has no spacelike point pair. One 
 strongly countably-additive joint momentum PVM is tied to the exact physical translations by the
 SNAG diagonal Fourier formula and has forward-cone support. A separate physical
 invariant-mass-gap predicate adds the exact vacuum-line projection; its same-PVM Hamiltonian view
-kills `(0, Δ)` and requires a bounded positive-energy nonvacuum excitation, but constructs no
-threshold or theory. Covariance,
+kills `(0, Δ)` and requires a bounded positive-energy nonvacuum excitation. The Clay mass is the
+supremum of the source-facing positive thresholds whose same-PVM Hamiltonian projection vanishes
+on `(0, Δ)` and whose zero projection is the vacuum line. Any one stronger physical joint gap
+supplies a bounded excitation that makes this set nonempty and bounded above with positive
+supremum, but no threshold or theory is constructed. Covariance,
 cyclicity, locality, and forward-cone spectrum are integrated on one exact scalar
 field/domain/vacuum/representation chain, while the mass gap remains an additional predicate.
 Reconstruction and observable interpretation are not yet packaged. No concrete gauge-group, connection, invariant-inner-product, curvature, or

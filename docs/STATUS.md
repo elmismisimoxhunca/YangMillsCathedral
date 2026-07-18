@@ -1906,6 +1906,25 @@ Implemented and verified:
 - No scalar Wightman surface, PVM, threshold, quantum theory, existence theorem, or mass-gap witness
   is constructed.
 
+## 2026-07-18 — one-hundred-seventh stone: finite physical mass-gap supremum
+
+Implemented and verified:
+
+- `IsClayHamiltonianGapThreshold` is source-facing: `Δ > 0`, exact zero-momentum vacuum-line
+  projection, and no same-PVM Hamiltonian spectrum in `(0, Δ)`; it does not include the stronger
+  invariant-mass or bounded-excitation guards.
+- `physicalGapThresholdSet` is exactly the set of those source-facing Hamiltonian thresholds.
+- `physicalMassGapValue` is the real supremum of that exact threshold set, matching Clay p. 6 §4.
+- Any one stronger physical joint gap makes the source-facing set nonempty; its separately required
+  nonzero bounded-energy band uniformly bounds every source-facing threshold.
+- Therefore any stronger physical joint gap yields `HasFinitePositivePhysicalMassGap`: the set is
+  nonempty and bounded above and its exact supremum is positive.
+- Hostile probes lock the mass definition to `sSup` and prove that a vacuum-only spectrum admits all
+  positive Hamiltonian intervals, making the source-facing threshold set unbounded rather than
+  artificially empty.
+- No admissible threshold, spectrum, quantum theory, Yang–Mills existence theorem, or mass-gap
+  witness is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

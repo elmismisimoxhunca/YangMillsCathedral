@@ -195,6 +195,9 @@ committed before higher layers depend on it.
   the same PVM; prove its `(0, Δ)` projection is zero and a bounded positive-energy band is nonzero.
 - [x] Reject empty, full, unrelated-representation, vacuum-only, nonpositive-threshold, and
   no-finite-excitation spectral surrogates.
+- [x] Define the Clay mass as the supremum of source-facing positive same-PVM Hamiltonian
+  thresholds; prove that any stronger physical joint gap makes this set nonempty and bounded above
+  with positive supremum.
 
 ## Phase 6 — optional lattice route
 

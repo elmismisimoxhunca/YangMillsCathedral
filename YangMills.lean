@@ -204,6 +204,8 @@ import YangMills.Minkowski.JointTranslationSpectrum
 import YangMills.Minkowski.JointTranslationSpectrumProbes
 import YangMills.Minkowski.ScalarWightmanAxiomSurface
 import YangMills.Minkowski.ScalarWightmanAxiomSurfaceProbes
+import YangMills.Minkowski.PhysicalMassGapSupremum
+import YangMills.Minkowski.PhysicalMassGapSupremumProbes
 import YangMills.Audit
 
 /-!
