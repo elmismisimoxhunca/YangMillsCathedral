@@ -117,7 +117,10 @@ committed before higher layers depend on it.
   Fréchet flatness on point-coincidence diagonals.
 - [x] Package algebraic finite test sequences with an exact nonzero-arity support finset.
 - [x] Construct exact continuous configuration split/merge maps and the raw scalar tensor kernel.
-- [ ] Prove the raw tensor kernel is Schwartz and package the continuous bilinear tensor operation.
+- [x] Prove a reusable generic scalar Schwartz tensor product with explicit decay bounds and
+  algebraic bilinearity.
+- [ ] Pull the bundled tensor through exact configuration splitting and package any needed
+  continuous bilinear topology before defining the sequence product.
 - [ ] Establish the strict subspace's embedding/sufficiency/density/completion relation to OS-I's
   derivative-vanishing ordered spaces; install the per-arity induced and finite-sequence direct-sum
   topologies while keeping the positive-half-space completed tensor product distinct; construct the

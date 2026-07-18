@@ -1377,8 +1377,27 @@ Implemented and verified:
   `f(x₁,…,xₙ) g(xₙ₊₁,…,xₙ₊ₘ)`, with exact split and merged evaluation theorems.
 - Hostile probes prove both blocks are retained, the two explicit positive-time bumps give a
   nonzero kernel value, and zeroing the second factor cannot be ignored.
-- No bundled Schwartz tensor is claimed. Decay estimates and continuous bilinearity remain reusable
-  mathematics debt before the finite sequence product can be defined.
+- This stone itself makes no bundled Schwartz claim. The following stone supplies the generic decay
+  theorem; exact configuration pullback and continuous bilinear topology remain pending before the
+  finite sequence product.
+- No reflection positivity theorem, Euclidean theory, reconstruction, Wightman theory, existence
+  theorem, or mass-gap witness is introduced.
+
+## 2026-07-18 — seventy-ninth stone: generic scalar Schwartz tensor product
+
+Implemented and verified:
+
+- Projection-pullback derivative norms are bounded using continuous multilinear composition and the
+  norm-at-most-one first/second projections.
+- `max_pow_le_add_pow` splits product-space polynomial weights between the two factors.
+- `scalarSchwartzTensorProduct` packages `(x,y) ↦ f(x)g(y)` as an actual Mathlib Schwartz map using
+  the iterated Leibniz bound and explicit finite sums of Schwartz seminorm products.
+- Exact evaluation, additivity in both factors, and scalar compatibility in both factors are proved.
+- Hostile probes independently zero each factor, preserve nonzero paired evaluations, reject
+  unrelated pointwise replacement, and exercise both additive laws.
+- The theorem works for arbitrary real normed spaces; it does not rely on finite-dimensionality.
+- Joint continuity as a bilinear map and pullback through the exact Euclidean configuration split
+  remain pending packaging before the finite sequence product.
 - No reflection positivity theorem, Euclidean theory, reconstruction, Wightman theory, existence
   theorem, or mass-gap witness is introduced.
 
