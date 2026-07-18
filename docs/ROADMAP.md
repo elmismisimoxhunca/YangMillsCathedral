@@ -195,7 +195,9 @@ committed before higher layers depend on it.
   difference/normalized-anchor Schwartz lifts, require independence of every normalized anchor, and
   use that exact relative distribution as the polynomially bounded tube boundary.
 - [ ] Define extended-tube continuation.
-- [ ] Add explicit OS reconstruction and correlator coherence.
+- [x] Define the first explicit Euclidean/Minkowski bridge: reverse strict Euclidean point order,
+  Wick-rotate `τ ↦ -iτ`, and prove all consecutive relative coordinates lie in the backward tube.
+- [ ] Add correlator-value continuation and explicit OS reconstruction and correlator coherence.
 
 ## Phase 5 — translations and mass gap
 

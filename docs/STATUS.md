@@ -2065,6 +2065,23 @@ Implemented and verified:
 - Coordinate Haar/Lebesgue volume is not called Riemannian volume. No anchor, relative distribution,
   analytic datum, correlator inhabitant, reconstruction, or physical theory is constructed.
 
+## 2026-07-18 — one-hundred-sixteenth stone: reverse Wick-rotation geometry
+
+Implemented and verified:
+
+- `Reconstruction.reverseWickRotateEuclideanConfiguration` explicitly reverses Euclidean point
+  labels and maps only the distinguished time coordinate by `τ ↦ -iτ`; spatial coordinates remain
+  real.
+- `reverseWickRotatedRelativeCoordinates` forms exact consecutive differences after that reversal.
+- Strictly increasing Euclidean times become strictly positive reversed time differences, and every
+  resulting relative coordinate is proved to lie in the exact Wightman backward tube.
+- Explicit standard strict Euclidean configurations make the bridge nonvacuous in dimensions one
+  and four.
+- Hostile probes lock time/spatial formulas and relative imaginary sign, and prove concretely that
+  omitting reversal rejects the explicit strict two-point configuration from the backward tube.
+- This is geometry only: no Euclidean/Minkowski correlator equality, analytic continuation theorem,
+  OS reconstruction, theory inhabitant, or mass-gap witness is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

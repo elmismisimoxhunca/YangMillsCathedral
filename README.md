@@ -201,9 +201,11 @@ interface additionally requires uniform radial polynomial growth over every comp
 imaginary-direction set. A connected relative-coordinate interface uses normalized coordinate-
 Lebesgue anchor tests to identify each full correlator with one relative tempered distribution and
 makes that exact distribution the analytic boundary; coherence is required for every normalized
-anchor. Comparison with the source's arbitrary polynomial normal form, extended-tube continuation,
-reconstruction, and observable interpretation remain pending, and no analytic or correlator datum
-is constructed. No concrete gauge-group, connection, invariant-inner-product, curvature, or
+anchor. The first explicit Euclidean/Minkowski bridge reverses strictly increasing Euclidean point
+order, sends `τ ↦ -iτ`, and proves that every resulting consecutive relative coordinate lands in
+the exact backward tube. Correlator-value continuation, comparison with the source's arbitrary
+polynomial normal form, extended-tube continuation, reconstruction, and observable interpretation
+remain pending, and no analytic or correlator datum is constructed. No concrete gauge-group, connection, invariant-inner-product, curvature, or
 structure-certificate witness,
 symmetry group, reconstruction bridge, quantum-theory witness, Yang–Mills existence claim, or
 mass-gap claim is present.
