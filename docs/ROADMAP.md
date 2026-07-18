@@ -132,7 +132,9 @@ committed before higher layers depend on it.
 - [x] Construct named, locally installed additive-group and complex-module structures on the exact
   finite sequence carrier.
 - [x] Bundle every generating finite-stage map as a continuous complex-linear map.
-- [ ] Prove joint sequence addition/scalar continuity, compare the
+- [x] Construct the exact continuous linear natural coordinate injections.
+- [ ] Prove the linear coordinate-injection continuity criterion, joint sequence addition/scalar
+  continuity, and compare the
   finite-stage final topology with OS-I's locally convex direct sum, and prove any needed product
   continuity.
 - [x] Construct the exact reverse-conjugate involution on scalar Schwartz components.

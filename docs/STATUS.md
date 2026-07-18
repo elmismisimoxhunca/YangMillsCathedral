@@ -1615,6 +1615,24 @@ Implemented and verified:
 - No source-facing `(E2)`, Euclidean theory, reconstruction, Wightman theory, existence theorem, or
   mass-gap witness is introduced.
 
+## 2026-07-18 — ninety-first stone: continuous linear coordinate injections
+
+Implemented and verified:
+
+- `scalarSchwartzToSingletonStage` identifies one exact arity Schwartz test with its singleton
+  dependent finite stage.
+- That assignment is bundled as a continuous complex-linear map for the finite product topology.
+- `scalarSchwartzCoordinateInjectionContinuousLinearMap` composes the singleton assignment with the
+  corresponding continuous linear stage extension.
+- The source component is retained exactly, every distinct component is zero, the map is injective,
+  nonzero support is exactly the source singleton, and zero support is empty.
+- Hostile probes instantiate the explicit positive-time bump, verify continuity against the named
+  preliminary topology, and reject a nonzero value at any wrong coordinate.
+- The OS-I iff criterion for linear maps, direct-sum identification, joint algebra continuity, and
+  convolution continuity remain pending.
+- No source-facing `(E2)`, Euclidean theory, reconstruction, Wightman theory, existence theorem, or
+  mass-gap witness is introduced.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

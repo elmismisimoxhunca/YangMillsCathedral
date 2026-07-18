@@ -171,6 +171,8 @@ import YangMills.Euclidean.SchwingerFiniteSequenceModule
 import YangMills.Euclidean.SchwingerFiniteSequenceModuleProbes
 import YangMills.Euclidean.SchwingerFiniteStageContinuousLinear
 import YangMills.Euclidean.SchwingerFiniteStageContinuousLinearProbes
+import YangMills.Euclidean.SchwingerCoordinateInjection
+import YangMills.Euclidean.SchwingerCoordinateInjectionProbes
 import YangMills.Audit
 
 /-!
