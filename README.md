@@ -117,7 +117,8 @@ curvature, and the adjoint
 action packaged as a
 smooth invertible operator family, alongside an explicit positive
 adjoint-invariant Lie-algebra inner-product certificate inducing a chart-independent positive
-pairing on every actual adjoint quotient fiber, a reusable canonical-tensor theorem proving
+pairing on every actual adjoint quotient fiber and packaging that exact pairing as a bilinear map,
+a reusable canonical-tensor theorem proving
 basis independence of bilinear quadratic contraction without installing a codomain inner-product
 instance, and a named smooth Euclidean metric interface whose chosen tangent-fiber orthonormal
 contraction gives a nonnegative pointwise scalar for the exact

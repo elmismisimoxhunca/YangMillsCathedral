@@ -148,8 +148,9 @@ local section/lifts and proved to agree with all such right-related presentation
 is specialized to the exact curvature derived from one connection and exterior-derivative datum,
 with presentation independence supplied by its indexed structure certificate. The exact pointwise
 base curvature is now proved smooth and packaged without changing its carrier. The separately
-specified adjoint-invariant Lie-algebra pairing is transported to the actual adjoint fibers and
-proved independent of every designated chart.
+specified adjoint-invariant Lie-algebra pairing is transported to the actual adjoint fibers,
+proved independent of every designated chart, and packaged as a bilinear map without changing its
+exact quotient-coherent values.
 `PrincipalTwoForm.IsHorizontal`, `.IsRightAdEquivariant`, and the connection-indexed
 `PrincipalCurvatureStructureCertificate` state (1.15) and (1.14) intrinsically without accepting an
 unrelated curvature field. This is a requirement surface: automatic derivation from the current

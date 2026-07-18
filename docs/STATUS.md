@@ -1073,9 +1073,24 @@ Verified:
 - Hostile probes reject disagreement with the canonical tensor value, dependence on bases even
   with different index types, and substitution of an unrelated bilinear map that changes the
   contraction.
-- This is reusable general mathematics. Specialization to the dependent adjoint fiber requires a
-  fiber-pairing linear map and a degree-two alternating-form-to-bilinear adapter; no Hodge-star or
-  volume claim is made.
+- This is reusable general mathematics. Specialization to the dependent adjoint fiber was left to
+  subsequent adapters; no Hodge-star or volume claim is made.
+
+## 2026-07-17 — sixty-second mathematical stone: bilinear adjoint-fiber pairing
+
+Verified:
+
+- `AdjointBundle.selectedFiberLieAlgebraLinearEquiv` composes the exact selected quotient-fiber
+  coordinate with the explicit inverse model/Lie-algebra equivalence.
+- `selectedFiberLieAlgebraLinearEquiv_apply` proves that packaging retains that exact coordinate.
+- `AdjointBundle.fiberPairingLinearMap` packages the invariant pairing as an iterated real linear map
+  on each actual dependent adjoint fiber, using only named locally installed fiber structures.
+- `fiberPairingLinearMap_apply` proves evaluation is exactly the established chart-independent
+  `AdjointBundle.fiberPairing`; no replacement pairing or global inner-product instance appears.
+- Hostile probes reject coordinate replacement, pairing-value replacement, and failure of
+  additivity in the packaged first argument.
+- This supplies the codomain-pairing prerequisite for canonical tensor contraction. The exact
+  degree-two form-to-bilinear adapter remains pending.
 
 Not yet achieved:
 
@@ -1094,8 +1109,9 @@ Not yet achieved:
 - Clay, Hall, Aharony–Seiberg–Tachikawa, and Freed artifacts are pinned. Clay equation (1) now
   anchors the action formula, invariant quadratic form, and chosen orthonormal curvature
   contraction and relative-to-designated-measure action. Generic bilinear contraction is now proved
-  basis-independent, but its exact dependent adjoint-curvature specialization, a general Hodge-star
-  bridge, and metric-volume compatibility remain pending. OS/Wightman, spectral,
+  basis-independent and the exact dependent adjoint-fiber pairing is packaged bilinearly, but the
+  degree-two curvature adapter and resulting exact specialization, a general Hodge-star bridge, and
+  metric-volume compatibility remain pending. OS/Wightman, spectral,
   observable, and lattice sources remain to
   be independently acquired and verified before their corresponding declarations become canonical.
 
