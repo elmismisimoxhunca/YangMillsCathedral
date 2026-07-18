@@ -1862,6 +1862,35 @@ Implemented and verified:
 - No local field datum inhabitant, spectrum, reconstruction, existence theorem, or mass gap is
   constructed.
 
+## 2026-07-18 — one-hundred-fifth stone: physical joint translation spectrum
+
+Implemented and verified:
+
+- Streater–Wightman printed p. 92 was visually verified as the exact SNAG/PVM source: one
+  momentum-space PVM, intersection multiplication, strong disjoint countable additivity,
+  normalization, and `U(a)=∫exp(i p·a)dE(p)`.
+- `ProjectionValuedMeasureData` packages self-adjoint idempotents, exact empty/universal values,
+  measurable intersection multiplication, and strong countable additivity.
+- `JointTranslationSpectralData` supplies finite diagonal measures exactly coherent with that PVM;
+  a genuinely integrable mostly-minus momentum character reproduces the exact physical translation
+  unitary, and the full Poincaré representation transports the PVM by the projected Lorentz action,
+  preventing a disconnected energy surrogate or nonintegrable-zero shortcut.
+- `ForwardConeJointTranslationSpectrumData` kills the projection outside the closed future cone.
+- `HasPhysicalJointSpectralMassGap` makes the zero-momentum projection exactly the selected
+  normalized vacuum line, excludes every nonzero future momentum below `Δ²`, requires `Δ > 0`, and
+  requires a nonzero bounded positive-energy excitation band above `Δ`.
+- The normalized Hamiltonian spectral view is the energy-coordinate pushforward of the same PVM;
+  its exact `(0, Δ)` projection vanishes, its bounded excitation band is nonzero, and the latter also
+  yields a finite invariant-mass scale.
+- The finite excitation guard rejects a vacuum-only/infinite-gap spectrum and implements the Clay
+  statement's `m < ∞` anti-vacuity requirement.
+- Hostile probes expose exact PVM laws, strong sums, diagonal coherence, character integrability,
+  negative-time rejection, vacuum projection, Hamiltonian and invariant subgap rejection, finite
+  excitation, empty/full/vacuum-only families, an unrelated representation, and a nonpositive
+  threshold.
+- No PVM, spectrum, threshold, quantum theory, existence theorem, or mass gap witness is
+  constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
@@ -1870,7 +1899,7 @@ Not yet achieved:
 - No general smooth bundle-map, smooth adjoint-vector-bundle/descent layer, concrete
   principal-connection/curvature/structure-certificate
   witness, automatic curvature horizontality/equivariance theorem, Bianchi/gauge-covariance result,
-  symmetry-group, quantum-theory, acceptance, existence, or mass-gap declaration exists.
+  symmetry-group, quantum-theory, acceptance, existence, or satisfying mass-gap declaration exists.
 - No Yang–Mills acceptance declaration exists.
 - No standalone Git remote exists or has been pushed. The tested candidate
   `git@github.com:elmismisimoxhunca/lean-yangmills-adaly.git` does not exist, and the available SSH
@@ -1890,8 +1919,10 @@ Not yet achieved:
   lattice sources are likewise pinned,
   but lattice declarations and all continuum bridges remain unimplemented. Wilson's OPE paper and
   the Gross–Wilczek/Politzer asymptotic-freedom papers are pinned, but their typed observable and
-  ultraviolet-consistency declarations remain unimplemented. A spectral-theorem source package
-  also remains to be completed before corresponding declarations become canonical.
+  ultraviolet-consistency declarations remain unimplemented. The physical joint translation-PVM
+  and invariant-mass-gap predicates are now anchored to the visually verified SNAG discussion, and
+  the same PVM supplies the Hamiltonian interval view; any satisfying spectral datum and the final
+  acceptance integration remain absent.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

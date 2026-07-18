@@ -35,6 +35,15 @@ Printed pages and section numbers are authoritative; text lines refer to the ret
   - defines inhomogeneous/Poincaré elements as translation–Lorentz pairs;
   - gives affine action `x ↦ Λx + a` and the semidirect-product multiplication law;
   - identifies the inhomogeneous `SL(2,ℂ)` group used later for spinorial representations.
+- Printed p. 92; PDF page 102; extraction lines 3890–3934:
+  - states the SNAG representation `U(a,1) = ∫ exp(i p·a) dE(p)` for translations;
+  - identifies `E` as a projection-valued measure on momentum space;
+  - prints intersection multiplicativity, countable additivity on disjoint Borel sets, and
+    normalization `E(ℝ⁴) = 1`;
+  - identifies absence from the physical energy-momentum spectrum with `E(S) = 0` and notes that
+    Lorentz covariance permits discrete point spectrum only at `p = 0`.
+  The retained PDF page was visually checked; this is the primary source anchor for the project's
+  joint translation-PVM surface rather than an inference from finite-cutoff lattice data.
 - Printed p. 96, §3-1; PDF page 106; extraction lines 4058–4109: fields are operator-valued
   distributions and the axioms for fields and field theory begin.
 - Printed p. 97; PDF page 107; extraction lines 4110–4134, axiom `0`:
@@ -65,10 +74,12 @@ translation/Poincaré representation, common invariant domain, operator-valued t
 distributions, covariance, locality, forward-cone spectrum, invariant unique vacuum, and cyclicity.
 Those requirements must remain connected to the same representation and domain.
 
-The checker will strengthen the book's generator-level presentation by requiring an explicit joint
-translation spectral/PVM interface. Energy, momentum, invariant mass, the vacuum projection, and
-the mass-gap predicate must all be derived from that same joint spectral object. This strengthening
-is a formalization decision intended to block disconnected Hamiltonians or surrogate spectra.
+The checker follows the book's explicit printed-p. 92 SNAG/PVM presentation rather than stopping
+at the generator-level summary on printed p. 97. Energy, momentum, invariant mass, the vacuum
+projection, the energy-coordinate Hamiltonian spectral view, and the mass-gap predicate must all use
+that same joint spectral object. Connecting the
+Clay gap semantics and exact vacuum line to this PVM is a formalization strengthening intended to
+block disconnected Hamiltonians, vacuum-only spectra, or surrogate gaps.
 
 No Wightman theory, vacuum, field, PVM, existence proof, or mass-gap witness is supplied by retaining
 this source.

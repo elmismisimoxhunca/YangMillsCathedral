@@ -177,16 +177,22 @@ committed before higher layers depend on it.
 - [x] Define scalar bosonic locality for field and adjoint using spacelike-separated topological
   supports, prove nonzero locality test pairs exist in dimensions at least two, and prove dimension
   one has no spacelike point pair.
-- [ ] Define forward-cone spectral data independently.
+- [x] Define forward-cone joint spectral data independently and tie it to the exact physical
+  translation representation through the SNAG Fourier formula.
 - [ ] Add explicit OS reconstruction and correlator coherence.
 
 ## Phase 5 — translations and mass gap
 
-- [ ] Build or package a genuine joint projection-valued-measure interface.
-- [ ] Tie energy and momentum to one strongly continuous translation representation.
-- [ ] Define forward-cone support, vacuum sector and invariant mass.
-- [ ] Derive Hamiltonian-only gap views under explicit bridge hypotheses.
-- [ ] Reject bounded, empty, full and unrelated spectral witnesses.
+- [x] Package a normalized, self-adjoint, strongly countably-additive joint
+  projection-valued-measure interface.
+- [x] Tie energy and momentum to one strongly continuous translation representation through finite
+  diagonal spectral measures and an exact, genuinely integrable SNAG Fourier formula.
+- [x] Define forward-cone support, exact vacuum-line zero-momentum projection, invariant mass, and
+  a positive-threshold joint-spectral gap predicate without constructing a witness.
+- [x] Derive the normalized Hamiltonian spectral projection as the energy-coordinate pushforward of
+  the same PVM; prove its `(0, Δ)` projection is zero and a bounded positive-energy band is nonzero.
+- [x] Reject empty, full, unrelated-representation, vacuum-only, nonpositive-threshold, and
+  no-finite-excitation spectral surrogates.
 
 ## Phase 6 — optional lattice route
 

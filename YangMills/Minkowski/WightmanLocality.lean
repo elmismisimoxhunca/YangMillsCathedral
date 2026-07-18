@@ -5,6 +5,7 @@ Authors: Sebastian Rodrigo
 -/
 
 import YangMills.Minkowski.WightmanField
+import YangMills.Minkowski.QuadraticTopology
 import Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension
 
 /-!
@@ -30,16 +31,6 @@ namespace YangMills.Minkowski
 def spacelikeSeparatedPointPairSet (d : EuclideanDimension) :
     Set (Spacetime d × Spacetime d) :=
   {p | d.minkowskiQuadraticForm (p.1 - p.2) < 0}
-
-/-- The Minkowski quadratic form is continuous on the finite-dimensional coordinate carrier. -/
-theorem continuous_minkowskiQuadraticForm (d : EuclideanDimension) :
-    Continuous d.minkowskiQuadraticForm := by
-  change Continuous (fun p : Spacetime d => d.minkowskiQuadraticForm p)
-  simp only [EuclideanDimension.minkowskiQuadraticForm,
-    QuadraticMap.weightedSumSquares_apply]
-  apply continuous_finsetSum Finset.univ
-  intro i _
-  fun_prop
 
 /-- Spacelike separation is an open relation. -/
 theorem isOpen_spacelikeSeparatedPointPairSet (d : EuclideanDimension) :

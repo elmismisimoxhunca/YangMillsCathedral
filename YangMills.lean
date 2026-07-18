@@ -185,6 +185,7 @@ import YangMills.Euclidean.SchwingerEuclideanCandidate
 import YangMills.Euclidean.SchwingerEuclideanCandidateProbes
 import YangMills.Minkowski.PoincareKinematics
 import YangMills.Minkowski.PoincareKinematicsProbes
+import YangMills.Minkowski.QuadraticTopology
 import YangMills.Minkowski.PoincareCoverRepresentation
 import YangMills.Minkowski.PoincareCoverRepresentationProbes
 import YangMills.Minkowski.Vacuum
@@ -199,6 +200,8 @@ import YangMills.Minkowski.WightmanCyclicity
 import YangMills.Minkowski.WightmanCyclicityProbes
 import YangMills.Minkowski.WightmanLocality
 import YangMills.Minkowski.WightmanLocalityProbes
+import YangMills.Minkowski.JointTranslationSpectrum
+import YangMills.Minkowski.JointTranslationSpectrumProbes
 import YangMills.Audit
 
 /-!

@@ -179,8 +179,12 @@ exact inverse-affine test pullback and covariance of both field and adjoint unde
 physical unitaries are packaged. Finite field/adjoint words on the exact vacuum are defined and
 cyclicity requires their Hilbert-space span to be dense. Scalar bosonic locality is defined for
 field/adjoint pairs with spacelike-separated topological supports; explicit nonzero test pairs exist
-from dimension two onward, while dimension one has no spacelike point pair. Spectrum and the
-remaining Wightman theory are not yet packaged. No concrete gauge-group, connection, invariant-inner-product, curvature, or
+from dimension two onward, while dimension one has no spacelike point pair. One normalized,
+strongly countably-additive joint momentum PVM is tied to the exact physical translations by the
+SNAG diagonal Fourier formula, with forward-cone support, exact vacuum-line projection, and a
+physical invariant-mass-gap predicate whose same-PVM Hamiltonian view kills `(0, Δ)` and requires a
+bounded positive-energy nonvacuum excitation, but constructs no threshold or theory. Reconstruction and
+the remaining Wightman coherence are not yet packaged. No concrete gauge-group, connection, invariant-inner-product, curvature, or
 structure-certificate witness,
 symmetry group, reconstruction bridge, quantum-theory witness, Yang–Mills existence claim, or
 mass-gap claim is present.
