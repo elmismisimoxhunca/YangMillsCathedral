@@ -164,8 +164,10 @@ committed before higher layers depend on it.
   representation whose injective translation subgroup is derived from that same representation.
 - [ ] Construct/require the genuine `SL(2,ℂ)` topological covering projection, including target
   topology and covering/kernel laws.
-- [ ] Define vacuum, common field domain, Wightman fields, covariance, locality, cyclicity, and
-  forward-cone spectral data independently.
+- [x] Define a normalized Poincaré-invariant vacuum whose full invariant subspace is exactly one
+  complex line, tied to the same representation and derived translations.
+- [ ] Define common field domain, Wightman fields, covariance, locality, cyclicity, and forward-cone
+  spectral data independently.
 - [ ] Define common invariant domains and operator-valued tempered distributions.
 - [ ] Add explicit OS reconstruction and correlator coherence.
 

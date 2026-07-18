@@ -1763,6 +1763,22 @@ Implemented and verified:
   constructed. Vacuum, fields, common
   domain, spectrum/PVM, reconstruction, existence, and mass gap remain pending.
 
+## 2026-07-18 — ninety-ninth stone: invariant unique vacuum line
+
+Implemented and verified:
+
+- `Minkowski.IsPoincareInvariantVector` uses the same strongly continuous unitary representation,
+  not a disconnected symmetry action.
+- `Minkowski.PoincareInvariantVacuumData` requires a unit-norm vacuum fixed by every lift-group
+  element and requires every invariant vector to lie on its complex line.
+- The vacuum is proved nonzero; invariance under physical translations is derived from the same
+  representation's translation subgroup.
+- Every normalized invariant vector is proved to differ from the selected vacuum by a unit-modulus
+  complex phase.
+- Hostile probes reject a zero vacuum and any invariant vector outside the selected vacuum line.
+- No vacuum inhabitant is constructed. Field cyclicity, common domain, spectral vacuum projection,
+  reconstruction, existence, and mass gap remain pending.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

@@ -170,8 +170,9 @@ inhabitant is constructed. Independently, proper-orthochronous Lorentz and affin
 kinematics are now defined for the mostly-minus Minkowski form, with properness, time orientation,
 and nontrivial translation probes. A weaker topological-group lift/pre-cover interface and one
 strongly continuous unitary representation on a separable Hilbert carrier are packaged without
-inhabitants; physical translations are derived from that same representation. A genuine topological
-covering projection remains pending. Vacuum, fields, spectrum, and the remaining Wightman theory are not yet packaged. No concrete gauge-group, connection, invariant-inner-product, curvature, or
+inhabitants; physical translations are derived from that same representation. A genuine topological covering projection remains pending. A normalized vacuum is
+now tied to that same representation, with the complete invariant subspace required to be its single
+complex line. Fields, cyclicity, spectrum, and the remaining Wightman theory are not yet packaged. No concrete gauge-group, connection, invariant-inner-product, curvature, or
 structure-certificate witness,
 symmetry group, reconstruction bridge, quantum-theory witness, Yang–Mills existence claim, or
 mass-gap claim is present.
