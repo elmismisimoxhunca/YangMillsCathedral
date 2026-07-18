@@ -2430,8 +2430,32 @@ Implemented and verified:
 - Hostile probes expose joint operation continuity, coordinate coherence, both derivative- and
   curvature-slot continuity, repeated-curvature-slot vanishing, exact zero-order evaluation,
   empty-argument uniqueness, and rejection of an unrelated zero-order curvature anchor.
-- No positive-order tensor, intrinsic covariant derivative, recursive tower law, Bianchi theorem,
-  polynomial grammar, quantum interpretation, theory, or mass gap is constructed.
+- No positive-order tensor, recursive tower law, Bianchi theorem, polynomial grammar, quantum
+  interpretation, theory, or mass gap is constructed.
+
+## 2026-07-18 — one-hundred-thirty-third stone: same-connection adjoint-section derivative
+
+Implemented and verified:
+
+- `AdjointBundle.CovariantDerivative` specializes Mathlib's bundled covariant-derivative carrier to
+  the exact dependent adjoint bundle with all topology/module/fiber-bundle structures installed
+  locally.
+- `adjointLocalSectionCoordinate`, `adjointLocalOrdinaryDerivative`, and
+  `adjointLocalConnectionBracketTerm` keep the fixed-chart ordinary derivative and exact principal-
+  connection correction separately visible.
+- `adjointLocalCovariantDerivativeExpression` is definitionally their plus-sign sum
+  `dσ(X) + [A(X),σ]`, matching the project's right-`Ad(g⁻¹)` associated-bundle convention.
+- `PrincipalConnectionAdjointCovariantDerivativeData` requires Mathlib additivity/Leibniz laws and
+  the exact local formula for every smooth adjoint section, designated principal chart, in-chart
+  base point, and tangent vector.
+- The source locator correctly distinguishes Freed's numbered Bianchi equation `(1.16)` from the
+  unnumbered `d_Θ = d + ad(Θ)` definition immediately following it.
+- Hostile probes expose the unfolded plus sign, block omission of a nonzero bracket correction,
+  reject substitution of a connection with a different local expression, and reject an unrelated
+  coordinate derivative value.
+- This is an uninhabited degree-zero section-derivative interface. No smooth-output theorem,
+  adjoint-valued-form derivative, positive curvature-tensor order, recursive tower, Bianchi theorem,
+  polynomial interpretation, theory, or mass gap is constructed.
 
 Not yet achieved:
 

@@ -118,9 +118,12 @@ committed before higher layers depend on it.
 - [x] Prove topological-module compatibility for every exact dependent adjoint fiber and define the
   continuous derivative-slot/alternating-curvature tensor carrier, with order zero locked to the
   exact smoothly descended curvature.
-- [ ] Construct the same-connection intrinsic covariant derivative giving positive tensor orders,
-  derive Bianchi rather than storing it as a certificate, and extend the basic bridge to interpreted
-  gauge-invariant local curvature polynomials, including renormalized operator mixing.
+- [x] Define an uninhabited Mathlib covariant derivative on exact adjoint sections and tie it in every
+  designated chart to the same principal connection by the explicit `dσ + [A,σ]` formula.
+- [ ] Prove smooth-output regularity, extend that same-connection derivative to adjoint-valued forms
+  and positive curvature-tensor orders, derive Bianchi rather than storing it as a certificate, and
+  extend the basic bridge to interpreted gauge-invariant local curvature polynomials, including
+  renormalized operator mixing.
 - [ ] Separate local observables from nonlocal Wilson observables.
 - [ ] Add nontrivial positive examples and hostile disconnected-curvature probes.
 

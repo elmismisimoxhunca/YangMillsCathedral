@@ -205,8 +205,10 @@ curvature-squared density to labels in one local family, with a nonempty base, e
 and nonzero non-unit `F²` action. The dependent adjoint-fiber topology is now proved compatible with
 its transported additive/module operations, enabling a continuous multilinear carrier with explicit
 derivative slots and two alternating curvature slots. Its order-zero value is exactly the same
-smoothly descended curvature; no positive-order covariant derivative is fabricated. This is not a
-general curvature-polynomial/covariant-derivative language or a canonical injective quantization
+smoothly descended curvature. An uninhabited degree-zero adjoint-section derivative interface now
+uses Mathlib's intrinsic additivity/Leibniz carrier and requires the exact same-connection local
+formula `dσ(X) + [A(X),σ]` in every designated chart. It is not yet extended to adjoint-valued forms
+or positive curvature-tensor orders. This is not a general curvature-polynomial/covariant-derivative language or a canonical injective quantization
 map. Coefficient singularities are not yet matched to
 asymptotic freedom or perturbative renormalization. A separate same-family stress-tensor checker
 requires symmetric Hermitian components local relative to the whole family, explicit inverse-matrix
