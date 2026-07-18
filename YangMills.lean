@@ -141,6 +141,8 @@ import YangMills.Euclidean.SchwingerTimeReflection
 import YangMills.Euclidean.SchwingerTimeReflectionProbes
 import YangMills.Euclidean.PositiveTimeSchwartzBump
 import YangMills.Euclidean.PositiveTimeSchwartzBumpProbes
+import YangMills.Euclidean.SchwingerOrderedTestSpace
+import YangMills.Euclidean.SchwingerOrderedTestSpaceProbes
 import YangMills.Audit
 
 /-!

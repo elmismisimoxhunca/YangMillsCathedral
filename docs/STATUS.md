@@ -1322,6 +1322,29 @@ Implemented and verified:
 - No reflection positivity theorem, Euclidean theory, reconstruction, Wightman theory, existence
   theorem, or mass-gap witness is introduced.
 
+## 2026-07-18 — seventy-sixth stone: ordered and coincidence-flat test candidate
+
+Implemented and verified:
+
+- `HasPointCoincidence` names equality of two distinctly labelled Euclidean points.
+- `IsFlatAtPointCoincidences` requires every iterated real Fréchet derivative of the exact Schwartz
+  function to vanish at every such configuration.
+- `strictPositiveTimeOrderedConfigurationSet` requires every selected time positive and strictly
+  increasing with point-label order; `HasStrictPositiveTimeOrderedSupport` uses topological support.
+- `MathlibPositiveTimeOrderedFlatTestFunction` packages these two properties as a strict subspace,
+  not OS-I's exact source carrier: boundary-flat source functions may have boundary points in their
+  topological support and are excluded here.
+- The explicit arity-one positive-time bump inhabits this candidate nontrivially; ordering and
+  coincidence-flatness have no hidden higher-arity obligations at arity one.
+- Hostile probes exhibit an all-positive but reversed two-point configuration, so positivity alone
+  cannot discharge ordering, and project the exact all-derivative flatness condition.
+- Future work must determine the strict subspace's embedding/sufficiency/density/completion relation
+  to OS-I's derivative-vanishing carrier and compare Fréchet with multi-index flatness. The induced
+  per-arity topology, finite-sequence direct-sum topology, and distinct positive-half-space completed
+  tensor product remain separately visible debt, followed by finite sequence products and `(E2)`.
+- No reflection positivity theorem, Euclidean theory, reconstruction, Wightman theory, existence
+  theorem, or mass-gap witness is introduced.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

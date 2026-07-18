@@ -133,9 +133,12 @@ identified with OS-II `(E0′)`. Exact positive-arity Schwartz permutation pullb
 Schwinger symmetry `(E3)` are implemented separately. Proper-Euclidean rigid motions, their exact
 Schwartz pullback, and scalar covariance `(E1)` are also implemented. Exact first-coordinate time
 reflection and strict-positive-time topological-support infrastructure are present, together with
-an explicit nonzero compactly supported arity-one positive-time Schwartz test. `(E2)` remains absent
-pending OS-I's time-ordered/diagonal-flat source-space bridge and the finite sequence product; `(E4)`
-is also absent. No
+an explicit nonzero compactly supported arity-one positive-time Schwartz test. A concrete strict
+subspace also records topological-support time ordering and full Fréchet-derivative flatness on
+coincidence diagonals. `(E2)` remains absent pending its embedding/sufficiency/density/completion comparison
+with OS-I's derivative-vanishing ordered spaces, the induced topology on each arity space, the
+direct-sum topology on finite sequences, the distinct completed tensor product for positive-half-
+space tests, and the finite sequence product; `(E4)` is also absent. No
 concrete gauge-group, connection, invariant-inner-product, curvature, or structure-certificate witness,
 symmetry group, reconstruction bridge, quantum-theory witness, Yang–Mills existence claim, or
 mass-gap claim is present.
