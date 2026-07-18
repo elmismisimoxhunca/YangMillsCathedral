@@ -13,9 +13,11 @@ Osterwalder–Schrader I defines the sequence product by
 `(f × g)ₙ = ∑ᵣ fₙ₋ᵣ × gᵣ`. This module constructs that finite sum as an exact bundled `n`-point
 Schwartz test, including both arity-zero endpoints.
 
-Only the per-arity component is defined here. Packaging all components into a finite sequence,
-proving its exact finite support, and installing any direct-sum topology remain separate work. The
-convolution output is not claimed to preserve the strict positive-time ordered subspace.
+Only the per-arity component is defined in this module.
+`YangMills.Euclidean.SchwingerConvolutionSequence` proves exact finite support and packages all
+components in the unrestricted sequence carrier. Installing a direct-sum
+topology remains separate work. The convolution output is not claimed to preserve the strict
+positive-time ordered subspace.
 -/
 
 namespace YangMills
@@ -29,6 +31,12 @@ noncomputable def castScalarSchwartzArity
 @[simp] theorem castScalarSchwartzArity_rfl
     {d : EuclideanDimension} {n : ℕ} (f : ScalarSchwartzTestFunction d n) :
     castScalarSchwartzArity rfl f = f :=
+  rfl
+
+@[simp] theorem castScalarSchwartzArity_zero
+    {d : EuclideanDimension} {n m : ℕ} (h : n = m) :
+    castScalarSchwartzArity h (0 : ScalarSchwartzTestFunction d n) = 0 := by
+  subst m
   rfl
 
 /-- The exact `N`-point component of the finite sequence convolution. -/

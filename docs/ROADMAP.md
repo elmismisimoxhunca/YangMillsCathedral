@@ -127,8 +127,8 @@ committed before higher layers depend on it.
   from the strict positive-time sequence.
 - [x] Define the exact finite per-arity convolution, including zero/one endpoint formulas and the
   nonzero internal singleton-bump split.
-- [ ] Prove finite support for the convolution family, package it in the unrestricted carrier, and install any
-  needed continuous bilinear topology.
+- [x] Prove finite support for the convolution family and package it in the unrestricted carrier.
+- [ ] Install any needed direct-sum/continuous bilinear topology.
 - [ ] Establish the strict subspace's embedding/sufficiency/density/completion relation to OS-I's
   derivative-vanishing ordered spaces; install the per-arity induced and finite-sequence direct-sum
   topologies while keeping the positive-half-space completed tensor product distinct; construct the

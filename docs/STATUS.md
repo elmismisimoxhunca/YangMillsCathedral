@@ -1477,6 +1477,27 @@ Implemented and verified:
 - No reflection positivity theorem, Euclidean theory, reconstruction, Wightman theory, existence
   theorem, or mass-gap witness is introduced.
 
+## 2026-07-18 — eighty-fourth stone: finite Schwinger convolution sequence
+
+Implemented and verified:
+
+- `finiteSequenceSupportBound` is the supremum of exact finite support; every component above it is
+  proved zero.
+- `finiteSchwartzSequenceConvolutionComponent` extends the exact per-arity formula to arbitrary
+  unrestricted finite sequences.
+- Above the sum of input support bounds, every split has either its left or right factor zero, so the
+  entire convolution component vanishes.
+- `finiteSchwartzSequenceConvolutionSupport` filters nonzero components inside the proved finite
+  range, and membership is exactly equivalent to nonvanishing.
+- `finiteSchwartzSequenceConvolution` packages the result as an unrestricted finite sequence.
+- Forgetting positive-time evidence before convolution agrees definitionally with the earlier
+  positive-input component formula.
+- Hostile probes retain the nonzero singleton-bump arity-two term and reject output support that
+  omits it.
+- Direct-sum topology/continuity, reflected involution, and `(E2)` remain pending.
+- No reflection positivity theorem, Euclidean theory, reconstruction, Wightman theory, existence
+  theorem, or mass-gap witness is introduced.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
