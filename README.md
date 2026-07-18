@@ -139,7 +139,8 @@ coincidence diagonals. `(E2)` remains absent pending its embedding/sufficiency/d
 with OS-I's derivative-vanishing ordered spaces, the induced topology on each arity space, the
 direct-sum topology on finite sequences, the distinct completed tensor product for positive-half-
 space tests, and the finite sequence product; the algebraic finite-sequence carrier with exact
-nonzero support is already implemented. `(E4)` is also absent. No
+nonzero support, exact configuration split/merge, and the raw pointwise tensor kernel are already
+implemented. Bundled Schwartz regularity of that kernel remains pending. `(E4)` is also absent. No
 concrete gauge-group, connection, invariant-inner-product, curvature, or structure-certificate witness,
 symmetry group, reconstruction bridge, quantum-theory witness, Yang–Mills existence claim, or
 mass-gap claim is present.

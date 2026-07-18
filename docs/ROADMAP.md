@@ -116,6 +116,8 @@ committed before higher layers depend on it.
 - [x] Define a strict Mathlib subspace using topological-support time ordering and infinite-order
   Fréchet flatness on point-coincidence diagonals.
 - [x] Package algebraic finite test sequences with an exact nonzero-arity support finset.
+- [x] Construct exact continuous configuration split/merge maps and the raw scalar tensor kernel.
+- [ ] Prove the raw tensor kernel is Schwartz and package the continuous bilinear tensor operation.
 - [ ] Establish the strict subspace's embedding/sufficiency/density/completion relation to OS-I's
   derivative-vanishing ordered spaces; install the per-arity induced and finite-sequence direct-sum
   topologies while keeping the positive-half-space completed tensor product distinct; construct the

@@ -1365,6 +1365,23 @@ Implemented and verified:
 - No reflection positivity theorem, Euclidean theory, reconstruction, Wightman theory, existence
   theorem, or mass-gap witness is introduced.
 
+## 2026-07-18 — seventy-eighth stone: exact configuration concatenation
+
+Implemented and verified:
+
+- `euclideanConfigurationSplit` is a continuous real-linear equivalence from `(n+m)` points to the
+  first `n` and final `m` blocks, using `Fin.castAdd m` and `Fin.natAdd n` exactly.
+- `euclideanConfigurationMerge` is its inverse, with exact recovery theorems for both blocks and the
+  second-block offset.
+- `scalarSchwartzRawTensorKernel` is the unbundled function
+  `f(x₁,…,xₙ) g(xₙ₊₁,…,xₙ₊ₘ)`, with exact split and merged evaluation theorems.
+- Hostile probes prove both blocks are retained, the two explicit positive-time bumps give a
+  nonzero kernel value, and zeroing the second factor cannot be ignored.
+- No bundled Schwartz tensor is claimed. Decay estimates and continuous bilinearity remain reusable
+  mathematics debt before the finite sequence product can be defined.
+- No reflection positivity theorem, Euclidean theory, reconstruction, Wightman theory, existence
+  theorem, or mass-gap witness is introduced.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

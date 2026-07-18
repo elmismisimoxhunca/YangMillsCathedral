@@ -145,6 +145,8 @@ import YangMills.Euclidean.SchwingerOrderedTestSpace
 import YangMills.Euclidean.SchwingerOrderedTestSpaceProbes
 import YangMills.Euclidean.SchwingerTestSequence
 import YangMills.Euclidean.SchwingerTestSequenceProbes
+import YangMills.Euclidean.SchwingerConfigurationConcatenation
+import YangMills.Euclidean.SchwingerConfigurationConcatenationProbes
 import YangMills.Audit
 
 /-!
