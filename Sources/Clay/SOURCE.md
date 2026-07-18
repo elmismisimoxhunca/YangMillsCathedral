@@ -63,9 +63,9 @@ authoritative sources. They must not be silently attributed verbatim to Clay.
 The current classical layer uses the conventional `1/2 * sum_ij` contraction in Mathlib's chosen
 orthonormal basis for an explicitly supplied smooth Riemannian metric. A reusable canonical-tensor
 theorem now proves basis independence for arbitrary bilinear maps and explicit bilinear codomain
-pairings. The exact adjoint-fiber pairing is now packaged bilinearly; the degree-two dependent
-adjoint-valued curvature adapter and identification with a general manifold Hodge star remain
-pending. The current action
+pairings. The exact adjoint-fiber pairing is packaged bilinearly and an exact generic degree-two
+alternating-map adapter is available; applying it to the dependent adjoint-valued curvature and
+identifying the result with a general manifold Hodge star remain pending. The current action
 retains the outer coefficient `(4 * g^2)⁻¹`, requires strictly positive `g`, and integrates only when
 the exact curvature scalar is integrable against an explicitly designated Borel measure. That
 measure is not called Riemannian volume without a future compatibility theorem.

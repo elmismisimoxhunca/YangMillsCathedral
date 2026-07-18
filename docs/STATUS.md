@@ -1089,8 +1089,24 @@ Verified:
   `AdjointBundle.fiberPairing`; no replacement pairing or global inner-product instance appears.
 - Hostile probes reject coordinate replacement, pairing-value replacement, and failure of
   additivity in the packaged first argument.
-- This supplies the codomain-pairing prerequisite for canonical tensor contraction. The exact
-  degree-two form-to-bilinear adapter remains pending.
+- This supplies the codomain-pairing prerequisite for canonical tensor contraction. The form
+  adapter was left to the next reusable mathematics stone.
+
+## 2026-07-17 — sixty-third mathematical stone: degree-two bilinear adapter
+
+Verified:
+
+- `Mathematics.alternatingMapFinZeroEval` evaluates the unique empty input family, and
+  `alternatingMapFinOneToLinear` uses it after one exact curry.
+- `alternatingMapFinTwoToBilinear` curries a `Fin 2` alternating map twice into an iterated linear
+  map, with `alternatingMapFinTwoToBilinear_apply` proving exact evaluation at `![x, y]`.
+- `continuousAlternatingMapFinTwoToBilinear` forgets only continuity packaging and retains the exact
+  value of every continuous degree-two alternating map.
+- Hostile probes reject algebraic or continuous value replacement and failure of first-argument
+  additivity.
+- This is reusable general mathematics. Applying the adapter with the named local structures on
+  each dependent adjoint fiber and proving equality with the committed chosen contraction remain
+  pending; no Hodge-star or volume claim is made.
 
 Not yet achieved:
 
@@ -1109,9 +1125,10 @@ Not yet achieved:
 - Clay, Hall, Aharony–Seiberg–Tachikawa, and Freed artifacts are pinned. Clay equation (1) now
   anchors the action formula, invariant quadratic form, and chosen orthonormal curvature
   contraction and relative-to-designated-measure action. Generic bilinear contraction is now proved
-  basis-independent and the exact dependent adjoint-fiber pairing is packaged bilinearly, but the
-  degree-two curvature adapter and resulting exact specialization, a general Hodge-star bridge, and
-  metric-volume compatibility remain pending. OS/Wightman, spectral,
+  basis-independent, the exact dependent adjoint-fiber pairing is packaged bilinearly, and the
+  generic degree-two adapter is available. Its local dependent-curvature application and resulting
+  exact specialization, a general Hodge-star bridge, and metric-volume compatibility remain
+  pending. OS/Wightman, spectral,
   observable, and lattice sources remain to
   be independently acquired and verified before their corresponding declarations become canonical.
 

@@ -84,8 +84,9 @@ committed before higher layers depend on it.
 - [x] Prove a reusable canonical-tensor theorem making bilinear quadratic contraction independent
   of the chosen orthonormal basis.
 - [x] Package the exact quotient-coherent adjoint-fiber pairing as a bilinear map.
-- [ ] Package degree-two adjoint-valued forms as exact bilinear maps and connect the curvature
-  contraction to the canonical-tensor theorem.
+- [x] Prove an exact degree-two alternating-map-to-bilinear adapter.
+- [ ] Apply the adapter in each dependent adjoint fiber and connect the exact curvature contraction
+  to the canonical-tensor theorem.
 - [ ] Connect the resulting canonical contraction to a general Hodge-star interface.
 - [x] Define and probe the integrable Euclidean action relative to a designated Borel measure and
   positive coupling, with Clay's outer normalization explicit.
