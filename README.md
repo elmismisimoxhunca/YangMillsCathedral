@@ -207,7 +207,10 @@ its transported additive/module operations, enabling a continuous multilinear ca
 derivative slots and two alternating curvature slots. Its order-zero value is exactly the same
 smoothly descended curvature. An uninhabited degree-zero adjoint-section derivative interface now
 uses Mathlib's intrinsic additivity/Leibniz carrier and requires the exact same-connection local
-formula `dσ(X) + [A(X),σ]` in every designated chart. It is not yet extended to adjoint-valued forms
+formula `dσ(X) + [A(X),σ]` in every designated chart. A separate strengthening requires Mathlib's
+`C∞` covariant-derivative regularity and derives a smooth derivative-bundle section from every
+smooth adjoint section; this is required data, not a construction from the formula. It is not yet
+extended to adjoint-valued forms
 or positive curvature-tensor orders. This is not a general curvature-polynomial/covariant-derivative language or a canonical injective quantization
 map. Coefficient singularities are not yet matched to
 asymptotic freedom or perturbative renormalization. A separate same-family stress-tensor checker

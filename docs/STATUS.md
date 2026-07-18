@@ -2453,9 +2453,27 @@ Implemented and verified:
 - Hostile probes expose the unfolded plus sign, block omission of a nonzero bracket correction,
   reject substitution of a connection with a different local expression, and reject an unrelated
   coordinate derivative value.
-- This is an uninhabited degree-zero section-derivative interface. No smooth-output theorem,
-  adjoint-valued-form derivative, positive curvature-tensor order, recursive tower, Bianchi theorem,
-  polynomial interpretation, theory, or mass gap is constructed.
+- This is an uninhabited degree-zero section-derivative interface. No adjoint-valued-form derivative,
+  positive curvature-tensor order, recursive tower, Bianchi theorem, polynomial interpretation,
+  theory, or mass gap is constructed.
+
+## 2026-07-18 — one-hundred-thirty-fourth stone: smooth adjoint derivative output
+
+Implemented and verified:
+
+- `AdjointBundle.CovariantDerivative.IsSmooth` specializes Mathlib's
+  `ContMDiffCovariantDerivative` at `C∞` to the exact named dependent adjoint vector bundle.
+- `SmoothPrincipalConnectionAdjointCovariantDerivativeData` strengthens the exact same-connection
+  `d + ad(A)` datum with that standard regularity requirement.
+- `smooth_output` derives an exact `C∞` total-space section of the derivative bundle from every
+  exact smooth adjoint section, including the `∞ + 1 = ∞` input regularity reconciliation.
+- The smooth wrapper retains the identical principal connection, derivative carrier, and local
+  coordinate formula rather than supplying a disconnected smooth operator.
+- A hostile probe rejects packaging a nonsmooth derivative as smooth data while preserving the exact
+  underlying same-connection datum.
+- This regularity is required acceptance data and is not derived from the local formula alone. No
+  derivative inhabitant, adjoint-valued-form extension, positive curvature-tensor order, Bianchi
+  theorem, polynomial interpretation, theory, or mass gap is constructed.
 
 Not yet achieved:
 
