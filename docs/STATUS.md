@@ -2411,6 +2411,28 @@ Implemented and verified:
 - Arbitrary curvature polynomials, covariant derivatives, operator mixing, quantization, a theory,
   and a mass gap remain unconstructed.
 
+## 2026-07-18 — one-hundred-thirty-second stone: curvature-derivative tensor carrier
+
+Implemented and verified:
+
+- `AdjointBundle.fiberIsTopologicalAddGroup` and `fiberContinuousSMul` prove that the exact
+  quotient-derived dependent-fiber topology is compatible with its transported addition, negation,
+  and real scalar multiplication.
+- The proofs use the exact selected quotient coordinate as a continuous linear equivalence and
+  introduce only named locally installed structures, not global fiber instances.
+- `AdjointBundle.CurvatureDerivativeTensor n` has `n` continuous multilinear derivative slots and
+  retains two continuous alternating curvature slots valued in the exact dependent adjoint fiber.
+- `toCurvatureDerivativeTensorZero` embeds any exact adjoint-valued two-form in the unique
+  zero-derivative-slot carrier.
+- `PrincipalConnectionData.curvatureDerivativeTensorZero` specializes that embedding definitionally
+  to the same smoothly descended curvature indexed by the exact connection, exterior derivative,
+  and structural certificate.
+- Hostile probes expose joint operation continuity, coordinate coherence, both derivative- and
+  curvature-slot continuity, repeated-curvature-slot vanishing, exact zero-order evaluation,
+  empty-argument uniqueness, and rejection of an unrelated zero-order curvature anchor.
+- No positive-order tensor, intrinsic covariant derivative, recursive tower law, Bianchi theorem,
+  polynomial grammar, quantum interpretation, theory, or mass gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

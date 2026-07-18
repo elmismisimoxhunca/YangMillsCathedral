@@ -115,8 +115,12 @@ committed before higher layers depend on it.
   the classical trace identity is not silently promoted to the quantum theory.
 - [x] Tie a basic nonzero/non-unit quantum `F²` label to the exact canonical curvature density and
   exact classical/quantum spacetime dimension, without asserting a global injective quantization map.
-- [ ] Extend the basic bridge to interpreted gauge-invariant local curvature polynomials and
-  covariant derivatives, including renormalized operator mixing.
+- [x] Prove topological-module compatibility for every exact dependent adjoint fiber and define the
+  continuous derivative-slot/alternating-curvature tensor carrier, with order zero locked to the
+  exact smoothly descended curvature.
+- [ ] Construct the same-connection intrinsic covariant derivative giving positive tensor orders,
+  derive Bianchi rather than storing it as a certificate, and extend the basic bridge to interpreted
+  gauge-invariant local curvature polynomials, including renormalized operator mixing.
 - [ ] Separate local observables from nonlocal Wilson observables.
 - [ ] Add nontrivial positive examples and hostile disconnected-curvature probes.
 
