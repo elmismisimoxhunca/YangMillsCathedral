@@ -166,9 +166,10 @@ committed before higher layers depend on it.
   topology and covering/kernel laws.
 - [x] Define a normalized Poincaré-invariant vacuum whose full invariant subspace is exactly one
   complex line, tied to the same representation and derived translations.
-- [ ] Define common field domain, Wightman fields, covariance, locality, cyclicity, and forward-cone
-  spectral data independently.
-- [ ] Define common invariant domains and operator-valued tempered distributions.
+- [x] Define one dense common domain containing the same vacuum and invariant under the same
+  Poincaré representation, with exact restricted unitaries.
+- [ ] Define Wightman fields and adjoints on that domain, tempered matrix elements, covariance,
+  locality, cyclicity, and forward-cone spectral data independently.
 - [ ] Add explicit OS reconstruction and correlator coherence.
 
 ## Phase 5 — translations and mass gap

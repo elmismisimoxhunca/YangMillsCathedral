@@ -172,7 +172,9 @@ and nontrivial translation probes. A weaker topological-group lift/pre-cover int
 strongly continuous unitary representation on a separable Hilbert carrier are packaged without
 inhabitants; physical translations are derived from that same representation. A genuine topological covering projection remains pending. A normalized vacuum is
 now tied to that same representation, with the complete invariant subspace required to be its single
-complex line. Fields, cyclicity, spectrum, and the remaining Wightman theory are not yet packaged. No concrete gauge-group, connection, invariant-inner-product, curvature, or
+complex line. One dense common submodule contains that vacuum and is invariant under the same
+representation, whose unitaries restrict exactly to it. Fields, cyclicity, spectrum, and the
+remaining Wightman theory are not yet packaged. No concrete gauge-group, connection, invariant-inner-product, curvature, or
 structure-certificate witness,
 symmetry group, reconstruction bridge, quantum-theory witness, Yang–Mills existence claim, or
 mass-gap claim is present.

@@ -1779,6 +1779,21 @@ Implemented and verified:
 - No vacuum inhabitant is constructed. Field cyclicity, common domain, spectral vacuum projection,
   reconstruction, existence, and mass gap remain pending.
 
+## 2026-07-18 — one-hundredth stone: dense common invariant domain
+
+Implemented and verified:
+
+- `Minkowski.CommonInvariantDomainData` packages one complex submodule of the same physical Hilbert
+  carrier, dense in that carrier, containing the exact selected vacuum, and invariant under the same
+  strongly continuous unitary representation.
+- The selected vacuum is bundled as an actual nonzero domain vector.
+- Every physical unitary restricts to a linear isometric equivalence of the exact common domain; its
+  inverse and exact underlying action are proved, and it fixes the domain vacuum.
+- Hostile probes reject the bottom submodule and any physical unitary image outside the domain while
+  retaining density and the same vacuum.
+- No common-domain inhabitant, field, adjoint, tempered matrix element, cyclicity theorem, spectrum,
+  reconstruction, existence theorem, or mass gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

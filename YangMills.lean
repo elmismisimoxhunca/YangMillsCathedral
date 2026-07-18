@@ -189,6 +189,8 @@ import YangMills.Minkowski.PoincareCoverRepresentation
 import YangMills.Minkowski.PoincareCoverRepresentationProbes
 import YangMills.Minkowski.Vacuum
 import YangMills.Minkowski.VacuumProbes
+import YangMills.Minkowski.CommonInvariantDomain
+import YangMills.Minkowski.CommonInvariantDomainProbes
 import YangMills.Audit
 
 /-!
