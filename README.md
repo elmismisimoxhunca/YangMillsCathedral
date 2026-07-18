@@ -130,7 +130,8 @@ theorem or metric volume), are implemented. Scalar positive-arity tempered Schwi
 normalized zero-point data, and a concrete fixed-order factorial-growth estimate over Mathlib
 Schwartz seminorms are also implemented as preliminary regularity infrastructure; they are not yet
 identified with OS-II `(E0′)`. Exact positive-arity Schwartz permutation pullback and scalar
-Schwinger symmetry `(E3)` are implemented separately, while `(E1)`, `(E2)`, and `(E4)` remain
+Schwinger symmetry `(E3)` are implemented separately. Proper-Euclidean rigid motions, their exact
+Schwartz pullback, and scalar covariance `(E1)` are also implemented, while `(E2)` and `(E4)` remain
 absent. No
 concrete gauge-group, connection, invariant-inner-product, curvature, or structure-certificate witness,
 symmetry group, reconstruction bridge, quantum-theory witness, Yang–Mills existence claim, or

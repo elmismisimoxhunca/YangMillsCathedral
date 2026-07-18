@@ -110,6 +110,7 @@ committed before higher layers depend on it.
 - [x] Define normalized scalar tempered Schwinger families and explicit Mathlib fixed-order
   factorial-growth infrastructure, with the OS test-space/seminorm equivalence left visible.
 - [x] Define exact positive-arity Schwartz pullback and scalar Schwinger permutation symmetry `(E3)`.
+- [x] Define proper-Euclidean rigid motions, exact Schwartz pullback, and scalar covariance `(E1)`.
 - [ ] Prove the source-facing OS-II `(E0′)` bridge and define complete Euclidean/Schwinger data.
 - [ ] Define proper-orthochronous Poincaré and Wightman data independently.
 - [ ] Define common invariant domains and operator-valued tempered distributions.

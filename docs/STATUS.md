@@ -1266,6 +1266,25 @@ Implemented and verified:
 - This stone introduces no `(E1)`, `(E2)`, `(E4)`, source-norm bridge, reconstruction, Euclidean
   theory, Wightman theory, existence theorem, or mass-gap witness.
 
+## 2026-07-18 — seventy-third stone: scalar Schwinger proper-Euclidean covariance
+
+Implemented and verified:
+
+- `EuclideanProperRigidMotion` separates an orthogonal linear part, its determinant-one proof, and a
+  translation, matching OS-I's proper Euclidean group rather than silently strengthening to `O(d)`.
+- Identity and pure-translation motions are available without asserting any Schwinger-family
+  inhabitant.
+- `euclideanNPointRotation` and `euclideanNPointTranslation` act diagonally on the exact positive-
+  arity configuration space.
+- `pullbackScalarSchwartzTestFunctionByProperRigidMotion` is a continuous complex-linear Schwartz
+  pullback with proved pointwise formula `f (R xᵢ + a)`.
+- `ScalarSchwingerEuclideanCovariance` states `(E1)` for the same normalized scalar distribution
+  family and exact arity.
+- Hostile probes reject determinant `-1`, exhibit a genuinely nonzero translation in every supported
+  dimension, verify its exact pullback wiring, and reject covariance of an unrelated value.
+- No reflection positivity `(E2)`, clustering `(E4)`, source-norm bridge, reconstruction, Euclidean
+  theory, Wightman theory, existence theorem, or mass-gap witness is introduced.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
@@ -1289,8 +1308,8 @@ Not yet achieved:
   bridge and metric-volume compatibility remain pending. OS-I, correcting OS-II, Wightman 1956,
   and Streater–Wightman source artifacts are now acquired and verified. Scalar tempered Schwinger
   families and fixed-order factorial-growth infrastructure are implemented, but the OS source-norm
-  bridge, `(E1)`, `(E2)`, `(E4)`, and reconstruction remain unimplemented; scalar permutation
-  symmetry `(E3)` is now explicit. Wilson and Osterwalder–Seiler
+  bridge, `(E2)`, `(E4)`, and reconstruction remain unimplemented; scalar proper-Euclidean
+  covariance `(E1)` and permutation symmetry `(E3)` are now explicit. Wilson and Osterwalder–Seiler
   lattice sources are likewise pinned,
   but lattice declarations and all continuum bridges remain unimplemented. Wilson's OPE paper and
   the Gross–Wilczek/Politzer asymptotic-freedom papers are pinned, but their typed observable and

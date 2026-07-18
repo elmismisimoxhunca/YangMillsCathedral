@@ -135,6 +135,8 @@ import YangMills.Euclidean.SchwingerRegularity
 import YangMills.Euclidean.SchwingerRegularityProbes
 import YangMills.Euclidean.SchwingerSymmetry
 import YangMills.Euclidean.SchwingerSymmetryProbes
+import YangMills.Euclidean.SchwingerCovariance
+import YangMills.Euclidean.SchwingerCovarianceProbes
 import YangMills.Audit
 
 /-!
