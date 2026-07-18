@@ -2203,8 +2203,33 @@ Implemented and verified:
 - Hostile probes expose forward/backward singleton support, nonempty plaquette support, outside-
   support insensitivity, actual measurability/integrability, and a concrete two-site open path.
 - No bounded class-observable datum, potential-measurability datum, Gibbs datum, evaluated
-  expectation, area law, reflection positivity, continuum interpretation, theory, or mass gap is
-  constructed.
+  expectation, area law, reflection-positivity datum, continuum interpretation, theory, or mass gap
+  is constructed.
+
+## 2026-07-18 — one-hundred-twenty-third stone: finite lattice time reflection and positivity checker
+
+Implemented and verified:
+
+- `FiniteLatticeTimeReflectionGeometry` selects a time coordinate and an even periodic extent with
+  two separated reflection planes.
+- Vertex reflection `t ↦ -t` is involutive; forward time shifts reflect to backward shifts while
+  spatial shifts commute with reflection.
+- `timeReflectGaugeField` reads time-oriented links by inverse reflected-endpoint links and spatial
+  links at reflected bases. It is measurable, involutive, and exactly covariant with reflected local
+  gauge transformations.
+- Strict positive-time vertices and links lie between the two finite-periodic reflection planes;
+  six-site probes construct actual positive time and spatial links and show reflection is nonidentity.
+- `FiniteSupportedGaugeInvariantLatticeObservable` records a designated sufficient syntactic
+  support, bounded measurability, and local gauge invariance; no semantic minimality is claimed.
+- `finiteLatticeReflectionSquareObservable` is proved integrable before
+  `finiteLatticeReflectionPairing` takes the same specialized Gibbs expectation.
+- `FiniteLatticeReflectionPositivityData` requires reflection invariance and real nonnegative
+  pairings for all designated positive-supported tests, plus a test that genuinely changes when one
+  listed strict-positive link alone is changed, blocking fake support on constants.
+- This checker is definitionally separate from continuum OS `(E2)` and requires a future explicit
+  continuum bridge.
+- No reflection-positivity datum, transfer matrix, Hamiltonian, continuum limit, theory, or mass gap
+  is constructed.
 
 Not yet achieved:
 

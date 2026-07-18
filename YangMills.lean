@@ -230,6 +230,10 @@ import YangMills.Lattice.FinitePeriodicGaugeField
 import YangMills.Lattice.FinitePeriodicGaugeFieldProbes
 import YangMills.Lattice.FiniteGibbsMeasure
 import YangMills.Lattice.FiniteGibbsMeasureProbes
+import YangMills.Lattice.FiniteLatticeReflectionPositivity
+import YangMills.Lattice.FiniteLatticeReflectionPositivityProbes
+import YangMills.Lattice.FiniteLatticeTimeReflection
+import YangMills.Lattice.FiniteLatticeTimeReflectionProbes
 import YangMills.Lattice.FiniteProductHaarMeasure
 import YangMills.Lattice.FiniteProductHaarGibbsMeasure
 import YangMills.Lattice.FiniteProductHaarMeasureProbes

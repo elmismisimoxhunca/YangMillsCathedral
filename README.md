@@ -221,16 +221,18 @@ positive links, cyclic shifts, endpoint gauge transformations, plaquette holonom
 nonnegative conjugation- and inversion-invariant nontrivial Wilson-type potential with a strictly
 positive coefficient. Gauge invariance, plaquette orientation independence, zero identity action,
 and dimension-one absence of plaquettes are proved. Signed paths, endpoint-covariant holonomy, and
-Wilson-loop observables built from supplied nonconstant conjugation-class functions are explicit; the elementary four-step path is
-proved closed with holonomy equal to the plaquette. A finite-cutoff Gibbs acceptance interface now
+Wilson-loop observables built from supplied nonconstant conjugation-class functions are explicit;
+the elementary four-step path is proved closed with holonomy equal to the plaquette. A finite-cutoff Gibbs acceptance interface now
 constructs the exact finite product of probability-normalized compact-group Haar measure and
 proves its link marginals and local gauge invariance. For a measurable positive Boltzmann density,
 partition positivity/finiteness, Gibbs normalization, and Gibbs gauge invariance are derived on that
 same reference chain. Signed paths carry exact finite positive-link supports; bounded measurable
 class observables are proved support-local and integrable, and their closed-loop expectation is
 defined only from supplied product-Haar Gibbs data. No potential-measurability datum, Gibbs datum,
-or evaluated expectation is constructed. No lattice positivity, continuum limit, or identification with the
-continuum action/PVM is made.
+or evaluated expectation is constructed. An explicit even-periodic time reflection handles time-link
+orientation reversal and supports a separate finite-cutoff Osterwalder–Seiler positivity checker with
+a mandatory nonzero positive-support test. No positivity datum, continuum limit, or identification
+with continuum OS data or the continuum action/PVM is made.
 
 Primary OS-I and correcting OS-II article scans, Wightman's 1956 paper, and the corrected Princeton
 edition of Streater–Wightman are hash-pinned with exact text extractions. Load-bearing OS-II and

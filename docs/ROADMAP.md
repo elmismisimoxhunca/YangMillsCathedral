@@ -238,7 +238,10 @@ committed before higher layers depend on it.
   observables as support-local, gauge-invariant, genuinely integrable closed-loop expectations
   conditional on the same product-Haar Gibbs datum.
 - [ ] Define scaling, renormalization, interpreted-observable and continuum-limit bridges.
-- [ ] Keep finite-cutoff reflection positivity distinct from continuum OS data.
+- [x] Define explicit even-periodic lattice time reflection and a finite-cutoff reflection-positivity
+  checker over designated sufficient positive-link support with an actual-dependence witness and the same product-Haar Gibbs datum, with nonzero-domain
+  hostile evidence; keep it definitionally distinct from continuum OS `(E2)`. No positivity datum is
+  constructed.
 
 ## Phase 7 — dimension contracts and final checker
 
