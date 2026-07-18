@@ -123,7 +123,10 @@ committed before higher layers depend on it.
   algebraic bilinearity.
 - [x] Pull the bundled tensor through exact configuration splitting and prove exact evaluation and
   algebraic bilinearity on concatenated Euclidean configurations.
-- [ ] Package any needed continuous bilinear topology before defining the sequence product.
+- [x] Define the exact finite per-arity convolution, including zero/one endpoint formulas and the
+  nonzero internal singleton-bump split.
+- [ ] Prove finite support for the convolution family, package the output sequence, and install any
+  needed continuous bilinear topology.
 - [ ] Establish the strict subspace's embedding/sufficiency/density/completion relation to OS-I's
   derivative-vanishing ordered spaces; install the per-arity induced and finite-sequence direct-sum
   topologies while keeping the positive-half-space completed tensor product distinct; construct the

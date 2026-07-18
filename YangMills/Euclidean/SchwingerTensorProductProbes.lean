@@ -27,17 +27,15 @@ theorem bundled_tensor_exact_raw_kernel
 @[simp] theorem bundled_tensor_zero_left
     (d : EuclideanDimension) {n m : ℕ} (g : ScalarSchwartzTestFunction d m) :
     scalarSchwartzTensorProductOnConfiguration d
-      (0 : ScalarSchwartzTestFunction d n) g = 0 := by
-  ext x
-  simp [scalarSchwartzRawTensorKernel]
+      (0 : ScalarSchwartzTestFunction d n) g = 0 :=
+  scalarSchwartzTensorProductOnConfiguration_zero_left d g
 
 /-- Zeroing the second factor zeroes the bundled tensor. -/
 @[simp] theorem bundled_tensor_zero_right
     (d : EuclideanDimension) {n m : ℕ} (f : ScalarSchwartzTestFunction d n) :
     scalarSchwartzTensorProductOnConfiguration d f
-      (0 : ScalarSchwartzTestFunction d m) = 0 := by
-  ext x
-  simp [scalarSchwartzRawTensorKernel]
+      (0 : ScalarSchwartzTestFunction d m) = 0 :=
+  scalarSchwartzTensorProductOnConfiguration_zero_right d f
 
 /-- The tensor of two explicit nonzero bumps remains nonzero after exact configuration pullback. -/
 theorem bundled_positiveTimeBump_tensor_ne_zero

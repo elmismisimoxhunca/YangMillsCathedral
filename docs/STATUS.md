@@ -1438,6 +1438,25 @@ Implemented and verified:
 - No reflection positivity theorem, Euclidean theory, reconstruction, Wightman theory, existence
   theorem, or mass-gap witness is introduced.
 
+## 2026-07-18 — eighty-second stone: per-arity Schwinger convolution
+
+Implemented and verified:
+
+- `castScalarSchwartzArity` transports bundled tests only along exact natural-arity equality.
+- `schwingerSequenceConvolutionComponent` implements
+  `(f × g)ₙ = Σ_{r=0}^n f_{n-r} × g_r` as a finite sum of actual `n`-point Schwartz tests.
+- The `Fin (N+1)` index supplies `r ≤ N`; the only cast is the proved equality `N-r+r=N`.
+- At arity zero, convolution is the zero-point scalar product. At arity one, both endpoint terms are
+  independently exposed.
+- The convolution of two singleton arity-one bump sequences at arity two is exactly the nonzero
+  bundled two-bump tensor.
+- Hostile probes retain zero and one formulas, the internal split, nonvanishing, and rejection of
+  zero replacement.
+- Finite support of the convolution family, output-sequence packaging, direct-sum topology,
+  reflected involution, and `(E2)` remain pending.
+- No reflection positivity theorem, Euclidean theory, reconstruction, Wightman theory, existence
+  theorem, or mass-gap witness is introduced.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

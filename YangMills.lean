@@ -153,6 +153,8 @@ import YangMills.Euclidean.SchwingerTensorProduct
 import YangMills.Euclidean.SchwingerTensorProductProbes
 import YangMills.Euclidean.SchwingerExtendedSequence
 import YangMills.Euclidean.SchwingerExtendedSequenceProbes
+import YangMills.Euclidean.SchwingerConvolutionComponent
+import YangMills.Euclidean.SchwingerConvolutionComponentProbes
 import YangMills.Audit
 
 /-!

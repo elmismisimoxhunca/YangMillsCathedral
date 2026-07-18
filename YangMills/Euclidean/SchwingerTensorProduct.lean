@@ -47,6 +47,22 @@ noncomputable def scalarSchwartzTensorProductOnConfiguration
   rw [scalarSchwartzTensorProductOnConfiguration_apply]
   exact scalarSchwartzRawTensorKernel_merge d f g x y
 
+/-- Zeroing the first factor zeroes the concatenated tensor. -/
+@[simp] theorem scalarSchwartzTensorProductOnConfiguration_zero_left
+    (d : EuclideanDimension) {n m : ℕ} (g : ScalarSchwartzTestFunction d m) :
+    scalarSchwartzTensorProductOnConfiguration d
+      (0 : ScalarSchwartzTestFunction d n) g = 0 := by
+  ext x
+  simp [scalarSchwartzRawTensorKernel]
+
+/-- Zeroing the second factor zeroes the concatenated tensor. -/
+@[simp] theorem scalarSchwartzTensorProductOnConfiguration_zero_right
+    (d : EuclideanDimension) {n m : ℕ} (f : ScalarSchwartzTestFunction d n) :
+    scalarSchwartzTensorProductOnConfiguration d f
+      (0 : ScalarSchwartzTestFunction d m) = 0 := by
+  ext x
+  simp [scalarSchwartzRawTensorKernel]
+
 /-- The concatenated tensor is additive in its first factor. -/
 theorem scalarSchwartzTensorProductOnConfiguration_add_left
     (d : EuclideanDimension) {n m : ℕ} (f₁ f₂ : ScalarSchwartzTestFunction d n)
