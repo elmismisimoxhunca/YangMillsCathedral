@@ -1595,6 +1595,26 @@ Implemented and verified:
 - No source-facing `(E2)`, Euclidean theory, reconstruction, Wightman theory, existence theorem, or
   mass-gap witness is introduced.
 
+## 2026-07-18 — ninetieth stone: continuous linear finite-stage generators
+
+Implemented and verified:
+
+- The named finite-stage final topology, additive group, and complex module are installed locally
+  inside a dedicated module; no global instance is exported.
+- `scalarFiniteSchwartzStageToSequenceLinearMap` proves every exact finite-stage extension is complex
+  linear for the named module.
+- `scalarFiniteSchwartzStageToSequenceContinuousLinearMap` bundles the already proved stage
+  continuity with that exact linear map.
+- Exact components and support containment are preserved by the bundled map.
+- Hostile probes exercise named addition and scalar wiring, off-stage vanishing, continuity, support
+  escape rejection, and recovery of the explicit nonzero bump through an actual continuous linear
+  stage map.
+- This establishes generating-stage compatibility only. Joint sequence addition/scalar continuity,
+  a topological vector-space package, OS-I direct-sum identification, and convolution continuity
+  remain pending.
+- No source-facing `(E2)`, Euclidean theory, reconstruction, Wightman theory, existence theorem, or
+  mass-gap witness is introduced.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

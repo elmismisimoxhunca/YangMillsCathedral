@@ -169,6 +169,8 @@ import YangMills.Euclidean.SchwingerFiniteStageTopology
 import YangMills.Euclidean.SchwingerFiniteStageTopologyProbes
 import YangMills.Euclidean.SchwingerFiniteSequenceModule
 import YangMills.Euclidean.SchwingerFiniteSequenceModuleProbes
+import YangMills.Euclidean.SchwingerFiniteStageContinuousLinear
+import YangMills.Euclidean.SchwingerFiniteStageContinuousLinearProbes
 import YangMills.Audit
 
 /-!

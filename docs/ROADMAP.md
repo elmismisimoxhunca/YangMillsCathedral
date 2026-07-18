@@ -131,7 +131,8 @@ committed before higher layers depend on it.
 - [x] Construct the named finite-stage final topology and prove its exact universal property.
 - [x] Construct named, locally installed additive-group and complex-module structures on the exact
   finite sequence carrier.
-- [ ] Prove topological vector-space compatibility, compare the
+- [x] Bundle every generating finite-stage map as a continuous complex-linear map.
+- [ ] Prove joint sequence addition/scalar continuity, compare the
   finite-stage final topology with OS-I's locally convex direct sum, and prove any needed product
   continuity.
 - [x] Construct the exact reverse-conjugate involution on scalar Schwartz components.
