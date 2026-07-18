@@ -197,6 +197,8 @@ import YangMills.Minkowski.WightmanCovariance
 import YangMills.Minkowski.WightmanCovarianceProbes
 import YangMills.Minkowski.WightmanCyclicity
 import YangMills.Minkowski.WightmanCyclicityProbes
+import YangMills.Minkowski.WightmanLocality
+import YangMills.Minkowski.WightmanLocalityProbes
 import YangMills.Audit
 
 /-!

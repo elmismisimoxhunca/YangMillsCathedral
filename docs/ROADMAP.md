@@ -174,7 +174,10 @@ committed before higher layers depend on it.
   the same restricted physical unitaries.
 - [x] Define finite field/adjoint words on the exact domain vacuum and require their Hilbert-space
   span to be dense.
-- [ ] Define locality and forward-cone spectral data independently.
+- [x] Define scalar bosonic locality for field and adjoint using spacelike-separated topological
+  supports, prove nonzero locality test pairs exist in dimensions at least two, and prove dimension
+  one has no spacelike point pair.
+- [ ] Define forward-cone spectral data independently.
 - [ ] Add explicit OS reconstruction and correlator coherence.
 
 ## Phase 5 — translations and mass gap

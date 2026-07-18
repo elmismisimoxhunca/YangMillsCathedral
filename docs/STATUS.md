@@ -1844,6 +1844,24 @@ Implemented and verified:
 - No cyclic field datum inhabitant, locality, spectrum, reconstruction, existence theorem, or mass
   gap is constructed.
 
+## 2026-07-18 — one-hundred-fourth stone: scalar Wightman locality
+
+Implemented and verified:
+
+- `spacelikeSeparatedPointPairSet` uses the exact mostly-minus quadratic form and is proved open.
+- `HaveSpacelikeSeparatedTopologicalSupports` quantifies over the actual topological supports of two
+  Minkowski Schwartz tests and is proved symmetric.
+- Continuity, product neighborhoods, and finite-dimensional smooth bump existence produce two
+  nonzero spacelike-separated tests in every spacetime dimension at least two.
+- `oneDimensional_spacelikeSeparatedPointPairSet_eq_empty` exposes the lower-dimensional boundary:
+  with no spatial coordinate, dimension one has no spacelike point pair.
+- `ScalarWightmanLocalityData` requires scalar bosonic commutation for field-field, field-adjoint,
+  adjoint-field, and adjoint-adjoint pairs on the exact common domain.
+- Hostile probes expose nonzero test pairs in dimensions two and four, all four commutators, and
+  rejection of a disconnected replacement product.
+- No local field datum inhabitant, spectrum, reconstruction, existence theorem, or mass gap is
+  constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

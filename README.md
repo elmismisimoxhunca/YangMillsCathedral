@@ -177,8 +177,10 @@ representation, whose unitaries restrict exactly to it. A scalar field and adjoi
 same domain, with coherent tempered matrix elements and the conjugated-test adjoint relation. The
 exact inverse-affine test pullback and covariance of both field and adjoint under the same restricted
 physical unitaries are packaged. Finite field/adjoint words on the exact vacuum are defined and
-cyclicity requires their Hilbert-space span to be dense. Locality, spectrum, and the remaining
-Wightman theory are not yet packaged. No concrete gauge-group, connection, invariant-inner-product, curvature, or
+cyclicity requires their Hilbert-space span to be dense. Scalar bosonic locality is defined for
+field/adjoint pairs with spacelike-separated topological supports; explicit nonzero test pairs exist
+from dimension two onward, while dimension one has no spacelike point pair. Spectrum and the
+remaining Wightman theory are not yet packaged. No concrete gauge-group, connection, invariant-inner-product, curvature, or
 structure-certificate witness,
 symmetry group, reconstruction bridge, quantum-theory witness, Yang–Mills existence claim, or
 mass-gap claim is present.
