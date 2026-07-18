@@ -66,7 +66,8 @@ structure TemperedLocalObservableFamilyData
   /-- The different label acts nontrivially on the exact domain. -/
   nontrivial_operator_witness :
     ∃ (f : ScalarMinkowskiSchwartzTestFunction d) (φ : D.domain),
-      operator nontrivialLabel f φ ≠ 0
+      operator nontrivialLabel f φ ≠ 0 ∧
+      operator nontrivialLabel f φ ≠ operator unitLabel f φ
 
 /-- Exact full-product weak bilocal distributions for an ordered local-observable family. -/
 structure WeakTemperedBilocalObservableProductData

@@ -2299,8 +2299,26 @@ Implemented and verified:
   probes reject zero contractions, unused metadata and unrelated remainders.
 - Natural powers are an explicit finite-order convention while generic tempered coefficients can
   retain Wilson's fractional/logarithmic singular behavior.
-- No probe, contraction, OPE datum, curvature-polynomial interpretation, family covariance/locality,
-  prescribed asymptotic-freedom singularity, stress tensor, theory, or mass gap is constructed.
+- No probe, contraction, OPE datum, curvature-polynomial interpretation, prescribed
+  asymptotic-freedom singularity, stress tensor, theory, or mass gap is constructed.
+
+## 2026-07-18 — one-hundred-twenty-seventh stone: covariant local-observable family surface
+
+Implemented and verified:
+
+- The local-family nontrivial witness now requires both nonzero action and action genuinely different
+  from the exact unit field, blocking duplicate labels with identical operators.
+- `CovariantLocalObservableFamilyData` adds an involutive label adjoint fixing the unit and an exact
+  conjugated-test common-domain adjoint relation.
+- Every label transforms with the same Poincaré lift projection, restricted domain unitary and exact
+  inverse-affine scalar test pullback already used by the scalar Wightman field.
+- Every ordered label pair commutes on the same domain for spacelike-separated closed topological
+  test supports.
+- Hostile probes force covariance on the nontrivial label, two-way adjoint closure, the same exact
+  adjoint matrix-element chain and all-label locality; dimensions at least two exercise locality on
+  explicit nonzero separated tests.
+- No local-observable family datum, curvature-polynomial/gauge interpretation, family cyclicity,
+  prescribed OPE singularity, stress tensor, theory, or mass gap is constructed.
 
 Not yet achieved:
 

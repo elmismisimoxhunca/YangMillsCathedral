@@ -98,7 +98,8 @@ committed before higher layers depend on it.
 - [x] Pin and visually verify the independent Gross–Wilczek and Politzer asymptotic-freedom papers.
 - [x] Define a prerequisite same-domain family of local operator-valued tempered distributions and
   exact full-product weak bilocal distributions with unit/nonzero hostile evidence and locked
-  operator order; no curvature interpretation is claimed.
+  operator order; strengthen the same family with exact label adjoints, same-representation scalar
+  Poincaré covariance, and all-label bosonic locality. No curvature interpretation is claimed.
 - [x] Define normalized compact-anchor bilocal diagonal probes with `O(r)` support, an exact
   nondegenerate relative-coefficient/local-field contraction, finite monotone truncations, connected
   full-product remainders, and weak all-order little-`o` asymptotics.

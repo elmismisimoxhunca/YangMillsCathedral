@@ -47,8 +47,18 @@ theorem zero_unit_operator_blocked
 theorem zero_nontrivial_operator_blocked
     (family : TemperedLocalObservableFamilyData D) :
     ∃ (f : ScalarMinkowskiSchwartzTestFunction d) (φ : D.domain),
-      family.operator family.nontrivialLabel f φ ≠ 0 :=
-  family.nontrivial_operator_witness
+      family.operator family.nontrivialLabel f φ ≠ 0 := by
+  rcases family.nontrivial_operator_witness with ⟨f, φ, hnonzero, _⟩
+  exact ⟨f, φ, hnonzero⟩
+
+/-- Distinct labels are witnessed by genuinely different actions, not names alone. -/
+theorem duplicate_unit_operator_label_blocked
+    (family : TemperedLocalObservableFamilyData D) :
+    ∃ (f : ScalarMinkowskiSchwartzTestFunction d) (φ : D.domain),
+      family.operator family.nontrivialLabel f φ ≠
+        family.operator family.unitLabel f φ := by
+  rcases family.nontrivial_operator_witness with ⟨f, φ, _, hdifferent⟩
+  exact ⟨f, φ, hdifferent⟩
 
 /-- Matrix-element distributions are tied to the exact same labeled operator and ordered vectors. -/
 theorem exact_local_matrix_element

@@ -202,6 +202,8 @@ import YangMills.Minkowski.WightmanField
 import YangMills.Minkowski.WightmanFieldProbes
 import YangMills.Minkowski.WightmanCovariance
 import YangMills.Minkowski.WightmanCovarianceProbes
+import YangMills.Minkowski.CovariantLocalObservableFamily
+import YangMills.Minkowski.CovariantLocalObservableFamilyProbes
 import YangMills.Minkowski.WightmanCyclicity
 import YangMills.Minkowski.WightmanCyclicityProbes
 import YangMills.Minkowski.WightmanLocality

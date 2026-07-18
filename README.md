@@ -192,7 +192,10 @@ cyclicity, locality, and forward-cone spectrum are integrated on one exact scala
 field/domain/vacuum/representation chain, while the mass gap remains an additional predicate.
 A prerequisite local-observable family now puts every labeled smeared operator and tempered matrix
 element on the same common domain, fixes the unit field by Lebesgue smearing, and requires full
-bilocal tempered products with exact pure-tensor operator order and nonzero witnesses. Normalized
+bilocal tempered products with exact pure-tensor operator order and nonzero witnesses. The same
+family can be required to close under an involutive label adjoint, transform covariantly under the
+same Poincaré representation/domain chain, and commute for every label pair on spacelike-separated
+supports. Normalized
 compact-first-anchor diagonal probes have linearly scale-controlled support and a canonical
 polynomial Schwartz-seminorm envelope. A generic weak OPE checker carries a designated probe and
 packages `C(x-y) O(x)` relative tempered coefficients, exact coefficient/local-field contraction, finite
