@@ -193,8 +193,10 @@ field/domain/vacuum/representation chain, while the mass gap remains an addition
 Normalized algebraic smeared vacuum correlators are extracted from exact finite field words, with
 one- and two-point operator order locked to the same selected vacuum and field. A separate interface
 requires an actual full-product tempered distribution at every arity and exact coherence on every
-finite pure Schwartz tensor. Tube analyticity, reconstruction, and observable interpretation are
-not yet packaged, and no correlator datum is constructed. No concrete gauge-group, connection, invariant-inner-product, curvature, or
+finite pure Schwartz tensor. The exact-sign open backward tube `ξ - iη`, `η ∈ V₊°`, is constructed
+and proved nonempty in dimensions 1–4, but no holomorphic correlator, boundary value,
+reconstruction, or observable interpretation is yet packaged, and no correlator datum is
+constructed. No concrete gauge-group, connection, invariant-inner-product, curvature, or
 structure-certificate witness,
 symmetry group, reconstruction bridge, quantum-theory witness, Yang–Mills existence claim, or
 mass-gap claim is present.

@@ -212,6 +212,8 @@ import YangMills.Minkowski.WightmanVacuumCorrelators
 import YangMills.Minkowski.WightmanVacuumCorrelatorsProbes
 import YangMills.Minkowski.WightmanJointTemperedCorrelators
 import YangMills.Minkowski.WightmanJointTemperedCorrelatorsProbes
+import YangMills.Minkowski.WightmanTubeGeometry
+import YangMills.Minkowski.WightmanTubeGeometryProbes
 import YangMills.Audit
 
 /-!

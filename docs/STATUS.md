@@ -1977,6 +1977,22 @@ Implemented and verified:
 - No jointly tempered correlator datum, field inhabitant, quantum theory, existence theorem, or
   mass-gap witness is constructed.
 
+## 2026-07-18 — one-hundred-eleventh stone: Wightman backward-tube geometry
+
+Implemented and verified:
+
+- `ComplexifiedSpacetime` remains a complexification of the Minkowski coordinate carrier, not an
+  identification with Euclidean spacetime.
+- `openForwardMomentumCone` uses strict positive time and strict positive mostly-minus invariant
+  square and is proved open.
+- `wightmanBackwardTube` preserves Streater–Wightman's exact `ξ - iη`, `η ∈ V₊°` sign and is proved
+  open at every finite relative-coordinate arity.
+- An explicit negative-imaginary unit-time point proves nonemptiness in all dimensions 1–4,
+  including dimension one.
+- Hostile probes reject zero at positive arity and the reversed positive-imaginary sign.
+- No holomorphic function, polynomial bound, boundary value, continuation, reconstruction,
+  correlator inhabitant, or physical theory is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
