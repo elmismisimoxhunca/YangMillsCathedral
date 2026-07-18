@@ -193,6 +193,8 @@ import YangMills.Minkowski.CommonInvariantDomain
 import YangMills.Minkowski.CommonInvariantDomainProbes
 import YangMills.Minkowski.WightmanField
 import YangMills.Minkowski.WightmanFieldProbes
+import YangMills.Minkowski.WightmanCovariance
+import YangMills.Minkowski.WightmanCovarianceProbes
 import YangMills.Audit
 
 /-!

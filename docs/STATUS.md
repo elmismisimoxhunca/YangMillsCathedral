@@ -1811,6 +1811,22 @@ Implemented and verified:
 - No field datum inhabitant, covariance, locality, cyclicity, spectrum, reconstruction, existence
   theorem, or mass gap is constructed.
 
+## 2026-07-18 — one-hundred-second stone: scalar Wightman covariance
+
+Implemented and verified:
+
+- `Minkowski.pullbackScalarMinkowskiSchwartzTestFunction` constructs the exact source convention
+  `f(Λ⁻¹(x-a))` from a continuous linear Lorentz equivalence and translation pullback.
+- Identity and pure-translation formulas are proved; affine pullback preserves and reflects
+  vanishing.
+- `Minkowski.ScalarWightmanFieldCovarianceData` requires both field and adjoint to transform by
+  conjugation with the exact same restricted physical unitary, projected affine transformation,
+  common domain, and field datum.
+- Hostile probes translate the explicit bump to value one at the translation point, retain its
+  nonvanishing, and derive translation covariance through the same lift-group translation map.
+- No covariance inhabitant, locality, cyclicity, spectrum, reconstruction, existence theorem, or
+  mass gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

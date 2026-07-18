@@ -170,7 +170,9 @@ committed before higher layers depend on it.
   Poincaré representation, with exact restricted unitaries.
 - [x] Define a scalar Wightman field and adjoint preserving that exact domain, with coherent
   tempered matrix elements and the conjugated-test adjoint relation.
-- [ ] Define field covariance, locality, cyclicity, and forward-cone spectral data independently.
+- [x] Define the exact inverse-affine scalar test pullback and covariance of field and adjoint under
+  the same restricted physical unitaries.
+- [ ] Define locality, cyclicity, and forward-cone spectral data independently.
 - [ ] Add explicit OS reconstruction and correlator coherence.
 
 ## Phase 5 — translations and mass gap
