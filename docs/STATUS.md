@@ -1891,6 +1891,21 @@ Implemented and verified:
 - No PVM, spectrum, threshold, quantum theory, existence theorem, or mass gap witness is
   constructed.
 
+## 2026-07-18 — one-hundred-sixth stone: integrated scalar Wightman axiom surface
+
+Implemented and verified:
+
+- `ScalarWightmanAxiomSurfaceData` wires covariance, cyclicity, scalar bosonic locality, and
+  forward-cone joint spectrum to one exact field/common-domain/vacuum/representation chain.
+- `ScalarWightmanAxiomSurfaceData.HasPhysicalMassGap` specializes the optional physical gap
+  predicate to that surface's exact vacuum and PVM rather than adding a gap to the Wightman axioms.
+- Hostile probes expose every exact component, the same-representation SNAG formula, positivity and
+  Hamiltonian consequences of an optional gap, and rejection of a nonpositive optional threshold.
+- Gauge-invariant observable interpretation and Euclidean reconstruction coherence remain explicit
+  downstream obligations.
+- No scalar Wightman surface, PVM, threshold, quantum theory, existence theorem, or mass-gap witness
+  is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

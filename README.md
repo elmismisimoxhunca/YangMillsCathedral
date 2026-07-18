@@ -181,10 +181,13 @@ cyclicity requires their Hilbert-space span to be dense. Scalar bosonic locality
 field/adjoint pairs with spacelike-separated topological supports; explicit nonzero test pairs exist
 from dimension two onward, while dimension one has no spacelike point pair. One normalized,
 strongly countably-additive joint momentum PVM is tied to the exact physical translations by the
-SNAG diagonal Fourier formula, with forward-cone support, exact vacuum-line projection, and a
-physical invariant-mass-gap predicate whose same-PVM Hamiltonian view kills `(0, Δ)` and requires a
-bounded positive-energy nonvacuum excitation, but constructs no threshold or theory. Reconstruction and
-the remaining Wightman coherence are not yet packaged. No concrete gauge-group, connection, invariant-inner-product, curvature, or
+SNAG diagonal Fourier formula and has forward-cone support. A separate physical
+invariant-mass-gap predicate adds the exact vacuum-line projection; its same-PVM Hamiltonian view
+kills `(0, Δ)` and requires a bounded positive-energy nonvacuum excitation, but constructs no
+threshold or theory. Covariance,
+cyclicity, locality, and forward-cone spectrum are integrated on one exact scalar
+field/domain/vacuum/representation chain, while the mass gap remains an additional predicate.
+Reconstruction and observable interpretation are not yet packaged. No concrete gauge-group, connection, invariant-inner-product, curvature, or
 structure-certificate witness,
 symmetry group, reconstruction bridge, quantum-theory witness, Yang–Mills existence claim, or
 mass-gap claim is present.

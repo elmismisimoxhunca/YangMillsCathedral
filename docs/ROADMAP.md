@@ -179,6 +179,8 @@ committed before higher layers depend on it.
   one has no spacelike point pair.
 - [x] Define forward-cone joint spectral data independently and tie it to the exact physical
   translation representation through the SNAG Fourier formula.
+- [x] Integrate covariance, cyclicity, locality, and forward-cone spectrum on one exact scalar
+  field/domain/vacuum/representation chain, while retaining mass gap as an optional predicate.
 - [ ] Add explicit OS reconstruction and correlator coherence.
 
 ## Phase 5 — translations and mass gap

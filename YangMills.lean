@@ -202,6 +202,8 @@ import YangMills.Minkowski.WightmanLocality
 import YangMills.Minkowski.WightmanLocalityProbes
 import YangMills.Minkowski.JointTranslationSpectrum
 import YangMills.Minkowski.JointTranslationSpectrumProbes
+import YangMills.Minkowski.ScalarWightmanAxiomSurface
+import YangMills.Minkowski.ScalarWightmanAxiomSurfaceProbes
 import YangMills.Audit
 
 /-!
