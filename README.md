@@ -203,9 +203,15 @@ Lebesgue anchor tests to identify each full correlator with one relative tempere
 makes that exact distribution the analytic boundary; coherence is required for every normalized
 anchor. The first explicit Euclidean/Minkowski bridge reverses strictly increasing Euclidean point
 order, sends `τ ↦ -iτ`, and proves that every resulting consecutive relative coordinate lands in
-the exact backward tube. Correlator-value continuation, comparison with the source's arbitrary
-polynomial normal form, extended-tube continuation, reconstruction, and observable interpretation
-remain pending, and no analytic or correlator datum is constructed. No concrete gauge-group, connection, invariant-inner-product, curvature, or
+the exact backward tube. A strict-domain continuation interface then equates each Euclidean
+Schwinger distribution on every strict ordered/flat test with the genuinely integrable value of the
+same reverse-Wick analytic function. Nonzero test values are proved to map into the tube and the
+integrand vanishes outside its preimage. Requiring absolute integrability for all such strict
+Schwartz tests strengthens OS-I's initial compact-support formula, and the carrier support itself
+also remains stronger than OS-I: the exact
+source-space comparison, arbitrary-polynomial comparison, extended-tube continuation,
+reconstruction, and observable interpretation remain pending, and no continuation or correlator
+datum is constructed. No concrete gauge-group, connection, invariant-inner-product, curvature, or
 structure-certificate witness,
 symmetry group, reconstruction bridge, quantum-theory witness, Yang–Mills existence claim, or
 mass-gap claim is present.

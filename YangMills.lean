@@ -224,6 +224,8 @@ import YangMills.Minkowski.WightmanRelativeAnalyticCorrelators
 import YangMills.Minkowski.WightmanRelativeAnalyticCorrelatorsProbes
 import YangMills.Reconstruction.ReverseWickRotationGeometry
 import YangMills.Reconstruction.ReverseWickRotationGeometryProbes
+import YangMills.Reconstruction.StrictOrderedWickContinuation
+import YangMills.Reconstruction.StrictOrderedWickContinuationProbes
 import YangMills.Audit
 
 /-!

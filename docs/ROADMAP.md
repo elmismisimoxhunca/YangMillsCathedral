@@ -197,7 +197,9 @@ committed before higher layers depend on it.
 - [ ] Define extended-tube continuation.
 - [x] Define the first explicit Euclidean/Minkowski bridge: reverse strict Euclidean point order,
   Wick-rotate `τ ↦ -iτ`, and prove all consecutive relative coordinates lie in the backward tube.
-- [ ] Add correlator-value continuation and explicit OS reconstruction and correlator coherence.
+- [x] Require exact genuinely integrable Euclidean/Wightman correlator-value continuation on every
+  current strict ordered/flat Mathlib test, using the reverse-Wick analytic function.
+- [ ] Prove the exact OS source-space comparison and add full OS reconstruction and correlator coherence.
 
 ## Phase 5 — translations and mass gap
 

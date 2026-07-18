@@ -2082,6 +2082,29 @@ Implemented and verified:
 - This is geometry only: no Euclidean/Minkowski correlator equality, analytic continuation theorem,
   OS reconstruction, theory inhabitant, or mass-gap witness is constructed.
 
+## 2026-07-18 — one-hundred-seventeenth stone: strict ordered Wick continuation
+
+Implemented and verified:
+
+- `MathlibStrictOrderedScalarWickContinuationData` connects one exact Euclidean Schwinger family to
+  one exact relative analytic Wightman chain.
+- At every positive arity and every current strict positive-time ordered/flat test, the reverse-Wick
+  analytic integrand is required genuinely integrable.
+- The Euclidean tempered-distribution value is exactly that coordinate-Lebesgue/Haar integral of
+  the same polynomially bounded Wightman tube function.
+- Kernel-visible support lemmas prove every nonzero test value maps into the holomorphy tube and the
+  integrand vanishes outside its preimage.
+- OS-I `(5.2)` initially uses compactly supported tests in the noncoincident region; requiring
+  absolute integrability for every potentially noncompact strict Schwartz test is an explicit
+  strengthening. Reversal is justified by the source's analytic permutation symmetry before
+  `(5.1)`, not attributed to `(5.1)` itself.
+- The explicit nonzero arity-one positive-time bump exercises the continuation interface.
+- Hostile probes reject a disconnected continuation value and prevent Mathlib's
+  nonintegrable-zero convention from satisfying coherence silently.
+- The current carrier is stronger than OS-I's printed derivative-vanishing ordered space. No
+  source-carrier density/topology/completion comparison, full distribution equality, Hilbert
+  reconstruction, continuation inhabitant, theory, or mass-gap witness is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
