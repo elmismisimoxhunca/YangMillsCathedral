@@ -68,5 +68,6 @@ with the named dependent-fiber structures, and the resulting exact curvature con
 equal to every orthonormal-basis sum. Identification with a general manifold Hodge star remains
 pending. The current action
 retains the outer coefficient `(4 * g^2)⁻¹`, requires strictly positive `g`, and integrates only when
-the exact curvature scalar is integrable against an explicitly designated Borel measure. That
+the exact curvature scalar is integrable against an explicitly designated Borel measure. The same
+action is proved to integrate the canonical basis-independent curvature scalar. That
 measure is not called Riemannian volume without a future compatibility theorem.

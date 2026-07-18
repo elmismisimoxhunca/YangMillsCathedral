@@ -123,8 +123,8 @@ basis independence of bilinear quadratic contraction without installing a codoma
 instance, an exact degree-two alternating-map-to-bilinear adapter, and a named smooth Euclidean
 metric interface whose pointwise contraction of exact smoothly descended curvature is constructed
 canonically, proved equal to every orthonormal-basis sum, and proved nonnegative, together with an
-integrable real-valued Euclidean action relative to
-an explicitly designated Borel measure and positive coupling (without claiming a general Hodge-star
+integrable real-valued Euclidean action proved to integrate that canonical scalar relative to an
+explicitly designated Borel measure and positive coupling (without claiming a general Hodge-star
 theorem or metric volume), are implemented. No
 concrete gauge-group, connection, invariant-inner-product, curvature, or structure-certificate witness,
 symmetry group, reconstruction bridge, quantum-theory witness, Yang–Mills existence claim, or

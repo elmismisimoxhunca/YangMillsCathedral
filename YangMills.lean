@@ -129,6 +129,8 @@ import YangMills.Classical.EuclideanCanonicalCurvatureContraction
 import YangMills.Classical.EuclideanCanonicalCurvatureContractionProbes
 import YangMills.Classical.EuclideanAction
 import YangMills.Classical.EuclideanActionProbes
+import YangMills.Classical.EuclideanCanonicalAction
+import YangMills.Classical.EuclideanCanonicalActionProbes
 import YangMills.Audit
 
 /-!

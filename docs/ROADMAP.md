@@ -90,6 +90,7 @@ committed before higher layers depend on it.
 - [ ] Connect the resulting canonical contraction to a general Hodge-star interface.
 - [x] Define and probe the integrable Euclidean action relative to a designated Borel measure and
   positive coupling, with Clay's outer normalization explicit.
+- [x] Prove the same action integrates the canonical basis-independent curvature scalar.
 - [ ] Construct metric-volume semantics and prove compatibility with the designated measure.
 - [ ] Interpret gauge-invariant local curvature polynomials and covariant derivatives.
 - [ ] Separate local observables from nonlocal Wilson observables.

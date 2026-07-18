@@ -1126,6 +1126,23 @@ Verified:
 - Basis dependence of the exact pointwise contraction is closed. No general Hodge-star theorem,
   volume form, or metric-induced measure is claimed.
 
+## 2026-07-17 — sixty-fifth mathematical stone: canonical action presentation
+
+Verified:
+
+- `EuclideanActionAnalyticData.canonicalCurvatureDensity_integrable` transports the stored
+  integrability requirement from the chosen contraction to the pointwise-equal canonical curvature
+  scalar against the same designated measure.
+- `euclideanYangMillsActionRelativeToMeasure_eq_canonical` proves the existing action value is
+  exactly the integral of the canonical basis-independent scalar with the same action coefficient
+  and measure.
+- No analytic witness, action value, connection, curvature, pairing, metric, measure, or coupling is
+  replaced by the bridge.
+- Hostile probes reject nonintegrability of the canonical scalar, disagreement with the canonical
+  integral formula, and substitution of an unrelated integrand that changes the weighted value.
+- The measure remains designated Borel data rather than claimed Riemannian volume; no Hodge-star
+  theorem is asserted.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
@@ -1145,7 +1162,8 @@ Not yet achieved:
   contraction and relative-to-designated-measure action. Generic bilinear contraction is now proved
   basis-independent, the exact dependent adjoint-fiber pairing is packaged bilinearly, and the
   generic degree-two adapter is applied to the exact curvature. The resulting pointwise contraction
-  is now basis-independent, but a general Hodge-star bridge and metric-volume compatibility remain
+  is basis-independent and the existing action is proved to integrate it, but a general Hodge-star
+  bridge and metric-volume compatibility remain
   pending. OS/Wightman, spectral,
   observable, and lattice sources remain to
   be independently acquired and verified before their corresponding declarations become canonical.
