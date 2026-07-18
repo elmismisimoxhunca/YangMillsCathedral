@@ -48,8 +48,10 @@ Printed pages and section numbers are authoritative; text lines refer to the ret
   - matrix elements are tempered distributions.
 - Printed p. 99; PDF page 109; extraction lines 4183–4217, axiom `II`: covariance of fields under
   the same Poincaré representation on the common domain.
-- Printed p. 100; PDF page 110; extraction lines 4222–4257, axiom `III`: local (anti)commutativity at
-  spacelike separation on the common domain.
+- Printed p. 100; PDF page 110; extraction lines 4222–4257, axiom `III`:
+  - local (anti)commutativity at spacelike separation on the common domain;
+  - explicitly defines the adjoint field by `φ*(g) = [φ(conj g)]*` (the conjugation bar is visually
+    present in the retained scan although imperfectly represented by text extraction).
 - Printed pp. 100–101; extraction lines 4258–4304: trivial constant fields are explicitly noted and
   a field theory is required to have a vacuum cyclic for polynomials in smeared fields.
 - Printed p. 111; extraction lines 4671–4709: cluster decomposition and the text's threshold

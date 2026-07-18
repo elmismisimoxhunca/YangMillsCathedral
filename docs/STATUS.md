@@ -1794,6 +1794,23 @@ Implemented and verified:
 - No common-domain inhabitant, field, adjoint, tempered matrix element, cyclicity theorem, spectrum,
   reconstruction, existence theorem, or mass gap is constructed.
 
+## 2026-07-18 — one-hundred-first stone: scalar Wightman field on the common domain
+
+Implemented and verified:
+
+- `Minkowski.ScalarMinkowskiSchwartzTestFunction` is the actual complex Schwartz carrier on the
+  independent Minkowski coordinate space; an explicit compactly supported bump has value one at the
+  origin and is nonzero.
+- `Minkowski.ScalarWightmanFieldOnCommonDomainData` packages one scalar field and its adjoint as
+  complex-linear maps into endomorphisms of the exact previously selected common domain.
+- For every ordered domain-vector pair, field and adjoint matrix elements are actual tempered
+  distributions and are coherently equal to the corresponding Hilbert inner products.
+- The adjoint relation uses the conjugated Schwartz test and the same field/domain data.
+- Hostile probes retain the nonzero test, exact domain outputs, coherent bump matrix elements, and
+  reject a disconnected replacement scalar.
+- No field datum inhabitant, covariance, locality, cyclicity, spectrum, reconstruction, existence
+  theorem, or mass gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

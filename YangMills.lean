@@ -191,6 +191,8 @@ import YangMills.Minkowski.Vacuum
 import YangMills.Minkowski.VacuumProbes
 import YangMills.Minkowski.CommonInvariantDomain
 import YangMills.Minkowski.CommonInvariantDomainProbes
+import YangMills.Minkowski.WightmanField
+import YangMills.Minkowski.WightmanFieldProbes
 import YangMills.Audit
 
 /-!

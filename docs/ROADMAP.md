@@ -168,8 +168,9 @@ committed before higher layers depend on it.
   complex line, tied to the same representation and derived translations.
 - [x] Define one dense common domain containing the same vacuum and invariant under the same
   Poincaré representation, with exact restricted unitaries.
-- [ ] Define Wightman fields and adjoints on that domain, tempered matrix elements, covariance,
-  locality, cyclicity, and forward-cone spectral data independently.
+- [x] Define a scalar Wightman field and adjoint preserving that exact domain, with coherent
+  tempered matrix elements and the conjugated-test adjoint relation.
+- [ ] Define field covariance, locality, cyclicity, and forward-cone spectral data independently.
 - [ ] Add explicit OS reconstruction and correlator coherence.
 
 ## Phase 5 — translations and mass gap
