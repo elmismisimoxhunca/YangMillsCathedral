@@ -1396,8 +1396,25 @@ Implemented and verified:
 - Hostile probes independently zero each factor, preserve nonzero paired evaluations, reject
   unrelated pointwise replacement, and exercise both additive laws.
 - The theorem works for arbitrary real normed spaces; it does not rely on finite-dimensionality.
-- Joint continuity as a bilinear map and pullback through the exact Euclidean configuration split
-  remain pending packaging before the finite sequence product.
+- This generic stone does not itself perform the Euclidean pullback; the following stone supplies
+  it. Joint continuity remains pending packaging before the finite sequence product.
+- No reflection positivity theorem, Euclidean theory, reconstruction, Wightman theory, existence
+  theorem, or mass-gap witness is introduced.
+
+## 2026-07-18 — eightieth stone: bundled concatenated Schwinger tensor
+
+Implemented and verified:
+
+- `scalarSchwartzTensorProductOnConfiguration` pulls the generic bundled tensor through the exact
+  continuous configuration split, producing an actual `(n+m)`-point Schwartz test.
+- Its evaluation is proved definitionally equal to `scalarSchwartzRawTensorKernel`; evaluation on an
+  exact merged pair is `f x * g y`.
+- Additivity and scalar compatibility are proved independently in both factors after pullback.
+- Hostile probes connect bundled and raw kernels, independently zero both factors, retain the
+  nonzero two-bump tensor, and exercise additive/scalar laws.
+- No closure under the current globally strict ordered subspace is claimed: cross-block ordering and
+  coincidence conditions require additional hypotheses.
+- Joint continuity and finite sequence convolution/product remain pending before `(E2)`.
 - No reflection positivity theorem, Euclidean theory, reconstruction, Wightman theory, existence
   theorem, or mass-gap witness is introduced.
 

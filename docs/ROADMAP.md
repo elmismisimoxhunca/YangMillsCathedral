@@ -119,8 +119,9 @@ committed before higher layers depend on it.
 - [x] Construct exact continuous configuration split/merge maps and the raw scalar tensor kernel.
 - [x] Prove a reusable generic scalar Schwartz tensor product with explicit decay bounds and
   algebraic bilinearity.
-- [ ] Pull the bundled tensor through exact configuration splitting and package any needed
-  continuous bilinear topology before defining the sequence product.
+- [x] Pull the bundled tensor through exact configuration splitting and prove exact evaluation and
+  algebraic bilinearity on concatenated Euclidean configurations.
+- [ ] Package any needed continuous bilinear topology before defining the sequence product.
 - [ ] Establish the strict subspace's embedding/sufficiency/density/completion relation to OS-I's
   derivative-vanishing ordered spaces; install the per-arity induced and finite-sequence direct-sum
   topologies while keeping the positive-half-space completed tensor product distinct; construct the

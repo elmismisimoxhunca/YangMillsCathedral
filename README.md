@@ -141,8 +141,8 @@ direct-sum topology on finite sequences, the distinct completed tensor product f
 space tests, and the finite sequence product; the algebraic finite-sequence carrier with exact
 nonzero support, exact configuration split/merge, and the raw pointwise tensor kernel are already
 implemented. A reusable generic tensor product is proved Schwartz with explicit decay bounds and
-algebraic bilinearity; its pullback to the exact Euclidean configuration carrier and any required
-joint continuity remain pending. `(E4)` is also absent. No
+algebraic bilinearity, then pulled through the exact Euclidean configuration split with exact raw-
+kernel agreement. Any required joint continuity and the finite sequence convolution remain pending. `(E4)` is also absent. No
 concrete gauge-group, connection, invariant-inner-product, curvature, or structure-certificate witness,
 symmetry group, reconstruction bridge, quantum-theory witness, Yang–Mills existence claim, or
 mass-gap claim is present.
