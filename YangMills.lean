@@ -175,6 +175,8 @@ import YangMills.Euclidean.SchwingerCoordinateInjection
 import YangMills.Euclidean.SchwingerCoordinateInjectionProbes
 import YangMills.Euclidean.SchwingerCoordinateContinuityCriterion
 import YangMills.Euclidean.SchwingerCoordinateContinuityCriterionProbes
+import YangMills.Euclidean.SchwingerTranslation
+import YangMills.Euclidean.SchwingerTranslationProbes
 import YangMills.Audit
 
 /-!

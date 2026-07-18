@@ -158,7 +158,9 @@ continuity remain pending. Exact reverse-conjugation on scalar Schwartz componen
 and kept distinct from Euclidean time reflection. Both operations are lifted to exact finite
 sequences and combined in the source order `Θ f*`. The exact algebraic Schwinger evaluation and
 nonnegative-real form are defined on the current strict Mathlib subdomain, but are deliberately not
-identified with source-facing `(E2)` before the carrier/topology comparison. `(E4)` is also absent. No
+identified with source-facing `(E2)` before the carrier/topology comparison. Exact simultaneous
+Euclidean translations and their finite-sequence lift are available as algebraic clustering
+infrastructure, but the nonzero spatial ray and `(E4)` limit remain absent. No
 concrete gauge-group, connection, invariant-inner-product, curvature, or structure-certificate witness,
 symmetry group, reconstruction bridge, quantum-theory witness, Yang–Mills existence claim, or
 mass-gap claim is present.

@@ -1653,6 +1653,23 @@ Implemented and verified:
   pending. No source-facing `(E2)`, reconstruction, existence theorem, or mass-gap witness is
   introduced.
 
+## 2026-07-18 — ninety-third stone: exact Schwinger translations
+
+Implemented and verified:
+
+- `translateScalarSchwartzTestFunction` uses the exact simultaneous pullback convention
+  `f(x₁+a,…,xₙ+a)` through the existing proper-Euclidean translation machinery.
+- Translation by `-a` inverts translation by `a`; translations compose by displacement addition.
+- Every zero-arity test is fixed, and translation preserves and reflects vanishing at every arity.
+- `translateScalarFiniteSchwartzSequence` lifts translation componentwise while preserving exact
+  finite support definitionally; inverse and composition laws are proved.
+- Hostile probes translate the explicit bump by its center and obtain value one at the zero
+  configuration, retain its nonzero arity-one support, and reject omitted translated support.
+- This is algebraic `(E4)` infrastructure only. No nonzero spatial ray, large-parameter limit,
+  clustering axiom, or lattice/continuum identification is introduced.
+- No source-facing `(E2)`, `(E4)`, reconstruction, existence theorem, or mass-gap witness is
+  introduced.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

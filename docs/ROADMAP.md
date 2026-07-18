@@ -147,6 +147,9 @@ committed before higher layers depend on it.
   derivative-vanishing ordered spaces; install the per-arity induced and finite-sequence direct-sum
   topologies while keeping the positive-half-space completed tensor product distinct; then define
   `(E2)` on the already constructed product and reflected-star operation.
+- [x] Construct exact simultaneous Euclidean translations on Schwartz tests and finite sequences,
+  with inverse and support preservation, as algebraic `(E4)` infrastructure.
+- [ ] Define the nonzero spatial-ray translation and clustering limit required by `(E4)`.
 - [ ] Prove the source-facing OS-II `(E0′)` bridge and define complete Euclidean/Schwinger data.
 - [ ] Define proper-orthochronous Poincaré and Wightman data independently.
 - [ ] Define common invariant domains and operator-valued tempered distributions.
