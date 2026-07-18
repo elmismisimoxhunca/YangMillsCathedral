@@ -230,6 +230,9 @@ import YangMills.Lattice.FinitePeriodicGaugeField
 import YangMills.Lattice.FinitePeriodicGaugeFieldProbes
 import YangMills.Lattice.FiniteGibbsMeasure
 import YangMills.Lattice.FiniteGibbsMeasureProbes
+import YangMills.Lattice.FiniteProductHaarMeasure
+import YangMills.Lattice.FiniteProductHaarGibbsMeasure
+import YangMills.Lattice.FiniteProductHaarMeasureProbes
 import YangMills.Lattice.WilsonLoopObservable
 import YangMills.Lattice.WilsonLoopObservableProbes
 import YangMills.Audit

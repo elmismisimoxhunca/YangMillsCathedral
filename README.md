@@ -223,10 +223,11 @@ positive coefficient. Gauge invariance, plaquette orientation independence, zero
 and dimension-one absence of plaquettes are proved. Signed paths, endpoint-covariant holonomy, and
 Wilson-loop observables built from supplied nonconstant conjugation-class functions are explicit; the elementary four-step path is
 proved closed with holonomy equal to the plaquette. A finite-cutoff Gibbs acceptance interface now
-requires a normalized gauge-invariant reference measure, measurable positive Boltzmann density,
-strictly positive finite partition function, normalized invariant Gibbs measure, and genuinely
-integrable bounded observables. It does not construct the intended compact-group product Haar
-reference or any Gibbs datum. No lattice positivity, continuum limit, or identification with the
+constructs the exact finite product of probability-normalized compact-group Haar measure and
+proves its link marginals and local gauge invariance. For a measurable positive Boltzmann density,
+partition positivity/finiteness, Gibbs normalization, and Gibbs gauge invariance are derived on that
+same reference chain; bounded observable integrability remains explicit. No potential-measurability
+or Gibbs datum is constructed. No lattice positivity, continuum limit, or identification with the
 continuum action/PVM is made.
 
 Primary OS-I and correcting OS-II article scans, Wightman's 1956 paper, and the corrected Princeton

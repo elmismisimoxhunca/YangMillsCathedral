@@ -230,8 +230,10 @@ committed before higher layers depend on it.
 - [x] Define an exact finite-cutoff Gibbs acceptance interface over a supplied normalized,
   gauge-invariant reference measure, with positive finite partition function and genuinely
   integrable bounded-observable expectations.
-- [ ] Construct/package compact-group product Haar structure and prove that it supplies the required
-  reference measure; no Gibbs datum is currently constructed.
+- [x] Construct probability-normalized compact Haar measure, its exact finite link product and
+  marginals, and prove local gauge invariance; specialize the Gibbs checker definitionally to this
+  reference and derive partition/Gibbs normalization and invariance from one measurable density.
+  No potential-measurability or Gibbs datum is currently constructed.
 - [ ] Define scaling, renormalization, interpreted-observable and continuum-limit bridges.
 - [ ] Keep finite-cutoff reflection positivity distinct from continuum OS data.
 

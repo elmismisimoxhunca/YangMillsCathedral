@@ -53,6 +53,16 @@ theorem latticeBoltzmannWeight_gaugeInvariant
       latticeBoltzmannWeight potential coupling U := by
   simp [latticeBoltzmannWeight, wilsonTypeLatticeAction_gaugeInvariant]
 
+/-- Nonnegative finite action bounds every Boltzmann density by one. -/
+theorem latticeBoltzmannWeight_le_one
+    {d : EuclideanDimension} {Λ : FinitePeriodicLattice}
+    {G : Type*} [Group G]
+    (potential : PlaquettePotentialData G) (coupling : LatticeCouplingData)
+    (U : GaugeField d Λ G) :
+    latticeBoltzmannWeight potential coupling U ≤ 1 := by
+  rw [latticeBoltzmannWeight, ENNReal.ofReal_le_one, Real.exp_le_one_iff]
+  exact neg_nonpos.mpr (wilsonTypeLatticeAction_nonnegative Λ potential coupling U)
+
 /-- Partition function relative to a supplied finite-cutoff reference measure. -/
 noncomputable def latticePartitionFunction
     {d : EuclideanDimension} {Λ : FinitePeriodicLattice}
@@ -69,6 +79,80 @@ noncomputable def normalizedLatticeGibbsMeasure
     (reference : Measure (GaugeField d Λ G)) : Measure (GaugeField d Λ G) :=
   (latticePartitionFunction potential coupling reference)⁻¹ •
     reference.withDensity (latticeBoltzmannWeight potential coupling)
+
+/-- A measurable positive density over a probability reference has positive partition function. -/
+theorem latticePartitionFunction_pos_of_probability
+    {d : EuclideanDimension} {Λ : FinitePeriodicLattice}
+    {G : Type*} [Group G] [MeasurableSpace G]
+    (potential : PlaquettePotentialData G) (coupling : LatticeCouplingData)
+    (reference : Measure (GaugeField d Λ G))
+    (hprobability : reference Set.univ = 1)
+    (hmeasurable : Measurable
+      (latticeBoltzmannWeight (d := d) (Λ := Λ) potential coupling)) :
+    0 < latticePartitionFunction potential coupling reference := by
+  rw [latticePartitionFunction, lintegral_pos_iff_support hmeasurable]
+  have hsupport : Function.support
+      (latticeBoltzmannWeight (d := d) (Λ := Λ) potential coupling) = Set.univ := by
+    ext U
+    simp only [Function.mem_support, Set.mem_univ, iff_true]
+    exact ne_of_gt (latticeBoltzmannWeight_pos potential coupling U)
+  rw [hsupport, hprobability]
+  exact zero_lt_one
+
+/-- The uniform bound by one makes the partition function finite over a probability reference. -/
+theorem latticePartitionFunction_ne_top_of_probability
+    {d : EuclideanDimension} {Λ : FinitePeriodicLattice}
+    {G : Type*} [Group G] [MeasurableSpace G]
+    (potential : PlaquettePotentialData G) (coupling : LatticeCouplingData)
+    (reference : Measure (GaugeField d Λ G))
+    (hprobability : reference Set.univ = 1) :
+    latticePartitionFunction potential coupling reference ≠ ⊤ := by
+  letI : IsProbabilityMeasure reference := ⟨hprobability⟩
+  apply ne_top_of_le_ne_top ENNReal.one_ne_top
+  exact lintegral_le_const (Filter.Eventually.of_forall
+    (latticeBoltzmannWeight_le_one potential coupling))
+
+/-- Positive finite partition function exactly normalizes the `withDensity` measure. -/
+theorem normalizedLatticeGibbsMeasure_probability
+    {d : EuclideanDimension} {Λ : FinitePeriodicLattice}
+    {G : Type*} [Group G] [MeasurableSpace G]
+    (potential : PlaquettePotentialData G) (coupling : LatticeCouplingData)
+    (reference : Measure (GaugeField d Λ G))
+    (hpos : 0 < latticePartitionFunction potential coupling reference)
+    (hneTop : latticePartitionFunction potential coupling reference ≠ ⊤) :
+    normalizedLatticeGibbsMeasure potential coupling reference Set.univ = 1 := by
+  rw [normalizedLatticeGibbsMeasure, Measure.smul_apply, withDensity_apply _ .univ,
+    Measure.restrict_univ, latticePartitionFunction]
+  exact ENNReal.inv_mul_cancel hpos.ne' hneTop
+
+/-- A measure-preserving symmetry of the reference and density preserves the normalized Gibbs
+measure on the same exact chain. -/
+theorem normalizedLatticeGibbsMeasure_map_eq_of_measurePreserving
+    {d : EuclideanDimension} {Λ : FinitePeriodicLattice}
+    {G : Type*} [Group G] [MeasurableSpace G]
+    (potential : PlaquettePotentialData G) (coupling : LatticeCouplingData)
+    (reference : Measure (GaugeField d Λ G))
+    (T : GaugeField d Λ G → GaugeField d Λ G)
+    (hT : MeasurePreserving T reference reference)
+    (hmeasurable : Measurable
+      (latticeBoltzmannWeight (d := d) (Λ := Λ) potential coupling))
+    (hinvariant : ∀ U, latticeBoltzmannWeight potential coupling (T U) =
+      latticeBoltzmannWeight potential coupling U) :
+    Measure.map T (normalizedLatticeGibbsMeasure potential coupling reference) =
+      normalizedLatticeGibbsMeasure potential coupling reference := by
+  ext s hs
+  rw [Measure.map_apply hT.measurable hs]
+  simp only [normalizedLatticeGibbsMeasure, Measure.smul_apply]
+  congr 1
+  rw [withDensity_apply _ (hs.preimage hT.measurable), withDensity_apply _ hs]
+  calc
+    ∫⁻ U in T ⁻¹' s, latticeBoltzmannWeight potential coupling U ∂reference =
+        ∫⁻ U in T ⁻¹' s, latticeBoltzmannWeight potential coupling (T U) ∂reference := by
+          apply setLIntegral_congr_fun (hs.preimage hT.measurable)
+          intro U _
+          exact (hinvariant U).symm
+    _ = ∫⁻ U in s, latticeBoltzmannWeight potential coupling U ∂reference :=
+      hT.setLIntegral_comp_preimage hs hmeasurable
 
 /-- Exact finite-cutoff Gibbs data based on a normalized gauge-invariant reference measure.
 
@@ -91,18 +175,54 @@ structure FiniteLatticeGibbsMeasureData
   /-- Exact action/Boltzmann measurability. -/
   boltzmann_measurable : Measurable
     (latticeBoltzmannWeight (d := d) (Λ := Λ) potential coupling)
-  /-- The partition function cannot vanish. -/
-  partition_pos : 0 < latticePartitionFunction potential coupling referenceMeasure
-  /-- The partition function cannot be infinite. -/
-  partition_ne_top : latticePartitionFunction potential coupling referenceMeasure ≠ ⊤
-  /-- Exact Gibbs probability normalization. -/
-  gibbs_probability :
-    normalizedLatticeGibbsMeasure potential coupling referenceMeasure Set.univ = 1
-  /-- The normalized Gibbs measure retains local gauge invariance. -/
-  gibbs_gaugeInvariant : ∀ g : GaugeTransformation d Λ G,
+
+/-- Strict positivity of the partition function is derived from the same measurable density and
+probability reference, rather than accepted as a disconnected field. -/
+theorem FiniteLatticeGibbsMeasureData.partition_pos
+    {d : EuclideanDimension} {Λ : FinitePeriodicLattice}
+    {G : Type*} [Group G] [MeasurableSpace G]
+    {potential : PlaquettePotentialData G} {coupling : LatticeCouplingData}
+    (data : @FiniteLatticeGibbsMeasureData d Λ G _ _ potential coupling) :
+    0 < latticePartitionFunction potential coupling data.referenceMeasure :=
+  latticePartitionFunction_pos_of_probability potential coupling data.referenceMeasure
+    data.reference_probability data.boltzmann_measurable
+
+/-- Partition finiteness is derived from the exact action bound and probability reference. -/
+theorem FiniteLatticeGibbsMeasureData.partition_ne_top
+    {d : EuclideanDimension} {Λ : FinitePeriodicLattice}
+    {G : Type*} [Group G] [MeasurableSpace G]
+    {potential : PlaquettePotentialData G} {coupling : LatticeCouplingData}
+    (data : @FiniteLatticeGibbsMeasureData d Λ G _ _ potential coupling) :
+    latticePartitionFunction potential coupling data.referenceMeasure ≠ ⊤ :=
+  latticePartitionFunction_ne_top_of_probability potential coupling data.referenceMeasure
+    data.reference_probability
+
+/-- Gibbs probability normalization is derived from the same partition function and density. -/
+theorem FiniteLatticeGibbsMeasureData.gibbs_probability
+    {d : EuclideanDimension} {Λ : FinitePeriodicLattice}
+    {G : Type*} [Group G] [MeasurableSpace G]
+    {potential : PlaquettePotentialData G} {coupling : LatticeCouplingData}
+    (data : @FiniteLatticeGibbsMeasureData d Λ G _ _ potential coupling) :
+    normalizedLatticeGibbsMeasure potential coupling data.referenceMeasure Set.univ = 1 :=
+  normalizedLatticeGibbsMeasure_probability potential coupling data.referenceMeasure
+    data.partition_pos data.partition_ne_top
+
+/-- Gibbs gauge invariance is derived from the same reference transformation and exact invariant
+density, rather than accepted as an unrelated final-measure field. -/
+theorem FiniteLatticeGibbsMeasureData.gibbs_gaugeInvariant
+    {d : EuclideanDimension} {Λ : FinitePeriodicLattice}
+    {G : Type*} [Group G] [MeasurableSpace G]
+    {potential : PlaquettePotentialData G} {coupling : LatticeCouplingData}
+    (data : @FiniteLatticeGibbsMeasureData d Λ G _ _ potential coupling)
+    (g : GaugeTransformation d Λ G) :
     Measure.map (gaugeTransform g)
-      (normalizedLatticeGibbsMeasure potential coupling referenceMeasure) =
-      normalizedLatticeGibbsMeasure potential coupling referenceMeasure
+      (normalizedLatticeGibbsMeasure potential coupling data.referenceMeasure) =
+      normalizedLatticeGibbsMeasure potential coupling data.referenceMeasure :=
+  normalizedLatticeGibbsMeasure_map_eq_of_measurePreserving potential coupling
+    data.referenceMeasure (gaugeTransform g)
+    ⟨data.gaugeTransform_measurable g, data.reference_gaugeInvariant g⟩
+    data.boltzmann_measurable
+    (latticeBoltzmannWeight_gaugeInvariant potential coupling g)
 
 /-- Bounded measurable complex observable on one finite gauge-field configuration space. -/
 structure FiniteLatticeObservable

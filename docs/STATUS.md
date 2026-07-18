@@ -2150,18 +2150,39 @@ Implemented and verified:
 
 - `latticeBoltzmannWeight` is the `ENNReal` exponential density of the exact finite Wilson-type
   action and is proved strictly positive at every configuration, with identity value one.
-- `latticePartitionFunction` is the exact `lintegral` against a supplied finite-cutoff reference;
-  accepted data separately require strict positivity and finiteness.
+- `latticePartitionFunction` is the exact `lintegral` against a supplied finite-cutoff reference.
 - `normalizedLatticeGibbsMeasure` is the exact inverse-partition scaling of `withDensity`.
-- `FiniteLatticeGibbsMeasureData` requires reference and Gibbs probability normalization,
-  measurability, and exact local gauge invariance on the same action/reference chain.
+- `FiniteLatticeGibbsMeasureData` requires reference probability normalization, measurability, and
+  exact local gauge invariance on the same action/reference chain. Partition positivity/finiteness,
+  Gibbs probability, and Gibbs invariance are now derived from those fields.
 - `FiniteLatticeObservable` requires measurability and a uniform norm bound; actual Bochner
   integrability under the Gibbs probability is proved before `finiteLatticeExpectation` is defined.
 - Hostile probes reject zero density, zero reference/Gibbs measures, zero/infinite partition
   functions, and nonintegrable-observable shortcuts.
-- This is a preliminary acceptance interface: compact-group product Haar construction and proof that
-  it supplies the reference remain open, and no Gibbs datum, expectation value, lattice positivity,
-  continuum theory, or mass gap is constructed.
+- The generic interface itself constructs no Gibbs datum, expectation value, lattice positivity,
+  continuum theory, or mass gap.
+
+## 2026-07-18 — one-hundred-twenty-first stone: exact finite product Haar reference
+
+Implemented and verified:
+
+- `normalizedCompactHaarMeasure` probability-normalizes Mathlib's chosen Haar measure using compact
+  finiteness and nonzeroness while retaining the exact Haar property.
+- Compact Haar uniqueness proves right invariance from normalized left invariance; inversion
+  invariance is then proved on the same measure.
+- `finiteGaugeFieldProductHaarMeasure` is definitionally `Measure.pi` over the finite positive-link
+  type. Its total mass and every coordinate marginal are proved exactly.
+- `linkGaugeMap_measurePreserving` and `gaugeTransform_measurePreserving_productHaar` derive local
+  gauge invariance coordinatewise from the same left/right Haar measure.
+- `FiniteProductHaarGibbsMeasureData` fixes the generic reference definitionally to this product and
+  asks only for measurability of the exact Boltzmann density.
+- Everywhere positivity and the action bound `weight ≤ 1` derive positive finite partition
+  function; `withDensity` normalization and measure-preserving density invariance derive Gibbs
+  probability and gauge invariance rather than accepting disconnected fields.
+- Hostile probes expose an explicit positive link, exact Haar marginal, zero-measure exclusions,
+  exact specialized reference, unrelated-reference rejection, and all derived Gibbs laws.
+- No concrete compact-simple gauge-group certificate, measurable potential datum, Gibbs datum,
+  expectation value, reflection positivity, continuum limit, theory, or mass gap is constructed.
 
 Not yet achieved:
 
