@@ -159,6 +159,8 @@ import YangMills.Euclidean.SchwingerConvolutionComponent
 import YangMills.Euclidean.SchwingerConvolutionComponentProbes
 import YangMills.Euclidean.SchwingerFiniteSequence
 import YangMills.Euclidean.SchwingerFiniteSequenceProbes
+import YangMills.Euclidean.SchwingerSequenceInvolution
+import YangMills.Euclidean.SchwingerSequenceInvolutionProbes
 import YangMills.Euclidean.SchwingerConvolutionSequence
 import YangMills.Euclidean.SchwingerConvolutionSequenceProbes
 import YangMills.Audit

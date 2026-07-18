@@ -1516,6 +1516,25 @@ Implemented and verified:
 - No reflection positivity theorem, Euclidean theory, reconstruction, Wightman theory, existence
   theorem, or mass-gap witness is introduced.
 
+## 2026-07-18 — eighty-sixth stone: finite-sequence reflected star
+
+Implemented and verified:
+
+- `ScalarFiniteSchwartzSequence.ext` derives sequence equality from all exact dependent components,
+  with support equality forced by the nonzero-support invariant.
+- `finiteSchwartzSequenceStar` lifts reverse-conjugation componentwise, preserves exact support, and
+  is involutive.
+- `finiteSchwartzSequenceTimeReflection` separately lifts Euclidean time reflection, preserves exact
+  support, and is involutive.
+- Time reflection and reverse-conjugation commute on exact components.
+- `finiteSchwartzSequenceReflectedStar` applies star first and time reflection second, giving the
+  source-facing `Θ f*`; its support is exact and the combined operation is involutive.
+- Hostile probes retain exact components/support, reject omission of the nonzero bump after either
+  star or combined reflection, and exercise every involution.
+- The reflection-positivity inequality `(E2)` and direct-sum topology/continuity remain pending.
+- No reflection positivity theorem, Euclidean theory, reconstruction, Wightman theory, existence
+  theorem, or mass-gap witness is introduced.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
