@@ -185,6 +185,8 @@ import YangMills.Euclidean.SchwingerEuclideanCandidate
 import YangMills.Euclidean.SchwingerEuclideanCandidateProbes
 import YangMills.Minkowski.PoincareKinematics
 import YangMills.Minkowski.PoincareKinematicsProbes
+import YangMills.Minkowski.PoincareCoverRepresentation
+import YangMills.Minkowski.PoincareCoverRepresentationProbes
 import YangMills.Audit
 
 /-!

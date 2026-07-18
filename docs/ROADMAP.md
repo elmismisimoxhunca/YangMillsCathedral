@@ -160,7 +160,12 @@ committed before higher layers depend on it.
 - [ ] Prove the source-facing OS-II `(E0′)` bridge and define complete Euclidean/Schwinger data.
 - [x] Define proper-orthochronous Lorentz/Poincaré affine kinematics independently of the Euclidean
   Schwinger surface.
-- [ ] Define the Poincaré cover/topological-group interface and Wightman data independently.
+- [x] Define a topological-group lift/pre-cover interface and one strongly continuous unitary
+  representation whose injective translation subgroup is derived from that same representation.
+- [ ] Construct/require the genuine `SL(2,ℂ)` topological covering projection, including target
+  topology and covering/kernel laws.
+- [ ] Define vacuum, common field domain, Wightman fields, covariance, locality, cyclicity, and
+  forward-cone spectral data independently.
 - [ ] Define common invariant domains and operator-valued tempered distributions.
 - [ ] Add explicit OS reconstruction and correlator coherence.
 

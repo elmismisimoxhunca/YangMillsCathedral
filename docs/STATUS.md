@@ -1740,6 +1740,29 @@ Implemented and verified:
 - This independent Minkowski layer introduces no group closure theorem, Poincaré cover, Hilbert
   representation, field, common domain, spectrum, reconstruction, existence theorem, or mass gap.
 
+## 2026-07-18 — ninety-eighth stone: Poincaré lift/pre-cover unitary representation interface
+
+Implemented and verified:
+
+- `Minkowski.ProperOrthochronousPoincareLiftData` requires a topological group projecting
+  surjectively to the exact affine kinematics, respecting identity and multiplication at the action
+  level, and containing a continuous injective Minkowski translation map.
+- This is explicitly a weaker lift/pre-cover interface: the affine target has no topology here and
+  no local-homeomorphism, covering-map, or discrete-kernel law is claimed.
+- Translation lifts project to the exact pure affine translations; the nonzero time translation lift
+  is proved distinct from cover identity.
+- `Minkowski.StronglyContinuousUnitaryPoincareRepresentation` packages one unitary group
+  homomorphism on one separable complete complex inner-product space, strongly continuous on every
+  vector.
+- Physical translation unitaries are derived from that same representation, obey spacetime addition,
+  and are strongly continuous. No disconnected surrogate translation representation is accepted.
+- Hostile probes expose projection surjectivity, exact group/action wiring, translation-map
+  injectivity, nontrivial translations, unitary identity/multiplication, and translation strong
+  continuity.
+- No lift group, genuine topological cover, Hilbert space, or representation inhabitant is
+  constructed. Vacuum, fields, common
+  domain, spectrum/PVM, reconstruction, existence, and mass gap remain pending.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
