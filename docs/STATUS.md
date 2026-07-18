@@ -2536,6 +2536,26 @@ Implemented and verified:
 - No transformation-group analytic structure, continuation/correlator datum, theory, or mass gap is
   constructed.
 
+## 2026-07-18 — one-hundred-thirty-eighth stone: perturbative running-coupling normal form
+
+Implemented and verified:
+
+- `PureYangMillsAsymptoticFreedomData` is indexed by an exact compact-simple gauge-group certificate
+  and carries an explicit spacetime dimension forced to four by a named equality field.
+- The chosen convention is the dimensionless logarithmic scale `t = log(μ/μ₀)` with
+  `g′(t)=β(g(t))`.
+- Positivity and the exact flow equation are required only on a strict open ultraviolet tail, so no
+  two-sided derivative at the threshold or infrared behavior is imposed.
+- The same coupling tends to zero at `+∞`; `β(0)=0`; and the small-positive-coupling normal form is
+  `β(g)/g³ → -b₀` with `b₀>0`, deriving eventual beta negativity.
+- Hostile probes reject lower-dimensional reuse, zero/constant running couplings, eventually
+  nonnegative beta functions, and a flow derivative disconnected from the same beta function.
+- The exact group certificate currently only indexes the universal sign normal form. The numerical
+  adjoint-Casimir/group-dependent coefficient and its invariant-pairing/coupling normalization remain
+  explicit debt; no claim is made that this is the full one-loop coefficient.
+- No OPE coefficient matching, perturbative series/remainder, infrared or mass-shell statement,
+  quantum theory, existence theorem, or mass gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

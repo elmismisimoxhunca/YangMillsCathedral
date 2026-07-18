@@ -103,7 +103,11 @@ committed before higher layers depend on it.
 - [x] Define normalized compact-anchor bilocal diagonal probes with `O(r)` support, an exact
   nondegenerate relative-coefficient/local-field contraction, finite monotone truncations, connected
   full-product remainders, and weak all-order little-`o` asymptotics.
-- [ ] Match OPE coefficient singularities and scaling orders to asymptotic freedom and perturbative
+- [x] Define a preliminary explicitly four-dimensional pure-gauge running-coupling/beta sign normal
+  form on an open ultraviolet tail, without imposing infrared behavior or inventing the unresolved
+  group-dependent coefficient normalization.
+- [ ] Connect the leading coefficient to the exact gauge group/invariant-pairing/coupling convention
+  and match OPE coefficient singularities and scaling orders to asymptotic freedom and perturbative
   renormalization; the generic weak OPE checker alone does not meet Clay's prescribed-singularity
   requirement.
 - [x] Define a symmetric Hermitian local stress-energy tensor inside the same local-observable/

@@ -212,8 +212,11 @@ formula `dσ(X) + [A(X),σ]` in every designated chart. A separate strengthening
 smooth adjoint section; this is required data, not a construction from the formula. It is not yet
 extended to adjoint-valued forms
 or positive curvature-tensor orders. This is not a general curvature-polynomial/covariant-derivative language or a canonical injective quantization
-map. Coefficient singularities are not yet matched to
-asymptotic freedom or perturbative renormalization. A separate same-family stress-tensor checker
+map. A preliminary four-dimensional perturbative interface now requires a positive running coupling
+on an explicit open ultraviolet tail, exact beta flow, ultraviolet limit, and negative cubic leading
+normal form. It intentionally leaves the group-dependent one-loop coefficient and invariant-pairing/
+coupling normalization disconnected and does not yet match OPE coefficient singularities. A separate
+same-family stress-tensor checker
 requires symmetric Hermitian components local relative to the whole family, explicit inverse-matrix
 contravariant rank-two Lorentz covariance, weak distributional conservation, and a nonzero non-unit
 energy density. Its symmetry/conservation semantics are independently sourced to an authoritative

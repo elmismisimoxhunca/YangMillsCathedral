@@ -232,6 +232,8 @@ import YangMills.Minkowski.WeakBilocalDiagonalProbe
 import YangMills.Minkowski.WeakBilocalDiagonalProbeProbes
 import YangMills.Minkowski.WeakOperatorProductExpansion
 import YangMills.Minkowski.WeakOperatorProductExpansionProbes
+import YangMills.Renormalization.RunningCoupling
+import YangMills.Renormalization.RunningCouplingProbes
 import YangMills.Minkowski.PhysicalMassGapSupremum
 import YangMills.Minkowski.PhysicalMassGapSupremumProbes
 import YangMills.Minkowski.WightmanVacuumCorrelators
