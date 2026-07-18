@@ -82,7 +82,9 @@ committed before higher layers depend on it.
 - [x] Induce its chart-independent positive pairing on actual adjoint quotient fibers.
 - [x] Define and probe the positive chosen-orthonormal contraction of exact descended curvature.
 - [ ] Prove basis independence and connect the contraction to a general Hodge-star interface.
-- [ ] Define the Euclidean action from descended curvature, metric, designated measure and coupling data.
+- [x] Define and probe the integrable Euclidean action relative to a designated Borel measure and
+  positive coupling, with Clay's outer normalization explicit.
+- [ ] Construct metric-volume semantics and prove compatibility with the designated measure.
 - [ ] Interpret gauge-invariant local curvature polynomials and covariant derivatives.
 - [ ] Separate local observables from nonlocal Wilson observables.
 - [ ] Add nontrivial positive examples and hostile disconnected-curvature probes.

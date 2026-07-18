@@ -1033,8 +1033,29 @@ Verified:
   metric substitutions that change the contraction; and chart dependence in the underlying exact
   quotient-fiber pairing.
 - No basis-independence or general manifold Hodge-star theorem is asserted. Integration measure,
-  coupling, integrability, and the action remain downstream work; no measure is called Riemannian
-  volume.
+  coupling, integrability, and the action were left to the next stone; no measure is called
+  Riemannian volume.
+
+## 2026-07-17 — sixtieth mathematical stone: Euclidean action relative to a measure
+
+Verified:
+
+- `EuclideanActionAnalyticData` stores proof that the manifold measurable structure is Borel, an
+  explicitly designated measure, a strictly positive coupling, and integrability of the exact
+  chosen curvature scalar against that same measure.
+- The integrability requirement is indexed by the same metric, invariant pairing, connection,
+  exterior-derivative datum, and same-index curvature certificate; no arbitrary regularity or
+  density witness can be substituted.
+- `EuclideanActionAnalyticData.actionCoefficient` is exactly `(4 * coupling ^ 2)⁻¹`, separately
+  retaining the inner `1/2` alternating-form convention, and is proved strictly positive from the
+  coupling certificate.
+- `euclideanYangMillsActionRelativeToMeasure` integrates the exact chosen curvature scalar against
+  the designated measure and is proved nonnegative.
+- Hostile probes reject a non-Borel measurable structure, nonpositive coupling, nonintegrable exact
+  scalar, negative action, unrelated integrand or measure substitutions that change the value, and
+  a disconnected caller-supplied action value.
+- The designated measure is not described as Riemannian volume. Basis independence, a general
+  Hodge-star bridge, and metric-volume compatibility remain explicit debt.
 
 Not yet achieved:
 
@@ -1052,8 +1073,9 @@ Not yet achieved:
   remains an explicit infrastructure blocker.
 - Clay, Hall, Aharony–Seiberg–Tachikawa, and Freed artifacts are pinned. Clay equation (1) now
   anchors the action formula, invariant quadratic form, and chosen orthonormal curvature
-  contraction, but basis independence, a general Hodge-star bridge, and integration/action
-  infrastructure remain pending. OS/Wightman, spectral, observable, and lattice sources remain to
+  contraction and relative-to-designated-measure action, but basis independence, a general
+  Hodge-star bridge, and metric-volume compatibility remain pending. OS/Wightman, spectral,
+  observable, and lattice sources remain to
   be independently acquired and verified before their corresponding declarations become canonical.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary

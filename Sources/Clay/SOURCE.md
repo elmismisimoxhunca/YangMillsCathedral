@@ -62,5 +62,7 @@ authoritative sources. They must not be silently attributed verbatim to Clay.
 
 The current classical layer uses the conventional `1/2 * sum_ij` contraction in Mathlib's chosen
 orthonormal basis for an explicitly supplied smooth Riemannian metric. It does not yet prove basis
-independence or identify that construction with a general manifold Hodge star. No integration
-measure is called Riemannian volume without a future compatibility theorem.
+independence or identify that construction with a general manifold Hodge star. The current action
+retains the outer coefficient `(4 * g^2)⁻¹`, requires strictly positive `g`, and integrates only when
+the exact curvature scalar is integrable against an explicitly designated Borel measure. That
+measure is not called Riemannian volume without a future compatibility theorem.

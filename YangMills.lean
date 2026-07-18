@@ -119,6 +119,8 @@ import YangMills.Geometry.PrincipalCurvatureSmoothDescent
 import YangMills.Geometry.PrincipalCurvatureSmoothDescentProbes
 import YangMills.Classical.EuclideanCurvatureDensity
 import YangMills.Classical.EuclideanCurvatureDensityProbes
+import YangMills.Classical.EuclideanAction
+import YangMills.Classical.EuclideanActionProbes
 import YangMills.Audit
 
 /-!
