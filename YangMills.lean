@@ -177,6 +177,8 @@ import YangMills.Euclidean.SchwingerCoordinateContinuityCriterion
 import YangMills.Euclidean.SchwingerCoordinateContinuityCriterionProbes
 import YangMills.Euclidean.SchwingerTranslation
 import YangMills.Euclidean.SchwingerTranslationProbes
+import YangMills.Euclidean.SchwingerSpatialRay
+import YangMills.Euclidean.SchwingerSpatialRayProbes
 import YangMills.Audit
 
 /-!

@@ -149,7 +149,9 @@ committed before higher layers depend on it.
   `(E2)` on the already constructed product and reflected-star operation.
 - [x] Construct exact simultaneous Euclidean translations on Schwartz tests and finite sequences,
   with inverse and support preservation, as algebraic `(E4)` infrastructure.
-- [ ] Define the nonzero spatial-ray translation and clustering limit required by `(E4)`.
+- [x] Define normalized nonzero spatial rays, prove escape to infinity, construct the four-dimensional
+  ray, and reject a one-dimensional spatial direction.
+- [ ] Define the clustering factorization expression and limit required by `(E4)`.
 - [ ] Prove the source-facing OS-II `(E0′)` bridge and define complete Euclidean/Schwinger data.
 - [ ] Define proper-orthochronous Poincaré and Wightman data independently.
 - [ ] Define common invariant domains and operator-valued tempered distributions.

@@ -1670,6 +1670,24 @@ Implemented and verified:
 - No source-facing `(E2)`, `(E4)`, reconstruction, existence theorem, or mass-gap witness is
   introduced.
 
+## 2026-07-18 — ninety-fourth stone: nonzero Euclidean spatial rays
+
+Implemented and verified:
+
+- `EuclideanUnitSpatialDirection` packages a zero-time-component vector with norm exactly one,
+  excluding a zero or unnormalized clustering direction.
+- A canonical second-coordinate direction is constructed whenever spacetime dimension is at least
+  two; four-dimensional Euclidean spacetime receives an explicit direction.
+- One-dimensional Euclidean spacetime is proved to admit no unit spatial direction after its sole
+  coordinate is selected as time.
+- `euclideanSpatialRayDisplacement` has exact time component zero and norm `|λ|`; its norm tends to
+  infinity as `λ → +∞`.
+- Finite sequences translate along the exact ray without changing support.
+- Hostile probes expose the nonzero four-dimensional ray at scale one, the dimension-one rejection,
+  escape to infinity, and survival of the explicit bump's arity-one support.
+- The `(E4)` factorization expression and clustering limit remain pending. No source-facing `(E2)`,
+  `(E4)`, reconstruction, existence theorem, or mass-gap witness is introduced.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

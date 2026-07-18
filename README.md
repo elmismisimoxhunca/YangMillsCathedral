@@ -160,7 +160,9 @@ sequences and combined in the source order `Θ f*`. The exact algebraic Schwinge
 nonnegative-real form are defined on the current strict Mathlib subdomain, but are deliberately not
 identified with source-facing `(E2)` before the carrier/topology comparison. Exact simultaneous
 Euclidean translations and their finite-sequence lift are available as algebraic clustering
-infrastructure, but the nonzero spatial ray and `(E4)` limit remain absent. No
+infrastructure. Normalized spatial rays are constructed in dimensions with a spatial coordinate,
+the four-dimensional ray escapes to infinity, and dimension one is proved to have no such direction;
+the `(E4)` factorization expression and limit remain absent. No
 concrete gauge-group, connection, invariant-inner-product, curvature, or structure-certificate witness,
 symmetry group, reconstruction bridge, quantum-theory witness, Yang–Mills existence claim, or
 mass-gap claim is present.
