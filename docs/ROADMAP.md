@@ -181,6 +181,8 @@ committed before higher layers depend on it.
   translation representation through the SNAG Fourier formula.
 - [x] Integrate covariance, cyclicity, locality, and forward-cone spectrum on one exact scalar
   field/domain/vacuum/representation chain, while retaining mass gap as an optional predicate.
+- [x] Extract normalized algebraic smeared vacuum correlators from exact finite field words and lock
+  one- and two-point operator order; joint temperedness and analyticity remain pending.
 - [ ] Add explicit OS reconstruction and correlator coherence.
 
 ## Phase 5 — translations and mass gap

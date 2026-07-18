@@ -1925,6 +1925,23 @@ Implemented and verified:
 - No admissible threshold, spectrum, quantum theory, Yang–Mills existence theorem, or mass-gap
   witness is constructed.
 
+## 2026-07-18 — one-hundred-eighth stone: algebraic smeared Wightman correlators
+
+Implemented and verified:
+
+- `scalarWightmanVacuumWordExpectation` pairs the exact selected vacuum with an exact finite
+  field/adjoint word acting on the exact common-domain vacuum.
+- `scalarWightmanVacuumExpectation` specializes to ordered field-only tests with the list head as
+  the leftmost/outermost operator.
+- Arity zero is exactly one by vacuum normalization; singleton values equal the exact coherent
+  tempered matrix element; pair values lock `Φ(f) Φ(g) Ω` order.
+- Hostile probes reject an identically-zero family and a swapped pair when ordered matrix elements
+  differ, and route the explicit nonzero Minkowski bump through the exact singleton value.
+- Joint `n`-point temperedness, tube analyticity, Euclidean continuation, and reconstruction remain
+  explicit downstream obligations.
+- No independent jointly distributional correlator datum, field inhabitant, quantum theory,
+  existence theorem, or mass-gap witness is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

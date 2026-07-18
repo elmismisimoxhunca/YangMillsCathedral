@@ -190,7 +190,9 @@ supplies a bounded excitation that makes this set nonempty and bounded above wit
 supremum, but no threshold or theory is constructed. Covariance,
 cyclicity, locality, and forward-cone spectrum are integrated on one exact scalar
 field/domain/vacuum/representation chain, while the mass gap remains an additional predicate.
-Reconstruction and observable interpretation are not yet packaged. No concrete gauge-group, connection, invariant-inner-product, curvature, or
+Normalized algebraic smeared vacuum correlators are extracted from exact finite field words, with
+one- and two-point operator order locked to the same selected vacuum and field. Joint `n`-point
+temperedness, tube analyticity, reconstruction, and observable interpretation are not yet packaged. No concrete gauge-group, connection, invariant-inner-product, curvature, or
 structure-certificate witness,
 symmetry group, reconstruction bridge, quantum-theory witness, Yang–Mills existence claim, or
 mass-gap claim is present.
