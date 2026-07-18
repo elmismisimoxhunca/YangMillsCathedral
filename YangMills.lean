@@ -139,6 +139,8 @@ import YangMills.Euclidean.SchwingerCovariance
 import YangMills.Euclidean.SchwingerCovarianceProbes
 import YangMills.Euclidean.SchwingerTimeReflection
 import YangMills.Euclidean.SchwingerTimeReflectionProbes
+import YangMills.Euclidean.PositiveTimeSchwartzBump
+import YangMills.Euclidean.PositiveTimeSchwartzBumpProbes
 import YangMills.Audit
 
 /-!

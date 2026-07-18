@@ -1298,11 +1298,29 @@ Implemented and verified:
   every point and containment of the actual topological support.
 - Hostile probes exhibit positive-time configurations, prove reflected positive-time incompatibility
   at positive arity, and explicitly show that the zero Schwartz test satisfies support vacuously.
-- Full `(E2)` remains absent until a nonzero positive-time Schwartz test, OS-I's time-ordered and
-  diagonal-flat `_𝒮₊` source-space bridge, and the finite sequence product/reflection operation are
-  constructed; subtype inhabitation by zero is not accepted as anti-vacuity evidence.
+- Full `(E2)` remains absent pending OS-I's time-ordered and diagonal-flat `_𝒮₊` source-space bridge
+  and the finite sequence product/reflection operation. The following stone supplies a nonzero test;
+  subtype inhabitation by zero alone remains explicitly unacceptable anti-vacuity evidence.
 - No reflection positivity theorem, clustering, reconstruction, Euclidean theory, Wightman theory,
   existence theorem, or mass-gap witness is introduced.
+
+## 2026-07-18 — seventy-fifth stone: nonzero positive-time Schwartz test
+
+Implemented and verified:
+
+- `positiveTimeBumpCenter` places an arity-one configuration at selected Euclidean time one.
+- `positiveTimeBump` has inner radius `1/4` and outer radius `1/2`; its real compactly supported
+  smooth function is transported through `Complex.ofRealCLM` to `positiveTimeBumpSchwartz`.
+- The bump equals one at its center and is therefore proved nonzero.
+- Coordinate-distance bounds from its closed support prove every supported configuration has
+  strictly positive selected time, yielding `positiveTimeBumpTest` in the exact support subtype.
+- Hostile probes prove the topological support is nonempty, the packaged value is nonzero, and zero
+  substitution is impossible.
+- This closes nonzero-domain anti-vacuity only for the reusable all-points-positive subtype. OS-I's
+  time-ordered/diagonal-flat source-space bridge, finite test-sequence product, and `(E2)` remain
+  absent.
+- No reflection positivity theorem, Euclidean theory, reconstruction, Wightman theory, existence
+  theorem, or mass-gap witness is introduced.
 
 Not yet achieved:
 
