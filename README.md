@@ -129,7 +129,9 @@ explicitly designated Borel measure and positive coupling (without claiming a ge
 theorem or metric volume), are implemented. Scalar positive-arity tempered Schwinger distributions,
 normalized zero-point data, and a concrete fixed-order factorial-growth estimate over Mathlib
 Schwartz seminorms are also implemented as preliminary regularity infrastructure; they are not yet
-identified with OS-II `(E0′)` and carry none of `(E1)`–`(E4)`. No
+identified with OS-II `(E0′)`. Exact positive-arity Schwartz permutation pullback and scalar
+Schwinger symmetry `(E3)` are implemented separately, while `(E1)`, `(E2)`, and `(E4)` remain
+absent. No
 concrete gauge-group, connection, invariant-inner-product, curvature, or structure-certificate witness,
 symmetry group, reconstruction bridge, quantum-theory witness, Yang–Mills existence claim, or
 mass-gap claim is present.

@@ -109,6 +109,7 @@ committed before higher layers depend on it.
     the Wightman 1956 paper, and the Streater–Wightman axiomatic source.
 - [x] Define normalized scalar tempered Schwinger families and explicit Mathlib fixed-order
   factorial-growth infrastructure, with the OS test-space/seminorm equivalence left visible.
+- [x] Define exact positive-arity Schwartz pullback and scalar Schwinger permutation symmetry `(E3)`.
 - [ ] Prove the source-facing OS-II `(E0′)` bridge and define complete Euclidean/Schwinger data.
 - [ ] Define proper-orthochronous Poincaré and Wightman data independently.
 - [ ] Define common invariant domains and operator-valued tempered distributions.

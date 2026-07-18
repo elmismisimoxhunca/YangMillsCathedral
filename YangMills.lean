@@ -133,6 +133,8 @@ import YangMills.Classical.EuclideanCanonicalAction
 import YangMills.Classical.EuclideanCanonicalActionProbes
 import YangMills.Euclidean.SchwingerRegularity
 import YangMills.Euclidean.SchwingerRegularityProbes
+import YangMills.Euclidean.SchwingerSymmetry
+import YangMills.Euclidean.SchwingerSymmetryProbes
 import YangMills.Audit
 
 /-!

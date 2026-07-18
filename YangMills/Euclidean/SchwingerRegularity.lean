@@ -48,6 +48,11 @@ def one : PositiveArity := ⟨1, by decide⟩
 
 @[simp] theorem one_value : one.value = 1 := rfl
 
+/-- Positive arity two, used to expose genuinely nonidentity permutations. -/
+def two : PositiveArity := ⟨2, by decide⟩
+
+@[simp] theorem two_value : two.value = 2 := rfl
+
 end PositiveArity
 
 /-- The Euclidean configuration space of `n` ordered points in spacetime dimension `d`. -/

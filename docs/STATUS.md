@@ -1251,6 +1251,21 @@ Implemented and verified:
 - No covariance, reflection positivity, symmetry, clustering, reconstruction, Euclidean theory,
   Wightman theory, existence theorem, or mass-gap witness is introduced.
 
+## 2026-07-18 — seventy-second stone: scalar Schwinger permutation symmetry
+
+Implemented and verified:
+
+- `euclideanNPointPermutation` promotes every permutation of `Fin n` to a continuous real-linear
+  equivalence of the exact `n`-point configuration space in the selected Euclidean dimension.
+- `permuteScalarSchwartzTestFunction` is the exact continuous complex-linear Schwartz pullback, with
+  its pointwise precomposition formula proved.
+- `ScalarSchwingerPermutationSymmetry` states OS-I `(E3)` for every positive arity and every
+  permutation of the same scalar distribution family.
+- Hostile probes exhibit a genuinely nonidentity two-point transposition and reject changed values
+  under the exact designated permutation; an unrelated symmetric family cannot satisfy the field.
+- This stone introduces no `(E1)`, `(E2)`, `(E4)`, source-norm bridge, reconstruction, Euclidean
+  theory, Wightman theory, existence theorem, or mass-gap witness.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
@@ -1274,7 +1289,8 @@ Not yet achieved:
   bridge and metric-volume compatibility remain pending. OS-I, correcting OS-II, Wightman 1956,
   and Streater–Wightman source artifacts are now acquired and verified. Scalar tempered Schwinger
   families and fixed-order factorial-growth infrastructure are implemented, but the OS source-norm
-  bridge, `(E1)`–`(E4)`, and reconstruction remain unimplemented. Wilson and Osterwalder–Seiler
+  bridge, `(E1)`, `(E2)`, `(E4)`, and reconstruction remain unimplemented; scalar permutation
+  symmetry `(E3)` is now explicit. Wilson and Osterwalder–Seiler
   lattice sources are likewise pinned,
   but lattice declarations and all continuum bridges remain unimplemented. Wilson's OPE paper and
   the Gross–Wilczek/Politzer asymptotic-freedom papers are pinned, but their typed observable and
