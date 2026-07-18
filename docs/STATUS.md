@@ -1959,6 +1959,24 @@ Implemented and verified:
 - This is signature-neutral reusable mathematics and constructs no Euclidean or Minkowski physical
   datum.
 
+## 2026-07-18 — one-hundred-tenth stone: jointly tempered Wightman correlator interface
+
+Implemented and verified:
+
+- `ScalarMinkowskiNPointSchwartzTestFunction` is the actual full-product Schwartz carrier
+  `𝓢(Fin n → Spacetime d, ℂ)` at every arity.
+- `ScalarWightmanJointTemperedCorrelatorData.nPointDistribution` requires one actual Mathlib
+  tempered distribution on that carrier for every `n`.
+- `pureTensor_coherent` ties every distribution to the exact ordered algebraic field-word vacuum
+  expectation on every finite pure Schwartz tensor.
+- Zero arity evaluates the exact scalar unit to one; arity one recovers the coherent tempered matrix
+  element; arity two locks `Φ(f) Φ(g) Ω` order.
+- Hostile probes reject an identically-zero family and a disconnected distribution value.
+- Tube analyticity, boundary-value semantics, Euclidean continuation, and reconstruction remain
+  explicit downstream obligations.
+- No jointly tempered correlator datum, field inhabitant, quantum theory, existence theorem, or
+  mass-gap witness is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

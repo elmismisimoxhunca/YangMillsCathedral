@@ -210,6 +210,8 @@ import YangMills.Minkowski.PhysicalMassGapSupremum
 import YangMills.Minkowski.PhysicalMassGapSupremumProbes
 import YangMills.Minkowski.WightmanVacuumCorrelators
 import YangMills.Minkowski.WightmanVacuumCorrelatorsProbes
+import YangMills.Minkowski.WightmanJointTemperedCorrelators
+import YangMills.Minkowski.WightmanJointTemperedCorrelatorsProbes
 import YangMills.Audit
 
 /-!
