@@ -37,6 +37,8 @@ import YangMills.Mathematics.AlternatingMapDegreeTwoBilinear
 import YangMills.Mathematics.AlternatingMapDegreeTwoBilinearProbes
 import YangMills.Mathematics.SchwartzTensorProduct
 import YangMills.Mathematics.SchwartzTensorProductProbes
+import YangMills.Mathematics.FiniteConfigurationSchwartzTensor
+import YangMills.Mathematics.FiniteConfigurationSchwartzTensorProbes
 import YangMills.Mathematics.SmoothLieBracketWedge
 import YangMills.Mathematics.SmoothLieBracketWedgeProbes
 import YangMills.Geometry.LieGroup

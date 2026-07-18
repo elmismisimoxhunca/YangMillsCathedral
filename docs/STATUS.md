@@ -1942,6 +1942,23 @@ Implemented and verified:
 - No independent jointly distributional correlator datum, field inhabitant, quantum theory,
   existence theorem, or mass-gap witness is constructed.
 
+## 2026-07-18 — one-hundred-ninth stone: finite-configuration Schwartz pure tensors
+
+Implemented and verified:
+
+- `Mathematics.finiteConfigurationSplit` and its inverse split exact `Fin (n+m)` coordinate blocks
+  without selecting Euclidean or Minkowski semantics.
+- `scalarSchwartzTensorProductOnFiniteConfiguration` packages the exact concatenated product as an
+  actual full-configuration Schwartz test.
+- `scalarZeroConfigurationSchwartz` and `scalarOneConfigurationSchwartz` provide exact unit and
+  one-point stages.
+- `scalarSchwartzPureTensor` recursively packages every finite family of one-point Schwartz tests;
+  its evaluation is proved equal to the exact coordinatewise finite product.
+- Hostile probes lock block offsets, split/merge inversion, unit arity, coordinate order, and reject
+  an unrelated replacement value.
+- This is signature-neutral reusable mathematics and constructs no Euclidean or Minkowski physical
+  datum.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
