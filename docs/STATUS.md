@@ -2362,8 +2362,32 @@ Implemented and verified:
   Blaschke–Gieres–Reboud–Schweda 2016; Streater–Wightman supplies quantum component covariance,
   locality, common-domain, and adjoint semantics.
 - The rank-two convention is an explicit formalization decision beyond Clay's printed existence
-  request. No tensor datum, translation-generator Ward identity, trace/trace-anomaly semantics,
-  renormalization theorem, theory, or mass gap is constructed.
+  request. No tensor datum, trace/trace-anomaly semantics, renormalization theorem, theory, or mass
+  gap is constructed.
+
+## 2026-07-18 — one-hundred-thirtieth stone: stress-energy translation Ward bridge
+
+Implemented and verified:
+
+- `StressTensorChargeCutoffData` makes the formal spatial charge integral honest through exact
+  spacetime Schwartz products.
+- Integral-one temporal profiles have shrinking support and converge on every Schwartz test to the
+  time-zero delta distribution, excluding derivative-contaminated mollifiers.
+- Real nonnegative spatial profiles are bounded by one, equal one on expanding norm balls, and have
+  support controlled by twice the plateau radius.
+- `LocalStressEnergyTranslationWardData` supplies common-domain Hermitian momentum generators with
+  integrable diagonal first moments equal to those of the exact same physical joint PVM.
+- The exact same generators differentiate the exact same physical translation unitaries with
+  independently probed `+i` time and `-i` spatial mostly-minus signs.
+- Controlled strong limits of the same stress tensor's `T^{0ν}` components equal those generators on
+  every common-domain vector.
+- Every label in the same local-observable family obeys the corresponding infinitesimal translation
+  Ward identity, with the sign fixed by the inverse-affine test pullback.
+- A nonzero time generator and zero-regulator hostile probes block trivial/disconnected surrogates.
+- Blaschke–Gieres–Reboud–Schweda equation `(2.2)` sources the classical charge/generator relation;
+  the regulator, same-PVM, common-domain and all-family quantum formulation is explicitly classified
+  as a project strengthening informed by the pinned Wightman/SNAG chain.
+- No cutoff sequence, generator, Ward datum, tensor, trace anomaly, theory, or mass gap is constructed.
 
 Not yet achieved:
 

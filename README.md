@@ -205,8 +205,11 @@ to asymptotic freedom or perturbative renormalization. A separate same-family st
 requires symmetric Hermitian components local relative to the whole family, explicit inverse-matrix
 contravariant rank-two Lorentz covariance, weak distributional conservation, and a nonzero non-unit
 energy density. Its symmetry/conservation semantics are independently sourced to an authoritative
-gauge-theory energy-momentum review. Translation-generator Ward
-identities and trace-anomaly semantics remain open. Normalized algebraic smeared vacuum correlators are extracted from exact
+gauge-theory energy-momentum review. A separate bridge uses explicit delta-convergent temporal
+mollifiers and bounded expanding spatial cutoffs to identify strong `T^{0ν}` charge limits with
+common-domain momentum generators tied to the same physical translation unitaries and joint PVM;
+it also imposes the corresponding all-family infinitesimal Ward identities. Trace-anomaly semantics
+remain open. Normalized algebraic smeared vacuum correlators are extracted from exact
 finite field words, with
 one- and two-point operator order locked to the same selected vacuum and field. A separate interface
 requires an actual full-product tempered distribution at every arity and exact coherence on every

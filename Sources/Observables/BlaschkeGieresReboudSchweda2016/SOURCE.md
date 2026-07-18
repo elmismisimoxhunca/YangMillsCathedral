@@ -41,8 +41,9 @@ choice in the declaration-level source map.
 
 The present checker deliberately does **not** infer a quantum stress tensor from the classical
 formula, impose classical tracelessness on the quantum theory, or claim the trace anomaly. The
-review's charge formula motivates a future Ward/generator bridge to the exact physical translation
-representation/PVM; that bridge remains open.
+review's charge formula motivates the separately declared Ward/generator acceptance bridge to the
+exact physical translation representation/PVM. That interface now exists, but no bridge datum or
+translation generator is constructed.
 
 ## Artifact chain
 

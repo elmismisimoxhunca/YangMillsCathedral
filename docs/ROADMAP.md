@@ -109,8 +109,10 @@ committed before higher layers depend on it.
 - [x] Define a symmetric Hermitian local stress-energy tensor inside the same local-observable/
   common-domain/Poincaré chain, with explicit rank-two Lorentz covariance, weak conservation and a
   nonzero non-unit energy-density witness.
-- [ ] Connect the stress tensor to physical translation generators through Ward identities and state
-  trace/trace-anomaly semantics where required; no such theorem is currently supplied.
+- [x] Connect controlled `T^{0ν}` charge limits to common-domain momentum generators tied to the
+  same physical translation unitaries and joint PVM, with all-family infinitesimal Ward identities.
+- [ ] State trace/trace-anomaly semantics and the required renormalized four-dimensional relation;
+  the classical trace identity is not silently promoted to the quantum theory.
 - [ ] Interpret gauge-invariant local curvature polynomials and covariant derivatives.
 - [ ] Separate local observables from nonlocal Wilson observables.
 - [ ] Add nontrivial positive examples and hostile disconnected-curvature probes.
