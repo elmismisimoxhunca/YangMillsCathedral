@@ -126,7 +126,10 @@ canonically, proved equal to every orthonormal-basis sum, proved nonnegative, an
 exactly under positive rescaling of the named invariant pairing, together with an integrable
 real-valued Euclidean action proved to integrate that canonical scalar relative to an
 explicitly designated Borel measure and positive coupling (without claiming a general Hodge-star
-theorem or metric volume), are implemented. No
+theorem or metric volume), are implemented. Scalar positive-arity tempered Schwinger distributions,
+normalized zero-point data, and a concrete fixed-order factorial-growth estimate over Mathlib
+Schwartz seminorms are also implemented as preliminary regularity infrastructure; they are not yet
+identified with OS-II `(E0′)` and carry none of `(E1)`–`(E4)`. No
 concrete gauge-group, connection, invariant-inner-product, curvature, or structure-certificate witness,
 symmetry group, reconstruction bridge, quantum-theory witness, Yang–Mills existence claim, or
 mass-gap claim is present.

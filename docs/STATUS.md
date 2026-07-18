@@ -1227,6 +1227,30 @@ Verified:
 - No observable algebra, OPE, running coupling, renormalization bridge, quantum theory, or mass-gap
   witness is constructed by source acquisition.
 
+## 2026-07-18 — seventy-first stone: scalar Schwinger regularity infrastructure
+
+Implemented and verified:
+
+- `PositiveArity` keeps the actual positive correlation-function arity explicit and inhabited.
+- `EuclideanNPointSpace`, `ScalarSchwartzTestFunction`, and
+  `ScalarTemperedSchwingerDistribution` use the selected Euclidean dimension and actual Mathlib
+  Schwartz/tempered-distribution carriers.
+- `ScalarSchwingerDistributionFamily` separates normalized `S₀ = 1` from positive-arity tempered
+  distributions.
+- `FactorialGrowthSequence` records positive coefficients, one positive amplitude, one nonnegative
+  real factorial exponent, and a bound indexed by the actual arity.
+- `mathlibSchwartzOrderControl` is an explicit finite sum of weighted Fréchet-derivative Schwartz
+  seminorms; `MathlibFixedOrderFactorialGrowthData` requires one order and one factorial sequence to
+  control every positive arity of the same family.
+- The naming and source map deliberately do not identify this Mathlib convention with OS-II
+  `(E0′)`: comparison with OS's diagonal-sensitive test spaces and weighted multi-index norm,
+  including preservation of factorial growth, remains a required bridge.
+- Hostile probes reject zero actual arity, zero `S₀`, nonpositive coefficients or amplitudes,
+  negative exponents, zero fixed order, an identically-zero control, and a disconnected nonzero
+  distribution value under zero designated control.
+- No covariance, reflection positivity, symmetry, clustering, reconstruction, Euclidean theory,
+  Wightman theory, existence theorem, or mass-gap witness is introduced.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
@@ -1248,8 +1272,10 @@ Not yet achieved:
   generic degree-two adapter is applied to the exact curvature. The resulting pointwise contraction
   is basis-independent and the existing action is proved to integrate it, but a general Hodge-star
   bridge and metric-volume compatibility remain pending. OS-I, correcting OS-II, Wightman 1956,
-  and Streater–Wightman source artifacts are now acquired and verified; their Lean requirement
-  surfaces remain unimplemented. Wilson and Osterwalder–Seiler lattice sources are likewise pinned,
+  and Streater–Wightman source artifacts are now acquired and verified. Scalar tempered Schwinger
+  families and fixed-order factorial-growth infrastructure are implemented, but the OS source-norm
+  bridge, `(E1)`–`(E4)`, and reconstruction remain unimplemented. Wilson and Osterwalder–Seiler
+  lattice sources are likewise pinned,
   but lattice declarations and all continuum bridges remain unimplemented. Wilson's OPE paper and
   the Gross–Wilczek/Politzer asymptotic-freedom papers are pinned, but their typed observable and
   ultraviolet-consistency declarations remain unimplemented. A spectral-theorem source package

@@ -107,7 +107,9 @@ committed before higher layers depend on it.
     linear-growth locators as provisional searchable evidence.
   - [x] Acquire, signature-check, text-extract, and visually verify OS-I/OS-II primary article scans,
     the Wightman 1956 paper, and the Streater–Wightman axiomatic source.
-- [ ] Define OS-II-strength Euclidean/Schwinger data.
+- [x] Define normalized scalar tempered Schwinger families and explicit Mathlib fixed-order
+  factorial-growth infrastructure, with the OS test-space/seminorm equivalence left visible.
+- [ ] Prove the source-facing OS-II `(E0′)` bridge and define complete Euclidean/Schwinger data.
 - [ ] Define proper-orthochronous Poincaré and Wightman data independently.
 - [ ] Define common invariant domains and operator-valued tempered distributions.
 - [ ] Add explicit OS reconstruction and correlator coherence.
