@@ -2389,6 +2389,28 @@ Implemented and verified:
   as a project strengthening informed by the pinned Wightman/SNAG chain.
 - No cutoff sequence, generator, Ward datum, tensor, trace anomaly, theory, or mass gap is constructed.
 
+## 2026-07-18 — one-hundred-thirty-first stone: basic curvature-squared interpretation
+
+Implemented and verified:
+
+- `BasicCurvatureObservableTag` deliberately contains only the normalized unit and curvature squared.
+- `basicClassicalCurvatureObservable` makes `F²` definitionally equal to the basis-free canonical
+  density of the exact metric, invariant pairing, connection, exterior derivative, curvature
+  certificate, and descent chain.
+- `CurvatureSquaredLocalObservableInterpretationData` places both tags in one exact tempered local-
+  observable family/common quantum domain.
+- A designated classical base point prevents empty-base vacuity, and every classical tangent finrank
+  must equal the exact quantum spacetime dimension.
+- The selected quantum unit is the family's normalized unit; the `F²` label is distinct and acts both
+  nontrivially and differently from the unit on one exact test/domain vector.
+- Hostile probes expose the exact classical density, designated-point dimension equation, normalized
+  unit, and rejection of zero/duplicate-unit `F²` interpretations.
+- In accordance with Clay footnote 1, no global injective classical-polynomial-to-quantum-field map is
+  claimed. “Gauge-invariant” remains the intended source interpretation through curvature descent
+  and invariant pairing; gauge transformations of connections are not yet formalized here.
+- Arbitrary curvature polynomials, covariant derivatives, operator mixing, quantization, a theory,
+  and a mass gap remain unconstructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
@@ -2419,9 +2441,10 @@ Not yet achieved:
   support-local loop expectations, finite-cutoff reflection-positivity checker, and scaling/
   expectation-limit interfaces are explicit. No Gibbs, positivity, scaling, or continuum-bridge
   inhabitant is constructed, and measure/field/OS continuum identification remains unimplemented.
-  Wilson's OPE paper and
-  the Gross–Wilczek/Politzer asymptotic-freedom papers are pinned, but their typed observable and
-  ultraviolet-consistency declarations remain unimplemented. The physical joint translation-PVM
+  Wilson's OPE paper and the Gross–Wilczek/Politzer asymptotic-freedom papers are pinned. Generic
+  weak OPE data and the basic exact `F²` interpretation bridge are implemented, but arbitrary
+  curvature-polynomial/covariant-derivative interpretation, operator mixing, and prescribed
+  ultraviolet coefficient semantics remain unimplemented. The physical joint translation-PVM
   and invariant-mass-gap predicates are now anchored to the visually verified SNAG discussion, and
   the same PVM supplies the Hamiltonian interval view; any satisfying spectral datum and the final
   acceptance integration remain absent.

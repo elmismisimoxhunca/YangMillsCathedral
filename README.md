@@ -199,9 +199,12 @@ supports. Normalized
 compact-first-anchor diagonal probes have linearly scale-controlled support and a canonical
 polynomial Schwartz-seminorm envelope. A generic weak OPE checker carries a designated probe and
 packages `C(x-y) O(x)` relative tempered coefficients, exact coefficient/local-field contraction, finite
-monotone truncations, connected remainders, and all-order little-`o` behavior. Labels are not yet
-interpreted as gauge-invariant curvature polynomials, and coefficient singularities are not matched
-to asymptotic freedom or perturbative renormalization. A separate same-family stress-tensor checker
+monotone truncations, connected remainders, and all-order little-`o` behavior. A deliberately basic
+classical-to-quantum interpretation bridge now maps the normalized unit and the exact canonical
+curvature-squared density to labels in one local family, with a nonempty base, exact dimension match,
+and nonzero non-unit `F²` action. This is not a general curvature-polynomial/covariant-derivative
+language or a canonical injective quantization map. Coefficient singularities are not yet matched to
+asymptotic freedom or perturbative renormalization. A separate same-family stress-tensor checker
 requires symmetric Hermitian components local relative to the whole family, explicit inverse-matrix
 contravariant rank-two Lorentz covariance, weak distributional conservation, and a nonzero non-unit
 energy density. Its symmetry/conservation semantics are independently sourced to an authoritative

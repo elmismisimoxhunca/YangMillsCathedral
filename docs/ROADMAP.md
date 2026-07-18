@@ -113,7 +113,10 @@ committed before higher layers depend on it.
   same physical translation unitaries and joint PVM, with all-family infinitesimal Ward identities.
 - [ ] State trace/trace-anomaly semantics and the required renormalized four-dimensional relation;
   the classical trace identity is not silently promoted to the quantum theory.
-- [ ] Interpret gauge-invariant local curvature polynomials and covariant derivatives.
+- [x] Tie a basic nonzero/non-unit quantum `F²` label to the exact canonical curvature density and
+  exact classical/quantum spacetime dimension, without asserting a global injective quantization map.
+- [ ] Extend the basic bridge to interpreted gauge-invariant local curvature polynomials and
+  covariant derivatives, including renormalized operator mixing.
 - [ ] Separate local observables from nonlocal Wilson observables.
 - [ ] Add nontrivial positive examples and hostile disconnected-curvature probes.
 
