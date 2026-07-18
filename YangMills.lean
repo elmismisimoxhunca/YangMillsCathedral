@@ -181,6 +181,8 @@ import YangMills.Euclidean.SchwingerSpatialRay
 import YangMills.Euclidean.SchwingerSpatialRayProbes
 import YangMills.Euclidean.SchwingerClusteringForm
 import YangMills.Euclidean.SchwingerClusteringFormProbes
+import YangMills.Euclidean.SchwingerEuclideanCandidate
+import YangMills.Euclidean.SchwingerEuclideanCandidateProbes
 import YangMills.Audit
 
 /-!

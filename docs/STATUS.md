@@ -1707,6 +1707,23 @@ Implemented and verified:
 - Source-facing `(E2)`, `(E4)`, complete Euclidean data, reconstruction, existence, and a mass-gap
   witness remain absent.
 
+## 2026-07-18 — ninety-sixth stone: coherent strict Euclidean candidate
+
+Implemented and verified:
+
+- `MathlibStrictScalarEuclideanCandidate` assembles fixed-order factorial growth, proper-Euclidean
+  covariance, permutation symmetry, strict-domain reflection positivity, and direction-indexed
+  clustering around one normalized Schwinger family.
+- Every field is indexed by that same family; clustering is indexed by one explicitly supplied unit
+  spatial direction.
+- Projection theorems expose positivity and clustering on every strict test sequence/pair.
+- Hostile probes exercise the exact growth bound, `(E1)`, `(E3)`, the explicit nonzero bump in both
+  positivity and clustering, and nonvanishing of the candidate direction.
+- Dimension one cannot package a direction-indexed composite candidate, matching its proved absence
+  of spatial directions rather than hiding a vacuous direction quantifier.
+- No inhabitant is constructed. This is not a source-facing OS theory, `(E0′)` bridge,
+  reconstruction datum, existence theorem, or mass-gap witness.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
