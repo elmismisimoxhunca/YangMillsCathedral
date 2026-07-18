@@ -2182,7 +2182,29 @@ Implemented and verified:
 - Hostile probes expose an explicit positive link, exact Haar marginal, zero-measure exclusions,
   exact specialized reference, unrelated-reference rejection, and all derived Gibbs laws.
 - No concrete compact-simple gauge-group certificate, measurable potential datum, Gibbs datum,
-  expectation value, reflection positivity, continuum limit, theory, or mass gap is constructed.
+  evaluated expectation, reflection positivity, continuum limit, theory, or mass gap is constructed.
+
+## 2026-07-18 — one-hundred-twenty-second stone: support-local Wilson-loop expectations
+
+Implemented and verified:
+
+- `orientedStepPositiveLink` identifies the exact positive link read by forward or backward signed
+  traversal; `pathLinkSupport` recursively records the finite support of a based path.
+- `pathHolonomy_eq_of_eq_on_pathLinkSupport` proves arbitrary changes outside that support cannot
+  alter holonomy.
+- Signed-link and finite-path holonomy measurability are proved from exact product evaluations and
+  measurable group operations.
+- `BoundedMeasurableGaugeInvariantClassObservable` strengthens the algebraic nonconstant class
+  function with source-facing boundedness and measurability evidence.
+- `finiteWilsonLoopObservable` is a genuine `FiniteLatticeObservable`, remains support-local, and is
+  gauge invariant on exactly closed paths.
+- `finiteProductHaarWilsonLoopExpectation` requires the same specialized Gibbs datum and an explicit
+  closure proof; integrability is proved before taking the Bochner integral.
+- Hostile probes expose forward/backward singleton support, nonempty plaquette support, outside-
+  support insensitivity, actual measurability/integrability, and a concrete two-site open path.
+- No bounded class-observable datum, potential-measurability datum, Gibbs datum, evaluated
+  expectation, area law, reflection positivity, continuum interpretation, theory, or mass gap is
+  constructed.
 
 Not yet achieved:
 

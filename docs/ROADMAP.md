@@ -234,6 +234,9 @@ committed before higher layers depend on it.
   marginals, and prove local gauge invariance; specialize the Gibbs checker definitionally to this
   reference and derive partition/Gibbs normalization and invariance from one measurable density.
   No potential-measurability or Gibbs datum is currently constructed.
+- [x] Give signed paths exact finite positive-link supports; package bounded measurable class
+  observables as support-local, gauge-invariant, genuinely integrable closed-loop expectations
+  conditional on the same product-Haar Gibbs datum.
 - [ ] Define scaling, renormalization, interpreted-observable and continuum-limit bridges.
 - [ ] Keep finite-cutoff reflection positivity distinct from continuum OS data.
 

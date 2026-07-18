@@ -43,7 +43,7 @@ abbrev Vertex (d : EuclideanDimension) (Λ : FinitePeriodicLattice) :=
 structure PositiveOrientedLink (d : EuclideanDimension) (Λ : FinitePeriodicLattice) where
   base : Vertex d Λ
   direction : d.CoordinateIndex
-  deriving Fintype
+  deriving DecidableEq, Fintype
 
 /-- Cyclic successor on one nonempty periodic coordinate axis. -/
 def cyclicSucc (Λ : FinitePeriodicLattice) (i : Fin Λ.extent) : Fin Λ.extent := by

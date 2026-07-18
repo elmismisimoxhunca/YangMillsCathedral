@@ -226,8 +226,10 @@ proved closed with holonomy equal to the plaquette. A finite-cutoff Gibbs accept
 constructs the exact finite product of probability-normalized compact-group Haar measure and
 proves its link marginals and local gauge invariance. For a measurable positive Boltzmann density,
 partition positivity/finiteness, Gibbs normalization, and Gibbs gauge invariance are derived on that
-same reference chain; bounded observable integrability remains explicit. No potential-measurability
-or Gibbs datum is constructed. No lattice positivity, continuum limit, or identification with the
+same reference chain. Signed paths carry exact finite positive-link supports; bounded measurable
+class observables are proved support-local and integrable, and their closed-loop expectation is
+defined only from supplied product-Haar Gibbs data. No potential-measurability datum, Gibbs datum,
+or evaluated expectation is constructed. No lattice positivity, continuum limit, or identification with the
 continuum action/PVM is made.
 
 Primary OS-I and correcting OS-II article scans, Wightman's 1956 paper, and the corrected Princeton
