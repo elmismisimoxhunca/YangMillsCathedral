@@ -226,6 +226,8 @@ import YangMills.Reconstruction.ReverseWickRotationGeometry
 import YangMills.Reconstruction.ReverseWickRotationGeometryProbes
 import YangMills.Reconstruction.StrictOrderedWickContinuation
 import YangMills.Reconstruction.StrictOrderedWickContinuationProbes
+import YangMills.Lattice.FinitePeriodicGaugeField
+import YangMills.Lattice.FinitePeriodicGaugeFieldProbes
 import YangMills.Audit
 
 /-!

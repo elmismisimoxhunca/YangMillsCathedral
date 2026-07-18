@@ -213,8 +213,15 @@ source-space comparison, arbitrary-polynomial comparison, extended-tube continua
 reconstruction, and observable interpretation remain pending, and no continuation or correlator
 datum is constructed. No concrete gauge-group, connection, invariant-inner-product, curvature, or
 structure-certificate witness,
-symmetry group, reconstruction bridge, quantum-theory witness, Yang–Mills existence claim, or
-mass-gap claim is present.
+symmetry group, source-facing reconstruction theorem, quantum-theory witness, Yang–Mills existence
+claim, or mass-gap claim is present.
+
+The independent finite-cutoff lattice layer now packages nonempty periodic vertices, group-valued
+positive links, cyclic shifts, endpoint gauge transformations, plaquette holonomy, and a
+nonnegative conjugation- and inversion-invariant nontrivial Wilson-type potential with a strictly
+positive coefficient. Gauge invariance, plaquette orientation independence, zero identity action,
+and dimension-one absence of plaquettes are proved. No Gibbs measure, lattice positivity, continuum limit, or identification
+with the continuum action/PVM is made.
 
 Primary OS-I and correcting OS-II article scans, Wightman's 1956 paper, and the corrected Princeton
 edition of Streater–Wightman are hash-pinned with exact text extractions. Load-bearing OS-II and

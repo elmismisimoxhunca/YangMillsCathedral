@@ -220,7 +220,10 @@ committed before higher layers depend on it.
 ## Phase 6 — optional lattice route
 
 - [x] Pin and visually verify Wilson and Osterwalder–Seiler primary lattice sources.
-- [ ] Define dimension-indexed lattice regulators and Wilson action semantics.
+- [x] Define dimension-indexed nonempty finite periodic lattices, group-valued positive links,
+  endpoint gauge transformations, plaquette holonomy/orientation reversal, and a nontrivial
+  normalized nonnegative Wilson-type potential with strictly positive coefficient and exact gauge
+  invariance.
 - [ ] Define scaling, renormalization, observable and continuum-limit bridges.
 - [ ] Keep finite-cutoff reflection positivity distinct from continuum OS data.
 

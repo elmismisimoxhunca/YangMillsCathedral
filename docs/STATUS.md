@@ -2105,6 +2105,28 @@ Implemented and verified:
   source-carrier density/topology/completion comparison, full distribution equality, Hilbert
   reconstruction, continuation inhabitant, theory, or mass-gap witness is constructed.
 
+## 2026-07-18 — one-hundred-eighteenth stone: finite periodic lattice gauge action
+
+Implemented and verified:
+
+- `Lattice.FinitePeriodicLattice` encodes a nonempty successor extent on every dimension-indexed
+  periodic axis; one-site periodicity and distinct-direction shift commutation are proved.
+- `GaugeField` stores group elements on positive oriented bonds, while `gaugeTransform` uses exact
+  base/forward-endpoint multiplication.
+- `plaquetteHolonomy` uses the ordered four-link product and is proved to transform by base-point
+  conjugation.
+- `PlaquettePotentialData` avoids a fake canonical matrix trace by requiring an explicit
+  nonnegative, identity-normalized, conjugation- and inversion-invariant class potential; a
+  nontriviality witness blocks the identically-zero density.
+- Plaquette direction reversal is proved to invert holonomy, and the potential is therefore
+  orientation-independent.
+- `LatticeCouplingData` requires a strictly positive coefficient. The finite Wilson-type action is
+  unconditionally gauge invariant and nonnegative; the identity field has zero action.
+- Dimension two has a genuine plaquette direction pair, while dimension one has none and its
+  plaquette action is identically zero.
+- No compactness/Haar structure, Gibbs measure, lattice reflection positivity, continuum limit,
+  confinement, lattice-to-OS bridge, theory, or Clay mass gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
@@ -2130,8 +2152,9 @@ Not yet achieved:
   families and fixed-order factorial-growth infrastructure are implemented, but the OS source-norm
   bridge, `(E2)`, `(E4)`, and reconstruction remain unimplemented; scalar proper-Euclidean
   covariance `(E1)` and permutation symmetry `(E3)` are now explicit. Wilson and Osterwalder–Seiler
-  lattice sources are likewise pinned,
-  but lattice declarations and all continuum bridges remain unimplemented. Wilson's OPE paper and
+  lattice sources are likewise pinned; finite periodic bonds, plaquette holonomy, local gauge
+  transformations, and Wilson-type action are now explicit, while Haar/Gibbs measures, lattice
+  positivity/observables, scaling, and all continuum bridges remain unimplemented. Wilson's OPE paper and
   the Gross–Wilczek/Politzer asymptotic-freedom papers are pinned, but their typed observable and
   ultraviolet-consistency declarations remain unimplemented. The physical joint translation-PVM
   and invariant-mass-gap predicates are now anchored to the visually verified SNAG discussion, and
