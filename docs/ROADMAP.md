@@ -106,8 +106,11 @@ committed before higher layers depend on it.
 - [ ] Match OPE coefficient singularities and scaling orders to asymptotic freedom and perturbative
   renormalization; the generic weak OPE checker alone does not meet Clay's prescribed-singularity
   requirement.
-- [ ] Define the local stress-energy tensor on the same interpreted observable/domain/Poincaré chain
-  and its conservation/covariance semantics.
+- [x] Define a symmetric Hermitian local stress-energy tensor inside the same local-observable/
+  common-domain/Poincaré chain, with explicit rank-two Lorentz covariance, weak conservation and a
+  nonzero non-unit energy-density witness.
+- [ ] Connect the stress tensor to physical translation generators through Ward identities and state
+  trace/trace-anomaly semantics where required; no such theorem is currently supplied.
 - [ ] Interpret gauge-invariant local curvature polynomials and covariant derivatives.
 - [ ] Separate local observables from nonlocal Wilson observables.
 - [ ] Add nontrivial positive examples and hostile disconnected-curvature probes.

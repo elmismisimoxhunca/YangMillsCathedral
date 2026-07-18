@@ -206,6 +206,8 @@ import YangMills.Minkowski.WightmanCovariance
 import YangMills.Minkowski.WightmanCovarianceProbes
 import YangMills.Minkowski.CovariantLocalObservableFamily
 import YangMills.Minkowski.CovariantLocalObservableFamilyProbes
+import YangMills.Minkowski.LocalStressEnergyTensor
+import YangMills.Minkowski.LocalStressEnergyTensorProbes
 import YangMills.Minkowski.WightmanCyclicity
 import YangMills.Minkowski.WightmanCyclicityProbes
 import YangMills.Minkowski.WightmanLocality

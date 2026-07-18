@@ -201,7 +201,12 @@ polynomial Schwartz-seminorm envelope. A generic weak OPE checker carries a desi
 packages `C(x-y) O(x)` relative tempered coefficients, exact coefficient/local-field contraction, finite
 monotone truncations, connected remainders, and all-order little-`o` behavior. Labels are not yet
 interpreted as gauge-invariant curvature polynomials, and coefficient singularities are not matched
-to asymptotic freedom or perturbative renormalization. Normalized algebraic smeared vacuum correlators are extracted from exact
+to asymptotic freedom or perturbative renormalization. A separate same-family stress-tensor checker
+requires symmetric Hermitian components local relative to the whole family, explicit inverse-matrix
+contravariant rank-two Lorentz covariance, weak distributional conservation, and a nonzero non-unit
+energy density. Its symmetry/conservation semantics are independently sourced to an authoritative
+gauge-theory energy-momentum review. Translation-generator Ward
+identities and trace-anomaly semantics remain open. Normalized algebraic smeared vacuum correlators are extracted from exact
 finite field words, with
 one- and two-point operator order locked to the same selected vacuum and field. A separate interface
 requires an actual full-product tempered distribution at every arity and exact coherence on every

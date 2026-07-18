@@ -1,0 +1,1953 @@
+                                                                                                                             LYCEN-2016-04
+                                                                                                                             LA-UR-16-23055
+
+
+
+
+                                         The Energy-Momentum Tensor(s) in Classical Gauge Theories
+
+                                                         Daniel N. Blaschke∗, François Gieres†, Méril Reboud†‡,
+                                                                         and Manfred Schweda§
+
+                                                                                 June 29, 2016
+
+                                                                      ∗ Los Alamos National Laboratory,
+
+                                                                        Los Alamos, NM, 87545, (USA)
+                                                                  † Institut de Physique Nucléaire de Lyon,
+arXiv:1605.01121v2 [hep-th] 6 Jul 2016
+
+
+
+
+                                                Université de Lyon, Université Claude Bernard Lyon 1 and CNRS/IN2P3,
+                                                    Bat. P. Dirac, 4 rue Enrico Fermi, F-69622-Villeurbanne (France)
+                                                                     ‡ Ecole Normale Supérieure de Lyon,
+
+                                                             46 allée d’Italie, F-69364-Lyon CEDEX 07 (France)
+                                                    § Institute for Theoretical Physics, Vienna University of Technology
+
+                                                            Wiedner Hauptstraße 8-10, A-1040 Vienna (Austria)
+
+                                         E-mail: dblaschke@lanl.gov, gieres@ipnl.in2p3.fr, meril.reboud@ens-lyon.fr,
+                                                                  mschweda@tph.tuwien.ac.at
+
+
+
+                                                                 Dedicated to the memory of Raymond Stora
+                                         who made profound and lasting contributions to field theory and to symmetries in physics
+
+
+
+                                                                                    Abstract
+                                                We give an introduction to, and review of, the energy-momentum tensors in classical
+                                            gauge field theories in Minkowski space, and to some extent also in curved space-time. For
+                                            the canonical energy-momentum tensor of non-Abelian gauge fields and of matter fields
+                                            coupled to such fields, we present a new and simple improvement procedure based on gauge
+                                            invariance for constructing a gauge invariant, symmetric energy-momentum tensor. The
+                                            relationship with the Einstein-Hilbert tensor following from the coupling to a gravitational
+                                            field is also discussed.
+Contents
+1 Introduction                                                                                    1
+
+2 EMT’s for gauge theories in Minkowski space                                                3
+  2.1 Canonical EMT and its properties . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+      2.1.1 The canonical EMT and the associated conserved charges . . . . . . . . . 3
+      2.1.2 Superpotential terms . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+      2.1.3 The canonical EMT for pure YM theory and its general properties . . . . 5
+      2.1.4 Improvements of the canonical EMT and definition of the physical EMT . 6
+  2.2 Improvement of the canonical EMT’s in gauge theories . . . . . . . . . . . . . . 7
+      2.2.1 Belinfante’s procedure for constructing a symmetric EMT . . . . . . . . . 7
+      2.2.2 Improvement procedure for constructing a gauge invariant EMT . . . . . 9
+  2.3 Assessment concerning the improvements . . . . . . . . . . . . . . . . . . . . . . 13
+
+3 Einstein-Hilbert EMT in Minkowski space                                                         13
+  3.1 Motivation and procedure . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      13
+  3.2 Fields in curved space-time . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     15
+      3.2.1 General framework and dynamics . . . . . . . . . . . . . . . . . . . . . . .          15
+      3.2.2 EMT for matter/gauge fields coupled to a dynamical gravitational field .              17
+      3.2.3 EMT for matter/gauge fields coupled to an external gravitational field . .            18
+  3.3 Einstein-Hilbert’s EMT for matter/gauge fields in Minkowski space . . . . . . . .           19
+  3.4 Case of spinor fields . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   21
+  3.5 Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     22
+
+4 On the quantum theory: Noether’s theorem and Ward identities                                    22
+
+5 Ward identities, their “cousins and descendants”: on (the work of) Raymond
+  Stora                                                                      23
+
+A Gauge field theories in a nutshell                                                              25
+
+
+1    Introduction
+The role and impact of symmetries in modern physics can hardly be overstated. As H. Weyl [1]
+put it: “As far as I see, all a priori statements in physics have their origin in symmetry”. Some
+salient features are the following ones [2]:
+
+    • The laws of nature are possible realizations of the symmetries of nature.
+    • The basic quantities or building blocks of physical theories are often defined and classified
+      by virtue of symmetry considerations, e.g. elementary particles and relativistic fields.
+    • The general structure of physical theories is largely determined by the underlying invari-
+      ances. In particular, the form of interactions is strongly restricted by geometric symme-
+      tries (relativistic covariance) and the gauge symmetries essentially fix all fundamental
+      interactions (electro-weak, strong and gravitational forces).
+
+
+
+
+                                                 1
+A pillar of classical mechanics and field theory is given by the two theorems that E. Noether
+established in 1918 [3]. They describe in quite general terms the consequences of the invariance
+of an action functional under a Lie group of global or local symmetry transformations, respec-
+tively, extending and generalizing some special cases which had previously been investigated, in
+particular by F. Klein in relationship with general relativity, e.g. see [4–7] and references therein.
+These two theorems can be applied to systems with a finite number of degrees of freedom (me-
+chanics) as well as to systems with an infinite number of degrees of freedom (field theory), both
+in their relativistic or non-relativistic versions, e.g. see reference [8] for numerous examples.
+They can also be generalized to superspace [9, 10] or to non-commutative space (see [11] and
+references therein).
+
+Plan of the paper: In the present note we focus, for classical YM (Yang-Mills) theories in n-
+dimensional Minkowski space, on the EMT (energy-momentum tensor, also referred to as stress-
+energy tensor or stress tensor for short): the components T µν of the EMT can be interpreted as
+follows, e.g. see reference [12]. T 00 represents the energy density, T 0i the i-momentum density
+(or energy flux density) and T ij the i-momentum flux density in the j-direction. Regarding
+the field theoretical system as a collection of particles, we can also interpret T ii ≡ p as the
+pressure and (T ij ) with i 6= j as the shear stress. In particular, we will study here the so-called
+canonical EMT whose components Tcan       µν represent the conserved current densities which are
+
+associated (by virtue of Noether’s first theorem) to the invariance      of the action under space-
+time translations. The corresponding conserved charges P ≡ Rn−1 dn−1 x Tcan
+                                                               ν                   0ν define the total
+                                                                   R
+
+energy and momentum of the physical system.
+    As is well known (for instance for Maxwell’s theory), the tensor Tcan    µν is neither symmetric
+
+nor gauge invariant in general and thereby needs to be “improved”. This is traditionally real-
+ized by the “symmetrization procedure of Belinfante” [13, 14] which relies on the spin angular
+momentum density, but this method does not work straightforwardly in the case where matter
+fields are minimally coupled to a gauge field [15]. After a short introduction to the subject and
+problematics in subsection 2.1, we will show in subsection 2.2 that the improvement can be
+realized in a simple manner for pure gauge fields or for interacting gauge and matter fields by
+taking into account the local gauge invariance1 . A conceptually quite different approach consists
+of coupling the gauge and matter fields to gravity and deducing the so-called Einstein-Hilbert
+EMT in Minkowski space from the metric EMT on curved space. This approach is outlined for
+YM theories in section 3 and it is readily shown that the different results in Minkowski space
+coincide with each other. Concerning the latter point we should mention that more general and
+abstract approaches have been considered in the literature (we refer in particular to the system-
+atic study [17] based on the earlier work [18]), but we hope that the elementary discussion of the
+different aspects presented here is useful both as a short introduction to, and as an overview of,
+the subject. While our paper is devoted to the classical theory, we conclude with some remarks
+on how symmetries impact the quantum theory, i.e. on Ward identities, and more generally on
+the related subjects to which R. Stora made substantial contributions.
+   1
+    In the older literature (e.g. see reference [16]), the local, i.e. space-time dependent, gauge transformations
+are often referred to as gauge transformations of the second kind as opposed to gauge transformations of the first
+kind, i.e. global gauge transformations (labeled by constant parameters). To avoid a topological connotation, some
+authors also use the terminology flexible versus rigid symmetry transformations for transformations involving
+x-dependent symmetry parameters versus constant ones. By gauge invariance we shall always mean local gauge
+invariance.
+
+
+
+
+                                                        2
+General framework of classical Lagrangian field theory in Minkowski space: Our
+conventions and general assumptions are as follows. We choose natural units so that c ≡ 1 ≡ ~.
+The points of n-dimensional Minkowski space are labeled by x ≡ (xµ )µ=0,1,...,n−1 ≡ (t, ~x ) ∈ Rn
+and the signature of the Minkowski metric (ηµν ) is chosen to be (+, −, . . . , −). We will deal only
+with YM theories, i.e. multiplets of complex scalar or Dirac fields which are minimally coupled
+to the YM field Aµ (x) ≡ Aµa (x)Ta (see appendix A for the notation and for a summary of gauge
+theories). Thus, generically we have a collection ϕ ≡ (ϕr )r=1,...,N of classical relativistic fields in
+Minkowski space which are assumed to vanish (together with their derivatives) sufficiently fast at
+spatial infinity.
+        R n
+                  The dynamics of fields is specified by a local, Poincaré invariant action functional
+S[ϕ] ≡ d x L(ϕ, ∂µ ϕ) which involves a Lagrangian density L having the following properties.
+We consider closed systems which means [19] that the Lagrangian L does not explicitly depend
+on the space-time coordinates, i.e. the x-dependence of L is only due to the x-dependence of ϕ
+and ∂µ ϕ. Moreover, we assume that L depends at most on first-order derivatives: the associated
+equations of motion
+                                                                    !
+                                     δS   ∂L                ∂L
+                                  0=    =    − ∂µ                       ,                            (1.1)
+                                     δϕ   ∂ϕ              ∂(∂µ ϕ)
+
+are then at most of second order. We concentrate on the Lagrangian formulation of field theory
+and refer to the work [20, 21] for a discussion of the EMT of gauge theories within the Hamil-
+tonian framework. Moreover in section 3, we discuss the generalization to curved space-time
+manifolds.
+
+
+2     EMT’s for gauge theories in Minkowski space
+After recalling the definition of the canonical EMT [15, 19, 22], we consider the example of pure
+YM theories (while referring whenever necessary to the summary of non-Abelian gauge theories
+given in appendix A). Thereafter, we discuss the general properties of the EMT (local conser-
+vation law, symmetry, gauge invariance, tracelessness) as well as the addition of superpotential
+terms to the canonical EMT: The aim of these additions is to “improve” the characteristics of
+the canonical EMT, so that it becomes symmetric and gauge invariant (and traceless for scale
+invariant Lagrangians) if it does not have these properties.
+
+2.1     Canonical EMT and its properties
+2.1.1    The canonical EMT and the associated conserved charges
+Noether’s first theorem: By virtue of Noether’s first theorem, the invariance of the action
+S[ϕ] under translations xν → x0ν = xν + aν implies the existence of current densities (jcan   µ )ν
+                                     µ )ν = 0 for ν ∈ {0, 1, . . . , n − 1}. The conserved second-
+satisfying the conservation law ∂µ (jcan
+               µν      µ   ν
+rank tensor Tcan ≡ (jcan ) is referred to as the canonical EMT field and with the notation
+δxµ = aµ , δϕ = −aµ ∂µ ϕ (where |aµ |  1) we have
+
+         δS                                                                   ∂L
+    0=      δϕ + ∂µ j µ       with     j µ ≡ −Tcan
+                                               µν
+                                                   aν            µν
+                                                                Tcan ≡              ∂ ν ϕ − η µν L . (2.1)
+         δϕ                                                                 ∂(∂µ ϕ)
+
+                                         µν and in similar expressions, the sum over all fields
+In this expression for the tensor field Tcan
+is implicitly understood (e.g. the sum over φ and φ∗ in the case of a complex scalar field φ).
+
+                                                   3
+                                 µν = 0 holds by virtue of the equations of motion of ϕ and its
+The local conservation law ∂µ Tcan
+                                                           µν [19]:
+explicit verification amounts to a one-line derivation of Tcan
+                                         ∂L                           ∂L                     ∂L         
+          ∂µ (η µν L) = ∂ ν L =                        ∂ν ϕ +               ∂ ν (∂µ ϕ) = ∂µ          ∂ν ϕ .
+                                         ∂ϕ                         ∂(∂µ ϕ) | {z }           ∂(∂µ ϕ)
+                                     | {z }                                 = ∂µ (∂ ν ϕ)
+                                           ∂L
+                                  = ∂µ   ∂(∂µ ϕ)
+
+
+   If we assumeR as usual that the fields vanish sufficiently fast at spatial infinity, then the
+boundary term dn−1 x ∂i Tcan
+                          iν vanishes and we have conserved “charges”
+
+                                                        Z
+                                              Pν ≡                  dn−1 x Tcan
+                                                                            0ν
+                                                                                                              (2.2)
+                                                         Rn−1
+
+associated with the conserved densities (2.1). The vector (P ν ) represents the total energy-
+momentum of the fields and generates space-time translations of the fields ϕ in classical and
+in quantum theory. (Some subtleties appear for gauge theories due to the presence of so-called
+constraint equations following from the gauge invariance of the Lagrangian, see references [20,
+21].) In particular P 0 coincides with the canonical Hamiltonian function H since Tcan 00 = ∂L ϕ̇ −
+                        R n−1                                                               ∂ ϕ̇
+L = H. The fact that V d           0ν
+                                x Tcan represents the components of a Lorentz vector for any space
+region V ⊂ Rn−1 (a result which is also known as von Laue’s theorem [23]) is not quite obvious,
+but can be verified [24] by using the assumptions that ∂µ Tcanµν = 0 and that the functions T µν
+                                                                                                 can
+vanish sufficiently fast at the boundary of V . We note that the integral (2.2) is performed over a
+hypersurface of Rn given by x0 constant which can be replaced by a generic (n − 1)-dimensional
+space-like hypersurface Σ with fields vanishing on its boundary ∂Σ.
+
+Other derivations: We note that the canonical Noether currents associated to geometric
+symmetries can also be obtained [25] by considering local symmetry transformations without
+coupling the fields to a gravitational field (and similarly for internal symmetries without a
+coupling of matter fields to a gauge field). This approach may be referred to as Gell-Mann-Lévy
+procedure [26] since it goes back to the classic work of Gell-Mann and Lévy on the σ-model [27].
+
+2.1.2   Superpotential terms
+Apart from an overall numerical factor, there are other ambiguities in the definition of a canon-
+ical current. In fact, for the canonical EMT we can always add a so-called superpotential term,
+i.e. the divergence of an antisymmetric tensor, so as to pass over to a so-called improved EMT
+  µν
+Timp  defined by2
+
+                         µν    µν
+                       Timp ≡ Tcan + ∂ρ χµρν                ,         with     χµρν = −χρµν    .              (2.3)
+
+The antisymmetry of χµρν in its first two indices ensures that ∂ρ χµρν is identically conserved,
+        µν
+hence Timp  is conserved as well. The derivative in the superpotential term entails that one
+has the same conserved charge as for Tcanµν provided χ0iν decreases for r ≡ |~  x | → ∞ faster
+than 1/r n−2  in n space-time dimensions. The freedom (2.3) may be used to give a different
+form (eventually with a greater physical significance) to the EMT, various examples for this
+“improvement procedure” (i.e. judicious choices of superpotentials) being given below.
+  2
+    One may regret that some monographs (e.g. [16]) refer to (2.3) as “the canonical EMT” since χµρν and
+          µν
+thereby Timp are neither unique nor naturally given.
+
+
+                                                                4
+2.1.3    The canonical EMT for pure YM theory and its general properties
+Canonical expression: By way of example, for pure YM theory in n dimensions, the trans-
+lation invariance of the YM action (A.9), i.e. Lg (F ) ≡ − 4c12 Tr (F µν Fµν ), yields
+
+                             µν      1                    1
+                            Tcan =      Tr (−F µρ ∂ ν Aρ + η µν F ρσ Fρσ ) .                       (2.4)
+                                     c2                   4
+According to Noether’s first theorem, this EMT is locally conserved, i.e. ∂µ Tcan µν = 0, by virtue
+                                νµ        νµ           νµ
+of the field equation 0 = Dν F ≡ ∂ν F + iq [Aν , F ] where q denotes the non-Abelian charge
+(cf. appendix A). As for any EMT some other properties are also of interest: one may wonder
+whether it is gauge invariant (since we are dealing with gauge theories), whether it is symmetric
+in its indices, whether it is traceless and whether it gives rise to a positive energy density. As a
+matter of fact, the EMT (2.4) enjoys none of these properties. The physical and mathematical
+ideas behind these four properties are the following ones, ignoring for the moment the coupling
+to gravity which we address in the next subsection.
+
+On the gauge invariance of the EMT: The lack of gauge invariance of the components
+of the classical EMT is unacceptable
+                           R n−1
+                                         since these physical quantities are measurable; and so
+is the energy-momentum V d         x Tcan (contained in a domain V ⊂ Rn−1 of finite volume)
+                                      0ν
+
+which is not on-shell gauge invariant (i.e. not gauge invariant for fields ϕ satisfying the classical
+equations of motion).
+
+On the symmetry of the EMT: If the EMT Tcan        µν is not symmetric on-shell, then the
+                                     µνρ
+canonical angular momentum tensor Mcan and the EMT Tcan µν are not related in the same way
+
+as angular momentum and momentum are related in classical mechanics, i.e. by a relation of
+the form “the components of M are the moments of T ”,
+
+                                      M µρσ = xρ T µσ − xσ T µρ .                                  (2.5)
+
+Indeed for a tensor M µρσ of this form, the conservation law ∂µ M µρσ = 0 only holds if the tensor
+T µν is symmetric on-shell:
+
+                         0 = ∂µ M µρσ = ∂µ (xρ T µσ − xσ T µρ ) = T ρσ − T σρ ,                    (2.6)
+
+where we used the fact that ∂µ T µν = 0 holds for solutions of the equations of motion. Thus,
+if the canonical EMT is not symmetric, then the canonical angular momentum tensor does not
+have the ‘mechanical’ form (2.5), rather we have an extra spin angular momentum term sµρσ ,
+
+         µρσ                                                   ∂L    1
+        Mcan = xρ Tcan
+                   µσ
+                       − xσ Tcan
+                             µρ
+                                 + sµρσ ,     with sµρσ ≡           ( Σρσ ) ϕ = −sµσρ .            (2.7)
+                                                             ∂(∂µ ϕ) 2
+
+Here, 2i Σρσ ≡ d(Mρσ ) is a N -dimensional representation d of a basis (Mρσ ) of the Lie algebra
+associated to the Lorentz group, e.g. d(Mρσ ) = 0 for a scalar field, d(Mρσ ) ≡ Mρσ for a vector
+field (Aµ ) and d(Mρσ ) ≡ 81 [γρ , γσ ] for a Dirac field (γ0 , . . . , γd−1 denoting matrices satisfying
+the Clifford algebra relation {γρ , γσ } = 2ηρσ 1).
+
+
+
+
+                                                   5
+On the tracelessness of the EMT: Consider a field theoretic model which is invariant
+under rescalings x     x0 = eρ x (where ρ is a constant real parameter), e.g. pure YM theory in
+four dimensions or the theory of a real massless scalar field φ. For such a model, one expects
+                                                                                       µν
+that the canonical EMT can be improved so as to obtain a “new improved” EMT Tconf          which
+is conserved, symmetric and traceless [28, 29]: the dilatation current (j µ ) associated to scale
+invariance is then given by the moments of the EMT and its local conservation law (reflecting
+the scale invariance) is tantamount to the tracelessness of the EMT:
+                                     µν                             µ
+                           j µ = xν Tconf ,      hence    ∂µ j µ = Tconf µ = 0.                       (2.8)
+
+This tracelessness of the EMT plays an important role in conformal field theories [30]. Here, we
+only note that for a single, real, massless scalar field φ in n-dimensional Minkowski space, the
+new improved or Callan-Coleman-Jackiw EMT [28] reads
+       µν      µν                                                                      1 n−2
+      Tconf ≡ Tcan − ξ(n) (∂ µ ∂ ν − η µν )φ2      with  ≡ ∂ µ ∂µ     and ξ(n) ≡           .        (2.9)
+                                                                                       4 n−1
+
+On the positivity of the energy density: An interesting question is whether or not the
+total energy P 0 is positive or, more importantly (the energy being only determined up to an
+additive constant in the absence of gravity), whether the total energy is bounded from below.
+In fact, if this is not the case, then one can extract an infinite amount of energy from the
+physical system. If the energy density T 00 satisfies the positivity condition T 00 ≥ 0 in all
+inertial frames, then the energy P 0 is positive in all inertial frames if |P~ | ≤ P 0 , i.e. equivalently
+if the vector P ≡ (P 0 , P~ ) is time-like and future-directed3 [31]. The latter condition is satisfied
+if the EMT satisfies the so-called dominant energy condition [32] stipulating that the energy
+current E µ ≡ T µ ν uν is time-like and future-directed for every observer with velocity (uµ ) (e.g.
+consider (uµ ) = (1, ~0 )). The energy conditions reflect the principles of relativity and play an
+important role in general relativity where relations of this type are an essential ingredient for
+establishing general results like the no hair theorem, the laws of black hole thermodynamics or
+the singularity theorems of Penrose and Hawking which predict the occurrence of singularities
+in the universe [33–36].
+
+2.1.4    Improvements of the canonical EMT and definition of the physical EMT
+Improvements of the canonical EMT: In view of the unpleasant and problematic proper-
+ties (lack of symmetry and of gauge invariance) of the canonical EMT some improvements of the
+canonical expression (2.1) have been looked for. The first one is due to Belinfante [13] and rep-
+resents an astute procedure for constructing a symmetric EMT out of the canonical expression
+— see section 2.2.1. In section 2.2.2 we will show that, for non-Abelian gauge theories, the same
+results can be obtained by taking into account the gauge invariance of the Lagrangian. (Equiv-
+alently, one can already exploit this gauge invariance in establishing Noether’s first theorem for
+the translational invariance so as to obtain right away a gauge invariant (and symmetric) EMT,
+see references [37–39] as well as [40]; we also note that a symmetric EMT can be obtained in
+establishing Noether’s theorem if one considers both translations and Lorentz transformations
+in an appropriate way [41].) We mentioned already that for scale invariant theories a further im-
+provement, which is due to Callan, Coleman and Jackiw [28], consists of constructing a traceless
+EMT out of Belinfante’s symmetric tensor.
+  3                                                                                        ~ · ~v ) with γ ≡
+    Under a Lorentz boost with velocity ~v , the component P 0 goes over to P 00 = γ(P 0 − P
+       2 −1/2          0                     00
+(1 − ~v )     , hence P ≥ 0 does not imply P ≥ 0 without the given assumption.
+
+
+                                                     6
+Definition of the physical EMT: The canonical EMT and its improvements represent
+different localizations for the energy and momentum, and one may wonder whether there is
+a preferred or a correct localization. An answer to this question can be provided by coupling
+the matter fields (including gauge fields) to the gravitational field. In fact, in general relativity
+the EMT represents the local source for the gravitational field in Einstein’s field equations
+very much like the electric current density represents the source for the electromagnetic field
+in Maxwell’s equations. Thus, in curved space-time, one defines the so-called metric EMT for
+the gauge or matter field as the functional derivative of the gauge/matter field action S[ϕ, gµν ]
+with respect to the metric tensor field (gµν ), see section 3 below. Accordingly, this curved space
+EMT is generally covariant, covariantly conserved, symmetric and gauge invariant. The so-
+                                 µν
+called Einstein-Hilbert EMT TEH     in Minkowski space which is obtained from the metric EMT
+by setting gµν = ηµν is then conserved, symmetric and gauge invariant by construction.
+    As was pointed out by Rosenfeld [42] and Belinfante [14] (and as we will discuss in sub-
+section 3.3), this conceptually quite different approach yields, in the flat space limit of the
+minimal coupling to gravity, Belinfante’s symmetric EMT whose construction does not make
+any reference to gravity. (In particular one recovers the canonical EMT if this one is already
+symmetric. We note that Belinfante’s symmetric EMT admits a natural geometric formulation
+if gravity is viewed as a gauge theory of the Poincaré group, see references [15, 43].) One can
+also recover the traceless Callan-Coleman-Jackiw EMT in the flat space limit of a conformally
+invariant field theory on curved space.
+
+Summary: If one takes for granted that Einstein’s general relativity is the correct theory
+for the gravitational field, then the EMT of gauge and/or matter fields in Minkowski space
+should not only be conserved and gauge invariant, but it should also be symmetric and naturally
+generalizable to a generally covariant tensor in curved space. Yet, we should note that within
+certain alternative theories of gravity like Einstein-Cartan theory [43–45], the canonical EMT
+appears naturally. In particular, non symmetric EMT’s which do exist for certain classical spin
+fluids can consistently be coupled to gravity in this framework, see [46] and references therein.
+Concerning the validity of the different theories of gravity we note that Einstein-Cartan theory is
+considered to be a viable alternative to general relativity: both theories can only be distinguished
+at very high densities or at very small distances which are currently beyond experimental reach
+— see [46] and references therein.
+    The canonical and the improved (or Einstein-Hilbert-) EMT’s only differ by a total derivative
+so that they yield the same conserved charges P ν and it is the latter which play a fundamental
+role in classical and quantum field theories on flat space [20, 21]: They appear for instance in
+the defining axioms of Wightman and of Haag and Kastler for quantum field theory [47, 48].
+
+2.2     Improvement of the canonical EMT’s in gauge theories
+2.2.1    Belinfante’s procedure for constructing a symmetric EMT
+General procedure: The concern of Belinfante [13, 14] was to construct an improved EMT
+which is symmetric in its indices for any relativistically invariant field theory. The resulting
+         µν
+tensor Timp which is also referred to as the Belinfante(-Rosenfeld) tensor, is obtained by choosing
+the superpotential appearing in equation (2.3) to be given by
+                                         1
+                                 χµρν = − (sµρν − sνµρ + sρνµ ) ,                             (2.10)
+                                         2
+
+
+                                                 7
+where sµρν represents the spin density tensor of the fields which appears in the canonical angular
+momentum tensor (2.7). For a detailed presentation of this approach we refer to the literature,
+e.g. see reference [15]. Here we emphasize that this approach applies to any relativistically
+invariant field theory, but that, for gauge theories, the gauge invariance of the “symmetry
+improved” EMT of Belinfante is not a priori ensured. We will come back to this point in
+footnotes 4 and 5.
+
+Pure gauge fields: For the YM field, the described improvement procedure for the canonical
+EMT (2.4) yields χµρν = Faµρ Aνa . Use of the equation of motion Dρ F µρ = 0 then leads to the
+tensor
+
+                                  µν          1                 1
+                                Timp (F ) =      Tr (F µρ Fρ ν + η µν F ρσ Fρσ ) ,                            (2.11)
+                                              c2                4
+
+which is not only conserved and symmetric, but also gauge invariant4 . In n = 4 dimensions it
+is traceless.
+    Let us briefly consider the particular case of Maxwell’s U (1) theory in four space-time
+                                                           µν
+dimensions, for which the tensor (2.11) reduces to Timp       (F ) = F µρ Fρ ν + 41 η µν F ρσ Fρσ . This
+tensor encodes the familiar expressions [49] for the energy and momentum densities of the
+electromagnetic field (i.e. Timp      ~ 2+B
+                              00 = 1 (E      ~ 2 ) and T 0i = (E ~ × B)
+                                                                      ~ xi ) as well as for Maxwell’s
+                                    2                   imp
+                                                           ij                     µν
+stress tensor density (given by the spatial components Timp ). The result for Timp    (F ) expresses in
+a remarkable manner the union of space and time, energy and momentum as well as electricity
+and magnetism as achieved by the masters of electrodynamics and special relativity (Maxwell,
+                                                                                              µν
+Einstein, Lorentz, Poincaré and Minkowski). For ν = 0, the local conservation law ∂µ Timp          = 0 is
+                                                                                            00
+simply Poynting’s theorem for the free electromagnetic field. Furthermore, we have Timp (F ) ≥ 0
+        00 (F ) = 0 if and only if F = 0), as well as |E
+(and Timp                                                   ~ ×B ~ | ≤ 1 (E ~2+B  ~ 2 ) = T 00 : from
+                                                                        2R                    imp
+                                 ~       0                          ν          3   0ν
+these relations it follows that |P | ≤ P for the components P ≡ R3 d x Timp of the energy-
+momentum four-vector, i.e. the latter vector is time-like and future directed [31].
+
+Matter fields interacting with a gauge field: The improvement procedure of Belinfante
+is somewhat different and more subtle when matter fields (scalars or fermions) are coupled to
+a gauge field (e.g. see reference [15] for Abelian gauge theory). By way of illustration, let us
+consider a multiplet ψ ≡ [ψ1 , . . . , ψN ]t of Dirac fields which is minimally coupled to the YM
+                                                                           ↔
+field, i.e. we have the Lagrangian density (A.11): LM (ψ, A) ≡ i ψ̄γ µ Dµ ψ − mψ̄ψ. Then, the
+canonical EMT reads
+                   µν          ih µ ν                       i
+                 Tcan (ψ, A) =    ψ̄γ D ψ − (Dν ψ̄)γ µ ψ − η µν LM + Aνa jaµ [ψ, A] ,        (2.12)
+                               2
+where jaµ [ψ, A] ≡ q ψ̄γ µ Ta ψ. In this case, the standard (“naive”) improvement procedure is not
+sufficient, rather an extra minimal coupling procedure has to be performed at the level of the
+EMT’s so as to discard the last term (i.e. the potential-current term) in expression (2.12). We
+will see in the next section that the improved EMT’s follow straightforwardly from the canonical
+EMT’s if we improve these tensors by taking into account local gauge invariance.
+   4
+     As a matter of fact, the canonical expression (2.4) can be rendered gauge invariant in a very direct way by
+guessing the superpotential term ∂ρ (Faµρ Aνa ) since this term reduces on-shell (i.e. by virtue of the equation of
+motion Dρ F µρ = 0) to Faµρ (∂ρ Aν + ig [Aρ , Aν ])a and therefore allows to “gauge covariantize” the factor ∂ ν Aρ in
+ µν
+Tcan , thus ensuring gauge invariance of the EMT. This way of proceeding directly yields the result (2.11) without
+determining the spin density sµρν .
+
+
+                                                          8
+2.2.2   Improvement procedure for constructing a gauge invariant EMT
+For pure gauge theories (Abelian or non-Abelian) the standard derivation of the EMT (which
+consists of determining the consequence of the invariance of the action functional under space-
+time translations as outlined at the beginning of section 2.1) does not take into account the
+gauge invariance of the Lagrangian. Thus, the lack of gauge invariance of the canonical EMT
+does not come as a surprise. Gauge invariance of the EMT can either be achieved by exploiting
+this invariance of the Lagrangian in the course of the derivation of the EMT or by exploiting it
+upon improving the canonical EMT. The first approach is discussed in detail in reference [39]
+(see also [37, 38, 40, 50]) and we will present here the second procedure which is inspired by the
+first one, but which has not been considered in the literature to the best of our knowledge. As we
+will see, the latter approach can also be used to determine in a neat and straightforward manner
+the improved EMT for massive Abelian vector fields, i.e. Proca theory (this result being inspired
+by the work [40, 50]) despite the fact that the complete Lagrangian is not gauge invariant in
+this case. For all of these theories, the improved EMT obtained by exploiting gauge invariance
+(considering either of the two methods that we just outlined) coincides with the one obtained
+by Belinfante’s procedure whose goal is to construct a symmetric EMT out of the canonical one.
+More generally, we will show that our method of exploiting gauge invariance also generalizes to
+the case where matter fields (scalar or spinor fields) are coupled in a gauge invariant manner
+to gauge fields: in this context the improvement follows readily and there is no need to add
+by hand some extra term as it is the case for Belinfante’s procedure applied to this physical
+system. We will consider a general gauge theory, the case of an Abelian theory corresponding
+to the choice a = 1 for the internal symmetry indices and f abc = 0 for the structure constants.
+
+Improvement for pure gauge theories: The assumptions concerning the Lagrangian L
+are as follows. As before, we assume that L(x) ≡ L(Aν (x), ∂µ Aν (x)) is a scalar field depending
+on Aν and its first-order derivatives, but not explicitly on x. Moreover, we suppose that L has
+the form
+                                       L ≡ Lg (F ) + Lm (A) ,                                 (2.13)
+where Lm (A) only depends on Aν (and not on its derivatives) and where Lg is assumed to be
+gauge invariant. The latter assumption implies that Lg only depends on Aν and its derivatives
+by virtue of the components Fµν of the field strength tensor, this tensor being given by expres-
+sion (A.7), i.e. Fµν = ∂µ Aν − ∂ν Aµ + iq [Aµ , Aν ]. (This result follows for instance explicitly by
+exploiting the so-called Klein-Noether identities [6] which have first been discussed by F. Klein
+for general relativity and which have been rediscovered by R. Utiyama [51] in the context of
+YM theories.) Henceforth we have
+                                           ∂Fρσb
+                                ∂L                  ∂Lg     ∂Lg
+                                    a
+                                        =        a    b
+                                                         =2   a
+                                                                 .                            (2.14)
+                              ∂(∂µ Aν )   ∂(∂µ Aν ) ∂Fρσ    ∂Fµν
+   By definition the canonical EMT (2.1) presently reads
+                                 µν      ∂L
+                                Tcan =            ∂ ν Aaρ − η µν L ,
+                                       ∂(∂µ Aaρ )
+and obviously fails to be gauge invariant (even for Lm = 0) due to the factor ∂ ν Aaρ in its first
+term. To obtain a gauge invariant expression, we use relations (2.14) and (A.7):
+                        µν     ∂Lg  ν           ν         ν
+                                                                     
+                      Tcan ≡2     a
+                                      Faρ + ∂ρ A a − iq [A   , Aρ ]a   − η µν L .          (2.15)
+                              ∂Fµρ
+
+
+                                                  9
+For the second term we now apply the Leibniz rule:
+       ∂Lg        ν          µρν
+                                        ∂L 
+                                           g                                     ∂Lg ν
+   2     a
+            ∂ ρ A a = −∂ ρ χ     − 2∂ρ     a
+                                              Aνa ,             with χµρν ≡ −2     a
+                                                                                      Aa = −χρµν .     (2.16)
+       ∂Fµρ                             ∂Fµρ                                     ∂Fµρ
+
+Here, the contribution ∂ρ χµρν is a superpotential term5 so that we have obtained an improved
+       µν
+EMT Timp   of the form (2.3). The second term on the right hand side of the previous equation can
+be rewritten by using (2.14) and the equation of motion of the gauge field, ∂ρ ( ∂(∂∂L        ∂L
+                                                                                       a ) = ∂Aa :
+                                                                                    ρA )         µ         µ
+
+                                   ∂L                     ∂L  ν      ∂L ν
+                                      g
+                           −2∂ρ            Aνa = ∂ρ                  A =     A .                       (2.17)
+                                     a
+                                   ∂Fµρ                    ∂(∂ρ Aaµ ) a  ∂Aaµ a
+
+                                                     ∂Lg (F )
+                                   ∂L
+For the Lagrangian (2.13) we have ∂A a =              ∂Aa     + ∂L∂A
+                                                                   m (A)
+                                                                     a   with
+                                              µ           µ          µ
+
+
+                                         b
+                                       ∂Fρσ
+                                ∂Lg         ∂Lg                 ∂Lg
+                                     =           = −2qf bca Acρ      ,                                 (2.18)
+                                ∂Aaµ   ∂Aaµ ∂Fρσ
+                                              b                   b
+                                                                ∂Fρµ
+
+and thereby (2.17) becomes
+                                   ∂L                             ∂Lg   ∂Lm ν
+                           −2∂ρ            Aνa = 2iq [Aν , Aρ ]a        +     A .                      (2.19)
+                                     a
+                                   ∂Fµρ                              a
+                                                                    Fµρ   ∂Aaµ a
+
+Since the first term in this expression compensates the third term in expression (2.15), we are
+                          µν    µν + ∂ χµρν with
+led to the final result Timp = Tcan    ρ
+
+
+           µν     µν          µν
+                                          h       ∂Lg ν        µν
+                                                                     i h ∂L
+                                                                           m ν      µν
+                                                                                          i
+         Timp = Timp (F ) + Timp (A) ≡ 2               Faρ − η    Lg  +      A  − η    Lm   .          (2.20)
+                                                    a
+                                                  ∂Fµρ                   ∂Aaµ a
+
+For the Lagrangian L ≡ Lg (F ), this EMT only depends on the gauge potential by means of the
+field strength, hence its gauge invariance is ensured by the invariance of Lg (F ).
+    As a first application we consider pure YM theory, i.e. L = Lg (F ) ≡ − 4c12 Tr (F µν Fµν ),
+thus we recover the result (2.11). By construction, this EMT is conserved and gauge invariant.
+It is also symmetric and it is traceless for n = 4; the result coincides with the one obtained by
+Belinfante’s procedure (see footnote 5) or from the Einstein-Hilbert EMT (section 3).
+    If we include a mass term for the vector field Aµ into the four dimensional Abelian theory
+by adding Lm (A) ≡ 12 m2 Aµ Aµ to Lg (F ), then (2.20) yields
+
+                               µν     µν                             1 µν ρ
+                             Timp = Timp (F ) + m2 (Aµ Aν −            η A Aρ ) .                      (2.21)
+                                                                     2
+This is the improved EMT for the Proca theory [50] where the mass term is also symmetric,
+but neither gauge nor scale invariant.
+   5
+    We note that for Lg ≡ − 14 Faµν Fµν
+                                     a
+                                        , we have χµρν = Faµρ Aνa : This superpotential coincides with the one
+resulting from Belinfante’s improvement procedure applied to pure gauge theories.
+
+
+
+
+                                                           10
+Improvement for matter fields interacting with gauge fields: Consider charged matter
+fields ϕ (complex scalars φ or Dirac spinors ψ) which are minimally coupled to gauge fields. For
+notational clarity, we first discuss the case of a multiplet of complex scalar fields, i.e. ϕ =
+(φ, φ† ), for which we have specified the dynamics in equations (A.10)-(A.17). Quite generally,
+suppose that we have a gauge invariant Lagrangian of the form
+
+                        L ≡ Lg (F ) + LM ,         with LM ≡ L0 (Dµ ϕ) + L1 (ϕ) ,
+
+where L1 (ϕ) only depends on the field ϕ and not on its derivatives. By virtue of gauge invariance,
+the kinetic terms for gauge and matter fields, i.e. Lg (F ) and L0 (Dµ ϕ) can only depend on the
+field strength and covariant derivatives, respectively:
+
+   Fµν ≡ ∂µ Aν − ∂ν Aµ + iq [Aµ , Aν ] ,          Dµ φ ≡ ∂µ φ + iqAµ φ ,        Dµ φ† ≡ ∂µ φ† − iqφ† Aµ .
+                                                                                                      (2.22)
+
+Here, the generators Ta of the underlying Lie algebra are assumed to be in the adjoint repre-
+sentation for Fµν and in an N -dimensional representation for the multiplet of matterRfields.
+   As noted in equation (A.14), the variation of the matter field action SM [ϕ, A] ≡ dn x LM
+with respect to the gauge field yields the matter current:
+                               δSM [ϕ, A]     ∂LM       h
+                                                           †      ∂L0       ∂L0        i
+              jaµ [ϕ, A] ≡ −              = −      = iq  φ   Ta          −        Ta φ   .           (2.23)
+                                 δAaµ         ∂Aaµ              ∂(Dµ φ† ) ∂(Dµ φ)
+
+    By its very definition (2.1), the canonical EMT of the physical system under consideration
+is given by
+                             ∂L                  ∂L                        ∂L
+                   µν
+                  Tcan =             ∂ ν Aaρ +         ∂ ν φ + (∂ ν φ† )           − η µν L .        (2.24)
+                                 a
+                           ∂(∂µ Aρ )           ∂(∂µ φ)                   ∂(∂µ φ† )
+
+Let us now substitute relation (2.14) and ∂(∂∂L µ ϕ)
+                                                         ∂L
+                                                     = ∂(Dµ ϕ)
+                                                               , and let us use (2.22) to express
+                           ν  a       ν
+the ordinary derivatives ∂ Aρ and ∂ ϕ appearing in (2.24) in terms of the field strength and
+the covariant derivatives, respectively. After grouping together the different contributions and
+substituting relation (2.23), we get the result
+
+         µν      µν          µν                               ∂Lg                           
+        Tcan = Tint (F ) + Tint (ϕ, A) + Aνa jaµ [ϕ, A] + 2     a
+                                                                    ∂ρ A ν
+                                                                         a + iq [A ρ , Aν
+                                                                                          ]a   ,     (2.25)
+                                                              ∂Fµρ
+
+with
+
+                                  µν            ∂Lg ν                   µν
+                                Tint (F ) ≡ 2     a
+                                                     Fa ρ − η µν Lg = Timp (F )                      (2.26)
+                                                ∂Fµρ
+
+and
+
+                        µν             ∂LM                     ∂LM
+                      Tint (ϕ, A) ≡           Dν φ + (Dν φ† )           − η µν LM         .          (2.27)
+                                      ∂(Dµ φ)                 ∂(Dµ φ† )
+
+To conclude, we rewrite the last term in (2.25) following the line of arguments (2.16)-(2.19):
+           ∂Lg                      ∂L ν                    ∂Lg
+       2     a
+                ∂ρ Aνa = −∂ρ χµρν +   a
+                                        Aa = −∂ρ χµρν − 2iq   a
+                                                                 [Aρ , Aν ]a − Aνa jaµ [ϕ, A] ,
+           ∂Fµρ                     ∂Aµ                     ∂Fµρ
+
+                                                       11
+                                        ∂L      g    ∂L
+                                                    ∂LM
+where the last expression follows from ∂A a = ∂Aa + ∂Aa and the definition (2.23).
+                                          µ     µ     µ
+   In summary, with the definition
+                           µν    µν                                          ∂Lg ν
+                         Tint ≡ Tcan + ∂ρ χµρν ,     where χµρν ≡ −2           a
+                                                                                  Aa ,
+                                                                             ∂Fµρ
+                       µν
+we have a total EMT Tint  for the interacting system of fields which is a sum of the improved
+EMT for the gauge field and the EMT of the matter fields interacting with the gauge field:
+                                         µν     µν          µν
+                                       Tint = Tint (F ) + Tint (ϕ, A) .                           (2.28)
+
+                                                                 −1
+Upon considering the Lagrangians (A.9), (A.10), i.e. Lg (F ) ≡ 4c  2
+                                                                     Tr (F µν Fµν ) and LM (φ, A) ≡
+(Dµ φ† )(Dµ φ) − m2 φ† φ, we obtain the explicit expression (2.11) and
+
+                     µν
+                   Tint (φ, A) = (Dµ φ† )(Dν φ) + (Dν φ† )(Dµ φ) − η µν LM (φ, A) .               (2.29)
+
+Each of the tensors (2.11), (2.29) is gauge invariant (by construction) and symmetric in its
+                          µν
+indices. The total EMT Tint  is conserved (by construction), but the different contributions are
+not: their divergence can easily be evaluated by using the field equations (A.12) and (A.13) as
+well as the commutation relations [Dµ , Dν ]φ = iqFµν φ and [Dµ , Dν ]φ† = −iqφ† Fµν :
+
+             µν          1                        µν                                  µν
+        ∂µ Tint (F ) =      Tr (jµ F µν ) = −∂µ Tint (φ, A) ,        hence       ∂µ Tint =0 .     (2.30)
+                         c2
+
+Thus, we have the standard local conservation law for the total EMT tensor of the interacting
+                                                                   µν
+system. We note that the partial differential equation ∂µ Tint        (φ, A) = − c12 Tr (jµ F µν ) can be
+viewed as a continuum version of the Lorentz-Yang-Mills force law, i.e. Wong’s equation [52].
+                  µν
+The relation ∂µ Tint (F ) = c12 Tr (jµ F µν ) may be regarded as the balance equation for the gauge
+field energy. Indeed (considering Maxwell’s U (1) theory), from (j µ ) ≡ (ρ, ~j ) we have the Lorentz
+                                 ~ ρE
+force density (F µν jν ) = (~j · E, ~ +~j × B
+                                            ~ ), hence we obtain, for ν = 0, the local balance equation
+
+                                                       ~ + ~j · E
+                                           −∂t w = div P        ~,
+
+where w ≡ 12 (E ~2+B  ~ 2 ) represents the electromagnetic energy density and P     ~ ≡ E ~ ×B ~ is
+the Poynting vector. The latter result is nothing else but Poynting’s theorem expressing that
+the electromagnetic fields not only radiate, but also do work on the electric charges (currents),
+thereby transforming electromagnetic energy into mechanical or thermal energy.
+    The case of a Dirac field is tantamount to considering ϕ = (ψα , ψ̄α ) in the previous
+                                 µν                             µν
+derivation. The expression for Tint (F ) is unchanged and for Tint (ψ, A) one obtains the following
+                                                          ↔
+explicit result from the Lagrangian LM (ψ) ≡ i ψ̄γ µ Dµψ − mψ̄ψ:
+                             µν            ih µ ν                  i
+                           Tint (ψ, A) =     ψ̄γ D ψ − (Dν ψ̄)γ µ ψ − η µν LM .                   (2.31)
+                                           2
+By construction, this expression is gauge invariant, but it is not symmetric in its indices. The
+                                         (µν)        µν      νµ
+symmetry can be achieved by hand (Tint ≡ 21 [Tint       + Tint  ]) without destroying the other
+characteristics of the tensor:
+
+                    (µν)            ih µ ν                            i
+                  Tint (ψ, A) =       ψ̄γ D ψ − (Dν ψ̄)γ µ ψ + (µ ↔ ν) − η µν LM          .       (2.32)
+                                    4
+
+
+                                                     12
+Summary: We have recovered in a constructive manner the same results as for the modified
+Belinfante procedure. The present approach does not require a determination of the spin densi-
+ties and of the associated superpotential terms, nor does it require to perform specific minimal
+couplings for each of the tensors under consideration. The only shortcoming is that the sym-
+metry of the “gauge improved” EMT is not automatically realized. In fact, the symmetrization
+of the gauge improved EMT for the Dirac field has to be achieved by hand, but this does not
+raise any problem and this feature is actually also encountered for the Einstein-Hilbert EMT
+of the Dirac field, see equation (3.23) below.
+
+2.3    Assessment concerning the improvements
+As we discussed in equations (2.5)-(2.7), the symmetry of the EMT in Minkowski space is
+convenient, but by no means mandatory. Moreover it does not become mandatory when matter
+or gauge fields are coupled to gravity if one takes into account the fact that the currently
+available experimental data do not allow us to discriminate between general relativity and
+alternative theories of Einstein-Cartan-type which allow for torsion and for a non symmetric
+EMT of matter or gauge fields.
+    If one considers gauge field theories in Minkowski space as we do in the present article,
+then the EMT necessarily has to be gauge invariant due to its physical interpretation. However,
+Belinfante’s improvement procedure does not yield a priori a gauge invariant EMT when applied
+to gauge theories, and in addition it does not work in the straightforward manner for the
+physically interesting case where matter fields are minimally coupled to a gauge field. The
+improvement procedure that we presented here is devised to obtain an EMT which satisfies
+the physically unavoidable condition of gauge invariance and it readily works for pure gauge
+theories as well as for matter fields interacting with gauge fields (and even for massive Abelian
+gauge fields). For pure gauge fields, the resulting expression for the “gauge-improved” EMT
+coincides with the EMT obtained by Belinfante’s “symmetrization procedure” since the involved
+superpotential terms coincide with each other.
+
+
+3     Einstein-Hilbert EMT in Minkowski space
+3.1    Motivation and procedure
+The EMT (T µν ) in Minkowski space represents a collection of conserved current densities which
+are associated to space-time translations, i.e. geometric transformations which act on both
+space-time coordinates and on fields. These transformations being more complex than internal
+symmetries which only act in the space of fields, it is useful to look at the conserved current
+densities associated to internal symmetries so as to address the conceptual and technical issues
+in a simpler setting.
+    The Lagrangian LM (ϕ) ≡ LM (ϕ, A = 0) for free charged matter fields is invariant un-
+der global (rigid) gauge transformations, i.e. at the infinitesimal level under transformations
+parametrized by real constants ω a with a ∈ {1, . . . , nG }. (More generally, one can consider a
+gauge invariant self-interaction of matter fields, e.g. include a self-interaction potential V (φ† φ)
+for a multiplet of scalar fields (like the Higgs field) or an invariant Yukawa-type coupling between
+scalar and spinor fields. Since these interaction terms do not involve derivatives of fields, they
+lead to the same canonical currents (3.1).) According to Noether’s first theorem, the canonical
+          µ
+currents jcan,a [ϕ] associated to the global gauge invariance are given by ω a jcan,a
+                                                                                µ     [ϕ] = ∂L M (ϕ)
+                                                                                            ∂(∂µ ϕ) δϕ,
+
+
+
+                                                  13
+where δϕ denotes an infinitesimal global gauge transformation. For multiplets of free complex
+scalars or Dirac spinors, one has the respective expressions
+                               h                          i
+                 µ
+                jcan,a [φ] = iq φ† Ta ∂ µ φ − (∂ µ φ† )Ta φ ,    µ
+                                                                jcan,a [ψ] = q ψ̄γ µ Ta ψ .      (3.1)
+
+Here, the coupling constant q represents the “non-Abelian” charge of fields which we have
+factored out from the parameters ω a so as to have the same overall numerical factor for the
+canonical Noether currents as for the currents resulting from a coupling to a gauge field, see
+next equation.
+    Equivalently, the expressions (3.1) can be viewed as the response of the physical system to a
+variation of the (external) gauge field, the latter field mediating the interaction between charge
+carrying matter fields (see equations (A.14), (A.15)):
+
+                    µ               δS[ϕ; A]
+                   jcan,a [ϕ] = −                         (A = external gauge field) .           (3.2)
+                                      δAaµ A=0
+
+The equivalence follows from the fact that for an external gauge field, the action S[ϕ; A] is in
+particular invariant under global gauge transformations and reduces to the free field action for
+A = 0.
+     In this section, we discuss the generalization of these ideas to geometric symmetries (the
+global differential geometric aspects having been elaborated in detail in reference [17]). More
+precisely, we apply the lines of reasoning described above for internal symmetries to the case of
+the currents Tcanµν associated to the invariance of the relativistic field theory in Minkowski space
+
+under space-time translations, i.e. under the rigid geometric transformations x          x0 (x) = x + a
+        µ
+with aR constant. In this respect we first note that the associated conserved Noether charges
+P ν = dn−1 x Tcan 0ν represent the energy-momentum of the fields, these fields being matter fields
+
+(describing for instance electrons) or gauge fields (gauge bosons mediating the interaction).
+The exchange of energy and momentum is realized by gravity as described by a metric, i.e.
+a symmetric non-degenerate tensor field g(x) ≡ (gµν (x)). Both matter and gauge fields (or
+particles representing their field quanta) are subject to the gravitational interaction.
+     In section 3.2, we first consider the case of a dynamical gravitational field, the gravita-
+tional analogue of the YM equations Dµ F µν = j ν for the gauge field being given by Einstein’s
+field equations Gµν = −κTµν for the gravitational field: instead of gauge transformations (i.e.
+local internal transformations) we now consider diffeomorphisms xµ               x0µ (x) ≃ xµ + ξ µ (x)
+(i.e. general coordinate transformations or x-dependent translations). By definition, the EMT
+T µν [ϕ, g] in curved space then represents the response of the physical system to a variation of
+the (external) gravitational field gµν , and its covariant conservation law in curved space holds
+by virtue of the reparametrization invariance of the action. Finally, in section 3.3 we consider
+the flat (Minkowski) space limit gµν = ηµν (representing the analogue of A = 0 for the in-
+ternal symmetries) and we argue that the resulting EMT T µν [ϕ, g = η] (to which we refer to
+                                                                          µν
+as the Einstein-Hilbert EMT) coincides with the improved EMT Timp            [ϕ] associated to transla-
+tional invariance in Minkowski space. For this identification an ambiguity appears since a given
+Minkowski space Lagrangian may represent the flat space limit of different non-equivalent La-
+grangians in curved space (involving for instance a minimal or a non-minimal coupling of matter
+to gravity, both cases admitting different invariances): by considering both the diffeomorphism
+invariance and the absence or presence of local Weyl invariance in curved space, one can recover,
+in the flat space limit, the improved and the new improved EMT’s for a scalar field discussed
+
+                                                     14
+before. Moreover, one can relate the corresponding symmetries in curved space and in flat space
+(local versus global scale invariance) [28, 53].
+    Since the issues we just raised concern the relationship between results for field theories
+in Minkowski space-time (like (3.2)) and results in general relativity (field theories in curved
+space-time), we mention that general relativity may also be viewed as a solution to the problem
+of constructing a field theory for a massless spin 2 field (symmetric tensor field) interacting with
+matter in Minkowski space-time, i.e. a consistent special relativistic field theory for a massless
+spin 2 particle. More precisely, starting from the free field theory for such a field in Minkowski
+space-time as given by the Lagrangian of Pauli and Fierz (which amounts to a linearization
+of the pure gravitational field equations), one has a local gauge invariance (corresponding to a
+linearization of diffeomorphisms) and a consistent coupling to the EMT of matter then requires
+a back-reaction of the gravitational field on matter: this process, referred to as Noether method,
+has to be re-iterated in principle an infinite number of times. However, by the use of a classically
+equivalent first-order action functional determined by J. Schwinger, S. Deser could promote the
+free field theory to a consistent self-interacting theory in a few steps [54]. The initial flat space
+metric does not appear in the final theory which rather involves a symmetric tensor field (gµν )
+representing the dynamics of the gravitational field. This non-geometrical approach to general
+relativity is described in detail in reference [55] (see also [56, 57]) and also played a role for
+YM-theories since R. Feynman introduced the notion of ghost fields in this context before it
+has been considered by B. DeWitt and by L.D. Faddeev and V.N. Popov for the quantization
+of YM-theories [58].
+
+3.2     Fields in curved space-time
+3.2.1    General framework and dynamics
+Curved space-time: Let M be a n-dimensional space-time manifold endowed with a metric
+tensor field g ≡ (gµν ) of signature6 (+, −, . . . , −). We denote the covariant derivative of a tensor
+field with respect to the Levi-Civita-connection by ∇µ (e.g. ∇µ V ρ = ∂µ V ρ + Γρµν V ν where the
+coefficients Γρµν ≡ 21 g ρσ (∂µ gνσ + ∂ν gµσ − ∂σ gµν ) are the Christoffel symbols) and we write the
+gauge covariant derivative as before by Dµ , e.g. for a complex scalar field Dµ φ ≡ ∇µ φ+iqAµ φ =
+∂µ φ + iqAµ φ.
+    The commutator of covariant derivatives defines the Riemann curvature tensor, i.e.
+
+                                           [∇µ , ∇ν ]V ρ = Rρσµν V σ ,
+
+and by a contraction of indices the latter gives rise to the Ricci tensor Rµν ≡ Rρµνρ , which yields
+the curvature scalar R ≡ Rµµ . The equations of motion for the gravitational field involve the
+Einstein tensor Gµν ≡ Rµν − 12 gµν R which is covariantly conserved ∇µ Gµν = 0 as a consequence
+of its definition. (Here and in the following, we limit ourselves for simplicity to the case where
+the cosmological constant Λ vanishes, otherwise an extra Λ-dependent term appears in Gµν and
+in the action functional for the gravitational field.)
+   6
+    This signature is common in field theory and is often used in general relativity too (e.g. in references [19,
+55, 59]), though a large part of the literature on general relativity uses the opposite signature (−, +, . . . , +).
+Different conventions for the signature in combination with different sign conventions for the Riemann and
+Einstein tensors imply differences of signs in various mathematical expressions. In particular, we choose here the
+“(−, +, −)” convention for the curvature tensor according to the classification of Misner, Thorne and Wheeler [60].
+
+
+
+
+                                                        15
+Matter/gauge fields: The coupling of fermionic (spinorial) matter fields to gravity requires
+the consideration of vielbein fields and will be addressed in section 3.4. In the sequel we only
+consider bosonic (tensor) fields, and more precisely scalar matter fields φ and/or gauge vector
+fields A ≡ (Aµ ). The YM field strength tensor in curved space is defined by
+
+                   Fµν ≡ ∇µ Aν − ∇ν Aµ + iq [Aµ , Aν ] = ∂µ Aν − ∂ν Aµ + iq [Aµ , Aν ] ,
+
+where the last expression follows from the symmetry of the Christoffel symbols (Γρµν = Γρνµ ).
+   The scalar matter fields φ and/or the gauge field A will genericallyR be denoted by ϕ. Their
+                                                                          n
+                                                                             p
+dynamics is assumed to be given by an action functional SM [ϕ, g] ≡ d x |g| LM (involving
+g ≡ det g) which is invariant under diffeomorphisms, as well as under gauge transformations
+Aµ     A0µ = Aµ + Dµ ω if a gauge field is present (see equation (A.6)). Thus, LM is a scalar
+density with respect to diffeomorphisms.
+
+Dynamics of fields: Following D. Hilbert, the dynamics and interaction of all fields is de-
+scribed by the total action
+                                                 Z          q                  Z          q
+             S[ϕ, g] ≡ Sgrav [g] + SM [ϕ, g] ≡       dn x    |g| Lgrav (R) +       dn x   |g| LM (ϕ, g) .   (3.3)
+
+                   1
+Here, Lgrav (R) ≡ 2κ R (with κ ≡ 8πG, where G is Newton’s constant), and for the gauge field
+A we have the Lagrangian density
+                                            1                    1
+                         LM (A, g) ≡ −         Tr (F µν Fµν ) = − g µρ g νσ Fρσ
+                                                                             a   a
+                                                                                Fµν .                       (3.4)
+                                           4c2                   4
+For a multiplet φ of complex scalar fields interacting with the gauge field, the minimal coupling
+to gravity is described by the Lagrangian7
+
+             LM (φ, A, g) ≡ g µν (Dµ φ† )(Dν φ) − m2 φ† φ ,           with Dµ φ ≡ ∂µ φ + iqAµ φ .           (3.5)
+
+       Instead of the minimal coupling of the scalar matter field to gravity one may consider
+                                                                  1
+                                    L̃M (φ, g) ≡ LM (φ, g) −        ξRφ† φ ,                                (3.6)
+                                                                  2
+where ξ is a real parameter and where the second term represents a non-minimal coupling of
+the matter field φ to gravity: in fact this is the only possible local scalar coupling with the
+correct dimension [35, 59].
+    The action (3.3), which defines the dynamics of fields in general relativity, is invariant under
+general coordinate transformations. The equations of motion for the interacting matter and
+gauge fields following from the functionals (3.3)-(3.5) read 0 = δS[ϕ, g]/δϕ = δSM [ϕ, g]/δϕ
+which yields
+
+         0 = Dµ F µν − j ν              (YM equation in curved space),
+         0 = (Dµ Dµ + m2 )φ = 0         (Coupled Klein-Gordon equation in curved space).                    (3.7)
+                                                                          p              
+Here, Dµ F µν = ∇µ F µν + iq[Aµ , F µν ] where ∇µ F µν = √1 ∂µ                 |g| F µν denotes the covariant
+                                                                    |g|
+divergence of the antisymmetric tensor F µν . The derivative Dµ Dµ φ involves the contribution
+   7
+    More generally, we can include a gauge invariant self-interaction potential V (φ† φ): this will not change the
+form (3.12) of the resulting EMT.
+
+
+                                                        16
+                              p             
+φ ≡ g µν ∇µ ∇ν φ = √1 ∂µ          |g| g µν ∂ν φ , i.e. the Laplace-Beltrami operator acting on scalar
+                        |g|
+fields. The equations of motion of the metric field components represent Einstein’s field equa-
+tions:
+                                        p
+            δS   δSgrav δSM     |g|
+        0 = µν =        + µν =      (Gµν + κTµν ) ,                i.e.    Gµν = −κTµν           (3.8)
+           δg     δg µν  δg    2κ
+with
+
+                                                  −2 δSM [ϕ, g]
+                                    T µν [ϕ, g] ≡ p                    .                         (3.9)
+                                                   |g| δgµν
+
+For obvious reasons, we will refer to this tensor as the metric EMT (in curved space). By
+reference to its originators [61, 62] it is also called the Einstein-Hilbert EMT in curved space.
+Concerning the global sign in (3.9) we note that g µν gνλ = δλµ implies that Tµν = √+2 δSδg
+                                                                                          M [ϕ,g]
+                                                                                            µν    .
+                                                                                         |g|
+
+
+3.2.2    EMT for matter/gauge fields coupled to a dynamical gravitational field
+On the metric EMT: From the equations of motion (3.8) one concludes that the local
+field T µν [ϕ, g] plays a fundamental role if matter or gauge fields are coupled to gravity while
+the
+R n−1
+     formulation of field theory in flat space essentially relies on the conserved charges P ν ≡
+  d         0ν . Since the metric tensor is symmetric in its indices, the metric EMT is identically
+       x Tcan
+symmetric by construction, i.e. we have a symmetric expression without using the equations of
+motion of ϕ. From ∇µ Gµν = 0 it follows that the EMT is covariantly conserved in curved space,
+i.e.
+
+                                             ∇µ T µν = 0 ,                                     (3.10)
+
+if g satisfies Einstein’s field equations. Due to the presence of the covariant rather than the
+ordinary derivative in equation (3.10), this relation does not represent a local conservation law.
+This can be understood on physical grounds due to the fictitious forces which appear in arbitrary
+(accelerated) frames [31, 62]. However, relation (3.10) can be related to a local conservation law
+and, in certain instances, integral conservation laws for energy and momentum can be derived,
+e.g. see references [19, 31, 55, 63–66].
+
+Explicit expressions: From SM [ϕ, g] ≡ dn x |g| LM (ϕ, ∂µ ϕ; g) and the definition (3.9)
+                                                 R        p
+
+we can obtain an explicit expression of T µν in terms of the Lagrangian density LM (the latter
+depending on the first order derivatives ∂µ ϕ):
+
+                                                 ∂LM
+                                     T µν = −2        − g µν LM    .                           (3.11)
+                                                 ∂gµν
+
+For our prototype Lagrangians (3.4) and (3.5) we get the results
+                                  1                1
+                   T µν [A, g] =    Tr F µρ Fρ ν + g µν F ρσ Fρσ ,
+                                                                
+                                                                                               (3.12)
+                                 c2                4
+                T µν [φ, A, g] = (Dµ φ† )(Dν φ) + (Dν φ† )(Dµ φ) − g µν LM (φ, A, g) .
+
+
+                                                     17
+For the Lagrangian (3.6) the tensor T µν [φ, g] involves additional contributions, see references [35,
+59]. The conservation law ∇µ T µν = 0 can be explicitly checked for expressions (3.12) by using
+the equations of motion of A and φ as well as the Bianchi identity 0 = Dρ Fµν + cyclic permu-
+tations of the indices ρ, µ, ν. The metric EMT T µν [A, g] is gauge invariant as a consequence of
+the gauge invariance of the Lagrangian density LM (A, g) and of definition (3.11). The results
+concerning the tracelessness of the EMT’s (3.12) are the same as the ones obtained for the
+improved EMT’s in Minkowski space.
+
+Invariance under diffeomorphisms and the metric EMT: Let us verify that the co-
+variant conservation law ∇µ T µν = 0 follows from the diffeomorphism invariance of the total
+action (3.3). To do so, we note that a diffeomorphism xµ     x0µ (x) ≃ xµ − ξ µ (x) is generated by
+                           µ
+a smooth vector field ξ ≡ ξ ∂µ and acts on the metric tensor field as δξ gµν = ∇µ ξν +∇ν ξµ . From
+the invariance of the action under infinitesimal diffeomorphisms and the use of the equations of
+motion of matter and gauge fields it follows that
+                                                                      !
+                                              δS         δS                               δS
+                                    Z                                         Z
+                                        n
+                 0 = δξ S =             d x      δξ ϕ +      δξ gµν       =       dn x        2∇µ ξν ,        (3.13)
+                                              δϕ        δgµν                             δgµν
+
+where we took into account the symmetry of gµν for passing to the last expression. By substitut-
+ing the explicit form of the functional derivative δgδSµν as given in equation (3.8) and performing
+an integration by parts, we obtain
+                 1                                            1
+                     Z          q                                 Z          q
+  0 = δξ S = −           dn x   |g| (Gµν + κT µν )∇µ ξν =             dn x       |g| ξν (∇µ Gµν + κ∇µ T µν ) . (3.14)
+                 κ                                            κ
+    First, we consider the particular case where we have pure gravity, i.e. no matter fields, hence
+T µν = 0. From the arbitrariness of ξ   ν one then concludes that ∇µ G
+                                                                         µν = 0. In fact [57], this
+
+line of arguments may be viewed as indirect proof of the relation ∇µ Gµν = 0 which holds
+by virtue of the definition of Gµν in terms of the metric. The latter relation is referred to
+as generalized Bianchi identity or as Noether identity since it follows from the invariance of
+the action functional under a group of local symmetry transformations, i.e. an illustration of
+Noether’s second theorem [3].
+    Next we consider the total action: by using the identity ∇µ Gµν = 0 and the arbitrariness
+of ξν , it then follows that the relation ∇µ T µν = 0 holds for the solutions of the matter field
+equations.
+
+3.2.3   EMT for matter/gauge fields coupled to an external gravitational field
+Generalities: If we consider matter and gauge fields coupled to an external (background)
+metric, then we do not have a dynamical term for gravity in the action, i.e. S = SM [ϕ; g]. The
+EMT now represents the variation of the total action with respect to the external gravitational
+field:
+
+                               −2 δS[ϕ; g]
+                 T µν [ϕ; g] ≡ p                          (g = external gravitational field) .                (3.15)
+                                |g| δgµν
+
+The covariant conservation law ∇µ T µν = 0 for the solutions of the matter field equations again
+follows from the calculation (3.13), (3.14) in which we now drop the contribution Sgrav [g] to the
+action, which implies that Gµν does not appear in the integral (3.14).
+
+                                                         18
+Case of an external gauge field: Let us also consider the case where both the metric field
+g and the gauge potential (Aµ ) represent external fields. We suppose that the complex scalar
+field φ is coupled toR the background   gauge field A, i.e. we have the gauge invariant total action
+                        n
+                           p
+S ≡ SM [φ; A, g] ≡ d x |g| LM with LM given by expression (3.5). Then the gauge invariance
+of the total action S and the use of the scalar matter field equations of motion δS/δφ = 0 imply
+the covariant conservation law Dµ j µ = 0 for the current density vector (jaµ ) associated to the
+scalar field; indeed, for an infinitesimal gauge variation (δg Aµ = Dµ ω) we have
+                                                           !
+                              δS         δS                                  δS
+                   Z                                               Z                          Z          q
+                        n                                                n
+      0 = δg S =       d x       δg φ +     δ g Aµ             =        d x     Dµ ω =            dn x       |g| ω a (Dµ j µ )a ,
+                              δφ        δAµ                                 δAµ
+
+where
+                                      −1 δS
+                                jaµ ≡ p                        (A, g = external fields) .
+                                        |g| δAaµ
+
+For the matter field Lagrangian (3.5) we obtain the explicit expression
+                                                       h                                  i
+                                  jaµ [φ; A, g] = iq φ† Ta Dµ φ − (Dµ φ† )Ta φ .                                              (3.16)
+
+    The invariance of the total action S under diffeomorphisms then leads to the continuum
+version of the Lorentz-Yang-Mills force law in curved space-time [52],
+
+                                                                       1
+                                          ∇µ T µν [φ; A, g] =             Tr (F νµ jµ )                                       (3.17)
+                                                                       c2
+
+by virtue of                                                                                        !
+                                                     δS         δS           δS
+                                      Z
+                                            n
+                         0 = δξ S =        d x          δξ φ +     δ ξ Aµ +      δξ gµν                  ,
+                                                     δφ        δAµ          δgµν
+and δS/δφ = 0, δξ gµν = ∇µ ξν + ∇ν ξµ as well as
+
+                             δξ Aµ = ξ ν ∂ν Aµ + (∂µ ξ ν )Aν = ξ ν Fνµ + Dµ (ξ ν Aν ) .
+
+For instance, for the matter field Lagrangian (3.5), we obtain the explicit expression (3.12) for
+T µν [φ; A, g] and (3.16) for j µ [φ; A, g]. Once the external gauge field is promoted to a dynamical
+gauge field by adding the gauge field Lagrangian LM (A; g) of equation (3.4) to the interacting
+matter field Lagrangian (3.5), the total EMT of both matter and gauge fields is covariantly
+conserved as we noted already after equation (3.15). In the flat space limit, expression (3.12)
+                                                                 µν
+for T µν [φ; A, g] reduces to expression (2.29) for the EMT Tint    [φ, A] and equation (3.17) reduces
+to the balance equation (2.30) for the latter EMT.
+
+3.3     Einstein-Hilbert’s EMT for matter/gauge fields in Minkowski space
+Definition: The result (3.15) serves as a motivation for defining the Einstein-Hilbert or metric
+EMT for bosonic matter fields ϕ in flat space by the relation
+                                                                   (
+                       −2 δS[ϕ; g]
+                                     
+       µν                                                               g = external gravitational field
+      TEH [ϕ] ≡                                  ,    where                                                                   (3.18)
+                                                                        η ≡ (ηµν ) ≡ diag (1, −1, . . . , −1) .
+                       p
+                         |g| δgµν         g=η
+
+
+
+                                                               19
+By construction, the so-defined EMT is identically symmetric and it admits a natural general-
+                                                                                        µν
+ization to curved space by its very definition. The flat space conservation law ∂µ TEH     = 0 for
+  µν
+TEH   follows directly from the covariant conservation law ∇µ T µν = 0 in curved space.
+    The definition (3.18) for the EMT of a physical system in Minkowski space amounts to
+                                                      µν
+coupling this system to a gravitational field: then TEH  [ϕ] represents the response of the system
+to a variation of the (external) metric to which all (energy and momentum carrying) fields
+couple and which mediates the gravitational interaction of these fields. This definition of the
+EMT in Minkowski space is conceptually and mathematically quite different from the one of
+  µν
+Timp [ϕ] which we presented in section 2 and which follows from Noether’s theorem (eventually
+supplemented by an improvement procedure to render the canonical expression of the EMT
+symmetric in its indices or gauge invariant, or both symmetric and traceless). Before trying to
+relate the different expressions for the EMT’s, we have a look at the explicit expressions for the
+Einstein-Hilbert EMT.
+
+Explicit expressions: The YM Lagrangian LM (A, g) in curved space, as given by (3.4),
+reduces in the flat space limit to the YM Lagrangian (A.9) in Minkowski space; similarly both
+of the scalar field Lagrangians LM (φ, g) and L̃M (φ, g) given in equations (3.5) and (3.6) reduce
+in the flat space limit to one and the same Minkowski space Lagrangian L(φ). Furthermore, the
+metric EMT’s (3.12) for the YM field and for the scalar field coupled to the former field reduce in
+the flat space limit to the improved EMT’s (2.11) and (2.29). We also mention that for the non-
+minimal coupling of a free massless scalar field to gravity as described by the Lagrangian (3.6),
+the corresponding metric EMT reduces in the flat space limit to the new improved EMT (2.9).
+
+Relating the different expressions: In the following, we will show that the two definitions
+for the EMT’s of YM-theories in Minkowski space, i.e. (3.18) which results from the coupling
+to gravity, and the improved EMT (2.28) (with the definitions (2.26) and (2.27)) which follows
+from Noether’s first theorem supplemented by the “gauge improvement” procedure, coincide
+with each other. (We refer to the work [17] for general mathematical arguments and results
+relying on differential geometric tools.) The coincidence of results for the EMT’s can readily
+be explained on general grounds by comparing the expression (3.11) for the metric EMT, i.e.
+T µν = −2 ∂L        µν
+            ∂gµν − g LM , with the general expressions (2.26), (2.27) for the improved EMT’s of
+              M
+
+the YM field A and of a scalar field multiplet φ coupled to the YM field.
+                                                                                         µν
+    First, we note that the second term in T µν reduces directly to the second term in Tint as g µν
+              µν                                 µν         ∂LM
+reduces to η . Concerning the first term in T , i.e. −2 ∂gµν , we note that the curved space
+Lagrangians LM (A, g) and LM (φ, A, g) (as given by expressions (3.4), (3.5)) are quadratic in
+the field strengths (Fµν and Dµ φ, respectively) with coefficients depending on g ρσ . Thus the
+relation
+                         ∂g ρσ               (µν)            (µν)     ∂gρσ
+                               = −g ρα g σβ δ(αβ) ,    with δ(αβ) =        ,                (3.19)
+                         ∂gµν                                         ∂gµν
+
+implies that −2 ∂L
+                 ∂gµν reduces in the flat space limit to an expression which is again quadratic
+                   M
+
+in the field strengths and which is, by construction, Lorentz covariant, gauge invariant and
+
+
+
+
+                                                  20
+symmetric in the indices. By virtue of Euler’s homogeneous function theorem we have
+                             ∂LM          g→η   ∂Lg ν
+                          −2      (A, g) −→ 2     a
+                                                    Fa ρ ,                                                         (3.20)
+                             ∂gµν              ∂Fµρ
+                           ∂LM            g→η  ∂LM                     ∂LM
+                        −2      (φ, A, g) −→          Dν φ + (Dν φ† )           ,
+                           ∂gµν               ∂(Dµ φ)                 ∂(Dµ φ† )
+
+i.e. the results (2.26) and (2.27).
+
+3.4    Case of spinor fields
+The coupling of spinor fields to gravity (put forward in Weyl’s seminal paper [67] of 1929)
+requires the consideration of orthonormal vielbein fields ea µ (x) related to the metric by gµν =
+ηab ea µ eb ν . The components E µ a of thepinverse of the matrix (ea µ ) define the frame vector field
+Ea ≡ E µ a ∂µ : E µ a ea ν = δµν . We have |g| = e with e ≡ | det (ea µ )|. The vielbein EMT [55] is
+then defined by varying the action for the spinor fields (coupled to an external gravitational
+field) with respect to the vielbein or frame fields:
+
+                                         1 δS                             −1 δS
+                                T aµ =              ,        or T µ a =            .                               (3.21)
+                                         e δE µ a                          e δea µ
+
+The invariance of the action S[ϕ, ea µ ] under local Lorentz transformations (parametrized at the
+infinitesimal level by δε ea µ = εa b eb µ with εab = −εba ) and the application of the matter field
+equations of motion δS/δϕ = 0 imply that the tensor T ab is symmetric on-shell: from
+                                                !
+                          δS        δS                                                   1
+              Z                                          Z                                   Z
+                  n
+ 0 = δε S =       d x        δε ϕ + a δε ea µ       =−        dn x e T µ a εa b eb µ =           dn x e T [ab] εab , (3.22)
+                          δϕ       δe µ                                                  2
+
+and from the arbitrariness of εab we conclude that T [ab] = 0, or equivalently T ab = T ba . Then,
+the spinor field EMT T µν ≡ E µ a E ν b T ab is also symmetric in the curved space indices for the
+solutions of the matter field equations. Furthermore [68], the matter field equations ensure the
+covariant conservation law ∇µ T µν = 0 by virtue of the line of arguments (3.13), (3.14) with
+S ≡ SM .
+    In summary, the matter field equations for the spinor fields ensure the consistency of Ein-
+stein’s field equations Gµν = −κT µν involving the Einstein tensor Gµν which is both symmetric
+and covariantly conserved in the absence of torsion [55]. (The latter assumption is generally
+made in Einstein gravity, but we note that a generalization of the theory including torsion is
+given by the so-called Cartan-Sciama-Kibble approach to gravity, see [44, 55] and references
+therein.) Accordingly, the EMT with lower indices (which also has to be on-shell symmetric in
+the absence of torsion) is generally written as
+
+                                             1 a
+                                    Tµν =      (e µ ηab T b ν + (µ ↔ ν)) .                                         (3.23)
+                                             2
+
+   By way of illustration, we consider the Dirac field coupled to a gauge field (Aµ ) and to
+gravity. Then we have covariant derivatives involving the spin connection ωµ ,
+
+  Da ψ ≡ E µ a Dµ ψ = E µ a [∂µ ψ + ωµ ψ + iqAµ ψ] ,             Da ψ̄ = E µ a [∂µ ψ̄ − ψ̄ ωµ − iq ψ̄Aµ ] , (3.24)
+
+
+                                                        21
+and the action functional reads8
+                                                             ↔
+                                        Z                               
+                                a
+                     S[ψ, A; e µ ] ≡        dn x e ψ̄ iγ a Da ψ − mψ ,
+                                        Z            hi                                      i
+                                            dn x e        ψ̄γ a Da ψ − (Da ψ̄)γ a ψ − mψ̄ψ
+                                                                                
+                                    =                                                                     (3.25)
+                                        Z             2
+                                    ≡       dn x e LM (ψ, A, E µ a ) .
+
+Variation of this action with respect to the frame fields E µ a and use of the matter field equations
+of motion (which imply that the term in δS which is proportional to δe, i.e. the function LM ,
+vanishes) yields
+
+                                                            ∂LM
+                                                  T aµ =             ,                                    (3.26)
+                                                            ∂E µ a
+
+                      ↔
+hence T a µ = iψ̄γ a Dµ ψ. The associated symmetric tensor (3.23) now has the form
+
+                                              i       ↔             ↔
+                                    T µν =      ψ̄γ µ D ν ψ + ψ̄γ ν D µ ψ .
+                                                                         
+                                                                                                          (3.27)
+                                              2
+
+By virtue of the matter field equations, it is covariantly conserved and coincides in the flat
+space limit with the improved EMT (2.32) for the Dirac field coupled to the YM field (the
+latter being conserved, symmetric and gauge invariant).
+
+3.5    Summary
+In this section we recalled the definition of the metric EMT in curved space and, for gauge
+field theories, we showed that the resulting expressions reduce in the flat space limit to gauge
+invariant, symmetric EMT’s which coincide with the improved EMT’s determined in section 2.
+(For the case of a non minimal coupling of scalar fields to gravity, one recovers the new improved
+EMT in Minkowski space, the local scale invariance reducing to global scale invariance.)
+
+
+4     On the quantum theory: Noether’s theorem and Ward iden-
+      tities
+In the perturbative approach to Lagrangian models in quantum field theory, the first Noether
+theorem, as applied to geometric symmetries (e.g. translational invariance) or to internal sym-
+metries (e.g. global U (1) transformations), finds its expression in the so-called Ward (or Ward-
+Takahashi) identities. A general formulation and simple derivation of the latter has been put
+forward by R. Stora [69–71] towards 1971. Here, we outline the general ideas which are nicely
+summarized in [7] and refer to the monographs [25, 30, 72] for the technical details and physical
+applications.
+    We consider the case of a global internal symmetry transformation of a matter multiplet
+ϕ ≡ [ϕ1 , . . . , ϕN ]t , e.g. relations (A.3) with constant infinitesimal symmetry parameters ω a
+    8
+      We note that the inclusion of an invariant Yukawa-like coupling with scalar fields does not modify the form
+of the resulting EMT.
+
+
+
+                                                           22
+(with a = 1, . . . , nG ); thus, we have δϕr (x) = ω a Φra (ϕ(x)) and Noether’s first theorem then
+reads
+                              δS                                   ∂L
+                           Φra r + ∂µ jaµ = 0 ,   with jaµ ≡             Φr .
+                              δϕ                                ∂(∂µ ϕr ) a
+In quantum theory one is interested in the vacuum expectation values hT ϕs1 (y1 ) . . . ϕsn (yn )i of
+time-ordered field operators ϕs1 (y1 ), . . . , ϕsn (yn ) with n = 1, 2, . . . . Use of the conservation law
+∂µ jaµ = 0 (associated to Noether’s theorem in the classical theory) and of the definition of the
+T -product in terms of Heaviside’s function lead to
+                                                   n
+     ∂       µ
+                                                  X
+        hT ja  (x)ϕs 1 (y1 ) . . . ϕs n (y n )i =     δ(x0 − yj0 ) hT ϕs1 (y1 ) . . . [ja0 (x), ϕsj (yj )] . . . ϕsn (yn )i .
+    ∂xµ                                           j=1
+
+By virtue of the canonical commutation relations for the field operators, one can evaluate the
+                                                                            s
+equal-time commutator on the right-hand side: [ja0 (x), ϕsj (yj )] 0 0 = −iΦaj (x) δ(~x − ~yj ). This
+                                                                                     x =yj
+yields the Ward identities (in configuration space):
+
+                                                        n
+      ∂        µ
+                                                       X                                  s
+        µ
+          hT ja  (x)ϕs 1 (y1 ) . . . ϕs n (y n )i = −i     δ(x − yj ) hT ϕs1 (y1 ) . . . Φaj (x) . . . ϕsn (yn )i . (4.1)
+     ∂x                                                j=1
+
+
+By Fourier transformation, these identities can be rewritten in momentum space and in fact it
+is in the latter space that they were originally discovered for a special case in electrodynamics,
+and that they are often encountered in the literature. Their general form (4.1) shows that
+the Ward identities are the reflection of Noether’s first theorem: they represent a collection of
+important relations between the correlation functions in quantum field theory which result from
+the underlying classical symmetry group.
+    One may wonder about the impact of an improvement jaµ           jaµ + ∂ρ Baρµ for a given locally
+                                       µ
+conserved classical current density (ja ) on the explicit expression of Ward identities. General
+statements require a specification of the class of superpotentials which is considered. If the
+latter depend on the canonical momenta, derivatives of the delta function potentially appear
+in the Ward identities. Here, we only refer to some general recent works devoted to Ward
+identities [73, 74]. Furthermore, for completeness, we mention some works which deal more
+specifically with the quantum theory related to the EMT (some others being discussed in the
+next section): [30, 75–80].
+
+
+5     Ward identities, their “cousins and descendants”: on (the
+      work of) Raymond Stora
+The so-called Slavnov (or Slavnov-Taylor) identities can be viewed as a generalization of the
+Ward identities and can be formulated and derived in simple terms using the so-called BRST
+symmetry. This symmetry has been discovered by Becchi, Rouet and Stora (BRS) [81, 82] (and
+shortly thereafter in an unpublished work by Tyutin [83]) and it was shown by BRS [81, 82]
+that this symmetry allows to prove the renormalizability of non-Abelian gauge theories and
+to characterize the observables as well as the anomalous breakings of classical symmetries in
+quantum theory (see references [84–88] for some early elaborations and the monograph [89]
+for an introductory account). The BRST symmetry transformations were originally expressed
+in terms of an anti-commuting (Grassmann) parameter, but BRS could quickly dispense with
+
+                                                              23
+this parameter [82], thus regarding the symmetry operator as an anti-derivation acting on
+the BRS differential algebra. R. Stora always denoted the BRST-transformation of a field ϕ
+by sϕ while referring to it as the “Slavnov operation” [85, 90]. Due to its nilpotency, this
+operation allows for a cohomological interpretation [82, 85] and thereby allows to reformulate
+the problem of perturbative renormalization of Lagrangian field theories with rigid or local
+symmetries as an algebraic problem: this approach is referred to as algebraic renormalization,
+see [91] for a nice summary and references [89, 92] for a detailed presentation and various
+applications. In particular, the realization of Wess and Zumino [93] that anomalies (which
+describe an anomalous breaking of classical symmetries in quantum theory) are described by
+a consistency condition could be neatly reformulated as a cohomological problem [85] (and
+treated by BRS for YM theories [82]). In fact, the issue of determining the anomalous terms
+can be dealt with by using a simple algebraic method (referred to as the descent equation
+method) put forward by R. Stora [85] with the help of some mathematical lemmas due to
+J.A. Dixon (see also [94–96] as well as the general introduction presented in the monograph [68]).
+This approach has been applied by R. Stora and his collaborators to a wealth of theories
+like gravity [97], supersymmetry [98], string theory [99], conformal models [100] or topological
+theories [101], and has been investigated by numerous authors. Quite generally, the method of
+BRST quantization within the Lagrangian or the Hamiltonian [102] framework, and its variants
+developed by the Russian School (Batalin, Fradkin, Tyutin, Vilkovisky), represents a general
+and powerful approach to the quantization of constrained dynamical systems with a finite or
+infinite number of degrees of freedom [102–104].
+      The life-long interest of R. Stora in the quantization of field theories based on the fun-
+damental principle of causality made him also contribute to general approaches as the one of
+Epstein and Glaser (elaborating recently on the problem of the extension of distribution-valued
+field operators [105]), and work out what he considered to be the “missing chapters” of the
+subject [106], an endeavor that he could unfortunately not complete despite relentless efforts
+and various successes.
+      While interested and knowledgeable in a vast spectrum of topics in physics, Raymond was
+always particularly concerned with unveiling the underlying mathematical structures or find-
+ing the appropriate mathematical framework for the formulation of theories or for the solu-
+tion of problems, e.g. anomalies, differential algebras, gauge fixing, cohomological field theories,
+. . . [107]. In all instances he was extremely attached to correct and precise statements which gen-
+erally contributed to clarify the issues, but also retained him from publishing a certain number
+of his results (leaving nicely hand-written manuscripts communicated to friends and colleagues).
+He shared his passion with various long term friends from the international “Feldverein” like
+C. Itzykson, B. Zumino, D. Kastler, A.S. Wightman, J. Wess, H.-J. Borchers, R. Haag, . . . ,
+and it is very sad to note that all of these masters left us fairly recently, their deep insights
+and precious advice being greatly missed. As for Raymond, all of those who had the chance to
+meet him will always remember his culture, curiosity, enthusiasm, his brilliant and penetrating
+insights, as well as his great modesty, generosity and humanity.
+
+
+
+Acknowledgments
+F.G. acknowledges stimulating discussions with F. Delduc and H. Samtleben and wishes to
+thank M. Dubois-Violette and E. Pilon for helpful comments. We are grateful to J.-B. Zuber for
+a careful reading of the text and for his pertinent remarks. We also acknowledge the constructive
+
+
+                                                24
+feedback of S. Deser and F. Hehl concerning different points in the text. Finally, we are indebted
+to the anonymous referee for his constructive and clarifying comments which contributed to an
+improvement of the presentation.
+
+
+
+A      Gauge field theories in a nutshell
+To set the stage and fix the notation, we briefly recall the basics of non-Abelian gauge theories9 .
+in this appendix (e.g. see references [15, 71, 85, 108]).
+
+General set-up: Let G be a compact matrix Lie group (e.g. G = SU (N )) and g its Lie
+algebra with basis elements {T a }a=1,...,nG (with nG ≡ dim G) satisfying
+
+                                             [T a , T b ] = if abc T c .                                   (A.1)
+
+Here, the real structure constants f abc are totally antisymmetric in the indices10 . Furthermore,
+we assume that the matrices T a are Hermitian, i.e. (T a )† = T a . By virtue of relation (A.1), they
+are also traceless. For instance, for G = SU (2) we can choose T a = 12 σ a where σ 1 , σ 2 , σ 3 are
+the Pauli matrices and the structure constants are then given by εabc . Since the indices a, b, c
+are internal indices, they can indifferently be written as upper or lower indices, and Einstein’s
+convention of summing over identical indices is also applied to them.
+    The element U of the nG -dimensional Lie group G depends smoothly on nG real parameters
+ω a and it can be written (at least in the vicinity of the identity of G) as
+
+                               U = e−iqω ≃ 1 − iqω ,             with ω ≡ ω a Ta .                         (A.2)
+
+Here, the real constant q represents the “non-Abelian” or “YM charge” (which could as well be
+absorbed in the parameters ω a in this context) and we have U † = U −1 . The finite-dimensional
+structure group G gives rise to the infinite-dimensional gauge group G ≡ {U : Rn → G} whose
+elements describe the gauge transformations of matter and gauge fields which we will outline
+next.
+
+Fields and transformation laws: We suppose that the matter content is given by a multi-
+plet ϕ ≡ [ϕ1 , . . . , ϕN ]t , i.e. a column vector with N components ϕA each of which is a classical
+relativistic field, e.g. we have a collection of complex scalar fields φA or of Dirac fields ψA . For
+global gauge transformations, the multiplet ϕ is assumed to transform with a N -dimensional
+unitary representation Û of the group G: this means that the group element U ∈ G acts on ϕ
+by a unitary N × N matrix Û satisfying U        [1 U2 = Û1 Û2 . This representation of G is related to a
+N -dimensional representation T̂a of the Lie algebra g (see equation (A.2)):
+
+                   Û = e−iqω̂ ≃ 1N − iq ω̂ ,         with ω̂ ≡ ω a T̂a     and T̂a† = T̂a .
+   9
+     Non-Abelian gauge theories have been discovered at about the same time and independently by W. Pauli, by
+R. Shaw, by C. N. Yang and R. Mills and by R. Utiyama who considered right away the case of general Lie groups.
+However, the priority goes to Yang and Mills who were the first to publish their results — see reference [67] for
+the fascinating history of the subject.
+  10
+     For semi-simple Lie algebras like SU (N ), the structure constants can be chosen to be totally antisymmetric.
+Here, we recall [109] that a real or complex Lie algebra is called semi-simple if it does not contain any Abelian
+ideal (i.e. invariant Lie subalgebra) except {0}; the Lie algebra g is called simple if it is not Abelian and does
+not contain any ideals other than g and {0}.
+
+
+                                                        25
+For (local) gauge transformations, the symmetry parameters ω a and the matrices Û depend
+smoothly on x ∈ Rn .
+   The transformation law of the matter multiplet ϕ and of its Hermitian conjugate ϕ† read
+                       U
+                       ϕ = Û ϕ ,            i.e. δϕ = −iq ω̂ϕ or δϕA = −iq ω̂AB ϕB ,
+                 U †
+                  ϕ = ϕ Û †    −1
+                                     ,       i.e. δϕ† = iq ϕ† ω̂     or δϕ†A = iq ϕ†B ω̂BA .      (A.3)
+
+Here, we use the notation ϕ†A ≡ (ϕ† )A and we note that the transformations only act on the
+internal symmetry indices A of the matter fields.
+    The covariant derivative of the matter multiplet ϕ is defined by
+
+              Dµ ϕ ≡ ∂µ ϕ + iq Âµ ϕ ,                    Dµ ϕ† ≡ (Dµ ϕ)† = ∂µ ϕ† − iqϕ† Âµ .    (A.4)
+
+Here, Âµ (x) ≡ Aaµ (x)T̂ a is the N -dimensional representation of the gauge potential: the latter
+is a g-valued vector field Aµ (x) ≡ Aaµ (x)T a where (Aaµ )µ∈{0,1,...,n−1} is a real-valued vector field
+for each value of a ∈ {1, . . . , nG }. Under a finite gauge transformation x 7→ U (x), the gauge
+potential transforms inhomogeneously with the adjoint representation of the gauge group:
+                                                              i
+                                         U
+                                          Aµ = U Aµ U −1 −      U ∂µ U −1 .                       (A.5)
+                                                              q
+For infinitesimal gauge variations UAµ ≃ Aµ + δAµ it follows from (A.5) and (A.2) that Aµ
+transforms with the covariant derivative of the g-valued functions x 7→ ω(x) ≡ ω a (x)Ta :
+
+                                         δAµ = Dµ ω ≡ ∂µ ω + iq [Aµ , ω] .                        (A.6)
+
+This transformation law involves the non-Abelian charge q (self-coupling constant) which also
+appears in the matter transformation law (A.3). For the Lie group generators Ta appearing in
+ω ≡ ω a Ta and Aµ ≡ Aaµ Ta , we can consider any representation Ta 7→ r(Ta ) of the Lie algebra,
+e.g. r(Ta ) = T̂a as we did for the discussion of the matter multiplet ϕ.
+    The commutator of two covariant derivatives determines the YM field strength tensor Fµν ≡
+  a
+Fµν Ta :
+               [Dµ , Dν ] ω = iq [Fµν , ω] , with Fµν ≡ ∂µ Aν − ∂ν Aµ + iq [Aµ , Aν ] .    (A.7)
+Hence we have the gauge transformation law
+                           U
+                               Fµν = U Fµν U −1          or        δFµν = iq [Fµν , ω] ,          (A.8)
+
+i.e. Fµν transforms with the adjoint representation. The Jacobi identity for the covariant deriva-
+tives implies the Bianchi identity for the field strength: 0 = Dλ Fµν + cyclic permutations of the
+indices. In contrast to the Abelian theory, the field strength presently involves terms which are
+non-linear in the gauge field Aµ and it is not invariant under gauge transformations. Its com-
+ponents F0i a ≡ E a , F a = ε B a (for n = 4) may be viewed as the non-Abelian generalization
+                  xi   ij    ijk xk
+of the electric and magnetic fields of Maxwell’s theory.
+     The theory can be generalized from Minkowski space to an n-dimensional smooth manifold
+M and a global (coordinate free) formulation can be given, e.g. see reference [110]. The latter
+relies on the introduction of a principal fiber bundle P (with compact Lie group G) over M ,
+i.e. a manifold P which has locally the structure U × G where U is an open subset of M . The
+YM potential is then introduced as a g-valued 1-form on P with appropriate transformation
+properties and it is referred to as a connection. The expressions given above for Rn then represent
+local expressions on U ≃ Rn .
+
+                                                         26
+Dynamics: In the following, we generally drop the hat denoting the representation (of the
+Lie algebra or Lie group) which is considered for the matter multiplets. Concerning the nor-
+malization of the trace, we note that for a simple Lie algebra one may choose a basis (Ta ) such
+that Tr (r(T a ) r(T b )) = c2 (r) δ ab for any representation Ta 7→ r(Ta ), where the constant c2 (r)
+is known as the index of the representation r. For instance, for the adjoint representation, Ta
+is represented by (r(Ta ))bc = −ifabc and c2 (r) = 2.
+    The dynamics of pure YM-theory is described by the classical action
+                                  1                                      1
+                                          Z                                   Z
+                                                n         µν
+                      Sg [A] ≡ −              d x Tr (F        Fµν ) = −           dn x F aµν Fµν
+                                                                                               a
+                                                                                                  ,         (A.9)
+                                 4c2                                     4
+which is invariant under gauge transformations. Free Maxwell theory represents a particular case
+of pure YM theory for which the gauge group G = U (1) is Abelian: the internal index takes
+a single value a = 1 and the totally antisymmetric structure constants f abc in (A.1) vanish,
+as does the commutator term in the field strength (A.7) and in the covariant derivative (A.6).
+Thus, in this particular case there is no self-interaction of gauge potentials in the action (A.9).
+    The dynamics of a matter multiplet φ ≡ [φ1 , . . . , φN ]t , of N scalar fields or of a multiplet
+ψ ≡ [ψ1 , . . . , ψN ]t of N Dirac fields of mass m which are coupled to the gauge field Aµ are
+respectively described by the gauge invariant Lagrangian densities
+
+                                  LM (φ, A) ≡ (Dµ φ† )(Dµ φ) − m2 φ† φ ,                                   (A.10)
+
+and
+                                      ↔                       ih µ                     i
+               LM (ψ, A) ≡ i ψ̄γ µ Dµψ − mψ̄ψ ≡                 ψ̄γ Dµ ψ − (Dµ ψ̄)γ µ ψ − mψ̄ψ ,           (A.11)
+                                                              2
+where ψ̄ ≡ [ψ̄1 , . . . , ψ̄N ] and ψ̄γ µ ≡ [ψ̄1 γ µ , . . . , ψ̄N γ µ ]. The equations of motion for interacting
+matter and gauge fields follow from the gauge invariant action functional S[ϕ, A] ≡ Sg [A] +
+SM [ϕ, A]: we have
+
+           δS    δSM                                                  δS     δSM
+      0=     †
+               =      = −(Dµ Dµ + m2 )φ ,                 or 0 =           =       = (iγ µ Dµ − m)ψ ,      (A.12)
+           δφ     δφ†                                                 δ ψ̄    δ ψ̄
+
+as well as the Hermitian conjugate expressions, and (for a ∈ {1, . . . , nG })
+
+                       δS    δSg   δSM
+                0=       a
+                           =   a
+                                 +      = Dν Faνµ − jaµ ,                     i.e.     Dν F νµ = j µ ,     (A.13)
+                      δAµ    δAµ   δAaµ
+
+with
+
+                                                               δSM [ϕ, A]
+                                              jaµ [ϕ, A] ≡ −                   .                           (A.14)
+                                                                 δAaµ
+
+From (A.14), (A.10) and (A.11), we get the g-valued currents
+                          h                               i
+           jaµ [φ, A] = iq φ† T̂a Dµ φ − (Dµ φ† )T̂a φ ,                    jaµ [ψ, A] = q ψ̄γ µ T̂a ψ ,   (A.15)
+
+which transform with the adjoint representation under gauge transformations:
+
+                     j = U j µ U −1
+                   U µ
+                                              or      δj µ = iq [j µ , ω]          with ω ≡ ω a Ta .       (A.16)
+
+
+                                                          27
+The equation of motion (A.13) for the non-Abelian gauge field is referred to as the Yang-Mills
+equation. In contrast to the Maxwell equation appearing in U (1) gauge theory, the YM equation
+involves the covariant derivative. Hence the matter current j µ [ϕ, A], which appears as a source
+in this equation, is only covariantly conserved:
+                          1                   1
+  Dµ j µ = Dµ Dν F νµ =     [Dµ , Dν ]F νµ = − iq [Fµν , F µν ] = 0 ,     i.e.   Dµ j µ = 0 .      (A.17)
+                          2                   2
+
+References
+  [1] H. Weyl, Symmetry, (Princeton Univ. Press, 1952).
+  [2] F. Gieres, “About symmetries in physics”, in Symmetries in Physics, F. Gieres, M. Kibler,
+      C. Lucchesi, and O. Piguet, eds., (Editions Frontières, 1998). arXiv:hep-th/9712154.
+      Proceedings of the fifth Séminaire Rhodanien de Physique, Dolomieu 1997.
+  [3] E. Noether, “Invariante Variationsprobleme”, Nachr. Ges. Wiss. Gött. 1918 (1918) 235–257,
+      arXiv:physics/0503066 [physics].
+  [4] P. J. Olver, Applications of Lie Groups to Differential Equations, second ed., vol. 107 of
+      Graduate Texts in Mathematics, (Springer Verlag, 1993).
+  [5] Y. Kosmann-Schwarzbach, The Noether Theorems: Invariance and Conservation Laws in the
+      Twentieth Century, Sources and Studies in the History of Mathematics and Physical Sciences,
+      (Springer Verlag, 2011).
+  [6] K. Sundermeyer, Symmetries in Fundamental Physics, vol. 176 of Fundam. Theor. Phys.,
+      (Springer Verlag, 2014).
+  [7] J. B. Zuber, “Invariances in physics and group theory”, Talk given at the Conference Lie and
+      Klein: the Erlangen program and its impact on mathematics and physics, Strasbourg, Sept. 2012,
+      arXiv:1307.3970 [hep-th].
+  [8] M. Bañados and I. A. Reyes, “A short review on Noether’s theorems, gauge symmetries and
+      boundary terms, for students”, arXiv:1601.03616 [hep-th].
+  [9] V. Ogievetsky and E. Sokatchev, “Supercurrent”, Sov. J. Nucl. Phys. 28 (1978) 423, [Yad. Fiz.
+      28 (1978) 825].
+ [10] W. Lang, “Currents in supersymmetric gauge theories”, Nucl. Phys. B150 (1979) 201–220.
+ [11] J. Zahn, “Wirkungs- und Lokalitätsprinzip für nichtkommutative skalare Feldtheorien”, Master’s
+      thesis, Universität Hamburg, 2003.
+ [12] H. C. Ohanian and R. Ruffini, Gravitation and Spacetime, third ed., (Cambridge Univ. Press,
+      2013).
+ [13] F. J. Belinfante, “On the spin angular momentum of mesons”, Physica 6 (1939) 887–898.
+ [14] F. J. Belinfante, “On the current and the density of the electric charge, the energy, the linear
+      momentum and the angular momentum of arbitrary fields”, Physica 7 (1940) 449.
+ [15] G. Grensing, Structural Aspects of Quantum Field Theory and Noncommutative Geometry,
+      (World Scientific Publ., 2013).
+ [16] L. H. Ryder, Quantum Field Theory, second ed., (Cambridge Univ. Press, 1996).
+ [17] M. Forger and H. Römer, “Currents and the energy momentum tensor in classical field theory: A
+      fresh look at an old problem”, Annals Phys. 309 (2004) 306–389, arXiv:hep-th/0307199.
+ [18] M. J. Gotay and J. E. Marsden, “Stress-energy-momentum tensors and the Belinfante-Rosenfeld
+      formula”, Contemp. Math. 132 (1992) 367-392,
+ [19] L. Landau and E. Lifshitz, The Classical Theory of Fields, Course of Theoretical Physics, Vol. 2 ,
+      fourth ed., (Butterworth-Heinemann, 1980).
+
+
+
+                                                   28
+[20] A. J. Hanson, T. Regge, and C. Teitelboim, Constrained Hamiltonian Systems, (Roma:
+     Accademia Nazionale dei Lincei, 1976).
+[21] D. N. Blaschke, F. Gieres, M. Reboud and M. Schweda, “Poincaré transformations in the
+     Hamiltonian formulation of gauge field theories”, talk presented by F. Gieres at the XXIVth
+     International Conference on Integrable Systems and Quantum symmetries (ISQS-24), Prague,
+     June 2016, manuscript in preparation.
+[22] A. Duncan, The Conceptual Framework of Quantum Field Theory, (Oxford Univ. Press, 2012).
+[23] D. J. Griffiths, “Resource letter EM-1: Electromagnetic momentum”, Am. J. Phys. 80 (2012)
+     7–18.
+[24] U. E. Schröder, Special Relativity, vol. 33 of World Sci. Lect. Notes Phys., (Singapore: World
+     Scientific, 1990).
+[25] C. Itzykson and J.-B. Zuber, Quantum Field Theory, Dover ed., (New York: Dover Publ. Inc.,
+     2005).
+[26] B. P. Kosyakov, Introduction to the Classical Theory of Particles and Fields, (Springer Verlag,
+     2007).
+[27] M. Gell-Mann and M. Lévy, “The axial vector current in beta decay”, Nuovo Cim. 16 (1960) 705.
+[28] C. G. Callan Jr., S. R. Coleman, and R. Jackiw, “A new improved energy-momentum tensor”,
+     Annals Phys. 59 (1970) 42–73.
+[29] R. Jackiw and S.-Y. Pi, “Tutorial on scale and conformal symmetries in diverse dimensions”, J.
+     Phys. A: Math. Theor. 44 (2011) 223001, arXiv:1101.4886 [math-ph].
+[30] P. Di Francesco, P. Mathieu, and D. Sénéchal, Conformal Field Theory, Graduate Texts in
+     Contemporary Physics, (New York: Springer, 1997).
+[31] W. Thirring, Classical Mathematical Physics: Dynamical Systems and Field Theories, third ed.,
+     (Springer Verlag, 1997).
+[32] U. Sexl and H. K. Urbantke, Relativity, Groups, Particles: Special Relativity and Relativistic
+     Symmetry in Field and Particle Physics, (Springer Verlag, 2001).
+[33] S. W. Hawking and G. F. R. Ellis, The Large Scale Structure of Space-time, Cambridge
+     Monographs on Mathematical Physics, (Cambridge Univ. Press, 1973).
+[34] J. M. M. Senovilla and D. Garfinkle, “The 1965 Penrose singularity theorem”, Class. Quant.
+     Grav. 32 (2015) 124008, arXiv:1410.5226 [gr-qc].
+[35] R. M. Wald, General Relativity, (Chicago: Univ. Press, 1984).
+[36] E. Poisson, A Relativist’s Toolkit: The Mathematics of Black-Hole Mechanics, (Cambridge Univ.
+     Press, 2008).
+[37] E. Eriksen and J. M. Leinaas, “Gauge invariance and the transformation properties of the
+     electromagnetic four-potential”, Phys. Scripta 22 (1980) 199.
+[38] Y. Takahashi, “Energy-momentum tensors in relativistic and non-relativistic classical field
+     theory”, Fortschr. Phys. 34 (1986) 323–344.
+[39] G. Muñoz, “Lagrangian field theories and energy-momentum tensors”, Am. J. Phys. 64 (1996)
+     1153–1157.
+[40] M. Montesinos and E. Flores, “Symmetric energy-momentum tensor in Maxwell, Yang-Mills, and
+     Proca theories obtained using only Noether’s theorem”, Rev. Mex. Fis. 52 (2006) 29–36,
+     arXiv:hep-th/0602190.
+     R. E. Gamboa Saravi, “On the energy momentum tensor”, J. Phys. A: Math. Gen. 37 (2004)
+     9573–9586, arXiv:math-ph/0306020.
+[41] A. O. Barut, Electrodynamics and Classical Theory of Fields and Particles, Dover Books on
+     Physics, (Dover Publ. Inc., 1981).
+[42] L. Rosenfeld, “Sur le tenseur d’impulsion-énergie”, Mémoires Acad. Roy. de Belgique 18 (1940)
+     1–30.
+
+
+                                                 29
+[43] M. Blagojević and F. W. Hehl, eds., Gauge Theories of Gravitation: A Reader with
+     Commentaries, (World Scientific, 2013).
+[44] F. W. Hehl, P. von der Heyde, G. D. Kerlick, and J. M. Nester, “General relativity with spin and
+     torsion: Foundations and prospects”, Rev. Mod. Phys. 48 (1976) 393–416.
+     R. T. Hammond, “Torsion gravity”, Rept. Prog. Phys. 65 (2002) 599–649.
+[45] A. Trautman, “Einstein-Cartan theory”, in Encyclopedia of Mathematical Physics, J.-P.
+     Françoise, G. L. Naber, and S. T. Tsou, eds., vol. 2, pp. 189–195, (Oxford: Elsevier, 2006).
+     arXiv:gr-qc/0606062.
+[46] F. W. Hehl, “On energy-momentum and spin/helicity of quark and gluon fields”, in Proceedings,
+     15th Workshop on High Energy Spin Physics (DSPIN-13): Dubna, Russia, Oct 8-12, 2013,
+     (Dubna: JINR, 2014). arXiv:1402.0261 [gr-qc].
+[47] R. F. Streater and A. S. Wightman, PCT, spin and statistics, and all that, Princeton Landmarks
+     in Mathematics and Physics, (Princeton Univ. Press, 2000).
+[48] R. Haag, Local Quantum Physics: Fields, Particles, Algebras, second ed., Texts and Monographs
+     in Physics, (Berlin: Springer Verlag, 1996).
+[49] J. D. Jackson, Classical Electrodynamics, third ed., (Wiley, 1998).
+[50] B. Felsager, Geometry, Particles and Fields, Graduate Texts in Contemporary Physics, (Springer
+     Verlag, 1998).
+[51] R. Utiyama, “Theory of invariant variation and the generalized canonical dynamics”, Prog.
+     Theor. Phys. Suppl. 9 (1959) 19–44.
+[52] H. Balasin, D. N. Blaschke, F. Gieres, and M. Schweda, “Wong’s equations and charged
+     relativistic particles in non-commutative space”, SIGMA 10 (2014) 099, arXiv:1403.0255
+     [hep-th].
+[53] S. Deser, “Scale invariance and gravitational coupling”, Annals Phys. 59 (1970) 248–253.
+[54] S. Deser, “Self-interaction and gauge invariance”, Gen. Rel. Grav. 1 (1970) 9–18,
+     arXiv:gr-qc/0411023.
+     S. Deser, “Gravity from self-interaction redux”, Gen. Rel. Grav. 42 (2010) 641–646,
+     arXiv:0910.2975 [gr-qc].
+[55] T. Ortín, Gravity and Strings, second ed., Cambridge Monographs on Mathematical Physics,
+     (Cambridge Univ. Press, 2015).
+[56] R. P. Feynman, F. B. Morinigo, and W. G. Wagner, Feynman Lectures On Gravitation, Frontiers
+     in Physics, B. Hatfield ed., (Westview Press, 2002).
+[57] N. Straumann, General Relativity, second ed., Graduate Texts in Physics, (Springer Verlag,
+     2013).
+     N. Straumann, “Reflections on gravity”, Concluding talk at the ESA-CERN Workshop, CERN,
+     5-7 April 2000, arXiv:astro-ph/0006423.
+[58] G. ’t Hooft (ed.), 50 years of Yang-Mills theory, (World Scientific Publ., 2005).
+[59] N. D. Birrell and P. C. W. Davies, Quantum Fields in Curved Space, Cambridge Monogr. Math.
+     Phys., (Cambridge Univ. Press, 1982).
+[60] C. W. Misner, K. S. Thorne, and J. A. Wheeler, Gravitation, (New York: W. H. Freeman and
+     Company, 1973).
+[61] D. Hilbert, “Die Grundlagen der Physik. (Erste Mitteilung.)”, Nachr. d. K. Gesellsch. d. Wiss.
+     zu Göttingen, Math.-Phys. Klasse 1915, Heft 3 (1915) 395–407.
+[62] A. Einstein, “Feldgleichungen der Gravitation”, Preuss. Akad. Wiss., Sitzungsberichte 1915
+     (Teil 2) (1915) 844–847.
+     A. Einstein, “Die Grundlage der allgemeinen Relativitätstheorie”, Annalen Phys. 49 (1916)
+     769–822.
+
+
+
+
+                                                 30
+[63] L. F. Abbott and S. Deser, “Stability of Gravity with a Cosmological Constant”, Nucl. Phys.
+     B195 (1982) 76.
+[64] M. Dubois-Violette and J. Madore, “Conservation laws and integrability conditions for
+     gravitational and Yang-Mills field equations”, Commun. Math. Phys. 108 (1987) 213.
+[65] G. Barnich and F. Brandt, “Covariant theory of asymptotic symmetries, conservation laws and
+     central charges”, Nucl. Phys. B633 (2002) 3–82, arXiv:hep-th/0111246.
+[66] H. Stephani, Relativity — An Introduction to Special and General Relativity, third ed.,
+     (Cambridge Univ. Press, 2006).
+[67] L. O’Raifeartaigh, The Dawning of Gauge Theory, Princeton Series in Physics, (Princeton Univ.
+     Press, 1997).
+[68] R. A. Bertlmann, Anomalies in Quantum Field Theory, vol. 91 of International Series of
+     Monographs on Physics, (Oxford, UK: Clarendon, 1996).
+[69] A. Rouet and R. Stora, “Ward identities and trace identities for the stress-energy tensor”, Lett.
+     Nuovo Cim. 4 (1972) 136–138.
+[70] A. Rouet and R. Stora, “Noether’s theorem and Ward identities in renormalizable theories”,
+     Lett. Nuovo Cim. 4 (1972) 139.
+[71] R. Stora, “Lagrangian field theory”, in Particle Physics, Proceedings of the Les Houches Summer
+     School on Theoretical Physics 1971, C. DeWitt and C. Itzykson, eds., pp. 1–80, (Gordon and
+     Breach, 1973).
+[72] M. Srednicki, Quantum Field Theory, (Cambridge Univ. Press, 2007).
+[73] M. Dütsch and F. M. Boas, “The Master Ward identity”, Rev. Math. Phys. 14 (2002) 977,
+     arXiv:hep-th/0111101.
+[74] S. G. Avery and B. U. W. Schwab, “Noether’s second theorem and Ward identities for gauge
+     symmetries”, JHEP 02 (2016) 031, arXiv:1510.07038 [hep-th].
+[75] S. Coleman, Aspects of Symmetry, (Cambridge Univ. Press, 1985).
+[76] S. A. Fulling, Aspects of Quantum Field Theory in Curved Space-time, vol. 17 of London Math.
+     Soc. Student Texts, (Cambridge Univ. Press, 1989).
+[77] M. J. Duff, “Twenty years of the Weyl anomaly”, Class. Quant. Grav. 11 (1994) 1387–1404,
+     arXiv:hep-th/9308075 [hep-th].
+[78] R. Blumenhagen, D. Lüst, and S. Theisen, Basic Concepts of String Theory, Theoretical and
+     Mathematical Physics, (Springer Verlag, 2013).
+[79] Y. Nakayama, “A lecture note on scale invariance vs conformal invariance”, Phys. Rept. 569
+     (2014) 1–93, arXiv:1302.0884 [hep-th], Lectures given at Taiwan Central University for the
+     5th Taiwan School on Strings and Fields.
+     A. Dymarsky, Z. Komargodski, A. Schwimmer, and S. Theisen, “On scale and conformal
+     invariance in four dimensions”, JHEP 10 (2015) 171, arXiv:1309.2921 [hep-th].
+[80] D. N. Blaschke, R. Carballo-Rubio, and E. Mottola, “Fermion pairing and the scalar boson of
+     the 2D conformal anomaly”, JHEP 12 (2014) 153, arXiv:1407.8523 [hep-th].
+[81] C. Becchi, A. Rouet, and R. Stora, “The Abelian Higgs-Kibble model: Unitarity of the S
+     operator”, Phys. Lett. B52 (1974) 344.
+     C. Becchi, A. Rouet, and R. Stora, “Renormalization of the Abelian Higgs-Kibble model”,
+     Commun. Math. Phys. 42 (1975) 127–162.
+[82] C. Becchi, A. Rouet, and R. Stora, “Renormalization of gauge theories”, Annals Phys. 98 (1976)
+     287–321.
+[83] I. V. Tyutin, “Gauge invariance in field theory and statistical physics in operator formalism”,
+     arXiv:0812.0580 [hep-th], (Lebedev Institute preprint in Russian 1975: LEBEDEV-75-39).
+[84] C. Becchi, A. Rouet, and R. Stora, “Gauge field models”, in Renormalization Theory,
+     Proceedings of the NATO Advanced Study Institute, Erice, August 1975, G. Velo and A. S.
+
+
+                                                 31
+     Wightman, eds., vol. 23 of NATO Advanced Study Institutes Series, Series C, pp. 269–297,
+     (Dortrecht: Springer, 1976).
+ [85] R. Stora, “Continuum gauge theories”, in New Developments in Quantum Field Theory and
+      Statistical Mechanics Cargèse 1976, XVI Latin American School of Physics Caracas, Venezuela
+      1976, M. Lévy and P. Mitter, eds., vol. 26 of NATO Advanced Study Institutes Series,
+      pp. 201–224, (Springer US, 1977).
+ [86] C. Becchi, A. Rouet, and R. Stora, “Renormalizable theories with symmetry breaking”, in Field
+      Theory, Quantization and Statistical Physics, E. Tirapegui, ed., vol. 6 of Mathematical Physics
+      and Applied Mathematics, (Springer Verlag, 1981).
+ [87] O. Piguet and A. Rouet, “Symmetries in perturbative quantum field theory”, Phys. Rept. 76
+      (1981) 1.
+ [88] C. Becchi, “Lectures on the renormalization of gauge theories”, in Relativity, Groups and
+      Topology, Les Houches Summer School on Theoretical Physics, August 1983, B. DeWitt and
+      R. Stora, eds., (Amsterdam: North-Holland, 1984).
+ [89] O. Piguet and S. P. Sorella, Algebraic Renormalization: Perturbative Renormalization,
+      Symmetries and Anomalies, vol. 28 of Lect. Notes Phys.: Monographs, (Springer Verlag, 1995).
+ [90] R. Stora, “Remarks on Slavnov symmetries”, in Renormalization of Quantum Field Theories
+      with Non-linear Field Transformations, Proceedings of a workshop at Ringberg Castle Tegernsee,
+      1987, P. Breitenlohner, D. Maison, and K. Sibold, eds., vol. 303 of Lecture Notes in Physics,
+      pp. 213–219, (Springer Verlag, 1987).
+      R. Stora, “The Slavnov symmetry, cousins and descendants”, in BRS symmetry, Proceedings of
+      the International Symposium on the Occasion of its 20th Anniversary, Kyoto, Sept. 1995,
+      M. Abe, N. Nakanishi, and I. Ojima, eds., pp. 1–16, (Tokyo, Japan: Univ. Acad. Press, 1996).
+ [91] D. H. T. Franco and O. Piguet, “Algebraic renormalization”, Scholarpedia 8 no. 11, (2013) 8336.
+      http://www.scholarpedia.org/article/Algebraic_renormalization.
+ [92] A. Boresch, S. Emery, O. Moritsch, M. Schweda, T. Sommer, and H. Zerrouki, Applications of
+      Noncovariant Gauges in the Algebraic Renormalization Procedure, (World Scientific, 1998).
+ [93] J. Wess and B. Zumino, “Consequences of anomalous Ward identities”, Phys. Lett. B37 (1971)
+      95–97.
+ [94] B. Zumino, “Chiral anomalies and differential geometry”, in Relativity, Groups and Topology,
+      Les Houches Summer School on Theoretical Physics, August 1983, B. DeWitt and R. Stora, eds.,
+      (Amsterdam: North-Holland, 1984).
+      http://www.osti.gov/energycitations/product.biblio.jsp?osti_id=5461614.
+ [95] R. Stora, “Algebraic structure and topological origin of anomalies”, in Progress in Gauge Field
+      Theory, Cargèse Summer Institute, Sept. 1983, G. ’t Hooft, A. Jaffe, H. Lehmann, P. K. Mitter,
+      I. M. Singer, and R. Stora, eds., vol. 115 of NATO Advanced Study Institutes Series, Series B,
+      pp. 543–562, (Plenum Press, 1984).
+ [96] J. Mañes, R. Stora, and B. Zumino, “Algebraic study of chiral anomalies”, Commun. Math.
+      Phys. 102 (1985) 157.
+ [97] F. Langouche, T. Schücker, and R. Stora, “Gravitational anomalies of the adler-bardeen type”,
+      Phys. Lett. B145 (1984) 342–346.
+ [98] G. Girardi, R. Grimm, and R. Stora, “Chiral anomalies in n = 1 supersymmetric Yang-Mills
+      theories”, Phys. Lett. B156 (1985) 203–208.
+      S. Ferrara, A. Masiero, M. Porrati, and R. Stora, “Bardeen anomaly and Wess-Zumino term in
+      the supersymmetric standard model”, Nucl. Phys. B417 (1994) 238–256,
+      arXiv:hep-th/9311038.
+ [99] L. Baulieu, C. Becchi, and R. Stora, “On the covariant quantization of the free bosonic string”,
+      Phys. Lett. B180 (1986) 55–60.
+[100] S. Lazzarini and R. Stora, “Ward identities for conformal models”, in Stochastics, Algebra and
+
+
+                                                  32
+     Analysis in Classical and Quantum Dynamics, S. Albeverio, Ph. Blanchard, and D. Testard,
+     eds., Proceedings of the IVth French-German Encounter on Mathematics and Physics, CIRM,
+     Marseille, France, February/March 1988, vol. 59 of Mathematics and Its Applications,
+     pp. 169–172, (Kluwer Academic Publishers, 1990).
+     S. Lazzarini and R. Stora, “Ward identities for Lagrangian conformal models”, in Knots, topology
+     and quantum field theories, Proceedings of the Johns Hopkins Workshop on Current Problems in
+     Particle Theory 13, Florence, 1989, L. Lusanna, ed., (World Scientific Publ., 1989).
+[101] S. Ouvry, R. Stora, and P. van Baal, “On the algebraic characterization of Witten’s topological
+      Yang-Mills theory”, Phys. Lett. B220 (1989) 159.
+[102] M. Henneaux and C. Teitelboim, Quantization of Gauge Systems, (Princeton Univ. Press, 1992).
+[103] D. M. Gitman and I. V. Tyutin, Quantization of Fields with Constraints, Springer Series in
+      Nuclear and Particle Physics, (Springer Verlag, 1990).
+[104] H. J. Rothe and K. D. Rothe, Classical and Quantum Dynamics of Constrained Hamiltonian
+      Systems, vol. 81 of World Sci. Lect. Notes Phys., (World Scientific Publ., 2010).
+[105] N. M. Nikolov, R. Stora, and I. Todorov, “Renormalization of massless Feynman amplitudes in
+      configuration space”, Rev. Math. Phys. 26 (2014) 1430002, arXiv:1307.6854 [hep-th].
+[106] R. Stora, “Renormalized perturbation theory: A missing chapter”, Int. J. Geom. Meth. Mod.
+      Phys. 5 (2008) 1345–1360, arXiv:0901.3426 [hep-th].
+[107] D. Kastler and R. Stora, “A differential geometric setting for BRS transformations and
+      anomalies I”, J. Geom. Phys. 3 (1986) 437–482.
+      R. Stora, “From Koszul complexes to gauge fixing”, in 50 years of Yang-Mills theory,
+      G. ’t Hooft, ed., pp. 137–167, (World Scientific Publ., 2005).
+      R. Stora, F. Thuillier, and J.-C. Wallet, “Algebraic structure of cohomological field theory
+      models and equivariant cohomology”, in Infinite Dimensional Geometry, noncommutative
+      Geometry, Operator Algebras and Fundamental Interactions, R. Coquereaux,
+      M. Dubois-Violette, and P. Flad, eds., pp. 266–297, Proc. 1st Caribbean Spring School of
+      Mathematics and Theoretical Physics, Saint Francois, Guadeloupe 1993, (World Scientific, 1995).
+      R. Stora, “Exercises in equivariant cohomology”, in Quantum Fields and Quantum Space Time,
+      G. ’t Hooft, A. Jaffe, G. Mack, P. K. Mitter, and R. Stora, eds., Proc. NATO Advanced Study
+      Institute, Cargèse, France 1996, vol. 364 of NATO Advanced Study Institutes Series, Series B,
+      pp. 265–279, (Plenum, 1997), arXiv:hep-th/9611114.
+[108] A. Das, Lectures on Quantum Field Theory, (World Scientific, 2008).
+[109] L. Frappat, A. Sciarrino, and P. Sorba, Dictionary of Lie Algebras and Superalgebras, (Academic
+      Press, 2000). arXiv:hep-th/9607161.
+[110] D. Bleecker, Gauge Theory And Variational Principles, Global Analysis, Pure and Applied, Vol.
+      1, (Reading, USA: Addison-Wesley, 1981).
+
+
+
+
+                                                 33
+

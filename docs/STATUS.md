@@ -2339,6 +2339,32 @@ Implemented and verified:
 - These are derived boundary facts only: no one-dimensional quantum theory, lower-to-four
   coercion, existence theorem, or mass gap is constructed.
 
+## 2026-07-18 — one-hundred-twenty-ninth stone: local stress-energy tensor interface
+
+Implemented and verified:
+
+- `minkowskiSchwartzCoordinateDerivative` supplies exact Schwartz directional derivatives along the
+  canonical spacetime basis.
+- Explicit inverse-Lorentz matrix coefficients fix a project contravariant rank-two component
+  convention matching `U(g)T(f)U(g)⁻¹` and the inverse-affine test pullback.
+- `LocalStressEnergyTensorData` selects every `T^{μν}` as a label in the same tempered local-
+  observable family/common-domain/Poincaré chain.
+- Components are symmetric at label/operator level, Hermitian on conjugated tests, local relative to
+  every label in the same family, transform by the exact rank-two Lorentz sum, and satisfy weak
+  distributional conservation.
+- Each component inherits the same family's coherent tempered matrix elements.
+- The `T^{00}` energy-density label must differ from the unit and act both nontrivially and
+  differently from the unit on an exact test/domain vector.
+- Hostile probes independently expose the coordinate derivative, inverse Lorentz entries,
+  inverse-affine pullback, locality, symmetry, adjointness, tensor covariance, conservation, tempered
+  coherence, and rejection of zero/unit energy-density surrogates.
+- The standard gauge-theory symmetry/conservation semantics are pinned to
+  Blaschke–Gieres–Reboud–Schweda 2016; Streater–Wightman supplies quantum component covariance,
+  locality, common-domain, and adjoint semantics.
+- The rank-two convention is an explicit formalization decision beyond Clay's printed existence
+  request. No tensor datum, translation-generator Ward identity, trace/trace-anomaly semantics,
+  renormalization theorem, theory, or mass gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
