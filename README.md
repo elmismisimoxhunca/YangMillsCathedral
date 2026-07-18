@@ -131,8 +131,10 @@ normalized zero-point data, and a concrete fixed-order factorial-growth estimate
 Schwartz seminorms are also implemented as preliminary regularity infrastructure; they are not yet
 identified with OS-II `(E0′)`. Exact positive-arity Schwartz permutation pullback and scalar
 Schwinger symmetry `(E3)` are implemented separately. Proper-Euclidean rigid motions, their exact
-Schwartz pullback, and scalar covariance `(E1)` are also implemented, while `(E2)` and `(E4)` remain
-absent. No
+Schwartz pullback, and scalar covariance `(E1)` are also implemented. Exact first-coordinate time
+reflection and strict-positive-time topological-support infrastructure are present, but `(E2)`
+remains absent pending a proved nonzero positive-time test, OS-I's time-ordered/diagonal-flat
+source-space bridge, and the finite sequence product; `(E4)` is also absent. No
 concrete gauge-group, connection, invariant-inner-product, curvature, or structure-certificate witness,
 symmetry group, reconstruction bridge, quantum-theory witness, Yang–Mills existence claim, or
 mass-gap claim is present.

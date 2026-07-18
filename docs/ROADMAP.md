@@ -111,6 +111,9 @@ committed before higher layers depend on it.
   factorial-growth infrastructure, with the OS test-space/seminorm equivalence left visible.
 - [x] Define exact positive-arity Schwartz pullback and scalar Schwinger permutation symmetry `(E3)`.
 - [x] Define proper-Euclidean rigid motions, exact Schwartz pullback, and scalar covariance `(E1)`.
+- [x] Define exact Euclidean time reflection and strict-positive-time Schwartz support infrastructure.
+- [ ] Construct nonzero positive-time tests, the time-ordered/diagonal-flat OS-I source-space bridge,
+  finite test-sequence products, and reflection positivity `(E2)`.
 - [ ] Prove the source-facing OS-II `(E0′)` bridge and define complete Euclidean/Schwinger data.
 - [ ] Define proper-orthochronous Poincaré and Wightman data independently.
 - [ ] Define common invariant domains and operator-valued tempered distributions.

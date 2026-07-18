@@ -1285,6 +1285,25 @@ Implemented and verified:
 - No reflection positivity `(E2)`, clustering `(E4)`, source-norm bridge, reconstruction, Euclidean
   theory, Wightman theory, existence theorem, or mass-gap witness is introduced.
 
+## 2026-07-18 — seventy-fourth stone: Euclidean time-reflection infrastructure
+
+Implemented and verified:
+
+- `euclideanTimeCoordinate` selects the first coordinate in every supported positive dimension.
+- `euclideanTimeReflection` is a linear isometry that exactly negates that coordinate and fixes all
+  others; pointwise and Schwartz-pullback involutivity are proved.
+- `euclideanNPointTimeReflection` acts diagonally at the exact arity, and
+  `reflectScalarSchwartzTestFunction` is its continuous complex-linear Schwartz pullback.
+- `strictPositiveTimeConfigurationSet` and `HasStrictPositiveTimeSupport` use strict positivity at
+  every point and containment of the actual topological support.
+- Hostile probes exhibit positive-time configurations, prove reflected positive-time incompatibility
+  at positive arity, and explicitly show that the zero Schwartz test satisfies support vacuously.
+- Full `(E2)` remains absent until a nonzero positive-time Schwartz test, OS-I's time-ordered and
+  diagonal-flat `_𝒮₊` source-space bridge, and the finite sequence product/reflection operation are
+  constructed; subtype inhabitation by zero is not accepted as anti-vacuity evidence.
+- No reflection positivity theorem, clustering, reconstruction, Euclidean theory, Wightman theory,
+  existence theorem, or mass-gap witness is introduced.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
