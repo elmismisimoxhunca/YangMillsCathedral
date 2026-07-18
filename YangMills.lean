@@ -239,6 +239,8 @@ import YangMills.Lattice.FiniteProductHaarGibbsMeasure
 import YangMills.Lattice.FiniteProductHaarMeasureProbes
 import YangMills.Lattice.FiniteWilsonLoopExpectation
 import YangMills.Lattice.FiniteWilsonLoopExpectationProbes
+import YangMills.Lattice.LatticeScalingTrajectory
+import YangMills.Lattice.LatticeScalingTrajectoryProbes
 import YangMills.Lattice.WilsonLoopObservable
 import YangMills.Lattice.WilsonLoopObservableProbes
 import YangMills.Audit

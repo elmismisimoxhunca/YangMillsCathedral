@@ -2231,6 +2231,28 @@ Implemented and verified:
 - No reflection-positivity datum, transfer matrix, Hamiltonian, continuum limit, theory, or mass gap
   is constructed.
 
+## 2026-07-18 — one-hundred-twenty-fourth stone: lattice scaling trajectories
+
+Implemented and verified:
+
+- `FiniteLatticeScalingTrajectoryData` indexes an exact periodic lattice, positive spacing,
+  plaquette potential, action coefficient, bare gauge coupling and product-Haar Gibbs datum at every
+  natural cutoff.
+- The bare gauge coupling is kept distinct from the action coefficient and tied by an explicit
+  positive injective normalization convention.
+- Spacing and bare coupling must tend to zero, while sites per axis and physical linear extent tend to
+  infinity; fixed-cutoff, bounded-volume and constant-positive-coupling probes derive contradictions.
+- `scalingTrajectoryExpectation` uses each stage's exact same-chain Gibbs measure.
+- `LatticeToContinuumObservableExpectationBridgeData` takes an independently supplied target
+  carrier/functional and requires genuine expectation convergence rather than definitional
+  identification.
+- Exact unit approximants and an actual one-link-dependent nontrivial approximant block empty or
+  constant-only bridges; uniqueness of limits blocks unrelated target values.
+- The interface records Wilson's warning that `a → 0` is difficult and OS's statement that general
+  infinite volume was open; OS's explicit two-dimensional scaling is model evidence only.
+- No trajectory, continuum target, measure/field convergence, renormalization theorem, OS/Wightman
+  identification, continuum theory, or mass gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
@@ -2257,8 +2279,11 @@ Not yet achieved:
   bridge, `(E2)`, `(E4)`, and reconstruction remain unimplemented; scalar proper-Euclidean
   covariance `(E1)` and permutation symmetry `(E3)` are now explicit. Wilson and Osterwalder–Seiler
   lattice sources are likewise pinned; finite periodic bonds, plaquette holonomy, local gauge
-  transformations, and Wilson-type action are now explicit, while Haar/Gibbs measures, lattice
-  positivity/observables, scaling, and all continuum bridges remain unimplemented. Wilson's OPE paper and
+  transformations, Wilson-type action, normalized product Haar, conditional Gibbs data,
+  support-local loop expectations, finite-cutoff reflection-positivity checker, and scaling/
+  expectation-limit interfaces are explicit. No Gibbs, positivity, scaling, or continuum-bridge
+  inhabitant is constructed, and measure/field/OS continuum identification remains unimplemented.
+  Wilson's OPE paper and
   the Gross–Wilczek/Politzer asymptotic-freedom papers are pinned, but their typed observable and
   ultraviolet-consistency declarations remain unimplemented. The physical joint translation-PVM
   and invariant-mass-gap predicates are now anchored to the visually verified SNAG discussion, and

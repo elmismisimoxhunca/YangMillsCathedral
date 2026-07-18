@@ -237,10 +237,15 @@ committed before higher layers depend on it.
 - [x] Give signed paths exact finite positive-link supports; package bounded measurable class
   observables as support-local, gauge-invariant, genuinely integrable closed-loop expectations
   conditional on the same product-Haar Gibbs datum.
-- [ ] Define scaling, renormalization, interpreted-observable and continuum-limit bridges.
+- [x] Define simultaneous spacing-to-zero, sites-per-axis/physical-linear-extent-to-infinity and
+  bare-coupling
+  trajectories with exact stagewise Gibbs data, explicit bare/action normalization, and conditional
+  convergence of support-local observable expectations to an independently supplied target.
+- [ ] Define renormalization, continuum field/OS identification, and interpreted-observable bridges;
+  the expectation-level scaling interface alone is not a continuum Yang–Mills construction.
 - [x] Define explicit even-periodic lattice time reflection and a finite-cutoff reflection-positivity
-  checker over designated sufficient positive-link support with an actual-dependence witness and the same product-Haar Gibbs datum, with nonzero-domain
-  hostile evidence; keep it definitionally distinct from continuum OS `(E2)`. No positivity datum is
+  checker over designated sufficient positive-link support with an actual-dependence witness and
+  the same product-Haar Gibbs datum, with nonzero-domain hostile evidence; keep it definitionally distinct from continuum OS `(E2)`. No positivity datum is
   constructed.
 
 ## Phase 7 — dimension contracts and final checker

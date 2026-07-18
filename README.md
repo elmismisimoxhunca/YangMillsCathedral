@@ -232,7 +232,12 @@ defined only from supplied product-Haar Gibbs data. No potential-measurability d
 or evaluated expectation is constructed. An explicit even-periodic time reflection handles time-link
 orientation reversal and supports a separate finite-cutoff Osterwalder–Seiler positivity checker with
 a mandatory nonzero positive-support test. No positivity datum, continuum limit, or identification
-with continuum OS data or the continuum action/PVM is made.
+with continuum OS data or the continuum action/PVM is made. A separate scaling-trajectory checker
+requires spacing and bare coupling to vanish while sites per axis and physical linear extent
+diverge, keeps the
+bare coupling distinct from the action coefficient, and can require convergence of exact lattice
+observable expectations to an independently supplied target functional. No trajectory, target,
+renormalization bridge, or continuum identification is constructed.
 
 Primary OS-I and correcting OS-II article scans, Wightman's 1956 paper, and the corrected Princeton
 edition of Streater–Wightman are hash-pinned with exact text extractions. Load-bearing OS-II and
