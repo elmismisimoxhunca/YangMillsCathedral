@@ -2253,6 +2253,26 @@ Implemented and verified:
 - No trajectory, continuum target, measure/field convergence, renormalization theorem, OS/Wightman
   identification, continuum theory, or mass gap is constructed.
 
+## 2026-07-18 — one-hundred-twenty-fifth stone: weak bilocal local-observable products
+
+Implemented and verified:
+
+- `TemperedLocalObservableFamilyData` indexes labeled local smeared operators on one exact common
+  invariant domain and coherent tempered matrix elements for every ordered domain-vector pair.
+- The unit label is exactly the identity operator smeared by `minkowskiSchwartzIntegral`; a normalized
+  test proves it acts identically rather than vanishing through normalization.
+- A distinct label and nonzero operator witness reject empty, singleton/unit-only and zero families.
+- `WeakTemperedBilocalObservableProductData` assigns an actual full two-configuration tempered
+  distribution to every ordered label/vector tuple.
+- Pure-tensor coherence fixes exact `A(f)` after `B(g)` operator order, matching Wilson's weak
+  matrix-element formulation; a nonzero product witness rejects the zero distribution family.
+- Hostile probes expose the exact unit, local matrix-element coherence, operator order, nonzero full
+  distribution and rejection of a candidate disagreeing on one pure tensor.
+- This is prerequisite infrastructure only: labels are not interpreted as gauge-invariant curvature
+  polynomials, covariance/locality are not imposed family-wide, and no OPE coefficient,
+  coefficient/local-field contraction, truncation, near-diagonal remainder, prescribed singularity,
+  stress tensor, observable datum, theory, or mass gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

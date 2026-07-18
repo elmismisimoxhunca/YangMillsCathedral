@@ -208,6 +208,8 @@ import YangMills.Minkowski.JointTranslationSpectrum
 import YangMills.Minkowski.JointTranslationSpectrumProbes
 import YangMills.Minkowski.ScalarWightmanAxiomSurface
 import YangMills.Minkowski.ScalarWightmanAxiomSurfaceProbes
+import YangMills.Minkowski.TemperedLocalObservableProducts
+import YangMills.Minkowski.TemperedLocalObservableProductsProbes
 import YangMills.Minkowski.PhysicalMassGapSupremum
 import YangMills.Minkowski.PhysicalMassGapSupremumProbes
 import YangMills.Minkowski.WightmanVacuumCorrelators

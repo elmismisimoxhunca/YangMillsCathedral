@@ -190,7 +190,12 @@ supplies a bounded excitation that makes this set nonempty and bounded above wit
 supremum, but no threshold or theory is constructed. Covariance,
 cyclicity, locality, and forward-cone spectrum are integrated on one exact scalar
 field/domain/vacuum/representation chain, while the mass gap remains an additional predicate.
-Normalized algebraic smeared vacuum correlators are extracted from exact finite field words, with
+A prerequisite local-observable family now puts every labeled smeared operator and tempered matrix
+element on the same common domain, fixes the unit field by Lebesgue smearing, and requires full
+bilocal tempered products with exact pure-tensor operator order and nonzero witnesses. Labels are
+not yet interpreted as gauge-invariant curvature polynomials, and no OPE coefficients or asymptotic
+remainder are defined. Normalized algebraic smeared vacuum correlators are extracted from exact
+finite field words, with
 one- and two-point operator order locked to the same selected vacuum and field. A separate interface
 requires an actual full-product tempered distribution at every arity and exact coherence on every
 finite pure Schwartz tensor. The exact-sign open backward tube `ξ - iη`, `η ∈ V₊°`, is constructed

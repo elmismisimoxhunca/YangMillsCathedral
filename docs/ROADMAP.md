@@ -96,6 +96,9 @@ committed before higher layers depend on it.
 - [ ] Construct metric-volume semantics and prove compatibility with the designated measure.
 - [x] Pin and visually verify Wilson's primary operator-product-expansion source.
 - [x] Pin and visually verify the independent Gross–Wilczek and Politzer asymptotic-freedom papers.
+- [x] Define a prerequisite same-domain family of local operator-valued tempered distributions and
+  exact full-product weak bilocal distributions with unit/nonzero hostile evidence and locked
+  operator order; no curvature interpretation or OPE asymptotics is yet claimed.
 - [ ] Interpret gauge-invariant local curvature polynomials and covariant derivatives.
 - [ ] Separate local observables from nonlocal Wilson observables.
 - [ ] Add nontrivial positive examples and hostile disconnected-curvature probes.
