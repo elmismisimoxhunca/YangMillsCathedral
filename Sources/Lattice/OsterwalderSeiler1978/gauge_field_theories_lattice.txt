@@ -1,0 +1,1468 @@
+ANNALS       OF PHYSICS     110,   440-471 (1978)
+
+
+
+
+                                    Gauge Field Theories                      on a Lattice
+
+                                                 K.     OSTERWALDER*.+B**
+
+         Lyman     Laboratory      of Physics,   Harvard        University,   Cambridge,    Massachusetts           02138
+
+
+                                                                 AND
+
+
+                                                             E. SEILER~
+
+                   Department      of Physics,   Princeton      University,   Princeton,   New Jersey       08540
+
+                                                     Received    June 17, 1977
+
+
+
+          We begin a rigorous, nonperturbative investigation of quantum field theories with local
+       internal symmetries. We discuss the lattice approximation of Yang-Mills fields and offer-
+       mion fields in the Euclidean setup and we verify physical positivity for the Schwinger
+       functions of these approximations. This implies the existence of a positive self-adjoint
+       transfer matrix. We then prove existence and analyticity of the infinite volume limit of
+       strongly coupled Yang-Mills theories on the lattice and we verify Wilson’s confinement
+       bound. Finally we present a rigorous treatment of the Higgs mechanism in lattice gauge
+       theories.
+
+
+                                                      1. TNTR~DuCTI~N
+
+   Quantum field theories with (non-abelian) local internal symmetry groups appear
+to be the most promising models for elementary particles interacting weakly, electro-
+magnetically, and strongly. While there is a large classof quantum field theory models,
+without local internal symmetries (and therefore not containing gauge fields), which
+we think we understand quite well both on a perturbative and on a nonperturbative
+level, there is much less that is known about the mathematical structure of gauge
+field theories. On the level of formal power seriesexpansions, much work has been
+done to show that gauge theories are renormalizable; see[l, 20, 341.
+   In this paper we begin an analysis of gauge field theories on a nonperturbative
+level. The general strategy is to regularize the theory through the introduction of
+cutoffs and to study subsequently the limit as the cutoffs are removed. Unfortunately
+the cutoffs always destroy some of the symmetries of the models, which then have
+to be recovered in the limit. Also, some cutoffs destroy the positivity of the metric
+
+   * Supported in part by the National Science Foundation under Grant PHY 75-21212.
+   + A Sloan Foundation Fellow.
+   ** Present address: Mathematisches Seminar der ETH Zurich, Switzerland.
+   * Supported in part by the National Science Foundation under Grant MPS 74-22844.
+                                                                 440
+0003-4916/78/l 102-0440$05.00/0
+Copyright      Q 1978 by Academic   Press. Inc.
+All rights   of reproduction in any form reserved.
+                         GAUGE    FIELD   THEORIES   ON   A LATTICE                      441
+
+of the Hilbert space of physical states. This should be avoided, because it seems to be
+quite complicated to exhibit positivity as a property that holds in the no-cutoff limit
+only. A “good” cutoff therefore preserves positivity and most of the symmetries.
+In particular, it should preserve gauge invariance. The lattice approximation           first
+introduced by Wilson [35] and by Polyakov has these properties.
+   In Section 2 we describe the lattice approximation for quantum field theories in the
+Euclidean formulation.      Our definition of lattice gauge fields follows [35,2], but we
+treat the fermions somewhat differently from [35, 18,211. This permits us to follow
+the general scheme of [25] to prove that the lattice approximations atisfies the physical
+positivity condition (i.e., positive metric for the Hilbert space of physical states) and to
+construct a transfer matrix T = e-H with H = H* > 0. We also show how to apply
+rigorously the ansatz of Faddeev and Popov [8].
+   In Section 3 we show how to remove the volume cutoff in a strongly coupled pure
+Yang-Mills theory. Using a cluster expansion we prove that the infinite volume limit
+of the Schwinger functions of the theory exists and is analytic in the (inverse) coupling
+constant and that the theory has a nonvanishing mass gap.
+   In Section 4 we study the Higgs mechanism [5, 15, 161. We discuss theories of
+gauge fields coupled to a matter field whose internal symmetries are spontaneously
+broken. The presence of a gauge field prevents the appearance of massless Goldstone
+particles and the gauge field “acquires a mass.” We exhibit this mechanism in lattice
+theories for the case of total symmetry breakdown with no massless particles left.
+   Tn Section 5 we make use of the results of Section 3 to prove Wilson’s confinement
+bound [35] for strongly coupled Yang-Mills theories.
+   In the final section we discuss some speculations about the continuum limit and
+look at a simplified Yang-Mills      model which can be solved exactly.
+   We use some elementary notions and facts from the theory of Lie groups without
+comment. Standard references are, e.g., [17,29].
+   Parts of this paper have already been reported in [24].
+
+
+                           2. THE LATTICE APPROXIMATION
+
+   Euclidean Green’s functions of an arbitrary fermion-boson       model uniquely define
+a relativistic quantum field theory if they satisfy the conditions of physical positivity,
+(anti)symmetry,    Euclidean covariance, and a regularity condition [25].
+   In this section we introduce a lattice approximation      for Euclidean quantum field
+theories, involving gauge fields, fermions, and bosons, and show that it satisfies the
+physical positivity condition (i.e., positive metric for the Hilbert space of physical
+states). This condition will continue to hold in the continuum limit, i.e., as we let the
+lattice spacing tend to zero. Following the general scheme introduced in [25] we then
+construct the Hamiltonian H, or the transfer matrix T = e-H, in the language of
+statistical mechanics. It follows from the construction that H = H* > 0.
+   For a definition of lattice boson fields we refer to [14]. Our definition of lattice
+gauge fields is standard, too [2,35], whereas we treat the fermions somewhat differently
+442                             OSTERWALDER            AND      SEILER
+
+
+from [18,21,35]. In the present construction we try to preserve as much structure
+of the continuum theory as possible. In particular, chiral invariance is not destroyed
+by our lattice approximation.
+   We will always work with a hypercubical lattice (1 in IV (d > 2) with lattice spacing
+a. For technical reasons (see Section 2.3) we choose (1 to be symmetric with respect
+to the coordinate axes with no points on these axes. A general point in rl is thus
+of the form
+
+             x = (x”,..., xy,            xi = a(* + n), n integer, ] xi 1 -=zL( .
+
+The values of Li determine the size of d. We write (1, for the infinite lattice, Lc = co,
+i = l,..., d. Furthermore we let e, be the vector of length a parallel to the @h coor-
+dinate axis. (Ordered) pairs xy of nearest-neighbor lattice points x, y Ed are called
+(directed) bonds, closed loops uvxy consisting of four bonds UV, ux, xy, and yu are
+calledplaquettes. We will say that the bond xy (the plaquette uuxy) is in A if x and y
+(u, v, x, and JJ) are in A.
+   For simplicity we assume the lattice spacing a to be 1 unless specified otherwise.
+
+
+2.1. Lattice Yang-Mills   Fields [2, 351
+   Let 9 be a compact Lie group (the gauge group), let x be a character on 9, and
+let g. be a map from directed lattice bonds in (1 into 9 such that
+                                                         -1
+                                           &T,     =   gm *
+
+
+Such a map g. , also denoted by { g=,}, is called a “field configuration.” The space of
+all field configurations is denoted by 5P.
+   To each plaquette P = uvxy in II there corresponds a conjugacy class g, C 9
+defined by
+                           gp = cwi class of guugvxgx,g,u .
+
+With every plaquette P we associate the expression
+
+                                AP   =     HXkP)        +    XkPN.
+
+
+Notice that AP is independent of the orientation and of the starting point of the path
+around P. More generally, with a closed path C = xlxe a** x, on the lattice II
+(i.e., x1x2 , x2x, ,... , x,-rx, and x,x, are lattice bonds), we associate the expression
+x(C) = x( gay, &*2* *emgz,zl), where x is again some character on 9.
+    The Yang-Mills action on the lattice (1 is defined by
+                         GAUGE    FIELD         THEORIES        ON   A LATTICE       443
+
+where g, is the Yang-Mills   coupling constant and the sum En runs over all plaquettes
+P in A.
+  With AIM we define a Gibbs measure
+
+                                   d/L,,= z;‘eAI;” dg, ,
+                                     z*, = J- eASUdg, ,
+
+ where dgm is the infinite product n dgsy of Haar measures dg,, , xy any bond in A, .
+ We define a local observable to be a function F in L*(dg,) which depends only on
+finitely many bond variables g,, . The expectation of 9 is defined by
+
+
+
+
+A local gauge transformation is a map y. from lattice points x E A, into the group 99
+such that yz = e (the identity element in 9) for all but finitely many points x E LI, .
+Associated with y there is a transformation of the bond variables
+                                                                     -1
+                                  gLc?d -       gxu   -    YxgxvY,        .         (2.4)
+
+Both the AIM and dgm are invariant under local gauge transformations and so is
+the Gibbs measure dpA . An observable .F is gauge invariant if for all local gauge
+transformations y we have 9 = Fv, where 9~ is defined by
+
+
+
+As in the continuum case we may use local gauge transformations to eliminate
+redundant degrees of freedom from the integral in (2.3).
+   Pick a bond rs in (1. In order to eliminate the bond variable g,, from the action
+we choose a local gauge transformation
+
+                                 Yx =       e             for    x # r,
+                                     = gw                 for    x = r.
+
+Postponing integration   over g,., we transform the remaining variables in integral (2.3)
+as follows.
+
+                                 gx, + d,                  (xy # rs).
+
+This eliminates g,, from the action and from F if the latter is gauge invariant.
+Otherwise we introduce
+444                             OSTERWALDER          AND    SEILER
+
+
+In both cases (2.3) can be replaced by an average with respect to the measure
+G1eAYA ILZrs dg,, . In effect this procedure amounts to fixing the bond variable g,,
+to e (for gauge-invariant 9). It is easy to show that one can simultaneously fix to e
+the variables of as many bonds as one can draw without ever closing a loop.
+   All this is just an example of a more general procedure which Faddeev and Popov
+have proposed for the continuum gauge theories [S]. There integration over all field
+configurations is replaced by integration over a “hypersurface” in g* chosen such that
+every orbit { g,,} of the group of gauge transformations ({ g$} fixed, {rZ} varying)
+intersects it at least once. While Faddeev and Popov had to argue purely heuristically,
+the lattice approximation offers itself for a rigorous derivation of the Faddeev-Popov
+ansatz. Let us give an example.
+   We pick a “time axis” parallel to one of the lattice generators, the e,-direction, say.
+Then we want to restrict integration in (2.3) to the “hypersurface” determined by
+
+                                   gxs+eo= e,              all x.                         (2.5)
+
+(We call the gauge defined by (2.5) “radiation             gauge.“) Let us define a a-function
+(as a distribution) on 9 by
+
+                                     W        = C doxch).                                 (2.6)
+                                                 0
+
+Here {x0} are the characters of a complete system of inequivalent do-dimensional
+representations of the group 3. By the theorem of Peter and Weyl [17,27,29],
+definition (2.6) gives for continuous invariant functions f on 9
+
+
+                   sXd&=1                and         s f(g) W        & =fW
+
+Furthermore,   for all field configurations     { gz,}
+
+
+
+
+Here dy is the product nIzon dyz of Haar measures dyl,. To prove (2.7) one makes
+repeated use of
+                        GAUGE    FIELD     THEORIES      ON   A   LATTICE                    445
+
+For gauge-invariant   9 we can now write
+
+
+
+
+                          = -G1 J‘ F({ g,,j)           n a( gr,a+eo) eAsM dg,
+                                                      .E;l                                  (2.8)
+                          = (Z,:““)-’     j Frad((gzv})       eA5M*raddgm
+
+
+
+where on the second line we have made a change of variables g,, --t g&’ and used
+gauge invariance of p and of AIM. prad and AjiY”lrad are obtained from 9 and AIM
+by putting all the bond variables gd,l+e, equal to e. Zyd is defined in the obvious way
+and equals Z,, . Notice that due to (2.7) there are no Faddeev-Popov       ghosts in the
+gauge defined by (2.5). This gauge will be useful in Section 3.3, where we prove
+physical positivity.
+  Finally let us define gauge averages. For 9 a function as above, we set
+
+
+                                                                                            (2.9)
+
+where the product runs over all lattice points x in the support of F. If we are already
+restricted to the radiation gauge, then only “time’‘-independent   gauge transformations
+are allowed (i.e., yz = yI’ if the spatial components of x and x’ agree), and the product
+in (2.9) runs over lattice points in a plane of constant x0 only. Obviously we have
+
+
+
+
+2.2. Euclidean Fermi Fields on the Lattice
+
+   Free Euclidean fermion fields YUk were introduced              in [26]. They were defined such
+that
+
+
+
+                                            1      m - iyuEp,  e’D(.“-!/) &
+                                         (2vTr)3 St m2 + p2 1aB
+and
+446                             OSTERWALDER    AND   SEILER
+
+
+Here
+
+
+
+We may choose
+                                            0
+                      YoE=Yo=       ( “0” -uo, 1
+
+                      ykE = iyk = i                     k = 1, 2, 3.
+
+
+tj and $ = #*yO are free relativistic fermion fields. (Notice that for simplicity we
+have set d = 4). To define a lattice approximation        of this theory we introduce a
+Grassmann algebra /J?* , whose generators are Yak(x), where k = 1,2; a = 1,2, 3,4,
+and x E /1. More precisely, with each lattice site x E rl we associate a complex vector
+space V, = V,l 0 VS2, where both V,i are s-dimensional (s = spinor degree of
+freedom). In each VZi we pick a basis denoted by Y:(x), cy = l,..., S. In fermion
+theories with internal symmetries, V,2 is of the form VZi = ( VZi)*nin @ (V,i)int ,
+where ( VZi)int is the internal symmetry space which carries a d (=dim( V,“)int)
+dimensional unitary representation U(a) of the gauge group 9?. A basis in Vri is now
+denoted by Y&(x), a = l,..., d.
+   Gl!* is the Grassmann algebra over the vector space V, = @&., V, . Following
+Berezin [3] we define a linear functional on 02n , written as an “integral” P as follows.
+We set
+
+
+
+
+            f(monomial in Y&(x) of lower than maximal degree) = 0.
+Then we extend j to all of flA by linearity. The symbol A means exterior multi-
+plication and will be dropped in the following.
+    Now we define the Euclidean fermion action by
+
+       AnF = zA [mYI         Yz(x) - +Yl(x) yuE(Yz(x - e,) - Y2(x + e,))].         (2.13)
+
+This is a lattice version of the formal continuum    expression
+
+                       &nt= I Yl(x){nz - ~,“a,} Y2(x) d*x,
+which formally gives (2.10). Notice that in (2.13) the spinor indices have been
+suppressed; e.g., ‘Y’(x) Ye  means xti Y,‘(x) Ya2(x). Also, terms involving points
+                           GAUGE   FIELD    THEORIES   ON   A LATTICE                 447
+
+x h e, not contained in (1 are to be left out in the sum of (2.11). Notice that m can be
+any real number including zero.
+   If there are internal degrees of freedom, then the fermion field may be coupled
+to the gauge field. The action then becomes
+
+            A/j” = c [m!P(x)       P(x)     - p(x)      yuE{U(gz,a-e,) !P(x - e,)
+                   re‘l
+                     - Wgr,r+e,)y2(x f- 4ll.                                        (2.14)
+
+Again we have suppressed the spinor indices and the indices referring to internal
+degrees of freedom. For example, Yl(x) yUEU( g,,) Y2( y) stands for
+
+
+
+
+As observables 9 we take elements in the Grassmann algebra r!ZAwhose coefficients
+may be (continuous) functions of the bond variables g,, . The expectation of 9 is
+defined by
+
+
+                                                                                    (2.15)
+
+
+A local gauge transformation       now consists of (2.4) plus a substitution
+
+                             Yal(x) - Yi’ (x) = O(h,) Yo,l(x),
+                                                                                    (2.16)
+                             YE”(X) -      Y;‘(x)   = U(h,) Y”(x).
+
+The action A = AxM + AAF is invariant under (2.4) and (2.16). We leave it as an exercise
+to verify that the functional jA , too, is invariant under (2.16); see [3].
+
+2.3. Physical Positivity
+   In this section we show how to use the expectation (*> to define a (positive metric)
+Hilbert space &‘, the Hilbert space of physical states. Then there is a standard con-
+struction of the “transfer matrix” e-H, where H is the Hamiltonian    [25].
+   We call the e,,-direction the “time direction.” The set 0?+ of functions at positive
+times is defined to be the Grassmann algebra generated by (Y”(x), x0 > 0} with
+coefficients which are functions f({ go,}) of the bond variables g,, , x0 > 0, y” > 0.
+Correspondingly we define @-. An antilinear map 0: GP -j Q!- is defined as follows:
+
+
+where 8x = (-x0, x1, x2, 9) and k, = 1 or 2.
+  The main result of this section is contained in the following theorem.
+448                              OSTERWALDER     AND SEILER
+
+  THEOREM 2.1.      With (a) defined as in (2.15) and 9 a gauge-invariant function in a+,
+
+
+
+  Proof. We pass to the radiation gauge where all the variables belonging to bonds
+parallel to the time direction are fixed to e. The algebras of observables are now
+denoted by I$$ . We define a cone B of “positive” functions as the convex cone
+generated by functions of the form (@F)F with 9 E 0& .
+
+  LEMMA   2.2.   If A E 8, then
+
+
+
+
+  Proof of Lemma 2.2.      It suffices to assume A = (@T)F,
+
+
+
+
+  LEMMA   2.3.   9 is a muItiplicative   cone; i.e., ifA and B are in 8, then AB is in 9’.
+
+   Proof of Lemma 2.3. Let A = C (@A,) Ai, B = x (OBi) Bi with Ai, Bj E G& .
+We may assume that Ai and Bj are homogeneous elements of the Grassmann algebra
+of degrees ai and bj , resp. Then
+
+                           AB = C (OA,)(OB,) AiBj(-l)Qbj
+          .                     ij
+
+                                 = ; (O(BjA,)) AiBj(-1)“““’
+
+                                 = C (O(AiBj))(AiBj)   E 9.
+
+  LEMMA   2.4.   exp(AI”,rad    + Azgrad) E 9.
+
+    Proof of Lemma 2.4.        We write the exponent as a sum of three terms
+A+ + A- + AA, such that A+ E a&, , A- = @A+ E G&,, and AA is the part of the
+exponent which couples positive and negative time variables. Obviously eA++A- =
+eAf+@A+   = (&A+) e-4’ E 8. It therefore suffices to show that AA E 8.
+                             GAUGE             FIELD         THEORIES              ON   A        LATTICE                    449
+
+  The part involving    fermions is of the form
+
+               4 zA      [!P(x        - e,) yoEY1(x) + Y’(x                                     - e,) yoEY/“(x)]
+                 a?=1
+                   = 4 x;,             [(@P(x))                 Yl(x)          i- (OY’2(x))                   Y2(x)] E 9.
+                              cu=:
+The Yang-Mills    part of dA is a sum of terms Ay”, where P is a plaquette which
+intersects the x0 = 0 plane (see Fig. I). We have (with x(g) = tr D(g), D a unitary
+representation of 3)
+                       rad
+                   AP        =    ~(x(g~y~dhJ                     +      complex                conjugate)
+
+
+                             =    g
+                                                 Dij(gWOr)              Dii(gzy)            +        c.c. I
+                                      @
+                                          lj
+
+                             =g                  (oDji(gry))               Dji(gzv)              +     c.c.       E ~9.
+                                      ixij                                                                    !
+
+
+This proves Lemma 2.4.
+
+
+
+
+                                               FIG.     1.     The plaquette P.
+
+  Theorem 2.1 is an easy consequenceof Lemmas 2.2-2.4.
+  We now define an expectation for 9 E .9 by
+
+
+
+
+The physical Hilbert space SA is defined to be the completion of UZAd/J”, with
+respect to the norm /I A Ii2 = ((@A)A)y”, where
+
+                             J+‘-= {A E %r’d , ((@A) A:cd                                            = oj.
+450                             OSTERWALDER      AND   SEILER
+
+
+The natural map of C&t into J& will be denoted by W. Hence for A, B E @&
+
+                               (WA,   WB),     = ((@A) B)yd,
+
+where (a, *)n is the scalar product in *A . Notice that ZA contains a subspace HA,a
+which is the image under W of the set of gauge-invariant functions A E 0?+. At this
+point there is no reason to reject vectors in & but not in &$i (both XA and XA,i
+have of course a positive metric).
+   Let us sketch the construction of the transfer matrix and of the Hamiltonian.  For
+simplicity we assume that we have already constructed the infinite volume limit
+fl+ (1, (see Section 3), and we drop the subscript (1. Then we define T to be the
+operator on a:ad that shifts everything by two lattice units in time (e”) direction.
+This determines an operator T& on Z by
+
+                             (WA, T,WB)       = ((@A)(TB))rad.
+
+It is easy to show that TX is a positive self-adjoint operator of norm less than 1.
+Hence we can write T = e-2H, where H = H* > 0 is the Hamiltonian,           e-H is the
+transfer matrix. (Here we assume that T does not have zero as an eigenvalue. In the
+continuum limit this follows easily from the continuity of T” as (Y---f 0.)
+  Remarks.     (1) Under a chiral transformation       u/,, transform as follows.
+
+                               E(x)    -     1 (eimY% YA(.K),
+                                              ”
+                                                                                        (2.17)
+
+
+The Euclidean fermion action (2.14) is invariant under (2.17), provided m = 0.
+      (2) Euclidean boson fields at time zero (i.e., x O = 0) can be naturally identified
+with the corresponding relativistic fields at time zero. In the fermion case one would
+like to identify u/,l(O, x) and YW2(0, x) with the relativistic fields #,(O, x) and &,+(O, x),
+respectively. But this cannot be correct, because y/l and Y2 always anticommute,
+while the relativistic fields do not. In the continuum case [26] this was not a real
+problem, because Euclidean fermi fields are too singular to exist at sharp times.
+This argument, however, does not work in a lattice theory. Our way out has been
+not to allow lattice points to be at x O = 0, but at x0 = 4 + integer only, thus avoiding
+the whole problem.
+     (3) If we consider a free fermion theory, then as we let the lattice spacing tend
+to zero the lattice approximation defined by (2.13) converges to the usual continuum
+theory in the sense that the lattice Schwinger functions converge to the continuum
+Schwinger functions as distributions. This, however, is not sufficient to give us the
+right continuum fermions if we couple the lattice fermions to some other field.
+Actually, perturbation theory suggests that the number of fermion degrees of freedom
+                            GAUGE FIELD THEORIES ON A LATTICE                                  451
+
+gets multiplied by 2”. To seethis one should look at a closed fermion loop with lattice
+propagators
+
+
+
+
+and passto the continuum limit. Becauseof the periodicity of the sine, one will end
+up with 2d times the value for the same loop in a continuum theory. This problem
+of the lattice approximation has been noticed by various people and has been dealt
+with in different ways: see,e.g., [36]. Here we propose to simply add to A,,F of (2.13)
+a term of the form
+
+        dA.lF 7 -    C iP(x)(iy,)      1 {2P(s)   -- Y”(x + e,) - Y2(x - e,)j.             (2.18)
+                    !e.‘l              li
+
+
+Then eA.lr-Ja~F is again of the form (@.F).F with 3 E GIyd and hence physical
+positivity is still valid. To seethis we proceed as in the proof of Lemma 2.4. Notice
+thatforsEA,.xO       = -<,
+
+       i.Y1(x)(yoE -L iy,) Yz(.u + e,) = (y. “u/l)(x) ( l   +   YE%   )   y2(s   +   e")
+
+
+
+
+is of the form (@A),4 with A E CJ!:adbecause(I + iyoEyj)/2 is a projection operator.
+   In the presence of gauge fields &I, F has to be modified appropriately and the
+argument goesthrough.
+   The Fourier transform of the propagator of the modified theory is
+
+                    nz - a-l(iyuE sin p,a + iy, C (1 - COS p,a))
+                                                                                           (2.19)
+                    m2 f u-~[C (sin p,a)” + (C (1 - cos p,a))“] ’
+
+where we have explicitly exhibited the dependence on the lattice spacing a. Again as
+a + 0 this propagator converges to the continuum propagator but also the loops
+converge to the continuum loops. (The additional term in the denominator of (2.19)
+allows only the neighborhood of p,,a = 0 to contribute to the continuum limit).
+Hence the addition of (2.18) to the fermion action (2.13) prevents the creation of
+unwanted, additional fermion degrees of freedom. See [23, 311 for a discussion of
+convergence of approximate fermion theories.
+
+
+    3. STRONGLY COUPLED PURE YANG-MILLS           THEORY: INFINITE VOLUME             LIMIT,
+                               ANALYTICITY,   AND MASS GAP
+
+   The construction of the infinite volume limit for a general lattice Yang-Mills theory
+is still an open problem. However, if the coupling is sufficiently strong, then there is a
+convergent “high-temperature” expansion which gives at the same time analyticity
+of the correlation functions in go2 and the existence of a nonvanishing mass gap.
+452                                  OSTERWALDER              AND     SEILER
+
+
+We first notice that in the particularly simple case of the Abelian gauge group U(l),
+the existence of the infinite volume limit for arbitrary coupling strength follows from
+Griffith’s inequalities which have been proved in sufficient generality by Ginibre [lo]:
+The basic interaction term in this case is A, = cos vP . If we define P, to be the convex
+cone generated by
+
+                                 {COS     ngjvij      j nij   E Z, i, j   E Hd}
+
+it follows   from Ginibre’s   work      [lo] that for L&, 2E2E P,
+
+
+
+
+From this we conclude in the standard fashion that for P E P, , (.S;,, increases
+monotonically in (1 to a limit (9)m and also that (S),    and (9),    decrease mono-
+tonically in g, (see also [6, 71).
+   Let us now turn to the case of a pure Yang-Mills   theory with arbitrary compact
+gauge group 9 and large coupling g, , We will use the fact that for large g,
+
+                                        exp(U/%3 ApI - 1
+to obtain a convergent “cluster expansion”    for the expectation values of local
+observables (bounded functions of finitely many bond variables). In statistical
+mechanics, this would be called a high-temperature    expansion. In quantum field
+theory it was first introduced by Glimm et al. [13] in their construction of Pi
+models. Basically our method follows the arguments of [I 31, but we can simplify
+matters considerably due to the fact that
+
+
+
+where D is the dimension       of the representation,                 of which    x is the character.   Hence
+we expand
+
+
+             exp-!--
+                 2g02c (AP -I D) = fl
+                     ps/j                          PE n
+                                                          [l + ]exp & 0 (Ap + D) -              I I]
+
+
+                                           = QLPEpp~
+Here the sum runs over all subsets Q of plaquettes in /1 and
+
+                               pp = exp(l/2goz~~~p + 0) - 1
+fulfills
+                                      0 < pp < const(l/g,2).                                             (3.1)
+                                GAUGE             FIELD          THEORIES          ON     A LATTICE                             453
+
+Now let 9 be a bounded (measurable) function of finitely many bond variables and
+let Q, ~3 supp F be the set of plaquettes which have bond variables occurring in 9.
+The finite volume expectation of 9 is given by
+
+
+
+                                                                                                                               (3.2)
+                                =       &         Z,’       j-   9     11     PP dg,,
+                                                                      J-0
+where
+
+
+
+
+and the sum in (3.2) runs over all subsets Q of plaquettes in (1. Next we split each Q
+into two disjoint sets Q = Qr u Q, , where Q, is the union of all connected com-
+ponents of Q that have bonds in common with Q, ; Q, = Q\Qr . Then, obviously,
+
+                <’\J‘c\ ,z* =       &        (1         F     fl   PP &i)(              [ pg2     PP da)     + Zil.
+                                        z                                           -
+                                                             6% Q,
+
+We now fix Q, and sum over all Qz such that Q, has no bonds in common with either
+Q,, or Q, . Observe that
+
+                                        cQ,
+                                          .I-pgppdgA
+                                                  =-?l,~9
+where Q, u Q0 is the set of all plaquettes which have bonds in common with plaquettes
+in Q1 u QO. Therefore
+
+                                                                                                                               (3.3)
+
+
+Q1 corm QO, Q, C A means that the sum runs over all Q, CA with the property
+that each connected component of Q, has at least one bond in common with Q0 ;
+(3.3) is the cluster expansion. We will show that for 1g,, 1sufficiently large, it converges
+absolutely and uniformly in j /1 1, the size of the volume A (g, may be complex).
+
+  THEOREM 3.1. Suppose 1g, [ is sujiciently                                             large.      Then     there    are constants
+CY= cu(F, d, 9, x) and j3 = /3(d, 9, X) such that
+
+                     &              1 j- F         J’J      PP dg,,         zAEz            1 <    a (s)“.                     (3.4)
+                                                  PEQ
+                  Q;g&Qo
+                      /
+  Here I Q [ is the number of plaquettes in Q.
+454                            OSTERWALDER AND SEILER
+
+  For the proof we will need three estimates.
+
+  LEMMA   3.2. For 1g,, 1suficiently large
+
+                                                                                  (3.5)
+
+  Remark.    For real g,, in fact
+
+                                     0 -=I Zn\*lZ*   < 1.
+
+This can be seen immediately by writing Zn,o and Zn as integrals over all bond
+variables in /l and observing that the integrand of ZA,c is smaller than the integrand
+of Z, since
+
+                               exp(1/2g02)(Ap + 0) b 1.
+
+  LEMMA   3.3.   There is a constant cl = cl( g, x) such that for all Q
+
+
+
+
+  LEMMA 3.4. Let N(K) denote the number of possiblesets Q of plaquettes in (1 such
+that 1Q 1 = K and such that all componentsof Q are connectedwith QO. Then there are
+constants c2 = c2(] Q, I) and c3 = c&d) such that
+
+                                       N(K) < c2 * czK.
+
+   The proof of Lemma 3.4 is a purely combinatorial estimate which can be derived
+as in [13]. Lemma 3.3 follows immediately from (3.1). We now give a proof of
+Lemma 3.2, which is essentially a simplified version of an argument given in [32].
+It suffices to show that
+
+                                    8 < I zn\(P,llzl I G 27                       (3.6)
+
+where {I’,,) consists of one plaquette POC A. As above, we can expand
+
+
+
+
+Proceeding by induction    we assume that (3.6) has been proved for I II ] = N - 1,
+                        GAUGE       FIELD     THEORIES      ON       A LATTICE                    455
+
+
+and consider now the case 1(1 / = N. From (3.7) and the induction                      hypothesis we
+obtain
+
+
+
+
+                         G       zA         (&)‘“I            * 21ml+l,          by Lemma 3.3,
+                             Qconn(P,)
+
+                                                  K
+                                                      c2 * const)K,              by Lemma 3.4,
+
+which can be made less than Q by choosing 1g,, 1 sufficiently large. Hence
+
+                                    I 1 -    G/zl\~P,,)l         (     3
+
+
+and (3.6) follows.
+   Proof of Theorem 3.1. This is an easy consequence of Lemmas 3.2 and 3.3. The
+left-hand side of (3.4) is bounded by
+
+
+
+
+A standard consequence of convergence of the cluster expansion is the existence of
+a mass gap (exponential clustering). We state the result and refer for a proof to [13];
+see also [24].
+
+   THEOREM     3.5. Let Fl , F2 be functions offinitely many bond variables. Suppose g,
+is sujiciently large. Then there are constants c = ~(9~) s2) and m > 0 such that
+uniformly in A, for any Iattice vector a,
+
+                          l(9&F2a) - (Fl)(F2)1                   < ce-mlal.                      (3.8)
+
+  Here F2” is the translate of F2 by the vector a.
+  Remark.     It can be shown that
+
+                                     m 2 4(ln g02 - In /3),                                      (3.9)
+
+with fi as in Theorem 3.1. The reason is that in the cluster expansion for the left-hand
+side of (3.8), Q must contain at least 4(j a I - r) plaquettes; otherwise the corre-
+sponding term vanishes. (r is a constant depending on the size of the supports of F1
+and F2 , respectively.) The bound (3.9) is independent of the group c??and in agreement
+with the results derived in a simplified model (Section 6).
+ 456                                OSTERWALDER   AND   SEILER
+
+
+  Existence of the infinite volume limit and analyticity in l/g,,2 of the infinite volume
+expectations are two more standard applications of the cluster expansion (see [13]).
+We just summarize the results.
+
+   THEOREM    3.6. For g, s@ciently       large, the infinite volume limit of the lattice
+Yang-Mills theories exists, has a mass gap m 3 4(ln g O2- In p), satisfies the condition
+of physical positivity, and is invariant under lattice translations.
+
+  THEOREM     3.7. The infinite volume expectations      of a iattice Yang-Mills   theory are
+analytic in z = l/go2 for I z 1 suficiently small.
+
+   Remark.        Translation   invariance follows from uniqueness of the infinite volume
+limit.
+
+
+                                 4. THE HICGS MECHANISM
+
+    In this section we discuss theories in which the gauge field is coupled to a “matter”
+field whose internal symmetry is spontaneously broken. Due to the presence of the
+gauge field, no massless Goldstone particles appear, but the gauge field “acquires a
+mass.” This is called the Higgs mechanism [5, 15, 161. In field theory it is usually
+discussed on a semiclassical level. For a discussion on the axiomatic level see [33].
+Here we prove the occurrence of the effect for lattice theories, at least for the case of
+total symmetry breakdown, where there are no massless degrees of freedom left.
+    In order to unify the treatment of gauge field coupling to matter fields with complete
+symmetry breakdown, we introduce a matter field as follows: With each lattice site x
+we associate a pair (R(x), g(x)), where R(x) takes values in R, = [0, co) and g(x) is
+an element in the gauge group 9 (polar coordinates!). Let us look at two examples:
+     (1) 97 = U( 1). In this case the matter field is actually a complex scalar field Q(x)
+with R(x) = 1 @(x)1 and g(x) = @(x)/i @(x)1; i.e., (R, g) is just the polar coordinate
+representation of 0(x) = R(x) eiBCZ1,g(x) = eiB(x).
+         (2)   9 = SU(2). Now the matter field is a two-dimensional         complex vector
+field
+
+
+
+
+with R(x) = 1@(x)1 = (I @&)I2 + ] @2(x)12)1/2and g(x) is uniquely defined by
+
+
+                                @W= (;c;) = g(x)(“,“‘,.
+                          GAUGE     FIELD       THEORIES     ON   A LA-MICE           457
+
+We now define the action for the coupled system in a finite volume A.
+
+
+
+
+                     & (mw)           + id(x) XDR(x)2).                              (4.1)
+
+Here the first term is the pure Yang-Mills        contribution AP = x( gp) as in (2.1)
+(for simplicity we write here and in the following x(g) instead of Re x(g)), D = x(e);
+the second term gives the coupling between matter field and gauge field, while V is a
+function on IF!, with a sharp absolute minimum at R = i? # 0. More precisely, the
+classes of potentials we will be considering are as follows:
+   u(R, ci , c2) = set of Lebesgue measurable functions V on Iw, , satisfying
+
+                    V(R) >, c,(R -          @2         for all    R E R, ,
+                                                                                     (4.2)
+                    V(R) < c,(R -           @          for    /R -     i? / < R/2.
+
+Notice that V(R) = y(R2 - K2)2 is in u(R, yiP, Ye)        for any choice of R and of y.
+   The term +d(x) ~D(R(x))~ in (4.1) is added for convenience, as will be seen later.
+d(x) is the number of bonds in A with one endpoint at x, i.e., for x not on the boundary
+aA of A, d(x) is simply twice the dimension d of space time. (See formulas (4.9)-(4.11).
+   The Gibbs measure is now defined by
+                                      dpn = ZileAL1 dv, ,                            (4.3)
+where
+                                            ZJi = /” eAA dv,
+and
+                         dv, =     n &a, n &W                n R(x)” dW.4            (4.4)
+                                  cz@‘l  ZE/l                XEA
+(dR(x) is Lebesgue measure on R, , k is a positive integer depending on the gauge
+group 9; dg,, and dg(x) denote again Haar measureon 3).
+   In the caseof the examples looked at before, we can bring (4.3) into a more familiar
+form.
+   (1) Y = U(1). We choose k = 1, g,, = eiBzv,AP = cos 9, . Then (4.1) is the
+same as
+
+               A-4 = &     ,r;, ccos 8, -        1) + X Re c a*(X) cos 8~~@(y)
+                                                          WEA
+
+                    - ;A (W @(x)l>+ dh I @(-x)12),
+
+               dv, = fl $         fl d(Re G(x)) . d(Im a(x)).
+                    21EA          SE”
+
+j95/110/2-14
+458                            OSTERWALDER      AND   SEILER
+
+
+      (2)   ‘9 = SU(2). Choose k = 3, AP = tr g, . Then
+
+                A~ = &    p;’ (Tr g, - 2) + h c 2 Re(@(x), &L@(Y))
+                                             ryEA
+
+
+
+               dv, =   n dgev n d(Re @Jo) d(Im @Jo).
+                       WEA    XEA
+                                jd.2
+
+
+The measure (4.3) is invariant under joint gauge transformations        of gauge field and
+matter field
+
+
+
+We now use this gauge invariance to eliminate         redundant   degrees of freedom. ‘For
+each bond xy we define new bond variables
+
+                                   L = g-w g,,g(Y),                                   (4.6)
+
+and we denote by hp the product of the four new bond variables belonging to the
+plaquette P (of course h, = g, !). We again write AP = x(hp). Then, in terms of the
+new bond variables, An in (4.1) becomes
+
+
+
+
+                         - & Q’(W)) + +4x) . XDNd2)                                   (4.7)
+
+and
+
+                       dv, =    n dh,, n dg(x) n R(x)~ dR(x)
+                               XtEA    zz*     rszl
+
+                           = dC/, . fl dg(x).
+                                    ren
+
+The measure dpn (4.3) factorizes
+
+
+
+where
+                                  GAUGE         FIELD       THEORIES   ON   A LATTICE                  459
+
+
+
+
+                                                2;, = J eAAd6, = ZA.
+
+Let 3 be a local observable (a bounded measurable function of the field variables g,, ,
+<Y,Zand R(x) with x, y *-* contained in a subregion of A). Then
+
+
+
+
+where q, is the “gauge average” of P defined by
+
+
+                                                                                                      (4.8)
+
+It is therefore sufficient to study the .reduced measure dGn and gauge-invariant
+observables. From now on we will drop the hat on the quantities. As in the previous
+chapter we con.struct the infinite volume limit using a convergent cluster expansion.
+We begin by sfilitting An in a suitable way into a local part and a coupling part. We
+decompose
+
+
+
+with
+
+                                                                                                     (4.10)
+
+
+                                                                                               W2)
+
+                  -           ;Ar, .t’ (R(x)            - R(v))~                                     (4.11)
+                                   XYE‘I
+
+According   to the splitting         (4.9) of An we write the measure dtL A as
+
+                                                                        z;, = J e A’:’
+                                                                                   _ dpjt’,          (4.12)
+where
+
+                                          (0)    1   A!“’                 (0)      A(O)
+                      dp!p’      = (Z,, )- e A dv                      7--.I  = s e n dv,, .         (4.13)
+
+The measuredpjp) factorizes
+460                                  OSTERWALDER          AND    SEILER
+
+
+The factor &’        can be written in the form
+
+                                         eA$’ = n (1 + pp),                          (4.15)
+                                                    PEA
+
+where
+
+                                             pp=esp-            1,
+
+        sp   =   &      (XVP)   -   D)   +      x
+                                             2(d - 1)
+
+                 x .zp [(x&v)        - NW            NY) - E2) - 4 W(x) - R(Y))~/.   (4.16)
+
+Here LsP runs over all four bonds xy of the plaquette P. The factor 1/2(d - 1)
+in front of the sum accounts for the fact that any bond occurs in 2(d - 1) different
+plaquettes. For plaquettes containing edges of the boundary of A that factor has to be
+modified.
+   Now we can repeat the arguments of Section 3 and write down a cluster expansion
+for the expectation of a local observable 9 with support Q, (see (3.3)).
+
+                                                                                     (4.17)
+
+
+Our goal is to show that for any choice of g, and h there is a large class of functions V
+for which the cluster expansion converges uniformly in (1.
+   The main result of this section is the following theorem.
+
+    THEDREM 4.1. For arbitrary positive values of the coupling parameters g, and A,
+there are positive numbers R, c, , c2 such that for V E v(R, c, , c2) the cluster expansion
+(4.17) converges uniformly in A, and the expectations of local observables have an
+infinite volume limit which has the physical positivity property, the exponential cluster
+property (3 mass gap) and is invariant under lattice translations.
+
+  The proof of Theorem 4.1 follows step by step the arguments of Section 3 with
+one exception, the proof of Lemma 3.3. We restate it here in the appropriate form.
+
+   LEMMA 4.2. For any positive g,, and h and for any E > 0, there are K, c, , c2 such
+that for V E v(R, c1 , c2)
+
+
+
+
+  Remark.    For simplicity we assume 9 to be bounded, such that /) F jlm does not
+depend on d&j.
+  Let us first try to understand qualitatively why Lemma 4.2 should be true. In
+                            GAUGE      FIELD       THEORIES               ON   A LATTICE               461
+
+Section 3 we chose g, large and pP was uniformly small. In the present situation,
+pP may become large, but the values of hp and R(x) for which this happens will be
+strongly suppressed by the measure dpll(O). Namely, given X and g,, , we choose V such
+that it has a sufficiently sharp minimum at sufficiently large R. Then (4.14) tells us
+that the measure dp?) strongly favors values of R(x) which are very close to i? and
+values of h,, which are very close to the identity element. But these are exactly the
+values of the variables for which pP is small.
+
+  Proof.    Notice that there are at most 2(d - 1) plaquettes containing a given bond
+and at most r = 2d(d - 1) plaquettes containing a given site. Hence any variable h,,
+or R(x) appears in at most r factors pP . By repeated application of Holder’s inequality
+we therefore find
+
+
+
+
+and Lemma 4.2 follows if we can show that under the stated conditions
+
+                                                       II PP IL     G     E.                         (4.18)
+
+(11. /Il. is the norm in L,.(d~$“).)    Writing               pp as esp - 1 = j: SpetsP dt (see (4.16)), we
+find
+
+
+
+                                         < sup II &etSPII7                                           (4.19)
+                                                 o<ta
+                                         < IISP IL . is;1 II et+ llzr.
+
+We will get separate estimates of the two factors on the right-hand side of (4.19).
+
+   LEMMA    4.3.     Suppose V E v(R, cl , CJ and the range of cl and cz is restricted               by
+
+                      cl > [I + (32dD) hR12,                            1 -=c c2/c1 < a (fixed).     (4.20)
+
+Then there is a constant c, depending on LXand k only such that uniformIy in R > 1,
+
+                                           sup II etSPIL < c.                                        (4.21)
+                                          o<ta
+
+
+Furthermore,       given E > 0 there is an i?, such that for a > i?, and cl , c2 restricted
+as above,
+                                               II SP     IL     G   c-k                              (4.22)
+
+   Clearly Lemma 4.3 implies (4.18) and thus Lemma 4.2.
+462                                     OSTERWALDER                  AND       SEILER
+
+
+   Notice that by (4.16)
+
+                    SP < $$                c        I R(x) R(y)            -    W? I
+                                          WEP
+
+
+                           <    &-       1     (2        I R(x) ~ R j -t / R(x) - R I”},
+                                        XEP
+
+
+where we have used that -20                     < x(&J           - D < 0. Again                by Holder’s   inequality
+(x E P arbitrary)
+
+
+
+
+with T = 16rhD/(d - 1) = (32dD) * h. Inequalities (A6) and (A7) of the Appendix
+show that both factors .on the righ.t-hand side of (4.23) are bounded by constants just
+depending on cy and the constants of the theory (d, D, k) but not on i?. This proves
+the first part, (4.21), of Lemma 4.3. We now prove (4.22). From (4.16) we get for xy
+any bond in P
+
+            II SP   //2r   G    Wko2)   II X@P)      -    D   ll2r
+
+                                + CWtd - WI1 X@P> - D ILr II R(x) R(Y) - II2 II+,,
+                                + (D/2> II R(x) - Rty12 IhJ.
+The terms involving            R(x) are dealt with by the methods of the Appendix.
+
+             II R(x) NY) - it2 Ilar < 2R II N4 - R 1141.
+                                                      + II R(x) - w II&                                             (4.24)
+
+and the right-hand         side of (4.24) is bounded uniformly                          in i? by (A8) and (4.20):
+
+                           IlOW - R(Y))” Ilo G II W4 - Rt~)llir
+                                             < 4 II R(x) - R II&
+                                             < O(P),       for large R
+
+by (A8) and (4.20).
+  To conclude the proof of (4.22) we need the following                                  lemma.
+
+  LEMMA    4.4.     For all q, uniformIy in cl and c2
+
+
+
+  Remark.   One can actually show that II x(hp) - D IIn = O(R-“)                                    with n depending
+on the gauge group 9.
+
+  Proof.   Let U(e) be the finite-dimensional                        unitary representation         of 9 of which x( -)
+                          GAUGE FIELD THEORIES ON A LATTICE                         463
+
+is the character, i.e., x(g) = tr U(g). We now write x(h + g) for tr(U(h) + U(g)), etc.
+For h, g E 9 and e the identity element in 99we find
+
+I x(e - gh)l = I x(e - g> + x(e - h) - x((e - g>(e - h))l
+             G I x(e - g)l + I x(e - h)l + [x((e - g>(e - g)*) x((e - h)(e - h)*)]l’“.
+
+On the other hand x@ - g)(e - g)*) = x(e - g) + x((e - g)*) becausex(e - gg*)=
+tr(l - U(g) U(g*)) = 0. Hence
+
+       I x(e - &)I < I x(e - g)l + I x(e - h)l + 2[1 x(e - g)l I x(e - h>ll””
+                      < 2(1x(e - g>l + I x(e - 4).
+
+By the samearguments we find for h, = h,,h,,h,,h,,
+
+   / x(h,) - D I = I x(e - ~,,h,,Ad,~)l
+                 G 4{/ x(e - h,,)l + I x(e - k,Jl + I x(e - L)l + I x@ - hv&~
+
+This implies that
+                            1;x(hp) - D ilq < 4 II x&J       - D II* .            (4.25)
+
+From (4.10) to (4.13) we find (assumingx to be real)
+
+                    ,;x(llzy) _ D i,i = .I I x(g{--     D I* eAti2(x(g)-D)
+                                                                         cr’g
+                                                      eARw7--I)) dg
+
+Writing p for AR2and p for D - x(g), we get for any E > 0
+
+
+
+
+                                      S                      S e-“O dg
+                                                dg+ (2DY o~(E/2)v~
+                                            pae-“O
+                                   io~(t12)l/~
+                              <
+                                      J e-up dg            S e-up dg
+                                                       Ldtk12P
+
+
+                              <E       for p sufficiently large.
+
+This together with (4.25) proves Lemma 4.4.
+
+
+                            5. WILSON'S CONFINEMENT           BOUND
+
+   It has become one of the most challenging problems of elementary particle physics
+to explain why the quarks, though the elementary constituents of the material world,
+464                              OSTERWALDER        AND SEILER
+
+can never be observed experimentally. It is generally believed (or hoped) that non-
+abelian gauge theories do “confine” quarks, but there are still rather widespread
+views on why this should happen [4, 18,28,35]. Wilson [35] claims that confinement
+follows from a bound of the form
+
+                                   o&(C))       < e-o’“reac),                         (5.1)
+
+where C is a closed path on the lattice (e.g., a rectangle), area C is the area of the
+ surface spanned by C, and x0 is some character on the gauge group ‘S’. (Remember: if
+ c = (x,x2x, -** x, = x1), then x,,(C) = xJgzlrzgz?ra a** g,,-,,,)). For simplicity we will
+ always assume that C is planar and does not Intersect itself, e.g., C = rectangle.
+ Then area C is simply the number of plaquettes enclosed by C. In this section we want
+to show that in the region of convergence of the cluster expansion (5.1) holds. We
+limit ourselves to theories with gauge group 9 = SU(n) or B = U(1).
+   Let D, be an irreducible representation of SU(n) with Young tableau Y, . We define
+
+                      n, = (l/n){number         of boxes in Y, , mod n}.
+
+(For SU(3), n, is known as triality.) For 9 = U(l), we define n, = u, where DO(ei*) =
+eioe,u E 2. Also, x,,(g) = tr Do(g).
+
+ THEOREM 5.1. In the region of convergence of the cluster expansion in a pure
+Yang-Mills theory, (5.1) holdsprovided that n, # 0.
+    Proof. The strategy is to show that the cluster expansion of the left-hand side of
+(5.1) contains only terms in which I Q 1 > area C. Then by Theorem 3.1, a factor
+eareaC, E < 1, can be extracted from each term in the cluster expansion. (This is
+analogous to the proof of the existence of a mass gap.) All we have to prove is the
+following technical lemma.
+
+  LEMMA 5.2. Let pp be any invariant L” function of the plaquette variable g, and
+assumen, # 0. Then
+
+                           j- xc, ( I-I gz,)    n. PP I-I d&z, = 0
+                                   SYSC         E-0
+for all Q with 1 Q 1 < area C.
+   For a proof we use the Peter-Weyl        expansion (Fourier expansion) of pp (see, e.g.,
+[17, 27,291):
+                                p&4            = C acxdgd.
+                                                 0
+Therefore Lemma 5.2 follows if we can show that
+
+                                                                                      (5.2)
+                           GAUGE       FIELD            THEORIES       ON   A LATTICE                465
+
+
+for / Q 1 < area C and any choice of rp , P E Q. Concentrating in (5.2) on the
+integration over the variable g,, of a fixed bond xy we find (again by Peter-Weyl)
+that we get zero unless
+
+                             c     EP*xY%p          -0
+                                                    -                   for         my $ C,         (5.3)
+                         P:ryeP
+
+
+                            c      ~P,,,n,,         =      fn,          for         xy E C.         (5.4)
+                         P:xyEP
+
+
+Here cp,sa,= f 1, depending on whether g;z or g,, is a factor in g, . Equations (5.3)-
+(5.4) are to be understood as congruences mod 1. Let us first assume that Q lies
+entirely in the plane of C. Then each bond xy belongs to at most two plaquettes P’
+and P” in Q and ~~~~~~= -E~-,~~ . Hence (5.3) reduces to nTp, = nTp” if both P’ and P”
+belong to Q and rzTp,= 0 if P’ contains at least one bond not contained in any
+P” E Q. This shows that nTp = 0 for P outside C and n, = constant for P in Q and
+inside C. (5.4) now forces this constant to be &n, # 0. %his leads to a contradiction
+unless all the plaquettes inside C belong to Q, hence (5.2). Now let us look at a more
+general set Q.
+    We say that two bonds xy and x’y’ are equivalent, xy - x’y’, if they are parallel
+and if both lines xx’ and yy’ are perpendicular to the plane of the loop. We now
+pick a bond xy in the plane of C and add Eqs. (5.3)-(5.4) for all x’y’ - xy. The
+contributions from plaquettes P which are orthogonal to the plane of C drop out
+from the sums as they contain exactly two bonds x’y’ and x”y” equivalent to xy, but
+EP,X’Y  =   ~P>X”U” * Hence we are left with
+
+
+                            c          +,z~,+f,p --0                          for     xy $ C,
+                        PX’Y’EP
+                         +‘y’.-w
+                    Pjlplaneof     C
+
+
+                             c         ~P,z~y~n7p         =      fn,          for     xy E C.
+                        P:x’Y’EP
+                         Z’Y’WZY
+                    Pllplaneof     C
+
+
+Now the argument    goes as before. This completes the proofs of Lemma                           5.2 and
+Theorem 5.1.
+  Remark. For 9 = U(1) the bound on (x0(C)) has been studied in [ll]                            for weak
+coupling and in [6] for strong coupling.
+
+
+                                               6. DISCUSSION
+
+   So far we have treated various gauge field models on a fixed lattice. Of course
+the real interest lies in the continuum limit.
+   One would like to let the lattice spacing tend to zero while keeping the masses of
+physical objects (“mesons,” “ baryons”) fixed. By a simple scaling argument
+                                              mi = a-lfi(ge>,                                       P-5.0
+466                            OSTERWALDER            AND   SEILER
+
+
+where g, stands for the bare coupling constant(s) of the theory and a is the lattice
+spacing. So when a -+ 0 we need fi(g) -+ 0; that means if we were to look at the
+theory with a microscope that brings the lattice spacing back to 1, we would see the
+theory approaching a critical point, as has been noticed by various people; see, e.g.,
+ [12, 301.
+   If the map {g,,} H (m,} is invertible, it can be used to adjust the bare coupling(s)
+in such a way that a finite limit for the physical masses results; this coupling constant
+renormalization is the only kind of renormalization consistent with gauge invariance.
+A pure gauge theory has only one coupling constant; the “renormalization          map” is
+therefore much simpler in this case than in, say, the y4 theory where it is a map from
+a portion of UP into R3 (see [30]). This fact and, of course, asymptotic freedom,
+should make the continuum limit easier in gauge theories.
+   Of course, so far we know little about J;(g), except in the area where we have
+convergent expansions. In a pure Yang-Mills theory in low dimension (d < 4) we
+expect a qualitative behavior of the type illustrated in Fig. 2 where lim80+m f(gJ : cg,
+limVolof( g,) = 0, f(g,) - 4 In g, for large g, . In the case of an abelian group
+(U( 1)) there may be a critical point at a finite coupling constant g, in d = 4 (see
+Fig. 3). The popular belief is that in fact for g, < g, , the theory is “critical” in the
+sense that there is no mass gap. In more than four dimensions a critical point at finite
+
+
+
+
+                                             FIGURE    2
+
+
+
+
+                                             FIGURE    3
+                         GAUGE     FIELD     THEORIES     ON   A LATTICE                 467
+
+g;’ should occur also in the non-abelian case. It should be noted that these critical
+points (if they exist) do not indicate that there is spontaneous breakdown of gauge
+invariance for go1 > g;l; in that respect the situation is quite different from the one
+encountered in the more usual lattice systems [9]. The precise statement is the
+following: In an equilibrium state fulfilling the DLR equations [19], there is no spon-
+taneous breakdown fo gauge invariance. This is almost trivial since the DLR equations
+state that equilibrium states restricted to a finite volume are identical to Gibbs states
+with certain boundary conditions. Since these finite volume Gibbs states are still
+gauge invariant (under gauge transformations          that affect the interior of the region
+only) they cannot produce gauge-dependent expectations for observables localized
+inside. See also [22].
+    The argument just presented works of course only in the gauge-invariant formalism.
+ If we “fix a gauge” (e.g., use the radiation gauge), the situation is different. This
+explains why in a continuum theory (for instance, free QED) gauge invariance is
+always broken (see [33]).
+    In order to get some idea of what should be expected for weak coupling or small
+lattice spacing, it is instructive to look at a simplified Yang-Mills           model that is
+exactly soluble and is exact in two dimensions. To define the model we drop from the
+ action (2.2) all “horizontal”  plaquettes, that is, all plaquettes not containing any bond
+ in “time” direction. The transfer matrix T then simplifies to a tensor product of copies
+of an operator f; tlrl is given by the kernel (in the radiation gauge)
+
+
+                       ilp(h, g) = exp((l/2g,“)          Re x.,(&l)      + or),         (6.2)
+
+
+where 01is chosen in such a way that the largest eigenvalue oft is 1. tlp (and therefore t)
+is easily diagonalized by applying the Peter-Weyl theorem [ 17, 27, 291:
+
+
+
+
+                                 USo)      = J il’“(h,    e) g,(h) dh,                  (6.4)
+
+
+ where {x0} is a complete set of characters of the group 3. The eigenvalues of tlp are
+just
+                                            A, = AJd, ,                                 (6.5)
+
+where d,, = x0(e) is the dimension of the representation D, . All eigenvalues are
+nonnegative (this follows from the general discussionin Section 2 but more simply
+from the fact that i is of positive type. We order the eigenvalues
+
+                                     1 = &, > AU1> ... .                                (6.6)
+468                            OSTERWALDER        AND      SEILER
+
+
+(By a Perron-Frobenius    argument it can be seen that u0 is the trivial representation.)
+  If we interpret T1J2 as e-aH on .%’ we find that H has eigenvalues of the form
+
+                               l ({n,})   = - k C n, In /i, ,                           (6.7)
+                                                   I7
+where n, are nonnegative integers. The mass gap on the Hilbert          space S is therefore
+
+                                    m = -(l/a)      In fi, .                            (6.8)
+
+On the gauge-invariant   subspace eei the mass gap obeys, as can be seen easily
+
+                                  m,.i. 3 -(4/a) In A, .                                (6.9)
+(In two dimensions actually
+
+                               m&i. = + m               Cd = 9,                        (6.10)
+expressing that nonoverlapping gauge-invariant observables are independent.)
+  The energy of a “string” of length L belonging to the representation T is
+
+                                   eL = -(L/a3          In fi, .                       (6.11)
+We would like to have a finite limit for quantities like (6.11) as a -+ 0. That forces
+g, -+ 0 (see (6.4), (6.2)). A Gaussian approximation for
+
+                                                                                       (6.12)
+
+gives the correct behavior for X,(g,) for small g, ; the result is
+
+                              Mgo) = 4 - cge2+ O(ge3)                                 (6.13)
+and therefore
+
+             EL= - $i ln (1 - 5 go2+ O(ge3))
+                                          = 2 f go2+ O(g,3)                            (6.14)
+                                      7                             +
+so if we choose g, proportional to a we obtain a finite limit for EJL as a + 0.
+   The same prescription g, N a also produces a finite limit for the expectations of
+loop variables. Consider d = 2 for simplicity. If g, is a closed-loop variable we obtain
+
+                               <x,(g3)       = (LY-e.areaL,                           (6.15)
+where area L is the area enclosed by the loop L. By choosing g,, N a this becomes
+in the continuum limit (P meaning “path ordering”)
+
+                         (x, (P exp (if,      Au dx,)))       = CfYaL                 (6.16)
+                                    GAUGE        FIELD            THEORIES             ON        A   LATTICE          469
+
+with some constant C, < 1. This agrees with the result that can be computed directly
+in the case of 59 = U(1) by Gaussian integration.
+   As remarked before, loop variables belonging to nonoverlapping loops are statis-
+tically independent. So (6.16) can be considered a complete description of the two-
+dimensional continuum Yang-Mills      theory, expressed in terms of the somewhat
+unusual loop variable. Only in the abelian case is it easy to recover the Euclidean
+quantum field theory from these loop variables since
+
+
+                                    exp (i i$,, Au dxu) = exp (i f, F d%),
+                                                                                                                    (6.17)
+                                                                       F = l “F “Y *
+
+F of course is a trivial white noise field; its corresponding relativistic field vanishes as
+has to be the case. The non-Abelian (Euclidean) Yang-Mills           field cannot be recon-
+structed from the loop variables in such a way; but it is possible that these loop
+variables are the more natural objects in a Yang-Mills        theory. It is an interesting
+question whether it is possible to find a consistent field theoretic framework         based
+on these “loops” instead of local fields.
+
+
+
+                                                                   APPENDIX
+
+
+   We prove several elementary estimates which are necessary to establish Lemma 4.3.
+The main input will be assumptions (4.2) on the potential V and conditions (4.20)
+on the constants c1 and c2 . We will always assume that R > 1. By y we denote a
+constant that depends on k only (its exact value might change from line to line).
+We assume k > 1.
+
+
+
+
+     (b)   Rk < (2@k + (2 / R - i? 1)“’
+
+                                                                                                                     (A3
+     (c)   lorn   eRiR--RI-Y(R)~k           dR     <     ,,ak         j-,*   ,~R--RI-(c~/?)(R--R)~             dR
+
+
+
+                                                   <            j&w/2rl)              -112
+                                                   --Y                           Cl          .                       (A3)
+470                                             OSTERWALDER                   AND SEILER
+
+
+        (d)    jam   eBI-*-v(R)~k             do      <    $k        jos     ,-((c,lzh3)I~--R~~           dR
+
+
+                                                      < yRk(c, - 219)-1/Z,                                                               (A4)
+assuming2/3 < cl .
+
+       (e)     j6* 1R - i? IQewvcR’RLdR ,< yRk j* / R _ R ,U,-h,+-R)*                                                         dR
+                                                 --3)
+                                                                 <    yj&;(n+l)/z
+                                                                                                                                         (A5)
+
+(with y depending on k and q). Now we combine these estimatesto prove Lemma 4.3.
+From (Al) and (A3)-(A5) we get
+
+                                       2TRiR(r)-RI         jl;.'Jr    <     ye(T~)2i2rC~(C2,C1)1/8r
+                                    IIe                                                                                                  CA@
+                                      II eTlR(cd-R12
+                                                  !(;ldr < y(c2/(cl _ 2~-))1’8’                                                          (A7)
+                                       11R(x) - R I~8r< ~(c~/c~)~‘~~~~
+                                                                    cl-l”                                                                (Jw
+
+
+                                                      ACKNOWLEDGMENT
+
+    It is a pleasureto thank Professor W. Zimmermann for the hospitality at the Max-Planck-lnstitut
+fiir Physik und Astrophysik (Miinchen), where part of this work has been carried out.
+
+
+                                                                REFERENCES
+
+ I. C. BECCHI,  A. ROUET, AND R. STORA, in “Renorm,..--tion     Theory” (G. Velo and A. S. Wightman,
+    Eds.), NATO Advanced Study Institutes Series C23, Reidel, 1976.
+ 2. R. BALIAN,   J. M. DROUFFE,   AND C. ITZYKSON, Phys. Rev. D 10 (19741, 3376; Phys.      Rev. D 11
+    (1975), 2098; Phys. Rev. D 11 (1975), 2104.
+ 3. F. BEREZIN, “The Method of Second Quantization,”        Academic Press, New York, 1966.
+ 4. G. CALLAN, R. DASHEN, AND D. GROSS, “A Mechanism for Quark Confinement,” Princeton
+    preprint, 1977.
+ 5. F. ENGLER~    AND R. BROW, Phys. Rev. Lurt. 13 (1964), 321.
+ 6. G.-F.  DE ANGELIS,  D. DE FALCO, AND F. GUERRA, “Lattice Gauge Models in the Strong Coupling
+    Regime,” Salerno preprint, 1977.
+ 7. G.-F. DE ANGELIS AND D. DE FALCO, “Correlation           Inequalities for Lattice Gauge Fields,”
+    Salerno preprint, 1977.
+ 8. L. FADDEEV AND V. N. POPOV, Kiev Report ITP67-36 (English translation by D. Gordon and
+    B. W. Lee, NAL preprint NAL-THY-57,         1972); Phys. Left. B25 (1967), 29.
+ 9. J. FR~~HLICH,       B. SIMON,     AND    T. SPENCER,             Commun.          Math.       Phys.   50 fl976),   79; Phys.   Rev. Lett.
+      36 (1976),
+              804.
+10. J. GINIBRE, Commun.             Math.     Phys.       16 (1970),         310.
+11. J. GLIMM AND A. JAFFE,Phys. Lett. B 66 (1977), 67.
+12. J. GLIMM AND A. JAFFE, Commun. Math. Phys. 51 (1976). I.
+13. J. GLIMM, A. JAFFE, AND T. SPENCER,Contributions in “Co&tructive Quantum Field Theory”
+    (G. Velo and A. Wightman, Eds.), Springer Lecture Notes in Physics, Vol. 25, Springer-Verlag,
+    Berlin/New York, 1973.
+                              GAUGE     FIELD   THEORIES     ON   A   LATTICE                            471
+
+14. F. GUERRA,     L. ROSEN,      AND B. SIMON,        Ann. Math.   101 (1975), 111.
+15. G. S. GURALNIK,        C. R. HAGEN,        AND T. W. B. KIBBLE,     Phys.   Rev. Left. 13 (1964), 585.
+16. P. W. HIGGS, Phys. Left. 12 (1964), 132; Phys. Ren 145 (1966), 1156.
+17. E. HEWI~     AND K. A. Ross, “Abstract Harmonic Analysis,” Vols. I, II, Springer-Verlag,               New
+    York, 1970.
+18. J. K~GUT AND L. SUSSKIND,            Phys.     Rev. D 10 (1974), 3468; Phys. Rev. D 11 (1975), 395.
+19. 0. LANFORD,      i~r “Statistical Mechanics and Mathematical Problems” (A. Lenard, Ed.). p. I,
+    Springer Lecture Notes, Vol. 20, Springer-Verlag,                  Berlin/New York, 1973.
+20. B. W. LEE, Phys. Rev. D 5 (1972), 823.
+21. M. L~~scHER,      “Construction of a Self-adjoint, Strictly Positive Transfer Matrix for Euclidean
+     Lattice Gauge Theory,” DESY preprint, 1976.
+22. M. MSCHER,         “Absence of Spontaneous Gauge Symmetry Breaking in Hamiltonian Lattice
+    Gauge Theories,” preprint, 1977.
+23. A. MCDERMOT,          Thesis, Cornell, 1976.
+24. K. OSTERWALDER,           “Yang-Mills        Fields on the Lattice” (lecture delivered at the 1976 Cargese
+     Summer School), preprint, 1976.
+25. K. OSTERWALDER           AND R. SCHRADER,            Commun. Math. Phys. 31 (1973), 83; Commun. Math.
+    Phys. 42 (1975), 281.
+26. K. OSTERWALDER          AND R. SCHRADER,           Helc. Phys. Acfa 46 (1973), 277.
+27. F. PETER AND H. WEYL, Math. Ann. 97 (1927), 737.
+28. A. POLYAKOV,        “Quark Confinement and Topology of Gauge Groups,” Nordita preprint 76/33,
+     1976.
+29. L. S. PONTRYAGIN,          “Topological Groups,” Gordon & Breach, New York, 1966.
+30. R. SCHRADER,        Commun. Math. Phys. 49 (1976), 131; Commwr. Math. Phys. 50 (1976), 97.
+31. E. SEILER AND B. SIMON, Commun. M&h. Phys. 45 (1975). 99.
+32. T. SPENCER, Commurl. Math. Phys. 44 (1975), 143.
+33. F. STROCCHI,      ‘Spontaneous Symmetry Breaking in Local Gauge Quantum Field Theory; The
+     Higgs Mechanism,” Princeton preprint, 1976.
+34. G. ‘T HOOFT,     Nucl.     Phys. B33 (1971). 173; Nucl. Phys. B35 (1971). 167.
+35. K. G. WILSON,        Phys. Rev. D 10 (1974), 2445.
+36. K. G. WILSON, Cargese Lectures 1976, to appear.
+

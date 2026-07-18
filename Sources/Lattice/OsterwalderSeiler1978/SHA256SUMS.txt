@@ -1,0 +1,2 @@
+58861ff0dfbc7f2f6af3ce178f2b8ac82ae4d560b8cdde8e3f988fa891b67547  gauge_field_theories_lattice.pdf
+9dad6bfe67ff1bbc9925e1fa0b76ab2d9cb9e6f5c2b210f07cf85f19aa661f08  gauge_field_theories_lattice.txt

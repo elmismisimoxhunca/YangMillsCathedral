@@ -133,5 +133,6 @@ mass-gap claim is present.
 
 Primary OS-I and correcting OS-II article scans, Wightman's 1956 paper, and the corrected Princeton
 edition of Streater–Wightman are hash-pinned with exact text extractions. Load-bearing OS-II and
-Wightman-axiom pages were visually verified. This source acquisition does not construct any
-Euclidean or Wightman theory.
+Wightman-axiom pages were visually verified. Wilson 1974 and Osterwalder–Seiler 1978 lattice sources
+are also pinned and visually checked without identifying finite-cutoff results with the continuum
+target. Source acquisition constructs no Euclidean, lattice, or Wightman theory.

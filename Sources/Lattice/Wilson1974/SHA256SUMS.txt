@@ -1,0 +1,2 @@
+6eadfb8d3e3cd217c379623857c6e1ab31e7298edbfd2c18f7ea93d17b49582c  confinement_of_quarks.pdf
+37668e454315769df2d57ecbaff6c380f780ba9e3b0e56776ed9072ea3bb63d4  confinement_of_quarks.txt

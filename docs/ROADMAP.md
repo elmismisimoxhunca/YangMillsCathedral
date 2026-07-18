@@ -120,7 +120,7 @@ committed before higher layers depend on it.
 
 ## Phase 6 — optional lattice route
 
-- [ ] Pin Wilson and Osterwalder–Seiler primary sources.
+- [x] Pin and visually verify Wilson and Osterwalder–Seiler primary lattice sources.
 - [ ] Define dimension-indexed lattice regulators and Wilson action semantics.
 - [ ] Define scaling, renormalization, observable and continuum-limit bridges.
 - [ ] Keep finite-cutoff reflection positivity distinct from continuum OS data.

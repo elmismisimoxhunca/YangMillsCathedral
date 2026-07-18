@@ -23,6 +23,15 @@ Searchable extraction: `Sources/Clay/yangmills_official.txt`
 | p. 6 §4; text 277–280 | For every compact simple gauge group, a nontrivial QFT on `ℝ⁴` exists and has positive gap | Final acceptance proposition | — | Pending all lower layers; no inhabitant asserted |
 | p. 6 §4; text 279–280 | Axiomatic properties at least as strong as references [45, 35] | Comparative requirement | — | Streater–Wightman, Wightman 1956, OS-I, and correcting OS-II sources are acquired, hash-pinned, and visually verified. The explicit comparative Lean contract and its hostile probes remain pending |
 
+## Lattice-regulator evidence
+
+| Source locator | Requirement | Classification | Lean declaration | Status / decision |
+|---|---|---|---|---|
+| Wilson 1974, pp. 2448–2449, §III.A, equations (3.1)–(3.12) | Euclidean lattice sites/links, local gauge transformations, compact link variables, gauge-invariant periodic action, and continuum-limit motivation | Optional regulator definition | — | Primary APS article is hash-pinned and visually verified under `Sources/Lattice/Wilson1974/`. The lattice carrier and finite cutoff must remain distinct from the continuum target; declarations remain pending |
+| Osterwalder–Seiler 1978, pp. 442–443 | Directed bonds, plaquettes, compact-group link configurations, plaquette action, Gibbs measure, local observables, and local gauge invariance | Optional regulator/model requirement | — | Primary article scan is hash-pinned and visually verified under `Sources/Lattice/OsterwalderSeiler1978/`; declarations remain pending |
+| Osterwalder–Seiler 1978, p. 448, Theorem 2.1 | Reflection positivity for gauge-invariant positive-time lattice observables | Finite-cutoff model requirement | — | Must remain distinct from continuum OS reflection positivity and connect only through an explicit continuum bridge |
+| Osterwalder–Seiler 1978, p. 455, Theorem 3.5 | Strong-coupling uniform exponential clustering for finitely supported bond observables | Lower/regulated consistency evidence | — | This lattice “mass gap” is not the Clay continuum mass gap and cannot inhabit the final contract without continuum, reconstruction, and physical spectral bridges |
+
 ## Gauge-group convention evidence
 
 | Source locator | Evidence | Formalization consequence | Status |

@@ -1192,6 +1192,24 @@ Verified:
 - No Wightman field, Hilbert space, translation representation, PVM, vacuum, existence theorem, or
   mass-gap witness is constructed.
 
+## 2026-07-18 — sixty-ninth evidence stone: lattice regulator sources
+
+Verified:
+
+- Wilson's 1974 *Confinement of Quarks*, DOI `10.1103/PhysRevD.10.2445`, is hash-pinned with exact
+  text extraction; the title and lattice-action pages were visually verified.
+- Wilson's pp. 2448–2449 define Euclidean lattice variables, local gauge transformations, a periodic
+  gauge action, and its formal continuum approximation while explicitly warning that the continuum
+  limit is a separate renormalization problem.
+- Osterwalder–Seiler's 1978 *Gauge Field Theories on a Lattice*, DOI
+  `10.1016/0003-4916(78)90039-8`, is hash-pinned with exact text extraction and visually verified
+  article/action/theorem pages.
+- Osterwalder–Seiler Theorem 2.1 gives finite-cutoff lattice reflection positivity; Theorem 3.5 gives
+  strong-coupling exponential clustering. The source map explicitly prevents either from silently
+  becoming continuum OS data or the Clay physical mass gap.
+- No lattice regulator, continuum limit, confinement theorem, Euclidean theory, or mass-gap witness
+  is constructed by source acquisition.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
@@ -1214,8 +1232,10 @@ Not yet achieved:
   is basis-independent and the existing action is proved to integrate it, but a general Hodge-star
   bridge and metric-volume compatibility remain pending. OS-I, correcting OS-II, Wightman 1956,
   and Streater–Wightman source artifacts are now acquired and verified; their Lean requirement
-  surfaces remain unimplemented. Spectral-theorem, observable, and lattice source packages also
-  remain to be independently completed before corresponding declarations become canonical.
+  surfaces remain unimplemented. Wilson and Osterwalder–Seiler lattice sources are likewise pinned,
+  but lattice declarations and all continuum bridges remain unimplemented. Spectral-theorem and
+  observable source packages also remain to be completed before corresponding declarations become
+  canonical.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

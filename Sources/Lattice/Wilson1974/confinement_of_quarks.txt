@@ -1,0 +1,1137 @@
+10                      E FF ECTIVE ACTION                 FOR COMPOSITE OPERATORS
+
+ {1973); S. Weinberg,    iMd. 7, 2887 {1973); R. Jackiw,                 learned it from S. Coleman, in proceedings of the
+ Ref. 4.                                                                 Lectures given at the International Summer School of
+t~The analysis of the physical interpretation. of Z{P, G)I,~„,           Physics "Ettore Majorana, " 1973 {unpublished).
+  is an adaptation to the present context of the correspond-           ~oR. Dashen, B. Hasslacher, and A. Neveu, Phys. Rev.
+  ing argument for P5)~„,,„.. That discussion is due to                  D {to be published).
+  K. Symanzik, Commun. Math. Phys. 16, 48 {1970). We
+
+
+
+
+PHYSICAL REVIEW             D                    VOLUME         10, NUMBER           8                          15 0C TOB ER 1974
+
+
+                                                  Confinement         of qnarks*
+                                                       Kenneth G. %ilson
+                            Laboratory   of nuclear Studies, Cornell University, Ithaca,   iVevv   York l4850
+                                                       {Received 12 June 1974)
+               A mechanism for total confinement of quarks, similar to that of Schwinger, is defined which requires
+             the existence of Abelian or non-Abelian gauge fields. It is shown how to quantize a gauge field theory
+             on a discrete lattice in Euclidean space-time, preserving exact gauge invariance and treating the gauge
+             fields as angular variables {which makes a gauge-fixing term unnecessary). The lattice gauge theory has
+             a computable strong-coupling    limit; in this limit the binding mechanism applies and there are no free
+             quarks. There is unfortunately    no Lorentz (or Euclidean) invariance in the strong-coupling limit. The
+             strong-coupling expansion involves sums over all quark paths and sums over all surfaces {on the lattice)
+             joining quark paths. This structure is reminiscent of relativistic string models of hadrons.
+
+
+
+
+                    I. INTRODUCTION                                     particles over short times and short distances.
+                                                                        The polarization effects which prevent the ap-
+   The success of the quark-constituent picture                         pearance of electrons in the final state take place
+both for resonances and for deep-inelastic elec-                        on a longer time scale (longer than 1/m&, where
+tron and neutrino processes makes it difficult to                       rn& is the photon mass).
+believe quarks do not exist. The problem is that                          A new mechanism which keeps quarks bound
+quarks have not been seen. This suggests that                           will be proposed in this paper. The mechanism
+quarks, for some reason, cannot appear as sep-                          applies to gauge theories only. The mechanism
+arate particles in a final state. A number of                           will be illustrated using the strong-coupling limit
+speculations have been offered as to how this                           of a gauge theory in four-dimensional space-time.
+might happen. '                                                         However, the model discussed here has a built-in
+   Independently of the quark problem, Schwinger                        ultraviolet cutoff, and in the strong-coupling limit
+observed many years ago' that the vector mesons                         all particle masses (including the gauge field
+of a gauge theory can have a nonzero mass if vacu-                      masses) are much larger than the cutoff; in con-
+um polarization totally screens the charges in a                        sequence the theory is far from covariant.
+gauge theory. Schwinger illustrated this result                            The confinement mechanism proposed here is
+with the exact solution of quantum electrodynamics                      soft (long-time scale). However, in the model dis-
+in one space and one time dimension, where the                          cussed here the cutoff spoils the possibility of
+photon acquires a mass -e' for any nonzero charge                       free pointlike behavior for the quarks.
+ e [e has dimensions of (mass)'~' in this theory J.                        The model discussed in this paper is a gauge
+ Schwinger suggested that the same effect could oc-                     theory set up on a four-dimensional Euclidean lat-
+ cur in four dimensions for sufficiently large cou-                     tice. The inverse of the lattice spacing a serves
+ pllngs.                                                                as an ultraviolet cutoff. The use of a Euclidean
+    Further study of the Schwinger model by Lowen-                       space (i.e. , imaginary instead of real times) in-
+ stein and Swieca' and Casher, Kogut, and Suss-                          stead of a Lorentz space is not a serious re-
+ kind' has shown that the asymptotic states of the                       striction; the energy eigenstates (including scat-
+ model contain only massive photons, not elec-                           tering states) of the lattice theory can be deter-
+ trons. Nevertheless, as Casher clat. have shown                         mined from the "transfer-matrix" formalism as
+ in detail, the electrons are present in deep-in-                        has been discussed by suri' and reviewed by
+ elastic processes and behave like free pointlike                        Wilson and Kogut. ' A brief discussion of the
+                                         KENNETH        G. W'II SON                                              10
+
+transfer-matrix  method is given in See. III.
+  In Schminger's speculations about four dimen-
+sions, the photon mass mould be zero for any
+charge e less than a critical coupling e„. for e
+&e, the photon mass mould be nonzero and vary
+with e. Figure 1 shows how a plot of m& vs e
+might look. The point e, is a point of nonanaly-
+ticity. Similar nonanalytic points, called critical                                       I
+
+                                                                                         e
+points, occur in solid-state physics at certain
+types of phase transitions. Consider, for in-               FIG. 1. Speculative plot of photon mass vs renormal-
+stance, a ferromagnet in the absence of an ex-            ized charge e, in unknown units. The transition at e,
+ternal field. For any temperature above the Curie         is second-order (see text).
+temperature T~, the spontaneous magnetization
+M is 0. Below T&, M is nonzero and a function of
+temperature. At Tc there may be either a first-           ing the surfaces on the lattice to the continuum
+order phase transition (in which case M is dis-           surfaces of the string models; it is not known at
+continuous at T~} or a second-order phase transi-         present whether these difficulties can be over-
+tion (critical point) for which M-0 as T- Tc              come.
+from either side.                                           In Sec. II the nature of the quark binding mech-
+                                                          anism will be discussed, qualitatively.    In Sec.
+   By analogy with the solid-state situation one
+can think of the transition from zero to nonzero          III the gauge theory will be formulated on a. dis-
+photon mass as a change of phase: this analogy
+                                                          crete lattice, both classically and quantum mech-
+is best understood by imagining the particles of          anically. In Sec. IV the strong-coupling expansion
+quantum electrodynamics to be the excitations of
+                                                          for the lattice gauge theory is explained. In Sec.
+a medium (the ether) In th. is case it is the ether       V a cursory discussion of weak coupling is given.
+                                                          In Sec. VI there is a brief discussion of the prob-
+which undergoes a change of phase at e, . There
+is again a question whether this change of phase          lem of I orentz invariance and the rela. tion to
+is first-order (cf. Fig. 2) or second-order (Fig.         string models.
+I). (Coleman and Weinberg" have found a non-
+trivial example of a first-order transition in an-                    II. QUARK BINDING MECHANISM
+other context. )                                             The binding mechanism will be explained in this
+   The model discussed in this paper is a single          sec'tion using the Feynman path-integral picture.
+Abelian gauge field coupled (with strength g) to          The path-integral framework will be used in an
+massive quarks. In weak coupling the gauge field          intuitive rather than a formal way. Consider the
+behaves like a normal free zero-mass field (de-           current-current propagator
+spite modifications introduced in the lattice quan-
+tization) and the quarks are unbound. In strong               D„,(x) =(Ili TJ„(x)J„(0)i(I},                   (2. I)
+coupling the gauge field is massive and the quarks        whose Fourier transform determines         the e'-e
+are bound, showing the existence of the second            annihilation cross section into hadrons. Assume
+phase. Thus there should be a phase transition at         that the currents J„(x) are built from quark fields
+some intermediate value of g. Nothing is known            as in the quark-parton model. Assume that the
+about this transition at the present time.                quarks interact through a single gauge field. {The
+   The quantization procedure and strong-coupling         restriction to one field is only for simplicity. } In
+approximation described in this paper can be ap-          the Feynman path-integral picture the propagator
+plied to non-Abelian gauge theories also. This
+will be explained briefly in Sec. III.
+   An extraordinary feature of the strong-coupling
+expansion of the lattice theory (see Sec. IV) is that
+it has the same general structure as the relativis-
+tic string models of hadrons. ' The vacuum ex-
+pectation values of the gauge theory involve (in
+the strong-coupling expansion} sums over all
+quark paths and sums over all surfaces connect-
+ing these paths; the surfaces are generated by
+the gauge field treated in strong coupling. The
+paths and surfaces are defined on a discrete lat-           FIG. 2. Speculative plot of photon mass vs renormal-
+tice. There are geometrical difficulties in relat-        ized charge e if there is a first-order transition at ec.
+                                       CONFINEMENT       OF QUABKS
+
+D„,(x) is given by a weighted average over all pos-
+sible classical quark paths and all possible classi-
+cal values of the gauge field. The currents J„c,x}
+and J, (0) are thought of as producing a quark pair
+at the origin which later annihilate at the point x:
+One has to sum over all paths joining the points
+0 and x for each of the pair of quarks.
+  An example of paths for the quark and antiquark
+are shown in Fig. 3. The vacuum can also emit
+and absorb quark pairs; this leads to further
+closed loops as illustrated in Fig. 4. All possible        I IG. 4. Example of current loop {as in Fig. 3) with   an
+loops must be summed over too. It is also pos-           extra vacuum loop.
+sible to have independent loops for the points 0
+and x (Fig. 5), but this possibility will not be im-
+                                                         a more difficult question to answer and will not
+portant here.
+   The weight associated with a given quark path         be discussed in this paper.
+                                                            Note that x must be large: If x is small there
+or set of paths includes a factor of exp[ig)A„(x)
+xds" J, where A„(x) is the gauge field. Here             is little likelihood of finding a large size loop.
+   ..  ds" is a line integral or a sum over line inte-   This may seem a bit peculiar: One expects quarks
+                                                         to appear in the final state of e -e annihilation
+grals for each of the quark-antiquark loops, in-
+                                                         only at large virtual-photon momentum q if they
+cluding the loop joining the points 0 and x. The
+constant g is the coupling constant of the gauge         appear at all, and large q means small x, not
+                                                         large x. The answer to this paradox has two
+theory. There are further weight factors inde-
+pendent of A. Finally, independently of the quark
+                                                         parts. First, the important paths in the Feynman
+                                                         path integral bear no detailed relation to possible
+paths there is another weight factor, namely, the
+                                                         physical final states (the paths are paths of bare
+exponential of the free action for the gauge field.
+The combined weight factor is then averaged over
+                                                         particles, not physical particles). Secondly,
+all quark paths and all gauge fields A„(x) to give       large x does not necessarily mean small q. In
+the current-current propagator.
+                                                         fact the study of whether well-separated quark-
+                                                         antiquark paths exist for large )( is really a. search
+   In order that quarks exist as separate final-state
+                                                         for a quark-antiquark threshold in e -e annihila-
+particles it must be possible to have quark-anti-
+                                                         tion, which would contribute a term -exp(2mivx )
+quark loops with well-separated quark and anti-
+                                                         to the current-current propagator for large x,
+quark lines, at least when x and 0 are far apart.
+                                                         where m is the quark mass. (Here —means up to
+This is illustrated in Fig. 6(a). If the quark and
+                                                         a. power of x'. ) Such a term corresponds in mo-
+antiquark paths are unlikely to separate beyond a
+                                                         mentum space to the singularity at the threshold
+fixed size, say 10 "cm [see Fig. 6(b)], then
+                                                         q' = (2m)'.
+clearly no detector will see a. quark or antiquark
+                                                           Suppose the gauge-field averaging is performed
+in isolation.
+   It is assumed in this discussion that vacuum
+                                                         before the quark-paths averaging. Then one deter-
+                                                         mine the average over all gauge fields of the
+loops are not important. If vacuum loops are im-
+                                                         weight factor exp[ifgA„(y)ds" ] weighted further
+portant enough then space will be filled with a
+                                                         with the exponential. of the free gauge-field action.
+high density of vacuum-produced      quark-antiquark
+pairs. In particular, there will be many quark-          For an Abelian gauge theory this average can be
+antiquark pairs inside a detector of macroscopic         computed explicitly: It is
+size. The question then is whether there can be
+an excess of quarks over antiquarks, or vice
+versa, in a region of macroscopic size. This is
+
+                  X
+
+
+
+
+                                                           FIG. 5. Example of separate quark loops for the points
+  FIG. 3. An example of quark {q) and antiquark   {q)    0 and x. {Integration over the gauge field produces gauge
+paths connecting the points 0 and x.                     propagators which connect these loops. )
+2448                                         KE NNE T H G. WILSON
+
+
+       exp   -g   dS   ds D]I p y —y
+
+
+where    D»(y -y') is the free gauge-field propa-
+gator.
+   The quark binding mechanism can be seen by
+comparing the above expression for one space
+dimension and three space dimensions. In three
+space dimensions this calculation gives no binding
+{the binding occurs only with a modified gauge-
+field action: see Sec. IV), while there is binding         FIG. 6. (a) Loop with well-separated quark and anti-
+in one space dimension. In three space dimen-            quark. (b) Loop with small separation between quark
+sions D„,(y —y') behaves as (y —y') a. In con-           and antiquark.
+sequence large values of (y' —y) are negligible in
+the double line integral. Hence, the double inte-        may be suppressed (due to P' or A dependence in
+gral is proportional to P, where P is the length         the exponential) a loop closely shielded by a vacu-
+of the loop. Unfortunately the integral is divergent     um-polarization loop is always unsuppressed.
+at y'=y; a cutoff is needed for the integral to            The binding mechanism proposed here is soft:
+make sense. Since a cutoff will be introduced any-       The exponential damping is associated with large
+way in this paper, this is not a major concern.          size loops having large areas. The behavior of
+For simple loops, the perimeter P is roughly of          small loops is irrelevant to the binding mech-
+order (x')~' (ignoring the case that x is close to       anism. Also for small loops both their area and
+the light cone). Thus one has an exponential of the      perimeter are small and neither is of great im-
+type one expects when free quarks are present.           portance in an exponential.
+   In one space dimension, D„,(y -y') behaves as            The mechanism discussed here works equally
+ln[(y -y') ] for y' —y large, and y' and y can freely    well for Dirac quarks or scalar quarks. This is
+range separately over the loop. In this case the         in contrast to the Higgs mechanism which can
+double integral is proportional to P'. Now the           wipe out the charge of scalar particles only.
+                                       "~,
+gauge-field average behaves as e -i, cp2 where c
+is a constant. In this case the contribution of large        III. LATTKE QUANTIZATION OF GAUGE FIELDS
+loops is heavily suppressed and there are no free
+quarks. [The case of nearby quark-antiquark pairs                       A. Classical action on a lattice
+as in Fig. 6(b) is special —in this case large y —y'
+                                                            In this section the gauge-field action (space-
+is unimportant due to cancellation between the
+                                                         time integral of the Lagrangian) will be defined on
+quark path and the nearby and oppositely directed
+                                                         a discrete lattice with spacing a in Euclidean
+antiquark path. In this case the double integral
+behaves as P, not P', but in this case there are         space-time. The simplest way to proceed is to
+no isolated quarks. ]
+                                                         consider a continuum action, substitute finite-
+                                                         difference approximations for derivatives, and
+   In the strongly coupled lattice gauge theory de-
+scribed in later sections, the gauge-field average       replace the space-time integral by a sum over the
+of exp[igf&A„(x)ds" ] behaves as ex(ipc'2), where 2
+                                                         lattice sites. However, the result of this is an
+is the enclosed area of the loop. This heavily sup-      action which is not gauge-invariant for nonzero r~.
+presses large loops, such as in Fig. 6(a), where         Because of the vagaries of renormalization this is
+                                                         likely to mean that the quantized theory still lacks
+A is of order P'. One can think of one factor P as
+being roughly (x')'~', the other P as being analo-
+gous to a mass multiplying {x')"'. Since      P-~  as
+x- ~, the quark-antiquark threshold is at infinite
+mass.
+  In all these calculations one can have a large
+loop if there is a nearby vacuum loop (Fig. 7). In
+this case one always gets   e"   behavior. For ex-
+ample, in the strong-coupling case the relevant
+enclosed area is the area between the two loops
+which is proportional to the perimeter P provided
+the separation of the two loops is fixed indepen-
+dently of P. This is in accord with Schwinger's            FIG. 7. Quark-antiquark     loop with nearby vacuum
+picture. While an isolated mell-separated loop           loop.
+                                        CONFINEMENT       OF QUARKS
+
+gauge invariance in the limit     a-0(if such a limit          ~n P     a~+ff 9
+exists). The alternative is to formulate gauge in-        In the action A&, the field B„„acts like an angular
+variance for a lattice theory, and tinker with the        variable: A& is periodic in B„„with period 27t.
+action so that it is gauge invariant for any a. This
+                                                          The free gauge-field action will be defined to pre-
+alternative will be pursued here.
+                                                          serve this property. This does not mean that
+   For convenience a charged Dirac field g coupled
+to a single gauge field A„. will be discussed in de-      A„„ is an angular variable in the continuum limit.
+                                                          Owing to the relation (3.6), A„„becomes an infin-
+tail. Generalizations to non-Abelian gauge groups         itesimal angular variable A„(x) for a-0; such a
+will be noted later.                                                                              -~
+                                                          variable has the range      &A„{x}&~ without any
+   On the lattice the fields are g„, g„, and A„„,
+                                                          periodicity.
+where n is a four-vector with integer components
+                                                            A gauge-invariant           lattice approximation   for
+referring to points on a simple hypercubic lattice.
+                                                          ~p+v —+vA p ls
+A simple action on the lattice for the Dirac field
+(ignoring the gauge field for now) has the form               F„q„=(A„, p, —A„, —A„,„- q + A„„)/a .                   (3 7)
+
+    A~ = -a'       m, y„y„                                It is convenient to define a rescaled form of
+                                                          Ert PV   ~
+
+
+
+
+        +aaQQ0„yp(4, +p —0, p),                  (3.1)        f„yv = +g+n pu
+                                                                       = &„P +&„+P,V —&,+u, P —&„V ~
+where m, is the bare mass; P. is a unit vector a-
+long the axis g; ar, „replaces the space-time in-         A simple l.attice action for the gauge field which
+tegration of the continuum theory, and (g„„„              preserves periodicity is
+ —g„„")/2a replaces Vj. There is no over-all
+                                                                        1
+factor of i due to the Euclidean metric. A gauge                                        rt   PV                        (3.9)
+                                                                                nPV
+transformation on the lattice can be defined as
+follow-".                                                 In the continuum limit,              f„„,-0 due to the factor
+                                                 (3.2)    cP in the definition of            f„„„.Thus for small a, one
+                                                          can write
+
+                                                                                                       .f. ——-
+                                                 (3.3)
+                                                               Ae=              z~ (I+~i. &.            &.
+           (y„,p -y „)/a,
+    A„„-A„„—                                                                2
+                                                                                nPV
+
+where g is the coupling constant and y„ is arbi-          The constant term is irrelevant. The linear term
+trary. The terms g„g„,p and g„&„p are not in-             in f„„,is 0 because          f„„„
+                                                                                    is odd in the indices p.
+variant to this transformation; the corresponding         and v. The quadratic term gives
+gauge-invariant expressions are g„g„,„-
+xexp(tagA„~) and $„$„pexp( fagA„p g). -Thus, a
+                                                               A~= -~a          ~ F„„v
+                                                                                nP&
+                                                                                             2
+                                                                                                                  (3.11 }
+gauge-invariant form for Av is
+                                                          which  is the conventional gauge-field action in a
+                                                          lattice approximation.    The terms involving
+         ff
+                                                          f„„,', f„„„',etc. all   vanish for a —0 even after
+    — a'P m, g„t) „.                              (3.5}   removing a factor a' to convert               g„
+                                                                                                into an inte-
+                                                          gral.
+It is convenient to define                                  The full action may now be written
+
+
+    A=-cg $„g„+Kg+ ($„y„g„,pe' » —$„,gy„g„e 'e»)+,
+                                                 1
+                                                   p g e'~vU,                    PV
+                                                                                                                      {3.12)
+               n             n                                              n
+
+
+
+
+with e=moa', K=a'/2. This action reduces to the                                       B. Quantization
+usual continuum action for       a-0;
+                                    for finite a it is
+gauge invariant and periodic in the gauge field.            The problem of principal interest here is the
+Note, however, that the continuum limit is a              quantization of the gauge field. Therefore, the
+classical limit in which the lattice variables g„,        gauge field v ill be quantized by itself to start with.
+     and A„„approach continuum functions Q(x),            Later the quantization of g will be discussed. At
+$(x), and A„(x) with x=na. The continuum limit            the end of this section the generalizations to non-
+of the quantized theory is much harder to discuss         Abelian gauge theories will also be described.
+owing to renormalization problems.                          The quantization of the lattice gauge theory will
+                                              KE NNE T H G. WILSON                                                    10
+
+be carried out in two steps. The first step will
+be to define a lattice version of Euclidean vacuum
+expectation values, starting from a lattice ver-                                           +
+sion of the Feynman path integral. The second                                          +   +
+step will be to define a quantum theory on the lat-
+tice, which will allow the introduction of a real
+time variable and the definition of particle states                                         (0,0) (I,O)
+and scattering amplitudes.     In both cases the lat-
+tice provides an ultraviolet cutoff and there is no
+Lorentz invariance. Lorentz invariance can only                             FIG. 8. Example of a lattice path I'.
+be achieved in the limit a (lattice spacing)-0, if
+at all, and in practice this is a difficult limit to
+evaluate.                                                          finite lattice volume), but these divergences are
+  As discussed in Sec. I, one would like to calcu-                 normally removed by the division by Z (this divi-
+late the gauge-field average of exp[ig)A„(x)ds" ]                  sion is equivalent to removing all vacuum loops
+weighted with the gauge-field action. On a lattice                 in perturbation theory).
+the line integral becomes a sum over a closed                         One can define more conventional vacuum ex-
+path P on the lattice (see, e. g. , Fig. 8). The sum               pectation values in a similar manner. For in-
+has the form:    ig  (+)B„„, where a particular B„„                stance, one can define a propagator. In the ab-
+
+
+
+
+                                                                                ',
+is present in the sum if the path connects the sites               sence of a gauge-fixing term it is awkward to de-
+n and n+P (-B„„appears if the path goes from                       fine a propagator for the gauge field 8„„itself;
+n+P to n)                                                          instead one can define a gauge-invariant propa-
+   On the lattice, an average over all gauge fields                gator as
+involves integrating over all values of the 8„„for
+all n and p, . Normally one would have integrals
+over an infinite range: -~&B„„&~,but because
+                                                                   D„„,=Z                      da
+
+of the periodicity in J3„„ there is no point to in-
+tegrating over more than a single period. Thus                                  xexp   if„„,—  if„„+, ~ e   muP
+the lattice version of the gauge-field average is
+                                                                                                                   (3. 15)
+                                                                   This is a propagator for the operator    e' ~»; it is
+                                                                   defined only for the lattice points n of a Euclidean
+                                                                   space-time lattice. If the lattice spacing is a, this
+                 xexp i   Q(+)B„„+,
+                          p     2g  Q e'~m                 v       means the propagator is defined only for imag-
+                                              npv                  inary times of the form in, a, where n, is an in-
+                                                         (3.13)    teger.
+                                                                      A theory defined only for discrete imaginary
+                                                                   values of the time leaves much to be desired.
+                                                                   Fortunately, one can generalize the theory to de-
+    z=   IIII zz„„exp,
+         m   u      . 2g
+                  -n'
+                         P            yIP &
+                                              '
+                                                    ')             fine a Hamiltonian for a quantized theory. The
+                                                                   particle eigenstates and scattering amplitudes of
+                                                         (3. 14)   the theory can then be obtained, in principle, by
+  Note that no gauge-fixing term has been added                    diagonalizing the Hamiltonian.    The Hamiltonian
+to the action. The finite range of B„„makes a                      mill be defined using the transfer-matrix formal-
+gauge-fixing term unnecessary.    In continuum                     ism. Only a brief discussion of the transfer-ma-
+gauge theories where A„(x) has an infinite range                   trix approach will be given here. For a review' of
+[-~ &A„(x) & ~] a gauge-fixing term is essential                   the ideas see Wilson and Kogut. ' A detailed dis-
+to have a convergent functional integral. The rea-                 cussion including approximate calculation of sin-
+son for this is that the volume in path-integral                   gle-particle energies and scattering amplitudes
+space generated by all possible gauge transforma-                  in a simple scalar field theory is given by suri. '
+
+a convergence factor in this volume.      "
+tions is infinite; the gauge-fixing term provides
+                                             In the lat-
+                                                                      Consider the expression for Z. Introduce finite
+                                                                   bounds on the lattice coordinate n„say
+tice theory the total volume of integration is finite                                                           (3.16)
+if the lattice itself is of finite extent; no conver-
+gence factor is required. For a lattice of infinite                Introduce periodic boundary conditions (see be-
+extent there are divergences due to the infinite                   low'}. Then one can write Z as the trace of a ma-
+number of integrations (in other words, the in-                    trix V, more precisely
+                                               CONFINEMENT      OF QUARKS                                       2451
+10
+
+       Z=TrV '                                       (3. 1 t)   of Eqs. (3. 18)-(3.21). One must remember that
+                                                                the variables 8-„p are integrated out in the de-
+This formula is made possible by the fact that                  finition of V. This means that in forming the com-
+each term in the action A involves no more than                 plex conjugate of V one can also make the change
+two adjacent values of n, .                                     of variable B-„„--B-„.] Hence V has a complete
+   To set up the matrix V, one must first under-                orthogonal set of eigenstates 4 and eigenvalues X.
+stand the space on which it acts. The space used                The Hamiltonian H is now defined as follows: The
+here is the space of all functions P(Bn;) (periodic                                0
+                                                                eigenstates of are the eigenstates of V; the
+in each B-„, with period 2m), where the index i                 eigenvalues of H are given by
+runs from 1 to 3 only, and the lattice variable n
+has only three components (n„n„n, }. The matrix                    F. —     -a   lr&,                          (3.23)
+ Vwill be defined as a function of two sets of argu-            where   A. is the corresponding eigenvalue of V. The
+ments, say B-„; and B-„',, these two sets of argu-              reason for the factor a ' will be evident shortly.
+ments referring to the space-time fields B„; for                The reason for using the logarithm is so that the
+two adjacent values of n, . Matrix multiplication               energies of multiparticle scattering states will be
+of two V's involves integrations over a set of                  the sum of single-particle energies (see suri').
+                        j.
+variables (B-„, Define V as                                        A problem arises with this definition if V has
+                                                                any negative eigenvalues A, . If this were to happen,
+                                                     (3.18)     H would have complex eigenvalues.       This did not
+                                                                happen in the case studied by suri'; whether it
+  The quantity Uas written out below looks com-                 happens here the author does not know; this ques-
+plicated, but all it is is that part of the action A            tion must be studied further. Even if V has nega-
+referring to a given nearest-neighbor pair of val-              tive eigenvalues, they may be irrelevant in the
+ues for np; terms in A referring to a single value              limit a-0 if such a limit exists.
+of n, are divided equally between the matrices                     The definition (3.23) means that
+connecting np to n, +1 and np to n, —1. The result
+ 1s
+                                                                                                               (3.24)
+                                                                This means Vis the operator which propagates a
+       U=,
+        4+/ g Pg
+                 (e'~-„„+e'fn~~)   ll gy
+
+
+
+
+                             (e nio+ 8' noi),
+                                                                                                            „
+                                                                state through an imaginary time ia. It is a con-
+                                                                sequence of this that the propagator D„„, is a
+                                                                vacuum expectation value for imaginary time inpa
+          +
+              2g   &ggi
+                    n
+                                                     (3.19}
+                                                                in the theory with Hamiltonian H. For proof of
+ where                                                          this statement see Refs. 5 and 6.
+                                                                   The lattice quantization procedure can be ex-
+       f n, , =Bn, +Bn+f, , —Bn+f, ; —Bop            (3.20)     tended to non-Abelian gauge theories. This is
+                                                                done as follows. In place of the single variable
+ and
+                                                                8„„, one has a set of variables B„„where n is an
+       f.;o=B. +B";,o-B-. —B       I
+                                       ;   o    ~     (3.21)    internal index. For each n and , B„„is to pa-
+                                                                                                   )L(,
+
+
+
+  With the definition of V given here, the trace
+                                                                rametrize an element h„„of the gauge group. In
+ Tr V'" ' is easily seen to reproduce all the inte-             place of exp(iB„„) one substitutes U(b„„), where U
+ grations involved in the equation for Z, and the                is the unitary matrix representing 5„„ in the quark
+                                                                representation.    The product $„y„p„,„- exp(iB„„) is
+ sum of the 2K+1 exponents Ureproduces the ac-
+ tion A except for some additional terms coupling
+                                                                replaced by g„y„U(b„„)$„+„".A gauge transforma-
+                                                                 tion is defined by a set of group transformations
+ the boundary np=N to the boundary np=-N to
+ achieve a periodic structure.                                  y„; under these transformations
+    Note that the 0 components of B„„have received                                                              (3.25}
+ special treatment. This is because there are no
+ terms in A involving B„p for more than one value                                                               (3.26)
+ of np; this makes it possible to include integra-
+ tions over B~ in the definition of V rather than in
+                                                                             yn ~np Xn+   j                     (3.2'I)
+ the definition of matrix multiplication.                           ~nil,
+
+    The matrix V is used to define the quantized
+ theory. Briefly, this is accomplished as follows.                      U(&.„)—U(J.) U(&.„)U'(y. +„-),          (3.28)
+  Vis a Hermitian matrix, i.e. ,
+                                                                 where y „b„„y„+p ' is computed according to the
+        V(B, B'}*= V(B', a} .                         (3.22)
+                                                                 multiplication law of the group. A simple gauge-
+ [This result can be verified by close examination               invariant action for the gauge field is
+                                                        KE NNE T H G. WILSON                                                 10
+
+                                                                          the bracket (    ) must vanish for all products of
+           1
+               2   ~ Tr
+                   npv
+                          ~A(   np   n+   j u~n+0   p
+                                                        1
+                                                            nv            j's and p's, except the product containing all
+                                                                          possible $'s and $'s. For example, suppose there
+                                                                 (3.29)   are two lattice sites 0 and 1, and g„and $„are
+where the unitary transformation       UA is taken from                   single component fields. Then the brackets must
+the adjoint representation of the group. (Any rep-                        be
+resentation will do as wel1. .) In the classical con-
+tinuum limit, b„becomes an infinitesimal group
+transformation      B„„=gaA"„(na} with A~ fixed as
+a-0]; in this limit one can show, with some ef-
+fort, that A~ reduces to the standard continuum                                                                           (3.32)
+Yang-Mills action. %hen the non-Abelian theory
+is quantized, the integrations over 6 „are group
+integrations over all elements of the group. These
+are compact integrations (for compact groups} and                              ~$0400141&
+no gauge-fixing term is required.
+   Since qua, rk binding can be illustrated using                         where 1 is a constant which was chosen arbitrari-
+Abelian theory, the non-Abelian theory will not                           ly. This definition of the bracket operation satis-
+be studied further.                                                       fies translational invariance: for example,
+   Finally, the quantization of the Dirac field mill
+be discussed. It is convenient initially to quantize
+the Dirac field in an analogous manner to the
+gauge field. The only problem tha. t occurs is to
+                                                                          because the terms multiplying the p's are all 0.
+define "integration" for a Fermi field. This can                          Note also that the a. nticommutation rules mean
+be done. "                                                                that, for example,
+   The property of the integral that is crucial for                            (&O~o~i&i& =   -1 .
+quantization is translational invariance in the in-
+tegration variable. For example, when quantizing                          (In a, nalogy to the scalar case, one requires g, $,
+a scalar field Q on a lattice the field averaging                                     not fog=1 —44o )
+involves the integral f"„dP„whi ch has the trans-                           One can now define the Feynman path integral
+lational invar iance                                                      on a lattice for the complete gauge theory in-
+                                                                          cluding the Dirac fields. For example, the cur-
+                                                                          rent-current propagator on the lattice is
+                                                                                                          fr
+
+
+
+                                     f
+for any integrable function and any constant J„.                                               m     V   -ff
+It is this translational invariance that makes the
+                                                                                                                         (3.34)
+Feynman path integral provide a realization of
+Schwinger's action principle (see, e.g. , Ref. 12                         where A is the full action of Eq. (3.12) and
+for further discussion). Analogously one needs
+to define an integration over Fermi fields with                                                                           (3.35)
+the same translational invariance. Stated ab-
+stractly, one wants to define a bracket operation                           This formulation of the path integral is different
+(   ) defined on functions of purely anticommuting                        from the formulation discussed in Sec. II. Hom-
+Fermi fields g„with the property                                          ever, one can easily derive a lattice form of the
+                                                                          path integrals of Sec. II from the present expres-
+                                                                 (3.31)   sion. The procedure is to expand Eq. (3.34) in
+where q„and q„are anticommuting c-numbers                                 powers of K, where K is the coefficient of the
+(these have been introduced by Bchwinger}. The                            nearest-neighbor coupling terms $„y„y„,-„e's "&
+bracket operation should produce a number for                             etc. This nearest-neighbor coupling term can be
+every function f; it should also be a linear opera-                       represented diagrammatically by a line from the
+tion. Thus for a finite lattice it is sufficient to                       site n to the site n+ p, . The expansion is best
+specify the bracket (    ) for all monomials in the                       described by studying an example of a term from
+4„and g„. Because of the anticommutation rules,                           the expansion of the numerator of Eq. (3.34),
+g„2 and P„' vanish (more correctly, y„' and $„2                           which will now be discussed. An example of a,
+vanish where 4 and $„„are any component of g„                             term in the expansion is represented diagram-
+and g„), therefore, there are only a finite number                        matically in Fig. 9. The expression for this term
+of possible monomials. It is now easy to see that                         is
+10                                                                    CONFINEMENT                     OF QUARKS
+
+
+        If'    V
+                         Tl
+
+
+                               eee.
+                                             )                       . .. .e" '&,.r "'2„r,r„e "
+                                                 2'&r„r, «, 2. r «-0. r.          &                   tr e                                         . "- e"'r =0
+                                                                                                                                           1'„r., r, e
+
+                                                                                                                                                                       (3.36)
+(D for diagram), where the four lattice sites involved are (n„n, }=(0, 0), (1, 0), (0, 1), and (1, 1); the values
+of n2 and n2 are constant and have been suppressed in the notation of Eq. (3.36). The action Ao omits the K
+term, and is
+
+      Ao=-cg q„q„+ 2g 2
+                         n
+                                                        g g e'"o. .
+                                                        n       PV
+                                                                                                                                                                       (3.37)
+
+The calculation of D has two parts, one being the integration over all gauge fields 8„„,the other being the
+calculation of the g, g bracket. These are independent calculations, i.eer D factors into DODs. The quanti-
+ty D~ is
+                                        Ir
+                                                                                                             1              sf
+      Ds           IIII
+                    m         V     -7l'
+                                             dD             p    (DOo, o++ o, 1       D01.0       00. 1}         2
+                                                                                                                      aPV
+                                                                                                                                                                       (3.38)
+
+This is an example of a guage-field average of the exponential of a line integral over a closed loop, the
+loop being the loop of Fig. 9. The g bracket calculation can be factorized further into separate bracket
+calculations for each lattice site, since A, contains no terms involving   or $ and coupling different lattice                   &}&
+
+
+
+sites. Consider only the four lattice sites on the loop, for simplicity. By moving the g's around some
+(using the anticommuting rule) the bracket becomes
+
+      (4.y.        &},  . """&t„y,4„e ""'"T&„y„k„&t„ydl., ""'"&I., k.. "-'-&I'.y .4, ) .
+                         e                                                                    e              y,       e
+
+
+
+To make a product of all possible (I&'s and &1&'s                                                      if the nearest-neighbor couplings combine to form
+means one must have products of all possible g~'s                                                      closed loops (the lattice site at the endpoint of an
+and $00's, all possible &I&»'s and $0, 's, etc. In sum-                                                open line would have an extra &)&„or $„so the
+mary the complete bracket may be written as a                                                          bracket at n would give 0). The bracket calculation
+product of four separate brackets. Define                                                              for a closed loop gives a trace involving K times
+                                                                                                       a y matrix for each line in the loop and D's for
+      DO =(&t10e                    "        10T&'10)                                 (3.39)           each lattice site in the loop (except the points n
+                                                                                                       and 0 where there are currents). The average
+                                                                                      (3.40)           over gauge fields involves an exponential of a sum
+Both D& and D&„are matrices in spin space due to                                                       of 8„„'s around each loop. There can be any num-
+the spinor indices implied for j», ip, O, g„, and                                                      ber of loops.
+     The full bracket is simply
+                                                                                                                     IV. STRONG-COUPLING APPROXIMATION
+      D~ ——-K                 Tr(DOy, DOoyOD'Oy, DO „yo) .                            (3.41}
+                                                                                                         The gauge field average Z(P) which determines
+The matrices                      D~&    and D&„are easily determined.                                 whether quarks are bound was defined on a lattice
+For example,                      D& explicitly             is                                         in Sec. III (Eq. 3. 13). There are two limits in
+      De, e= &„,e p                              -eg 2„r&e„r) e„e .                   &R.   eel        which this average can be calculated. The most
+                                                                                                       interesting limit is the strong-coupling limit
+The exponential can be expanded in powers of c;                                                        g-~.     This is the limit which exhibits quark bind-
+assuming the spinors have four components                                                              ing. A strong-coupling expansion will be derived
+only the c' term can produce a product of all four                                                     in this section.
+&)10's times all four $, 0's; the result is
+
+      D&0. 8             ~a B~
+(the minus sign comes from the convention that
+the bracket is positive when &J'108 appears to the
+left of $102). A similar calculation gives
+                    2
+         t(v                                                                          (3.44)                                           0
+                                                                                                                             (o, o)
+     The results of this example are easily general-
+ized.    A term of general order K' is nonzero only                                                                  FIG. 9. Elementary       square on the lattice.
+                                                          KE NNE T H G. %'ILSGN                                                                                 10
+
+   The strong-coupling expansion will be the basis                             Expanding       in powers of 1/g', the zeroth-order
+for a reformulation of the gauge-field theory as a                             term is
+string model. This will also be explained in this
+section.
+   Consider specifically the numerator of Eq.
+                                                                                   f'„'l(P)=
+                                                                                                    IIII
+                                                                                                     m        v
+                                                                                                                          dB„, exp i
+                                                                                                                                         L
+                                                                                                                                             P (+)B„„.
+                                                                                                                                             P
+(3.13), to be denoted f„(P):
+                                                                               This term vanishes, since for a, ny B„„which ap-
+                                                                               pears in g~, there is an integral J",dB„„
+                                         1                                     xexp(s iB„„)which is zero. Thus one must seek
+                 x exp! iQ
+                               P
+                                    (a)B„„+, Q e'f~~~J .  nP. V                higher-order terms in g ' which cancel the B„„
+                                                                       (4.1)   in the line integral. The first-order term is
+
+
+
+    I~."(P)   =, IIII  m   v       -7
+                                        dB   „g   ~7;0
+                                                         exp i    QP (s)B„„+if„,
+The quantity   f, „,
+                   is itself a line integral of the gauge field; it is the line integral a, round a. square originat-
+ing at the lattice site l of size & (unit square). The integral for f~„'!(P) will vanish unless it is
+                                                                  „,
+possible to find a unit square such that f, cancels completely the line integral Q~(+)B„„. This
+is possible only if the path P is itself a unit square. Otherwise the first-order term vanishes and one
+must study the terms of order g or higher.    '
+  The term of order g '" has the form
+
+
+
+
+The only nonzero terms in this sum are those for                               macroscopically, and there will be no quarks
+which                                                                          among the final-state particles.
+                                                                                 Consider higher-order terms in the expansion
+                                                                   (4.5)
+                                                                               of I~(P) for given P. There are many such terms
+                                                                               because there are rainy surfaces with boundary
+[See Eq. (3.8) for the definition off„, in terms of
+B„„,J This equation can be understood geo-
+                                                                               P. In particular, there a, re many ways to combine
+metrically. Each f&„corresponds to a square of                                                 f
+                                                                               subsets of 's to add to zero so such subsets can
+                                                                               be added to any minimal sum of f's which forms
+size a on the lattice. For this sum to vanish the
+set of squares defined by f, ,       f, „, „. .
+                                              must
+combine to ma, ke a surface with boundary P. (To
+                                                                               a surface with boundary P. The simplest example
+                                                                                               f
+                                                                               of a set of 's which add to zero are the set of 's                           f
+                                                                               corresponding to the six faces of a unit cube.
+                       „,
+be precise, each f, corresponds to a line inte-
+                                                                               Written out, this gives
+gral around a square, and when these squares are
+joined to make a surface the line integrals must                                                   Jj n+ff,
+                                                                                                                                 '           f
+                                                                                                                    v +         J nip, vm' +fnffp
+                                                                                                                                     P
+                                                                                       fnp v                  If,     ~fnv 7f                       fn+v, vfp
+cancel along all internal lines of the surface. The
+line integrals along the boundary P of the surface                                                                                                         (4. 6)
+must run in the opposite direction to the original                             which is easily checked using Eq. (3.8). [Equation
+path P. ) See Fig. 10.
+   For a, given path P the lowest nonzero order in
+I„(P}is determined by the minimal area A en-
+closed by P, the area A being the area of any sur-
+face built of unit squares on the lattice with
+boundary P. Then j~(P)-(g')                  " ',
+                                        apart from a
+numerical factor.
+   This is the result promised in See. II: The
+gauge-field average f„(P) behaves as
+exp(-A(lng')/a'J, i.e. , exponentiaHy in the area
+enclosed by P. Hence, according to the argu-                                      FIG. 10. Filling of enclosed area of path I' by elemen-
+ments of Sec. II, quark pa, ths will not separate                              tary squares.
+                                                                                             -"
+(4. 6) is the lattice analog of the equation            the quark loops. The sum of the g expansion is
+elJ vm o~  P (x} —0 ]                                   a sum over all such surfaces. This is precisely
+  Let A(P) be the minimal area as defined above         the structure appearing in string models: com-
+enclosed by P. Since one can place a unit cube          bined sums over quark loops and interpolating
+anywhere on this minimal area, it means that            surfaces. However, the loops and surfaces of the
+there are roughly A(P)/a' more terms of order           gauge-field theory are defined on a lattice where-
+g "(g') "~ }I' in the expansion of I„(P) than           as the loops and surfaces of the string models are
+there are terms of order (g') "       ''.
+                                       [One can         defined on a. continuum. It may not be easy to de-
+place unit cubes anywhere in space, not just on         rive quantitative relations between the two types
+the minimal surface; but when one divides I„(P)         of surfaces.
+by Z all disconnected terms cancel, as usual. J
+This suggests that the 1/g' expansion is not very
+                         -
+useful in the limit A(P) ~, which is the limit of
+                                                                  V. VfEAK-COUPLING APPROXIMATION
+
+interest for quark binding. However, experience           The weak-coupling approximation will be dis-
+with related problems suggests that I„(P) is not        cussed briefly, leaving many questions open. Only
+the appropriate qua, ntity to expand; instead one       the pure gauge field will be discussed. Consider
+should try writing                                      again the expression
+    I(P) =Z 'I„(P)
+                                                        4(P}=    IIII
+            (gz)-A(P} -c(P.g }
+                                                                                          Q (*)B„„,
+                                                                                                2k" g
+                                                                                  '                     1
+                                                                                                      e''
+and expand c(P, g') in powers of g    '
+                                     instead. One
+                                                                          xexp,       ~
+
+                                                                                                            np v
+would expect c(P, g'} to be dominated by a term
+proportional   to A{P), say
+     c(P, g') =A(P)f( g ')+ 0(P)
+                                                        Suppose the integration variables were f„„, rather         ,
+                                                        than B   „.For small g, only small values of f„„,„
+(where P is the length of the path P). The crucial      would be important in the integral, in order that
+question is the nature of the series for f(g ').        Bee' ~~& be near its maximum value 1. One would
+Past experience with similar types of expansions        then expand:
+(namely, the high-temperature     expansions of
+statistical mechanics: see, e.g. , Ref. 13) suggests                                                                   (5.2)
+that f(g ') will have a convergent expansion at
+least for g ' less than a critical value g, '. How-     Kith this approximation one could extend the limits
+ever, no calculations have been done in the gauge-      of integration on f„„,from +v to +~, with negli-
+field theory for f(g ') as yet.                         gible error; one would then have a set of Gaussian
+  Consider the complete expansion of I(P). Each         integrals to evaluate.
+nonzero term in the expansion corresponds to a            In practice the integration variables are the
+surface with perimeter P. The complete expan-           B„„not the f„„, However,         one can make a.
+sion corresponds to a sum over all possible sur-        change of va, riable from the        8,
+                                                                                             to the         f„„,
+                                                                                                            It is
+faces with given perimeter P. "All possible" sur-       not possible to eliminate all the 8 „by this trans-
+faces include surfaces which intersect themselves       formation, a, nd not all the variables f„„, , are in-
+(to take into account terms where a given   f„„,  ap-   dependent. Nevertheless,      the transformation is
+pears several times in the sum
+    ..„,
+                                     .
+                                   f.. ,
+                                      , ,+              sufficient to make I„(P) calculable for small g'.
++f.      ,). There is a weight factor for each sur-       To ma, ke the change of variables precise, con-
+face, aside from the power of g ' determined by         sider a system of flnlte size (1 Pl, " I}}t) w3. th
+                                                                                                 ==-
+
+
+the area of the surface. For a simple surface,          periodic boundary conditions. Then one can
+the weight factor is 1; the weight is more compli-      change variables from the           8,
+                                                                                           to a subset of the
+cated for self -intersecting surfaces.                  f„„, plus some gauge transformation variables
+   Thus, the strong-coupling expansion for the          Q„, plus four extra variables („, a. s follows:
+current-current propagator has the same general                            „n„n,
+                                                          (i) For n, wI}li, n      arbitrary, .B„~ (}}.=1, 2, 3)
+structure as in string models of hadrons. One is        is replaced by   f„„,  For B„„, one writes
+actually dealing here with a double expansion. An
+expansion in the coefficient A. (appearing in the
+Dirac field action) was needed to define quark          and   replaces   8„, by p„. This is the essence of
+loops on the lattice; the sum of the K expansion        the transformation from J3„„ to f„» for p. +0 and
+is a sum over all possible quark loops. The g '
+expansion is needed to define surfaces filling in
+                                                        from B~ to 5„. To complete the transformation
+                                                        one must discuss the surface no                =¹
+2456                                      KENNETH        G. %'II SON                                          10
+
+  (ii) For no=%, n, 0N, and n2 and n, arbitrary,
+B„„(l),el) is replaced by f„». B„, is replaced by
+(t}„, with                                                            + (linear combination   of   f„„),   (5.5)
+    B„~= Q„+i                                    (5.4)
+                                                           i.e., the P variables   define a gauge transforma-
+   (iii) For no = n, = N, n2 o N, and n, arbitrary,        tion and  f, represents   a translation of some of
+B„„(p,o2) is replaced by f„». B„, is replaced by           the B's. It is easily verified that the integrand
+p„, with B„,=f„„-—ft}„.                                    of Z„(P) involves only the f's: It is independent
+  (iv) For n, =n, =n, =N, and n, cN, B„„(y,+3}is           of both the Q's and g„(the latter does not appear
+replaced by f„», B„,by 4)„, where B„,= Q„„- —4)„.          because any closed path I' has as many -B„,
+  (v) For no=n, =n~ =n, =N one writes B„„=t„with           terms as +B„„terms on the sublattice n, =N}.
+f„being the new variables. One also sets $„=0              Hence the Q„and g„ integrations can be computed
+for this value of n.
+  The variables f„» which are not integration
+                                                                            f
+                                                           triviaUy. The integrations are nontrivial be-
+                                                           cause of the constraint (4.6).
+variables (for example, f„„„with p, a0 and vs0,               What one wants to accomplish is to reduce the
+for n, wf(f) can be expressed in terms of the inde-        lattice theory for small g to something like a con-
+pendent f„„„variables using Eq. (4.6); neither             ventional free gauge-field theory. This means
+the P„nor &„ appear in these expressions.                  restoring the B „as the integration variables, but
+  When an arbitrary B „ is expressed in terms              with infinite limits of integration, and with a
+of the new independent variables, one finds (g,            gauge-fixing term included. Suppose, for example,
+is present only if m, =X):                                 one starts with
+
+
+
+                                                                                                           (5.6)
+
+
+
+where the o( term is a lattice version of a (V„A„)         K or both for each unit lattice spacing of separa-
+gauge-fixing term. This integral can be computed           tion}. This corresponds to the existence of masses
+by explicit Gaussian integration methods rather            much larger than the cutoff. [The usual rule is that
+more easily than the f„„„integrations for I~{I'}.          if a propagator falls as e '~ ~ for x large then the
+In addition, 1„(P) can also be reduced to an inte-         lowest mass intermediate state contributing to the
+gral over a subset of the f„„„,using the same              propagator has mass I/$. If the propagator be-
+change of variables as for I„(P}. The result is            haves as g '" for distances x=na, then the cor-
+different in this case due to the Q. term which cou-       responding mass is 2(lng}/a. This is larger than
+ples the P's to the f's; also there is no conver-          the cutoff momentum v/a if g is large. ]
+gence factor for the g integration. To make I„'(P)            Thus, one is interested in practice in values of
+well defined and equal to 1„(P), one must (a) put          g and Ksuch that the correlation length g is much
+in a convergence factor for the & integral, i.e., a        larger than the lattice spacing a, in order that the
+term ——,'P(Q„B„„) and (b) add a quadratic form in          corresponding mass is much less than the cutoff.
+    f
+the 's to compensate for the result of the Q inte-         One knows from statistical mechanics that large
+gration of the gauge-fixing term. The author has           correlation lengths are associated with second-
+not carried through this calculation; but since the        order phase transitions (critical points). Thus
+net result is still that Z„(P}=I„'(P) is a Gaussian
+integration in the B's, the result will presumably                                                 "
+                                                           one seeks special values g, and K, for g and K at
+                                                           which there is a phase transition.
+be similar to the conventional free-field calcula-            It has already been argued that there are two
+tion reported in Sec. II.                                  distinct phases for the gauge field, a strong-cou-
+                                                           pling phase for large g which binds quarks, and a
+                VI. PHASE TRANSIONS                        weak-coupling phase for small g which does not
+                                                           bind quarks. The arguments given neglected quark
+  In the strong-coupling limit (g-~, K-0) the              vacuum loops, which is reasonable if K is small.
+gauge theory is far from being Lorentz-invariant.          There should be a transition between these two
+More precisely, since the action was defined on a          phases which would occur at a critical value g,
+Euclidean metric, it is Euclidean invariance that          for any g and any small value of K. This is one
+is missing.  In the strong-coupling limit, vacuum          possible phase transition; it is this transition
+expectation values decrease rapidly at separations         which was discussed in Sec. II. But, as w'ill be
+of only a few lattice sites (there is a factor g 2 or      argued below, this is probably a first-order tran-
+10                                  CONFINE ME NT OF QUARKS
+
+sition rather than second order.                       sociated with a mass approaching 0. In simple
+   Suppose one wishes to construct a model of          statistical-mechanical problems one can generate
+strong interactions using the lattice theory of this   12 terms or so in analogous expansions. The ex-
+paper with the gauge group separate from ordinary      pansion for the lattice theory of this paper is more
+SU(3) &&SU(3) symmetry. Then the gauge fields          complicated, but one could hope to generate maybe
+would all be SU(3) X SU(3) singlets, while the quark   6 or '7 orders with some practice. Series expan-
+fields would carry SU(3) &&SU(3) quantum numbers       sions require considerably more effort than mean-
+as well as gauge-group quantum numbers. A              field calculations; they apply mainly to propaga-
+little thought shows that in the strong-coupling       tars, being very awkward to perform on three-
+limit (g-~, K-O), SU(3) x SU(3) is an exact sym-       and four-point functions, and one must have a
+metry rather than a spontaneously broken sym-          clear idea of what one is trying to learn before
+metry. Varying g does not change this situation;       attempting such calculations. See Ref. 16 for one
+so one must hope that by increasing K one can          of the best series-expansion formalisms; see
+change the exact SU(3) x SU(3) into broken SU(3)       Ref. 13 for a general review.
+xSU(3). If this does not work one is free to intro-       The renormalization-group    approach is poten-
+duce additional terms into the quark field action      tially the most powerful and accurate method for
+in hopes of forcing a spontaneous breaking of          studying lattice theories near a critical point,
+SU(3) X SU(3). Suppose, for simplicity, that SU(3)     but at present the renor malization-group    tech-
+xSU(3) can be broken by increasing K. Then there       niques are too limited in scope to be applicable
+will be a phase transition at a critical value K,
+for K where one changes from exact SU(3) X SU(3)
+                                                       to the present problem. See Refs. 6 and 17.
+                                                          Return to mean-field ideas.             "
+                                                                                          The prototype
+to spontaneously broken SU(3) &&SU(3). If this         mean-field calculation is a calculation of the
+transition is a second-order transition then there     magnetization as a function of the external field
+will be a large correlation length for K near K„       for an Ising ferromagnet. I et s„be the spin at
+in this case the theory might be a realistic model     site n with values +1 only; let the interaction be
+of broken SU(3) x SU(3) for K slightly greater than
+K, (with g large enough to maintain quark binding).
+   In summary, the transition of real interest is
+                                                               =Kgb' s„s„.„-+hg s„,                                       (6. 1)
+
+a transition in K (or some other parameter intro-      where K is related to the spin-spin coupling and
+duced into the quark action) rather than g.            h is proportional to the external field. Then
+   Apart from special limits (g- ~ and K-O, or                         /
+
+
+
+
+g small) it is very difficult to solve the lattice         ,&I=Z '(s, exp           KP Q s„s„,„"+h g s„
+theory. It is especially difficult to solve the lat-
+tice theory near a critical point with a large cor-
+relation length. Various methods have been de-         where ( ' ) means a sum over all configurations
+veloped by statistical mechanicians to deal with       of all spins, and
+this problem. In the remainder of this section
+these methods will be discussed briefly. There             Z = exp         A                s„s„,„-+h       s„
+are essentially three approaches to consider:
+ (1) mean-field techniques, (3) series expansions,     In the mean-field approximation,      one assumes
+and (3) the renormaiization-group     approach.        that the spins s„,", coupled to s, can be replaced by
+   Mean-field techniques'5 are the simplest and        their average value M. As a result, the formula
+crudest methods for studying a critical point; in-     for M simplifies to a sum over s, only, namely
+variably they are the methods one uses first in                    '                 {2~~~+"~'0
+                                                           M =Z                                                           (6.4)
+studying a new situation. They are used to deter-                      $0=" 3.
+mine if there is a phase transition, whether it is
+                                                       with d being the dimensionality                  (3 usually) and
+first or second order, and to give rough estimates
+of the behavior near the transition. None of the           Z 0- ~          ~{2dK hf+h) sa
+results of a mean-field calculation are entirely                Sa=4 1
+
+trustworthy.    Examples of mean-field calculations    The result is
+will be given later.
+   An example of a series expansion would be the
+                                                           M = tanh(2dKM+h)                 .                             (6.6)
+expansion of the current-current propagator for        If 2dK&1 this equation has a unique solution for
+small momentum (momentum(&1/a) in powers of            M as a function of h; in particular, M = 0 for
+g and K, to high order ing ' and K. Dne then           h =0. For 2dK&1 the solution is multiple-valued;
+uses Pade-approximant techniques to look for           stability considerations show that one must choose
+ singularities in either g or K that wouM be as-       a solution with M w 0 when h = 0.
+2458                                             KE NNE TH G. WILSON                                                       10
+
+  In this approximation one has actually replaced                 M =0 for h =0. If g is small then there are solu-
+Q&s„- by 2dM, which is a good approximation if                    tions with M+0 for h =0, and stability considera-
+d is large. This is generally true of mean-field                  tions show again that the M+ 0 solutions are pre-
+theories.                                                         ferred.
+  An analogous  mean-field calculation can be per-                   In the magnetic case, one finds that the spon-
+formed for the lattice gauge theory. In this case                 taneous magnetization M goes to zero for 2dk-1
+a simple external field term has the form                         [from Eq. (6.6)]. However, the gauge-field case
+                                                                  never has a solution for h =0 with M small but
+    /gQ (e'~np + e 'en')                                          nonzero. Thus there is a first-order transition
+           np
+                                                                  at the value of g for which M changes from zero
+(this is to be added to the gauge-field action), and
+                                                                  to being nonzero.
+M can be defined to be the expectation value of                                                               -0
+e' 0~. The question is whether M is zero in the                      A nonzero value of M in the limit h     means
+                                                                  one has spontaneous breaking of the gauge-field
+limit h-0. In the gauge-field theory e' ou couples
+                                                                  symmetry. So for small g the theory shows spon-
+to a product of three other exponentials; as a
+                                                                  taneous breaking.
+mean-field approximation one replaces this prod-
+                                                                     A much more thorough discussion of the mean-
+uct by M'. The result of this is that
+
+M=&
+                                                                  Drouffe, and Itzykson.     "
+                                                                  field approximation has been given by Balian,
+                                                                                             A Hamiltonian formula-
+                                                                  tion of the lattice gauge theory has been given by
+                                                                  Kogut and Susskind. ' A clear review of quark
+                         2(d —1)
+                xexp               M'+h    (e' oI + e 'ao~)       confinement in the lattice theory is given in Ref.
+                                                                  20. Another formulation of the connection between
+                                                        (6.'1 )   strongly coupled gauge theories and string models
+                                                                  is given in Ref. 21.
+where d is the space-time dimensionality,            and
+
+       Z, =     exp, —1)M'+
+                        2(d
+                                     A    (e'so~ + e "o~)"                            ACKNOWLEDGMENTS
+
+                                                        (6.6)
+                                                                    The author has benefited from conversations
+The result of this is that                                        with many people in developing and especially in
+                 —                                                understanding the lattice gauge theory. Persons
+       f {d 1) M+&
+       M         2                              (6.9)             I am indebted to include       J.
+                                                                                              Bjorken, R. P. Feyn-
+                                                                  man, M. E. Fisher, D. Gross,         J.
+                                                                                                     Kogut, L.
+where f is a ratio of Bessel's functions. If g is                 Susskind, T. -M. Yan, and members of a seminar
+large the solution to this equation is unique and                 at Qrsay.
+
+
+
+
+*Work supported in part by the National Science Founda-           'S. Coleman   and   E. Weinberg, Phys. Rev. D 7, 1888
+ tion.                                                              (1973).
+ See, e.g. , J. M. Cornwall and R. E. Norton, Phys. Rev.           Y. Nambu,   in'Symmetries and Quark Models, proceed-
+  D 8, 3338 (1973); R. Jackiw and K. Johnson, ibid. 8,             ings of the International Conference on Symmetries and
+ 2386 {1973);J. Kogut and L. Susskind, iMd. 9, 3501                  uark Models, Wayne State Univ. , 1969, edited by
+  (1974); D. Amati and M. Testa, Phys. Lett. 48B, 227              Ramesh Chand (Gordon and Breach, New York, 1970);
+  (1974); G. *t Hooft, Nucl. Phys. B (to be published);            L. Susskind, Nuovo Cimento 6SA, 457 (1970); G. Konisi,
+  P. Olesen, Phys. Lett. 50B, 255 (1974); A. Chodos,               Prog. Theor. Phys. 48, 2008 (1972); P. Goddard,
+  R. L. Jaffe, K. J'ohnson, C. B. Thorn, and V. F.                 J. Goldstone, C. Rebbi, and C. B. Thorn, Nucl. Phys.
+ Weisskopf, Phys. Rev. D 9, 3471 (1974).                            B56, 109 (1972); J.-L. Gervais and B. Sakita, Phys.
+2J. Schwinger, Phys. Rev. 125, 397 (1962); 128, 2425                Rev. Lett. 30, 716 (1973); S. Mandelstam, Nucl. Phys.
+  (1962).                                                           B64, 205 (1973).
+ J. H. Lowenstein  and J. A. Swieca, Ann, Phys. (N. Y.)            R. P, Feynman, Phys. Rev. 80, 440 (1950).
+  68, 172 (1971).                                                   See, e. g. , E. S. Abers and B. W. Lee, Phys. Rep. 9C,
+4A. Casher, J. Kogut, and L. Susskind, Phys. Rev. Lett.             1 (1973).
+  31, 7S2 {1973);Phys. Rev. D 10, 732 (1974).                     ~~See, e. g. , F. A. Berezin, The Method of Second Quan-
+'A. suri, Ph. D. thesis, Cornell University, 1969 (un-              tization (Academic, New York, 1966), pp. 52ff.
+ published).                                                      ~2K. G. Wilson, Phys. Rev. D 6, 419 (1972).
+~K. G. Wilson and      J. Kogut, Phys. Rep. 12C, 75 (1974).       ~3M. E. Fisher, Rep. Prog. Phys. 30, 615 (1967).
+ Sec. X.                                                          ~4For the relation of relativistic field theory to critical
+                                                   CONFINEMENT                     OF QUABKS                                             2459
+
+  points see Ref. 6, Sec. X, and references cited there-                             D (to be published)   ~
+
+
+
+  in.                                                                               J. Kogut and L. Susskind, Phys. Rev. D (to be pub-
+  For a review see R. Brout, Phase Transitions (Benja-                               lished).
+  Tnin, New York, 1965), p. 8.                                                       K. Wilson, Cornell Report No. CLNS-271 (to be pub-
+i'D. Jasnow and M. Wortis, Phys. Rev, 176, 739 (1968).                               lished in the proceedings of the conference on Yang-
+ 'K. G. Wilson, Cargbse {1973) Lecture Notes, in                                     Mills Fields, Marseille, 1974).
+  preparation.                                                                      tH. P. Nielsen and P. Olesen, Nucl. Phys, 361, 45
+  R. Balian, J. M. Drouffe, and C. Ttzykson, Phys. Rev.                              (1973); L. .J. Tassie, Phys. Lett. 46B, 397 (1973).
+
+
+
+
+                                                        VOLt ME 10                 5UMBLH       8                    15 OCTOBER 1974
+
+             Elementary          and composite               particles in asymptotically                   free gauge theories
+                                                                      T. P. Cheng
+                          Department      of Physics,   University                 —
+                                                                      of Missouri St. Louis, St. Louis, Missouri 63121
+
+                                                                     Ng Wing-Chiu*'
+           Institute for Theoretical    Physics,   State University     of New York at Stony Brook, Stony Brook, New     York   ll?9&)
+
+                                                                        K. Young
+                      Department       of Physics, The Chinese        University   of Hong Kong, Shatin, X. T. , Hong Kong
+                                                                 (Received 3 June 1974)
+               %'e demonstrate that in asymptotically free gauge theories the wave-function renormalization    constants
+             for spin-1/2 fields do not vanish. (The scalar fields, if incorporated, also have this property. ) However„
+             there exists a subclass of such theories where the Z's for the gauge fields themselves tend to zero in
+             the limit of infinite cutoff. These features are shown to be gauge-independent.   This suggests the
+             potentiality of constructing asymptotically free strong-interaction theories in which the only elementary
+             fields are "quarks" and all other hadrons are bound states.
+
+
+
+
+                     I. 1NTRODUCTION                                               This confluence of field-theoretical and S-matrix
+                                                                                   approaches to strong-interaction physics is also
+   Qauge-invariant quantum field theories based on                                 indicated by the works of Qrisaru, Schnitzer, and
+non-Abelian groups are being actively investigated.                                Tsao. " These authors have demonstrated that
+A number of rather unique properties have been                                     vector mesons and spin--,' fermions in such field
+discovered about such theories. These features,                                    theories satisfy the usual criteria of Reggeization:
+when interpreted optimistically,      indicate that non-                           factorization of Born amplitudes and Mandel. stam
+Abelian gauge theories may provide the framework                                   countings. However, as possible candidates for
+within which theories of strong interactions (or                                   strong-interaction theories, the class of gauge
+event unified theories of all elementary-particle                                  theories investigated in their works may have
+forces) may be constructed.                                                        some drawbacks: These gauge theories are not
+   Gauge theories are renormalizable,
+                                           ' It has been                                                                '
+                                                                                   asymptotically free and while spin--, particles
+shown, by way of the renormalization-group         equa-                           (tiuarks'?) iie on Regge trajectory, scalar fields
+tion, ' that the origin of the coupling-constant space                             do not. (It would seem an unattractive picture of
+is an ultraviolet-stable fixed point only in non-                                  having spin--, fermions composite, but not all
+Abelian gauge theories. 4 This asymptotically free                                 other particles. ) In this paper we shall use an-
+nature of the theory provides us with a field-the-                                 other criterion for the compositeness of fields
+oretical explanation of Bjorken scaling rather          —                          appearing in a Lagrangian field theory, i.e. , the
+the explanation of lou, Bjorken scaling is ap-
+                           t                                                       vanishing of the wave-function renormalization
+proached in the deep Euclidean limit. ' This same                                   constants. Our results suggest the possibility of
+property indicates that the effective couplings can                                constructing strong-interaction field theories
+                                         —
+be large in the infrared limit it just may provide                                 which are asymptotically free and in which the
+the desired quark-conf inement mechanism.                    '                     only elementary fields are quarks and all other
+   There are also a number of works suggesting                                     hadrons are composite.
+intriguing connections of gauge theories to dual                                      In Sec. II we shall demonstrate, through a
+models and relativistic string models of hadrons. '                                 straightforward exercise of solving the renormal-
+
