@@ -129,3 +129,7 @@ theorem or metric volume), are implemented. No
 concrete gauge-group, connection, invariant-inner-product, curvature, or structure-certificate witness,
 symmetry group, reconstruction bridge, quantum-theory witness, Yang–Mills existence claim, or
 mass-gap claim is present.
+
+Full transformed Project Euclid reader extracts of OS-I and correcting OS-II are hash-pinned as
+provisional searchable evidence. They are explicitly not primary PDF bytes; no OS declaration will
+become canonical until the primary scans and formulas are visually verified.

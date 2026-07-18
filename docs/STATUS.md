@@ -1143,6 +1143,25 @@ Verified:
 - The measure remains designated Borel data rather than claimed Riemannian volume; no Hodge-star
   theorem is asserted.
 
+## 2026-07-17 — sixty-sixth evidence stone: OS-I/OS-II correction record
+
+Verified:
+
+- Full transformed Markdown extractions of Project Euclid's legacy OS-I and OS-II PDF-download
+  endpoints are retained under `Sources/AxiomaticQFT/OsterwalderSchrader/` with byte hashes and a
+  retrieval timestamp.
+- The source record verifies the identities and DOI metadata for OS-I, *CMP* 31 (1973), 83–112, and
+  correcting OS-II, *CMP* 42 (1975), 281–305.
+- OS-II printed p. 282 explicitly reports that OS-I Lemma 8.8 is wrong and that sufficiency of the
+  original `(E0)–(E4)` is open; printed p. 287 introduces the stronger linear-growth condition and
+  corrected reconstruction theorem.
+- The retained files are honestly labelled Jina Reader transformations, not primary PDFs. Direct
+  Project Euclid requests returned HTML access-control bytes, which were rejected rather than
+  mislabeled as PDFs; Springer redirected through an identity-provider flow.
+- Mathematical notation in the transformed extraction is OCR-degraded. No OS, Wightman, Euclidean,
+  or reconstruction declaration is introduced, and primary PDF acquisition plus visual formula
+  verification remain mandatory gates.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
@@ -1163,10 +1182,10 @@ Not yet achieved:
   basis-independent, the exact dependent adjoint-fiber pairing is packaged bilinearly, and the
   generic degree-two adapter is applied to the exact curvature. The resulting pointwise contraction
   is basis-independent and the existing action is proved to integrate it, but a general Hodge-star
-  bridge and metric-volume compatibility remain
-  pending. OS/Wightman, spectral,
-  observable, and lattice sources remain to
-  be independently acquired and verified before their corresponding declarations become canonical.
+  bridge and metric-volume compatibility remain pending. Full transformed OS-I/OS-II source text
+  and correction locators are hash-pinned, but primary OS PDF bytes and an authoritative accessible
+  Wightman artifact remain unacquired; spectral, observable, and lattice sources also remain to be
+  independently acquired and verified before their corresponding declarations become canonical.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

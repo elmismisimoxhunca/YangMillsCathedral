@@ -11,8 +11,10 @@ A later correction takes precedence over an earlier superseded statement. In par
 of Osterwalder–Schrader I reconstruction conditions must account for Osterwalder–Schrader II,
 *Communications in Mathematical Physics* 42 (1975), 281–305,
 <https://doi.org/10.1007/BF01608978>: p. 282 reports the failure of OS-I Lemma 8.8 and p. 287
-states the strengthened linear-growth condition. This citation is a ledger seed, not a source pin;
-the primary artifact must be acquired and verified before an OS declaration becomes canonical.
+states the strengthened linear-growth condition. Hash-pinned full transformed Project Euclid reader
+extracts now live under `Sources/AxiomaticQFT/OsterwalderSchrader/`, but they are not primary PDF
+bytes and their mathematical notation is OCR-degraded. The primary artifacts must still be acquired,
+signature-checked, visually verified, and hashed before an OS declaration becomes canonical.
 
 ## Required source record
 
