@@ -172,7 +172,9 @@ committed before higher layers depend on it.
   tempered matrix elements and the conjugated-test adjoint relation.
 - [x] Define the exact inverse-affine scalar test pullback and covariance of field and adjoint under
   the same restricted physical unitaries.
-- [ ] Define locality, cyclicity, and forward-cone spectral data independently.
+- [x] Define finite field/adjoint words on the exact domain vacuum and require their Hilbert-space
+  span to be dense.
+- [ ] Define locality and forward-cone spectral data independently.
 - [ ] Add explicit OS reconstruction and correlator coherence.
 
 ## Phase 5 — translations and mass gap

@@ -1827,6 +1827,23 @@ Implemented and verified:
 - No covariance inhabitant, locality, cyclicity, spectrum, reconstruction, existence theorem, or
   mass gap is constructed.
 
+## 2026-07-18 — one-hundred-third stone: scalar Wightman vacuum cyclicity
+
+Implemented and verified:
+
+- `Minkowski.ScalarWightmanFieldLetter` distinguishes exact field and adjoint insertions with their
+  Minkowski Schwartz tests.
+- `scalarWightmanFieldWordOnVacuum` applies finite words on the exact common domain, starting from
+  the same selected domain vacuum; every word remains in that domain.
+- `scalarWightmanFieldPolynomialVacuumSubmodule` is the complex Hilbert-space span of all such word
+  vectors, and it contains the selected nonzero vacuum through the empty word.
+- `ScalarWightmanVacuumCyclicity` requires the topological closure of that exact submodule to be the
+  whole physical Hilbert carrier.
+- Hostile probes expose empty, field, adjoint, and explicit-bump singleton words, reject a bottom
+  span, and reject any Hilbert vector outside the closure under cyclicity.
+- No cyclic field datum inhabitant, locality, spectrum, reconstruction, existence theorem, or mass
+  gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
