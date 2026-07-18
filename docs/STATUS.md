@@ -2144,6 +2144,25 @@ Implemented and verified:
 - No Gibbs expectation, area law, confinement result, reflection positivity, continuum observable
   interpretation, theory, or mass gap is constructed.
 
+## 2026-07-18 — one-hundred-twentieth stone: finite Gibbs acceptance interface
+
+Implemented and verified:
+
+- `latticeBoltzmannWeight` is the `ENNReal` exponential density of the exact finite Wilson-type
+  action and is proved strictly positive at every configuration, with identity value one.
+- `latticePartitionFunction` is the exact `lintegral` against a supplied finite-cutoff reference;
+  accepted data separately require strict positivity and finiteness.
+- `normalizedLatticeGibbsMeasure` is the exact inverse-partition scaling of `withDensity`.
+- `FiniteLatticeGibbsMeasureData` requires reference and Gibbs probability normalization,
+  measurability, and exact local gauge invariance on the same action/reference chain.
+- `FiniteLatticeObservable` requires measurability and a uniform norm bound; actual Bochner
+  integrability under the Gibbs probability is proved before `finiteLatticeExpectation` is defined.
+- Hostile probes reject zero density, zero reference/Gibbs measures, zero/infinite partition
+  functions, and nonintegrable-observable shortcuts.
+- This is a preliminary acceptance interface: compact-group product Haar construction and proof that
+  it supplies the reference remain open, and no Gibbs datum, expectation value, lattice positivity,
+  continuum theory, or mass gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

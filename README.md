@@ -222,8 +222,12 @@ nonnegative conjugation- and inversion-invariant nontrivial Wilson-type potentia
 positive coefficient. Gauge invariance, plaquette orientation independence, zero identity action,
 and dimension-one absence of plaquettes are proved. Signed paths, endpoint-covariant holonomy, and
 Wilson-loop observables built from supplied nonconstant conjugation-class functions are explicit; the elementary four-step path is
-proved closed with holonomy equal to the plaquette. No Gibbs measure, lattice positivity, continuum
-limit, or identification with the continuum action/PVM is made.
+proved closed with holonomy equal to the plaquette. A finite-cutoff Gibbs acceptance interface now
+requires a normalized gauge-invariant reference measure, measurable positive Boltzmann density,
+strictly positive finite partition function, normalized invariant Gibbs measure, and genuinely
+integrable bounded observables. It does not construct the intended compact-group product Haar
+reference or any Gibbs datum. No lattice positivity, continuum limit, or identification with the
+continuum action/PVM is made.
 
 Primary OS-I and correcting OS-II article scans, Wightman's 1956 paper, and the corrected Princeton
 edition of Streater–Wightman are hash-pinned with exact text extractions. Load-bearing OS-II and

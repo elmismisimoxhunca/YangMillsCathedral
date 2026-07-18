@@ -227,6 +227,11 @@ committed before higher layers depend on it.
 - [x] Define signed finite lattice paths, endpoint-covariant holonomy, closed paths, and nontrivial
   closed-loop observables from supplied nonconstant conjugation-class functions with exact local
   gauge invariance; gauge-field nonconstancy and character/continuity interpretation remain pending.
+- [x] Define an exact finite-cutoff Gibbs acceptance interface over a supplied normalized,
+  gauge-invariant reference measure, with positive finite partition function and genuinely
+  integrable bounded-observable expectations.
+- [ ] Construct/package compact-group product Haar structure and prove that it supplies the required
+  reference measure; no Gibbs datum is currently constructed.
 - [ ] Define scaling, renormalization, interpreted-observable and continuum-limit bridges.
 - [ ] Keep finite-cutoff reflection positivity distinct from continuum OS data.
 

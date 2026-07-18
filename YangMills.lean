@@ -228,6 +228,8 @@ import YangMills.Reconstruction.StrictOrderedWickContinuation
 import YangMills.Reconstruction.StrictOrderedWickContinuationProbes
 import YangMills.Lattice.FinitePeriodicGaugeField
 import YangMills.Lattice.FinitePeriodicGaugeFieldProbes
+import YangMills.Lattice.FiniteGibbsMeasure
+import YangMills.Lattice.FiniteGibbsMeasureProbes
 import YangMills.Lattice.WilsonLoopObservable
 import YangMills.Lattice.WilsonLoopObservableProbes
 import YangMills.Audit
