@@ -1457,6 +1457,26 @@ Implemented and verified:
 - No reflection positivity theorem, Euclidean theory, reconstruction, Wightman theory, existence
   theorem, or mass-gap witness is introduced.
 
+## 2026-07-18 — eighty-third stone: unrestricted finite Schwartz sequences
+
+Implemented and verified:
+
+- `ScalarFiniteSchwartzSequence` is the unrestricted finite algebra carrier with one dependent
+  Schwartz component at every natural arity and exact nonzero support.
+- Outside-support vanishing and nonzero-to-support membership are derived.
+- `toFiniteSchwartzSequence` forgets strict positive-time ordered/flat proofs while preserving every
+  exact extended component and natural support.
+- Zero and scalar-unit unrestricted sequences are available; the latter is supported exactly at
+  arity zero.
+- Hostile probes verify exact support, outside-support rejection, preservation of the singleton bump
+  at arity one, and impossibility of omitting it after forgetting.
+- This separation prevents convolution output from being falsely required to preserve global
+  cross-block positive-time ordering.
+- Finite-support convolution packaging, direct-sum topology, reflected involution, and `(E2)` remain
+  pending.
+- No reflection positivity theorem, Euclidean theory, reconstruction, Wightman theory, existence
+  theorem, or mass-gap witness is introduced.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

@@ -144,8 +144,9 @@ zero-arity Schwartz test. Exact configuration split/merge and the raw pointwise 
 also implemented. A reusable generic tensor product is proved Schwartz with explicit decay bounds and
 algebraic bilinearity, then pulled through the exact Euclidean configuration split with exact raw-
 kernel agreement. The finite convolution component is defined at every natural arity, including both
-zero-arity endpoints; finite-support output packaging and any required joint continuity remain
-pending. `(E4)` is also absent. No
+zero-arity endpoints. An unrestricted finite Schwartz-sequence carrier is separate from the strict
+positive-time domain, with an exact forgetful map; finite-support convolution packaging and any
+required joint continuity remain pending. `(E4)` is also absent. No
 concrete gauge-group, connection, invariant-inner-product, curvature, or structure-certificate witness,
 symmetry group, reconstruction bridge, quantum-theory witness, Yang–Mills existence claim, or
 mass-gap claim is present.

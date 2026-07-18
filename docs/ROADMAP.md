@@ -123,9 +123,11 @@ committed before higher layers depend on it.
   algebraic bilinearity.
 - [x] Pull the bundled tensor through exact configuration splitting and prove exact evaluation and
   algebraic bilinearity on concatenated Euclidean configurations.
+- [x] Define the unrestricted finite Schwartz-sequence algebra carrier and an exact forgetful map
+  from the strict positive-time sequence.
 - [x] Define the exact finite per-arity convolution, including zero/one endpoint formulas and the
   nonzero internal singleton-bump split.
-- [ ] Prove finite support for the convolution family, package the output sequence, and install any
+- [ ] Prove finite support for the convolution family, package it in the unrestricted carrier, and install any
   needed continuous bilinear topology.
 - [ ] Establish the strict subspace's embedding/sufficiency/density/completion relation to OS-I's
   derivative-vanishing ordered spaces; install the per-arity induced and finite-sequence direct-sum
