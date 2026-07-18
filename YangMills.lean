@@ -151,6 +151,8 @@ import YangMills.Euclidean.SchwingerConfigurationConcatenation
 import YangMills.Euclidean.SchwingerConfigurationConcatenationProbes
 import YangMills.Euclidean.SchwingerTensorProduct
 import YangMills.Euclidean.SchwingerTensorProductProbes
+import YangMills.Euclidean.SchwingerExtendedSequence
+import YangMills.Euclidean.SchwingerExtendedSequenceProbes
 import YangMills.Audit
 
 /-!

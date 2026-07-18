@@ -138,9 +138,10 @@ subspace also records topological-support time ordering and full Fréchet-deriva
 coincidence diagonals. `(E2)` remains absent pending its embedding/sufficiency/density/completion comparison
 with OS-I's derivative-vanishing ordered spaces, the induced topology on each arity space, the
 direct-sum topology on finite sequences, the distinct completed tensor product for positive-half-
-space tests, and the finite sequence product; the algebraic finite-sequence carrier with exact
-nonzero support, exact configuration split/merge, and the raw pointwise tensor kernel are already
-implemented. A reusable generic tensor product is proved Schwartz with explicit decay bounds and
+space tests, and the finite sequence product; the algebraic finite-sequence carrier has exact
+positive and natural-arity support, with its scalar zero-point component represented faithfully as a
+zero-arity Schwartz test. Exact configuration split/merge and the raw pointwise tensor kernel are
+also implemented. A reusable generic tensor product is proved Schwartz with explicit decay bounds and
 algebraic bilinearity, then pulled through the exact Euclidean configuration split with exact raw-
 kernel agreement. Any required joint continuity and the finite sequence convolution remain pending. `(E4)` is also absent. No
 concrete gauge-group, connection, invariant-inner-product, curvature, or structure-certificate witness,

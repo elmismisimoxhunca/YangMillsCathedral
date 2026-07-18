@@ -1418,6 +1418,26 @@ Implemented and verified:
 - No reflection positivity theorem, Euclidean theory, reconstruction, Wightman theory, existence
   theorem, or mass-gap witness is introduced.
 
+## 2026-07-18 — eighty-first stone: uniform natural-arity sequence components
+
+Implemented and verified:
+
+- `scalarZeroAritySchwartz` embeds a scalar as an actual Schwartz function on the compact zero-point
+  configuration space; evaluation, zero, addition, scalar multiplication, and injectivity are proved.
+- `extendedComponent` presents one exact Schwartz test at every natural arity, agreeing with the
+  stored scalar at zero and the exact dependent positive component otherwise.
+- `naturalSupport` combines zero precisely when the scalar is nonzero with the image of the exact
+  positive support.
+- `mem_naturalSupport_iff` proves exact equivalence between support membership and nonvanishing of
+  the same extended component.
+- `unitZeroPointTestSequence` supplies a sequence supported exactly at natural arity zero, distinct
+  from the existing bump sequence supported exactly at arity one.
+- Hostile probes reject omitted natural support and scalar replacement at zero arity and verify the
+  exact supports `{}`, `{0}`, and `{1}` for the key examples.
+- No convolution/product, direct-sum topology, reflected involution, or `(E2)` is introduced.
+- No reflection positivity theorem, Euclidean theory, reconstruction, Wightman theory, existence
+  theorem, or mass-gap witness is introduced.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

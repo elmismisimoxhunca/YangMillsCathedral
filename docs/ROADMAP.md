@@ -116,6 +116,8 @@ committed before higher layers depend on it.
 - [x] Define a strict Mathlib subspace using topological-support time ordering and infinite-order
   Fréchet flatness on point-coincidence diagonals.
 - [x] Package algebraic finite test sequences with an exact nonzero-arity support finset.
+- [x] Represent the scalar zero-point component as a zero-arity Schwartz test and derive exact finite
+  natural-arity support for uniform convolution indexing.
 - [x] Construct exact continuous configuration split/merge maps and the raw scalar tensor kernel.
 - [x] Prove a reusable generic scalar Schwartz tensor product with explicit decay bounds and
   algebraic bilinearity.
