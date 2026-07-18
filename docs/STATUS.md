@@ -1162,6 +1162,22 @@ Verified:
   or reconstruction declaration is introduced, and primary PDF acquisition plus visual formula
   verification remain mandatory gates.
 
+## 2026-07-17 — sixty-seventh mathematical stone: invariant-pairing normalization scaling
+
+Verified:
+
+- `canonicalBilinearQuadraticContraction_smul_pairing` proves that scaling any explicit codomain
+  bilinear pairing scales its canonical tensor contraction by the same scalar.
+- `AdjointBundle.fiberPairingLinearMap_positiveScale` specializes this to the exact quotient-coherent
+  dependent-fiber pairing induced by `InvariantInnerProductData.positiveScale`.
+- `EuclideanMetricData.canonicalTwoFormContraction_positiveScale` and
+  `canonicalCurvatureDensity_positiveScale` propagate the same factor through the canonical
+  two-form contraction and exact certified curvature scalar.
+- All fiber, topology, tangent finite-dimensionality, and metric structures remain named and locally
+  installed. No global normalization or inner-product instance is introduced.
+- Hostile probes reject malformed scaling at the generic canonical contraction, exact dependent
+  fiber pairing, and exact canonical curvature levels.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

@@ -74,6 +74,24 @@ theorem orthonormalBasis_curvatureContraction_mismatch_blocked
   intro basis mismatch
   exact mismatch (geometry.canonicalTwoFormContraction_eq_orthonormalSum inner form b basis)
 
+/-- Positive pairing rescaling cannot change the exact canonical curvature scalar by a different
+factor. -/
+theorem malformed_canonicalCurvatureScale_blocked
+    (geometry : EuclideanMetricData (IB := IB) (B := B))
+    (inner : InvariantInnerProductData (I := IG) (G := G))
+    (scalar : ℝ) (scalar_pos : 0 < scalar)
+    (connection : PrincipalConnectionData smoothBundle)
+    (exterior : PrincipalConnectionExteriorDerivativeData connection)
+    (certificate : PrincipalCurvatureStructureCertificate smoothBundle connection exterior)
+    (b : B)
+    (mismatch :
+      geometry.canonicalCurvatureDensity (inner.positiveScale scalar scalar_pos)
+          connection exterior certificate b ≠
+        scalar * geometry.canonicalCurvatureDensity
+          inner connection exterior certificate b) : False :=
+  mismatch (geometry.canonicalCurvatureDensity_positiveScale
+    inner scalar scalar_pos connection exterior certificate b)
+
 /-- The exact canonical curvature scalar cannot be negative. -/
 theorem negative_canonicalCurvatureDensity_blocked
     (geometry : EuclideanMetricData (IB := IB) (B := B))

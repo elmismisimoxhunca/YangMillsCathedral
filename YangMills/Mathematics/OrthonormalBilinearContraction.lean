@@ -63,6 +63,18 @@ theorem canonicalBilinearQuadraticContraction_eq_sum
     TensorProduct.lift.tmul]
   rw [Finset.sum_comm]
 
+/-- Scaling the explicit codomain pairing scales the canonical contraction by the same scalar. -/
+theorem canonicalBilinearQuadraticContraction_smul_pairing
+    (scalar : ℝ)
+    (pairing : W →ₗ[ℝ] W →ₗ[ℝ] ℝ)
+    (bilinear : E →ₗ[ℝ] E →ₗ[ℝ] W) :
+    canonicalBilinearQuadraticContraction (scalar • pairing) bilinear =
+      scalar * canonicalBilinearQuadraticContraction pairing bilinear := by
+  let basis := stdOrthonormalBasis ℝ E
+  rw [canonicalBilinearQuadraticContraction_eq_sum (scalar • pairing) bilinear basis,
+    canonicalBilinearQuadraticContraction_eq_sum pairing bilinear basis]
+  simp only [LinearMap.smul_apply, smul_eq_mul, Finset.mul_sum]
+
 /-- Double contraction sums computed in two orthonormal bases agree. -/
 theorem orthonormalBilinearQuadraticContraction_independent
     (pairing : W →ₗ[ℝ] W →ₗ[ℝ] ℝ)

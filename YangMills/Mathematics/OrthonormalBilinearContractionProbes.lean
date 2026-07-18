@@ -52,6 +52,16 @@ theorem orthonormal_basis_dependence_blocked
     (orthonormalBilinearQuadraticContraction_independent
       pairing bilinear first second)
 
+/-- Scaling the codomain pairing cannot produce a differently scaled canonical contraction. -/
+theorem pairingScale_canonicalContraction_mismatch_blocked
+    (scalar : ℝ)
+    (pairing : W →ₗ[ℝ] W →ₗ[ℝ] ℝ)
+    (bilinear : E →ₗ[ℝ] E →ₗ[ℝ] W)
+    (mismatch :
+      canonicalBilinearQuadraticContraction (scalar • pairing) bilinear ≠
+        scalar * canonicalBilinearQuadraticContraction pairing bilinear) : False :=
+  mismatch (canonicalBilinearQuadraticContraction_smul_pairing scalar pairing bilinear)
+
 /-- An unrelated bilinear map cannot replace the supplied map when it changes the canonical
 contraction. -/
 theorem unrelated_bilinearMap_substitution_blocked

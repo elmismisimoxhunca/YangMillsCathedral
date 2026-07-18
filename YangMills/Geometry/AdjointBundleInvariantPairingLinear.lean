@@ -98,6 +98,27 @@ theorem fiberPairingLinearMap_apply
     fiberPairingLinearMap bundle inner b X Y = fiberPairing bundle inner b X Y := by
   rfl
 
+/-- Positive rescaling of the named Lie-algebra pairing scales its exact dependent-fiber bilinear
+map by the same scalar. -/
+theorem fiberPairingLinearMap_positiveScale
+    (inner : InvariantInnerProductData (I := I) (G := G))
+    (scalar : ℝ) (scalar_pos : 0 < scalar) (b : B) :
+    letI : AddCommGroup (AdjointBundle.Fiber (I := I) (torsor := torsor) b) :=
+      AdjointBundle.fiberAddCommGroup (I := I) bundle b
+    letI : Module ℝ (AdjointBundle.Fiber (I := I) (torsor := torsor) b) :=
+      AdjointBundle.fiberModule (I := I) bundle b
+    fiberPairingLinearMap bundle (inner.positiveScale scalar scalar_pos) b =
+      scalar • fiberPairingLinearMap bundle inner b := by
+  letI : AddCommGroup (AdjointBundle.Fiber (I := I) (torsor := torsor) b) :=
+    AdjointBundle.fiberAddCommGroup (I := I) bundle b
+  letI : Module ℝ (AdjointBundle.Fiber (I := I) (torsor := torsor) b) :=
+    AdjointBundle.fiberModule (I := I) bundle b
+  ext X Y
+  change fiberPairing bundle (inner.positiveScale scalar scalar_pos) b X Y =
+    scalar * fiberPairing bundle inner b X Y
+  unfold fiberPairing
+  exact inner.positiveScale_pairing scalar scalar_pos _ _
+
 end AdjointBundle
 
 end

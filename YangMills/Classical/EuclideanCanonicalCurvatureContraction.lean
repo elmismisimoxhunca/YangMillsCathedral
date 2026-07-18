@@ -76,6 +76,33 @@ def canonicalTwoFormContraction
     (continuousAlternatingMapFinTwoToBilinear (form b))
 
 omit [FiniteDimensional ℝ EG] in
+/-- Positive rescaling of the named invariant pairing scales the canonical two-form contraction by
+the same scalar. -/
+theorem canonicalTwoFormContraction_positiveScale
+    (geometry : EuclideanMetricData (IB := IB) (B := B))
+    (inner : InvariantInnerProductData (I := IG) (G := G))
+    (scalar : ℝ) (scalar_pos : 0 < scalar)
+    (form : AdjointBundle.DifferentialForm (IG := IG) (IB := IB) bundle 2)
+    (b : B) :
+    geometry.canonicalTwoFormContraction
+        (inner.positiveScale scalar scalar_pos) form b =
+      scalar * geometry.canonicalTwoFormContraction inner form b := by
+  rw [canonicalTwoFormContraction, canonicalTwoFormContraction]
+  letI : RiemannianBundle (fun b : B => TangentSpace IB b) :=
+    ⟨geometry.metric.toRiemannianMetric⟩
+  letI : FiniteDimensional ℝ (TangentSpace IB b) := tangentSpaceFiniteDimensional b
+  letI : AddCommGroup (AdjointBundle.Fiber (I := IG) (torsor := torsor) b) :=
+    AdjointBundle.fiberAddCommGroup (I := IG) bundle b
+  letI : Module ℝ (AdjointBundle.Fiber (I := IG) (torsor := torsor) b) :=
+    AdjointBundle.fiberModule (I := IG) bundle b
+  letI : TopologicalSpace (AdjointBundle.Fiber (I := IG) (torsor := torsor) b) :=
+    AdjointBundle.fiberTopology (I := IG) bundle b
+  rw [AdjointBundle.fiberPairingLinearMap_positiveScale
+    bundle inner scalar scalar_pos b]
+  rw [canonicalBilinearQuadraticContraction_smul_pairing]
+  ring
+
+omit [FiniteDimensional ℝ EG] in
 /-- Every orthonormal basis computes the canonical contraction as the conventional double sum. -/
 theorem canonicalTwoFormContraction_eq_orthonormalSum
     {ι : Type uι} [Fintype ι]
@@ -143,6 +170,23 @@ def canonicalCurvatureDensity
     (b : B) : ℝ :=
   geometry.canonicalTwoFormContraction inner
     (connection.smoothBaseCurvature exterior certificate).toForm b
+
+/-- Positive rescaling of the named invariant pairing scales the exact canonical curvature scalar
+by the same factor. -/
+theorem canonicalCurvatureDensity_positiveScale
+    (geometry : EuclideanMetricData (IB := IB) (B := B))
+    (inner : InvariantInnerProductData (I := IG) (G := G))
+    (scalar : ℝ) (scalar_pos : 0 < scalar)
+    (connection : PrincipalConnectionData smoothBundle)
+    (exterior : PrincipalConnectionExteriorDerivativeData connection)
+    (certificate : PrincipalCurvatureStructureCertificate smoothBundle connection exterior)
+    (b : B) :
+    geometry.canonicalCurvatureDensity (inner.positiveScale scalar scalar_pos)
+        connection exterior certificate b =
+      scalar * geometry.canonicalCurvatureDensity
+        inner connection exterior certificate b :=
+  geometry.canonicalTwoFormContraction_positiveScale
+    inner scalar scalar_pos _ b
 
 /-- The canonical curvature scalar is exactly the previously chosen contraction of the same exact
 curvature. -/

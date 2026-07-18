@@ -63,6 +63,26 @@ theorem fiberPairingLinearMap_replacement_blocked
     AdjointBundle.fiberModule (I := I) bundle b
   exact mismatch (AdjointBundle.fiberPairingLinearMap_apply bundle inner b X Y)
 
+/-- Positive rescaling cannot change the exact dependent-fiber pairing by any factor other than
+the supplied scalar. -/
+theorem malformed_fiberPairingScale_blocked
+    (scalar : ℝ) (scalar_pos : 0 < scalar) (b : B)
+    (mismatch :
+      letI : AddCommGroup (AdjointBundle.Fiber (I := I) (torsor := torsor) b) :=
+        AdjointBundle.fiberAddCommGroup (I := I) bundle b
+      letI : Module ℝ (AdjointBundle.Fiber (I := I) (torsor := torsor) b) :=
+        AdjointBundle.fiberModule (I := I) bundle b
+      AdjointBundle.fiberPairingLinearMap
+          bundle (inner.positiveScale scalar scalar_pos) b ≠
+        scalar • AdjointBundle.fiberPairingLinearMap bundle inner b) : False := by
+  letI : AddCommGroup (AdjointBundle.Fiber (I := I) (torsor := torsor) b) :=
+    AdjointBundle.fiberAddCommGroup (I := I) bundle b
+  letI : Module ℝ (AdjointBundle.Fiber (I := I) (torsor := torsor) b) :=
+    AdjointBundle.fiberModule (I := I) bundle b
+  exact mismatch
+    (AdjointBundle.fiberPairingLinearMap_positiveScale
+      bundle inner scalar scalar_pos b)
+
 /-- The packaged pairing cannot fail additivity in its first argument. -/
 theorem nonadditive_fiberPairingLinearMap_blocked
     (b : B) (X Y Z : AdjointBundle.Fiber (I := I) (torsor := torsor) b)

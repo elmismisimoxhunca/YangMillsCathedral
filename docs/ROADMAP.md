@@ -91,6 +91,8 @@ committed before higher layers depend on it.
 - [x] Define and probe the integrable Euclidean action relative to a designated Borel measure and
   positive coupling, with Clay's outer normalization explicit.
 - [x] Prove the same action integrates the canonical basis-independent curvature scalar.
+- [x] Prove positive rescaling of the named invariant pairing scales the exact fiber pairing and
+  canonical curvature scalar by the same factor.
 - [ ] Construct metric-volume semantics and prove compatibility with the designated measure.
 - [ ] Interpret gauge-invariant local curvature polynomials and covariant derivatives.
 - [ ] Separate local observables from nonlocal Wilson observables.

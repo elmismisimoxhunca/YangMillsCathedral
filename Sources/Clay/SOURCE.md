@@ -70,4 +70,6 @@ pending. The current action
 retains the outer coefficient `(4 * g^2)⁻¹`, requires strictly positive `g`, and integrates only when
 the exact curvature scalar is integrable against an explicitly designated Borel measure. The same
 action is proved to integrate the canonical basis-independent curvature scalar. That
-measure is not called Riemannian volume without a future compatibility theorem.
+measure is not called Riemannian volume without a future compatibility theorem. Positive rescaling
+of the named invariant pairing is proved to scale both the exact dependent-fiber pairing and the
+canonical curvature scalar by the same factor; no normalization is installed globally.
