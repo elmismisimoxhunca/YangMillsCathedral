@@ -45,14 +45,58 @@ structure PositiveOrientedLink (d : EuclideanDimension) (Λ : FinitePeriodicLatt
   direction : d.CoordinateIndex
 
 /-- Cyclic successor on one nonempty periodic coordinate axis. -/
-def cyclicSucc (Λ : FinitePeriodicLattice) (i : Fin Λ.extent) : Fin Λ.extent :=
-  ⟨(i.val + 1) % Λ.extent, Nat.mod_lt _ (by simp [FinitePeriodicLattice.extent])⟩
+def cyclicSucc (Λ : FinitePeriodicLattice) (i : Fin Λ.extent) : Fin Λ.extent := by
+  letI : NeZero Λ.extent := ⟨by simp [FinitePeriodicLattice.extent]⟩
+  exact i + 1
+
+/-- Cyclic predecessor on one nonempty periodic coordinate axis. -/
+def cyclicPred (Λ : FinitePeriodicLattice) (i : Fin Λ.extent) : Fin Λ.extent := by
+  letI : NeZero Λ.extent := ⟨by simp [FinitePeriodicLattice.extent]⟩
+  exact i - 1
+
+@[simp] theorem cyclicSucc_cyclicPred
+    (Λ : FinitePeriodicLattice) (i : Fin Λ.extent) :
+    cyclicSucc Λ (cyclicPred Λ i) = i := by
+  letI : NeZero Λ.extent := ⟨by simp [FinitePeriodicLattice.extent]⟩
+  simp [cyclicSucc, cyclicPred]
+
+@[simp] theorem cyclicPred_cyclicSucc
+    (Λ : FinitePeriodicLattice) (i : Fin Λ.extent) :
+    cyclicPred Λ (cyclicSucc Λ i) = i := by
+  letI : NeZero Λ.extent := ⟨by simp [FinitePeriodicLattice.extent]⟩
+  simp [cyclicSucc, cyclicPred]
 
 /-- Shift one periodic vertex forward by one lattice unit. -/
 def shiftForward
     {d : EuclideanDimension} {Λ : FinitePeriodicLattice}
     (x : Vertex d Λ) (μ : d.CoordinateIndex) : Vertex d Λ :=
   Function.update x μ (cyclicSucc Λ (x μ))
+
+/-- Shift one periodic vertex backward by one lattice unit. -/
+def shiftBackward
+    {d : EuclideanDimension} {Λ : FinitePeriodicLattice}
+    (x : Vertex d Λ) (μ : d.CoordinateIndex) : Vertex d Λ :=
+  Function.update x μ (cyclicPred Λ (x μ))
+
+@[simp] theorem shiftForward_shiftBackward
+    {d : EuclideanDimension} {Λ : FinitePeriodicLattice}
+    (x : Vertex d Λ) (μ : d.CoordinateIndex) :
+    shiftForward (shiftBackward x μ) μ = x := by
+  funext i
+  by_cases hi : i = μ
+  · subst i
+    simp [shiftForward, shiftBackward]
+  · simp [shiftForward, shiftBackward, hi]
+
+@[simp] theorem shiftBackward_shiftForward
+    {d : EuclideanDimension} {Λ : FinitePeriodicLattice}
+    (x : Vertex d Λ) (μ : d.CoordinateIndex) :
+    shiftBackward (shiftForward x μ) μ = x := by
+  funext i
+  by_cases hi : i = μ
+  · subst i
+    simp [shiftForward, shiftBackward]
+  · simp [shiftForward, shiftBackward, hi]
 
 /-- Shifts in distinct coordinate directions commute. -/
 theorem shiftForward_comm

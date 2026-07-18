@@ -220,8 +220,10 @@ The independent finite-cutoff lattice layer now packages nonempty periodic verti
 positive links, cyclic shifts, endpoint gauge transformations, plaquette holonomy, and a
 nonnegative conjugation- and inversion-invariant nontrivial Wilson-type potential with a strictly
 positive coefficient. Gauge invariance, plaquette orientation independence, zero identity action,
-and dimension-one absence of plaquettes are proved. No Gibbs measure, lattice positivity, continuum limit, or identification
-with the continuum action/PVM is made.
+and dimension-one absence of plaquettes are proved. Signed paths, endpoint-covariant holonomy, and
+Wilson-loop observables built from supplied nonconstant conjugation-class functions are explicit; the elementary four-step path is
+proved closed with holonomy equal to the plaquette. No Gibbs measure, lattice positivity, continuum
+limit, or identification with the continuum action/PVM is made.
 
 Primary OS-I and correcting OS-II article scans, Wightman's 1956 paper, and the corrected Princeton
 edition of Streater–Wightman are hash-pinned with exact text extractions. Load-bearing OS-II and

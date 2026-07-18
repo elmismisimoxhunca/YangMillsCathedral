@@ -224,7 +224,10 @@ committed before higher layers depend on it.
   endpoint gauge transformations, plaquette holonomy/orientation reversal, and a nontrivial
   normalized nonnegative Wilson-type potential with strictly positive coefficient and exact gauge
   invariance.
-- [ ] Define scaling, renormalization, observable and continuum-limit bridges.
+- [x] Define signed finite lattice paths, endpoint-covariant holonomy, closed paths, and nontrivial
+  closed-loop observables from supplied nonconstant conjugation-class functions with exact local
+  gauge invariance; gauge-field nonconstancy and character/continuity interpretation remain pending.
+- [ ] Define scaling, renormalization, interpreted-observable and continuum-limit bridges.
 - [ ] Keep finite-cutoff reflection positivity distinct from continuum OS data.
 
 ## Phase 7 — dimension contracts and final checker

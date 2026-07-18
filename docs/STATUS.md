@@ -2127,6 +2127,23 @@ Implemented and verified:
 - No compactness/Haar structure, Gibbs measure, lattice reflection positivity, continuum limit,
   confinement, lattice-to-OS bridge, theory, or Clay mass gap is constructed.
 
+## 2026-07-18 — one-hundred-nineteenth stone: finite Wilson-loop observables
+
+Implemented and verified:
+
+- `Lattice.SignedDirection` and `stepEndpoint` describe exact forward/backward periodic traversal;
+  backward link values use the inverse positive link at the preceding vertex.
+- `pathEndpoint` and `pathHolonomy` preserve ordered path composition, and holonomy is proved to
+  transform only at the initial/final endpoints.
+- `GaugeInvariantClassObservable` requires a nonconstant conjugation-class function without
+  imposing a fake canonical representation trace. This does not yet prove that every induced
+  function of gauge fields is nonconstant.
+- Every closed-loop observable is proved locally gauge invariant.
+- The explicit nonempty four-step plaquette path is closed and its path holonomy is exactly the
+  independently defined plaquette holonomy, preventing reliance only on the trivial empty loop.
+- No Gibbs expectation, area law, confinement result, reflection positivity, continuum observable
+  interpretation, theory, or mass gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
