@@ -2031,6 +2031,21 @@ Implemented and verified:
 - No polynomially bounded analytic datum, boundary value, correlator inhabitant, reconstruction, or
   physical theory is constructed.
 
+## 2026-07-18 — one-hundred-fourteenth stone: consecutive-difference/anchor coordinates
+
+Implemented and verified:
+
+- `Mathematics.consecutiveDifferenceAnchorLinearEquiv` identifies an `(n+1)`-point configuration
+  with exact differences `xᵢ-xᵢ₊₁` and the final anchor `xₙ`.
+- Reverse-inductive reconstruction is proved to be its exact inverse, then promoted by finite
+  dimensionality to a continuous linear equivalence.
+- `relativeAnchorSchwartzLift` pulls a relative Schwartz test times an anchor Schwartz test back to
+  one actual full-configuration Schwartz test with exact product evaluation.
+- Hostile probes lock difference signs, final-anchor choice, reconstruction, common-translation
+  invariance of differences, anchor translation, and reject an unrelated lifted value.
+- This is signature-neutral reusable mathematics and makes no physical translation-invariance or
+  reconstruction claim.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

@@ -39,6 +39,8 @@ import YangMills.Mathematics.SchwartzTensorProduct
 import YangMills.Mathematics.SchwartzTensorProductProbes
 import YangMills.Mathematics.FiniteConfigurationSchwartzTensor
 import YangMills.Mathematics.FiniteConfigurationSchwartzTensorProbes
+import YangMills.Mathematics.ConsecutiveDifferenceCoordinates
+import YangMills.Mathematics.ConsecutiveDifferenceCoordinatesProbes
 import YangMills.Mathematics.SmoothLieBracketWedge
 import YangMills.Mathematics.SmoothLieBracketWedgeProbes
 import YangMills.Geometry.LieGroup
