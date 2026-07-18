@@ -137,8 +137,9 @@ an explicit nonzero compactly supported arity-one positive-time Schwartz test. A
 subspace also records topological-support time ordering and full Fréchet-derivative flatness on
 coincidence diagonals. `(E2)` remains absent pending its embedding/sufficiency/density/completion comparison
 with OS-I's derivative-vanishing ordered spaces, the induced topology on each arity space, the
-direct-sum topology on finite sequences, the distinct completed tensor product for positive-half-
-space tests, and the reflection-positivity inequality; the algebraic finite-sequence carrier
+identification of the named finite-stage final topology with OS-I's locally convex direct sum, the
+distinct completed tensor product for positive-half-space tests, and the source-facing
+reflection-positivity inequality; the algebraic finite-sequence carrier
 and product are implemented with exact positive and natural-arity support, with its scalar zero-point component represented faithfully as a
 zero-arity Schwartz test. Exact configuration split/merge and the raw pointwise tensor kernel are
 also implemented. A reusable generic tensor product is proved Schwartz with explicit decay bounds and
@@ -146,7 +147,9 @@ algebraic bilinearity, then pulled through the exact Euclidean configuration spl
 kernel agreement. The finite convolution component is defined at every natural arity, including both
 zero-arity endpoints. An unrestricted finite Schwartz-sequence carrier is separate from the strict
 positive-time domain, with an exact forgetful map. Finite-support closure is proved and the
-convolution is packaged in that unrestricted carrier; direct-sum topology and any required joint
+convolution is packaged in that unrestricted carrier. A named finite-stage final topology and its
+exact stagewise universal property are implemented without a global instance; topological
+vector-space structure, identification with OS-I's locally convex direct sum, and any required joint
 continuity remain pending. Exact reverse-conjugation on scalar Schwartz components is implemented
 and kept distinct from Euclidean time reflection. Both operations are lifted to exact finite
 sequences and combined in the source order `Θ f*`. The exact algebraic Schwinger evaluation and

@@ -1556,6 +1556,26 @@ Implemented and verified:
 - Source-facing `(E2)`, `(E4)`, Euclidean theory, reconstruction, Wightman theory, existence, and a
   mass-gap witness remain absent.
 
+## 2026-07-18 — eighty-eighth stone: finite-stage sequence topology
+
+Implemented and verified:
+
+- `ScalarFiniteSchwartzStage d s` is the dependent finite product of exact arity Schwartz spaces for
+  a finite arity set `s`.
+- `scalarFiniteSchwartzStageToSequence` extends by zero and filters support by actual nonvanishing,
+  so a stage bound cannot become fake support.
+- Every unrestricted finite sequence is recovered exactly from the stage indexed by its actual
+  support; the explicit singleton bump survives this recovery.
+- `scalarFiniteSchwartzFiniteStageFinalTopology` is the named supremum of the coinduced topologies
+  from all stage maps and is not installed globally.
+- Every stage map is continuous, and a map out of the final topology is continuous iff all of its
+  finite-stage composites are continuous.
+- This is not yet identified with OS-I's locally convex direct-sum topology or linear-map criterion:
+  topological vector-space operations, source per-arity comparison, and completed positive-half-space
+  tensor products remain pending.
+- No source-facing `(E2)`, Euclidean theory, reconstruction, Wightman theory, existence theorem, or
+  mass-gap witness is introduced.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

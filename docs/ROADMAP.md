@@ -128,7 +128,10 @@ committed before higher layers depend on it.
 - [x] Define the exact finite per-arity convolution, including zero/one endpoint formulas and the
   nonzero internal singleton-bump split.
 - [x] Prove finite support for the convolution family and package it in the unrestricted carrier.
-- [ ] Install any needed direct-sum/continuous bilinear topology.
+- [x] Construct the named finite-stage final topology and prove its exact universal property.
+- [ ] Equip the finite sequence carrier with topological vector-space operations, compare the
+  finite-stage final topology with OS-I's locally convex direct sum, and prove any needed product
+  continuity.
 - [x] Construct the exact reverse-conjugate involution on scalar Schwartz components.
 - [x] Lift reverse-conjugation and Euclidean time reflection to finite sequences and define the
   exact combined operation `Θ f*`.
