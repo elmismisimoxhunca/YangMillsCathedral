@@ -31,6 +31,14 @@ Printed pages and section numbers are authoritative; text lines refer to the ret
   - calls determinant-one transformations proper and positive-time-component transformations
     orthochronous;
   - exhibits time and space inversion as excluded components.
+- Printed p. 13; PDF page 23; extraction lines 642–668:
+  - defines the complex Lorentz group by the complexified form-preservation law;
+  - separates determinant `+1` and `-1` components and calls the former proper;
+  - states that `1` and `-1` are connected in the proper complex component and prints an explicit
+    connecting curve.
+- Printed p. 14; PDF page 24; extraction lines 669–685, equations `(1-19)`–`(1-20)`:
+  - presents the `SL(2,ℂ) × SL(2,ℂ)` realization of proper complex Lorentz transformations;
+  - prints their multiplication action on complex spacetime vectors.
 - Printed p. 14; PDF page 24; extraction lines 686–706, equations `(1-22)`–`(1-23)`:
   - defines inhomogeneous/Poincaré elements as translation–Lorentz pairs;
   - gives affine action `x ↦ Λx + a` and the semidirect-product multiplication law;
@@ -63,6 +71,15 @@ Printed pages and section numbers are authoritative; text lines refer to the ret
     present in the retained scan although imperfectly represented by text extraction).
 - Printed pp. 100–101; extraction lines 4258–4304: trivial constant fields are explicitly noted and
   a field theory is required to have a vacuum cyclic for polynomials in smeared fields.
+- Printed p. 63, §2-4; PDF page 73; extraction lines 2733–2752:
+  - defines the extended tube as the union of all simultaneous proper-complex-Lorentz images of the
+    ordinary tube;
+  - prints the exact existential orbit characterization and transformation-law setup.
+- Printed pp. 65–66; PDF pages 75–76; extraction lines 2822–2863, lemma and Theorem 2-11:
+  - states the path lemma used for single-valuedness;
+  - states single-valued holomorphic continuation to the extended tube and proper-complex-Lorentz
+    covariance. The present Lean geometry uses the domain definition only; the analytic theorem
+    remains a separate obligation.
 - Printed p. 111; extraction lines 4671–4709: cluster decomposition and the text's threshold
   description of a mass gap. This passage is supporting physical semantics only; it does not replace
   the required joint translation-PVM definition.

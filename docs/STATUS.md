@@ -2493,8 +2493,28 @@ Implemented and verified:
 - Streater–Wightman supplies the four-dimensional source. Dimensions one through three are explicit
   project consistency infrastructure rather than a verbatim source quantifier.
 - “Proper” currently records determinant one only. No group topology, connectedness theorem,
-  complex Lie/analytic structure, real-Lorentz embedding, extended-tube orbit, continuation datum,
-  theory, or mass gap is constructed.
+  complex Lie/analytic structure, real-Lorentz embedding, continuation datum, theory, or mass gap is
+  constructed.
+
+## 2026-07-18 — one-hundred-thirty-sixth stone: extended-tube orbit geometry
+
+Implemented and verified:
+
+- `wightmanExtendedTube` is definitionally the union of all simultaneous proper-complex-Lorentz
+  images of the exact ordinary backward tube.
+- Membership has an exact transformation/source-point witness rather than an unrelated enlarged set.
+- Each orbit image equals an inverse-action preimage, so fixed-action continuity proves every image
+  open and the full orbit open.
+- Identity gives ordinary-tube inclusion and nonemptiness; group multiplication proves exact orbit
+  invariance.
+- Invertibility keeps zero outside the extended tube at every positive arity.
+- Four-dimensional complex negation maps the standard tube point into the extended orbit but outside
+  the original backward tube, proving strict enlargement and blocking a fixed-tube surrogate.
+- The source is four-dimensional; dimensions one through three remain project consistency
+  infrastructure.
+- This is domain geometry only. No transformation-group analytic structure, single-valued
+  holomorphic continuation, extended covariance law, correlator datum, theory, or mass gap is
+  constructed.
 
 Not yet achieved:
 

@@ -224,7 +224,10 @@ committed before higher layers depend on it.
   use that exact relative distribution as the polynomially bounded tube boundary.
 - [x] Define determinant-one proper complex Lorentz kinematics preserving the exact complex-bilinear
   mostly-minus form, with group action, continuity and a nonidentity four-dimensional element.
-- [ ] Add the transformation-group topology/analytic structure and define extended-tube continuation.
+- [x] Construct the exact open invariant extended-tube orbit, prove ordinary-tube inclusion and
+  strict four-dimensional enlargement, and keep zero excluded at positive arity.
+- [ ] Add the transformation-group topology/analytic structure and define single-valued holomorphic
+  extended-tube continuation with its covariance law.
 - [x] Define the first explicit Euclidean/Minkowski bridge: reverse strict Euclidean point order,
   Wick-rotate `τ ↦ -iτ`, and prove all consecutive relative coordinates lie in the backward tube.
 - [x] Require exact genuinely integrable Euclidean/Wightman correlator-value continuation on every

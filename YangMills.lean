@@ -242,6 +242,8 @@ import YangMills.Minkowski.WightmanTubeGeometry
 import YangMills.Minkowski.WightmanTubeGeometryProbes
 import YangMills.Minkowski.ComplexLorentzKinematics
 import YangMills.Minkowski.ComplexLorentzKinematicsProbes
+import YangMills.Minkowski.WightmanExtendedTubeGeometry
+import YangMills.Minkowski.WightmanExtendedTubeGeometryProbes
 import YangMills.Minkowski.WightmanTubeBoundaryValue
 import YangMills.Minkowski.WightmanTubeBoundaryValueProbes
 import YangMills.Minkowski.WightmanTubePolynomialGrowth

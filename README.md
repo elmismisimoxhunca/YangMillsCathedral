@@ -228,8 +228,10 @@ requires an actual full-product tempered distribution at every arity and exact c
 finite pure Schwartz tensor. Determinant-one complex-linear automorphisms preserving the exact
 complex-bilinear mostly-minus form now form a named proper complex Lorentz group acting
 simultaneously on finite relative configurations; four-dimensional complex negation is an explicit
-nonidentity element. Group topology, connectedness, analytic structure, and the extended orbit
-remain pending. The exact-sign open backward tube `ξ - iη`, `η ∈ V₊°`, is constructed
+nonidentity element. The exact extended tube is now the open invariant union of all simultaneous
+proper-complex-Lorentz images; a negated standard point proves strict four-dimensional enlargement.
+Group topology, connectedness, analytic structure, and holomorphic continuation remain pending. The
+exact-sign open backward tube `ξ - iη`, `η ∈ V₊°`, is constructed
 and proved nonempty in dimensions 1–4. A separate interface requires genuine holomorphy there,
 integrable regularized tube-function pairings for every strict direction tuple, and convergence in
 the tempered-distribution topology as all directions jointly approach zero. A strengthened
