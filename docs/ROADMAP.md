@@ -98,7 +98,15 @@ committed before higher layers depend on it.
 - [x] Pin and visually verify the independent Gross–Wilczek and Politzer asymptotic-freedom papers.
 - [x] Define a prerequisite same-domain family of local operator-valued tempered distributions and
   exact full-product weak bilocal distributions with unit/nonzero hostile evidence and locked
-  operator order; no curvature interpretation or OPE asymptotics is yet claimed.
+  operator order; no curvature interpretation is claimed.
+- [x] Define normalized compact-anchor bilocal diagonal probes with `O(r)` support, an exact
+  nondegenerate relative-coefficient/local-field contraction, finite monotone truncations, connected
+  full-product remainders, and weak all-order little-`o` asymptotics.
+- [ ] Match OPE coefficient singularities and scaling orders to asymptotic freedom and perturbative
+  renormalization; the generic weak OPE checker alone does not meet Clay's prescribed-singularity
+  requirement.
+- [ ] Define the local stress-energy tensor on the same interpreted observable/domain/Poincaré chain
+  and its conservation/covariance semantics.
 - [ ] Interpret gauge-invariant local curvature polynomials and covariant derivatives.
 - [ ] Separate local observables from nonlocal Wilson observables.
 - [ ] Add nontrivial positive examples and hostile disconnected-curvature probes.

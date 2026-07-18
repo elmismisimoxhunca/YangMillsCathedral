@@ -2268,10 +2268,39 @@ Implemented and verified:
   matrix-element formulation; a nonzero product witness rejects the zero distribution family.
 - Hostile probes expose the exact unit, local matrix-element coherence, operator order, nonzero full
   distribution and rejection of a candidate disagreeing on one pure tensor.
-- This is prerequisite infrastructure only: labels are not interpreted as gauge-invariant curvature
-  polynomials, covariance/locality are not imposed family-wide, and no OPE coefficient,
-  coefficient/local-field contraction, truncation, near-diagonal remainder, prescribed singularity,
-  stress tensor, observable datum, theory, or mass gap is constructed.
+- This prerequisite still does not interpret labels as gauge-invariant curvature polynomials or
+  impose covariance/locality family-wide.
+
+## 2026-07-18 — one-hundred-twenty-sixth stone: generic weak finite-order OPE checker
+
+Implemented and verified:
+
+- `WeakBilocalDiagonalProbeData` packages full bilocal Schwartz tests with integral one, one compact
+  first-anchor region, relative support bounded by a fixed positive constant times `r`, support
+  shrinking to the diagonal as `r → 0+`, and a fixed dimension/order polynomial seminorm envelope.
+- Derived/probe theorems reject eventually zero tests, empty anchor compacts and support uniformly
+  separated from the diagonal; linear scale control prevents arbitrary slow reparameterizations
+  from making order powers meaningless, while seminorm control blocks arbitrarily amplified
+  zero-integral additions.
+- Reusable `BilocalDifferenceFirstAnchor` mathematics fixes `(x,y) ↦ (x-y,x)` and its Schwartz lift,
+  rejecting the previously available final-anchor convention for Wilson's `C(x-y) O(x)` formula.
+- `TemperedRelativeAnchorContractionData` is a nondegenerate bilinear contraction of relative
+  coefficient and local-field tempered distributions, fixed exactly on relative/first-anchor pure
+  tests.
+- `WeakOperatorProductExpansionData` supplies relative tempered coefficients, finite monotone output
+  truncations, and exact full-product remainders tied to the same ordered bilocal distributions and
+  local-field matrix elements.
+- Every order-`N` remainder is little-`o(r^N)` against every normalized compact-anchor probe and
+  every ordered domain-vector matrix element.
+- Every accepted OPE carries a designated normalized probe, so universal probe asymptotics cannot
+  pass through an empty probe type.
+- A nonzero zeroth-order coefficient is tied to a nonzero same-label local matrix element and hence
+  a nonzero contracted term. Every nonzero coefficient eventually enters a truncation; hostile
+  probes reject zero contractions, unused metadata and unrelated remainders.
+- Natural powers are an explicit finite-order convention while generic tempered coefficients can
+  retain Wilson's fractional/logarithmic singular behavior.
+- No probe, contraction, OPE datum, curvature-polynomial interpretation, family covariance/locality,
+  prescribed asymptotic-freedom singularity, stress tensor, theory, or mass gap is constructed.
 
 Not yet achieved:
 

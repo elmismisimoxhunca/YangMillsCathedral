@@ -192,9 +192,13 @@ cyclicity, locality, and forward-cone spectrum are integrated on one exact scala
 field/domain/vacuum/representation chain, while the mass gap remains an additional predicate.
 A prerequisite local-observable family now puts every labeled smeared operator and tempered matrix
 element on the same common domain, fixes the unit field by Lebesgue smearing, and requires full
-bilocal tempered products with exact pure-tensor operator order and nonzero witnesses. Labels are
-not yet interpreted as gauge-invariant curvature polynomials, and no OPE coefficients or asymptotic
-remainder are defined. Normalized algebraic smeared vacuum correlators are extracted from exact
+bilocal tempered products with exact pure-tensor operator order and nonzero witnesses. Normalized
+compact-first-anchor diagonal probes have linearly scale-controlled support and a canonical
+polynomial Schwartz-seminorm envelope. A generic weak OPE checker carries a designated probe and
+packages `C(x-y) O(x)` relative tempered coefficients, exact coefficient/local-field contraction, finite
+monotone truncations, connected remainders, and all-order little-`o` behavior. Labels are not yet
+interpreted as gauge-invariant curvature polynomials, and coefficient singularities are not matched
+to asymptotic freedom or perturbative renormalization. Normalized algebraic smeared vacuum correlators are extracted from exact
 finite field words, with
 one- and two-point operator order locked to the same selected vacuum and field. A separate interface
 requires an actual full-product tempered distribution at every arity and exact coherence on every
