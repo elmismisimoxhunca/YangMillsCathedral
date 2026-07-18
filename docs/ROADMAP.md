@@ -100,11 +100,11 @@ committed before higher layers depend on it.
 
 ## Phase 4 — Euclidean and Minkowski quantum surfaces
 
-- [ ] Pin OS-I, OS-II, Wightman and correcting primary-source bytes with verified locators.
+- [x] Pin OS-I, correcting OS-II, Wightman primary/authoritative source bytes with verified locators.
   - [x] Hash-pin full transformed Project Euclid reader extracts and verify the OS-II correction and
     linear-growth locators as provisional searchable evidence.
-  - [ ] Acquire and visually verify OS-I/OS-II primary PDF bytes and a legally accessible
-    authoritative Wightman source before introducing canonical declarations.
+  - [x] Acquire, signature-check, text-extract, and visually verify OS-I/OS-II primary article scans,
+    the Wightman 1956 paper, and the Streater–Wightman axiomatic source.
 - [ ] Define OS-II-strength Euclidean/Schwinger data.
 - [ ] Define proper-orthochronous Poincaré and Wightman data independently.
 - [ ] Define common invariant domains and operator-valued tempered distributions.

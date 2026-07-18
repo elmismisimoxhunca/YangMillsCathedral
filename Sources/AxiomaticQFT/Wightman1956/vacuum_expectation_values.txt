@@ -1,0 +1,601 @@
+PH YSI CAL R EVI EW                               VOI UME           101, NUMBER               2                         JANUAR Y 15, 19S6
+
+                  Quantum         Field Theory in Terxns of Vacuum Expectation Values
+                                                            A. S. WnHTMAN
+                               Palmer Physical   I.aboratory, Princeton University, PrAsceton, %em Jersey
+                                                        (Received Juiy 18, 1955)
+
+                Vacuum expectation values of products of neutral scalar field operators are discussed. The properties of
+             these distributions arising from Lorentz iavariance, the absence of negative energy states and the positive
+             definiteness of the scalar product are determined. The vacuum expectation values are shown to be boundary
+             values of analytic functions. Local commutativity of the field is shown to be equivalent to a symmetry prop-
+             perty of the analytic functions. The problem of determining a theory of a neutral scalar field given its vacuum
+             expectation values is posed and solved.
+
+
+
+                     l. INTRODUCTION                                     Geld which has these  J (") as its vacuum expectation
+     KCENT work in relativistic quantum Geld theory                      values. We do not show that any set of F&") outside of
+                                                                         those determined by the free Geld actually exists.
+      has made heavy use of certain basic singular
+functions defined as vacuum expectation values of
+products of Gelds taken at various space-time points.
+                                                                            2. CONSEQUENCES OF LORENTZ INVARIANCE
+In this paper, we present some results of a systematic                     For Lorentz transformations                  without time inversion,
+study of relativistic Geld theory based on such vacuum                   we know that U(a, A) is unitary. Thus,
+expectation values. For simplicity, we treat the case
+of a neutral scalar Geld interacting with itself. The                    F&-&(x„" x„)=(U(a, A)e„U(a, A)y(x,                    )" @(x„)~p)
+methods used have generalizations in any Geld theory.                                                    = (%p, $(Ax&+a)         $(Ax„+a)%p)
+   The objects of our attentions are the singular                        and therefore
+functions:
+                                                                                  P&"&(», . x.)=p&"&(Ax,+a,                   "Ax„ya)         (2)
+      F "'(x),     x„)= (4 p, P(xr)&f (xs)       y(x„)@p),
+                                                                         for {a,A} without time inversion. Here we have used
+where%'0 is the vacuum state, assumed to be the unique                   (I) and the Lorentz invariance of the vacuum state:
+state of energy and momentum zero, and p(x) is a
+neutral scalar Geld. As is well known, P&"& has to be                                                    U(a, A)+p ——4'p.
+understood as a distribution in the sense of L. Schwartz.                For Lorentz transformations                   with time inversion,   we
+It is a linear functional which gives a complex number                   have, on the other hand, '
+for each infinitely differentiable function f(xr,     x„)
+which vanishes outside a bounded region of space time:
+
+
+    F &"& (f) = ~d4x&     d4x„f(x.i,     x„)P&"&(xi,        x„).
+                                                                         Thus,
+(We call such       f testing functions. ) Furthermore,                          F &"& (xr,       x„)= [F&"& (Axi+a,           .Ax„+a)]*      (4)
+p&a&
+     (fs) ~0 if      a  sequence   of testing functions
+                                                                         for {a,A} with time inversion.
+fs(xr, .  x„) (vanishing outside a fixed bounded region)                    A somewhat similar relation                   is derived   from the
+and all their derivatives converge to zero uniformly in
+                                                                         hermiticity of P(x):
+space time. We shall study the structure of F&"&, ex-
+ploiting systematically     the Lorentz transformation
+properties of &t (x) which are given by
+                                —
+             U(a, A)y(x) U(a, A) '=y(Ax+a).                     (I)      Thus,
+                                                                                       F &" (x„~ x„)= [F "& (x„, .xi) j*.
+                                                                                              &                    &
+
+
+
+Here, {a,A} is an element of the inhomogeneous Lorentz
+group meaning the operation of transforming by the                               s. CONSEQUENCES OF THE ABSENCE OF
+homogeneous Lorentz transformation, A, followed by                                         NEGATIVE ENERGY STATES
+translating by a. U(a, A.) is the corresponding unitary or
+antiunitary operator which yields the transformed wave
+                                                                            From      2,
+                                                                                       we see that F("& is a function only of the
+                                                                         differences of the x~, . x„. We shall therefore write
+functions. we shall also determine the consequences
+for F&") of the assumptions that no negative energy                                               p(~&   —p&s&(pr . . . g, )
+states exist in the theory and that P(x) is a local field.                 ' For convenience in printing we shall often denote the complex
+Finally, we shall show how, given a set p         'a    ~       &    ~
+                                                                         conjugate, a, of a number a, by [a7*; this fatter notation is the
+~  . , one can construct a theory of a neutral scalar                    same as the notation we use to denote adjoint of an operator.
+                                                                     860
+                                                            QUANTUM            FIELD THEORY                                                                86i
+where                                                                                 Ke introduce        the notation
+       $1     X1    X21    t2       X2       X3~
+                                                 ' ' '    kn —1   Xn 1   Xn.                                           — i—
+                                                                                                                 z;, ;+1—f;
+                                                                                                                          2I;
+
+~e shall assume that F("' has a Fourier transform and                               Equation (2) implies the Lorentz invariance of G("':
+shall show that if
+                                                                                            G'"'(Pi        "P=i) =G'"'(Api, "Ap-                  )-
+F("'(5,            &-)=             exp( —iZ P" 4)                                  for A without time inversion, and Eq. (4):
+                                                  j'=1
+                                                                                        G'"'(Pi                      —
+                                                                                                         P -1)=LG'"'( Api                —Ap -1)j"'
+                                                                                             ~       ~       ~
+                                                                                    for A with time inversion.                Consequently,            we have
+then       G(n& vanishes       unless the p; satisfy                                throughout the tube
+
+                    p, 2= (p.0)2 p.2)P                    p.0)P                                   (Z12y' ' Zn —1, n)    F      (AZ12) ' ' ' AZn   1,   n)—
+                                                                                    for A without time inversion and
+by virtue of the assumption that no negative-energy
+states exist.
+   If + is an arbitrary state, its component of mo-
+                                                                                         F(-&(z„, . z. , „)=P'(-iPz„,                     Az„, )j* .        (7)
+mentum p is                                                                         for A with time inversion.
+
+                                e    "   d'aU(a1)%'
+                                                                                       We use the following theorem, whose proof will be
+                                                                                    published in another paper.
+                                                                                                  A funct— ion f(zi,
+                                                                                       Theorem.                      z„) of 23 four-vector
+Thus, by our hypothesis that no negative energy states
+                                                                                    variables s1,  s„analytic in the tube:
+exist,                                                                                    —~ (Re s;„(~, Im s; in the future cone,
+                                                                                    and invariant under the homogeneous                     Lorentz group
+    e'&'d'aF("'(&1,                 4-1, k, +a, 4+1           5 -1)
+)                                                                                   without time inversion:
+
+             e'n'd'a(+„P(X1)                  .0(X,)                                                  f(z„z„)=y(Az„Az„)
+                                              X(t (x,    „—
+                                                          a)" y(x„—a)+0) isIt aisfunction  of the scalar products s,"s&, j, k= i, 2,
+                                                                                   analytic in the complex manifold over which the
+                                                                                                                                     e.
+
+    = 4o, y(x )                p(x;)     I   e'"'d'aU( —a, 1)                       scalar products vary when the vectors s1,                      -
+                                                                                                                                                        s„vary
+       ~
+
+                                                                                    over the future tube.
+                                                                                      If we introduce the complex vectors
+                                                                                                             j—1
+                                                                                                         zi&=p zk, 2+1 foi          2( J&
+vanishes unless p is within or on the forward light cone.
+Therefore, G("'(Pi,      P„ 1) vanishes if any of its
+                                ~
+
+
+arguments lie outside the forward light cone. In the                                then the theorem tells us that the P&"& are analytic
+special case e= 2, this result is well known.                                       functions of the squares of the lengths of these vectors
+   It is an important consequence of this property of the                                                    F(ni      F(n) (z 2)
+6&") that the distributions F &") are boundary values of
+analytic functions. This result is displayed in and                                 As the variables s;, ;+1 vary over the tube each variable
+simultaneously proved by the formula                                                s;,~ varies in an open set of the complex plane. From
+                                                                                    the explicit form
+F("'(&1 igi, .            ~, i2I„1)—
+                          g—
+
+
+
+                                              2 P1" (4 i~j))— one can easily see that this set fills the entire plane
+                                              n—1
+                               exP( —i
+                                              j=l                                   except for the positive real axis and the origin. The
+                                     XG'"'(pi)             p. 1)d'pi      d'P. if   situation is indicated in detail in Fig. i. Of course, the
+                                                                                    2:;,& are not independent,   so that the manifold they
+where the four-vectors q, are restricted to lie in the                              define is not just the topological product of cut planes.
+future light cone. The 8(23 —1)-dimensional open region                             The theory of a scalar field can be regarded as a
+thus defined in the 8(23 —1)-dimensional space of the                               boundary value problem for this set of analytic func-
+components of the $1,       $„1,2I1, . 2I„1 is called the                           tions. We give an example of such a set, those arising
+future tube. Thus, F("'($1, $n 1) is a boundary value                               from the theory of a scalar field p (x) satisfying (Q+ m2)
+of a function analytic in the future tube.                                          Xg(x)=P and the commutation rules Lg(x), P(x'))
+                                                                                                                 j, jt   I    Pl-AN
+
+
+
+                  fLIGHTTHE
+                       ON
+                         CONE
+                                                 $ IN THE INTERIOR
+                                                   OF PAST CONE
+                                                                                                                                                 FIG. 2. Contour for
+                                                                                                                                              the integration of Eq.
+                                                                                                                                              (14).
+
+
+
+             f SPACE LIKE                          ININTERIOR OF
+                                                   FUTURE CONE
+                                                                                         Ke start from the equation
+                                                                                                          8$                                   1
+   FIG. 1. Domain of variation of the complex variable 22= (p 4ri)—   '                                        (t, xi), P(t, x2)             = —8(x, —x2).
+ =P —g' —2ig g, when g varies over all space time and y in the                                       8(ct)                                     i
+future cone. The labeled points indicate values of s' in the physical
+limit q —+ 0 for typical positions of g.                                            Integrating       over all space, we have
+
+= z-'a(x —*'):                                                                                             dxi
+                                                                                                                   Bp
+                                                                                                                              (t, xi), y(t, x2)          =i '
+                                                                    's odd                           J            8 (ct)
+                                                                                    or
+               m'q " '              Hi "(m(si2')'*)
+PI )(z, 2) = (                                                                      lim (2cd, t) '
+              I
+                  kg       i)              m(si22) &                                4 t~o             I   J
+                                                                                                               d'x iLQ( t+Atx i), p(t, x2)               j
+     Hi"'(m(z242)&)               H&&" (m(s             i, „')l)
+         m(s24')
+                       *
+                                         ms--1,         ''                                          —)"d'xi[a(t                 At, xi), y—(t, x2)$           =2 '.      (13)—
+The sum in (9) goes over all "pairings" of the sequence                             Now we assume that, in the limit, the only contribution
+(1 22), a "pairing" being a division of the set into                                to this integral will come from the singularity on the
+(e/2) disjoint subsets. The formulas assume a more                                  light cone, an assumption whose validity will be dis-
+familiar aspect if one goes over to the physical limit in                           cussed at the end of this section. For the erst term in
+which                                                                               the erst commutator of (13), the integral then can be
+                   (m ) Hi&'&(m(s')f)
+                                                  -AI" (~)                          written
+                   E   g~)        m(z')'                                                                            ~0
+                                                                                                d2x, . . . =42r     I
+                                                                                                                                dP{          22L(cht)2       P]l). . .
+4. CONSEQUENCES OF THE COMMUTATION                                      RULES               J                     ~ (,a, t)'
+  The local commutation                  rules
+                                                                                    where $= (cAt, xi —  x2). In the complex plane of Fig. 1,
+                  I~(.),~(~)j-=o,                 (.-y)'&0,                         this corresponds to an integration just below the real
+imply that                                                                          axis from (cht)2 to the origin. From the first term in the
+                                                                                    second commutator we get a similar integral just above
+P'"&(xr, . x;,xj+], ' ' 'x )             P       (xi ' ' 'xj+\ x;      x„) (10)     the real axis. This suggests that the two terms con-
+as long as x; and x;+~ are space-like separated points.                             tribute a contour integral around the branch cut. The
+These relations can be extended by analytic continua-                               second terms combine to given an equal contribution.
+tion to relations of the analytic functions pt"&(z;p):                              Thus, it seems plausible that the canonical commuta-
+                                                                                    tion relations are equivalent to the requirement that
+                           p(n) (z. 2)     p(a) (pz, 2)                      (11)
+where P stands for the operation of permuting the                                                                            p(n) (z 2)      — pin —2i (s 2)             (14)
+             j
+                                                                                                                         2
+
+subscripts    and          j+1,
+                       and, by delnition, z;&2 ——z&,2. The                                           e(a)                                     2m-i
+proof  is  simple. (11) coincides with (10) for all z;22
+on the negative real axis. Consequently, it holds every-                            where the contour, C(R), is that indicated in Fig. 2,
+where by analytic continuation. Thus, the local prop-                               and it is understood that on the right-hand side the
+erty of a field P(x) is characterized by a global sym-                              point x, is identified with x;+~.
+metry relation on the analytic functions J &").                                       It is not dificult to verify that the J'&") of the free-
+   Unlike the local commutation rules, the more special                             6eld case satisfy (14). One writes
+canonical commutation rules require a certain amount
+of heuristic juggling before a translation in terms of
+                                                                                                Hi"'(m(s') 1)                J &(m(s') '*)         Y&(m(s')')
+                                                                                                                                              +i
+of analytic functions is possible.                                                                                              m (s')   &
+                                                                                                                                                      m(s')   &
+                                                        QUANTUM         FIELD THEORY
+Now Ji(m(s2)&)/m(s2)& is an entire function of s', so                        This is indeed correct if J'pdg(00, but if J'pdg= oo,
+that the contour integral of (14) vanishes by Cauchy s                       then (17) is somewhat misleading, as the following ex-
+theorem. On the other hand                                                   ample shows.
+                                                                               I.et
+Vi(m(sp)&)     1          (—m's'/4)"                                                                 dg(m) = dm,       for     m) 0.
+  m(s )0      22r ~p          r (r+I)!
+                               l
+                                                                             Then, using a standard integral representation                    of the
+                                                                             Hankel function, we get
+                         m(s')      &
+
+
+           X 2 log                              )—
+                                           P(r+1— f (r+ 2)                                                             f
+                                                                             P"'(s) =                  d&(t' —1)&          m'dg(m)
+The precise definition of the f(r) is irrelevant since
+their contribution to the integrand is an entire function.                                                             &&expL   —m$( —s') l]
+The contribution from the last term is
+                   m'                        2i           1—
+                          t
+                   gori~ c(in            orm s z        22ri
+                                                                                       =(g~i) ' L(s') ')
+From the terms involving the logarithm, we get
+                                                                             The corresponding singularity of the commutation                     re-
+                                    (—
+                     1                m2R/4) "+'                             lation is obtained by examining the distribution:
+
+                    22r       —o r!(r+1)!(r+1)                               (+o, L4 (z ) A (*)1-+o) =»m(~ "i(s) —L~ "i(s)j*&
+                                                                                                              ~0
+which approaches zero in the limit R                    —0. The resultant
+                                                          &
+                                                                                                                '0         P= (z, —z,)2(0
+formula,
+                                   H i &'i (m(s') &)          1
+               hm
+               z-0 J c&ii,              m(s2)
+                                                                             where o($) = sign(P).
+                                                &
+
+
+
+                                                                               o($) (P) is that very special kind of distribution,
+                                                                                        '*
+shows that the F&"i of Eq. (9) satisfy (14).                                                                                      an
+  In current renormalization                                                 integrable function. However, its derivatives are not
+                                theory, the canonical
+commutation relation (12) holds for the unrenormalized                       functions nor can they be expressed in terms of b func-
+6elds, :but the renormalized 6elds are supposed to                           tions and their derivatives except in the following
+satisfy                                                                                                        f
+                                                                             rather singular way. Let be a testing function. Then
+              8$                                    1
+                                                   ~(x —y),
+                                                = —.
+                , (*) @b)                                             (15)
+
+where 0 &Z & I. H Z&0, our previous analysis requires
+only trivial modifications: a 1/Z appears as a factor                                 —1— dQ($) f($) o($) — f($) o($) (P)- d4$
+                                                                                              I
+                                                                                                                                                 (20)
+on the right-hand side of (14). However, for Z=O, the                                  t2Q                         ~z,
+commutator is essentially more singular than in the
+case of a free Geld. In order to understand this case,                       In (20), the first and second integrals on the right-hand
+we study F &') in more detail.                                               side are over the entire mantle of the light cone, while
+  It is an immediate consequence of the Lorentz in-                          the third is over the four-volume later and earlier than
+variance of G&", that the most general F &'& is of the form                  the hyperboloids P=f'2             P)0
+                                                                                                                and P= f'            re-P(0,
+                                                                             spectively. The second integral can be written
+                                           m' Pi&'i(m(s') &)
+           F(2i(s') =                                                 (16)                                         2
+                                                                                                  dII(~) o(k)f(f) = — d4&o(k)~(P)f(k),
+                                   dg(m)
+                          ~p               8~i          m(s') I
+                                                                                       f 2J                        |2Q
+ (apart from a constant), where dg is a weight function                      which is just of the right type to yield the right-hand
+which will be shown to be positive in Sec. 5. It would
+                                                                             side of (15).
+be tempting to argue that the operation indicated in
+                                                                                To obtain the commutation rules at a fixed time,
+Eq. (14) can be carried out under the integral sign                          one takes = 8 &/4Ix', where h is positive and symmetrical
+in (16) so that                                                                          f
+                                                                             in time, and shrinks to zero the time interval in which
+                                                                             h is nonzero. The first term of (20) is then zero and the
+                          1/Z= ~ dg(m).                               (17)                                                 f
+                                                                             last two diferent from zero. If is held 6xed and $       0,        — &
+
+
+                                                                             each of the last two terms becomes arbitrarily large,
+                                                                        A.      S. WIGHTMAN
+although their sum nearly cancels. The expression as a                                         We shall not study the relations (21) in detail in this
+whole is proportional to 14 (0) in an approximation which                                   paper but we want to point out their general significance
+becomes better and better as h shrinks toward the origin                                    for field theory. F~") is intimately-connected   with the
+of time. Thus, the right-hand side of (15) should indeed                                    5-matrix elements for those processes in which the
+be i 'oo&&(x —y) but it does eo&! arise from a term in                                      sum of the number of ingoing and outgoing particles
+(@o,(p(x), P(y)$ +o) of the form (2&ri) '~o(x —         y)                                  .s e, e.g. ,
+Xb((x —y)') as the derivation of (17) would indicate.
+Ke conclude that the treatment of the canonical com-
+mutation rules in the case J'o"dg= &4&, requires a direct                                   is the S-matrix element for the scattering of two mesons
+consideration of the singularities of F&"'(s). In such a                                    of momenta pi and po, to produce two mesons of mo-
+case, to replace (14) by an appropriate alternative is                                      menta pi' and po'. The positive-definiteness conditions
+not dificult, but to avoid complications unessential to                                     will therefore imply relations not only for the S-matrix
+the present paper we defer the discussion. In particular,                                   elements of a given process, but also relations between
+in Sec. 6 we consider only the local commutation                                            the 5-matrix elements of different processes. It might
+rules.                                                                                      be argued that such relations can yield nothing more
+                                                                                            than those results arising from the conservation of
+         5. POSITIVE DEFINITENESS CONDITIONS
+                                                                                            probability. We do not believe that to be true. The
+  Since the length of a vector is greater than or equal                                     positive-definiteness  conditions    deserve a detailed
+to zero, we have                                                                            investigation.
+
+                                                                                               6. INVERSE PROBLEM DETERMINATION OF A  —
+ o&ofo+o+&i~ d x&fi(xi)4t&(xi)+o                                                                 THEORY FROM ITS VACUUM EXPECTATION
+                                                                                                                                  VALUES
+
+                  f P                                                                         If one is given analytic functions F&"&(s;,'), e=0,
+          +Go           d xld    xof2(   xl   )x2)     )xl)4( xo)+ 0+' ' '
+                                                     &t(
+                                                                                            1, 2,     , then one can construct a theory of a scalar
+                                                                                            field, p(x), in which the e-fold vacuum expectation
+                                                                                            value of p(x) is just the boundary value of F&"&, pro-
+for all no, ni, n, ,   and all testing                          functions       fi(xi),     vided that the E'") satisfy certain conditions, most of
+fo(xi, xo),  . Therefore,                                                                   which have been discussed in the preceding sections.
+                                                                                            The construction will be carried out explicitly, the
+   s   j OCZi&j v ' ' ' J    i &I, ' ' ' &&                                                 conditions on F("' being introduced as they are needed.
+                                                                                               First, we reconstruct the Hilbert space from the
+           XF&+'&(x, x,            "»,y,                                                    F("'. Certain vectors of it will be defined as conjugate
+                                                           y;)f, (yi,     y;)
+                                X d4xi          d4x, d'yi          d'y,   )0.        (21)
+                                                                                            linear functionals on the spaces of testing functions.
+                                                                                            Then addition, multiplication by a scalar factor and
+                                                                                            formation of the scalar product will be defined for these
+We will rei'er to (21) as the positive-definiteness con-
+                                                                                            vectors. The full Hilbert space is then obtained by a
+ditions. The simplest consequences of (21) are obtained                                     standard completion process.
+by setting all but one of the n; equal to zero. For                                            Let 40 denote the conjugate linear functional which
+example, for &ri/0, we find
+                                                                                            yields for the testing function f&"'(xi,  x„) the value
+
+                  fi(xi)F"'(xi —xo) fi(xo)d'x&d'xo &0.                               (22)
+              )                                                                                          '
+
+                                                                                                                 f'"'(xi . x )d4xi.       d4x F&"&(x,      x ).
+
+It, can be shown that (22) is a necessary and sufEcient
+condition that F"' be a Fourier transform of a positive                                     J et    0,
+                                                                                                    (  denote the conjugate linear functional which
+                                                                                                             &
+
+
+
+
+measure of not too fast increaseo
+                           Bistros (generalized Bochner                                     yields for the testing function f&"&(x&,  x„), the value
+theorem). For aopO, we have
+                                                                                               f&"&(x                x )F&"+ &(x„,    xi, yi,     y„)
+                            —xo) xo —yi, yi —yo)
+   f, (x&,   xo)F &" (xi                                                                                                Xg'"'(y, " y-)d'x "d' .          d'y
+                                  X fo(yi)yo)d'x&d'xod'y, d'y, )                     (23)
+                                                                                            The +, f    and 4'0, together with the null functional 0,
+                                                                                                                 &
+
+
+
+
+an inequality whose consequences have not been char-                                        can be made into the basis vectors of a linear vector
+acterized as neatly as those of (22).                                                       space if we define multiplication by a scalar and addi-
+  ' L. Schwartz,   Theoric des        blti orls                  (Hermann       8z   Cie,
+                                                                                            tion as follows: n4,         is defined as
+                                                                                                                              &   &        ( &, while   0',
+Paris, 1951), Vol. 2, p. 132, Theorem 18.                                                   N, &-&+&If@&-& is the conjugate linear functional which
+                                                             QIIANTUM                        FIELD THEORY
+yields for the testing function f&'&(x&, .                             x)) the value               by virtue of the Lorentz invariance property of the
+                                                                                                   F&"&  given in Eq. (2). Furthermore,    on the basis
+
+aJ
+     f"'(*,                ) F"        '(,         ,   y, . y-)
+                                                                                                   vectors,
+                                                                                                               U(a, A) U(b, M) = U(a+Ah, AM)       (26)
+                                                                                                   The operators U(a, A.) can be extended to all vectors in
+     Xg&"&(yi,             y   )d'x,         d'xid'y,        d'y
+                                                                                                   @ by linearity and, so defined, are unitary.
+                                                                                                     For the {a,A) containing time inversion we define
+     + f&'&(x&,                x))F&'+"&(x&, . xi, yi,                 y„)
+                                                                                                                                   U(a, A) so = eo,
+                               X h'"'(yi, . y„)d'xi.                d'x, d'y, .            d'y„.                                 U(a, A)+o& &=Co«&,                                  (27)
+                                                                                                   where
+The sum +p+@, is defined similarly. It is obvious
+                               &
+
+
+
+                                                                                                                        . x„)=[g&"&(A—'(x, —a)
+                                   &
+
+
+
+                                                                                                       g&«"&(x))
+                                                                                                                                                                     —'(x„—a))]*.
+indeed that addition is associative and commutative                                                                                                              A
+and has a zero, the null functional. Further, inverses                                             This definition has as a consequence
+(negatives) exist and scalar multiplication is commuta-
+tive, associative, and distributive. In short, the set of                                                       (U(a, A)e,   &
+                                                                                                                                 &,   U(a, A)e'))& ))=[(e,&»&,&I), &)]*,      &
+
+
+
+
+all linear combinations of the basis vectors +, ( and                                  ~
+
+
+
+4'p forms a linear vector space, @.                                                                by virtue of the Lorentz invariance property of the
+                                                                                                   F&"& given in Eq. (4). Just as for the operators for
+   We introduce a scalar product into @ by means of
+the following formulas:                                                                            {a,A) without time inversion, (26) is satisfied, and the
+                                                                                                   U(a, A) can be extended to all vectors, and, so defined,
+                                                                                                   are antiunitary.
+(+    &«) 4'))&   ))   =       y'"&(x)         x„)F'"+"&                                              The U(a, A) which are determined in this way are
+                                                                                                   guaranteed to contain no negative energies by virtue
+                                                                                                   of the analyticity of the F("~ in the future tube. The
+                  X (x             xi yi        y )&'"&(y&
+                                                                    . y )                          details of their momentum spectrum can be ascertained
+                                           Xd4xi       . .d4x„d4yi. . .d4y ,                       from the set on which the Fourier transforms of the
+                                                                                           (24)    Fi"& do not vanish. The real four-vector, p, is in the
+     (+pP. -)= ~F'-'(y, " y-)                                                                      momentum spectrum of U(a, A) if for some Fi"&, the
+
+                                       Xg(-&(yi,       ". y-)d'yi          d'y-            (»)
+                                                                                                   Fourier transform with respect to at least one of the
+                                                                                                   variables does not vanish at p.
+                                                                                                      The action of the 6eld operator P(x) [or better its
+Equations (24) and (25) define the scalar product for                                              average, &t)(f), with the testing function f(y)] on the
+the basis of our linear vector space. It then turns out                                            vector +, &-& is defined as follows: &t&(f)@, is the con-          &   &
+
+
+
+that for linear combinations of the basis vectors, it is                                           jugate linear functional which, for the testing function
+consistent to de6ne it as linear in its second argument                                              i (xi, . x„) yields the number
+and antilinear in its first.
+                                                                                                   f    &
+
+
+
+
+   The scalar product so defined will have the desirable
+property, (C P) = [(+,C)]*, by virtue of the hermiticity                                                f (xi,
+                                                                                                            &   "&
+                                                                                                                          x„)F i "+"+'&(x„,         xi, y, yi,        y„)
+condition (5) on F&"&. It will be positive de6nite                                                                                                 y)d"' d".dy' dy.
+                                                                                                                         Xf(y)g-(»,
+by virtue of the positive definiteness conditions (21)
+on F&"&. Thus, with this definition, @ has all the prop-                                           This is just the vector 4'i, &, where f(y)g&~&(yi,
+                                                                                                                                               &
+                                                                                                                                                          y )
+erties of a Hilbert space except completeness. So we                                               is regarded as a testing function in (m+1) variables.
+complete it by the standard method.                                                                &t)(f)rois de6ned a's 4'y. &t)(f) is defined as the closed
+   Next we de6ne the unitary operators U(ag) which                                                 linear extension of this operator.
+give the representation of the inhomogeneous Lorentz                                                  On the basis vectors and their finite linear combina-
+group. Consider first the action of U(a, A) for {a,A)                                              tions &&&(f) possesses the property
+without time inversion"on the basis elements 4'0 and
+ Qg (~):
+                                                                                                                                        &(f)*=4 (f),
+                                       U(a, A)Co= 0'p,                                             where                                   of f(x). Thus,
+                                                                                                                     f(x) is the complex conjugate
+                                   U(ag)%, &.&=4,           &»&,                                   g(f) will be formally Hermitean  if is real.
+                                                                                                      The transformation properties of the operator p(f)
+                                                                                                                                                            f
+ where
+                                                                                                   follow immediately from those of the 4', &-&. For U(a, A)
+      g'&"&(x„. x ) =g&"&(A—'(xi —a), .                            A
+                                                                       —'(x„—
+                                                                                      a)).         unitary, we have
+                                                                                                   U(ag)&t)(f)+, &»&= U(a, A)@z, «
+ The U(a, A) preserve
+ vectors,
+                                             scalar products            of the basis
+
+                                                                                                   Therefore,
+                                                                                                                                               =e,   ; =y(f')
+                                                                                                                                                        -                     U(a, A)e,   .
+            (U(a, A)%, &-&, U(a, A)+), &-&) = (+,                   &»&,&I )) &-&),                                         U(        A)4(f)=4(f')U(, A),
+                                                                  A.     S. WIGHTMAN
+with    f'(x)= fLA '(x —tt)] in agreement                      with     (1). For       Our reconstruction remains valid in a theory in which
+the anti-unitary                U(a, A) we have similarly:                          the field p(x) is not a complete description of the sys-
+                                                                                    tem, e.g. , in a theory of interacting neutral mesons and
+                                                                                    nucleons. However, in such a case the reconstruction
+                                                                                    process given here will not recover the entire Hilbert
+Therefore,                                                                          space. If one were to deGne a theory by its analytic
+                                                                                    functions F &"', rather than by its Geld equations and
+                                                                                    commutation rules, then, to be sure that the theory was
+with fic defined as in (27) in agreement with (1).
+                                                                                    one of a single field @(x), one would have to impose
+  The local commutation rules of g(f) can be veri6ed
+                                                                                    some kind of "completeness" requirement. For example
+as follows:
+                                                                                    one could require that the set of vectors g (fi)  Q (f„)4p
+
+Q   (fi) $ (fp)Q        ( )   = +f f g = 4f f g ( ) = $ (fs) Q (fi)4 ( )
+                                       («&                                          for m=0, 1, 2,       span the whole Hilbert space, where
+                                                                                                          ~
+
+
+                                                                                    the f; are testing functions which vanish outside of a
+                                             —
+when fi(x)fs(y) for all (x y)'&0. The proof depends                                 spacelike slice of space time of arbitrarily small thick-
+on the fact that for such fi and fs,                                                ness ht in the time direction.
+
+                                                                                                              7. CONCLUSION
+                                                                                      A theory of a neutral scalar Geld can be reformulated
+by virtue of Eq. (10).
+  To complete the reconstruction of the theory we                                   as a theory of a denumerable set of analytic functions of
+need only show that the vacuum expectation values of                                complex variables, E&"&, m=0, 1, 2,      . Relativistic in-
+products of p(f)'s are the F&"& This .is an easy conse-                             variance implies that the P'"& are invariant under
+quence of the formula P(fi)@(fs)' ' '@(f )0'p=%t, ...f„.                            Lorentz transformation without time inversion and are
+It implies                                                                          therefore functions of certain complex variables s;,     '.
+                                                                                    Local commutation      rules of g (x) imply F "& (s;ts)
+                                                                                                                                      &
+
+
+
+
+(+pl(fi)" tt (f-)+p)                                                                =F&"&(Ps;ss), where P is any of a certain'set of per-
+                                                                                    mutations of the labels i,       j;
+                                                                                                                 the positive definiteness of
+                                                                                    the scalar product implies a set of inequalities con-
+                   eJ
+                        ~
+                            fi(xi).     f.(xe)&'"'(xi,        xe)d'xi      d4x„,
+                                                                                    necting the boundary values of the F&"'.&iGiven a set
+                                                                                    of J"&") satisfying the conditions listed, one can re-
+which was to be proved.                                                             construct a theory of a neutral scalar Geld.
+
+
+
+
+PHYSICAL REVIEW                                                 VOLUM E 202, NUM HER                  2                    JANUARY   25, 2956
+
+                                                 Radiative &orrections to Decay Processes
+                                                      R. K. BEHRENDS, R. J. FINKELSTEIN, AND A. SIRLIN
+                                             DePartment   of Physics, Unigersity of California, I.os Angeles, California
+                                                                     (Received August 1, 1955)
+
+                      Radiative corrections associated with the electromagnetic Geld have been determined for the decay of
+                   a fermion of arbitrary mass into a lighter one with the emission of a single boson or of two other fermions;
+                   no special assumptions have been made about the nature of the interaction responsible for the instability.
+                   The particular example of the muon-electron decay has been worked through in detail. Su%ciently accurate
+                   experimental determination of the muon spectrum would permit the observation of a I.amb term without
+                   vacuum polarization. Modified formulas for the Michel parameter p are given.
+
+                                   INTRODUCTION                                     be described in terms of virtual photons and is exactly
+           instabilities of the elementary particles are                            similar to the processes responsible for the Lamb-
+A        LL
+
+                                  "
+       somewhat modi6ed by Quctuations of their elec-
+tromagnetic fields. These Quctuations are responsible
+                                                                                    Retherford shift. The total probability of decay with
+                                                                                    and without inner bremsstrahlung       would of course
+6rst for the emission of real photons, simultaneous with                            exceed the probability of unperturbed decay, were it
+the decay and independent of the surrounding matter                                 not for the damping effect of the virtual photons„
+(inner bremsstrahlung) and second for damping effects                               however both effects are of the same order and must be
+associated with the unradiated Geld. This damping may                               considered together.
+    ' S. Hanawa and T. Miyazima, Progr. Theoret. Phys. (Japan)                         %e have considered the decay of an arbitrary charged
+5, 459 (1950).
+                                                                                    fermion into a lighter one with the emission of a single
+    ' T. Nakano et al. , Progr. Theoret. Phys. (Japan) 5, 1014 (1950).              boson or of two other fermions, without making any
+

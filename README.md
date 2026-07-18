@@ -131,6 +131,7 @@ concrete gauge-group, connection, invariant-inner-product, curvature, or structu
 symmetry group, reconstruction bridge, quantum-theory witness, Yang–Mills existence claim, or
 mass-gap claim is present.
 
-Full transformed Project Euclid reader extracts of OS-I and correcting OS-II are hash-pinned as
-provisional searchable evidence. They are explicitly not primary PDF bytes; no OS declaration will
-become canonical until the primary scans and formulas are visually verified.
+Primary OS-I and correcting OS-II article scans, Wightman's 1956 paper, and the corrected Princeton
+edition of Streater–Wightman are hash-pinned with exact text extractions. Load-bearing OS-II and
+Wightman-axiom pages were visually verified. This source acquisition does not construct any
+Euclidean or Wightman theory.

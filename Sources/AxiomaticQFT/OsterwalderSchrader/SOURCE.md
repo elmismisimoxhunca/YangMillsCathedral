@@ -2,19 +2,20 @@
 
 ## Status
 
-**Provisional transformed full-text evidence; primary PDF bytes are not yet pinned.**
+**Primary article scans acquired, signature-checked, text-extracted, and visually verified at the
+load-bearing pages.**
 
-The two retained artifacts are full Markdown text extractions produced by Jina Reader from Project
-Euclid's legacy PDF-download endpoints. They expose all printed pages and are useful for searchable
-source review, but they are not the publisher PDF bytes and must not be described as primary PDFs.
-No canonical Osterwalder–Schrader Lean declaration may rely on this directory alone. Direct PDF
-acquisition, `%PDF-` signature checking, visual inspection, and byte hashing remain required.
+The user supplied the scans under `/projects/`. Each retained `.pdf` begins with `%PDF-`, is
+unencrypted, has the correct title, printed page range, journal header, and complete article text,
+and was successfully processed by `pdfinfo`, `pdftotext`, and page rendering. Their byte identity
+with a particular publisher download was not independently established, so they are described as
+primary article scans rather than publisher-download bytes.
 
-Direct unauthenticated requests to the current Project Euclid `full.pdf` endpoints returned a
-roughly one-kilobyte HTML access-control page in this environment; the response body can vary
-between requests. Those bytes were inspected as HTML and
-were deliberately not retained under a `.pdf` name. Springer PDF endpoints redirected through an
-identity-provider flow and likewise yielded no verified PDF artifact.
+The earlier Jina Reader Markdown transformations remain retained as separately labelled search aids.
+They are not primary artifacts and are not used for visual formula verification.
+
+Direct unauthenticated requests to current Project Euclid `full.pdf` endpoints returned variable
+roughly one-kilobyte HTML access-control pages. Those bytes were rejected rather than saved as PDFs.
 
 ## OS-I identity
 
@@ -22,13 +23,11 @@ identity-provider flow and likewise yielded no verified PDF artifact.
 - *Communications in Mathematical Physics* **31** (1973), 83–112.
 - DOI: <https://doi.org/10.1007/BF01645738>.
 - Project Euclid identity: `euclid.cmp/1103858969`.
-- Current article record:
+- Article record:
   <https://projecteuclid.org/journals/communications-in-mathematical-physics/volume-31/issue-2/Axioms-for-Euclidean-Greens-functions/10.1007/BF01645738.full>.
-- Preferred primary PDF endpoint, not successfully retrieved here:
-  <https://projecteuclid.org/journals/communications-in-mathematical-physics/volume-31/issue-2/Axioms-for-Euclidean-Greens-functions/10.1007/BF01645738.full.pdf>.
-- Legacy endpoint used as the Jina Reader input:
-  <https://projecteuclid.org/download/pdf_1/euclid.cmp/1103858969>.
-- Retained transformed extraction: `os1_projecteuclid_reader.md`.
+- Retained primary scan: `os1_primary_scan.pdf` — 30 PDF pages.
+- Reproducible text extraction: `os1_primary_scan.txt`, produced by `pdftotext -layout`.
+- Retained transformed search aid: `os1_projecteuclid_reader.md`.
 
 ## OS-II correcting-source identity
 
@@ -36,41 +35,40 @@ identity-provider flow and likewise yielded no verified PDF artifact.
 - *Communications in Mathematical Physics* **42** (1975), 281–305.
 - DOI: <https://doi.org/10.1007/BF01608978>.
 - Project Euclid identity: `euclid.cmp/1103899050`.
-- Current article record:
+- Article record:
   <https://projecteuclid.org/journals/communications-in-mathematical-physics/volume-42/issue-3/Axioms-for-Euclidean-Greens-functions-II/10.1007/BF01608978.full>.
-- Preferred primary PDF endpoint, not successfully retrieved here:
-  <https://projecteuclid.org/journals/communications-in-mathematical-physics/volume-42/issue-3/Axioms-for-Euclidean-Greens-functions-II/10.1007/BF01608978.full.pdf>.
-- Legacy endpoint used as the Jina Reader input:
-  <https://projecteuclid.org/download/pdf_1/euclid.cmp/1103899050>.
-- Retained transformed extraction: `os2_projecteuclid_reader.md`.
+- Retained primary scan: `os2_primary_scan.pdf` — 25 PDF pages.
+- Reproducible text extraction: `os2_primary_scan.txt`, produced by `pdftotext -layout`.
+- Retained transformed search aid: `os2_projecteuclid_reader.md`.
 
-## Load-bearing searchable locators
+## Load-bearing verified locators
 
-Line numbers below refer only to the retained transformed artifacts. Printed journal pages remain
-the authoritative locators.
+Printed journal pages are authoritative. Text line numbers below refer to the retained
+`*_primary_scan.txt` files.
 
 ### OS-I
 
-- Printed pp. 84–85; extraction lines 28–35: the original proposal lists `(E0)` temperedness,
-  `(E1)` Euclidean covariance, `(E2)` positivity, `(E3)` symmetry, and `(E4)` cluster property.
-- Printed pp. 87–88; extraction lines 119–143: the axioms and the original `E → R` / `R → E`
-  theorem claims are stated.
+- Printed pp. 84–85: the original proposal lists `(E0)` temperedness, `(E1)` Euclidean covariance,
+  `(E2)` positivity, `(E3)` symmetry, and `(E4)` cluster property.
+- Printed pp. 87–88; `os1_primary_scan.txt` lines 237–277: the axioms and original `E → R` / `R → E`
+  theorem claims are stated. The formulas and headings were visually checked on PDF pages 5–6.
 - These sufficiency claims are **not** accepted uncorrected because OS-II explicitly reports the
   failure of OS-I Lemma 8.8.
 
 ### OS-II correction and replacement
 
-- Printed p. 282; extraction lines 34–50: the authors state that OS-I Lemma 8.8 is wrong, that it is
-  open whether OS-I `(E0)–(E4)` suffice for a Wightman theory, and that stronger sufficient
-  conditions are introduced.
-- Printed p. 282; extraction lines 48–50: the counterexample and distinction from the preliminary
-  Erice condition are discussed.
-- Printed p. 287, §IV.1; extraction lines 209–229: the paper introduces the linear-growth condition
-  `(E0′)` and the slightly stronger `(E0″)`. The mathematical formula is OCR-degraded in the
-  transformed artifact and must be transcribed only after visual verification of primary PDF bytes.
-- Printed p. 287; extraction lines 231–239: the corrected reconstruction theorem states that
-  `(E0′)` (or `(E0″)`) together with `(E1)–(E4)` yields a uniquely determined Wightman theory whose
-  Wightman distributions satisfy `R0–R5` plus a linear-growth condition.
+- Printed p. 282; `os2_primary_scan.txt` lines 56–95: the authors state that OS-I Lemma 8.8 is wrong,
+  that it is open whether OS-I `(E0)–(E4)` suffice for a Wightman theory, and give the separate-
+  versus-joint-temperedness counterexample. This page was visually checked on PDF page 2.
+- Printed p. 287, §IV.1; `os2_primary_scan.txt` lines 297–324: the paper defines factorial growth,
+  the linear-growth condition `(E0′)` in equation (4.1), the stronger `(E0″)` in equation (4.2), and
+  states the corrected reconstruction theorem. The formulas were visually checked on PDF page 7.
+- The visually verified `(E0′)` condition requires `S₀ = 1`, each `Sₙ` in the indicated distribution
+  space, a fixed order `s ∈ ℤ₊`, and a factorial-growth sequence `{σₙ}` such that
+  `|Sₙ(f)| ≤ σₙ |f|ₙ,ₛ` for all positive `n` and Schwartz test functions `f` on `ℝ⁴ⁿ`.
+- The corrected theorem states that `(E0′)` (or `(E0″)`) together with `(E1)–(E4)` gives the Euclidean
+  Green's functions of a uniquely determined Wightman quantum field theory satisfying `R0–R5` and
+  an additional Wightman linear-growth condition `(R0′)`.
 
 ## Formalization decision
 
@@ -80,19 +78,23 @@ Reflection positivity, Euclidean covariance, symmetry, clustering, regularity/gr
 axioms, and reconstruction coherence must remain separately visible obligations.
 
 The original OS-I sufficiency theorem must never be encoded using only ordinary temperedness. A
-canonical reconstruction requirement must incorporate a visually verified OS-II-strength growth
-condition or another later authoritative theorem with all hypotheses explicit.
+canonical reconstruction requirement must incorporate the OS-II-strength linear-growth condition
+or another later authoritative theorem with every hypothesis explicit.
 
-No OS, Wightman, Euclidean-theory, or reconstruction declaration is introduced by this source-only
-stone. Primary PDF acquisition and exact formula verification remain hard gates.
+The scans now clear the source-acquisition gate for defining an OS-II-strength requirement surface.
+They do not themselves provide a Yang–Mills model, prove existence, or justify identifying Euclidean
+and Minkowski data definitionally.
 
 ## Artifact chain
 
-- Retrieval time: `FETCH_TIMESTAMP.txt`.
-- `SHA256SUMS.txt` verifies the retained transformed Markdown bytes.
-- Jina Reader URLs used:
+- Acquisition/verification time: `FETCH_TIMESTAMP.txt`.
+- `SHA256SUMS.txt` verifies both primary scans, their reproducible text extractions, and the two
+  transformed reader artifacts.
+- Duplicate `/projects/osterwalder1973 (1).pdf` was byte-identical to
+  `/projects/osterwalder1973.pdf` and was not retained twice.
+- Primary-scan SHA-256 values:
+  - OS-I: `40c81d85a832452dde05bee6b601982488697aedf1a7be2fa2128279fd3c6182`.
+  - OS-II: `36413586b83b491c8e0ef318e98d6e882619019826e62dc24daf898dc7f486ec`.
+- Jina Reader inputs retained only as provenance for the transformed search aids:
   - <https://r.jina.ai/https://projecteuclid.org/download/pdf_1/euclid.cmp/1103858969>
   - <https://r.jina.ai/https://projecteuclid.org/download/pdf_1/euclid.cmp/1103899050>
-- Transformation caveat: Jina Reader performed PDF-to-Markdown extraction. OCR errors are visible,
-  including degraded mathematical symbols. The artifacts are search aids and correction evidence,
-  not substitutes for the primary scans.

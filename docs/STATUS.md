@@ -1148,19 +1148,16 @@ Verified:
 Verified:
 
 - Full transformed Markdown extractions of Project Euclid's legacy OS-I and OS-II PDF-download
-  endpoints are retained under `Sources/AxiomaticQFT/OsterwalderSchrader/` with byte hashes and a
-  retrieval timestamp.
-- The source record verifies the identities and DOI metadata for OS-I, *CMP* 31 (1973), 83–112, and
-  correcting OS-II, *CMP* 42 (1975), 281–305.
-- OS-II printed p. 282 explicitly reports that OS-I Lemma 8.8 is wrong and that sufficiency of the
-  original `(E0)–(E4)` is open; printed p. 287 introduces the stronger linear-growth condition and
-  corrected reconstruction theorem.
-- The retained files are honestly labelled Jina Reader transformations, not primary PDFs. Direct
-  Project Euclid requests returned HTML access-control bytes, which were rejected rather than
-  mislabeled as PDFs; Springer redirected through an identity-provider flow.
-- Mathematical notation in the transformed extraction is OCR-degraded. No OS, Wightman, Euclidean,
-  or reconstruction declaration is introduced, and primary PDF acquisition plus visual formula
-  verification remain mandatory gates.
+  endpoints were initially retained as provisional search evidence.
+- Primary OS-I and OS-II article scans supplied under `/projects/` are now hash-pinned with exact
+  `pdftotext -layout` extractions. Both have `%PDF-` signatures, correct title/page metadata, and
+  complete article content.
+- OS-II printed p. 282 was visually verified to report that OS-I Lemma 8.8 is wrong and that
+  sufficiency of the original `(E0)–(E4)` is open.
+- OS-II printed p. 287 was visually verified to state factorial growth, `(E0′)` equation (4.1),
+  `(E0″)` equation (4.2), and the corrected reconstruction theorem.
+- OS-II has correcting priority. No OS, Wightman, Euclidean, or reconstruction declaration is
+  introduced by source acquisition alone.
 
 ## 2026-07-17 — sixty-seventh mathematical stone: invariant-pairing normalization scaling
 
@@ -1177,6 +1174,23 @@ Verified:
   installed. No global normalization or inner-product instance is introduced.
 - Hostile probes reject malformed scaling at the generic canonical contraction, exact dependent
   fiber pairing, and exact canonical curvature levels.
+
+## 2026-07-17 — sixty-eighth evidence stone: Wightman axiomatic sources
+
+Verified:
+
+- The 2000 corrected Princeton edition of Streater–Wightman, *PCT, Spin and Statistics, and All
+  That*, is hash-pinned with exact text extraction and publication/ISBN metadata. The byte source is
+  a supplied third-party scan, honestly distinguished from a publisher download.
+- Printed pp. 96–101 (§3-1) were visually verified: one continuous unitary Poincaré-cover
+  representation, forward-cone spectrum, unique invariant vacuum, common dense invariant domain,
+  tempered field matrix elements, covariance, locality, and cyclicity are separate obligations.
+- Wightman's 1956 *Physical Review* paper, DOI `10.1103/PhysRev.101.860`, is hash-pinned and visually
+  verified as primary vacuum-expectation-value/reconstruction evidence.
+- The source map records the planned strengthening to one explicit joint translation PVM so that
+  energy, momentum, vacuum projection, invariant mass, and the gap cannot be disconnected.
+- No Wightman field, Hilbert space, translation representation, PVM, vacuum, existence theorem, or
+  mass-gap witness is constructed.
 
 Not yet achieved:
 
@@ -1198,10 +1212,10 @@ Not yet achieved:
   basis-independent, the exact dependent adjoint-fiber pairing is packaged bilinearly, and the
   generic degree-two adapter is applied to the exact curvature. The resulting pointwise contraction
   is basis-independent and the existing action is proved to integrate it, but a general Hodge-star
-  bridge and metric-volume compatibility remain pending. Full transformed OS-I/OS-II source text
-  and correction locators are hash-pinned, but primary OS PDF bytes and an authoritative accessible
-  Wightman artifact remain unacquired; spectral, observable, and lattice sources also remain to be
-  independently acquired and verified before their corresponding declarations become canonical.
+  bridge and metric-volume compatibility remain pending. OS-I, correcting OS-II, Wightman 1956,
+  and Streater–Wightman source artifacts are now acquired and verified; their Lean requirement
+  surfaces remain unimplemented. Spectral-theorem, observable, and lattice source packages also
+  remain to be independently completed before corresponding declarations become canonical.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.
