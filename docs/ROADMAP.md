@@ -115,9 +115,11 @@ committed before higher layers depend on it.
 - [x] Construct an explicit nonzero arity-one Schwartz test with strict-positive-time support.
 - [x] Define a strict Mathlib subspace using topological-support time ordering and infinite-order
   Fréchet flatness on point-coincidence diagonals.
-- [ ] Establish its embedding/sufficiency/density/completion relation to OS-I's derivative-vanishing
-  ordered spaces; distinguish per-arity induced, finite-sequence direct-sum, and positive-half-space
-  completed-tensor topologies; construct finite test-sequence products and define `(E2)`.
+- [x] Package algebraic finite test sequences with an exact nonzero-arity support finset.
+- [ ] Establish the strict subspace's embedding/sufficiency/density/completion relation to OS-I's
+  derivative-vanishing ordered spaces; install the per-arity induced and finite-sequence direct-sum
+  topologies while keeping the positive-half-space completed tensor product distinct; construct the
+  sequence product/reflection and define `(E2)`.
 - [ ] Prove the source-facing OS-II `(E0′)` bridge and define complete Euclidean/Schwinger data.
 - [ ] Define proper-orthochronous Poincaré and Wightman data independently.
 - [ ] Define common invariant domains and operator-valued tempered distributions.

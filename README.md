@@ -138,7 +138,8 @@ subspace also records topological-support time ordering and full Fréchet-deriva
 coincidence diagonals. `(E2)` remains absent pending its embedding/sufficiency/density/completion comparison
 with OS-I's derivative-vanishing ordered spaces, the induced topology on each arity space, the
 direct-sum topology on finite sequences, the distinct completed tensor product for positive-half-
-space tests, and the finite sequence product; `(E4)` is also absent. No
+space tests, and the finite sequence product; the algebraic finite-sequence carrier with exact
+nonzero support is already implemented. `(E4)` is also absent. No
 concrete gauge-group, connection, invariant-inner-product, curvature, or structure-certificate witness,
 symmetry group, reconstruction bridge, quantum-theory witness, Yang–Mills existence claim, or
 mass-gap claim is present.

@@ -1345,6 +1345,26 @@ Implemented and verified:
 - No reflection positivity theorem, Euclidean theory, reconstruction, Wightman theory, existence
   theorem, or mass-gap witness is introduced.
 
+## 2026-07-18 — seventy-seventh stone: finite Schwinger test sequences
+
+Implemented and verified:
+
+- `MathlibStrictPositiveTimeTestSequence` separates the arity-zero scalar, a finite positive-arity
+  support finset, and the exact underlying Schwartz component at every positive arity.
+- Every component retains strict ordered support and coincidence-flatness from the current strict
+  Mathlib subspace.
+- `mem_support_iff` makes the finset exactly equivalent to nonvanishing of the same component;
+  arbitrary finite supersets cannot serve as disconnected summation witnesses.
+- Derived theorems force every outside-support component to zero and every nonzero component into
+  support.
+- Both a zero sequence and a singleton sequence carrying the exact nonzero arity-one positive-time
+  bump are constructed without asserting any Schwinger-family or QFT inhabitant.
+- Hostile probes reject nonzero outside-support components, omitted singleton support, and
+  replacement of the supported bump by an unrelated value.
+- The direct-sum topology, sequence product, reflected involution, and `(E2)` remain absent.
+- No reflection positivity theorem, Euclidean theory, reconstruction, Wightman theory, existence
+  theorem, or mass-gap witness is introduced.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
