@@ -106,10 +106,14 @@ committed before higher layers depend on it.
 - [x] Define a preliminary explicitly four-dimensional pure-gauge running-coupling/beta sign normal
   form on an open ultraviolet tail, without imposing infrared behavior or inventing the unresolved
   group-dependent coefficient normalization.
-- [ ] Connect the leading coefficient to the exact gauge group/invariant-pairing/coupling convention
-  and match OPE coefficient singularities and scaling orders to asymptotic freedom and perturbative
-  renormalization; the generic weak OPE checker alone does not meet Clay's prescribed-singularity
-  requirement.
+- [x] Add a supplied preliminary weak-distribution regular-variation condition on every nonzero
+  coefficient of the exact OPE, with normalized short-distance tests, signed radial degrees,
+  real running-coupling exponents, nonzero leading limits, and hostile anti-collapse probes.
+- [ ] Derive rather than supply the relevant scaling laws: connect the leading beta/OPE coefficients
+  to the exact gauge group/invariant-pairing/coupling convention, interpreted curvature-polynomial
+  operators, anomalous-dimension mixing, scheme dependence and controlled perturbative remainders.
+  Neither the generic OPE nor the supplied regular-variation condition meets Clay's
+  prescribed-singularity requirement.
 - [x] Define a symmetric Hermitian local stress-energy tensor inside the same local-observable/
   common-domain/Poincaré chain, with explicit rank-two Lorentz covariance, weak conservation and a
   nonzero non-unit energy-density witness.

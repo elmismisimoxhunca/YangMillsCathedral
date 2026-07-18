@@ -2556,6 +2556,30 @@ Implemented and verified:
 - No OPE coefficient matching, perturbative series/remainder, infrared or mass-shell statement,
   quantum theory, existence theorem, or mass gap is constructed.
 
+## 2026-07-18 — one-hundred-thirty-ninth stone: supplied weak OPE regular variation
+
+Implemented and verified:
+
+- `normalizedRelativeSchwartzDilationCLM` defines `r⁻ᵈ f(·/r)` exactly at nonzero scale and is
+  totalized by zero at the excluded scale; all source-facing limits use `r → 0+`.
+- `rescaledOPECoefficient` combines the exact normalized test dilation, `t=-log r`, a signed real
+  radial degree, and a real power of the same four-dimensional running coupling.
+- `SuppliedWeakOPERegularVariationData` requires every nonzero coefficient of one exact weak OPE to
+  converge in Mathlib's pointwise/weak tempered-distribution topology to a nonzero leading
+  distribution. Signed degrees permit regular or vanishing coefficients.
+- At least one actual nonzero coefficient has a nonzero coupling exponent, blocking a wholly
+  disconnected running-coupling decoration.
+- Hostile probes expose exact evaluation, inverse-coordinate scaling, scale-zero totalization,
+  positive-scale noncollapse, all-coefficient limits, nonzero leaders, four-dimensional scope,
+  a signed-degree constructor surface with no nonnegativity premise, negative-degree visibility,
+  limit uniqueness, and rejection of all-zero coupling exponents.
+- This is explicitly supplied acceptance data, not a consequence of Gross–Wilczek, Politzer, or
+  Wilson for an arbitrary local family. It does not calculate group-normalized beta/OPE
+  coefficients, anomalous dimensions, operator mixing, scheme dependence, perturbative remainders,
+  or identify the labels with curvature-polynomial observables. Clay's prescribed-singularity
+  obligation therefore remains open.
+- No OPE datum, regular-variation datum, theory, existence theorem, or mass gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

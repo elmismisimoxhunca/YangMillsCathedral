@@ -215,8 +215,12 @@ or positive curvature-tensor orders. This is not a general curvature-polynomial/
 map. A preliminary four-dimensional perturbative interface now requires a positive running coupling
 on an explicit open ultraviolet tail, exact beta flow, ultraviolet limit, and negative cubic leading
 normal form. It intentionally leaves the group-dependent one-loop coefficient and invariant-pairing/
-coupling normalization disconnected and does not yet match OPE coefficient singularities. A separate
-same-family stress-tensor checker
+coupling normalization disconnected. A separate supplied regular-variation interface ties every
+nonzero coefficient of the exact weak OPE to normalized short-distance Schwartz dilations, signed
+real radial degree, a real power of the same running coupling, and a nonzero weak distributional
+limit. This is acceptance data, not a perturbative calculation: anomalous dimensions, mixing,
+scheme dependence, remainders, interpreted curvature-polynomial labels, and Clay's prescribed
+singularities remain open. A separate same-family stress-tensor checker
 requires symmetric Hermitian components local relative to the whole family, explicit inverse-matrix
 contravariant rank-two Lorentz covariance, weak distributional conservation, and a nonzero non-unit
 energy density. Its symmetry/conservation semantics are independently sourced to an authoritative
