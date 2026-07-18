@@ -186,7 +186,10 @@ committed before higher layers depend on it.
 - [x] Require actual full-product tempered distributions at every arity, coherent with exact ordered
   field-word values on every finite pure Schwartz tensor.
 - [x] Construct the exact-sign open backward tube `ξ - iη`, `η ∈ V₊°`, and prove explicit
-  nonemptiness/strictness in dimensions 1–4; holomorphic correlators remain pending.
+  nonemptiness/strictness in dimensions 1–4.
+- [x] Package genuine tube holomorphy and all-direction tempered-distribution boundary convergence,
+  with exact integrable tube-function regularizations; relative-coordinate correlator coherence,
+  polynomial bounds, and extended-tube continuation remain pending.
 - [ ] Add explicit OS reconstruction and correlator coherence.
 
 ## Phase 5 — translations and mass gap

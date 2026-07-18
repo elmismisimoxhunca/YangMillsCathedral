@@ -1993,6 +1993,26 @@ Implemented and verified:
 - No holomorphic function, polynomial bound, boundary value, continuation, reconstruction,
   correlator inhabitant, or physical theory is constructed.
 
+## 2026-07-18 — one-hundred-twelfth stone: Wightman tube boundary-value interface
+
+Implemented and verified:
+
+- `wightmanForwardDirectionSet` is the open domain of all coordinatewise strict future imaginary
+  directions.
+- Positive standard directions remain in that domain at every scale and genuinely tend to zero;
+  the boundary filter is proved `NeBot`, and at positive arity the standard ray consists of nonzero
+  strict directions. Arity zero retains its expected singleton direction carrier.
+- `wightmanTubeApproachPoint` sends every real relative configuration and admissible direction to
+  the exact negative-imaginary backward tube.
+- `WightmanTubeBoundaryValueData` requires a genuinely holomorphic function, actual tempered
+  approximants, integrability of every tube-function/Schwartz pairing, exact integral coherence,
+  and convergence to the selected boundary distribution as all direction tuples jointly tend to
+  zero.
+- Hostile probes reject a disconnected regularized value and expose every analytic and convergence
+  field.
+- Relative-coordinate correlator coherence, polynomial bounds, extended-tube continuation,
+  reconstruction, and every analytic inhabitant remain pending.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
