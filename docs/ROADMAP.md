@@ -190,8 +190,11 @@ committed before higher layers depend on it.
 - [x] Package genuine tube holomorphy and all-direction tempered-distribution boundary convergence,
   with exact integrable tube-function regularizations.
 - [x] Require uniform radial polynomial growth on every compact strict imaginary-direction set as an
-  explicit normal form; comparison with arbitrary source polynomials, relative-coordinate
-  correlator coherence, and extended-tube continuation remain pending.
+  explicit normal form; comparison with arbitrary source polynomials remains pending.
+- [x] Connect full correlators to relative tempered distributions through exact consecutive-
+  difference/normalized-anchor Schwartz lifts, require independence of every normalized anchor, and
+  use that exact relative distribution as the polynomially bounded tube boundary.
+- [ ] Define extended-tube continuation.
 - [ ] Add explicit OS reconstruction and correlator coherence.
 
 ## Phase 5 — translations and mass gap

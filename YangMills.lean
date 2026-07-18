@@ -220,6 +220,8 @@ import YangMills.Minkowski.WightmanTubeBoundaryValue
 import YangMills.Minkowski.WightmanTubeBoundaryValueProbes
 import YangMills.Minkowski.WightmanTubePolynomialGrowth
 import YangMills.Minkowski.WightmanTubePolynomialGrowthProbes
+import YangMills.Minkowski.WightmanRelativeAnalyticCorrelators
+import YangMills.Minkowski.WightmanRelativeAnalyticCorrelatorsProbes
 import YangMills.Audit
 
 /-!

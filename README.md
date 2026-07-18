@@ -198,9 +198,12 @@ and proved nonempty in dimensions 1–4. A separate interface requires genuine h
 integrable regularized tube-function pairings for every strict direction tuple, and convergence in
 the tempered-distribution topology as all directions jointly approach zero. A strengthened
 interface additionally requires uniform radial polynomial growth over every compact strict
-imaginary-direction set. Relative-coordinate coherence, comparison with the source's arbitrary
-polynomial normal form, extended-tube continuation, reconstruction, and observable interpretation
-remain pending, and no analytic or correlator datum is constructed. No concrete gauge-group, connection, invariant-inner-product, curvature, or
+imaginary-direction set. A connected relative-coordinate interface uses normalized coordinate-
+Lebesgue anchor tests to identify each full correlator with one relative tempered distribution and
+makes that exact distribution the analytic boundary; coherence is required for every normalized
+anchor. Comparison with the source's arbitrary polynomial normal form, extended-tube continuation,
+reconstruction, and observable interpretation remain pending, and no analytic or correlator datum
+is constructed. No concrete gauge-group, connection, invariant-inner-product, curvature, or
 structure-certificate witness,
 symmetry group, reconstruction bridge, quantum-theory witness, Yang–Mills existence claim, or
 mass-gap claim is present.

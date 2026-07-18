@@ -2046,6 +2046,25 @@ Implemented and verified:
 - This is signature-neutral reusable mathematics and makes no physical translation-invariance or
   reconstruction claim.
 
+## 2026-07-18 — one-hundred-fifteenth stone: relative analytic Wightman correlators
+
+Implemented and verified:
+
+- `ScalarWightmanRelativeAnalyticCorrelatorData` packages one relative tempered distribution at
+  every difference arity for the exact existing full correlator family.
+- A selected anchor Schwartz test has exact coordinate-Lebesgue integral one, preventing an empty
+  normalization domain; it is proved nonzero by hostile probe.
+- `full_relative_coherent` requires the full `(n+1)`-point distribution on the exact
+  consecutive-difference/anchor lift to equal the relative distribution for every normalized
+  anchor, not merely the selected witness.
+- Normalized-anchor independence is derived from that exact common relative value.
+- `analyticBoundary` uses the exact relative distribution as the polynomially bounded
+  all-direction weak tube boundary at every arity.
+- Hostile probes reject a disconnected relative value and expose the full-to-relative-to-analytic
+  chain.
+- Coordinate Haar/Lebesgue volume is not called Riemannian volume. No anchor, relative distribution,
+  analytic datum, correlator inhabitant, reconstruction, or physical theory is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
