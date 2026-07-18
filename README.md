@@ -161,8 +161,10 @@ nonnegative-real form are defined on the current strict Mathlib subdomain, but a
 identified with source-facing `(E2)` before the carrier/topology comparison. Exact simultaneous
 Euclidean translations and their finite-sequence lift are available as algebraic clustering
 infrastructure. Normalized spatial rays are constructed in dimensions with a spatial coordinate,
-the four-dimensional ray escapes to infinity, and dimension one is proved to have no such direction;
-the `(E4)` factorization expression and limit remain absent. No
+the four-dimensional ray escapes to infinity, and dimension one is proved to have no such direction.
+The exact connected factorization expression and zero-limit predicate are defined along an explicitly
+supplied direction on the strict Mathlib subdomain, but are not identified with source-facing `(E4)`
+before the carrier/topology comparison. No
 concrete gauge-group, connection, invariant-inner-product, curvature, or structure-certificate witness,
 symmetry group, reconstruction bridge, quantum-theory witness, Yang–Mills existence claim, or
 mass-gap claim is present.

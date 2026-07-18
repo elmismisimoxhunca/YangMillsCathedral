@@ -1688,6 +1688,25 @@ Implemented and verified:
 - The `(E4)` factorization expression and clustering limit remain pending. No source-facing `(E2)`,
   `(E4)`, reconstruction, existence theorem, or mass-gap witness is introduced.
 
+## 2026-07-18 — ninety-fifth stone: strict-domain clustering form
+
+Implemented and verified:
+
+- `mathlibStrictReflectedStarSequence` and `mathlibStrictSpatialRayTranslatedSequence` retain the
+  exact reflected first cluster and ray-translated second cluster.
+- `mathlibStrictScalarClusteringExpression` wires the source order
+  `S((Θ f*) × T_{λa}g) - S(Θ f*) S(g)` through exact finite-sequence evaluation and convolution.
+- `MathlibStrictScalarClusteringAlongDirection` requires that connected expression to tend to
+  complex zero as the real ray scale tends to `+∞`, for every pair of strict test sequences.
+- The predicate requires an explicitly supplied unit spatial direction, avoiding hidden vacuity in
+  dimension one.
+- Hostile probes use the explicit nonzero bump pair and escaping ray, preserve translated support,
+  and reject a connected expression that remains constantly one.
+- No satisfying Schwinger family is constructed. This strict-subdomain candidate is not named
+  source-facing `(E4)` before the carrier/topology comparison.
+- Source-facing `(E2)`, `(E4)`, complete Euclidean data, reconstruction, existence, and a mass-gap
+  witness remain absent.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

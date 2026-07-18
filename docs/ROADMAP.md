@@ -151,7 +151,10 @@ committed before higher layers depend on it.
   with inverse and support preservation, as algebraic `(E4)` infrastructure.
 - [x] Define normalized nonzero spatial rays, prove escape to infinity, construct the four-dimensional
   ray, and reject a one-dimensional spatial direction.
-- [ ] Define the clustering factorization expression and limit required by `(E4)`.
+- [x] Define and probe the exact clustering factorization expression and zero-limit predicate along
+  an explicitly supplied direction on the current strict Mathlib subdomain.
+- [ ] Transport the clustering predicate across the source-carrier/topology comparison and expose
+  source-facing `(E4)`.
 - [ ] Prove the source-facing OS-II `(E0′)` bridge and define complete Euclidean/Schwinger data.
 - [ ] Define proper-orthochronous Poincaré and Wightman data independently.
 - [ ] Define common invariant domains and operator-valued tempered distributions.
