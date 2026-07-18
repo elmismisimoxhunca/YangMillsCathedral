@@ -149,8 +149,9 @@ positive-time domain, with an exact forgetful map. Finite-support closure is pro
 convolution is packaged in that unrestricted carrier; direct-sum topology and any required joint
 continuity remain pending. Exact reverse-conjugation on scalar Schwartz components is implemented
 and kept distinct from Euclidean time reflection. Both operations are lifted to exact finite
-sequences and combined in the source order `Θ f*`; the `(E2)` inequality remains pending.
-`(E4)` is also absent. No
+sequences and combined in the source order `Θ f*`. The exact algebraic Schwinger evaluation and
+nonnegative-real form are defined on the current strict Mathlib subdomain, but are deliberately not
+identified with source-facing `(E2)` before the carrier/topology comparison. `(E4)` is also absent. No
 concrete gauge-group, connection, invariant-inner-product, curvature, or structure-certificate witness,
 symmetry group, reconstruction bridge, quantum-theory witness, Yang–Mills existence claim, or
 mass-gap claim is present.

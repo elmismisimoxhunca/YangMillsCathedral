@@ -1535,6 +1535,27 @@ Implemented and verified:
 - No reflection positivity theorem, Euclidean theory, reconstruction, Wightman theory, existence
   theorem, or mass-gap witness is introduced.
 
+## 2026-07-18 — eighty-seventh stone: algebraic strict-domain reflection form
+
+Implemented and verified:
+
+- `zeroAritySchwingerLinear` evaluates the actual zero-arity Schwartz representation with the
+  family's normalized zero-point value.
+- `schwingerDistributionAtNaturalArity` packages arity zero and every positive tempered Schwinger
+  distribution as algebraic complex-linear functionals.
+- `finiteSequenceSchwingerEvaluation` sums exactly over the sequence's nonzero support; the zero
+  sequence evaluates to zero, the scalar sequence unit evaluates to one, and the explicit singleton
+  bump evaluates through the actual positive-arity distribution.
+- `IsNonnegativeComplexReal` requires both zero imaginary part and nonnegative real part.
+- `mathlibStrictReflectionPositivityExpression` wires the exact source order `(Θ f*) × f`.
+- `MathlibStrictScalarReflectionPositivity` quantifies that form over the current strict positive-time
+  ordered/flat Mathlib domain. It is intentionally not named OS-I `(E2)` pending the source-carrier
+  and induced/direct-sum/completed-tensor topology comparison.
+- Hostile probes instantiate the condition at the explicit nonzero bump and reject imaginary or
+  negative-real form values. No satisfying Schwinger family is constructed.
+- Source-facing `(E2)`, `(E4)`, Euclidean theory, reconstruction, Wightman theory, existence, and a
+  mass-gap witness remain absent.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

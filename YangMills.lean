@@ -163,6 +163,8 @@ import YangMills.Euclidean.SchwingerSequenceInvolution
 import YangMills.Euclidean.SchwingerSequenceInvolutionProbes
 import YangMills.Euclidean.SchwingerConvolutionSequence
 import YangMills.Euclidean.SchwingerConvolutionSequenceProbes
+import YangMills.Euclidean.SchwingerReflectionPositivityForm
+import YangMills.Euclidean.SchwingerReflectionPositivityFormProbes
 import YangMills.Audit
 
 /-!

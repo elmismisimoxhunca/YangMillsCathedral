@@ -132,7 +132,8 @@ committed before higher layers depend on it.
 - [x] Construct the exact reverse-conjugate involution on scalar Schwartz components.
 - [x] Lift reverse-conjugation and Euclidean time reflection to finite sequences and define the
   exact combined operation `Θ f*`.
-- [ ] Define and probe the reflection-positivity inequality `(E2)`.
+- [x] Define and probe the algebraic reflection-positivity form on the current strict Mathlib
+  subdomain, without identifying it with source-facing `(E2)`.
 - [ ] Establish the strict subspace's embedding/sufficiency/density/completion relation to OS-I's
   derivative-vanishing ordered spaces; install the per-arity induced and finite-sequence direct-sum
   topologies while keeping the positive-half-space completed tensor product distinct; then define
