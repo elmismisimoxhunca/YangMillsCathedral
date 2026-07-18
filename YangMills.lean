@@ -167,6 +167,8 @@ import YangMills.Euclidean.SchwingerReflectionPositivityForm
 import YangMills.Euclidean.SchwingerReflectionPositivityFormProbes
 import YangMills.Euclidean.SchwingerFiniteStageTopology
 import YangMills.Euclidean.SchwingerFiniteStageTopologyProbes
+import YangMills.Euclidean.SchwingerFiniteSequenceModule
+import YangMills.Euclidean.SchwingerFiniteSequenceModuleProbes
 import YangMills.Audit
 
 /-!

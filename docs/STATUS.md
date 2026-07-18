@@ -1576,6 +1576,25 @@ Implemented and verified:
 - No source-facing `(E2)`, Euclidean theory, reconstruction, Wightman theory, existence theorem, or
   mass-gap witness is introduced.
 
+## 2026-07-18 — eighty-ninth stone: named finite-sequence complex module
+
+Implemented and verified:
+
+- Exact-support scalar sequences are proved equivalent to Mathlib dependent finitely supported
+  functions, in both directions.
+- Named pointwise addition, negation, and complex scalar multiplication preserve the same dependent
+  components while recomputing exact nonzero support.
+- Addition support cannot escape the union of input supports but may shrink under cancellation;
+  nonzero complex scalars preserve exact support.
+- `scalarFiniteSchwartzSequenceAddCommGroup` and `scalarFiniteSchwartzSequenceModule` transport the
+  full algebraic laws and are named definitions requiring local `letI` installation.
+- Hostile probes prove exact cancellation to the existing zero sequence, empty support after
+  cancellation, survival of the explicit bump under multiplication by `i`, and local module wiring.
+- No global algebra or topology instance is installed, and no continuity with the finite-stage
+  topology or identification with OS-I's direct sum is asserted.
+- No source-facing `(E2)`, Euclidean theory, reconstruction, Wightman theory, existence theorem, or
+  mass-gap witness is introduced.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

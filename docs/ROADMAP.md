@@ -129,7 +129,9 @@ committed before higher layers depend on it.
   nonzero internal singleton-bump split.
 - [x] Prove finite support for the convolution family and package it in the unrestricted carrier.
 - [x] Construct the named finite-stage final topology and prove its exact universal property.
-- [ ] Equip the finite sequence carrier with topological vector-space operations, compare the
+- [x] Construct named, locally installed additive-group and complex-module structures on the exact
+  finite sequence carrier.
+- [ ] Prove topological vector-space compatibility, compare the
   finite-stage final topology with OS-I's locally convex direct sum, and prove any needed product
   continuity.
 - [x] Construct the exact reverse-conjugate involution on scalar Schwartz components.
