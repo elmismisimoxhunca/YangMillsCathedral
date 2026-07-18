@@ -2320,6 +2320,25 @@ Implemented and verified:
 - No local-observable family datum, curvature-polynomial/gauge interpretation, family cyclicity,
   prescribed OPE singularity, stress tensor, theory, or mass gap is constructed.
 
+## 2026-07-18 — one-hundred-twenty-eighth stone: one-dimensional boundary facts
+
+Implemented and verified:
+
+- Every continuous real alternating degree-two map on exact one-dimensional spacetime is proved
+  zero by the `Fin 2` linear-dependence/finrank obstruction.
+- `OneDimensionalKinematicBoundaryData` packages the absence of a spatial clustering direction,
+  spacelike point pairs and nonzero separated tests, while retaining a nonempty Wightman backward
+  tube.
+- Production lattice theorems now prove there are no ordered plaquette directions and every
+  dimension-one Wilson-type plaquette action vanishes for every field/potential/coupling.
+- `OneDimensionalLatticeBoundaryData` packages those exact facts without a model witness.
+- An explicit one-site forward path is closed and has exact holonomy `u`; conditional on `u ≠ 1`, a
+  hostile probe shows zero local plaquette action does not erase nonidentity global holonomy around
+  that periodic loop; no winding or homotopy statement is made.
+- A direct index probe rejects identifying dimension one with the four-dimensional Clay endpoint.
+- These are derived boundary facts only: no one-dimensional quantum theory, lower-to-four
+  coercion, existence theorem, or mass gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

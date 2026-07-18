@@ -262,7 +262,9 @@ committed before higher layers depend on it.
 
 ## Phase 7 — dimension contracts and final checker
 
-- [ ] Add the degenerate/topological `d = 1` boundary contract.
+- [x] Add the kinematic/lattice degenerate-topological `d = 1` boundary: degree-two local forms and
+  plaquette action vanish, spatial clustering/spacelike pairs are absent, but global periodic
+  holonomy and analytic tube geometry can remain. This is not a one-dimensional theory witness.
 - [ ] Add rigorous `d = 2` consistency models.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.
 - [ ] Add the full `d = 4` Clay acceptance contract.

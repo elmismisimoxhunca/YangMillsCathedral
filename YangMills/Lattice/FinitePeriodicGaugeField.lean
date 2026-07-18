@@ -255,4 +255,21 @@ theorem wilsonTypeLatticeAction_nonnegative
   intro ν hν
   exact potential.nonnegative _
 
+/-- Dimension one has no ordered pair of distinct plaquette directions. -/
+theorem oneDimensional_no_plaquetteDirections
+    (μ ν : EuclideanDimension.one.CoordinateIndex) : ¬ μ < ν := by
+  intro h
+  fin_cases μ
+  fin_cases ν
+  simp at h
+
+/-- Consequently every dimension-one Wilson-type plaquette action vanishes, independently of the
+link holonomy. -/
+theorem oneDimensional_wilsonTypeLatticeAction_zero
+    (Λ : FinitePeriodicLattice) {G : Type*} [Group G]
+    (potential : PlaquettePotentialData G) (coupling : LatticeCouplingData)
+    (U : GaugeField EuclideanDimension.one Λ G) :
+    wilsonTypeLatticeAction Λ potential coupling U = 0 := by
+  simp [wilsonTypeLatticeAction, oneDimensional_no_plaquetteDirections]
+
 end YangMills.Lattice

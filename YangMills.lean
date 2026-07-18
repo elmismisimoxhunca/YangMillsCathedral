@@ -8,6 +8,8 @@ import YangMills.Foundation.Dimensions
 import YangMills.Foundation.DimensionsProbes
 import YangMills.Foundation.Signatures
 import YangMills.Foundation.SignaturesProbes
+import YangMills.Dimensions.OneDimensionalBoundary
+import YangMills.Dimensions.OneDimensionalBoundaryProbes
 import YangMills.Mathematics.LieAlgebraSimplicity
 import YangMills.Mathematics.LieAlgebraSimplicityProbes
 import YangMills.Mathematics.LieGroupAdjoint

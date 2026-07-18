@@ -251,6 +251,12 @@ bare coupling distinct from the action coefficient, and can require convergence 
 observable expectations to an independently supplied target functional. No trajectory, target,
 renormalization bridge, or continuum identification is constructed.
 
+The first dimension-specific boundary now proves that continuous local two-forms and plaquette
+actions vanish in Euclidean spacetime dimension one, with no spatial clustering direction or
+spacelike pair. It separately proves that a nontrivial periodic one-site holonomy may remain and
+that the analytic Wightman tube is nonempty. These are boundary facts, not a one-dimensional theory
+or a route to the four-dimensional contract.
+
 Primary OS-I and correcting OS-II article scans, Wightman's 1956 paper, and the corrected Princeton
 edition of Streater–Wightman are hash-pinned with exact text extractions. Load-bearing OS-II and
 Wightman-axiom pages were visually verified. Wilson 1974 and Osterwalder–Seiler 1978 lattice sources
