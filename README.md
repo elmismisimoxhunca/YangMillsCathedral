@@ -190,12 +190,14 @@ locally convex final topology in Mathlib's reversed order, and equality is prove
 admissibility rather than asserted. An exact scalar/all-positive-arity coordinate map into a
 Hausdorff product is proved continuous and injective, so the locally convex final topology itself is
 Hausdorff. A complex-linear map from this topology into any real-locally-convex topological complex
-module is now proved continuous exactly when all finite-stage composites are continuous. Neither
-topology is yet identified with OS-I's printed locally convex direct sum: replacing finite-stage
-maps by the paper's individual natural injections and completing that identification, proper enlargement and sufficiency/density/completion
+module is now proved continuous exactly when all finite-stage composites are continuous. OS-I's
+separate scalar and positive-arity natural injections are constructed, every stage is their exact
+finite sum, and the paper's coordinatewise continuity criterion is proved. The Hausdorff locally
+convex final topology is therefore selected as the source-facing locally convex direct-sum topology;
+the raw topological final topology remains a separately named auxiliary topology and equality is
+not asserted or required for this selection. Proper enlargement and sufficiency/density/completion
 comparisons with the earlier strict-support subspace, the distinct completed-tensor topology, and
 OS-II-strength reconstruction remain open. `(E2)` remains absent pending those comparisons, the
-source-facing topology identification, the
 distinct completed tensor product for positive-half-space tests, and the source-facing
 reflection-positivity inequality; the algebraic finite-sequence carrier
 and product are implemented with exact positive and natural-arity support, with its scalar zero-point component represented faithfully as a

@@ -2952,7 +2952,7 @@ Implemented and verified:
 
 - `IsOSPositiveTimeOrderedFourDimensionalLocallyConvexFinalTopology` requires joint addition and
   complex scalar continuity, real local convexity, and continuity of every exact finite-stage map.
-- The `sInf` of all such topologies is constructed as a distinct locally convex final topology.
+- The `sInf` of all such topologies is constructed as a separately named locally convex final topology.
   Mathlib lattice theorems prove it self-admissible, so its defining family is not vacuous.
 - Named `ContinuousAdd`, `ContinuousSMul ℂ`, `ContinuousNeg`, `IsTopologicalAddGroup`, and
   `LocallyConvexSpace ℝ` structures are packaged, and every exact stage map is bundled as the same
@@ -3017,6 +3017,30 @@ Implemented and verified:
   equivalence between those individual injections and the finite-stage criterion—and hence the
   printed direct-sum identification—remains open, alongside strict-carrier density/completion,
   completed tensor topology, `(E2)`, OS-II growth and reconstruction.
+- No `(E2)` datum, reconstruction, quantum theory, existence theorem, or mass gap is constructed.
+
+## 2026-07-19 — one-hundred-sixty-first stone: source-facing locally convex direct sum
+
+Implemented and verified:
+
+- The exact sequence-coordinate equivalence is upgraded to a complex-linear equivalence. OS-I's
+  separate scalar natural injection and every positive-arity source natural injection are defined.
+- Scalar and source injections factor through the empty and singleton finite stages respectively
+  and are proved continuous into the Hausdorff locally convex final topology.
+- Every exact finite-stage extension is proved equal to the scalar injection plus the finite sum of
+  its selected positive-arity injections, including dependent-coordinate casts and the exact zero
+  branch outside the stage.
+- A complex-linear map into any real-locally-convex topological complex module is continuous exactly
+  when its scalar-injection composite and every positive-arity-injection composite are continuous.
+  This is the coordinatewise universal property printed by OS-I p. 87.
+- The Hausdorff locally convex final topology is consequently designated the source-facing locally
+  convex direct-sum topology. The raw topological final topology remains a separately named
+  auxiliary topology; equality is neither asserted nor needed for the source-facing selection.
+- Hostile probes lock the scalar/component split, exact finite-stage recomposition, genuine
+  injection continuity, the coordinatewise criterion, the nonzero source injection, and exact
+  topology selection.
+- Strict-carrier density/completion, the distinct completed positive-half-space tensor topology,
+  source product/involution, `(E2)`, OS-II growth and reconstruction remain open.
 - No `(E2)` datum, reconstruction, quantum theory, existence theorem, or mass gap is constructed.
 
 Not yet achieved:

@@ -232,7 +232,7 @@ committed before higher layers depend on it.
   use local compactness of `ℂ` to prove joint complex scalar continuity, derive negation continuity,
   and prove finite-union stage addition and separate sequence addition continuity. Keep joint
   addition conditional on the still-unproved product-quotient property.
-- [x] Construct the distinct locally convex final topology as the `sInf` of all stage-continuous
+- [x] Construct the separately named locally convex final topology as the `sInf` of all stage-continuous
   real-locally-convex topological complex-module topologies; prove it admissible, package its joint
   operations and stage CLMs, compare it with the raw final topology, and characterize equality by
   raw admissibility without asserting that equality or OS-I direct-sum identification.
@@ -242,10 +242,14 @@ committed before higher layers depend on it.
 - [x] Prove the finite-stage universal property: a complex-linear map from source sequences into any
   real-locally-convex topological complex module is continuous exactly when every finite-stage
   composite is continuous; package and uniquely determine stagewise continuous-linear maps.
+- [x] Construct OS-I's separate scalar and every positive-arity natural injection, prove exact
+  finite-stage decomposition and injection continuity, derive the paper's coordinatewise universal
+  property, and designate the Hausdorff locally convex final topology as the source-facing locally
+  convex direct-sum topology while keeping the raw topological final topology separately named and
+  without asserting equality.
 - [ ] Establish the earlier strict-support subspace's sufficiency/density/completion relation to the
-  exact positive-arity OS-I source spaces; prove the needed Hausdorff/direct-sum characterization
-  and either raw/local-convex-final equality or the correct source-facing topology selection while
-  keeping the positive-half-space completed tensor product distinct; only then define source-facing `(E2)`
+  exact positive-arity OS-I source spaces while keeping the positive-half-space completed tensor
+  product distinct; only then define source-facing `(E2)`
   on the constructed product and reflected-star operation.
 - [x] Construct exact simultaneous Euclidean translations on Schwartz tests and finite sequences,
   with inverse and support preservation, as algebraic `(E4)` infrastructure.

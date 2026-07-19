@@ -16,11 +16,13 @@ candidate: the `sInf` of all topologies that make the named source-sequence alge
 complex module, make it locally convex over `ℝ`, and make every exact finite-stage extension
 continuous. Mathlib's lattice theorems prove that this `sInf` has all those properties.
 
-This topology is kept distinct from the previously constructed raw finite-stage final topology. The
-raw topology is compared to it, and equality is characterized exactly by admissibility of the raw
-topology. We do not identify this construction with OS-I's printed Hausdorff locally convex direct
-sum, prove the two topologies equal, construct a completion or completed tensor product, state
-`(E2)`, supply OS-II growth, or perform reconstruction.
+This topology is kept separately named from the previously constructed raw finite-stage final
+topology. The raw topology is compared to it, and equality is characterized exactly by admissibility
+of the raw topology. This module alone does not yet identify the construction with OS-I's printed
+Hausdorff locally convex direct sum or prove the two topologies equal; downstream natural-injection
+infrastructure supplies the source-facing designation without requiring that equality. It does not
+construct a completion or completed tensor product, state `(E2)`, supply OS-II growth, or perform
+reconstruction.
 -/
 
 namespace YangMills
