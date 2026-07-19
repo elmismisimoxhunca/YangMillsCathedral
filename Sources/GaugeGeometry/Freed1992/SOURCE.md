@@ -112,7 +112,9 @@ map used for Mathlib's two-input and self-bracket derivative rules. Its exact co
 one-with-`n` coordinate wedge is constructed and proved coherent with the intrinsic graded bracket
 under the canonical tangent/model equivalence. Fixed-tuple evaluation is packaged continuously,
 and the same one-form-valued input derivative now derives the exact four-term derivative of every
-self-wedge coefficient. The arbitrary-manifold certificate remains supplied data: existence, chart independence, arbitrary-manifold `d²`, and the
+self-wedge coefficient. Their exterior alternation is proved to be `-2 • (A ∧ dA)` for the exact
+skew coordinate bracket, but is not yet identified with `extDeriv` of the whole self-wedge
+form-valued function. The arbitrary-manifold certificate remains supplied data: existence, chart independence, arbitrary-manifold `d²`, and the
 exterior-derivative graded Leibniz identity are not claimed. Given the original
 one-form certificate for the same smooth principal connection, `curvatureForm` derives exactly
 (1.13).

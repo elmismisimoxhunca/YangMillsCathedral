@@ -63,8 +63,10 @@ committed before higher layers depend on it.
 - [x] Construct the continuous one-with-`n` wedge for an arbitrary bounded bilinear map and prove
   the actual group bracket's coordinate wedge is exactly the intrinsic graded Lie-bracket wedge.
 - [x] Package exact fixed-tuple evaluation as a continuous linear map and derive the same-input
-  self-wedge coefficient `HasFDerivAt`/four-term `fderiv` rule; the exterior-derivative graded
-  Leibniz expansion remains debt.
+  self-wedge coefficient `HasFDerivAt`/four-term `fderiv` rule.
+- [x] Exterior-alternate those coefficient derivatives and prove the exact skew-bilinear
+  `-2 • (A ∧_B dA)` identity, including the canonical group-coordinate bracket specialization;
+  identification with `extDeriv` of the whole self-wedge remains debt.
 - [x] Define principal curvature from a certified derivative and the smooth bracket-wedge.
 - [x] State and probe intrinsic curvature horizontality/right-adjoint-equivariance certificates.
 - [x] Construct and probe the set-level adjoint associated-bundle orbit quotient.

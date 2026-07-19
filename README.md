@@ -308,7 +308,9 @@ the actual group Lie algebra is now connected to Mathlib's bounded-bilinear deri
 exact two-input and self-bracket `fderiv` formulas. Its continuous one-with-`n` coordinate wedge is
 constructed with the exact omitted-slot sum and proved to be precisely the coordinate image of the
 intrinsic graded Lie-bracket wedge. Exact fixed-tuple evaluation is continuously linear, and every
-self-wedge two-vector coefficient now has a derived same-input four-term `fderiv` rule. Canonical
+self-wedge two-vector coefficient now has a derived same-input four-term `fderiv` rule. Exterior
+alternation of those coefficients is proved to equal `-2 • (A ∧ dA)` for the exact skew coordinate
+bracket. This is not yet identified with `extDeriv` of the whole self-wedge function. Canonical
 existence, chart independence,
 arbitrary-manifold `d²`, exterior-derivative graded Leibniz, positive-degree covariant exterior
 differentiation, and

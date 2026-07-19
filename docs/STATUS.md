@@ -3356,6 +3356,25 @@ Implemented and verified:
 - This is coefficient-level local-model calculus. Exterior alternation, the self-wedge graded
   Leibniz identity, manifold/covariant transport, and Bianchi remain unproved.
 
+## 2026-07-19 — one-hundred-eightieth stone: self-wedge exterior alternation
+
+Implemented and verified:
+
+- `continuousBilinearSelfWedgeExteriorAlternationAt` names the exact three-slot signed alternation
+  of the previously derived self-wedge coefficient derivatives.
+- `continuousBilinearSelfWedgeOne_fderiv_tuple` removes the earlier `Fin.cases` presentation and
+  supplies the exact four-term derivative for every arbitrary `Fin 2` tuple.
+- `continuousBilinearSelfWedgeExteriorAlternationAt_eq_neg_two` expands all twelve terms, applies
+  skew symmetry in the six derivative-first terms, and proves the exact identity
+  `-2 • (A ∧_B dA)`.
+- `groupLieAlgebraCoordinateBracketCLM_skew` derives skewness from the same transported Mathlib
+  tangent bracket, and the group-coordinate specialization uses no auxiliary bracket.
+- Hostile probes lock tuple recovery, the minus-two sign and normalization, canonical group skew,
+  and reject every conflicting alternation value.
+- The left side is intentionally a raw exterior alternation. Differentiability of the whole
+  self-wedge form-valued function, its identification with Mathlib `extDeriv`, manifold/covariant
+  transport, and Bianchi remain unproved.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
