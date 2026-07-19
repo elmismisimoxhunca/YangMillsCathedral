@@ -134,6 +134,24 @@ theorem exact_curvature_squared_observable :
   ⟨data.curvatureSquaredInterpretation.curvatureSquaredLabel_ne_unit,
     data.curvatureSquaredInterpretation.curvatureSquared_nontrivial⟩
 
+/-- The stress tensor belongs to the exact same local-observable family. -/
+theorem exact_stress_energy :
+    Nonempty (Minkowski.LocalStressEnergyTensorData data.observableFamily) :=
+  ⟨data.stressEnergy⟩
+
+/-- Stress charges and Ward identities use the exact accepted Wightman joint PVM. -/
+theorem exact_stress_translation_spectrum :
+    Nonempty (Minkowski.LocalStressEnergyTranslationWardData
+      data.stressEnergy data.wightmanSurface.spectrum) :=
+  ⟨data.stressTranslationWard⟩
+
+/-- The same-chain physical time generator is explicitly nonzero. -/
+theorem exact_nonzero_time_generator :
+    ∃ vector : D.domain,
+      data.stressTranslationWard.momentumGenerator
+        (Minkowski.stressTensorTimeIndex EuclideanDimension.three) vector ≠ 0 :=
+  data.timeTranslationGenerator_nontrivial
+
 /-- The selected threshold is positive and gives finite-positive supremum semantics on the exact
 same Wightman joint PVM. -/
 theorem exact_same_spectrum_gap :

@@ -9,6 +9,7 @@ import YangMills.Euclidean.SchwingerEuclideanCandidate
 import YangMills.Geometry.LieGroup
 import YangMills.Minkowski.PhysicalMassGapSupremum
 import YangMills.Minkowski.ScalarWightmanAxiomSurface
+import YangMills.Minkowski.StressEnergyTranslationWard
 import YangMills.Minkowski.WightmanJointTemperedCorrelators
 import YangMills.Minkowski.WightmanLocalObservableCoherence
 import YangMills.Minkowski.WightmanRelativeAnalyticCorrelators
@@ -22,8 +23,9 @@ This module defines an uninhabited, per-carrier acceptance record hard-wired to 
 Euclidean spacetime. It joins one compact-simple physical gauge group and exact classical curvature
 chain to one strict Euclidean scalar family, one independent Minkowski/Wightman chain, an explicit
 strict Wick-continuation bridge, one covariant local-observable family containing that Wightman
-field, an interpretation of the exact classical `F²` observable, and a physical gap on the same
-joint translation PVM.
+field, an interpretation of the exact classical `F²` observable, a local stress tensor whose
+regulated charges and translation Ward identities use the same joint translation PVM, and a
+physical gap on that spectrum.
 
 The classical base is exactly coordinate `ℝ³`, and the designated action measure must equal its
 coordinate Lebesgue measure. The supplied Riemannian metric is not yet proved to be the canonical
@@ -130,6 +132,12 @@ structure ThreeDimensionalCurrentStrengthContinuumCoreAcceptanceData
   curvatureSquaredInterpretation :
     Observables.CurvatureSquaredLocalObservableInterpretationData geometry inner connection
       exterior curvatureCertificate observableFamily
+  /-- Symmetric, Hermitian, covariant, local, weakly conserved stress tensor in the same family. -/
+  stressEnergy : Minkowski.LocalStressEnergyTensorData observableFamily
+  /-- The stress charges, translation derivatives, Ward identity, and momentum moments use the
+  exact same representation, domain, family, and Wightman joint PVM. -/
+  stressTranslationWard : Minkowski.LocalStressEnergyTranslationWardData
+    stressEnergy wightmanSurface.spectrum
   /-- One selected physical gap threshold; positivity and excitation nonvacuity are in the exact
   same-PVM predicate below. -/
   gapThreshold : ℝ
@@ -170,6 +178,16 @@ theorem hasFinitePositivePhysicalMassGap
     Minkowski.HasFinitePositivePhysicalMassGap vacuumData data.wightmanSurface.spectrum :=
   Minkowski.hasFinitePositivePhysicalMassGap_of_hasPhysicalJointSpectralMassGap
     data.physicalMassGap
+
+/-- The physical time-translation generator tied to the same stress tensor and PVM is nonzero on
+one exact common-domain vector. -/
+theorem timeTranslationGenerator_nontrivial
+    (data : ThreeDimensionalCurrentStrengthContinuumCoreAcceptanceData geometry inner connection
+      exterior curvatureCertificate fieldData) :
+    ∃ vector : D.domain,
+      data.stressTranslationWard.momentumGenerator
+        (Minkowski.stressTensorTimeIndex EuclideanDimension.three) vector ≠ 0 :=
+  data.stressTranslationWard.timeGenerator_nontrivial
 
 /-- The coherently selected Wightman field is nonzero and differs from the unit on one test/vector. -/
 theorem wightmanField_nontrivial

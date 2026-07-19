@@ -430,7 +430,9 @@ and metric-volume compatibility remain explicit debt. It dependently joins one c
 physical gauge group and exact classical curvature/action chain to one strict
 Euclidean scalar candidate, one Wightman representation/vacuum/domain/field/spectrum chain, exact
 full and relative correlators, strict Wick coherence, the same coherently connected covariant local-
-observable family, an exact `F²` interpretation, and a positive physical gap on that same joint PVM.
+observable family, an exact `F²` interpretation, a symmetric conserved local stress tensor whose
+regulated charges and Ward identity use that same joint PVM/translation chain, and a positive
+physical gap on the same spectrum.
 It imports no lattice regulator, four-dimensional OS spatial-`ℝ³` tensor surface, or four-dimensional
 running-coupling data, and no inhabitant is constructed. The `CurrentStrength` qualifier retains the
 known OS-II/source-space reconstruction and genuine Poincaré-cover debts.

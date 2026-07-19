@@ -3545,6 +3545,20 @@ Implemented and verified:
   reconstruction and a genuine Poincaré covering remain required before the `d=3` contract is
   complete.
 
+## 2026-07-19 — one-hundred-ninetieth stone: three-dimensional stress/translation closure
+
+Implemented and verified:
+
+- The three-dimensional current-strength core now requires a symmetric, Hermitian, covariant,
+  local, weakly conserved stress tensor inside its exact observable family.
+- `LocalStressEnergyTranslationWardData` is indexed by that exact tensor and by
+  `wightmanSurface.spectrum`; regulated stress charges, translation derivatives, momentum moments,
+  and all-family Ward identities therefore use the same domain, representation, family, and PVM as
+  the physical gap.
+- The bridge requires a nonzero physical time-translation generator on one common-domain vector.
+- Hostile projections expose the exact stress-family carrier, same-spectrum Ward bridge, and
+  nonzero time generator. No tensor, cutoff sequence, generator, theory, or gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

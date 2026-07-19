@@ -445,8 +445,9 @@ committed before higher layers depend on it.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.
   - [x] Add a current-strength continuum core hard-wired to coordinate `ℝ³` with coordinate
     Lebesgue action measure, dependently joining compact-simple gauge/classical data, strict
-    Euclidean and Wightman chains, strict Wick coherence, one
-    coherent covariant local family, exact `F²` interpretation, and a same-PVM physical gap.
+    Euclidean and Wightman chains, strict Wick coherence, one coherent covariant local family,
+    exact `F²` interpretation, a same-PVM stress-charge/translation Ward bridge, and a same-PVM
+    physical gap.
   - [ ] Prove the supplied metric is the canonical flat metric and its induced volume is the
     committed coordinate Lebesgue measure; replace current strict Euclidean/reconstruction and
     Poincaré pre-cover surfaces with corrected source-facing OS-II/OS-I reconstruction and genuine
