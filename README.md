@@ -415,7 +415,9 @@ The first dimension-specific boundary now proves that continuous local two-forms
 actions vanish in Euclidean spacetime dimension one, with no spatial clustering direction or
 spacelike pair. It separately proves that a nontrivial periodic one-site holonomy may remain and
 that the analytic Wightman tube is nonempty. These are boundary facts, not a one-dimensional theory
-or a route to the four-dimensional contract.
+or a route to the four-dimensional contract. An explicit Clay-endpoint predicate rejects every
+supported dimension `1`–`3`, and finite-rank proofs rule out any real-linear identification of their
+coordinate spacetimes—especially the 3D core base—with the exact four-dimensional core base.
 
 The first dimension-two consistency layer proves the opposite local nondegeneracy: an explicit
 continuous area two-form evaluates to one, a normalized spatial direction and nonzero spacelike-

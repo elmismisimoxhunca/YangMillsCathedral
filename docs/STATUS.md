@@ -3683,6 +3683,21 @@ Implemented and verified:
 - The package remains `CurrentStrength`: its Mathlib Schwartz control is not identified with OS-II's
   printed `|f|_{n,s}`, so no corrected reconstruction, theory, or mass-gap witness is constructed.
 
+## 2026-07-19 — one-hundred-ninety-ninth stone: Clay endpoint dimension separation
+
+Implemented and verified:
+
+- `IsFourDimensionalClayEndpoint` accepts exactly the four-dimensional checker index.
+- Every supported lower dimension `1`–`3` is rejected explicitly.
+- Exact finite-rank arguments prove that no lower-dimensional real Euclidean spacetime is linearly
+  equivalent to four-dimensional spacetime; in particular the 3D and 4D core bases cannot be
+  substituted through a linear coordinate identification.
+- Hostile probes cover all lower indices, four's exclusion from the lower union, and the `ℝ¹`,
+  `ℝ²`, and exact 3D-core carrier obstructions.
+- These are supporting index and real-linear coordinate-carrier separation facts, not yet
+  witness-level separation for the still-absent final acceptance proposition and not nonexistence
+  claims for lower-dimensional theories.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

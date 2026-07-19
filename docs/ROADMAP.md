@@ -468,7 +468,11 @@ committed before higher layers depend on it.
   - [ ] Replace the remaining OS-II `(E0′)`/reconstruction and Poincaré-cover debt; add source-faithful
     curvature-polynomial/OPE mixing, group-normalized perturbative coefficients/remainders, trace
     anomaly, and final universal compact-simple-group quantification.
-- [ ] Prove that no lower-dimensional witness is silently accepted as 4D.
+- [x] Define the exact Clay endpoint predicate, reject every lower dimension `1`–`3`, and prove no
+  lower-dimensional Euclidean coordinate carrier (especially the 3D core base) is real-linearly
+  equivalent to the four-dimensional carrier.
+- [ ] Once the final four-dimensional acceptance proposition exists, prove that no lower-dimensional
+  witness can inhabit it; the current index/rank lemmas are supporting evidence only.
 - [ ] Publish the final acceptance proposition without asserting an inhabitant.
 
 ## Per-commit gates
