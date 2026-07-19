@@ -3654,6 +3654,20 @@ Implemented and verified:
   nuclearity, strict-carrier density, OS-II growth, reconstruction, and existence remain separate
   obligations rather than prerequisites for this positivity predicate.
 
+## 2026-07-19 — one-hundred-ninety-seventh stone: exact-source `(E4)` clustering
+
+Implemented and verified:
+
+- `OSSourceFourDimensionalClustering` quantifies over every pair of exact derivative-vanishing
+  source sequences and every normalized nonzero four-dimensional spatial direction.
+- Its expression is exactly `S((Θ f*) × T_{λa}g) - S(Θ f*)S(g)` in the unrestricted finite
+  Schwartz algebra and tends to complex zero as `λ → +∞`.
+- Four dimensions have an explicit canonical direction, every direction is nonzero, and the
+  positive-arity source bump survives, blocking empty-direction, zero-ray, and scalar-only vacuity.
+- Exact componentwise restriction proves source `(E4)` implies every earlier strict-direction
+  predicate; no converse is claimed.
+- No clustering family, OS-II growth, reconstruction, theory, or mass-gap witness is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

@@ -121,6 +121,11 @@ is now stated on finite sequences over the exact four-dimensional derivative-van
 components: the source sequence is forgotten componentwise into the unrestricted Schwartz algebra
 before evaluating `(Θ f*) × f`. Completed positive-half-space tensors, nuclearity, OS-II growth,
 and reconstruction remain distinct obligations and are not prerequisites for this algebraic `(E2)`.
+Exact source-carrier `(E4)` is likewise stated for every pair of source sequences and every normalized
+nonzero spatial direction, using the printed reflected first factor, translated second factor, and
+connected subtraction term. Printed p. 88 writes `a ∈ ℝ³`; excluding zero and normalizing its norm
+is the project's explicit spatial-infinity/reparameterization convention, not verbatim source syntax.
+This is a supplied requirement, not an exhibited clustering family.
 
 The original OS-I sufficiency theorem must never be encoded using only ordinary temperedness. A
 canonical reconstruction requirement must incorporate the OS-II-strength linear-growth condition

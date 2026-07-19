@@ -335,7 +335,8 @@ committed before higher layers depend on it.
   an explicitly supplied direction on the current strict Mathlib subdomain.
 - [x] Assemble growth, `(E1)`, `(E3)`, strict-domain positivity, and direction-indexed clustering
   around one coherent normalized family in a non-source-facing candidate record.
-- [ ] Transport clustering across the source-carrier comparison and expose source-facing `(E4)`.
+- [x] Define source-facing `(E4)` on every exact four-dimensional source pair and normalized nonzero
+  spatial direction, and prove it restricts exactly to every strict-direction predicate.
 - [ ] Prove the source-facing OS-II `(E0′)` bridge and define complete Euclidean/Schwinger data.
 - [x] Define proper-orthochronous Lorentz/Poincaré affine kinematics independently of the Euclidean
   Schwinger surface.

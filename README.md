@@ -242,9 +242,10 @@ through an exact componentwise bridge; the converse is not claimed. Exact simult
 Euclidean translations and their finite-sequence lift are available as algebraic clustering
 infrastructure. Normalized spatial rays are constructed in dimensions with a spatial coordinate,
 the four-dimensional ray escapes to infinity, and dimension one is proved to have no such direction.
-The exact connected factorization expression and zero-limit predicate are defined along an explicitly
-supplied direction on the strict Mathlib subdomain, but are not identified with source-facing `(E4)`
-before the carrier/topology comparison. Growth, `(E1)`, `(E3)`, strict positivity, and clustering are
+The exact connected factorization expression and zero-limit predicate are defined on both the strict
+Mathlib subdomain and every pair of exact four-dimensional source sequences. Source `(E4)` quantifies
+over every normalized nonzero spatial direction and implies each strict-direction predicate exactly;
+the converse is not claimed. Growth, `(E1)`, `(E3)`, strict positivity, and clustering are
 assembled around one normalized family and direction in a non-source-facing candidate record; no
 inhabitant is constructed. Independently, proper-orthochronous Lorentz and affine Poincaré
 kinematics are now defined for the mostly-minus Minkowski form, with properness, time orientation,
