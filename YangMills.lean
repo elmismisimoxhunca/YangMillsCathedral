@@ -12,6 +12,8 @@ import YangMills.Dimensions.OneDimensionalBoundary
 import YangMills.Dimensions.OneDimensionalBoundaryProbes
 import YangMills.Dimensions.TwoDimensionalNondegeneracy
 import YangMills.Dimensions.TwoDimensionalNondegeneracyProbes
+import YangMills.Dimensions.ThreeDimensionalContinuumCoreAcceptance
+import YangMills.Dimensions.ThreeDimensionalContinuumCoreAcceptanceProbes
 import YangMills.Mathematics.LieAlgebraSimplicity
 import YangMills.Mathematics.LieAlgebraSimplicityProbes
 import YangMills.Mathematics.LieGroupAdjoint

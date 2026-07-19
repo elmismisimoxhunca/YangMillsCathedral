@@ -3520,6 +3520,31 @@ Implemented and verified:
 - Hostile probes reject disconnected field and adjoint operators. No field, family, coherence datum,
   theory, or mass gap is constructed.
 
+## 2026-07-19 — one-hundred-eighty-ninth stone: three-dimensional continuum core
+
+Implemented and verified:
+
+- `ThreeDimensionalCurrentStrengthContinuumCoreAcceptanceData` is hard-wired to coordinate
+  Euclidean `ℝ³`, its two-dimensional spatial slice, and coordinate Lebesgue action measure; the
+  supplied metric is not yet proved canonical flat or measure-inducing.
+- Its physical compact-simple gauge group is distinct in role and type parameter from the Poincaré
+  lift group.
+- One exact classical connection/curvature/action chain is joined to an exact `F²` interpretation in
+  the same quantum local-observable family.
+- One strict scalar Euclidean candidate is connected by exact strict Wick continuation to full and
+  relative correlators of the exact Wightman field.
+- The Wightman field is coherently the family's existing nontrivial label; the family is covariant,
+  adjoint-closed, and local on the same common domain.
+- A positive physical gap is required on the integrated Wightman surface's exact joint translation
+  PVM and derives finite-positive supremum semantics from that same spectrum.
+- Hostile projections lock dimension, compact-simple semantics, strict Wick coherence, nonzero
+  Wightman and `F²` operators, exact classical coordinate measure, same-spectrum gap semantics, and
+  reject disconnected spectra/families.
+- No inhabitant is constructed. The record imports no lattice module, four-dimensional OS spatial
+  `ℝ³` tensor surface, or four-dimensional running-coupling interface. Corrected source-facing OS
+  reconstruction and a genuine Poincaré covering remain required before the `d=3` contract is
+  complete.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

@@ -423,6 +423,18 @@ potential therefore has a concrete strictly positive local plaquette density. Th
 kinematic and finite-cutoff witnesses—not a continuum two-dimensional Yang–Mills theory, OS datum,
 Wightman theory, or mass-gap result—and dimension two is proved distinct from Clay's dimension four.
 
+A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
+three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly
+coordinate `ℝ³`, and its designated action measure is coordinate Lebesgue measure, while flat-metric
+and metric-volume compatibility remain explicit debt. It dependently joins one compact-simple
+physical gauge group and exact classical curvature/action chain to one strict
+Euclidean scalar candidate, one Wightman representation/vacuum/domain/field/spectrum chain, exact
+full and relative correlators, strict Wick coherence, the same coherently connected covariant local-
+observable family, an exact `F²` interpretation, and a positive physical gap on that same joint PVM.
+It imports no lattice regulator, four-dimensional OS spatial-`ℝ³` tensor surface, or four-dimensional
+running-coupling data, and no inhabitant is constructed. The `CurrentStrength` qualifier retains the
+known OS-II/source-space reconstruction and genuine Poincaré-cover debts.
+
 Primary OS-I and correcting OS-II article scans, Wightman's 1956 paper, and the corrected Princeton
 edition of Streater–Wightman are hash-pinned with exact text extractions. Load-bearing OS-II and
 Wightman-axiom pages were visually verified. Wilson 1974 and Osterwalder–Seiler 1978 lattice sources
