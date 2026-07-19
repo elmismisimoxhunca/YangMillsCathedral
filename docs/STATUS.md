@@ -2802,6 +2802,28 @@ Implemented and verified:
   completed positive-half-space tensor product, `(E2)`, OS-II growth and reconstruction remain open.
 - No `(E2)` datum, reconstruction, quantum theory, existence theorem, or mass gap is constructed.
 
+## 2026-07-19 — one-hundred-forty-ninth stone: exact-source finite-stage final topology
+
+Implemented and verified:
+
+- `OSPositiveTimeOrderedFourDimensionalStage s` is the product of the separate scalar `f₀` and the
+  exact source spaces at every positive arity in finite stage `s`.
+- Stage components extend by the exact zero source test outside `s`; stage output support filters by
+  actual nonvanishing and is proved contained in `s`.
+- `osPositiveTimeOrderedFourDimensionalSequenceToSupportStage` restricts any exact source sequence
+  to its actual support, and `osPositiveTimeOrderedFourDimensionalStage_recover` proves exact
+  recovery including the scalar.
+- `osPositiveTimeOrderedFourDimensionalFiniteStageFinalTopology` is the named supremum of all stage-
+  map coinduced topologies. Every stage map is continuous and the exact all-stage universal property
+  for maps out is proved.
+- Hostile probes lock selected and absent components, support containment, exact recovery, scalar
+  retention by the empty positive stage, every stage's continuity and the universal property.
+- This topology is not yet identified with OS-I's locally convex direct sum. Compatible complex-
+  module/topological-vector-space operations and local convexity remain open, as do the strict-
+  carrier density/completion relation, completed positive-half-space tensor product, source product,
+  involution, `(E2)`, OS-II growth and reconstruction.
+- No `(E2)` datum, reconstruction, quantum theory, existence theorem, or mass gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

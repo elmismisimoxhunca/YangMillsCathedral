@@ -164,10 +164,13 @@ exact four-dimensional algebraic source-sequence carrier now combines that scala
 many exact positive-arity components and exact nonzero support; the earlier strict sequence maps
 componentwise without changing its scalar, support or Schwartz components and without a properness
 claim, and explicit scalar-unit and nonzero-
-bump source sequences prevent collapse. This does not yet provide the topological/product OS source
-domain: proper enlargement and sufficiency/density/completion comparisons with the earlier strict-
-support subspace, direct-sum and completed-tensor topology comparisons, and OS-II-strength
-reconstruction remain open. `(E2)`
+bump source sequences prevent collapse. Exact products over every finite positive-arity stage now
+include the separate scalar, filter support by actual nonvanishing, recover every source sequence,
+and generate a named finite-stage final topology with its exact universal property. This topology
+is not yet called OS-I's locally convex direct sum: compatible complex-module/topological-vector-
+space operations, proper enlargement and sufficiency/density/completion comparisons with the
+earlier strict-support subspace, locally convex identification, the distinct completed-tensor
+topology, and OS-II-strength reconstruction remain open. `(E2)`
 remains absent pending those comparisons, the identification of the named finite-stage final topology with OS-I's locally convex direct sum, the
 distinct completed tensor product for positive-half-space tests, and the source-facing
 reflection-positivity inequality; the algebraic finite-sequence carrier

@@ -211,9 +211,12 @@ committed before higher layers depend on it.
 - [x] Assemble the separate scalar `f₀`, finitely many exact positive-arity source components and
   exact nonzero support into the four-dimensional algebraic OS source-sequence carrier; map the
   earlier strict sequence componentwise without a properness claim and retain explicit scalar-unit and nonzero-bump sequences.
+- [x] Construct the exact-source finite-stage products, stage maps, exact-support recovery, named
+  finite-stage final topology and its all-stage universal property, retaining the separate scalar.
 - [ ] Establish the earlier strict-support subspace's sufficiency/density/completion relation to the
-  exact positive-arity OS-I source spaces; install the finite-sequence direct-sum topology while keeping
-  the positive-half-space completed tensor product distinct; only then define source-facing `(E2)`
+  exact positive-arity OS-I source spaces; install compatible complex-module/topological-vector-
+  space operations and identify the named final topology with OS-I's locally convex direct sum while
+  keeping the positive-half-space completed tensor product distinct; only then define source-facing `(E2)`
   on the constructed product and reflected-star operation.
 - [x] Construct exact simultaneous Euclidean translations on Schwartz tests and finite sequences,
   with inverse and support preservation, as algebraic `(E4)` infrastructure.
