@@ -43,7 +43,8 @@ have to inhabit. The final target will be a proposition, not a falsely inhabited
 
 See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md), the goal sequence in
 [`docs/ROADMAP.md`](docs/ROADMAP.md), the declaration-level
-[`docs/SOURCE_MAP.md`](docs/SOURCE_MAP.md), and the evidence-only current state in
+[`docs/SOURCE_MAP.md`](docs/SOURCE_MAP.md), the DOI-verified past/future audit inventory in
+[`docs/AUDIT_BIBLIOGRAPHY.md`](docs/AUDIT_BIBLIOGRAPHY.md), and the evidence-only current state in
 [`docs/STATUS.md`](docs/STATUS.md).
 
 ## Formalization laws
@@ -68,9 +69,12 @@ Requirements: Git, `curl`, and `elan`. The project pins its Lean and Mathlib rev
 ```bash
 lake build
 python3 scripts/verify_sources.py
+python3 scripts/verify_audit_bibliography.py
 ```
 
-Source verification is independent of Lean compilation. Both gates are required.
+Source-byte and audit-bibliography verification are independent of Lean compilation. All gates are
+required; the bibliography verifier is offline by default and accepts `--online` only for an
+explicit Crossref refresh.
 
 ## Repository layout
 

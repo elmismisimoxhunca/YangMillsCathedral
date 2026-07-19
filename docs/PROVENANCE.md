@@ -31,6 +31,15 @@ Every source-critical declaration must have a ledger row containing:
 - confidence and unresolved ambiguity;
 - hostile probe that would fail if the requirement were removed or disconnected.
 
+## Audit bibliography versus canonical source records
+
+`docs/AUDIT_BIBLIOGRAPHY.md` is the DOI-verified acquisition and audit plan for both existing and
+future work. Inclusion there does not make a source canonical. Canonical use still requires a
+`Sources/**/SOURCE.md` identity record, a retained or stable lawful artifact, hash verification when
+bytes are retained, visual inspection of load-bearing pages, and a declaration-level
+`docs/SOURCE_MAP.md` row. This distinction prevents a correct DOI from being mistaken for verified
+mathematical coverage.
+
 ## Artifact chain
 
 Pinned artifacts live under `Sources/`. Each directory contains an identity record, retrieval time

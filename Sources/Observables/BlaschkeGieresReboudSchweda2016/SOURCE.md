@@ -4,8 +4,10 @@
 
 - Daniel N. Blaschke, François Gieres, Méril Reboud, and Manfred Schweda,
   **The Energy-Momentum Tensor(s) in Classical Gauge Theories**.
+- Published in *Nuclear Physics B* **912** (2016), 192–223.
+- DOI: <https://doi.org/10.1016/j.nuclphysb.2016.07.001>.
 - arXiv:1605.01121v2 [hep-th], 6 July 2016.
-- Stable source: <https://arxiv.org/abs/1605.01121>.
+- Stable author-version source: <https://arxiv.org/abs/1605.01121>.
 - Retained arXiv PDF: `energy_momentum_tensors_gauge_theories.pdf`, 34 PDF pages.
 - Exact `pdftotext -layout` extraction: `energy_momentum_tensors_gauge_theories.txt`.
 

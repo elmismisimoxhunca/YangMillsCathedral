@@ -81,6 +81,7 @@ Every commit must pass, as applicable:
 lake env lean <changed module>
 lake build
 python3 scripts/verify_sources.py
+python3 scripts/verify_audit_bibliography.py
 python3 scripts/audit_lean.py
 git diff --check
 ```

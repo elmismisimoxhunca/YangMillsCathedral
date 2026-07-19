@@ -2627,6 +2627,30 @@ Implemented and verified:
 - No OS sequence, reflection-positive datum, reconstruction, theory, existence theorem, or mass gap
   is constructed.
 
+## 2026-07-19 — one-hundred-forty-second stone: comprehensive audit bibliography
+
+Implemented and verified:
+
+- `docs/AUDIT_BIBLIOGRAPHY.md` now inventories current sources of record and candidate authoritative
+  sources selected for acquisition/page audit across every currently planned remaining workstream.
+- Thirty-six DOI records were queried directly through the Crossref works API and matched against
+  every identity field Crossref supplies; sources without DOIs retain canonical institutional URLs,
+  arXiv identifiers or ISBNs rather than invented identifiers. The machine-readable metadata
+  snapshot and offline/optional-online verifier are checked in.
+- The inventory separates current sources of record, required additions, and conditional sources
+  that become relevant only if optional topology, moduli, gauge-fixing or perturbative-convergence
+  layers are introduced.
+- A coverage matrix maps Bianchi, Hodge/action, OS reconstruction, the genuine Poincaré cover,
+  joint spectral measures, extended tubes, operator mixing, beta normalization, trace anomaly,
+  two-dimensional consistency and final Clay integration to bounded source chains.
+- Online verification corrected plausible but wrong DOI variants for Freed, Ambrose, Driver and
+  Gross–King–Sengupta and rejected a nonresolving DOI previously associated with Hall–Wightman.
+- The Blaschke–Gieres–Reboud–Schweda source record now includes its verified Nuclear Physics B DOI.
+- Bibliography inclusion is explicitly not canonicalization: every new load-bearing source still
+  requires an artifact/identity record, page-level inspection and a declaration-level source-map
+  row before use.
+- No source in the inventory is represented as proving four-dimensional existence or a mass gap.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

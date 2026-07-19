@@ -10,6 +10,9 @@ committed before higher layers depend on it.
 - [x] Record the no-solution mission, provenance law and dependency architecture.
 - [ ] Establish a writable standalone remote.
 - [x] Add declaration-level source and legacy-integration ledgers.
+- [x] Publish a Crossref/DOI-verified audit bibliography covering existing declarations and every
+  currently planned source gap, with a correction log and explicit acquisition/canonicalization
+  boundary.
 
 ## Phase 1 — dimensions and signatures
 
