@@ -448,14 +448,14 @@ known OS-II/source-space reconstruction and genuine Poincaré-cover debts.
 
 A parallel uninhabited four-dimensional current-strength core now fixes coordinate `ℝ⁴`, the
 canonical flat metric and coordinate Lebesgue measure, then dependently joins the same classical,
-exact source-carrier Euclidean `(E1)`–`(E4)` package, Wightman, strict Wick, observable, `F²`,
+carrier-exact OS-II `(E0′)` plus source-carrier OS-I `(E1)`–`(E4)` package, Wightman, strict Wick, observable, `F²`,
 stress/translation, and same-PVM gap surfaces at the actual Clay dimension. Unlike the lower-dimensional core it also requires the
 preliminary four-dimensional pure-gauge running-coupling/beta normal form indexed by the exact
 compact-simple gauge certificate, exact same-family bilocal products/weak OPE, supplied regular-variation scaling by that same
 coupling, and an anti-disconnection bridge forcing the interpreted `F² × F²` input to have one
 nonzero contracted zeroth-order OPE term whose coupling exponent and leading scaling distribution
-are both nonzero. Its Euclidean growth remains the preliminary Mathlib seminorm convention, not
-source-facing OS-II `(E0′)`. This is still not the final Clay contract: corrected OS reconstruction,
+are both nonzero. Its Euclidean package retains explicit ambient tempered extensions but restricts
+to carrier-exact OS-II `(E0′)`. This is still not the final Clay contract: corrected OS reconstruction,
 genuine Poincaré covering, source-faithful curvature-polynomial observables,
 renormalized OPE coefficients/remainders and trace-anomaly semantics remain open. No inhabitant is
 constructed.

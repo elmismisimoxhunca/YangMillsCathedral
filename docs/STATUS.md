@@ -3672,16 +3672,16 @@ Implemented and verified:
 
 Implemented and verified:
 
-- `OSSourceFourDimensionalEuclideanCurrentStrengthData` assembles preliminary fixed-order factorial
+- `OSSourceFourDimensionalEuclideanCurrentStrengthData` now assembles ambient-extension OS-II
   growth and exact same-family source-carrier `(E1)`–`(E4)` obligations.
 - Positivity reaches every exact derivative-vanishing source sequence; clustering reaches every
   source pair and every normalized nonzero spatial direction.
-- Restriction derives the older strict-domain candidate along any supplied direction, so the strict
-  surface is not disconnected duplicate data.
-- The four-dimensional continuum core now requires this exact-source package and derives its strict
-  candidate for the existing strict Wick bridge.
-- The package remains `CurrentStrength`: its Mathlib Schwartz control is not identified with OS-II's
-  printed `|f|_{n,s}`, so no corrected reconstruction, theory, or mass-gap witness is constructed.
+- Its ambient growth restricts canonically to carrier-exact OS-II `(E0′)` on the coincidence-flat
+  family; source clustering already quantifies over every normalized direction.
+- The four-dimensional continuum core now requires this exact-source package; its strict Wick
+  bridge remains independently indexed by the same ambient Schwinger family.
+- The package remains `CurrentStrength` because it retains extra full-Schwartz tempered extensions
+  and has no corrected reconstruction bridge; no theory or mass-gap witness is constructed.
 
 ## 2026-07-19 — one-hundred-ninety-ninth stone: Clay endpoint dimension separation
 
@@ -3717,6 +3717,20 @@ Implemented and verified:
 - The control and growth data remain uninhabited, are not identified with the different Mathlib
   seminorm sum, and construct no family, reconstruction, theory, or mass gap.
 
+## 2026-07-19 — two-hundred-first stone: four-dimensional Euclidean `(E0′)` integration
+
+Implemented and verified:
+
+- The exact-source Euclidean current-strength package now requires ambient-extension OS-II growth
+  on the same Schwinger family as covariance, positivity, symmetry, and clustering.
+- Its growth restricts canonically to carrier-exact `(E0′)` on the exact coincidence-flat family.
+- The four-dimensional continuum core now requires this integrated `(E0′)`–`(E4)` package and no
+  longer stores an arbitrary selected clustering direction or duplicate strict Euclidean candidate.
+- Source `(E4)` already quantifies over every normalized nonzero direction; the strict Wick bridge
+  remains separately and explicitly limited to its current strict ordered domain.
+- Extra ambient tempered extensions and the absence of corrected reconstruction keep both records
+  qualified as `CurrentStrength`; no family, theory, or mass-gap witness is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
@@ -3739,9 +3753,9 @@ Not yet achieved:
   is basis-independent and the existing action is proved to integrate it, but a general Hodge-star
   bridge and metric-volume compatibility remain pending. OS-I, correcting OS-II, Wightman 1956,
   and Streater–Wightman source artifacts are now acquired and verified. Scalar tempered Schwinger
-  families and fixed-order factorial-growth infrastructure are implemented, but the OS source-norm
-  bridge, `(E2)`, `(E4)`, and reconstruction remain unimplemented; scalar proper-Euclidean
-  covariance `(E1)` and permutation symmetry `(E3)` are now explicit. Wilson and Osterwalder–Seiler
+  families, the exact printed OS-II control, carrier-exact `(E0′)`, and source-carrier `(E1)`–`(E4)`
+  are implemented as uninhabited requirements. Corrected reconstruction remains unimplemented, and
+  the current ambient family/strict Wick surfaces are not silently identified with its output. Wilson and Osterwalder–Seiler
   lattice sources are likewise pinned; finite periodic bonds, plaquette holonomy, local gauge
   transformations, Wilson-type action, normalized product Haar, conditional Gibbs data,
   support-local loop expectations, finite-cutoff reflection-positivity checker, and scaling/

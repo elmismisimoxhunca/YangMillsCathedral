@@ -9,9 +9,9 @@ import YangMills.Euclidean.OSOrderedFourDimensionalEuclideanCurrentStrength
 /-!
 # Hostile probes for the exact-source Euclidean current-strength package
 
-These projections ensure `(E1)`–`(E4)` and preliminary growth use one exact family, while source
-positivity/clustering quantify over their full exact domains. They do not upgrade the seminorm to
-OS-II `(E0′)` or construct a family.
+These projections ensure ambient-extension OS-II growth and `(E1)`–`(E4)` use one exact family,
+while the derived carrier-exact growth, source positivity, and source clustering reach their exact
+domains. They construct no family or reconstruction.
 -/
 
 namespace YangMills.OSOrderedFourDimensionalEuclideanCurrentStrength.Probes
@@ -22,9 +22,14 @@ variable
     {family : ScalarSchwingerDistributionFamily EuclideanDimension.four}
     (data : OSSourceFourDimensionalEuclideanCurrentStrengthData family)
 
-/-- Preliminary growth remains indexed by the exact same family. -/
-example : MathlibFixedOrderFactorialGrowthData family :=
-  data.fixedOrderGrowth
+/-- Ambient-extension OS-II growth remains indexed by the exact same family. -/
+example : OSIIAmbientExtensionLinearGrowthData family :=
+  data.linearGrowth
+
+/-- Carrier-exact OS-II growth is derived on the exact coincidence-flat restriction. -/
+noncomputable example :
+    OSIICarrierExactLinearGrowthData family.toOSIICoincidenceFlatFamily :=
+  data.carrierExactLinearGrowth
 
 /-- Covariance remains indexed by the exact same family. -/
 example : ScalarSchwingerEuclideanCovariance family :=
@@ -55,11 +60,6 @@ example (v : EuclideanUnitSpatialDirection EuclideanDimension.four)
       (fun scale : ℝ => osSourceFourDimensionalClusteringExpression family v f g scale)
       Filter.atTop (nhds 0) :=
   data.clustering_apply v f g
-
-/-- Restriction to the strict carrier preserves all data on the exact same family and direction. -/
-example (v : EuclideanUnitSpatialDirection EuclideanDimension.four) :
-    MathlibStrictScalarEuclideanCandidate family v :=
-  data.toMathlibStrictCandidate v
 
 /-- The exact source package cannot silently use only the zero-arity component. -/
 theorem positive_arity_source_test_nonzero :

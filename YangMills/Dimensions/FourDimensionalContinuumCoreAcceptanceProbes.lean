@@ -181,6 +181,12 @@ theorem exact_source_euclidean_current_strength :
     Nonempty (OSSourceFourDimensionalEuclideanCurrentStrengthData data.schwingerFamily) :=
   ⟨data.sourceEuclideanCurrentStrength⟩
 
+/-- Carrier-exact OS-II `(E0′)` is derived on the exact coincidence-flat restriction. -/
+theorem exact_carrier_linear_growth :
+    Nonempty (OSIICarrierExactLinearGrowthData
+      data.schwingerFamily.toOSIICoincidenceFlatFamily) :=
+  ⟨data.sourceEuclideanCurrentStrength.carrierExactLinearGrowth⟩
+
 /-- Source reflection positivity reaches every exact derivative-vanishing source sequence. -/
 theorem exact_source_reflection_positivity
     (f : OSPositiveTimeOrderedFourDimensionalTestSequence) :
@@ -197,12 +203,6 @@ theorem exact_source_clustering
         data.schwingerFamily v f g scale)
       Filter.atTop (nhds 0) :=
   data.sourceEuclideanCurrentStrength.clustering v f g
-
-/-- The older strict Euclidean candidate is derived from that source package and exact direction. -/
-theorem exact_euclidean_candidate :
-    Nonempty (MathlibStrictScalarEuclideanCandidate
-      data.schwingerFamily data.spatialDirection) :=
-  ⟨data.strictEuclideanCandidate⟩
 
 /-- The Wightman surface uses the exact supplied four-dimensional field chain. -/
 theorem exact_wightman_surface :

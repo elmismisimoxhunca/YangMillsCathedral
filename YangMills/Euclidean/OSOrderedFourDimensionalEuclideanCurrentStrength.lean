@@ -5,19 +5,18 @@ Authors: Sebastian Rodrigo
 -/
 
 import YangMills.Euclidean.OSOrderedFourDimensionalClustering
-import YangMills.Euclidean.SchwingerEuclideanCandidate
+import YangMills.Euclidean.OSIILinearGrowth
 
 /-!
 # Current-strength Euclidean axioms on the exact four-dimensional OS source carrier
 
-This record assembles one normalized scalar Schwinger family with proper-Euclidean covariance
-`(E1)`, permutation symmetry `(E3)`, and exact source-carrier positivity/clustering `(E2)/(E4)`.
-It retains the project's concrete full-Schwartz fixed-order factorial estimate as preliminary
-regularity data.
+This record assembles one normalized ambient tempered Schwinger family with carrier-exact OS-II
+linear growth on its coincidence-flat restriction, proper-Euclidean covariance `(E1)`, source
+positivity `(E2)`, permutation symmetry `(E3)`, and source clustering `(E4)`.
 
-The record is explicitly `CurrentStrength`: the concrete Mathlib seminorm has not been identified
-with OS-II's printed `|f|_{n,s}`, so this is not yet source-facing `(E0′)` and cannot feed a corrected
-reconstruction theorem. No Schwinger family inhabitant is constructed.
+The record remains explicitly `CurrentStrength`: it requires extra ambient full-Schwartz extensions,
+and no corrected reconstruction bridge has yet been stated. No Schwinger family inhabitant is
+constructed.
 -/
 
 namespace YangMills
@@ -25,8 +24,9 @@ namespace YangMills
 /-- Current-strength four-dimensional Euclidean axiom package on one exact source family. -/
 structure OSSourceFourDimensionalEuclideanCurrentStrengthData
     (family : ScalarSchwingerDistributionFamily EuclideanDimension.four) where
-  /-- Preliminary fixed-order factorial growth on full Mathlib Schwartz spaces. -/
-  fixedOrderGrowth : MathlibFixedOrderFactorialGrowthData family
+  /-- Exact OS-II `(E0′)` on the coincidence-flat restriction, with this family's ambient tempered
+  extensions retained as explicit strengthening data. -/
+  linearGrowth : OSIIAmbientExtensionLinearGrowthData family
   /-- Proper-Euclidean covariance `(E1)` on the same family. -/
   covariance : ScalarSchwingerEuclideanCovariance family
   /-- Exact source-carrier reflection positivity `(E2)`. -/
@@ -58,17 +58,12 @@ theorem clustering_apply
       Filter.atTop (nhds 0) :=
   data.clustering v f g
 
-/-- Restrict current source-carrier data to the earlier strict candidate along any exact direction. -/
-def toMathlibStrictCandidate
+/-- The ambient growth requirement restricts canonically to carrier-exact OS-II `(E0′)` data. -/
+noncomputable def carrierExactLinearGrowth
     {family : ScalarSchwingerDistributionFamily EuclideanDimension.four}
-    (data : OSSourceFourDimensionalEuclideanCurrentStrengthData family)
-    (direction : EuclideanUnitSpatialDirection EuclideanDimension.four) :
-    MathlibStrictScalarEuclideanCandidate family direction where
-  fixedOrderGrowth := data.fixedOrderGrowth
-  covariance := data.covariance
-  symmetry := data.symmetry
-  reflectionPositivity := data.reflectionPositivity.toMathlibStrict
-  clustering := data.clustering.toMathlibStrictAlongDirection direction
+    (data : OSSourceFourDimensionalEuclideanCurrentStrengthData family) :
+    OSIICarrierExactLinearGrowthData family.toOSIICoincidenceFlatFamily :=
+  data.linearGrowth.toCarrierExact
 
 end OSSourceFourDimensionalEuclideanCurrentStrengthData
 

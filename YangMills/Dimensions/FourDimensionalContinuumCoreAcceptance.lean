@@ -25,7 +25,8 @@ import YangMills.Renormalization.AsymptoticFreedomOPE
 
 This module defines an uninhabited, per-carrier acceptance record hard-wired to four-dimensional
 Euclidean spacetime. It joins one compact-simple physical gauge group and exact classical curvature
-chain to one strict Euclidean scalar family, one independent Minkowski/Wightman chain, an explicit
+chain to one ambient Euclidean scalar family with exact source restrictions, one independent
+Minkowski/Wightman chain, an explicit
 strict Wick-continuation bridge, one covariant local-observable family containing that Wightman
 field, an interpretation of the exact classical `F²` observable, a local stress tensor whose
 regulated charges and translation Ward identities use the same joint translation PVM, and a
@@ -34,9 +35,9 @@ physical gap on that spectrum.
 The classical base is exactly coordinate `ℝ⁴`, its metric is Mathlib's canonical flat inner-product
 metric, and the designated action measure must equal coordinate Lebesgue measure. A general project
 bridge identifying metric-induced Riemannian volume with that measure remains absent. The name
-includes `CurrentStrength` because the Euclidean record now has exact source-carrier OS-I `(E1)`–
-`(E4)` but only preliminary Mathlib-convention growth, not source-facing OS-II `(E0′)` or a corrected
-reconstruction theorem. The Poincaré object remains the current lift/pre-cover interface. No lattice datum can fill
+includes `CurrentStrength` because the Euclidean record has carrier-exact OS-II `(E0′)` on the
+coincidence-flat restriction and exact source-carrier OS-I `(E1)`–`(E4)`, but retains extra ambient
+tempered extensions and has no corrected reconstruction theorem. The Poincaré object remains the current lift/pre-cover interface. No lattice datum can fill
 any field of this record. The exact compact-simple gauge certificate indexes a preliminary
 four-dimensional running-coupling normal form and a supplied weak regular-variation condition on the
 exact same-family OPE. Neither provides source-faithful group-normalized perturbative coefficients,
@@ -113,11 +114,8 @@ structure FourDimensionalCurrentStrengthContinuumCoreAcceptanceData
   classicalMeasure_eq_coordinateLebesgue : classicalAction.measure = MeasureTheory.volume
   /-- One exact scalar Schwinger distribution family in Euclidean spacetime dimension four. -/
   schwingerFamily : ScalarSchwingerDistributionFamily EuclideanDimension.four
-  /-- Explicit one-dimensional spatial-ray direction inside four-dimensional spacetime's
-  three-dimensional spatial slice. -/
-  spatialDirection : EuclideanUnitSpatialDirection EuclideanDimension.four
-  /-- Current-strength exact-source Euclidean `(E1)`–`(E4)` package on that same family, retaining
-  preliminary Mathlib-convention growth rather than claiming source-facing OS-II `(E0′)`. -/
+  /-- Current-strength Euclidean package with carrier-exact OS-II `(E0′)` on the coincidence-flat
+  restriction and source-carrier OS-I `(E1)`–`(E4)` on that same ambient family. -/
   sourceEuclideanCurrentStrength :
     OSSourceFourDimensionalEuclideanCurrentStrengthData schwingerFamily
   /-- Integrated Wightman requirements on the exact supplied field/domain/vacuum/representation. -/
@@ -196,14 +194,6 @@ variable
     {exterior : Geometry.PrincipalConnectionExteriorDerivativeData connection}
     {curvatureCertificate : Geometry.PrincipalCurvatureStructureCertificate
       smoothBundle connection exterior}
-
-/-- Restrict the exact-source Euclidean package to the older strict carrier along the core's exact
-selected direction. This is derived data, not a second disconnected Euclidean candidate. -/
-def strictEuclideanCandidate
-    (data : FourDimensionalCurrentStrengthContinuumCoreAcceptanceData inner connection
-      exterior curvatureCertificate fieldData) :
-    MathlibStrictScalarEuclideanCandidate data.schwingerFamily data.spatialDirection :=
-  data.sourceEuclideanCurrentStrength.toMathlibStrictCandidate data.spatialDirection
 
 /-- The accepted spacetime dimension is definitionally four, with a three-dimensional spatial slice. -/
 theorem exact_dimension
