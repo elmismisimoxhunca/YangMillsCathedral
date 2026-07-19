@@ -459,12 +459,13 @@ committed before higher layers depend on it.
     three-dimensional contract complete.
 - [ ] Add the full `d = 4` Clay acceptance contract.
   - [x] Add an uninhabited current-strength core on canonical coordinate `ℝ⁴`, joining the exact
-    classical/action, strict Euclidean/Wick, Wightman/same-PVM gap, coherent `F²` observable,
+    classical/action, exact source-carrier Euclidean `(E1)`–`(E4)` with preliminary growth, strict
+    Wick, Wightman/same-PVM gap, coherent `F²` observable,
     stress/translation Ward, compact-simple-indexed running coupling, exact weak OPE, and supplied
     same-coupling regular-variation surfaces, with a required nonzero interpreted `F² × F²`
     zeroth-order term with nonzero same-running-coupling exponent and nonzero leading scaling
     distribution.
-  - [ ] Replace all current-strength OS/reconstruction and Poincaré-cover debt; add source-faithful
+  - [ ] Replace the remaining OS-II `(E0′)`/reconstruction and Poincaré-cover debt; add source-faithful
     curvature-polynomial/OPE mixing, group-normalized perturbative coefficients/remainders, trace
     anomaly, and final universal compact-simple-group quantification.
 - [ ] Prove that no lower-dimensional witness is silently accepted as 4D.

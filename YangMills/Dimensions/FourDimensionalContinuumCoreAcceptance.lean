@@ -6,7 +6,7 @@ Authors: Sebastian Rodrigo
 
 import YangMills.Classical.CanonicalEuclideanMetric
 import YangMills.Classical.EuclideanAction
-import YangMills.Euclidean.SchwingerEuclideanCandidate
+import YangMills.Euclidean.OSOrderedFourDimensionalEuclideanCurrentStrength
 import YangMills.Geometry.LieGroup
 import YangMills.Minkowski.PhysicalMassGapSupremum
 import YangMills.Minkowski.ScalarWightmanAxiomSurface
@@ -33,9 +33,10 @@ physical gap on that spectrum.
 
 The classical base is exactly coordinate `ℝ⁴`, its metric is Mathlib's canonical flat inner-product
 metric, and the designated action measure must equal coordinate Lebesgue measure. A general project
-bridge identifying metric-induced Riemannian volume with that measure remains absent. The name includes `CurrentStrength` because the Euclidean
-record is the project's current strict Mathlib candidate, not source-facing OS-II `(E0')`/OS-I
-`(E2)`/`(E4)` data or a reconstruction theorem. The Poincaré object remains the current lift/pre-cover interface. No lattice datum can fill
+bridge identifying metric-induced Riemannian volume with that measure remains absent. The name
+includes `CurrentStrength` because the Euclidean record now has exact source-carrier OS-I `(E1)`–
+`(E4)` but only preliminary Mathlib-convention growth, not source-facing OS-II `(E0′)` or a corrected
+reconstruction theorem. The Poincaré object remains the current lift/pre-cover interface. No lattice datum can fill
 any field of this record. The exact compact-simple gauge certificate indexes a preliminary
 four-dimensional running-coupling normal form and a supplied weak regular-variation condition on the
 exact same-family OPE. Neither provides source-faithful group-normalized perturbative coefficients,
@@ -115,9 +116,10 @@ structure FourDimensionalCurrentStrengthContinuumCoreAcceptanceData
   /-- Explicit one-dimensional spatial-ray direction inside four-dimensional spacetime's
   three-dimensional spatial slice. -/
   spatialDirection : EuclideanUnitSpatialDirection EuclideanDimension.four
-  /-- Current strict-domain Euclidean candidate on that exact family and direction. -/
-  strictEuclideanCandidate :
-    MathlibStrictScalarEuclideanCandidate schwingerFamily spatialDirection
+  /-- Current-strength exact-source Euclidean `(E1)`–`(E4)` package on that same family, retaining
+  preliminary Mathlib-convention growth rather than claiming source-facing OS-II `(E0′)`. -/
+  sourceEuclideanCurrentStrength :
+    OSSourceFourDimensionalEuclideanCurrentStrengthData schwingerFamily
   /-- Integrated Wightman requirements on the exact supplied field/domain/vacuum/representation. -/
   wightmanSurface : Minkowski.ScalarWightmanAxiomSurfaceData fieldData
   /-- Full-product tempered correlators of that exact Wightman field. -/
@@ -194,6 +196,14 @@ variable
     {exterior : Geometry.PrincipalConnectionExteriorDerivativeData connection}
     {curvatureCertificate : Geometry.PrincipalCurvatureStructureCertificate
       smoothBundle connection exterior}
+
+/-- Restrict the exact-source Euclidean package to the older strict carrier along the core's exact
+selected direction. This is derived data, not a second disconnected Euclidean candidate. -/
+def strictEuclideanCandidate
+    (data : FourDimensionalCurrentStrengthContinuumCoreAcceptanceData inner connection
+      exterior curvatureCertificate fieldData) :
+    MathlibStrictScalarEuclideanCandidate data.schwingerFamily data.spatialDirection :=
+  data.sourceEuclideanCurrentStrength.toMathlibStrictCandidate data.spatialDirection
 
 /-- The accepted spacetime dimension is definitionally four, with a three-dimensional spatial slice. -/
 theorem exact_dimension

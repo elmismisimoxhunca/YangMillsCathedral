@@ -3668,6 +3668,21 @@ Implemented and verified:
   predicate; no converse is claimed.
 - No clustering family, OS-II growth, reconstruction, theory, or mass-gap witness is constructed.
 
+## 2026-07-19 — one-hundred-ninety-eighth stone: exact-source Euclidean current-strength package
+
+Implemented and verified:
+
+- `OSSourceFourDimensionalEuclideanCurrentStrengthData` assembles preliminary fixed-order factorial
+  growth and exact same-family source-carrier `(E1)`–`(E4)` obligations.
+- Positivity reaches every exact derivative-vanishing source sequence; clustering reaches every
+  source pair and every normalized nonzero spatial direction.
+- Restriction derives the older strict-domain candidate along any supplied direction, so the strict
+  surface is not disconnected duplicate data.
+- The four-dimensional continuum core now requires this exact-source package and derives its strict
+  candidate for the existing strict Wick bridge.
+- The package remains `CurrentStrength`: its Mathlib Schwartz control is not identified with OS-II's
+  printed `|f|_{n,s}`, so no corrected reconstruction, theory, or mass-gap witness is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

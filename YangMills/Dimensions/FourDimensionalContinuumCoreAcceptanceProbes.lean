@@ -176,7 +176,29 @@ theorem exact_classical_coordinate_measure :
     data.classicalAction.measure = MeasureTheory.volume :=
   data.classicalMeasure_eq_coordinateLebesgue
 
-/-- The strict Euclidean family is exactly four-dimensional. -/
+/-- The exact source-carrier Euclidean `(E1)`–`(E4)` package uses the same family. -/
+theorem exact_source_euclidean_current_strength :
+    Nonempty (OSSourceFourDimensionalEuclideanCurrentStrengthData data.schwingerFamily) :=
+  ⟨data.sourceEuclideanCurrentStrength⟩
+
+/-- Source reflection positivity reaches every exact derivative-vanishing source sequence. -/
+theorem exact_source_reflection_positivity
+    (f : OSPositiveTimeOrderedFourDimensionalTestSequence) :
+    IsNonnegativeComplexReal
+      (osSourceFourDimensionalReflectionPositivityExpression data.schwingerFamily f) :=
+  data.sourceEuclideanCurrentStrength.reflectionPositivity f
+
+/-- Source clustering reaches every exact source pair and every normalized spatial direction. -/
+theorem exact_source_clustering
+    (v : EuclideanUnitSpatialDirection EuclideanDimension.four)
+    (f g : OSPositiveTimeOrderedFourDimensionalTestSequence) :
+    Filter.Tendsto
+      (fun scale : ℝ => osSourceFourDimensionalClusteringExpression
+        data.schwingerFamily v f g scale)
+      Filter.atTop (nhds 0) :=
+  data.sourceEuclideanCurrentStrength.clustering v f g
+
+/-- The older strict Euclidean candidate is derived from that source package and exact direction. -/
 theorem exact_euclidean_candidate :
     Nonempty (MathlibStrictScalarEuclideanCandidate
       data.schwingerFamily data.spatialDirection) :=
