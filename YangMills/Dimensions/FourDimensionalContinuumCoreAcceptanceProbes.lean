@@ -142,6 +142,28 @@ theorem exact_nonzero_curvature_squared_ope_term :
         data.curvatureSquaredOPECoherence.bra data.curvatureSquaredOPECoherence.ket) ≠ 0 :=
   data.curvatureSquaredOPEContractedTerm_nonzero
 
+/-- The selected interpreted coefficient genuinely depends on the exact running coupling. -/
+theorem exact_curvature_squared_running_dependence :
+    letI : DecidableEq data.observableFamily.Label := data.observableLabelDecidableEq
+    data.opeRegularVariation.couplingExponent
+      (data.curvatureSquaredInterpretation.quantumLabel
+        Observables.BasicCurvatureObservableTag.curvatureSquared)
+      (data.curvatureSquaredInterpretation.quantumLabel
+        Observables.BasicCurvatureObservableTag.curvatureSquared)
+      data.curvatureSquaredOPECoherence.outputLabel ≠ 0 :=
+  data.curvatureSquaredCouplingExponent_nonzero
+
+/-- The same interpreted coefficient has a nonzero leading scaling distribution. -/
+theorem exact_curvature_squared_leading_distribution :
+    letI : DecidableEq data.observableFamily.Label := data.observableLabelDecidableEq
+    data.opeRegularVariation.leadingDistribution
+      (data.curvatureSquaredInterpretation.quantumLabel
+        Observables.BasicCurvatureObservableTag.curvatureSquared)
+      (data.curvatureSquaredInterpretation.quantumLabel
+        Observables.BasicCurvatureObservableTag.curvatureSquared)
+      data.curvatureSquaredOPECoherence.outputLabel ≠ 0 :=
+  data.curvatureSquaredOPELeadingDistribution_nonzero
+
 /-- The classical action is indexed by the canonical flat metric on exact coordinate `ℝ⁴`. -/
 theorem exact_canonical_classical_metric :
     Nonempty (Classical.EuclideanActionAnalyticData

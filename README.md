@@ -445,7 +445,8 @@ surfaces at the actual Clay dimension. Unlike the lower-dimensional core it also
 preliminary four-dimensional pure-gauge running-coupling/beta normal form indexed by the exact
 compact-simple gauge certificate, exact same-family bilocal products/weak OPE, supplied regular-variation scaling by that same
 coupling, and an anti-disconnection bridge forcing the interpreted `F² × F²` input to have one
-nonzero contracted zeroth-order OPE term. This is still not the final Clay contract: corrected OS
+nonzero contracted zeroth-order OPE term whose coupling exponent and leading scaling distribution
+are both nonzero. This is still not the final Clay contract: corrected OS
 reconstruction, genuine Poincaré covering, source-faithful curvature-polynomial observables,
 renormalized OPE coefficients/remainders and trace-anomaly semantics remain open. No inhabitant is
 constructed.

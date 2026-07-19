@@ -163,6 +163,16 @@ structure FourDimensionalCurrentStrengthContinuumCoreAcceptanceData
     Observables.CurvatureSquaredOPECoherenceData
       (Classical.canonicalEuclideanSpacetimeMetricData EuclideanDimension.four)
       inner connection exterior curvatureCertificate curvatureSquaredInterpretation weakOPE
+  /-- The selected nonzero `F² × F²` coefficient genuinely depends on the same running coupling;
+  the generic regular-variation witness is not allowed to come only from an unrelated coefficient. -/
+  curvatureSquaredCouplingExponent_nonzero :
+    letI : DecidableEq observableFamily.Label := observableLabelDecidableEq
+    opeRegularVariation.couplingExponent
+      (curvatureSquaredInterpretation.quantumLabel
+        Observables.BasicCurvatureObservableTag.curvatureSquared)
+      (curvatureSquaredInterpretation.quantumLabel
+        Observables.BasicCurvatureObservableTag.curvatureSquared)
+      curvatureSquaredOPECoherence.outputLabel ≠ 0
   /-- Symmetric, Hermitian, covariant, local, weakly conserved stress tensor in the same family. -/
   stressEnergy : Minkowski.LocalStressEnergyTensorData observableFamily
   /-- The stress charges, translation derivatives, Ward identity, and momentum moments use the
@@ -238,6 +248,21 @@ theorem curvatureSquaredOPEContractedTerm_nonzero
         data.curvatureSquaredOPECoherence.ket) ≠ 0 := by
   letI : DecidableEq data.observableFamily.Label := data.observableLabelDecidableEq
   exact data.curvatureSquaredOPECoherence.contractedTerm_nonzero
+
+/-- The same selected `F² × F²` coefficient has nonzero leading scaling distribution. -/
+theorem curvatureSquaredOPELeadingDistribution_nonzero
+    (data : FourDimensionalCurrentStrengthContinuumCoreAcceptanceData inner connection
+      exterior curvatureCertificate fieldData) :
+    letI : DecidableEq data.observableFamily.Label := data.observableLabelDecidableEq
+    data.opeRegularVariation.leadingDistribution
+      (data.curvatureSquaredInterpretation.quantumLabel
+        Observables.BasicCurvatureObservableTag.curvatureSquared)
+      (data.curvatureSquaredInterpretation.quantumLabel
+        Observables.BasicCurvatureObservableTag.curvatureSquared)
+      data.curvatureSquaredOPECoherence.outputLabel ≠ 0 := by
+  letI : DecidableEq data.observableFamily.Label := data.observableLabelDecidableEq
+  exact data.opeRegularVariation.leadingDistribution_nonzero _ _ _
+    data.curvatureSquaredOPECoherence.coefficient_nonzero
 
 /-- The selected threshold is strictly positive by the exact same-PVM gap predicate. -/
 theorem gapThreshold_pos

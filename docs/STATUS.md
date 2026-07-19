@@ -3625,6 +3625,19 @@ Implemented and verified:
   No coefficient calculation, operator-mixing matrix, group normalization, remainder calculation,
   trace anomaly, theory, or mass-gap witness is constructed.
 
+## 2026-07-19 — one-hundred-ninety-fifth stone: interpreted OPE running dependence
+
+Implemented and verified:
+
+- The four-dimensional core now requires the selected nonzero interpreted `F² × F²` coefficient's
+  coupling exponent to be nonzero for the exact same running coupling.
+- The generic regular-variation theorem then derives that this exact coefficient has a nonzero
+  leading tempered distribution.
+- Hostile projections expose both same-coefficient running dependence and the nonzero leading
+  distribution, preventing the generic OPE's running witness from living only on an unrelated label.
+- The exponent and leading distribution remain supplied data. No anomalous dimension calculation,
+  group normalization, operator mixing, perturbative coefficient or remainder is derived.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

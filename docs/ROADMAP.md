@@ -459,7 +459,8 @@ committed before higher layers depend on it.
     classical/action, strict Euclidean/Wick, Wightman/same-PVM gap, coherent `F²` observable,
     stress/translation Ward, compact-simple-indexed running coupling, exact weak OPE, and supplied
     same-coupling regular-variation surfaces, with a required nonzero interpreted `F² × F²`
-    zeroth-order term.
+    zeroth-order term with nonzero same-running-coupling exponent and nonzero leading scaling
+    distribution.
   - [ ] Replace all current-strength OS/reconstruction and Poincaré-cover debt; add source-faithful
     curvature-polynomial/OPE mixing, group-normalized perturbative coefficients/remainders, trace
     anomaly, and final universal compact-simple-group quantification.
