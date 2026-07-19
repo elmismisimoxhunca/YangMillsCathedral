@@ -3339,6 +3339,23 @@ Implemented and verified:
 - This does not yet differentiate the wedge or prove graded Leibniz, manifold/covariant transport,
   or Bianchi.
 
+## 2026-07-19 — one-hundred-seventy-ninth stone: self-wedge coefficient calculus
+
+Implemented and verified:
+
+- `continuousAlternatingMapEvaluation` packages evaluation on any fixed tuple as a continuous
+  linear map, with continuity derived from the alternating-map operator-norm bound.
+- `continuousBilinearSelfWedgeOne_hasFDerivAt_apply` derives the fixed two-vector self-wedge
+  coefficient derivative solely from the exact one-form-valued `HasFDerivAt` witness.
+- `continuousBilinearSelfWedgeOne_fderiv_apply` exposes all four terms: two forward-order product
+  terms minus the corresponding two reverse-order terms.
+- No separate differentiability witness for the wedge coefficient is accepted; it is derived through
+  continuous evaluation and Mathlib's bounded-bilinear calculus.
+- Hostile probes lock exact evaluation, the same-input derivative, all four slots, and rejection of
+  missing, swapped, sign-changed, or otherwise malformed derivative outputs.
+- This is coefficient-level local-model calculus. Exterior alternation, the self-wedge graded
+  Leibniz identity, manifold/covariant transport, and Bianchi remain unproved.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

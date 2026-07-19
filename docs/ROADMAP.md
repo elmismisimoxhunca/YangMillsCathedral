@@ -61,8 +61,10 @@ committed before higher layers depend on it.
 - [x] Connect the actual finite-dimensional group Lie-algebra coordinate bracket to Mathlib's
   bounded-bilinear `HasFDerivAt`/`fderiv` calculus, including the exact self-bracket rule.
 - [x] Construct the continuous one-with-`n` wedge for an arbitrary bounded bilinear map and prove
-  the actual group bracket's coordinate wedge is exactly the intrinsic graded Lie-bracket wedge;
-  the exterior-derivative graded Leibniz expansion remains debt.
+  the actual group bracket's coordinate wedge is exactly the intrinsic graded Lie-bracket wedge.
+- [x] Package exact fixed-tuple evaluation as a continuous linear map and derive the same-input
+  self-wedge coefficient `HasFDerivAt`/four-term `fderiv` rule; the exterior-derivative graded
+  Leibniz expansion remains debt.
 - [x] Define principal curvature from a certified derivative and the smooth bracket-wedge.
 - [x] State and probe intrinsic curvature horizontality/right-adjoint-equivariance certificates.
 - [x] Construct and probe the set-level adjoint associated-bundle orbit quotient.
