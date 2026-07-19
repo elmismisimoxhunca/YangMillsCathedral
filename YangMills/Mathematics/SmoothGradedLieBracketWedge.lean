@@ -115,6 +115,22 @@ theorem lieBracketWedgeOneMany_one_toForm
   exact ContinuousAlternatingMap.lieBracketWedgeOneMany_one
     (alpha.toForm x) (beta.toForm x)
 
+/-- The smooth cubic self-bracket, assembled from the exact smooth inner and outer wedges. -/
+noncomputable def lieBracketWedgeOneManySelfSelf
+    (coordinates : V ≃L[ℝ] W) [SmoothLieBracketCoordinates coordinates]
+    (alpha : SmoothManifoldDifferentialForm I M V coordinates 1) :
+    SmoothManifoldDifferentialForm I M V coordinates 3 :=
+  lieBracketWedgeOneMany coordinates 2 alpha
+    (lieBracketWedgeOne coordinates alpha alpha)
+
+/-- The smooth cubic self-bracket has the exact zero three-form as its carrier by Jacobi. -/
+@[simp]
+theorem lieBracketWedgeOneManySelfSelf_toForm
+    (coordinates : V ≃L[ℝ] W) [SmoothLieBracketCoordinates coordinates]
+    (alpha : SmoothManifoldDifferentialForm I M V coordinates 1) :
+    (lieBracketWedgeOneManySelfSelf coordinates alpha).toForm = 0 :=
+  ManifoldDifferentialForm.lieBracketWedgeOneMany_self_self alpha.toForm
+
 end SmoothManifoldDifferentialForm
 
 end YangMills.Mathematics

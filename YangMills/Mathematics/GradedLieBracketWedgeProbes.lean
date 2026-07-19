@@ -51,6 +51,18 @@ theorem exact_degree_two_three_terms
           ⁅alpha (fun _ => v 2), beta (Fin.removeNth 2 v)⁆ := by
   rw [ContinuousAlternatingMap.lieBracketWedgeOneMany_apply, Fin.sum_univ_three]
 
+/-- The exact cubic self-bracket cancels by Lie Jacobi with the fixed normalization. -/
+theorem exact_cubic_jacobi_cancellation
+    (alpha : T [⋀^Fin 1]→L[ℝ] V) :
+    alpha.lieBracketWedgeOneMany 2 (alpha.lieBracketWedgeOne alpha) = 0 :=
+  ContinuousAlternatingMap.lieBracketWedgeOneMany_self_self alpha
+
+/-- A purported nonzero cubic self-bracket is rejected. -/
+theorem nonzero_cubic_self_bracket_blocked
+    (alpha : T [⋀^Fin 1]→L[ℝ] V)
+    (hne : alpha.lieBracketWedgeOneMany 2 (alpha.lieBracketWedgeOne alpha) ≠ 0) : False :=
+  hne (ContinuousAlternatingMap.lieBracketWedgeOneMany_self_self alpha)
+
 /-- Omitting any demanded alternating-sum term or changing a sign is rejected. -/
 theorem malformed_sum_blocked
     (n : ℕ) (alpha : T [⋀^Fin 1]→L[ℝ] V) (beta : T [⋀^Fin n]→L[ℝ] V)
@@ -74,6 +86,17 @@ theorem exact_zero_laws
     (0 : T [⋀^Fin 1]→L[ℝ] V).lieBracketWedgeOneMany n beta = 0 ∧
       alpha.lieBracketWedgeOneMany n 0 = 0 := by
   simp
+
+/-- The manifold lift carries the cubic Jacobi cancellation pointwise. -/
+theorem exact_manifold_cubic_jacobi_cancellation
+    {E : Type uE} {H : Type uH}
+    [NormedAddCommGroup E] [NormedSpace ℝ E] [TopologicalSpace H]
+    {M : Type uM} [TopologicalSpace M]
+    {I : ModelWithCorners ℝ E H} [ChartedSpace H M]
+    [ContinuousSMul ℝ V]
+    (alpha : ManifoldDifferentialForm I M V 1) :
+    alpha.lieBracketWedgeOneMany 2 (alpha.lieBracketWedgeOne alpha) = 0 :=
+  ManifoldDifferentialForm.lieBracketWedgeOneMany_self_self alpha
 
 /-- The manifold lift uses both forms at the same exact base point. -/
 theorem exact_manifold_pointwise_formula

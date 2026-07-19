@@ -44,6 +44,8 @@ committed before higher layers depend on it.
   one-with-two three-term formula needed before Bianchi.
 - [x] Prove smooth closure of the exact graded bracket wedge from the existing smooth coordinate
   bracket, bundle it without changing the carrier, and retain degree-one smooth coherence.
+- [x] Expand the cubic self-bracket with the exact wedge normalization and derive its pointwise,
+  manifold, and smoothly bundled vanishing from the cyclic Lie Jacobi identity.
 - [x] Add arbitrary-manifold one-form exterior-derivative certification.
 - [x] Define principal curvature from a certified derivative and the smooth bracket-wedge.
 - [x] State and probe intrinsic curvature horizontality/right-adjoint-equivariance certificates.

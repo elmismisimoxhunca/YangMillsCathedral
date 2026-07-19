@@ -3227,6 +3227,22 @@ Implemented and verified:
 - A positive-degree exterior/covariant derivative, graded Leibniz laws, Jacobi cancellation,
   Bianchi, and positive curvature-tensor orders remain open. No connection or theory is constructed.
 
+## 2026-07-19 — one-hundred-seventy-second stone: cubic graded Jacobi cancellation
+
+Implemented and verified:
+
+- `ContinuousAlternatingMap.lieBracketWedgeOneMany_self_self` proves
+  `[α ∧ [α ∧ α]] = 0` for every continuous Lie-algebra-valued one-form.
+- Evaluation expands the exact three omitted-slot terms and both inner bracket orders. Skew symmetry
+  converts each pair to twice one nested bracket, and the cyclic Lie Jacobi identity cancels the
+  resulting sum with the repository's fixed self-wedge normalization.
+- Pointwise manifold and smoothly bundled corollaries retain the exact zero three-form carrier; the
+  smooth corollary is assembled only from the already derived smooth inner and outer wedges.
+- Hostile probes reject nonzero pointwise and smooth cubic self-brackets and lock manifold
+  coherence.
+- A positive-degree exterior/covariant derivative, graded Leibniz laws, Bianchi, and positive
+  curvature-tensor orders remain open. No connection or theory is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

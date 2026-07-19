@@ -114,6 +114,22 @@ theorem _root_.ContinuousAlternatingMap.lieBracketWedgeOneMany_one
   rw [hzero, hone]
   simp [sub_eq_add_neg]
 
+/-- The cubic self-bracket vanishes by the Lie Jacobi identity. With the project's exact
+self-wedge normalization, evaluation expands to twice the cyclic Jacobi sum. -/
+@[simp]
+theorem _root_.ContinuousAlternatingMap.lieBracketWedgeOneMany_self_self
+    (alpha : T [⋀^Fin 1]→L[ℝ] V) :
+    alpha.lieBracketWedgeOneMany 2 (alpha.lieBracketWedgeOne alpha) = 0 := by
+  ext v
+  rw [ContinuousAlternatingMap.lieBracketWedgeOneMany_apply, Fin.sum_univ_three]
+  simp only [ContinuousAlternatingMap.lieBracketWedgeOne_apply]
+  simp [Fin.removeNth]
+  rw [show Fin.succAbove (2 : Fin 3) (1 : Fin 2) = (1 : Fin 3) by decide]
+  have pair_eq (x y z : V) : ⁅x, ⁅y, z⁆⁆ - ⁅x, ⁅z, y⁆⁆ =
+      (2 : ℤ) • ⁅x, ⁅y, z⁆⁆ := by
+    rw [← lie_skew z y, lie_neg, sub_neg_eq_add, two_zsmul]
+  rw [pair_eq, pair_eq, pair_eq, ← zsmul_add, ← zsmul_add, lie_jacobi, smul_zero]
+
 /-- A zero one-form has zero graded bracket wedge in every degree. -/
 @[simp]
 theorem _root_.ContinuousAlternatingMap.zero_lieBracketWedgeOneMany
@@ -157,6 +173,19 @@ theorem ManifoldDifferentialForm.lieBracketWedgeOneMany_apply
       ∑ i : Fin (n + 1), (-1 : ℤ) ^ (i : ℕ) •
         ⁅alpha x (fun _ => v i), beta x (i.removeNth v)⁆ :=
   ContinuousAlternatingMap.lieBracketWedgeOneMany_apply n (alpha x) (beta x) v
+
+/-- The pointwise manifold cubic self-bracket is the zero three-form. -/
+@[simp]
+theorem ManifoldDifferentialForm.lieBracketWedgeOneMany_self_self
+    {E : Type uE} {H : Type uH}
+    [NormedAddCommGroup E] [NormedSpace ℝ E] [TopologicalSpace H]
+    {M : Type uM} [TopologicalSpace M]
+    {I : ModelWithCorners ℝ E H} [ChartedSpace H M]
+    [ContinuousSMul ℝ V]
+    (alpha : ManifoldDifferentialForm I M V 1) :
+    alpha.lieBracketWedgeOneMany 2 (alpha.lieBracketWedgeOne alpha) = 0 := by
+  funext x
+  exact ContinuousAlternatingMap.lieBracketWedgeOneMany_self_self (alpha x)
 
 end
 

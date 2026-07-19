@@ -74,6 +74,21 @@ theorem exact_smooth_one_with_two
     (alpha.toForm.lieBracketWedgeOneMany 2 beta.toForm).IsSmooth coordinates :=
   alpha.smooth.lieBracketWedgeOneMany coordinates 2 beta.smooth
 
+/-- The smoothly bundled cubic self-bracket has the exact zero three-form carrier. -/
+theorem exact_smooth_cubic_jacobi_cancellation
+    (alpha : SmoothManifoldDifferentialForm I M V coordinates 1) :
+    (SmoothManifoldDifferentialForm.lieBracketWedgeOneManySelfSelf
+      coordinates alpha).toForm = 0 :=
+  SmoothManifoldDifferentialForm.lieBracketWedgeOneManySelfSelf_toForm coordinates alpha
+
+/-- A nonzero carrier cannot be substituted for the smooth cubic Jacobi cancellation. -/
+theorem nonzero_smooth_cubic_self_bracket_blocked
+    (alpha : SmoothManifoldDifferentialForm I M V coordinates 1)
+    (hne : (SmoothManifoldDifferentialForm.lieBracketWedgeOneManySelfSelf
+      coordinates alpha).toForm ≠ 0) : False :=
+  hne (SmoothManifoldDifferentialForm.lieBracketWedgeOneManySelfSelf_toForm
+    coordinates alpha)
+
 /-- A smooth zero one-form gives the exact zero pointwise graded carrier. -/
 theorem exact_smooth_zero_left
     (n : ℕ) (beta : SmoothManifoldDifferentialForm I M V coordinates n) :

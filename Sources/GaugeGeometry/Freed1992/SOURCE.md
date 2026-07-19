@@ -90,7 +90,9 @@ now extends a continuous one-form bracket wedge to every continuous `n`-form by 
 slot alternating sum and proves degree-one coherence. Equation (1.13) anchors that degree-one
 normalization, while (1.16) motivates the one-with-two specialization `[Θ ∧ Ω]`. The existing
 smooth coordinate-bracket certificate now proves smooth closure of this exact graded operation by a
-finite signed sum. No positive-degree covariant derivative or Bianchi proof is supplied.
+finite signed sum. The cubic self-bracket is also expanded with the fixed normalization and proved
+zero as twice the cyclic Lie Jacobi sum, pointwise and smoothly. No positive-degree covariant
+derivative or Bianchi proof is supplied.
 Joint continuity and coordinate smoothness are derived for Mathlib's actual finite-dimensional
 Lie-group tangent bracket by transport through the canonical normed model coordinates; the
 bracket-wedge is then proved to preserve smooth manifold one-forms.
