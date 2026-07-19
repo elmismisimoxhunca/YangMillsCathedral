@@ -310,6 +310,8 @@ import YangMills.Minkowski.WightmanCovariance
 import YangMills.Minkowski.WightmanCovarianceProbes
 import YangMills.Minkowski.CovariantLocalObservableFamily
 import YangMills.Minkowski.CovariantLocalObservableFamilyProbes
+import YangMills.Minkowski.WightmanLocalObservableCoherence
+import YangMills.Minkowski.WightmanLocalObservableCoherenceProbes
 import YangMills.Minkowski.LocalStressEnergyTensor
 import YangMills.Minkowski.LocalStressEnergyTensorProbes
 import YangMills.Minkowski.StressEnergyTranslationWard

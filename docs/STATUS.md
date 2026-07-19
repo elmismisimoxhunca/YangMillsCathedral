@@ -3505,6 +3505,21 @@ Implemented and verified:
 - These are kinematic and finite-cutoff witnesses only. No two-dimensional continuum Yang–Mills,
   OS/Wightman theory, continuum bridge, or mass gap is constructed.
 
+## 2026-07-19 — one-hundred-eighty-eighth stone: Wightman/observable coherence
+
+Implemented and verified:
+
+- `ScalarWightmanFieldLocalObservableCoherenceData` identifies the exact scalar Wightman field with
+  the same-domain local family's existing nontrivial label.
+- The Wightman adjoint is identified with the operator at that label's exact involutive adjoint.
+- Pointwise operator equalities propagate to the already-tempered field and adjoint matrix-element
+  distributions.
+- Involutivity and unit-label preservation prove the selected adjoint label is also nonunit.
+- The family's existing anti-vacuity witness transfers to the Wightman field, proving one action is
+  nonzero and differs from the smeared unit.
+- Hostile probes reject disconnected field and adjoint operators. No field, family, coherence datum,
+  theory, or mass gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

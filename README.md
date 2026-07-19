@@ -274,7 +274,10 @@ element on the same common domain, fixes the unit field by Lebesgue smearing, an
 bilocal tempered products with exact pure-tensor operator order and nonzero witnesses. The same
 family can be required to close under an involutive label adjoint, transform covariantly under the
 same Poincaré representation/domain chain, and commute for every label pair on spacelike-separated
-supports. Normalized
+supports. A further exact coherence surface identifies the scalar Wightman field with this family's
+existing nontrivial label and identifies its adjoint with the corresponding involutive adjoint
+label, transferring family anti-vacuity to the Wightman field and preventing disconnected scalar
+and observable sectors. Normalized
 compact-first-anchor diagonal probes have linearly scale-controlled support and a canonical
 polynomial Schwartz-seminorm envelope. A generic weak OPE checker carries a designated probe and
 packages `C(x-y) O(x)` relative tempered coefficients, exact coefficient/local-field contraction, finite

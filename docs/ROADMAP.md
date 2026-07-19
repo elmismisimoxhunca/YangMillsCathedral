@@ -146,6 +146,9 @@ committed before higher layers depend on it.
   exact full-product weak bilocal distributions with unit/nonzero hostile evidence and locked
   operator order; strengthen the same family with exact label adjoints, same-representation scalar
   Poincaré covariance, and all-label bosonic locality. No curvature interpretation is claimed.
+- [x] Add exact operator and adjoint-operator coherence identifying the scalar Wightman field with
+  the same family's existing nontrivial label, transferring anti-vacuity and tempered matrix
+  elements rather than allowing disconnected scalar and observable sectors.
 - [x] Define normalized compact-anchor bilocal diagonal probes with `O(r)` support, an exact
   nondegenerate relative-coefficient/local-field contraction, finite monotone truncations, connected
   full-product remainders, and weak all-order little-`o` asymptotics.

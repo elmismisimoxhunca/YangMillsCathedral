@@ -89,7 +89,11 @@ Printed pages and section numbers are authoritative; text lines refer to the ret
 This source controls the Minkowski/Wightman acceptance surface: Hilbert space, one physical
 translation/Poincaré representation, common invariant domain, operator-valued tempered
 distributions, covariance, locality, forward-cone spectrum, invariant unique vacuum, and cyclicity.
-Those requirements must remain connected to the same representation and domain.
+Those requirements must remain connected to the same representation and domain. When the scalar
+Wightman field is used alongside the separately sourced gauge-invariant local-observable family, an
+explicit project coherence surface identifies it with that family's existing nontrivial label and
+identifies its adjoint with the exact involutive adjoint label. This anti-disconnection requirement
+is a formalization strengthening, not a new existence claim from the book.
 
 The checker follows the book's explicit printed-p. 92 SNAG/PVM presentation rather than stopping
 at the generator-level summary on printed p. 97. Energy, momentum, invariant mass, the vacuum
