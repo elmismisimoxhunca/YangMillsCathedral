@@ -233,7 +233,7 @@ committed before higher layers depend on it.
 - [x] Lift reverse-conjugation and Euclidean time reflection to finite sequences and define the
   exact combined operation `Θ f*`.
 - [x] Define and probe the algebraic reflection-positivity form on the current strict Mathlib
-  subdomain, without identifying it with source-facing `(E2)`.
+  subdomain.
 - [x] Define a broader project-dimension Fréchet candidate whose every derivative vanishes outside
   strict positive time order, package the condition as an exact complex Schwartz submodule, install
   its exact induced per-arity Schwartz topology, include the
@@ -271,6 +271,9 @@ committed before higher layers depend on it.
 - [x] Assemble the separate scalar `f₀`, finitely many exact positive-arity source components and
   exact nonzero support into the four-dimensional algebraic OS source-sequence carrier; map the
   earlier strict sequence componentwise without a properness claim and retain explicit scalar-unit and nonzero-bump sequences.
+- [x] Forget the exact source sequence into the unrestricted finite Schwartz algebra without changing
+  scalar, support, or positive components; define algebraic source-carrier `(E2)` on the exact
+  reflected-star convolution, and prove it implies the strict-subdomain predicate.
 - [x] Construct the exact-source finite-stage products, stage maps, exact-support recovery, named
   finite-stage final topology and its all-stage universal property, retaining the separate scalar.
 - [x] Identify exact source sequences with a scalar times a dependent finitely supported source-
@@ -322,8 +325,8 @@ committed before higher layers depend on it.
 - [ ] Establish the earlier strict-support subspace's sufficiency/density/completion relation to the
   exact positive-arity OS-I source spaces; prove the half-line quotient complete with the source's
   Fréchet presentation; represent nuclearity; construct or characterize the completed projective
-  tensor carrier and iterated powers while keeping them separate from the direct sum; only then
-  define source-facing `(E2)` on the constructed product and reflected-star operation.
+  tensor carrier and iterated powers while keeping them separate from the direct sum and its already
+  defined algebraic source-carrier `(E2)`.
 - [x] Construct exact simultaneous Euclidean translations on Schwartz tests and finite sequences,
   with inverse and support preservation, as algebraic `(E4)` infrastructure.
 - [x] Define normalized nonzero spatial rays, prove escape to infinity, construct the four-dimensional
@@ -332,8 +335,7 @@ committed before higher layers depend on it.
   an explicitly supplied direction on the current strict Mathlib subdomain.
 - [x] Assemble growth, `(E1)`, `(E3)`, strict-domain positivity, and direction-indexed clustering
   around one coherent normalized family in a non-source-facing candidate record.
-- [ ] Transport positivity and clustering across the source-carrier/topology comparison and expose
-  source-facing `(E2)` and `(E4)`.
+- [ ] Transport clustering across the source-carrier comparison and expose source-facing `(E4)`.
 - [ ] Prove the source-facing OS-II `(E0′)` bridge and define complete Euclidean/Schwinger data.
 - [x] Define proper-orthochronous Lorentz/Poincaré affine kinematics independently of the Euclidean
   Schwinger surface.

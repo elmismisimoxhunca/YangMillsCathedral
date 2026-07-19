@@ -3638,6 +3638,22 @@ Implemented and verified:
 - The exponent and leading distribution remain supplied data. No anomalous dimension calculation,
   group normalization, operator mixing, perturbative coefficient or remainder is derived.
 
+## 2026-07-19 — one-hundred-ninety-sixth stone: exact-source algebraic `(E2)`
+
+Implemented and verified:
+
+- Every finite sequence over the exact four-dimensional derivative-vanishing OS source spaces now
+  maps to the unrestricted finite Schwartz algebra with exact scalar, support, and positive
+  components.
+- `OSSourceFourDimensionalReflectionPositivity` evaluates the exact Schwinger family on the actual
+  unrestricted reflected-star convolution `(Θ f*) × f` and requires a nonnegative complex real.
+- The concrete arity-one source bump survives the forgetful map, preventing scalar-only collapse.
+- The strict-to-source inclusion forgets back to the exact same unrestricted sequence, so source
+  positivity implies the earlier strict-subdomain predicate. No converse or properness is claimed.
+- This closes exact algebraic source-carrier `(E2)`. Completed positive-half-space tensors,
+  nuclearity, strict-carrier density, OS-II growth, reconstruction, and existence remain separate
+  obligations rather than prerequisites for this positivity predicate.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

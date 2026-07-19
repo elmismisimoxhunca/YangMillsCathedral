@@ -116,7 +116,11 @@ Printed journal pages are authoritative. Text line numbers below refer to the re
 OS-II has correcting priority over OS-I. The checker must keep Euclidean/Schwinger data and
 Minkowski/Wightman data as separate carriers connected by an explicit reconstruction bridge.
 Reflection positivity, Euclidean covariance, symmetry, clustering, regularity/growth, Wightman
-axioms, and reconstruction coherence must remain separately visible obligations.
+axioms, and reconstruction coherence must remain separately visible obligations. Algebraic `(E2)`
+is now stated on finite sequences over the exact four-dimensional derivative-vanishing source
+components: the source sequence is forgotten componentwise into the unrestricted Schwartz algebra
+before evaluating `(Θ f*) × f`. Completed positive-half-space tensors, nuclearity, OS-II growth,
+and reconstruction remain distinct obligations and are not prerequisites for this algebraic `(E2)`.
 
 The original OS-I sufficiency theorem must never be encoded using only ordinary temperedness. A
 canonical reconstruction requirement must incorporate the OS-II-strength linear-growth condition

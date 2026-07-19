@@ -215,10 +215,10 @@ candidates at every intended finite positive power, with density-derived uniquen
 noncollapse. These data do not characterize the completed projective tensor topology. Proper
 enlargement and sufficiency/density/completion comparisons with the earlier strict-support subspace,
 completeness and the Fréchet presentation of the half-line quotient, actual completed-tensor
-carriers and topology, nuclearity, and OS-II-strength reconstruction remain open. `(E2)` remains
-absent pending those comparisons, a separately constructed completed tensor product for
-positive-half-space tests, and the source-facing
-reflection-positivity inequality; the algebraic finite-sequence carrier
+carriers and topology, nuclearity, and OS-II-strength reconstruction remain open. Exact source-carrier `(E2)` is now stated on finite derivative-vanishing source sequences via the
+unrestricted reflected-star convolution. Completed positive-half-space tensors, nuclearity, and
+OS-II-strength reconstruction remain separate open obligations rather than prerequisites for this
+algebraic positivity condition. The algebraic finite-sequence carrier
 and product are implemented with exact positive and natural-arity support, with its scalar zero-point component represented faithfully as a
 zero-arity Schwartz test. Exact configuration split/merge and the raw pointwise tensor kernel are
 also implemented. A reusable generic tensor product is proved Schwartz with explicit decay bounds and
@@ -236,8 +236,9 @@ continuity, source-space and locally convex direct-sum identification with OS-I,
 continuity remain pending. Exact reverse-conjugation on scalar Schwartz components is implemented
 and kept distinct from Euclidean time reflection. Both operations are lifted to exact finite
 sequences and combined in the source order `Θ f*`. The exact algebraic Schwinger evaluation and
-nonnegative-real form are defined on the current strict Mathlib subdomain, but are deliberately not
-identified with source-facing `(E2)` before the carrier/topology comparison. Exact simultaneous
+nonnegative-real form are defined both on the current strict Mathlib subdomain and on the exact
+four-dimensional derivative-vanishing source carrier. Source positivity implies strict positivity
+through an exact componentwise bridge; the converse is not claimed. Exact simultaneous
 Euclidean translations and their finite-sequence lift are available as algebraic clustering
 infrastructure. Normalized spatial rays are constructed in dimensions with a spatial coordinate,
 the four-dimensional ray escapes to infinity, and dimension one is proved to have no such direction.
