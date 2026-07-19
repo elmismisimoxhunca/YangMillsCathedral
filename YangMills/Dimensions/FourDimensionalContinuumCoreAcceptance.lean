@@ -9,7 +9,7 @@ import YangMills.Classical.EuclideanAction
 import YangMills.Euclidean.OSOrderedFourDimensionalEuclideanCurrentStrength
 import YangMills.Geometry.LieGroup
 import YangMills.Minkowski.PhysicalMassGapSupremum
-import YangMills.Minkowski.PoincareTopologicalCover
+import YangMills.Minkowski.PoincareTopologicalDoubleCover
 import YangMills.Minkowski.ScalarWightmanAxiomSurface
 import YangMills.Minkowski.StressEnergyTranslationWard
 import YangMills.Minkowski.WightmanJointTemperedCorrelators
@@ -40,8 +40,8 @@ bridge identifying metric-induced Riemannian volume with that measure remains ab
 includes `CurrentStrength` because the Euclidean record has carrier-exact OS-II `(E0′)` on the
 coincidence-flat restriction and exact source-carrier OS-I `(E1)`–`(E4)`, but retains extra ambient
 tempered extensions and has no corrected reconstruction theorem. The exact lift is now required to
-carry a genuine topological covering projection, while concrete inhomogeneous `SL(2,ℂ)`, affine-
-target group laws, and kernel semantics remain open. No lattice datum can fill
+carry a genuine two-sheeted topological covering projection, while concrete inhomogeneous
+`SL(2,ℂ)`, affine-target group laws, and `{±1}` kernel identification remain open. No lattice datum can fill
 any field of this record. The exact compact-simple gauge certificate indexes a preliminary
 four-dimensional running-coupling normal form and a supplied weak regular-variation condition on the
 exact same-family OPE. Neither provides source-faithful group-normalized perturbative coefficients,
@@ -105,12 +105,13 @@ structure FourDimensionalCurrentStrengthContinuumCoreAcceptanceData
     (fieldData : Minkowski.ScalarWightmanFieldOnCommonDomainData D) where
   /-- Exact compact-simple convention for the physical gauge group, not the Poincaré lift group. -/
   compactSimpleGaugeGroup : Geometry.CompactSimpleGaugeGroupData GaugeGroup EG
-  /-- Genuine topological covering requirement on the exact Poincaré lift group. -/
-  poincareCover : Minkowski.ProperOrthochronousPoincareCoverData
+  /-- Genuine two-sheeted topological covering requirement on the exact Poincaré lift group. -/
+  poincareDoubleCover : Minkowski.ProperOrthochronousPoincareDoubleCoverData
     EuclideanDimension.four PoincareLiftGroup
-  /-- The genuine cover strengthens the exact lift already indexing the representation; no
+  /-- The double cover strengthens the exact lift already indexing the representation; no
   disconnected second projection is accepted. -/
-  poincareCover_toLift_eq : poincareCover.toProperOrthochronousPoincareLiftData = lift
+  poincareDoubleCover_toLift_eq :
+    poincareDoubleCover.toProperOrthochronousPoincareLiftData = lift
   /-- Preliminary four-dimensional pure-gauge ultraviolet running-coupling normal form indexed by
   that exact compact-simple gauge-group certificate. -/
   asymptoticFreedom : Renormalization.PureYangMillsAsymptoticFreedomData

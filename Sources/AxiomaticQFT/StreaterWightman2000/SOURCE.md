@@ -31,6 +31,11 @@ Printed pages and section numbers are authoritative; text lines refer to the ret
   - calls determinant-one transformations proper and positive-time-component transformations
     orthochronous;
   - exhibits time and space inversion as excluded components.
+- Printed p. 12; PDF page 22; extraction lines 596–624, equations `(1-14)`–`(1-15)`:
+  - defines the determinant-one `2 × 2` matrix action on real four-vectors;
+  - states `Λ(-A) = Λ(A)` and that `Λ(A) = Λ(B)` implies `A = ±B`;
+  - identifies `A ↦ Λ(A)` as a homomorphism from `SL(2,ℂ)` onto the restricted Lorentz group.
+  The retained page was rendered and visually checked for the two-to-one statement.
 - Printed p. 13; PDF page 23; extraction lines 642–668:
   - defines the complex Lorentz group by the complexified form-preservation law;
   - separates determinant `+1` and `-1` components and calls the former proper;
@@ -97,9 +102,11 @@ is a formalization strengthening, not a new existence claim from the book.
 
 The affine Poincaré target now carries the topology induced by its pointwise Lorentz action and
 translation coordinate. `ProperOrthochronousPoincareCoverData` requires the existing exact
-surjective lift projection to satisfy Mathlib's genuine covering-map predicate. This is an
-uninhabited acceptance strengthening of the earlier pre-cover, not a construction of the book's
-inhomogeneous `SL(2,ℂ)`, semidirect-product group law, or two-sheet kernel.
+surjective lift projection to satisfy Mathlib's genuine covering-map predicate. Printed p. 12 states
+that the homogeneous map identifies exactly `A` and `-A`; the strengthened double-cover interface
+therefore requires every affine fiber to be equivalent to `Fin 2`. This remains uninhabited and does
+not construct the book's inhomogeneous `SL(2,ℂ)`, semidirect-product group law, or identify the two
+abstract sheets with a concrete `{±1}` kernel.
 
 The checker follows the book's explicit printed-p. 92 SNAG/PVM presentation rather than stopping
 at the generator-level summary on printed p. 97. Energy, momentum, invariant mass, the vacuum

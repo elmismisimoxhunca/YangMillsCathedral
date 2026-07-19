@@ -3795,6 +3795,21 @@ Implemented and verified:
 - No concrete inhomogeneous `SL(2,ℂ)` carrier, affine-target group law, two-sheet/kernel theorem,
   universal-cover result, cover inhabitant, theory, or mass gap is constructed.
 
+## 2026-07-19 — two-hundred-sixth stone: exact two-sheet covering semantics
+
+Implemented and verified:
+
+- `ProperOrthochronousPoincareDoubleCoverData` strengthens the genuine covering projection by
+  requiring every exact affine target fiber to be equivalent to `Fin 2`.
+- Every target consequently has two explicitly distinct lift points, and every fiber is finite as
+  well as discrete and nonempty.
+- Physical translation lifts and the same covering-map projection are retained unchanged.
+- The four-dimensional core now requires this two-sheeted cover and ties its inherited lift exactly
+  to the lift indexing the physical representation.
+- The abstract sheets are not identified with matrix signs. No concrete inhomogeneous `SL(2,ℂ)`,
+  affine semidirect-product group law, `{±1}` kernel theorem, universal cover, inhabitant, theory, or
+  mass gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

@@ -86,19 +86,25 @@ theorem exact_compact_simple_gauge_group :
 
 /-- The exact lift group carries a genuine topological covering projection. -/
 theorem exact_poincare_topological_cover :
-    Nonempty (Minkowski.ProperOrthochronousPoincareCoverData
+    Nonempty (Minkowski.ProperOrthochronousPoincareDoubleCoverData
       EuclideanDimension.four PoincareLiftGroup) :=
-  ⟨data.poincareCover⟩
+  ⟨data.poincareDoubleCover⟩
 
-/-- The cover is the exact lift indexing the physical representation, not a disconnected projection. -/
+/-- The double cover is the exact lift indexing the physical representation, not a disconnected projection. -/
 theorem exact_poincare_cover_lift :
-    data.poincareCover.toProperOrthochronousPoincareLiftData = lift :=
-  data.poincareCover_toLift_eq
+    data.poincareDoubleCover.toProperOrthochronousPoincareLiftData = lift :=
+  data.poincareDoubleCover_toLift_eq
 
 /-- Consequently, the exact physical cover projection is a local homeomorphism. -/
 theorem exact_poincare_cover_localHomeomorph :
-    IsLocalHomeomorph data.poincareCover.projection :=
-  data.poincareCover.projection_isLocalHomeomorph
+    IsLocalHomeomorph data.poincareDoubleCover.projection :=
+  data.poincareDoubleCover.projection_isLocalHomeomorph
+
+/-- Every affine transformation has exactly two sheets in the accepted physical cover. -/
+theorem exact_poincare_two_sheets
+    (target : Minkowski.ProperOrthochronousPoincareTransformation EuclideanDimension.four) :
+    Nonempty ((data.poincareDoubleCover.projection ⁻¹' ({target} : Set _)) ≃ Fin 2) :=
+  ⟨data.poincareDoubleCover.fiberEquivFinTwo target⟩
 
 /-- The preliminary ultraviolet normal form uses that exact gauge-group certificate and dimension. -/
 theorem exact_asymptotic_freedom :

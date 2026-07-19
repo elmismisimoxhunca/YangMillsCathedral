@@ -320,6 +320,8 @@ import YangMills.Minkowski.PoincareTargetTopology
 import YangMills.Minkowski.PoincareTargetTopologyProbes
 import YangMills.Minkowski.PoincareTopologicalCover
 import YangMills.Minkowski.PoincareTopologicalCoverProbes
+import YangMills.Minkowski.PoincareTopologicalDoubleCover
+import YangMills.Minkowski.PoincareTopologicalDoubleCoverProbes
 import YangMills.Minkowski.Vacuum
 import YangMills.Minkowski.VacuumProbes
 import YangMills.Minkowski.CommonInvariantDomain
