@@ -18,7 +18,7 @@ import YangMills.Minkowski.WightmanRelativeAnalyticCorrelators
 import YangMills.Minkowski.WeakOperatorProductExpansion
 import YangMills.Observables.CurvatureSquaredInterpretation
 import YangMills.Observables.CurvatureSquaredOPECoherence
-import YangMills.Reconstruction.OSSourceOrderedWickContinuation
+import YangMills.Reconstruction.SameFieldOSIIOutputCorrelatorUniqueness
 import YangMills.Renormalization.AsymptoticFreedomOPE
 
 /-!
@@ -123,15 +123,12 @@ structure FourDimensionalCurrentStrengthContinuumCoreAcceptanceData
   wightmanSurface : Minkowski.ScalarWightmanAxiomSurfaceData fieldData
   /-- Full-product tempered correlators of that exact Wightman field. -/
   fullCorrelators : Minkowski.ScalarWightmanJointTemperedCorrelatorData fieldData
-  /-- Corrected OS-II output growth `(R0′)` on those exact full Wightman distributions. -/
-  wightmanLinearGrowth : Minkowski.OSIIWightmanLinearGrowthData fullCorrelators
-  /-- Relative analytic correlators derived from the same full correlator family. -/
-  relativeAnalyticCorrelators :
-    Minkowski.ScalarWightmanRelativeAnalyticCorrelatorData fullCorrelators
-  /-- Exact derivative-vanishing source-carrier Wick coherence between the same Euclidean family
-  and Minkowski analytic correlators. -/
-  sourceWickCoherence : Reconstruction.OSSourceOrderedScalarWickContinuationData
-    schwingerFamily relativeAnalyticCorrelators
+  /-- Selected `(R0′)`, relative analytic, and exact-source Wick data together with all-arity
+  correlator-extension uniqueness on this same field realization. This is not reconstruction
+  uniqueness across heterogeneous Wightman theories. -/
+  sameFieldOSIIOutputUniqueness :
+    Reconstruction.SameFieldOSIIOutputCorrelatorUniquenessData
+      schwingerFamily fullCorrelators
   /-- One local-observable family on the same common invariant domain. -/
   observableFamily : Minkowski.TemperedLocalObservableFamilyData.{uLift, uH, uLabel} D
   /-- Adjoint closure, covariance, and locality on that same family and representation chain. -/
@@ -198,6 +195,28 @@ variable
     {exterior : Geometry.PrincipalConnectionExteriorDerivativeData connection}
     {curvatureCertificate : Geometry.PrincipalCurvatureStructureCertificate
       smoothBundle connection exterior}
+
+/-- Corrected OS-II output growth selected by the same-field correlator package. -/
+def wightmanLinearGrowth
+    (data : FourDimensionalCurrentStrengthContinuumCoreAcceptanceData inner connection
+      exterior curvatureCertificate fieldData) :
+    Minkowski.OSIIWightmanLinearGrowthData data.fullCorrelators :=
+  data.sameFieldOSIIOutputUniqueness.selectedGrowth
+
+/-- Relative analytic correlators selected by the same-field correlator package. -/
+def relativeAnalyticCorrelators
+    (data : FourDimensionalCurrentStrengthContinuumCoreAcceptanceData inner connection
+      exterior curvatureCertificate fieldData) :
+    Minkowski.ScalarWightmanRelativeAnalyticCorrelatorData data.fullCorrelators :=
+  data.sameFieldOSIIOutputUniqueness.selectedRelative
+
+/-- Exact-source Wick coherence selected by the same-field correlator package. -/
+def sourceWickCoherence
+    (data : FourDimensionalCurrentStrengthContinuumCoreAcceptanceData inner connection
+      exterior curvatureCertificate fieldData) :
+    Reconstruction.OSSourceOrderedScalarWickContinuationData
+      data.schwingerFamily data.relativeAnalyticCorrelators :=
+  data.sameFieldOSIIOutputUniqueness.selectedWick
 
 /-- Restrict the exact source-carrier Wick coherence to the old strict domain. This is derived, not
 an independent second Euclidean/Minkowski bridge. -/

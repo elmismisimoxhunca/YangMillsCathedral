@@ -387,9 +387,11 @@ Nonzero source values are proved to map into the tube and the integrand vanishes
 preimage. Requiring absolute integrability for all such possibly noncompact source Schwartz tests
 strengthens OS-I's initial compact-support formula. Separately, OS-II `(R0′)` now requires one common
 positive Wightman Schwartz order, exact printed full-coordinate controls, and positive `ωₙ` bounded
-by `α β^(n²)` on the same full correlator family. Arbitrary-polynomial comparison, derivation or
-inhabitation of the extended-tube continuation interface, corrected reconstruction, and full
-observable interpretation remain pending, and no continuation or correlator
+by `α β^(n²)` on the same full correlator family. A narrow package now bundles selected `(R0′)`,
+relative analytic, and exact-source Wick data and requires all-arity correlator-extension uniqueness
+only on the same field realization. Corrected reconstruction acceptance, heterogeneous Hilbert-space
+unitary equivalence, a proof or construction of reconstruction, arbitrary-polynomial comparison, derivation or inhabitation of the
+extended-tube continuation interface, and full observable interpretation remain pending, and no continuation or correlator
 datum is constructed. No concrete gauge-group, connection, invariant-inner-product, curvature, or
 structure-certificate witness,
 symmetry group, source-facing reconstruction theorem, quantum-theory witness, Yang–Mills existence
@@ -459,8 +461,9 @@ compact-simple gauge certificate, exact same-family bilocal products/weak OPE, s
 coupling, and an anti-disconnection bridge forcing the interpreted `F² × F²` input to have one
 nonzero contracted zeroth-order OPE term whose coupling exponent and leading scaling distribution
 are both nonzero. Its Euclidean package retains explicit ambient tempered extensions but restricts
-to carrier-exact OS-II `(E0′)`. This is still not the final Clay contract: corrected OS reconstruction,
-genuine Poincaré covering, source-faithful curvature-polynomial observables,
+to carrier-exact OS-II `(E0′)` and carries narrow same-field OS-II output-correlator uniqueness.
+This is still not the final Clay contract: corrected reconstruction acceptance, heterogeneous
+unitary reconstruction uniqueness, genuine Poincaré covering, source-faithful curvature-polynomial observables,
 renormalized OPE coefficients/remainders and trace-anomaly semantics remain open. No inhabitant is
 constructed.
 

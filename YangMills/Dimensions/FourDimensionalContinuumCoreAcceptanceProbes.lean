@@ -230,6 +230,13 @@ theorem exact_source_wick_coherence :
       data.schwingerFamily data.relativeAnalyticCorrelators) :=
   ⟨data.sourceWickCoherence⟩
 
+/-- The selected `(R0′)`, analytic, and Wick output package imposes all-arity correlator
+uniqueness only on this exact field realization; no reconstruction classification is claimed. -/
+theorem exact_sameField_osII_output_uniqueness :
+    Nonempty (Reconstruction.SameFieldOSIIOutputCorrelatorUniquenessData
+      data.schwingerFamily data.fullCorrelators) :=
+  ⟨data.sameFieldOSIIOutputUniqueness⟩
+
 /-- The old strict Wick bridge is derived from the exact source bridge. -/
 theorem exact_wick_coherence :
     Nonempty (Reconstruction.MathlibStrictOrderedScalarWickContinuationData

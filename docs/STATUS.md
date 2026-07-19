@@ -3762,6 +3762,21 @@ Implemented and verified:
 - The four-dimensional core now requires this same-correlator `(R0′)` surface. No reconstruction
   output, uniqueness theorem, theory, or mass-gap witness is constructed.
 
+## 2026-07-19 — two-hundred-fourth stone: same-field OS-II correlator uniqueness
+
+Implemented and verified:
+
+- `SameFieldOSIIOutputCorrelatorUniquenessData` bundles selected `(R0′)`, relative analytic, and
+  exact-source Wick data for one full correlator family.
+- Any alternative full correlator extension on the exact same field/Hilbert realization that also
+  has `(R0′)` and exact-source Wick coherence must have equal distributions at every arity.
+- Derived uniqueness reaches every full Schwartz test value, preventing zero-arity-only or
+  disconnected-functional uniqueness.
+- The four-dimensional core now requires this narrow same-field obligation.
+- This is not corrected reconstruction acceptance or Wightman-theory uniqueness. Heterogeneous
+  unitary-equivalence semantics, the Poincaré cover, and reconstruction remain open; no output,
+  theory, or mass-gap witness is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

@@ -340,7 +340,10 @@ committed before higher layers depend on it.
 - [x] Define equation (2.1)'s exact flattened-coordinate weighted multi-index least-upper-bound
   control, carrier-exact OS-II `(E0′)` functionals/bounds on `𝒮₀`, and the one-way restriction from a
   separate ambient-tempered-extension strengthening.
-- [ ] Assemble exact `(E0′)`–`(E4)` Euclidean/Schwinger data and state the corrected reconstruction bridge.
+- [x] Assemble current-strength `(E0′)`–`(E4)` Euclidean data and narrow same-field uniqueness for
+  selected `(R0′)`/relative/source-Wick correlator extensions.
+- [ ] Define corrected reconstruction acceptance and heterogeneous Wightman-realization unitary
+  equivalence; same-field correlator uniqueness is supporting evidence only.
 - [x] Define proper-orthochronous Lorentz/Poincaré affine kinematics independently of the Euclidean
   Schwinger surface.
 - [x] Define a topological-group lift/pre-cover interface and one strongly continuous unitary
@@ -393,8 +396,10 @@ committed before higher layers depend on it.
   derive the old strict bridge by restriction.
 - [x] Define corrected-output Wightman `(R0′)` on the exact full correlator family with one common
   positive order, printed full-coordinate controls, and `0 < ωₙ ≤ α β^(n²)`.
-- [ ] State and prove the corrected OS-II reconstruction acceptance bridge, including output
-  uniqueness and complete correlator coherence.
+- [x] Require all-arity distribution uniqueness among corrected/coherent correlator extensions on
+  one exact field realization, with selected `(R0′)`, relative, and source-Wick data bundled.
+- [ ] State corrected OS-II reconstruction acceptance with heterogeneous unitary-equivalence
+  semantics, without constructing an output.
 
 ## Phase 5 — translations and mass gap
 
@@ -473,7 +478,7 @@ committed before higher layers depend on it.
     same-coupling regular-variation surfaces, with a required nonzero interpreted `F² × F²`
     zeroth-order term with nonzero same-running-coupling exponent and nonzero leading scaling
     distribution.
-  - [ ] Replace the remaining corrected-reconstruction and Poincaré-cover debt; add source-faithful
+  - [ ] Add corrected reconstruction acceptance with heterogeneous-unitary semantics and replace the Poincaré-cover debt; add source-faithful
     curvature-polynomial/OPE mixing, group-normalized perturbative coefficients/remainders, trace
     anomaly, and final universal compact-simple-group quantification.
 - [x] Define the exact Clay endpoint predicate, reject every lower dimension `1`–`3`, and prove no
