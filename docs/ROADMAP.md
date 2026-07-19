@@ -222,6 +222,10 @@ committed before higher layers depend on it.
   and component laws.
 - [x] Prove every exact-source finite-stage extension complex-linear and package it as a continuous
   complex-linear map into the named final topology, with exact support and nonzero-stage probes.
+- [x] Present the final topology as the quotient of the disjoint union of all exact finite stages;
+  use local compactness of `ℂ` to prove joint complex scalar continuity, derive negation continuity,
+  and prove finite-union stage addition and separate sequence addition continuity. Keep joint
+  addition conditional on the still-unproved product-quotient property.
 - [ ] Establish the earlier strict-support subspace's sufficiency/density/completion relation to the
   exact positive-arity OS-I source spaces; install compatible complex-module/topological-vector-
   space operations and identify the named final topology with OS-I's locally convex direct sum while

@@ -173,9 +173,12 @@ and generate a named finite-stage final topology with its exact universal proper
 sequences are also algebraically equivalent to the separate scalar times a dependent finitely
 supported source-space family, with named additive-group and complex-module structures and exact
 scalar/component laws. Every generating finite-stage extension is now proved complex-linear and
-packaged as a continuous complex-linear map into the named final topology. The topology is not yet
-called OS-I's locally convex direct sum: joint continuity of the global operations, topological-vector-
-space operations, proper enlargement and sufficiency/density/completion comparisons with the
+packaged as a continuous complex-linear map into the named final topology. The topology is also
+proved to be the quotient of the disjoint union of all finite stages. Local compactness of `ℂ`
+yields joint complex scalar continuity; negation, finite-union stage addition, and addition in each
+sequence variable separately are continuous. Joint addition remains conditional on the unproved
+product-quotient property, so the topology is not yet called OS-I's locally convex direct sum:
+topological-vector-space operations, proper enlargement and sufficiency/density/completion comparisons with the
 earlier strict-support subspace, locally convex identification, the distinct completed-tensor
 topology, and OS-II-strength reconstruction remain open. `(E2)`
 remains absent pending those comparisons, the identification of the named finite-stage final topology with OS-I's locally convex direct sum, the

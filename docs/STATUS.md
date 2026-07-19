@@ -2892,6 +2892,28 @@ Implemented and verified:
   direct-sum identification, `(E2)`, OS-II growth or reconstruction is asserted.
 - No `(E2)` datum, reconstruction, quantum theory, existence theorem, or mass gap is constructed.
 
+## 2026-07-19 — one-hundred-fifty-fourth stone: final-topology quotient compatibility
+
+Implemented and verified:
+
+- The disjoint union of all exact finite source stages maps continuously and surjectively onto exact
+  source sequences, and the named finite-stage final topology is proved to be exactly its quotient
+  topology.
+- The lifted scalar action is continuous stagewise. Since `ℂ` is locally compact, quotient-product
+  lifting proves joint complex scalar multiplication continuous on exact source sequences; named
+  `ContinuousSMul ℂ` and continuous negation structures are packaged.
+- Addition of stages indexed by `s` and `t` is constructed continuously in the union stage `s ∪ t`
+  and proved to factor exactly to named sequence addition. Consequently addition by any fixed source
+  sequence is continuous on either side.
+- Joint addition is not inferred from separate continuity. A conditional theorem isolates the exact
+  remaining hypothesis that the product of the total-stage quotient map with itself is quotient;
+  no general false quotient-product principle is assumed.
+- Hostile probes lock quotient recovery, named scalar and negation continuity, the nonzero singleton,
+  exact union-stage addition, separate addition continuity, and the conditional joint-addition gate.
+- `ContinuousAdd`, topological-vector-space structure, local convexity, direct-sum identification,
+  source product/involution, `(E2)`, OS-II growth and reconstruction remain open.
+- No `(E2)` datum, reconstruction, quantum theory, existence theorem, or mass gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
