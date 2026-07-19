@@ -41,9 +41,34 @@ def IsOSPositiveTimeOrderedDerivativeVanishing
     x ∉ strictPositiveTimeOrderedConfigurationSet d n →
       iteratedFDeriv ℝ k (f : EuclideanNPointSpace d n → ℂ) x = 0
 
+/-- The candidate condition is a complex-linear subspace of the exact ambient Schwartz carrier. -/
+def osPositiveTimeOrderedDerivativeSubmodule
+    (d : EuclideanDimension) (n : ℕ) :
+    Submodule ℂ (ScalarSchwartzTestFunction d n) where
+  carrier := {f | IsOSPositiveTimeOrderedDerivativeVanishing f}
+  zero_mem' := by
+    intro k x hx
+    change iteratedFDeriv ℝ k
+      (0 : EuclideanNPointSpace d n → ℂ) x = 0
+    rw [iteratedFDeriv_zero]
+    rfl
+  add_mem' := by
+    intro f g hf hg k x hx
+    change iteratedFDeriv ℝ k
+      ((f : EuclideanNPointSpace d n → ℂ) +
+        (g : EuclideanNPointSpace d n → ℂ)) x = 0
+    rw [iteratedFDeriv_add_apply (f.smooth k).contDiffAt (g.smooth k).contDiffAt,
+      hf k x hx, hg k x hx, add_zero]
+  smul_mem' := by
+    intro scalar f hf k x hx
+    change iteratedFDeriv ℝ k
+      (scalar • (f : EuclideanNPointSpace d n → ℂ)) x = 0
+    rw [iteratedFDeriv_const_smul_apply (f.smooth k).contDiffAt, hf k x hx, smul_zero]
+
 /-- Project-dimension Fréchet candidate for OS-I's four-dimensional `S₊`, with the coordinate
 partial-derivative/Fréchet-derivative equivalence, exact specialization, and closedness proof still
-separated as debt. -/
+separated as debt. Its membership predicate is exactly the carrier of the named complex submodule
+above. -/
 def OSPositiveTimeOrderedDerivativeCarrier
     (d : EuclideanDimension) (n : ℕ) :=
   {f : ScalarSchwartzTestFunction d n // IsOSPositiveTimeOrderedDerivativeVanishing f}
@@ -51,6 +76,22 @@ def OSPositiveTimeOrderedDerivativeCarrier
 namespace OSPositiveTimeOrderedDerivativeCarrier
 
 variable {d : EuclideanDimension} {n : ℕ}
+
+/-- Exact algebraic identification with the named complex Schwartz submodule. -/
+def equivSubmodule :
+    OSPositiveTimeOrderedDerivativeCarrier d n ≃
+      osPositiveTimeOrderedDerivativeSubmodule d n where
+  toFun f := ⟨f.1, f.2⟩
+  invFun f := ⟨f.1, f.2⟩
+  left_inv _ := rfl
+  right_inv _ := rfl
+
+/-- Candidate membership is exactly membership in the named complex submodule. -/
+@[simp]
+theorem mem_submodule_iff (f : ScalarSchwartzTestFunction d n) :
+    f ∈ osPositiveTimeOrderedDerivativeSubmodule d n ↔
+      IsOSPositiveTimeOrderedDerivativeVanishing f :=
+  Iff.rfl
 
 /-- Forgetful map to the exact ambient Mathlib Schwartz carrier. -/
 def toSchwartz (f : OSPositiveTimeOrderedDerivativeCarrier d n) :
@@ -83,7 +124,7 @@ theorem derivative_vanishes_outside
     (k : ℕ) (x : EuclideanNPointSpace d n)
     (hx : x ∉ strictPositiveTimeOrderedConfigurationSet d n) :
     iteratedFDeriv ℝ k
-      ((f.toSchwartz : ScalarSchwartzTestFunction d n) :
+      ((toSchwartz f : ScalarSchwartzTestFunction d n) :
         EuclideanNPointSpace d n → ℂ) x = 0 :=
   f.2 k x hx
 
@@ -116,7 +157,7 @@ def positiveTimeBump (d : EuclideanDimension) :
 
 /-- The explicit arity-one carrier element is not the zero Schwartz test. -/
 theorem positiveTimeBump_toSchwartz_ne_zero (d : EuclideanDimension) :
-    (positiveTimeBump d).toSchwartz ≠ 0 :=
+    toSchwartz (positiveTimeBump d) ≠ 0 :=
   positiveTimeBumpSchwartz_ne_zero d
 
 end OSPositiveTimeOrderedDerivativeCarrier

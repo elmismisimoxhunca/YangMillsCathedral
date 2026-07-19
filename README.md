@@ -136,7 +136,8 @@ reflection and strict-positive-time topological-support infrastructure are prese
 an explicit nonzero compactly supported arity-one positive-time Schwartz test. A concrete strict
 subspace also records topological-support time ordering and full Fréchet-derivative flatness on
 coincidence diagonals. A broader project-dimension Fréchet candidate now requires every derivative
-to vanish outside strict positive time order, uses the exact induced per-arity Schwartz topology,
+to vanish outside strict positive time order, is packaged as an exact complex Schwartz submodule,
+uses the exact induced per-arity Schwartz topology,
 contains the strict-support carrier, and has an explicit nonzero arity-one test. It is not yet called
 the exact OS source space: four-dimensional multi-index equivalence, closedness, proper enlargement,
 sufficiency/density/completion comparisons, and OS-II-strength reconstruction remain open. `(E2)`

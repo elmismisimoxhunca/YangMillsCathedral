@@ -180,7 +180,8 @@ committed before higher layers depend on it.
 - [x] Define and probe the algebraic reflection-positivity form on the current strict Mathlib
   subdomain, without identifying it with source-facing `(E2)`.
 - [x] Define a broader project-dimension Fréchet candidate whose every derivative vanishes outside
-  strict positive time order, install its exact induced per-arity Schwartz topology, include the
+  strict positive time order, package the condition as an exact complex Schwartz submodule, install
+  its exact induced per-arity Schwartz topology, include the
   strict-support carrier, and provide a nonzero test with hostile probes.
 - [ ] Prove exact four-dimensional equivalence with OS-I's multi-index carrier and its closedness,
   then establish the strict subspace's sufficiency/density/completion relation; install the

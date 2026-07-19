@@ -2586,12 +2586,15 @@ Implemented and verified:
 
 - `IsOSPositiveTimeOrderedDerivativeVanishing` requires every iterated real Fréchet derivative,
   including order zero, to vanish outside strict positive time order.
-- `OSPositiveTimeOrderedDerivativeCarrier` installs exactly the topology induced from the ambient
-  Mathlib Schwartz carrier and packages an injective topological forgetful map.
+- `osPositiveTimeOrderedDerivativeSubmodule` proves exact closure under addition and arbitrary
+  complex scalar multiplication. `OSPositiveTimeOrderedDerivativeCarrier` is algebraically
+  identified with that submodule, installs exactly the topology induced from the ambient Mathlib
+  Schwartz carrier, and packages an injective topological forgetful map.
 - Every earlier strict topological-support ordered/flat test includes with exactly the same
   underlying Schwartz function; the explicit positive-time bump gives a nonzero arity-one element.
 - Coincidence flatness is derived because a coincident configuration cannot be strictly ordered.
-- Hostile probes lock the derivative-only constructor surface, reject a nonzero outside jet,
+- Hostile probes lock the derivative-only constructor surface and complex-linear closure, reject a
+  nonzero outside jet,
   preserve the strict inclusion, expose the induced topology, and block zero-only collapse.
 - OS-I printed p. 86 was newly visually checked for the multi-index spaces, induced topology, and
   completed-tensor distinction. The Lean carrier is deliberately classified only as a

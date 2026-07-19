@@ -29,6 +29,26 @@ def derivative_only_constructor_surface
     OSPositiveTimeOrderedDerivativeCarrier d n :=
   ⟨f, h⟩
 
+/-- The derivative condition is an exact complex submodule, so sums and arbitrary complex
+multiples remain in the same candidate condition. -/
+theorem exact_complex_linear_closure
+    {d : EuclideanDimension} {n : ℕ}
+    (f g : ScalarSchwartzTestFunction d n)
+    (hf : IsOSPositiveTimeOrderedDerivativeVanishing f)
+    (hg : IsOSPositiveTimeOrderedDerivativeVanishing g)
+    (scalar : ℂ) :
+    f + g ∈ osPositiveTimeOrderedDerivativeSubmodule d n ∧
+      scalar • f ∈ osPositiveTimeOrderedDerivativeSubmodule d n :=
+  ⟨(osPositiveTimeOrderedDerivativeSubmodule d n).add_mem hf hg,
+    (osPositiveTimeOrderedDerivativeSubmodule d n).smul_mem scalar hf⟩
+
+/-- The candidate and named submodule presentations retain exactly the same Schwartz function. -/
+theorem exact_submodule_identification
+    {d : EuclideanDimension} {n : ℕ}
+    (f : OSPositiveTimeOrderedDerivativeCarrier d n) :
+    (OSPositiveTimeOrderedDerivativeCarrier.equivSubmodule f).1 = f.toSchwartz :=
+  rfl
+
 /-- The exact internal candidate law cannot be replaced by a disconnected value. -/
 theorem exact_derivative_vanishing
     {d : EuclideanDimension} {n : ℕ}
