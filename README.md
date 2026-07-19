@@ -381,12 +381,13 @@ anchor. The first explicit Euclidean/Minkowski bridge reverses strictly increasi
 order, sends `τ ↦ -iτ`, and proves that every resulting consecutive relative coordinate lands in
 the exact backward tube. A strict-domain continuation interface then equates each Euclidean
 Schwinger distribution on every strict ordered/flat test with the genuinely integrable value of the
-same reverse-Wick analytic function. Nonzero test values are proved to map into the tube and the
-integrand vanishes outside its preimage. Requiring absolute integrability for all such strict
-Schwartz tests strengthens OS-I's initial compact-support formula, and the carrier support itself
-also remains stronger than OS-I: the exact
-source-space comparison, arbitrary-polynomial comparison, derivation or inhabitation of the
-extended-tube continuation interface, reconstruction, and full observable interpretation remain pending, and no continuation or correlator
+same reverse-Wick analytic function. An exact-source continuation interface now extends this equality
+to every derivative-vanishing ordered OS source test and derives the strict view by restriction.
+Nonzero source values are proved to map into the tube and the integrand vanishes outside its
+preimage. Requiring absolute integrability for all such possibly noncompact source Schwartz tests
+strengthens OS-I's initial compact-support formula. Arbitrary-polynomial comparison, derivation or
+inhabitation of the extended-tube continuation interface, corrected reconstruction, and full
+observable interpretation remain pending, and no continuation or correlator
 datum is constructed. No concrete gauge-group, connection, invariant-inner-product, curvature, or
 structure-certificate witness,
 symmetry group, source-facing reconstruction theorem, quantum-theory witness, Yang–Mills existence
@@ -448,7 +449,8 @@ known OS-II/source-space reconstruction and genuine Poincaré-cover debts.
 
 A parallel uninhabited four-dimensional current-strength core now fixes coordinate `ℝ⁴`, the
 canonical flat metric and coordinate Lebesgue measure, then dependently joins the same classical,
-carrier-exact OS-II `(E0′)` plus source-carrier OS-I `(E1)`–`(E4)` package, Wightman, strict Wick, observable, `F²`,
+carrier-exact OS-II `(E0′)` plus source-carrier OS-I `(E1)`–`(E4)` package, Wightman,
+exact derivative-vanishing source Wick coherence, observable, `F²`,
 stress/translation, and same-PVM gap surfaces at the actual Clay dimension. Unlike the lower-dimensional core it also requires the
 preliminary four-dimensional pure-gauge running-coupling/beta normal form indexed by the exact
 compact-simple gauge certificate, exact same-family bilocal products/weak OPE, supplied regular-variation scaling by that same

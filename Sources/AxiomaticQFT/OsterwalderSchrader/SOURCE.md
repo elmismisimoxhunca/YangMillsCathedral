@@ -138,7 +138,10 @@ property, and equation (4.1) is imposed on complex-linear functionals over the e
 `𝒮₀` submodules using one positive order and factorial-growth sequence. A separate
 `OSIIAmbientExtensionLinearGrowthData` retains extra full-Schwartz tempered extensions and restricts
 canonically to carrier-exact data; no converse extension is claimed. Both remain separate from the
-Mathlib-seminorm candidate. The scans do not
+Mathlib-seminorm candidate. The exact derivative-vanishing ordered source carrier is also now used
+by `OSSourceOrderedScalarWickContinuationData` for the smeared equations (5.1)–(5.2); requiring
+integrability for all source Schwartz tests is an explicit project strengthening, and the resulting
+coherence is not called reconstruction. The scans do not
 themselves provide a Yang–Mills model, prove existence, or justify identifying Euclidean and
 Minkowski data definitionally.
 

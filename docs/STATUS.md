@@ -3726,10 +3726,26 @@ Implemented and verified:
 - Its growth restricts canonically to carrier-exact `(E0′)` on the exact coincidence-flat family.
 - The four-dimensional continuum core now requires this integrated `(E0′)`–`(E4)` package and no
   longer stores an arbitrary selected clustering direction or duplicate strict Euclidean candidate.
-- Source `(E4)` already quantifies over every normalized nonzero direction; the strict Wick bridge
-  remains separately and explicitly limited to its current strict ordered domain.
+- Source `(E4)` already quantifies over every normalized nonzero direction; at this stone the Wick
+  bridge was still separately limited to its strict ordered domain.
 - Extra ambient tempered extensions and the absence of corrected reconstruction keep both records
   qualified as `CurrentStrength`; no family, theory, or mass-gap witness is constructed.
+
+## 2026-07-19 — two-hundred-second stone: exact-source Wick coherence
+
+Implemented and verified:
+
+- `OSSourceOrderedScalarWickContinuationData` requires integrability and exact smeared equality for
+  every derivative-vanishing positive-time ordered four-dimensional source test.
+- The Euclidean distribution and relative Wightman analytic boundary are the exact existing
+  families; no disconnected continuation value is stored.
+- Nonzero source values are proved to lie in strict positive time order and reverse-Wick-rotate into
+  the exact backward tube; the integrand vanishes outside its preimage.
+- Strict ordered/flat tests include without changing their Schwartz function, so exact-source
+  continuation derives the old strict bridge in the valid direction.
+- The four-dimensional core now requires exact-source Wick coherence and derives its strict view.
+  This is coherence between supplied data, not corrected reconstruction, uniqueness, a Hilbert-space
+  construction, theory existence, or a mass-gap witness.
 
 Not yet achieved:
 
@@ -3755,7 +3771,8 @@ Not yet achieved:
   and Streater–Wightman source artifacts are now acquired and verified. Scalar tempered Schwinger
   families, the exact printed OS-II control, carrier-exact `(E0′)`, and source-carrier `(E1)`–`(E4)`
   are implemented as uninhabited requirements. Corrected reconstruction remains unimplemented, and
-  the current ambient family/strict Wick surfaces are not silently identified with its output. Wilson and Osterwalder–Seiler
+  the current ambient family/exact-source Wick coherence and its derived strict view are not
+  silently identified with a reconstructed output. Wilson and Osterwalder–Seiler
   lattice sources are likewise pinned; finite periodic bonds, plaquette holonomy, local gauge
   transformations, Wilson-type action, normalized product Haar, conditional Gibbs data,
   support-local loop expectations, finite-cutoff reflection-positivity checker, and scaling/

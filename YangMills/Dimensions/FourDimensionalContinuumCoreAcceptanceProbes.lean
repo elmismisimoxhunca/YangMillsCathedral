@@ -209,7 +209,14 @@ theorem exact_wightman_surface :
     Nonempty (Minkowski.ScalarWightmanAxiomSurfaceData fieldData) :=
   ⟨data.wightmanSurface⟩
 
-/-- The strict Wick bridge connects the exact Euclidean family to the exact analytic correlators. -/
+/-- The exact source Wick bridge connects every derivative-vanishing ordered source test to the
+same analytic Wightman correlators. -/
+theorem exact_source_wick_coherence :
+    Nonempty (Reconstruction.OSSourceOrderedScalarWickContinuationData
+      data.schwingerFamily data.relativeAnalyticCorrelators) :=
+  ⟨data.sourceWickCoherence⟩
+
+/-- The old strict Wick bridge is derived from the exact source bridge. -/
 theorem exact_wick_coherence :
     Nonempty (Reconstruction.MathlibStrictOrderedScalarWickContinuationData
       data.schwingerFamily data.relativeAnalyticCorrelators) :=

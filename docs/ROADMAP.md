@@ -389,7 +389,10 @@ committed before higher layers depend on it.
   Wick-rotate `τ ↦ -iτ`, and prove all consecutive relative coordinates lie in the backward tube.
 - [x] Require exact genuinely integrable Euclidean/Wightman correlator-value continuation on every
   current strict ordered/flat Mathlib test, using the reverse-Wick analytic function.
-- [ ] Prove the exact OS source-space comparison and add full OS reconstruction and correlator coherence.
+- [x] Extend that same coherence to every exact derivative-vanishing ordered OS source test and
+  derive the old strict bridge by restriction.
+- [ ] State and prove the corrected OS-II reconstruction acceptance bridge, including output
+  uniqueness and complete correlator coherence.
 
 ## Phase 5 — translations and mass gap
 
@@ -462,8 +465,8 @@ committed before higher layers depend on it.
     three-dimensional contract complete.
 - [ ] Add the full `d = 4` Clay acceptance contract.
   - [x] Add an uninhabited current-strength core on canonical coordinate `ℝ⁴`, joining the exact
-    classical/action, carrier-exact OS-II `(E0′)` and source-carrier OS-I `(E1)`–`(E4)`, strict
-    Wick, Wightman/same-PVM gap, coherent `F²` observable,
+    classical/action, carrier-exact OS-II `(E0′)` and source-carrier OS-I `(E1)`–`(E4)`, exact-source
+    Wick coherence, Wightman/same-PVM gap, coherent `F²` observable,
     stress/translation Ward, compact-simple-indexed running coupling, exact weak OPE, and supplied
     same-coupling regular-variation surfaces, with a required nonzero interpreted `F² × F²`
     zeroth-order term with nonzero same-running-coupling exponent and nonzero leading scaling

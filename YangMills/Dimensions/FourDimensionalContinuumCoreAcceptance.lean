@@ -17,7 +17,7 @@ import YangMills.Minkowski.WightmanRelativeAnalyticCorrelators
 import YangMills.Minkowski.WeakOperatorProductExpansion
 import YangMills.Observables.CurvatureSquaredInterpretation
 import YangMills.Observables.CurvatureSquaredOPECoherence
-import YangMills.Reconstruction.StrictOrderedWickContinuation
+import YangMills.Reconstruction.OSSourceOrderedWickContinuation
 import YangMills.Renormalization.AsymptoticFreedomOPE
 
 /-!
@@ -27,7 +27,7 @@ This module defines an uninhabited, per-carrier acceptance record hard-wired to 
 Euclidean spacetime. It joins one compact-simple physical gauge group and exact classical curvature
 chain to one ambient Euclidean scalar family with exact source restrictions, one independent
 Minkowski/Wightman chain, an explicit
-strict Wick-continuation bridge, one covariant local-observable family containing that Wightman
+exact-source Wick-continuation bridge, one covariant local-observable family containing that Wightman
 field, an interpretation of the exact classical `F²` observable, a local stress tensor whose
 regulated charges and translation Ward identities use the same joint translation PVM, and a
 physical gap on that spectrum.
@@ -125,8 +125,9 @@ structure FourDimensionalCurrentStrengthContinuumCoreAcceptanceData
   /-- Relative analytic correlators derived from the same full correlator family. -/
   relativeAnalyticCorrelators :
     Minkowski.ScalarWightmanRelativeAnalyticCorrelatorData fullCorrelators
-  /-- Explicit strict ordered Wick coherence between the exact Euclidean and Minkowski families. -/
-  strictWickCoherence : Reconstruction.MathlibStrictOrderedScalarWickContinuationData
+  /-- Exact derivative-vanishing source-carrier Wick coherence between the same Euclidean family
+  and Minkowski analytic correlators. -/
+  sourceWickCoherence : Reconstruction.OSSourceOrderedScalarWickContinuationData
     schwingerFamily relativeAnalyticCorrelators
   /-- One local-observable family on the same common invariant domain. -/
   observableFamily : Minkowski.TemperedLocalObservableFamilyData.{uLift, uH, uLabel} D
@@ -194,6 +195,15 @@ variable
     {exterior : Geometry.PrincipalConnectionExteriorDerivativeData connection}
     {curvatureCertificate : Geometry.PrincipalCurvatureStructureCertificate
       smoothBundle connection exterior}
+
+/-- Restrict the exact source-carrier Wick coherence to the old strict domain. This is derived, not
+an independent second Euclidean/Minkowski bridge. -/
+noncomputable def strictWickCoherence
+    (data : FourDimensionalCurrentStrengthContinuumCoreAcceptanceData inner connection
+      exterior curvatureCertificate fieldData) :
+    Reconstruction.MathlibStrictOrderedScalarWickContinuationData
+      data.schwingerFamily data.relativeAnalyticCorrelators :=
+  data.sourceWickCoherence.toMathlibStrict
 
 /-- The accepted spacetime dimension is definitionally four, with a three-dimensional spatial slice. -/
 theorem exact_dimension
