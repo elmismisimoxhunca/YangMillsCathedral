@@ -65,8 +65,10 @@ committed before higher layers depend on it.
 - [x] Package exact fixed-tuple evaluation as a continuous linear map and derive the same-input
   self-wedge coefficient `HasFDerivAt`/four-term `fderiv` rule.
 - [x] Exterior-alternate those coefficient derivatives and prove the exact skew-bilinear
-  `-2 • (A ∧_B dA)` identity, including the canonical group-coordinate bracket specialization;
-  identification with `extDeriv` of the whole self-wedge remains debt.
+  `-2 • (A ∧_B dA)` identity, including the canonical group-coordinate bracket specialization.
+- [x] Prove the degree-one wedge operator-norm bound, bundle it as a continuous bilinear map, derive
+  whole-form differentiability, and identify the alternation with Mathlib `extDeriv`; transport to
+  arbitrary manifolds and covariant differentiation remain debt.
 - [x] Define principal curvature from a certified derivative and the smooth bracket-wedge.
 - [x] State and probe intrinsic curvature horizontality/right-adjoint-equivariance certificates.
 - [x] Construct and probe the set-level adjoint associated-bundle orbit quotient.

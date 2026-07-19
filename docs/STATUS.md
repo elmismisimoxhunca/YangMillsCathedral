@@ -3375,6 +3375,24 @@ Implemented and verified:
   self-wedge form-valued function, its identification with Mathlib `extDeriv`, manifold/covariant
   transport, and Bianchi remain unproved.
 
+## 2026-07-19 — one-hundred-eighty-first stone: full local self-wedge exterior derivative
+
+Implemented and verified:
+
+- `norm_continuousBilinearWedgeOneMany_one_le` proves the explicit operator-norm estimate
+  `2 ‖B‖ ‖α‖ ‖β‖` from the two-term wedge formula.
+- `continuousBilinearWedgeOneCLM` packages the exact degree-one wedge as a curried continuous
+  bilinear map without changing its carrier.
+- `continuousBilinearSelfWedgeOne_hasFDerivAt` applies Mathlib's bounded-bilinear calculus to derive
+  whole-form self-wedge differentiability from the same one-form-valued derivative witness.
+- `extDeriv_continuousBilinearSelfWedgeOne` identifies the raw coefficient alternation with Mathlib
+  `extDeriv` and proves `d(A ∧_B A) = -2 • (A ∧_B dA)` exactly.
+- The canonical finite-dimensional group-coordinate bracket receives the same exact theorem.
+- Hostile probes lock the norm bound, bundled carrier, derived differentiability, minus-two identity,
+  canonical specialization, and rejection of malformed exterior derivatives.
+- This closes the required self-wedge graded Leibniz identity only in normed local coordinates.
+  Arbitrary-manifold transport, positive-degree covariant differentiation, and Bianchi remain open.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

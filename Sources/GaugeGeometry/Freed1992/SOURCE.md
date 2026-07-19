@@ -113,9 +113,10 @@ one-with-`n` coordinate wedge is constructed and proved coherent with the intrin
 under the canonical tangent/model equivalence. Fixed-tuple evaluation is packaged continuously,
 and the same one-form-valued input derivative now derives the exact four-term derivative of every
 self-wedge coefficient. Their exterior alternation is proved to be `-2 • (A ∧ dA)` for the exact
-skew coordinate bracket, but is not yet identified with `extDeriv` of the whole self-wedge
-form-valued function. The arbitrary-manifold certificate remains supplied data: existence, chart independence, arbitrary-manifold `d²`, and the
-exterior-derivative graded Leibniz identity are not claimed. Given the original
+skew coordinate bracket. An explicit operator-norm bound makes the whole wedge operation
+continuous bilinear, derives form-valued differentiability from the same input, and identifies the
+alternation with Mathlib `extDeriv`. The arbitrary-manifold certificate remains supplied data: existence, chart independence, arbitrary-manifold `d²`, arbitrary-manifold graded Leibniz
+transport, and covariant exterior differentiation are not claimed. Given the original
 one-form certificate for the same smooth principal connection, `curvatureForm` derives exactly
 (1.13).
 The set-level `AdjointBundle` implements Freed's displayed `g_P = P ×_G g` as the orbit quotient

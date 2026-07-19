@@ -310,9 +310,10 @@ constructed with the exact omitted-slot sum and proved to be precisely the coord
 intrinsic graded Lie-bracket wedge. Exact fixed-tuple evaluation is continuously linear, and every
 self-wedge two-vector coefficient now has a derived same-input four-term `fderiv` rule. Exterior
 alternation of those coefficients is proved to equal `-2 • (A ∧ dA)` for the exact skew coordinate
-bracket. This is not yet identified with `extDeriv` of the whole self-wedge function. Canonical
-existence, chart independence,
-arbitrary-manifold `d²`, exterior-derivative graded Leibniz, positive-degree covariant exterior
+bracket. An explicit operator-norm bound packages the wedge as a continuous bilinear map, derives
+whole-form differentiability from the same input, and identifies that alternation with Mathlib's
+`extDeriv`. Canonical arbitrary-manifold existence, chart independence,
+arbitrary-manifold `d²`, arbitrary-manifold graded Leibniz transport, positive-degree covariant exterior
 differentiation, and
 positive curvature-tensor orders remain open. This is not a general
 curvature-polynomial/covariant-derivative language or a canonical injective quantization map. A preliminary four-dimensional perturbative interface now requires a positive running coupling
