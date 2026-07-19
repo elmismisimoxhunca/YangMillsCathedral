@@ -448,10 +448,12 @@ committed before higher layers depend on it.
     Euclidean and Wightman chains, strict Wick coherence, one coherent covariant local family,
     exact `F²` interpretation, a same-PVM stress-charge/translation Ward bridge, and a same-PVM
     physical gap.
-  - [ ] Prove the supplied metric is the canonical flat metric and its induced volume is the
-    committed coordinate Lebesgue measure; replace current strict Euclidean/reconstruction and
-    Poincaré pre-cover surfaces with corrected source-facing OS-II/OS-I reconstruction and genuine
-    covering interfaces before calling the three-dimensional contract complete.
+  - [x] Replace the arbitrary metric index by Mathlib's canonical flat inner-product metric on
+    coordinate `ℝ³`; retain coordinate Lebesgue action measure exactly.
+  - [ ] Prove the general metric-induced volume bridge to the committed coordinate Lebesgue measure;
+    replace current strict Euclidean/reconstruction and Poincaré pre-cover surfaces with corrected
+    source-facing OS-II/OS-I reconstruction and genuine covering interfaces before calling the
+    three-dimensional contract complete.
 - [ ] Add the full `d = 4` Clay acceptance contract.
 - [ ] Prove that no lower-dimensional witness is silently accepted as 4D.
 - [ ] Publish the final acceptance proposition without asserting an inhabitant.

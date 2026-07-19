@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Sebastian Rodrigo
 -/
 
+import YangMills.Classical.CanonicalEuclideanMetric
 import YangMills.Classical.EuclideanAction
 import YangMills.Euclidean.SchwingerEuclideanCandidate
 import YangMills.Geometry.LieGroup
@@ -27,9 +28,9 @@ field, an interpretation of the exact classical `F²` observable, a local stress
 regulated charges and translation Ward identities use the same joint translation PVM, and a
 physical gap on that spectrum.
 
-The classical base is exactly coordinate `ℝ³`, and the designated action measure must equal its
-coordinate Lebesgue measure. The supplied Riemannian metric is not yet proved to be the canonical
-flat metric or to induce that measure. The name includes `CurrentStrength` because the Euclidean
+The classical base is exactly coordinate `ℝ³`, its metric is Mathlib's canonical flat inner-product
+metric, and the designated action measure must equal coordinate Lebesgue measure. A general project
+bridge identifying metric-induced Riemannian volume with that measure remains absent. The name includes `CurrentStrength` because the Euclidean
 record is the project's current strict Mathlib candidate, not source-facing OS-II `(E0')`/OS-I
 `(E2)`/`(E4)` data or a reconstruction theorem. The Poincaré object remains the current lift/pre-cover interface. No lattice datum can fill
 any field of this record, no four-dimensional running-coupling or OS spatial-`ℝ³` carrier is used,
@@ -83,8 +84,6 @@ variable
 one exact Minkowski physical chain. Every quantum object is definitionally specialized to
 `EuclideanDimension.three`; the physical gauge group and Poincaré lift group remain distinct. -/
 structure ThreeDimensionalCurrentStrengthContinuumCoreAcceptanceData
-    (geometry : Classical.EuclideanMetricData
-      (IB := threeDimensionalEuclideanModel) (B := ThreeDimensionalEuclideanBase))
     (inner : Geometry.InvariantInnerProductData
       (I := modelWithCornersSelf ℝ EG) (G := GaugeGroup))
     (connection : Geometry.PrincipalConnectionData smoothBundle)
@@ -95,10 +94,11 @@ structure ThreeDimensionalCurrentStrengthContinuumCoreAcceptanceData
   /-- Exact compact-simple convention for the physical gauge group, not the Poincaré lift group. -/
   compactSimpleGaugeGroup : Geometry.CompactSimpleGaugeGroupData GaugeGroup EG
   /-- Relative-to-designated-measure analytic action data on the same classical curvature chain. -/
-  classicalAction : Classical.EuclideanActionAnalyticData geometry inner connection exterior
-    curvatureCertificate
-  /-- The designated action measure is coordinate Lebesgue measure on the exact `ℝ³` base. Metric-
-  volume compatibility remains separate debt because the supplied metric is not yet proved flat. -/
+  classicalAction : Classical.EuclideanActionAnalyticData
+    (Classical.canonicalEuclideanSpacetimeMetricData EuclideanDimension.three)
+    inner connection exterior curvatureCertificate
+  /-- The designated action measure is coordinate Lebesgue measure on the exact canonical-flat
+  `ℝ³` base. A general metric-induced-volume API bridge remains separate debt. -/
   classicalMeasure_eq_coordinateLebesgue : classicalAction.measure = MeasureTheory.volume
   /-- One exact scalar Schwinger distribution family in Euclidean spacetime dimension three. -/
   schwingerFamily : ScalarSchwingerDistributionFamily EuclideanDimension.three
@@ -130,8 +130,9 @@ structure ThreeDimensionalCurrentStrengthContinuumCoreAcceptanceData
   /-- Exact unit/curvature-squared interpretation from the same classical geometry into the same
   quantum family; this is not a complete curvature-polynomial grammar. -/
   curvatureSquaredInterpretation :
-    Observables.CurvatureSquaredLocalObservableInterpretationData geometry inner connection
-      exterior curvatureCertificate observableFamily
+    Observables.CurvatureSquaredLocalObservableInterpretationData
+      (Classical.canonicalEuclideanSpacetimeMetricData EuclideanDimension.three)
+      inner connection exterior curvatureCertificate observableFamily
   /-- Symmetric, Hermitian, covariant, local, weakly conserved stress tensor in the same family. -/
   stressEnergy : Minkowski.LocalStressEnergyTensorData observableFamily
   /-- The stress charges, translation derivatives, Ward identity, and momentum moments use the
@@ -147,8 +148,6 @@ structure ThreeDimensionalCurrentStrengthContinuumCoreAcceptanceData
 namespace ThreeDimensionalCurrentStrengthContinuumCoreAcceptanceData
 
 variable
-    {geometry : Classical.EuclideanMetricData
-      (IB := threeDimensionalEuclideanModel) (B := ThreeDimensionalEuclideanBase)}
     {inner : Geometry.InvariantInnerProductData
       (I := modelWithCornersSelf ℝ EG) (G := GaugeGroup)}
     {connection : Geometry.PrincipalConnectionData smoothBundle}
@@ -158,7 +157,7 @@ variable
 
 /-- The accepted spacetime dimension is definitionally three, with a two-dimensional spatial slice. -/
 theorem exact_dimension
-    (_data : ThreeDimensionalCurrentStrengthContinuumCoreAcceptanceData geometry inner connection
+    (_data : ThreeDimensionalCurrentStrengthContinuumCoreAcceptanceData inner connection
       exterior curvatureCertificate fieldData) :
     EuclideanDimension.three.value = 3 ∧
       EuclideanDimension.three.spatialDimension = 2 := by
@@ -166,14 +165,14 @@ theorem exact_dimension
 
 /-- The selected threshold is strictly positive by the exact same-PVM gap predicate. -/
 theorem gapThreshold_pos
-    (data : ThreeDimensionalCurrentStrengthContinuumCoreAcceptanceData geometry inner connection
+    (data : ThreeDimensionalCurrentStrengthContinuumCoreAcceptanceData inner connection
       exterior curvatureCertificate fieldData) :
     0 < data.gapThreshold :=
   data.physicalMassGap.1
 
 /-- The same selected gap yields finite-positive supremum semantics on the exact surface spectrum. -/
 theorem hasFinitePositivePhysicalMassGap
-    (data : ThreeDimensionalCurrentStrengthContinuumCoreAcceptanceData geometry inner connection
+    (data : ThreeDimensionalCurrentStrengthContinuumCoreAcceptanceData inner connection
       exterior curvatureCertificate fieldData) :
     Minkowski.HasFinitePositivePhysicalMassGap vacuumData data.wightmanSurface.spectrum :=
   Minkowski.hasFinitePositivePhysicalMassGap_of_hasPhysicalJointSpectralMassGap
@@ -182,7 +181,7 @@ theorem hasFinitePositivePhysicalMassGap
 /-- The physical time-translation generator tied to the same stress tensor and PVM is nonzero on
 one exact common-domain vector. -/
 theorem timeTranslationGenerator_nontrivial
-    (data : ThreeDimensionalCurrentStrengthContinuumCoreAcceptanceData geometry inner connection
+    (data : ThreeDimensionalCurrentStrengthContinuumCoreAcceptanceData inner connection
       exterior curvatureCertificate fieldData) :
     ∃ vector : D.domain,
       data.stressTranslationWard.momentumGenerator
@@ -191,7 +190,7 @@ theorem timeTranslationGenerator_nontrivial
 
 /-- The coherently selected Wightman field is nonzero and differs from the unit on one test/vector. -/
 theorem wightmanField_nontrivial
-    (data : ThreeDimensionalCurrentStrengthContinuumCoreAcceptanceData geometry inner connection
+    (data : ThreeDimensionalCurrentStrengthContinuumCoreAcceptanceData inner connection
       exterior curvatureCertificate fieldData) :
     ∃ (test : Minkowski.ScalarMinkowskiSchwartzTestFunction EuclideanDimension.three)
       (vector : D.domain),

@@ -43,8 +43,6 @@ variable
     {vacuumData : Minkowski.PoincareInvariantVacuumData U}
     {D : Minkowski.CommonInvariantDomainData vacuumData}
     {fieldData : Minkowski.ScalarWightmanFieldOnCommonDomainData D}
-    {geometry : Classical.EuclideanMetricData
-      (IB := threeDimensionalEuclideanModel) (B := ThreeDimensionalEuclideanBase)}
     {inner : Geometry.InvariantInnerProductData
       (I := modelWithCornersSelf ℝ EG) (G := GaugeGroup)}
     {connection : Geometry.PrincipalConnectionData smoothBundle}
@@ -53,7 +51,7 @@ variable
       smoothBundle connection exterior}
     (data : ThreeDimensionalCurrentStrengthContinuumCoreAcceptanceData.{uEG, uEP, uHP,
       uGauge, uP, uLift, uH, uLabel}
-      geometry inner connection exterior curvatureCertificate fieldData)
+      inner connection exterior curvatureCertificate fieldData)
 
 include data
 
@@ -85,6 +83,13 @@ theorem distinct_dimension_indices :
 theorem exact_compact_simple_gauge_group :
     Geometry.CompactSimpleGaugeGroupData GaugeGroup EG :=
   ThreeDimensionalCurrentStrengthContinuumCoreAcceptanceData.compactSimpleGaugeGroup data
+
+/-- The classical action is indexed by the canonical flat metric on exact coordinate `ℝ³`. -/
+theorem exact_canonical_classical_metric :
+    Nonempty (Classical.EuclideanActionAnalyticData
+      (Classical.canonicalEuclideanSpacetimeMetricData EuclideanDimension.three)
+      inner connection exterior curvatureCertificate) :=
+  ⟨data.classicalAction⟩
 
 /-- The exact classical coordinate base uses coordinate Lebesgue measure, not an arbitrary measure. -/
 theorem exact_classical_coordinate_measure :

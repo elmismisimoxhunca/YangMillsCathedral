@@ -3525,8 +3525,8 @@ Implemented and verified:
 Implemented and verified:
 
 - `ThreeDimensionalCurrentStrengthContinuumCoreAcceptanceData` is hard-wired to coordinate
-  Euclidean `ℝ³`, its two-dimensional spatial slice, and coordinate Lebesgue action measure; the
-  supplied metric is not yet proved canonical flat or measure-inducing.
+  Euclidean `ℝ³`, its two-dimensional spatial slice, and coordinate Lebesgue action measure; at
+  this stone the supplied metric had not yet been fixed to the canonical flat metric.
 - Its physical compact-simple gauge group is distinct in role and type parameter from the Poincaré
   lift group.
 - One exact classical connection/curvature/action chain is joined to an exact `F²` interpretation in
@@ -3558,6 +3558,21 @@ Implemented and verified:
 - The bridge requires a nonzero physical time-translation generator on one common-domain vector.
 - Hostile projections expose the exact stress-family carrier, same-spectrum Ward bridge, and
   nonzero time generator. No tensor, cutoff sequence, generator, theory, or gap is constructed.
+
+## 2026-07-19 — one-hundred-ninety-first stone: canonical Euclidean coordinate metric
+
+Implemented and verified:
+
+- `canonicalEuclideanSpacetimeMetricData` packages Mathlib's standard vector-space Riemannian metric
+  on every supported coordinate spacetime, downgrading its `C^ω` regularity to the required `C^∞`.
+- Its tangent-fiber pairing is definitionally the ordinary real inner product, self-pairing is the
+  squared coordinate norm, and nonzero vectors have positive self-pairing.
+- Hostile probes evaluate standard basis vectors and reject any unrelated metric whose pairing
+  differs from the canonical inner product.
+- The three-dimensional core no longer accepts an arbitrary Riemannian metric parameter: its action
+  and exact `F²` interpretation are indexed by the canonical flat metric on coordinate `ℝ³`.
+- The designated action measure remains exactly coordinate Lebesgue measure. A general theorem
+  identifying Mathlib's metric-induced Riemannian volume with this measure remains open.
 
 Not yet achieved:
 

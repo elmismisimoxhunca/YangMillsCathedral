@@ -425,8 +425,9 @@ Wightman theory, or mass-gap result—and dimension two is proved distinct from 
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly
-coordinate `ℝ³`, and its designated action measure is coordinate Lebesgue measure, while flat-metric
-and metric-volume compatibility remain explicit debt. It dependently joins one compact-simple
+coordinate `ℝ³`, its metric is Mathlib's canonical flat inner-product metric, and its designated
+action measure is coordinate Lebesgue measure; only the general metric-induced-volume API bridge
+remains explicit debt. It dependently joins one compact-simple
 physical gauge group and exact classical curvature/action chain to one strict
 Euclidean scalar candidate, one Wightman representation/vacuum/domain/field/spectrum chain, exact
 full and relative correlators, strict Wick coherence, the same coherently connected covariant local-
