@@ -85,6 +85,11 @@ with an explicit value-coordinate bridge for the intrinsic tangent Lie algebra. 
 same pointwise form satisfying (1.9)–(1.10); it does not construct a connection. Reusable
 `lieBracketWedgeOne` infrastructure antisymmetrizes the two bracket orders and proves that the
 self-wedge evaluates to twice the pointwise bracket, making the factor `1/2` in (1.13) explicit.
+As a reusable project generalization—not a generic formula quoted from Freed—graded infrastructure
+now extends a continuous one-form bracket wedge to every continuous `n`-form by the exact omitted-
+slot alternating sum and proves degree-one coherence. Equation (1.13) anchors that degree-one
+normalization, while (1.16) motivates the one-with-two specialization `[Θ ∧ Ω]`; no positive-degree
+covariant derivative or Bianchi proof is supplied.
 Joint continuity and coordinate smoothness are derived for Mathlib's actual finite-dimensional
 Lie-group tangent bracket by transport through the canonical normed model coordinates; the
 bracket-wedge is then proved to preserve smooth manifold one-forms.

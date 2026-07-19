@@ -3194,6 +3194,23 @@ Implemented and verified:
 - Positive-degree covariant exterior differentiation, graded bracket wedge, Bianchi, and positive
   curvature-tensor orders remain open. No derivative inhabitant or theory is constructed.
 
+## 2026-07-19 — one-hundred-seventieth stone: continuous graded Lie-bracket wedge
+
+Implemented and verified:
+
+- `ContinuousAlternatingMap.lieBracketWedgeOneMany` constructs `[α ∧ β]` from a continuous
+  one-form and continuous `n`-form using Mathlib's algebraic alternatization and the exact sum
+  `∑ᵢ (-1)ⁱ[α(vᵢ),β(v₀,…,v̂ᵢ,…,vₙ)]`.
+- Continuity is proved directly term by term from joint bracket continuity, coordinate evaluation,
+  omitted-slot continuity, finite sums, and integer scalar action; no new normed-space assumption is
+  imposed.
+- At degree one the construction is proved exactly equal to the existing two-term bracket wedge,
+  retaining its curvature normalization. Zero laws and a pointwise manifold lift are derived.
+- Hostile probes lock every term/sign, degree-one coherence, the exact three terms for a one-form
+  wedged with a two-form, alternation, zero laws, and same-base manifold evaluation.
+- Smooth closure of the graded operation, a positive-degree covariant exterior derivative, Bianchi,
+  and positive curvature-tensor orders remain open. No connection or theory is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
