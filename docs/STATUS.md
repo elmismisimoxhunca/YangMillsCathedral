@@ -3774,8 +3774,26 @@ Implemented and verified:
   disconnected-functional uniqueness.
 - The four-dimensional core now requires this narrow same-field obligation.
 - This is not corrected reconstruction acceptance or Wightman-theory uniqueness. Heterogeneous
-  unitary-equivalence semantics, the Poincaré cover, and reconstruction remain open; no output,
-  theory, or mass-gap witness is constructed.
+  unitary-equivalence semantics and reconstruction remain open; no output, theory, or mass-gap
+  witness is constructed.
+
+## 2026-07-19 — two-hundred-fifth stone: genuine topological Poincaré cover requirement
+
+Implemented and verified:
+
+- The proper-orthochronous Lorentz carrier now has the topology induced by its exact pointwise linear
+  action, and the affine Poincaré target has the product coordinate topology retaining both that
+  action and the exact translation.
+- Both coordinate maps are injective topological embeddings; changing the translation cannot be
+  hidden by proof fields.
+- `ProperOrthochronousPoincareCoverData` extends the existing surjective lift and requires its exact
+  projection to satisfy Mathlib's `IsCoveringMap`.
+- Continuity, local-homeomorphism, openness, quotient-map behavior, and discrete nonempty fibers are
+  derived. Physical translation lifts remain exact.
+- The four-dimensional core requires this cover and an equality tying its inherited lift to the
+  exact lift indexing the physical representation.
+- No concrete inhomogeneous `SL(2,ℂ)` carrier, affine-target group law, two-sheet/kernel theorem,
+  universal-cover result, cover inhabitant, theory, or mass gap is constructed.
 
 Not yet achieved:
 

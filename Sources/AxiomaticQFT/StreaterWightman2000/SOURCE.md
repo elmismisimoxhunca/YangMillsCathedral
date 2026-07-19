@@ -95,6 +95,12 @@ explicit project coherence surface identifies it with that family's existing non
 identifies its adjoint with the exact involutive adjoint label. This anti-disconnection requirement
 is a formalization strengthening, not a new existence claim from the book.
 
+The affine Poincaré target now carries the topology induced by its pointwise Lorentz action and
+translation coordinate. `ProperOrthochronousPoincareCoverData` requires the existing exact
+surjective lift projection to satisfy Mathlib's genuine covering-map predicate. This is an
+uninhabited acceptance strengthening of the earlier pre-cover, not a construction of the book's
+inhomogeneous `SL(2,ℂ)`, semidirect-product group law, or two-sheet kernel.
+
 The checker follows the book's explicit printed-p. 92 SNAG/PVM presentation rather than stopping
 at the generator-level summary on printed p. 97. Energy, momentum, invariant mass, the vacuum
 projection, the energy-coordinate Hamiltonian spectral view, and the mass-gap predicate must all use

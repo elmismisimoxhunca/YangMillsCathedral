@@ -348,8 +348,11 @@ committed before higher layers depend on it.
   Schwinger surface.
 - [x] Define a topological-group lift/pre-cover interface and one strongly continuous unitary
   representation whose injective translation subgroup is derived from that same representation.
-- [ ] Construct/require the genuine `SL(2,ℂ)` topological covering projection, including target
-  topology and covering/kernel laws.
+- [x] Install the exact Lorentz-action/translation coordinate topology on the affine target and
+  require the existing surjective lift projection to be a genuine Mathlib covering map, deriving
+  continuity, local-homeomorphism, open/quotient behavior, and discrete fibers.
+- [ ] Construct the concrete inhomogeneous `SL(2,ℂ)` carrier, prove affine-target group/topological-
+  group laws, and identify the exact two-sheet/kernel semantics.
 - [x] Define a normalized Poincaré-invariant vacuum whose full invariant subspace is exactly one
   complex line, tied to the same representation and derived translations.
 - [x] Define one dense common domain containing the same vacuum and invariant under the same
@@ -478,7 +481,7 @@ committed before higher layers depend on it.
     same-coupling regular-variation surfaces, with a required nonzero interpreted `F² × F²`
     zeroth-order term with nonzero same-running-coupling exponent and nonzero leading scaling
     distribution.
-  - [ ] Add corrected reconstruction acceptance with heterogeneous-unitary semantics and replace the Poincaré-cover debt; add source-faithful
+  - [ ] Add corrected reconstruction acceptance with heterogeneous-unitary semantics, concrete `SL(2,ℂ)`/kernel and affine-target group laws; add source-faithful
     curvature-polynomial/OPE mixing, group-normalized perturbative coefficients/remainders, trace
     anomaly, and final universal compact-simple-group quantification.
 - [x] Define the exact Clay endpoint predicate, reject every lower dimension `1`–`3`, and prove no

@@ -84,6 +84,22 @@ theorem exact_compact_simple_gauge_group :
     Geometry.CompactSimpleGaugeGroupData GaugeGroup EG :=
   FourDimensionalCurrentStrengthContinuumCoreAcceptanceData.compactSimpleGaugeGroup data
 
+/-- The exact lift group carries a genuine topological covering projection. -/
+theorem exact_poincare_topological_cover :
+    Nonempty (Minkowski.ProperOrthochronousPoincareCoverData
+      EuclideanDimension.four PoincareLiftGroup) :=
+  ⟨data.poincareCover⟩
+
+/-- The cover is the exact lift indexing the physical representation, not a disconnected projection. -/
+theorem exact_poincare_cover_lift :
+    data.poincareCover.toProperOrthochronousPoincareLiftData = lift :=
+  data.poincareCover_toLift_eq
+
+/-- Consequently, the exact physical cover projection is a local homeomorphism. -/
+theorem exact_poincare_cover_localHomeomorph :
+    IsLocalHomeomorph data.poincareCover.projection :=
+  data.poincareCover.projection_isLocalHomeomorph
+
 /-- The preliminary ultraviolet normal form uses that exact gauge-group certificate and dimension. -/
 theorem exact_asymptotic_freedom :
     Nonempty (Renormalization.PureYangMillsAsymptoticFreedomData

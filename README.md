@@ -253,9 +253,13 @@ the converse is not claimed. Growth, `(E1)`, `(E3)`, strict positivity, and clus
 assembled around one normalized family and direction in a non-source-facing candidate record; no
 inhabitant is constructed. Independently, proper-orthochronous Lorentz and affine Poincaré
 kinematics are now defined for the mostly-minus Minkowski form, with properness, time orientation,
-and nontrivial translation probes. A weaker topological-group lift/pre-cover interface and one
-strongly continuous unitary representation on a separable Hilbert carrier are packaged without
-inhabitants; physical translations are derived from that same representation. A genuine topological covering projection remains pending. A normalized vacuum is
+and nontrivial translation probes. A topological-group lift/pre-cover interface and one strongly
+continuous unitary representation on a separable Hilbert carrier are packaged without inhabitants;
+physical translations are derived from that same representation. The exact affine target now has
+its induced Lorentz-action/translation coordinate topology, and a separate uninhabited strengthening
+requires the projection to be a genuine Mathlib covering map with local-homeomorphism, open,
+quotient, and discrete-fiber consequences. Concrete inhomogeneous `SL(2,ℂ)`, target group laws, and
+the two-sheet/kernel theorem remain pending. A normalized vacuum is
 now tied to that same representation, with the complete invariant subspace required to be its single
 complex line. One dense common submodule contains that vacuum and is invariant under the same
 representation, whose unitaries restrict exactly to it. A scalar field and adjoint preserve that
@@ -463,7 +467,8 @@ nonzero contracted zeroth-order OPE term whose coupling exponent and leading sca
 are both nonzero. Its Euclidean package retains explicit ambient tempered extensions but restricts
 to carrier-exact OS-II `(E0′)` and carries narrow same-field OS-II output-correlator uniqueness.
 This is still not the final Clay contract: corrected reconstruction acceptance, heterogeneous
-unitary reconstruction uniqueness, genuine Poincaré covering, source-faithful curvature-polynomial observables,
+unitary reconstruction uniqueness, concrete inhomogeneous `SL(2,ℂ)` and kernel/group laws,
+source-faithful curvature-polynomial observables,
 renormalized OPE coefficients/remainders and trace-anomaly semantics remain open. No inhabitant is
 constructed.
 

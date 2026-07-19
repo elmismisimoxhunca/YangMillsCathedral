@@ -316,6 +316,10 @@ import YangMills.Minkowski.PoincareKinematicsProbes
 import YangMills.Minkowski.QuadraticTopology
 import YangMills.Minkowski.PoincareCoverRepresentation
 import YangMills.Minkowski.PoincareCoverRepresentationProbes
+import YangMills.Minkowski.PoincareTargetTopology
+import YangMills.Minkowski.PoincareTargetTopologyProbes
+import YangMills.Minkowski.PoincareTopologicalCover
+import YangMills.Minkowski.PoincareTopologicalCoverProbes
 import YangMills.Minkowski.Vacuum
 import YangMills.Minkowski.VacuumProbes
 import YangMills.Minkowski.CommonInvariantDomain
