@@ -108,8 +108,10 @@ conversions preserve the same smooth degree-two derivative carrier. Separately, 
 within-set `d² = 0` theorem now proves that the positive-degree Cartan expression of the same first
 normed-space derivative vanishes, including the exact `1 → 2 → 3` endpoint. The actual
 finite-dimensional group Lie-algebra coordinate bracket is now tied to the same bounded bilinear
-map used for Mathlib's two-input and self-bracket derivative rules. The arbitrary-manifold
-certificate remains supplied data: existence, chart independence, arbitrary-manifold `d²`, and the
+map used for Mathlib's two-input and self-bracket derivative rules. Its exact continuous
+one-with-`n` coordinate wedge is constructed and proved coherent with the intrinsic graded bracket
+under the canonical tangent/model equivalence. The arbitrary-manifold certificate remains supplied
+data: existence, chart independence, arbitrary-manifold `d²`, and the
 exterior-derivative graded Leibniz identity are not claimed. Given the original
 one-form certificate for the same smooth principal connection, `curvatureForm` derives exactly
 (1.13).

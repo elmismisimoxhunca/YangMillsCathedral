@@ -59,8 +59,10 @@ committed before higher layers depend on it.
   including exact within-set, global, and `1 → 2 → 3` nilpotence surfaces; arbitrary-manifold
   `d²` remains debt.
 - [x] Connect the actual finite-dimensional group Lie-algebra coordinate bracket to Mathlib's
-  bounded-bilinear `HasFDerivAt`/`fderiv` calculus, including the exact self-bracket rule; the
-  exterior-derivative graded Leibniz expansion remains debt.
+  bounded-bilinear `HasFDerivAt`/`fderiv` calculus, including the exact self-bracket rule.
+- [x] Construct the continuous one-with-`n` wedge for an arbitrary bounded bilinear map and prove
+  the actual group bracket's coordinate wedge is exactly the intrinsic graded Lie-bracket wedge;
+  the exterior-derivative graded Leibniz expansion remains debt.
 - [x] Define principal curvature from a certified derivative and the smooth bracket-wedge.
 - [x] State and probe intrinsic curvature horizontality/right-adjoint-equivariance certificates.
 - [x] Construct and probe the set-level adjoint associated-bundle orbit quotient.

@@ -20,6 +20,8 @@ import YangMills.Mathematics.LieGroupContinuousBracket
 import YangMills.Mathematics.LieGroupContinuousBracketProbes
 import YangMills.Mathematics.LieGroupBracketCalculus
 import YangMills.Mathematics.LieGroupBracketCalculusProbes
+import YangMills.Mathematics.ContinuousBilinearWedge
+import YangMills.Mathematics.ContinuousBilinearWedgeProbes
 import YangMills.Mathematics.LieGroupSmoothBracket
 import YangMills.Mathematics.LieBracketWedge
 import YangMills.Mathematics.LieBracketWedgeProbes

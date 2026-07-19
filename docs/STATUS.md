@@ -3322,6 +3322,23 @@ Implemented and verified:
 - This is finite-dimensional normed-coordinate infrastructure. The exterior derivative of the
   bracket wedge, graded Leibniz, manifold/covariant transport, and Bianchi remain unproved.
 
+## 2026-07-19 — one-hundred-seventy-eighth stone: continuous bilinear coordinate wedge
+
+Implemented and verified:
+
+- `continuousBilinearWedgeOneMany` constructs the exact signed omitted-slot wedge of a continuous
+  one-form and `n`-form through any curried continuous bilinear map.
+- Its full alternating-sum evaluation and degree-one first-minus-second formula are proved.
+- Additivity and real scalar multiplication are proved in both form arguments, preparing the
+  operation for Mathlib's bounded-bilinear differential calculus.
+- `groupLieAlgebraCoordinateBracket_wedge_coherence` proves that canonical coordinate
+  postcomposition carries the intrinsic graded Lie-bracket wedge to this operation using the exact
+  previously constructed group bracket map.
+- Hostile probes lock signs, degree-one ordering, the exact degree-two three-term expansion, both
+  linearity surfaces, and intrinsic/coordinate coherence while rejecting malformed sums and coherence failures.
+- This does not yet differentiate the wedge or prove graded Leibniz, manifold/covariant transport,
+  or Bianchi.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

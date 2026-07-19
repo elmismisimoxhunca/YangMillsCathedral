@@ -305,7 +305,9 @@ exact degree-two derivative carrier. Mathlib's normed-space `d² = 0` theorem no
 positive-degree Cartan expression of the same first derivative vanishes within a set and globally,
 including the exact `1 → 2 → 3` endpoint. The same finite-dimensional coordinate bracket used by
 the actual group Lie algebra is now connected to Mathlib's bounded-bilinear derivative rule, with
-exact two-input and self-bracket `fderiv` formulas. Canonical existence, chart independence,
+exact two-input and self-bracket `fderiv` formulas. Its continuous one-with-`n` coordinate wedge is
+constructed with the exact omitted-slot sum and proved to be precisely the coordinate image of the
+intrinsic graded Lie-bracket wedge. Canonical existence, chart independence,
 arbitrary-manifold `d²`, exterior-derivative graded Leibniz, positive-degree covariant exterior
 differentiation, and
 positive curvature-tensor orders remain open. This is not a general
