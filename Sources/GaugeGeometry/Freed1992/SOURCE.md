@@ -100,8 +100,12 @@ bracket-wedge is then proved to preserve smooth manifold one-forms.
 Mathlib's normed-space `extDeriv`, its nilpotence theorem, and its pullback theorem are packaged as
 local-model infrastructure. For arbitrary manifolds, a certified `1 → 2` interface requires a
 smooth two-form to satisfy the exact within-set Cartan formula against every pair of local smooth
-vector fields and proves compatibility with Mathlib's `extDerivWithin`. Given such a certificate
-for the same smooth principal connection, `curvatureForm` derives exactly (1.13).
+vector fields and proves compatibility with Mathlib's `extDerivWithin`. As reusable project
+infrastructure, a positive-degree certificate now mirrors Mathlib's exact triangular indices and
+signs for every `(n+1) → (n+2)` step, including an exact `2 → 3` specialization. It remains supplied
+data: existence, chart independence, `d²`, and graded Leibniz are not claimed. Given the original
+one-form certificate for the same smooth principal connection, `curvatureForm` derives exactly
+(1.13).
 The set-level `AdjointBundle` implements Freed's displayed `g_P = P ×_G g` as the orbit quotient
 for `(p,X)·g = (p·g, Ad(g⁻¹)X)`, including the induced base projection and exact representative
 relation. The total carrier now has the induced quotient topology, and its projection is proved a

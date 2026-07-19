@@ -3256,6 +3256,26 @@ Implemented and verified:
 - These are algebraic prerequisites for future curvature and Leibniz expansions. No exterior or
   covariant derivative, Bianchi identity, connection, or theory is constructed.
 
+## 2026-07-19 — one-hundred-seventy-fourth stone: positive-degree Cartan certificates
+
+Implemented and verified:
+
+- `positiveDegreeCartanExpressionCoordinates` mirrors Mathlib's general positive-degree Cartan
+  formula with the exact `Fin (n+2)` derivative sum, triangular `Fin (n+1)`/`Ici` bracket sum,
+  nested omitted slots, integer signs, and leading subtraction.
+- Normed-space specialization is definitionally the pinned Mathlib expression, and
+  `extDerivWithin_eq_positiveDegreeCartanExpression` derives exact compatibility from Mathlib's
+  theorem under its differentiability and unique-differentiability hypotheses.
+- `SmoothManifoldPositiveDegreeExteriorDerivativeCertificate` packages a supplied smooth
+  `(n+2)`-form satisfying that formula for one smooth `(n+1)`-form. Certificates agree on every
+  admissible smooth field tuple, and every zero form has a concrete zero certificate.
+- `SmoothManifoldTwoFormExteriorDerivativeCertificate` is the exact `2 → 3` specialization needed
+  to type a future ordinary derivative of curvature.
+- Hostile probes lock all indices/signs, Mathlib compatibility, certificate formula and agreement,
+  the `2 → 3` endpoint, malformed-formula rejection, and the zero output.
+- This does not construct a canonical manifold exterior derivative or prove chart independence,
+  `d²`, graded Leibniz, covariant differentiation, or Bianchi. No connection or theory is built.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

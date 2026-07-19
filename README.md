@@ -95,8 +95,10 @@ forms, source-facing Lie-algebra simplicity layer, and compact-connected-simple 
 certificate type and semantics, the fiberwise torsor core, algebraic bundle maps/gauge
 automorphisms, topological and smooth equivariant local trivializations, derived open-quotient
 projection and smooth overlap-transition theorems, smooth gauge automorphisms, the Lie-group adjoint
-action, a typed pointwise manifold differential-form carrier, local-model exterior derivative and
-an arbitrary-manifold one-form Cartan certificate, a smoothly closed Lie-bracket wedge,
+action, a typed pointwise manifold differential-form carrier, local-model exterior derivative,
+an arbitrary-manifold one-form Cartan certificate, and supplied positive-degree Cartan certificates
+with exact normed-space compatibility and a `2 → 3` specialization, alongside smoothly closed
+Lie-bracket wedges,
 finite-dimensional tangent-bracket continuity/smoothness bridges, smooth differential-form
 regularity, pointwise and smooth principal connection-form definitions, the derived principal
 curvature formula, intrinsic curvature horizontality/right-adjoint-equivariance certificate semantics,
@@ -296,8 +298,10 @@ with degree-one coherence and the one-with-two three-term formula proved. The ex
 coordinate bracket now derives smooth closure of that exact graded carrier and a bundled operation
 coherent with the earlier degree-one smooth wedge. Additivity and real-scalarity in each graded
 argument are derived explicitly. The exact cubic self-bracket is proved zero, pointwise and
-smoothly, by expansion to twice the cyclic Lie Jacobi sum. Positive-degree covariant
-exterior differentiation and positive curvature-tensor orders remain open. This is not a general
+smoothly, by expansion to twice the cyclic Lie Jacobi sum. The positive-degree ordinary Cartan
+certificate now makes a supplied `2 → 3` exterior derivative typeable, but canonical existence,
+chart independence, `d²`, graded Leibniz, positive-degree covariant exterior differentiation, and
+positive curvature-tensor orders remain open. This is not a general
 curvature-polynomial/covariant-derivative language or a canonical injective quantization map. A preliminary four-dimensional perturbative interface now requires a positive running coupling
 on an explicit open ultraviolet tail, exact beta flow, ultraviolet limit, and negative cubic leading
 normal form. It intentionally leaves the group-dependent one-loop coefficient and invariant-pairing/

@@ -49,6 +49,10 @@ committed before higher layers depend on it.
 - [x] Expand the cubic self-bracket with the exact wedge normalization and derive its pointwise,
   manifold, and smoothly bundled vanishing from the cyclic Lie Jacobi identity.
 - [x] Add arbitrary-manifold one-form exterior-derivative certification.
+- [x] Add a parallel positive-degree Cartan certificate for every `(n+1) → (n+2)` step with
+  Mathlib's exact triangular
+  indices/signs, normed-space `extDerivWithin` compatibility, certificate agreement, a concrete zero
+  certificate, and an exact `2 → 3` specialization; do not claim canonical existence or `d²`.
 - [x] Define principal curvature from a certified derivative and the smooth bracket-wedge.
 - [x] State and probe intrinsic curvature horizontality/right-adjoint-equivariance certificates.
 - [x] Construct and probe the set-level adjoint associated-bundle orbit quotient.
