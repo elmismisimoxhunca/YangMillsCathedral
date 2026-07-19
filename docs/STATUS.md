@@ -2967,6 +2967,20 @@ Implemented and verified:
   reconstruction remain open.
 - No `(E2)` datum, reconstruction, quantum theory, existence theorem, or mass gap is constructed.
 
+## 2026-07-19 — one-hundred-fifty-eighth stone: Schwartz Hausdorff infrastructure
+
+Implemented and verified:
+
+- `SchwartzMap.exists_schwartzSeminorm_ne_zero` proves the standard zeroth Schwartz seminorm
+  detects every nonzero map by its pointwise norm control.
+- The standard seminorm family therefore separates points; named `T1Space` and `T2Space` structures
+  are derived from `WithSeminorms` and the existing topological additive-group structure.
+- Structures remain named rather than global to avoid future Mathlib instance conflicts.
+- Hostile probes require seminorm detection of every nonzero map, closed exact singletons, and
+  disjoint open neighborhoods for every unequal pair.
+- This is reusable general mathematics. It supplies no OS direct-sum identification, `(E2)`, OS-II
+  growth, reconstruction, quantum theory, existence theorem, or mass gap.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

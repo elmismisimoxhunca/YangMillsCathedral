@@ -204,6 +204,8 @@ committed before higher layers depend on it.
   second-derivative commutation and permutation-invariant list folds; derive exact independence of
   multi-index occurrence enumeration and equivalence of the canonical multi-index and Fréchet
   candidate predicates.
+- [x] Prove the standard Schwartz seminorm family separates points and package named `T1Space` and
+  `T2Space` structures as reusable mathematics rather than assuming ambient Hausdorffness.
 - [x] Interpret OS-I's four-dimensional `D^α` as the proved permutation-independent repeated-
   coordinate Fréchet derivative, define exact positive-arity source membership, prove it equivalent
   to the Fréchet candidate, transport closedness, install the induced topology, and retain a nonzero

@@ -147,6 +147,8 @@ point/coordinate Kronecker basis now proves that full Fréchet-map vanishing is 
 vanishing on every ordered basis-direction tuple, with nonzero derivatives detected by a tuple.
 Each coordinate jet is now an exact continuous complex-linear Schwartz functional; their kernel
 intersection proves the dimension-generic candidate closed and its forgetful map a closed embedding.
+Separately, the standard Schwartz seminorm family is proved point-separating, supplying named
+`T1Space` and Hausdorff structures without a project axiom.
 Exact four-dimensional point/coordinate labels are now flattened point-major as `μ + 4i`;
 natural-valued multi-indices have an exact occurrence enumeration with each coordinate repeated by
 its multiplicity, and Fréchet-candidate membership implies all resulting canonical derivatives
