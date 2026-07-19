@@ -191,6 +191,10 @@ degree-zero input through smooth bundle-map evaluation. Separately, the local no
 curvature and degree-two covariant exterior expression are derived from one twice differentiable
 one-form, and their Bianchi identity follows from `d²`, self-wedge Leibniz, and Jacobi. Within-set
 versions retain one explicit set together with its regularity, uniqueness, membership, and
-closure/interior hypotheses and agree with the global definitions on `univ`. Transport to
+closure/interior hypotheses and agree with the global definitions on `univ`. Fixed-value manifold
+forms now have separate raw unrestricted and explicit within-set normed-coordinate pullbacks.
+Inverse extended charts use corner-aware `mfderivWithin` on the exact model range, with target-local
+derivative invertibility and canonical bracket-wedge carrier coherence; chart-target regularity and
+exterior-derivative naturality remain open, and no geometry is claimed outside the chart target. Transport to
 the exact principal/adjoint-bundle connection, a canonical arbitrary-manifold positive-degree
 operator, source-facing Bianchi, and gauge covariance remain pending.

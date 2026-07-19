@@ -316,8 +316,13 @@ whole-form differentiability from the same input, and identifies that alternatio
 exact finite-dimensional normed-coordinate Bianchi identity for `F_A = dA + 1/2[A ∧ A]` and
 `D_A F_A = dF_A + [A ∧ F_A]`, all from the same twice differentiable one-form. A within-set version
 retains the exact chart-style set, `ContDiffWithinAt`, `UniqueDiffOn`, membership, and
-closure-of-interior hypotheses and recovers the global definitions on `univ`. Canonical
-arbitrary-manifold existence, chart independence,
+closure-of-interior hypotheses and recovers the global definitions on `univ`. Fixed-value manifold
+forms now have distinct raw unrestricted and explicit within-set normed-coordinate pullback
+carriers. Inverse extended-chart specialization uses the corner-aware `mfderivWithin` on the exact
+model range, with chart-center recovery, target-local derivative invertibility, linearity, and
+canonical bracket-wedge coherence; no chart-target regularity, exterior naturality, or geometric
+meaning outside the chart target is asserted. Canonical arbitrary-manifold
+existence, chart independence,
 arbitrary-manifold `d²`, arbitrary-manifold graded Leibniz transport, positive-degree covariant exterior
 differentiation, and
 positive curvature-tensor orders remain open. This is not a general

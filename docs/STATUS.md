@@ -3432,6 +3432,24 @@ Implemented and verified:
   exterior-derivative naturality, exact principal-curvature coordinate equality, and source-facing
   principal/adjoint Bianchi theorems remain open.
 
+## 2026-07-19 — one-hundred-eighty-fourth stone: normed coordinates for manifold forms
+
+Implemented and verified:
+
+- Raw unrestricted `mfderiv` transport and canonical explicit-source `mfderivWithin` transport are
+  separate carriers; the raw carrier is documented as meaningful only under full differentiability.
+- `inExtChartAt` uses the canonical within-set carrier on `Set.range I`, matching Mathlib's
+  corner-aware inverse-chart pullback rather than differentiating the unrestricted totalization.
+- Exact evaluation and chart-center point recovery retain the same within-range derivative.
+- `inExtChartAt_tangentMap_isInvertible` proves this transport invertible at every chart-target
+  point; a hostile nontrivial-model probe rejects silent zero transport at the chart center.
+- Addition and real scalar multiplication commute exactly with within-set coordinate pullback.
+- Canonical tangent/model coordinates carry the intrinsic graded Lie-bracket wedge to the exact
+  continuous-bilinear coordinate wedge, both generally within a source and in inverse charts.
+- This is carrier-level infrastructure only. Chart-target regularity, `extDerivWithin` naturality,
+  principal connection specialization, exact curvature equality, and transported Bianchi remain
+  open.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
