@@ -197,8 +197,9 @@ convex final topology is therefore selected as the source-facing locally convex 
 with named topological additive-group, complex scalar, real local-convexity and Hausdorff structures
 and continuously linear scalar/source injections. The raw topological final topology remains a
 separately named auxiliary topology and equality is not asserted or required for this selection. A
-reusable uninhabited completed-projective-tensor interface now requires Hausdorff locally convex
-factors and an additive-uniform complete carrier, jointly continuous noncollapsing pure
+reusable continuous Schwartz point-evaluation map now supplies closed kernels and exact pointwise
+separation for future half-line support quotients. An uninhabited completed-projective-tensor
+interface requires Hausdorff locally convex factors and an additive-uniform complete carrier, jointly continuous noncollapsing pure
 tensors, dense pure span, and continuous-linear extension into same-universe complete targets;
 uniqueness is derived from density. Proper enlargement and sufficiency/density/completion
 comparisons with the earlier strict-support subspace, construction of the half-line quotient and

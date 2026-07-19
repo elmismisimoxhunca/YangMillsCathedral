@@ -3079,6 +3079,21 @@ Implemented and verified:
   iterated source-specific completion, and bridges remain open and separate from the direct sum.
 - No `(E2)` datum, reconstruction, quantum theory, existence theorem, or mass gap is constructed.
 
+## 2026-07-19 — one-hundred-sixty-fourth stone: continuous Schwartz point evaluation
+
+Implemented and verified:
+
+- `SchwartzMap.pointEvaluationLinearMap` evaluates an arbitrary real Schwartz map at one exact
+  point, and the zeroth standard Schwartz seminorm proves it continuous.
+- Point evaluation is bundled as a continuous real-linear map with exact application.
+- Every point-evaluation kernel is closed for Hausdorff values, every nonzero Schwartz map is
+  detected by some evaluation, and equality of all evaluations determines the exact map.
+- Hostile probes lock exact values, closed kernels, nonzero detection, and full pointwise
+  determination.
+- This is reusable infrastructure for the closed negative-half-line support submodule and quotient
+  `𝒮(ℝ₊)`; no quotient, completed tensor carrier, `(E2)`, reconstruction, theory, or mass gap is
+  constructed here.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

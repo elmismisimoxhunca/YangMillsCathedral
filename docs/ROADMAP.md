@@ -248,6 +248,9 @@ committed before higher layers depend on it.
   convex direct-sum topology with named topological/local-convex/Hausdorff structures and bundled
   natural-injection CLMs, while keeping the raw topological final topology separately named and
   without asserting equality.
+- [x] Package exact Schwartz point evaluation as a continuous real-linear map, prove every kernel
+  closed, and prove point evaluations detect and determine every Schwartz map as infrastructure for
+  closed support subspaces and half-line quotients.
 - [x] Isolate missing completed projective tensor-product mathematics in a typed interface requiring
   Hausdorff locally convex complex factors, an additive-uniform complete carrier, jointly continuous
   noncollapsing pure tensors, dense pure span, and continuous-linear extension into same-universe
