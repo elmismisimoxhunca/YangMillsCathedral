@@ -199,7 +199,8 @@ and continuously linear scalar/source injections. The raw topological final topo
 separately named auxiliary topology and equality is not asserted or required for this selection. A
 reusable continuous Schwartz point-evaluation map supplies closed kernels and exact pointwise
 separation. It proves OS-I's negative-half-line Schwartz submodule closed; the genuine quotient
-`𝒮(ℝ₊)` is Hausdorff and contains an explicit nonzero positive bump class. An uninhabited
+`𝒮(ℝ₊)` is a Hausdorff real-locally-convex topological complex module and contains an explicit
+nonzero positive bump class. An uninhabited
 completed-projective-tensor
 interface requires Hausdorff locally convex factors and an additive-uniform complete carrier, jointly continuous noncollapsing pure
 tensors, dense pure span, and continuous-linear extension into same-universe complete targets;

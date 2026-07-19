@@ -15,6 +15,9 @@ packaging, Hausdorff separation, and a nonzero positive representative.
 
 namespace YangMills.OSPositiveHalfLineSchwartzQuotient.Probes
 
+open Filter
+open scoped Topology
+
 noncomputable section
 
 /-- Negative-half-line membership is exactly nonpositive topological support. -/
@@ -61,6 +64,33 @@ theorem positive_bump_value_retained : osPositiveHalfLineBumpSchwartz 1 = 1 :=
 theorem nonzero_positive_class_retained :
     osPositiveHalfLineSchwartzQuotientMap osPositiveHalfLineBumpSchwartz ≠ 0 :=
   osPositiveHalfLineBumpQuotient_ne_zero
+
+/-- Named quotient structures expose genuine joint addition and complex scalar continuity. -/
+theorem exact_named_topological_operations :
+    letI : IsTopologicalAddGroup OSPositiveHalfLineSchwartzSpace :=
+      osPositiveHalfLineSchwartzIsTopologicalAddGroup
+    letI : ContinuousSMul ℂ OSPositiveHalfLineSchwartzSpace :=
+      osPositiveHalfLineSchwartzContinuousSMul
+    Continuous (fun p : OSPositiveHalfLineSchwartzSpace × OSPositiveHalfLineSchwartzSpace =>
+      p.1 + p.2) ∧
+    Continuous (fun p : ℂ × OSPositiveHalfLineSchwartzSpace => p.1 • p.2) := by
+  letI : IsTopologicalAddGroup OSPositiveHalfLineSchwartzSpace :=
+    osPositiveHalfLineSchwartzIsTopologicalAddGroup
+  letI : ContinuousSMul ℂ OSPositiveHalfLineSchwartzSpace :=
+    osPositiveHalfLineSchwartzContinuousSMul
+  exact ⟨continuous_add, continuous_smul⟩
+
+/-- Named quotient local convexity gives an actual convex refinement of every zero neighborhood. -/
+theorem exact_convex_zero_neighborhood
+    (U : Set OSPositiveHalfLineSchwartzSpace)
+    (hU : U ∈ 𝓝 (0 : OSPositiveHalfLineSchwartzSpace)) :
+    ∃ V ∈ 𝓝 (0 : OSPositiveHalfLineSchwartzSpace), Convex ℝ V ∧ V ⊆ U := by
+  letI : IsTopologicalAddGroup OSPositiveHalfLineSchwartzSpace :=
+    osPositiveHalfLineSchwartzIsTopologicalAddGroup
+  letI : LocallyConvexSpace ℝ OSPositiveHalfLineSchwartzSpace :=
+    osPositiveHalfLineSchwartzLocallyConvexSpace
+  exact (locallyConvexSpace_iff_exists_convex_subset_zero ℝ
+    OSPositiveHalfLineSchwartzSpace).mp inferInstance U hU
 
 /-- Installing the named Hausdorff structure separates the positive bump class from zero by
 disjoint open neighborhoods. -/

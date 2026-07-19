@@ -25,6 +25,9 @@ remain open.
 
 namespace YangMills
 
+open Filter
+open scoped Topology
+
 noncomputable section
 
 /-- One-dimensional complex Schwartz space used in OS-I's half-line quotient. -/
@@ -120,6 +123,40 @@ def osPositiveHalfLineSchwartzQuotientCLM :
     OneDimensionalComplexSchwartzSpace →L[ℂ] OSPositiveHalfLineSchwartzSpace :=
   { osPositiveHalfLineSchwartzQuotientMap with
     cont := continuous_osPositiveHalfLineSchwartzQuotientMap }
+
+/-- Named topological additive-group structure on the quotient. -/
+@[reducible]
+noncomputable def osPositiveHalfLineSchwartzIsTopologicalAddGroup :
+    IsTopologicalAddGroup OSPositiveHalfLineSchwartzSpace := by
+  infer_instance
+
+/-- Named jointly continuous complex scalar action on the quotient. -/
+@[reducible]
+noncomputable def osPositiveHalfLineSchwartzContinuousSMul :
+    ContinuousSMul ℂ OSPositiveHalfLineSchwartzSpace := by
+  infer_instance
+
+/-- The quotient topology is real locally convex. Convex neighborhoods descend as images of convex
+ambient neighborhoods because the linear quotient map is open. -/
+@[reducible]
+noncomputable def osPositiveHalfLineSchwartzLocallyConvexSpace :
+    LocallyConvexSpace ℝ OSPositiveHalfLineSchwartzSpace := by
+  rw [locallyConvexSpace_iff_exists_convex_subset_zero]
+  intro U hU
+  have hpre : osPositiveHalfLineSchwartzQuotientMap ⁻¹' U ∈
+      𝓝 (0 : OneDimensionalComplexSchwartzSpace) := by
+    simpa using
+      continuous_osPositiveHalfLineSchwartzQuotientMap.continuousAt.preimage_mem_nhds hU
+  obtain ⟨V, hV, hVconvex, hVsub⟩ :=
+    (locallyConvexSpace_iff_exists_convex_subset_zero ℝ
+      OneDimensionalComplexSchwartzSpace).mp inferInstance _ hpre
+  refine ⟨(Submodule.mkQ osNegativeHalfLineSchwartzSubmodule) '' V, ?_, ?_, ?_⟩
+  · simpa using
+      osNegativeHalfLineSchwartzSubmodule.isOpenMap_mkQ.image_mem_nhds hV
+  · exact hVconvex.linear_image
+      (osPositiveHalfLineSchwartzQuotientMap.restrictScalars ℝ)
+  · rintro y ⟨x, hx, rfl⟩
+    exact hVsub hx
 
 /-- The closed quotient is regular, hence Hausdorff. -/
 @[reducible]

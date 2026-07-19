@@ -76,7 +76,8 @@ Printed journal pages are authoritative. Text line numbers below refer to the re
   completeness of the carrier, joint pure-tensor continuity, dense span, noncollapse, and
   same-universe extension with uniqueness derived from density. The exact negative-half-line
   Schwartz submodule is now proved closed, its membership is equivalent to nonpositive topological
-  support, and the genuine Hausdorff quotient `𝒮(ℝ₊)` has an explicit nonzero positive class.
+  support, and the genuine Hausdorff real-locally-convex topological complex-module quotient
+  `𝒮(ℝ₊)` has an explicit nonzero positive class.
   Completeness, the printed seminorm presentation, and the positive-half-space completion remain
   unconstructed; that tensor topology remains separate by definition.
 - Printed pp. 84–85: the original proposal lists `(E0)` temperedness, `(E1)` Euclidean covariance,

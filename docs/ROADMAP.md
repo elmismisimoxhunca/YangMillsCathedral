@@ -252,8 +252,8 @@ committed before higher layers depend on it.
   closed, and prove point evaluations detect and determine every Schwartz map as infrastructure for
   closed support subspaces and half-line quotients.
 - [x] Construct OS-I's exact closed negative-half-line Schwartz submodule, prove membership
-  equivalent to nonpositive topological support, form the genuine Hausdorff quotient `𝒮(ℝ₊)`, and
-  retain an explicit nonzero positive representative.
+  equivalent to nonpositive topological support, form the genuine Hausdorff locally convex
+  topological complex-module quotient `𝒮(ℝ₊)`, and retain an explicit nonzero positive representative.
 - [x] Isolate missing completed projective tensor-product mathematics in a typed interface requiring
   Hausdorff locally convex complex factors, an additive-uniform complete carrier, jointly continuous
   noncollapsing pure tensors, dense pure span, and continuous-linear extension into same-universe

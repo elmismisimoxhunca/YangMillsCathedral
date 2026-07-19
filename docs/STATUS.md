@@ -3104,11 +3104,14 @@ Implemented and verified:
 - `OSPositiveHalfLineSchwartzSpace` is the actual quotient `𝒮(ℝ)/𝒮(ℝ₋)` with Mathlib's quotient
   topology. Its canonical map is complex-linear, continuous, surjective, a quotient map, and is
   bundled continuously linearly.
-- Closedness supplies named regular/Hausdorff quotient structures.
+- The open linear quotient map transports named topological additive-group, jointly continuous
+  complex scalar, and real local-convexity structures; closedness supplies named regular/Hausdorff
+  structures.
 - A compactly supported smooth bump centered at `1` has topological support in `[0,∞)`, exact value
   one, and gives a nonzero quotient class.
 - Hostile probes lock support semantics, closedness, quotient topology/surjectivity, exact zero
-  classes, CLM packaging, nonzero retention, and Hausdorff separation from zero.
+  classes, CLM packaging, joint operations, convex zero neighborhoods, nonzero retention, and
+  Hausdorff separation from zero.
 - Quotient completeness, OS-I's seminorm presentation, spatial/tensor factors, `(E2)`, OS-II growth
   and reconstruction remain open.
 - No `(E2)` datum, reconstruction, quantum theory, existence theorem, or mass gap is constructed.
