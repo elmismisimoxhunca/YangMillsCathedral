@@ -84,6 +84,12 @@ theorem exact_compact_simple_gauge_group :
     Geometry.CompactSimpleGaugeGroupData GaugeGroup EG :=
   FourDimensionalCurrentStrengthContinuumCoreAcceptanceData.compactSimpleGaugeGroup data
 
+/-- The exact affine target carries the source-compatible named topological-group law. -/
+theorem exact_poincare_target_group :
+    Nonempty (Minkowski.ProperOrthochronousPoincareTargetGroupData
+      EuclideanDimension.four) :=
+  ⟨data.poincareTargetGroup⟩
+
 /-- The exact lift group carries a genuine topological covering projection. -/
 theorem exact_poincare_topological_cover :
     Nonempty (Minkowski.ProperOrthochronousPoincareDoubleCoverData
@@ -105,6 +111,18 @@ theorem exact_poincare_two_sheets
     (target : Minkowski.ProperOrthochronousPoincareTransformation EuclideanDimension.four) :
     Nonempty ((data.poincareDoubleCover.projection ⁻¹' ({target} : Set _)) ≃ Fin 2) :=
   ⟨data.poincareDoubleCover.fiberEquivFinTwo target⟩
+
+/-- The exact double-cover projection is multiplicative for the accepted target law. -/
+theorem exact_poincare_projection_mul (first second : PoincareLiftGroup) :
+    letI : Group (Minkowski.ProperOrthochronousPoincareTransformation
+      EuclideanDimension.four) := data.poincareTargetGroup.group
+    data.poincareTargetGroup.projectionMonoidHom data.poincareDoubleCover (first * second) =
+      data.poincareTargetGroup.projectionMonoidHom data.poincareDoubleCover first *
+        data.poincareTargetGroup.projectionMonoidHom data.poincareDoubleCover second := by
+  letI : Group (Minkowski.ProperOrthochronousPoincareTransformation
+    EuclideanDimension.four) := data.poincareTargetGroup.group
+  exact (data.poincareTargetGroup.projectionMonoidHom
+    data.poincareDoubleCover).map_mul first second
 
 /-- The preliminary ultraviolet normal form uses that exact gauge-group certificate and dimension. -/
 theorem exact_asymptotic_freedom :

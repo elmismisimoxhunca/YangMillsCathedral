@@ -259,8 +259,11 @@ physical translations are derived from that same representation. The exact affin
 its induced Lorentz-action/translation coordinate topology, and a separate uninhabited strengthening
 requires the projection to be a genuine Mathlib covering map with local-homeomorphism, open,
 quotient, and discrete-fiber consequences. A further uninhabited strengthening makes every exact
-fiber equivalent to `Fin 2` and derives two distinct lifts. Concrete inhomogeneous `SL(2,ℂ)`, target
-group laws, and identification of the sheets with the `{±1}` kernel remain pending. A normalized vacuum is
+fiber equivalent to `Fin 2` and derives two distinct lifts. A named target topological-group law is
+also required to have the exact affine identity and action-composition multiplication; the double-
+cover projection is thereby a bundled group homomorphism. Constructing that law from future-cone
+closure, concrete inhomogeneous `SL(2,ℂ)`, and identifying the sheets with the `{±1}` kernel remain
+pending. A normalized vacuum is
 now tied to that same representation, with the complete invariant subspace required to be its single
 complex line. One dense common submodule contains that vacuum and is invariant under the same
 representation, whose unitaries restrict exactly to it. A scalar field and adjoint preserve that
@@ -469,7 +472,7 @@ are both nonzero. Its Euclidean package retains explicit ambient tempered extens
 to carrier-exact OS-II `(E0′)` and carries narrow same-field OS-II output-correlator uniqueness.
 This is still not the final Clay contract: corrected reconstruction acceptance, heterogeneous
 unitary reconstruction uniqueness, concrete inhomogeneous `SL(2,ℂ)`, `{±1}` kernel identification,
-and affine-target group laws,
+and construction of the named affine-target group law,
 source-faithful curvature-polynomial observables,
 renormalized OPE coefficients/remainders and trace-anomaly semantics remain open. No inhabitant is
 constructed.

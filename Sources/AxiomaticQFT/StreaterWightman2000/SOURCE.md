@@ -104,9 +104,12 @@ The affine Poincaré target now carries the topology induced by its pointwise Lo
 translation coordinate. `ProperOrthochronousPoincareCoverData` requires the existing exact
 surjective lift projection to satisfy Mathlib's genuine covering-map predicate. Printed p. 12 states
 that the homogeneous map identifies exactly `A` and `-A`; the strengthened double-cover interface
-therefore requires every affine fiber to be equivalent to `Fin 2`. This remains uninhabited and does
-not construct the book's inhomogeneous `SL(2,ℂ)`, semidirect-product group law, or identify the two
-abstract sheets with a concrete `{±1}` kernel.
+therefore requires every affine fiber to be equivalent to `Fin 2`. Equation `(1-22)` also controls a
+named target group interface: its identity and multiplication must have the exact affine actions,
+and it must be topological for the canonical coordinate topology; the cover projection then derives
+as a bundled homomorphism. These interfaces remain uninhabited and do not construct the book's
+inhomogeneous `SL(2,ℂ)`, derive proper-orthochronous closure, or identify the two abstract sheets with
+a concrete `{±1}` kernel.
 
 The checker follows the book's explicit printed-p. 92 SNAG/PVM presentation rather than stopping
 at the generator-level summary on printed p. 97. Energy, momentum, invariant mass, the vacuum

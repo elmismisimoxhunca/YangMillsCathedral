@@ -318,6 +318,8 @@ import YangMills.Minkowski.PoincareCoverRepresentation
 import YangMills.Minkowski.PoincareCoverRepresentationProbes
 import YangMills.Minkowski.PoincareTargetTopology
 import YangMills.Minkowski.PoincareTargetTopologyProbes
+import YangMills.Minkowski.PoincareTargetTopologicalGroup
+import YangMills.Minkowski.PoincareTargetTopologicalGroupProbes
 import YangMills.Minkowski.PoincareTopologicalCover
 import YangMills.Minkowski.PoincareTopologicalCoverProbes
 import YangMills.Minkowski.PoincareTopologicalDoubleCover

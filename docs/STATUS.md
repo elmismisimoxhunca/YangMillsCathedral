@@ -3810,6 +3810,23 @@ Implemented and verified:
   affine semidirect-product group law, `{±1}` kernel theorem, universal cover, inhabitant, theory, or
   mass gap is constructed.
 
+## 2026-07-19 — two-hundred-seventh stone: affine-target topological-group contract
+
+Implemented and verified:
+
+- `ProperOrthochronousPoincareTargetGroupData` requires a named group law on the exact affine target
+  whose identity is the existing affine identity and whose multiplication acts by exact source-order
+  composition.
+- Affine transformations are proved equal when all their actions agree, so this multiplication is
+  uniquely determined by the action law rather than being disconnected algebra.
+- The named law must be a topological group for the canonical Lorentz-action/translation topology.
+- For every exact double cover, the action-level projection laws derive a bundled group
+  homomorphism into this named target law.
+- The four-dimensional core now requires this target law alongside the exact double cover.
+- The law remains supplied acceptance data: future-cone closure, its concrete construction, the
+  inhomogeneous `SL(2,ℂ)` semidirect product, `{±1}` kernel identification, theory, and mass gap are
+  not constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
