@@ -342,8 +342,13 @@ committed before higher layers depend on it.
   separate ambient-tempered-extension strengthening.
 - [x] Assemble current-strength `(E0′)`–`(E4)` Euclidean data and narrow same-field uniqueness for
   selected `(R0′)`/relative/source-Wick correlator extensions.
-- [ ] Define corrected reconstruction acceptance and heterogeneous Wightman-realization unitary
-  equivalence; same-field correlator uniqueness is supporting evidence only.
+- [x] Define heterogeneous scalar Wightman-realization unitary equivalence intertwining lift groups,
+  representations, vacua, common domains, fields and adjoints; derive equality of every finite
+  field/adjoint vacuum word.
+- [x] Define corrected reconstruction acceptance over the same exact Poincaré lift and selected
+  Hilbert universe, requiring heterogeneous Hilbert-unitary equivalence and equality of the
+  separately supplied full tempered-distribution families for every corrected, source-Wick-coherent
+  output in that scope; same-field uniqueness remains supporting evidence.
 - [x] Define proper-orthochronous Lorentz/Poincaré affine kinematics independently of the Euclidean
   Schwinger surface.
 - [x] Define a topological-group lift/pre-cover interface and one strongly continuous unitary
@@ -406,8 +411,9 @@ committed before higher layers depend on it.
   positive order, printed full-coordinate controls, and `0 < ωₙ ≤ α β^(n²)`.
 - [x] Require all-arity distribution uniqueness among corrected/coherent correlator extensions on
   one exact field realization, with selected `(R0′)`, relative, and source-Wick data bundled.
-- [ ] State corrected OS-II reconstruction acceptance with heterogeneous unitary-equivalence
-  semantics, without constructing an output.
+- [x] State corrected OS-II reconstruction acceptance requiring fixed-lift heterogeneous
+  Hilbert-unitary equivalence and full distribution equality for all universe-relative coherent
+  outputs, without constructing an output.
 
 ## Phase 5 — translations and mass gap
 

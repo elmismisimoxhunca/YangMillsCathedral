@@ -3827,6 +3827,32 @@ Implemented and verified:
   inhomogeneous `SL(2,ℂ)` semidirect product, `{±1}` kernel identification, theory, and mass gap are
   not constructed.
 
+## 2026-07-19 — two-hundred-eighth stone: heterogeneous Wightman unitary equivalence
+
+Implemented and verified:
+
+- `ScalarWightmanRealizationUnitaryEquivalence` provides project-level transport between explicitly
+  equivalent lift-group carriers and Hilbert carriers. A source-facing
+  `ScalarWightmanFixedLiftUnitaryEquivalence` additionally forces lift transport to be the identity,
+  matching Streater–Wightman's fixed Poincaré group.
+- Exact affine projections and physical translations agree under generic lift transport. In the
+  source-facing specialization, the same exact group element acts on both realizations, while one
+  Hilbert unitary intertwines the Poincaré representations and normalized vacua.
+- One domain isometry is required to be the restriction of that Hilbert unitary and transports the
+  vacuum, scalar field, and adjoint field exactly.
+- Vacuum-in-domain coherence and Hilbert-level field intertwining are derived. Induction then proves
+  transport of every finite field/adjoint word and equality of every associated algebraic vacuum
+  expectation, including every ordered field-only smeared correlator.
+- `CorrectedOSIIReconstructionAcceptanceData` now requires every universe-relative heterogeneous
+  Hilbert realization over the same exact lift, with corrected `(R0′)`, relative analyticity, and
+  exact-source Wick coherence for the same Euclidean family, to be related by fixed-lift unitary
+  equivalence and to have the same full tempered distributions at every arity.
+- The four-dimensional core uses this exact acceptance record with its selected Euclidean family,
+  Wightman axiom surface, and full correlators, replacing same-field-only uniqueness as its core
+  obligation.
+- These are uninhabited acceptance conditions. They do not construct an output or equivalence,
+  prove the OS reconstruction theorem, construct a theory, or prove a mass gap.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

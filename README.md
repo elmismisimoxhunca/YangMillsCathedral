@@ -397,8 +397,15 @@ strengthens OS-I's initial compact-support formula. Separately, OS-II `(R0′)` 
 positive Wightman Schwartz order, exact printed full-coordinate controls, and positive `ωₙ` bounded
 by `α β^(n²)` on the same full correlator family. A narrow package now bundles selected `(R0′)`,
 relative analytic, and exact-source Wick data and requires all-arity correlator-extension uniqueness
-only on the same field realization. Corrected reconstruction acceptance, heterogeneous Hilbert-space
-unitary equivalence, a proof or construction of reconstruction, arbitrary-polynomial comparison, derivation or inhabitation of the
+only on the same field realization. A transport relation aligns potentially different lift carriers
+by a projection/translation-preserving continuous group equivalence and uses one Hilbert unitary for
+representations, vacua, common domains, fields, and adjoints; equality of every finite field/adjoint
+vacuum word is derived. Its source-facing specialization fixes the exact lift and group element.
+Corrected reconstruction acceptance quantifies over corrected/coherent alternative Hilbert
+realizations in the selected universe on that same lift and requires both this fixed-lift unitary
+equivalence and equality of the separately supplied full tempered-distribution families. This remains
+an uninhabited acceptance condition: any proof or construction of reconstruction,
+arbitrary-polynomial comparison, derivation or inhabitation of the
 extended-tube continuation interface, and full observable interpretation remain pending, and no continuation or correlator
 datum is constructed. No concrete gauge-group, connection, invariant-inner-product, curvature, or
 structure-certificate witness,
@@ -469,9 +476,9 @@ compact-simple gauge certificate, exact same-family bilocal products/weak OPE, s
 coupling, and an anti-disconnection bridge forcing the interpreted `F² × F²` input to have one
 nonzero contracted zeroth-order OPE term whose coupling exponent and leading scaling distribution
 are both nonzero. Its Euclidean package retains explicit ambient tempered extensions but restricts
-to carrier-exact OS-II `(E0′)` and carries narrow same-field OS-II output-correlator uniqueness.
-This is still not the final Clay contract: corrected reconstruction acceptance, heterogeneous
-unitary reconstruction uniqueness, concrete inhomogeneous `SL(2,ℂ)`, `{±1}` kernel identification,
+to carrier-exact OS-II `(E0′)` and requires corrected same-lift, universe-relative reconstruction
+acceptance with heterogeneous Hilbert-unitary equivalence and full tempered-distribution uniqueness.
+This is still not the final Clay contract: concrete inhomogeneous `SL(2,ℂ)`, `{±1}` kernel identification,
 and construction of the named affine-target group law,
 source-faithful curvature-polynomial observables,
 renormalized OPE coefficients/remainders and trace-anomaly semantics remain open. No inhabitant is

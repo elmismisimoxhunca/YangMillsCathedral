@@ -19,7 +19,7 @@ import YangMills.Minkowski.WightmanRelativeAnalyticCorrelators
 import YangMills.Minkowski.WeakOperatorProductExpansion
 import YangMills.Observables.CurvatureSquaredInterpretation
 import YangMills.Observables.CurvatureSquaredOPECoherence
-import YangMills.Reconstruction.SameFieldOSIIOutputCorrelatorUniqueness
+import YangMills.Reconstruction.CorrectedOSIIReconstructionAcceptance
 import YangMills.Renormalization.AsymptoticFreedomOPE
 
 /-!
@@ -39,7 +39,9 @@ metric, and the designated action measure must equal coordinate Lebesgue measure
 bridge identifying metric-induced Riemannian volume with that measure remains absent. The name
 includes `CurrentStrength` because the Euclidean record has carrier-exact OS-II `(E0′)` on the
 coincidence-flat restriction and exact source-carrier OS-I `(E1)`–`(E4)`, but retains extra ambient
-tempered extensions and has no corrected reconstruction theorem. The exact lift is now required to
+tempered extensions and now requires corrected same-lift, universe-relative reconstruction
+acceptance without
+constructing a reconstruction. The exact lift is required to
 carry a genuine two-sheeted topological covering projection, while concrete inhomogeneous
 `SL(2,ℂ)`, construction of the required named affine-target group law, and `{±1}` kernel
 identification remain open. No lattice datum can fill
@@ -137,12 +139,13 @@ structure FourDimensionalCurrentStrengthContinuumCoreAcceptanceData
   wightmanSurface : Minkowski.ScalarWightmanAxiomSurfaceData fieldData
   /-- Full-product tempered correlators of that exact Wightman field. -/
   fullCorrelators : Minkowski.ScalarWightmanJointTemperedCorrelatorData fieldData
-  /-- Selected `(R0′)`, relative analytic, and exact-source Wick data together with all-arity
-  correlator-extension uniqueness on this same field realization. This is not reconstruction
-  uniqueness across heterogeneous Wightman theories. -/
-  sameFieldOSIIOutputUniqueness :
-    Reconstruction.SameFieldOSIIOutputCorrelatorUniquenessData
-      schwingerFamily fullCorrelators
+  /-- Corrected `(R0′)`, relative analytic, and exact-source Wick data together with universe-relative
+  uniqueness across heterogeneous Hilbert realizations on the same exact lift. The selected
+  Wightman surface and full
+  correlator family are the exact fields above, not reconstructed copies. -/
+  correctedOSIIReconstruction :
+    Reconstruction.CorrectedOSIIReconstructionAcceptanceData
+      schwingerFamily wightmanSurface fullCorrelators
   /-- One local-observable family on the same common invariant domain. -/
   observableFamily : Minkowski.TemperedLocalObservableFamilyData.{uLift, uH, uLabel} D
   /-- Adjoint closure, covariance, and locality on that same family and representation chain. -/
@@ -210,27 +213,27 @@ variable
     {curvatureCertificate : Geometry.PrincipalCurvatureStructureCertificate
       smoothBundle connection exterior}
 
-/-- Corrected OS-II output growth selected by the same-field correlator package. -/
+/-- Corrected OS-II output growth selected by the reconstruction-acceptance package. -/
 def wightmanLinearGrowth
     (data : FourDimensionalCurrentStrengthContinuumCoreAcceptanceData inner connection
       exterior curvatureCertificate fieldData) :
     Minkowski.OSIIWightmanLinearGrowthData data.fullCorrelators :=
-  data.sameFieldOSIIOutputUniqueness.selectedGrowth
+  data.correctedOSIIReconstruction.selectedGrowth
 
-/-- Relative analytic correlators selected by the same-field correlator package. -/
+/-- Relative analytic correlators selected by the reconstruction-acceptance package. -/
 def relativeAnalyticCorrelators
     (data : FourDimensionalCurrentStrengthContinuumCoreAcceptanceData inner connection
       exterior curvatureCertificate fieldData) :
     Minkowski.ScalarWightmanRelativeAnalyticCorrelatorData data.fullCorrelators :=
-  data.sameFieldOSIIOutputUniqueness.selectedRelative
+  data.correctedOSIIReconstruction.selectedRelative
 
-/-- Exact-source Wick coherence selected by the same-field correlator package. -/
+/-- Exact-source Wick coherence selected by the reconstruction-acceptance package. -/
 def sourceWickCoherence
     (data : FourDimensionalCurrentStrengthContinuumCoreAcceptanceData inner connection
       exterior curvatureCertificate fieldData) :
     Reconstruction.OSSourceOrderedScalarWickContinuationData
       data.schwingerFamily data.relativeAnalyticCorrelators :=
-  data.sameFieldOSIIOutputUniqueness.selectedWick
+  data.correctedOSIIReconstruction.selectedWick
 
 /-- Restrict the exact source-carrier Wick coherence to the old strict domain. This is derived, not
 an independent second Euclidean/Minkowski bridge. -/

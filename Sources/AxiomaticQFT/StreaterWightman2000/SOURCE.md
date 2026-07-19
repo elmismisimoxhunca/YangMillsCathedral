@@ -85,6 +85,13 @@ Printed pages and section numbers are authoritative; text lines refer to the ret
   - states single-valued holomorphic continuation to the extended tube and proper-complex-Lorentz
     covariance. The present Lean geometry uses the domain definition only; the analytic theorem
     remains a separate obligation.
+- Printed p. 118; PDF page 128; extraction lines 4978–5007, reconstruction theorem uniqueness:
+  - any other scalar field theory with the same vacuum expectation values is unitarily equivalent;
+  - the unitary maps the vacuum, intertwines the Poincaré representations and smeared fields, and
+    transports the common domain exactly.
+  The retained page was rendered and visually checked. It is the source anchor for heterogeneous
+  Wightman-realization unitary equivalence, not a claim that the project has constructed either
+  realization or the intertwiner.
 - Printed p. 111; extraction lines 4671–4709: cluster decomposition and the text's threshold
   description of a mass gap. This passage is supporting physical semantics only; it does not replace
   the required joint translation-PVM definition.
@@ -117,6 +124,13 @@ projection, the energy-coordinate Hamiltonian spectral view, and the mass-gap pr
 that same joint spectral object. Connecting the
 Clay gap semantics and exact vacuum line to this PVM is a formalization strengthening intended to
 block disconnected Hamiltonians, vacuum-only spectra, or surrogate gaps.
+
+`ScalarWightmanFixedLiftUnitaryEquivalence` formalizes the printed-p. 118 uniqueness relation
+between two already supplied scalar realizations over the same exact Poincaré lift: group transport
+is the identity, and one Hilbert unitary handles the representation, vacuum, common domain, field,
+and adjoint. A more general project transport relation can compare explicitly equivalent lift
+carriers, but that generalization is not attributed verbatim to the source. Neither interface asserts
+that reconstructed outputs or intertwiners exist.
 
 No Wightman theory, vacuum, field, PVM, existence proof, or mass-gap witness is supplied by retaining
 this source.

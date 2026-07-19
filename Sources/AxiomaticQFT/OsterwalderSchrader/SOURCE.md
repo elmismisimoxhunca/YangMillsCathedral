@@ -132,11 +132,14 @@ This is a supplied requirement, not an exhibited clustering family.
 
 The original OS-I sufficiency theorem must never be encoded using only ordinary temperedness. A
 canonical reconstruction requirement must incorporate the OS-II-strength linear-growth condition
-or another later authoritative theorem with every hypothesis explicit. The current
-`SameFieldOSIIOutputCorrelatorUniquenessData` bundles selected `(R0′)`, relative analytic, and
-exact-source Wick data and requires all-arity distribution uniqueness only on the same field
-realization. This is a narrow correlator-extension obligation supporting future work, not corrected
-reconstruction acceptance, heterogeneous Wightman-theory uniqueness, or a proof of the theorem.
+or another later authoritative theorem with every hypothesis explicit.
+`SameFieldOSIIOutputCorrelatorUniquenessData` remains a narrow supporting correlator-extension
+obligation. The stronger uninhabited `CorrectedOSIIReconstructionAcceptanceData` requires selected
+`(R0′)`, relative analytic, and exact-source Wick data and quantifies, within the selected Hilbert
+universe, over every alternative Wightman output on the same exact Poincaré lift carrying those
+corrected hypotheses for the same Euclidean family. Each alternative must be fixed-lift unitarily
+equivalent in the Streater–Wightman p. 118 sense and have the same full tempered
+distributions. This is acceptance semantics, not a proof or construction of reconstruction.
 
 The scans now support `OSIICarrierExactLinearGrowthData`: equation (2.1)'s exact flattened
 coordinate-square weighted multi-index control is specified by its least-upper-bound universal
