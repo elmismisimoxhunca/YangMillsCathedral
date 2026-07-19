@@ -144,9 +144,12 @@ to vanish outside strict positive time order, is packaged as an exact complex Sc
 uses the exact induced per-arity Schwartz topology,
 contains the strict-support carrier, and has an explicit nonzero arity-one test. An exact
 point/coordinate Kronecker basis now proves that full Fréchet-map vanishing is equivalent to
-vanishing on every ordered basis-direction tuple, with nonzero derivatives detected by a tuple. It
-is not yet called the exact OS source space: flattening and identifying those ordered repeated
-directions, symmetry, and multiplicity with OS-I's four-dimensional `D^α` convention, closedness, proper enlargement,
+vanishing on every ordered basis-direction tuple, with nonzero derivatives detected by a tuple.
+Each coordinate jet is now an exact continuous complex-linear Schwartz functional; their kernel
+intersection proves the dimension-generic candidate closed and its forgetful map a closed embedding.
+It is not yet called the exact OS source space: flattening and identifying ordered repeated
+directions, symmetry, and multiplicity with OS-I's four-dimensional `D^α` convention, transporting
+this closedness to that exact source identification, proper enlargement,
 sufficiency/density/completion comparisons, and OS-II-strength reconstruction remain open. `(E2)`
 remains absent pending those comparisons, the identification of the named finite-stage final topology with OS-I's locally convex direct sum, the
 distinct completed tensor product for positive-half-space tests, and the source-facing

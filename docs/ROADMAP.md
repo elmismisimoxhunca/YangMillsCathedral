@@ -189,8 +189,12 @@ committed before higher layers depend on it.
 - [x] Construct the exact point/coordinate basis and prove full Fréchet-map vanishing equivalent to
   all ordered coordinate-basis jet evaluations, with a reusable multilinear basis-determination
   theorem and nonzero-detection probes.
+- [x] Prove the dimension-generic Fréchet candidate is closed in the exact ambient Schwartz topology
+  by expressing it as an intersection of continuous coordinate-directional jet kernels, and package
+  its forgetful map as a closed embedding with hostile limit probes.
 - [ ] Complete the remaining exact four-dimensional multi-index comparison: flatten coordinates and
-  identify ordered repeated basis directions, symmetry, and multiplicity with OS-I's `D^α`; prove closedness,
+  identify ordered repeated basis directions, symmetry, and multiplicity with OS-I's `D^α`; only
+  after that comparison identify the candidate closedness theorem with the printed source space,
   then establish the strict subspace's sufficiency/density/completion relation; install the
   finite-sequence direct-sum topology while keeping the positive-half-space completed tensor product
   distinct; only then define source-facing `(E2)` on the constructed product and reflected-star

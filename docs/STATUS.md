@@ -2651,6 +2651,29 @@ Implemented and verified:
   row before use.
 - No source in the inventory is represented as proving four-dimensional existence or a mass gap.
 
+## 2026-07-19 — one-hundred-forty-third stone: closed OS Fréchet candidate
+
+Implemented and verified:
+
+- Reusable `SchwartzMap.iteratedDirectionalEvaluationCLM` packages any finite ordered real
+  directional jet at a point as a continuous complex-linear functional on exact complex Schwartz
+  space, and proves exact agreement with `iteratedFDeriv`.
+- Every such jet-vanishing kernel is closed. Hostile mathematics probes lock exact evaluation and
+  kernel membership and reject a nonzero selected jet.
+- `isClosed_osPositiveTimeOrderedDerivativeSubmodule` uses the proved coordinate-jet equivalence to
+  identify the dimension-generic candidate with the intersection of all continuous coordinate-jet
+  kernels outside strict positive time order.
+- `OSPositiveTimeOrderedDerivativeCarrier.closedEmbedding_toSchwartz` upgrades the existing induced
+  topological embedding to a closed embedding.
+- Hostile limit probes prove every ambient Schwartz limit of accepted tests retains the exact
+  derivative-vanishing law and show that one nonzero exterior jet blocks such convergence.
+- This proves closedness only for the internal dimension-generic Fréchet candidate. Exact
+  four-dimensional coordinate flattening, repeated-direction symmetry and multiplicity, and
+  comparison with OS-I's printed `D^α` space remain open; the theorem is not mislabeled as that
+  source-space identification.
+- No `(E2)` datum, OS-II reconstruction, quantum theory, existence theorem, or mass gap is
+  constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

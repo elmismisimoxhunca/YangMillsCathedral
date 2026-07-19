@@ -15,8 +15,9 @@ Osterwalder–Schrader I, printed p. 86, defines the closed subspace
 project-dimension **Fréchet candidate for `S₊`**, using vanishing of every iterated real Fréchet
 derivative outside the strict positive ordered region. It is intended as a coordinate-free
 strengthening, but the finite-dimensional comparison with the printed multi-index conditions in
-either direction, exact four-dimensional specialization, and the source's closed-subspace theorem
-remain explicit debt.
+either direction and exact four-dimensional specialization remain explicit debt. A downstream
+module proves this internal candidate closed, but does not transport that result to the source's
+still-unidentified exact multi-index space.
 
 Unlike the earlier strict-support carrier, this definition does not require topological support to
 be contained in the open ordered set: boundary points may remain in topological support while all
@@ -66,8 +67,8 @@ def osPositiveTimeOrderedDerivativeSubmodule
     rw [iteratedFDeriv_const_smul_apply (f.smooth k).contDiffAt, hf k x hx, smul_zero]
 
 /-- Project-dimension Fréchet candidate for OS-I's four-dimensional `S₊`, with the coordinate
-partial-derivative/Fréchet-derivative equivalence, exact specialization, and closedness proof still
-separated as debt. Its membership predicate is exactly the carrier of the named complex submodule
+partial-derivative/Fréchet-derivative equivalence and exact specialization still separated as debt;
+a downstream module supplies closedness only for this internal candidate. Its membership predicate is exactly the carrier of the named complex submodule
 above. -/
 def OSPositiveTimeOrderedDerivativeCarrier
     (d : EuclideanDimension) (n : ℕ) :=

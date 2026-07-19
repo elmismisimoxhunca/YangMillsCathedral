@@ -18,7 +18,9 @@ coordinate basis directions.
 
 This is still not the printed multi-index theorem. A future comparison must identify repeated
 basis-direction evaluations, with order and multiplicity accounted for, with OS-I's `D^α` notation
-in exactly four dimensions. Closedness and reconstruction remain separate debt.
+in exactly four dimensions. A downstream module proves closedness of this internal candidate via
+these coordinate jets, but transporting that theorem to the exact printed source-space
+identification and reconstruction remain separate debt.
 -/
 
 namespace YangMills

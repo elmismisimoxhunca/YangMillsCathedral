@@ -39,6 +39,8 @@ import YangMills.Mathematics.AlternatingMapDegreeTwoBilinear
 import YangMills.Mathematics.AlternatingMapDegreeTwoBilinearProbes
 import YangMills.Mathematics.ContinuousMultilinearMapBasis
 import YangMills.Mathematics.ContinuousMultilinearMapBasisProbes
+import YangMills.Mathematics.SchwartzDirectionalEvaluation
+import YangMills.Mathematics.SchwartzDirectionalEvaluationProbes
 import YangMills.Mathematics.SchwartzTensorProduct
 import YangMills.Mathematics.SchwartzTensorProductProbes
 import YangMills.Mathematics.FiniteConfigurationSchwartzTensor
@@ -169,6 +171,8 @@ import YangMills.Euclidean.OSOrderedDerivativeCarrier
 import YangMills.Euclidean.OSOrderedDerivativeCarrierProbes
 import YangMills.Euclidean.OSOrderedCoordinateJets
 import YangMills.Euclidean.OSOrderedCoordinateJetsProbes
+import YangMills.Euclidean.OSOrderedDerivativeClosed
+import YangMills.Euclidean.OSOrderedDerivativeClosedProbes
 import YangMills.Euclidean.SchwingerTestSequence
 import YangMills.Euclidean.SchwingerTestSequenceProbes
 import YangMills.Euclidean.SchwingerConfigurationConcatenation
