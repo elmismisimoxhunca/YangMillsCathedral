@@ -236,6 +236,9 @@ committed before higher layers depend on it.
   real-locally-convex topological complex-module topologies; prove it admissible, package its joint
   operations and stage CLMs, compare it with the raw final topology, and characterize equality by
   raw admissibility without asserting that equality or OS-I direct-sum identification.
+- [x] Construct the exact scalar/all-positive-arity coordinate map, prove it injective and continuous
+  via an admissible induced coordinate topology, and derive Hausdorff separation of the locally
+  convex final topology while retaining the explicit nonzero singleton coordinate.
 - [ ] Establish the earlier strict-support subspace's sufficiency/density/completion relation to the
   exact positive-arity OS-I source spaces; prove the needed Hausdorff/direct-sum characterization
   and either raw/local-convex-final equality or the correct source-facing topology selection while

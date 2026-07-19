@@ -2981,6 +2981,25 @@ Implemented and verified:
 - This is reusable general mathematics. It supplies no OS direct-sum identification, `(E2)`, OS-II
   growth, reconstruction, quantum theory, existence theorem, or mass gap.
 
+## 2026-07-19 — one-hundred-fifty-ninth stone: Hausdorff locally convex source topology
+
+Implemented and verified:
+
+- Hausdorffness of ambient Schwartz space transports through the exact closed embedding to every
+  positive-arity source space.
+- `OSPositiveTimeOrderedFourDimensionalAllCoordinates` keeps the separate scalar and every exact
+  positive-arity source coordinate; the sequence coordinate map is complex-linear and injective.
+- The topology induced by that map is proved an admissible locally convex final topology, so
+  universal minimality makes the map continuous from the constructed locally convex final topology.
+- A continuous injection into the Hausdorff scalar/product source space proves the locally convex
+  final source topology itself Hausdorff; the exact coordinate map is also bundled continuously
+  linear.
+- Hostile probes lock exact coordinates, injectivity, auxiliary admissibility, continuity, retention
+  of the nonzero singleton coordinate, and disjoint open separation of every unequal pair.
+- Raw-topology equality, identification with OS-I's printed locally convex direct sum, strict-carrier
+  density/completion, completed tensor topology, `(E2)`, OS-II growth and reconstruction remain open.
+- No `(E2)` datum, reconstruction, quantum theory, existence theorem, or mass gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

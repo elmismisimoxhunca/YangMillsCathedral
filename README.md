@@ -187,8 +187,9 @@ on the unproved product-quotient property. Separately, an `sInf` construction no
 stage-continuous real-locally-convex topological complex-module topology, with joint addition/scalar
 operations, local convexity and continuous-linear stage maps. The raw topology lies below this
 locally convex final topology in Mathlib's reversed order, and equality is proved equivalent to raw
-admissibility rather than asserted. Neither topology is yet identified with OS-I's printed Hausdorff
-locally convex direct sum: that identification, proper enlargement and sufficiency/density/completion
+admissibility rather than asserted. An exact scalar/all-positive-arity coordinate map into a
+Hausdorff product is proved continuous and injective, so the locally convex final topology itself is
+Hausdorff. Neither topology is yet identified with OS-I's printed locally convex direct sum: that identification, proper enlargement and sufficiency/density/completion
 comparisons with the earlier strict-support subspace, the distinct completed-tensor topology, and
 OS-II-strength reconstruction remain open. `(E2)` remains absent pending those comparisons, the
 source-facing topology identification, the
