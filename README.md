@@ -321,8 +321,11 @@ forms now have distinct raw unrestricted and explicit within-set normed-coordina
 carriers. Inverse extended-chart specialization uses the corner-aware `mfderivWithin` on the exact
 model range, with chart-center recovery, target-local derivative invertibility, linearity, and
 canonical bracket-wedge coherence; no chart-target regularity, exterior naturality, or geometric
-meaning outside the chart target is asserted. Canonical arbitrary-manifold
-existence, chart independence,
+meaning outside the chart target is asserted. The exact principal connection, its indexed exterior-
+derivative certificate, and the curvature derived from both now satisfy Freed's curvature equation
+in arbitrary within-set coordinates and inverse extended charts. The coordinate derivative term is
+still the pulled-back certificate, not yet `extDerivWithin` of the coordinate connection, so this
+does not transport Bianchi. Canonical arbitrary-manifold existence, chart independence,
 arbitrary-manifold `d²`, arbitrary-manifold graded Leibniz transport, positive-degree covariant exterior
 differentiation, and
 positive curvature-tensor orders remain open. This is not a general

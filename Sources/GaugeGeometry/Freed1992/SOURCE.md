@@ -195,6 +195,10 @@ closure/interior hypotheses and agree with the global definitions on `univ`. Fix
 forms now have separate raw unrestricted and explicit within-set normed-coordinate pullbacks.
 Inverse extended charts use corner-aware `mfderivWithin` on the exact model range, with target-local
 derivative invertibility and canonical bracket-wedge carrier coherence; chart-target regularity and
-exterior-derivative naturality remain open, and no geometry is claimed outside the chart target. Transport to
-the exact principal/adjoint-bundle connection, a canonical arbitrary-manifold positive-degree
-operator, source-facing Bianchi, and gauge covariance remain pending.
+exterior-derivative naturality remain open, and no geometry is claimed outside the chart target.
+The exact principal connection, its indexed derivative certificate, and curvature derived from both
+now satisfy (1.13) after the same within-set or inverse-chart coordinate transport. The derivative
+term is still the pulled-back certificate, not yet coordinate `extDerivWithin`, so no transported
+Bianchi claim follows. Transport of the coordinate Bianchi theorem and positive-degree covariant
+expression to the exact principal/adjoint-bundle connection, a canonical arbitrary-manifold
+positive-degree operator, source-facing Bianchi, and gauge covariance remain pending.

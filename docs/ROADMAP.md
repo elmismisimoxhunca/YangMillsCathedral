@@ -77,6 +77,9 @@ committed before higher layers depend on it.
   inverse extended charts using corner-aware `mfderivWithin` on the exact model range, and prove
   evaluation, center recovery, target-local derivative invertibility, linearity, and canonical
   bracket-wedge coherence. Chart-target regularity and exterior naturality remain debt.
+- [x] Pull the exact principal connection, its indexed derivative certificate, and its derived
+  curvature through the same within-set/chart coordinates, proving the exact coordinate curvature
+  equation without identifying the certificate with coordinate `extDerivWithin`.
 - [x] Define principal curvature from a certified derivative and the smooth bracket-wedge.
 - [x] State and probe intrinsic curvature horizontality/right-adjoint-equivariance certificates.
 - [x] Construct and probe the set-level adjoint associated-bundle orbit quotient.

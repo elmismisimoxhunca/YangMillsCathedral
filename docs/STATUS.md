@@ -3446,9 +3446,28 @@ Implemented and verified:
 - Addition and real scalar multiplication commute exactly with within-set coordinate pullback.
 - Canonical tangent/model coordinates carry the intrinsic graded Lie-bracket wedge to the exact
   continuous-bilinear coordinate wedge, both generally within a source and in inverse charts.
-- This is carrier-level infrastructure only. Chart-target regularity, `extDerivWithin` naturality,
-  principal connection specialization, exact curvature equality, and transported Bianchi remain
-  open.
+- At this stone, chart-target regularity, `extDerivWithin` naturality, principal connection
+  specialization, exact curvature equality, and transported Bianchi remained open.
+
+## 2026-07-19 — one-hundred-eighty-fifth stone: exact principal curvature coordinates
+
+Implemented and verified:
+
+- The exact principal connection form, its connection-indexed exterior-derivative certificate, and
+  the curvature derived from both now have named within-set normed-coordinate carriers.
+- Separate inverse extended-chart carriers reuse the corner-aware within-range tangent transport.
+- `curvatureCoordinatePullbackWithin_eq` proves Freed's exact equation after arbitrary same-map,
+  same-source coordinate pullback using the canonical transported group bracket.
+- `curvatureCoordinatesInExtChartAt_eq` proves the inverse-chart specialization without replacing
+  the exact connection, derivative certificate, or derived curvature.
+- The original degree-one bracket wedge is proved coherent with the graded one-with-one formula,
+  preserving the exact `1/2` normalization through coordinate transport.
+- Hostile probes reject unrelated curvature and derivative carriers and lock both general within-set
+  and inverse-chart equations.
+- The derivative term remains the coordinate pullback of the manifold certificate. It is not yet
+  proved equal to `extDerivWithin` of the coordinate connection; chart regularity, derivative
+  naturality, equality with `groupLieAlgebraCoordinateCurvatureWithin`, and transported Bianchi
+  remain open.
 
 Not yet achieved:
 
