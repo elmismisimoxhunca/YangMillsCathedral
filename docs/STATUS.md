@@ -3177,6 +3177,23 @@ Implemented and verified:
   predicate, a positive-degree covariant exterior derivative, graded bracket wedge, Bianchi, and
   positive curvature-tensor orders remain open. No derivative inhabitant or theory is constructed.
 
+## 2026-07-19 — one-hundred-sixty-ninth stone: smooth degree-zero covariant exterior derivative
+
+Implemented and verified:
+
+- `SmoothPrincipalConnectionAdjointCovariantDerivativeData.covariantExteriorDerivativeZero`
+  packages the exact pointwise degree-one output together with a derived proof of the project's
+  adjoint-valued differential-form smoothness predicate.
+- No new regularity field is supplied. The proof uses the already required `C∞` derivative-bundle
+  section, applies that smooth family of continuous linear maps to each locally smooth tangent
+  field, and reads the result in the exact designated dependent-fiber trivialization.
+- Forgetting smoothness is definitionally the preceding same-connection pointwise packaging, and
+  evaluation remains definitionally the original intrinsic covariant derivative.
+- Hostile probes lock the exact pointwise carrier, smoothness of that same carrier, unique-slot
+  evaluation, rejection of an unrelated smooth output, and the same local `d + ad(A)` expression.
+- Positive-degree covariant exterior differentiation, graded bracket wedge, Bianchi, and positive
+  curvature-tensor orders remain open. No derivative inhabitant or theory is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

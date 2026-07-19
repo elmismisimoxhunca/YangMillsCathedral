@@ -135,8 +135,10 @@ committed before higher layers depend on it.
   derive the exact smooth derivative-bundle output for every smooth adjoint section.
 - [x] Canonically package the same-connection derivative of every pointwise degree-zero
   adjoint-valued form as a degree-one form, with exact unique-slot evaluation, section coherence,
-  and output uniqueness; derive the designated-chart `dσ + [A,σ]` formula for smooth inputs only,
-  and do not claim smooth output or positive-degree differentiation.
+  and output uniqueness; derive the designated-chart `dσ + [A,σ]` formula for smooth inputs only.
+- [x] Use the stored `C∞` covariant-derivative regularity and smooth dependent bundle evaluation to
+  prove that the exact degree-one packaged output is smooth for every smooth degree-zero input,
+  without introducing a new regularity field or claiming positive-degree differentiation.
 - [ ] Extend that same-connection derivative to adjoint-valued forms and positive curvature-tensor
   orders, derive Bianchi rather than storing it as a certificate, and extend the basic bridge to
   interpreted gauge-invariant local curvature polynomials, including renormalized operator mixing.

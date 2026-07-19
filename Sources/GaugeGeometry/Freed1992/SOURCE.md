@@ -158,5 +158,7 @@ exact quotient-coherent values.
 unrelated curvature field. This is a requirement surface: automatic derivation from the current
 Cartan certificate and connection laws remains pending. The existing same-connection derivative on
 adjoint sections is now canonically packaged as the degree-zero-to-degree-one endpoint of `d_Θ`,
-with no new witness and with the exact local `dσ + [A,σ]` formula retained. A canonical
-positive-degree operator, Bianchi, and gauge covariance remain pending.
+with no new witness and with the exact local `dσ + [A,σ]` formula retained. The separately stored
+`C∞` derivative regularity now derives smoothness of this exact degree-one output for every smooth
+degree-zero input through smooth bundle-map evaluation. A canonical positive-degree operator,
+Bianchi, and gauge covariance remain pending.

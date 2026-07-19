@@ -288,10 +288,10 @@ formula `dσ(X) + [A(X),σ]` in every designated chart. A separate strengthening
 `C∞` covariant-derivative regularity and derives a smooth derivative-bundle section from every
 smooth adjoint section; this is required data, not a construction from the formula. The exact
 section derivative is now canonically packaged as a degree-one adjoint-valued form for every
-pointwise degree-zero input, with exact evaluation, input-section coherence, and uniqueness. For
-smooth inputs its designated-chart value has the same local formula. Smoothness of the output in the
-project's form predicate, positive-degree covariant exterior
-differentiation, and positive curvature-tensor orders remain open. This is not a general
+pointwise degree-zero input, with exact evaluation, input-section coherence, and uniqueness. The
+stored `C∞` derivative regularity now derives smoothness of this exact output for every smooth input,
+and its designated-chart value has the same local formula. Positive-degree covariant exterior
+differentiation and positive curvature-tensor orders remain open. This is not a general
 curvature-polynomial/covariant-derivative language or a canonical injective quantization map. A preliminary four-dimensional perturbative interface now requires a positive running coupling
 on an explicit open ultraviolet tail, exact beta flow, ultraviolet limit, and negative cubic leading
 normal form. It intentionally leaves the group-dependent one-loop coefficient and invariant-pairing/
