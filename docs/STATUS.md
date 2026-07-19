@@ -2778,6 +2778,30 @@ Implemented and verified:
   product, source-facing `(E2)`, OS-II growth and reconstruction remain open.
 - No `(E2)` datum, reconstruction, quantum theory, existence theorem, or mass gap is constructed.
 
+## 2026-07-19 — one-hundred-forty-eighth stone: exact algebraic OS source sequences
+
+Implemented and verified:
+
+- `OSPositiveTimeOrderedFourDimensionalTestSequence` keeps the source's scalar `f₀ ∈ ℂ` separate
+  from exact positive-arity `OSPositiveTimeOrderedFourDimensionalSourceSpace` components.
+- Its positive support finset is equivalent to nonvanishing of the same underlying Schwartz
+  component, preventing disconnected finite-support witnesses.
+- Zero source components and the all-zero source sequence are explicit.
+- `MathlibStrictPositiveTimeTestSequence.toFourDimensionalOSSourceSequence` maps the earlier strict
+  topological-support carrier componentwise while preserving its scalar, exact support and every
+  underlying Schwartz function definitionally; no properness claim is made.
+- `unitZeroPointFourDimensionalOSSourceSequence` proves scalar-only data remains expressible without
+  inventing an arity-zero source-space component.
+- `singletonPositiveTimeBumpFourDimensionalOSSourceSequence` has exact support `{1}` and retains the
+  explicit nonzero arity-one bump.
+- Hostile probes lock the constructor surface, omitted-component zero law, the designated all-zero
+  sequence, exact source membership, the strict-carrier componentwise map, scalar separation,
+  singleton support and
+  nonzero content.
+- This is algebraic only. The exact source-sequence direct-sum topology, product, involution,
+  completed positive-half-space tensor product, `(E2)`, OS-II growth and reconstruction remain open.
+- No `(E2)` datum, reconstruction, quantum theory, existence theorem, or mass gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

@@ -208,6 +208,9 @@ committed before higher layers depend on it.
   coordinate Fréchet derivative, define exact positive-arity source membership, prove it equivalent
   to the Fréchet candidate, transport closedness, install the induced topology, and retain a nonzero
   source-space test with hostile probes while keeping OS-I's scalar zero-point component separate.
+- [x] Assemble the separate scalar `f₀`, finitely many exact positive-arity source components and
+  exact nonzero support into the four-dimensional algebraic OS source-sequence carrier; map the
+  earlier strict sequence componentwise without a properness claim and retain explicit scalar-unit and nonzero-bump sequences.
 - [ ] Establish the earlier strict-support subspace's sufficiency/density/completion relation to the
   exact positive-arity OS-I source spaces; install the finite-sequence direct-sum topology while keeping
   the positive-half-space completed tensor product distinct; only then define source-facing `(E2)`

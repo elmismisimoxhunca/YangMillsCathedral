@@ -159,10 +159,15 @@ and the canonical multi-index predicate is equivalent to the Fréchet candidate.
 repeated-coordinate derivative is now named as the formal interpretation of OS-I's four-dimensional
 `D^α`; exact positive-arity source membership is defined, proved equivalent to the Fréchet
 presentation, proved closed with the induced Schwartz topology, and supplied a nonzero arity-one
-test. OS-I's separate scalar zero-point sequence component is not folded into this subtype. This
-does not yet provide the finite-sequence OS source domain: proper enlargement and
-sufficiency/density/completion comparisons with the earlier strict-support subspace, direct-sum and
-completed-tensor topology comparisons, and OS-II-strength reconstruction remain open. `(E2)`
+test. OS-I's separate scalar zero-point sequence component is not folded into this subtype. An
+exact four-dimensional algebraic source-sequence carrier now combines that scalar with finitely
+many exact positive-arity components and exact nonzero support; the earlier strict sequence maps
+componentwise without changing its scalar, support or Schwartz components and without a properness
+claim, and explicit scalar-unit and nonzero-
+bump source sequences prevent collapse. This does not yet provide the topological/product OS source
+domain: proper enlargement and sufficiency/density/completion comparisons with the earlier strict-
+support subspace, direct-sum and completed-tensor topology comparisons, and OS-II-strength
+reconstruction remain open. `(E2)`
 remains absent pending those comparisons, the identification of the named finite-stage final topology with OS-I's locally convex direct sum, the
 distinct completed tensor product for positive-half-space tests, and the source-facing
 reflection-positivity inequality; the algebraic finite-sequence carrier

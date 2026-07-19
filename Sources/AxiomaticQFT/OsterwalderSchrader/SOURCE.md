@@ -58,9 +58,11 @@ Printed journal pages are authoritative. Text line numbers below refer to the re
   repeated-coordinate derivative is now the formal interpretation of the printed `D^α` convention;
   exact positive-arity source membership is proved equivalent to the Fréchet presentation and
   closed in the induced Schwartz topology. OS-I's separately declared scalar zero-point sequence
-  component is not identified with this subtype. The relation to the earlier strict-support subspace, the finite-
-  sequence locally convex direct sum, and the distinct completed positive-half-space tensor product
-  remain open.
+  component is not identified with this subtype; a following algebraic source-sequence carrier keeps
+  that scalar separate while combining finitely many exact positive-arity components. The
+  componentwise map from the earlier strict-support sequence is exact; proper enlargement and
+  sufficiency/density/completion remain open, as do the finite-sequence locally convex direct-sum
+  topology and the distinct completed positive-half-space tensor product.
 - Printed pp. 84–85: the original proposal lists `(E0)` temperedness, `(E1)` Euclidean covariance,
   `(E2)` positivity, `(E3)` symmetry, and `(E4)` cluster property.
 - Printed pp. 87–88; `os1_primary_scan.txt` lines 237–277: the axioms and original `E → R` / `R → E`
