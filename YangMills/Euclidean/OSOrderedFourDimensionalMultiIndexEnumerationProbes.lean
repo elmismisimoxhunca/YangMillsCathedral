@@ -10,8 +10,9 @@ import YangMills.Euclidean.OSOrderedFourDimensionalMultiIndexEnumeration
 # Hostile probes for enumerated four-dimensional candidate multi-indices
 
 These probes prevent multiplicities, occurrence order, and the underlying Schwartz test from being
-replaced by disconnected data. They retain the distinction between the proved all-enumeration
-comparison and the still-missing permutation theorem for one canonical `D^α` ordering.
+replaced by disconnected data. Downstream modules prove permutation independence and then package
+the canonical formal `D^α` at positive arity; these probes isolate the preceding combinatorial
+all-enumeration comparison.
 -/
 
 namespace YangMills.OSOrderedFourDimensionalMultiIndexEnumeration.Probes

@@ -2750,6 +2750,34 @@ Implemented and verified:
 - No exact OS source-space identity, `(E2)` datum, reconstruction, quantum theory, existence theorem,
   or mass gap is constructed.
 
+## 2026-07-19 — one-hundred-forty-seventh stone: exact OS-I positive-arity source spaces
+
+Implemented and verified:
+
+- `fourDimensionalOSMultiIndexPartialDerivative` names the canonical permutation-independent
+  repeated-coordinate Fréchet evaluation as the formal interpretation of OS-I printed p. 86's
+  four-dimensional `D^α` notation.
+- Its exact expansion retains order `|α|`, the point-major coordinate basis and every multiplicity;
+  a theorem identifies it with every exact occurrence enumeration.
+- `IsOSPositiveTimeOrderedFourDimensionalSourceTest` is indexed by `PositiveArity` and gives the
+  exact positive-arity source membership law: every interpreted `D^α` vanishes outside strict
+  positive time order. OS-I's separately declared scalar zero-point component remains separate.
+- `osPositiveTimeOrderedFourDimensionalSourceTest_iff_frechet` proves exact equivalence with the
+  established coordinate-free presentation on the same Schwartz function.
+- `isClosed_osPositiveTimeOrderedFourDimensionalSourceTest` transports the proved kernel-
+  intersection closedness to the exact source-syntax carrier.
+- `OSPositiveTimeOrderedFourDimensionalSourceSpace` packages each positive-arity subtype with the
+  induced ambient Schwartz topology, an exact equivalence to the Fréchet carrier, and a closed
+  embedding.
+- The explicit positive-time bump supplies a nonzero arity-one source-space element.
+- Hostile probes lock the exact and enumerated positive-arity `D^α` values, source/Fréchet
+  membership identity, closed topology, rejection by a nonzero exterior source derivative, and
+  nonzero content.
+- This does not yet construct the finite-sequence OS source domain: the relation to the earlier
+  strict-support subspace, locally convex direct sum, distinct completed positive-half-space tensor
+  product, source-facing `(E2)`, OS-II growth and reconstruction remain open.
+- No `(E2)` datum, reconstruction, quantum theory, existence theorem, or mass gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

@@ -18,9 +18,9 @@ finite occurrence enumeration with each coordinate repeated according to its mul
 The resulting derivative is deliberately called a **candidate multi-index derivative**. Downstream
 modules quantify over exact occurrence enumerations, recover arbitrary coordinate tuples, and prove
 permutation independence, yielding an internal converse to the implication exposed here. Its
-identification with the source's recursively interpreted `D^α` remains separate debt. No exact OS
-source-space identity, reflection positivity, reconstruction, theory inhabitant, or mass-gap claim
-is asserted.
+identification with the source's recursively interpreted `D^α` is supplied only by a downstream
+source-space module after those theorems, not by this initial definition. No reflection positivity,
+reconstruction, theory inhabitant, or mass-gap claim is asserted.
 -/
 
 namespace YangMills
@@ -118,8 +118,9 @@ def IsOSPositiveTimeOrderedMultiIndexVanishing
         fourDimensionalMultiIndexDerivative α f x = 0
 
 /-- The established Fréchet candidate implies every canonical four-dimensional candidate
-multi-index derivative vanishes. The converse remains intentionally absent pending the exact
-permutation/multiplicity theorem. -/
+multi-index derivative vanishes. This initial module exposes only that direction; downstream
+multiplicity, enumeration and permutation modules prove the converse, and the positive-arity
+source-space layer supplies the formal `D^α` interpretation. -/
 theorem frechet_implies_fourDimensionalMultiIndexVanishing
     {n : ℕ} (f : ScalarSchwartzTestFunction EuclideanDimension.four n)
     (h : IsOSPositiveTimeOrderedDerivativeVanishing f) :

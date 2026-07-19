@@ -16,10 +16,10 @@ closedness theorem for the repository's still dimension-generic **Fréchet candi
 is the intersection of kernels of all continuous coordinate-directional jet evaluations outside
 strict positive time order.
 
-This theorem does not identify the candidate with OS-I's exact `D^α` carrier. Four-dimensional
-coordinate flattening, repeated-direction symmetry and multiplicity, and the source-space
-comparison remain separate debt. It supplies no reflection positivity, completion, OS-II growth,
-reconstruction, theory inhabitant, or mass-gap claim.
+Downstream modules complete four-dimensional coordinate flattening, multiplicity and permutation
+comparison, interpret OS-I's `D^α` at positive arity, and transport this theorem to the resulting
+source spaces. This closedness layer itself supplies no reflection positivity, completion, OS-II
+growth, reconstruction, theory inhabitant, or mass-gap claim.
 -/
 
 namespace YangMills

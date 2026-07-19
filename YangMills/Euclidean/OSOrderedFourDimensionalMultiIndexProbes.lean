@@ -10,8 +10,9 @@ import YangMills.Euclidean.OSOrderedFourDimensionalMultiIndex
 # Hostile probes for four-dimensional OS candidate multi-indices
 
 The probes lock exact four-dimensional scope, point-major flattening, occurrence multiplicity,
-derivative evaluation, zero total order, and the one-way bridge from the existing Fréchet candidate. They deliberately do
-not manufacture the still-missing converse or identify the candidate with OS-I's printed `D^α`.
+derivative evaluation, zero total order, and the one-way bridge exposed by this initial module.
+Downstream modules prove the converse and permutation independence and then package the formal
+OS-I `D^α` interpretation only at positive arity.
 -/
 
 namespace YangMills.OSOrderedFourDimensionalMultiIndex.Probes

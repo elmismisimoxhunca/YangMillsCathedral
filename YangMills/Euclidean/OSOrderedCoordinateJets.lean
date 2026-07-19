@@ -16,11 +16,10 @@ exact coordinate basis of the `n`-point Euclidean configuration space and proves
 each iterated Fréchet derivative as a multilinear map is equivalent to vanishing on every tuple of
 coordinate basis directions.
 
-This is still not the printed multi-index theorem. A future comparison must identify repeated
-basis-direction evaluations, with order and multiplicity accounted for, with OS-I's `D^α` notation
-in exactly four dimensions. A downstream module proves closedness of this internal candidate via
-these coordinate jets, but transporting that theorem to the exact printed source-space
-identification and reconstruction remain separate debt.
+This module itself stops before the printed multi-index theorem. Downstream modules identify
+repeated basis directions and multiplicities, prove permutation independence, interpret OS-I's
+`D^α` at positive arity, and transport this candidate's closedness to those exact source spaces.
+Finite-sequence topology, `(E2)` and reconstruction remain separate debt.
 -/
 
 namespace YangMills

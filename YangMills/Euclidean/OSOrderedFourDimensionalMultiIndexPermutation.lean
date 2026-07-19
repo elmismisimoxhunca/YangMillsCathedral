@@ -16,10 +16,10 @@ candidate derivative. Every enumeration is then compared with the canonical occu
 and canonical multi-index vanishing is proved equivalent both to all-enumeration vanishing and to
 the original Fréchet candidate.
 
-This closes the internal permutation/order-independence debt. It still does not identify the
-canonical iterated-basis evaluation with OS-I printed p. 86's recursively interpreted coordinate
-operator `D^α`; that final source-syntax comparison remains explicit debt. No exact OS source-space
-identity, `(E2)`, reconstruction, theory inhabitant, or mass gap is asserted.
+This closes the internal permutation/order-independence debt. A downstream module uses this result
+to name the canonical iterated-basis evaluation as OS-I printed p. 86's formal `D^α`
+interpretation and package exact positive-arity source membership. This module itself asserts no `(E2)`,
+reconstruction, theory inhabitant, or mass gap.
 -/
 
 namespace YangMills

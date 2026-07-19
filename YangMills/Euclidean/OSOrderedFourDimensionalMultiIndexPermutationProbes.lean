@@ -10,8 +10,9 @@ import YangMills.Euclidean.OSOrderedFourDimensionalMultiIndexPermutation
 # Hostile probes for four-dimensional multi-index permutation independence
 
 These probes lock order independence to actual occurrence enumerations, the exact same Schwartz
-function and point, and the earlier canonical derivative. They do not identify that derivative with
-OS-I's still-uncompared recursive `D^α` syntax.
+function and point, and the earlier canonical derivative. A downstream positive-arity source-space
+module uses these results to supply the formal OS-I `D^α` interpretation; these probes themselves
+assert only permutation independence.
 -/
 
 namespace YangMills.OSOrderedFourDimensionalMultiIndexPermutation.Probes

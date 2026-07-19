@@ -204,13 +204,14 @@ committed before higher layers depend on it.
   second-derivative commutation and permutation-invariant list folds; derive exact independence of
   multi-index occurrence enumeration and equivalence of the canonical multi-index and Fréchet
   candidate predicates.
-- [ ] Complete the remaining exact four-dimensional multi-index comparison by identifying the
-  canonical repeated-basis derivative with OS-I's recursively interpreted `D^α`; only after that
-  source-syntax comparison identify the candidate closedness theorem with the printed source space,
-  then establish the strict subspace's sufficiency/density/completion relation; install the
-  finite-sequence direct-sum topology while keeping the positive-half-space completed tensor product
-  distinct; only then define source-facing `(E2)` on the constructed product and reflected-star
-  operation.
+- [x] Interpret OS-I's four-dimensional `D^α` as the proved permutation-independent repeated-
+  coordinate Fréchet derivative, define exact positive-arity source membership, prove it equivalent
+  to the Fréchet candidate, transport closedness, install the induced topology, and retain a nonzero
+  source-space test with hostile probes while keeping OS-I's scalar zero-point component separate.
+- [ ] Establish the earlier strict-support subspace's sufficiency/density/completion relation to the
+  exact positive-arity OS-I source spaces; install the finite-sequence direct-sum topology while keeping
+  the positive-half-space completed tensor product distinct; only then define source-facing `(E2)`
+  on the constructed product and reflected-star operation.
 - [x] Construct exact simultaneous Euclidean translations on Schwartz tests and finite sequences,
   with inverse and support preservation, as algebraic `(E4)` infrastructure.
 - [x] Define normalized nonzero spatial rays, prove escape to infinity, construct the four-dimensional

@@ -155,11 +155,14 @@ and an occurrence enumeration that recovers the tuple entrywise; quantifying ove
 is proved equivalent to the Fréchet/coordinate-jet candidate. Iterated Schwartz directional
 operators are now proved permutation-invariant from exact second-derivative commutation and
 permutation-invariant list folds, so every occurrence enumeration equals the canonical derivative
-and the canonical multi-index predicate is equivalent to the Fréchet candidate. It is not yet called
-the exact OS source space: identification of this canonical repeated-basis derivative with OS-I's
-recursively interpreted `D^α`, transporting
-this closedness to that exact source identification, proper enlargement,
-sufficiency/density/completion comparisons, and OS-II-strength reconstruction remain open. `(E2)`
+and the canonical multi-index predicate is equivalent to the Fréchet candidate. The canonical
+repeated-coordinate derivative is now named as the formal interpretation of OS-I's four-dimensional
+`D^α`; exact positive-arity source membership is defined, proved equivalent to the Fréchet
+presentation, proved closed with the induced Schwartz topology, and supplied a nonzero arity-one
+test. OS-I's separate scalar zero-point sequence component is not folded into this subtype. This
+does not yet provide the finite-sequence OS source domain: proper enlargement and
+sufficiency/density/completion comparisons with the earlier strict-support subspace, direct-sum and
+completed-tensor topology comparisons, and OS-II-strength reconstruction remain open. `(E2)`
 remains absent pending those comparisons, the identification of the named finite-stage final topology with OS-I's locally convex direct sum, the
 distinct completed tensor product for positive-half-space tests, and the source-facing
 reflection-positivity inequality; the algebraic finite-sequence carrier

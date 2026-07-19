@@ -17,11 +17,10 @@ multi-index by taking exact fiber cardinalities and an enumeration through
 tuple exactly.
 
 Quantifying candidate vanishing over every enumeration is therefore proved equivalent to the
-existing all-coordinate-tuple Fréchet candidate. This is a combinatorial comparison, not yet a
-proof that the canonical repeated-basis derivative is invariant under permutations, nor an
-identification with OS-I printed p. 86's recursively interpreted `D^α`. Those analytic/source
-comparisons remain explicit debt. No `(E2)`, reconstruction, theory inhabitant, or mass gap is
-asserted.
+existing all-coordinate-tuple Fréchet candidate. Downstream modules prove permutation independence
+and use it to supply OS-I printed p. 86's formal positive-arity `D^α` interpretation and source
+spaces. This combinatorial layer itself asserts no `(E2)`, reconstruction, theory inhabitant, or
+mass gap.
 -/
 
 namespace YangMills
@@ -128,8 +127,8 @@ theorem osPositiveTimeOrderedCoordinateJets_iff_enumeratedMultiIndex
         (fourDimensionalCoordinateTupleEnumeration coordinates) x hx
 
 /-- In exactly four dimensions, the original full Fréchet candidate is equivalent to candidate
-vanishing for every multi-index occurrence enumeration. This still does not identify one canonical
-ordering with source `D^α`. -/
+vanishing for every multi-index occurrence enumeration. Downstream permutation and positive-arity
+source-space modules reduce these enumerations to one canonical formal `D^α`. -/
 theorem osPositiveTimeOrderedFrechet_iff_enumeratedMultiIndex
     {n : ℕ} (f : ScalarSchwartzTestFunction EuclideanDimension.four n) :
     IsOSPositiveTimeOrderedDerivativeVanishing f ↔

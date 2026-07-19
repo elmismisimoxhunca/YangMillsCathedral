@@ -54,11 +54,13 @@ Printed journal pages are authoritative. Text line numbers below refer to the re
   defined. The formulas and topology distinctions were visually checked on PDF page 4. The current
   Lean Fréchet candidate models only `S₊`. It is internally equivalent to ordered tuples of the
   exact point/coordinate basis and, in four dimensions, to one canonical natural-valued multi-index
-  presentation after proved multiplicity enumeration and permutation independence. The remaining
-  comparison is identification of that repeated-basis derivative with the printed recursively
-  interpreted `D^α` convention. Candidate closedness is proved internally, but transport of that
-  theorem to the still-unidentified exact source space and the completed-tensor comparison remain
-  open.
+  presentation after proved multiplicity enumeration and permutation independence. The canonical
+  repeated-coordinate derivative is now the formal interpretation of the printed `D^α` convention;
+  exact positive-arity source membership is proved equivalent to the Fréchet presentation and
+  closed in the induced Schwartz topology. OS-I's separately declared scalar zero-point sequence
+  component is not identified with this subtype. The relation to the earlier strict-support subspace, the finite-
+  sequence locally convex direct sum, and the distinct completed positive-half-space tensor product
+  remain open.
 - Printed pp. 84–85: the original proposal lists `(E0)` temperedness, `(E1)` Euclidean covariance,
   `(E2)` positivity, `(E3)` symmetry, and `(E4)` cluster property.
 - Printed pp. 87–88; `os1_primary_scan.txt` lines 237–277: the axioms and original `E → R` / `R → E`
