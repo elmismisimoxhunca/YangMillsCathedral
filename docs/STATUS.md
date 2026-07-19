@@ -3464,10 +3464,29 @@ Implemented and verified:
   preserving the exact `1/2` normalization through coordinate transport.
 - Hostile probes reject unrelated curvature and derivative carriers and lock both general within-set
   and inverse-chart equations.
-- The derivative term remains the coordinate pullback of the manifold certificate. It is not yet
-  proved equal to `extDerivWithin` of the coordinate connection; chart regularity, derivative
-  naturality, equality with `groupLieAlgebraCoordinateCurvatureWithin`, and transported Bianchi
-  remain open.
+- At this stone the derivative term remained only the coordinate pullback of the manifold
+  certificate; chart regularity, derivative naturality, coordinate-curvature identification, and
+  transported Bianchi remained open.
+
+## 2026-07-19 — one-hundred-eighty-sixth stone: conditional exact-curvature Bianchi bridge
+
+Implemented and verified:
+
+- `PrincipalConnectionCoordinateExteriorDerivativeNaturalityOn` states the exact missing equality
+  between the pulled-back connection-indexed derivative certificate and `extDerivWithin` of the
+  exact coordinate connection.
+- Tangent transport and exterior calculus retain separate sets. In an inverse chart these are exactly
+  `Set.range IP` and `(extChartAt IP p).target`, respectively.
+- Under naturality, the exact derived principal-curvature carrier agrees on the calculus set with
+  `groupLieAlgebraCoordinateCurvatureWithin`.
+- The existing same-connection coordinate Bianchi theorem then derives a zero covariant expression
+  for the exact curvature carrier under explicit `ContDiffWithinAt`, smoothness-order,
+  `UniqueDiffOn`, membership, and closure-of-interior hypotheses.
+- Inverse-chart specializations preserve the actual chart target in every hypothesis and conclusion.
+- Hostile probes reject mismatched derivative values and nonzero Bianchi outputs while locking the
+  exact two-set naturality shape.
+- Naturality and chart regularity are hypotheses, not constructed evidence. A canonical manifold
+  positive-degree derivative and descended adjoint-bundle Bianchi theorem remain open.
 
 Not yet achieved:
 

@@ -324,8 +324,11 @@ canonical bracket-wedge coherence; no chart-target regularity, exterior naturali
 meaning outside the chart target is asserted. The exact principal connection, its indexed exterior-
 derivative certificate, and the curvature derived from both now satisfy Freed's curvature equation
 in arbitrary within-set coordinates and inverse extended charts. The coordinate derivative term is
-still the pulled-back certificate, not yet `extDerivWithin` of the coordinate connection, so this
-does not transport Bianchi. Canonical arbitrary-manifold existence, chart independence,
+still the pulled-back certificate, not yet `extDerivWithin` of the coordinate connection. An exact
+naturality predicate now separates the corner-aware tangent-transport source from the exterior-
+calculus set; assuming that predicate and all within-set regularity hypotheses, the previously proved
+coordinate theorem derives Bianchi for the exact curvature carrier without accepting a Bianchi
+witness. Naturality itself remains unproved. Canonical arbitrary-manifold existence, chart independence,
 arbitrary-manifold `d²`, arbitrary-manifold graded Leibniz transport, positive-degree covariant exterior
 differentiation, and
 positive curvature-tensor orders remain open. This is not a general

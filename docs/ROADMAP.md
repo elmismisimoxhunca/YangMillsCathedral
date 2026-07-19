@@ -80,6 +80,9 @@ committed before higher layers depend on it.
 - [x] Pull the exact principal connection, its indexed derivative certificate, and its derived
   curvature through the same within-set/chart coordinates, proving the exact coordinate curvature
   equation without identifying the certificate with coordinate `extDerivWithin`.
+- [x] State the exact same-connection exterior-naturality obligation with separate tangent-transport
+  and calculus sets, and derive conditional within-chart Bianchi for the exact curvature carrier;
+  proving the naturality obligation and chart regularity remains debt.
 - [x] Define principal curvature from a certified derivative and the smooth bracket-wedge.
 - [x] State and probe intrinsic curvature horizontality/right-adjoint-equivariance certificates.
 - [x] Construct and probe the set-level adjoint associated-bundle orbit quotient.

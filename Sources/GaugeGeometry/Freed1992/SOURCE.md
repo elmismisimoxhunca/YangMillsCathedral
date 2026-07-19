@@ -198,7 +198,9 @@ derivative invertibility and canonical bracket-wedge carrier coherence; chart-ta
 exterior-derivative naturality remain open, and no geometry is claimed outside the chart target.
 The exact principal connection, its indexed derivative certificate, and curvature derived from both
 now satisfy (1.13) after the same within-set or inverse-chart coordinate transport. The derivative
-term is still the pulled-back certificate, not yet coordinate `extDerivWithin`, so no transported
-Bianchi claim follows. Transport of the coordinate Bianchi theorem and positive-degree covariant
-expression to the exact principal/adjoint-bundle connection, a canonical arbitrary-manifold
-positive-degree operator, source-facing Bianchi, and gauge covariance remain pending.
+term is still the pulled-back certificate, not yet coordinate `extDerivWithin`. An exact naturality
+predicate separates inverse-chart tangent transport on the model range from exterior calculus on the
+actual chart target. Assuming this predicate and the full local regularity hypotheses, the coordinate
+Bianchi theorem now derives a zero covariant expression for the exact principal-curvature carrier;
+naturality itself, a canonical arbitrary-manifold positive-degree operator, a descended adjoint-
+bundle Bianchi theorem, and gauge covariance remain pending.
