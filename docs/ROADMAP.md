@@ -133,6 +133,10 @@ committed before higher layers depend on it.
   designated chart to the same principal connection by the explicit `dσ + [A,σ]` formula.
 - [x] Add Mathlib's standard `C∞` covariant-derivative regularity as an explicit strengthening and
   derive the exact smooth derivative-bundle output for every smooth adjoint section.
+- [x] Canonically package the same-connection derivative of every pointwise degree-zero
+  adjoint-valued form as a degree-one form, with exact unique-slot evaluation, section coherence,
+  and output uniqueness; derive the designated-chart `dσ + [A,σ]` formula for smooth inputs only,
+  and do not claim smooth output or positive-degree differentiation.
 - [ ] Extend that same-connection derivative to adjoint-valued forms and positive curvature-tensor
   orders, derive Bianchi rather than storing it as a certificate, and extend the basic bridge to
   interpreted gauge-invariant local curvature polynomials, including renormalized operator mixing.

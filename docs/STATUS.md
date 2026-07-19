@@ -3159,6 +3159,24 @@ Implemented and verified:
   actual completed tensor powers, `(E2)`, OS-II growth and reconstruction remain open. No theory,
   existence theorem, or mass gap is built.
 
+## 2026-07-19 — one-hundred-sixty-eighth stone: degree-zero covariant exterior derivative
+
+Implemented and verified:
+
+- `covariantExteriorDerivativeZero` canonically packages the existing same-connection intrinsic
+  derivative of the exact section corresponding to a degree-zero adjoint-valued form as a degree-one
+  adjoint-valued form; it introduces no new derivative field.
+- Evaluation at the unique `Fin 1` slot is definitionally the original covariant derivative, and a
+  degree-zero form built from a section differentiates that exact section.
+- Agreement at every tangent evaluation uniquely determines the packaged one-form. A hostile probe
+  rejects any output with even one mismatching evaluation.
+- For every smooth input and designated in-chart point, exact fiber coordinates reduce to the
+  existing same-connection expression `dσ(X) + [A(X),σ]`; probes expose both the ordinary derivative
+  and bracket correction tied to that connection.
+- This is only pointwise degree zero to degree one. Smoothness in the project's adjoint-form
+  predicate, a positive-degree covariant exterior derivative, graded bracket wedge, Bianchi, and
+  positive curvature-tensor orders remain open. No derivative inhabitant or theory is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

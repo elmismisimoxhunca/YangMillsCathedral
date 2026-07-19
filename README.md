@@ -286,10 +286,13 @@ smoothly descended curvature. An uninhabited degree-zero adjoint-section derivat
 uses Mathlib's intrinsic additivity/Leibniz carrier and requires the exact same-connection local
 formula `dσ(X) + [A(X),σ]` in every designated chart. A separate strengthening requires Mathlib's
 `C∞` covariant-derivative regularity and derives a smooth derivative-bundle section from every
-smooth adjoint section; this is required data, not a construction from the formula. It is not yet
-extended to adjoint-valued forms
-or positive curvature-tensor orders. This is not a general curvature-polynomial/covariant-derivative language or a canonical injective quantization
-map. A preliminary four-dimensional perturbative interface now requires a positive running coupling
+smooth adjoint section; this is required data, not a construction from the formula. The exact
+section derivative is now canonically packaged as a degree-one adjoint-valued form for every
+pointwise degree-zero input, with exact evaluation, input-section coherence, and uniqueness. For
+smooth inputs its designated-chart value has the same local formula. Smoothness of the output in the
+project's form predicate, positive-degree covariant exterior
+differentiation, and positive curvature-tensor orders remain open. This is not a general
+curvature-polynomial/covariant-derivative language or a canonical injective quantization map. A preliminary four-dimensional perturbative interface now requires a positive running coupling
 on an explicit open ultraviolet tail, exact beta flow, ultraviolet limit, and negative cubic leading
 normal form. It intentionally leaves the group-dependent one-loop coefficient and invariant-pairing/
 coupling normalization disconnected. A separate supplied regular-variation interface ties every

@@ -46,7 +46,9 @@ Printed p. 8, §1, equations (1.9)–(1.16); extracted text lines 381–419:
   equivariance;
 - curvature is `Ω = dΘ + 1/2 [Θ ∧ Θ]` in equation (1.13);
 - curvature is horizontal and equivariant;
-- equation (1.16) is the Bianchi identity.
+- equation (1.16) is the Bianchi identity;
+- immediately afterward, `d_Θ = d + ad(Θ)` denotes the connection covariant derivative on
+  associated-bundle-valued forms.
 
 Printed p. 9, §1, equations (1.18)–(1.19); extracted text lines 434–447:
 
@@ -154,5 +156,7 @@ exact quotient-coherent values.
 `PrincipalTwoForm.IsHorizontal`, `.IsRightAdEquivariant`, and the connection-indexed
 `PrincipalCurvatureStructureCertificate` state (1.15) and (1.14) intrinsically without accepting an
 unrelated curvature field. This is a requirement surface: automatic derivation from the current
-Cartan certificate and connection laws remains pending, as do a canonical general-degree operator,
-Bianchi, and gauge covariance.
+Cartan certificate and connection laws remains pending. The existing same-connection derivative on
+adjoint sections is now canonically packaged as the degree-zero-to-degree-one endpoint of `d_Θ`,
+with no new witness and with the exact local `dσ + [A,σ]` formula retained. A canonical
+positive-degree operator, Bianchi, and gauge covariance remain pending.
