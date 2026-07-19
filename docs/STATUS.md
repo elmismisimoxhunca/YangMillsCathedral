@@ -3276,6 +3276,21 @@ Implemented and verified:
 - This does not construct a canonical manifold exterior derivative or prove chart independence,
   `d²`, graded Leibniz, covariant differentiation, or Bianchi. No connection or theory is built.
 
+## 2026-07-19 — one-hundred-seventy-fifth stone: one-form/positive-degree Cartan coherence
+
+Implemented and verified:
+
+- `positiveDegreeCartanExpressionCoordinates_zero_eq_oneForm` proves the positive-degree triangular
+  formula at `n = 0` is exactly the earlier ordered one-form Cartan expression.
+- The proof explicitly recovers both omitted one-slot tuples, both field coordinates, the singleton
+  triangular bracket sum, and the earlier `twoVectorArguments` ordering.
+- `toPositiveDegreeZero` and `toOneForm` convert certificates in both directions while retaining
+  definitionally the same smooth degree-two derivative carrier.
+- Hostile probes lock the expression bridge, each conversion, carrier preservation through both
+  round trips, and rejection of unrelated forward or reverse derivative outputs.
+- This is coherence between supplied APIs, not certificate existence, full structure equality,
+  chart independence, `d²`, graded Leibniz, covariant differentiation, or Bianchi.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

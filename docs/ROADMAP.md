@@ -53,6 +53,8 @@ committed before higher layers depend on it.
   Mathlib's exact triangular
   indices/signs, normed-space `extDerivWithin` compatibility, certificate agreement, a concrete zero
   certificate, and an exact `2 → 3` specialization; do not claim canonical existence or `d²`.
+- [x] Prove the positive-degree formula at `n = 0` equals the earlier one-form Cartan formula and
+  provide bidirectional certificate conversions preserving the exact degree-two derivative carrier.
 - [x] Define principal curvature from a certified derivative and the smooth bracket-wedge.
 - [x] State and probe intrinsic curvature horizontality/right-adjoint-equivariance certificates.
 - [x] Construct and probe the set-level adjoint associated-bundle orbit quotient.

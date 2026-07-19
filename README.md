@@ -299,8 +299,10 @@ coordinate bracket now derives smooth closure of that exact graded carrier and a
 coherent with the earlier degree-one smooth wedge. Additivity and real-scalarity in each graded
 argument are derived explicitly. The exact cubic self-bracket is proved zero, pointwise and
 smoothly, by expansion to twice the cyclic Lie Jacobi sum. The positive-degree ordinary Cartan
-certificate now makes a supplied `2 → 3` exterior derivative typeable, but canonical existence,
-chart independence, `d²`, graded Leibniz, positive-degree covariant exterior differentiation, and
+certificate now makes a supplied `2 → 3` exterior derivative typeable. At `n = 0` its formula is
+proved equal to the earlier one-form formula, with conversions in both directions preserving the
+exact degree-two derivative carrier. Canonical existence, chart independence, `d²`, graded Leibniz,
+positive-degree covariant exterior differentiation, and
 positive curvature-tensor orders remain open. This is not a general
 curvature-polynomial/covariant-derivative language or a canonical injective quantization map. A preliminary four-dimensional perturbative interface now requires a positive running coupling
 on an explicit open ultraviolet tail, exact beta flow, ultraviolet limit, and negative cubic leading
