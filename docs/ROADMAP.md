@@ -67,8 +67,10 @@ committed before higher layers depend on it.
 - [x] Exterior-alternate those coefficient derivatives and prove the exact skew-bilinear
   `-2 • (A ∧_B dA)` identity, including the canonical group-coordinate bracket specialization.
 - [x] Prove the degree-one wedge operator-norm bound, bundle it as a continuous bilinear map, derive
-  whole-form differentiability, and identify the alternation with Mathlib `extDeriv`; transport to
-  arbitrary manifolds and covariant differentiation remain debt.
+  whole-form differentiability, and identify the alternation with Mathlib `extDeriv`.
+- [x] Derive the finite-dimensional normed-coordinate Bianchi identity from the exact same
+  connection one-form, canonical transported bracket, Mathlib `d² = 0`, self-wedge Leibniz, and
+  Jacobi cancellation; arbitrary-manifold/principal-bundle transport remains debt.
 - [x] Define principal curvature from a certified derivative and the smooth bracket-wedge.
 - [x] State and probe intrinsic curvature horizontality/right-adjoint-equivariance certificates.
 - [x] Construct and probe the set-level adjoint associated-bundle orbit quotient.

@@ -3393,6 +3393,25 @@ Implemented and verified:
 - This closes the required self-wedge graded Leibniz identity only in normed local coordinates.
   Arbitrary-manifold transport, positive-degree covariant differentiation, and Bianchi remain open.
 
+## 2026-07-19 — one-hundred-eighty-second stone: normed-coordinate Bianchi
+
+Implemented and verified:
+
+- `groupLieAlgebraCoordinateCurvature` defines `F_A = dA + 1/2[A ∧ A]` from one exact
+  group-coordinate one-form and the canonical transported tangent bracket.
+- `groupLieAlgebraCoordinateCovariantExteriorDerivativeTwo` defines the degree-two expression
+  `D_Aω = dω + [A ∧ ω]` using the same connection and bracket.
+- `groupLieAlgebraCoordinateSelfWedge_cubic` derives exact cubic Jacobi cancellation in those
+  coordinates rather than assuming a zero field.
+- `groupLieAlgebraCoordinate_bianchi` derives `D_A F_A = 0` from second-order regularity of the
+  same one-form, Mathlib `d² = 0`, the exact self-wedge exterior derivative, and Jacobi.
+- No curvature, covariant derivative, or Bianchi witness is accepted independently.
+- Hostile probes lock both defining formulas, cubic cancellation, the derived zero, and reject
+  unrelated curvature and nonzero Bianchi outputs.
+- This is a finite-dimensional normed-coordinate theorem. Transport to the project's exact
+  principal connection, descended adjoint-bundle curvature, arbitrary-manifold positive-degree
+  covariant exterior derivative, and source-facing Bianchi theorem remain open.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
