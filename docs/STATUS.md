@@ -3698,6 +3698,23 @@ Implemented and verified:
   witness-level separation for the still-absent final acceptance proposition and not nonexistence
   claims for lower-dimensional theories.
 
+## 2026-07-19 — two-hundredth stone: OS-II printed control and ambient-extension growth
+
+Implemented and verified:
+
+- `fourDimensionalConfigurationSquaredNorm` uses the exact flattened coordinate sum
+  `∑ᵢ∑μ(xᵢ^μ)²`, not the outer Pi supremum norm, and `osIIPrintedWeightedDerivativeTerm` formalizes
+  equation (2.1)'s corresponding `(1+x²)^(p/2)‖D^αf(x)‖` term.
+- `OSIIPrintedSchwartzControlData` characterizes the displayed supremum by every-term upper bounds
+  and its least-upper-bound universal property; uniqueness and zero-test control are derived.
+- Any strictly positive displayed term blocks a fake zero control.
+- `OSIIAmbientExtensionLinearGrowthData` imposes equation (4.1) only on the exact coincidence-flat
+  `𝒮₀` subtype, with one positive order and one positive factorial-growth sequence.
+- Its indexed Schwinger family still supplies extra ambient full-Schwartz tempered extensions, so it
+  is explicitly a strengthening rather than the final carrier-exact source formulation.
+- The control and growth data remain uninhabited, are not identified with the different Mathlib
+  seminorm sum, and construct no family, reconstruction, theory, or mass gap.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

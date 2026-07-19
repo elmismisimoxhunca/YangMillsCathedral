@@ -106,7 +106,8 @@ Printed journal pages are authoritative. Text line numbers below refer to the re
   states the corrected reconstruction theorem. The formulas were visually checked on PDF page 7.
 - The visually verified `(E0′)` condition requires `S₀ = 1`, each `Sₙ` in the indicated distribution
   space, a fixed order `s ∈ ℤ₊`, and a factorial-growth sequence `{σₙ}` such that
-  `|Sₙ(f)| ≤ σₙ |f|ₙ,ₛ` for all positive `n` and Schwartz test functions `f` on `ℝ⁴ⁿ`.
+  `|Sₙ(f)| ≤ σₙ |f|ₙ,ₛ` for all positive `n` and coincidence-flat tests
+  `f ∈ 𝒮₀(ℝ⁴ⁿ)`.
 - The corrected theorem states that `(E0′)` (or `(E0″)`) together with `(E1)–(E4)` gives the Euclidean
   Green's functions of a uniquely determined Wightman quantum field theory satisfying `R0–R5` and
   an additional Wightman linear-growth condition `(R0′)`.
@@ -131,9 +132,14 @@ The original OS-I sufficiency theorem must never be encoded using only ordinary 
 canonical reconstruction requirement must incorporate the OS-II-strength linear-growth condition
 or another later authoritative theorem with every hypothesis explicit.
 
-The scans now clear the source-acquisition gate for defining an OS-II-strength requirement surface.
-They do not themselves provide a Yang–Mills model, prove existence, or justify identifying Euclidean
-and Minkowski data definitionally.
+The scans now support `OSIIAmbientExtensionLinearGrowthData`: equation (2.1)'s exact flattened
+coordinate-square weighted multi-index control is specified by its least-upper-bound universal
+property, and equation (4.1) is imposed on the exact coincidence-flat `𝒮₀` subtype using one positive
+order and factorial-growth sequence. The indexed Schwinger family still supplies extra ambient
+full-Schwartz tempered extensions, so this is an explicit strengthening rather than the final
+carrier-exact source family. It remains separate from the Mathlib-seminorm candidate. The scans do not
+themselves provide a Yang–Mills model, prove existence, or justify identifying Euclidean and
+Minkowski data definitionally.
 
 ## Artifact chain
 

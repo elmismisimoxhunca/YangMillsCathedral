@@ -231,6 +231,8 @@ import YangMills.Euclidean.OSOrderedDerivativeCarrier
 import YangMills.Euclidean.OSOrderedDerivativeCarrierProbes
 import YangMills.Euclidean.OSOrderedCoordinateJets
 import YangMills.Euclidean.OSOrderedCoordinateJetsProbes
+import YangMills.Euclidean.OSIILinearGrowth
+import YangMills.Euclidean.OSIILinearGrowthProbes
 import YangMills.Euclidean.OSOrderedDerivativeClosed
 import YangMills.Euclidean.OSOrderedDerivativeClosedProbes
 import YangMills.Euclidean.OSOrderedFourDimensionalMultiIndex

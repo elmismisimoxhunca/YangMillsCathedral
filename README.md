@@ -134,8 +134,12 @@ real-valued Euclidean action proved to integrate that canonical scalar relative 
 explicitly designated Borel measure and positive coupling (without claiming a general Hodge-star
 theorem or metric volume), are implemented. Scalar positive-arity tempered Schwinger distributions,
 normalized zero-point data, and a concrete fixed-order factorial-growth estimate over Mathlib
-Schwartz seminorms are also implemented as preliminary regularity infrastructure; they are not yet
-identified with OS-II `(E0′)`. Exact positive-arity Schwartz permutation pullback and scalar
+Schwartz seminorms are also implemented as preliminary regularity infrastructure and remain distinct
+from OS-II's printed norm. An ambient-extension `(E0′)` strengthening now characterizes equation
+(2.1)'s flattened-coordinate weighted multi-index control by its exact least-upper-bound property
+and imposes equation (4.1) only on the coincidence-flat `𝒮₀` subtype with one positive order and
+factorial-growth sequence. Because its family still supplies extra full-Schwartz tempered
+extensions, the carrier-exact source formulation remains open; no control or family is constructed. Exact positive-arity Schwartz permutation pullback and scalar
 Schwinger symmetry `(E3)` are implemented separately. Proper-Euclidean rigid motions, their exact
 Schwartz pullback, and scalar covariance `(E1)` are also implemented. Exact first-coordinate time
 reflection and strict-positive-time topological-support infrastructure are present, together with

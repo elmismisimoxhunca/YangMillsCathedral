@@ -337,7 +337,10 @@ committed before higher layers depend on it.
   around one coherent normalized family in a non-source-facing candidate record.
 - [x] Define source-facing `(E4)` on every exact four-dimensional source pair and normalized nonzero
   spatial direction, and prove it restricts exactly to every strict-direction predicate.
-- [ ] Prove the source-facing OS-II `(E0′)` bridge and define complete Euclidean/Schwinger data.
+- [x] Define equation (2.1)'s exact flattened-coordinate weighted multi-index least-upper-bound
+  control and an ambient-tempered-extension strengthening of equation (4.1) on exact `𝒮₀` tests.
+- [ ] Define the carrier-exact OS-II `(E0′)` family without requiring full-Schwartz extensions,
+  assemble exact `(E0′)`–`(E4)` Euclidean/Schwinger data, and state the corrected reconstruction bridge.
 - [x] Define proper-orthochronous Lorentz/Poincaré affine kinematics independently of the Euclidean
   Schwinger surface.
 - [x] Define a topological-group lift/pre-cover interface and one strongly continuous unitary
@@ -465,7 +468,7 @@ committed before higher layers depend on it.
     same-coupling regular-variation surfaces, with a required nonzero interpreted `F² × F²`
     zeroth-order term with nonzero same-running-coupling exponent and nonzero leading scaling
     distribution.
-  - [ ] Replace the remaining OS-II `(E0′)`/reconstruction and Poincaré-cover debt; add source-faithful
+  - [ ] Integrate exact OS-II `(E0′)` and replace the remaining reconstruction and Poincaré-cover debt; add source-faithful
     curvature-polynomial/OPE mixing, group-normalized perturbative coefficients/remainders, trace
     anomaly, and final universal compact-simple-group quantification.
 - [x] Define the exact Clay endpoint predicate, reject every lower dimension `1`–`3`, and prove no
