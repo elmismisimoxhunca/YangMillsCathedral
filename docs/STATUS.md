@@ -2931,6 +2931,21 @@ Implemented and verified:
   remain open.
 - No `(E2)` datum, reconstruction, quantum theory, existence theorem, or mass gap is constructed.
 
+## 2026-07-19 — one-hundred-fifty-sixth stone: finite-stage local convexity
+
+Implemented and verified:
+
+- Every exact finite source stage inherits named `IsTopologicalAddGroup`, `ContinuousSMul ℂ`, and
+  `LocallyConvexSpace ℝ` structures from the separate scalar and finite dependent product of exact
+  positive-arity source spaces.
+- Hostile probes install each aggregate and expose joint stage addition, joint complex scalar
+  continuity, actual convex zero-neighborhood refinements, and the nonzero independent scalar even
+  at the empty positive-arity stage.
+- These are finite-product structures only. They do not establish joint sequence addition, sequence
+  local convexity, direct-sum identification, completion/tensor topology, `(E2)`, OS-II growth or
+  reconstruction.
+- No `(E2)` datum, reconstruction, quantum theory, existence theorem, or mass gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

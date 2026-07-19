@@ -175,7 +175,9 @@ and generate a named finite-stage final topology with its exact universal proper
 sequences are also algebraically equivalent to the separate scalar times a dependent finitely
 supported source-space family, with named additive-group and complex-module structures and exact
 scalar/component laws. Every generating finite-stage extension is now proved complex-linear and
-packaged as a continuous complex-linear map into the named final topology. The topology is also
+packaged as a continuous complex-linear map into the named final topology. Every finite stage has
+named topological additive-group, continuous complex scalar, and real locally convex structures,
+including the independent scalar at the empty positive stage. The topology is also
 proved to be the quotient of the disjoint union of all finite stages. Local compactness of `ℂ`
 yields joint complex scalar continuity; negation, finite-union stage addition, and addition in each
 sequence variable separately are continuous. Joint addition remains conditional on the unproved
