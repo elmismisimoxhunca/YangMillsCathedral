@@ -2674,6 +2674,31 @@ Implemented and verified:
 - No `(E2)` datum, OS-II reconstruction, quantum theory, existence theorem, or mass gap is
   constructed.
 
+## 2026-07-19 — one-hundred-forty-fourth stone: canonical four-dimensional multi-indices
+
+Implemented and verified:
+
+- `fourDimensionalPointCoordinateEquiv` flattens the exact dependent point/coordinate label to
+  `Fin (4n)` in point-major order, with the proved arithmetic law `(i, μ) ↦ μ + 4i`.
+- `FourDimensionalMultiIndex` is a natural-valued function on that exact flattened coordinate type;
+  `fourDimensionalMultiIndexOrder` is its finite sum.
+- `fourDimensionalMultiIndexOccurrenceEquiv` identifies the `αᵢ` finite occurrences of every
+  coordinate `i` with exactly `|α|` derivative slots. The repeated-coordinate and basis-direction
+  maps are proved to return the exact designated coordinate at every occurrence.
+- `fourDimensionalMultiIndexDerivative` evaluates the iterated Fréchet derivative on that canonical
+  repeated basis tuple, and `IsOSPositiveTimeOrderedMultiIndexVanishing` records its exterior
+  vanishing.
+- `frechet_implies_fourDimensionalMultiIndexVanishing` proves the established Fréchet candidate
+  implies every such canonical four-dimensional multi-index condition.
+- Hostile probes lock point-major flattening, every multiplicity occurrence, the exact iterated-
+  derivative value, zero-arity evaluation, zero total order, the exact one-way carrier bridge, and
+  rejection by any nonzero exterior multi-index jet.
+- This is only a partial comparison with OS-I printed p. 86. Permutation symmetry/order
+  independence, the converse from arbitrary coordinate tuples, and identification of the canonical
+  repeated-basis derivative with the source's recursively interpreted `D^α` remain open.
+- No exact OS source-space identity, `(E2)` datum, reconstruction, quantum theory, existence theorem,
+  or mass gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

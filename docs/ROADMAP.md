@@ -192,9 +192,14 @@ committed before higher layers depend on it.
 - [x] Prove the dimension-generic Fréchet candidate is closed in the exact ambient Schwartz topology
   by expressing it as an intersection of continuous coordinate-directional jet kernels, and package
   its forgetful map as a closed embedding with hostile limit probes.
-- [ ] Complete the remaining exact four-dimensional multi-index comparison: flatten coordinates and
-  identify ordered repeated basis directions, symmetry, and multiplicity with OS-I's `D^α`; only
-  after that comparison identify the candidate closedness theorem with the printed source space,
+- [x] Specialize to four dimensions, flatten `(point, coordinate)` exactly as `μ + 4i`, define
+  natural-valued multi-indices on `Fin (4n)`, enumerate every coordinate occurrence with exact
+  multiplicity, and prove the established Fréchet candidate implies every canonical repeated-basis
+  multi-index derivative vanishes.
+- [ ] Complete the remaining exact four-dimensional multi-index comparison: prove permutation
+  symmetry/order independence and the converse from arbitrary coordinate tuples, then identify the
+  canonical repeated-basis derivative with OS-I's recursively interpreted `D^α`; only after that
+  comparison identify the candidate closedness theorem with the printed source space,
   then establish the strict subspace's sufficiency/density/completion relation; install the
   finite-sequence direct-sum topology while keeping the positive-half-space completed tensor product
   distinct; only then define source-facing `(E2)` on the constructed product and reflected-star

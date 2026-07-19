@@ -173,6 +173,8 @@ import YangMills.Euclidean.OSOrderedCoordinateJets
 import YangMills.Euclidean.OSOrderedCoordinateJetsProbes
 import YangMills.Euclidean.OSOrderedDerivativeClosed
 import YangMills.Euclidean.OSOrderedDerivativeClosedProbes
+import YangMills.Euclidean.OSOrderedFourDimensionalMultiIndex
+import YangMills.Euclidean.OSOrderedFourDimensionalMultiIndexProbes
 import YangMills.Euclidean.SchwingerTestSequence
 import YangMills.Euclidean.SchwingerTestSequenceProbes
 import YangMills.Euclidean.SchwingerConfigurationConcatenation
