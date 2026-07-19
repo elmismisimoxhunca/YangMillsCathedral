@@ -412,6 +412,14 @@ spacelike pair. It separately proves that a nontrivial periodic one-site holonom
 that the analytic Wightman tube is nonempty. These are boundary facts, not a one-dimensional theory
 or a route to the four-dimensional contract.
 
+The first dimension-two consistency layer proves the opposite local nondegeneracy: an explicit
+continuous area two-form evaluates to one, a normalized spatial direction and nonzero spacelike-
+separated Schwartz tests exist, and a concrete `2 × 2` periodic one-link gauge field realizes every
+prescribed group element as one selected plaquette holonomy. Every admissible nontrivial plaquette
+potential therefore has a concrete strictly positive local plaquette density. These remain
+kinematic and finite-cutoff witnesses—not a continuum two-dimensional Yang–Mills theory, OS datum,
+Wightman theory, or mass-gap result—and dimension two is proved distinct from Clay's dimension four.
+
 Primary OS-I and correcting OS-II article scans, Wightman's 1956 paper, and the corrected Princeton
 edition of Streater–Wightman are hash-pinned with exact text extractions. Load-bearing OS-II and
 Wightman-axiom pages were visually verified. Wilson 1974 and Osterwalder–Seiler 1978 lattice sources

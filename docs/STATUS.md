@@ -3488,6 +3488,23 @@ Implemented and verified:
 - Naturality and chart regularity are hypotheses, not constructed evidence. A canonical manifold
   positive-degree derivative and descended adjoint-bundle Bianchi theorem remain open.
 
+## 2026-07-19 — one-hundred-eighty-seventh stone: dimension-two nondegeneracy
+
+Implemented and verified:
+
+- `twoDimensionalAreaForm` is an explicit continuous `dx⁰ ∧ dx¹`; it evaluates to one on the
+  ordered standard basis and is therefore nonzero.
+- Dimension two has an explicit normalized spatial direction, nonzero spacelike-separated Schwartz
+  tests, a nonempty backward tube, and an ordered time/spatial plaquette plane.
+- A concrete `2 × 2` periodic one-link gauge field realizes every prescribed group element as the
+  holonomy of one selected elementary plaquette.
+- Every admissible nontrivial plaquette potential therefore yields a concrete selected plaquette
+  with strictly positive local action density.
+- Hostile probes reject zero area, malformed holonomy, identity replacement of a nonidentity link,
+  extension of the dimension-one curvature degeneracy, and substitution of dimension two for four.
+- These are kinematic and finite-cutoff witnesses only. No two-dimensional continuum Yang–Mills,
+  OS/Wightman theory, continuum bridge, or mass gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

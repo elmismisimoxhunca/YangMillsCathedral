@@ -42,6 +42,12 @@ checker only through an explicit scaling/continuum-limit bridge that preserves i
 observables and the required continuum axioms. Wilson's own caveats about lost continuum symmetry
 and the difficulty of the limit are retained as anti-vacuity constraints.
 
+The dimension-two consistency layer now constructs a concrete `2 × 2` periodic one-link field whose
+selected elementary plaquette realizes any prescribed group element. Combined with the already
+required nontrivial plaquette potential, this gives a strictly positive selected local density. This
+is a derived finite-cutoff consistency witness, not a claim printed by Wilson and not a continuum
+model.
+
 No confinement theorem, continuum limit, Yang–Mills existence theorem, or four-dimensional mass gap
 is imported from this paper.
 

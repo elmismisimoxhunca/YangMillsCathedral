@@ -435,6 +435,10 @@ committed before higher layers depend on it.
   plaquette action vanish, spatial clustering/spacelike pairs are absent, but global periodic
   holonomy and analytic tube geometry can remain. This is not a one-dimensional theory witness.
 - [ ] Add rigorous `d = 2` consistency models.
+  - [x] Prove first nondegeneracy witnesses: a nonzero area two-form, spatial ray, nonzero spacelike
+    tests, and a concrete positive-density elementary plaquette for every admissible potential.
+  - [ ] Add source-backed continuum two-dimensional Yang–Mills consistency evidence distinct from
+    the finite-cutoff and kinematic witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.
 - [ ] Add the full `d = 4` Clay acceptance contract.
 - [ ] Prove that no lower-dimensional witness is silently accepted as 4D.

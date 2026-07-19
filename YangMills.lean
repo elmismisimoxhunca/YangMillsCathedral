@@ -10,6 +10,8 @@ import YangMills.Foundation.Signatures
 import YangMills.Foundation.SignaturesProbes
 import YangMills.Dimensions.OneDimensionalBoundary
 import YangMills.Dimensions.OneDimensionalBoundaryProbes
+import YangMills.Dimensions.TwoDimensionalNondegeneracy
+import YangMills.Dimensions.TwoDimensionalNondegeneracyProbes
 import YangMills.Mathematics.LieAlgebraSimplicity
 import YangMills.Mathematics.LieAlgebraSimplicityProbes
 import YangMills.Mathematics.LieGroupAdjoint
