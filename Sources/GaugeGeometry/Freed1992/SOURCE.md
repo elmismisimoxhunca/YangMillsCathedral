@@ -106,9 +106,11 @@ signs for every `(n+1) → (n+2)` step, including an exact `2 → 3` specializat
 triangular expression is proved equal to the earlier one-form Cartan formula, and bidirectional
 conversions preserve the same smooth degree-two derivative carrier. Separately, pinned Mathlib's
 within-set `d² = 0` theorem now proves that the positive-degree Cartan expression of the same first
-normed-space derivative vanishes, including the exact `1 → 2 → 3` endpoint. The arbitrary-manifold
-certificate remains supplied data: existence, chart independence, arbitrary-manifold `d²`, and
-graded Leibniz are not claimed. Given the original
+normed-space derivative vanishes, including the exact `1 → 2 → 3` endpoint. The actual
+finite-dimensional group Lie-algebra coordinate bracket is now tied to the same bounded bilinear
+map used for Mathlib's two-input and self-bracket derivative rules. The arbitrary-manifold
+certificate remains supplied data: existence, chart independence, arbitrary-manifold `d²`, and the
+exterior-derivative graded Leibniz identity are not claimed. Given the original
 one-form certificate for the same smooth principal connection, `curvatureForm` derives exactly
 (1.13).
 The set-level `AdjointBundle` implements Freed's displayed `g_P = P ×_G g` as the orbit quotient

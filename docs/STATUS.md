@@ -3305,6 +3305,23 @@ Implemented and verified:
 - This proves normed-space local-model mathematics only. It does not provide an arbitrary-manifold
   exterior derivative, chart-independent `d²`, covariant `D²`, graded Leibniz, or Bianchi.
 
+## 2026-07-19 — one-hundred-seventy-seventh stone: exact Lie-bracket differential calculus
+
+Implemented and verified:
+
+- `groupLieAlgebraCoordinateBracketCLM_apply` proves that the existing bounded bilinear coordinate
+  map is exactly the transported Mathlib tangent Lie bracket.
+- `groupLieAlgebraCoordinateBracket_hasFDerivAt` derives the bracketed function's derivative from
+  the two exact input derivatives using Mathlib's bilinear calculus; no separate differentiability
+  witness or auxiliary bracket is accepted.
+- `groupLieAlgebraCoordinateBracket_fderiv_apply` evaluates the exact two-term product rule in an
+  arbitrary source direction, and `groupLieAlgebraCoordinateSelfBracket_fderiv_apply` specializes
+  it to the same function in both slots.
+- Hostile probes reject an unrelated continuous bilinear bracket map and any derivative value that
+  differs from the canonical two-term result.
+- This is finite-dimensional normed-coordinate infrastructure. The exterior derivative of the
+  bracket wedge, graded Leibniz, manifold/covariant transport, and Bianchi remain unproved.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
