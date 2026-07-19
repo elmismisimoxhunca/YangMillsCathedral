@@ -196,10 +196,15 @@ finite sum, and the paper's coordinatewise continuity criterion is proved. The H
 convex final topology is therefore selected as the source-facing locally convex direct-sum topology,
 with named topological additive-group, complex scalar, real local-convexity and Hausdorff structures
 and continuously linear scalar/source injections. The raw topological final topology remains a
-separately named auxiliary topology and equality is not asserted or required for this selection. Proper enlargement and sufficiency/density/completion
-comparisons with the earlier strict-support subspace, the distinct completed-tensor topology, and
+separately named auxiliary topology and equality is not asserted or required for this selection. A
+reusable uninhabited completed-projective-tensor interface now requires Hausdorff locally convex
+factors and an additive-uniform complete carrier, jointly continuous noncollapsing pure
+tensors, dense pure span, and continuous-linear extension into same-universe complete targets;
+uniqueness is derived from density. Proper enlargement and sufficiency/density/completion
+comparisons with the earlier strict-support subspace, construction of the half-line quotient and
+source-specific completed-tensor carrier, and
 OS-II-strength reconstruction remain open. `(E2)` remains absent pending those comparisons, the
-distinct completed tensor product for positive-half-space tests, and the source-facing
+separately constructed completed tensor product for positive-half-space tests, and the source-facing
 reflection-positivity inequality; the algebraic finite-sequence carrier
 and product are implemented with exact positive and natural-arity support, with its scalar zero-point component represented faithfully as a
 zero-arity Schwartz test. Exact configuration split/merge and the raw pointwise tensor kernel are

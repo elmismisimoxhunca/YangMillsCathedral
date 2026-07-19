@@ -248,9 +248,14 @@ committed before higher layers depend on it.
   convex direct-sum topology with named topological/local-convex/Hausdorff structures and bundled
   natural-injection CLMs, while keeping the raw topological final topology separately named and
   without asserting equality.
+- [x] Isolate missing completed projective tensor-product mathematics in a typed interface requiring
+  Hausdorff locally convex complex factors, an additive-uniform complete carrier, jointly continuous
+  noncollapsing pure tensors, dense pure span, and continuous-linear extension into same-universe
+  complete targets, with uniqueness derived from density.
 - [ ] Establish the earlier strict-support subspace's sufficiency/density/completion relation to the
-  exact positive-arity OS-I source spaces while keeping the positive-half-space completed tensor
-  product distinct; only then define source-facing `(E2)`
+  exact positive-arity OS-I source spaces; construct the half-line quotient and specialize the
+  completed tensor interface while keeping it separate from the direct sum; only then define
+  source-facing `(E2)`
   on the constructed product and reflected-star operation.
 - [x] Construct exact simultaneous Euclidean translations on Schwartz tests and finite sequences,
   with inverse and support preservation, as algebraic `(E4)` infrastructure.

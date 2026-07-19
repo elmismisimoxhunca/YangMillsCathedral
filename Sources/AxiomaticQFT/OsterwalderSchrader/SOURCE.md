@@ -71,8 +71,12 @@ Printed journal pages are authoritative. Text line numbers below refer to the re
   exact finite sum, and the individual-injection continuity criterion is proved equivalent to
   continuity from the Hausdorff locally convex final topology. That topology is therefore the
   source-facing locally convex direct-sum topology. The raw topological final topology remains
-  separately named and is not identified with it; the completed positive-half-space tensor product
-  remains unconstructed and separate by definition.
+  separately named and is not identified with it. A general completed projective tensor-product
+  acceptance interface now records Hausdorff local convexity of both factors, additive-uniform
+  completeness of the carrier, joint pure-tensor continuity, dense span, noncollapse, and
+  same-universe extension with uniqueness derived from density, but no source-facing half-line quotient
+  or positive-half-space completion is constructed; that tensor topology remains separate by
+  definition.
 - Printed pp. 84–85: the original proposal lists `(E0)` temperedness, `(E1)` Euclidean covariance,
   `(E2)` positivity, `(E3)` symmetry, and `(E4)` cluster property.
 - Printed pp. 87–88; `os1_primary_scan.txt` lines 237–277: the axioms and original `E → R` / `R → E`

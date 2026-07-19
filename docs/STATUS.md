@@ -3060,6 +3060,25 @@ Implemented and verified:
   OS-II growth and reconstruction remain open.
 - No `(E2)` datum, reconstruction, quantum theory, existence theorem, or mass gap is constructed.
 
+## 2026-07-19 — one-hundred-sixty-third stone: completed projective tensor interface
+
+Implemented and verified:
+
+- `CompletedComplexProjectiveTensorProductData` isolates missing general mathematics as a typed
+  interface rather than an arbitrary proposition or project axiom.
+- Both factors must be Hausdorff real-locally-convex topological complex modules. A candidate
+  carrier must be complete for an additive-compatible uniformity, receive a jointly continuous
+  bilinear pure-tensor map, have dense pure-tensor span, and preserve every pair of nonzero factors.
+- Every jointly continuous bilinear map into a same-universe additive-uniform complete Hausdorff
+  locally convex target must extend continuously linearly with exact agreement on pure tensors;
+  uniqueness is derived from dense pure span and target Hausdorffness.
+- Derived theorems prove zero-factor laws and nontriviality from explicit nonzero factors.
+- Hostile probes reject one-factor collapse, zero pure tensors, nondense disconnected complements,
+  nonexact lifts, nonunique extensions, and proper self-projections.
+- No interface inhabitant is constructed. The OS positive-half-line quotient, spatial factor,
+  iterated source-specific completion, and bridges remain open and separate from the direct sum.
+- No `(E2)` datum, reconstruction, quantum theory, existence theorem, or mass gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

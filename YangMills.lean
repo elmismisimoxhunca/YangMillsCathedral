@@ -45,6 +45,8 @@ import YangMills.Mathematics.SchwartzDirectionalPermutation
 import YangMills.Mathematics.SchwartzDirectionalPermutationProbes
 import YangMills.Mathematics.SchwartzHausdorff
 import YangMills.Mathematics.SchwartzHausdorffProbes
+import YangMills.Mathematics.CompletedProjectiveTensorProduct
+import YangMills.Mathematics.CompletedProjectiveTensorProductProbes
 import YangMills.Mathematics.SchwartzTensorProduct
 import YangMills.Mathematics.SchwartzTensorProductProbes
 import YangMills.Mathematics.FiniteConfigurationSchwartzTensor
