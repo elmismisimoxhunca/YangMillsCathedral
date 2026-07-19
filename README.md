@@ -438,6 +438,16 @@ It imports no lattice regulator, four-dimensional OS spatial-`ℝ³` tensor surf
 running-coupling data, and no inhabitant is constructed. The `CurrentStrength` qualifier retains the
 known OS-II/source-space reconstruction and genuine Poincaré-cover debts.
 
+A parallel uninhabited four-dimensional current-strength core now fixes coordinate `ℝ⁴`, the
+canonical flat metric and coordinate Lebesgue measure, then dependently joins the same classical,
+strict Euclidean, Wightman, strict Wick, observable, `F²`, stress/translation, and same-PVM gap
+surfaces at the actual Clay dimension. Unlike the lower-dimensional core it also requires the
+preliminary four-dimensional pure-gauge running-coupling/beta normal form indexed by the exact
+compact-simple gauge certificate. This is still not the final Clay contract: corrected OS
+reconstruction, genuine Poincaré covering, source-faithful curvature-polynomial observables,
+renormalized OPE coefficients/remainders and trace-anomaly semantics remain open. No inhabitant is
+constructed.
+
 Primary OS-I and correcting OS-II article scans, Wightman's 1956 paper, and the corrected Princeton
 edition of Streater–Wightman are hash-pinned with exact text extractions. Load-bearing OS-II and
 Wightman-axiom pages were visually verified. Wilson 1974 and Osterwalder–Seiler 1978 lattice sources

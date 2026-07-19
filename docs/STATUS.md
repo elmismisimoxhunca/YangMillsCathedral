@@ -3574,6 +3574,26 @@ Implemented and verified:
 - The designated action measure remains exactly coordinate Lebesgue measure. A general theorem
   identifying Mathlib's metric-induced Riemannian volume with this measure remains open.
 
+## 2026-07-19 — one-hundred-ninety-second stone: four-dimensional continuum core
+
+Implemented and verified:
+
+- `FourDimensionalCurrentStrengthContinuumCoreAcceptanceData` is an uninhabited integration surface
+  hard-wired to canonical-flat coordinate `ℝ⁴` and coordinate Lebesgue action measure.
+- It joins one compact-simple gauge/classical curvature/action chain to one strict Euclidean family,
+  one exact Wightman/correlator chain, and strict ordered Wick coherence.
+- The same covariant local family contains the nontrivial Wightman field, exact `F²` interpretation,
+  and local stress tensor; stress charges, Ward identities and the physical gap use the exact same
+  representation, domain and joint translation PVM.
+- Unlike the lower-dimensional core, it requires the preliminary four-dimensional pure-gauge
+  running-coupling/beta normal form indexed by the exact compact-simple gauge certificate.
+- Hostile projections distinguish all three lower dimensions, expose canonical metric/measure,
+  reject disconnected spectra/families, and require nonconstant running coupling, nonzero Wightman
+  and `F²` actions, nonzero time generator, and finite-positive same-PVM gap semantics.
+- No inhabitant is constructed. Corrected OS reconstruction, genuine Poincaré covering,
+  source-faithful curvature-polynomial/OPE mixing, group-normalized coefficients and perturbative
+  remainders, trace anomaly, and the final universal Clay proposition remain open.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

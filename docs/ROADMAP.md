@@ -455,6 +455,12 @@ committed before higher layers depend on it.
     source-facing OS-II/OS-I reconstruction and genuine covering interfaces before calling the
     three-dimensional contract complete.
 - [ ] Add the full `d = 4` Clay acceptance contract.
+  - [x] Add an uninhabited current-strength core on canonical coordinate `ℝ⁴`, joining the exact
+    classical/action, strict Euclidean/Wick, Wightman/same-PVM gap, coherent `F²` observable,
+    stress/translation Ward, and compact-simple-indexed running-coupling surfaces.
+  - [ ] Replace all current-strength OS/reconstruction and Poincaré-cover debt; add source-faithful
+    curvature-polynomial/OPE mixing, group-normalized perturbative coefficients/remainders, trace
+    anomaly, and final universal compact-simple-group quantification.
 - [ ] Prove that no lower-dimensional witness is silently accepted as 4D.
 - [ ] Publish the final acceptance proposition without asserting an inhabitant.
 
