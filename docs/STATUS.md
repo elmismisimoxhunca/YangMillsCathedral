@@ -3043,6 +3043,23 @@ Implemented and verified:
   source product/involution, `(E2)`, OS-II growth and reconstruction remain open.
 - No `(E2)` datum, reconstruction, quantum theory, existence theorem, or mass gap is constructed.
 
+## 2026-07-19 — one-hundred-sixty-second stone: direct-sum named structures and injections
+
+Implemented and verified:
+
+- The source-facing direct-sum topology now exposes named `ContinuousAdd`, `ContinuousSMul ℂ`,
+  `IsTopologicalAddGroup`, `LocallyConvexSpace ℝ`, and `T2Space` structures under its own name.
+- The separate scalar and every positive-arity natural injection are bundled as exact continuous
+  complex-linear maps into that topology.
+- Application theorems prove the CLM bundles retain the exact algebraic injections.
+- Hostile probes install the named aggregates, expose genuine joint operations, require local
+  convexity and Hausdorffness, retain the scalar coordinate, and retain the explicit nonzero source
+  test through its bundled injection.
+- This supplies canonical source-facing topology plumbing only. Strict-carrier density/completion,
+  the distinct completed positive-half-space tensor topology, source product/involution, `(E2)`,
+  OS-II growth and reconstruction remain open.
+- No `(E2)` datum, reconstruction, quantum theory, existence theorem, or mass gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

@@ -35,6 +35,10 @@ noncomputable local instance sourceContinuousSMulForProbes (arity : PositiveArit
     ContinuousSMul ℂ (OSPositiveTimeOrderedFourDimensionalSourceSpace arity) :=
   OSPositiveTimeOrderedFourDimensionalSourceSpace.continuousSMul arity
 
+noncomputable local instance sequenceTopologyForProbes :
+    TopologicalSpace OSPositiveTimeOrderedFourDimensionalTestSequence :=
+  osPositiveTimeOrderedFourDimensionalLocallyConvexDirectSumTopology
+
 noncomputable local instance sequenceAddCommGroupForProbes :
     AddCommGroup OSPositiveTimeOrderedFourDimensionalTestSequence :=
   osPositiveTimeOrderedFourDimensionalSequenceAddCommGroup
@@ -107,6 +111,56 @@ theorem exact_source_topology_selection :
     osPositiveTimeOrderedFourDimensionalLocallyConvexDirectSumTopology =
       osPositiveTimeOrderedFourDimensionalLocallyConvexFinalTopology :=
   rfl
+
+/-- Installing the source-facing aggregate exposes genuine joint addition and complex scalar
+continuity under the direct-sum name. -/
+theorem exact_named_topological_operations :
+    letI : IsTopologicalAddGroup OSPositiveTimeOrderedFourDimensionalTestSequence :=
+      osPositiveTimeOrderedFourDimensionalLocallyConvexDirectSumIsTopologicalAddGroup
+    letI : ContinuousSMul ℂ OSPositiveTimeOrderedFourDimensionalTestSequence :=
+      osPositiveTimeOrderedFourDimensionalLocallyConvexDirectSumContinuousSMul
+    Continuous (fun p : OSPositiveTimeOrderedFourDimensionalTestSequence ×
+      OSPositiveTimeOrderedFourDimensionalTestSequence => p.1 + p.2) ∧
+    Continuous (fun p : ℂ × OSPositiveTimeOrderedFourDimensionalTestSequence => p.1 • p.2) := by
+  letI : IsTopologicalAddGroup OSPositiveTimeOrderedFourDimensionalTestSequence :=
+    osPositiveTimeOrderedFourDimensionalLocallyConvexDirectSumIsTopologicalAddGroup
+  letI : ContinuousSMul ℂ OSPositiveTimeOrderedFourDimensionalTestSequence :=
+    osPositiveTimeOrderedFourDimensionalLocallyConvexDirectSumContinuousSMul
+  exact ⟨continuous_add, continuous_smul⟩
+
+/-- The source-facing topology has both actual convex zero-neighborhoods and Hausdorff separation. -/
+theorem exact_named_locallyConvex_hausdorff :
+    letI : IsTopologicalAddGroup OSPositiveTimeOrderedFourDimensionalTestSequence :=
+      osPositiveTimeOrderedFourDimensionalLocallyConvexDirectSumIsTopologicalAddGroup
+    letI : LocallyConvexSpace ℝ OSPositiveTimeOrderedFourDimensionalTestSequence :=
+      osPositiveTimeOrderedFourDimensionalLocallyConvexDirectSumLocallyConvexSpace
+    letI : T2Space OSPositiveTimeOrderedFourDimensionalTestSequence :=
+      osPositiveTimeOrderedFourDimensionalLocallyConvexDirectSumT2Space
+    LocallyConvexSpace ℝ OSPositiveTimeOrderedFourDimensionalTestSequence ∧
+      T2Space OSPositiveTimeOrderedFourDimensionalTestSequence := by
+  letI : IsTopologicalAddGroup OSPositiveTimeOrderedFourDimensionalTestSequence :=
+    osPositiveTimeOrderedFourDimensionalLocallyConvexDirectSumIsTopologicalAddGroup
+  letI : LocallyConvexSpace ℝ OSPositiveTimeOrderedFourDimensionalTestSequence :=
+    osPositiveTimeOrderedFourDimensionalLocallyConvexDirectSumLocallyConvexSpace
+  letI : T2Space OSPositiveTimeOrderedFourDimensionalTestSequence :=
+    osPositiveTimeOrderedFourDimensionalLocallyConvexDirectSumT2Space
+  exact ⟨inferInstance, inferInstance⟩
+
+/-- The bundled scalar injection preserves the exact scalar coordinate. -/
+theorem exact_scalar_continuousLinearMap (c : ℂ) :
+    (osPositiveTimeOrderedFourDimensionalScalarNaturalInjectionContinuousLinearMap c).zeroPoint =
+      c :=
+  rfl
+
+/-- The bundled positive-arity injection preserves the explicit nonzero source test. -/
+theorem nonzero_source_continuousLinearMap_retained :
+    ((osPositiveTimeOrderedFourDimensionalSourceNaturalInjectionContinuousLinearMap
+      PositiveArity.one
+      OSPositiveTimeOrderedFourDimensionalSourceSpace.positiveTimeBump).component
+        PositiveArity.one).toSchwartz ≠ 0 := by
+  rw [osPositiveTimeOrderedFourDimensionalSourceNaturalInjectionContinuousLinearMap_apply,
+    osPositiveTimeOrderedFourDimensionalSourceNaturalInjection_component_same]
+  exact OSPositiveTimeOrderedFourDimensionalSourceSpace.positiveTimeBump_toSchwartz_ne_zero
 
 end
 

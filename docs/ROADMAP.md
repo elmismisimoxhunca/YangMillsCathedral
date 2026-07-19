@@ -245,7 +245,8 @@ committed before higher layers depend on it.
 - [x] Construct OS-I's separate scalar and every positive-arity natural injection, prove exact
   finite-stage decomposition and injection continuity, derive the paper's coordinatewise universal
   property, and designate the Hausdorff locally convex final topology as the source-facing locally
-  convex direct-sum topology while keeping the raw topological final topology separately named and
+  convex direct-sum topology with named topological/local-convex/Hausdorff structures and bundled
+  natural-injection CLMs, while keeping the raw topological final topology separately named and
   without asserting equality.
 - [ ] Establish the earlier strict-support subspace's sufficiency/density/completion relation to the
   exact positive-arity OS-I source spaces while keeping the positive-half-space completed tensor

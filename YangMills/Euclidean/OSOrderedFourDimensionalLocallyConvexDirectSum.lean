@@ -373,6 +373,85 @@ noncomputable def osPositiveTimeOrderedFourDimensionalLocallyConvexDirectSumTopo
     TopologicalSpace OSPositiveTimeOrderedFourDimensionalTestSequence :=
   osPositiveTimeOrderedFourDimensionalLocallyConvexFinalTopology
 
+/-- Named joint addition continuity for the source-facing direct-sum topology. -/
+@[reducible]
+noncomputable def osPositiveTimeOrderedFourDimensionalLocallyConvexDirectSumContinuousAdd :
+    @ContinuousAdd OSPositiveTimeOrderedFourDimensionalTestSequence
+      osPositiveTimeOrderedFourDimensionalLocallyConvexDirectSumTopology inferInstance :=
+  osPositiveTimeOrderedFourDimensionalLocallyConvexFinalContinuousAdd
+
+/-- Named joint complex scalar continuity for the source-facing direct-sum topology. -/
+@[reducible]
+noncomputable def osPositiveTimeOrderedFourDimensionalLocallyConvexDirectSumContinuousSMul :
+    @ContinuousSMul ℂ OSPositiveTimeOrderedFourDimensionalTestSequence inferInstance inferInstance
+      osPositiveTimeOrderedFourDimensionalLocallyConvexDirectSumTopology :=
+  osPositiveTimeOrderedFourDimensionalLocallyConvexFinalContinuousSMul
+
+/-- Named topological additive-group structure for the source-facing direct sum. -/
+@[reducible]
+noncomputable def osPositiveTimeOrderedFourDimensionalLocallyConvexDirectSumIsTopologicalAddGroup :
+    @IsTopologicalAddGroup OSPositiveTimeOrderedFourDimensionalTestSequence
+      osPositiveTimeOrderedFourDimensionalLocallyConvexDirectSumTopology inferInstance :=
+  osPositiveTimeOrderedFourDimensionalLocallyConvexFinalIsTopologicalAddGroup
+
+/-- Named real local convexity for the source-facing direct sum. -/
+@[reducible]
+noncomputable def osPositiveTimeOrderedFourDimensionalLocallyConvexDirectSumLocallyConvexSpace :
+    @LocallyConvexSpace ℝ OSPositiveTimeOrderedFourDimensionalTestSequence inferInstance
+      inferInstance inferInstance inferInstance
+      osPositiveTimeOrderedFourDimensionalLocallyConvexDirectSumTopology :=
+  osPositiveTimeOrderedFourDimensionalLocallyConvexFinalLocallyConvexSpace
+
+/-- Named Hausdorff structure for the source-facing direct sum. -/
+@[reducible]
+noncomputable def osPositiveTimeOrderedFourDimensionalLocallyConvexDirectSumT2Space :
+    @T2Space OSPositiveTimeOrderedFourDimensionalTestSequence
+      osPositiveTimeOrderedFourDimensionalLocallyConvexDirectSumTopology :=
+  osPositiveTimeOrderedFourDimensionalLocallyConvexFinalT2Space
+
+/-- The scalar natural injection bundled continuously linearly into the source-facing direct sum. -/
+def osPositiveTimeOrderedFourDimensionalScalarNaturalInjectionContinuousLinearMap :
+    letI : TopologicalSpace OSPositiveTimeOrderedFourDimensionalTestSequence :=
+      osPositiveTimeOrderedFourDimensionalLocallyConvexDirectSumTopology
+    ℂ →L[ℂ] OSPositiveTimeOrderedFourDimensionalTestSequence := by
+  letI : TopologicalSpace OSPositiveTimeOrderedFourDimensionalTestSequence :=
+    osPositiveTimeOrderedFourDimensionalLocallyConvexDirectSumTopology
+  exact { osPositiveTimeOrderedFourDimensionalScalarNaturalInjection with
+    cont := continuous_osPositiveTimeOrderedFourDimensionalScalarNaturalInjection }
+
+/-- Every positive-arity natural injection bundled continuously linearly. -/
+def osPositiveTimeOrderedFourDimensionalSourceNaturalInjectionContinuousLinearMap
+    (arity : PositiveArity) :
+    letI : TopologicalSpace OSPositiveTimeOrderedFourDimensionalTestSequence :=
+      osPositiveTimeOrderedFourDimensionalLocallyConvexDirectSumTopology
+    OSPositiveTimeOrderedFourDimensionalSourceSpace arity →L[ℂ]
+      OSPositiveTimeOrderedFourDimensionalTestSequence := by
+  letI : TopologicalSpace OSPositiveTimeOrderedFourDimensionalTestSequence :=
+    osPositiveTimeOrderedFourDimensionalLocallyConvexDirectSumTopology
+  exact { osPositiveTimeOrderedFourDimensionalSourceNaturalInjection arity with
+    cont := continuous_osPositiveTimeOrderedFourDimensionalSourceNaturalInjection arity }
+
+/-- Continuous-linear scalar injection has the exact algebraic value. -/
+@[simp]
+theorem osPositiveTimeOrderedFourDimensionalScalarNaturalInjectionContinuousLinearMap_apply
+    (c : ℂ) :
+    letI : TopologicalSpace OSPositiveTimeOrderedFourDimensionalTestSequence :=
+      osPositiveTimeOrderedFourDimensionalLocallyConvexDirectSumTopology
+    osPositiveTimeOrderedFourDimensionalScalarNaturalInjectionContinuousLinearMap c =
+      osPositiveTimeOrderedFourDimensionalScalarNaturalInjection c :=
+  rfl
+
+/-- Continuous-linear source injection has the exact algebraic value. -/
+@[simp]
+theorem osPositiveTimeOrderedFourDimensionalSourceNaturalInjectionContinuousLinearMap_apply
+    (arity : PositiveArity)
+    (f : OSPositiveTimeOrderedFourDimensionalSourceSpace arity) :
+    letI : TopologicalSpace OSPositiveTimeOrderedFourDimensionalTestSequence :=
+      osPositiveTimeOrderedFourDimensionalLocallyConvexDirectSumTopology
+    osPositiveTimeOrderedFourDimensionalSourceNaturalInjectionContinuousLinearMap arity f =
+      osPositiveTimeOrderedFourDimensionalSourceNaturalInjection arity f :=
+  rfl
+
 end
 
 end YangMills

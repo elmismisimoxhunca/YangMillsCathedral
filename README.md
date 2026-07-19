@@ -193,9 +193,10 @@ Hausdorff. A complex-linear map from this topology into any real-locally-convex 
 module is now proved continuous exactly when all finite-stage composites are continuous. OS-I's
 separate scalar and positive-arity natural injections are constructed, every stage is their exact
 finite sum, and the paper's coordinatewise continuity criterion is proved. The Hausdorff locally
-convex final topology is therefore selected as the source-facing locally convex direct-sum topology;
-the raw topological final topology remains a separately named auxiliary topology and equality is
-not asserted or required for this selection. Proper enlargement and sufficiency/density/completion
+convex final topology is therefore selected as the source-facing locally convex direct-sum topology,
+with named topological additive-group, complex scalar, real local-convexity and Hausdorff structures
+and continuously linear scalar/source injections. The raw topological final topology remains a
+separately named auxiliary topology and equality is not asserted or required for this selection. Proper enlargement and sufficiency/density/completion
 comparisons with the earlier strict-support subspace, the distinct completed-tensor topology, and
 OS-II-strength reconstruction remain open. `(E2)` remains absent pending those comparisons, the
 distinct completed tensor product for positive-half-space tests, and the source-facing
