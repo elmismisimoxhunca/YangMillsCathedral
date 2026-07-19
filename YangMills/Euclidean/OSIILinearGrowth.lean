@@ -8,7 +8,7 @@ import YangMills.Euclidean.OSOrderedFourDimensionalSourceSpace
 import YangMills.Euclidean.SchwingerRegularity
 
 /-!
-# OS-II linear-growth acceptance strengthening with an ambient tempered extension
+# Carrier-exact OS-II linear growth and an ambient-extension bridge
 
 OS-II printed p. 284 equation (2.1) uses the weighted multi-index Schwartz norm
 
@@ -18,10 +18,10 @@ and printed p. 287 equation (4.1) requires one positive order `s` and factorial-
 `σₙ` such that `|Sₙ(f)| ≤ σₙ |f|ₛ` for every positive arity.
 
 This module characterizes the displayed supremum by its upper-bound/least-upper-bound universal
-property rather than identifying it with Mathlib's different Fréchet seminorm presentation. Equation
-(4.1) is imposed only on the exact coincidence-flat `𝒮₀` subtype. The surrounding Schwinger family
-still supplies ambient tempered extensions on full Schwartz space, so the final record is explicitly
-a strengthening of source `(E0′)`, not yet its carrier-exact formulation. No Schwinger family or
+property rather than identifying it with Mathlib's different Fréchet seminorm presentation. A
+carrier-exact family consists of complex-linear functionals only on the coincidence-flat `𝒮₀`
+subtypes, and equation (4.1) is imposed there. A separate stronger interface retains ambient tempered
+extensions on full Schwartz space and restricts canonically to the carrier-exact data. No family or
 reconstruction is constructed.
 -/
 
@@ -117,9 +117,59 @@ theorem control_ne_zero_of_term_pos
 
 end OSIIPrintedSchwartzControlData
 
+/-- The coincidence-flat condition is an exact complex Schwartz submodule. -/
+def osIICoincidenceFlatSchwartzSubmodule (n : ℕ) :
+    Submodule ℂ (ScalarSchwartzTestFunction EuclideanDimension.four n) where
+  carrier := {f | IsFlatAtPointCoincidences f}
+  zero_mem' := by
+    intro k x _
+    change iteratedFDeriv ℝ k
+      (0 : EuclideanNPointSpace EuclideanDimension.four n → ℂ) x = 0
+    rw [iteratedFDeriv_zero]
+    rfl
+  add_mem' := by
+    intro f g hf hg k x hx
+    change iteratedFDeriv ℝ k
+      ((f : EuclideanNPointSpace EuclideanDimension.four n → ℂ) +
+        (g : EuclideanNPointSpace EuclideanDimension.four n → ℂ)) x = 0
+    rw [iteratedFDeriv_add_apply (f.smooth k).contDiffAt (g.smooth k).contDiffAt,
+      hf k x hx, hg k x hx, add_zero]
+  smul_mem' := by
+    intro scalar f hf k x hx
+    change iteratedFDeriv ℝ k
+      (scalar • (f : EuclideanNPointSpace EuclideanDimension.four n → ℂ)) x = 0
+    rw [iteratedFDeriv_const_smul_apply (f.smooth k).contDiffAt,
+      hf k x hx, smul_zero]
+
 /-- The exact OS-II coincidence-flat test carrier `𝒮₀(ℝ^(4n))`. -/
 abbrev OSIICoincidenceFlatSchwartzTestFunction (n : ℕ) :=
-  {f : ScalarSchwartzTestFunction EuclideanDimension.four n // IsFlatAtPointCoincidences f}
+  osIICoincidenceFlatSchwartzSubmodule n
+
+/-- Carrier-exact normalized OS-II Schwinger functionals on `𝒮₀`, without requiring ambient
+full-Schwartz tempered extensions. -/
+structure OSIICoincidenceFlatSchwingerFamily where
+  /-- Separate zero-point value. -/
+  zeroPoint : ℂ
+  /-- Source normalization `S₀ = 1`. -/
+  zeroPoint_normalized : zeroPoint = 1
+  /-- Complex-linear functional on the exact coincidence-flat carrier at every positive arity. -/
+  positivePoint : ∀ n : PositiveArity,
+    OSIICoincidenceFlatSchwartzTestFunction n.value →ₗ[ℂ] ℂ
+
+/-- Carrier-exact OS-II `(E0′)` linear growth on one normalized `𝒮₀` family. -/
+structure OSIICarrierExactLinearGrowthData
+    (family : OSIICoincidenceFlatSchwingerFamily) where
+  /-- One common positive Schwartz order for every arity. -/
+  order : ℕ
+  order_positive : 0 < order
+  /-- Positive factorial-growth coefficients `σₙ`. -/
+  growth : FactorialGrowthSequence
+  /-- Exact printed Schwartz control at every positive arity and that same order. -/
+  printedControl : ∀ n : PositiveArity, OSIIPrintedSchwartzControlData n.value order
+  /-- Equation (4.1) on the exact coincidence-flat carrier. -/
+  bound : ∀ (n : PositiveArity)
+    (f : OSIICoincidenceFlatSchwartzTestFunction n.value),
+    ‖family.positivePoint n f‖ ≤ growth.coefficient n * (printedControl n).control f.1
 
 /-- OS-II `(E0′)` linear growth on `𝒮₀`, with a separately supplied ambient tempered extension.
 
@@ -139,6 +189,28 @@ structure OSIIAmbientExtensionLinearGrowthData
   bound : ∀ (n : PositiveArity)
     (f : OSIICoincidenceFlatSchwartzTestFunction n.value),
     ‖family.positivePoint n f.1‖ ≤ growth.coefficient n * (printedControl n).control f.1
+
+/-- Restrict an ambient tempered Schwinger family to the exact coincidence-flat carrier. -/
+noncomputable def ScalarSchwingerDistributionFamily.toOSIICoincidenceFlatFamily
+    (family : ScalarSchwingerDistributionFamily EuclideanDimension.four) :
+    OSIICoincidenceFlatSchwingerFamily where
+  zeroPoint := family.zeroPoint
+  zeroPoint_normalized := family.zeroPoint_normalized
+  positivePoint := fun n =>
+    (family.positivePoint n).toLinearMap.comp
+      (osIICoincidenceFlatSchwartzSubmodule n.value).subtype
+
+/-- Ambient-extension linear growth restricts to carrier-exact `(E0′)` data; the converse is not
+claimed because a source functional need not have a supplied full-Schwartz tempered extension. -/
+noncomputable def OSIIAmbientExtensionLinearGrowthData.toCarrierExact
+    {family : ScalarSchwingerDistributionFamily EuclideanDimension.four}
+    (data : OSIIAmbientExtensionLinearGrowthData family) :
+    OSIICarrierExactLinearGrowthData family.toOSIICoincidenceFlatFamily where
+  order := data.order
+  order_positive := data.order_positive
+  growth := data.growth
+  printedControl := data.printedControl
+  bound := data.bound
 
 end
 

@@ -3698,7 +3698,7 @@ Implemented and verified:
   witness-level separation for the still-absent final acceptance proposition and not nonexistence
   claims for lower-dimensional theories.
 
-## 2026-07-19 — two-hundredth stone: OS-II printed control and ambient-extension growth
+## 2026-07-19 — two-hundredth stone: carrier-exact OS-II linear growth
 
 Implemented and verified:
 
@@ -3708,10 +3708,12 @@ Implemented and verified:
 - `OSIIPrintedSchwartzControlData` characterizes the displayed supremum by every-term upper bounds
   and its least-upper-bound universal property; uniqueness and zero-test control are derived.
 - Any strictly positive displayed term blocks a fake zero control.
-- `OSIIAmbientExtensionLinearGrowthData` imposes equation (4.1) only on the exact coincidence-flat
-  `𝒮₀` subtype, with one positive order and one positive factorial-growth sequence.
-- Its indexed Schwinger family still supplies extra ambient full-Schwartz tempered extensions, so it
-  is explicitly a strengthening rather than the final carrier-exact source formulation.
+- The coincidence-flat condition is packaged as an exact complex Schwartz submodule.
+  `OSIICoincidenceFlatSchwingerFamily` has linear functionals only on those source carriers.
+- `OSIICarrierExactLinearGrowthData` imposes equation (4.1) with one positive order and one positive
+  factorial-growth sequence, without requiring a full-Schwartz extension.
+- A separate `OSIIAmbientExtensionLinearGrowthData` retains extra full-Schwartz tempered extensions
+  and restricts canonically to carrier-exact data; no converse extension is claimed.
 - The control and growth data remain uninhabited, are not identified with the different Mathlib
   seminorm sum, and construct no family, reconstruction, theory, or mass gap.
 

@@ -338,9 +338,9 @@ committed before higher layers depend on it.
 - [x] Define source-facing `(E4)` on every exact four-dimensional source pair and normalized nonzero
   spatial direction, and prove it restricts exactly to every strict-direction predicate.
 - [x] Define equation (2.1)'s exact flattened-coordinate weighted multi-index least-upper-bound
-  control and an ambient-tempered-extension strengthening of equation (4.1) on exact `𝒮₀` tests.
-- [ ] Define the carrier-exact OS-II `(E0′)` family without requiring full-Schwartz extensions,
-  assemble exact `(E0′)`–`(E4)` Euclidean/Schwinger data, and state the corrected reconstruction bridge.
+  control, carrier-exact OS-II `(E0′)` functionals/bounds on `𝒮₀`, and the one-way restriction from a
+  separate ambient-tempered-extension strengthening.
+- [ ] Assemble exact `(E0′)`–`(E4)` Euclidean/Schwinger data and state the corrected reconstruction bridge.
 - [x] Define proper-orthochronous Lorentz/Poincaré affine kinematics independently of the Euclidean
   Schwinger surface.
 - [x] Define a topological-group lift/pre-cover interface and one strongly continuous unitary

@@ -132,12 +132,13 @@ The original OS-I sufficiency theorem must never be encoded using only ordinary 
 canonical reconstruction requirement must incorporate the OS-II-strength linear-growth condition
 or another later authoritative theorem with every hypothesis explicit.
 
-The scans now support `OSIIAmbientExtensionLinearGrowthData`: equation (2.1)'s exact flattened
+The scans now support `OSIICarrierExactLinearGrowthData`: equation (2.1)'s exact flattened
 coordinate-square weighted multi-index control is specified by its least-upper-bound universal
-property, and equation (4.1) is imposed on the exact coincidence-flat `𝒮₀` subtype using one positive
-order and factorial-growth sequence. The indexed Schwinger family still supplies extra ambient
-full-Schwartz tempered extensions, so this is an explicit strengthening rather than the final
-carrier-exact source family. It remains separate from the Mathlib-seminorm candidate. The scans do not
+property, and equation (4.1) is imposed on complex-linear functionals over the exact coincidence-flat
+`𝒮₀` submodules using one positive order and factorial-growth sequence. A separate
+`OSIIAmbientExtensionLinearGrowthData` retains extra full-Schwartz tempered extensions and restricts
+canonically to carrier-exact data; no converse extension is claimed. Both remain separate from the
+Mathlib-seminorm candidate. The scans do not
 themselves provide a Yang–Mills model, prove existence, or justify identifying Euclidean and
 Minkowski data definitionally.
 

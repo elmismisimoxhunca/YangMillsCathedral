@@ -64,6 +64,26 @@ example {n p : ℕ} (data : OSIIPrintedSchwartzControlData n p)
     data.control f ≠ 0 :=
   data.control_ne_zero_of_term_pos f α hα x positive
 
+/-- Membership in the exact source carrier is exactly infinite-order coincidence flatness. -/
+example (n : ℕ) (f : ScalarSchwartzTestFunction EuclideanDimension.four n) :
+    f ∈ osIICoincidenceFlatSchwartzSubmodule n ↔ IsFlatAtPointCoincidences f :=
+  Iff.rfl
+
+variable
+    {sourceFamily : OSIICoincidenceFlatSchwingerFamily}
+    (sourceGrowth : OSIICarrierExactLinearGrowthData sourceFamily)
+
+/-- Carrier-exact `(E0′)` uses one positive order. -/
+example : 0 < sourceGrowth.order :=
+  sourceGrowth.order_positive
+
+/-- Carrier-exact equation (4.1) evaluates only exact `𝒮₀` tests. -/
+example (n : PositiveArity)
+    (f : OSIICoincidenceFlatSchwartzTestFunction n.value) :
+    ‖sourceFamily.positivePoint n f‖ ≤
+      sourceGrowth.growth.coefficient n * (sourceGrowth.printedControl n).control f.1 :=
+  sourceGrowth.bound n f
+
 variable
     {family : ScalarSchwingerDistributionFamily EuclideanDimension.four}
     (growth : OSIIAmbientExtensionLinearGrowthData family)
@@ -82,5 +102,10 @@ example (n : PositiveArity)
     ‖family.positivePoint n f.1‖ ≤
       growth.growth.coefficient n * (growth.printedControl n).control f.1 :=
   growth.bound n f
+
+/-- Ambient-extension data restricts to carrier-exact `(E0′)` on the exact restricted family. -/
+noncomputable example :
+    OSIICarrierExactLinearGrowthData family.toOSIICoincidenceFlatFamily :=
+  growth.toCarrierExact
 
 end YangMills.OSIILinearGrowth.Probes
