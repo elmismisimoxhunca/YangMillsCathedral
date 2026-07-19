@@ -3747,6 +3747,21 @@ Implemented and verified:
   This is coherence between supplied data, not corrected reconstruction, uniqueness, a Hilbert-space
   construction, theory existence, or a mass-gap witness.
 
+## 2026-07-19 — two-hundred-third stone: corrected-output Wightman `(R0′)`
+
+Implemented and verified:
+
+- The full Wightman Schwartz weight now uses the exact flattened positive coordinate sum over all
+  `4n` coordinates, distinct from both the outer Pi norm and the Minkowski quadratic form.
+- `OSIIWightmanPrintedSchwartzControlData` uniquely characterizes the printed control by its
+  least-upper-bound property and rejects zero controls when an exact term is positive.
+- `OSIIWightmanLinearGrowthCoefficientData` requires positive `ωₙ` and the exact source bound
+  `ωₙ ≤ α β^(n²)` without adding unprinted sign hypotheses on `α, β`.
+- `OSIIWightmanLinearGrowthData` imposes equation (4.3) with one common positive order on the exact
+  existing full Wightman distributions, not a disconnected functional family.
+- The four-dimensional core now requires this same-correlator `(R0′)` surface. No reconstruction
+  output, uniqueness theorem, theory, or mass-gap witness is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

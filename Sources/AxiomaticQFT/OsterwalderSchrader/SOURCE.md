@@ -110,7 +110,9 @@ Printed journal pages are authoritative. Text line numbers below refer to the re
   `f ∈ 𝒮₀(ℝ⁴ⁿ)`.
 - The corrected theorem states that `(E0′)` (or `(E0″)`) together with `(E1)–(E4)` gives the Euclidean
   Green's functions of a uniquely determined Wightman quantum field theory satisfying `R0–R5` and
-  an additional Wightman linear-growth condition `(R0′)`.
+  an additional Wightman linear-growth condition `(R0′)`. Visually verified equation (4.3) requires
+  one `w ∈ ℤ₊`, positive coefficients `ωₙ` with `ωₙ ≤ α β^(n²)` for some constants `α, β`, and
+  `|Wₙ(f)| ≤ ωₙ |f|_{n,w}` for every full Schwartz test on `ℝ^(4n)`.
 
 ## Formalization decision
 

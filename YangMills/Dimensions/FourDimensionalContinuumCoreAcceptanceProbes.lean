@@ -209,6 +209,20 @@ theorem exact_wightman_surface :
     Nonempty (Minkowski.ScalarWightmanAxiomSurfaceData fieldData) :=
   ⟨data.wightmanSurface⟩
 
+/-- Corrected OS-II `(R0′)` controls the exact full Wightman correlator family. -/
+theorem exact_wightman_linear_growth :
+    Nonempty (Minkowski.OSIIWightmanLinearGrowthData data.fullCorrelators) :=
+  ⟨data.wightmanLinearGrowth⟩
+
+/-- Its positive coefficients have the exact source `α β^(n²)` bound. -/
+theorem exact_wightman_growth_coefficient (n : PositiveArity) :
+    0 < data.wightmanLinearGrowth.growth.coefficient n ∧
+      data.wightmanLinearGrowth.growth.coefficient n ≤
+        data.wightmanLinearGrowth.growth.alpha *
+          data.wightmanLinearGrowth.growth.beta ^ (n.value ^ 2) :=
+  ⟨data.wightmanLinearGrowth.growth.coefficient_pos n,
+    data.wightmanLinearGrowth.growth.coefficient_bound n⟩
+
 /-- The exact source Wick bridge connects every derivative-vanishing ordered source test to the
 same analytic Wightman correlators. -/
 theorem exact_source_wick_coherence :

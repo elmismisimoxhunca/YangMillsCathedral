@@ -358,6 +358,8 @@ import YangMills.Minkowski.WightmanVacuumCorrelators
 import YangMills.Minkowski.WightmanVacuumCorrelatorsProbes
 import YangMills.Minkowski.WightmanJointTemperedCorrelators
 import YangMills.Minkowski.WightmanJointTemperedCorrelatorsProbes
+import YangMills.Minkowski.WightmanLinearGrowth
+import YangMills.Minkowski.WightmanLinearGrowthProbes
 import YangMills.Minkowski.WightmanTubeGeometry
 import YangMills.Minkowski.WightmanTubeGeometryProbes
 import YangMills.Minkowski.ComplexLorentzKinematics

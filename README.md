@@ -385,7 +385,9 @@ same reverse-Wick analytic function. An exact-source continuation interface now 
 to every derivative-vanishing ordered OS source test and derives the strict view by restriction.
 Nonzero source values are proved to map into the tube and the integrand vanishes outside its
 preimage. Requiring absolute integrability for all such possibly noncompact source Schwartz tests
-strengthens OS-I's initial compact-support formula. Arbitrary-polynomial comparison, derivation or
+strengthens OS-I's initial compact-support formula. Separately, OS-II `(R0′)` now requires one common
+positive Wightman Schwartz order, exact printed full-coordinate controls, and positive `ωₙ` bounded
+by `α β^(n²)` on the same full correlator family. Arbitrary-polynomial comparison, derivation or
 inhabitation of the extended-tube continuation interface, corrected reconstruction, and full
 observable interpretation remain pending, and no continuation or correlator
 datum is constructed. No concrete gauge-group, connection, invariant-inner-product, curvature, or
@@ -450,7 +452,7 @@ known OS-II/source-space reconstruction and genuine Poincaré-cover debts.
 A parallel uninhabited four-dimensional current-strength core now fixes coordinate `ℝ⁴`, the
 canonical flat metric and coordinate Lebesgue measure, then dependently joins the same classical,
 carrier-exact OS-II `(E0′)` plus source-carrier OS-I `(E1)`–`(E4)` package, Wightman,
-exact derivative-vanishing source Wick coherence, observable, `F²`,
+exact derivative-vanishing source Wick coherence, corrected-output Wightman `(R0′)`, observable, `F²`,
 stress/translation, and same-PVM gap surfaces at the actual Clay dimension. Unlike the lower-dimensional core it also requires the
 preliminary four-dimensional pure-gauge running-coupling/beta normal form indexed by the exact
 compact-simple gauge certificate, exact same-family bilocal products/weak OPE, supplied regular-variation scaling by that same

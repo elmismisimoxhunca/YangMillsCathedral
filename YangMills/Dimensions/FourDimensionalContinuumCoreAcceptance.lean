@@ -12,6 +12,7 @@ import YangMills.Minkowski.PhysicalMassGapSupremum
 import YangMills.Minkowski.ScalarWightmanAxiomSurface
 import YangMills.Minkowski.StressEnergyTranslationWard
 import YangMills.Minkowski.WightmanJointTemperedCorrelators
+import YangMills.Minkowski.WightmanLinearGrowth
 import YangMills.Minkowski.WightmanLocalObservableCoherence
 import YangMills.Minkowski.WightmanRelativeAnalyticCorrelators
 import YangMills.Minkowski.WeakOperatorProductExpansion
@@ -122,6 +123,8 @@ structure FourDimensionalCurrentStrengthContinuumCoreAcceptanceData
   wightmanSurface : Minkowski.ScalarWightmanAxiomSurfaceData fieldData
   /-- Full-product tempered correlators of that exact Wightman field. -/
   fullCorrelators : Minkowski.ScalarWightmanJointTemperedCorrelatorData fieldData
+  /-- Corrected OS-II output growth `(R0′)` on those exact full Wightman distributions. -/
+  wightmanLinearGrowth : Minkowski.OSIIWightmanLinearGrowthData fullCorrelators
   /-- Relative analytic correlators derived from the same full correlator family. -/
   relativeAnalyticCorrelators :
     Minkowski.ScalarWightmanRelativeAnalyticCorrelatorData fullCorrelators

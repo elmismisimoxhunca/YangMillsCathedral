@@ -391,6 +391,8 @@ committed before higher layers depend on it.
   current strict ordered/flat Mathlib test, using the reverse-Wick analytic function.
 - [x] Extend that same coherence to every exact derivative-vanishing ordered OS source test and
   derive the old strict bridge by restriction.
+- [x] Define corrected-output Wightman `(R0′)` on the exact full correlator family with one common
+  positive order, printed full-coordinate controls, and `0 < ωₙ ≤ α β^(n²)`.
 - [ ] State and prove the corrected OS-II reconstruction acceptance bridge, including output
   uniqueness and complete correlator coherence.
 
@@ -466,7 +468,7 @@ committed before higher layers depend on it.
 - [ ] Add the full `d = 4` Clay acceptance contract.
   - [x] Add an uninhabited current-strength core on canonical coordinate `ℝ⁴`, joining the exact
     classical/action, carrier-exact OS-II `(E0′)` and source-carrier OS-I `(E1)`–`(E4)`, exact-source
-    Wick coherence, Wightman/same-PVM gap, coherent `F²` observable,
+    Wick coherence, Wightman `(R0′)`/same-PVM gap, coherent `F²` observable,
     stress/translation Ward, compact-simple-indexed running coupling, exact weak OPE, and supplied
     same-coupling regular-variation surfaces, with a required nonzero interpreted `F² × F²`
     zeroth-order term with nonzero same-running-coupling exponent and nonzero leading scaling
