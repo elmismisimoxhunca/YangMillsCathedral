@@ -2699,6 +2699,31 @@ Implemented and verified:
 - No exact OS source-space identity, `(E2)` datum, reconstruction, quantum theory, existence theorem,
   or mass gap is constructed.
 
+## 2026-07-19 — one-hundred-forty-fifth stone: enumerated four-dimensional multi-indices
+
+Implemented and verified:
+
+- `FourDimensionalMultiIndexEnumeration α k` is an exact equivalence from all dependent coordinate
+  occurrences `(i, r < αᵢ)` to `Fin k`; its existence prevents a disconnected slot count.
+- Every arbitrary ordered coordinate tuple induces `fourDimensionalCoordinateTupleMultiIndex` by
+  exact fiber cardinalities and `fourDimensionalCoordinateTupleEnumeration` through
+  `Equiv.sigmaFiberEquiv`.
+- `fourDimensionalCoordinateTupleEnumeration_recovers` proves the induced enumerated coordinate at
+  every slot is exactly the original tuple entry, retaining order and repetitions.
+- `IsOSPositiveTimeOrderedEnumeratedMultiIndexVanishing` quantifies over every occurrence
+  enumeration. It implies the earlier canonical condition.
+- `osPositiveTimeOrderedCoordinateJets_iff_enumeratedMultiIndex` and
+  `osPositiveTimeOrderedFrechet_iff_enumeratedMultiIndex` prove exact internal equivalence with all
+  arbitrary ordered coordinate tuples in four dimensions.
+- Hostile probes lock fiber multiplicities, entrywise tuple recovery, exact candidate equivalence,
+  retention of the canonical ordering, and rejection by any nonzero arbitrary exterior coordinate
+  jet, including rejection of a disconnected carrier surrogate.
+- This combinatorial all-enumeration equivalence does not prove higher-derivative permutation
+  symmetry or identify one canonical ordering with OS-I's recursively interpreted `D^α`. Those
+  analytic and source-syntax comparisons remain open.
+- No exact OS source-space identity, `(E2)` datum, reconstruction, quantum theory, existence theorem,
+  or mass gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

@@ -150,8 +150,11 @@ intersection proves the dimension-generic candidate closed and its forgetful map
 Exact four-dimensional point/coordinate labels are now flattened point-major as `μ + 4i`;
 natural-valued multi-indices have an exact occurrence enumeration with each coordinate repeated by
 its multiplicity, and Fréchet-candidate membership implies all resulting canonical derivatives
-vanish. It is not yet called the exact OS source space: permutation/order independence, the converse
-from arbitrary coordinate tuples, identification with OS-I's recursively interpreted `D^α`, transporting
+vanish. Every arbitrary ordered coordinate tuple now induces exact fiber-cardinality multiplicities
+and an occurrence enumeration that recovers the tuple entrywise; quantifying over all enumerations
+is proved equivalent to the Fréchet/coordinate-jet candidate. It is not yet called the exact OS
+source space: permutation/order independence reducing all enumerations to one canonical ordering,
+identification with OS-I's recursively interpreted `D^α`, transporting
 this closedness to that exact source identification, proper enlargement,
 sufficiency/density/completion comparisons, and OS-II-strength reconstruction remain open. `(E2)`
 remains absent pending those comparisons, the identification of the named finite-stage final topology with OS-I's locally convex direct sum, the
