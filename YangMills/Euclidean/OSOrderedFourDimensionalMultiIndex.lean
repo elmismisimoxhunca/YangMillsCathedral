@@ -15,11 +15,12 @@ four-dimensional comparison by flattening a point/coordinate pair `(i, μ)` to t
 index `μ + 4 i`, defining natural-valued multi-indices on `Fin (4n)`, and constructing an exact
 finite occurrence enumeration with each coordinate repeated according to its multiplicity.
 
-The resulting derivative is deliberately called a **candidate multi-index derivative**. Its exact
-identification with the source's recursively interpreted `D^α` still requires permutation symmetry
-of higher derivatives and multiplicity/order comparison in both directions. Only the proved
-Fréchet-to-candidate implication is exposed here; no converse, exact OS source-space identity,
-reflection positivity, reconstruction, theory inhabitant, or mass-gap claim is asserted.
+The resulting derivative is deliberately called a **candidate multi-index derivative**. Downstream
+modules quantify over exact occurrence enumerations, recover arbitrary coordinate tuples, and prove
+permutation independence, yielding an internal converse to the implication exposed here. Its
+identification with the source's recursively interpreted `D^α` remains separate debt. No exact OS
+source-space identity, reflection positivity, reconstruction, theory inhabitant, or mass-gap claim
+is asserted.
 -/
 
 namespace YangMills

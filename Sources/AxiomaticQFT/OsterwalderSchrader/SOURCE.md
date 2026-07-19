@@ -52,10 +52,13 @@ Printed journal pages are authoritative. Text line numbers below refer to the re
   derivative-vanishing ordered spaces `S_{s,t}`, the positive ordered space `S₊ = S_{0,∞}`, their
   induced Schwartz topologies, and the distinct completed positive-half-space tensor product are
   defined. The formulas and topology distinctions were visually checked on PDF page 4. The current
-  Lean Fréchet candidate models only `S₊`. It now has an internally equivalent presentation by
-  ordered tuples of the exact point/coordinate basis, but the four-dimensional identification of
-  those tuples, including repeated directions and multiplicities, with the printed multi-index
-  `D^α` convention remains open, as do closedness and completed-tensor comparison.
+  Lean Fréchet candidate models only `S₊`. It is internally equivalent to ordered tuples of the
+  exact point/coordinate basis and, in four dimensions, to one canonical natural-valued multi-index
+  presentation after proved multiplicity enumeration and permutation independence. The remaining
+  comparison is identification of that repeated-basis derivative with the printed recursively
+  interpreted `D^α` convention. Candidate closedness is proved internally, but transport of that
+  theorem to the still-unidentified exact source space and the completed-tensor comparison remain
+  open.
 - Printed pp. 84–85: the original proposal lists `(E0)` temperedness, `(E1)` Euclidean covariance,
   `(E2)` positivity, `(E3)` symmetry, and `(E4)` cluster property.
 - Printed pp. 87–88; `os1_primary_scan.txt` lines 237–277: the axioms and original `E → R` / `R → E`

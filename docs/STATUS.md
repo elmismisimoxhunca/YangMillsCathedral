@@ -2724,6 +2724,32 @@ Implemented and verified:
 - No exact OS source-space identity, `(E2)` datum, reconstruction, quantum theory, existence theorem,
   or mass gap is constructed.
 
+## 2026-07-19 — one-hundred-forty-sixth stone: multi-index permutation independence
+
+Implemented and verified:
+
+- Reusable `SchwartzMap.lineDerivOp_commute` derives exact commutation of two Schwartz directional
+  derivatives from Mathlib's symmetric-second-derivative theorem.
+- `SchwartzMap.iteratedLineDerivOp_eq_foldr` identifies the recursive operator with the exact fold of
+  its finite direction list. Pairwise commutation and `List.Perm.foldr_eq` then prove
+  `iteratedLineDerivOp_comp_perm` for every slot permutation.
+- `SchwartzMap.iteratedFDeriv_comp_perm` transfers that exact equality to every iterated Fréchet
+  value at the designated point. Hostile probes retain the same function, point and tuple and show
+  nonzero jets survive permutation.
+- Any two four-dimensional multi-index occurrence enumerations are proved related by an explicit
+  slot permutation and give the same `fourDimensionalEnumeratedMultiIndexDerivative`.
+- Every enumeration's slot count is derived from its actual equivalence and its derivative is proved
+  equal to `fourDimensionalMultiIndexDerivative` in the canonical occurrence ordering.
+- `osPositiveTimeOrderedCanonicalMultiIndex_iff_enumeratedMultiIndex` and
+  `osPositiveTimeOrderedFrechet_iff_canonicalMultiIndex` complete the internal equivalence between
+  canonical multi-index, all-enumeration, coordinate-jet and Fréchet candidate predicates.
+- Hostile probes lock the exact slot permutation, enumeration independence, canonical value,
+  predicate equivalences, and rejection by a nonzero canonical exterior jet.
+- The remaining source comparison is narrower but still substantive: the canonical repeated-basis
+  derivative has not yet been identified with OS-I printed p. 86's recursively interpreted `D^α`.
+- No exact OS source-space identity, `(E2)` datum, reconstruction, quantum theory, existence theorem,
+  or mass gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

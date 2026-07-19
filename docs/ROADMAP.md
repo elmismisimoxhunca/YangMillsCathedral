@@ -200,11 +200,13 @@ committed before higher layers depend on it.
   fiber-cardinality multiplicities and an enumeration from every ordered coordinate tuple, prove
   exact tuple recovery, and prove all-enumeration multi-index vanishing equivalent to the existing
   Fréchet/coordinate-jet candidate.
-- [ ] Complete the remaining exact four-dimensional multi-index comparison: prove permutation
-  symmetry/order independence so the all-enumeration condition collapses to one canonical ordering,
-  then identify the canonical repeated-basis derivative with OS-I's recursively interpreted `D^α`;
-  only after that
-  comparison identify the candidate closedness theorem with the printed source space,
+- [x] Prove reusable permutation symmetry of every iterated Schwartz directional derivative from
+  second-derivative commutation and permutation-invariant list folds; derive exact independence of
+  multi-index occurrence enumeration and equivalence of the canonical multi-index and Fréchet
+  candidate predicates.
+- [ ] Complete the remaining exact four-dimensional multi-index comparison by identifying the
+  canonical repeated-basis derivative with OS-I's recursively interpreted `D^α`; only after that
+  source-syntax comparison identify the candidate closedness theorem with the printed source space,
   then establish the strict subspace's sufficiency/density/completion relation; install the
   finite-sequence direct-sum topology while keeping the positive-half-space completed tensor product
   distinct; only then define source-facing `(E2)` on the constructed product and reflected-star
