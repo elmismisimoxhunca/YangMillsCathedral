@@ -239,6 +239,9 @@ committed before higher layers depend on it.
 - [x] Construct the exact scalar/all-positive-arity coordinate map, prove it injective and continuous
   via an admissible induced coordinate topology, and derive Hausdorff separation of the locally
   convex final topology while retaining the explicit nonzero singleton coordinate.
+- [x] Prove the finite-stage universal property: a complex-linear map from source sequences into any
+  real-locally-convex topological complex module is continuous exactly when every finite-stage
+  composite is continuous; package and uniquely determine stagewise continuous-linear maps.
 - [ ] Establish the earlier strict-support subspace's sufficiency/density/completion relation to the
   exact positive-arity OS-I source spaces; prove the needed Hausdorff/direct-sum characterization
   and either raw/local-convex-final equality or the correct source-facing topology selection while

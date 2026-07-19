@@ -3000,6 +3000,25 @@ Implemented and verified:
   density/completion, completed tensor topology, `(E2)`, OS-II growth and reconstruction remain open.
 - No `(E2)` datum, reconstruction, quantum theory, existence theorem, or mass gap is constructed.
 
+## 2026-07-19 — one-hundred-sixtieth stone: locally convex finite-stage universal property
+
+Implemented and verified:
+
+- For any real-locally-convex topological complex module `Y`, a complex-linear map from exact source
+  sequences to `Y` is continuous for the locally convex final topology if and only if its composite
+  with every exact finite-stage extension is continuous.
+- The reverse implication uses the topology induced by the linear map, proves it admissible, and
+  invokes exact universal minimality rather than assuming a generic direct-sum theorem.
+- Every all-stage-continuous algebraic linear map packages as the same continuous-linear map, and
+  two continuity proofs cannot produce disconnected packages.
+- Hostile probes recover the independently constructed all-coordinate CLM, retain its nonzero
+  singleton value, require all finite stages, and enforce package uniqueness.
+- OS-I p. 87 states the analogous criterion using each natural coordinate injection. Exact
+  equivalence between those individual injections and the finite-stage criterion—and hence the
+  printed direct-sum identification—remains open, alongside strict-carrier density/completion,
+  completed tensor topology, `(E2)`, OS-II growth and reconstruction.
+- No `(E2)` datum, reconstruction, quantum theory, existence theorem, or mass gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

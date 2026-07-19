@@ -189,7 +189,10 @@ operations, local convexity and continuous-linear stage maps. The raw topology l
 locally convex final topology in Mathlib's reversed order, and equality is proved equivalent to raw
 admissibility rather than asserted. An exact scalar/all-positive-arity coordinate map into a
 Hausdorff product is proved continuous and injective, so the locally convex final topology itself is
-Hausdorff. Neither topology is yet identified with OS-I's printed locally convex direct sum: that identification, proper enlargement and sufficiency/density/completion
+Hausdorff. A complex-linear map from this topology into any real-locally-convex topological complex
+module is now proved continuous exactly when all finite-stage composites are continuous. Neither
+topology is yet identified with OS-I's printed locally convex direct sum: replacing finite-stage
+maps by the paper's individual natural injections and completing that identification, proper enlargement and sufficiency/density/completion
 comparisons with the earlier strict-support subspace, the distinct completed-tensor topology, and
 OS-II-strength reconstruction remain open. `(E2)` remains absent pending those comparisons, the
 source-facing topology identification, the

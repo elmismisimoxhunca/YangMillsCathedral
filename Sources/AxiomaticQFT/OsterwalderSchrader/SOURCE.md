@@ -61,10 +61,15 @@ Printed journal pages are authoritative. Text line numbers below refer to the re
   component is not identified with this subtype; a following algebraic source-sequence carrier keeps
   that scalar separate while combining finitely many exact positive-arity components. The
   componentwise map from the earlier strict-support sequence is exact; proper enlargement and
-  sufficiency/density/completion remain open. Exact finite-stage products and their final topology
-  are now constructed for the source sequence, but compatible vector-topological structure and
-  identification with the paper's locally convex direct sum remain open, as does the distinct
-  completed positive-half-space tensor product.
+  sufficiency/density/completion remain open. Exact finite-stage products and their raw final
+  topology are now constructed for the source sequence. A distinct Hausdorff locally convex final
+  topology has compatible complex-module operations, exact continuous-linear finite-stage maps,
+  and the finite-stage universal property for linear maps into real-locally-convex topological
+  complex modules. Printed p. 87, `os1_primary_scan.txt` lines 200–210, instead states the direct-sum
+  topology through continuity on each natural coordinate injection. Exact equivalence between that
+  individual-injection criterion and the implemented finite-stage criterion—and hence identification
+  with the paper's printed locally convex direct sum—remains open, as does the distinct completed
+  positive-half-space tensor product.
 - Printed pp. 84–85: the original proposal lists `(E0)` temperedness, `(E1)` Euclidean covariance,
   `(E2)` positivity, `(E3)` symmetry, and `(E4)` cluster property.
 - Printed pp. 87–88; `os1_primary_scan.txt` lines 237–277: the axioms and original `E → R` / `R → E`
