@@ -215,6 +215,9 @@ committed before higher layers depend on it.
   earlier strict sequence componentwise without a properness claim and retain explicit scalar-unit and nonzero-bump sequences.
 - [x] Construct the exact-source finite-stage products, stage maps, exact-support recovery, named
   finite-stage final topology and its all-stage universal property, retaining the separate scalar.
+- [x] Identify exact source sequences with a scalar times a dependent finitely supported source-
+  space family and transport named additive-group and complex-module structures with exact scalar
+  and component laws.
 - [ ] Establish the earlier strict-support subspace's sufficiency/density/completion relation to the
   exact positive-arity OS-I source spaces; install compatible complex-module/topological-vector-
   space operations and identify the named final topology with OS-I's locally convex direct sum while

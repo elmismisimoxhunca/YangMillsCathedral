@@ -2841,6 +2841,24 @@ Implemented and verified:
   direct-sum identification, `(E2)`, OS-II growth or reconstruction is asserted.
 - No `(E2)` datum, reconstruction, quantum theory, existence theorem, or mass gap is constructed.
 
+## 2026-07-19 — one-hundred-fifty-first stone: exact source-sequence complex algebra
+
+Implemented and verified:
+
+- `OSPositiveTimeOrderedFourDimensionalSourceDFinsupp` models finitely supported dependent positive-
+  arity source tests, and sequence coordinates are its product with the separate scalar `f₀`.
+- Exact-support source sequences are proved equivalent to those coordinates; support membership is
+  tied to source-space zero through exact underlying Schwartz equality.
+- Named additive commutative group and complex module structures are transported to source
+  sequences under controlled local source-space instances.
+- Algebraic zero is the designated all-zero source sequence. Addition and complex scalar
+  multiplication are exact on both the scalar and every positive-arity Schwartz component.
+- Hostile probes lock coordinate preservation, designated zero, exact addition/scalar action and
+  retention of the nonzero singleton source sequence.
+- No continuity, topological-vector-space structure, local convexity, direct-sum identification,
+  source product/involution, `(E2)`, OS-II growth or reconstruction is asserted.
+- No `(E2)` datum, reconstruction, quantum theory, existence theorem, or mass gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

@@ -168,8 +168,11 @@ componentwise without changing its scalar, support or Schwartz components and wi
 claim, and explicit scalar-unit and nonzero-
 bump source sequences prevent collapse. Exact products over every finite positive-arity stage now
 include the separate scalar, filter support by actual nonvanishing, recover every source sequence,
-and generate a named finite-stage final topology with its exact universal property. This topology
-is not yet called OS-I's locally convex direct sum: compatible complex-module/topological-vector-
+and generate a named finite-stage final topology with its exact universal property. Exact source
+sequences are also algebraically equivalent to the separate scalar times a dependent finitely
+supported source-space family, with named additive-group and complex-module structures and exact
+scalar/component laws. The topology is not yet called OS-I's locally convex direct sum: compatibility
+of these structures with the topology, topological-vector-
 space operations, proper enlargement and sufficiency/density/completion comparisons with the
 earlier strict-support subspace, locally convex identification, the distinct completed-tensor
 topology, and OS-II-strength reconstruction remain open. `(E2)`
