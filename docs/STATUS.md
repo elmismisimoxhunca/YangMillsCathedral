@@ -3116,7 +3116,7 @@ Implemented and verified:
   and reconstruction remain open.
 - No `(E2)` datum, reconstruction, quantum theory, existence theorem, or mass gap is constructed.
 
-## 2026-07-19 — one-hundred-sixty-sixth stone: positive-half-space tensor acceptance data
+## 2026-07-19 — one-hundred-sixty-sixth stone: positive-half-space scalar-functional candidate
 
 Implemented and verified:
 
@@ -3124,18 +3124,40 @@ Implemented and verified:
   three, recording the spatial provenance even though the underlying Euclidean type is definitionally
   the same as three-dimensional spacetime. Its complex Schwartz factor has an
   explicit compactly supported nonzero spatial bump.
-- `OSPositiveHalfSpaceCompletedTensorData` records the scalar-valued completion consequence printed
-  by OS-I for `𝒮(ℝ₊) ⊗̂ 𝒮(ℝ³)` while leaving the carrier supplied and uninhabited. The stronger
+- `OSPositiveHalfSpaceScalarFunctionalTensorCandidate` records OS-I's scalar-valued extension
+  consequence for the exact factors while leaving the candidate carrier supplied and uninhabited.
+  Scalar-valued extensions do not characterize `𝒮(ℝ₊) ⊗̂ 𝒮(ℝ³)` or its topology. The stronger
   arbitrary-target projective interface is not inherited and remains separately source-blocked.
-- Any supplied carrier is additive-uniform complete, Hausdorff and locally convex, with jointly
+- Any supplied candidate is additive-uniform complete, Hausdorff and locally convex, with jointly
   continuous noncollapsing pure tensors, dense pure span, and exact scalar-functional extension;
-  scalar extension uniqueness is derived from density.
+  scalar extension uniqueness within that candidate is derived from density.
 - Hostile probes lock the four-dimensional spatial index, two-factor noncollapse, joint continuity,
   dense pure span, exact scalar extension values, and scalar extension uniqueness.
-- No completed carrier or iterated tensor power is constructed. Half-line completeness, the printed
-  seminorm presentation, strict-carrier comparison, `(E2)`, OS-II growth and reconstruction remain
-  open.
+- No completed tensor topology or carrier is constructed or characterized. Half-line completeness,
+  the printed seminorm presentation, nuclearity, strict-carrier comparison, `(E2)`, OS-II growth and
+  reconstruction remain open.
 - No `(E2)` datum, reconstruction, quantum theory, existence theorem, or mass gap is constructed.
+
+## 2026-07-19 — one-hundred-sixty-seventh stone: iterated scalar-functional candidates
+
+Implemented and verified:
+
+- `osPositiveHalfSpaceScalarFunctionalTensorFactorCount` makes the indexing explicit: index `n`
+  denotes `n + 1` intended factors, so index zero is the one-factor candidate and never the scalar
+  OS-sequence component.
+- `OSPositiveHalfSpaceIteratedScalarFunctionalTensorCandidate` anchors `T 0` to that candidate and
+  records fixed-left-associated scalar-functional successor candidate data for every natural index.
+- Every supplied successor has jointly continuous noncollapsing pure tensors, dense pure span, and
+  exact scalar-functional extension. Extension uniqueness is derived from density at each index.
+- The explicit one-factor bump is recursively tensorized and proved nonzero at every finite positive
+  factor count. Hostile probes also lock the one-factor anchor, successor continuity and density,
+  scalar lift values and uniqueness, two-factor recursion, and two-factor noncollapse.
+- The stronger arbitrary-target projective interface is not inherited. These data do not
+  characterize completed tensor topology or nuclearity; no associator, permutation equivalence,
+  product-Schwartz identification, actual completed carrier, or OS test-space bridge is asserted.
+- Half-line completeness, the printed seminorm presentation, nuclearity, strict-carrier comparison,
+  actual completed tensor powers, `(E2)`, OS-II growth and reconstruction remain open. No theory,
+  existence theorem, or mass gap is built.
 
 Not yet achieved:
 

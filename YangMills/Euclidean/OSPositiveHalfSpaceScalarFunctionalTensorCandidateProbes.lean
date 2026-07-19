@@ -4,16 +4,16 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Sebastian Rodrigo
 -/
 
-import YangMills.Euclidean.OSPositiveHalfSpaceCompletedTensor
+import YangMills.Euclidean.OSPositiveHalfSpaceScalarFunctionalTensorCandidate
 
 /-!
-# Hostile probes for OS positive-half-space completed tensor data
+# Hostile probes for the OS positive-half-space scalar-functional tensor candidate
 
-The probes require both exact factors, joint continuity, dense pure span, and a nonzero explicit
-pure tensor. They do not construct a completion.
+The probes require both exact factors, joint continuity, dense pure span, scalar extension, and a
+nonzero explicit pure tensor. They neither construct nor characterize a completed tensor product.
 -/
 
-namespace YangMills.OSPositiveHalfSpaceCompletedTensor.Probes
+namespace YangMills.OSPositiveHalfSpaceScalarFunctionalTensorCandidate.Probes
 
 noncomputable section
 
@@ -53,9 +53,9 @@ variable [UniformSpace T] [AddCommGroup T] [Module ℂ T]
 variable [IsUniformAddGroup T] [IsTopologicalAddGroup T] [ContinuousSMul ℂ T]
 variable [LocallyConvexSpace ℝ T] [T2Space T] [CompleteSpace T]
 
-/-- Any supplied completion retains both explicit nonzero factors. -/
+/-- Any supplied scalar-functional candidate retains both explicit nonzero factors. -/
 theorem exact_nonzero_two_factor_tensor
-    (D : OSPositiveHalfSpaceCompletedTensorData T) :
+    (D : OSPositiveHalfSpaceScalarFunctionalTensorCandidate T) :
     D.pure
       (osPositiveHalfLineSchwartzQuotientMap osPositiveHalfLineBumpSchwartz)
       osThreeDimensionalSpatialBumpSchwartz ≠ 0 :=
@@ -63,14 +63,14 @@ theorem exact_nonzero_two_factor_tensor
 
 /-- The source-facing pure map is genuinely jointly continuous, not only separately continuous. -/
 theorem exact_joint_pure_continuity
-    (D : OSPositiveHalfSpaceCompletedTensorData T) :
+    (D : OSPositiveHalfSpaceScalarFunctionalTensorCandidate T) :
     Continuous (fun p : OSPositiveHalfLineSchwartzSpace ×
       OSThreeDimensionalSpatialSchwartzSpace => D.pure p.1 p.2) :=
   D.continuous_pure_uncurry
 
-/-- A disconnected completed summand invisible to all pure tensors is blocked by density. -/
+/-- A disconnected candidate summand invisible to all pure tensors is blocked by density. -/
 theorem exact_dense_pure_span
-    (D : OSPositiveHalfSpaceCompletedTensorData T) :
+    (D : OSPositiveHalfSpaceScalarFunctionalTensorCandidate T) :
     Dense ((Submodule.span ℂ (Set.range
       (fun p : OSPositiveHalfLineSchwartzSpace ×
         OSThreeDimensionalSpatialSchwartzSpace =>
@@ -79,7 +79,7 @@ theorem exact_dense_pure_span
 
 /-- OS-I's scalar-valued extension data retains the exact two-factor value. -/
 theorem exact_scalar_lift_value
-    (D : OSPositiveHalfSpaceCompletedTensorData T)
+    (D : OSPositiveHalfSpaceScalarFunctionalTensorCandidate T)
     (b : OSPositiveHalfLineSchwartzSpace →ₗ[ℂ]
       OSThreeDimensionalSpatialSchwartzSpace →ₗ[ℂ] ℂ)
     (hb : Continuous (fun p : OSPositiveHalfLineSchwartzSpace ×
@@ -91,7 +91,7 @@ theorem exact_scalar_lift_value
 
 /-- A disconnected scalar extension agreeing on every pure tensor is blocked by density. -/
 theorem exact_scalar_lift_uniqueness
-    (D : OSPositiveHalfSpaceCompletedTensorData T)
+    (D : OSPositiveHalfSpaceScalarFunctionalTensorCandidate T)
     (b : OSPositiveHalfLineSchwartzSpace →ₗ[ℂ]
       OSThreeDimensionalSpatialSchwartzSpace →ₗ[ℂ] ℂ)
     (hb : Continuous (fun p : OSPositiveHalfLineSchwartzSpace ×
@@ -102,4 +102,4 @@ theorem exact_scalar_lift_uniqueness
 
 end
 
-end YangMills.OSPositiveHalfSpaceCompletedTensor.Probes
+end YangMills.OSPositiveHalfSpaceScalarFunctionalTensorCandidate.Probes

@@ -8,20 +8,22 @@ import YangMills.Euclidean.OSPositiveHalfLineSchwartzQuotient
 import YangMills.Foundation.Dimensions
 
 /-!
-# Acceptance data for the OS positive-half-space completed tensor product
+# Scalar-functional candidate data for the OS positive-half-space tensor
 
 OS-I, printed pp. 86–87, defines
 `𝒮(ℝ⁴₊) = 𝒮(ℝ₊) ⊗̂ 𝒮(ℝ³)` and then its iterated completed tensor powers. The exact Hausdorff
 locally convex half-line quotient is now available, while ordinary spatial tests are Schwartz maps
 on the neutral real spatial `ℝ³` selected by four-dimensional spacetime. This module states the
-source-facing scalar-valued completion surface on those exact factors. The stronger arbitrary-target
-projective universal interface remains separate pending authoritative functional-analysis sourcing.
+source-facing scalar-functional candidate surface on those exact factors. Scalar-valued extensions
+do not characterize the projective tensor topology. The stronger arbitrary-target universal
+interface remains separate pending authoritative functional-analysis sourcing, and OS-I's nuclearity
+statement has no Lean representation yet.
 
-No completed carrier is constructed. A proposed carrier must separately provide an
+No completed tensor product is constructed or characterized. A candidate carrier provides an
 additive-compatible complete uniformity, Hausdorff local convexity, jointly continuous
-noncollapsing pure tensors, dense pure span, and OS-I's scalar-valued extension data. This acceptance
-surface is definitionally separate from the finite-sequence direct-sum topology. Explicit nonzero
-half-line and spatial bumps prove that any supplied completion has a nonzero pure tensor.
+noncollapsing pure tensors, dense pure span, and OS-I's scalar-valued extension consequence. This
+candidate surface is definitionally separate from the finite-sequence direct-sum topology. Explicit
+nonzero half-line and spatial bumps prove that any supplied candidate has a nonzero pure tensor.
 -/
 
 namespace YangMills
@@ -66,11 +68,11 @@ noncomputable local instance spatialT2ForTensor :
     T2Space OSThreeDimensionalSpatialSchwartzSpace :=
   SchwartzMap.t2Space
 
-/-- Source-facing acceptance data for one completed positive-half-space tensor factor. The carrier
-`T` remains supplied data and is not connected to finite source sequences. The scalar-valued
-extension property follows the consequence printed by OS-I; the stronger arbitrary-target
-projective universal property remains in separate reusable infrastructure and is not required here. -/
-structure OSPositiveHalfSpaceCompletedTensorData
+/-- Source-facing scalar-functional candidate data for one positive-half-space tensor factor. The
+carrier `T` remains supplied and is not connected to finite source sequences. The scalar-valued
+extension property follows the consequence printed by OS-I, but does not characterize the completed
+projective tensor topology. Arbitrary-target universality and nuclearity are not required here. -/
+structure OSPositiveHalfSpaceScalarFunctionalTensorCandidate
     (T : Type)
     [UniformSpace T] [AddCommGroup T] [Module ℂ T]
     [IsUniformAddGroup T] [IsTopologicalAddGroup T] [ContinuousSMul ℂ T]
@@ -81,7 +83,7 @@ structure OSPositiveHalfSpaceCompletedTensorData
   /-- Pure tensors are genuinely jointly continuous. -/
   pure_joint_continuous : Continuous (fun p : OSPositiveHalfLineSchwartzSpace ×
     OSThreeDimensionalSpatialSchwartzSpace => pure p.1 p.2)
-  /-- Finite linear combinations of pure tensors are dense in the supplied completion. -/
+  /-- Finite linear combinations of pure tensors are dense in the supplied candidate carrier. -/
   dense_pure_span : Dense ((Submodule.span ℂ (Set.range
     (fun p : OSPositiveHalfLineSchwartzSpace ×
       OSThreeDimensionalSpatialSchwartzSpace => pure p.1 p.2)) : Submodule ℂ T) : Set T)
@@ -135,7 +137,7 @@ theorem osThreeDimensionalSpatialBumpSchwartz_ne_zero :
   rw [osThreeDimensionalSpatialBumpSchwartz_zero] at h
   simp at h
 
-namespace OSPositiveHalfSpaceCompletedTensorData
+namespace OSPositiveHalfSpaceScalarFunctionalTensorCandidate
 
 variable {T : Type}
 variable [UniformSpace T] [AddCommGroup T] [Module ℂ T]
@@ -143,20 +145,20 @@ variable [IsUniformAddGroup T] [IsTopologicalAddGroup T] [ContinuousSMul ℂ T]
 variable [LocallyConvexSpace ℝ T] [T2Space T] [CompleteSpace T]
 
 /-- Exact pure tensor of the explicit nonzero positive half-line class and spatial bump. -/
-def nonzeroBumpPureTensor (D : OSPositiveHalfSpaceCompletedTensorData T) : T :=
+def nonzeroBumpPureTensor (D : OSPositiveHalfSpaceScalarFunctionalTensorCandidate T) : T :=
   D.pure
     (osPositiveHalfLineSchwartzQuotientMap osPositiveHalfLineBumpSchwartz)
     osThreeDimensionalSpatialBumpSchwartz
 
-/-- Every supplied completed tensor carrier is nontrivial on the explicit two-factor test. -/
+/-- Every supplied scalar-functional candidate is nontrivial on the explicit two-factor test. -/
 theorem nonzeroBumpPureTensor_ne_zero
-    (D : OSPositiveHalfSpaceCompletedTensorData T) :
+    (D : OSPositiveHalfSpaceScalarFunctionalTensorCandidate T) :
     D.nonzeroBumpPureTensor ≠ 0 :=
   D.pure_ne_zero _ _ osPositiveHalfLineBumpQuotient_ne_zero
     osThreeDimensionalSpatialBumpSchwartz_ne_zero
 
 /-- Pure tensors are genuinely jointly continuous for the exact half-line/spatial factors. -/
-theorem continuous_pure_uncurry (D : OSPositiveHalfSpaceCompletedTensorData T) :
+theorem continuous_pure_uncurry (D : OSPositiveHalfSpaceScalarFunctionalTensorCandidate T) :
     Continuous (fun p : OSPositiveHalfLineSchwartzSpace ×
       OSThreeDimensionalSpatialSchwartzSpace => D.pure p.1 p.2) :=
   D.pure_joint_continuous
@@ -164,7 +166,7 @@ theorem continuous_pure_uncurry (D : OSPositiveHalfSpaceCompletedTensorData T) :
 /-- Agreement on all pure tensors uniquely determines the scalar-valued extension. This follows
 from dense pure span and scalar Hausdorffness. -/
 theorem scalarLift_unique
-    (D : OSPositiveHalfSpaceCompletedTensorData T)
+    (D : OSPositiveHalfSpaceScalarFunctionalTensorCandidate T)
     (b : OSPositiveHalfLineSchwartzSpace →ₗ[ℂ]
       OSThreeDimensionalSpatialSchwartzSpace →ₗ[ℂ] ℂ)
     (hb : Continuous (fun p : OSPositiveHalfLineSchwartzSpace ×
@@ -183,7 +185,7 @@ theorem scalarLift_unique
     rw [D.dense_pure_span.closure_eq]
     exact Set.mem_univ x)
 
-end OSPositiveHalfSpaceCompletedTensorData
+end OSPositiveHalfSpaceScalarFunctionalTensorCandidate
 
 end
 

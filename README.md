@@ -206,13 +206,16 @@ interface requires Hausdorff locally convex factors and an additive-uniform comp
 tensors, dense pure span, and continuous-linear extension into same-universe complete targets;
 uniqueness is derived from density, but this stronger arbitrary-target interface remains separate
 from source-facing use pending authoritative sourcing. The neutral spatial `ℝ³` selected by
-four-dimensional spacetime and source-facing scalar-functional completion data for
-`𝒮(ℝ₊) ⊗̂ 𝒮(ℝ³)` are defined; explicit nonzero factor tests force a nonzero pure tensor in every
-supplied carrier, but no carrier is constructed. Proper enlargement and
-sufficiency/density/completion comparisons with the earlier strict-support subspace, completeness
-and the Fréchet presentation of the half-line quotient, the source-specific completed-tensor carrier, and
-OS-II-strength reconstruction remain open. `(E2)` remains absent pending those comparisons, the
-separately constructed completed tensor product for positive-half-space tests, and the source-facing
+four-dimensional spacetime and source-facing scalar-functional tensor candidate data for the
+factors `𝒮(ℝ₊)` and `𝒮(ℝ³)` are defined; explicit nonzero tests force a nonzero pure tensor in every
+supplied candidate. A zero-based fixed-left-associated family records analogous scalar-functional
+candidates at every intended finite positive power, with density-derived uniqueness and recursive
+noncollapse. These data do not characterize the completed projective tensor topology. Proper
+enlargement and sufficiency/density/completion comparisons with the earlier strict-support subspace,
+completeness and the Fréchet presentation of the half-line quotient, actual completed-tensor
+carriers and topology, nuclearity, and OS-II-strength reconstruction remain open. `(E2)` remains
+absent pending those comparisons, a separately constructed completed tensor product for
+positive-half-space tests, and the source-facing
 reflection-positivity inequality; the algebraic finite-sequence carrier
 and product are implemented with exact positive and natural-arity support, with its scalar zero-point component represented faithfully as a
 zero-arity Schwartz test. Exact configuration split/merge and the raw pointwise tensor kernel are
