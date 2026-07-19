@@ -37,6 +37,8 @@ import YangMills.Mathematics.OrthonormalBilinearContraction
 import YangMills.Mathematics.OrthonormalBilinearContractionProbes
 import YangMills.Mathematics.AlternatingMapDegreeTwoBilinear
 import YangMills.Mathematics.AlternatingMapDegreeTwoBilinearProbes
+import YangMills.Mathematics.ContinuousMultilinearMapBasis
+import YangMills.Mathematics.ContinuousMultilinearMapBasisProbes
 import YangMills.Mathematics.SchwartzTensorProduct
 import YangMills.Mathematics.SchwartzTensorProductProbes
 import YangMills.Mathematics.FiniteConfigurationSchwartzTensor
@@ -165,6 +167,8 @@ import YangMills.Euclidean.SchwingerOrderedTestSpace
 import YangMills.Euclidean.SchwingerOrderedTestSpaceProbes
 import YangMills.Euclidean.OSOrderedDerivativeCarrier
 import YangMills.Euclidean.OSOrderedDerivativeCarrierProbes
+import YangMills.Euclidean.OSOrderedCoordinateJets
+import YangMills.Euclidean.OSOrderedCoordinateJetsProbes
 import YangMills.Euclidean.SchwingerTestSequence
 import YangMills.Euclidean.SchwingerTestSequenceProbes
 import YangMills.Euclidean.SchwingerConfigurationConcatenation

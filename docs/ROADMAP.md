@@ -183,7 +183,11 @@ committed before higher layers depend on it.
   strict positive time order, package the condition as an exact complex Schwartz submodule, install
   its exact induced per-arity Schwartz topology, include the
   strict-support carrier, and provide a nonzero test with hostile probes.
-- [ ] Prove exact four-dimensional equivalence with OS-I's multi-index carrier and its closedness,
+- [x] Construct the exact point/coordinate basis and prove full Fréchet-map vanishing equivalent to
+  all ordered coordinate-basis jet evaluations, with a reusable multilinear basis-determination
+  theorem and nonzero-detection probes.
+- [ ] Complete the remaining exact four-dimensional multi-index comparison: flatten coordinates and
+  identify ordered repeated basis directions, symmetry, and multiplicity with OS-I's `D^α`; prove closedness,
   then establish the strict subspace's sufficiency/density/completion relation; install the
   finite-sequence direct-sum topology while keeping the positive-half-space completed tensor product
   distinct; only then define source-facing `(E2)` on the constructed product and reflected-star

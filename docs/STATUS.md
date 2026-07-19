@@ -2605,6 +2605,28 @@ Implemented and verified:
 - No OS sequence, reflection-positive datum, reconstruction, theory, existence theorem, or mass gap
   is constructed.
 
+## 2026-07-18 — one-hundred-forty-first stone: coordinate-basis OS jets
+
+Implemented and verified:
+
+- A reusable theorem, built over Mathlib's `Module.Basis.ext_multilinear`, proves that every
+  finite-arity continuous multilinear map is determined by its values on basis tuples, including
+  arity zero; a nonzero map therefore has a nonzero basis-tuple evaluation.
+- `euclideanNPointCoordinateBasis` is the exact Kronecker basis indexed jointly by point label and
+  Euclidean spacetime coordinate.
+- `IsOSPositiveTimeOrderedCoordinateJetVanishing` requires every derivative to vanish on every
+  ordered tuple of those exact directions outside strict positive time order.
+- `osPositiveTimeOrderedFrechet_iff_coordinateJets` proves exact internal equivalence with full
+  Fréchet-map vanishing, and `OSPositiveTimeOrderedCoordinateJetCarrier.equivFrechetCarrier`
+  preserves the same Schwartz test in both presentations.
+- Hostile probes calculate the point/coordinate basis values, detect any nonzero derivative by an
+  actual coordinate tuple, lock the carrier identification, and retain the explicit nonzero test.
+- This still is not OS-I's printed multi-index equivalence. Exact four-dimensional coordinate
+  flattening and the relation between ordered repeated directions, derivative symmetry/multiplicity,
+  and `D^α` remain open, as do closedness and every reconstruction obligation.
+- No OS sequence, reflection-positive datum, reconstruction, theory, existence theorem, or mass gap
+  is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
