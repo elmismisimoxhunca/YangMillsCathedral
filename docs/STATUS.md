@@ -2824,6 +2824,23 @@ Implemented and verified:
   involution, `(E2)`, OS-II growth and reconstruction.
 - No `(E2)` datum, reconstruction, quantum theory, existence theorem, or mass gap is constructed.
 
+## 2026-07-19 — one-hundred-fiftieth stone: exact source-space complex algebra
+
+Implemented and verified:
+
+- `OSPositiveTimeOrderedFourDimensionalSourceSpace.equivSubmodule` identifies every positive-arity
+  source-syntax carrier with the exact complex derivative-vanishing Schwartz submodule while
+  preserving the underlying function definitionally.
+- Named additive commutative group and complex module structures are transported through that
+  equivalence under the repository's controlled-instance policy.
+- Zero, addition, negation and complex scalar multiplication are proved to be exactly the ambient
+  Schwartz operations.
+- Hostile probes lock the exact submodule equivalence and all underlying operations and retain the
+  explicit nonzero source test.
+- No continuity, topological-vector-space structure, local convexity, source-sequence module,
+  direct-sum identification, `(E2)`, OS-II growth or reconstruction is asserted.
+- No `(E2)` datum, reconstruction, quantum theory, existence theorem, or mass gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

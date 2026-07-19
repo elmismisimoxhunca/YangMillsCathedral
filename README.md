@@ -159,7 +159,9 @@ and the canonical multi-index predicate is equivalent to the Fréchet candidate.
 repeated-coordinate derivative is now named as the formal interpretation of OS-I's four-dimensional
 `D^α`; exact positive-arity source membership is defined, proved equivalent to the Fréchet
 presentation, proved closed with the induced Schwartz topology, and supplied a nonzero arity-one
-test. OS-I's separate scalar zero-point sequence component is not folded into this subtype. An
+test. Each source space is now algebraically equivalent to the exact complex Schwartz submodule,
+with named additive-group and complex-module structures whose operations preserve the underlying
+Schwartz functions exactly. OS-I's separate scalar zero-point sequence component is not folded into this subtype. An
 exact four-dimensional algebraic source-sequence carrier now combines that scalar with finitely
 many exact positive-arity components and exact nonzero support; the earlier strict sequence maps
 componentwise without changing its scalar, support or Schwartz components and without a properness

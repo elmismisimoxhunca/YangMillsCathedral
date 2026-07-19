@@ -208,6 +208,8 @@ committed before higher layers depend on it.
   coordinate Fréchet derivative, define exact positive-arity source membership, prove it equivalent
   to the Fréchet candidate, transport closedness, install the induced topology, and retain a nonzero
   source-space test with hostile probes while keeping OS-I's scalar zero-point component separate.
+- [x] Package each exact positive-arity source space as an exact complex Schwartz submodule and
+  transport named additive-group and complex-module structures with exact underlying operations.
 - [x] Assemble the separate scalar `f₀`, finitely many exact positive-arity source components and
   exact nonzero support into the four-dimensional algebraic OS source-sequence carrier; map the
   earlier strict sequence componentwise without a properness claim and retain explicit scalar-unit and nonzero-bump sequences.
