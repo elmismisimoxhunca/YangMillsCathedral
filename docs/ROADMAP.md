@@ -55,6 +55,9 @@ committed before higher layers depend on it.
   certificate, and an exact `2 → 3` specialization; do not claim canonical existence or `d²`.
 - [x] Prove the positive-degree formula at `n = 0` equals the earlier one-form Cartan formula and
   provide bidirectional certificate conversions preserving the exact degree-two derivative carrier.
+- [x] Combine Mathlib's normed-space `d² = 0` theorem with the positive-degree Cartan bridge,
+  including exact within-set, global, and `1 → 2 → 3` nilpotence surfaces; arbitrary-manifold
+  `d²` remains debt.
 - [x] Define principal curvature from a certified derivative and the smooth bracket-wedge.
 - [x] State and probe intrinsic curvature horizontality/right-adjoint-equivariance certificates.
 - [x] Construct and probe the set-level adjoint associated-bundle orbit quotient.

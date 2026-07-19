@@ -301,8 +301,10 @@ argument are derived explicitly. The exact cubic self-bracket is proved zero, po
 smoothly, by expansion to twice the cyclic Lie Jacobi sum. The positive-degree ordinary Cartan
 certificate now makes a supplied `2 → 3` exterior derivative typeable. At `n = 0` its formula is
 proved equal to the earlier one-form formula, with conversions in both directions preserving the
-exact degree-two derivative carrier. Canonical existence, chart independence, `d²`, graded Leibniz,
-positive-degree covariant exterior differentiation, and
+exact degree-two derivative carrier. Mathlib's normed-space `d² = 0` theorem now proves the
+positive-degree Cartan expression of the same first derivative vanishes within a set and globally,
+including the exact `1 → 2 → 3` endpoint. Canonical existence, chart independence,
+arbitrary-manifold `d²`, graded Leibniz, positive-degree covariant exterior differentiation, and
 positive curvature-tensor orders remain open. This is not a general
 curvature-polynomial/covariant-derivative language or a canonical injective quantization map. A preliminary four-dimensional perturbative interface now requires a positive running coupling
 on an explicit open ultraviolet tail, exact beta flow, ultraviolet limit, and negative cubic leading

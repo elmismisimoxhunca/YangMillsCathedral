@@ -3291,6 +3291,20 @@ Implemented and verified:
 - This is coherence between supplied APIs, not certificate existence, full structure equality,
   chart independence, `d²`, graded Leibniz, covariant differentiation, or Bianchi.
 
+## 2026-07-19 — one-hundred-seventy-sixth stone: local-model Cartan nilpotence
+
+Implemented and verified:
+
+- `extDerivWithin_positiveDegreeCartanExpression_zero` combines the exact positive-degree Cartan
+  bridge with Mathlib's `extDerivWithin_extDerivWithin_apply` theorem.
+- Differentiability of the first derivative is derived from the same input form's second-order
+  regularity and exact set hypotheses; it is not accepted as a disconnected witness.
+- `extDeriv_positiveDegreeCartanExpression_zero` supplies the global specialization, while
+  `secondExteriorDerivativeCartanExpression_zero` locks the Bianchi-relevant `1 → 2 → 3` endpoint.
+- Hostile probes reject a nonzero second-derivative Cartan value and any unrelated nonzero output.
+- This proves normed-space local-model mathematics only. It does not provide an arbitrary-manifold
+  exterior derivative, chart-independent `d²`, covariant `D²`, graded Leibniz, or Bianchi.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
