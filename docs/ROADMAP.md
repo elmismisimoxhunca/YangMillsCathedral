@@ -212,6 +212,8 @@ committed before higher layers depend on it.
   transport named additive-group and complex-module structures with exact underlying operations.
 - [x] Prove exact source-space addition, negation and complex scalar multiplication continuous for
   the induced Schwartz topology and package named topological-algebra structures.
+- [x] Package the exact forgetful map as a real-linear inducing map and transport named real local
+  convexity from ambient Schwartz space to every exact positive-arity source space.
 - [x] Assemble the separate scalar `f₀`, finitely many exact positive-arity source components and
   exact nonzero support into the four-dimensional algebraic OS source-sequence carrier; map the
   earlier strict sequence componentwise without a properness claim and retain explicit scalar-unit and nonzero-bump sequences.

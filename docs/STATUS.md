@@ -2914,6 +2914,23 @@ Implemented and verified:
   source product/involution, `(E2)`, OS-II growth and reconstruction remain open.
 - No `(E2)` datum, reconstruction, quantum theory, existence theorem, or mass gap is constructed.
 
+## 2026-07-19 — one-hundred-fifty-fifth stone: source-space local convexity
+
+Implemented and verified:
+
+- The transported exact complex source-space module canonically restricts to a real module, and the
+  exact forgetful map is packaged as `toSchwartzRealLinearMap`.
+- The map preserves the same underlying Schwartz function and exact real scalar action and is proved
+  inducing for the already-defined source topology.
+- Named `LocallyConvexSpace ℝ` structure is transported from ambient Schwartz space to every exact
+  positive-arity source space.
+- Hostile probes lock exact real-linearity, the inducing topology, actual convex neighborhoods at
+  zero, and retention of the explicit nonzero source test.
+- This is per-arity local convexity only. Sequence local convexity, joint sequence addition,
+  direct-sum identification, completion/tensor topology, `(E2)`, OS-II growth and reconstruction
+  remain open.
+- No `(E2)` datum, reconstruction, quantum theory, existence theorem, or mass gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

@@ -162,7 +162,9 @@ presentation, proved closed with the induced Schwartz topology, and supplied a n
 test. Each source space is now algebraically equivalent to the exact complex Schwartz submodule,
 with named additive-group and complex-module structures whose operations preserve the underlying
 Schwartz functions exactly; addition, negation and complex scalar multiplication are proved
-continuous for the induced topology through named topological-algebra structures. OS-I's separate scalar zero-point sequence component is not folded into this subtype. An
+continuous for the induced topology through named topological-algebra structures. The exact
+forgetful map is also packaged as a real-linear inducing map, transporting named real local
+convexity from ambient Schwartz space at every positive arity. OS-I's separate scalar zero-point sequence component is not folded into this subtype. An
 exact four-dimensional algebraic source-sequence carrier now combines that scalar with finitely
 many exact positive-arity components and exact nonzero support; the earlier strict sequence maps
 componentwise without changing its scalar, support or Schwartz components and without a properness
