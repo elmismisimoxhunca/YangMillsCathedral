@@ -2946,6 +2946,27 @@ Implemented and verified:
   reconstruction.
 - No `(E2)` datum, reconstruction, quantum theory, existence theorem, or mass gap is constructed.
 
+## 2026-07-19 — one-hundred-fifty-seventh stone: locally convex final source topology
+
+Implemented and verified:
+
+- `IsOSPositiveTimeOrderedFourDimensionalLocallyConvexFinalTopology` requires joint addition and
+  complex scalar continuity, real local convexity, and continuity of every exact finite-stage map.
+- The `sInf` of all such topologies is constructed as a distinct locally convex final topology.
+  Mathlib lattice theorems prove it self-admissible, so its defining family is not vacuous.
+- Named `ContinuousAdd`, `ContinuousSMul ℂ`, `ContinuousNeg`, `IsTopologicalAddGroup`, and
+  `LocallyConvexSpace ℝ` structures are packaged, and every exact stage map is bundled as the same
+  continuous complex-linear extension.
+- The raw finite-stage final topology is proved below the locally convex final topology in Mathlib's
+  reversed topology order. Equality is proved equivalent to full raw admissibility and is not
+  asserted.
+- Hostile probes lock self-admissibility, genuine joint operations, convex zero neighborhoods,
+  exact nonzero-stage recovery, the one-way raw comparison, and the exact equality gate.
+- Hausdorff separation, identification with OS-I's printed locally convex direct sum, raw equality,
+  strict-carrier density/completion, completed tensor topology, `(E2)`, OS-II growth and
+  reconstruction remain open.
+- No `(E2)` datum, reconstruction, quantum theory, existence theorem, or mass gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

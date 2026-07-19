@@ -180,12 +180,16 @@ named topological additive-group, continuous complex scalar, and real locally co
 including the independent scalar at the empty positive stage. The topology is also
 proved to be the quotient of the disjoint union of all finite stages. Local compactness of `ℂ`
 yields joint complex scalar continuity; negation, finite-union stage addition, and addition in each
-sequence variable separately are continuous. Joint addition remains conditional on the unproved
-product-quotient property, so the topology is not yet called OS-I's locally convex direct sum:
-topological-vector-space operations, proper enlargement and sufficiency/density/completion comparisons with the
-earlier strict-support subspace, locally convex identification, the distinct completed-tensor
-topology, and OS-II-strength reconstruction remain open. `(E2)`
-remains absent pending those comparisons, the identification of the named finite-stage final topology with OS-I's locally convex direct sum, the
+sequence variable separately are continuous. Joint addition on this raw topology remains conditional
+on the unproved product-quotient property. Separately, an `sInf` construction now gives the finest
+stage-continuous real-locally-convex topological complex-module topology, with joint addition/scalar
+operations, local convexity and continuous-linear stage maps. The raw topology lies below this
+locally convex final topology in Mathlib's reversed order, and equality is proved equivalent to raw
+admissibility rather than asserted. Neither topology is yet identified with OS-I's printed Hausdorff
+locally convex direct sum: that identification, proper enlargement and sufficiency/density/completion
+comparisons with the earlier strict-support subspace, the distinct completed-tensor topology, and
+OS-II-strength reconstruction remain open. `(E2)` remains absent pending those comparisons, the
+source-facing topology identification, the
 distinct completed tensor product for positive-half-space tests, and the source-facing
 reflection-positivity inequality; the algebraic finite-sequence carrier
 and product are implemented with exact positive and natural-arity support, with its scalar zero-point component represented faithfully as a

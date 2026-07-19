@@ -230,9 +230,13 @@ committed before higher layers depend on it.
   use local compactness of `ℂ` to prove joint complex scalar continuity, derive negation continuity,
   and prove finite-union stage addition and separate sequence addition continuity. Keep joint
   addition conditional on the still-unproved product-quotient property.
+- [x] Construct the distinct locally convex final topology as the `sInf` of all stage-continuous
+  real-locally-convex topological complex-module topologies; prove it admissible, package its joint
+  operations and stage CLMs, compare it with the raw final topology, and characterize equality by
+  raw admissibility without asserting that equality or OS-I direct-sum identification.
 - [ ] Establish the earlier strict-support subspace's sufficiency/density/completion relation to the
-  exact positive-arity OS-I source spaces; install compatible complex-module/topological-vector-
-  space operations and identify the named final topology with OS-I's locally convex direct sum while
+  exact positive-arity OS-I source spaces; prove the needed Hausdorff/direct-sum characterization
+  and either raw/local-convex-final equality or the correct source-facing topology selection while
   keeping the positive-half-space completed tensor product distinct; only then define source-facing `(E2)`
   on the constructed product and reflected-star operation.
 - [x] Construct exact simultaneous Euclidean translations on Schwartz tests and finite sequences,
