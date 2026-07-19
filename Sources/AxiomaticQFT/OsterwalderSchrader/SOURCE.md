@@ -78,8 +78,12 @@ Printed journal pages are authoritative. Text line numbers below refer to the re
   Schwartz submodule is now proved closed, its membership is equivalent to nonpositive topological
   support, and the genuine Hausdorff real-locally-convex topological complex-module quotient
   `𝒮(ℝ₊)` has an explicit nonzero positive class.
-  Completeness, the printed seminorm presentation, and the positive-half-space completion remain
-  unconstructed; that tensor topology remains separate by definition.
+  The neutral spatial `ℝ³` selected by four-dimensional spacetime and source-facing scalar-valued
+  completion data for `𝒮(ℝ₊) ⊗̂ 𝒮(ℝ³)` are now defined; explicit nonzero factors force a nonzero
+  pure tensor in any supplied carrier. The stronger arbitrary-target projective interface remains
+  separate and is not required by this source-facing record pending authoritative sourcing. Quotient completeness, the printed seminorm presentation, construction of
+  a completed carrier, and iterated tensor powers remain open; that tensor topology remains separate
+  by definition.
 - Printed pp. 84–85: the original proposal lists `(E0)` temperedness, `(E1)` Euclidean covariance,
   `(E2)` positivity, `(E3)` symmetry, and `(E4)` cluster property.
 - Printed pp. 87–88; `os1_primary_scan.txt` lines 237–277: the axioms and original `E → R` / `R → E`

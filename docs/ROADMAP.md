@@ -258,11 +258,15 @@ committed before higher layers depend on it.
   Hausdorff locally convex complex factors, an additive-uniform complete carrier, jointly continuous
   noncollapsing pure tensors, dense pure span, and continuous-linear extension into same-universe
   complete targets, with uniqueness derived from density.
+- [x] Define the neutral spatial `ℝ³` selected by four-dimensional spacetime and source-facing
+  scalar-functional completion data for `𝒮(ℝ₊) ⊗̂ 𝒮(ℝ³)`, with explicit nonzero factors forcing a
+  nonzero pure tensor in every supplied carrier; keep the stronger arbitrary-target projective
+  interface separate pending authoritative sourcing and construct no carrier.
 - [ ] Establish the earlier strict-support subspace's sufficiency/density/completion relation to the
   exact positive-arity OS-I source spaces; prove the half-line quotient complete with the source's
-  Fréchet presentation and specialize the completed tensor interface while keeping it separate from the direct sum; only then define
-  source-facing `(E2)`
-  on the constructed product and reflected-star operation.
+  Fréchet presentation, construct the completed tensor carrier and iterated powers while keeping
+  them separate from the direct sum; only then define source-facing `(E2)` on the constructed
+  product and reflected-star operation.
 - [x] Construct exact simultaneous Euclidean translations on Schwartz tests and finite sequences,
   with inverse and support preservation, as algebraic `(E4)` infrastructure.
 - [x] Define normalized nonzero spatial rays, prove escape to infinity, construct the four-dimensional

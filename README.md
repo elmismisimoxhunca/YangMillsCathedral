@@ -204,9 +204,13 @@ nonzero positive bump class. An uninhabited
 completed-projective-tensor
 interface requires Hausdorff locally convex factors and an additive-uniform complete carrier, jointly continuous noncollapsing pure
 tensors, dense pure span, and continuous-linear extension into same-universe complete targets;
-uniqueness is derived from density. Proper enlargement and sufficiency/density/completion
-comparisons with the earlier strict-support subspace, completeness and the Fréchet presentation of
-the now-constructed Hausdorff half-line quotient, the source-specific completed-tensor carrier, and
+uniqueness is derived from density, but this stronger arbitrary-target interface remains separate
+from source-facing use pending authoritative sourcing. The neutral spatial `ℝ³` selected by
+four-dimensional spacetime and source-facing scalar-functional completion data for
+`𝒮(ℝ₊) ⊗̂ 𝒮(ℝ³)` are defined; explicit nonzero factor tests force a nonzero pure tensor in every
+supplied carrier, but no carrier is constructed. Proper enlargement and
+sufficiency/density/completion comparisons with the earlier strict-support subspace, completeness
+and the Fréchet presentation of the half-line quotient, the source-specific completed-tensor carrier, and
 OS-II-strength reconstruction remain open. `(E2)` remains absent pending those comparisons, the
 separately constructed completed tensor product for positive-half-space tests, and the source-facing
 reflection-positivity inequality; the algebraic finite-sequence carrier
