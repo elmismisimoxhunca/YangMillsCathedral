@@ -189,6 +189,8 @@ with no new witness and with the exact local `dσ + [A,σ]` formula retained. Th
 `C∞` derivative regularity now derives smoothness of this exact degree-one output for every smooth
 degree-zero input through smooth bundle-map evaluation. Separately, the local normed-coordinate
 curvature and degree-two covariant exterior expression are derived from one twice differentiable
-one-form, and their Bianchi identity follows from `d²`, self-wedge Leibniz, and Jacobi. Transport to
+one-form, and their Bianchi identity follows from `d²`, self-wedge Leibniz, and Jacobi. Within-set
+versions retain one explicit set together with its regularity, uniqueness, membership, and
+closure/interior hypotheses and agree with the global definitions on `univ`. Transport to
 the exact principal/adjoint-bundle connection, a canonical arbitrary-manifold positive-degree
 operator, source-facing Bianchi, and gauge covariance remain pending.

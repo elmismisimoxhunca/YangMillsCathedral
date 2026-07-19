@@ -70,7 +70,10 @@ committed before higher layers depend on it.
   whole-form differentiability, and identify the alternation with Mathlib `extDeriv`.
 - [x] Derive the finite-dimensional normed-coordinate Bianchi identity from the exact same
   connection one-form, canonical transported bracket, Mathlib `d² = 0`, self-wedge Leibniz, and
-  Jacobi cancellation; arbitrary-manifold/principal-bundle transport remains debt.
+  Jacobi cancellation.
+- [x] Prove within-set self-wedge Leibniz and Bianchi variants retaining explicit regularity,
+  uniqueness, membership, and closure/interior hypotheses, with exact `univ` recovery; local
+  manifold-chart pullback and principal-bundle transport remain debt.
 - [x] Define principal curvature from a certified derivative and the smooth bracket-wedge.
 - [x] State and probe intrinsic curvature horizontality/right-adjoint-equivariance certificates.
 - [x] Construct and probe the set-level adjoint associated-bundle orbit quotient.

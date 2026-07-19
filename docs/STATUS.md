@@ -3412,6 +3412,26 @@ Implemented and verified:
   principal connection, descended adjoint-bundle curvature, arbitrary-manifold positive-degree
   covariant exterior derivative, and source-facing Bianchi theorem remain open.
 
+## 2026-07-19 — one-hundred-eighty-third stone: within-set coordinate Bianchi
+
+Implemented and verified:
+
+- `continuousBilinearSelfWedgeOne_fderivWithin_tuple` derives every fixed coefficient derivative
+  from one `DifferentiableWithinAt` input on one exact set.
+- `continuousBilinearSelfWedgeOne_differentiableWithinAt` derives whole-wedge regularity without a
+  second witness, and `extDerivWithin_continuousBilinearSelfWedgeOne` proves the exact minus-two
+  within-set Leibniz identity.
+- `groupLieAlgebraCoordinateCurvatureWithin` and
+  `groupLieAlgebraCoordinateCovariantExteriorDerivativeTwoWithin` retain the same set, connection,
+  and canonical bracket; both recover the global definitions exactly on `univ`.
+- `groupLieAlgebraCoordinate_bianchiWithin` derives zero from one `ContDiffWithinAt` connection,
+  explicit smoothness order, `UniqueDiffOn`, membership, and closure-of-interior hypotheses.
+- Hostile probes reject malformed within-set derivatives, unrelated same-set curvature, and nonzero
+  Bianchi outputs while locking exact `univ` recovery.
+- This removes the locality-shape blocker for chart transport. The chart-local pullback carrier,
+  exterior-derivative naturality, exact principal-curvature coordinate equality, and source-facing
+  principal/adjoint Bianchi theorems remain open.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

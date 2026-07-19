@@ -314,7 +314,9 @@ bracket. An explicit operator-norm bound packages the wedge as a continuous bili
 whole-form differentiability from the same input, and identifies that alternation with Mathlib's
 `extDeriv`. Combining this with Mathlib `d² = 0` and coordinate Jacobi cancellation now derives the
 exact finite-dimensional normed-coordinate Bianchi identity for `F_A = dA + 1/2[A ∧ A]` and
-`D_A F_A = dF_A + [A ∧ F_A]`, all from the same twice differentiable one-form. Canonical
+`D_A F_A = dF_A + [A ∧ F_A]`, all from the same twice differentiable one-form. A within-set version
+retains the exact chart-style set, `ContDiffWithinAt`, `UniqueDiffOn`, membership, and
+closure-of-interior hypotheses and recovers the global definitions on `univ`. Canonical
 arbitrary-manifold existence, chart independence,
 arbitrary-manifold `d²`, arbitrary-manifold graded Leibniz transport, positive-degree covariant exterior
 differentiation, and
