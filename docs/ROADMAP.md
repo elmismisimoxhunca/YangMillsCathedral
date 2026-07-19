@@ -218,6 +218,8 @@ committed before higher layers depend on it.
 - [x] Identify exact source sequences with a scalar times a dependent finitely supported source-
   space family and transport named additive-group and complex-module structures with exact scalar
   and component laws.
+- [x] Prove every exact-source finite-stage extension complex-linear and package it as a continuous
+  complex-linear map into the named final topology, with exact support and nonzero-stage probes.
 - [ ] Establish the earlier strict-support subspace's sufficiency/density/completion relation to the
   exact positive-arity OS-I source spaces; install compatible complex-module/topological-vector-
   space operations and identify the named final topology with OS-I's locally convex direct sum while

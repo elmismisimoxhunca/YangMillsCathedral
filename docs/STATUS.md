@@ -2859,6 +2859,24 @@ Implemented and verified:
   source product/involution, `(E2)`, OS-II growth or reconstruction is asserted.
 - No `(E2)` datum, reconstruction, quantum theory, existence theorem, or mass gap is constructed.
 
+## 2026-07-19 — one-hundred-fifty-second stone: continuous linear source stages
+
+Implemented and verified:
+
+- The exact per-arity source-space algebra, source-sequence algebra and finite-stage final topology
+  are installed only as local named instances.
+- `osPositiveTimeOrderedFourDimensionalStageToSequenceLinearMap` proves every generating finite-
+  stage extension complex-linear with exact scalar and underlying Schwartz component laws.
+- `osPositiveTimeOrderedFourDimensionalStageToSequenceContinuousLinearMap` packages the same map as
+  continuous into the named exact-source final topology.
+- Bundling retains the exact stage map and support bound.
+- Hostile probes lock the stage map, named addition/scalar action, support, actual continuity and
+  recovery of the nonzero singleton from its support stage.
+- This proves compatibility of generating maps only. Joint global addition/scalar continuity,
+  topological-vector-space structure, local convexity, direct-sum identification, source product/
+  involution, `(E2)`, OS-II growth and reconstruction remain open.
+- No `(E2)` datum, reconstruction, quantum theory, existence theorem, or mass gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
