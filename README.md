@@ -294,8 +294,9 @@ and its designated-chart value has the same local formula. Separately, a reusabl
 bracket wedge now combines a one-form with every `n`-form by the exact omitted-slot alternating sum,
 with degree-one coherence and the one-with-two three-term formula proved. The existing smooth
 coordinate bracket now derives smooth closure of that exact graded carrier and a bundled operation
-coherent with the earlier degree-one smooth wedge. The exact cubic self-bracket is now proved zero,
-pointwise and smoothly, by expansion to twice the cyclic Lie Jacobi sum. Positive-degree covariant
+coherent with the earlier degree-one smooth wedge. Additivity and real-scalarity in each graded
+argument are derived explicitly. The exact cubic self-bracket is proved zero, pointwise and
+smoothly, by expansion to twice the cyclic Lie Jacobi sum. Positive-degree covariant
 exterior differentiation and positive curvature-tensor orders remain open. This is not a general
 curvature-polynomial/covariant-derivative language or a canonical injective quantization map. A preliminary four-dimensional perturbative interface now requires a positive running coupling
 on an explicit open ultraviolet tail, exact beta flow, ultraviolet limit, and negative cubic leading

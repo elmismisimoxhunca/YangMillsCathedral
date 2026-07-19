@@ -130,6 +130,58 @@ theorem _root_.ContinuousAlternatingMap.lieBracketWedgeOneMany_self_self
     rw [← lie_skew z y, lie_neg, sub_neg_eq_add, two_zsmul]
   rw [pair_eq, pair_eq, pair_eq, ← zsmul_add, ← zsmul_add, lie_jacobi, smul_zero]
 
+/-- The graded bracket wedge is additive in its one-form argument. -/
+@[simp]
+theorem _root_.ContinuousAlternatingMap.add_lieBracketWedgeOneMany
+    (n : ℕ) (alpha₁ alpha₂ : T [⋀^Fin 1]→L[ℝ] V)
+    (beta : T [⋀^Fin n]→L[ℝ] V) :
+    (alpha₁ + alpha₂).lieBracketWedgeOneMany n beta =
+      alpha₁.lieBracketWedgeOneMany n beta + alpha₂.lieBracketWedgeOneMany n beta := by
+  ext v
+  simp [ContinuousAlternatingMap.lieBracketWedgeOneMany_apply, add_lie,
+    Finset.sum_add_distrib]
+
+/-- The graded bracket wedge is additive in its `n`-form argument. -/
+@[simp]
+theorem _root_.ContinuousAlternatingMap.lieBracketWedgeOneMany_add
+    (n : ℕ) (alpha : T [⋀^Fin 1]→L[ℝ] V)
+    (beta₁ beta₂ : T [⋀^Fin n]→L[ℝ] V) :
+    alpha.lieBracketWedgeOneMany n (beta₁ + beta₂) =
+      alpha.lieBracketWedgeOneMany n beta₁ + alpha.lieBracketWedgeOneMany n beta₂ := by
+  ext v
+  simp [ContinuousAlternatingMap.lieBracketWedgeOneMany_apply, lie_add,
+    Finset.sum_add_distrib]
+
+/-- Real scalar multiplication factors from the one-form argument. -/
+@[simp]
+theorem _root_.ContinuousAlternatingMap.smul_lieBracketWedgeOneMany
+    [ContinuousSMul ℝ V]
+    (n : ℕ) (r : ℝ) (alpha : T [⋀^Fin 1]→L[ℝ] V)
+    (beta : T [⋀^Fin n]→L[ℝ] V) :
+    (r • alpha).lieBracketWedgeOneMany n beta =
+      r • alpha.lieBracketWedgeOneMany n beta := by
+  ext v
+  simp [ContinuousAlternatingMap.lieBracketWedgeOneMany_apply, smul_lie,
+    Finset.smul_sum]
+  apply Finset.sum_congr rfl
+  intro i hi
+  rw [smul_comm]
+
+/-- Real scalar multiplication factors from the `n`-form argument. -/
+@[simp]
+theorem _root_.ContinuousAlternatingMap.lieBracketWedgeOneMany_smul
+    [ContinuousSMul ℝ V]
+    (n : ℕ) (r : ℝ) (alpha : T [⋀^Fin 1]→L[ℝ] V)
+    (beta : T [⋀^Fin n]→L[ℝ] V) :
+    alpha.lieBracketWedgeOneMany n (r • beta) =
+      r • alpha.lieBracketWedgeOneMany n beta := by
+  ext v
+  simp [ContinuousAlternatingMap.lieBracketWedgeOneMany_apply, lie_smul,
+    Finset.smul_sum]
+  apply Finset.sum_congr rfl
+  intro i hi
+  rw [smul_comm]
+
 /-- A zero one-form has zero graded bracket wedge in every degree. -/
 @[simp]
 theorem _root_.ContinuousAlternatingMap.zero_lieBracketWedgeOneMany

@@ -3243,6 +3243,19 @@ Implemented and verified:
 - A positive-degree exterior/covariant derivative, graded Leibniz laws, Bianchi, and positive
   curvature-tensor orders remain open. No connection or theory is constructed.
 
+## 2026-07-19 — one-hundred-seventy-third stone: graded bracket bilinearity laws
+
+Implemented and verified:
+
+- `add_lieBracketWedgeOneMany` and `lieBracketWedgeOneMany_add` derive additivity in the one-form
+  and `n`-form arguments from the exact alternating-sum definition.
+- `smul_lieBracketWedgeOneMany` and `lieBracketWedgeOneMany_smul` derive real-scalarity in both
+  arguments, including the required commutation between integer signs and real scalar action.
+- Hostile probes lock both additivity laws and both real-scalarity laws simultaneously; the earlier
+  zero laws remain exact consequences.
+- These are algebraic prerequisites for future curvature and Leibniz expansions. No exterior or
+  covariant derivative, Bianchi identity, connection, or theory is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

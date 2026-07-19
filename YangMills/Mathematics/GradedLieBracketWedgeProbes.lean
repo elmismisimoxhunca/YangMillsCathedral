@@ -80,6 +80,29 @@ theorem nonalternating_output_blocked
     (hne : alpha.lieBracketWedgeOneMany n beta v ≠ 0) : False :=
   hne ((alpha.lieBracketWedgeOneMany n beta).map_eq_zero_of_eq v heq hij)
 
+/-- Additivity in both arguments is part of the exact graded bracket operation. -/
+theorem exact_additivity
+    (n : ℕ) (alpha₁ alpha₂ : T [⋀^Fin 1]→L[ℝ] V)
+    (beta₁ beta₂ : T [⋀^Fin n]→L[ℝ] V) :
+    (alpha₁ + alpha₂).lieBracketWedgeOneMany n beta₁ =
+        alpha₁.lieBracketWedgeOneMany n beta₁ +
+          alpha₂.lieBracketWedgeOneMany n beta₁ ∧
+      alpha₁.lieBracketWedgeOneMany n (beta₁ + beta₂) =
+        alpha₁.lieBracketWedgeOneMany n beta₁ +
+          alpha₁.lieBracketWedgeOneMany n beta₂ := by
+  simp
+
+/-- Real scalar factors can be extracted from either exact argument. -/
+theorem exact_real_scalarity
+    [ContinuousSMul ℝ V]
+    (n : ℕ) (r : ℝ) (alpha : T [⋀^Fin 1]→L[ℝ] V)
+    (beta : T [⋀^Fin n]→L[ℝ] V) :
+    (r • alpha).lieBracketWedgeOneMany n beta =
+        r • alpha.lieBracketWedgeOneMany n beta ∧
+      alpha.lieBracketWedgeOneMany n (r • beta) =
+        r • alpha.lieBracketWedgeOneMany n beta := by
+  simp
+
 /-- Zero in either factor gives exactly the zero output, not a disconnected supplied form. -/
 theorem exact_zero_laws
     (n : ℕ) (alpha : T [⋀^Fin 1]→L[ℝ] V) (beta : T [⋀^Fin n]→L[ℝ] V) :
