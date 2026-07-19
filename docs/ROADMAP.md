@@ -210,6 +210,8 @@ committed before higher layers depend on it.
   source-space test with hostile probes while keeping OS-I's scalar zero-point component separate.
 - [x] Package each exact positive-arity source space as an exact complex Schwartz submodule and
   transport named additive-group and complex-module structures with exact underlying operations.
+- [x] Prove exact source-space addition, negation and complex scalar multiplication continuous for
+  the induced Schwartz topology and package named topological-algebra structures.
 - [x] Assemble the separate scalar `f₀`, finitely many exact positive-arity source components and
   exact nonzero support into the four-dimensional algebraic OS source-sequence carrier; map the
   earlier strict sequence componentwise without a properness claim and retain explicit scalar-unit and nonzero-bump sequences.

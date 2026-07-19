@@ -2877,6 +2877,21 @@ Implemented and verified:
   involution, `(E2)`, OS-II growth and reconstruction remain open.
 - No `(E2)` datum, reconstruction, quantum theory, existence theorem, or mass gap is constructed.
 
+## 2026-07-19 — one-hundred-fifty-third stone: source-space topological algebra
+
+Implemented and verified:
+
+- The exact positive-arity source topology remains the induced ambient Schwartz topology while its
+  named additive-group and complex-module structures are installed locally.
+- Named `ContinuousAdd`, `ContinuousNeg`, `IsTopologicalAddGroup` and `ContinuousSMul ℂ` structures
+  are constructed by reducing every operation to its exact ambient Schwartz operation.
+- Hostile probes install the named aggregate topological additive-group structure, expose joint
+  addition continuity, negation continuity, joint complex scalar continuity and retain the explicit
+  nonzero source test.
+- Structures remain named rather than global. No source-sequence global continuity, local convexity,
+  direct-sum identification, `(E2)`, OS-II growth or reconstruction is asserted.
+- No `(E2)` datum, reconstruction, quantum theory, existence theorem, or mass gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
