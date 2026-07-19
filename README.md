@@ -443,8 +443,9 @@ canonical flat metric and coordinate Lebesgue measure, then dependently joins th
 strict Euclidean, Wightman, strict Wick, observable, `F²`, stress/translation, and same-PVM gap
 surfaces at the actual Clay dimension. Unlike the lower-dimensional core it also requires the
 preliminary four-dimensional pure-gauge running-coupling/beta normal form indexed by the exact
-compact-simple gauge certificate, exact same-family bilocal products/weak OPE, and supplied
-regular-variation scaling by that same coupling. This is still not the final Clay contract: corrected OS
+compact-simple gauge certificate, exact same-family bilocal products/weak OPE, supplied regular-variation scaling by that same
+coupling, and an anti-disconnection bridge forcing the interpreted `F² × F²` input to have one
+nonzero contracted zeroth-order OPE term. This is still not the final Clay contract: corrected OS
 reconstruction, genuine Poincaré covering, source-faithful curvature-polynomial observables,
 renormalized OPE coefficients/remainders and trace-anomaly semantics remain open. No inhabitant is
 constructed.

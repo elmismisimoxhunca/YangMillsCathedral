@@ -34,7 +34,11 @@ operation is not an OPE, and coincident-point products cannot be smuggled in def
 
 Wilson's model assumptions are not accepted as a nonperturbative Yang–Mills construction. Future Lean
 requirements must state their convergence/asymptotic and domain semantics explicitly and connect
-observables to the same quantum theory used for reconstruction and spectral claims.
+observables to the same quantum theory used for reconstruction and spectral claims. The basic
+curvature-squared interpretation is now connected explicitly to the weak OPE: the ordered `F² × F²`
+input must have a nonzero coefficient and nonzero selected local-field matrix element already at
+zeroth order. This is a project anti-disconnection requirement, not a coefficient calculation or a
+claim printed by Wilson for nonperturbative four-dimensional Yang–Mills.
 
 ## Artifact chain
 

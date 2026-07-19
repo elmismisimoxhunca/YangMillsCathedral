@@ -16,6 +16,7 @@ import YangMills.Minkowski.WightmanLocalObservableCoherence
 import YangMills.Minkowski.WightmanRelativeAnalyticCorrelators
 import YangMills.Minkowski.WeakOperatorProductExpansion
 import YangMills.Observables.CurvatureSquaredInterpretation
+import YangMills.Observables.CurvatureSquaredOPECoherence
 import YangMills.Reconstruction.StrictOrderedWickContinuation
 import YangMills.Renormalization.AsymptoticFreedomOPE
 
@@ -132,6 +133,16 @@ structure FourDimensionalCurrentStrengthContinuumCoreAcceptanceData
   /-- Adjoint closure, covariance, and locality on that same family and representation chain. -/
   covariantObservableFamily :
     Minkowski.CovariantLocalObservableFamilyData observableFamily
+  /-- The scalar Wightman field is an exact nontrivial label of that same family. -/
+  fieldObservableCoherence :
+    Minkowski.ScalarWightmanFieldLocalObservableCoherenceData
+      fieldData observableFamily covariantObservableFamily
+  /-- Exact unit/curvature-squared interpretation from the same classical geometry into the same
+  quantum family; this is not a complete curvature-polynomial grammar. -/
+  curvatureSquaredInterpretation :
+    Observables.CurvatureSquaredLocalObservableInterpretationData
+      (Classical.canonicalEuclideanSpacetimeMetricData EuclideanDimension.four)
+      inner connection exterior curvatureCertificate observableFamily
   /-- Decidable equality is retained explicitly for finite OPE truncations; it is not installed as
   a global instance on an unrelated label carrier. -/
   observableLabelDecidableEq : DecidableEq observableFamily.Label
@@ -146,16 +157,12 @@ structure FourDimensionalCurrentStrengthContinuumCoreAcceptanceData
   opeRegularVariation :
     letI : DecidableEq observableFamily.Label := observableLabelDecidableEq
     Renormalization.SuppliedWeakOPERegularVariationData asymptoticFreedom weakOPE
-  /-- The scalar Wightman field is an exact nontrivial label of that same family. -/
-  fieldObservableCoherence :
-    Minkowski.ScalarWightmanFieldLocalObservableCoherenceData
-      fieldData observableFamily covariantObservableFamily
-  /-- Exact unit/curvature-squared interpretation from the same classical geometry into the same
-  quantum family; this is not a complete curvature-polynomial grammar. -/
-  curvatureSquaredInterpretation :
-    Observables.CurvatureSquaredLocalObservableInterpretationData
+  /-- The interpreted `F² × F²` product has one actual nonzero zeroth-order term in that exact OPE. -/
+  curvatureSquaredOPECoherence :
+    letI : DecidableEq observableFamily.Label := observableLabelDecidableEq
+    Observables.CurvatureSquaredOPECoherenceData
       (Classical.canonicalEuclideanSpacetimeMetricData EuclideanDimension.four)
-      inner connection exterior curvatureCertificate observableFamily
+      inner connection exterior curvatureCertificate curvatureSquaredInterpretation weakOPE
   /-- Symmetric, Hermitian, covariant, local, weakly conserved stress tensor in the same family. -/
   stressEnergy : Minkowski.LocalStressEnergyTensorData observableFamily
   /-- The stress charges, translation derivatives, Ward identity, and momentum moments use the
@@ -212,6 +219,25 @@ theorem ope_nonzero_zerothOrderTerm
         (data.observableFamily.matrixElement C bra ket) ≠ 0 := by
   letI : DecidableEq data.observableFamily.Label := data.observableLabelDecidableEq
   exact data.weakOPE.exists_nonzero_zerothOrderTerm
+
+/-- The interpreted `F² × F²` expansion has an exact nonzero contracted zeroth-order term. -/
+theorem curvatureSquaredOPEContractedTerm_nonzero
+    (data : FourDimensionalCurrentStrengthContinuumCoreAcceptanceData inner connection
+      exterior curvatureCertificate fieldData) :
+    letI : DecidableEq data.observableFamily.Label := data.observableLabelDecidableEq
+    data.weakOPE.contraction.contract
+      (data.weakOPE.coefficient
+        (data.curvatureSquaredInterpretation.quantumLabel
+          Observables.BasicCurvatureObservableTag.curvatureSquared)
+        (data.curvatureSquaredInterpretation.quantumLabel
+          Observables.BasicCurvatureObservableTag.curvatureSquared)
+        data.curvatureSquaredOPECoherence.outputLabel)
+      (data.observableFamily.matrixElement
+        data.curvatureSquaredOPECoherence.outputLabel
+        data.curvatureSquaredOPECoherence.bra
+        data.curvatureSquaredOPECoherence.ket) ≠ 0 := by
+  letI : DecidableEq data.observableFamily.Label := data.observableLabelDecidableEq
+  exact data.curvatureSquaredOPECoherence.contractedTerm_nonzero
 
 /-- The selected threshold is strictly positive by the exact same-PVM gap predicate. -/
 theorem gapThreshold_pos

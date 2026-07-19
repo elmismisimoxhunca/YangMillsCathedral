@@ -3610,6 +3610,21 @@ Implemented and verified:
   coefficients. Group normalization, operator mixing, scheme dependence, calculated remainders and
   trace anomaly remain open; no theory or OPE inhabitant is constructed.
 
+## 2026-07-19 — one-hundred-ninety-fourth stone: interpreted curvature-squared OPE coherence
+
+Implemented and verified:
+
+- `CurvatureSquaredOPECoherenceData` ties the exact interpreted curvature-squared label to both
+  ordered inputs of one exact weak OPE in the same observable family.
+- A selected output label must occur already at zeroth truncation order, its exact relative
+  coefficient must be nonzero, and one exact output local-field matrix element must be nonzero.
+- Contraction nondegeneracy derives a nonzero exact `F² × F²` term; monotonicity keeps the output in
+  every later truncation.
+- Hostile probes reject zero coefficients, zero output matrix elements, and unrelated input labels.
+- The four-dimensional core now requires this bridge and exposes the exact nonzero contracted term.
+  No coefficient calculation, operator-mixing matrix, group normalization, remainder calculation,
+  trace anomaly, theory, or mass-gap witness is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

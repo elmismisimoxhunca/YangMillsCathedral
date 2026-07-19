@@ -458,7 +458,8 @@ committed before higher layers depend on it.
   - [x] Add an uninhabited current-strength core on canonical coordinate `ℝ⁴`, joining the exact
     classical/action, strict Euclidean/Wick, Wightman/same-PVM gap, coherent `F²` observable,
     stress/translation Ward, compact-simple-indexed running coupling, exact weak OPE, and supplied
-    same-coupling regular-variation surfaces.
+    same-coupling regular-variation surfaces, with a required nonzero interpreted `F² × F²`
+    zeroth-order term.
   - [ ] Replace all current-strength OS/reconstruction and Poincaré-cover debt; add source-faithful
     curvature-polynomial/OPE mixing, group-normalized perturbative coefficients/remainders, trace
     anomaly, and final universal compact-simple-group quantification.

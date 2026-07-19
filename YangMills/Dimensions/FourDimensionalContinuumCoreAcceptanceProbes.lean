@@ -119,6 +119,29 @@ theorem exact_nonzero_ope_term :
         (data.observableFamily.matrixElement C bra ket) ≠ 0 :=
   data.ope_nonzero_zerothOrderTerm
 
+/-- The interpreted curvature-squared label participates nontrivially in that exact OPE. -/
+theorem exact_curvature_squared_ope_coherence :
+    letI : DecidableEq data.observableFamily.Label := data.observableLabelDecidableEq
+    Nonempty (Observables.CurvatureSquaredOPECoherenceData
+      (Classical.canonicalEuclideanSpacetimeMetricData EuclideanDimension.four)
+      inner connection exterior curvatureCertificate data.curvatureSquaredInterpretation
+      data.weakOPE) :=
+  ⟨data.curvatureSquaredOPECoherence⟩
+
+/-- The exact selected `F² × F²` term has nonzero coefficient/local-field contraction. -/
+theorem exact_nonzero_curvature_squared_ope_term :
+    letI : DecidableEq data.observableFamily.Label := data.observableLabelDecidableEq
+    data.weakOPE.contraction.contract
+      (data.weakOPE.coefficient
+        (data.curvatureSquaredInterpretation.quantumLabel
+          Observables.BasicCurvatureObservableTag.curvatureSquared)
+        (data.curvatureSquaredInterpretation.quantumLabel
+          Observables.BasicCurvatureObservableTag.curvatureSquared)
+        data.curvatureSquaredOPECoherence.outputLabel)
+      (data.observableFamily.matrixElement data.curvatureSquaredOPECoherence.outputLabel
+        data.curvatureSquaredOPECoherence.bra data.curvatureSquaredOPECoherence.ket) ≠ 0 :=
+  data.curvatureSquaredOPEContractedTerm_nonzero
+
 /-- The classical action is indexed by the canonical flat metric on exact coordinate `ℝ⁴`. -/
 theorem exact_canonical_classical_metric :
     Nonempty (Classical.EuclideanActionAnalyticData
