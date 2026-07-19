@@ -96,6 +96,29 @@ theorem nonconstant_running_coupling :
       data.asymptoticFreedom.runningCoupling = fun _ => coupling :=
   data.runningCoupling_not_constant
 
+/-- Bilocal products and the weak OPE use the exact same observable family. -/
+theorem exact_weak_ope_chain :
+    letI : DecidableEq data.observableFamily.Label := data.observableLabelDecidableEq
+    Nonempty (Minkowski.WeakTemperedBilocalObservableProductData data.observableFamily) ∧
+      Nonempty (Minkowski.WeakOperatorProductExpansionData data.observableProducts) :=
+  ⟨⟨data.observableProducts⟩, ⟨data.weakOPE⟩⟩
+
+/-- Preliminary regular variation uses the exact running coupling and exact weak OPE. -/
+theorem exact_ope_regular_variation :
+    letI : DecidableEq data.observableFamily.Label := data.observableLabelDecidableEq
+    Nonempty (Renormalization.SuppliedWeakOPERegularVariationData
+      data.asymptoticFreedom data.weakOPE) :=
+  ⟨data.opeRegularVariation⟩
+
+/-- The accepted OPE contains a genuinely nonzero contracted zeroth-order term. -/
+theorem exact_nonzero_ope_term :
+    letI : DecidableEq data.observableFamily.Label := data.observableLabelDecidableEq
+    ∃ (A B C : data.observableFamily.Label) (bra ket : D.domain),
+      C ∈ data.weakOPE.truncation 0 ∧
+      data.weakOPE.contraction.contract (data.weakOPE.coefficient A B C)
+        (data.observableFamily.matrixElement C bra ket) ≠ 0 :=
+  data.ope_nonzero_zerothOrderTerm
+
 /-- The classical action is indexed by the canonical flat metric on exact coordinate `ℝ⁴`. -/
 theorem exact_canonical_classical_metric :
     Nonempty (Classical.EuclideanActionAnalyticData

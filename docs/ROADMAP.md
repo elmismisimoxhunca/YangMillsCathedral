@@ -457,7 +457,8 @@ committed before higher layers depend on it.
 - [ ] Add the full `d = 4` Clay acceptance contract.
   - [x] Add an uninhabited current-strength core on canonical coordinate `ℝ⁴`, joining the exact
     classical/action, strict Euclidean/Wick, Wightman/same-PVM gap, coherent `F²` observable,
-    stress/translation Ward, and compact-simple-indexed running-coupling surfaces.
+    stress/translation Ward, compact-simple-indexed running coupling, exact weak OPE, and supplied
+    same-coupling regular-variation surfaces.
   - [ ] Replace all current-strength OS/reconstruction and Poincaré-cover debt; add source-faithful
     curvature-polynomial/OPE mixing, group-normalized perturbative coefficients/remainders, trace
     anomaly, and final universal compact-simple-group quantification.

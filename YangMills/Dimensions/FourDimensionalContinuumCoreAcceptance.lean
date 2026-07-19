@@ -14,9 +14,10 @@ import YangMills.Minkowski.StressEnergyTranslationWard
 import YangMills.Minkowski.WightmanJointTemperedCorrelators
 import YangMills.Minkowski.WightmanLocalObservableCoherence
 import YangMills.Minkowski.WightmanRelativeAnalyticCorrelators
+import YangMills.Minkowski.WeakOperatorProductExpansion
 import YangMills.Observables.CurvatureSquaredInterpretation
 import YangMills.Reconstruction.StrictOrderedWickContinuation
-import YangMills.Renormalization.RunningCoupling
+import YangMills.Renormalization.AsymptoticFreedomOPE
 
 /-!
 # Four-dimensional current-strength continuum core acceptance
@@ -35,9 +36,10 @@ bridge identifying metric-induced Riemannian volume with that measure remains ab
 record is the project's current strict Mathlib candidate, not source-facing OS-II `(E0')`/OS-I
 `(E2)`/`(E4)` data or a reconstruction theorem. The Poincaré object remains the current lift/pre-cover interface. No lattice datum can fill
 any field of this record. The exact compact-simple gauge certificate indexes a preliminary
-four-dimensional running-coupling normal form, but no source-facing OS completed-tensor carrier,
-renormalized OPE coefficient bridge, inhabitant, theory, existence theorem, or mass-gap proof is
-constructed.
+four-dimensional running-coupling normal form and a supplied weak regular-variation condition on the
+exact same-family OPE. Neither provides source-faithful group-normalized perturbative coefficients,
+operator mixing or remainders; no source-facing OS completed-tensor carrier, inhabitant, theory,
+existence theorem, or mass-gap proof is constructed.
 -/
 
 namespace YangMills.Dimensions
@@ -130,6 +132,20 @@ structure FourDimensionalCurrentStrengthContinuumCoreAcceptanceData
   /-- Adjoint closure, covariance, and locality on that same family and representation chain. -/
   covariantObservableFamily :
     Minkowski.CovariantLocalObservableFamilyData observableFamily
+  /-- Decidable equality is retained explicitly for finite OPE truncations; it is not installed as
+  a global instance on an unrelated label carrier. -/
+  observableLabelDecidableEq : DecidableEq observableFamily.Label
+  /-- Exact weak full bilocal products for the same local-observable family. -/
+  observableProducts : Minkowski.WeakTemperedBilocalObservableProductData observableFamily
+  /-- Weak all-orders OPE on those exact products and labels. -/
+  weakOPE :
+    letI : DecidableEq observableFamily.Label := observableLabelDecidableEq
+    Minkowski.WeakOperatorProductExpansionData observableProducts
+  /-- Preliminary supplied regular-variation scaling of the exact OPE coefficients by the same
+  running coupling. This remains weaker than Clay's prescribed perturbative singularities. -/
+  opeRegularVariation :
+    letI : DecidableEq observableFamily.Label := observableLabelDecidableEq
+    Renormalization.SuppliedWeakOPERegularVariationData asymptoticFreedom weakOPE
   /-- The scalar Wightman field is an exact nontrivial label of that same family. -/
   fieldObservableCoherence :
     Minkowski.ScalarWightmanFieldLocalObservableCoherenceData
@@ -184,6 +200,18 @@ theorem runningCoupling_not_constant
     ¬ ∃ coupling : ℝ,
       data.asymptoticFreedom.runningCoupling = fun _ => coupling :=
   data.asymptoticFreedom.runningCoupling_not_constant
+
+/-- The exact same-family OPE has a genuinely nonzero contracted zeroth-order term. -/
+theorem ope_nonzero_zerothOrderTerm
+    (data : FourDimensionalCurrentStrengthContinuumCoreAcceptanceData inner connection
+      exterior curvatureCertificate fieldData) :
+    letI : DecidableEq data.observableFamily.Label := data.observableLabelDecidableEq
+    ∃ (A B C : data.observableFamily.Label) (bra ket : D.domain),
+      C ∈ data.weakOPE.truncation 0 ∧
+      data.weakOPE.contraction.contract (data.weakOPE.coefficient A B C)
+        (data.observableFamily.matrixElement C bra ket) ≠ 0 := by
+  letI : DecidableEq data.observableFamily.Label := data.observableLabelDecidableEq
+  exact data.weakOPE.exists_nonzero_zerothOrderTerm
 
 /-- The selected threshold is strictly positive by the exact same-PVM gap predicate. -/
 theorem gapThreshold_pos

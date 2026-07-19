@@ -3594,6 +3594,22 @@ Implemented and verified:
   source-faithful curvature-polynomial/OPE mixing, group-normalized coefficients and perturbative
   remainders, trace anomaly, and the final universal Clay proposition remain open.
 
+## 2026-07-19 — one-hundred-ninety-third stone: four-dimensional weak OPE integration
+
+Implemented and verified:
+
+- The four-dimensional core now carries exact weak bilocal products and a weak all-orders OPE on its
+  same coherently connected local-observable family.
+- Decidable equality of the exact label carrier is stored locally for finite truncations and is not
+  installed on an unrelated or global label type.
+- `SuppliedWeakOPERegularVariationData` ties every nonzero coefficient's preliminary scaling to the
+  exact core running coupling and exact weak OPE.
+- The existing OPE anti-vacuity theorem derives an actual nonzero contracted zeroth-order term in
+  the same family; hostile projections lock products, OPE, scaling, and that term.
+- This remains supplied weak regular variation, not source-faithful perturbative Yang–Mills OPE
+  coefficients. Group normalization, operator mixing, scheme dependence, calculated remainders and
+  trace anomaly remain open; no theory or OPE inhabitant is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
