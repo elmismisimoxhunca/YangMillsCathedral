@@ -135,9 +135,12 @@ Schwartz pullback, and scalar covariance `(E1)` are also implemented. Exact firs
 reflection and strict-positive-time topological-support infrastructure are present, together with
 an explicit nonzero compactly supported arity-one positive-time Schwartz test. A concrete strict
 subspace also records topological-support time ordering and full Fréchet-derivative flatness on
-coincidence diagonals. `(E2)` remains absent pending its embedding/sufficiency/density/completion comparison
-with OS-I's derivative-vanishing ordered spaces, the induced topology on each arity space, the
-identification of the named finite-stage final topology with OS-I's locally convex direct sum, the
+coincidence diagonals. A broader project-dimension Fréchet candidate now requires every derivative
+to vanish outside strict positive time order, uses the exact induced per-arity Schwartz topology,
+contains the strict-support carrier, and has an explicit nonzero arity-one test. It is not yet called
+the exact OS source space: four-dimensional multi-index equivalence, closedness, proper enlargement,
+sufficiency/density/completion comparisons, and OS-II-strength reconstruction remain open. `(E2)`
+remains absent pending those comparisons, the identification of the named finite-stage final topology with OS-I's locally convex direct sum, the
 distinct completed tensor product for positive-half-space tests, and the source-facing
 reflection-positivity inequality; the algebraic finite-sequence carrier
 and product are implemented with exact positive and natural-arity support, with its scalar zero-point component represented faithfully as a

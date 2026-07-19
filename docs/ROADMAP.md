@@ -179,10 +179,14 @@ committed before higher layers depend on it.
   exact combined operation `Θ f*`.
 - [x] Define and probe the algebraic reflection-positivity form on the current strict Mathlib
   subdomain, without identifying it with source-facing `(E2)`.
-- [ ] Establish the strict subspace's embedding/sufficiency/density/completion relation to OS-I's
-  derivative-vanishing ordered spaces; install the per-arity induced and finite-sequence direct-sum
-  topologies while keeping the positive-half-space completed tensor product distinct; then define
-  `(E2)` on the already constructed product and reflected-star operation.
+- [x] Define a broader project-dimension Fréchet candidate whose every derivative vanishes outside
+  strict positive time order, install its exact induced per-arity Schwartz topology, include the
+  strict-support carrier, and provide a nonzero test with hostile probes.
+- [ ] Prove exact four-dimensional equivalence with OS-I's multi-index carrier and its closedness,
+  then establish the strict subspace's sufficiency/density/completion relation; install the
+  finite-sequence direct-sum topology while keeping the positive-half-space completed tensor product
+  distinct; only then define source-facing `(E2)` on the constructed product and reflected-star
+  operation.
 - [x] Construct exact simultaneous Euclidean translations on Schwartz tests and finite sequences,
   with inverse and support preservation, as algebraic `(E4)` infrastructure.
 - [x] Define normalized nonzero spatial rays, prove escape to infinity, construct the four-dimensional

@@ -2580,6 +2580,28 @@ Implemented and verified:
   obligation therefore remains open.
 - No OPE datum, regular-variation datum, theory, existence theorem, or mass gap is constructed.
 
+## 2026-07-18 — one-hundred-fortieth stone: OS ordered Fréchet candidate
+
+Implemented and verified:
+
+- `IsOSPositiveTimeOrderedDerivativeVanishing` requires every iterated real Fréchet derivative,
+  including order zero, to vanish outside strict positive time order.
+- `OSPositiveTimeOrderedDerivativeCarrier` installs exactly the topology induced from the ambient
+  Mathlib Schwartz carrier and packages an injective topological forgetful map.
+- Every earlier strict topological-support ordered/flat test includes with exactly the same
+  underlying Schwartz function; the explicit positive-time bump gives a nonzero arity-one element.
+- Coincidence flatness is derived because a coincident configuration cannot be strictly ordered.
+- Hostile probes lock the derivative-only constructor surface, reject a nonzero outside jet,
+  preserve the strict inclusion, expose the induced topology, and block zero-only collapse.
+- OS-I printed p. 86 was newly visually checked for the multi-index spaces, induced topology, and
+  completed-tensor distinction. The Lean carrier is deliberately classified only as a
+  project-dimension Fréchet candidate for `S₊`, not the exact source space.
+- Exact four-dimensional multi-index equivalence, closedness, proper enlargement beyond strict
+  support, finite direct-sum and completed-tensor comparisons, source-facing `(E2)`, and all OS-II
+  reconstruction obligations remain open. OS-II's correction of Lemma 8.8 is explicitly recorded.
+- No OS sequence, reflection-positive datum, reconstruction, theory, existence theorem, or mass gap
+  is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

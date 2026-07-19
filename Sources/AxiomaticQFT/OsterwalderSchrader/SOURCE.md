@@ -48,6 +48,12 @@ Printed journal pages are authoritative. Text line numbers below refer to the re
 
 ### OS-I
 
+- Printed p. 86; `os1_primary_scan.txt` lines 151–190: the coincidence-flat space, the closed
+  derivative-vanishing ordered spaces `S_{s,t}`, the positive ordered space `S₊ = S_{0,∞}`, their
+  induced Schwartz topologies, and the distinct completed positive-half-space tensor product are
+  defined. The formulas and topology distinctions were visually checked on PDF page 4. The current
+  Lean Fréchet candidate models only `S₊`; multi-index equivalence, closedness, and completed-tensor
+  comparison remain open.
 - Printed pp. 84–85: the original proposal lists `(E0)` temperedness, `(E1)` Euclidean covariance,
   `(E2)` positivity, `(E3)` symmetry, and `(E4)` cluster property.
 - Printed pp. 87–88; `os1_primary_scan.txt` lines 237–277: the axioms and original `E → R` / `R → E`
