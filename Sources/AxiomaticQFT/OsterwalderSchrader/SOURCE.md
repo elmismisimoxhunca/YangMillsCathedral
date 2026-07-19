@@ -74,9 +74,11 @@ Printed journal pages are authoritative. Text line numbers below refer to the re
   separately named and is not identified with it. A general completed projective tensor-product
   acceptance interface now records Hausdorff local convexity of both factors, additive-uniform
   completeness of the carrier, joint pure-tensor continuity, dense span, noncollapse, and
-  same-universe extension with uniqueness derived from density, but no source-facing half-line quotient
-  or positive-half-space completion is constructed; that tensor topology remains separate by
-  definition.
+  same-universe extension with uniqueness derived from density. The exact negative-half-line
+  Schwartz submodule is now proved closed, its membership is equivalent to nonpositive topological
+  support, and the genuine Hausdorff quotient `𝒮(ℝ₊)` has an explicit nonzero positive class.
+  Completeness, the printed seminorm presentation, and the positive-half-space completion remain
+  unconstructed; that tensor topology remains separate by definition.
 - Printed pp. 84–85: the original proposal lists `(E0)` temperedness, `(E1)` Euclidean covariance,
   `(E2)` positivity, `(E3)` symmetry, and `(E4)` cluster property.
 - Printed pp. 87–88; `os1_primary_scan.txt` lines 237–277: the axioms and original `E → R` / `R → E`

@@ -251,13 +251,16 @@ committed before higher layers depend on it.
 - [x] Package exact Schwartz point evaluation as a continuous real-linear map, prove every kernel
   closed, and prove point evaluations detect and determine every Schwartz map as infrastructure for
   closed support subspaces and half-line quotients.
+- [x] Construct OS-I's exact closed negative-half-line Schwartz submodule, prove membership
+  equivalent to nonpositive topological support, form the genuine Hausdorff quotient `𝒮(ℝ₊)`, and
+  retain an explicit nonzero positive representative.
 - [x] Isolate missing completed projective tensor-product mathematics in a typed interface requiring
   Hausdorff locally convex complex factors, an additive-uniform complete carrier, jointly continuous
   noncollapsing pure tensors, dense pure span, and continuous-linear extension into same-universe
   complete targets, with uniqueness derived from density.
 - [ ] Establish the earlier strict-support subspace's sufficiency/density/completion relation to the
-  exact positive-arity OS-I source spaces; construct the half-line quotient and specialize the
-  completed tensor interface while keeping it separate from the direct sum; only then define
+  exact positive-arity OS-I source spaces; prove the half-line quotient complete with the source's
+  Fréchet presentation and specialize the completed tensor interface while keeping it separate from the direct sum; only then define
   source-facing `(E2)`
   on the constructed product and reflected-star operation.
 - [x] Construct exact simultaneous Euclidean translations on Schwartz tests and finite sequences,

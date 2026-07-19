@@ -197,13 +197,15 @@ convex final topology is therefore selected as the source-facing locally convex 
 with named topological additive-group, complex scalar, real local-convexity and Hausdorff structures
 and continuously linear scalar/source injections. The raw topological final topology remains a
 separately named auxiliary topology and equality is not asserted or required for this selection. A
-reusable continuous Schwartz point-evaluation map now supplies closed kernels and exact pointwise
-separation for future half-line support quotients. An uninhabited completed-projective-tensor
+reusable continuous Schwartz point-evaluation map supplies closed kernels and exact pointwise
+separation. It proves OS-I's negative-half-line Schwartz submodule closed; the genuine quotient
+`𝒮(ℝ₊)` is Hausdorff and contains an explicit nonzero positive bump class. An uninhabited
+completed-projective-tensor
 interface requires Hausdorff locally convex factors and an additive-uniform complete carrier, jointly continuous noncollapsing pure
 tensors, dense pure span, and continuous-linear extension into same-universe complete targets;
 uniqueness is derived from density. Proper enlargement and sufficiency/density/completion
-comparisons with the earlier strict-support subspace, construction of the half-line quotient and
-source-specific completed-tensor carrier, and
+comparisons with the earlier strict-support subspace, completeness and the Fréchet presentation of
+the now-constructed Hausdorff half-line quotient, the source-specific completed-tensor carrier, and
 OS-II-strength reconstruction remain open. `(E2)` remains absent pending those comparisons, the
 separately constructed completed tensor product for positive-half-space tests, and the source-facing
 reflection-positivity inequality; the algebraic finite-sequence carrier

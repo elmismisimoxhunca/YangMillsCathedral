@@ -3094,6 +3094,25 @@ Implemented and verified:
   `𝒮(ℝ₊)`; no quotient, completed tensor carrier, `(E2)`, reconstruction, theory, or mass gap is
   constructed here.
 
+## 2026-07-19 — one-hundred-sixty-fifth stone: OS positive-half-line Schwartz quotient
+
+Implemented and verified:
+
+- `osNegativeHalfLineSchwartzSubmodule` consists exactly of complex Schwartz functions vanishing at
+  every positive real point; membership is equivalent to topological support in `(-∞,0]`.
+- Continuous point evaluations express it as an intersection of closed kernels, proving closedness.
+- `OSPositiveHalfLineSchwartzSpace` is the actual quotient `𝒮(ℝ)/𝒮(ℝ₋)` with Mathlib's quotient
+  topology. Its canonical map is complex-linear, continuous, surjective, a quotient map, and is
+  bundled continuously linearly.
+- Closedness supplies named regular/Hausdorff quotient structures.
+- A compactly supported smooth bump centered at `1` has topological support in `[0,∞)`, exact value
+  one, and gives a nonzero quotient class.
+- Hostile probes lock support semantics, closedness, quotient topology/surjectivity, exact zero
+  classes, CLM packaging, nonzero retention, and Hausdorff separation from zero.
+- Quotient completeness, OS-I's seminorm presentation, spatial/tensor factors, `(E2)`, OS-II growth
+  and reconstruction remain open.
+- No `(E2)` datum, reconstruction, quantum theory, existence theorem, or mass gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

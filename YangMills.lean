@@ -173,6 +173,8 @@ import YangMills.Euclidean.SchwingerSchwartzInvolution
 import YangMills.Euclidean.SchwingerSchwartzInvolutionProbes
 import YangMills.Euclidean.PositiveTimeSchwartzBump
 import YangMills.Euclidean.PositiveTimeSchwartzBumpProbes
+import YangMills.Euclidean.OSPositiveHalfLineSchwartzQuotient
+import YangMills.Euclidean.OSPositiveHalfLineSchwartzQuotientProbes
 import YangMills.Euclidean.SchwingerOrderedTestSpace
 import YangMills.Euclidean.SchwingerOrderedTestSpaceProbes
 import YangMills.Euclidean.OSOrderedDerivativeCarrier
