@@ -61,6 +61,8 @@ import YangMills.Mathematics.ConsecutiveDifferenceCoordinates
 import YangMills.Mathematics.ConsecutiveDifferenceCoordinatesProbes
 import YangMills.Mathematics.SmoothLieBracketWedge
 import YangMills.Mathematics.SmoothLieBracketWedgeProbes
+import YangMills.Mathematics.SmoothGradedLieBracketWedge
+import YangMills.Mathematics.SmoothGradedLieBracketWedgeProbes
 import YangMills.Geometry.LieGroup
 import YangMills.Geometry.LieGroupProbes
 import YangMills.Geometry.InvariantInnerProduct

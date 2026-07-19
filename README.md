@@ -292,8 +292,10 @@ pointwise degree-zero input, with exact evaluation, input-section coherence, and
 stored `C∞` derivative regularity now derives smoothness of this exact output for every smooth input,
 and its designated-chart value has the same local formula. Separately, a reusable continuous graded
 bracket wedge now combines a one-form with every `n`-form by the exact omitted-slot alternating sum,
-with degree-one coherence and the one-with-two three-term formula proved. Graded smooth closure,
-positive-degree covariant exterior differentiation, and positive curvature-tensor orders remain open. This is not a general
+with degree-one coherence and the one-with-two three-term formula proved. The existing smooth
+coordinate bracket now derives smooth closure of that exact graded carrier and a bundled operation
+coherent with the earlier degree-one smooth wedge. Positive-degree covariant exterior
+differentiation and positive curvature-tensor orders remain open. This is not a general
 curvature-polynomial/covariant-derivative language or a canonical injective quantization map. A preliminary four-dimensional perturbative interface now requires a positive running coupling
 on an explicit open ultraviolet tail, exact beta flow, ultraviolet limit, and negative cubic leading
 normal form. It intentionally leaves the group-dependent one-loop coefficient and invariant-pairing/

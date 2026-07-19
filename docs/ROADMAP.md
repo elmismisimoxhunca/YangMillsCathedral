@@ -41,7 +41,9 @@ committed before higher layers depend on it.
 - [x] Add continuous and smooth degree-one wedge/bracket infrastructure.
 - [x] Construct the continuous graded bracket wedge of a one-form with every `n`-form using the
   exact omitted-slot alternating sum, prove degree-one coherence and zero laws, and expose the
-  one-with-two three-term formula needed before Bianchi; graded smooth closure remains open.
+  one-with-two three-term formula needed before Bianchi.
+- [x] Prove smooth closure of the exact graded bracket wedge from the existing smooth coordinate
+  bracket, bundle it without changing the carrier, and retain degree-one smooth coherence.
 - [x] Add arbitrary-manifold one-form exterior-derivative certification.
 - [x] Define principal curvature from a certified derivative and the smooth bracket-wedge.
 - [x] State and probe intrinsic curvature horizontality/right-adjoint-equivariance certificates.

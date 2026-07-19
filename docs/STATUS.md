@@ -3211,6 +3211,22 @@ Implemented and verified:
 - Smooth closure of the graded operation, a positive-degree covariant exterior derivative, Bianchi,
   and positive curvature-tensor orders remain open. No connection or theory is constructed.
 
+## 2026-07-19 — one-hundred-seventy-first stone: smooth graded Lie-bracket wedge
+
+Implemented and verified:
+
+- `ManifoldDifferentialForm.IsSmooth.lieBracketWedgeOneMany` proves that a smooth one-form wedged
+  by the exact graded bracket with a smooth `n`-form is a smooth `(n+1)`-form.
+- Each omitted-slot term uses the corresponding smooth tangent fields, the existing smooth bracket
+  in exact normed value coordinates, integer sign conversion, and a finite smooth sum.
+- `SmoothManifoldDifferentialForm.lieBracketWedgeOneMany` bundles that proof without changing the
+  pointwise carrier. At degree one its carrier is proved exactly equal to the earlier smooth
+  two-form bracket wedge.
+- Hostile probes lock smoothness of the exact carrier, degree-one smooth coherence, rejection of an
+  unrelated smooth output, the smooth one-with-two endpoint, and the zero-one-form carrier.
+- A positive-degree exterior/covariant derivative, graded Leibniz laws, Jacobi cancellation,
+  Bianchi, and positive curvature-tensor orders remain open. No connection or theory is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
