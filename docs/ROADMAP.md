@@ -136,7 +136,12 @@ committed before higher layers depend on it.
 - [x] Prove smooth principal-form evaluation on exact local tangent lifts.
 - [x] Transfer that evaluation through presentation independence to smooth generic two-form descent.
 - [x] Specialize smooth descent to the exact certified curvature form.
-- [ ] Derive structural curvature laws automatically and prove gauge covariance and Bianchi.
+- [x] Construct gauge-automorphism pullback of principal connections from the exact tangent map;
+  derive vertical normalization, right equivariance, smoothness, identity, and contravariant
+  composition rather than storing transformed-connection witnesses.
+- [ ] Transform the indexed exterior certificate and derive curvature, descent, action, and
+  observable gauge covariance; do not infer these from connection pullback alone.
+- [ ] Derive structural curvature laws automatically and prove intrinsic descended Bianchi.
 
 ## Phase 3 — classical Yang–Mills semantics
 

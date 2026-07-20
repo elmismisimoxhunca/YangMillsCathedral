@@ -4165,5 +4165,17 @@ Hostile probes reject both a mismatched descended coordinate and a nonzero repre
 output. This remains deliberately weaker than intrinsic descended Bianchi: no positive-degree
 adjoint-bundle covariant exterior derivative or adjoint-valued three-form is constructed.
 
+### Principal-connection gauge pullback
+
+`YangMills.Geometry.PrincipalConnectionGaugePullback` now constructs the pullback of a smooth
+principal connection by the exact tangent map of an existing smooth gauge automorphism. Gauge
+equivariance differentiates to preserve fundamental vertical generators and commute with fixed
+right translations, deriving vertical normalization and right-adjoint equivariance of the result.
+Smoothness is derived by transporting local test vector fields through the gauge diffeomorphism and
+its smooth inverse. Identity and multiplication laws expose the contravariant pullback order,
+equivalently a right gauge action convention. Hostile probes reject changed vertical generators and
+malformed composition. No exterior-derivative certificate is transformed yet, so curvature,
+descended curvature, action, and observable gauge invariance remain open.
+
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

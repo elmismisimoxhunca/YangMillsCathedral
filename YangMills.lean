@@ -169,6 +169,8 @@ import YangMills.Geometry.SmoothGaugeTransformation
 import YangMills.Geometry.SmoothGaugeTransformationProbes
 import YangMills.Geometry.PointwisePrincipalConnection
 import YangMills.Geometry.PointwisePrincipalConnectionProbes
+import YangMills.Geometry.PrincipalConnectionGaugePullback
+import YangMills.Geometry.PrincipalConnectionGaugePullbackProbes
 import YangMills.Geometry.PrincipalCurvature
 import YangMills.Geometry.PrincipalCurvatureProbes
 import YangMills.Geometry.PrincipalCurvatureNormedCoordinates

@@ -101,8 +101,9 @@ an arbitrary-manifold one-form Cartan certificate, and supplied positive-degree 
 with exact normed-space compatibility and a `2 → 3` specialization, alongside smoothly closed
 Lie-bracket wedges,
 finite-dimensional tangent-bracket continuity/smoothness bridges, smooth differential-form
-regularity, pointwise and smooth principal connection-form definitions, the derived principal
-curvature formula, intrinsic curvature horizontality/right-adjoint-equivariance certificate semantics,
+regularity, pointwise and smooth principal connection-form definitions, the derived smooth gauge-
+automorphism pullback of connections with exact identity and contravariant composition laws, the
+derived principal curvature formula, intrinsic curvature horizontality/right-adjoint-equivariance certificate semantics,
 the adjoint associated-bundle orbit quotient with its quotient topology, base projection, and
 representative-independent local coordinates, topological local trivializations backed by derived
 adjoint regularity, their exact promotion to Mathlib's generic bundle-trivialization interface, and
@@ -392,9 +393,12 @@ Leibniz transport, positive-degree adjoint-bundle covariant exterior differentia
 descended Bianchi, and positive curvature-tensor orders remain open. The interpreted observable layer now extends the exact
 unit and `F²` labels to the finite intrinsic fragment `1`, `F²`, `(F²)²`, with exact classical
 carrier coherence. A separate explicit anti-collapse strengthening requires `(F²)²` to be a new
-nontrivial operator in the 4D core; this is not attributed to Clay's footnote. It is still not an
-active connection-gauge-invariance theorem or a language of independent invariant contractions,
-mixed curvature polynomials, or covariant derivatives, nor a canonical injective quantization map.
+nontrivial operator in the 4D core; this is not attributed to Clay's footnote. Smooth gauge
+automorphisms now pull principal connections back with both connection laws and smoothness derived,
+but no transformed exterior certificate, curvature covariance, action invariance, or observable
+invariance follows yet. The checker still lacks a language of independent invariant contractions,
+mixed curvature polynomials, or covariant derivatives, and no canonical injective quantization map
+is claimed.
 A preliminary four-dimensional perturbative interface now requires a positive running coupling
 on an explicit open ultraviolet tail, exact beta flow, ultraviolet limit, and negative cubic leading
 normal form. An exact supplied normalization certificate now chooses a basis orthonormal for the

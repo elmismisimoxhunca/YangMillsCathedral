@@ -211,6 +211,11 @@ Bianchi identity at every actual target point without accepting naturality, regu
 witnesses. The exact smooth adjoint-bundle curvature descent is additionally tied chartwise to that
 same representative: its designated base-chart coordinate is the exact principal curvature on the
 local section and tangent lifts, while the representative satisfies coordinate Bianchi. This does
-not construct an intrinsic adjoint-valued three-form. Arbitrary-map/two-set naturality, a canonical
-arbitrary-manifold positive-degree operator, an intrinsic descended adjoint-bundle Bianchi theorem,
-and gauge covariance remain pending.
+not construct an intrinsic adjoint-valued three-form. Freed's p. 9 pullback statement now anchors an
+exact gauge-automorphism pullback of principal connections: tangent naturality derives vertical
+normalization and right equivariance, transported test fields derive smoothness, and identity plus
+composition expose the contravariant pullback order. This constructs the connection action only;
+it does not yet construct the transformed exterior certificate or prove the local affine formula,
+curvature covariance, descended-form invariance, or action/observable invariance. Arbitrary-map/
+two-set exterior naturality, a canonical arbitrary-manifold positive-degree operator, an intrinsic
+descended adjoint-bundle Bianchi theorem, and full gauge covariance remain pending.
