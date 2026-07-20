@@ -4385,7 +4385,16 @@ exact target-wide field equalities while retaining the chart target and model ra
 Lie bracket's vanishing at the identity. Finally,
 `YangMills.Mathematics.LieGroupInfinitesimalAdjoint` combines that commutation with the certified
 universal Maurer--Cartan equation to prove `d(Ad(·⁻¹)Y)₁(X) = -[X,Y]` in exact model coordinates.
-The remaining bridge is applying this formula to the targeted principal-form Cartan comparison. Descent of the full candidate and a genuine intrinsic `D_A F` theorem remain open.
+`YangMills.Geometry.PrincipalFormInfinitesimalEquivariance` applies this formula to the exact
+principal-orbit coefficient chain for arbitrary degree, with no exponential map. Horizontality
+proves every nondistinguished coefficient derivative vanishes. The positive-degree Cartan formula
+then yields the required ordinary vertical derivative from one explicit termwise triangular
+bracket-evaluation vanishing premise. The current reduction assumes globally smooth fields and
+all-group orbit adaptation. The remaining reusable geometry must therefore either construct global
+orbit-adapted tangent fields with prescribed center values and bracket-zero theorems, or first
+localize the reduction to an explicit principal-chart neighborhood before using a chart-local
+constructor; the
+premise is not treated as candidate data. Descent of the full candidate and a genuine intrinsic `D_A F` theorem remain open.
 
 The four-dimensional `CurrentStrength` integration record now requires one exact algebraic quantum
 action of its canonical smooth principal gauge group on its same observable family and one

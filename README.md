@@ -482,7 +482,11 @@ regularity of identity-centered chart multiplication are now proved. Both exact 
 normalizations and identity-point chart-coordinate identifications for the left- and right-invariant
 fields are also derived. Target-wide chart-field equality and intrinsic left/right invariant-field commutation at the identity is now
 proved, and the universal Maurer--Cartan certificate derives the unconditional exact formula
-`d(Ad(·⁻¹)Y)₁(X) = -[X,Y]`. The remaining bridge is its targeted principal-form Cartan comparison, descent of the full candidate, and a genuine intrinsic
+`d(Ad(·⁻¹)Y)₁(X) = -[X,Y]`. The exact principal-orbit coefficient derivative and all nondistinguished horizontal cancellations
+are now derived, reducing the targeted Cartan comparison to an explicit termwise triangular bracket-evaluation
+vanishing premise. Because the current theorem uses globally smooth fields and all-group orbit
+adaptation, the remaining bridge is either a global adapted-field construction or a localization
+of the reduction followed by chart-local adapted fields that derive that premise, descent of the full candidate, and a genuine intrinsic
 `D_A F` theorem remain open. Exact inverse-action
 curvature covariance now derives pointwise invariance of both chosen and basis-independent
 canonical curvature densities for the full pulled connection/exterior/certificate chain. The exact

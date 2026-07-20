@@ -253,8 +253,13 @@ committed before higher layers depend on it.
 - [x] Upgrade the pointwise identifications to exact target-wide field equalities, derive intrinsic
   left/right invariant-field commutation at the identity, and prove `d(Ad(·⁻¹)Y)₁(X) = -[X,Y]` in the exact project
   derivative/model-coordinate carriers.
-- [ ] Apply that unconditional infinitesimal formula in the targeted principal-form Cartan
-  comparison, derive vertical cancellation and full candidate tensoriality, then prove full candidate
+- [x] Apply the infinitesimal formula to the exact principal-orbit coefficient chain, derive all
+  nondistinguished coefficient cancellations by horizontality, and reduce the ordinary vertical
+  derivative to one explicit termwise triangular bracket-evaluation vanishing premise for globally smooth
+  orbit-adapted fields.
+- [ ] Construct globally smooth orbit-adapted tangent fields with prescribed values and center
+  bracket cancellation, or first localize the Cartan reduction to an explicit principal-chart
+  neighborhood; discharge the termwise triangular premise, derive full candidate tensoriality, then prove full candidate
   right-adjoint equivariance, then descend it and derive structural curvature
   laws and a genuine intrinsic `D_A F` theorem.
 
