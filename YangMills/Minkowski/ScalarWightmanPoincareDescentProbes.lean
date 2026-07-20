@@ -68,7 +68,8 @@ theorem exact_descended_adjoint_covariance
   chain.adjoint_covariant_descendedAffine p f ψ
 
 omit targetGroup in
-/-- Every label in the same covariant local-observable family inherits direct affine covariance. -/
+/-- Every explicitly designated scalar label in the same local-observable family inherits direct
+affine covariance. -/
 theorem exact_descended_observable_covariance
     {family : TemperedLocalObservableFamilyData chain.D}
     (covariance : CovariantLocalObservableFamilyData family)

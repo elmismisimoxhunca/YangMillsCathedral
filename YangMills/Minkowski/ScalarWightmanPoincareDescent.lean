@@ -151,8 +151,8 @@ theorem ScalarWightmanAxiomChainData.adjoint_covariant_descendedAffine
     (selectedAffinePoincareLift (cover := cover) p) f ψ
   simpa [ScalarWightmanAxiomChainData.descendedAffineDomainUnitary] using covariance
 
-/-- Every label of a covariant local-observable family on the same scalar chain has direct affine
-covariance under the descended domain unitary. -/
+/-- Every explicitly designated scalar label of a local-observable family on the same scalar chain
+has direct affine covariance under the descended domain unitary. -/
 theorem CovariantLocalObservableFamilyData.operator_covariant_descendedAffine
     {family : TemperedLocalObservableFamilyData chain.D}
     (covariance : CovariantLocalObservableFamilyData family)

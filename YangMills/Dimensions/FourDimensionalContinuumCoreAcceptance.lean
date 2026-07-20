@@ -232,6 +232,9 @@ structure FourDimensionalCurrentStrengthContinuumCoreAcceptanceData
       curvatureSquaredOPECoherence.outputLabel ≠ 0
   /-- Symmetric, Hermitian, covariant, local, weakly conserved stress tensor in the same family. -/
   stressEnergy : Minkowski.LocalStressEnergyTensorData observableFamily
+  /-- Stress component labels are disjoint from the scalar-covariant label sector. -/
+  stressCovarianceSeparation :
+    Minkowski.ScalarStressCovarianceSeparationData covariantObservableFamily stressEnergy
   /-- The stress charges, translation derivatives, Ward identity, and momentum moments use the
   exact same representation, domain, family, and Wightman joint PVM. -/
   stressTranslationWard : Minkowski.LocalStressEnergyTranslationWardData

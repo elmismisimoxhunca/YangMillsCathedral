@@ -4,7 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Sebastian Rodrigo
 -/
 
-import YangMills.Minkowski.TemperedLocalObservableProducts
+import YangMills.Minkowski.CovariantLocalObservableFamily
 import YangMills.Minkowski.WightmanCovariance
 import YangMills.Minkowski.WightmanLocality
 import Mathlib.Analysis.Distribution.SchwartzSpace.Deriv
@@ -109,6 +109,24 @@ structure LocalStressEnergyTensorData
       family.operator
         (componentLabel (stressTensorTimeIndex d) (stressTensorTimeIndex d)) f φ ≠
           family.operator family.unitLabel f φ
+
+/-- Explicit separation between labels governed by the scalar pullback law and labels governed by
+the rank-two stress-tensor mixing law. This project strengthening prevents a stress component from
+silently inheriting both transformation interfaces; it does not construct either datum. -/
+structure ScalarStressCovarianceSeparationData
+    {d : EuclideanDimension} {G : Type*}
+    [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+    {lift : ProperOrthochronousPoincareLiftData d G}
+    {H : Type*} [NormedAddCommGroup H] [InnerProductSpace ℂ H] [CompleteSpace H]
+    [TopologicalSpace.SeparableSpace H]
+    {U : StronglyContinuousUnitaryPoincareRepresentation lift H}
+    {vacuumData : PoincareInvariantVacuumData U}
+    {D : CommonInvariantDomainData vacuumData}
+    {family : TemperedLocalObservableFamilyData D}
+    (covariance : CovariantLocalObservableFamilyData family)
+    (stress : LocalStressEnergyTensorData family) where
+  componentLabel_not_mem_scalar : ∀ μ ν,
+    stress.componentLabel μ ν ∉ covariance.scalarLabel
 
 /-- Symmetry gives exact equality of the corresponding same-family operators. -/
 theorem LocalStressEnergyTensorData.component_operator_symmetric

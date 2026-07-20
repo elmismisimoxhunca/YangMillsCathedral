@@ -52,6 +52,15 @@ theorem exact_component_symmetry
   ⟨stress.componentLabel_symmetric μ ν,
     stress.component_operator_symmetric μ ν⟩
 
+/-- A stress component cannot silently be governed by both scalar and rank-two covariance laws. -/
+theorem scalar_tensor_covariance_overlap_blocked
+    (covariance : CovariantLocalObservableFamilyData family)
+    (stress : LocalStressEnergyTensorData family)
+    (separation : ScalarStressCovarianceSeparationData covariance stress)
+    (μ ν : d.CoordinateIndex) :
+    stress.componentLabel μ ν ∉ covariance.scalarLabel :=
+  separation.componentLabel_not_mem_scalar μ ν
+
 /-- Every component obeys the exact same-domain Hermitian relation. -/
 theorem exact_component_adjoint_relation
     (stress : LocalStressEnergyTensorData family)

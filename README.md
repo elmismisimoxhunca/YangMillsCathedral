@@ -388,7 +388,8 @@ scheme dependence, remainders, independent/mixed curvature-polynomial and deriva
 Clay's prescribed singularities remain open. A separate same-family stress-tensor checker
 requires symmetric Hermitian components local relative to the whole family, explicit inverse-matrix
 contravariant rank-two Lorentz covariance, weak distributional conservation, and a nonzero non-unit
-energy density. Its symmetry/conservation semantics are independently sourced to an authoritative
+energy density. A separate anti-confusion contract excludes every stress-component label from the
+scalar sector, while general Lorentz mixing for other non-scalar labels remains open. Its symmetry/conservation semantics are independently sourced to an authoritative
 gauge-theory energy-momentum review. A separate bridge uses explicit delta-convergent temporal
 mollifiers and bounded expanding spatial cutoffs to identify strong `T^{0ν}` charge limits with
 common-domain momentum generators tied to the same physical translation unitaries and joint PVM;

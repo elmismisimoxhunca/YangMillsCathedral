@@ -200,8 +200,8 @@ theorem exact_descended_affine_scalar_field_covariance
           EuclideanDimension.four p f) ψ :=
   data.scalarField_covariant_descendedAffine p f ψ
 
-/-- Every label of the exact original local-observable family—not a transported copy—has direct
-affine covariance. -/
+/-- Every explicitly designated scalar label of the exact original local-observable family—not a
+transported copy—has direct affine covariance. -/
 theorem exact_descended_affine_observable_covariance
     (A : data.observableFamily.Label)
     (hA : A ∈ data.covariantObservableFamily.scalarLabel)
@@ -473,6 +473,13 @@ theorem exact_curvature_scalar_covariance_sector :
 theorem exact_stress_energy :
     Nonempty (Minkowski.LocalStressEnergyTensorData data.observableFamily) :=
   ⟨data.stressEnergy⟩
+
+/-- Every stress component is excluded from the scalar-covariant sector. -/
+theorem exact_scalar_stress_covariance_separation
+    (μ ν : EuclideanDimension.four.CoordinateIndex) :
+    data.stressEnergy.componentLabel μ ν ∉
+      data.covariantObservableFamily.scalarLabel :=
+  data.stressCovarianceSeparation.componentLabel_not_mem_scalar μ ν
 
 /-- Stress charges and Ward identities use the exact accepted Wightman joint PVM. -/
 theorem exact_stress_translation_spectrum :

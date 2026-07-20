@@ -3965,12 +3965,13 @@ Implemented and verified:
 - `CovariantLocalObservableFamilyData` now carries an explicit adjoint-closed `scalarLabel` sector.
   Its scalar pullback law requires membership in that sector; unit and distinguished Wightman labels
   are explicit members.
-- Arbitrary observable labels are no longer silently assigned scalar Lorentz covariance. This
-  removes the former conflict with `LocalStressEnergyTensorData`, whose component labels obey their
-  own rank-two mixing law.
+- Arbitrary observable labels are no longer silently assigned scalar Lorentz covariance.
+  `ScalarStressCovarianceSeparationData` explicitly excludes every stress-component label from the
+  scalar sector, so those labels obey only their rank-two mixing interface.
 - Cover-to-affine descent carries the scalar-membership premise throughout, including the exact 4D
   lift-equality bridge. The interpreted `F²` labels in the 3D/4D cores and `(F²)²` in the 4D core are
-  explicitly required to belong to the scalar sector.
+  explicitly required to belong to the scalar sector. Both cores require explicit scalar/stress
+  disjointness.
 - Hostile probes expose the sector anchors, adjoint closure, membership-sensitive covariance, and
   scalar membership of interpreted curvature observables. No tensor representation, theory, or
   observable inhabitant is constructed.
@@ -3984,6 +3985,9 @@ Not yet achieved:
   principal-connection/curvature/structure-certificate
   witness, automatic curvature horizontality/equivariance theorem, Bianchi/gauge-covariance result,
   symmetry-group, quantum-theory, acceptance, existence, or satisfying mass-gap declaration exists.
+- Observable labels outside the explicit scalar sector and stress-component image do not yet carry
+  a general finite-dimensional Lorentz representation/mixing interface; full covariant observable
+  coverage remains open.
 - No Yang–Mills acceptance declaration exists.
 - No standalone Git remote exists or has been pushed. The tested candidate
   `git@github.com:elmismisimoxhunca/lean-yangmills-adaly.git` does not exist, and the available SSH
