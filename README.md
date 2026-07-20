@@ -431,8 +431,10 @@ same exact local formula derives a base-preserving total-space `C∞` diffeomorp
 restrictions are the previously established continuous-linear equivalences. This completes the
 layered smooth vector-bundle-automorphism packaging. The exact adjoint-fiber pairing and its
 quadratic value are invariant when both arguments undergo this action. Still open are a
-connection-independent direct Maurer–Cartan proof, the structure equation, derived curvature
-contraction/density/action invariance, and observable invariance. The checker still lacks a language of independent invariant contractions,
+connection-independent direct Maurer–Cartan proof and the structure equation. Exact inverse-action
+curvature covariance now derives pointwise invariance of both chosen and basis-independent
+canonical curvature densities for the full pulled connection/exterior/certificate chain; integral
+action invariance and observable invariance remain open. The checker still lacks a language of independent invariant contractions,
 mixed curvature polynomials, or covariant derivatives, and no canonical injective quantization map
 is claimed.
 A preliminary four-dimensional perturbative interface now requires a positive running coupling

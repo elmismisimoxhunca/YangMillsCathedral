@@ -4239,9 +4239,12 @@ carrier.
 `YangMills.Geometry.AdjointBundleGaugeInvariantPairing` then applies the exact forward coordinate
 law and adjoint invariance to prove that simultaneous covariant action on both arguments leaves the
 descended fiber pairing and its quadratic value unchanged. This is pointwise pairing invariance,
-not yet curvature-contraction, density, action, or observable invariance. A connection-independent
-direct Maurer–Cartan proof and structure equation, those downstream invariance theorems, and
-observable gauge invariance remain open.
+not by itself curvature-contraction, density, action, or observable invariance.
+`YangMills.Classical.EuclideanCanonicalCurvatureGaugeInvariance` combines that theorem with exact
+inverse-induced-action curvature covariance to prove pointwise invariance of the chosen and
+basis-independent canonical densities for the same pulled connection, derived exterior datum, and
+derived structure certificate. Integral/action and observable invariance remain open, as do a
+connection-independent direct Maurer–Cartan proof and structure equation.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

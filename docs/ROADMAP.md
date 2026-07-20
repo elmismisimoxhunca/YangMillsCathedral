@@ -177,8 +177,11 @@ committed before higher layers depend on it.
 - [x] Package the dependent action as a base-preserving total-space `C∞` diffeomorphism in the exact
   named smooth-vector-bundle structure, with fixed-fiber restrictions equal to the established
   continuous-linear equivalences.
-- [ ] Prove connection-independent direct Maurer–Cartan smoothness and the structure equation;
-  then derive scalar-density, action, and observable gauge invariance.
+- [x] Prove gauge invariance of the exact descended fiber pairing/quadratic value and derive
+  pointwise invariance of chosen and basis-independent canonical curvature densities for the exact
+  pulled connection/exterior/certificate chain.
+- [ ] Prove integrated action and interpreted-observable gauge invariance.
+- [ ] Prove connection-independent direct Maurer–Cartan smoothness and the structure equation.
 - [ ] Derive structural curvature laws automatically and prove intrinsic descended Bianchi.
 
 ## Phase 3 — classical Yang–Mills semantics
