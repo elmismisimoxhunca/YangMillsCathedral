@@ -247,8 +247,11 @@ committed before higher layers depend on it.
   mixed-partial derivative fields under exact first-partial normalization hypotheses and exact
   `C²`-within regularity of Lie-group multiplication in
   the identity-centered chart on `range I ×ˢ range I`.
-- [ ] Identify the exact chart pullbacks of left- and right-invariant fields with those mixed partial
-  fields, derive their identity-point commutation, and apply the unconditional formula in the targeted Cartan
+- [x] Prove both product-range first-partial normalizations and identify the identity-point chart
+  coordinates of left- and right-invariant fields with the corresponding centered-multiplication
+  partials; derive zero bracket for the exact normalized partial fields.
+- [ ] Upgrade those pointwise identifications to exact within-neighborhood field equalities, derive
+  intrinsic left/right invariant-field commutation, and apply the unconditional formula in the targeted Cartan
   comparison, then prove full candidate
   right-adjoint equivariance, then descend it and derive structural curvature
   laws and a genuine intrinsic `D_A F` theorem.

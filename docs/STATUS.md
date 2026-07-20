@@ -4375,9 +4375,12 @@ isolated premise that the relevant left/right manifold Lie bracket vanishes at t
 Schwarz cancellation theorem for opposite partial-derivative fields under exact first-partial
 normalization hypotheses, while
 `YangMills.Mathematics.LieGroupChartMultiplication` proves exact `C²` regularity of identity-centered
-chart multiplication within `range I ×ˢ range I`. The remaining bridge is now the exact
-corner-aware identification of the chart pullbacks of the left- and right-invariant fields with
-those two partial fields; after that identification yields commutation, the targeted principal-form
+chart multiplication within `range I ×ˢ range I`.
+`YangMills.Mathematics.LieGroupInvariantFieldChartIdentity` derives both exact first-partial
+normalizations, zero within-range bracket of the normalized partial fields, and identity-point
+agreement of Mathlib's chart pullbacks of the left- and right-invariant fields with those partials.
+The remaining bridge is upgrading these pointwise agreements to exact within-neighborhood field
+equalities; after that yields intrinsic commutation, the targeted principal-form
 Cartan comparison remains. Descent of the full candidate and a genuine intrinsic `D_A F` theorem remain open.
 
 The four-dimensional `CurrentStrength` integration record now requires one exact algebraic quantum
