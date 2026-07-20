@@ -410,8 +410,11 @@ smoothness on every chart source and hence global `C∞` regularity from atlas c
 trivialization now defines the associated Maurer–Cartan one-form carrier. The variable principal
 action tangent splits into fixed right translation plus its fundamental vertical term, so connection
 equivariance and vertical normalization derive the evaluated affine formula
-`ϕ*Θ=Ad(g_ϕ⁻¹)Θ+g_ϕ⁻¹dg_ϕ`. Smooth bundling and the Maurer–Cartan equation, descended active
-covariance, action invariance, and observable invariance do not follow yet. The checker still lacks a language of independent invariant contractions,
+`ϕ*Θ=Ad(g_ϕ⁻¹)Θ+g_ϕ⁻¹dg_ϕ`. For every supplied exact smooth connection, joint adjoint regularity
+and this affine identity express the unchanged Maurer–Cartan carrier as a difference of derived
+smooth forms, yielding an exact smooth-form bundle. A connection-independent direct regularity
+proof and the Maurer–Cartan equation, descended active covariance, action invariance, and observable
+invariance do not follow yet. The checker still lacks a language of independent invariant contractions,
 mixed curvature polynomials, or covariant derivatives, and no canonical injective quantization map
 is claimed.
 A preliminary four-dimensional perturbative interface now requires a positive running coupling

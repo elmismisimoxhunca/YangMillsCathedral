@@ -227,7 +227,9 @@ exact factor `Ad(g_ϕ(p)⁻¹)`. The selected associated function is now identif
 principal-chart coordinates on local sections; chart conjugation and atlas coverage derive its
 global `C∞` regularity. Left Maurer–Cartan trivialization and the differentiated variable principal
 action now derive the evaluated affine connection law with the exact inverse adjoint factor, plus
-sign, and inhomogeneous `g_ϕ⁻¹dg_ϕ` term. Smooth bundling/structure equations for that Maurer–Cartan
-form, descended-form covariance, and action/observable invariance remain pending. Arbitrary-map/
+sign, and inhomogeneous `g_ϕ⁻¹dg_ϕ` term. Given any exact smooth principal connection, the affine
+identity and joint adjoint regularity derive a smooth-form bundle with the unchanged Maurer–Cartan
+carrier. A connection-independent direct regularity proof, the Maurer–Cartan structure equation,
+descended-form covariance, and action/observable invariance remain pending. Arbitrary-map/
 two-set exterior naturality, a canonical arbitrary-manifold positive-degree operator, an intrinsic
 descended adjoint-bundle Bianchi theorem, and full gauge covariance remain pending.
