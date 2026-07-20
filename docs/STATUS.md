@@ -4004,23 +4004,46 @@ Implemented and verified:
   blindness, same-chain covariance, anti-vacuity, tensorial factorization, scalar recovery, exact
   predicate-indexed coverage, residual exclusions, and exhaustive original-label classification.
 
+## 2026-07-19 — two-hundred-sixteenth stone: completion-audit baseline
+
+Implemented and verified:
+
+- `docs/COMPLETION_AUDIT.md` restates the governing objective as eighteen concrete completion
+  criteria and maps every objective family to inspected files, declarations, probes, source records,
+  commands, statuses, and unresolved evidence.
+- Separate dimension and bridge matrices prevent broad green statuses from standing in for missing
+  dimension contracts or coherence theorems.
+- Every standard verifier is documented with both its observed baseline result and its coverage
+  limit. The audit explicitly records that source hashes do not verify interpretation and builds do
+  not verify physical adequacy.
+- Git inspection fixes the pre-audit implementation snapshot at branch `cathedral`, commit
+  `689ab5f`, a then-clean working tree, and no configured remote. The audit documentation itself is
+  intentionally committed afterward and must be re-anchored during final closure. The final proposition, witness-level separation, final
+  audit closure, push, and PR remain absent.
+- The stale claim that non-scalar/non-stress labels lacked finite-dimensional covariance was
+  corrected to match the committed exhaustive residual multiplet coverage.
+- The audit concludes **not complete** and is a living baseline, not a completion certificate.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
   `SU(n)` API does not supply the complete manifold/compactness/connectedness/tangent-simplicity
   chain, so positive consistency infrastructure remains open.
-- No general smooth bundle-map, smooth adjoint-vector-bundle/descent layer, concrete
-  principal-connection/curvature/structure-certificate
-  witness, automatic curvature horizontality/equivariance theorem, Bianchi/gauge-covariance result,
-  symmetry-group, quantum-theory, acceptance, existence, or satisfying mass-gap declaration exists.
-- Observable labels outside the explicit scalar sector and stress-component image do not yet carry
-  a general finite-dimensional Lorentz representation/mixing interface; full covariant observable
-  coverage remains open.
-- No Yang–Mills acceptance declaration exists.
-- No standalone Git remote exists or has been pushed. The tested candidate
+- No concrete smooth gauge-bundle-map witness, principal-connection/curvature/
+  structure-certificate witness, automatic curvature horizontality/equivariance theorem,
+  unconditional Bianchi/gauge-covariance result, symmetry-group construction, quantum-theory
+  witness, existence theorem, or satisfying mass-gap declaration exists. The smooth adjoint vector
+  bundle and smooth curvature descent layers themselves are implemented.
+- Bosonic observable labels now have exhaustive scalar/stress/residual covariance classification;
+  residual labels are covered by finite projected-Lorentz multiplets with component-level exclusion
+  of scalar/stress labels. Spinorial graded locality and adjoint/conjugate-representation coherence
+  remain separate open interfaces.
+- No final universally quantified Clay acceptance proposition exists; the existing 3D/4D
+  declarations remain explicitly qualified `CurrentStrength` acceptance records.
+- No standalone Git remote is configured in this checkout. The tested candidate
   `git@github.com:elmismisimoxhunca/lean-yangmills-adaly.git` does not exist, and the available SSH
-  credential was scoped to the retired repository. Local commits can proceed; remote publication
-  remains an explicit infrastructure blocker.
+  credential was scoped to the retired repository. No push or PR is evidenced locally; remote
+  publication remains blocked/unverified rather than globally disproved.
 - Clay, Hall, Aharony–Seiberg–Tachikawa, and Freed artifacts are pinned. Clay equation (1) now
   anchors the action formula, invariant quadratic form, and chosen orthonormal curvature
   contraction and relative-to-designated-measure action. Generic bilinear contraction is now proved

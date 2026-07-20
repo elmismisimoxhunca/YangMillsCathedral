@@ -44,7 +44,8 @@ have to inhabit. The final target will be a proposition, not a falsely inhabited
 See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md), the goal sequence in
 [`docs/ROADMAP.md`](docs/ROADMAP.md), the declaration-level
 [`docs/SOURCE_MAP.md`](docs/SOURCE_MAP.md), the DOI-verified past/future audit inventory in
-[`docs/AUDIT_BIBLIOGRAPHY.md`](docs/AUDIT_BIBLIOGRAPHY.md), and the evidence-only current state in
+[`docs/AUDIT_BIBLIOGRAPHY.md`](docs/AUDIT_BIBLIOGRAPHY.md), the living prompt-to-artifact
+[`docs/COMPLETION_AUDIT.md`](docs/COMPLETION_AUDIT.md), and the evidence-only current state in
 [`docs/STATUS.md`](docs/STATUS.md).
 
 ## Formalization laws

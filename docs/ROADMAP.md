@@ -534,6 +534,9 @@ committed before higher layers depend on it.
   equivalent to the four-dimensional carrier.
 - [ ] Once the final four-dimensional acceptance proposition exists, prove that no lower-dimensional
   witness can inhabit it; the current index/rank lemmas are supporting evidence only.
+- [x] Establish `docs/COMPLETION_AUDIT.md` as a pre-audit-snapshot-anchored prompt-to-artifact checklist
+  with explicit verifier limits, dimension/bridge matrices, publication state, and open blockers.
+- [ ] Repeat and close every completion-audit row at the final commit.
 - [ ] Publish the final acceptance proposition without asserting an inhabitant.
 
 ## Per-commit gates
@@ -542,6 +545,7 @@ committed before higher layers depend on it.
 lake env lean <changed-module>
 lake build
 python3 scripts/verify_sources.py
+python3 scripts/verify_audit_bibliography.py
 python3 scripts/audit_lean.py
 git diff --check
 git status --short
