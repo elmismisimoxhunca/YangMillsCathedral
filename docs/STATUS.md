@@ -4389,12 +4389,15 @@ universal Maurer--Cartan equation to prove `d(Ad(·⁻¹)Y)₁(X) = -[X,Y]` in e
 principal-orbit coefficient chain for arbitrary degree, with no exponential map. Horizontality
 proves every nondistinguished coefficient derivative vanishes. The positive-degree Cartan formula
 then yields the required ordinary vertical derivative from one explicit termwise triangular
-bracket-evaluation vanishing premise. The current reduction assumes globally smooth fields and
-all-group orbit adaptation. The remaining reusable geometry must therefore either construct global
-orbit-adapted tangent fields with prescribed center values and bracket-zero theorems, or first
-localize the reduction to an explicit principal-chart neighborhood before using a chart-local
-constructor; the
-premise is not treated as candidate data. Descent of the full candidate and a genuine intrinsic `D_A F` theorem remain open.
+bracket-evaluation vanishing premise. `YangMills.Geometry.PrincipalFormInfinitesimalEquivarianceWithin` localizes the entire Cartan
+reduction to any explicit open calculus set while retaining all-group orbit adaptation.
+`YangMills.Geometry.PrincipalOrbitAdaptedProductField` constructs prescribed-value fields in
+base/group product coordinates, smooth on an open centered-base-chart source times the whole group,
+with exact all-orbit right transport and normalized fundamental/right-invariant bracket zero. The
+remaining reusable geometry is first deriving a product-field within-bracket law from the
+normalized group-level theorem, then transporting the fields and that law through a smooth
+principal partial trivialization to the total space; the termwise premise is not treated as
+candidate data. Descent of the full candidate and a genuine intrinsic `D_A F` theorem remain open.
 
 The four-dimensional `CurrentStrength` integration record now requires one exact algebraic quantum
 action of its canonical smooth principal gauge group on its same observable family and one
