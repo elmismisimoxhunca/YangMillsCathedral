@@ -5,6 +5,7 @@ Authors: Sebastian Rodrigo
 -/
 
 import YangMills.Mathematics.OneFormCartanFieldExtension
+import YangMills.Mathematics.SmoothManifoldOneFormExtChartRegularity
 
 /-!
 # Arbitrary-field extended-chart transport of the one-form Cartan expression
@@ -179,6 +180,29 @@ theorem SmoothManifoldDifferentialForm.oneFormCartanExpressionCoordinates_congr_
   exact inExtChart_oneFormCartanExpressionCoordinates_eq_of_eq_at
     I coordinates form s p hp unique_s first second first' second'
     first_smooth second_smooth first'_smooth second'_smooth hfirst hsecond form_differentiable
+
+/-- On a finite-dimensional manifold model, evaluation-based smoothness derives the required
+centered coordinate regularity, so the intrinsic Cartan expression is unconditionally independent
+of all admissible smooth field extensions with the same values at the point. -/
+theorem SmoothManifoldDifferentialForm.oneFormCartanExpressionCoordinates_congr_at
+    [FiniteDimensional ℝ E]
+    (coordinates : V ≃L[ℝ] W)
+    (form : SmoothManifoldDifferentialForm I M V coordinates 1)
+    (s : Set M) (p : M) (hp : p ∈ s) (unique_s : UniqueMDiffOn I s)
+    (first second first' second' : (y : M) → TangentSpace I y)
+    (first_smooth : ManifoldTangentField.IsSmoothOn I s first)
+    (second_smooth : ManifoldTangentField.IsSmoothOn I s second)
+    (first'_smooth : ManifoldTangentField.IsSmoothOn I s first')
+    (second'_smooth : ManifoldTangentField.IsSmoothOn I s second')
+    (hfirst : first p = first' p) (hsecond : second p = second' p) :
+    form.toForm.oneFormCartanExpressionCoordinates coordinates s p first second =
+      form.toForm.oneFormCartanExpressionCoordinates coordinates s p first' second' := by
+  letI : CompleteSpace E := FiniteDimensional.complete ℝ E
+  apply SmoothManifoldDifferentialForm.oneFormCartanExpressionCoordinates_congr_at_of_inExtChartAt
+    coordinates form s p hp unique_s first second first' second'
+    first_smooth second_smooth first'_smooth second'_smooth hfirst hsecond
+  exact (SmoothManifoldDifferentialForm.inExtChartAt_differentiableWithinAt_range
+    coordinates form p).mono inter_subset_right
 
 end
 end YangMills.Mathematics

@@ -255,9 +255,10 @@ Cartan calculation fixes the candidate sign and normalization `-1/2[θ∧θ]`; t
 the smooth candidate is packaged. Field-extension independence is now proved in normed spaces,
 exact centered-chart coordinates, and intrinsically conditional on an existing certificate.
 Arbitrary smooth fields now transport through the exact corner-aware centered chart, and explicit
-coordinate-form differentiability derives intrinsic extension independence. Generic derivation of
-that alternating-map-valued coordinate regularity and arbitrary-map certificate pullback remain
-necessary before this candidate can be certified as `dα`. The full Maurer–Cartan
+coordinate-form differentiability derives intrinsic extension independence. Finite-dimensional
+basis reconstruction now derives that complete coordinate-form regularity generically, yielding
+unconditional intrinsic extension independence for admissible smooth fields. Arbitrary-map
+certificate pullback remains necessary before the associated candidate can be certified as `dα`. The full Maurer–Cartan
 structure equation, an independently defined quantum gauge action on observable operators, and
 broader-observable invariance remain pending. The finite `1`, `F²`, `(F²)²` interpretation records
 do transport to the exact pulled chain with unchanged classical carriers, quantum family/labels,

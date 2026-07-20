@@ -437,9 +437,10 @@ expression on left-invariant fields fixes the sign and `1/2` self-wedge normaliz
 associated form is identified as its pullback and the smooth derivative candidate is packaged.
 Reusable mathematics now proves field-extension independence in normed spaces, exact centered-chart
 coordinates, and intrinsically once a Cartan certificate exists. The full Maurer–Cartan equation
-remains open because generic centered coordinate-form regularity and arbitrary-map certificate
-pullback are still missing, so the candidate is not yet certified as the arbitrary-manifold
-exterior derivative. Arbitrary smooth fields themselves now transport exactly through the
+remains open because arbitrary-map certificate pullback is still missing, so the associated
+candidate is not yet certified as the arbitrary-manifold exterior derivative. Finite-dimensional
+basis reconstruction now derives generic centered coordinate-form regularity and intrinsic
+field-extension independence for admissible smooth fields, while arbitrary smooth fields transport exactly through the
 corner-aware centered chart. Exact inverse-action
 curvature covariance now derives pointwise invariance of both chosen and basis-independent
 canonical curvature densities for the full pulled connection/exterior/certificate chain. The exact

@@ -194,8 +194,9 @@ committed before higher layers depend on it.
   intrinsically for any already supplied Cartan certificate.
 - [x] Prove arbitrary-field partial-chart Cartan transport on the exact range-intersection set and
   derive intrinsic extension independence from explicit coordinate-form differentiability.
-- [ ] Derive generic centered coordinate-form regularity and arbitrary-smooth-map certificate
-  pullback, then certify the candidate as the exterior derivative and conclude the full Maurer–Cartan structure equation.
+- [x] Derive generic finite-dimensional centered coordinate-form regularity and unconditional
+  intrinsic extension independence for admissible smooth fields.
+- [ ] Prove arbitrary-smooth-map certificate pullback, then certify the associated candidate as the exterior derivative and conclude the full Maurer–Cartan structure equation.
 - [ ] Derive structural curvature laws automatically and prove intrinsic descended Bianchi.
 
 ## Phase 3 — classical Yang–Mills semantics

@@ -4270,9 +4270,12 @@ any already supplied Cartan certificate.
 `YangMills.Mathematics.OneFormCartanArbitraryFieldChartTransport` now transports the complete
 intrinsic Cartan expression for arbitrary smooth fields to the exact corner-aware centered-chart
 set, and derives intrinsic extension independence from explicit coordinate-form differentiability.
-The candidate is not yet certified as `dα`: generic derivation of that alternating-map-valued
-coordinate regularity and arbitrary-smooth-map certificate pullback remain open, so no full
-Maurer–Cartan structure equation is claimed.
+`YangMills.Mathematics.SmoothManifoldOneFormExtChartRegularity` reconstructs the complete degree-one
+alternating-map-valued chart carrier from fixed-vector evaluations using a finite basis. Thus
+finite-dimensional intrinsic Cartan extension independence now requires no certificate or caller
+regularity witness. The associated candidate is not yet certified as `dα`: arbitrary-smooth-map
+certificate pullback remains open, so no associated-form Maurer–Cartan structure equation is
+claimed.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.
