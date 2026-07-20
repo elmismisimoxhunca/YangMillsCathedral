@@ -4016,9 +4016,10 @@ Implemented and verified:
 - Every standard verifier is documented with both its observed baseline result and its coverage
   limit. The audit explicitly records that source hashes do not verify interpretation and builds do
   not verify physical adequacy.
-- Git inspection fixes the pre-audit implementation snapshot at branch `cathedral`, commit
-  `689ab5f`, a then-clean working tree, and no configured remote. The audit documentation itself is
-  intentionally committed afterward and must be re-anchored during final closure. The final proposition, witness-level separation, final
+- The living audit is now anchored to fully validated implementation commit `464b2ea` on branch
+  `cathedral`: 3,592 build jobs, 6,498 kernel-audited declarations, 430 Lean files, a then-clean
+  working tree, and no configured remote. Later audit-metadata commits do not change that validated
+  implementation snapshot; final closure must re-anchor once more. The final proposition, witness-level separation, final
   audit closure, push, and PR remain absent.
 - The stale claim that non-scalar/non-stress labels lacked finite-dimensional covariance was
   corrected to match the committed exhaustive residual multiplet coverage.
