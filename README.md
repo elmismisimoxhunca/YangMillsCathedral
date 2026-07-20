@@ -491,8 +491,9 @@ transport. Independently, a quantum gauge interface now represents a generic gau
 exact common domain and derives conjugation on operators. A separate certificate, indexed by one
 exact designated action rather than choosing its own convenient action, requires every label and
 smearing to be invariant. It asserts neither unitarity nor continuity and does not
-yet specialize to the canonical smooth classical gauge group or connect that action to the
-interpreted fragment. The checker still lacks a language of independent invariant contractions,
+yet specialize to the canonical smooth classical gauge group. A one-way coherence bridge now
+applies its all-label law to every exact interpreted `1`, `F²`, and `(F²)²` label without replacing
+the designated action. The checker still lacks a language of independent invariant contractions,
 mixed curvature polynomials, or covariant derivatives, and no canonical injective quantization map
 is claimed.
 A preliminary four-dimensional perturbative interface now requires a positive running coupling
