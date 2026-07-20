@@ -192,7 +192,9 @@ committed before higher layers depend on it.
   associated form as its exact pullback, and package the smooth `-1/2[α∧α]` derivative candidate.
 - [x] Prove field-extension independence in normed spaces, exact centered-chart coordinates, and
   intrinsically for any already supplied Cartan certificate.
-- [ ] Prove arbitrary-field partial-chart Cartan transport and arbitrary-smooth-map certificate
+- [x] Prove arbitrary-field partial-chart Cartan transport on the exact range-intersection set and
+  derive intrinsic extension independence from explicit coordinate-form differentiability.
+- [ ] Derive generic centered coordinate-form regularity and arbitrary-smooth-map certificate
   pullback, then certify the candidate as the exterior derivative and conclude the full Maurer–Cartan structure equation.
 - [ ] Derive structural curvature laws automatically and prove intrinsic descended Bianchi.
 

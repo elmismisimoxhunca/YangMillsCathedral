@@ -18,8 +18,9 @@ extension independence on the corner-aware set `chart.symm ⁻¹' s ∩ Set.rang
 already supplied manifold Cartan certificate yields intrinsic extension independence.
 
 The certificate-based intrinsic theorem is downstream only: using it to construct that same
-certificate would be circular. A generalized arbitrary-field partial-chart Cartan transport remains
-required for unconditional intrinsic tensoriality.
+certificate would be circular. Arbitrary-field partial-chart transport is supplied downstream;
+generic derivation of alternating-map-valued coordinate-form regularity remains required for
+unconditional intrinsic tensoriality.
 -/
 
 open Set

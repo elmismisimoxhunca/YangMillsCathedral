@@ -4266,9 +4266,13 @@ candidate.
 `YangMills.Mathematics.OneFormCartanFieldExtension` proves that normed-space Cartan expressions
 only depend on field values, packages exact corner-aware centered-chart coordinate fields and their
 regularity, proves coordinate-level extension independence, and derives intrinsic independence from
-any already supplied Cartan certificate. The candidate is not yet certified as `dα`: generalized
-arbitrary-field partial-chart Cartan transport and arbitrary-smooth-map certificate pullback remain
-open, so no full Maurer–Cartan structure equation is claimed.
+any already supplied Cartan certificate.
+`YangMills.Mathematics.OneFormCartanArbitraryFieldChartTransport` now transports the complete
+intrinsic Cartan expression for arbitrary smooth fields to the exact corner-aware centered-chart
+set, and derives intrinsic extension independence from explicit coordinate-form differentiability.
+The candidate is not yet certified as `dα`: generic derivation of that alternating-map-valued
+coordinate regularity and arbitrary-smooth-map certificate pullback remain open, so no full
+Maurer–Cartan structure equation is claimed.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.
