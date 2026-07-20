@@ -4307,9 +4307,13 @@ section, tangent lifts, quotient coordinate, and inverse-chart transport.
 naturality from `ContMDiffOn`, recentering at every overlap point and using set-germ equality so the
 fixed `baseExtChartDomain` remains the `extDerivWithin` calculus set.
 `YangMills.Geometry.PrincipalConnectionLocalCurvatureCoherence` then proves the exact descended `F`
-equals the coordinate curvature of that same local `A`. No Bianchi vanishing or chart independence
-is claimed. Positive-degree covariant exterior differentiation and intrinsic descended Bianchi
-remain open.
+equals the coordinate curvature of that same local `A`.
+`YangMills.Geometry.PrincipalConnectionLocalBianchi` derives smoothness of `A`, unique
+differentiability of the exact overlap, and its closure-of-interior condition, then applies the
+within-coordinate Bianchi theorem to prove the exact same-chain local `dF + [A∧F]` expression
+vanishes at every overlap point. This remains a designated-chart coordinate theorem. Chart
+independence, positive-degree intrinsic covariant exterior differentiation, and intrinsic descended
+Bianchi remain open.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

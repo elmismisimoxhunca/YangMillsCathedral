@@ -213,8 +213,10 @@ committed before higher layers depend on it.
   same-chain `dF + [A∧F]` expression without asserting vanishing or chart independence.
 - [x] Derive exact-set exterior naturality for the locally smooth designated section and prove the
   descended curvature coordinate is the curvature of the same exact local potential.
-- [ ] Prove exact-overlap Bianchi, then derive structural curvature laws, positive-degree covariant
-  exterior differentiation, and intrinsic descended Bianchi.
+- [x] Derive exact-overlap potential regularity and domain geometry and prove the local same-chain
+  `dF + [A∧F] = 0` theorem.
+- [ ] Prove chart independence, then derive structural curvature laws, positive-degree intrinsic
+  covariant exterior differentiation, and intrinsic descended Bianchi.
 
 ## Phase 3 — classical Yang–Mills semantics
 
