@@ -275,10 +275,11 @@ Lift-independence then constructs a choice-independent unitary homomorphism on t
 Poincaré target; its strong continuity is descended through the genuine cover's quotient-map law.
 Explicit coherence recovers every original cover unitary and the exact translation unitaries already
 tied to the joint PVM, stress tensor, and gap. On the exact cover-indexed scalar chain, the common
-domain unitary, scalar field/adjoint covariance, and covariance of every label in any covariant
-scalar local-observable family on that same domain are now stated directly on affine kinematics with
-no lift choice exposed. Lift-equality transport applies these statements to the 4D core's exact
-original domain, scalar field, and complete covariant observable family rather than cast copies.
+domain unitary, scalar field/adjoint covariance, and covariance of every explicitly designated
+scalar label in any covariant local-observable family on that same domain are now stated directly on
+affine kinematics with no lift choice exposed. Lift-equality transport applies these statements to
+the 4D core's exact original domain, scalar field, and scalar sector of its observable family rather
+than cast copies; stress-tensor component labels retain their separate rank-two law.
 Constructing the target law from future-cone closure and concrete inhomogeneous `SL(2,ℂ)` remains
 pending. A normalized vacuum is
 now tied to that same representation, with the complete invariant subspace required to be its single
@@ -302,10 +303,10 @@ cyclicity, locality, and forward-cone spectrum are integrated on one exact scala
 field/domain/vacuum/representation chain, while the mass gap remains an additional predicate.
 A prerequisite local-observable family now puts every labeled smeared operator and tempered matrix
 element on the same common domain, fixes the unit field by Lebesgue smearing, and requires full
-bilocal tempered products with exact pure-tensor operator order and nonzero witnesses. The same
-family can be required to close under an involutive label adjoint, transform covariantly under the
-same Poincaré representation/domain chain, and commute for every label pair on spacelike-separated
-supports. A further exact coherence surface identifies the scalar Wightman field with this family's
+bilocal tempered products with exact pure-tensor operator order and nonzero witnesses. The same family can be required to close under an involutive label adjoint, designate an
+adjoint-closed scalar-label sector transforming by the scalar law under the same Poincaré
+representation/domain chain, and commute for every label pair on spacelike-separated supports.
+Tensor or spin labels outside that sector require their own transformation interface. A further exact coherence surface identifies the scalar Wightman field with this family's
 existing nontrivial label and identifies its adjoint with the corresponding involutive adjoint
 label, transferring family anti-vacuity to the Wightman field and preventing disconnected scalar
 and observable sectors. Normalized

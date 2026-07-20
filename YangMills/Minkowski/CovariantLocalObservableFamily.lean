@@ -23,8 +23,9 @@ is introduced on the physical Hilbert space, and no family, OPE, theory, or mass
 
 namespace YangMills.Minkowski
 
-/-- Adjoint closure, exact scalar covariance and bosonic locality for one labeled local-observable
-family on the same Poincaré representation/common domain chain. -/
+/-- Adjoint closure, exact scalar covariance on an explicit scalar-label sector, and bosonic
+locality for one labeled local-observable family on the same Poincaré representation/common domain
+chain. Labels outside the scalar sector are available to separate tensor/spin interfaces. -/
 structure CovariantLocalObservableFamilyData
     {d : EuclideanDimension} {G : Type*}
     [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
@@ -39,13 +40,22 @@ structure CovariantLocalObservableFamilyData
   adjointLabel : family.Label → family.Label
   adjointLabel_involutive : Function.Involutive adjointLabel
   adjointLabel_unit : adjointLabel family.unitLabel = family.unitLabel
+  /-- Labels designated to transform as Lorentz scalars. Tensor/spin labels remain in the same family
+  but use separate source-facing covariance interfaces. -/
+  scalarLabel : Set family.Label
+  /-- The unit and distinguished scalar Wightman label belong to the scalar sector. -/
+  unitLabel_mem_scalar : family.unitLabel ∈ scalarLabel
+  nontrivialLabel_mem_scalar : family.nontrivialLabel ∈ scalarLabel
+  /-- The scalar sector is closed under the exact label adjoint. -/
+  adjointLabel_mem_scalar : ∀ A, A ∈ scalarLabel → adjointLabel A ∈ scalarLabel
   /-- Exact common-domain adjoint relation, with conjugation on the scalar Schwartz test. -/
   adjoint_relation : ∀ A ψ φ f,
     @inner ℂ H _ ψ.val (family.operator (adjointLabel A) f φ).val =
       @inner ℂ H _
         (family.operator A (conjugateScalarMinkowskiSchwartzTestFunction f) ψ).val φ.val
-  /-- Every label transforms under the same physical lift representation and affine test pullback. -/
-  operator_covariant : ∀ A g f ψ,
+  /-- Every designated scalar label transforms under the same physical lift representation and
+  scalar affine test pullback. No scalar law is imposed on tensor/spin labels. -/
+  operator_covariant : ∀ A, A ∈ scalarLabel → ∀ g f ψ,
     D.domainUnitary g
         (family.operator A f ((D.domainUnitary g).symm ψ)) =
       family.operator A
@@ -75,7 +85,7 @@ theorem CovariantLocalObservableFamilyData.nontrivial_operator_covariant
         (family.operator family.nontrivialLabel f ((D.domainUnitary g).symm ψ)) =
       family.operator family.nontrivialLabel
         (pullbackScalarMinkowskiSchwartzTestFunction d (lift.projection g) f) ψ :=
-  data.operator_covariant family.nontrivialLabel g f ψ
+  data.operator_covariant family.nontrivialLabel data.nontrivialLabel_mem_scalar g f ψ
 
 /-- Applying the label adjoint twice restores the exact original local operator label. -/
 theorem CovariantLocalObservableFamilyData.adjointLabel_adjointLabel

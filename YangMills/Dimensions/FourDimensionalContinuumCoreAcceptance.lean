@@ -47,8 +47,9 @@ carry a genuine two-sheeted topological covering projection whose exact group ke
 with the literal complex signs `{±1}`. Scalar covariance, exact vacuum invariance, and cyclicity
 then derive trivial action of that kernel on the same physical Hilbert representation, which
 therefore descends to a strongly continuous homomorphism on the named affine target. The original
-uncast scalar field and every label of the original covariant observable family inherit direct
-affine covariance. Concrete inhomogeneous `SL(2,ℂ)` and construction of the
+uncast scalar field and every explicitly designated scalar label of the original covariant
+observable family inherit direct affine covariance; tensor labels retain separate transformation
+laws. Concrete inhomogeneous `SL(2,ℂ)` and construction of the
 required named affine-target group law remain open. No lattice datum can fill
 any field of this record. The exact compact-simple gauge certificate indexes a preliminary
 four-dimensional running-coupling normal form and a supplied weak regular-variation condition on the
@@ -166,7 +167,8 @@ structure FourDimensionalCurrentStrengthContinuumCoreAcceptanceData
       schwingerFamily wightmanSurface fullCorrelators
   /-- One local-observable family on the same common invariant domain. -/
   observableFamily : Minkowski.TemperedLocalObservableFamilyData.{uLift, uH, uLabel} D
-  /-- Adjoint closure, covariance, and locality on that same family and representation chain. -/
+  /-- Adjoint closure, locality, and an explicit Lorentz-scalar label sector on that same family and
+  representation chain. Stress-tensor labels use their separate rank-two covariance law. -/
   covariantObservableFamily :
     Minkowski.CovariantLocalObservableFamilyData observableFamily
   /-- The scalar Wightman field is an exact nontrivial label of that same family. -/
@@ -179,6 +181,10 @@ structure FourDimensionalCurrentStrengthContinuumCoreAcceptanceData
     Observables.CurvatureSquaredLocalObservableInterpretationData
       (Classical.canonicalEuclideanSpacetimeMetricData EuclideanDimension.four)
       inner connection exterior curvatureCertificate observableFamily
+  /-- The interpreted curvature-squared label belongs to the explicitly scalar-covariant sector. -/
+  curvatureSquaredLabel_mem_scalar :
+    curvatureSquaredInterpretation.quantumLabel .curvatureSquared ∈
+      covariantObservableFamily.scalarLabel
   /-- The finite intrinsic scalar fragment `1`, `F²`, `(F²)²` extends that exact basic
   interpretation. Independent contractions and covariant derivatives remain absent. -/
   curvaturePowerInterpretation :
@@ -190,6 +196,10 @@ structure FourDimensionalCurrentStrengthContinuumCoreAcceptanceData
   This is not inferred from Clay's renormalization footnote. -/
   curvatureQuarticAntiCollapse :
     Observables.CurvatureQuarticAntiCollapseData curvaturePowerInterpretation
+  /-- The interpreted curvature-quartic label also belongs to the scalar-covariant sector. -/
+  curvatureQuarticLabel_mem_scalar :
+    curvaturePowerInterpretation.quantumLabel .curvatureQuartic ∈
+      covariantObservableFamily.scalarLabel
   /-- Decidable equality is retained explicitly for finite OPE truncations; it is not installed as
   a global instance on an unrelated label carrier. -/
   observableLabelDecidableEq : DecidableEq observableFamily.Label
@@ -436,12 +446,13 @@ theorem scalarField_covariant_descendedAffine
   data.scalarWightmanAxiomChain.field_covariant_descendedAffineOfLiftEq
     data.poincareDoubleCover_toLift_eq p f ψ
 
-/-- Every label in the exact original covariant scalar local-observable family has direct affine
-covariance on the original domain. -/
+/-- Every label in the exact original explicitly designated scalar local-observable sector has
+direct affine covariance on the original domain. -/
 theorem localObservable_covariant_descendedAffine
     (data : FourDimensionalCurrentStrengthContinuumCoreAcceptanceData inner connection
       exterior curvatureCertificate fieldData)
     (A : data.observableFamily.Label)
+    (hA : A ∈ data.covariantObservableFamily.scalarLabel)
     (p : Minkowski.ProperOrthochronousPoincareTransformation EuclideanDimension.four)
     (f : Minkowski.ScalarMinkowskiSchwartzTestFunction EuclideanDimension.four)
     (ψ : D.domain) :
@@ -452,7 +463,7 @@ theorem localObservable_covariant_descendedAffine
         (Minkowski.pullbackScalarMinkowskiSchwartzTestFunction
           EuclideanDimension.four p f) ψ :=
   data.covariantObservableFamily.operator_covariant_descendedAffineOfLiftEq
-    data.scalarWightmanAxiomChain data.poincareDoubleCover_toLift_eq A p f ψ
+    data.scalarWightmanAxiomChain data.poincareDoubleCover_toLift_eq A hA p f ψ
 
 /-- The descended affine representation is strongly continuous on every exact Hilbert vector. -/
 theorem descendedAffinePoincareUnitary_stronglyContinuous

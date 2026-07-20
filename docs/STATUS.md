@@ -3945,8 +3945,8 @@ Implemented and verified:
 - `descendedAffineUnitaryHom` is a genuine homomorphism for the accepted named affine-target law.
 - The selected-lift domain restriction is proved coherent with every original `D.domainUnitary`.
   Scalar field and adjoint covariance therefore descend to direct affine statements with no lift
-  choice present. Every label in a covariant local-observable family sharing that exact domain
-  inherits the same direct affine covariance.
+  choice present. Every explicitly designated scalar label in a covariant local-observable family
+  sharing that exact domain inherits the same direct affine covariance.
 - Strong continuity descends from the cover representation through the exact cover projection's
   quotient-map universal property.
 - The dependent 4D scalar chain is transported to the exact double-cover index and yields an affine
@@ -3955,8 +3955,25 @@ Implemented and verified:
   on pure translations, the exact `U.translationUnitary a` tied to the joint PVM, stress tensor, and
   mass-gap predicate. Further lift-equality theorems define the descended domain action directly on
   the original uncast `D.domain` and prove affine covariance of the original scalar field and every
-  label in the core's original covariant local-observable family.
+  label in the core's explicitly designated scalar-observable sector.
 - No cover, representation, field, scalar theory, spinorial realization, or mass gap is constructed.
+
+## 2026-07-19 — two-hundred-fourteenth stone: scalar/tensor covariance separation
+
+Implemented and verified:
+
+- `CovariantLocalObservableFamilyData` now carries an explicit adjoint-closed `scalarLabel` sector.
+  Its scalar pullback law requires membership in that sector; unit and distinguished Wightman labels
+  are explicit members.
+- Arbitrary observable labels are no longer silently assigned scalar Lorentz covariance. This
+  removes the former conflict with `LocalStressEnergyTensorData`, whose component labels obey their
+  own rank-two mixing law.
+- Cover-to-affine descent carries the scalar-membership premise throughout, including the exact 4D
+  lift-equality bridge. The interpreted `F²` labels in the 3D/4D cores and `(F²)²` in the 4D core are
+  explicitly required to belong to the scalar sector.
+- Hostile probes expose the sector anchors, adjoint closure, membership-sensitive covariance, and
+  scalar membership of interpreted curvature observables. No tensor representation, theory, or
+  observable inhabitant is constructed.
 
 Not yet achieved:
 

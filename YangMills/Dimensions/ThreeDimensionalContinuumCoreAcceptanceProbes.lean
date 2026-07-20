@@ -139,6 +139,12 @@ theorem exact_curvature_squared_observable :
   ⟨data.curvatureSquaredInterpretation.curvatureSquaredLabel_ne_unit,
     data.curvatureSquaredInterpretation.curvatureSquared_nontrivial⟩
 
+/-- The interpreted `F²` label is explicitly in the scalar-covariant sector. -/
+theorem exact_curvature_squared_scalar_sector :
+    data.curvatureSquaredInterpretation.quantumLabel .curvatureSquared ∈
+      data.covariantObservableFamily.scalarLabel :=
+  data.curvatureSquaredLabel_mem_scalar
+
 /-- The stress tensor belongs to the exact same local-observable family. -/
 theorem exact_stress_energy :
     Nonempty (Minkowski.LocalStressEnergyTensorData data.observableFamily) :=

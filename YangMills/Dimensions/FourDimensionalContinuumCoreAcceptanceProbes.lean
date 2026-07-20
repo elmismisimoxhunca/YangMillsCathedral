@@ -204,6 +204,7 @@ theorem exact_descended_affine_scalar_field_covariance
 affine covariance. -/
 theorem exact_descended_affine_observable_covariance
     (A : data.observableFamily.Label)
+    (hA : A ∈ data.covariantObservableFamily.scalarLabel)
     (p : Minkowski.ProperOrthochronousPoincareTransformation EuclideanDimension.four)
     (f : Minkowski.ScalarMinkowskiSchwartzTestFunction EuclideanDimension.four)
     (ψ : D.domain) :
@@ -213,7 +214,7 @@ theorem exact_descended_affine_observable_covariance
       data.observableFamily.operator A
         (Minkowski.pullbackScalarMinkowskiSchwartzTestFunction
           EuclideanDimension.four p f) ψ :=
-  data.localObservable_covariant_descendedAffine A p f ψ
+  data.localObservable_covariant_descendedAffine A hA p f ψ
 
 /-- The descended physical affine action remains strongly continuous on every Hilbert vector. -/
 theorem exact_descended_affine_poincare_strong_continuity (ψ : H) :
@@ -458,6 +459,15 @@ theorem exact_curvature_quartic_observable :
   ⟨data.curvatureQuarticAntiCollapse.curvatureQuarticLabel_ne_unit,
     data.curvatureQuarticAntiCollapse.curvatureQuarticLabel_ne_curvatureSquared,
     data.curvatureQuarticAntiCollapse.curvatureQuartic_nontrivial⟩
+
+/-- The interpreted scalar curvature labels, unlike tensor component labels, are explicitly in the
+scalar-covariant sector. -/
+theorem exact_curvature_scalar_covariance_sector :
+    data.curvatureSquaredInterpretation.quantumLabel .curvatureSquared ∈
+        data.covariantObservableFamily.scalarLabel ∧
+      data.curvaturePowerInterpretation.quantumLabel .curvatureQuartic ∈
+        data.covariantObservableFamily.scalarLabel :=
+  ⟨data.curvatureSquaredLabel_mem_scalar, data.curvatureQuarticLabel_mem_scalar⟩
 
 /-- The stress tensor belongs to the exact same local-observable family. -/
 theorem exact_stress_energy :

@@ -156,12 +156,13 @@ covariance under the descended domain unitary. -/
 theorem CovariantLocalObservableFamilyData.operator_covariant_descendedAffine
     {family : TemperedLocalObservableFamilyData chain.D}
     (covariance : CovariantLocalObservableFamilyData family)
-    (A : family.Label) (p : ProperOrthochronousPoincareTransformation d)
+    (A : family.Label) (hA : A ∈ covariance.scalarLabel)
+    (p : ProperOrthochronousPoincareTransformation d)
     (f : ScalarMinkowskiSchwartzTestFunction d) (ψ : chain.D.domain) :
     chain.descendedAffineDomainUnitary p
         (family.operator A f ((chain.descendedAffineDomainUnitary p).symm ψ)) =
       family.operator A (pullbackScalarMinkowskiSchwartzTestFunction d p f) ψ := by
-  have transformed := covariance.operator_covariant A
+  have transformed := covariance.operator_covariant A hA
     (selectedAffinePoincareLift (cover := cover) p) f ψ
   simpa [ScalarWightmanAxiomChainData.descendedAffineDomainUnitary] using transformed
 
@@ -176,7 +177,8 @@ theorem CovariantLocalObservableFamilyData.nontrivial_operator_covariant_descend
           ((chain.descendedAffineDomainUnitary p).symm ψ)) =
       family.operator family.nontrivialLabel
         (pullbackScalarMinkowskiSchwartzTestFunction d p f) ψ :=
-  covariance.operator_covariant_descendedAffine chain family.nontrivialLabel p f ψ
+  covariance.operator_covariant_descendedAffine chain family.nontrivialLabel
+    covariance.nontrivialLabel_mem_scalar p f ψ
 
 /-- The descended scalar unitaries form a homomorphism for the exact named affine target law. -/
 noncomputable def ScalarWightmanAxiomChainData.descendedAffineUnitaryHom :
@@ -318,7 +320,8 @@ theorem CovariantLocalObservableFamilyData.operator_covariant_descendedAffineOfL
     (lift_eq : cover.toProperOrthochronousPoincareLiftData = otherLift)
     {family : TemperedLocalObservableFamilyData otherChain.D}
     (covariance : CovariantLocalObservableFamilyData family)
-    (A : family.Label) (p : ProperOrthochronousPoincareTransformation d)
+    (A : family.Label) (hA : A ∈ covariance.scalarLabel)
+    (p : ProperOrthochronousPoincareTransformation d)
     (f : ScalarMinkowskiSchwartzTestFunction d) (ψ : otherChain.D.domain) :
     otherChain.descendedAffineDomainUnitaryOfLiftEq lift_eq p
         (family.operator A f
@@ -326,7 +329,7 @@ theorem CovariantLocalObservableFamilyData.operator_covariant_descendedAffineOfL
       family.operator A (pullbackScalarMinkowskiSchwartzTestFunction d p f) ψ := by
   have projection_functions := congrArg
     (fun selected : ProperOrthochronousPoincareLiftData d G => selected.projection) lift_eq
-  have transformed := covariance.operator_covariant A
+  have transformed := covariance.operator_covariant A hA
     (selectedAffinePoincareLift (cover := cover) p) f ψ
   simpa [ScalarWightmanAxiomChainData.descendedAffineDomainUnitaryOfLiftEq,
     show otherLift.projection (selectedAffinePoincareLift (cover := cover) p) = p by

@@ -120,7 +120,8 @@ structure ThreeDimensionalCurrentStrengthContinuumCoreAcceptanceData
     schwingerFamily relativeAnalyticCorrelators
   /-- One local-observable family on the same common invariant domain. -/
   observableFamily : Minkowski.TemperedLocalObservableFamilyData.{uLift, uH, uLabel} D
-  /-- Adjoint closure, covariance, and locality on that same family and representation chain. -/
+  /-- Adjoint closure, locality, and an explicit Lorentz-scalar label sector on that same family and
+  representation chain. Stress-tensor labels use their separate rank-two covariance law. -/
   covariantObservableFamily :
     Minkowski.CovariantLocalObservableFamilyData observableFamily
   /-- The scalar Wightman field is an exact nontrivial label of that same family. -/
@@ -133,6 +134,10 @@ structure ThreeDimensionalCurrentStrengthContinuumCoreAcceptanceData
     Observables.CurvatureSquaredLocalObservableInterpretationData
       (Classical.canonicalEuclideanSpacetimeMetricData EuclideanDimension.three)
       inner connection exterior curvatureCertificate observableFamily
+  /-- The interpreted curvature-squared label is explicitly Lorentz scalar. -/
+  curvatureSquaredLabel_mem_scalar :
+    curvatureSquaredInterpretation.quantumLabel .curvatureSquared ∈
+      covariantObservableFamily.scalarLabel
   /-- Symmetric, Hermitian, covariant, local, weakly conserved stress tensor in the same family. -/
   stressEnergy : Minkowski.LocalStressEnergyTensorData observableFamily
   /-- The stress charges, translation derivatives, Ward identity, and momentum moments use the

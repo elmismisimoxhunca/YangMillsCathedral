@@ -26,6 +26,31 @@ variable
     {D : CommonInvariantDomainData vacuumData}
     {family : TemperedLocalObservableFamilyData D}
 
+/-- The unit and distinguished Wightman label are explicitly in the scalar-covariant sector. -/
+theorem exact_scalar_sector_anchors
+    (data : CovariantLocalObservableFamilyData family) :
+    family.unitLabel ∈ data.scalarLabel ∧ family.nontrivialLabel ∈ data.scalarLabel :=
+  ⟨data.unitLabel_mem_scalar, data.nontrivialLabel_mem_scalar⟩
+
+/-- The scalar sector is closed under the exact adjoint label. -/
+theorem exact_scalar_sector_adjoint_closed
+    (data : CovariantLocalObservableFamilyData family)
+    (A : family.Label) (hA : A ∈ data.scalarLabel) :
+    data.adjointLabel A ∈ data.scalarLabel :=
+  data.adjointLabel_mem_scalar A hA
+
+/-- Every designated scalar label has exact scalar covariance; no such law is silently imposed on
+labels outside this sector. -/
+theorem exact_scalar_label_covariance
+    (data : CovariantLocalObservableFamilyData family)
+    (A : family.Label) (hA : A ∈ data.scalarLabel)
+    (g : G) (f : ScalarMinkowskiSchwartzTestFunction d) (ψ : D.domain) :
+    D.domainUnitary g
+        (family.operator A f ((D.domainUnitary g).symm ψ)) =
+      family.operator A
+        (pullbackScalarMinkowskiSchwartzTestFunction d (lift.projection g) f) ψ :=
+  data.operator_covariant A hA g f ψ
+
 /-- Covariance cannot be restricted to the unit label. -/
 theorem exact_nontrivial_label_covariance
     (data : CovariantLocalObservableFamilyData family)
