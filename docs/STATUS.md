@@ -4379,9 +4379,13 @@ chart multiplication within `range I ×ˢ range I`.
 `YangMills.Mathematics.LieGroupInvariantFieldChartIdentity` derives both exact first-partial
 normalizations, zero within-range bracket of the normalized partial fields, and identity-point
 agreement of Mathlib's chart pullbacks of the left- and right-invariant fields with those partials.
-The remaining bridge is upgrading these pointwise agreements to exact within-neighborhood field
-equalities; after that yields intrinsic commutation, the targeted principal-form
-Cartan comparison remains. Descent of the full candidate and a genuine intrinsic `D_A F` theorem remain open.
+`YangMills.Mathematics.LieGroupInvariantFieldChartTarget` upgrades those pointwise agreements to
+exact target-wide field equalities while retaining the chart target and model range separately.
+`YangMills.Mathematics.LieGroupInvariantFieldCommutation` then derives the exact Mathlib manifold
+Lie bracket's vanishing at the identity. Finally,
+`YangMills.Mathematics.LieGroupInfinitesimalAdjoint` combines that commutation with the certified
+universal Maurer--Cartan equation to prove `d(Ad(·⁻¹)Y)₁(X) = -[X,Y]` in exact model coordinates.
+The remaining bridge is applying this formula to the targeted principal-form Cartan comparison. Descent of the full candidate and a genuine intrinsic `D_A F` theorem remain open.
 
 The four-dimensional `CurrentStrength` integration record now requires one exact algebraic quantum
 action of its canonical smooth principal gauge group on its same observable family and one

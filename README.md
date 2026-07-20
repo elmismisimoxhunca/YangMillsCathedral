@@ -480,8 +480,9 @@ conditionally on the exact identity-point commutation of left- and right-invaria
 corner-safe Schwarz cancellation for opposite mixed-partial fields under the exact first-partial normalization hypotheses and exact `C²`-within
 regularity of identity-centered chart multiplication are now proved. Both exact first-partial
 normalizations and identity-point chart-coordinate identifications for the left- and right-invariant
-fields are also derived. The remaining bridge is within-neighborhood equality of those chart fields
-with the partial fields, followed by intrinsic commutation and the targeted Cartan comparison, descent of the full candidate, and a genuine intrinsic
+fields are also derived. Target-wide chart-field equality and intrinsic left/right invariant-field commutation at the identity is now
+proved, and the universal Maurer--Cartan certificate derives the unconditional exact formula
+`d(Ad(·⁻¹)Y)₁(X) = -[X,Y]`. The remaining bridge is its targeted principal-form Cartan comparison, descent of the full candidate, and a genuine intrinsic
 `D_A F` theorem remain open. Exact inverse-action
 curvature covariance now derives pointwise invariance of both chosen and basis-independent
 canonical curvature densities for the full pulled connection/exterior/certificate chain. The exact

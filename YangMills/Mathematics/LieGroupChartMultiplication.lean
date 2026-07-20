@@ -4,7 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Sebastian Rodrigo
 -/
 
-import YangMills.Mathematics.LieGroupLeftTrivializedFieldDerivative
+import Mathlib.Geometry.Manifold.GroupLieAlgebra
 import YangMills.Mathematics.MixedPartialLieBracket
 
 /-!

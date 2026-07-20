@@ -5,6 +5,8 @@ Authors: Sebastian Rodrigo
 -/
 
 import YangMills.Mathematics.LieGroupChartMultiplication
+import YangMills.Mathematics.LieGroupRightInvariantField
+import YangMills.Mathematics.OneFormCartanFieldExtension
 
 /-!
 # Identity-point chart coordinates of invariant Lie-group fields

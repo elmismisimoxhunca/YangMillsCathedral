@@ -250,9 +250,11 @@ committed before higher layers depend on it.
 - [x] Prove both product-range first-partial normalizations and identify the identity-point chart
   coordinates of left- and right-invariant fields with the corresponding centered-multiplication
   partials; derive zero bracket for the exact normalized partial fields.
-- [ ] Upgrade those pointwise identifications to exact within-neighborhood field equalities, derive
-  intrinsic left/right invariant-field commutation, and apply the unconditional formula in the targeted Cartan
-  comparison, then prove full candidate
+- [x] Upgrade the pointwise identifications to exact target-wide field equalities, derive intrinsic
+  left/right invariant-field commutation at the identity, and prove `d(Ad(·⁻¹)Y)₁(X) = -[X,Y]` in the exact project
+  derivative/model-coordinate carriers.
+- [ ] Apply that unconditional infinitesimal formula in the targeted principal-form Cartan
+  comparison, derive vertical cancellation and full candidate tensoriality, then prove full candidate
   right-adjoint equivariance, then descend it and derive structural curvature
   laws and a genuine intrinsic `D_A F` theorem.
 
