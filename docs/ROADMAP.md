@@ -188,9 +188,10 @@ committed before higher layers depend on it.
   operators and require invariance for every label and smearing.
 - [x] Derive one-way coherence of the exact designated quantum action with every label in the
   interpreted `1`, `F²`, `(F²)²` fragment and reject substitution of an unrelated action.
-- [ ] Specialize that interface to the canonical smooth classical gauge-transformation group, prove
-  any further classical/quantum transformation-law coherence, and extend invariance to the missing
-  observable grammar.
+- [x] Specialize the action and exact-action invariance certificate to the canonical group of smooth
+  automorphisms of one fixed principal bundle, without constructing a representation.
+- [ ] Prove any further classical/quantum transformation-law coherence and extend invariance to the
+  missing observable grammar.
 - [x] Prove connection-independent direct smoothness of the exact associated Maurer–Cartan pullback
   using tangent-map calculus, and package its unchanged carrier as a smooth one-form.
 - [x] Calculate the universal Maurer–Cartan Cartan expression on left-invariant fields, identify the

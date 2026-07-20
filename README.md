@@ -490,10 +490,12 @@ family, labels, operator witnesses, and quartic anti-collapse data. This remains
 transport. Independently, a quantum gauge interface now represents a generic gauge group algebraically on the
 exact common domain and derives conjugation on operators. A separate certificate, indexed by one
 exact designated action rather than choosing its own convenient action, requires every label and
-smearing to be invariant. It asserts neither unitarity nor continuity and does not
-yet specialize to the canonical smooth classical gauge group. A one-way coherence bridge now
+smearing to be invariant. It asserts neither unitarity nor continuity. The action and its exact-action invariance certificate
+are now specialized, without constructing either, to the canonical group of smooth automorphisms
+of one fixed principal bundle. A one-way coherence bridge
 applies its all-label law to every exact interpreted `1`, `F²`, and `(F²)²` label without replacing
-the designated action. The checker still lacks a language of independent invariant contractions,
+the designated action. Further classical/quantum transformation-law coherence remains open. The
+checker still lacks a language of independent invariant contractions,
 mixed curvature polynomials, or covariant derivatives, and no canonical injective quantization map
 is claimed.
 A preliminary four-dimensional perturbative interface now requires a positive running coupling

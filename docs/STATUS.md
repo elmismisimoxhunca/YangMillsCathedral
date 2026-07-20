@@ -4260,9 +4260,11 @@ operator to be fixed by that action. No unitary or continuous gauge representati
 element is required; triviality of a physical gauge representation is not incorrectly excluded.
 `YangMills.Observables.QuantumGaugeCurvaturePowerCoherence` applies that exact-action certificate
 to every label in the interpreted `1`, `F²`, `(F²)²` fragment and rejects substitution of a
-different action at the quartic label. Specialization to the canonical smooth classical gauge
-group, any further classical/quantum transformation-law coherence, and the broader observable
-grammar remain open.
+different action at the quartic label.
+`YangMills.Observables.SmoothPrincipalGaugeQuantumObservableAction` specializes both the action and
+its exact-action invariance certificate to the canonical group of smooth automorphisms of one fixed
+principal bundle, without constructing a representation. Further classical/quantum
+transformation-law coherence and the broader observable grammar remain open.
 `YangMills.Geometry.DirectAssociatedMaurerCartanPullbackSmooth` now derives smoothness of the exact
 associated left Maurer–Cartan pullback directly from smooth tangent maps of the gauge function and
 `(g,h) ↦ g⁻¹h`, with no supplied principal connection. It packages the unchanged carrier as a
