@@ -624,11 +624,11 @@ known OS-II/source-space reconstruction and genuine Poincaré-cover debts.
 A parallel uninhabited four-dimensional current-strength core now fixes coordinate `ℝ⁴`, the
 canonical flat metric and coordinate Lebesgue measure, then dependently joins the same classical,
 carrier-exact OS-II `(E0′)` plus source-carrier OS-I `(E1)`–`(E4)` package, Wightman,
-exact derivative-vanishing source Wick coherence, corrected-output Wightman `(R0′)`, observable, the finite scalar fragment `1`, `F²`, `(F²)²`,
+exact derivative-vanishing source Wick coherence, corrected-output Wightman `(R0′)`, observable, the finite scalar fragment `1`, `F²`, `(F²)²` and its exact same-family natural-power extension `(F²)ⁿ`,
 stress/translation, and same-PVM gap surfaces at the actual Clay dimension. Its exact observable
 family now carries one designated algebraic action of the canonical smooth principal gauge group,
 an all-label invariance certificate for that same action, and derived invariance of each interpreted
-`1`, `F²`, `(F²)²` label; no representation is constructed and no unitarity or continuity is
+`1`, `F²`, `(F²)²` label and every natural-power label; no representation is constructed and no unitarity or continuity is
 implied. Unlike the lower-dimensional core it also requires the
 four-dimensional pure-gauge running-coupling/beta normal form with an exact supplied
 adjoint-Casimir/invariant-pairing one-loop normalization, exact same-family bilocal products/weak OPE, supplied regular-variation scaling by that same

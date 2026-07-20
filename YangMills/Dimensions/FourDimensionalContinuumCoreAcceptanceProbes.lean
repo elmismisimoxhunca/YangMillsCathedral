@@ -479,6 +479,23 @@ theorem exact_curvature_scalar_covariance_sector :
         data.covariantObservableFamily.scalarLabel :=
   ⟨data.curvatureSquaredLabel_mem_scalar, data.curvatureQuarticLabel_mem_scalar⟩
 
+/-- Every natural power has the exact canonical classical carrier and same-family label. -/
+theorem exact_curvature_all_powers
+    (n : ℕ) (b : FourDimensionalEuclideanBase) :
+    data.curvatureAllPowersInterpretation.classicalObservable n b =
+        (Classical.canonicalEuclideanSpacetimeMetricData EuclideanDimension.four).canonicalCurvatureDensity
+          inner connection exterior curvatureCertificate b ^ n ∧
+      data.curvatureAllPowersInterpretation.quantumLabel n ∈
+        data.covariantObservableFamily.scalarLabel :=
+  ⟨data.curvatureAllPowersInterpretation.classicalObservable_apply n b,
+    data.curvatureAllPowersLabel_mem_scalar n⟩
+
+/-- Restriction to exponents zero, one, and two recovers the exact existing finite interpretation. -/
+theorem exact_curvature_all_powers_finite_restriction :
+    data.curvatureAllPowersInterpretation.finiteRestriction =
+      data.curvaturePowerInterpretation :=
+  data.curvatureAllPowersInterpretation.finiteRestriction_eq
+
 /-- The stress tensor belongs to the exact same local-observable family. -/
 theorem exact_stress_energy :
     Nonempty (Minkowski.LocalStressEnergyTensorData data.observableFamily) :=
@@ -535,6 +552,17 @@ theorem exact_quantum_gauge_curvature_fragment
         (data.curvaturePowerInterpretation.quantumLabel tag) f =
       data.observableFamily.operator (data.curvaturePowerInterpretation.quantumLabel tag) f :=
   data.quantumGauge_curvaturePower_invariant g tag f
+
+/-- Every natural-power label is fixed by the same designated action. -/
+theorem exact_quantum_gauge_curvature_all_powers
+    (g : Geometry.SmoothGaugeTransformation smoothBundle)
+    (n : ℕ)
+    (f : Minkowski.ScalarMinkowskiSchwartzTestFunction EuclideanDimension.four) :
+    data.quantumGaugeAction.operatorAction g
+        (data.curvatureAllPowersInterpretation.quantumLabel n) f =
+      data.observableFamily.operator
+        (data.curvatureAllPowersInterpretation.quantumLabel n) f :=
+  data.quantumGauge_curvatureAllPowers_invariant g n f
 
 /-- Changing an operator under the exact designated action contradicts core acceptance. -/
 theorem changed_quantum_gauge_operator_blocked

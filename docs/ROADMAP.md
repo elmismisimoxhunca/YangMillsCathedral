@@ -314,7 +314,9 @@ committed before higher layers depend on it.
 - [x] Extend that exact label to the finite intrinsic scalar fragment `1`, `F²`, `(F²)²`, expose
   exact classical-carrier coherence, and separately require `(F²)²` anti-collapse as an explicit
   project strengthening in the 4D core. The core now carries one exact designated quantum action of the canonical smooth-principal gauge group and all-label invariance certificate, with the finite interpreted fragment
-  connected to that same action. All powers, independent invariant contractions, mixed polynomials,
+  connected to that same action. A natural-indexed same-family strengthening now covers every
+  `(F²)ⁿ`, restricts exactly to the finite fragment, places every label in the scalar sector, and
+  derives invariance under the same action. Independent invariant contractions, mixed polynomials,
   covariant derivatives, renormalized mixing, and further classical/quantum transformation-law
   coherence remain open.
 - [x] Prove topological-module compatibility for every exact dependent adjoint fiber and define the

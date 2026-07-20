@@ -4378,6 +4378,10 @@ The four-dimensional `CurrentStrength` integration record now requires one exact
 action of its canonical smooth principal gauge group on its same observable family and one
 all-label invariance certificate indexed by that exact action. Derived projections connect every
 interpreted `1`, `F²`, `(F²)²` label to the same action; hostile probes reject changed operators.
+`YangMills.Observables.CurvatureAllPowersInterpretation` extends this with a natural-indexed family for every natural
+power `(F²)ⁿ`, with exact classical carriers and exact restriction at exponents zero, one, and two.
+The four-dimensional core requires all such labels in its same scalar sector and derives their
+invariance under the same designated action. No injectivity or all-power anti-collapse is claimed.
 This adds coherence only: it constructs no representation and does not close the missing observable
 grammar or further classical/quantum transformation-law debt.
 

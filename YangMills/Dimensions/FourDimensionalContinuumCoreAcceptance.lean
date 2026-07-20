@@ -21,6 +21,7 @@ import YangMills.Minkowski.WeakOperatorProductExpansion
 import YangMills.Observables.CurvaturePowerInterpretation
 import YangMills.Observables.CurvatureSquaredOPECoherence
 import YangMills.Observables.QuantumGaugeCurvaturePowerCoherence
+import YangMills.Observables.QuantumGaugeCurvatureAllPowersCoherence
 import YangMills.Observables.SmoothPrincipalGaugeQuantumObservableAction
 import YangMills.Reconstruction.CorrectedOSIIReconstructionAcceptance
 import YangMills.Renormalization.AdjointCasimirNormalization
@@ -36,7 +37,7 @@ Minkowski/Wightman chain, an explicit
 exact-source Wick-continuation bridge, one covariant local-observable family containing that Wightman
 field with exhaustive scalar/stress/residual finite-multiplet covariance coverage, one exact
 algebraic action of the canonical smooth principal gauge group with all-label operator invariance,
-interpretations of the finite scalar fragment `1`, `F²`, `(F²)²` tied to that same action, a local stress tensor whose
+interpretations of the finite scalar fragment `1`, `F²`, `(F²)²` and every natural power `(F²)ⁿ` tied to that same action, a local stress tensor whose
 regulated charges and translation Ward identities use the same joint translation PVM, and a
 physical gap on that spectrum.
 
@@ -206,6 +207,17 @@ structure FourDimensionalCurrentStrengthContinuumCoreAcceptanceData
       (Classical.canonicalEuclideanSpacetimeMetricData EuclideanDimension.four)
       inner connection exterior curvatureCertificate observableFamily
       curvatureSquaredInterpretation
+  /-- Every natural power `(F²)ⁿ` extends the exact finite interpretation in the same family. This
+  remains narrower than a complete grammar of independent contractions and covariant derivatives. -/
+  curvatureAllPowersInterpretation :
+    Observables.ScalarCurvatureAllPowersLocalObservableInterpretationData
+      (Classical.canonicalEuclideanSpacetimeMetricData EuclideanDimension.four)
+      inner connection exterior curvatureCertificate observableFamily
+      curvatureSquaredInterpretation curvaturePowerInterpretation
+  /-- Every natural-power label belongs to the exact Lorentz-scalar sector. -/
+  curvatureAllPowersLabel_mem_scalar : ∀ n,
+    curvatureAllPowersInterpretation.quantumLabel n ∈
+      covariantObservableFamily.scalarLabel
   /-- Explicit project anti-collapse strengthening: `(F²)²` is a genuinely new nontrivial operator.
   This is not inferred from Clay's renormalization footnote. -/
   curvatureQuarticAntiCollapse :
@@ -297,6 +309,19 @@ theorem quantumGauge_curvaturePower_invariant
   Observables.quantumGauge_invariant_curvaturePower
     data.curvatureSquaredInterpretation data.quantumGaugeInvariance
     data.curvaturePowerInterpretation g tag f
+
+/-- The same exact action fixes every natural-power label in the narrow `(F²)ⁿ` subgrammar. -/
+theorem quantumGauge_curvatureAllPowers_invariant
+    (data : FourDimensionalCurrentStrengthContinuumCoreAcceptanceData inner connection
+      exterior curvatureCertificate fieldData)
+    (g : Geometry.SmoothGaugeTransformation smoothBundle)
+    (n : ℕ)
+    (f : Minkowski.ScalarMinkowskiSchwartzTestFunction EuclideanDimension.four) :
+    data.quantumGaugeAction.operatorAction g
+        (data.curvatureAllPowersInterpretation.quantumLabel n) f =
+      data.observableFamily.operator (data.curvatureAllPowersInterpretation.quantumLabel n) f :=
+  Observables.quantumGauge_invariant_curvatureAllPowers
+    data.quantumGaugeInvariance data.curvatureAllPowersInterpretation g n f
 
 /-- Corrected OS-II output growth selected by the reconstruction-acceptance package. -/
 def wightmanLinearGrowth
