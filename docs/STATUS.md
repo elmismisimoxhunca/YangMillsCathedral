@@ -4345,7 +4345,16 @@ right-adjoint-equivariant in every degree.
 one vertical slot, vanishing on two vertical slots, fundamental-vector normalization, and the
 conditional cancellation theorem proving candidate horizontality from the precise negative
 ordinary-derivative value. The remaining gap is deriving that value from infinitesimal
-right-action/adjoint differentiation; it is not accepted as candidate data. Descent of the full candidate and a genuine intrinsic `D_A F` theorem remain open.
+right-action/adjoint differentiation; it is not accepted as candidate data.
+Together with the previously proved verticality of fundamental vectors,
+`YangMills.Geometry.PrincipalVerticalTangentGeneration` derives from smooth local triviality that
+`ker(dπ)` is exactly the image of the infinitesimal orbit map. For a supplied pointwise connection,
+vertical normalization recovers the unique generator as the connection-form value.
+`YangMills.Geometry.PrincipalFundamentalVectorField` proves every fixed generator produces a global
+`C∞` field, every value is vertical, and every smooth identity-based group curve with the specified
+velocity generates the expected right-action tangent. Finite right-adjoint equivariance is exposed
+along these curves without assuming a Lie exponential or global flow. The remaining bridge is the
+infinitesimal inverse-adjoint derivative and its targeted Cartan comparison. Descent of the full candidate and a genuine intrinsic `D_A F` theorem remain open.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

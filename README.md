@@ -471,7 +471,10 @@ certificates now transport through smooth diffeomorphisms when the source model 
 preserves right-adjoint equivariance in every degree. The correction's exact signed value with one
 vertical slot, vanishing with two vertical slots, and fundamental-vector specialization are derived;
 the corresponding negative ordinary-derivative value is proved sufficient for candidate
-horizontality. Derivation of that value from infinitesimal right-action naturality, descent of the full candidate, and a genuine intrinsic
+horizontality. Smooth local triviality now proves that every vertical tangent has a unique
+fundamental generator, recovered by the connection form, and every fixed generator yields a globally
+smooth fundamental field with the expected right-action curve velocity. Derivation of the required
+ordinary-derivative value from infinitesimal right-action naturality, descent of the full candidate, and a genuine intrinsic
 `D_A F` theorem remain open. Exact inverse-action
 curvature covariance now derives pointwise invariance of both chosen and basis-independent
 canonical curvature densities for the full pulled connection/exterior/certificate chain. The exact
