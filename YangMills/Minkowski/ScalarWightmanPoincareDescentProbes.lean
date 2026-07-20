@@ -67,6 +67,18 @@ theorem exact_descended_adjoint_covariance
       chain.fieldData.adjointField (pullbackScalarMinkowskiSchwartzTestFunction d p f) ψ :=
   chain.adjoint_covariant_descendedAffine p f ψ
 
+omit targetGroup in
+/-- Every label in the same covariant local-observable family inherits direct affine covariance. -/
+theorem exact_descended_observable_covariance
+    {family : TemperedLocalObservableFamilyData chain.D}
+    (covariance : CovariantLocalObservableFamilyData family)
+    (A : family.Label) (p : ProperOrthochronousPoincareTransformation d)
+    (f : ScalarMinkowskiSchwartzTestFunction d) (ψ : chain.D.domain) :
+    chain.descendedAffineDomainUnitary p
+        (family.operator A f ((chain.descendedAffineDomainUnitary p).symm ψ)) =
+      family.operator A (pullbackScalarMinkowskiSchwartzTestFunction d p f) ψ :=
+  covariance.operator_covariant_descendedAffine chain A p f ψ
+
 /-- The descended map is a genuine homomorphism for the named target law. -/
 theorem exact_affine_multiplicativity
     (first second : ProperOrthochronousPoincareTransformation d) :

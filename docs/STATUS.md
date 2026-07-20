@@ -3945,7 +3945,8 @@ Implemented and verified:
 - `descendedAffineUnitaryHom` is a genuine homomorphism for the accepted named affine-target law.
 - The selected-lift domain restriction is proved coherent with every original `D.domainUnitary`.
   Scalar field and adjoint covariance therefore descend to direct affine statements with no lift
-  choice present.
+  choice present. Every label in a covariant local-observable family sharing that exact domain
+  inherits the same direct affine covariance.
 - Strong continuity descends from the cover representation through the exact cover projection's
   quotient-map universal property.
 - The dependent 4D scalar chain is transported to the exact double-cover index and yields an affine

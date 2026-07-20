@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Sebastian Rodrigo
 -/
 
+import YangMills.Minkowski.CovariantLocalObservableFamily
 import YangMills.Minkowski.ScalarWightmanKernelTriviality
 
 /-!
@@ -149,6 +150,33 @@ theorem ScalarWightmanAxiomChainData.adjoint_covariant_descendedAffine
   have covariance := chain.surface.covariance.adjoint_covariant
     (selectedAffinePoincareLift (cover := cover) p) f ψ
   simpa [ScalarWightmanAxiomChainData.descendedAffineDomainUnitary] using covariance
+
+/-- Every label of a covariant local-observable family on the same scalar chain has direct affine
+covariance under the descended domain unitary. -/
+theorem CovariantLocalObservableFamilyData.operator_covariant_descendedAffine
+    {family : TemperedLocalObservableFamilyData chain.D}
+    (covariance : CovariantLocalObservableFamilyData family)
+    (A : family.Label) (p : ProperOrthochronousPoincareTransformation d)
+    (f : ScalarMinkowskiSchwartzTestFunction d) (ψ : chain.D.domain) :
+    chain.descendedAffineDomainUnitary p
+        (family.operator A f ((chain.descendedAffineDomainUnitary p).symm ψ)) =
+      family.operator A (pullbackScalarMinkowskiSchwartzTestFunction d p f) ψ := by
+  have transformed := covariance.operator_covariant A
+    (selectedAffinePoincareLift (cover := cover) p) f ψ
+  simpa [ScalarWightmanAxiomChainData.descendedAffineDomainUnitary] using transformed
+
+/-- In particular, the exact designated nontrivial local observable has direct affine covariance. -/
+theorem CovariantLocalObservableFamilyData.nontrivial_operator_covariant_descendedAffine
+    {family : TemperedLocalObservableFamilyData chain.D}
+    (covariance : CovariantLocalObservableFamilyData family)
+    (p : ProperOrthochronousPoincareTransformation d)
+    (f : ScalarMinkowskiSchwartzTestFunction d) (ψ : chain.D.domain) :
+    chain.descendedAffineDomainUnitary p
+        (family.operator family.nontrivialLabel f
+          ((chain.descendedAffineDomainUnitary p).symm ψ)) =
+      family.operator family.nontrivialLabel
+        (pullbackScalarMinkowskiSchwartzTestFunction d p f) ψ :=
+  covariance.operator_covariant_descendedAffine chain family.nontrivialLabel p f ψ
 
 /-- The descended scalar unitaries form a homomorphism for the exact named affine target law. -/
 noncomputable def ScalarWightmanAxiomChainData.descendedAffineUnitaryHom :

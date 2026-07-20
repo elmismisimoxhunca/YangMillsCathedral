@@ -375,7 +375,8 @@ committed before higher layers depend on it.
   propositional cover-to-lift equality.
 - [x] Descend the cyclic scalar representation to a choice-independent unitary homomorphism on the
   named affine target; derive strong continuity through the genuine cover's quotient-map law,
-  descend the common-domain field and adjoint covariance statements with no lift exposed, and
+  descend common-domain field, adjoint, and same-domain local-observable-family covariance with no
+  lift exposed, and
   integrate the transported Hilbert representation into the 4D core.
 - [ ] Construct the target law from proper-orthochronous future-cone closure, build the concrete
   inhomogeneous `SL(2,ℂ)` carrier, and identify its matrix-sign kernel with the accepted literal-sign

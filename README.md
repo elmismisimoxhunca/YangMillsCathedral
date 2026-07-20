@@ -275,8 +275,8 @@ Lift-independence then constructs a choice-independent unitary homomorphism on t
 Poincaré target; its strong continuity is descended through the genuine cover's quotient-map law.
 Explicit coherence recovers every original cover unitary and the exact translation unitaries already
 tied to the joint PVM, stress tensor, and gap. On the exact cover-indexed scalar chain, the common
-domain unitary, field covariance, and adjoint covariance are now stated directly on affine
-kinematics with no lift choice exposed.
+domain unitary, scalar field/adjoint covariance, and covariance of every label in any covariant
+scalar local-observable family on that same domain are now stated directly on affine kinematics with no lift choice exposed.
 Constructing the target law from future-cone closure and concrete inhomogeneous `SL(2,ℂ)` remains
 pending. A normalized vacuum is
 now tied to that same representation, with the complete invariant subspace required to be its single
