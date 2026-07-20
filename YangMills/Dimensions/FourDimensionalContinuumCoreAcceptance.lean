@@ -17,7 +17,7 @@ import YangMills.Minkowski.WightmanLinearGrowth
 import YangMills.Minkowski.WightmanLocalObservableCoherence
 import YangMills.Minkowski.WightmanRelativeAnalyticCorrelators
 import YangMills.Minkowski.WeakOperatorProductExpansion
-import YangMills.Observables.CurvatureSquaredInterpretation
+import YangMills.Observables.CurvaturePowerInterpretation
 import YangMills.Observables.CurvatureSquaredOPECoherence
 import YangMills.Reconstruction.CorrectedOSIIReconstructionAcceptance
 import YangMills.Renormalization.AdjointCasimirNormalization
@@ -31,7 +31,7 @@ Euclidean spacetime. It joins one compact-simple physical gauge group and exact 
 chain to one ambient Euclidean scalar family with exact source restrictions, one independent
 Minkowski/Wightman chain, an explicit
 exact-source Wick-continuation bridge, one covariant local-observable family containing that Wightman
-field, an interpretation of the exact classical `F²` observable, a local stress tensor whose
+field, interpretations of the finite scalar fragment `1`, `F²`, `(F²)²`, a local stress tensor whose
 regulated charges and translation Ward identities use the same joint translation PVM, and a
 physical gap on that spectrum.
 
@@ -51,7 +51,8 @@ four-dimensional running-coupling normal form and a supplied weak regular-variat
 exact same-family OPE. The running coupling's leading coefficient is now tied to an exact
 pairing-orthonormal basis and adjoint-Casimir identity, and its value at an explicit ultraviolet
 reference scale is the exact outer coupling in the classical action. The connection-level
-field-rescaling convention, calculated OPE coefficients, operator mixing, scheme dependence, and
+field-rescaling convention, independent curvature contractions/covariant-derivative observables,
+calculated OPE coefficients, operator mixing, scheme dependence, and
 perturbative remainders remain absent; no source-facing OS completed-tensor carrier, inhabitant, theory,
 existence theorem, or mass-gap proof is constructed.
 -/
@@ -174,6 +175,17 @@ structure FourDimensionalCurrentStrengthContinuumCoreAcceptanceData
     Observables.CurvatureSquaredLocalObservableInterpretationData
       (Classical.canonicalEuclideanSpacetimeMetricData EuclideanDimension.four)
       inner connection exterior curvatureCertificate observableFamily
+  /-- The finite intrinsic scalar fragment `1`, `F²`, `(F²)²` extends that exact basic
+  interpretation. Independent contractions and covariant derivatives remain absent. -/
+  curvaturePowerInterpretation :
+    Observables.ScalarCurvaturePowerLocalObservableInterpretationData
+      (Classical.canonicalEuclideanSpacetimeMetricData EuclideanDimension.four)
+      inner connection exterior curvatureCertificate observableFamily
+      curvatureSquaredInterpretation
+  /-- Explicit project anti-collapse strengthening: `(F²)²` is a genuinely new nontrivial operator.
+  This is not inferred from Clay's renormalization footnote. -/
+  curvatureQuarticAntiCollapse :
+    Observables.CurvatureQuarticAntiCollapseData curvaturePowerInterpretation
   /-- Decidable equality is retained explicitly for finite OPE truncations; it is not installed as
   a global instance on an unrelated label carrier. -/
   observableLabelDecidableEq : DecidableEq observableFamily.Label

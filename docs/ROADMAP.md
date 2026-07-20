@@ -172,6 +172,10 @@ committed before higher layers depend on it.
   the classical trace identity is not silently promoted to the quantum theory.
 - [x] Tie a basic nonzero/non-unit quantum `F²` label to the exact canonical curvature density and
   exact classical/quantum spacetime dimension, without asserting a global injective quantization map.
+- [x] Extend that exact label to the finite intrinsic scalar fragment `1`, `F²`, `(F²)²`, expose
+  exact classical-carrier coherence, and separately require `(F²)²` anti-collapse as an explicit
+  project strengthening in the 4D core. Active gauge invariance, all powers, independent invariant
+  contractions, mixed polynomials, covariant derivatives, and renormalized mixing remain open.
 - [x] Prove topological-module compatibility for every exact dependent adjoint fiber and define the
   continuous derivative-slot/alternating-curvature tensor carrier, with order zero locked to the
   exact smoothly descended curvature.
@@ -487,7 +491,7 @@ committed before higher layers depend on it.
 - [ ] Add the full `d = 4` Clay acceptance contract.
   - [x] Add an uninhabited current-strength core on canonical coordinate `ℝ⁴`, joining the exact
     classical/action, carrier-exact OS-II `(E0′)` and source-carrier OS-I `(E1)`–`(E4)`, exact-source
-    Wick coherence, Wightman `(R0′)`/same-PVM gap, coherent `F²` observable,
+    Wick coherence, Wightman `(R0′)`/same-PVM gap, the coherent finite scalar fragment `1`, `F²`, `(F²)²`,
     stress/translation Ward, compact-simple-indexed running coupling, exact weak OPE, corrected
     same-lift reconstruction acceptance, and supplied same-coupling regular-variation surfaces, with
     a required nonzero interpreted `F² × F²`

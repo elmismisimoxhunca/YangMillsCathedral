@@ -348,8 +348,13 @@ coordinate theorem derives Bianchi for the exact curvature carrier without accep
 witness. Naturality itself remains unproved. Canonical arbitrary-manifold existence, chart independence,
 arbitrary-manifold `d²`, arbitrary-manifold graded Leibniz transport, positive-degree covariant exterior
 differentiation, and
-positive curvature-tensor orders remain open. This is not a general
-curvature-polynomial/covariant-derivative language or a canonical injective quantization map. A preliminary four-dimensional perturbative interface now requires a positive running coupling
+positive curvature-tensor orders remain open. The interpreted observable layer now extends the exact
+unit and `F²` labels to the finite intrinsic fragment `1`, `F²`, `(F²)²`, with exact classical
+carrier coherence. A separate explicit anti-collapse strengthening requires `(F²)²` to be a new
+nontrivial operator in the 4D core; this is not attributed to Clay's footnote. It is still not an
+active connection-gauge-invariance theorem or a language of independent invariant contractions,
+mixed curvature polynomials, or covariant derivatives, nor a canonical injective quantization map.
+A preliminary four-dimensional perturbative interface now requires a positive running coupling
 on an explicit open ultraviolet tail, exact beta flow, ultraviolet limit, and negative cubic leading
 normal form. An exact supplied normalization certificate now chooses a basis orthonormal for the
 same classical invariant pairing, imposes Gross–Wilczek's adjoint-Casimir contraction identity on
@@ -361,8 +366,8 @@ interface ties every
 nonzero coefficient of the exact weak OPE to normalized short-distance Schwartz dilations, signed
 real radial degree, a real power of the same running coupling, and a nonzero weak distributional
 limit. This is acceptance data, not a perturbative calculation: anomalous dimensions, mixing,
-scheme dependence, remainders, interpreted curvature-polynomial labels, and Clay's prescribed
-singularities remain open. A separate same-family stress-tensor checker
+scheme dependence, remainders, independent/mixed curvature-polynomial and derivative labels, and
+Clay's prescribed singularities remain open. A separate same-family stress-tensor checker
 requires symmetric Hermitian components local relative to the whole family, explicit inverse-matrix
 contravariant rank-two Lorentz covariance, weak distributional conservation, and a nonzero non-unit
 energy density. Its symmetry/conservation semantics are independently sourced to an authoritative
@@ -474,7 +479,7 @@ known OS-II/source-space reconstruction and genuine Poincaré-cover debts.
 A parallel uninhabited four-dimensional current-strength core now fixes coordinate `ℝ⁴`, the
 canonical flat metric and coordinate Lebesgue measure, then dependently joins the same classical,
 carrier-exact OS-II `(E0′)` plus source-carrier OS-I `(E1)`–`(E4)` package, Wightman,
-exact derivative-vanishing source Wick coherence, corrected-output Wightman `(R0′)`, observable, `F²`,
+exact derivative-vanishing source Wick coherence, corrected-output Wightman `(R0′)`, observable, the finite scalar fragment `1`, `F²`, `(F²)²`,
 stress/translation, and same-PVM gap surfaces at the actual Clay dimension. Unlike the lower-dimensional core it also requires the
 four-dimensional pure-gauge running-coupling/beta normal form with an exact supplied
 adjoint-Casimir/invariant-pairing one-loop normalization, exact same-family bilocal products/weak OPE, supplied regular-variation scaling by that same

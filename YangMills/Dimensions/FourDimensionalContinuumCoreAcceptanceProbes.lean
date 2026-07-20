@@ -339,6 +339,28 @@ theorem exact_curvature_squared_observable :
   ⟨data.curvatureSquaredInterpretation.curvatureSquaredLabel_ne_unit,
     data.curvatureSquaredInterpretation.curvatureSquared_nontrivial⟩
 
+/-- The first new scalar curvature power `(F²)²` is a distinct nontrivial operator on that same
+family, not a duplicate unit or `F²` sector. -/
+theorem exact_curvature_quartic_observable :
+    data.curvaturePowerInterpretation.quantumLabel .curvatureQuartic ≠
+        data.observableFamily.unitLabel ∧
+      data.curvaturePowerInterpretation.quantumLabel .curvatureQuartic ≠
+        data.curvatureSquaredInterpretation.quantumLabel .curvatureSquared ∧
+      ∃ (test : Minkowski.ScalarMinkowskiSchwartzTestFunction EuclideanDimension.four)
+        (vector : D.domain),
+        data.observableFamily.operator
+            (data.curvaturePowerInterpretation.quantumLabel .curvatureQuartic) test vector ≠ 0 ∧
+        data.observableFamily.operator
+            (data.curvaturePowerInterpretation.quantumLabel .curvatureQuartic) test vector ≠
+          data.observableFamily.operator data.observableFamily.unitLabel test vector ∧
+        data.observableFamily.operator
+            (data.curvaturePowerInterpretation.quantumLabel .curvatureQuartic) test vector ≠
+          data.observableFamily.operator
+            (data.curvatureSquaredInterpretation.quantumLabel .curvatureSquared) test vector :=
+  ⟨data.curvatureQuarticAntiCollapse.curvatureQuarticLabel_ne_unit,
+    data.curvatureQuarticAntiCollapse.curvatureQuarticLabel_ne_curvatureSquared,
+    data.curvatureQuarticAntiCollapse.curvatureQuartic_nontrivial⟩
+
 /-- The stress tensor belongs to the exact same local-observable family. -/
 theorem exact_stress_energy :
     Nonempty (Minkowski.LocalStressEnergyTensorData data.observableFamily) :=

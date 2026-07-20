@@ -3874,6 +3874,23 @@ Implemented and verified:
   No basis construction, connection-level field-rescaling theorem, `O(g⁵)` calculation, scheme
   choice, OPE coefficient, theory, or gap is constructed.
 
+## 2026-07-19 — two-hundred-tenth stone: scalar curvature-power observables
+
+Implemented and verified:
+
+- `ScalarCurvaturePowerTag` contains exactly the finite intrinsic fragment `1`, `F²`, `(F²)²`; its
+  classical carrier is the corresponding exact function of the already descended,
+  basis-independent canonical curvature density.
+- `ScalarCurvaturePowerLocalObservableInterpretationData` exposes that classical carrier and requires
+  exact equality with the canonical fragment. Its unit and `F²` labels are the existing labels in
+  the same quantum local family.
+- Separate `CurvatureQuarticAntiCollapseData` requires `(F²)²` to have a new label and one exact
+  test/vector on which its operator is nonzero and differs from both unit and `F²`. The 4D core
+  adopts this as a transparent project strengthening, not as a consequence of Clay's footnote.
+- No active connection-gauge-invariance theorem, all-power map, independent invariant contractions,
+  mixed curvature polynomials, covariant derivatives, renormalized products/mixing, interpretation
+  witness, theory, or gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

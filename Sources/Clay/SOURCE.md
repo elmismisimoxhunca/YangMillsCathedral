@@ -46,6 +46,15 @@ Printed and PDF page locators below refer to the source-of-record artifact.
   correspondence between classical differential polynomials and quantum fields. The future
   observable interface must therefore not claim a canonical syntactic bijection.
 
+`ScalarCurvaturePowerLocalObservableInterpretationData` now provides only the finite intrinsic
+fragment `1`, `F²`, `(F²)²` inside one exact local quantum family. It preserves the existing unit and
+`F²` labels and exposes an exact classical-meaning equality. A separate
+`CurvatureQuarticAntiCollapseData` may require `(F²)²` to be genuinely new and nontrivial; this is an
+explicit project strengthening, not a consequence attributed to the footnote. No active
+connection-gauge invariance theorem, all-power map, injectivity claim, or canonical quantization map
+is asserted. Independent invariant contractions, mixed polynomials, covariant derivatives, and
+renormalized mixing remain open.
+
 The exact searchable quotation begins near lines 262–280 of `yangmills_official.txt`. Text line
 numbers are convenience locators; the PDF page is authoritative.
 
