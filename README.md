@@ -351,8 +351,13 @@ differentiation, and
 positive curvature-tensor orders remain open. This is not a general
 curvature-polynomial/covariant-derivative language or a canonical injective quantization map. A preliminary four-dimensional perturbative interface now requires a positive running coupling
 on an explicit open ultraviolet tail, exact beta flow, ultraviolet limit, and negative cubic leading
-normal form. It intentionally leaves the group-dependent one-loop coefficient and invariant-pairing/
-coupling normalization disconnected. A separate supplied regular-variation interface ties every
+normal form. An exact supplied normalization certificate now chooses a basis orthonormal for the
+same classical invariant pairing, imposes Gross–Wilczek's adjoint-Casimir contraction identity on
+the exact tangent bracket, and fixes the one-loop coefficient to `11 C₂(G)/(3·16π²)`. An explicit
+ultraviolet reference scale equates this same running coupling with the outer coupling in the exact
+classical action. It does not construct that basis, prove the connection-level field-rescaling
+convention, or calculate the perturbative remainder. A separate supplied regular-variation
+interface ties every
 nonzero coefficient of the exact weak OPE to normalized short-distance Schwartz dilations, signed
 real radial degree, a real power of the same running coupling, and a nonzero weak distributional
 limit. This is acceptance data, not a perturbative calculation: anomalous dimensions, mixing,
@@ -471,8 +476,8 @@ canonical flat metric and coordinate Lebesgue measure, then dependently joins th
 carrier-exact OS-II `(E0′)` plus source-carrier OS-I `(E1)`–`(E4)` package, Wightman,
 exact derivative-vanishing source Wick coherence, corrected-output Wightman `(R0′)`, observable, `F²`,
 stress/translation, and same-PVM gap surfaces at the actual Clay dimension. Unlike the lower-dimensional core it also requires the
-preliminary four-dimensional pure-gauge running-coupling/beta normal form indexed by the exact
-compact-simple gauge certificate, exact same-family bilocal products/weak OPE, supplied regular-variation scaling by that same
+four-dimensional pure-gauge running-coupling/beta normal form with an exact supplied
+adjoint-Casimir/invariant-pairing one-loop normalization, exact same-family bilocal products/weak OPE, supplied regular-variation scaling by that same
 coupling, and an anti-disconnection bridge forcing the interpreted `F² × F²` input to have one
 nonzero contracted zeroth-order OPE term whose coupling exponent and leading scaling distribution
 are both nonzero. Its Euclidean package retains explicit ambient tempered extensions but restricts

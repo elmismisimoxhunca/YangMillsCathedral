@@ -3853,6 +3853,27 @@ Implemented and verified:
 - These are uninhabited acceptance conditions. They do not construct an output or equivalence,
   prove the OS reconstruction theorem, construct a theory, or prove a mass gap.
 
+## 2026-07-19 — two-hundred-ninth stone: adjoint-Casimir one-loop normalization
+
+Implemented and verified:
+
+- `AdjointCasimirNormalizationData` chooses a finite nonempty basis of the exact tangent Lie algebra,
+  requires it to be orthonormal for the same invariant pairing used by the classical action, and
+  defines its structure coefficients from the exact Mathlib tangent bracket.
+- Gross–Wilczek's displayed identity `∑_{b,c} C_{abc} C_{dbc} = C₂(G) δ_{ad}` is imposed with a
+  strictly positive adjoint Casimir. A genuinely nonzero structure coefficient is derived, excluding
+  an abelian or zero-bracket surrogate.
+- `GroupNormalizedOneLoopBetaData` fixes the same preliminary running coupling's leading coefficient
+  to `11 C₂(G)/(3·16π²)` and derives the denominator-cleared identity.
+- `ClassicalRunningCouplingReferenceData` chooses an explicit ultraviolet logarithmic scale and
+  equates the outer classical-action coupling with that same running coupling there. A replacement
+  scalar satisfying the same bridge is proved equal, blocking a disconnected action coupling.
+- The four-dimensional core requires both certificates using its exact compact-simple group,
+  invariant pairing, classical action, and running coupling.
+- The basis, Casimir identity, and coefficient/reference equalities remain supplied acceptance data.
+  No basis construction, connection-level field-rescaling theorem, `O(g⁵)` calculation, scheme
+  choice, OPE coefficient, theory, or gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
@@ -3876,18 +3897,20 @@ Not yet achieved:
   bridge and metric-volume compatibility remain pending. OS-I, correcting OS-II, Wightman 1956,
   and Streater–Wightman source artifacts are now acquired and verified. Scalar tempered Schwinger
   families, the exact printed OS-II control, carrier-exact `(E0′)`, and source-carrier `(E1)`–`(E4)`
-  are implemented as uninhabited requirements. Corrected reconstruction remains unimplemented, and
-  the current ambient family/exact-source Wick coherence and its derived strict view are not
-  silently identified with a reconstructed output. Wilson and Osterwalder–Seiler
+  are implemented as uninhabited requirements. Corrected same-lift reconstruction acceptance now
+  quantifies over universe-relative alternative Hilbert realizations, but no output, equivalence, or
+  reconstruction theorem is constructed; ambient family/exact-source Wick coherence is not silently
+  identified with an exhibited reconstructed output. Wilson and Osterwalder–Seiler
   lattice sources are likewise pinned; finite periodic bonds, plaquette holonomy, local gauge
   transformations, Wilson-type action, normalized product Haar, conditional Gibbs data,
   support-local loop expectations, finite-cutoff reflection-positivity checker, and scaling/
   expectation-limit interfaces are explicit. No Gibbs, positivity, scaling, or continuum-bridge
   inhabitant is constructed, and measure/field/OS continuum identification remains unimplemented.
   Wilson's OPE paper and the Gross–Wilczek/Politzer asymptotic-freedom papers are pinned. Generic
-  weak OPE data and the basic exact `F²` interpretation bridge are implemented, but arbitrary
-  curvature-polynomial/covariant-derivative interpretation, operator mixing, and prescribed
-  ultraviolet coefficient semantics remain unimplemented. The physical joint translation-PVM
+  weak OPE data, the basic exact `F²` interpretation bridge, and supplied group-normalized one-loop
+  beta coefficient are implemented, but arbitrary curvature-polynomial/covariant-derivative
+  interpretation, operator mixing, calculated OPE coefficients, scheme dependence, and perturbative
+  remainder semantics remain unimplemented. The physical joint translation-PVM
   and invariant-mass-gap predicates are now anchored to the visually verified SNAG discussion, and
   the same PVM supplies the Hamiltonian interval view; any satisfying spectral datum and the final
   acceptance integration remain absent.

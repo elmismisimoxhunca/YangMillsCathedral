@@ -18,7 +18,9 @@ were rendered and visually checked.
   Euclidean momenta.
 - p. 1344; PDF page 2; extraction lines 69–150: equations (5)–(9) give the Yang–Mills setup, the
   negative leading pure-gauge beta function, its ultraviolet limit for semisimple non-Abelian gauge
-  groups, and visible matter contributions.
+  groups, and visible matter contributions. The retained PDF page was visually checked for equation
+  (8), `βᵥ(g) = -(g³/16π²)(11/3) C₂(G) + O(g⁵)`, and the immediately following convention
+  `∑_{b,c} C_{abc} C_{dbc} = C₂(G) δ_{ad}`; extraction lines 131–140 locate the OCR-degraded display.
 - pp. 1344–1346: the conclusions concern perturbative ultraviolet behavior and logarithmic
   corrections, not a nonperturbative construction or infrared mass gap.
 
@@ -27,6 +29,16 @@ were rendered and visually checked.
 This source controls only a perturbative ultraviolet consistency interface: an explicit scale/running
 coupling, beta-function convention, ultraviolet limit, and observable/Green-function asymptotics with
 quantified logarithmic or remainder behavior. Gauge group and matter dependence must remain visible.
+
+`AdjointCasimirNormalizationData` states the displayed basis-level Casimir convention on the exact
+tangent Lie bracket and the invariant pairing used by the classical action.
+`GroupNormalizedOneLoopBetaData` then identifies the preliminary running coupling's positive leading
+coefficient with `11 C₂(G)/(3·16π²)`. `ClassicalRunningCouplingReferenceData` additionally chooses
+an explicit ultraviolet logarithmic reference scale and equates the same running coupling there
+with the outer coupling in the project's classical action. This records the convention obtained by
+rescaling the source's coupling-inside-curvature presentation to an outer `1/(4g²)` coefficient; no
+connection-level field-rescaling theorem is claimed. The basis, Casimir identity, and equalities are
+supplied acceptance data; the `O(g⁵)` remainder is not calculated or represented by this interface.
 
 No finite-order coefficient or slogan “asymptotically free” may stand in for a full continuum quantum
 theory, OS/Wightman reconstruction, existence, confinement, or mass gap.

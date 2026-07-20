@@ -20,6 +20,7 @@ import YangMills.Minkowski.WeakOperatorProductExpansion
 import YangMills.Observables.CurvatureSquaredInterpretation
 import YangMills.Observables.CurvatureSquaredOPECoherence
 import YangMills.Reconstruction.CorrectedOSIIReconstructionAcceptance
+import YangMills.Renormalization.AdjointCasimirNormalization
 import YangMills.Renormalization.AsymptoticFreedomOPE
 
 /-!
@@ -47,8 +48,11 @@ carry a genuine two-sheeted topological covering projection, while concrete inho
 identification remain open. No lattice datum can fill
 any field of this record. The exact compact-simple gauge certificate indexes a preliminary
 four-dimensional running-coupling normal form and a supplied weak regular-variation condition on the
-exact same-family OPE. Neither provides source-faithful group-normalized perturbative coefficients,
-operator mixing or remainders; no source-facing OS completed-tensor carrier, inhabitant, theory,
+exact same-family OPE. The running coupling's leading coefficient is now tied to an exact
+pairing-orthonormal basis and adjoint-Casimir identity, and its value at an explicit ultraviolet
+reference scale is the exact outer coupling in the classical action. The connection-level
+field-rescaling convention, calculated OPE coefficients, operator mixing, scheme dependence, and
+perturbative remainders remain absent; no source-facing OS completed-tensor carrier, inhabitant, theory,
 existence theorem, or mass-gap proof is constructed.
 -/
 
@@ -122,6 +126,10 @@ structure FourDimensionalCurrentStrengthContinuumCoreAcceptanceData
   that exact compact-simple gauge-group certificate. -/
   asymptoticFreedom : Renormalization.PureYangMillsAsymptoticFreedomData
     EuclideanDimension.four compactSimpleGaugeGroup
+  /-- Exact Gross–Wilczek one-loop normalization tied to the same gauge Lie algebra and the same
+  invariant pairing used by the classical action. -/
+  groupNormalizedOneLoopBeta : Renormalization.GroupNormalizedOneLoopBetaData
+    inner asymptoticFreedom
   /-- Relative-to-designated-measure analytic action data on the same classical curvature chain. -/
   classicalAction : Classical.EuclideanActionAnalyticData
     (Classical.canonicalEuclideanSpacetimeMetricData EuclideanDimension.four)
@@ -129,6 +137,11 @@ structure FourDimensionalCurrentStrengthContinuumCoreAcceptanceData
   /-- The designated action measure is coordinate Lebesgue measure on the exact canonical-flat
   `ℝ⁴` base. A general metric-induced-volume API bridge remains separate debt. -/
   classicalMeasure_eq_coordinateLebesgue : classicalAction.measure = MeasureTheory.volume
+  /-- Reference-scale bridge: the outer coupling in this exact classical action is the value of the
+  same running coupling whose one-loop coefficient is normalized above. -/
+  classicalRunningCouplingReference :
+    Renormalization.ClassicalRunningCouplingReferenceData
+      asymptoticFreedom classicalAction.coupling
   /-- One exact scalar Schwinger distribution family in Euclidean spacetime dimension four. -/
   schwingerFamily : ScalarSchwingerDistributionFamily EuclideanDimension.four
   /-- Current-strength Euclidean package with carrier-exact OS-II `(E0′)` on the coincidence-flat

@@ -358,6 +358,8 @@ import YangMills.Renormalization.RunningCoupling
 import YangMills.Renormalization.RunningCouplingProbes
 import YangMills.Renormalization.SchwartzScaling
 import YangMills.Renormalization.SchwartzScalingProbes
+import YangMills.Renormalization.AdjointCasimirNormalization
+import YangMills.Renormalization.AdjointCasimirNormalizationProbes
 import YangMills.Renormalization.AsymptoticFreedomOPE
 import YangMills.Renormalization.AsymptoticFreedomOPEProbes
 import YangMills.Minkowski.PhysicalMassGapSupremum

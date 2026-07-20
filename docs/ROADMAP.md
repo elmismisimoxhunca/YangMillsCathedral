@@ -488,13 +488,19 @@ committed before higher layers depend on it.
   - [x] Add an uninhabited current-strength core on canonical coordinate `ℝ⁴`, joining the exact
     classical/action, carrier-exact OS-II `(E0′)` and source-carrier OS-I `(E1)`–`(E4)`, exact-source
     Wick coherence, Wightman `(R0′)`/same-PVM gap, coherent `F²` observable,
-    stress/translation Ward, compact-simple-indexed running coupling, exact weak OPE, and supplied
-    same-coupling regular-variation surfaces, with a required nonzero interpreted `F² × F²`
+    stress/translation Ward, compact-simple-indexed running coupling, exact weak OPE, corrected
+    same-lift reconstruction acceptance, and supplied same-coupling regular-variation surfaces, with
+    a required nonzero interpreted `F² × F²`
     zeroth-order term with nonzero same-running-coupling exponent and nonzero leading scaling
     distribution.
-  - [ ] Add corrected reconstruction acceptance with heterogeneous-unitary semantics, concrete `SL(2,ℂ)`/`{±1}` kernel identification and construct the named affine-target group law; add source-faithful
-    curvature-polynomial/OPE mixing, group-normalized perturbative coefficients/remainders, trace
-    anomaly, and final universal compact-simple-group quantification.
+  - [x] Tie the same running coupling's one-loop coefficient to an explicit pairing-orthonormal
+    basis, the exact tangent bracket, Gross–Wilczek's adjoint-Casimir identity, and
+    `11 C₂(G)/(3·16π²)`; identify the exact classical outer coupling with that same running coupling
+    at an explicit UV reference scale. This remains supplied convention/normalization data, not a
+    connection-level field-rescaling theorem or perturbative calculation.
+  - [ ] Construct concrete `SL(2,ℂ)`/`{±1}` kernel identification and the named affine-target group
+    law; add source-faithful curvature-polynomial/OPE mixing, calculated perturbative remainders and
+    scheme dependence, trace anomaly, and final universal compact-simple-group quantification.
 - [x] Define the exact Clay endpoint predicate, reject every lower dimension `1`–`3`, and prove no
   lower-dimensional Euclidean coordinate carrier (especially the 3D core base) is real-linearly
   equivalent to the four-dimensional carrier.

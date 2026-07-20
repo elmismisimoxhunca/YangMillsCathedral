@@ -130,6 +130,36 @@ theorem exact_asymptotic_freedom :
       EuclideanDimension.four data.compactSimpleGaugeGroup) :=
   ⟨data.asymptoticFreedom⟩
 
+/-- Its one-loop coefficient uses the exact invariant pairing and exact gauge Lie algebra. -/
+theorem exact_group_normalized_oneLoop_beta :
+    Nonempty (Renormalization.GroupNormalizedOneLoopBetaData
+      inner data.asymptoticFreedom) :=
+  ⟨data.groupNormalizedOneLoopBeta⟩
+
+/-- The accepted leading coefficient is the exact positive adjoint-Casimir value. -/
+theorem exact_group_normalized_leadingCoefficient :
+    data.asymptoticFreedom.leadingCoefficient =
+      (11 * data.groupNormalizedOneLoopBeta.casimirNormalization.adjointCasimir) /
+        (3 * (16 * Real.pi ^ 2)) :=
+  data.groupNormalizedOneLoopBeta.leadingCoefficient_eq
+
+/-- The outer classical-action coupling is one exact value of that same running coupling. -/
+theorem exact_classical_running_coupling_reference :
+    data.asymptoticFreedom.ultravioletThreshold <
+        data.classicalRunningCouplingReference.referenceLogScale ∧
+      data.classicalAction.coupling = data.asymptoticFreedom.runningCoupling
+        data.classicalRunningCouplingReference.referenceLogScale :=
+  ⟨data.classicalRunningCouplingReference.reference_mem_ultraviolet,
+    data.classicalRunningCouplingReference.coupling_eq_runningCoupling⟩
+
+/-- An unrelated replacement for the exact classical coupling cannot satisfy this same bridge. -/
+theorem disconnected_classical_coupling_blocked
+    (replacement : ℝ)
+    (replacement_eq_running : replacement = data.asymptoticFreedom.runningCoupling
+      data.classicalRunningCouplingReference.referenceLogScale) :
+    replacement = data.classicalAction.coupling :=
+  data.classicalRunningCouplingReference.replacement_eq replacement_eq_running
+
 /-- The accepted running coupling is not a scale-independent constant. -/
 theorem nonconstant_running_coupling :
     ¬ ∃ coupling : ℝ,
