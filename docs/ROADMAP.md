@@ -234,8 +234,12 @@ committed before higher layers depend on it.
   fundamental fields, and derive their exact right-action curve velocities.
 - [x] Construct the smooth right-invariant field and identify its exact left-trivialized coefficient
   as the smooth inverse-adjoint orbit.
-- [ ] Prove the missing second-order manifold-calculus bridge `d(Ad(·⁻¹)Y)₁(X) = -[X,Y]` and its
-  targeted Cartan comparison, then prove full candidate
+- [x] Use the universal Maurer--Cartan certificate to compute derivatives of left-trivialized smooth
+  fields and derive `d(Ad(·⁻¹)Y)₁(X) = -[X,Y]` conditionally on left/right invariant-field
+  commutation at the identity.
+- [ ] Prove the remaining mixed-second-derivative theorem that left- and right-invariant fields
+  commute at the identity and apply the resulting unconditional formula in the targeted Cartan
+  comparison, then prove full candidate
   right-adjoint equivariance, then descend it and derive structural curvature
   laws and a genuine intrinsic `D_A F` theorem.
 

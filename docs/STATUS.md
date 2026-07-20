@@ -4356,9 +4356,12 @@ velocity generates the expected right-action tangent. Finite right-adjoint equiv
 along these curves without assuming a Lie exponential or global flow.
 `YangMills.Mathematics.LieGroupRightInvariantField` constructs the smooth right-invariant field, proves its exact invariance under every right
 translation, and proves that its exact left-trivialized coefficient is `Ad(g⁻¹)Y`; those model coordinates are
-smooth. The remaining bridge is the second-order manifold-calculus theorem identifying the
-derivative of that coefficient at the identity with `-[X,Y]`, followed by its targeted Cartan
-comparison. Descent of the full candidate and a genuine intrinsic `D_A F` theorem remain open.
+smooth. `YangMills.Mathematics.LieGroupLeftTrivializedFieldDerivative` now uses the certified
+universal Maurer--Cartan equation to compute the derivative of any smooth field's left-trivialized
+coefficient. It derives the exact `-[X,Y]` formula for the right-invariant field from the narrowly
+isolated premise that the relevant left/right manifold Lie bracket vanishes at the identity. The
+remaining second-order manifold-calculus bridge is precisely that mixed-derivative commutation
+fact; after it is proved, the targeted principal-form Cartan comparison remains. Descent of the full candidate and a genuine intrinsic `D_A F` theorem remain open.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.
