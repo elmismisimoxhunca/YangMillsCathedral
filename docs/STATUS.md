@@ -3914,6 +3914,23 @@ Implemented and verified:
   with a matrix semidirect product, produce canonical global/matrix sheet labels, construct a theory,
   or prove a gap.
 
+## 2026-07-19 — two-hundred-twelfth stone: scalar cover-kernel triviality
+
+Implemented and verified:
+
+- Exact scalar covariance proves that every identity-projecting lift commutes on the common domain
+  with both the field and its exact adjoint; identity affine pullback fixes the same Schwartz test.
+- Vacuum invariance and induction prove that the same restricted unitary fixes every finite
+  field/adjoint word on the selected vacuum.
+- The Wightman cyclicity equality supplies density of that exact polynomial-vacuum span. Equality of
+  continuous linear maps on the dense generating span then proves the full Hilbert unitary is the
+  identity.
+- For any scalar realization definitionally indexed by the exact double cover, the derived negative
+  sign therefore acts trivially.
+- This is a theorem from an already supplied scalar Wightman surface, not a representation or theory
+  construction. It does not apply to spinorial fields and does not yet transport automatically
+  across a merely propositionally equal lift index in the four-dimensional integration record.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

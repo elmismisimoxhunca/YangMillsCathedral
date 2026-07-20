@@ -265,8 +265,12 @@ cover projection is thereby a bundled group homomorphism. Its exact identity fib
 sheets, so the group kernel is now proved multiplicatively equivalent to the literal complex-unit
 subgroup `{1,-1}` and central, deriving a nonidentity negative-sign lift without another requirement. Relative to any selected lift, its fiber
 is proved to consist exactly of that lift and its distinct negative partner. This does not construct
-a canonical global section or matrix-label the sheets. Constructing the target law from future-cone closure and concrete inhomogeneous `SL(2,ℂ)`
-remain pending. A normalized vacuum is
+a canonical global section or matrix-label the sheets. For any cyclic scalar Wightman realization
+directly indexed by the exact cover, scalar covariance, exact vacuum invariance, and cyclicity now
+prove that every
+kernel element—and in particular the negative sign—acts as the identity on the full Hilbert space.
+Constructing the target law from future-cone closure and concrete inhomogeneous `SL(2,ℂ)` remains
+pending. A normalized vacuum is
 now tied to that same representation, with the complete invariant subspace required to be its single
 complex line. One dense common submodule contains that vacuum and is invariant under the same
 representation, whose unitaries restrict exactly to it. A scalar field and adjoint preserve that

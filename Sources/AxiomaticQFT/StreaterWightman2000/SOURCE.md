@@ -123,8 +123,13 @@ requires, a multiplicative equivalence of the projection kernel with these signs
 centrality is derived as well. Relative to any chosen lift, every point in its fiber is then proved
 to be that lift or its distinct negative-sign partner. This names the abstract group kernel and gives
 relative sign labels, not a matrix carrier, canonical global section, or matrix `A ↦ -A`
-identification. The cover interfaces remain uninhabited and do not construct
-the book's inhomogeneous `SL(2,ℂ)` or derive proper-orthochronous closure.
+identification. For a scalar Wightman realization indexed definitionally by that exact cover,
+`ScalarWightmanAxiomSurfaceData.unitary_eq_refl_of_projection_eq_identity` derives that every
+identity-projecting lift acts trivially: covariance fixes field/adjoint words, vacuum invariance
+fixes their base vector, and cyclicity plus continuity reaches the full Hilbert space. This is a
+project derivation from axioms `0`–`III`, not a separately printed theorem. The cover interfaces
+remain uninhabited and do not construct the book's inhomogeneous `SL(2,ℂ)` or derive
+proper-orthochronous closure.
 
 The checker follows the book's explicit printed-p. 92 SNAG/PVM presentation rather than stopping
 at the generator-level summary on printed p. 97. Energy, momentum, invariant mass, the vacuum
