@@ -462,8 +462,11 @@ laws. A reusable finite multilinear telescope now proves lift independence for h
 forms of every degree, with degree two definitionally compatible with the existing curvature chain.
 Right-adjoint representative independence and smooth descent into the actual dependent quotient
 fibers are now derived in every degree, with arbitrary designated-chart coordinate formulas and
-exact degree-two compatibility. A positive-degree operator, preservation of tensoriality by its
-principal output, and a genuine intrinsic `D_A F` theorem remain open. Exact inverse-action
+exact degree-two compatibility. The exact smooth positive-degree total-space candidate
+`dω + [Θ ∧ ω]` is now constructed from one unchanged connection, input form, and supplied ordinary
+exterior certificate, including its `2 → 3` specialization. Derivation of output tensoriality,
+positive-degree pullback/infinitesimal naturality, descent of this candidate, and a genuine intrinsic
+`D_A F` theorem remain open. Exact inverse-action
 curvature covariance now derives pointwise invariance of both chosen and basis-independent
 canonical curvature densities for the full pulled connection/exterior/certificate chain. The exact
 analytic datum transports to that chain with unchanged designated measure and coupling, deriving

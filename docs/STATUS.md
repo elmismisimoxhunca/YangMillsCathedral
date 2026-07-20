@@ -4324,9 +4324,16 @@ existing degree-two horizontality predicate is definitionally compatible.
 `YangMills.Geometry.PrincipalFormSmoothDescent` derives right-adjoint representative independence,
 actual dependent-quotient-fiber descent, arbitrary designated-chart coordinates, and smooth descent
 for every degree. Degree three is probed explicitly and the existing degree-two predicates and
-selected carrier are definitionally compatible. Construction of a positive-degree principal
-covariant derivative, preservation of horizontality/equivariance by that output, and a genuine
-intrinsic `D_A F` theorem remain open.
+selected carrier are definitionally compatible.
+`YangMills.Geometry.PrincipalFormCovariantExteriorCandidate` constructs the exact smooth
+positive-degree total-space expression `dω + [Θ ∧ ω]` from the same principal connection, smooth
+input form, and supplied ordinary exterior certificate. Its exact derivative and connection bracket
+carriers are exposed, its `2 → 3` specialization is probed, and hostile probes block an unrelated
+derivative or omitted nonzero bracket. The current positive-degree Cartan certificate determines the
+ordinary derivative on admissible smooth fields, but the API has no positive-degree diffeomorphism
+pullback theorem or infinitesimal right-action/adjoint differentiation bridge. Derivation of output
+horizontality/right-adjoint equivariance, descent of this candidate, and a genuine intrinsic `D_A F`
+theorem remain open.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

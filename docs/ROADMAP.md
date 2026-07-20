@@ -222,9 +222,11 @@ committed before higher layers depend on it.
 - [x] Generalize right-adjoint representative independence, actual dependent-fiber pointwise
   descent, arbitrary designated-chart coordinates, and smooth tensorial principal-form descent to
   every degree, preserving degree-two compatibility.
-- [ ] Construct the positive-degree principal covariant derivative and prove its output remains
-  horizontal and right-adjoint-equivariant, then derive structural curvature laws and a genuine
-  intrinsic `D_A F` theorem.
+- [x] Construct the exact smooth positive-degree principal total-space candidate
+  `dω + [Θ ∧ ω]`, tied to one unchanged connection, input form, and ordinary exterior certificate.
+- [ ] Derive positive-degree pullback and infinitesimal right-action naturality, prove the candidate
+  remains horizontal and right-adjoint-equivariant, then descend it and derive structural curvature
+  laws and a genuine intrinsic `D_A F` theorem.
 
 ## Phase 3 — classical Yang–Mills semantics
 
