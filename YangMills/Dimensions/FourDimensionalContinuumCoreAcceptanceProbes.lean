@@ -144,6 +144,19 @@ theorem exact_poincare_complex_sign_kernel :
     Minkowski.negativeProjectionKernelElement_ne_one EuclideanDimension.four
       data.poincareTargetGroup data.poincareDoubleCover⟩
 
+/-- Relative to any selected physical lift, its exact affine fiber consists precisely of that lift
+and its distinct negative-sign partner. -/
+theorem exact_poincare_relative_sign_sheets
+    {first second : PoincareLiftGroup}
+    (projection_eq : data.poincareDoubleCover.projection second =
+      data.poincareDoubleCover.projection first) :
+    second = first ∨
+      second = first * (Minkowski.negativeProjectionKernelElement
+        EuclideanDimension.four data.poincareTargetGroup data.poincareDoubleCover :
+          PoincareLiftGroup) :=
+  Minkowski.eq_or_eq_mul_negativeKernelElement_of_projection_eq
+    EuclideanDimension.four data.poincareTargetGroup data.poincareDoubleCover projection_eq
+
 /-- The preliminary ultraviolet normal form uses that exact gauge-group certificate and dimension. -/
 theorem exact_asymptotic_freedom :
     Nonempty (Renormalization.PureYangMillsAsymptoticFreedomData

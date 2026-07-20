@@ -250,6 +250,86 @@ theorem negativeProjectionKernelElement_ne_one
     simpa [negativeProjectionKernelElement] using mapped
   exact negativeComplexSign_ne_one signEquality
 
+/-- Multiplying any lift by the derived negative kernel element stays over the same affine target. -/
+theorem projection_mul_negativeKernelElement
+    (d : EuclideanDimension)
+    {G : Type*} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+    (targetGroup : ProperOrthochronousPoincareTargetGroupData d)
+    (cover : ProperOrthochronousPoincareDoubleCoverData d G) (g : G) :
+    cover.projection
+        (g * (negativeProjectionKernelElement d targetGroup cover : G)) =
+      cover.projection g := by
+  letI : Group (ProperOrthochronousPoincareTransformation d) := targetGroup.group
+  change targetGroup.projectionMonoidHom cover
+      (g * (negativeProjectionKernelElement d targetGroup cover : G)) =
+    targetGroup.projectionMonoidHom cover g
+  rw [map_mul]
+  have kernelProperty := (negativeProjectionKernelElement d targetGroup cover).property
+  change targetGroup.projectionMonoidHom cover
+      (negativeProjectionKernelElement d targetGroup cover : G) = 1 at kernelProperty
+  rw [kernelProperty, mul_one]
+
+/-- The negative-sign partner of every lift is genuinely distinct. -/
+theorem mul_negativeKernelElement_ne
+    (d : EuclideanDimension)
+    {G : Type*} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+    (targetGroup : ProperOrthochronousPoincareTargetGroupData d)
+    (cover : ProperOrthochronousPoincareDoubleCoverData d G) (g : G) :
+    g * (negativeProjectionKernelElement d targetGroup cover : G) ≠ g := by
+  intro equality
+  have kernelOne : (negativeProjectionKernelElement d targetGroup cover : G) = 1 := by
+    apply mul_left_cancel (a := g)
+    simpa using equality
+  exact negativeProjectionKernelElement_ne_one d targetGroup cover
+    (Subtype.ext kernelOne)
+
+/-- Relative to any selected lift `g`, every lift over the same affine target is exactly `g` or its
+negative-sign partner. This labels a fiber only after choosing `g`; it is not a global matrix-sheet
+labeling. -/
+theorem eq_or_eq_mul_negativeKernelElement_of_projection_eq
+    (d : EuclideanDimension)
+    {G : Type*} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+    (targetGroup : ProperOrthochronousPoincareTargetGroupData d)
+    (cover : ProperOrthochronousPoincareDoubleCoverData d G)
+    {g h : G} (projection_eq : cover.projection h = cover.projection g) :
+    h = g ∨ h = g * (negativeProjectionKernelElement d targetGroup cover : G) := by
+  letI : Group (ProperOrthochronousPoincareTransformation d) := targetGroup.group
+  let quotient : properOrthochronousPoincareProjectionKernel d targetGroup cover :=
+    ⟨g⁻¹ * h, by
+      change targetGroup.projectionMonoidHom cover (g⁻¹ * h) = 1
+      rw [map_mul, map_inv]
+      change (cover.projection g)⁻¹ * cover.projection h = 1
+      rw [projection_eq]
+      simp⟩
+  let signs := projectionKernelMulEquivComplexSign d targetGroup cover
+  rcases (signs quotient).property with positive | negative
+  · left
+    have signs_eq_one : signs quotient = 1 := by
+      apply Subtype.ext
+      exact positive
+    have quotient_eq_one : quotient = 1 := signs.injective (by simpa using signs_eq_one)
+    have value_eq : g⁻¹ * h = 1 := congrArg Subtype.val quotient_eq_one
+    calc
+      h = g * (g⁻¹ * h) := by simp
+      _ = g := by rw [value_eq, mul_one]
+  · right
+    have signs_eq_negative : signs quotient = negativeComplexSign := by
+      apply Subtype.ext
+      exact negative
+    have negative_image :
+        signs (negativeProjectionKernelElement d targetGroup cover) =
+          negativeComplexSign := by
+      simp [signs, negativeProjectionKernelElement]
+    have quotient_eq_negative :
+        quotient = negativeProjectionKernelElement d targetGroup cover :=
+      signs.injective (signs_eq_negative.trans negative_image.symm)
+    have value_eq : g⁻¹ * h =
+        (negativeProjectionKernelElement d targetGroup cover : G) :=
+      congrArg Subtype.val quotient_eq_negative
+    calc
+      h = g * (g⁻¹ * h) := by simp
+      _ = g * (negativeProjectionKernelElement d targetGroup cover : G) := by rw [value_eq]
+
 end
 
 end YangMills.Minkowski

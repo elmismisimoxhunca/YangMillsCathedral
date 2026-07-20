@@ -263,8 +263,9 @@ fiber equivalent to `Fin 2` and derives two distinct lifts. A named target topol
 also required to have the exact affine identity and action-composition multiplication; the double-
 cover projection is thereby a bundled group homomorphism. Its exact identity fiber already has two
 sheets, so the group kernel is now proved multiplicatively equivalent to the literal complex-unit
-subgroup `{1,-1}` and central, deriving a nonidentity negative-sign lift without another requirement. This does not construct or matrix-label every
-sheet. Constructing the target law from future-cone closure and concrete inhomogeneous `SL(2,ℂ)`
+subgroup `{1,-1}` and central, deriving a nonidentity negative-sign lift without another requirement. Relative to any selected lift, its fiber
+is proved to consist exactly of that lift and its distinct negative partner. This does not construct
+a canonical global section or matrix-label the sheets. Constructing the target law from future-cone closure and concrete inhomogeneous `SL(2,ℂ)`
 remain pending. A normalized vacuum is
 now tied to that same representation, with the complete invariant subspace required to be its single
 complex line. One dense common submodule contains that vacuum and is invariant under the same

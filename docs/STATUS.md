@@ -3904,12 +3904,15 @@ Implemented and verified:
 - Reusable order-two group infrastructure then derives a multiplicative equivalence with literal
   complex signs. Normality of the homomorphism kernel plus its unique nonidentity element derives
   centrality; these are theorems, not redundant supplied acceptance fields.
-- The negative sign derives a central nonidentity lift of the exact affine identity. The
-  four-dimensional core obtains this result automatically from the exact cover already indexing its
-  physical representation.
+- The negative sign derives a central nonidentity lift of the exact affine identity. Multiplying any
+  selected lift by it produces a distinct lift over the same target, and every lift over that target
+  is proved equal to exactly one of these two relative choices.
+- The four-dimensional core obtains these results automatically from the exact cover already
+  indexing its physical representation.
 - This project packaging is motivated jointly by Streater–Wightman printed p. 12's exact `A=±B`
   theorem and p. 14's inhomogeneous law. It does not construct `SL(2,ℂ)`, identify the accepted lift
-  with a matrix semidirect product, label every affine fiber, construct a theory, or prove a gap.
+  with a matrix semidirect product, produce canonical global/matrix sheet labels, construct a theory,
+  or prove a gap.
 
 Not yet achieved:
 

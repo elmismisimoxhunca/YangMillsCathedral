@@ -120,8 +120,10 @@ and it must be topological for the canonical coordinate topology; the cover proj
 as a bundled homomorphism. `complexSignSubgroup` constructs the literal complex-unit subgroup
 `{1,-1}`. The exact identity fiber's `Fin 2` equivalence then derives, rather than separately
 requires, a multiplicative equivalence of the projection kernel with these signs; order-two kernel
-centrality is derived as well. This names the abstract group kernel, not the matrix carrier or an
-`A ↦ -A` labeling of every affine fiber. The cover interfaces remain uninhabited and do not construct
+centrality is derived as well. Relative to any chosen lift, every point in its fiber is then proved
+to be that lift or its distinct negative-sign partner. This names the abstract group kernel and gives
+relative sign labels, not a matrix carrier, canonical global section, or matrix `A ↦ -A`
+identification. The cover interfaces remain uninhabited and do not construct
 the book's inhomogeneous `SL(2,ℂ)` or derive proper-orthochronous closure.
 
 The checker follows the book's explicit printed-p. 92 SNAG/PVM presentation rather than stopping

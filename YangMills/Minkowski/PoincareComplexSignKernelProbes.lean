@@ -51,6 +51,22 @@ theorem exact_negative_kernel_element :
   ⟨negativeProjectionKernelElement_mem_kernel d targetGroup cover,
     negativeProjectionKernelElement_ne_one d targetGroup cover⟩
 
+/-- Every lift has a distinct negative-sign partner over the same target. -/
+theorem exact_negative_sheet_partner (g : G) :
+    cover.projection
+        (g * (negativeProjectionKernelElement d targetGroup cover : G)) =
+      cover.projection g ∧
+    g * (negativeProjectionKernelElement d targetGroup cover : G) ≠ g :=
+  ⟨projection_mul_negativeKernelElement d targetGroup cover g,
+    mul_negativeKernelElement_ne d targetGroup cover g⟩
+
+/-- Relative to one selected lift, those are the only two elements of its exact fiber. -/
+theorem exact_relative_sign_exhaustion {g h : G}
+    (projection_eq : cover.projection h = cover.projection g) :
+    h = g ∨ h = g * (negativeProjectionKernelElement d targetGroup cover : G) :=
+  eq_or_eq_mul_negativeKernelElement_of_projection_eq
+    d targetGroup cover projection_eq
+
 /-- Every kernel element is centrally forced by the exact order-two homomorphic cover. -/
 theorem exact_whole_kernel_central
     (k : properOrthochronousPoincareProjectionKernel d targetGroup cover) (g : G) :

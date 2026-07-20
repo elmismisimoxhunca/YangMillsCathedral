@@ -367,10 +367,11 @@ committed before higher layers depend on it.
   group homomorphism.
 - [x] Construct the literal complex-unit subgroup `{1,-1}` and derive from the existing homomorphic
   `Fin 2` cover that the exact projection kernel is multiplicatively equivalent to it and central;
-  derive a nonidentity negative-sign lift without adding a redundant acceptance field.
+  derive a nonidentity negative-sign lift without adding a redundant acceptance field, and prove
+  every fiber consists of any selected lift and its distinct negative-sign partner.
 - [ ] Construct the target law from proper-orthochronous future-cone closure, build the concrete
   inhomogeneous `SL(2,ℂ)` carrier, and identify its matrix-sign kernel with the accepted literal-sign
-  kernel and every affine sheet.
+  kernel and upgrade the derived relative sheet labels to the concrete matrix realization.
 - [x] Define a normalized Poincaré-invariant vacuum whose full invariant subspace is exactly one
   complex line, tied to the same representation and derived translations.
 - [x] Define one dense common domain containing the same vacuum and invariant under the same
