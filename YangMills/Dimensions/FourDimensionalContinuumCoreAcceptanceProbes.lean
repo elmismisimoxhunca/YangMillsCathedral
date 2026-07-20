@@ -124,6 +124,26 @@ theorem exact_poincare_projection_mul (first second : PoincareLiftGroup) :
   exact (data.poincareTargetGroup.projectionMonoidHom
     data.poincareDoubleCover).map_mul first second
 
+/-- The exact projection kernel is the literal complex sign group, with a central nonidentity
+negative-sign lift of the affine identity. -/
+theorem exact_poincare_complex_sign_kernel :
+    Nonempty (Minkowski.properOrthochronousPoincareProjectionKernel
+        EuclideanDimension.four data.poincareTargetGroup data.poincareDoubleCover ≃*
+      Minkowski.ComplexSign) ∧
+      data.poincareDoubleCover.projection
+          (Minkowski.negativeProjectionKernelElement EuclideanDimension.four
+            data.poincareTargetGroup data.poincareDoubleCover : PoincareLiftGroup) =
+        Minkowski.ProperOrthochronousPoincareTransformation.identity
+          EuclideanDimension.four ∧
+      Minkowski.negativeProjectionKernelElement EuclideanDimension.four
+        data.poincareTargetGroup data.poincareDoubleCover ≠ 1 :=
+  ⟨⟨Minkowski.projectionKernelMulEquivComplexSign EuclideanDimension.four
+      data.poincareTargetGroup data.poincareDoubleCover⟩,
+    Minkowski.negativeProjectionKernelElement_mem_kernel EuclideanDimension.four
+      data.poincareTargetGroup data.poincareDoubleCover,
+    Minkowski.negativeProjectionKernelElement_ne_one EuclideanDimension.four
+      data.poincareTargetGroup data.poincareDoubleCover⟩
+
 /-- The preliminary ultraviolet normal form uses that exact gauge-group certificate and dimension. -/
 theorem exact_asymptotic_freedom :
     Nonempty (Renormalization.PureYangMillsAsymptoticFreedomData

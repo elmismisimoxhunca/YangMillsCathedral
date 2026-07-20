@@ -9,7 +9,7 @@ import YangMills.Classical.EuclideanAction
 import YangMills.Euclidean.OSOrderedFourDimensionalEuclideanCurrentStrength
 import YangMills.Geometry.LieGroup
 import YangMills.Minkowski.PhysicalMassGapSupremum
-import YangMills.Minkowski.PoincareTargetTopologicalGroup
+import YangMills.Minkowski.PoincareComplexSignKernel
 import YangMills.Minkowski.ScalarWightmanAxiomSurface
 import YangMills.Minkowski.StressEnergyTranslationWard
 import YangMills.Minkowski.WightmanJointTemperedCorrelators
@@ -43,9 +43,9 @@ coincidence-flat restriction and exact source-carrier OS-I `(E1)`–`(E4)`, but 
 tempered extensions and now requires corrected same-lift, universe-relative reconstruction
 acceptance without
 constructing a reconstruction. The exact lift is required to
-carry a genuine two-sheeted topological covering projection, while concrete inhomogeneous
-`SL(2,ℂ)`, construction of the required named affine-target group law, and `{±1}` kernel
-identification remain open. No lattice datum can fill
+carry a genuine two-sheeted topological covering projection whose exact group kernel is identified
+with the literal complex signs `{±1}`. Concrete inhomogeneous `SL(2,ℂ)` and construction of the
+required named affine-target group law remain open. No lattice datum can fill
 any field of this record. The exact compact-simple gauge certificate indexes a preliminary
 four-dimensional running-coupling normal form and a supplied weak regular-variation condition on the
 exact same-family OPE. The running coupling's leading coefficient is now tied to an exact

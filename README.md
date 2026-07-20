@@ -261,9 +261,11 @@ requires the projection to be a genuine Mathlib covering map with local-homeomor
 quotient, and discrete-fiber consequences. A further uninhabited strengthening makes every exact
 fiber equivalent to `Fin 2` and derives two distinct lifts. A named target topological-group law is
 also required to have the exact affine identity and action-composition multiplication; the double-
-cover projection is thereby a bundled group homomorphism. Constructing that law from future-cone
-closure, concrete inhomogeneous `SL(2,ℂ)`, and identifying the sheets with the `{±1}` kernel remain
-pending. A normalized vacuum is
+cover projection is thereby a bundled group homomorphism. Its exact identity fiber already has two
+sheets, so the group kernel is now proved multiplicatively equivalent to the literal complex-unit
+subgroup `{1,-1}` and central, deriving a nonidentity negative-sign lift without another requirement. This does not construct or matrix-label every
+sheet. Constructing the target law from future-cone closure and concrete inhomogeneous `SL(2,ℂ)`
+remain pending. A normalized vacuum is
 now tied to that same representation, with the complete invariant subspace required to be its single
 complex line. One dense common submodule contains that vacuum and is invariant under the same
 representation, whose unitaries restrict exactly to it. A scalar field and adjoint preserve that
@@ -488,8 +490,8 @@ nonzero contracted zeroth-order OPE term whose coupling exponent and leading sca
 are both nonzero. Its Euclidean package retains explicit ambient tempered extensions but restricts
 to carrier-exact OS-II `(E0′)` and requires corrected same-lift, universe-relative reconstruction
 acceptance with heterogeneous Hilbert-unitary equivalence and full tempered-distribution uniqueness.
-This is still not the final Clay contract: concrete inhomogeneous `SL(2,ℂ)`, `{±1}` kernel identification,
-and construction of the named affine-target group law,
+This is still not the final Clay contract: concrete inhomogeneous `SL(2,ℂ)`, matrix realization of
+the accepted literal-sign kernel, and construction of the named affine-target group law,
 source-faithful curvature-polynomial observables,
 renormalized OPE coefficients/remainders and trace-anomaly semantics remain open. No inhabitant is
 constructed.

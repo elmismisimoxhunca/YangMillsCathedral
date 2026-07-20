@@ -3891,6 +3891,26 @@ Implemented and verified:
   mixed curvature polynomials, covariant derivatives, renormalized products/mixing, interpretation
   witness, theory, or gap is constructed.
 
+## 2026-07-19 — two-hundred-eleventh stone: literal complex-sign cover kernel
+
+Implemented and verified:
+
+- `complexSignSubgroup` is the literal subgroup `{1,-1}` of complex units, not an abstract `Fin 2`
+  index; its negative sign is proved distinct from its identity.
+- `properOrthochronousPoincareProjectionKernel` is the group-theoretic kernel of the exact bundled
+  double-cover projection under the accepted named affine-target law.
+- `projectionKernelEquivIdentityFiber` identifies that kernel with the exact identity fiber, so the
+  existing `Fin 2` fiber theorem derives kernel cardinality two.
+- Reusable order-two group infrastructure then derives a multiplicative equivalence with literal
+  complex signs. Normality of the homomorphism kernel plus its unique nonidentity element derives
+  centrality; these are theorems, not redundant supplied acceptance fields.
+- The negative sign derives a central nonidentity lift of the exact affine identity. The
+  four-dimensional core obtains this result automatically from the exact cover already indexing its
+  physical representation.
+- This project packaging is motivated jointly by Streater–Wightman printed p. 12's exact `A=±B`
+  theorem and p. 14's inhomogeneous law. It does not construct `SL(2,ℂ)`, identify the accepted lift
+  with a matrix semidirect product, label every affine fiber, construct a theory, or prove a gap.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

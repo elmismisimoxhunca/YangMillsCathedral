@@ -365,8 +365,12 @@ committed before higher layers depend on it.
 - [x] Require a named affine-target topological-group law with exact identity/action composition,
   prove multiplication is action-determined, and derive the double-cover projection as a bundled
   group homomorphism.
-- [ ] Construct that law from proper-orthochronous future-cone closure, build the concrete
-  inhomogeneous `SL(2,ℂ)` carrier, and identify the two sheets with the exact `{±1}` kernel.
+- [x] Construct the literal complex-unit subgroup `{1,-1}` and derive from the existing homomorphic
+  `Fin 2` cover that the exact projection kernel is multiplicatively equivalent to it and central;
+  derive a nonidentity negative-sign lift without adding a redundant acceptance field.
+- [ ] Construct the target law from proper-orthochronous future-cone closure, build the concrete
+  inhomogeneous `SL(2,ℂ)` carrier, and identify its matrix-sign kernel with the accepted literal-sign
+  kernel and every affine sheet.
 - [x] Define a normalized Poincaré-invariant vacuum whose full invariant subspace is exactly one
   complex line, tied to the same representation and derived translations.
 - [x] Define one dense common domain containing the same vacuum and invariant under the same
@@ -502,8 +506,9 @@ committed before higher layers depend on it.
     `11 C₂(G)/(3·16π²)`; identify the exact classical outer coupling with that same running coupling
     at an explicit UV reference scale. This remains supplied convention/normalization data, not a
     connection-level field-rescaling theorem or perturbative calculation.
-  - [ ] Construct concrete `SL(2,ℂ)`/`{±1}` kernel identification and the named affine-target group
-    law; add source-faithful curvature-polynomial/OPE mixing, calculated perturbative remainders and
+  - [ ] Construct concrete inhomogeneous `SL(2,ℂ)`, identify its matrix-sign kernel with the accepted
+    literal-sign projection kernel, and construct the named affine-target group law; add
+    source-faithful curvature-polynomial/OPE mixing, calculated perturbative remainders and
     scheme dependence, trace anomaly, and final universal compact-simple-group quantification.
 - [x] Define the exact Clay endpoint predicate, reject every lower dimension `1`–`3`, and prove no
   lower-dimensional Euclidean coordinate carrier (especially the 3D core base) is real-linearly

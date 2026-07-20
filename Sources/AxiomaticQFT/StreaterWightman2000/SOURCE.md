@@ -48,6 +48,9 @@ Printed pages and section numbers are authoritative; text lines refer to the ret
   - defines inhomogeneous/Poincaré elements as translation–Lorentz pairs;
   - gives affine action `x ↦ Λx + a` and the semidirect-product multiplication law;
   - identifies the inhomogeneous `SL(2,ℂ)` group used later for spinorial representations.
+  Combined with the exact `A = ±B` result on printed p. 12, this motivates—but does not state
+  verbatim—the project's multiplicative identification of the affine cover kernel with literal
+  complex signs.
 - Printed p. 92; PDF page 102; extraction lines 3890–3934:
   - states the SNAG representation `U(a,1) = ∫ exp(i p·a) dE(p)` for translations;
   - identifies `E` as a projection-valued measure on momentum space;
@@ -114,9 +117,12 @@ that the homogeneous map identifies exactly `A` and `-A`; the strengthened doubl
 therefore requires every affine fiber to be equivalent to `Fin 2`. Equation `(1-22)` also controls a
 named target group interface: its identity and multiplication must have the exact affine actions,
 and it must be topological for the canonical coordinate topology; the cover projection then derives
-as a bundled homomorphism. These interfaces remain uninhabited and do not construct the book's
-inhomogeneous `SL(2,ℂ)`, derive proper-orthochronous closure, or identify the two abstract sheets with
-a concrete `{±1}` kernel.
+as a bundled homomorphism. `complexSignSubgroup` constructs the literal complex-unit subgroup
+`{1,-1}`. The exact identity fiber's `Fin 2` equivalence then derives, rather than separately
+requires, a multiplicative equivalence of the projection kernel with these signs; order-two kernel
+centrality is derived as well. This names the abstract group kernel, not the matrix carrier or an
+`A ↦ -A` labeling of every affine fiber. The cover interfaces remain uninhabited and do not construct
+the book's inhomogeneous `SL(2,ℂ)` or derive proper-orthochronous closure.
 
 The checker follows the book's explicit printed-p. 92 SNAG/PVM presentation rather than stopping
 at the generator-level summary on printed p. 97. Energy, momentum, invariant mass, the vacuum
