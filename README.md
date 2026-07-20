@@ -486,8 +486,13 @@ analytic datum transports to that chain with unchanged designated measure and co
 invariance of the integrated relative-to-measure Euclidean action. This is vertical gauge
 invariance, not base-diffeomorphism or metric-volume invariance. The finite interpreted fragment
 `1`, `F²`, `(F²)²` transports to the pulled chain with unchanged exact classical carriers, quantum
-family, labels, operator witnesses, and quartic anti-collapse data. This is same-family transport;
-the checker still has no independently defined quantum gauge action on its observable family. The checker still lacks a language of independent invariant contractions,
+family, labels, operator witnesses, and quartic anti-collapse data. This remains same-family
+transport. Independently, a quantum gauge interface now represents a generic gauge group algebraically on the
+exact common domain and derives conjugation on operators. A separate certificate, indexed by one
+exact designated action rather than choosing its own convenient action, requires every label and
+smearing to be invariant. It asserts neither unitarity nor continuity and does not
+yet specialize to the canonical smooth classical gauge group or connect that action to the
+interpreted fragment. The checker still lacks a language of independent invariant contractions,
 mixed curvature polynomials, or covariant derivatives, and no canonical injective quantization map
 is claimed.
 A preliminary four-dimensional perturbative interface now requires a positive running coupling

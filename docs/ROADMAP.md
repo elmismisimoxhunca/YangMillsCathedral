@@ -184,8 +184,10 @@ committed before higher layers depend on it.
   invariance of the integrated relative-to-measure Euclidean action.
 - [x] Transport the finite interpreted fragment `1`, `F²`, `(F²)²` to the exact pulled chain with
   unchanged classical carrier, same quantum family/labels, and retained anti-collapse witnesses.
-- [ ] Define an independent quantum gauge action on observable operators and prove its covariance or
-  invariance; extend the result to the missing observable grammar.
+- [x] Define an independent algebraic quantum gauge action by conjugation on exact common-domain
+  operators and require invariance for every label and smearing.
+- [ ] Specialize that interface to the canonical smooth classical gauge-transformation group, prove
+  coherence with interpreted observables, and extend invariance to the missing observable grammar.
 - [x] Prove connection-independent direct smoothness of the exact associated Maurer–Cartan pullback
   using tangent-map calculus, and package its unchanged carrier as a smooth one-form.
 - [x] Calculate the universal Maurer–Cartan Cartan expression on left-invariant fields, identify the

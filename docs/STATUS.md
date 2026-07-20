@@ -4251,9 +4251,15 @@ gauge transformations over the identity base map. No base-diffeomorphism, measur
 `YangMills.Observables.CurvaturePowerGaugeTransport` transports the existing basic and finite
 `1`, `F²`, `(F²)²` interpretations to the exact pulled chain. Their classical carriers are equal,
 and the same quantum family, every label, operator nontriviality witness, and quartic anti-collapse
-witness are retained. This is exact same-family transport, not a construction of a quantum gauge
-action on the observable operators. Such an independent quantum action interface and broader
-observable grammar remain open.
+witness are retained. This is exact same-family transport, not a quantum gauge action.
+`YangMills.Observables.QuantumGaugeObservableAction` independently requires an algebraic gauge-group
+representation on the exact common invariant domain and derives its conjugation action on arbitrary
+endomorphisms. A separate invariance certificate is indexed by one exact designated action, so it
+cannot silently select a disconnected convenient action, and requires every labeled smeared
+operator to be fixed by that action. No unitary or continuous gauge representation or nonidentity
+element is required; triviality of a physical gauge representation is not incorrectly excluded.
+Specialization to the canonical smooth classical gauge group, coherence with the interpreted
+fragment, and the broader observable grammar remain open.
 `YangMills.Geometry.DirectAssociatedMaurerCartanPullbackSmooth` now derives smoothness of the exact
 associated left Maurer–Cartan pullback directly from smooth tangent maps of the gauge function and
 `(g,h) ↦ g⁻¹h`, with no supplied principal connection. It packages the unchanged carrier as a
