@@ -4178,10 +4178,15 @@ malformed composition. `YangMills.Geometry.PrincipalCurvatureGaugePullbackFormul
 smooth gauge pullback to every fixed form degree, proves exact Lie-bracket-wedge pullback
 naturality, and constructs the curvature formula from the exact pulled derivative carrier. That
 assembled formula is proved equal to the pullback of the original same-index curvature, including
-an exact tangent-evaluation theorem. No within-set Cartan-certificate naturality theorem is yet
-available, so no transformed exterior data or canonical transformed `curvatureForm` is constructed;
-local adjoint covariance, descended curvature covariance, action invariance, and observable gauge
-invariance remain open.
+an exact tangent-evaluation theorem. Reusable diffeomorphism infrastructure now derives tangent-map
+invertibility, exact pushed/pulled tangent fields, image-set smoothness and unique-differentiability,
+within-set chain rules, and Lie-bracket transport. It proves full Cartan-expression naturality and
+constructs the pulled exterior certificate under the explicit `CompleteSpace EP` premise required
+by Mathlib's public bracket theorem. Finite-dimensional total-space models derive that premise.
+`YangMills.Geometry.PrincipalConnectionGaugeExteriorDerivative` therefore constructs exact
+transformed exterior data and proves canonical principal curvature pullback naturality, with hostile
+mismatch probes. Local affine and adjoint formulas, descended active covariance, action invariance,
+and observable gauge invariance remain open.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

@@ -216,9 +216,11 @@ exact gauge-automorphism pullback of principal connections: tangent naturality d
 normalization and right equivariance, transported test fields derive smoothness, and identity plus
 composition expose the contravariant pullback order. Smooth pullback in every degree and exact
 Lie-bracket-wedge naturality now prove that the curvature formula assembled from the pulled
-derivative carrier equals the pullback of the original curvature. This is not yet the canonical
-transformed curvature because the transformed Cartan certificate remains unconstructed; it also
-does not prove the local affine formula, local adjoint curvature law, descended-form covariance, or
-action/observable invariance. Arbitrary-map/
+derivative carrier equals the pullback of the original curvature. Reusable diffeomorphism mathematics now transports the complete within-set
+Cartan certificate under the explicit complete-source-model premise required by Mathlib's public
+Lie-bracket naturality theorem; finite-dimensional principal total-space models derive that premise.
+The canonical transformed principal curvature is therefore proved equal to the total-space pullback
+of the original exact curvature. This does not prove the local affine formula, local adjoint
+curvature law, descended-form covariance, or action/observable invariance. Arbitrary-map/
 two-set exterior naturality, a canonical arbitrary-manifold positive-degree operator, an intrinsic
 descended adjoint-bundle Bianchi theorem, and full gauge covariance remain pending.

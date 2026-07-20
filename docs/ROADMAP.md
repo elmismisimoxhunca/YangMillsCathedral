@@ -142,9 +142,13 @@ committed before higher layers depend on it.
 - [x] Pull smooth fixed-value forms through gauge diffeomorphisms in arbitrary degree, prove exact
   Lie-bracket-wedge pullback naturality, and show the curvature formula assembled from the pulled
   derivative carrier equals the pullback of the original exact curvature.
-- [ ] Prove within-set Cartan-certificate naturality, transform the indexed exterior certificate,
-  and only then derive canonical curvature, descent, action, and observable gauge covariance; do
-  not infer these from connection pullback or formula algebra alone.
+- [x] Prove within-set Cartan-certificate naturality under smooth diffeomorphisms with the explicit
+  complete-source-model premise required by Mathlib; derive the premise for finite-dimensional
+  principal total-space models, transform the exact indexed exterior certificate, and prove
+  canonical principal curvature pullback naturality.
+- [ ] Build the explicit local gauge-function/local-section bridge and derive the affine connection
+  and adjoint curvature formulas, then separately derive descended, scalar-density, action, and
+  observable gauge covariance/invariance.
 - [ ] Derive structural curvature laws automatically and prove intrinsic descended Bianchi.
 
 ## Phase 3 — classical Yang–Mills semantics
