@@ -4253,8 +4253,11 @@ gauge transformations over the identity base map. No base-diffeomorphism, measur
 and the same quantum family, every label, operator nontriviality witness, and quartic anti-collapse
 witness are retained. This is exact same-family transport, not a construction of a quantum gauge
 action on the observable operators. Such an independent quantum action interface and broader
-observable grammar remain open, as do a connection-independent direct Maurer–Cartan proof and
-structure equation.
+observable grammar remain open.
+`YangMills.Geometry.DirectAssociatedMaurerCartanPullbackSmooth` now derives smoothness of the exact
+associated left Maurer–Cartan pullback directly from smooth tangent maps of the gauge function and
+`(g,h) ↦ g⁻¹h`, with no supplied principal connection. It packages the unchanged carrier as a
+smooth one-form. The Maurer–Cartan structure equation remains open.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

@@ -186,7 +186,9 @@ committed before higher layers depend on it.
   unchanged classical carrier, same quantum family/labels, and retained anti-collapse witnesses.
 - [ ] Define an independent quantum gauge action on observable operators and prove its covariance or
   invariance; extend the result to the missing observable grammar.
-- [ ] Prove connection-independent direct Maurer–Cartan smoothness and the structure equation.
+- [x] Prove connection-independent direct smoothness of the exact associated Maurer–Cartan pullback
+  using tangent-map calculus, and package its unchanged carrier as a smooth one-form.
+- [ ] Prove the Maurer–Cartan structure equation.
 - [ ] Derive structural curvature laws automatically and prove intrinsic descended Bianchi.
 
 ## Phase 3 — classical Yang–Mills semantics

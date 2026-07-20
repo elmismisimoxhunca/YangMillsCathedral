@@ -430,8 +430,10 @@ quotient action as a diffeomorphism. On the named dependent smooth-vector-bundle
 same exact local formula derives a base-preserving total-space `C∞` diffeomorphism whose fixed-fiber
 restrictions are the previously established continuous-linear equivalences. This completes the
 layered smooth vector-bundle-automorphism packaging. The exact adjoint-fiber pairing and its
-quadratic value are invariant when both arguments undergo this action. Still open are a
-connection-independent direct Maurer–Cartan proof and the structure equation. Exact inverse-action
+quadratic value are invariant when both arguments undergo this action. Direct tangent-map calculus
+now proves connection-independent smoothness of the exact associated Maurer–Cartan pullback,
+independently of the existing affine-difference proof using a supplied connection. The
+Maurer–Cartan structure equation remains open. Exact inverse-action
 curvature covariance now derives pointwise invariance of both chosen and basis-independent
 canonical curvature densities for the full pulled connection/exterior/certificate chain. The exact
 analytic datum transports to that chain with unchanged designated measure and coupling, deriving
