@@ -234,8 +234,10 @@ curvature. Pointwise adjoint-bundle descent is expressed by the exact `Ad(g_ϕ�
 equivalent inverse-shifted principal representative, without asserting equality to the original
 adjoint-valued curvature. The covariant action `[p,X] ↦ [ϕ(p),X]` is now constructed on the actual
 adjoint quotient and dependent fibers, and transformed pointwise/smooth-descended curvature
-evaluations are proved to use its inverse. Continuity/linearity/smooth automorphism packaging, a
-connection-independent direct Maurer–Cartan proof, the structure equation, and action/observable
+evaluations are proved to use its inverse. In the selected fiber coordinate the forward action is
+exactly `Ad(g_ϕ)`, so every fixed fiber action is bundled as a continuous real-linear equivalence
+with exact inverse-gauge carrier. Joint dependent-total-space continuity and smooth automorphism
+packaging, a connection-independent direct Maurer–Cartan proof, the structure equation, and action/observable
 invariance remain pending. Arbitrary-map/
 two-set exterior naturality, a canonical arbitrary-manifold positive-degree operator, an intrinsic
 descended adjoint-bundle Bianchi theorem, and full gauge covariance remain pending.

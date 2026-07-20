@@ -166,8 +166,10 @@ committed before higher layers depend on it.
 - [x] Construct the covariant gauge action on the actual adjoint quotient and dependent fibers with
   exact identity/composition/inverse laws; prove pointwise curvature and evaluations of the exact
   smooth descended package transform by the inverse induced fiber action.
-- [ ] Prove continuity, linearity, and smooth vector-bundle-automorphism packaging of the induced
-  action; prove connection-independent direct Maurer–Cartan smoothness and the structure equation;
+- [x] Prove the exact selected-coordinate `Ad(g_ϕ)` formula and package every fixed dependent-fiber
+  action as a continuous real-linear equivalence with exact inverse-gauge carrier and composition.
+- [ ] Prove joint dependent-total-space continuity and smooth vector-bundle-automorphism packaging
+  of the induced action; prove connection-independent direct Maurer–Cartan smoothness and the structure equation;
   then derive scalar-density, action, and observable gauge invariance.
 - [ ] Derive structural curvature laws automatically and prove intrinsic descended Bianchi.
 

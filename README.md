@@ -419,8 +419,10 @@ inverse-shifted principal representative; it is not asserted equal to the origin
 curvature. The covariant quotient action `[p,X] ↦ [ϕ(p),X]` is now constructed on the actual
 adjoint bundle and exact dependent fibers, with identity, composition, and inverse laws. Pointwise
 curvature and evaluations of the exact smooth descended package transform by the inverse induced
-fiber action. Continuity, linearity, and smooth bundle-automorphism packaging of that action remain
-open, as do a connection-independent direct Maurer–Cartan proof, the structure equation, scalar
+fiber action. In selected quotient-derived coordinates the forward action is exactly `Ad(g_ϕ)`;
+every fixed dependent fiber action is therefore packaged as a continuous real-linear equivalence
+whose inverse is the inverse gauge action. Joint dependent-total-space continuity and smooth
+bundle-automorphism packaging remain open, as do a connection-independent direct Maurer–Cartan proof, the structure equation, scalar
 action invariance, and observable invariance. The checker still lacks a language of independent invariant contractions,
 mixed curvature polynomials, or covariant derivatives, and no canonical injective quantization map
 is claimed.
