@@ -406,9 +406,12 @@ exact curvature. Torsor uniqueness now constructs the associated function `g_ϕ`
 horizontality, and right-equivariance derive the evaluated local curvature formula
 `F_{ϕ* A}(p)=Ad(g_ϕ(p)⁻¹)F_A(p)`. The selected `g_ϕ` is identified with explicit second
 coordinates on canonical local sections; chart reconstruction and its conjugation law derive
-smoothness on every chart source and hence global `C∞` regularity from atlas coverage. The affine
-connection formula, descended active covariance, action invariance, and observable invariance do
-not follow yet. The checker still lacks a language of independent invariant contractions,
+smoothness on every chart source and hence global `C∞` regularity from atlas coverage. Left
+trivialization now defines the associated Maurer–Cartan one-form carrier. The variable principal
+action tangent splits into fixed right translation plus its fundamental vertical term, so connection
+equivariance and vertical normalization derive the evaluated affine formula
+`ϕ*Θ=Ad(g_ϕ⁻¹)Θ+g_ϕ⁻¹dg_ϕ`. Smooth bundling and the Maurer–Cartan equation, descended active
+covariance, action invariance, and observable invariance do not follow yet. The checker still lacks a language of independent invariant contractions,
 mixed curvature polynomials, or covariant derivatives, and no canonical injective quantization map
 is claimed.
 A preliminary four-dimensional perturbative interface now requires a positive running coupling

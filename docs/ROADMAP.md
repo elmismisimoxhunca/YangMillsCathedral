@@ -153,7 +153,10 @@ committed before higher layers depend on it.
 - [x] Identify the unique associated function with exact principal-chart second coordinates,
   derive local-section and whole-chart-source smoothness from existing bundle regularity, and use
   atlas coverage to prove global `C∞` smoothness without assuming regularity of choice.
-- [ ] Construct the associated Maurer–Cartan one-form and prove the affine connection formula, then
+- [x] Construct the pointwise associated left Maurer–Cartan pullback, derive the exact variable
+  principal-action tangent decomposition, and prove Freed's evaluated affine connection formula
+  with `Ad(g_ϕ⁻¹)`, the plus sign, and the inhomogeneous `g_ϕ⁻¹dg_ϕ` term.
+- [ ] Bundle smoothness and the structure equation for the associated Maurer–Cartan form, then
   separately derive descended, scalar-density, action, and observable gauge covariance/invariance.
 - [ ] Derive structural curvature laws automatically and prove intrinsic descended Bianchi.
 
