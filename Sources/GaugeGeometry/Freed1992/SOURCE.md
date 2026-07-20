@@ -208,5 +208,9 @@ cancellation, Mathlib Lie-bracket pullback, and vanishing constant-coordinate br
 finite-dimensional principal specialization, intrinsic smoothness discharges differentiability and
 derives the Cartan equality, full exterior naturality, and the exact same-connection coordinate
 Bianchi identity at every actual target point without accepting naturality, regularity, or Bianchi
-witnesses. Arbitrary-map/two-set naturality, a canonical arbitrary-manifold positive-degree
-operator, a descended adjoint-bundle Bianchi theorem, and gauge covariance remain pending.
+witnesses. The exact smooth adjoint-bundle curvature descent is additionally tied chartwise to that
+same representative: its designated base-chart coordinate is the exact principal curvature on the
+local section and tangent lifts, while the representative satisfies coordinate Bianchi. This does
+not construct an intrinsic adjoint-valued three-form. Arbitrary-map/two-set naturality, a canonical
+arbitrary-manifold positive-degree operator, an intrinsic descended adjoint-bundle Bianchi theorem,
+and gauge covariance remain pending.

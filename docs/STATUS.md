@@ -4154,5 +4154,16 @@ Not yet achieved:
   the same PVM supplies the Hamiltonian interval view; any satisfying spectral datum and the final
   acceptance integration remain absent.
 
+### Smooth-descent/principal-Bianchi bridge
+
+`YangMills.Geometry.PrincipalCurvatureSmoothDescentBianchiBridge` now joins two exact branches of
+the same indexed curvature. In every designated bundle chart, the coordinate of the constructed
+smooth adjoint-bundle-valued curvature is the principal curvature evaluated at that chart's local
+section and exact tangent lifts; throughout the inverse extended chart centered at that section,
+the same principal representative satisfies the already-derived coordinate Bianchi identity.
+Hostile probes reject both a mismatched descended coordinate and a nonzero representative Bianchi
+output. This remains deliberately weaker than intrinsic descended Bianchi: no positive-degree
+adjoint-bundle covariant exterior derivative or adjoint-valued three-form is constructed.
+
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

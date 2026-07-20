@@ -95,6 +95,10 @@ committed before higher layers depend on it.
   inverse-chart tangent cancellation, Mathlib Lie-bracket pullback, and constant-coordinate bracket
   vanishing; derive full principal inverse-chart naturality and same-connection coordinate Bianchi
   with only actual chart-target membership.
+- [x] Join exact smooth adjoint-bundle curvature descent to the coordinate theorem through the same
+  designated local section and tangent lifts. Keep this as a principal-representative chartwise
+  bridge, not an intrinsic descended Bianchi theorem, until positive-degree adjoint-bundle
+  differentiation and its coordinate coherence are constructed.
 - [x] Define principal curvature from a certified derivative and the smooth bracket-wedge.
 - [x] State and probe intrinsic curvature horizontality/right-adjoint-equivariance certificates.
 - [x] Construct and probe the set-level adjoint associated-bundle orbit quotient.

@@ -383,10 +383,13 @@ theorems derive unique differentiability and closure-of-interior membership. Reu
 Cartan mathematics now proves the remaining within-chain-rule and Lie-bracket transport equality for
 arbitrary fixed-value one-forms. Applied to the exact connection, this derives full exterior
 naturality and the same-connection coordinate Bianchi theorem at every actual chart-target point,
-without accepting naturality, regularity, or Bianchi witnesses. Canonical arbitrary-manifold existence, chart independence,
-arbitrary-manifold `d²`, arbitrary-manifold graded Leibniz transport, positive-degree covariant exterior
-differentiation, and
-positive curvature-tensor orders remain open. The interpreted observable layer now extends the exact
+without accepting naturality, regularity, or Bianchi witnesses. The exact smooth adjoint-bundle
+curvature descent is now joined to this result chartwise: its designated base-chart coordinate is
+the same principal curvature evaluated on the chart's local section and tangent lifts, and that same
+representative obeys coordinate Bianchi. This is not an intrinsic descended three-form. Canonical
+arbitrary-manifold existence, chart independence, arbitrary-manifold `d²`, arbitrary-manifold graded
+Leibniz transport, positive-degree adjoint-bundle covariant exterior differentiation, intrinsic
+descended Bianchi, and positive curvature-tensor orders remain open. The interpreted observable layer now extends the exact
 unit and `F²` labels to the finite intrinsic fragment `1`, `F²`, `(F²)²`, with exact classical
 carrier coherence. A separate explicit anti-collapse strengthening requires `(F²)²` to be a new
 nontrivial operator in the 4D core; this is not attributed to Clay's footnote. It is still not an
