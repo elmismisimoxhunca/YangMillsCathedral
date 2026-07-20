@@ -20,6 +20,13 @@ variable {E : Type uE} {H : Type uH}
     {G : Type uG} [Group G] [TopologicalSpace G] [ChartedSpace H G]
     [LieGroup I ∞ G]
 
+/-- Right translation carries the field value at `g` to its value at `g * a`. -/
+theorem exact_right_translation_invariance
+    (Y : GroupLieAlgebra I G) (g a : G) :
+    mfderiv I I (fun q : G => q * a) g (mulRightInvariantVectorField I Y g) =
+      mulRightInvariantVectorField I Y (g * a) :=
+  mfderiv_mul_right_mulRightInvariantVectorField I Y g a
+
 /-- Left trivialization has the exact inverse-adjoint coefficient. -/
 theorem exact_left_trivialized_coefficient
     (Y : GroupLieAlgebra I G) (g : G) :
@@ -43,6 +50,13 @@ theorem exact_inverse_adjoint_orbit_smooth (Y : GroupLieAlgebra I G) :
     ContMDiff I 𝓘(ℝ, E) ∞
       (fun g : G => groupLieAlgebraModelEquiv I (inverseAdjointOrbit I Y g)) :=
   inverseAdjointOrbit_contMDiff I Y
+
+/-- Failure of the exact right-translation law is rejected. -/
+theorem mismatched_right_translation_blocked
+    (Y : GroupLieAlgebra I G) (g a : G)
+    (wrong : mfderiv I I (fun q : G => q * a) g (mulRightInvariantVectorField I Y g) ≠
+      mulRightInvariantVectorField I Y (g * a)) : False :=
+  wrong (mfderiv_mul_right_mulRightInvariantVectorField I Y g a)
 
 /-- A changed inverse-adjoint coefficient is rejected. -/
 theorem mismatched_left_trivialized_coefficient_blocked
