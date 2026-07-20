@@ -168,8 +168,11 @@ committed before higher layers depend on it.
   smooth descended package transform by the inverse induced fiber action.
 - [x] Prove the exact selected-coordinate `Ad(g_ϕ)` formula and package every fixed dependent-fiber
   action as a continuous real-linear equivalence with exact inverse-gauge carrier and composition.
-- [ ] Prove joint dependent-total-space continuity and smooth vector-bundle-automorphism packaging
-  of the induced action; prove connection-independent direct Maurer–Cartan smoothness and the structure equation;
+- [x] Descend continuity through the defining adjoint quotient, package the quotient action as a
+  homeomorphism, and transport it to a base-preserving dependent-total-space homeomorphism whose
+  fixed-fiber restrictions are the exact continuous-linear gauge actions.
+- [ ] Prove smooth vector-bundle-automorphism packaging of the induced action; prove
+  connection-independent direct Maurer–Cartan smoothness and the structure equation;
   then derive scalar-density, action, and observable gauge invariance.
 - [ ] Derive structural curvature laws automatically and prove intrinsic descended Bianchi.
 

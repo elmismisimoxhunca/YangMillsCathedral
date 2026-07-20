@@ -4219,9 +4219,14 @@ original value. This is covariance, not equality with the original adjoint-value
 `YangMills.Geometry.AdjointBundleGaugeContinuousLinear` proves the selected coordinate formula is
 exactly the forward `Ad(g_ϕ)` operator and packages the unchanged action on every fixed dependent
 fiber as a continuous real-linear equivalence. Its inverse carrier is definitionally the inverse
-gauge action, and identity/composition laws hold at the bundled level. Joint dependent-total-space
-continuity and smooth bundle-automorphism packaging, a connection-independent direct Maurer–Cartan
-proof and structure equation, action invariance, and observable gauge invariance remain open.
+gauge action, and identity/composition laws hold at the bundled level.
+`YangMills.Geometry.AdjointBundleGaugeHomeomorph` descends continuity through the defining quotient
+map and packages the covariant quotient action with inverse gauge carrier as a homeomorphism.
+Transport through the exact quotient/dependent carrier homeomorphism yields a base-preserving
+homeomorphism for the named dependent-total-space topology; each fixed-fiber restriction is exactly
+the established continuous-linear equivalence. Smooth bundle-automorphism packaging, a
+connection-independent direct Maurer–Cartan proof and structure equation, action invariance, and
+observable gauge invariance remain open.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.
