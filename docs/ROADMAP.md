@@ -228,8 +228,10 @@ committed before higher layers depend on it.
   using conjugation diffeomorphism and Mathlib bracket naturality.
 - [x] Derive arbitrary-degree Cartan-expression/certificate pullback through smooth diffeomorphisms
   and prove right-adjoint equivariance of the exact bracket correction.
-- [ ] Derive infinitesimal right-action naturality, prove the full candidate remains horizontal and
-  right-adjoint-equivariant, then descend it and derive structural curvature
+- [x] Derive the bracket correction's exact one-/two-vertical-slot formulas and prove the precise
+  ordinary-derivative cancellation rule is sufficient for full candidate horizontality.
+- [ ] Derive that cancellation rule from infinitesimal right-action naturality, prove full candidate
+  right-adjoint equivariance, then descend it and derive structural curvature
   laws and a genuine intrinsic `D_A F` theorem.
 
 ## Phase 3 — classical Yang–Mills semantics

@@ -4339,9 +4339,13 @@ positive-degree Cartan expression and exact pulled certificate through smooth di
 exact image set under Mathlib's required source-model completeness hypothesis.
 `YangMills.Geometry.PrincipalFormCovariantExteriorBracketEquivariance` combines connection/input
 equivariance with adjoint bracket preservation to prove the exact bracket correction is
-right-adjoint-equivariant in every degree. The remaining gap is infinitesimal right-action/adjoint
-differentiation needed for ordinary-derivative vertical cancellation and full candidate
-tensoriality. Descent of the full candidate and a genuine intrinsic `D_A F` theorem remain open.
+right-adjoint-equivariant in every degree.
+`YangMills.Mathematics.LieBracketWedgeHorizontalVertical` and
+`YangMills.Geometry.PrincipalFormCovariantExteriorVertical` derive the exact signed bracket term on
+one vertical slot, vanishing on two vertical slots, fundamental-vector normalization, and the
+conditional cancellation theorem proving candidate horizontality from the precise negative
+ordinary-derivative value. The remaining gap is deriving that value from infinitesimal
+right-action/adjoint differentiation; it is not accepted as candidate data. Descent of the full candidate and a genuine intrinsic `D_A F` theorem remain open.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

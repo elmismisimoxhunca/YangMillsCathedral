@@ -468,8 +468,10 @@ exterior certificate, including its `2 → 3` specialization. Inner-conjugation 
 calculus now proves that the exact derivative-defined adjoint preserves the intrinsic tangent Lie
 bracket, closing the algebraic bracket-covariance substep. Positive-degree Cartan expressions and
 certificates now transport through smooth diffeomorphisms when the source model is complete, and the exact bracket correction
-preserves right-adjoint equivariance in every degree. Derivation of output horizontality,
-infinitesimal right-action naturality, descent of the full candidate, and a genuine intrinsic
+preserves right-adjoint equivariance in every degree. The correction's exact signed value with one
+vertical slot, vanishing with two vertical slots, and fundamental-vector specialization are derived;
+the corresponding negative ordinary-derivative value is proved sufficient for candidate
+horizontality. Derivation of that value from infinitesimal right-action naturality, descent of the full candidate, and a genuine intrinsic
 `D_A F` theorem remain open. Exact inverse-action
 curvature covariance now derives pointwise invariance of both chosen and basis-independent
 canonical curvature densities for the full pulled connection/exterior/certificate chain. The exact
