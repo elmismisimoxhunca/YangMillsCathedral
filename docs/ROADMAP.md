@@ -204,7 +204,11 @@ committed before higher layers depend on it.
 - [x] Prove exact chart-safe manifold-pullback/written-chart carrier and locality bridges, construct
   arbitrary-smooth-map certificates from exact smooth pullback packages in finite-dimensional
   models, and derive the certified associated Maurer–Cartan equation.
-- [ ] Derive structural curvature laws automatically and prove intrinsic descended Bianchi.
+- [x] Construct fixed-model base extended-chart coordinates for actual dependent-fiber
+  adjoint-valued forms on the exact principal-chart overlap, preserving corner-aware tangent
+  transport and in-domain nonzero values.
+- [ ] Derive smooth coordinate regularity, structural curvature laws, positive-degree covariant
+  exterior differentiation, and intrinsic descended Bianchi.
 
 ## Phase 3 — classical Yang–Mills semantics
 

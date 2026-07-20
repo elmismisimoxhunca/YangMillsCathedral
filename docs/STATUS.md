@@ -4288,6 +4288,13 @@ certificate from exact smooth pullback packages in finite-dimensional models.
 `YangMills.Geometry.AssociatedMaurerCartanExteriorDerivative` applies it to the associated gauge
 function, certifies the existing derivative candidate, and proves the exact normalized associated
 Maurer–Cartan equation.
+`YangMills.Geometry.AdjointBundleDifferentialFormBaseCoordinates` now converts every actual
+dependent-fiber adjoint-valued form into a fixed-model normed-space form on the exact overlap of a
+base extended chart and designated principal chart. The coordinate formula retains quotient-derived
+fiber coordinates and `mfderivWithin ... (Set.range IB)` tangent transport, while hostile probes
+prevent in-domain nonzero values from being erased by outside-domain totalization. Smooth coordinate
+regularity, positive-degree covariant exterior differentiation, and intrinsic descended Bianchi
+remain open.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.
