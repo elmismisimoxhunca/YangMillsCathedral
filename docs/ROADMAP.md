@@ -209,7 +209,10 @@ committed before higher layers depend on it.
   transport and in-domain nonzero values.
 - [x] Derive complete alternating-map-valued `C∞` regularity within the exact base/principal-chart
   overlap for smooth adjoint forms over finite-dimensional base models.
-- [ ] Derive structural curvature laws, positive-degree covariant exterior differentiation, and
+- [x] Package the exact-overlap local potential, exact descended-curvature coordinate, and typed
+  same-chain `dF + [A∧F]` expression without asserting vanishing or chart independence.
+- [ ] Prove local curvature-as-curvature-of-potential coherence and exact-overlap Bianchi, then
+  derive structural curvature laws, positive-degree covariant exterior differentiation, and
   intrinsic descended Bianchi.
 
 ## Phase 3 — classical Yang–Mills semantics

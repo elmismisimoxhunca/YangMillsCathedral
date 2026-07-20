@@ -4298,8 +4298,13 @@ finite-arity continuous alternating maps from all fixed-tuple evaluations, inclu
 `YangMills.Geometry.AdjointBundleDifferentialFormBaseCoordinateSmooth` combines this with smooth
 local tangent-field evaluation to derive full `C∞` base-coordinate regularity within the exact
 overlap for every designated atlas chart and finite-dimensional base model. No smoothness across the
-zero-totalization boundary is claimed. Positive-degree covariant exterior differentiation and
-intrinsic descended Bianchi remain open.
+zero-totalization boundary is claimed.
+`YangMills.Geometry.PrincipalConnectionLocalAdjointCalculus` now packages on that overlap the exact
+local potential from the principal connection, the exact smoothly descended certified curvature,
+and the typed degree-three expression `dF + [A∧F]`. Evaluation theorems preserve the same local
+section, tangent lifts, quotient coordinate, and inverse-chart transport. No vanishing or chart
+independence is claimed. Positive-degree covariant exterior differentiation and intrinsic descended
+Bianchi remain open.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.
