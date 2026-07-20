@@ -4333,11 +4333,15 @@ derivative or omitted nonzero bracket.
 `YangMills.Mathematics.LieGroupAdjointBracket` packages inner conjugation as a smooth diffeomorphism,
 calculates its pushforward on left-invariant fields, and applies Mathlib bracket pullback naturality
 to prove that the project's derivative-defined adjoint preserves the intrinsic tangent Lie bracket.
-This closes the bracket-covariance ingredient for future candidate equivariance. The current
-positive-degree Cartan certificate determines the ordinary derivative on admissible smooth fields, but the API has no positive-degree diffeomorphism
-pullback theorem or infinitesimal right-action/adjoint differentiation bridge. Derivation of output
-horizontality/right-adjoint equivariance, descent of this candidate, and a genuine intrinsic `D_A F`
-theorem remain open.
+This closes the bracket-covariance ingredient for future candidate equivariance.
+`YangMills.Mathematics.ManifoldPositiveDegreeExteriorDerivativeDiffeomorph` transports the complete
+positive-degree Cartan expression and exact pulled certificate through smooth diffeomorphisms on the
+exact image set under Mathlib's required source-model completeness hypothesis.
+`YangMills.Geometry.PrincipalFormCovariantExteriorBracketEquivariance` combines connection/input
+equivariance with adjoint bracket preservation to prove the exact bracket correction is
+right-adjoint-equivariant in every degree. The remaining gap is infinitesimal right-action/adjoint
+differentiation needed for ordinary-derivative vertical cancellation and full candidate
+tensoriality. Descent of the full candidate and a genuine intrinsic `D_A F` theorem remain open.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.
