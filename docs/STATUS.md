@@ -4277,8 +4277,14 @@ regularity witness.
 `YangMills.Geometry.UniversalMaurerCartanExteriorDerivative` uses this theorem to replace arbitrary
 local fields by left-invariant extensions, constructs a genuine all-fields exterior-derivative
 certificate with derivative `-1/2[θ∧θ]`, and proves the exact universal group-level structure
-equation. The associated candidate is not yet certified as `dα`: arbitrary-smooth-map certificate
-pullback remains open, so no associated-form Maurer–Cartan structure equation is claimed.
+equation.
+`YangMills.Mathematics.ManifoldOneFormExteriorDerivativeSmoothMapCoordinates` identifies every
+certificate with centered-chart `extDerivWithin` and proves Mathlib pullback naturality for an
+arbitrary smooth map's written-chart representative on the exact chart-safe set.
+`YangMills.Geometry.AssociatedMaurerCartanDerivativePullback` proves the associated smooth candidate
+is exactly the raw pullback of the certified universal derivative. The remaining
+manifold-pullback/written-chart carrier and locality bridges are still required for the
+arbitrary-map certificate constructor, so no associated-form Maurer–Cartan equation is claimed.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

@@ -198,8 +198,11 @@ committed before higher layers depend on it.
   intrinsic extension independence for admissible smooth fields.
 - [x] Construct the genuine universal left Maurer–Cartan exterior-derivative certificate and prove
   `dθ + 1/2[θ∧θ] = 0` on the finite-dimensional Lie group.
-- [ ] Prove arbitrary-smooth-map certificate pullback, then certify the associated candidate and
-  conclude its pulled Maurer–Cartan structure equation.
+- [x] Identify the associated smooth derivative candidate exactly with the raw pullback of the
+  certified universal derivative, and prove arbitrary-map `extDerivWithin` naturality in centered
+  chart coordinates.
+- [ ] Prove the remaining manifold-pullback/written-chart carrier and locality bridges, construct
+  arbitrary-smooth-map certificate pullback, and conclude the associated equation.
 - [ ] Derive structural curvature laws automatically and prove intrinsic descended Bianchi.
 
 ## Phase 3 — classical Yang–Mills semantics
