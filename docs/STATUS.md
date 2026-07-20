@@ -4302,9 +4302,14 @@ zero-totalization boundary is claimed.
 `YangMills.Geometry.PrincipalConnectionLocalAdjointCalculus` now packages on that overlap the exact
 local potential from the principal connection, the exact smoothly descended certified curvature,
 and the typed degree-three expression `dF + [A∧F]`. Evaluation theorems preserve the same local
-section, tangent lifts, quotient coordinate, and inverse-chart transport. No vanishing or chart
-independence is claimed. Positive-degree covariant exterior differentiation and intrinsic descended
-Bianchi remain open.
+section, tangent lifts, quotient coordinate, and inverse-chart transport.
+`YangMills.Geometry.PrincipalConnectionLocalExteriorNaturality` derives local-section pullback
+naturality from `ContMDiffOn`, recentering at every overlap point and using set-germ equality so the
+fixed `baseExtChartDomain` remains the `extDerivWithin` calculus set.
+`YangMills.Geometry.PrincipalConnectionLocalCurvatureCoherence` then proves the exact descended `F`
+equals the coordinate curvature of that same local `A`. No Bianchi vanishing or chart independence
+is claimed. Positive-degree covariant exterior differentiation and intrinsic descended Bianchi
+remain open.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

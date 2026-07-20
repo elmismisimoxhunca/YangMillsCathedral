@@ -211,9 +211,10 @@ committed before higher layers depend on it.
   overlap for smooth adjoint forms over finite-dimensional base models.
 - [x] Package the exact-overlap local potential, exact descended-curvature coordinate, and typed
   same-chain `dF + [A∧F]` expression without asserting vanishing or chart independence.
-- [ ] Prove local curvature-as-curvature-of-potential coherence and exact-overlap Bianchi, then
-  derive structural curvature laws, positive-degree covariant exterior differentiation, and
-  intrinsic descended Bianchi.
+- [x] Derive exact-set exterior naturality for the locally smooth designated section and prove the
+  descended curvature coordinate is the curvature of the same exact local potential.
+- [ ] Prove exact-overlap Bianchi, then derive structural curvature laws, positive-degree covariant
+  exterior differentiation, and intrinsic descended Bianchi.
 
 ## Phase 3 — classical Yang–Mills semantics
 

@@ -450,9 +450,11 @@ coordinates on the exact principal-chart overlap, retaining actual quotient fibe
 inverse-chart tangent transport. Finite-dimensional base models now derive complete `C∞` regularity
 of these alternating-map-valued coordinates within the exact overlap for designated atlas charts;
 the exact overlap now carries a typed `dF + [A∧F]` expression whose potential and curvature are tied
-to the same connection, local section, tangent lifts, and descended-curvature chain. Its vanishing,
-chart independence, positive-degree covariant exterior differentiation, and intrinsic descended
-Bianchi remain open. Exact inverse-action
+to the same connection, local section, tangent lifts, and descended-curvature chain. Local-section
+exterior naturality is now derived from `ContMDiffOn` without globally smoothing the totalized
+section, and the descended `F` is proved equal on the unchanged overlap to the coordinate curvature
+of that same `A`. Bianchi vanishing, chart independence, positive-degree covariant exterior
+differentiation, and intrinsic descended Bianchi remain open. Exact inverse-action
 curvature covariance now derives pointwise invariance of both chosen and basis-independent
 canonical curvature densities for the full pulled connection/exterior/certificate chain. The exact
 analytic datum transports to that chain with unchanged designated measure and coupling, deriving
