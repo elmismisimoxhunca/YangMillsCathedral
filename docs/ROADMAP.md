@@ -215,8 +215,11 @@ committed before higher layers depend on it.
   descended curvature coordinate is the curvature of the same exact local potential.
 - [x] Derive exact-overlap potential regularity and domain geometry and prove the local same-chain
   `dF + [A∧F] = 0` theorem.
-- [ ] Prove chart independence, then derive structural curvature laws, positive-degree intrinsic
-  covariant exterior differentiation, and intrinsic descended Bianchi.
+- [x] Identify every exact local Bianchi expression with the corresponding coordinate of the
+  existing intrinsic smooth zero adjoint-valued three-form, without naming it as an operator.
+- [ ] Prove nonzero chart-transition coherence or degree-generic tensorial principal-form descent,
+  then derive structural curvature laws, positive-degree intrinsic covariant exterior
+  differentiation, and a genuine intrinsic `D_A F` theorem.
 
 ## Phase 3 — classical Yang–Mills semantics
 

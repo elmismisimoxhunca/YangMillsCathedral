@@ -454,9 +454,11 @@ to the same connection, local section, tangent lifts, and descended-curvature ch
 exterior naturality is now derived from `ContMDiffOn` without globally smoothing the totalized
 section, and the descended `F` is proved equal on the unchanged overlap to the coordinate curvature
 of that same `A`. Exact-overlap potential regularity and domain geometry now discharge the
-within-coordinate Bianchi hypotheses, proving this local `dF + [A∧F]` expression vanishes. Chart
-independence, positive-degree intrinsic covariant exterior differentiation, and intrinsic descended
-Bianchi remain open. Exact inverse-action
+within-coordinate Bianchi hypotheses, proving this local `dF + [A∧F]` expression vanishes. Every
+such exact local expression is now identified with the corresponding coordinate of the existing
+intrinsic smooth zero adjoint-valued three-form. This result-specific global-carrier bridge does not
+construct positive-degree intrinsic covariant exterior differentiation or nonzero chart-transition
+laws; those and a genuine intrinsic `D_A F` theorem remain open. Exact inverse-action
 curvature covariance now derives pointwise invariance of both chosen and basis-independent
 canonical curvature densities for the full pulled connection/exterior/certificate chain. The exact
 analytic datum transports to that chain with unchanged designated measure and coupling, deriving

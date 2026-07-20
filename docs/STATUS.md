@@ -4311,9 +4311,12 @@ equals the coordinate curvature of that same local `A`.
 `YangMills.Geometry.PrincipalConnectionLocalBianchi` derives smoothness of `A`, unique
 differentiability of the exact overlap, and its closure-of-interior condition, then applies the
 within-coordinate Bianchi theorem to prove the exact same-chain local `dF + [A∧F]` expression
-vanishes at every overlap point. This remains a designated-chart coordinate theorem. Chart
-independence, positive-degree intrinsic covariant exterior differentiation, and intrinsic descended
-Bianchi remain open.
+vanishes at every overlap point.
+`YangMills.Geometry.PrincipalConnectionDescendedBianchiZero` identifies every designated-atlas-chart local expression
+with the corresponding base-chart coordinate of the existing intrinsic smooth zero
+adjoint-bundle-valued three-form. This is a result-specific global-carrier bridge, not construction
+of a general positive-degree operator. Nonzero chart-transition coherence, positive-degree intrinsic
+covariant exterior differentiation, and a genuine intrinsic `D_A F` theorem remain open.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.
