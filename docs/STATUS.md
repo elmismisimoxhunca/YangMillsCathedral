@@ -4065,6 +4065,26 @@ Implemented and verified:
 - Dedicated probes expose target-wide/pointwise regularity and the reduced-hypothesis Bianchi
   theorem. Exterior naturality and descended adjoint-bundle Bianchi remain open.
 
+## 2026-07-19 — two-hundred-nineteenth stone: exterior naturality reduced to Cartan transport
+
+Implemented and verified:
+
+- `PrincipalConnectionExteriorDerivativeData.exterior_coordinatesInExtChartAt_eq_cartan_constantFields`
+  derives the coordinate pullback of the certified derivative from the existing manifold Cartan
+  certificate on smooth inverse-chart pullbacks of arbitrary constant coordinate vectors.
+- `PrincipalConnectionData.extDerivWithin_connectionCoordinates_eq_coordinateCartan_constantFields`
+  independently derives Mathlib's `extDerivWithin` side from the exact smooth coordinate connection,
+  constant-field differentiability, and chart-target unique differentiability.
+- `PrincipalConnectionCoordinateCartanNaturalityInExtChartAt` names the sole remaining equality
+  between those intrinsic and coordinate Cartan expressions. It keeps the chart source, model range,
+  and actual chart target distinct.
+- Degree-two extensionality proves both directions: the exact Cartan equality implies full
+  alternating-map exterior naturality, and full naturality recovers that equality. Thus the named
+  residual condition is an exact equivalent, not a weaker proxy or stronger unrelated requirement.
+- Hostile probes expose both derived sides, the exact residual shape, the equivalence theorem, and
+  rejection of a mismatched Cartan value. The within-chain-rule and `mlieBracketWithin` transport
+  equality itself remains unproved.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

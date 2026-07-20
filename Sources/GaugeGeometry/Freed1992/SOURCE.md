@@ -204,6 +204,10 @@ term is still the pulled-back certificate, not yet coordinate `extDerivWithin`. 
 predicate separates inverse-chart tangent transport on the model range from exterior calculus on the
 actual chart target. In the finite-dimensional principal specialization, regularity, smoothness
 order, unique differentiability, and closure-of-interior membership are derived, so naturality plus
-actual chart-target membership now imply the zero coordinate covariant expression for the exact
-principal-curvature carrier. Naturality itself, a canonical arbitrary-manifold positive-degree operator, a descended adjoint-
-bundle Bianchi theorem, and gauge covariance remain pending.
+actual chart-target membership imply the zero coordinate covariant expression for the exact
+principal-curvature carrier. Naturality is now reduced to one explicit Cartan-transport equality:
+the certified derivative and coordinate `extDerivWithin` sides are separately derived from their
+Cartan formulas, and equality of those expressions is proved exactly equivalent to the full
+alternating-map predicate. The
+remaining within-chain-rule/Lie-bracket transport proof, a canonical arbitrary-manifold
+positive-degree operator, a descended adjoint-bundle Bianchi theorem, and gauge covariance remain pending.

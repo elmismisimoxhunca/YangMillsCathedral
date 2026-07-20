@@ -378,8 +378,12 @@ naturality predicate now separates the corner-aware tangent-transport source fro
 calculus set. In finite-dimensional total-space models, intrinsic connection smoothness now
 discharges coordinate regularity and its order bound automatically, while Mathlib's extended-chart
 theorems derive unique differentiability and closure-of-interior membership. The specialized theorem
-therefore requires only exterior naturality and actual chart-target membership; it derives Bianchi for the exact curvature carrier without accepting a Bianchi witness. Naturality
-itself remains unproved. Canonical arbitrary-manifold existence, chart independence,
+therefore requires only exterior naturality and actual chart-target membership; it derives Bianchi
+for the exact curvature carrier without accepting a Bianchi witness. Naturality itself remains
+unproved, but it is now reduced to one explicit inverse-chart Cartan-transport equality: the
+certified derivative/Cartan side and coordinate `extDerivWithin`/Cartan side are separately derived,
+and equality of those expressions is proved exactly equivalent to the full alternating-map
+naturality predicate. Canonical arbitrary-manifold existence, chart independence,
 arbitrary-manifold `d²`, arbitrary-manifold graded Leibniz transport, positive-degree covariant exterior
 differentiation, and
 positive curvature-tensor orders remain open. The interpreted observable layer now extends the exact

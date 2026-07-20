@@ -86,8 +86,11 @@ committed before higher layers depend on it.
 - [x] State the exact same-connection exterior-naturality obligation with separate tangent-transport
   and calculus sets, and derive conditional within-chart Bianchi for the exact curvature carrier.
   In finite-dimensional total-space models, remove the separately supplied coordinate-regularity and
-  order hypotheses via the derived intrinsic-smoothness theorem. Proving exterior naturality remains
-  debt.
+  order hypotheses via the derived intrinsic-smoothness theorem.
+- [x] Reduce inverse-chart exterior naturality to one explicit Cartan-transport equality: derive the
+  certified derivative side from the existing manifold Cartan certificate, derive the coordinate
+  side from Mathlib `extDerivWithin`, and prove that equality of those expressions is exactly
+  equivalent to full naturality. Proving the remaining within-chain-rule/Lie-bracket transport equality remains debt.
 - [x] Define principal curvature from a certified derivative and the smooth bracket-wedge.
 - [x] State and probe intrinsic curvature horizontality/right-adjoint-equivariance certificates.
 - [x] Construct and probe the set-level adjoint associated-bundle orbit quotient.
