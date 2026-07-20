@@ -473,8 +473,10 @@ vertical slot, vanishing with two vertical slots, and fundamental-vector special
 the corresponding negative ordinary-derivative value is proved sufficient for candidate
 horizontality. Smooth local triviality now proves that every vertical tangent has a unique
 fundamental generator, recovered by the connection form, and every fixed generator yields a globally
-smooth fundamental field with the expected right-action curve velocity. Derivation of the required
-ordinary-derivative value from infinitesimal right-action naturality, descent of the full candidate, and a genuine intrinsic
+smooth fundamental field with the expected right-action curve velocity. The smooth right-invariant
+field has been constructed and its left-trivialized coefficient proved to be exactly `Ad(g⁻¹)Y`.
+Derivation of the required ordinary-derivative value now awaits the second-order manifold-calculus
+bridge differentiating that coefficient to `-[X,Y]` and its targeted Cartan comparison, descent of the full candidate, and a genuine intrinsic
 `D_A F` theorem remain open. Exact inverse-action
 curvature covariance now derives pointwise invariance of both chosen and basis-independent
 canonical curvature densities for the full pulled connection/exterior/certificate chain. The exact

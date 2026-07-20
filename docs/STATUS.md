@@ -4353,8 +4353,12 @@ vertical normalization recovers the unique generator as the connection-form valu
 `YangMills.Geometry.PrincipalFundamentalVectorField` proves every fixed generator produces a global
 `C∞` field, every value is vertical, and every smooth identity-based group curve with the specified
 velocity generates the expected right-action tangent. Finite right-adjoint equivariance is exposed
-along these curves without assuming a Lie exponential or global flow. The remaining bridge is the
-infinitesimal inverse-adjoint derivative and its targeted Cartan comparison. Descent of the full candidate and a genuine intrinsic `D_A F` theorem remain open.
+along these curves without assuming a Lie exponential or global flow.
+`YangMills.Mathematics.LieGroupRightInvariantField` constructs the smooth right-invariant field and
+proves that its exact left-trivialized coefficient is `Ad(g⁻¹)Y`; those model coordinates are
+smooth. The remaining bridge is the second-order manifold-calculus theorem identifying the
+derivative of that coefficient at the identity with `-[X,Y]`, followed by its targeted Cartan
+comparison. Descent of the full candidate and a genuine intrinsic `D_A F` theorem remain open.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.
