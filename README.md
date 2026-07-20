@@ -460,8 +460,10 @@ intrinsic smooth zero adjoint-valued three-form. This result-specific global-car
 construct positive-degree intrinsic covariant exterior differentiation or nonzero chart-transition
 laws. A reusable finite multilinear telescope now proves lift independence for horizontal principal
 forms of every degree, with degree two definitionally compatible with the existing curvature chain.
-Generic representative independence, smooth descent, a positive-degree operator, and a genuine
-intrinsic `D_A F` theorem remain open. Exact inverse-action
+Right-adjoint representative independence and smooth descent into the actual dependent quotient
+fibers are now derived in every degree, with arbitrary designated-chart coordinate formulas and
+exact degree-two compatibility. A positive-degree operator, preservation of tensoriality by its
+principal output, and a genuine intrinsic `D_A F` theorem remain open. Exact inverse-action
 curvature covariance now derives pointwise invariance of both chosen and basis-independent
 canonical curvature densities for the full pulled connection/exterior/certificate chain. The exact
 analytic datum transports to that chain with unchanged designated measure and coupling, deriving

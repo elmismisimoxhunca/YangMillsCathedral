@@ -4320,9 +4320,13 @@ of a general positive-degree operator.
 multilinear telescope to prove arbitrary-degree kernel/projection independence.
 `YangMills.Geometry.PrincipalFormLiftIndependence` applies it to horizontal fixed-value principal
 forms of every degree and canonical local tangent lifts; degree three is explicitly probed and the
-existing degree-two horizontality predicate is definitionally compatible. Generic representative
-independence and smooth quotient descent, nonzero chart-transition coherence, positive-degree
-intrinsic covariant exterior differentiation, and a genuine intrinsic `D_A F` theorem remain open.
+existing degree-two horizontality predicate is definitionally compatible.
+`YangMills.Geometry.PrincipalFormSmoothDescent` derives right-adjoint representative independence,
+actual dependent-quotient-fiber descent, arbitrary designated-chart coordinates, and smooth descent
+for every degree. Degree three is probed explicitly and the existing degree-two predicates and
+selected carrier are definitionally compatible. Construction of a positive-degree principal
+covariant derivative, preservation of horizontality/equivariance by that output, and a genuine
+intrinsic `D_A F` theorem remain open.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

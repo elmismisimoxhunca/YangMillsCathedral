@@ -219,9 +219,12 @@ committed before higher layers depend on it.
   existing intrinsic smooth zero adjoint-valued three-form, without naming it as an operator.
 - [x] Generalize horizontal fixed-value principal-form lift independence to every degree using a
   finite multilinear telescope, preserving definitional degree-two compatibility.
-- [ ] Generalize right-adjoint representative independence and smooth tensorial principal-form
-  descent, then derive structural curvature laws, positive-degree intrinsic covariant exterior
-  differentiation, and a genuine intrinsic `D_A F` theorem.
+- [x] Generalize right-adjoint representative independence, actual dependent-fiber pointwise
+  descent, arbitrary designated-chart coordinates, and smooth tensorial principal-form descent to
+  every degree, preserving degree-two compatibility.
+- [ ] Construct the positive-degree principal covariant derivative and prove its output remains
+  horizontal and right-adjoint-equivariant, then derive structural curvature laws and a genuine
+  intrinsic `D_A F` theorem.
 
 ## Phase 3 — classical Yang–Mills semantics
 
