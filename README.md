@@ -433,8 +433,11 @@ layered smooth vector-bundle-automorphism packaging. The exact adjoint-fiber pai
 quadratic value are invariant when both arguments undergo this action. Still open are a
 connection-independent direct Maurer–Cartan proof and the structure equation. Exact inverse-action
 curvature covariance now derives pointwise invariance of both chosen and basis-independent
-canonical curvature densities for the full pulled connection/exterior/certificate chain; integral
-action invariance and observable invariance remain open. The checker still lacks a language of independent invariant contractions,
+canonical curvature densities for the full pulled connection/exterior/certificate chain. The exact
+analytic datum transports to that chain with unchanged designated measure and coupling, deriving
+invariance of the integrated relative-to-measure Euclidean action. This is vertical gauge
+invariance, not base-diffeomorphism or metric-volume invariance. Interpreted-observable invariance
+remains open. The checker still lacks a language of independent invariant contractions,
 mixed curvature polynomials, or covariant derivatives, and no canonical injective quantization map
 is claimed.
 A preliminary four-dimensional perturbative interface now requires a positive running coupling

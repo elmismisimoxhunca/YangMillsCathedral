@@ -249,6 +249,8 @@ import YangMills.Classical.EuclideanAction
 import YangMills.Classical.EuclideanActionProbes
 import YangMills.Classical.EuclideanCanonicalAction
 import YangMills.Classical.EuclideanCanonicalActionProbes
+import YangMills.Classical.EuclideanActionGaugeInvariance
+import YangMills.Classical.EuclideanActionGaugeInvarianceProbes
 import YangMills.Euclidean.SchwingerRegularity
 import YangMills.Euclidean.SchwingerRegularityProbes
 import YangMills.Euclidean.SchwingerSymmetry

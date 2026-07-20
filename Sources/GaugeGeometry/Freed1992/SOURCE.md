@@ -246,8 +246,9 @@ continuous-linear equivalences, completing the layered smooth bundle-automorphis
 same forward coordinate law and adjoint invariance prove simultaneous gauge invariance of the exact
 descended fiber pairing and its quadratic value. Combined with inverse-action curvature covariance,
 this derives pointwise invariance of the chosen and basis-independent canonical curvature densities
-for the exact pulled chain. Integrated action invariance remains downstream. A
-connection-independent direct Maurer–Cartan proof, the structure equation, and action/observable
-invariance remain pending. Arbitrary-map/
+for the exact pulled chain. Exact integrability transport preserving the designated measure and
+coupling then derives invariance of the integrated relative-to-measure action for vertical gauge
+transformations over the identity base map. A connection-independent direct Maurer–Cartan proof,
+the structure equation, and interpreted/broader-observable invariance remain pending. Arbitrary-map/
 two-set exterior naturality, a canonical arbitrary-manifold positive-degree operator, an intrinsic
 descended adjoint-bundle Bianchi theorem, and full gauge covariance remain pending.

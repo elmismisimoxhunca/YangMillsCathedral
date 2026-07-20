@@ -4243,8 +4243,14 @@ not by itself curvature-contraction, density, action, or observable invariance.
 `YangMills.Classical.EuclideanCanonicalCurvatureGaugeInvariance` combines that theorem with exact
 inverse-induced-action curvature covariance to prove pointwise invariance of the chosen and
 basis-independent canonical densities for the same pulled connection, derived exterior datum, and
-derived structure certificate. Integral/action and observable invariance remain open, as do a
-connection-independent direct Maurer–Cartan proof and structure equation.
+derived structure certificate.
+`YangMills.Classical.EuclideanActionGaugeInvariance` transports the exact analytic datum across
+that equality, retaining the designated Borel measure, positive coupling, and outer coefficient
+definitionally. It derives invariance of the integrated relative-to-measure action for vertical
+gauge transformations over the identity base map. No base-diffeomorphism, measure-pushforward,
+Jacobian, metric-volume, or interpreted-observable invariance is inferred. Interpreted-observable
+invariance remains open, as do a connection-independent direct Maurer–Cartan proof and structure
+equation.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

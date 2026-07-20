@@ -180,7 +180,9 @@ committed before higher layers depend on it.
 - [x] Prove gauge invariance of the exact descended fiber pairing/quadratic value and derive
   pointwise invariance of chosen and basis-independent canonical curvature densities for the exact
   pulled connection/exterior/certificate chain.
-- [ ] Prove integrated action and interpreted-observable gauge invariance.
+- [x] Transport exact action integrability with unchanged measure/coupling and prove vertical gauge
+  invariance of the integrated relative-to-measure Euclidean action.
+- [ ] Prove interpreted-observable gauge invariance.
 - [ ] Prove connection-independent direct Maurer–Cartan smoothness and the structure equation.
 - [ ] Derive structural curvature laws automatically and prove intrinsic descended Bianchi.
 
