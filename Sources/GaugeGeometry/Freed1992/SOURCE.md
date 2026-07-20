@@ -196,18 +196,17 @@ forms now have separate raw unrestricted and explicit within-set normed-coordina
 Inverse extended charts use corner-aware `mfderivWithin` on the exact model range, with target-local
 derivative invertibility and canonical bracket-wedge carrier coherence. For finite-dimensional
 principal total-space models, stored intrinsic connection smoothness now derives target-wide `C∞`
-regularity of the exact coordinate one-form; exterior-derivative naturality remains open, and no
-geometry is claimed outside the chart target.
+regularity of the exact coordinate one-form. That regularity lemma alone asserts no exterior
+naturality or geometry outside the chart target; the subsequent Cartan-transport theorem supplies
+naturality on the target.
 The exact principal connection, its indexed derivative certificate, and curvature derived from both
-now satisfy (1.13) after the same within-set or inverse-chart coordinate transport. The derivative
-term is still the pulled-back certificate, not yet coordinate `extDerivWithin`. An exact naturality
-predicate separates inverse-chart tangent transport on the model range from exterior calculus on the
-actual chart target. In the finite-dimensional principal specialization, regularity, smoothness
-order, unique differentiability, and closure-of-interior membership are derived, so naturality plus
-actual chart-target membership imply the zero coordinate covariant expression for the exact
-principal-curvature carrier. Naturality is now reduced to one explicit Cartan-transport equality:
-the certified derivative and coordinate `extDerivWithin` sides are separately derived from their
-Cartan formulas, and equality of those expressions is proved exactly equivalent to the full
-alternating-map predicate. The
-remaining within-chain-rule/Lie-bracket transport proof, a canonical arbitrary-manifold
-positive-degree operator, a descended adjoint-bundle Bianchi theorem, and gauge covariance remain pending.
+now satisfy (1.13) after the same within-set or inverse-chart coordinate transport. An exact
+naturality predicate separates inverse-chart tangent transport on the model range from exterior
+calculus on the actual chart target. Reusable mathematics proves inverse-chart Cartan transport for
+arbitrary differentiable fixed-value coordinate one-forms using the within-chain rule, exact tangent
+cancellation, Mathlib Lie-bracket pullback, and vanishing constant-coordinate brackets. In the
+finite-dimensional principal specialization, intrinsic smoothness discharges differentiability and
+derives the Cartan equality, full exterior naturality, and the exact same-connection coordinate
+Bianchi identity at every actual target point without accepting naturality, regularity, or Bianchi
+witnesses. Arbitrary-map/two-set naturality, a canonical arbitrary-manifold positive-degree
+operator, a descended adjoint-bundle Bianchi theorem, and gauge covariance remain pending.

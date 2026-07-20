@@ -369,21 +369,21 @@ carriers. Inverse extended-chart specialization uses the corner-aware `mfderivWi
 model range, with chart-center recovery, target-local derivative invertibility, linearity, and
 canonical bracket-wedge coherence. For a finite-dimensional principal total-space model, the exact
 connection's stored intrinsic smoothness now derives `C∞` regularity of this whole coordinate
-one-form throughout the actual chart target; no exterior naturality or geometric meaning outside the
-chart target is asserted. The exact principal connection, its indexed exterior-
+one-form throughout the actual chart target. That regularity result alone asserts no naturality or
+geometry outside the chart target; the subsequent Cartan-transport theorem derives naturality on
+the target. The exact principal connection, its indexed exterior-
 derivative certificate, and the curvature derived from both now satisfy Freed's curvature equation
-in arbitrary within-set coordinates and inverse extended charts. The coordinate derivative term is
-still the pulled-back certificate, not yet `extDerivWithin` of the coordinate connection. An exact
+in arbitrary within-set coordinates and inverse extended charts. For an arbitrary map/two-set
+pullback the derivative remains the certificate carrier; in finite-dimensional inverse charts it is
+now derived equal to `extDerivWithin` of the exact coordinate connection. An exact
 naturality predicate now separates the corner-aware tangent-transport source from the exterior-
 calculus set. In finite-dimensional total-space models, intrinsic connection smoothness now
 discharges coordinate regularity and its order bound automatically, while Mathlib's extended-chart
-theorems derive unique differentiability and closure-of-interior membership. The specialized theorem
-therefore requires only exterior naturality and actual chart-target membership; it derives Bianchi
-for the exact curvature carrier without accepting a Bianchi witness. Naturality itself remains
-unproved, but it is now reduced to one explicit inverse-chart Cartan-transport equality: the
-certified derivative/Cartan side and coordinate `extDerivWithin`/Cartan side are separately derived,
-and equality of those expressions is proved exactly equivalent to the full alternating-map
-naturality predicate. Canonical arbitrary-manifold existence, chart independence,
+theorems derive unique differentiability and closure-of-interior membership. Reusable inverse-chart
+Cartan mathematics now proves the remaining within-chain-rule and Lie-bracket transport equality for
+arbitrary fixed-value one-forms. Applied to the exact connection, this derives full exterior
+naturality and the same-connection coordinate Bianchi theorem at every actual chart-target point,
+without accepting naturality, regularity, or Bianchi witnesses. Canonical arbitrary-manifold existence, chart independence,
 arbitrary-manifold `d²`, arbitrary-manifold graded Leibniz transport, positive-degree covariant exterior
 differentiation, and
 positive curvature-tensor orders remain open. The interpreted observable layer now extends the exact

@@ -4082,8 +4082,29 @@ Implemented and verified:
   alternating-map exterior naturality, and full naturality recovers that equality. Thus the named
   residual condition is an exact equivalent, not a weaker proxy or stronger unrelated requirement.
 - Hostile probes expose both derived sides, the exact residual shape, the equivalence theorem, and
-  rejection of a mismatched Cartan value. The within-chain-rule and `mlieBracketWithin` transport
-  equality itself remains unproved.
+  rejection of a mismatched Cartan value.
+
+## 2026-07-19 — two-hundred-twentieth stone: derived exterior naturality and coordinate Bianchi
+
+Implemented and verified:
+
+- `ManifoldDifferentialForm.oneFormCartanExpressionCoordinates_inExtChartAt` proves reusable
+  inverse-extended-chart Cartan naturality for every differentiable fixed-value coordinate one-form.
+- Its derivative terms use `mfderivWithin_comp`, exact inverse-chart tangent cancellation, and
+  pointwise equality on the chart source while preserving `Set.range I` as the tangent-transport
+  source. Its bracket term uses Mathlib's `mpullback_mlieBracketWithin`; constant coordinate fields
+  have zero bracket.
+- Intrinsic connection smoothness discharges the generic theorem's differentiability premise and
+  derives `PrincipalConnectionData.coordinateCartanNaturalityInExtChartAt`.
+- Every connection-indexed derivative certificate now has derived
+  `PrincipalConnectionExteriorDerivativeData.isNaturalInExtChartAt`; naturality is no longer an
+  acceptance premise in finite-dimensional principal total-space models.
+- `curvatureCoordinatesInExtChartAt_coordinateBianchi_finiteDimensional` derives the exact
+  same-connection coordinate Bianchi identity at every chart-target point with no naturality,
+  regularity, smoothness-order, unique-differentiability, closure, or Bianchi witness.
+- Generic and principal hostile probes reject mismatched Cartan transport and nonzero Bianchi
+  outputs. Arbitrary-map/two-set naturality, a global arbitrary-manifold positive-degree operator,
+  and descended adjoint-bundle Bianchi remain open.
 
 Not yet achieved:
 
@@ -4092,7 +4113,8 @@ Not yet achieved:
   chain, so positive consistency infrastructure remains open.
 - No concrete smooth gauge-bundle-map witness, principal-connection/curvature/
   structure-certificate witness, automatic curvature horizontality/equivariance theorem,
-  unconditional Bianchi/gauge-covariance result, symmetry-group construction, quantum-theory
+  arbitrary-manifold/descended adjoint-bundle Bianchi or gauge-covariance result, symmetry-group
+  construction, quantum-theory
   witness, existence theorem, or satisfying mass-gap declaration exists. The smooth adjoint vector
   bundle and smooth curvature descent layers themselves are implemented.
 - Bosonic observable labels now have exhaustive scalar/stress/residual covariance classification;

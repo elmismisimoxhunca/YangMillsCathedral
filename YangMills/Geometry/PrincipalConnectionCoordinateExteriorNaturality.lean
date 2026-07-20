@@ -5,20 +5,20 @@ Authors: Sebastian Rodrigo
 -/
 
 import YangMills.Geometry.PrincipalCurvatureCoordinateBianchiBridge
+import YangMills.Mathematics.ManifoldOneFormExtChartNaturality
 
 /-!
-# Reduction of inverse-chart exterior naturality to Cartan transport
+# Derived inverse-chart exterior naturality through Cartan transport
 
-This module isolates the exact remaining equality needed for inverse-chart naturality of the
-connection-indexed exterior derivative. The supplied manifold certificate already identifies the
-certified derivative with its intrinsic Cartan expression on chart-pulled constant fields. Mathlib's
-normed-space theorem identifies `extDerivWithin` of the exact coordinate connection with the
-coordinate Cartan expression. Equality of those two explicit expressions therefore implies the full
-alternating-map naturality predicate.
+This module first isolates the exact equality controlling inverse-chart naturality of the
+connection-indexed exterior derivative. The supplied manifold certificate identifies the certified
+derivative with its intrinsic Cartan expression on chart-pulled constant fields, while Mathlib's
+normed-space theorem identifies `extDerivWithin` with the coordinate Cartan expression. Degree-two
+extensionality proves that equality is exactly equivalent to full naturality.
 
-The Cartan-transport equality itself remains open: it contains the within-chain-rule and Lie-bracket
-transport across an inverse extended chart. Keeping it explicit prevents the broader naturality
-predicate from hiding which reusable mathematics is still missing.
+Reusable inverse-chart Cartan mathematics now proves the isolated equality from the within-chain
+rule, inverse tangent cancellation, and Lie-bracket pullback. Intrinsic connection smoothness then
+derives full naturality without adding a witness.
 -/
 
 namespace YangMills.Geometry
@@ -69,6 +69,27 @@ def PrincipalConnectionCoordinateCartanNaturalityInExtChartAt
         (I := modelWithCornersSelf ℝ EP) (ContinuousLinearEquiv.refl ℝ EG)
         (connection.connectionCoordinatesInExtChartAt p).toManifoldForm
         (extChartAt IP p).target x (fun _ => v) (fun _ => w)
+
+namespace PrincipalConnectionData
+
+/-- Reusable inverse-chart Cartan transport and intrinsic connection smoothness discharge the exact
+remaining principal-connection Cartan naturality condition. -/
+theorem coordinateCartanNaturalityInExtChartAt
+    [FiniteDimensional ℝ EP]
+    (connection : PrincipalConnectionData smoothBundle) (p : P) :
+    PrincipalConnectionCoordinateCartanNaturalityInExtChartAt connection p := by
+  intro x hx v w
+  have hcoord : DifferentiableWithinAt ℝ
+      (connection.connectionCoordinatesInExtChartAt p) (extChartAt IP p).target x :=
+    (connection.connectionCoordinatesInExtChartAt_contDiffWithinAt p x hx).differentiableWithinAt
+      (by simp)
+  simpa [PrincipalConnectionData.toSmoothForm,
+    PrincipalConnectionData.connectionCoordinatesInExtChartAt] using
+    (connection.pointwise.form.oneFormCartanExpressionCoordinates_inExtChartAt
+      (groupLieAlgebraModelEquiv IG) p x hx v w (by
+        simpa [PrincipalConnectionData.connectionCoordinatesInExtChartAt] using hcoord))
+
+end PrincipalConnectionData
 
 namespace PrincipalConnectionExteriorDerivativeData
 
@@ -253,6 +274,17 @@ theorem isNaturalInExtChartAt_iff_cartanNaturality
       PrincipalConnectionCoordinateCartanNaturalityInExtChartAt connection p :=
   ⟨exterior.cartanNaturality_of_isNaturalInExtChartAt p,
     exterior.isNaturalInExtChartAt_of_cartanNaturality p⟩
+
+/-- In a finite-dimensional principal total-space model, inverse-chart exterior naturality is
+derived from the exact connection, certificate, and generic Cartan transport; it is no longer an
+acceptance premise. -/
+theorem isNaturalInExtChartAt
+    [FiniteDimensional ℝ EP]
+    {connection : PrincipalConnectionData smoothBundle}
+    (exterior : PrincipalConnectionExteriorDerivativeData connection) (p : P) :
+    exterior.IsNaturalInExtChartAt p :=
+  exterior.isNaturalInExtChartAt_of_cartanNaturality p
+    (connection.coordinateCartanNaturalityInExtChartAt p)
 
 end PrincipalConnectionExteriorDerivativeData
 

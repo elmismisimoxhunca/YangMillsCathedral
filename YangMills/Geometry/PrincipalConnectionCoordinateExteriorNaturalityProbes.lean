@@ -109,6 +109,20 @@ theorem exact_naturality_iff_cartan_transport
       PrincipalConnectionCoordinateCartanNaturalityInExtChartAt connection p :=
   exterior.isNaturalInExtChartAt_iff_cartanNaturality p
 
+/-- Generic Cartan transport and intrinsic connection smoothness derive the formerly residual
+principal Cartan equality. -/
+theorem exact_derived_cartan_transport
+    (connection : PrincipalConnectionData smoothBundle) (p : P) :
+    PrincipalConnectionCoordinateCartanNaturalityInExtChartAt connection p :=
+  connection.coordinateCartanNaturalityInExtChartAt p
+
+/-- The exact connection-indexed certificate now has derived inverse-chart exterior naturality. -/
+theorem exact_derived_exterior_naturality
+    {connection : PrincipalConnectionData smoothBundle}
+    (exterior : PrincipalConnectionExteriorDerivativeData connection) (p : P) :
+    exterior.IsNaturalInExtChartAt p :=
+  exterior.isNaturalInExtChartAt p
+
 /-- A mismatched intrinsic/coordinate Cartan value contradicts the exact remaining obligation. -/
 theorem mismatched_cartan_transport_blocked
     (connection : PrincipalConnectionData smoothBundle) (p : P)

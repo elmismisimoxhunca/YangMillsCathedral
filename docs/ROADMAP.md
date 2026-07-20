@@ -90,7 +90,11 @@ committed before higher layers depend on it.
 - [x] Reduce inverse-chart exterior naturality to one explicit Cartan-transport equality: derive the
   certified derivative side from the existing manifold Cartan certificate, derive the coordinate
   side from Mathlib `extDerivWithin`, and prove that equality of those expressions is exactly
-  equivalent to full naturality. Proving the remaining within-chain-rule/Lie-bracket transport equality remains debt.
+  equivalent to full naturality.
+- [x] Prove the remaining Cartan transport as reusable mathematics from the within-chain rule,
+  inverse-chart tangent cancellation, Mathlib Lie-bracket pullback, and constant-coordinate bracket
+  vanishing; derive full principal inverse-chart naturality and same-connection coordinate Bianchi
+  with only actual chart-target membership.
 - [x] Define principal curvature from a certified derivative and the smooth bracket-wedge.
 - [x] State and probe intrinsic curvature horizontality/right-adjoint-equivariance certificates.
 - [x] Construct and probe the set-level adjoint associated-bundle orbit quotient.

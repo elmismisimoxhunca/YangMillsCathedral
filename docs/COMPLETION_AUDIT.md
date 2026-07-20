@@ -69,7 +69,7 @@ Criteria 15–18 are currently decisive failures; several earlier criteria are a
 | Preserve prior remote/toolchain, comparison, literature, and history evidence | Root `research/` reports, especially `git-history-audit.md`, `git-history-prosecution.md`, `source-verification.md`; directive §“Treatment of completed archaeology” | Files were inventoried, not re-proved by the Lean build | Partial | Evidence is distributed outside the standalone repository and lacks one index mapping all archaeology deliverables |
 | Dimensions and signatures | `YangMills/Foundation/Dimensions.lean`, `Signatures.lean` and probes | Named dimensions `one`–`four`, finite-rank/signature probes | Implemented | None known at the index/signature layer |
 | Compact-simple gauge group | `YangMills/Geometry/LieGroup.lean`; source-map compact-simple rows | `LieGroupProbes.lean` rejects noncompact, disconnected, subsingleton, abelian-Lie-algebra, and proper-ideal surrogates | Implemented as an uninhabited requirement | No concrete positive `SU(n)` certificate; this is reusable consistency debt, not permission to assert existence |
-| Principal geometry and connection provenance | Geometry bundle, torsor, connection, curvature, descent, adjoint-bundle, and finite-dimensional chart-regularity modules listed in `docs/SOURCE_MAP.md` | Corresponding geometry probes and full kernel audit | Partial | Finite-dimensional inverse-chart connection regularity is derived and naturality is reduced to one explicit Cartan-transport equality; that equality, unconditional principal Bianchi, and descended adjoint-bundle Bianchi remain open |
+| Principal geometry and connection provenance | Geometry bundle, torsor, connection, curvature, descent, adjoint-bundle, and finite-dimensional chart-regularity modules listed in `docs/SOURCE_MAP.md` | Corresponding geometry probes and full kernel audit | Partial | Finite-dimensional inverse-chart regularity, Cartan transport, exterior naturality, and same-connection coordinate Bianchi are derived; arbitrary-manifold and descended adjoint-bundle Bianchi remain open |
 | Canonical classical action | `YangMills/Classical/CanonicalEuclideanMetric.lean`, `EuclideanCanonicalCurvatureContraction.lean`, `EuclideanAction.lean`, `EuclideanCanonicalAction.lean` | Canonical-contraction/action hostile probes | Partial | General Hodge-star identification and metric-induced-volume compatibility remain open |
 | Separate lattice regulator | `YangMills/Lattice/*`; no lattice import supplies either continuum core | Lattice probes for gauge invariance, Haar/Gibbs normalization, reflection positivity, loops, and scaling | Implemented finite-cutoff layer | No continuum-limit/OS identification or renormalization bridge; finite cutoff remains insufficient by design |
 | Euclidean Schwinger/OS surface | `YangMills/Euclidean/*`, including exact ordered source, finite-stage and locally convex direct-sum topologies, `(E0′)` growth, `(E1)`–`(E4)` | Euclidean hostile probes imported by `YangMills.lean` | Partial | Schwartz/half-line completeness, actual completed projective tensor powers, density/completion comparisons, and OS-I nuclearity remain open |
@@ -112,7 +112,7 @@ not yet prove witness-level noninhabitation of the future final proposition.
 
 | Independent surfaces | Explicit bridge | Current evidence | Remaining debt |
 |---|---|---|---|
-| Principal connection ↔ curvature | Same-index curvature structure, smooth descent, finite-dimensional inverse-chart regularity, and reduction of exterior naturality to explicit Cartan transport | Geometry curvature/descent/coordinate-regularity/naturality-reduction modules and probes | Within-chain-rule/Lie-bracket Cartan transport and unconditional/descended Bianchi |
+| Principal connection ↔ curvature | Same-index curvature structure, smooth descent, finite-dimensional inverse-chart regularity, derived Cartan transport/naturality, and same-connection coordinate Bianchi | Geometry curvature/descent/coordinate-regularity/Cartan-naturality/Bianchi modules and probes | Arbitrary-manifold positive-degree transport and descended adjoint-bundle Bianchi |
 | Classical curvature ↔ scalar observable | `CurvatureSquaredLocalObservableInterpretationData`, finite power extension | Exact carrier equalities and anti-collapse probes | Active gauge transformations and complete polynomial grammar |
 | Euclidean strict tests ↔ exact OS source | Exact source inclusion/restriction theorems | Ordered-source modules and probes | Completion/density/nuclearity comparisons |
 | Euclidean ↔ Wightman analytic data | Strict and exact-source reverse Wick continuation | Tube membership, integrability, and equality probes | Constructive reconstruction/output |
@@ -144,9 +144,9 @@ numbers above are historical evidence for one inspected baseline only.
 ## 6. Open blockers, ranked
 
 1. **Final contract absent:** no final universally quantified Clay acceptance proposition exists.
-2. **Principal calculus:** finite-dimensional inverse-chart connection regularity is derived and
-   exterior naturality is reduced to one explicit Cartan-transport equality, but its within-chain-rule/
-   Lie-bracket proof and unconditional same-connection principal/adjoint Bianchi remain open.
+2. **Principal calculus:** finite-dimensional inverse-chart connection regularity, Cartan transport,
+   exterior naturality, and same-connection coordinate Bianchi are derived, but arbitrary-manifold
+   positive-degree transport and descended adjoint-bundle Bianchi remain open.
 3. **OS functional analysis:** Schwartz and half-line quotient completeness, completed projective
    tensor carriers/powers, completion comparisons, and nuclearity remain open.
 4. **Poincaré construction:** the affine target group law is still supplied acceptance data;
