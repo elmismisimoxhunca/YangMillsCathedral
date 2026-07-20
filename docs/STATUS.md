@@ -4273,9 +4273,12 @@ set, and derives intrinsic extension independence from explicit coordinate-form 
 `YangMills.Mathematics.SmoothManifoldOneFormExtChartRegularity` reconstructs the complete degree-one
 alternating-map-valued chart carrier from fixed-vector evaluations using a finite basis. Thus
 finite-dimensional intrinsic Cartan extension independence now requires no certificate or caller
-regularity witness. The associated candidate is not yet certified as `dα`: arbitrary-smooth-map
-certificate pullback remains open, so no associated-form Maurer–Cartan structure equation is
-claimed.
+regularity witness.
+`YangMills.Geometry.UniversalMaurerCartanExteriorDerivative` uses this theorem to replace arbitrary
+local fields by left-invariant extensions, constructs a genuine all-fields exterior-derivative
+certificate with derivative `-1/2[θ∧θ]`, and proves the exact universal group-level structure
+equation. The associated candidate is not yet certified as `dα`: arbitrary-smooth-map certificate
+pullback remains open, so no associated-form Maurer–Cartan structure equation is claimed.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

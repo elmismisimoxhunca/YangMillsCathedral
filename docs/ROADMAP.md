@@ -196,7 +196,10 @@ committed before higher layers depend on it.
   derive intrinsic extension independence from explicit coordinate-form differentiability.
 - [x] Derive generic finite-dimensional centered coordinate-form regularity and unconditional
   intrinsic extension independence for admissible smooth fields.
-- [ ] Prove arbitrary-smooth-map certificate pullback, then certify the associated candidate as the exterior derivative and conclude the full Maurer–Cartan structure equation.
+- [x] Construct the genuine universal left Maurer–Cartan exterior-derivative certificate and prove
+  `dθ + 1/2[θ∧θ] = 0` on the finite-dimensional Lie group.
+- [ ] Prove arbitrary-smooth-map certificate pullback, then certify the associated candidate and
+  conclude its pulled Maurer–Cartan structure equation.
 - [ ] Derive structural curvature laws automatically and prove intrinsic descended Bianchi.
 
 ## Phase 3 — classical Yang–Mills semantics

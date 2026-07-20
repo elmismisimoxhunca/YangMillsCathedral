@@ -436,9 +436,10 @@ independently of the existing affine-difference proof using a supplied connectio
 expression on left-invariant fields fixes the sign and `1/2` self-wedge normalization; the
 associated form is identified as its pullback and the smooth derivative candidate is packaged.
 Reusable mathematics now proves field-extension independence in normed spaces, exact centered-chart
-coordinates, and intrinsically once a Cartan certificate exists. The full Maurer–Cartan equation
-remains open because arbitrary-map certificate pullback is still missing, so the associated
-candidate is not yet certified as the arbitrary-manifold exterior derivative. Finite-dimensional
+coordinates, and intrinsically once a Cartan certificate exists. Finite-dimensional Cartan tensoriality now upgrades the invariant-field calculation to a genuine
+universal exterior-derivative certificate and proves `dθ + 1/2[θ∧θ] = 0` on the group. The
+associated-form Maurer–Cartan equation remains open because arbitrary-map certificate pullback is
+still missing, so its candidate is not yet certified as the arbitrary-manifold exterior derivative. Finite-dimensional
 basis reconstruction now derives generic centered coordinate-form regularity and intrinsic
 field-extension independence for admissible smooth fields, while arbitrary smooth fields transport exactly through the
 corner-aware centered chart. Exact inverse-action
