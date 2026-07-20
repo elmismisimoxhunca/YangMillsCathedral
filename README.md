@@ -306,7 +306,13 @@ element on the same common domain, fixes the unit field by Lebesgue smearing, an
 bilocal tempered products with exact pure-tensor operator order and nonzero witnesses. The same family can be required to close under an involutive label adjoint, designate an
 adjoint-closed scalar-label sector transforming by the scalar law under the same Poincaré
 representation/domain chain, and commute for every label pair on spacelike-separated supports.
-Tensor or spin labels outside that sector require their own transformation interface. A further exact coherence surface identifies the scalar Wightman field with this family's
+Tensor or spin labels outside that sector require their own transformation interface. A reusable
+finite-multiplet layer now supplies one genuine strongly continuous complex-linear lift-group
+representation, exact translation-trivial component mixing, same-domain covariance, and mandatory
+nontrivial component. Its separate tensorial strengthening factors through the projected Lorentz
+transformation, while the base surface retains possible spinorial central action. The existing
+nontrivial scalar label derives an exact one-component trivial multiplet; complete multiplet coverage
+of arbitrary non-scalar labels and a stress adapter remain open. A further exact coherence surface identifies the scalar Wightman field with this family's
 existing nontrivial label and identifies its adjoint with the corresponding involutive adjoint
 label, transferring family anti-vacuity to the Wightman field and preventing disconnected scalar
 and observable sectors. Normalized

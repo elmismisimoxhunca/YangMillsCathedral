@@ -3976,6 +3976,27 @@ Implemented and verified:
   scalar membership of interpreted curvature observables. No tensor representation, theory, or
   observable inhabitant is constructed.
 
+## 2026-07-19 — two-hundred-fifteenth stone: finite covariant observable multiplets
+
+Implemented and verified:
+
+- `FiniteLiftCovariantObservableMultipletData` packages nonempty finite component indices inside the
+  existing observable family, one genuine complex-linear lift-group representation, pointwise strong
+  continuity, trivial component mixing on physical translation lifts, and exact covariance on the
+  same common domain and inverse-affine test pullback.
+- A mandatory nonzero/non-unit component rejects empty, zero, and unit-only multiplets. Identity and
+  composition of mixing are derived from the bundled representation rather than accepted as
+  unrelated coefficient laws.
+- `FiniteLorentzCovariantObservableMultipletData` separately requires mixing to depend only on the
+  projected Lorentz transformation. The base interface deliberately retains possible nontrivial
+  cover-kernel action for spinorial multiplets.
+- The existing distinguished nontrivial scalar label derives an exact one-component Lorentz
+  multiplet with trivial mixing; no new operator or field witness is introduced.
+- Hostile probes expose nonemptiness, representation identity/composition/continuity, translation
+  blindness, same-chain covariance, anti-vacuity, tensorial factorization, and scalar recovery.
+  A stress adapter and complete finite-multiplet coverage for every non-scalar observable label
+  remain open.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

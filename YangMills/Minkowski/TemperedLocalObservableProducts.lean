@@ -32,7 +32,8 @@ noncomputable def minkowskiSchwartzIntegral
     {d : EuclideanDimension} (f : ScalarMinkowskiSchwartzTestFunction d) : ℂ :=
   ∫ x, f x
 
-/-- A family of scalar local operator-valued tempered distributions on one exact common domain. -/
+/-- A family of local operator-valued tempered distributions smeared against scalar Schwartz tests
+on one exact common domain. Labels may carry separate scalar, tensor, or spin transformation laws. -/
 structure TemperedLocalObservableFamilyData
     {d : EuclideanDimension} {G : Type*}
     [Group G] [TopologicalSpace G] [IsTopologicalGroup G]

@@ -146,6 +146,11 @@ committed before higher layers depend on it.
   exact full-product weak bilocal distributions with unit/nonzero hostile evidence and locked
   operator order; strengthen the same family with exact label adjoints, same-representation scalar
   Poincaré covariance, and all-label bosonic locality. No curvature interpretation is claimed.
+- [x] Add a reusable nonempty finite-component covariance interface with one strongly continuous
+  lift-group representation, exact translation-trivial mixing, same-chain operator covariance, and
+  anti-vacuity; separate a tensorial projected-Lorentz strengthening from possible spinorial central
+  action and derive the existing nontrivial scalar field as a one-component trivial multiplet.
+  A stress-tensor adapter and general coverage of every non-scalar family label remain open.
 - [x] Add exact operator and adjoint-operator coherence identifying the scalar Wightman field with
   the same family's existing nontrivial label, transferring anti-vacuity and tempered matrix
   elements rather than allowing disconnected scalar and observable sectors.
