@@ -394,9 +394,11 @@ descended Bianchi, and positive curvature-tensor orders remain open. The interpr
 unit and `F²` labels to the finite intrinsic fragment `1`, `F²`, `(F²)²`, with exact classical
 carrier coherence. A separate explicit anti-collapse strengthening requires `(F²)²` to be a new
 nontrivial operator in the 4D core; this is not attributed to Clay's footnote. Smooth gauge
-automorphisms now pull principal connections back with both connection laws and smoothness derived,
-but no transformed exterior certificate, curvature covariance, action invariance, or observable
-invariance follows yet. The checker still lacks a language of independent invariant contractions,
+automorphisms now pull principal connections back with both connection laws and smoothness derived.
+Arbitrary-degree smooth pullback and Lie-bracket-wedge naturality additionally show that the
+curvature formula assembled from the exact pulled derivative carrier equals the pullback of the
+original curvature. The transformed Cartan certificate, canonical transformed `curvatureForm`,
+local adjoint law, action invariance, and observable invariance do not follow yet. The checker still lacks a language of independent invariant contractions,
 mixed curvature polynomials, or covariant derivatives, and no canonical injective quantization map
 is claimed.
 A preliminary four-dimensional perturbative interface now requires a positive running coupling

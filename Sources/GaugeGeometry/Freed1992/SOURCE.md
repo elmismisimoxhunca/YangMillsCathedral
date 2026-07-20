@@ -214,8 +214,11 @@ local section and tangent lifts, while the representative satisfies coordinate B
 not construct an intrinsic adjoint-valued three-form. Freed's p. 9 pullback statement now anchors an
 exact gauge-automorphism pullback of principal connections: tangent naturality derives vertical
 normalization and right equivariance, transported test fields derive smoothness, and identity plus
-composition expose the contravariant pullback order. This constructs the connection action only;
-it does not yet construct the transformed exterior certificate or prove the local affine formula,
-curvature covariance, descended-form invariance, or action/observable invariance. Arbitrary-map/
+composition expose the contravariant pullback order. Smooth pullback in every degree and exact
+Lie-bracket-wedge naturality now prove that the curvature formula assembled from the pulled
+derivative carrier equals the pullback of the original curvature. This is not yet the canonical
+transformed curvature because the transformed Cartan certificate remains unconstructed; it also
+does not prove the local affine formula, local adjoint curvature law, descended-form covariance, or
+action/observable invariance. Arbitrary-map/
 two-set exterior naturality, a canonical arbitrary-manifold positive-degree operator, an intrinsic
 descended adjoint-bundle Bianchi theorem, and full gauge covariance remain pending.

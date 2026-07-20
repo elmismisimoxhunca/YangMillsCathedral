@@ -4174,8 +4174,14 @@ right translations, deriving vertical normalization and right-adjoint equivarian
 Smoothness is derived by transporting local test vector fields through the gauge diffeomorphism and
 its smooth inverse. Identity and multiplication laws expose the contravariant pullback order,
 equivalently a right gauge action convention. Hostile probes reject changed vertical generators and
-malformed composition. No exterior-derivative certificate is transformed yet, so curvature,
-descended curvature, action, and observable gauge invariance remain open.
+malformed composition. `YangMills.Geometry.PrincipalCurvatureGaugePullbackFormula` now generalizes
+smooth gauge pullback to every fixed form degree, proves exact Lie-bracket-wedge pullback
+naturality, and constructs the curvature formula from the exact pulled derivative carrier. That
+assembled formula is proved equal to the pullback of the original same-index curvature, including
+an exact tangent-evaluation theorem. No within-set Cartan-certificate naturality theorem is yet
+available, so no transformed exterior data or canonical transformed `curvatureForm` is constructed;
+local adjoint covariance, descended curvature covariance, action invariance, and observable gauge
+invariance remain open.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

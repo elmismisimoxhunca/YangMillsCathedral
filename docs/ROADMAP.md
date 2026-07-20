@@ -139,8 +139,12 @@ committed before higher layers depend on it.
 - [x] Construct gauge-automorphism pullback of principal connections from the exact tangent map;
   derive vertical normalization, right equivariance, smoothness, identity, and contravariant
   composition rather than storing transformed-connection witnesses.
-- [ ] Transform the indexed exterior certificate and derive curvature, descent, action, and
-  observable gauge covariance; do not infer these from connection pullback alone.
+- [x] Pull smooth fixed-value forms through gauge diffeomorphisms in arbitrary degree, prove exact
+  Lie-bracket-wedge pullback naturality, and show the curvature formula assembled from the pulled
+  derivative carrier equals the pullback of the original exact curvature.
+- [ ] Prove within-set Cartan-certificate naturality, transform the indexed exterior certificate,
+  and only then derive canonical curvature, descent, action, and observable gauge covariance; do
+  not infer these from connection pullback or formula algebra alone.
 - [ ] Derive structural curvature laws automatically and prove intrinsic descended Bianchi.
 
 ## Phase 3 — classical Yang–Mills semantics
