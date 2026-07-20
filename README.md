@@ -447,8 +447,9 @@ basis reconstruction now derives generic centered coordinate-form regularity and
 field-extension independence for admissible smooth fields, while arbitrary smooth fields transport exactly through the
 corner-aware centered chart. Adjoint-bundle-valued forms now also have fixed-model base extended-chart
 coordinates on the exact principal-chart overlap, retaining actual quotient fibers and corner-aware
-inverse-chart tangent transport; smooth coordinate regularity, positive-degree covariant exterior
-differentiation, and intrinsic descended Bianchi remain open. Exact inverse-action
+inverse-chart tangent transport. Finite-dimensional base models now derive complete `C∞` regularity
+of these alternating-map-valued coordinates within the exact overlap for designated atlas charts;
+positive-degree covariant exterior differentiation and intrinsic descended Bianchi remain open. Exact inverse-action
 curvature covariance now derives pointwise invariance of both chosen and basis-independent
 canonical curvature densities for the full pulled connection/exterior/certificate chain. The exact
 analytic datum transports to that chain with unchanged designated measure and coupling, deriving

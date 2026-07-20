@@ -207,8 +207,10 @@ committed before higher layers depend on it.
 - [x] Construct fixed-model base extended-chart coordinates for actual dependent-fiber
   adjoint-valued forms on the exact principal-chart overlap, preserving corner-aware tangent
   transport and in-domain nonzero values.
-- [ ] Derive smooth coordinate regularity, structural curvature laws, positive-degree covariant
-  exterior differentiation, and intrinsic descended Bianchi.
+- [x] Derive complete alternating-map-valued `C∞` regularity within the exact base/principal-chart
+  overlap for smooth adjoint forms over finite-dimensional base models.
+- [ ] Derive structural curvature laws, positive-degree covariant exterior differentiation, and
+  intrinsic descended Bianchi.
 
 ## Phase 3 — classical Yang–Mills semantics
 

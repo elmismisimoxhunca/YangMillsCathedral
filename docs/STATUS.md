@@ -4292,9 +4292,14 @@ Maurer–Cartan equation.
 dependent-fiber adjoint-valued form into a fixed-model normed-space form on the exact overlap of a
 base extended chart and designated principal chart. The coordinate formula retains quotient-derived
 fiber coordinates and `mfderivWithin ... (Set.range IB)` tangent transport, while hostile probes
-prevent in-domain nonzero values from being erased by outside-domain totalization. Smooth coordinate
-regularity, positive-degree covariant exterior differentiation, and intrinsic descended Bianchi
-remain open.
+prevent in-domain nonzero values from being erased by outside-domain totalization.
+`YangMills.Mathematics.ContinuousAlternatingMapSmoothEvaluation` reconstructs smooth families of
+finite-arity continuous alternating maps from all fixed-tuple evaluations, including arity zero.
+`YangMills.Geometry.AdjointBundleDifferentialFormBaseCoordinateSmooth` combines this with smooth
+local tangent-field evaluation to derive full `C∞` base-coordinate regularity within the exact
+overlap for every designated atlas chart and finite-dimensional base model. No smoothness across the
+zero-totalization boundary is claimed. Positive-degree covariant exterior differentiation and
+intrinsic descended Bianchi remain open.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.
