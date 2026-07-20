@@ -116,6 +116,20 @@ theorem ScalarWightmanAxiomSurfaceData.unitary_eq_refl_of_projection_eq_identity
   intro ψ
   simpa [unitaryCLM] using congrArg (fun f : H →L[ℂ] H => f ψ) clm_eq
 
+/-- A fully connected scalar Wightman chain bundled over one exact lift index. This package exists
+only to transport the dependent chain across an equality of lift records; it asserts no existence. -/
+structure ScalarWightmanAxiomChainData
+    (d : EuclideanDimension)
+    {G : Type*} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+    (lift : ProperOrthochronousPoincareLiftData d G)
+    (H : Type*) [NormedAddCommGroup H] [InnerProductSpace ℂ H] [CompleteSpace H]
+    [TopologicalSpace.SeparableSpace H] where
+  U : StronglyContinuousUnitaryPoincareRepresentation lift H
+  vacuumData : PoincareInvariantVacuumData U
+  D : CommonInvariantDomainData vacuumData
+  fieldData : ScalarWightmanFieldOnCommonDomainData D
+  surface : ScalarWightmanAxiomSurfaceData fieldData
+
 /-- In particular, the derived negative sign of an exact two-sheet cover acts trivially in every
 cyclic scalar Wightman realization over that cover. -/
 theorem ScalarWightmanAxiomSurfaceData.negativeKernel_unitary_eq_refl
@@ -132,6 +146,23 @@ theorem ScalarWightmanAxiomSurfaceData.negativeKernel_unitary_eq_refl
   surface.unitary_eq_refl_of_projection_eq_identity
     (negativeProjectionKernelElement d targetGroup doubleCover : G)
     (negativeProjectionKernelElement_mem_kernel d targetGroup doubleCover)
+
+/-- Transport the whole dependent scalar chain across an equality between the selected lift and the
+exact double-cover lift, then apply negative-sign triviality. -/
+theorem ScalarWightmanAxiomChainData.negativeKernel_unitary_eq_refl_of_lift_eq
+    {d : EuclideanDimension}
+    {G : Type*} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+    {targetGroup : ProperOrthochronousPoincareTargetGroupData d}
+    {doubleCover : ProperOrthochronousPoincareDoubleCoverData d G}
+    {lift : ProperOrthochronousPoincareLiftData d G}
+    {H : Type*} [NormedAddCommGroup H] [InnerProductSpace ℂ H] [CompleteSpace H]
+    [TopologicalSpace.SeparableSpace H]
+    (chain : ScalarWightmanAxiomChainData d lift H)
+    (lift_eq : doubleCover.toProperOrthochronousPoincareLiftData = lift) :
+    chain.U.unitary (negativeProjectionKernelElement d targetGroup doubleCover : G) =
+      LinearIsometryEquiv.refl ℂ H := by
+  subst lift
+  exact chain.surface.negativeKernel_unitary_eq_refl
 
 end
 

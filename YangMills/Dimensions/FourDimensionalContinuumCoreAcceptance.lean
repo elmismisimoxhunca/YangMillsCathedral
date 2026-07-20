@@ -9,7 +9,7 @@ import YangMills.Classical.EuclideanAction
 import YangMills.Euclidean.OSOrderedFourDimensionalEuclideanCurrentStrength
 import YangMills.Geometry.LieGroup
 import YangMills.Minkowski.PhysicalMassGapSupremum
-import YangMills.Minkowski.PoincareComplexSignKernel
+import YangMills.Minkowski.ScalarWightmanKernelTriviality
 import YangMills.Minkowski.ScalarWightmanAxiomSurface
 import YangMills.Minkowski.StressEnergyTranslationWard
 import YangMills.Minkowski.WightmanJointTemperedCorrelators
@@ -44,7 +44,9 @@ tempered extensions and now requires corrected same-lift, universe-relative reco
 acceptance without
 constructing a reconstruction. The exact lift is required to
 carry a genuine two-sheeted topological covering projection whose exact group kernel is identified
-with the literal complex signs `{±1}`. Concrete inhomogeneous `SL(2,ℂ)` and construction of the
+with the literal complex signs `{±1}`. Scalar covariance, exact vacuum invariance, and cyclicity
+then derive trivial action of that kernel on the same physical Hilbert representation. Concrete
+inhomogeneous `SL(2,ℂ)` and construction of the
 required named affine-target group law remain open. No lattice datum can fill
 any field of this record. The exact compact-simple gauge certificate indexes a preliminary
 four-dimensional running-coupling normal form and a supplied weak regular-variation condition on the
@@ -337,6 +339,24 @@ theorem curvatureSquaredOPELeadingDistribution_nonzero
   letI : DecidableEq data.observableFamily.Label := data.observableLabelDecidableEq
   exact data.opeRegularVariation.leadingDistribution_nonzero _ _ _
     data.curvatureSquaredOPECoherence.coefficient_nonzero
+
+/-- Scalar covariance, exact vacuum invariance, and cyclicity force the derived negative cover sign
+to act trivially on the exact four-dimensional physical Hilbert space. The dependent scalar chain is
+transported across the core's exact cover-to-lift equality. -/
+theorem negativePoincareSign_unitary_eq_refl
+    (data : FourDimensionalCurrentStrengthContinuumCoreAcceptanceData inner connection
+      exterior curvatureCertificate fieldData) :
+    U.unitary (Minkowski.negativeProjectionKernelElement EuclideanDimension.four
+      data.poincareTargetGroup data.poincareDoubleCover : PoincareLiftGroup) =
+      LinearIsometryEquiv.refl ℂ H := by
+  let chain : Minkowski.ScalarWightmanAxiomChainData EuclideanDimension.four lift H :=
+    { U := U
+      vacuumData := vacuumData
+      D := D
+      fieldData := fieldData
+      surface := data.wightmanSurface }
+  exact chain.negativeKernel_unitary_eq_refl_of_lift_eq
+    data.poincareDoubleCover_toLift_eq
 
 /-- The selected threshold is strictly positive by the exact same-PVM gap predicate. -/
 theorem gapThreshold_pos

@@ -74,6 +74,19 @@ theorem exact_negative_sign_triviality
       LinearIsometryEquiv.refl ℂ H :=
   surface₂.negativeKernel_unitary_eq_refl
 
+omit surface projection_eq in
+/-- A propositionally equal lift index transports the whole dependent chain before applying the
+same negative-sign theorem. -/
+theorem exact_lift_equality_transport
+    {targetGroup : ProperOrthochronousPoincareTargetGroupData d}
+    {doubleCover : ProperOrthochronousPoincareDoubleCoverData d G}
+    {otherLift : ProperOrthochronousPoincareLiftData d G}
+    (chain : ScalarWightmanAxiomChainData d otherLift H)
+    (lift_eq : doubleCover.toProperOrthochronousPoincareLiftData = otherLift) :
+    chain.U.unitary (negativeProjectionKernelElement d targetGroup doubleCover : G) =
+      LinearIsometryEquiv.refl ℂ H :=
+  chain.negativeKernel_unitary_eq_refl_of_lift_eq lift_eq
+
 end
 
 end YangMills.Minkowski.ScalarWightmanKernelTriviality.Probes

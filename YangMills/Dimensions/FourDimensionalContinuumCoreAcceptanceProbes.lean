@@ -157,6 +157,14 @@ theorem exact_poincare_relative_sign_sheets
   Minkowski.eq_or_eq_mul_negativeKernelElement_of_projection_eq
     EuclideanDimension.four data.poincareTargetGroup data.poincareDoubleCover projection_eq
 
+/-- The derived negative sign acts trivially on the exact scalar physical Hilbert representation,
+not merely on an unrelated cover-indexed realization. -/
+theorem exact_scalar_negative_sign_unitary :
+    U.unitary (Minkowski.negativeProjectionKernelElement EuclideanDimension.four
+      data.poincareTargetGroup data.poincareDoubleCover : PoincareLiftGroup) =
+      LinearIsometryEquiv.refl ℂ H :=
+  data.negativePoincareSign_unitary_eq_refl
+
 /-- The preliminary ultraviolet normal form uses that exact gauge-group certificate and dimension. -/
 theorem exact_asymptotic_freedom :
     Nonempty (Renormalization.PureYangMillsAsymptoticFreedomData

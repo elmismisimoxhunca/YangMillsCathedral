@@ -370,8 +370,9 @@ committed before higher layers depend on it.
   derive a nonidentity negative-sign lift without adding a redundant acceptance field, and prove
   every fiber consists of any selected lift and its distinct negative-sign partner.
 - [x] Prove that every identity-projecting lift acts trivially in any cyclic scalar Wightman
-  realization definitionally indexed by that cover, using exact field/adjoint covariance, vacuum
-  invariance, word induction, cyclicity, and continuity.
+  realization, using exact field/adjoint covariance, vacuum invariance, word induction, cyclicity,
+  and continuity; bundle the dependent chain to transport the theorem across the 4D core's exact
+  propositional cover-to-lift equality.
 - [ ] Construct the target law from proper-orthochronous future-cone closure, build the concrete
   inhomogeneous `SL(2,ℂ)` carrier, and identify its matrix-sign kernel with the accepted literal-sign
   kernel and upgrade the derived relative sheet labels to the concrete matrix realization.

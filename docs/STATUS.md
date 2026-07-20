@@ -3927,9 +3927,12 @@ Implemented and verified:
   identity.
 - For any scalar realization definitionally indexed by the exact double cover, the derived negative
   sign therefore acts trivially.
+- `ScalarWightmanAxiomChainData` bundles the dependent representation/vacuum/domain/field/surface
+  chain and transports this theorem across a propositional equality of lift records. The
+  four-dimensional core now derives trivial negative-sign action on its exact existing physical
+  representation through `poincareDoubleCover_toLift_eq`.
 - This is a theorem from an already supplied scalar Wightman surface, not a representation or theory
-  construction. It does not apply to spinorial fields and does not yet transport automatically
-  across a merely propositionally equal lift index in the four-dimensional integration record.
+  construction, and it does not apply to spinorial fields.
 
 Not yet achieved:
 
