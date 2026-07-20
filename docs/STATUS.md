@@ -3943,6 +3943,9 @@ Implemented and verified:
 - `selectedAffinePoincareLift` chooses one lift only internally; projection coherence proves the
   resulting `descendedAffineUnitary` agrees with every original lift and is choice-independent.
 - `descendedAffineUnitaryHom` is a genuine homomorphism for the accepted named affine-target law.
+- The selected-lift domain restriction is proved coherent with every original `D.domainUnitary`.
+  Scalar field and adjoint covariance therefore descend to direct affine statements with no lift
+  choice present.
 - Strong continuity descends from the cover representation through the exact cover projection's
   quotient-map universal property.
 - The dependent 4D scalar chain is transported to the exact double-cover index and yields an affine

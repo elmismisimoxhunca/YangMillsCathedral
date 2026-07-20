@@ -132,8 +132,10 @@ lift index, allowing the four-dimensional core's exact cover-to-lift equality to
 This is a project derivation from axioms `0`–`III`, not a separately printed theorem. Kernel
 triviality further proves lift-independence of the scalar unitary. Choosing lifts therefore yields a
 choice-independent homomorphism on the exact named affine target, and its strong continuity follows
-from the exact cover projection's quotient-map property. This descends only scalar realizations; it
-is not the book's spinorial representation construction. The cover interfaces
+from the exact cover projection's quotient-map property. The selected-lift restriction to the common
+domain is proved independent of lift, and the source's scalar field and adjoint covariance equations
+are thereby restated directly for affine transformations with no lift exposed. This descends only
+scalar realizations; it is not the book's spinorial representation construction. The cover interfaces
 remain uninhabited and do not construct the book's inhomogeneous `SL(2,ℂ)` or derive
 proper-orthochronous closure.
 

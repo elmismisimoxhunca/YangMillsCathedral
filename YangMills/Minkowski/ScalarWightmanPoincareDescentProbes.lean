@@ -42,6 +42,31 @@ theorem exact_projection_coherence (g : G) :
     chain.descendedAffineUnitary (cover.projection g) = chain.U.unitary g :=
   chain.descendedAffineUnitary_projection targetGroup g
 
+/-- The common-domain restriction also recovers the exact original restricted unitary. -/
+theorem exact_domain_projection_coherence (g : G) :
+    chain.descendedAffineDomainUnitary (cover.projection g) = chain.D.domainUnitary g :=
+  chain.descendedAffineDomainUnitary_projection targetGroup g
+
+omit targetGroup in
+/-- Scalar field covariance is stated directly on affine kinematics, with no lift choice exposed. -/
+theorem exact_descended_field_covariance
+    (p : ProperOrthochronousPoincareTransformation d)
+    (f : ScalarMinkowskiSchwartzTestFunction d) (ψ : chain.D.domain) :
+    chain.descendedAffineDomainUnitary p
+        (chain.fieldData.field f ((chain.descendedAffineDomainUnitary p).symm ψ)) =
+      chain.fieldData.field (pullbackScalarMinkowskiSchwartzTestFunction d p f) ψ :=
+  chain.field_covariant_descendedAffine p f ψ
+
+omit targetGroup in
+/-- The same direct affine statement holds for the exact adjoint field. -/
+theorem exact_descended_adjoint_covariance
+    (p : ProperOrthochronousPoincareTransformation d)
+    (f : ScalarMinkowskiSchwartzTestFunction d) (ψ : chain.D.domain) :
+    chain.descendedAffineDomainUnitary p
+        (chain.fieldData.adjointField f ((chain.descendedAffineDomainUnitary p).symm ψ)) =
+      chain.fieldData.adjointField (pullbackScalarMinkowskiSchwartzTestFunction d p f) ψ :=
+  chain.adjoint_covariant_descendedAffine p f ψ
+
 /-- The descended map is a genuine homomorphism for the named target law. -/
 theorem exact_affine_multiplicativity
     (first second : ProperOrthochronousPoincareTransformation d) :
@@ -58,13 +83,13 @@ theorem exact_affine_strong_continuity (ψ : H) :
       chain.descendedAffineUnitary p ψ) :=
   chain.descendedAffineUnitary_stronglyContinuous targetGroup ψ
 
-omit targetGroup in
-/-- The selected-lift implementation cannot be changed to an unrelated unitary at one target. -/
-theorem unrelated_descended_unitary_blocked
-    (p : ProperOrthochronousPoincareTransformation d) (wrong : H ≃ₗᵢ[ℂ] H)
-    (claimed : wrong = chain.descendedAffineUnitary p) :
-    wrong = chain.U.unitary (selectedAffinePoincareLift (cover := cover) p) := by
-  exact claimed
+/-- No unrelated affine unitary family can satisfy coherence with every original cover lift. -/
+theorem unrelated_descended_unitary_family_blocked
+    (candidate : ProperOrthochronousPoincareTransformation d → (H ≃ₗᵢ[ℂ] H))
+    (candidate_coherent : ∀ g : G,
+      candidate (cover.projection g) = chain.U.unitary g) :
+    candidate = chain.descendedAffineUnitary :=
+  chain.descendedAffineUnitary_unique targetGroup candidate candidate_coherent
 
 end
 

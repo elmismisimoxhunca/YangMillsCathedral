@@ -374,8 +374,9 @@ committed before higher layers depend on it.
   and continuity; bundle the dependent chain to transport the theorem across the 4D core's exact
   propositional cover-to-lift equality.
 - [x] Descend the cyclic scalar representation to a choice-independent unitary homomorphism on the
-  named affine target; derive strong continuity through the genuine cover's quotient-map law and
-  integrate the transported construction into the 4D core.
+  named affine target; derive strong continuity through the genuine cover's quotient-map law,
+  descend the common-domain field and adjoint covariance statements with no lift exposed, and
+  integrate the transported Hilbert representation into the 4D core.
 - [ ] Construct the target law from proper-orthochronous future-cone closure, build the concrete
   inhomogeneous `SL(2,ℂ)` carrier, and identify its matrix-sign kernel with the accepted literal-sign
   kernel and upgrade the derived relative sheet labels to the concrete matrix realization.

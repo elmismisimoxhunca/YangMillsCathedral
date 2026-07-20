@@ -90,6 +90,66 @@ theorem ScalarWightmanAxiomChainData.descendedAffineUnitary_projection
     (selectedAffinePoincareLift (cover := cover) (cover.projection g)) g
     (selectedAffinePoincareLift_projection (cover := cover) (cover.projection g))
 
+/-- Projection coherence uniquely determines the descended affine unitary family. -/
+theorem ScalarWightmanAxiomChainData.descendedAffineUnitary_unique
+    (targetGroup : ProperOrthochronousPoincareTargetGroupData d)
+    (candidate : ProperOrthochronousPoincareTransformation d → (H ≃ₗᵢ[ℂ] H))
+    (candidate_coherent : ∀ g : G, candidate (cover.projection g) = chain.U.unitary g) :
+    candidate = chain.descendedAffineUnitary := by
+  funext p
+  let g := selectedAffinePoincareLift (cover := cover) p
+  calc
+    candidate p = candidate (cover.projection g) := by
+      rw [selectedAffinePoincareLift_projection]
+    _ = chain.U.unitary g := candidate_coherent g
+    _ = chain.descendedAffineUnitary (cover.projection g) :=
+      (chain.descendedAffineUnitary_projection targetGroup g).symm
+    _ = chain.descendedAffineUnitary p := by
+      rw [selectedAffinePoincareLift_projection]
+
+/-- The descended unitary restricted to the exact common invariant domain. -/
+noncomputable def ScalarWightmanAxiomChainData.descendedAffineDomainUnitary
+    (p : ProperOrthochronousPoincareTransformation d) :
+    chain.D.domain ≃ₗᵢ[ℂ] chain.D.domain :=
+  chain.D.domainUnitary (selectedAffinePoincareLift (cover := cover) p)
+
+/-- Restriction to the domain is likewise independent of the selected lift. -/
+theorem ScalarWightmanAxiomChainData.descendedAffineDomainUnitary_projection
+    (targetGroup : ProperOrthochronousPoincareTargetGroupData d)
+    (g : G) :
+    chain.descendedAffineDomainUnitary (cover.projection g) = chain.D.domainUnitary g := by
+  apply LinearIsometryEquiv.ext
+  intro ψ
+  apply Subtype.ext
+  change chain.U.unitary
+      (selectedAffinePoincareLift (cover := cover) (cover.projection g)) ψ =
+    chain.U.unitary g ψ
+  exact congrArg (fun unitary : H ≃ₗᵢ[ℂ] H => unitary ψ)
+    (chain.descendedAffineUnitary_projection targetGroup g)
+
+/-- Scalar-field covariance descends to the exact affine Poincaré target with no lift appearing in
+the statement. -/
+theorem ScalarWightmanAxiomChainData.field_covariant_descendedAffine
+    (p : ProperOrthochronousPoincareTransformation d)
+    (f : ScalarMinkowskiSchwartzTestFunction d) (ψ : chain.D.domain) :
+    chain.descendedAffineDomainUnitary p
+        (chain.fieldData.field f ((chain.descendedAffineDomainUnitary p).symm ψ)) =
+      chain.fieldData.field (pullbackScalarMinkowskiSchwartzTestFunction d p f) ψ := by
+  have covariance := chain.surface.covariance.field_covariant
+    (selectedAffinePoincareLift (cover := cover) p) f ψ
+  simpa [ScalarWightmanAxiomChainData.descendedAffineDomainUnitary] using covariance
+
+/-- The exact adjoint-field covariance descends through the same affine-domain unitary. -/
+theorem ScalarWightmanAxiomChainData.adjoint_covariant_descendedAffine
+    (p : ProperOrthochronousPoincareTransformation d)
+    (f : ScalarMinkowskiSchwartzTestFunction d) (ψ : chain.D.domain) :
+    chain.descendedAffineDomainUnitary p
+        (chain.fieldData.adjointField f ((chain.descendedAffineDomainUnitary p).symm ψ)) =
+      chain.fieldData.adjointField (pullbackScalarMinkowskiSchwartzTestFunction d p f) ψ := by
+  have covariance := chain.surface.covariance.adjoint_covariant
+    (selectedAffinePoincareLift (cover := cover) p) f ψ
+  simpa [ScalarWightmanAxiomChainData.descendedAffineDomainUnitary] using covariance
+
 /-- The descended scalar unitaries form a homomorphism for the exact named affine target law. -/
 noncomputable def ScalarWightmanAxiomChainData.descendedAffineUnitaryHom :
     letI : Group (ProperOrthochronousPoincareTransformation d) := targetGroup.group
