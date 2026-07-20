@@ -242,8 +242,10 @@ those continuous-linear equivalences. The exact quotient-chart formula
 `(b,X) ↦ (b,Ad(g_ϕ(s(b)))X)` now derives global forward/inverse `C∞` regularity and a quotient
 Diffeomorph. In the named dependent smooth-vector-bundle structure the same formula derives a
 base-preserving total-space `C∞` diffeomorphism whose fixed-fiber restrictions are the exact
-continuous-linear equivalences, completing the layered smooth bundle-automorphism packaging. A
-connection-independent direct Maurer–Cartan proof, the structure equation, and action/observable
+continuous-linear equivalences, completing the layered smooth bundle-automorphism packaging. The
+same forward coordinate law and adjoint invariance prove simultaneous gauge invariance of the exact
+descended fiber pairing and its quadratic value. Curvature-contraction and action invariance remain
+downstream. A connection-independent direct Maurer–Cartan proof, the structure equation, and action/observable
 invariance remain pending. Arbitrary-map/
 two-set exterior naturality, a canonical arbitrary-manifold positive-degree operator, an intrinsic
 descended adjoint-bundle Bianchi theorem, and full gauge covariance remain pending.

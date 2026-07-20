@@ -429,8 +429,10 @@ restrictions. In every named quotient chart the action is exactly
 quotient action as a diffeomorphism. On the named dependent smooth-vector-bundle structure, the
 same exact local formula derives a base-preserving total-space `C∞` diffeomorphism whose fixed-fiber
 restrictions are the previously established continuous-linear equivalences. This completes the
-layered smooth vector-bundle-automorphism packaging. Still open are a connection-independent direct Maurer–Cartan proof, the structure equation, scalar
-action invariance, and observable invariance. The checker still lacks a language of independent invariant contractions,
+layered smooth vector-bundle-automorphism packaging. The exact adjoint-fiber pairing and its
+quadratic value are invariant when both arguments undergo this action. Still open are a
+connection-independent direct Maurer–Cartan proof, the structure equation, derived curvature
+contraction/density/action invariance, and observable invariance. The checker still lacks a language of independent invariant contractions,
 mixed curvature polynomials, or covariant derivatives, and no canonical injective quantization map
 is claimed.
 A preliminary four-dimensional perturbative interface now requires a positive running coupling

@@ -4235,8 +4235,13 @@ calculation in the named dependent smooth-vector-bundle structure and derives a 
 `C∞` total-space diffeomorphism. Its carrier is the existing dependent homeomorphism and its
 restriction to each fixed fiber is exactly the established continuous-linear equivalence. This
 completes the layered smooth vector-bundle-automorphism packaging without replacing either exact
-carrier. A connection-independent direct Maurer–Cartan proof and structure equation, action
-invariance, and observable gauge invariance remain open.
+carrier.
+`YangMills.Geometry.AdjointBundleGaugeInvariantPairing` then applies the exact forward coordinate
+law and adjoint invariance to prove that simultaneous covariant action on both arguments leaves the
+descended fiber pairing and its quadratic value unchanged. This is pointwise pairing invariance,
+not yet curvature-contraction, density, action, or observable invariance. A connection-independent
+direct Maurer–Cartan proof and structure equation, those downstream invariance theorems, and
+observable gauge invariance remain open.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.
