@@ -9,7 +9,7 @@ import YangMills.Classical.EuclideanAction
 import YangMills.Euclidean.OSOrderedFourDimensionalEuclideanCurrentStrength
 import YangMills.Geometry.LieGroup
 import YangMills.Minkowski.PhysicalMassGapSupremum
-import YangMills.Minkowski.ScalarWightmanKernelTriviality
+import YangMills.Minkowski.ScalarWightmanPoincareDescent
 import YangMills.Minkowski.ScalarWightmanAxiomSurface
 import YangMills.Minkowski.StressEnergyTranslationWard
 import YangMills.Minkowski.WightmanJointTemperedCorrelators
@@ -45,7 +45,8 @@ acceptance without
 constructing a reconstruction. The exact lift is required to
 carry a genuine two-sheeted topological covering projection whose exact group kernel is identified
 with the literal complex signs `{±1}`. Scalar covariance, exact vacuum invariance, and cyclicity
-then derive trivial action of that kernel on the same physical Hilbert representation. Concrete
+then derive trivial action of that kernel on the same physical Hilbert representation, which
+therefore descends to a strongly continuous homomorphism on the named affine target. Concrete
 inhomogeneous `SL(2,ℂ)` and construction of the
 required named affine-target group law remain open. No lattice datum can fill
 any field of this record. The exact compact-simple gauge certificate indexes a preliminary
@@ -340,22 +341,95 @@ theorem curvatureSquaredOPELeadingDistribution_nonzero
   exact data.opeRegularVariation.leadingDistribution_nonzero _ _ _
     data.curvatureSquaredOPECoherence.coefficient_nonzero
 
+/-- The exact existing representation/vacuum/domain/field/surface chain, bundled only for
+transport and descent theorems. -/
+def scalarWightmanAxiomChain
+    (data : FourDimensionalCurrentStrengthContinuumCoreAcceptanceData inner connection
+      exterior curvatureCertificate fieldData) :
+    Minkowski.ScalarWightmanAxiomChainData EuclideanDimension.four lift H :=
+  { U := U
+    vacuumData := vacuumData
+    D := D
+    fieldData := fieldData
+    surface := data.wightmanSurface }
+
+/-- The exact scalar chain transported to the definitionally exact double-cover lift. -/
+def scalarWightmanDoubleCoverChain
+    (data : FourDimensionalCurrentStrengthContinuumCoreAcceptanceData inner connection
+      exterior curvatureCertificate fieldData) :
+    Minkowski.ScalarWightmanAxiomChainData EuclideanDimension.four
+      data.poincareDoubleCover.toProperOrthochronousPoincareLiftData H :=
+  data.scalarWightmanAxiomChain.transport data.poincareDoubleCover_toLift_eq.symm
+
+/-- Strongly continuous scalar representation descended to the exact named affine Poincaré target. -/
+noncomputable def descendedAffinePoincareUnitaryHom
+    (data : FourDimensionalCurrentStrengthContinuumCoreAcceptanceData inner connection
+      exterior curvatureCertificate fieldData) :
+    letI : Group (Minkowski.ProperOrthochronousPoincareTransformation
+      EuclideanDimension.four) := data.poincareTargetGroup.group
+    Minkowski.ProperOrthochronousPoincareTransformation EuclideanDimension.four →*
+      (H ≃ₗᵢ[ℂ] H) :=
+  data.scalarWightmanDoubleCoverChain.descendedAffineUnitaryHom
+    (targetGroup := data.poincareTargetGroup)
+
+/-- Every exact cover lift recovers the original, untransported physical unitary. -/
+theorem descendedAffinePoincareUnitary_projection
+    (data : FourDimensionalCurrentStrengthContinuumCoreAcceptanceData inner connection
+      exterior curvatureCertificate fieldData) (g : PoincareLiftGroup) :
+    data.scalarWightmanDoubleCoverChain.descendedAffineUnitary
+        (data.poincareDoubleCover.projection g) = U.unitary g := by
+  calc
+    data.scalarWightmanDoubleCoverChain.descendedAffineUnitary
+        (data.poincareDoubleCover.projection g) =
+      data.scalarWightmanDoubleCoverChain.U.unitary g :=
+        data.scalarWightmanDoubleCoverChain.descendedAffineUnitary_projection
+          data.poincareTargetGroup g
+    _ = data.scalarWightmanAxiomChain.U.unitary g :=
+      data.scalarWightmanAxiomChain.transport_unitary
+        data.poincareDoubleCover_toLift_eq.symm g
+    _ = U.unitary g := rfl
+
+/-- On pure translations the descended affine action is the exact original physical translation
+unitary tied to the joint PVM, stress tensor, and gap. -/
+theorem descendedAffinePoincareUnitary_pureTranslation
+    (data : FourDimensionalCurrentStrengthContinuumCoreAcceptanceData inner connection
+      exterior curvatureCertificate fieldData)
+    (a : EuclideanDimension.Spacetime EuclideanDimension.four) :
+    data.scalarWightmanDoubleCoverChain.descendedAffineUnitary
+        (Minkowski.ProperOrthochronousPoincareTransformation.pureTranslation
+          EuclideanDimension.four a) = U.translationUnitary a := by
+  let g := lift.translation (Multiplicative.ofAdd a)
+  have projection_functions := congrArg
+    (fun selected : Minkowski.ProperOrthochronousPoincareLiftData
+      EuclideanDimension.four PoincareLiftGroup => selected.projection)
+    data.poincareDoubleCover_toLift_eq
+  have projection_eq : data.poincareDoubleCover.projection g =
+      Minkowski.ProperOrthochronousPoincareTransformation.pureTranslation
+        EuclideanDimension.four a := by
+    rw [show data.poincareDoubleCover.projection = lift.projection from projection_functions]
+    exact lift.projection_translation (Multiplicative.ofAdd a)
+  rw [← projection_eq, data.descendedAffinePoincareUnitary_projection]
+  rfl
+
+/-- The descended affine representation is strongly continuous on every exact Hilbert vector. -/
+theorem descendedAffinePoincareUnitary_stronglyContinuous
+    (data : FourDimensionalCurrentStrengthContinuumCoreAcceptanceData inner connection
+      exterior curvatureCertificate fieldData) (ψ : H) :
+    Continuous (fun p : Minkowski.ProperOrthochronousPoincareTransformation
+      EuclideanDimension.four =>
+      data.scalarWightmanDoubleCoverChain.descendedAffineUnitary p ψ) :=
+  data.scalarWightmanDoubleCoverChain.descendedAffineUnitary_stronglyContinuous
+    data.poincareTargetGroup ψ
+
 /-- Scalar covariance, exact vacuum invariance, and cyclicity force the derived negative cover sign
-to act trivially on the exact four-dimensional physical Hilbert space. The dependent scalar chain is
-transported across the core's exact cover-to-lift equality. -/
+to act trivially on the exact four-dimensional physical Hilbert space. -/
 theorem negativePoincareSign_unitary_eq_refl
     (data : FourDimensionalCurrentStrengthContinuumCoreAcceptanceData inner connection
       exterior curvatureCertificate fieldData) :
     U.unitary (Minkowski.negativeProjectionKernelElement EuclideanDimension.four
       data.poincareTargetGroup data.poincareDoubleCover : PoincareLiftGroup) =
-      LinearIsometryEquiv.refl ℂ H := by
-  let chain : Minkowski.ScalarWightmanAxiomChainData EuclideanDimension.four lift H :=
-    { U := U
-      vacuumData := vacuumData
-      D := D
-      fieldData := fieldData
-      surface := data.wightmanSurface }
-  exact chain.negativeKernel_unitary_eq_refl_of_lift_eq
+      LinearIsometryEquiv.refl ℂ H :=
+  data.scalarWightmanAxiomChain.negativeKernel_unitary_eq_refl_of_lift_eq
     data.poincareDoubleCover_toLift_eq
 
 /-- The selected threshold is strictly positive by the exact same-PVM gap predicate. -/

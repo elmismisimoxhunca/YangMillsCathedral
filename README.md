@@ -271,6 +271,10 @@ prove that every
 kernel element—and in particular the negative sign—acts as the identity on the full Hilbert space.
 A bundled dependent-chain transport now carries this theorem across the 4D core's exact
 cover-to-lift equality, so it applies to the core's existing representation rather than a copied one.
+Lift-independence then constructs a choice-independent unitary homomorphism on the exact named affine
+Poincaré target; its strong continuity is descended through the genuine cover's quotient-map law.
+Explicit coherence recovers every original cover unitary and the exact translation unitaries already
+tied to the joint PVM, stress tensor, and gap.
 Constructing the target law from future-cone closure and concrete inhomogeneous `SL(2,ℂ)` remains
 pending. A normalized vacuum is
 now tied to that same representation, with the complete invariant subspace required to be its single

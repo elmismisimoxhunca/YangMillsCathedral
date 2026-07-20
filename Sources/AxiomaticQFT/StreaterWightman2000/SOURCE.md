@@ -129,7 +129,11 @@ identity-projecting lift acts trivially: covariance fixes field/adjoint words, v
 fixes their base vector, and cyclicity plus continuity reaches the full Hilbert space.
 `ScalarWightmanAxiomChainData` transports the complete dependent chain across a propositionally equal
 lift index, allowing the four-dimensional core's exact cover-to-lift equality to reuse the theorem.
-This is a project derivation from axioms `0`–`III`, not a separately printed theorem. The cover interfaces
+This is a project derivation from axioms `0`–`III`, not a separately printed theorem. Kernel
+triviality further proves lift-independence of the scalar unitary. Choosing lifts therefore yields a
+choice-independent homomorphism on the exact named affine target, and its strong continuity follows
+from the exact cover projection's quotient-map property. This descends only scalar realizations; it
+is not the book's spinorial representation construction. The cover interfaces
 remain uninhabited and do not construct the book's inhomogeneous `SL(2,ℂ)` or derive
 proper-orthochronous closure.
 

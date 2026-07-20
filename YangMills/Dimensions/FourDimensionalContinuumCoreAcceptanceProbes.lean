@@ -165,6 +165,36 @@ theorem exact_scalar_negative_sign_unitary :
       LinearIsometryEquiv.refl ℂ H :=
   data.negativePoincareSign_unitary_eq_refl
 
+/-- The exact scalar representation descends to a homomorphism on the named affine Poincaré target. -/
+theorem exact_descended_affine_poincare_representation :
+    letI : Group (Minkowski.ProperOrthochronousPoincareTransformation
+      EuclideanDimension.four) := data.poincareTargetGroup.group
+    Nonempty (Minkowski.ProperOrthochronousPoincareTransformation
+      EuclideanDimension.four →* (H ≃ₗᵢ[ℂ] H)) :=
+  ⟨data.descendedAffinePoincareUnitaryHom⟩
+
+/-- Every exact lift recovers the original physical cover unitary, blocking a cast-chain surrogate. -/
+theorem exact_descended_affine_cover_coherence (g : PoincareLiftGroup) :
+    data.scalarWightmanDoubleCoverChain.descendedAffineUnitary
+        (data.poincareDoubleCover.projection g) = U.unitary g :=
+  data.descendedAffinePoincareUnitary_projection g
+
+/-- Pure affine translations are exactly the original translation unitaries tied to the PVM,
+stress tensor, and gap. -/
+theorem exact_descended_affine_translation_coherence
+    (a : EuclideanDimension.Spacetime EuclideanDimension.four) :
+    data.scalarWightmanDoubleCoverChain.descendedAffineUnitary
+        (Minkowski.ProperOrthochronousPoincareTransformation.pureTranslation
+          EuclideanDimension.four a) = U.translationUnitary a :=
+  data.descendedAffinePoincareUnitary_pureTranslation a
+
+/-- The descended physical affine action remains strongly continuous on every Hilbert vector. -/
+theorem exact_descended_affine_poincare_strong_continuity (ψ : H) :
+    Continuous (fun p : Minkowski.ProperOrthochronousPoincareTransformation
+      EuclideanDimension.four =>
+      data.scalarWightmanDoubleCoverChain.descendedAffineUnitary p ψ) :=
+  data.descendedAffinePoincareUnitary_stronglyContinuous ψ
+
 /-- The preliminary ultraviolet normal form uses that exact gauge-group certificate and dimension. -/
 theorem exact_asymptotic_freedom :
     Nonempty (Renormalization.PureYangMillsAsymptoticFreedomData

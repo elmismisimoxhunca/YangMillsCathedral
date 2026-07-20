@@ -3934,6 +3934,24 @@ Implemented and verified:
 - This is a theorem from an already supplied scalar Wightman surface, not a representation or theory
   construction, and it does not apply to spinorial fields.
 
+## 2026-07-19 — two-hundred-thirteenth stone: scalar affine-Poincaré descent
+
+Implemented and verified:
+
+- Kernel triviality proves that any two lifts of the same affine transformation have the exact same
+  scalar Hilbert unitary.
+- `selectedAffinePoincareLift` chooses one lift only internally; projection coherence proves the
+  resulting `descendedAffineUnitary` agrees with every original lift and is choice-independent.
+- `descendedAffineUnitaryHom` is a genuine homomorphism for the accepted named affine-target law.
+- Strong continuity descends from the cover representation through the exact cover projection's
+  quotient-map universal property.
+- The dependent 4D scalar chain is transported to the exact double-cover index and yields an affine
+  homomorphism and pointwise strong-continuity theorem on the core's existing Hilbert space.
+  Cast-eliminating coherence theorems recover every original `U.unitary g` over its projection and,
+  on pure translations, the exact `U.translationUnitary a` tied to the joint PVM, stress tensor, and
+  mass-gap predicate.
+- No cover, representation, field, scalar theory, spinorial realization, or mass gap is constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic

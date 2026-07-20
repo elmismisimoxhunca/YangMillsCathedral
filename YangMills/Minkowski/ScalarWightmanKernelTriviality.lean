@@ -130,6 +130,32 @@ structure ScalarWightmanAxiomChainData
   fieldData : ScalarWightmanFieldOnCommonDomainData D
   surface : ScalarWightmanAxiomSurfaceData fieldData
 
+/-- Transport a complete dependent scalar chain across an equality of lift records. -/
+def ScalarWightmanAxiomChainData.transport
+    {d : EuclideanDimension}
+    {G : Type*} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+    {firstLift secondLift : ProperOrthochronousPoincareLiftData d G}
+    {H : Type*} [NormedAddCommGroup H] [InnerProductSpace ℂ H] [CompleteSpace H]
+    [TopologicalSpace.SeparableSpace H]
+    (chain : ScalarWightmanAxiomChainData d firstLift H)
+    (lift_eq : firstLift = secondLift) :
+    ScalarWightmanAxiomChainData d secondLift H := by
+  subst secondLift
+  exact chain
+
+/-- Transport changes only the lift index; its exact Hilbert unitary remains the original one. -/
+@[simp] theorem ScalarWightmanAxiomChainData.transport_unitary
+    {d : EuclideanDimension}
+    {G : Type*} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+    {firstLift secondLift : ProperOrthochronousPoincareLiftData d G}
+    {H : Type*} [NormedAddCommGroup H] [InnerProductSpace ℂ H] [CompleteSpace H]
+    [TopologicalSpace.SeparableSpace H]
+    (chain : ScalarWightmanAxiomChainData d firstLift H)
+    (lift_eq : firstLift = secondLift) (g : G) :
+    (chain.transport lift_eq).U.unitary g = chain.U.unitary g := by
+  subst secondLift
+  rfl
+
 /-- In particular, the derived negative sign of an exact two-sheet cover acts trivially in every
 cyclic scalar Wightman realization over that cover. -/
 theorem ScalarWightmanAxiomSurfaceData.negativeKernel_unitary_eq_refl
