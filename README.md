@@ -436,8 +436,10 @@ curvature covariance now derives pointwise invariance of both chosen and basis-i
 canonical curvature densities for the full pulled connection/exterior/certificate chain. The exact
 analytic datum transports to that chain with unchanged designated measure and coupling, deriving
 invariance of the integrated relative-to-measure Euclidean action. This is vertical gauge
-invariance, not base-diffeomorphism or metric-volume invariance. Interpreted-observable invariance
-remains open. The checker still lacks a language of independent invariant contractions,
+invariance, not base-diffeomorphism or metric-volume invariance. The finite interpreted fragment
+`1`, `F²`, `(F²)²` transports to the pulled chain with unchanged exact classical carriers, quantum
+family, labels, operator witnesses, and quartic anti-collapse data. This is same-family transport;
+the checker still has no independently defined quantum gauge action on its observable family. The checker still lacks a language of independent invariant contractions,
 mixed curvature polynomials, or covariant derivatives, and no canonical injective quantization map
 is claimed.
 A preliminary four-dimensional perturbative interface now requires a positive running coupling

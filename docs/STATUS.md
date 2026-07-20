@@ -4247,10 +4247,14 @@ derived structure certificate.
 `YangMills.Classical.EuclideanActionGaugeInvariance` transports the exact analytic datum across
 that equality, retaining the designated Borel measure, positive coupling, and outer coefficient
 definitionally. It derives invariance of the integrated relative-to-measure action for vertical
-gauge transformations over the identity base map. No base-diffeomorphism, measure-pushforward,
-Jacobian, metric-volume, or interpreted-observable invariance is inferred. Interpreted-observable
-invariance remains open, as do a connection-independent direct Maurer–Cartan proof and structure
-equation.
+gauge transformations over the identity base map. No base-diffeomorphism, measure-pushforward, Jacobian, or metric-volume invariance is inferred.
+`YangMills.Observables.CurvaturePowerGaugeTransport` transports the existing basic and finite
+`1`, `F²`, `(F²)²` interpretations to the exact pulled chain. Their classical carriers are equal,
+and the same quantum family, every label, operator nontriviality witness, and quartic anti-collapse
+witness are retained. This is exact same-family transport, not a construction of a quantum gauge
+action on the observable operators. Such an independent quantum action interface and broader
+observable grammar remain open, as do a connection-independent direct Maurer–Cartan proof and
+structure equation.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

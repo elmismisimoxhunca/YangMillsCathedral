@@ -182,7 +182,10 @@ committed before higher layers depend on it.
   pulled connection/exterior/certificate chain.
 - [x] Transport exact action integrability with unchanged measure/coupling and prove vertical gauge
   invariance of the integrated relative-to-measure Euclidean action.
-- [ ] Prove interpreted-observable gauge invariance.
+- [x] Transport the finite interpreted fragment `1`, `F²`, `(F²)²` to the exact pulled chain with
+  unchanged classical carrier, same quantum family/labels, and retained anti-collapse witnesses.
+- [ ] Define an independent quantum gauge action on observable operators and prove its covariance or
+  invariance; extend the result to the missing observable grammar.
 - [ ] Prove connection-independent direct Maurer–Cartan smoothness and the structure equation.
 - [ ] Derive structural curvature laws automatically and prove intrinsic descended Bianchi.
 

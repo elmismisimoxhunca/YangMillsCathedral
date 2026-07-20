@@ -249,6 +249,9 @@ this derives pointwise invariance of the chosen and basis-independent canonical 
 for the exact pulled chain. Exact integrability transport preserving the designated measure and
 coupling then derives invariance of the integrated relative-to-measure action for vertical gauge
 transformations over the identity base map. A connection-independent direct Maurer–Cartan proof,
-the structure equation, and interpreted/broader-observable invariance remain pending. Arbitrary-map/
+the structure equation, an independently defined quantum gauge action on observable operators, and
+broader-observable invariance remain pending. The finite `1`, `F²`, `(F²)²` interpretation records
+do transport to the exact pulled chain with unchanged classical carriers, quantum family/labels,
+and anti-collapse witnesses; this is deliberately only same-family transport. Arbitrary-map/
 two-set exterior naturality, a canonical arbitrary-manifold positive-degree operator, an intrinsic
 descended adjoint-bundle Bianchi theorem, and full gauge covariance remain pending.
