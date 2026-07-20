@@ -174,9 +174,10 @@ committed before higher layers depend on it.
 - [x] Prove the arbitrary quotient-chart formula `(b,X) ↦ (b,Ad(g_ϕ(s(b)))X)`, globalize forward
   and inverse `C∞` regularity in the named quotient atlas, and package the quotient action as a
   diffeomorphism with its exact homeomorphism carrier.
-- [ ] Package the quotient diffeomorphism, dependent-total-space homeomorphism, and fiberwise
-  continuous linear family into one dependent smooth vector-bundle automorphism/atlas bridge;
-  prove connection-independent direct Maurer–Cartan smoothness and the structure equation;
+- [x] Package the dependent action as a base-preserving total-space `C∞` diffeomorphism in the exact
+  named smooth-vector-bundle structure, with fixed-fiber restrictions equal to the established
+  continuous-linear equivalences.
+- [ ] Prove connection-independent direct Maurer–Cartan smoothness and the structure equation;
   then derive scalar-density, action, and observable gauge invariance.
 - [ ] Derive structural curvature laws automatically and prove intrinsic descended Bianchi.
 

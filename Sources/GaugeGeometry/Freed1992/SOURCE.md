@@ -240,7 +240,9 @@ with exact inverse-gauge carrier. Quotient continuity and the exact quotient/dep
 then produce a base-preserving dependent-total-space homeomorphism whose fiber restrictions are
 those continuous-linear equivalences. The exact quotient-chart formula
 `(b,X) ↦ (b,Ad(g_ϕ(s(b)))X)` now derives global forward/inverse `C∞` regularity and a quotient
-Diffeomorph. A single dependent smooth-vector-bundle automorphism/atlas bridge, a
+Diffeomorph. In the named dependent smooth-vector-bundle structure the same formula derives a
+base-preserving total-space `C∞` diffeomorphism whose fixed-fiber restrictions are the exact
+continuous-linear equivalences, completing the layered smooth bundle-automorphism packaging. A
 connection-independent direct Maurer–Cartan proof, the structure equation, and action/observable
 invariance remain pending. Arbitrary-map/
 two-set exterior naturality, a canonical arbitrary-manifold positive-degree operator, an intrinsic

@@ -426,8 +426,10 @@ producing a quotient homeomorphism; transport through the exact quotient/depende
 homeomorphism yields a base-preserving dependent-total-space homeomorphism with those exact fiber
 restrictions. In every named quotient chart the action is exactly
 `(b,X) ↦ (b,Ad(g_ϕ(s(b)))X)`; this globalizes forward and inverse `C∞` regularity and packages the
-quotient action as a diffeomorphism. A single dependent smooth-vector-bundle-automorphism record and
-atlas bridge remain open, as do a connection-independent direct Maurer–Cartan proof, the structure equation, scalar
+quotient action as a diffeomorphism. On the named dependent smooth-vector-bundle structure, the
+same exact local formula derives a base-preserving total-space `C∞` diffeomorphism whose fixed-fiber
+restrictions are the previously established continuous-linear equivalences. This completes the
+layered smooth vector-bundle-automorphism packaging. Still open are a connection-independent direct Maurer–Cartan proof, the structure equation, scalar
 action invariance, and observable invariance. The checker still lacks a language of independent invariant contractions,
 mixed curvature polynomials, or covariant derivatives, and no canonical injective quantization map
 is claimed.
