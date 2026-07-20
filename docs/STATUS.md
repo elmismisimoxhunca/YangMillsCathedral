@@ -4185,8 +4185,14 @@ constructs the pulled exterior certificate under the explicit `CompleteSpace EP`
 by Mathlib's public bracket theorem. Finite-dimensional total-space models derive that premise.
 `YangMills.Geometry.PrincipalConnectionGaugeExteriorDerivative` therefore constructs exact
 transformed exterior data and proves canonical principal curvature pullback naturality, with hostile
-mismatch probes. Local affine and adjoint formulas, descended active covariance, action invariance,
-and observable gauge invariance remain open.
+mismatch probes. `YangMills.Geometry.PrincipalCurvatureLocalGaugeAdjoint` canonically selects the
+unique associated group function from torsor data, proves its pointwise action, uniqueness, and
+right-action conjugation laws, and differentiates gauge projection preservation. The exact original
+curvature structure certificate then removes the vertical difference between gauge-transported and
+fixed-right-translated tangents, deriving the evaluated local law with `Ad(g_ϕ(p)⁻¹)`. Hostile probes
+reject the opposite adjoint factor whenever the two evaluated factors are explicitly distinguishable. Associated-function smoothness, the local affine connection
+formula, descended active covariance, action invariance, and observable gauge invariance remain
+open.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

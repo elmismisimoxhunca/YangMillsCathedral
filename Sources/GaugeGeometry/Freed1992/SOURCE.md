@@ -220,7 +220,10 @@ derivative carrier equals the pullback of the original curvature. Reusable diffe
 Cartan certificate under the explicit complete-source-model premise required by Mathlib's public
 Lie-bracket naturality theorem; finite-dimensional principal total-space models derive that premise.
 The canonical transformed principal curvature is therefore proved equal to the total-space pullback
-of the original exact curvature. This does not prove the local affine formula, local adjoint
-curvature law, descended-form covariance, or action/observable invariance. Arbitrary-map/
+of the original exact curvature. Torsor uniqueness now defines the associated function `g_ϕ` by
+`ϕ(p)=p·g_ϕ(p)` and derives its right-action conjugation law. Differentiated projection preservation,
+horizontality, and right equivariance then prove the evaluated local curvature identity with the
+exact factor `Ad(g_ϕ(p)⁻¹)`. Smoothness of the selected associated function, the local affine
+connection formula, descended-form covariance, and action/observable invariance remain pending. Arbitrary-map/
 two-set exterior naturality, a canonical arbitrary-manifold positive-degree operator, an intrinsic
 descended adjoint-bundle Bianchi theorem, and full gauge covariance remain pending.

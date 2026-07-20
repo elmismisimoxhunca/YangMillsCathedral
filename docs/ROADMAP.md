@@ -146,9 +146,12 @@ committed before higher layers depend on it.
   complete-source-model premise required by Mathlib; derive the premise for finite-dimensional
   principal total-space models, transform the exact indexed exterior certificate, and prove
   canonical principal curvature pullback naturality.
-- [ ] Build the explicit local gauge-function/local-section bridge and derive the affine connection
-  and adjoint curvature formulas, then separately derive descended, scalar-density, action, and
-  observable gauge covariance/invariance.
+- [x] Construct the unique associated gauge function `g_ϕ` from the principal torsor, derive its
+  right-action conjugation law and differentiated projection preservation, and combine canonical
+  curvature pullback with horizontality/right equivariance to prove the evaluated local
+  `Ad(g_ϕ⁻¹)` curvature formula.
+- [ ] Prove associated-function smoothness and the affine connection formula, then separately derive
+  descended, scalar-density, action, and observable gauge covariance/invariance.
 - [ ] Derive structural curvature laws automatically and prove intrinsic descended Bianchi.
 
 ## Phase 3 — classical Yang–Mills semantics
