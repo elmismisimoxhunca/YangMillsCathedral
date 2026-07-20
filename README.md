@@ -435,8 +435,11 @@ now proves connection-independent smoothness of the exact associated Maurer–Ca
 independently of the existing affine-difference proof using a supplied connection. On the universal group form, the exact Cartan
 expression on left-invariant fields fixes the sign and `1/2` self-wedge normalization; the
 associated form is identified as its pullback and the smooth derivative candidate is packaged.
-The full Maurer–Cartan equation remains open because that candidate is not yet certified as the
-arbitrary-manifold exterior derivative. Exact inverse-action
+Reusable mathematics now proves field-extension independence in normed spaces, exact centered-chart
+coordinates, and intrinsically once a Cartan certificate exists. The full Maurer–Cartan equation
+remains open because arbitrary-field partial-chart transport and arbitrary-map certificate pullback
+are still missing, so the candidate is not yet certified as the arbitrary-manifold exterior
+derivative. Exact inverse-action
 curvature covariance now derives pointwise invariance of both chosen and basis-independent
 canonical curvature densities for the full pulled connection/exterior/certificate chain. The exact
 analytic datum transports to that chain with unchanged designated measure and coupling, deriving

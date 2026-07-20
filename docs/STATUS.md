@@ -4262,8 +4262,13 @@ smooth one-form.
 calculates its Cartan expression on canonical left-invariant fields as the negative Lie bracket,
 and verifies the exact self-wedge factor two. The associated form is proved equal to the exact
 pullback of that universal carrier, while `-1/2[α∧α]` is packaged as a smooth same-carrier derivative
-candidate. It is not yet certified as `dα`: all-field Cartan tensoriality and arbitrary-smooth-map
-certificate pullback remain open, so no full Maurer–Cartan structure equation is claimed.
+candidate.
+`YangMills.Mathematics.OneFormCartanFieldExtension` proves that normed-space Cartan expressions
+only depend on field values, packages exact corner-aware centered-chart coordinate fields and their
+regularity, proves coordinate-level extension independence, and derives intrinsic independence from
+any already supplied Cartan certificate. The candidate is not yet certified as `dα`: generalized
+arbitrary-field partial-chart Cartan transport and arbitrary-smooth-map certificate pullback remain
+open, so no full Maurer–Cartan structure equation is claimed.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.
