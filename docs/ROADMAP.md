@@ -217,8 +217,10 @@ committed before higher layers depend on it.
   `dF + [A∧F] = 0` theorem.
 - [x] Identify every exact local Bianchi expression with the corresponding coordinate of the
   existing intrinsic smooth zero adjoint-valued three-form, without naming it as an operator.
-- [ ] Prove nonzero chart-transition coherence or degree-generic tensorial principal-form descent,
-  then derive structural curvature laws, positive-degree intrinsic covariant exterior
+- [x] Generalize horizontal fixed-value principal-form lift independence to every degree using a
+  finite multilinear telescope, preserving definitional degree-two compatibility.
+- [ ] Generalize right-adjoint representative independence and smooth tensorial principal-form
+  descent, then derive structural curvature laws, positive-degree intrinsic covariant exterior
   differentiation, and a genuine intrinsic `D_A F` theorem.
 
 ## Phase 3 — classical Yang–Mills semantics

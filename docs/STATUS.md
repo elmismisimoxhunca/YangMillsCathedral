@@ -4315,8 +4315,14 @@ vanishes at every overlap point.
 `YangMills.Geometry.PrincipalConnectionDescendedBianchiZero` identifies every designated-atlas-chart local expression
 with the corresponding base-chart coordinate of the existing intrinsic smooth zero
 adjoint-bundle-valued three-form. This is a result-specific global-carrier bridge, not construction
-of a general positive-degree operator. Nonzero chart-transition coherence, positive-degree intrinsic
-covariant exterior differentiation, and a genuine intrinsic `D_A F` theorem remain open.
+of a general positive-degree operator.
+`YangMills.Mathematics.ContinuousAlternatingMapProjectionIndependence` uses Mathlib's finite
+multilinear telescope to prove arbitrary-degree kernel/projection independence.
+`YangMills.Geometry.PrincipalFormLiftIndependence` applies it to horizontal fixed-value principal
+forms of every degree and canonical local tangent lifts; degree three is explicitly probed and the
+existing degree-two horizontality predicate is definitionally compatible. Generic representative
+independence and smooth quotient descent, nonzero chart-transition coherence, positive-degree
+intrinsic covariant exterior differentiation, and a genuine intrinsic `D_A F` theorem remain open.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

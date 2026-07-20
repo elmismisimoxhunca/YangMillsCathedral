@@ -458,7 +458,10 @@ within-coordinate Bianchi hypotheses, proving this local `dF + [A∧F]` expressi
 such exact local expression is now identified with the corresponding coordinate of the existing
 intrinsic smooth zero adjoint-valued three-form. This result-specific global-carrier bridge does not
 construct positive-degree intrinsic covariant exterior differentiation or nonzero chart-transition
-laws; those and a genuine intrinsic `D_A F` theorem remain open. Exact inverse-action
+laws. A reusable finite multilinear telescope now proves lift independence for horizontal principal
+forms of every degree, with degree two definitionally compatible with the existing curvature chain.
+Generic representative independence, smooth descent, a positive-degree operator, and a genuine
+intrinsic `D_A F` theorem remain open. Exact inverse-action
 curvature covariance now derives pointwise invariance of both chosen and basis-independent
 canonical curvature densities for the full pulled connection/exterior/certificate chain. The exact
 analytic datum transports to that chain with unchanged designated measure and coupling, deriving
