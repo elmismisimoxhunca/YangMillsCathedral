@@ -412,9 +412,12 @@ action tangent splits into fixed right translation plus its fundamental vertical
 equivariance and vertical normalization derive the evaluated affine formula
 `ϕ*Θ=Ad(g_ϕ⁻¹)Θ+g_ϕ⁻¹dg_ϕ`. For every supplied exact smooth connection, joint adjoint regularity
 and this affine identity express the unchanged Maurer–Cartan carrier as a difference of derived
-smooth forms, yielding an exact smooth-form bundle. A connection-independent direct regularity
-proof and the Maurer–Cartan equation, descended active covariance, action invariance, and observable
-invariance do not follow yet. The checker still lacks a language of independent invariant contractions,
+smooth forms, yielding an exact smooth-form bundle. The exact original curvature structure
+certificate now transports to the canonical gauge-pulled curvature. Its pointwise adjoint-bundle
+descent is identified both by the selected-section `Ad(g_ϕ⁻¹)` coefficient and an equivalent
+inverse-shifted principal representative; it is not asserted equal to the original adjoint-valued
+curvature. A connection-independent direct Maurer–Cartan regularity proof, the structure equation,
+smooth descended covariance, action invariance, and observable invariance do not follow yet. The checker still lacks a language of independent invariant contractions,
 mixed curvature polynomials, or covariant derivatives, and no canonical injective quantization map
 is claimed.
 A preliminary four-dimensional perturbative interface now requires a positive running coupling

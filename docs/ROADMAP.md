@@ -159,8 +159,12 @@ committed before higher layers depend on it.
 - [x] For every supplied exact smooth principal connection, derive smoothness of its inverse-adjoint
   transform and use the affine difference identity to bundle the unchanged associated
   Maurer–Cartan carrier as a smooth form without accepting a regularity witness.
+- [x] Transport the exact original curvature structure certificate to the canonical gauge-pulled
+  connection, deriving transformed horizontality/right-adjoint equivariance and a finite-dimensional
+  wrapper; identify the pointwise descended curvature by exact adjoint and inverse-shifted quotient
+  representatives without claiming equality to the original adjoint-valued curvature.
 - [ ] Prove connection-independent direct Maurer–Cartan smoothness and the structure equation, then
-  separately derive descended, scalar-density, action, and observable gauge covariance/invariance.
+  derive smooth descended, scalar-density, action, and observable gauge covariance/invariance.
 - [ ] Derive structural curvature laws automatically and prove intrinsic descended Bianchi.
 
 ## Phase 3 — classical Yang–Mills semantics

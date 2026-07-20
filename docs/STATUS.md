@@ -4206,8 +4206,15 @@ sign reversal, and the non-inverted adjoint factor when distinguishable.
 inverse-adjoint transform of every supplied smooth connection. The affine identity then identifies
 the unchanged associated Maurer–Cartan carrier with the difference of that smooth form and the
 smooth gauge-pulled connection, deriving an exact smooth-form bundle without an extra regularity
-field. A connection-independent direct proof and the Maurer–Cartan structure equation, descended
-active covariance, action invariance, and observable gauge invariance remain open.
+field. `YangMills.Geometry.PrincipalCurvatureGaugeStructure` derives the canonical transformed
+curvature structure certificate from the exact original certificate: gauge projection preservation
+transports horizontality, while differentiated commutation with right translation transports
+right-adjoint equivariance. Pointwise descent is identified by the selected-section
+`Ad(g_ϕ⁻¹)` coefficient and, equivalently, by inverse-shifting the principal representative while
+retaining the original coefficient. This is quotient covariance, not equality with the original
+adjoint-valued curvature. A connection-independent direct Maurer–Cartan proof and structure
+equation, smooth descended covariance, action invariance, and observable gauge invariance remain
+open.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.
