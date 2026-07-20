@@ -424,7 +424,10 @@ every fixed dependent fiber action is therefore packaged as a continuous real-li
 whose inverse is the inverse gauge action. Continuity descends through the defining quotient map,
 producing a quotient homeomorphism; transport through the exact quotient/dependent carrier
 homeomorphism yields a base-preserving dependent-total-space homeomorphism with those exact fiber
-restrictions. Smooth vector-bundle-automorphism packaging remains open, as do a connection-independent direct Maurer–Cartan proof, the structure equation, scalar
+restrictions. In every named quotient chart the action is exactly
+`(b,X) ↦ (b,Ad(g_ϕ(s(b)))X)`; this globalizes forward and inverse `C∞` regularity and packages the
+quotient action as a diffeomorphism. A single dependent smooth-vector-bundle-automorphism record and
+atlas bridge remain open, as do a connection-independent direct Maurer–Cartan proof, the structure equation, scalar
 action invariance, and observable invariance. The checker still lacks a language of independent invariant contractions,
 mixed curvature polynomials, or covariant derivatives, and no canonical injective quantization map
 is claimed.

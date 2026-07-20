@@ -4224,7 +4224,12 @@ gauge action, and identity/composition laws hold at the bundled level.
 map and packages the covariant quotient action with inverse gauge carrier as a homeomorphism.
 Transport through the exact quotient/dependent carrier homeomorphism yields a base-preserving
 homeomorphism for the named dependent-total-space topology; each fixed-fiber restriction is exactly
-the established continuous-linear equivalence. Smooth bundle-automorphism packaging, a
+the established continuous-linear equivalence.
+`YangMills.Geometry.AdjointBundleGaugeDiffeomorph` derives the arbitrary model-trivialization
+formula `(b,X) ↦ (b,Ad(g_ϕ(s(b)))X)`, proves it smooth on the exact chart target, and uses exact
+compatibility of those trivializations with the named quotient atlas to globalize forward and
+inverse `C∞` regularity. The quotient homeomorphism is therefore packaged as a diffeomorphism with
+unchanged carrier. A unified dependent smooth-vector-bundle automorphism/atlas bridge, a
 connection-independent direct Maurer–Cartan proof and structure equation, action invariance, and
 observable gauge invariance remain open.
 

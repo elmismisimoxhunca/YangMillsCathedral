@@ -171,8 +171,12 @@ committed before higher layers depend on it.
 - [x] Descend continuity through the defining adjoint quotient, package the quotient action as a
   homeomorphism, and transport it to a base-preserving dependent-total-space homeomorphism whose
   fixed-fiber restrictions are the exact continuous-linear gauge actions.
-- [ ] Prove smooth vector-bundle-automorphism packaging of the induced action; prove
-  connection-independent direct Maurer–Cartan smoothness and the structure equation;
+- [x] Prove the arbitrary quotient-chart formula `(b,X) ↦ (b,Ad(g_ϕ(s(b)))X)`, globalize forward
+  and inverse `C∞` regularity in the named quotient atlas, and package the quotient action as a
+  diffeomorphism with its exact homeomorphism carrier.
+- [ ] Package the quotient diffeomorphism, dependent-total-space homeomorphism, and fiberwise
+  continuous linear family into one dependent smooth vector-bundle automorphism/atlas bridge;
+  prove connection-independent direct Maurer–Cartan smoothness and the structure equation;
   then derive scalar-density, action, and observable gauge invariance.
 - [ ] Derive structural curvature laws automatically and prove intrinsic descended Bianchi.
 

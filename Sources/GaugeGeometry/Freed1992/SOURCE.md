@@ -238,8 +238,10 @@ evaluations are proved to use its inverse. In the selected fiber coordinate the 
 exactly `Ad(g_ϕ)`, so every fixed fiber action is bundled as a continuous real-linear equivalence
 with exact inverse-gauge carrier. Quotient continuity and the exact quotient/dependent carrier bridge
 then produce a base-preserving dependent-total-space homeomorphism whose fiber restrictions are
-those continuous-linear equivalences. Smooth automorphism packaging, a connection-independent
-direct Maurer–Cartan proof, the structure equation, and action/observable
+those continuous-linear equivalences. The exact quotient-chart formula
+`(b,X) ↦ (b,Ad(g_ϕ(s(b)))X)` now derives global forward/inverse `C∞` regularity and a quotient
+Diffeomorph. A single dependent smooth-vector-bundle automorphism/atlas bridge, a
+connection-independent direct Maurer–Cartan proof, the structure equation, and action/observable
 invariance remain pending. Arbitrary-map/
 two-set exterior naturality, a canonical arbitrary-manifold positive-degree operator, an intrinsic
 descended adjoint-bundle Bianchi theorem, and full gauge covariance remain pending.
