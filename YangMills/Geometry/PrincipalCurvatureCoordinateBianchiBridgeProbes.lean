@@ -160,6 +160,45 @@ theorem exact_chart_conditional_bianchi
   connection.curvatureCoordinatesInExtChartAt_coordinateBianchi exterior p x naturality
     regular order unique mem_closure mem
 
+/-- In a finite-dimensional total-space model, the chart theorem derives regularity from the exact
+connection instead of accepting it as a disconnected premise. -/
+theorem exact_chart_bianchi_from_intrinsic_smoothness
+    [FiniteDimensional ℝ EP]
+    (connection : PrincipalConnectionData smoothBundle)
+    (exterior : PrincipalConnectionExteriorDerivativeData connection)
+    (p : P) (x : EP)
+    (naturality : exterior.IsNaturalInExtChartAt p)
+    (mem : x ∈ (extChartAt IP p).target) :
+    letI : CompleteSpace EG := FiniteDimensional.complete ℝ EG
+    letI : ENat.LEInfty (minSmoothness ℝ 3) := by
+      rw [minSmoothness_of_isRCLikeNormedField]
+      infer_instance
+    groupLieAlgebraCoordinateCovariantExteriorDerivativeTwoWithin (I := IG) (G := G)
+      (connection.connectionCoordinatesInExtChartAt p) (extChartAt IP p).target
+      (connection.curvatureCoordinatesInExtChartAt exterior p) x = 0 :=
+  connection.curvatureCoordinatesInExtChartAt_coordinateBianchi_of_finiteDimensional exterior
+    p x naturality mem
+
+/-- A nonzero exact-curvature output contradicts the reduced interface without reintroducing a
+regularity or order premise. -/
+theorem nonzero_chart_bianchi_from_intrinsic_smoothness_blocked
+    [FiniteDimensional ℝ EP]
+    (connection : PrincipalConnectionData smoothBundle)
+    (exterior : PrincipalConnectionExteriorDerivativeData connection)
+    (p : P) (x : EP)
+    (naturality : exterior.IsNaturalInExtChartAt p)
+    (mem : x ∈ (extChartAt IP p).target)
+    (nonzero :
+      letI : CompleteSpace EG := FiniteDimensional.complete ℝ EG
+      letI : ENat.LEInfty (minSmoothness ℝ 3) := by
+        rw [minSmoothness_of_isRCLikeNormedField]
+        infer_instance
+      groupLieAlgebraCoordinateCovariantExteriorDerivativeTwoWithin (I := IG) (G := G)
+        (connection.connectionCoordinatesInExtChartAt p) (extChartAt IP p).target
+        (connection.curvatureCoordinatesInExtChartAt exterior p) x ≠ 0) : False :=
+  nonzero (connection.curvatureCoordinatesInExtChartAt_coordinateBianchi_of_finiteDimensional
+    exterior p x naturality mem)
+
 end
 
 end YangMills.Geometry.PrincipalCurvatureCoordinateBianchiBridge.Probes

@@ -367,15 +367,19 @@ closure-of-interior hypotheses and recovers the global definitions on `univ`. Fi
 forms now have distinct raw unrestricted and explicit within-set normed-coordinate pullback
 carriers. Inverse extended-chart specialization uses the corner-aware `mfderivWithin` on the exact
 model range, with chart-center recovery, target-local derivative invertibility, linearity, and
-canonical bracket-wedge coherence; no chart-target regularity, exterior naturality, or geometric
-meaning outside the chart target is asserted. The exact principal connection, its indexed exterior-
+canonical bracket-wedge coherence. For a finite-dimensional principal total-space model, the exact
+connection's stored intrinsic smoothness now derives `C∞` regularity of this whole coordinate
+one-form throughout the actual chart target; no exterior naturality or geometric meaning outside the
+chart target is asserted. The exact principal connection, its indexed exterior-
 derivative certificate, and the curvature derived from both now satisfy Freed's curvature equation
 in arbitrary within-set coordinates and inverse extended charts. The coordinate derivative term is
 still the pulled-back certificate, not yet `extDerivWithin` of the coordinate connection. An exact
 naturality predicate now separates the corner-aware tangent-transport source from the exterior-
-calculus set; assuming that predicate and all within-set regularity hypotheses, the previously proved
-coordinate theorem derives Bianchi for the exact curvature carrier without accepting a Bianchi
-witness. Naturality itself remains unproved. Canonical arbitrary-manifold existence, chart independence,
+calculus set. In finite-dimensional total-space models, intrinsic connection smoothness now
+discharges coordinate regularity and its order bound automatically, while Mathlib's extended-chart
+theorems derive unique differentiability and closure-of-interior membership. The specialized theorem
+therefore requires only exterior naturality and actual chart-target membership; it derives Bianchi for the exact curvature carrier without accepting a Bianchi witness. Naturality
+itself remains unproved. Canonical arbitrary-manifold existence, chart independence,
 arbitrary-manifold `d²`, arbitrary-manifold graded Leibniz transport, positive-degree covariant exterior
 differentiation, and
 positive curvature-tensor orders remain open. The interpreted observable layer now extends the exact

@@ -194,13 +194,16 @@ versions retain one explicit set together with its regularity, uniqueness, membe
 closure/interior hypotheses and agree with the global definitions on `univ`. Fixed-value manifold
 forms now have separate raw unrestricted and explicit within-set normed-coordinate pullbacks.
 Inverse extended charts use corner-aware `mfderivWithin` on the exact model range, with target-local
-derivative invertibility and canonical bracket-wedge carrier coherence; chart-target regularity and
-exterior-derivative naturality remain open, and no geometry is claimed outside the chart target.
+derivative invertibility and canonical bracket-wedge carrier coherence. For finite-dimensional
+principal total-space models, stored intrinsic connection smoothness now derives target-wide `C∞`
+regularity of the exact coordinate one-form; exterior-derivative naturality remains open, and no
+geometry is claimed outside the chart target.
 The exact principal connection, its indexed derivative certificate, and curvature derived from both
 now satisfy (1.13) after the same within-set or inverse-chart coordinate transport. The derivative
 term is still the pulled-back certificate, not yet coordinate `extDerivWithin`. An exact naturality
 predicate separates inverse-chart tangent transport on the model range from exterior calculus on the
-actual chart target. Assuming this predicate and the full local regularity hypotheses, the coordinate
-Bianchi theorem now derives a zero covariant expression for the exact principal-curvature carrier;
-naturality itself, a canonical arbitrary-manifold positive-degree operator, a descended adjoint-
+actual chart target. In the finite-dimensional principal specialization, regularity, smoothness
+order, unique differentiability, and closure-of-interior membership are derived, so naturality plus
+actual chart-target membership now imply the zero coordinate covariant expression for the exact
+principal-curvature carrier. Naturality itself, a canonical arbitrary-manifold positive-degree operator, a descended adjoint-
 bundle Bianchi theorem, and gauge covariance remain pending.

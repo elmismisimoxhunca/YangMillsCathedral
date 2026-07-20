@@ -4,7 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Sebastian Rodrigo
 -/
 
-import YangMills.Geometry.PrincipalCurvatureNormedCoordinates
+import YangMills.Geometry.PrincipalConnectionCoordinateRegularity
 import YangMills.Mathematics.NormedCoordinateBianchiWithin
 
 /-!
@@ -212,6 +212,32 @@ theorem curvatureCoordinatesInExtChartAt_coordinateBianchi
     connection.curvatureCoordinatePullbackWithin_coordinateBianchi exterior
       (extChartAt IP p).symm (Set.range ⇑IP) (extChartAt IP p).target x naturality
       connection_regular regularity_order unique_target mem_closure_interior mem_target
+
+/-- For a finite-dimensional principal total-space model, intrinsic smoothness of the exact
+connection derives the chart regularity required by the conditional Bianchi theorem. Mathlib's
+extended-chart theorems also derive unique differentiability and closure-of-interior membership, so
+only exterior naturality and actual target membership remain supplied. -/
+theorem curvatureCoordinatesInExtChartAt_coordinateBianchi_of_finiteDimensional
+    [FiniteDimensional ℝ EP]
+    (connection : PrincipalConnectionData smoothBundle)
+    (exterior : PrincipalConnectionExteriorDerivativeData connection)
+    (p : P) (x : EP)
+    (naturality : exterior.IsNaturalInExtChartAt p)
+    (mem_target : x ∈ (extChartAt IP p).target) :
+    letI : CompleteSpace EG := FiniteDimensional.complete ℝ EG
+    letI : ENat.LEInfty (minSmoothness ℝ 3) := by
+      rw [minSmoothness_of_isRCLikeNormedField]
+      infer_instance
+    groupLieAlgebraCoordinateCovariantExteriorDerivativeTwoWithin (I := IG) (G := G)
+      (connection.connectionCoordinatesInExtChartAt p) (extChartAt IP p).target
+      (connection.curvatureCoordinatesInExtChartAt exterior p) x = 0 := by
+  exact connection.curvatureCoordinatesInExtChartAt_coordinateBianchi exterior p x
+    (r := 2) naturality
+    ((connection.connectionCoordinatesInExtChartAt_contDiffWithinAt p x mem_target).of_le
+      (show (↑(2 : ℕ∞) : WithTop ℕ∞) ≤ ↑(⊤ : ℕ∞) from WithTop.coe_le_coe.mpr le_top))
+    (by rw [minSmoothness_of_isRCLikeNormedField]; norm_num)
+    (uniqueDiffOn_extChartAt_target p)
+    (extChartAt_target_subset_closure_interior mem_target) mem_target
 
 end PrincipalConnectionData
 

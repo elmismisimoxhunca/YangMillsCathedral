@@ -76,13 +76,18 @@ committed before higher layers depend on it.
 - [x] Separate raw unrestricted from explicit within-set normed-coordinate pullbacks; specialize
   inverse extended charts using corner-aware `mfderivWithin` on the exact model range, and prove
   evaluation, center recovery, target-local derivative invertibility, linearity, and canonical
-  bracket-wedge coherence. Chart-target regularity and exterior naturality remain debt.
+  bracket-wedge coherence.
+- [x] Derive target-wide and pointwise `C∞` regularity of the exact inverse-chart principal
+  connection one-form from stored intrinsic smoothness when the total-space model is finite
+  dimensional, using chart-pulled vector fields and finite-dimensional evaluation reconstruction.
 - [x] Pull the exact principal connection, its indexed derivative certificate, and its derived
   curvature through the same within-set/chart coordinates, proving the exact coordinate curvature
   equation without identifying the certificate with coordinate `extDerivWithin`.
 - [x] State the exact same-connection exterior-naturality obligation with separate tangent-transport
-  and calculus sets, and derive conditional within-chart Bianchi for the exact curvature carrier;
-  proving the naturality obligation and chart regularity remains debt.
+  and calculus sets, and derive conditional within-chart Bianchi for the exact curvature carrier.
+  In finite-dimensional total-space models, remove the separately supplied coordinate-regularity and
+  order hypotheses via the derived intrinsic-smoothness theorem. Proving exterior naturality remains
+  debt.
 - [x] Define principal curvature from a certified derivative and the smooth bracket-wedge.
 - [x] State and probe intrinsic curvature horizontality/right-adjoint-equivariance certificates.
 - [x] Construct and probe the set-level adjoint associated-bundle orbit quotient.

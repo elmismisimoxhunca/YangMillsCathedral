@@ -4044,6 +4044,27 @@ Implemented and verified:
   partner existence, and stress-label fixed points. No partner, multiplet, field, or theory is
   constructed.
 
+## 2026-07-19 — two-hundred-eighteenth stone: derived chart connection regularity
+
+Implemented and verified:
+
+- `PrincipalConnectionData.connectionCoordinatesInExtChartAt_contDiffOn` derives target-wide `C∞`
+  regularity of the exact corner-aware inverse-chart connection one-form from the connection's
+  existing intrinsic evaluation smoothness when the principal total-space model is finite
+  dimensional.
+- The proof pulls constant coordinate vectors back to smooth manifold vector fields using Mathlib's
+  `VectorField.mpullback`, identifies their exact `mfderivWithin ... (Set.range IP)` transport by
+  inverse-chart derivative identities, and reconstructs one-form-valued smoothness from all fixed
+  vector evaluations.
+- Pointwise `ContDiffWithinAt` is derived at every actual chart-target member; no coordinate
+  regularity witness or unrestricted `mfderiv` carrier is substituted.
+- `curvatureCoordinatesInExtChartAt_coordinateBianchi_of_finiteDimensional` consumes this theorem,
+  removing the supplied regularity and smoothness-order premises from the exact-curvature chart
+  Bianchi bridge. Mathlib derives `UniqueDiffOn` and closure-of-interior membership for the extended
+  chart target, leaving only exterior naturality and actual target membership explicit.
+- Dedicated probes expose target-wide/pointwise regularity and the reduced-hypothesis Bianchi
+  theorem. Exterior naturality and descended adjoint-bundle Bianchi remain open.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
