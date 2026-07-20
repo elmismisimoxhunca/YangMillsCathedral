@@ -4016,8 +4016,8 @@ Implemented and verified:
 - Every standard verifier is documented with both its observed baseline result and its coverage
   limit. The audit explicitly records that source hashes do not verify interpretation and builds do
   not verify physical adequacy.
-- The living audit is now anchored to fully validated implementation commit `f6a4c0c` on branch
-  `cathedral`: 3,697 build jobs, 7,206 kernel-audited declarations, 534 Lean files, a then-clean
+- The living audit is now anchored to fully validated implementation commit `cbafb6f` on branch
+  `cathedral`: 3,697 build jobs, 7,209 kernel-audited declarations, 534 Lean files, a then-clean
   working tree, and no configured remote. Later audit-metadata commits do not change that validated
   implementation snapshot; final closure must re-anchor once more. The final proposition, witness-level separation, final
   audit closure, push, and PR remain absent.
