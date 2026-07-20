@@ -432,8 +432,11 @@ restrictions are the previously established continuous-linear equivalences. This
 layered smooth vector-bundle-automorphism packaging. The exact adjoint-fiber pairing and its
 quadratic value are invariant when both arguments undergo this action. Direct tangent-map calculus
 now proves connection-independent smoothness of the exact associated Maurer–Cartan pullback,
-independently of the existing affine-difference proof using a supplied connection. The
-Maurer–Cartan structure equation remains open. Exact inverse-action
+independently of the existing affine-difference proof using a supplied connection. On the universal group form, the exact Cartan
+expression on left-invariant fields fixes the sign and `1/2` self-wedge normalization; the
+associated form is identified as its pullback and the smooth derivative candidate is packaged.
+The full Maurer–Cartan equation remains open because that candidate is not yet certified as the
+arbitrary-manifold exterior derivative. Exact inverse-action
 curvature covariance now derives pointwise invariance of both chosen and basis-independent
 canonical curvature densities for the full pulled connection/exterior/certificate chain. The exact
 analytic datum transports to that chain with unchanged designated measure and coupling, deriving

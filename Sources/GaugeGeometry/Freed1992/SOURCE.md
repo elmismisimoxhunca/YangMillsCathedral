@@ -250,8 +250,11 @@ for the exact pulled chain. Exact integrability transport preserving the designa
 coupling then derives invariance of the integrated relative-to-measure action for vertical gauge
 transformations over the identity base map. Smooth tangent-map calculus now proves direct,
 connection-independent smoothness of the exact associated Maurer–Cartan pullback while retaining
-the independent affine-difference proof. The Maurer–Cartan structure equation, an independently
-defined quantum gauge action on observable operators, and
+the independent affine-difference proof. On the universal group form, the exact invariant-field
+Cartan calculation fixes the candidate sign and normalization `-1/2[θ∧θ]`; the associated form is identified with its pullback and
+the smooth candidate is packaged. All-field Cartan tensoriality and arbitrary-map certificate
+pullback remain necessary before this candidate can be certified as `dα`. The full Maurer–Cartan
+structure equation, an independently defined quantum gauge action on observable operators, and
 broader-observable invariance remain pending. The finite `1`, `F²`, `(F²)²` interpretation records
 do transport to the exact pulled chain with unchanged classical carriers, quantum family/labels,
 and anti-collapse witnesses; this is deliberately only same-family transport. Arbitrary-map/

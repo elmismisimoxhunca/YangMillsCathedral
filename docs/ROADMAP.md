@@ -188,7 +188,10 @@ committed before higher layers depend on it.
   invariance; extend the result to the missing observable grammar.
 - [x] Prove connection-independent direct smoothness of the exact associated Maurer–Cartan pullback
   using tangent-map calculus, and package its unchanged carrier as a smooth one-form.
-- [ ] Prove the Maurer–Cartan structure equation.
+- [x] Calculate the universal Maurer–Cartan Cartan expression on left-invariant fields, identify the
+  associated form as its exact pullback, and package the smooth `-1/2[α∧α]` derivative candidate.
+- [ ] Prove all-field Cartan tensoriality and arbitrary-smooth-map certificate pullback, then certify
+  the candidate as the exterior derivative and conclude the full Maurer–Cartan structure equation.
 - [ ] Derive structural curvature laws automatically and prove intrinsic descended Bianchi.
 
 ## Phase 3 — classical Yang–Mills semantics

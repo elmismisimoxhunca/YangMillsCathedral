@@ -4257,7 +4257,13 @@ observable grammar remain open.
 `YangMills.Geometry.DirectAssociatedMaurerCartanPullbackSmooth` now derives smoothness of the exact
 associated left Maurer–Cartan pullback directly from smooth tangent maps of the gauge function and
 `(g,h) ↦ g⁻¹h`, with no supplied principal connection. It packages the unchanged carrier as a
-smooth one-form. The Maurer–Cartan structure equation remains open.
+smooth one-form.
+`YangMills.Geometry.AssociatedMaurerCartanStructureCandidate` defines the universal left form,
+calculates its Cartan expression on canonical left-invariant fields as the negative Lie bracket,
+and verifies the exact self-wedge factor two. The associated form is proved equal to the exact
+pullback of that universal carrier, while `-1/2[α∧α]` is packaged as a smooth same-carrier derivative
+candidate. It is not yet certified as `dα`: all-field Cartan tensoriality and arbitrary-smooth-map
+certificate pullback remain open, so no full Maurer–Cartan structure equation is claimed.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.
