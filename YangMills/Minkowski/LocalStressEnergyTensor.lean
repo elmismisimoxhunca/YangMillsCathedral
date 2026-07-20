@@ -111,8 +111,9 @@ structure LocalStressEnergyTensorData
           family.operator family.unitLabel f φ
 
 /-- Explicit separation between labels governed by the scalar pullback law and labels governed by
-the rank-two stress-tensor mixing law. This project strengthening prevents a stress component from
-silently inheriting both transformation interfaces; it does not construct either datum. -/
+the rank-two stress-tensor mixing law, together with exact fixedness under the existing family
+adjoint. These project strengthenings prevent a stress component from silently inheriting both
+transformation interfaces or using a disconnected duplicate adjoint label; they construct no datum. -/
 structure ScalarStressCovarianceSeparationData
     {d : EuclideanDimension} {G : Type*}
     [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
@@ -127,6 +128,10 @@ structure ScalarStressCovarianceSeparationData
     (stress : LocalStressEnergyTensorData family) where
   componentLabel_not_mem_scalar : ∀ μ ν,
     stress.componentLabel μ ν ∉ covariance.scalarLabel
+  /-- Hermitian stress components are fixed by the same family's exact label adjoint, rather than
+  merely having a disconnected componentwise matrix-element relation. -/
+  componentLabel_adjoint : ∀ μ ν,
+    covariance.adjointLabel (stress.componentLabel μ ν) = stress.componentLabel μ ν
 
 /-- Symmetry gives exact equality of the corresponding same-family operators. -/
 theorem LocalStressEnergyTensorData.component_operator_symmetric

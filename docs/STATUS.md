@@ -4024,6 +4024,25 @@ Implemented and verified:
   corrected to match the committed exhaustive residual multiplet coverage.
 - The audit concludes **not complete** and is a living baseline, not a completion certificate.
 
+## 2026-07-19 — two-hundred-seventeenth stone: multiplet adjoint coherence
+
+Implemented and verified:
+
+- `FiniteLiftCovariantObservableMultipletAdjointPartnerData` relates two existing finite multiplets
+  by an exact component-index equivalence, the same family's involutive adjoint labels, and
+  coefficientwise complex-conjugate mixing.
+- Reverse label coherence is derived from the existing adjoint involution rather than stored as a
+  second independent relation.
+- Every residual multiplet in `LocalObservableCovarianceCoverageData` now has an exact adjoint
+  partner inside the same residual cover. Component-level residual membership prevents that partner
+  from importing scalar or stress labels.
+- `ScalarStressCovarianceSeparationData` now additionally fixes every Hermitian stress-component
+  label under the same global family adjoint, connecting the prior componentwise Hermiticity law to
+  the family-level adjoint interface.
+- Hostile probes expose exact partner labels, reverse coherence, conjugate coefficients, in-cover
+  partner existence, and stress-label fixed points. No partner, multiplet, field, or theory is
+  constructed.
+
 Not yet achieved:
 
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
@@ -4036,8 +4055,8 @@ Not yet achieved:
   bundle and smooth curvature descent layers themselves are implemented.
 - Bosonic observable labels now have exhaustive scalar/stress/residual covariance classification;
   residual labels are covered by finite projected-Lorentz multiplets with component-level exclusion
-  of scalar/stress labels. Spinorial graded locality and adjoint/conjugate-representation coherence
-  remain separate open interfaces.
+  of scalar/stress labels and exact in-cover adjoint/conjugate-representation partners. Spinorial
+  graded locality remains a separate open interface.
 - No final universally quantified Clay acceptance proposition exists; the existing 3D/4D
   declarations remain explicitly qualified `CurrentStrength` acceptance records.
 - No standalone Git remote is configured in this checkout. The tested candidate

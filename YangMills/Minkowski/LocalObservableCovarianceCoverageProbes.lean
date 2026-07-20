@@ -92,6 +92,16 @@ theorem exact_residual_multiplet_component_exclusions
           stress.componentLabel μ ν :=
   coverage.residualMultiplet_components_mem m i
 
+/-- Every residual multiplet has an exact conjugate-representation adjoint partner inside the same
+residual cover. -/
+theorem exact_residual_adjoint_partner
+    (coverage : LocalObservableCovarianceCoverageData covariance stress)
+    (m : coverage.residualMultipletCover.Multiplet) :
+    ∃ n, Nonempty (FiniteLiftCovariantObservableMultipletAdjointPartnerData covariance
+      (coverage.residualMultipletCover.multiplet m).toFiniteLiftCovariantObservableMultipletData
+      (coverage.residualMultipletCover.multiplet n).toFiniteLiftCovariantObservableMultipletData) :=
+  coverage.residualMultiplet_adjointPartner m
+
 /-- Residual labels cannot be silently reclassified as scalar or as stress components. -/
 theorem exact_residual_exclusions
     (A : family.Label)

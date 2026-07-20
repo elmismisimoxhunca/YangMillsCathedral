@@ -233,7 +233,7 @@ structure FourDimensionalCurrentStrengthContinuumCoreAcceptanceData
       curvatureSquaredOPECoherence.outputLabel ≠ 0
   /-- Symmetric, Hermitian, covariant, local, weakly conserved stress tensor in the same family. -/
   stressEnergy : Minkowski.LocalStressEnergyTensorData observableFamily
-  /-- Stress component labels are disjoint from the scalar-covariant label sector. -/
+  /-- Stress labels are disjoint from the scalar sector and fixed by the global family adjoint. -/
   stressCovarianceSeparation :
     Minkowski.ScalarStressCovarianceSeparationData covariantObservableFamily stressEnergy
   /-- Every bosonic observable label outside the scalar and exact stress sectors belongs to a finite

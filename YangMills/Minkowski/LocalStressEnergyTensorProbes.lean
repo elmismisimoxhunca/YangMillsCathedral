@@ -61,6 +61,15 @@ theorem scalar_tensor_covariance_overlap_blocked
     stress.componentLabel μ ν ∉ covariance.scalarLabel :=
   separation.componentLabel_not_mem_scalar μ ν
 
+/-- Every Hermitian stress component is fixed by the exact global family adjoint label. -/
+theorem exact_stress_component_adjoint_label
+    (covariance : CovariantLocalObservableFamilyData family)
+    (stress : LocalStressEnergyTensorData family)
+    (separation : ScalarStressCovarianceSeparationData covariance stress)
+    (μ ν : d.CoordinateIndex) :
+    covariance.adjointLabel (stress.componentLabel μ ν) = stress.componentLabel μ ν :=
+  separation.componentLabel_adjoint μ ν
+
 /-- Every component obeys the exact same-domain Hermitian relation. -/
 theorem exact_component_adjoint_relation
     (stress : LocalStressEnergyTensorData family)

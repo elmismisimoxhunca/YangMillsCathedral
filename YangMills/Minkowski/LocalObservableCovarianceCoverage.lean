@@ -4,7 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Sebastian Rodrigo
 -/
 
-import YangMills.Minkowski.FiniteCovariantObservableMultiplet
+import YangMills.Minkowski.FiniteCovariantObservableMultipletAdjoint
 import YangMills.Minkowski.LocalStressEnergyTensor
 
 /-!
@@ -62,6 +62,12 @@ structure LocalObservableCovarianceCoverageData
   residualMultiplet_components_mem : ∀ m i,
     (residualMultipletCover.multiplet m).componentLabel i ∈
       residualCovariantObservableLabelSet covariance stress
+  /-- Every residual multiplet has an exact adjoint partner inside the same residual cover, with
+  existing family adjoint labels and coefficientwise conjugate mixing. -/
+  residualMultiplet_adjointPartner : ∀ m,
+    ∃ n, Nonempty (FiniteLiftCovariantObservableMultipletAdjointPartnerData covariance
+      (residualMultipletCover.multiplet m).toFiniteLiftCovariantObservableMultipletData
+      (residualMultipletCover.multiplet n).toFiniteLiftCovariantObservableMultipletData)
 
 /-- Every original family label is governed by the scalar interface, is an exact stress component,
 or belongs to the residual finite-multiplet cover. This is exhaustive classical classification, not

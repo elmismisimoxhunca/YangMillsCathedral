@@ -155,6 +155,9 @@ committed before higher layers depend on it.
   law without a duplicate mixing representation, and every residual bosonic label occurs in a
   finite projected-Lorentz multiplet. Spinorial fields remain outside this all-label bosonic-locality
   family and require a separate graded-locality surface.
+- [x] Require exact adjoint/conjugate-representation partners for every residual multiplet inside
+  the same cover, and fix every Hermitian stress-component label under the existing global family
+  adjoint; no disconnected adjoint field family is introduced.
 - [x] Add exact operator and adjoint-operator coherence identifying the scalar Wightman field with
   the same family's existing nontrivial label, transferring anti-vacuity and tempered matrix
   elements rather than allowing disconnected scalar and observable sectors.
