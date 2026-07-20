@@ -224,6 +224,8 @@ committed before higher layers depend on it.
   every degree, preserving degree-two compatibility.
 - [x] Construct the exact smooth positive-degree principal total-space candidate
   `dω + [Θ ∧ ω]`, tied to one unchanged connection, input form, and ordinary exterior certificate.
+- [x] Prove that the derivative-defined Lie-group adjoint preserves the intrinsic tangent Lie bracket
+  using conjugation diffeomorphism and Mathlib bracket naturality.
 - [ ] Derive positive-degree pullback and infinitesimal right-action naturality, prove the candidate
   remains horizontal and right-adjoint-equivariant, then descend it and derive structural curvature
   laws and a genuine intrinsic `D_A F` theorem.

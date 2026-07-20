@@ -24,6 +24,8 @@ import YangMills.Mathematics.LieGroupAdjoint
 import YangMills.Mathematics.LieGroupAdjointProbes
 import YangMills.Mathematics.LieGroupAdjointRegularity
 import YangMills.Mathematics.LieGroupAdjointRegularityProbes
+import YangMills.Mathematics.LieGroupAdjointBracket
+import YangMills.Mathematics.LieGroupAdjointBracketProbes
 import YangMills.Mathematics.LieGroupContinuousBracket
 import YangMills.Mathematics.LieGroupContinuousBracketProbes
 import YangMills.Mathematics.LieGroupBracketCalculus

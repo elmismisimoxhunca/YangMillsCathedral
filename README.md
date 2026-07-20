@@ -464,7 +464,9 @@ Right-adjoint representative independence and smooth descent into the actual dep
 fibers are now derived in every degree, with arbitrary designated-chart coordinate formulas and
 exact degree-two compatibility. The exact smooth positive-degree total-space candidate
 `dω + [Θ ∧ ω]` is now constructed from one unchanged connection, input form, and supplied ordinary
-exterior certificate, including its `2 → 3` specialization. Derivation of output tensoriality,
+exterior certificate, including its `2 → 3` specialization. Inner-conjugation diffeomorphism
+calculus now proves that the exact derivative-defined adjoint preserves the intrinsic tangent Lie
+bracket, closing the algebraic bracket-covariance substep. Derivation of output tensoriality,
 positive-degree pullback/infinitesimal naturality, descent of this candidate, and a genuine intrinsic
 `D_A F` theorem remain open. Exact inverse-action
 curvature covariance now derives pointwise invariance of both chosen and basis-independent

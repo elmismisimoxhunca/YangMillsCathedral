@@ -4329,8 +4329,12 @@ selected carrier are definitionally compatible.
 positive-degree total-space expression `dω + [Θ ∧ ω]` from the same principal connection, smooth
 input form, and supplied ordinary exterior certificate. Its exact derivative and connection bracket
 carriers are exposed, its `2 → 3` specialization is probed, and hostile probes block an unrelated
-derivative or omitted nonzero bracket. The current positive-degree Cartan certificate determines the
-ordinary derivative on admissible smooth fields, but the API has no positive-degree diffeomorphism
+derivative or omitted nonzero bracket.
+`YangMills.Mathematics.LieGroupAdjointBracket` packages inner conjugation as a smooth diffeomorphism,
+calculates its pushforward on left-invariant fields, and applies Mathlib bracket pullback naturality
+to prove that the project's derivative-defined adjoint preserves the intrinsic tangent Lie bracket.
+This closes the bracket-covariance ingredient for future candidate equivariance. The current
+positive-degree Cartan certificate determines the ordinary derivative on admissible smooth fields, but the API has no positive-degree diffeomorphism
 pullback theorem or infinitesimal right-action/adjoint differentiation bridge. Derivation of output
 horizontality/right-adjoint equivariance, descent of this candidate, and a genuine intrinsic `D_A F`
 theorem remain open.
