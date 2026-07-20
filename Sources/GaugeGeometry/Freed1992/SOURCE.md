@@ -232,7 +232,10 @@ identity and joint adjoint regularity derive a smooth-form bundle with the uncha
 carrier. The original curvature structure certificate now canonically transports to the gauge-pulled
 curvature. Pointwise adjoint-bundle descent is expressed by the exact `Ad(g_ϕ⁻¹)` coefficient and an
 equivalent inverse-shifted principal representative, without asserting equality to the original
-adjoint-valued curvature. A connection-independent direct Maurer–Cartan regularity proof, the
-structure equation, smooth descended covariance, and action/observable invariance remain pending. Arbitrary-map/
+adjoint-valued curvature. The covariant action `[p,X] ↦ [ϕ(p),X]` is now constructed on the actual
+adjoint quotient and dependent fibers, and transformed pointwise/smooth-descended curvature
+evaluations are proved to use its inverse. Continuity/linearity/smooth automorphism packaging, a
+connection-independent direct Maurer–Cartan proof, the structure equation, and action/observable
+invariance remain pending. Arbitrary-map/
 two-set exterior naturality, a canonical arbitrary-manifold positive-degree operator, an intrinsic
 descended adjoint-bundle Bianchi theorem, and full gauge covariance remain pending.

@@ -163,8 +163,12 @@ committed before higher layers depend on it.
   connection, deriving transformed horizontality/right-adjoint equivariance and a finite-dimensional
   wrapper; identify the pointwise descended curvature by exact adjoint and inverse-shifted quotient
   representatives without claiming equality to the original adjoint-valued curvature.
-- [ ] Prove connection-independent direct Maurer–Cartan smoothness and the structure equation, then
-  derive smooth descended, scalar-density, action, and observable gauge covariance/invariance.
+- [x] Construct the covariant gauge action on the actual adjoint quotient and dependent fibers with
+  exact identity/composition/inverse laws; prove pointwise curvature and evaluations of the exact
+  smooth descended package transform by the inverse induced fiber action.
+- [ ] Prove continuity, linearity, and smooth vector-bundle-automorphism packaging of the induced
+  action; prove connection-independent direct Maurer–Cartan smoothness and the structure equation;
+  then derive scalar-density, action, and observable gauge invariance.
 - [ ] Derive structural curvature laws automatically and prove intrinsic descended Bianchi.
 
 ## Phase 3 — classical Yang–Mills semantics

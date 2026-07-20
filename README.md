@@ -416,8 +416,12 @@ smooth forms, yielding an exact smooth-form bundle. The exact original curvature
 certificate now transports to the canonical gauge-pulled curvature. Its pointwise adjoint-bundle
 descent is identified both by the selected-section `Ad(g_ϕ⁻¹)` coefficient and an equivalent
 inverse-shifted principal representative; it is not asserted equal to the original adjoint-valued
-curvature. A connection-independent direct Maurer–Cartan regularity proof, the structure equation,
-smooth descended covariance, action invariance, and observable invariance do not follow yet. The checker still lacks a language of independent invariant contractions,
+curvature. The covariant quotient action `[p,X] ↦ [ϕ(p),X]` is now constructed on the actual
+adjoint bundle and exact dependent fibers, with identity, composition, and inverse laws. Pointwise
+curvature and evaluations of the exact smooth descended package transform by the inverse induced
+fiber action. Continuity, linearity, and smooth bundle-automorphism packaging of that action remain
+open, as do a connection-independent direct Maurer–Cartan proof, the structure equation, scalar
+action invariance, and observable invariance. The checker still lacks a language of independent invariant contractions,
 mixed curvature polynomials, or covariant derivatives, and no canonical injective quantization map
 is claimed.
 A preliminary four-dimensional perturbative interface now requires a positive running coupling

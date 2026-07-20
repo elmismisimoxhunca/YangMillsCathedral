@@ -4211,10 +4211,14 @@ curvature structure certificate from the exact original certificate: gauge proje
 transports horizontality, while differentiated commutation with right translation transports
 right-adjoint equivariance. Pointwise descent is identified by the selected-section
 `Ad(g_ϕ⁻¹)` coefficient and, equivalently, by inverse-shifting the principal representative while
-retaining the original coefficient. This is quotient covariance, not equality with the original
-adjoint-valued curvature. A connection-independent direct Maurer–Cartan proof and structure
-equation, smooth descended covariance, action invariance, and observable gauge invariance remain
-open.
+retaining the original coefficient. `YangMills.Geometry.AdjointBundleGaugeAction` constructs the
+covariant quotient action `[p,X] ↦ [ϕ(p),X]`, proves base preservation and exact group/inverse laws,
+and restricts it to the actual dependent fibers. The transformed pointwise curvature and every
+evaluation of the exact smooth descended package equal the inverse induced fiber action on the
+original value. This is covariance, not equality with the original adjoint-valued curvature.
+Continuity, linearity, and smooth bundle-automorphism packaging, a connection-independent direct
+Maurer–Cartan proof and structure equation, action invariance, and observable gauge invariance
+remain open.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.
