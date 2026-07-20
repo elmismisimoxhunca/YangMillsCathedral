@@ -313,8 +313,10 @@ committed before higher layers depend on it.
   exact classical/quantum spacetime dimension, without asserting a global injective quantization map.
 - [x] Extend that exact label to the finite intrinsic scalar fragment `1`, `F²`, `(F²)²`, expose
   exact classical-carrier coherence, and separately require `(F²)²` anti-collapse as an explicit
-  project strengthening in the 4D core. Active gauge invariance, all powers, independent invariant
-  contractions, mixed polynomials, covariant derivatives, and renormalized mixing remain open.
+  project strengthening in the 4D core. The core now carries one exact designated quantum action of the canonical smooth-principal gauge group and all-label invariance certificate, with the finite interpreted fragment
+  connected to that same action. All powers, independent invariant contractions, mixed polynomials,
+  covariant derivatives, renormalized mixing, and further classical/quantum transformation-law
+  coherence remain open.
 - [x] Prove topological-module compatibility for every exact dependent adjoint fiber and define the
   continuous derivative-slot/alternating-curvature tensor carrier, with order zero locked to the
   exact smoothly descended curvature.

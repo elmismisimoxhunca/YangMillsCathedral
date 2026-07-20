@@ -20,6 +20,8 @@ import YangMills.Minkowski.WightmanRelativeAnalyticCorrelators
 import YangMills.Minkowski.WeakOperatorProductExpansion
 import YangMills.Observables.CurvaturePowerInterpretation
 import YangMills.Observables.CurvatureSquaredOPECoherence
+import YangMills.Observables.QuantumGaugeCurvaturePowerCoherence
+import YangMills.Observables.SmoothPrincipalGaugeQuantumObservableAction
 import YangMills.Reconstruction.CorrectedOSIIReconstructionAcceptance
 import YangMills.Renormalization.AdjointCasimirNormalization
 import YangMills.Renormalization.AsymptoticFreedomOPE
@@ -32,7 +34,9 @@ Euclidean spacetime. It joins one compact-simple physical gauge group and exact 
 chain to one ambient Euclidean scalar family with exact source restrictions, one independent
 Minkowski/Wightman chain, an explicit
 exact-source Wick-continuation bridge, one covariant local-observable family containing that Wightman
-field with exhaustive scalar/stress/residual finite-multiplet covariance coverage, interpretations of the finite scalar fragment `1`, `F²`, `(F²)²`, a local stress tensor whose
+field with exhaustive scalar/stress/residual finite-multiplet covariance coverage, one exact
+algebraic action of the canonical smooth principal gauge group with all-label operator invariance,
+interpretations of the finite scalar fragment `1`, `F²`, `(F²)²` tied to that same action, a local stress tensor whose
 regulated charges and translation Ward identities use the same joint translation PVM, and a
 physical gap on that spectrum.
 
@@ -168,6 +172,15 @@ structure FourDimensionalCurrentStrengthContinuumCoreAcceptanceData
       schwingerFamily wightmanSurface fullCorrelators
   /-- One local-observable family on the same common invariant domain. -/
   observableFamily : Minkowski.TemperedLocalObservableFamilyData.{uLift, uH, uLabel} D
+  /-- One algebraic quantum action of the canonical group of smooth automorphisms of this exact
+  principal bundle on the exact common-domain observable operators. No representation is
+  constructed, and no unitarity or continuity is implied. -/
+  quantumGaugeAction : Observables.SmoothPrincipalGaugeQuantumObservableActionData
+    smoothBundle observableFamily
+  /-- Every label and smearing is fixed under that exact designated action; this certificate cannot
+  silently select a different convenient action. -/
+  quantumGaugeInvariance : Observables.SmoothPrincipalGaugeInvariantQuantumObservableFamilyData
+    smoothBundle observableFamily quantumGaugeAction
   /-- Adjoint closure, locality, and an explicit Lorentz-scalar label sector on that same family and
   representation chain. Stress-tensor labels use their separate rank-two covariance law. -/
   covariantObservableFamily :
@@ -259,6 +272,31 @@ variable
     {exterior : Geometry.PrincipalConnectionExteriorDerivativeData connection}
     {curvatureCertificate : Geometry.PrincipalCurvatureStructureCertificate
       smoothBundle connection exterior}
+
+/-- Every exact family label is invariant under the core's same designated smooth-principal gauge
+action. -/
+theorem quantumGauge_operator_invariant
+    (data : FourDimensionalCurrentStrengthContinuumCoreAcceptanceData inner connection
+      exterior curvatureCertificate fieldData)
+    (g : Geometry.SmoothGaugeTransformation smoothBundle)
+    (A : data.observableFamily.Label)
+    (f : Minkowski.ScalarMinkowskiSchwartzTestFunction EuclideanDimension.four) :
+    data.quantumGaugeAction.operatorAction g A f = data.observableFamily.operator A f :=
+  data.quantumGaugeInvariance.operator_invariant g A f
+
+/-- The same exact action fixes every label in the interpreted `1`, `F²`, `(F²)²` fragment. -/
+theorem quantumGauge_curvaturePower_invariant
+    (data : FourDimensionalCurrentStrengthContinuumCoreAcceptanceData inner connection
+      exterior curvatureCertificate fieldData)
+    (g : Geometry.SmoothGaugeTransformation smoothBundle)
+    (tag : Observables.ScalarCurvaturePowerTag)
+    (f : Minkowski.ScalarMinkowskiSchwartzTestFunction EuclideanDimension.four) :
+    data.quantumGaugeAction.operatorAction g
+        (data.curvaturePowerInterpretation.quantumLabel tag) f =
+      data.observableFamily.operator (data.curvaturePowerInterpretation.quantumLabel tag) f :=
+  Observables.quantumGauge_invariant_curvaturePower
+    data.curvatureSquaredInterpretation data.quantumGaugeInvariance
+    data.curvaturePowerInterpretation g tag f
 
 /-- Corrected OS-II output growth selected by the reconstruction-acceptance package. -/
 def wightmanLinearGrowth

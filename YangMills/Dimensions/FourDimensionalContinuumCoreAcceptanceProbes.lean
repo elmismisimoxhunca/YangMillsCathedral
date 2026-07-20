@@ -518,6 +518,33 @@ theorem disconnected_spectrum_blocked
     (claimed : wrong = data.wightmanSurface.spectrum) : False :=
   different claimed
 
+/-- Every exact observable label is fixed by the same designated canonical smooth-gauge action. -/
+theorem exact_quantum_gauge_all_labels
+    (g : Geometry.SmoothGaugeTransformation smoothBundle)
+    (A : data.observableFamily.Label)
+    (f : Minkowski.ScalarMinkowskiSchwartzTestFunction EuclideanDimension.four) :
+    data.quantumGaugeAction.operatorAction g A f = data.observableFamily.operator A f :=
+  data.quantumGauge_operator_invariant g A f
+
+/-- The exact interpreted finite fragment is connected to that same action. -/
+theorem exact_quantum_gauge_curvature_fragment
+    (g : Geometry.SmoothGaugeTransformation smoothBundle)
+    (tag : Observables.ScalarCurvaturePowerTag)
+    (f : Minkowski.ScalarMinkowskiSchwartzTestFunction EuclideanDimension.four) :
+    data.quantumGaugeAction.operatorAction g
+        (data.curvaturePowerInterpretation.quantumLabel tag) f =
+      data.observableFamily.operator (data.curvaturePowerInterpretation.quantumLabel tag) f :=
+  data.quantumGauge_curvaturePower_invariant g tag f
+
+/-- Changing an operator under the exact designated action contradicts core acceptance. -/
+theorem changed_quantum_gauge_operator_blocked
+    (g : Geometry.SmoothGaugeTransformation smoothBundle)
+    (A : data.observableFamily.Label)
+    (f : Minkowski.ScalarMinkowskiSchwartzTestFunction EuclideanDimension.four)
+    (changed : data.quantumGaugeAction.operatorAction g A f ≠
+      data.observableFamily.operator A f) : False :=
+  changed (data.quantumGauge_operator_invariant g A f)
+
 /-- A disconnected local family cannot replace the family coherently containing the Wightman field. -/
 theorem disconnected_observable_family_blocked
     (wrong : Minkowski.TemperedLocalObservableFamilyData.{uLift, uH, uLabel} D)

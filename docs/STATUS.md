@@ -4374,5 +4374,12 @@ isolated premise that the relevant left/right manifold Lie bracket vanishes at t
 remaining second-order manifold-calculus bridge is precisely that mixed-derivative commutation
 fact; after it is proved, the targeted principal-form Cartan comparison remains. Descent of the full candidate and a genuine intrinsic `D_A F` theorem remain open.
 
+The four-dimensional `CurrentStrength` integration record now requires one exact algebraic quantum
+action of its canonical smooth principal gauge group on its same observable family and one
+all-label invariance certificate indexed by that exact action. Derived projections connect every
+interpreted `1`, `F²`, `(F²)²` label to the same action; hostile probes reject changed operators.
+This adds coherence only: it constructs no representation and does not close the missing observable
+grammar or further classical/quantum transformation-law debt.
+
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

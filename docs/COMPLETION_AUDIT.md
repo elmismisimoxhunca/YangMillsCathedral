@@ -103,7 +103,7 @@ Criteria 15–18 are currently decisive failures; several earlier criteria are a
 | `1` | `OneDimensionalBoundaryData`, lattice boundary data | Degree-two local curvature and plaquettes degenerate; no spatial clustering/spacelike pair; global holonomy may survive | Continuum QFT, OS reconstruction, or mass gap | Implemented boundary only |
 | `2` | `TwoDimensionalKinematicNondegeneracyData`, finite plaquette witnesses | First nonzero area form, spatial direction, spacelike tests, nontrivial finite plaquette | Source-backed continuum Yang–Mills model or contract | Partial |
 | `3` | `ThreeDimensionalCurrentStrengthContinuumCoreAcceptanceData` | One coherent classical/Euclidean/Wightman/observable/stress/PVM/gap acceptance surface on `ℝ³` | Final 3D contract or positive construction | Partial |
-| `4` | `FourDimensionalCurrentStrengthContinuumCoreAcceptanceData` | Broad Clay-dimension integration on `ℝ⁴` with corrected OS-II, exact cover requirements, observables/OPE/stress/gap | Final universally quantified Clay acceptance proposition | Partial |
+| `4` | `FourDimensionalCurrentStrengthContinuumCoreAcceptanceData` | Broad Clay-dimension integration on `ℝ⁴` with corrected OS-II, exact cover requirements, designated action of the canonical smooth-principal gauge group with all-label invariance, observables/OPE/stress/gap | Final universally quantified Clay acceptance proposition | Partial |
 
 The index/rank theorems prove that dimensions `1`–`3` are not the four-dimensional endpoint. They do
 not yet prove witness-level noninhabitation of the future final proposition.
