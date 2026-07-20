@@ -13,8 +13,8 @@ The smooth associated derivative candidate `-1/2[α∧α]` is exactly the raw pu
 universal Maurer--Cartan derivative. The proof uses pointwise naturality of the exact bracket wedge
 and preserves the existing associated one-form carrier.
 
-This is the required derivative-carrier identity, but not yet an associated exterior-derivative
-certificate; arbitrary-smooth-map Cartan naturality remains separate.
+This is the required derivative-carrier identity. Its use in the subsequently derived associated
+exterior-derivative certificate remains separated into `AssociatedMaurerCartanExteriorDerivative`.
 -/
 
 namespace YangMills.Geometry
@@ -71,8 +71,8 @@ private theorem pullback_lieBracketWedgeOneMany
   rfl
 
 /-- The already-smooth associated derivative candidate is exactly the pointwise pullback of the
-certified universal derivative carrier. This is algebraic; certification still needs exterior
-naturality for an arbitrary smooth map. -/
+certified universal derivative carrier. This algebraic identity is consumed by the separate
+arbitrary-smooth-map certificate constructor. -/
 theorem associatedMaurerCartanDerivativeCandidate_eq_universal_pullback
     (gauge : SmoothGaugeTransformation smoothBundle) :
     (associatedMaurerCartanDerivativeCandidate gauge).toForm =

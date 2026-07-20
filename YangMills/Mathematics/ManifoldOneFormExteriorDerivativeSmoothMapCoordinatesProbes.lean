@@ -83,6 +83,66 @@ theorem mismatched_centered_smoothMap_pullback_blocked
           (fderivWithin ℝ g s ((extChartAt I p) p))) : False :=
   wrong (centeredChart_extDerivWithin_pullback f hf coordinates form p)
 
+omit [FiniteDimensional ℝ E] [FiniteDimensional ℝ E'] in
+/-- A changed raw-pullback carrier on the exact chart-safe set is rejected. -/
+theorem mismatched_raw_pullback_carrier_blocked
+    (f : M → M') (hf : ContMDiff I I' ∞ f)
+    (coordinates : V ≃L[ℝ] W) (k : ℕ)
+    (form : ManifoldDifferentialForm I' M' V k) (p : M)
+    (x : E)
+    (hx : x ∈ (extChartAt I p).target ∩
+      (f ∘ (extChartAt I p).symm) ⁻¹' (extChartAt I' (f p)).source)
+    (wrong :
+      (ManifoldDifferentialForm.pullback f hf form).inExtChartAt coordinates k p x ≠
+        ((form.inExtChartAt coordinates k (f p)) (writtenInExtChartAt I I' p f x)).compContinuousLinearMap
+            (fderivWithin ℝ (writtenInExtChartAt I I' p f)
+              ((extChartAt I p).target ∩
+                (f ∘ (extChartAt I p).symm) ⁻¹' (extChartAt I' (f p)).source) x)) : False :=
+  wrong (pullback_inExtChartAt_eqOn f hf coordinates k form p hx)
+
+omit [FiniteDimensional ℝ E] [IsManifold I ∞ M]
+    [FiniteDimensional ℝ E'] [IsManifold I' ∞ M'] in
+/-- The arbitrary Cartan-calculus set cannot fail to agree locally with the chart-safe set. -/
+theorem mismatched_chartSafe_locality_blocked
+    (f : M → M') (hf : ContMDiff I I' ∞ f)
+    (s : Set M) (p : M) (open_s : IsOpen s) (mem_s : p ∈ s)
+    (wrong : ¬ ((extChartAt I p).symm ⁻¹' s ∩ Set.range ⇑I : Set E) =ᶠ[
+        nhds ((extChartAt I p) p)]
+      ((extChartAt I p).target ∩
+        (f ∘ (extChartAt I p).symm) ⁻¹' (extChartAt I' (f p)).source : Set E)) : False :=
+  wrong (centered_calculusSet_eventuallyEq_chartSafe f hf s p open_s mem_s)
+
+/-- Exact smooth pullback carriers determine a genuine all-fields Cartan certificate; no
+naturality proposition is accepted from the caller. -/
+noncomputable def exact_smoothMap_certificate_constructor
+    (f : M → M') (hf : ContMDiff I I' ∞ f)
+    (coordinates : V ≃L[ℝ] W)
+    (form : SmoothManifoldDifferentialForm I' M' V coordinates 1)
+    (certificate : SmoothManifoldOneFormExteriorDerivativeCertificate coordinates form)
+    (pulledForm : SmoothManifoldDifferentialForm I M V coordinates 1)
+    (pulledForm_eq : pulledForm.toForm =
+      ManifoldDifferentialForm.pullback f hf form.toForm)
+    (pulledDerivative : SmoothManifoldDifferentialForm I M V coordinates 2)
+    (pulledDerivative_eq : pulledDerivative.toForm =
+      ManifoldDifferentialForm.pullback f hf certificate.derivative.toForm) :
+    SmoothManifoldOneFormExteriorDerivativeCertificate coordinates pulledForm :=
+  certificate.pullbackSmoothMapOfForms f hf coordinates form pulledForm pulledForm_eq
+    pulledDerivative pulledDerivative_eq
+
+omit [FiniteDimensional ℝ E] [FiniteDimensional ℝ E'] in
+/-- A derivative carrier different from the exact raw pullback cannot enter the constructor. -/
+theorem mismatched_pulledDerivative_blocked
+    (f : M → M') (hf : ContMDiff I I' ∞ f)
+    (coordinates : V ≃L[ℝ] W)
+    (form : SmoothManifoldDifferentialForm I' M' V coordinates 1)
+    (certificate : SmoothManifoldOneFormExteriorDerivativeCertificate coordinates form)
+    (pulledDerivative : SmoothManifoldDifferentialForm I M V coordinates 2)
+    (pulledDerivative_eq : pulledDerivative.toForm =
+      ManifoldDifferentialForm.pullback f hf certificate.derivative.toForm)
+    (wrong : pulledDerivative.toForm ≠
+      ManifoldDifferentialForm.pullback f hf certificate.derivative.toForm) : False :=
+  wrong pulledDerivative_eq
+
 /-- A substituted centered derivative contradicts the supplied certificate. -/
 theorem mismatched_certificate_centered_extDeriv_blocked
     (coordinates : V ≃L[ℝ] W)

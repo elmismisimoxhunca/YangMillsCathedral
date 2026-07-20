@@ -439,9 +439,10 @@ Reusable mathematics now proves field-extension independence in normed spaces, e
 coordinates, and intrinsically once a Cartan certificate exists. Finite-dimensional Cartan tensoriality now upgrades the invariant-field calculation to a genuine
 universal exterior-derivative certificate and proves `dθ + 1/2[θ∧θ] = 0` on the group. The
 associated derivative candidate is now proved exactly equal to the raw pullback of the certified
-universal derivative. The associated-form Maurer–Cartan equation remains open because the remaining
-manifold-pullback/written-chart carrier bridge and certificate locality are still missing, so its
-candidate is not yet certified as the arbitrary-manifold exterior derivative. Finite-dimensional
+universal derivative. Exact chart-safe carrier and locality bridges now construct arbitrary-smooth-map
+Cartan certificates from exact smooth pullback packages on finite-dimensional source and target
+models. Thus the associated candidate is certified as the exterior derivative of the exact associated
+pullback and its normalized Maurer–Cartan equation is derived. Finite-dimensional
 basis reconstruction now derives generic centered coordinate-form regularity and intrinsic
 field-extension independence for admissible smooth fields, while arbitrary smooth fields transport exactly through the
 corner-aware centered chart. Exact inverse-action

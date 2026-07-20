@@ -201,8 +201,9 @@ committed before higher layers depend on it.
 - [x] Identify the associated smooth derivative candidate exactly with the raw pullback of the
   certified universal derivative, and prove arbitrary-map `extDerivWithin` naturality in centered
   chart coordinates.
-- [ ] Prove the remaining manifold-pullback/written-chart carrier and locality bridges, construct
-  arbitrary-smooth-map certificate pullback, and conclude the associated equation.
+- [x] Prove exact chart-safe manifold-pullback/written-chart carrier and locality bridges, construct
+  arbitrary-smooth-map certificates from exact smooth pullback packages in finite-dimensional
+  models, and derive the certified associated Maurer–Cartan equation.
 - [ ] Derive structural curvature laws automatically and prove intrinsic descended Bianchi.
 
 ## Phase 3 — classical Yang–Mills semantics

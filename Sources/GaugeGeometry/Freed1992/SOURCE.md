@@ -259,10 +259,10 @@ coordinate-form differentiability derives intrinsic extension independence. Fini
 basis reconstruction now derives that complete coordinate-form regularity generically, yielding
 intrinsic extension independence for admissible smooth fields. This constructs a genuine universal
 exterior-derivative certificate and proves the displayed group-level Maurer–Cartan equation.
-The associated smooth candidate is now proved exactly equal to the raw pullback of that certified
-derivative, and arbitrary-map `extDerivWithin` naturality is proved in centered coordinates. The
-remaining manifold-pullback/written-chart carrier and locality bridges are necessary before the
-associated candidate can be certified as `dα`; only its pulled equation remains open. An independently defined quantum gauge
+The associated smooth candidate is proved exactly equal to the raw pullback of that certified
+derivative. Exact chart-safe carrier and locality bridges construct the arbitrary-smooth-map Cartan
+certificate from the existing smooth pullback packages in finite-dimensional models, certifying the
+candidate as `dα` and deriving the associated normalized equation. An independently defined quantum gauge
 action on observable operators and
 broader-observable invariance remain pending. The finite `1`, `F²`, `(F²)²` interpretation records
 do transport to the exact pulled chain with unchanged classical carriers, quantum family/labels,

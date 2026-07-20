@@ -4282,9 +4282,12 @@ equation.
 certificate with centered-chart `extDerivWithin` and proves Mathlib pullback naturality for an
 arbitrary smooth map's written-chart representative on the exact chart-safe set.
 `YangMills.Geometry.AssociatedMaurerCartanDerivativePullback` proves the associated smooth candidate
-is exactly the raw pullback of the certified universal derivative. The remaining
-manifold-pullback/written-chart carrier and locality bridges are still required for the
-arbitrary-map certificate constructor, so no associated-form Maurer–Cartan equation is claimed.
+is exactly the raw pullback of the certified universal derivative. Exact chart-safe carrier and
+locality bridges now yield `pullbackSmoothMapOfForms`, which derives an arbitrary-smooth-map Cartan
+certificate from exact smooth pullback packages in finite-dimensional models.
+`YangMills.Geometry.AssociatedMaurerCartanExteriorDerivative` applies it to the associated gauge
+function, certifies the existing derivative candidate, and proves the exact normalized associated
+Maurer–Cartan equation.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.
