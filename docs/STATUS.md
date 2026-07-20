@@ -3992,10 +3992,17 @@ Implemented and verified:
   cover-kernel action for spinorial multiplets.
 - The existing distinguished nontrivial scalar label derives an exact one-component Lorentz
   multiplet with trivial mixing; no new operator or field witness is introduced.
+- `FiniteLiftCovariantObservableCoverData` covers any explicit label subset by an arbitrary family
+  of finite lift-covariant multiplets. It does not silently factor possible spinorial central action
+  through the affine Lorentz projection.
+- `LocalObservableCovarianceCoverageData` gives the 3D/4D bosonic observable cores an exhaustive
+  scalar/stress/residual classification. Scalar labels use the scalar law, exact stress components
+  use only their rank-two law, and residual labels use the finite projected-Lorentz cover. Thus no
+  original bosonic-family label lacks covariance and no stress label receives an unrelated duplicate
+  representation. Spinorial fields require a separate future graded-locality surface.
 - Hostile probes expose nonemptiness, representation identity/composition/continuity, translation
-  blindness, same-chain covariance, anti-vacuity, tensorial factorization, and scalar recovery.
-  A stress adapter and complete finite-multiplet coverage for every non-scalar observable label
-  remain open.
+  blindness, same-chain covariance, anti-vacuity, tensorial factorization, scalar recovery, exact
+  predicate-indexed coverage, residual exclusions, and exhaustive original-label classification.
 
 Not yet achieved:
 

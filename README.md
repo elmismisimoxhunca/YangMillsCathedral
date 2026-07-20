@@ -311,8 +311,11 @@ finite-multiplet layer now supplies one genuine strongly continuous complex-line
 representation, exact translation-trivial component mixing, same-domain covariance, and mandatory
 nontrivial component. Its separate tensorial strengthening factors through the projected Lorentz
 transformation, while the base surface retains possible spinorial central action. The existing
-nontrivial scalar label derives an exact one-component trivial multiplet; complete multiplet coverage
-of arbitrary non-scalar labels and a stress adapter remain open. A further exact coherence surface identifies the scalar Wightman field with this family's
+nontrivial scalar label derives an exact one-component trivial multiplet. The 3D/4D cores now
+classify every label exhaustively: scalar labels retain the scalar law, exact stress labels retain
+only their rank-two law, and every residual bosonic label belongs to a finite projected-Lorentz
+multiplet. This avoids an unrelated duplicate law for stress components. Spinorial fields are
+outside this all-label bosonic-locality family and require a separate graded-locality surface. A further exact coherence surface identifies the scalar Wightman field with this family's
 existing nontrivial label and identifies its adjoint with the corresponding involutive adjoint
 label, transferring family anti-vacuity to the Wightman field and preventing disconnected scalar
 and observable sectors. Normalized

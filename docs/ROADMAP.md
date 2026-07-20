@@ -150,7 +150,11 @@ committed before higher layers depend on it.
   lift-group representation, exact translation-trivial mixing, same-chain operator covariance, and
   anti-vacuity; separate a tensorial projected-Lorentz strengthening from possible spinorial central
   action and derive the existing nontrivial scalar field as a one-component trivial multiplet.
-  A stress-tensor adapter and general coverage of every non-scalar family label remain open.
+- [x] Classify every local-observable label in the 3D/4D cores through an explicit scalar/stress/
+  residual split: scalar labels retain scalar covariance, exact stress labels retain their rank-two
+  law without a duplicate mixing representation, and every residual bosonic label occurs in a
+  finite projected-Lorentz multiplet. Spinorial fields remain outside this all-label bosonic-locality
+  family and require a separate graded-locality surface.
 - [x] Add exact operator and adjoint-operator coherence identifying the scalar Wightman field with
   the same family's existing nontrivial label, transferring anti-vacuity and tempered matrix
   elements rather than allowing disconnected scalar and observable sectors.

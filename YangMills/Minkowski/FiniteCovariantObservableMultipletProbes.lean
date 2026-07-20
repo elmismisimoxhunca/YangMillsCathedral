@@ -102,4 +102,43 @@ theorem exact_scalar_specialization
   · intro g
     rfl
 
+/-- Every selected label is an exact component of some finite lift-covariant multiplet. -/
+theorem exact_selected_label_coverage
+    {coveredLabel : Set family.Label}
+    (cover : FiniteLiftCovariantObservableCoverData family coveredLabel)
+    (A : family.Label) (hA : A ∈ coveredLabel) :
+    ∃ (m : cover.Multiplet) (i : Fin (cover.extraComponentCount m + 1)),
+      (cover.multiplet m).componentLabel i = A :=
+  cover.covers A hA
+
+/-- The multiplet index cannot be vacuous whenever the selected label set is inhabited. -/
+theorem exact_cover_has_multiplet
+    {coveredLabel : Set family.Label}
+    (cover : FiniteLiftCovariantObservableCoverData family coveredLabel)
+    (A : family.Label) (hA : A ∈ coveredLabel) :
+    Nonempty cover.Multiplet := by
+  rcases cover.covers A hA with ⟨m, _i, _hlabel⟩
+  exact ⟨m⟩
+
+/-- Coverage supplies exact same-chain covariance for the selected original label, not merely for an
+unrelated copied operator family. -/
+theorem exact_covered_label_covariance
+    {coveredLabel : Set family.Label}
+    (cover : FiniteLiftCovariantObservableCoverData family coveredLabel)
+    (A : family.Label) (hA : A ∈ coveredLabel) :
+    ∃ (m : cover.Multiplet) (i : Fin (cover.extraComponentCount m + 1)),
+      (cover.multiplet m).componentLabel i = A ∧
+      ∀ (g : G) (f : ScalarMinkowskiSchwartzTestFunction d) (ψ : D.domain),
+        D.domainUnitary g
+            (family.operator A f ((D.domainUnitary g).symm ψ)) =
+          ∑ j,
+            ((cover.multiplet m).mixingRepresentation g (Pi.single i 1) j) •
+              family.operator ((cover.multiplet m).componentLabel j)
+                (pullbackScalarMinkowskiSchwartzTestFunction d (lift.projection g) f) ψ := by
+  rcases cover.covers A hA with ⟨m, i, hlabel⟩
+  refine ⟨m, i, hlabel, ?_⟩
+  intro g f ψ
+  rw [← hlabel]
+  exact (cover.multiplet m).component_covariant i g f ψ
+
 end YangMills.Minkowski.FiniteCovariantObservableMultiplet.Probes

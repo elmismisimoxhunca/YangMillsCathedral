@@ -113,6 +113,16 @@ theorem exact_wick_coherence :
       data.schwingerFamily data.relativeAnalyticCorrelators) :=
   ⟨data.strictWickCoherence⟩
 
+/-- Every exact family label is scalar, an exact stress component, or covered by a residual finite
+projected-Lorentz multiplet. -/
+theorem exact_all_labels_covariance_classified
+    (A : data.observableFamily.Label) :
+    A ∈ data.covariantObservableFamily.scalarLabel ∨
+      (∃ μ ν, A = data.stressEnergy.componentLabel μ ν) ∨
+      A ∈ Minkowski.residualCovariantObservableLabelSet
+        data.covariantObservableFamily data.stressEnergy :=
+  data.observableCovarianceCoverage.label_scalar_or_stress_or_residual A
+
 /-- The Wightman field is an exact nontrivial operator in the same local-observable family. -/
 theorem exact_nontrivial_wightman_observable :
     ∃ (test : Minkowski.ScalarMinkowskiSchwartzTestFunction EuclideanDimension.three)

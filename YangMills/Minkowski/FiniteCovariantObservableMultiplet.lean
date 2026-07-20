@@ -18,11 +18,15 @@ This module packages that reusable requirement on the same common domain and loc
 family already used by the scalar and stress-tensor surfaces. The base interface represents the
 Poincaré lift group and therefore permits nontrivial central action appropriate to spinorial
 multiplets. A separate Lorentz-tensor strengthening requires the mixing to factor through the exact
-projected Lorentz transformation. Neither interface constructs a field, representation, theory, or
-mass gap. Kinematic component mixing here is distinct from renormalization/operator mixing.
+projected Lorentz transformation. A further predicate-indexed cover interface can require any
+explicit subset of a proposed observable family to occur in finite lift-covariant multiplets without
+silently excluding spinorial cover-kernel action. These interfaces construct no independent field,
+representation, theory, or mass gap. Kinematic component mixing here is distinct from renormalization/operator mixing.
 -/
 
 namespace YangMills.Minkowski
+
+universe uLift uH uLabel
 
 /-- A nonempty finite component family transforming through one strongly continuous complex-linear
 representation of the exact Poincaré lift group. Translation lifts have trivial component mixing;
@@ -83,6 +87,56 @@ structure FiniteLorentzCovariantObservableMultipletData
   mixing_eq_of_projectedLorentz_eq : ∀ g h,
     (lift.projection g).lorentz = (lift.projection h).lorentz →
       mixingRepresentation g = mixingRepresentation h
+
+/-- Coverage of an explicit label subset by nonempty finite lift-covariant multiplets. The family
+may contain arbitrarily many labels and multiplets, but every selected individual field has a finite
+component transformation law. Using lift-covariant rather than projected-Lorentz multiplets keeps
+this reusable surface valid for spinorial as well as tensorial fields. -/
+structure FiniteLiftCovariantObservableCoverData
+    {d : EuclideanDimension} {G : Type uLift}
+    [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+    {lift : ProperOrthochronousPoincareLiftData d G}
+    {H : Type uH} [NormedAddCommGroup H] [InnerProductSpace ℂ H] [CompleteSpace H]
+    [TopologicalSpace.SeparableSpace H]
+    {U : StronglyContinuousUnitaryPoincareRepresentation lift H}
+    {vacuumData : PoincareInvariantVacuumData U}
+    {D : CommonInvariantDomainData vacuumData}
+    (family : TemperedLocalObservableFamilyData.{uLift, uH, uLabel} D)
+    (coveredLabel : Set family.Label) where
+  /-- Index of finite multiplets. It is forced nonempty whenever the selected label set is inhabited. -/
+  Multiplet : Type uLabel
+  /-- Multiplet `m` has `extraComponentCount m + 1` components, hence is definitionally nonempty. -/
+  extraComponentCount : Multiplet → ℕ
+  /-- Exact finite lift-covariant multiplet data inside the same observable family. -/
+  multiplet : ∀ m,
+    FiniteLiftCovariantObservableMultipletData family (Fin (extraComponentCount m + 1))
+  /-- Every selected family label occurs as an exact component of one supplied multiplet. -/
+  covers : ∀ A, A ∈ coveredLabel →
+    ∃ (m : Multiplet) (i : Fin (extraComponentCount m + 1)),
+      (multiplet m).componentLabel i = A
+
+/-- Coverage of an explicit bosonic/tensorial label subset by nonempty finite multiplets whose
+mixing factors through the projected Lorentz transformation. This is the appropriate strengthening
+for gauge-invariant Yang–Mills local observables; spinorial fields require the lift-covariant cover
+and a separate graded-locality interface. -/
+structure FiniteLorentzCovariantObservableCoverData
+    {d : EuclideanDimension} {G : Type uLift}
+    [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+    {lift : ProperOrthochronousPoincareLiftData d G}
+    {H : Type uH} [NormedAddCommGroup H] [InnerProductSpace ℂ H] [CompleteSpace H]
+    [TopologicalSpace.SeparableSpace H]
+    {U : StronglyContinuousUnitaryPoincareRepresentation lift H}
+    {vacuumData : PoincareInvariantVacuumData U}
+    {D : CommonInvariantDomainData vacuumData}
+    (family : TemperedLocalObservableFamilyData.{uLift, uH, uLabel} D)
+    (coveredLabel : Set family.Label) where
+  Multiplet : Type uLabel
+  extraComponentCount : Multiplet → ℕ
+  multiplet : ∀ m,
+    FiniteLorentzCovariantObservableMultipletData family (Fin (extraComponentCount m + 1))
+  covers : ∀ A, A ∈ coveredLabel →
+    ∃ (m : Multiplet) (i : Fin (extraComponentCount m + 1)),
+      (multiplet m).componentLabel i = A
 
 /-- The mixing representation has the exact identity action. -/
 @[simp] theorem FiniteLiftCovariantObservableMultipletData.mixingRepresentation_one

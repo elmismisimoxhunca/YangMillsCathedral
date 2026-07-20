@@ -8,6 +8,7 @@ import YangMills.Classical.CanonicalEuclideanMetric
 import YangMills.Classical.EuclideanAction
 import YangMills.Euclidean.SchwingerEuclideanCandidate
 import YangMills.Geometry.LieGroup
+import YangMills.Minkowski.LocalObservableCovarianceCoverage
 import YangMills.Minkowski.PhysicalMassGapSupremum
 import YangMills.Minkowski.ScalarWightmanAxiomSurface
 import YangMills.Minkowski.StressEnergyTranslationWard
@@ -24,7 +25,7 @@ This module defines an uninhabited, per-carrier acceptance record hard-wired to 
 Euclidean spacetime. It joins one compact-simple physical gauge group and exact classical curvature
 chain to one strict Euclidean scalar family, one independent Minkowski/Wightman chain, an explicit
 strict Wick-continuation bridge, one covariant local-observable family containing that Wightman
-field, an interpretation of the exact classical `F²` observable, a local stress tensor whose
+field with exhaustive scalar/stress/residual finite-multiplet covariance coverage, an interpretation of the exact classical `F²` observable, a local stress tensor whose
 regulated charges and translation Ward identities use the same joint translation PVM, and a
 physical gap on that spectrum.
 
@@ -143,6 +144,10 @@ structure ThreeDimensionalCurrentStrengthContinuumCoreAcceptanceData
   /-- Stress component labels are disjoint from the scalar-covariant label sector. -/
   stressCovarianceSeparation :
     Minkowski.ScalarStressCovarianceSeparationData covariantObservableFamily stressEnergy
+  /-- Every bosonic observable label outside the scalar and exact stress sectors belongs to a finite
+  projected-Lorentz multiplet. Spinorial fields require a separate graded-locality surface. -/
+  observableCovarianceCoverage :
+    Minkowski.LocalObservableCovarianceCoverageData covariantObservableFamily stressEnergy
   /-- The stress charges, translation derivatives, Ward identity, and momentum moments use the
   exact same representation, domain, family, and Wightman joint PVM. -/
   stressTranslationWard : Minkowski.LocalStressEnergyTranslationWardData

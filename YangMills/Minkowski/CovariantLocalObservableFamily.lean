@@ -25,7 +25,8 @@ namespace YangMills.Minkowski
 
 /-- Adjoint closure, exact scalar covariance on an explicit scalar-label sector, and bosonic
 locality for one labeled local-observable family on the same Poincaré representation/common domain
-chain. Labels outside the scalar sector are available to separate tensor/spin interfaces. -/
+chain. Labels outside the scalar sector are available to separate bosonic tensor interfaces;
+spinorial fields require a distinct graded-locality surface. -/
 structure CovariantLocalObservableFamilyData
     {d : EuclideanDimension} {G : Type*}
     [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
@@ -40,8 +41,8 @@ structure CovariantLocalObservableFamilyData
   adjointLabel : family.Label → family.Label
   adjointLabel_involutive : Function.Involutive adjointLabel
   adjointLabel_unit : adjointLabel family.unitLabel = family.unitLabel
-  /-- Labels designated to transform as Lorentz scalars. Tensor/spin labels remain in the same family
-  but use separate source-facing covariance interfaces. -/
+  /-- Labels designated to transform as Lorentz scalars. Bosonic tensor labels remain in the same
+  family but use separate source-facing covariance interfaces. -/
   scalarLabel : Set family.Label
   /-- The unit and distinguished scalar Wightman label belong to the scalar sector. -/
   unitLabel_mem_scalar : family.unitLabel ∈ scalarLabel
@@ -54,7 +55,7 @@ structure CovariantLocalObservableFamilyData
       @inner ℂ H _
         (family.operator A (conjugateScalarMinkowskiSchwartzTestFunction f) ψ).val φ.val
   /-- Every designated scalar label transforms under the same physical lift representation and
-  scalar affine test pullback. No scalar law is imposed on tensor/spin labels. -/
+  scalar affine test pullback. No scalar law is imposed on tensor labels. -/
   operator_covariant : ∀ A, A ∈ scalarLabel → ∀ g f ψ,
     D.domainUnitary g
         (family.operator A f ((D.domainUnitary g).symm ψ)) =

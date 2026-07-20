@@ -8,6 +8,7 @@ import YangMills.Classical.CanonicalEuclideanMetric
 import YangMills.Classical.EuclideanAction
 import YangMills.Euclidean.OSOrderedFourDimensionalEuclideanCurrentStrength
 import YangMills.Geometry.LieGroup
+import YangMills.Minkowski.LocalObservableCovarianceCoverage
 import YangMills.Minkowski.PhysicalMassGapSupremum
 import YangMills.Minkowski.ScalarWightmanPoincareDescent
 import YangMills.Minkowski.ScalarWightmanAxiomSurface
@@ -31,7 +32,7 @@ Euclidean spacetime. It joins one compact-simple physical gauge group and exact 
 chain to one ambient Euclidean scalar family with exact source restrictions, one independent
 Minkowski/Wightman chain, an explicit
 exact-source Wick-continuation bridge, one covariant local-observable family containing that Wightman
-field, interpretations of the finite scalar fragment `1`, `F²`, `(F²)²`, a local stress tensor whose
+field with exhaustive scalar/stress/residual finite-multiplet covariance coverage, interpretations of the finite scalar fragment `1`, `F²`, `(F²)²`, a local stress tensor whose
 regulated charges and translation Ward identities use the same joint translation PVM, and a
 physical gap on that spectrum.
 
@@ -235,6 +236,10 @@ structure FourDimensionalCurrentStrengthContinuumCoreAcceptanceData
   /-- Stress component labels are disjoint from the scalar-covariant label sector. -/
   stressCovarianceSeparation :
     Minkowski.ScalarStressCovarianceSeparationData covariantObservableFamily stressEnergy
+  /-- Every bosonic observable label outside the scalar and exact stress sectors belongs to a finite
+  projected-Lorentz multiplet. Spinorial fields require a separate graded-locality surface. -/
+  observableCovarianceCoverage :
+    Minkowski.LocalObservableCovarianceCoverageData covariantObservableFamily stressEnergy
   /-- The stress charges, translation derivatives, Ward identity, and momentum moments use the
   exact same representation, domain, family, and Wightman joint PVM. -/
   stressTranslationWard : Minkowski.LocalStressEnergyTranslationWardData
