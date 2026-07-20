@@ -242,6 +242,97 @@ theorem ScalarWightmanAxiomChainData.descendedAffineUnitary_stronglyContinuous
   exact congrArg (fun unitary : H ≃ₗᵢ[ℂ] H => unitary ψ)
     (chain.descendedAffineUnitary_projection targetGroup g)
 
+/-- Lift independence transported back to a scalar chain indexed by a propositionally equal lift,
+without exposing cast domains or fields. -/
+theorem ScalarWightmanAxiomChainData.unitary_eq_of_doubleCover_projection_eq
+    {otherLift : ProperOrthochronousPoincareLiftData d G}
+    (otherChain : ScalarWightmanAxiomChainData d otherLift H)
+    (lift_eq : cover.toProperOrthochronousPoincareLiftData = otherLift)
+    (targetGroup : ProperOrthochronousPoincareTargetGroupData d)
+    (first second : G)
+    (projection_eq : cover.projection first = cover.projection second) :
+    otherChain.U.unitary first = otherChain.U.unitary second := by
+  let transported := otherChain.transport lift_eq.symm
+  calc
+    otherChain.U.unitary first = transported.U.unitary first :=
+      (otherChain.transport_unitary lift_eq.symm first).symm
+    _ = transported.U.unitary second :=
+      transported.unitary_eq_of_projection_eq targetGroup first second projection_eq
+    _ = otherChain.U.unitary second :=
+      otherChain.transport_unitary lift_eq.symm second
+
+/-- Descended affine-domain unitary on the original, uncast common domain of a propositionally equal
+lift-indexed scalar chain. -/
+noncomputable def ScalarWightmanAxiomChainData.descendedAffineDomainUnitaryOfLiftEq
+    {otherLift : ProperOrthochronousPoincareLiftData d G}
+    (otherChain : ScalarWightmanAxiomChainData d otherLift H)
+    (_lift_eq : cover.toProperOrthochronousPoincareLiftData = otherLift)
+    (p : ProperOrthochronousPoincareTransformation d) :
+    otherChain.D.domain ≃ₗᵢ[ℂ] otherChain.D.domain :=
+  otherChain.D.domainUnitary (selectedAffinePoincareLift (cover := cover) p)
+
+/-- The uncast descended domain unitary recovers every original restricted unitary. -/
+theorem ScalarWightmanAxiomChainData.descendedAffineDomainUnitaryOfLiftEq_projection
+    {otherLift : ProperOrthochronousPoincareLiftData d G}
+    (otherChain : ScalarWightmanAxiomChainData d otherLift H)
+    (lift_eq : cover.toProperOrthochronousPoincareLiftData = otherLift)
+    (targetGroup : ProperOrthochronousPoincareTargetGroupData d)
+    (g : G) :
+    otherChain.descendedAffineDomainUnitaryOfLiftEq lift_eq (cover.projection g) =
+      otherChain.D.domainUnitary g := by
+  apply LinearIsometryEquiv.ext
+  intro ψ
+  apply Subtype.ext
+  change otherChain.U.unitary
+      (selectedAffinePoincareLift (cover := cover) (cover.projection g)) ψ =
+    otherChain.U.unitary g ψ
+  exact congrArg (fun unitary : H ≃ₗᵢ[ℂ] H => unitary ψ)
+    (otherChain.unitary_eq_of_doubleCover_projection_eq lift_eq targetGroup _ _
+      (selectedAffinePoincareLift_projection (cover := cover) (cover.projection g)))
+
+/-- Direct affine covariance on the original scalar field/domain across a propositional lift equality. -/
+theorem ScalarWightmanAxiomChainData.field_covariant_descendedAffineOfLiftEq
+    {otherLift : ProperOrthochronousPoincareLiftData d G}
+    (otherChain : ScalarWightmanAxiomChainData d otherLift H)
+    (lift_eq : cover.toProperOrthochronousPoincareLiftData = otherLift)
+    (p : ProperOrthochronousPoincareTransformation d)
+    (f : ScalarMinkowskiSchwartzTestFunction d) (ψ : otherChain.D.domain) :
+    otherChain.descendedAffineDomainUnitaryOfLiftEq lift_eq p
+        (otherChain.fieldData.field f
+          ((otherChain.descendedAffineDomainUnitaryOfLiftEq lift_eq p).symm ψ)) =
+      otherChain.fieldData.field (pullbackScalarMinkowskiSchwartzTestFunction d p f) ψ := by
+  have projection_functions := congrArg
+    (fun selected : ProperOrthochronousPoincareLiftData d G => selected.projection) lift_eq
+  have transformed := otherChain.surface.covariance.field_covariant
+    (selectedAffinePoincareLift (cover := cover) p) f ψ
+  simpa [ScalarWightmanAxiomChainData.descendedAffineDomainUnitaryOfLiftEq,
+    show otherLift.projection (selectedAffinePoincareLift (cover := cover) p) = p by
+      rw [← projection_functions]
+      exact selectedAffinePoincareLift_projection (cover := cover) p] using transformed
+
+/-- Every original same-domain covariant scalar observable has direct affine covariance across the
+same propositional lift equality. -/
+theorem CovariantLocalObservableFamilyData.operator_covariant_descendedAffineOfLiftEq
+    {otherLift : ProperOrthochronousPoincareLiftData d G}
+    (otherChain : ScalarWightmanAxiomChainData d otherLift H)
+    (lift_eq : cover.toProperOrthochronousPoincareLiftData = otherLift)
+    {family : TemperedLocalObservableFamilyData otherChain.D}
+    (covariance : CovariantLocalObservableFamilyData family)
+    (A : family.Label) (p : ProperOrthochronousPoincareTransformation d)
+    (f : ScalarMinkowskiSchwartzTestFunction d) (ψ : otherChain.D.domain) :
+    otherChain.descendedAffineDomainUnitaryOfLiftEq lift_eq p
+        (family.operator A f
+          ((otherChain.descendedAffineDomainUnitaryOfLiftEq lift_eq p).symm ψ)) =
+      family.operator A (pullbackScalarMinkowskiSchwartzTestFunction d p f) ψ := by
+  have projection_functions := congrArg
+    (fun selected : ProperOrthochronousPoincareLiftData d G => selected.projection) lift_eq
+  have transformed := covariance.operator_covariant A
+    (selectedAffinePoincareLift (cover := cover) p) f ψ
+  simpa [ScalarWightmanAxiomChainData.descendedAffineDomainUnitaryOfLiftEq,
+    show otherLift.projection (selectedAffinePoincareLift (cover := cover) p) = p by
+      rw [← projection_functions]
+      exact selectedAffinePoincareLift_projection (cover := cover) p] using transformed
+
 end
 
 end YangMills.Minkowski

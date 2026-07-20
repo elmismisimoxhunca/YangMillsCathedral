@@ -188,6 +188,33 @@ theorem exact_descended_affine_translation_coherence
           EuclideanDimension.four a) = U.translationUnitary a :=
   data.descendedAffinePoincareUnitary_pureTranslation a
 
+/-- Direct affine covariance acts on the exact original scalar field and original common domain. -/
+theorem exact_descended_affine_scalar_field_covariance
+    (p : Minkowski.ProperOrthochronousPoincareTransformation EuclideanDimension.four)
+    (f : Minkowski.ScalarMinkowskiSchwartzTestFunction EuclideanDimension.four)
+    (ψ : D.domain) :
+    data.descendedAffineDomainUnitary p
+        (fieldData.field f ((data.descendedAffineDomainUnitary p).symm ψ)) =
+      fieldData.field
+        (Minkowski.pullbackScalarMinkowskiSchwartzTestFunction
+          EuclideanDimension.four p f) ψ :=
+  data.scalarField_covariant_descendedAffine p f ψ
+
+/-- Every label of the exact original local-observable family—not a transported copy—has direct
+affine covariance. -/
+theorem exact_descended_affine_observable_covariance
+    (A : data.observableFamily.Label)
+    (p : Minkowski.ProperOrthochronousPoincareTransformation EuclideanDimension.four)
+    (f : Minkowski.ScalarMinkowskiSchwartzTestFunction EuclideanDimension.four)
+    (ψ : D.domain) :
+    data.descendedAffineDomainUnitary p
+        (data.observableFamily.operator A f
+          ((data.descendedAffineDomainUnitary p).symm ψ)) =
+      data.observableFamily.operator A
+        (Minkowski.pullbackScalarMinkowskiSchwartzTestFunction
+          EuclideanDimension.four p f) ψ :=
+  data.localObservable_covariant_descendedAffine A p f ψ
+
 /-- The descended physical affine action remains strongly continuous on every Hilbert vector. -/
 theorem exact_descended_affine_poincare_strong_continuity (ψ : H) :
     Continuous (fun p : Minkowski.ProperOrthochronousPoincareTransformation

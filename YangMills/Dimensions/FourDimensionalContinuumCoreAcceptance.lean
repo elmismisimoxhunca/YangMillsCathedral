@@ -46,8 +46,9 @@ constructing a reconstruction. The exact lift is required to
 carry a genuine two-sheeted topological covering projection whose exact group kernel is identified
 with the literal complex signs `{±1}`. Scalar covariance, exact vacuum invariance, and cyclicity
 then derive trivial action of that kernel on the same physical Hilbert representation, which
-therefore descends to a strongly continuous homomorphism on the named affine target. Concrete
-inhomogeneous `SL(2,ℂ)` and construction of the
+therefore descends to a strongly continuous homomorphism on the named affine target. The original
+uncast scalar field and every label of the original covariant observable family inherit direct
+affine covariance. Concrete inhomogeneous `SL(2,ℂ)` and construction of the
 required named affine-target group law remain open. No lattice datum can fill
 any field of this record. The exact compact-simple gauge certificate indexes a preliminary
 four-dimensional running-coupling normal form and a supplied weak regular-variation condition on the
@@ -410,6 +411,48 @@ theorem descendedAffinePoincareUnitary_pureTranslation
     exact lift.projection_translation (Multiplicative.ofAdd a)
   rw [← projection_eq, data.descendedAffinePoincareUnitary_projection]
   rfl
+
+/-- Descended affine unitary on the exact original common domain, with no cast-domain surrogate. -/
+noncomputable def descendedAffineDomainUnitary
+    (data : FourDimensionalCurrentStrengthContinuumCoreAcceptanceData inner connection
+      exterior curvatureCertificate fieldData)
+    (p : Minkowski.ProperOrthochronousPoincareTransformation EuclideanDimension.four) :
+    D.domain ≃ₗᵢ[ℂ] D.domain :=
+  data.scalarWightmanAxiomChain.descendedAffineDomainUnitaryOfLiftEq
+    data.poincareDoubleCover_toLift_eq p
+
+/-- The exact original scalar field has direct affine covariance on its original common domain. -/
+theorem scalarField_covariant_descendedAffine
+    (data : FourDimensionalCurrentStrengthContinuumCoreAcceptanceData inner connection
+      exterior curvatureCertificate fieldData)
+    (p : Minkowski.ProperOrthochronousPoincareTransformation EuclideanDimension.four)
+    (f : Minkowski.ScalarMinkowskiSchwartzTestFunction EuclideanDimension.four)
+    (ψ : D.domain) :
+    data.descendedAffineDomainUnitary p
+        (fieldData.field f ((data.descendedAffineDomainUnitary p).symm ψ)) =
+      fieldData.field
+        (Minkowski.pullbackScalarMinkowskiSchwartzTestFunction
+          EuclideanDimension.four p f) ψ :=
+  data.scalarWightmanAxiomChain.field_covariant_descendedAffineOfLiftEq
+    data.poincareDoubleCover_toLift_eq p f ψ
+
+/-- Every label in the exact original covariant scalar local-observable family has direct affine
+covariance on the original domain. -/
+theorem localObservable_covariant_descendedAffine
+    (data : FourDimensionalCurrentStrengthContinuumCoreAcceptanceData inner connection
+      exterior curvatureCertificate fieldData)
+    (A : data.observableFamily.Label)
+    (p : Minkowski.ProperOrthochronousPoincareTransformation EuclideanDimension.four)
+    (f : Minkowski.ScalarMinkowskiSchwartzTestFunction EuclideanDimension.four)
+    (ψ : D.domain) :
+    data.descendedAffineDomainUnitary p
+        (data.observableFamily.operator A f
+          ((data.descendedAffineDomainUnitary p).symm ψ)) =
+      data.observableFamily.operator A
+        (Minkowski.pullbackScalarMinkowskiSchwartzTestFunction
+          EuclideanDimension.four p f) ψ :=
+  data.covariantObservableFamily.operator_covariant_descendedAffineOfLiftEq
+    data.scalarWightmanAxiomChain data.poincareDoubleCover_toLift_eq A p f ψ
 
 /-- The descended affine representation is strongly continuous on every exact Hilbert vector. -/
 theorem descendedAffinePoincareUnitary_stronglyContinuous

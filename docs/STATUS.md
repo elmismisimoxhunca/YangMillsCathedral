@@ -3953,7 +3953,9 @@ Implemented and verified:
   homomorphism and pointwise strong-continuity theorem on the core's existing Hilbert space.
   Cast-eliminating coherence theorems recover every original `U.unitary g` over its projection and,
   on pure translations, the exact `U.translationUnitary a` tied to the joint PVM, stress tensor, and
-  mass-gap predicate.
+  mass-gap predicate. Further lift-equality theorems define the descended domain action directly on
+  the original uncast `D.domain` and prove affine covariance of the original scalar field and every
+  label in the core's original covariant local-observable family.
 - No cover, representation, field, scalar theory, spinorial realization, or mass gap is constructed.
 
 Not yet achieved:

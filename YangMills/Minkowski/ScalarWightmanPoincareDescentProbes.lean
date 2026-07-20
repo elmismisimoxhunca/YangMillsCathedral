@@ -79,6 +79,23 @@ theorem exact_descended_observable_covariance
       family.operator A (pullbackScalarMinkowskiSchwartzTestFunction d p f) ψ :=
   covariance.operator_covariant_descendedAffine chain A p f ψ
 
+omit targetGroup in
+/-- Propositional lift equality descends covariance on the original, uncast observable family. -/
+theorem exact_lift_equality_observable_covariance
+    {otherLift : ProperOrthochronousPoincareLiftData d G}
+    (otherChain : ScalarWightmanAxiomChainData d otherLift H)
+    (lift_eq : cover.toProperOrthochronousPoincareLiftData = otherLift)
+    {family : TemperedLocalObservableFamilyData otherChain.D}
+    (covariance : CovariantLocalObservableFamilyData family)
+    (A : family.Label) (p : ProperOrthochronousPoincareTransformation d)
+    (f : ScalarMinkowskiSchwartzTestFunction d) (ψ : otherChain.D.domain) :
+    otherChain.descendedAffineDomainUnitaryOfLiftEq lift_eq p
+        (family.operator A f
+          ((otherChain.descendedAffineDomainUnitaryOfLiftEq lift_eq p).symm ψ)) =
+      family.operator A (pullbackScalarMinkowskiSchwartzTestFunction d p f) ψ :=
+  covariance.operator_covariant_descendedAffineOfLiftEq
+    otherChain lift_eq A p f ψ
+
 /-- The descended map is a genuine homomorphism for the named target law. -/
 theorem exact_affine_multiplicativity
     (first second : ProperOrthochronousPoincareTransformation d) :
