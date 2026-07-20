@@ -150,8 +150,11 @@ committed before higher layers depend on it.
   right-action conjugation law and differentiated projection preservation, and combine canonical
   curvature pullback with horizontality/right equivariance to prove the evaluated local
   `Ad(g_ϕ⁻¹)` curvature formula.
-- [ ] Prove associated-function smoothness and the affine connection formula, then separately derive
-  descended, scalar-density, action, and observable gauge covariance/invariance.
+- [x] Identify the unique associated function with exact principal-chart second coordinates,
+  derive local-section and whole-chart-source smoothness from existing bundle regularity, and use
+  atlas coverage to prove global `C∞` smoothness without assuming regularity of choice.
+- [ ] Construct the associated Maurer–Cartan one-form and prove the affine connection formula, then
+  separately derive descended, scalar-density, action, and observable gauge covariance/invariance.
 - [ ] Derive structural curvature laws automatically and prove intrinsic descended Bianchi.
 
 ## Phase 3 — classical Yang–Mills semantics

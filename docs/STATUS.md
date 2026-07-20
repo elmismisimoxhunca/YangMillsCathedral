@@ -4190,9 +4190,13 @@ unique associated group function from torsor data, proves its pointwise action, 
 right-action conjugation laws, and differentiates gauge projection preservation. The exact original
 curvature structure certificate then removes the vertical difference between gauge-transported and
 fixed-right-translated tangents, deriving the evaluated local law with `Ad(g_ϕ(p)⁻¹)`. Hostile probes
-reject the opposite adjoint factor whenever the two evaluated factors are explicitly distinguishable. Associated-function smoothness, the local affine connection
-formula, descended active covariance, action invariance, and observable gauge invariance remain
-open.
+reject the opposite adjoint factor whenever the two evaluated factors are explicitly distinguishable.
+`YangMills.Geometry.SmoothGaugeAssociatedFunction` identifies the unique selected function with the
+second coordinate of each transformed canonical local section. Every chart point is reconstructed
+from that section and its second coordinate, so the conjugation law expresses `g_ϕ` as a smooth
+chart formula. Exact chart-source regularity and atlas coverage derive global `C∞` smoothness; no
+regularity of `Classical.choose` is assumed. The local affine connection formula, descended active
+covariance, action invariance, and observable gauge invariance remain open.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

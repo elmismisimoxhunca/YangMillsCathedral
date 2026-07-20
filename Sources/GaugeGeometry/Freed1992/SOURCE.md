@@ -223,7 +223,9 @@ The canonical transformed principal curvature is therefore proved equal to the t
 of the original exact curvature. Torsor uniqueness now defines the associated function `g_ϕ` by
 `ϕ(p)=p·g_ϕ(p)` and derives its right-action conjugation law. Differentiated projection preservation,
 horizontality, and right equivariance then prove the evaluated local curvature identity with the
-exact factor `Ad(g_ϕ(p)⁻¹)`. Smoothness of the selected associated function, the local affine
-connection formula, descended-form covariance, and action/observable invariance remain pending. Arbitrary-map/
+exact factor `Ad(g_ϕ(p)⁻¹)`. The selected associated function is now identified with smooth
+principal-chart coordinates on local sections; chart conjugation and atlas coverage derive its
+global `C∞` regularity. The local affine connection formula, descended-form covariance, and
+action/observable invariance remain pending. Arbitrary-map/
 two-set exterior naturality, a canonical arbitrary-manifold positive-degree operator, an intrinsic
 descended adjoint-bundle Bianchi theorem, and full gauge covariance remain pending.
