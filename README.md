@@ -477,8 +477,10 @@ smooth fundamental field with the expected right-action curve velocity. The smoo
 field has been constructed and its left-trivialized coefficient proved to be exactly `Ad(g⁻¹)Y`.
 The universal Maurer--Cartan certificate now derives the coefficient derivative as `-[X,Y]`
 conditionally on the exact identity-point commutation of left- and right-invariant fields. The
-remaining second-order manifold-calculus bridge is precisely that mixed-derivative commutation
-fact, followed by its targeted Cartan comparison, descent of the full candidate, and a genuine intrinsic
+corner-safe Schwarz cancellation for opposite mixed-partial fields under the exact first-partial normalization hypotheses and exact `C²`-within
+regularity of identity-centered chart multiplication are now proved. The remaining bridge is the
+exact chart-pullback identification of invariant fields with those partial fields, followed by the
+targeted Cartan comparison, descent of the full candidate, and a genuine intrinsic
 `D_A F` theorem remain open. Exact inverse-action
 curvature covariance now derives pointwise invariance of both chosen and basis-independent
 canonical curvature densities for the full pulled connection/exterior/certificate chain. The exact

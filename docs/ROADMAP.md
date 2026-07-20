@@ -243,8 +243,12 @@ committed before higher layers depend on it.
 - [x] Use the universal Maurer--Cartan certificate to compute derivatives of left-trivialized smooth
   fields and derive `d(Ad(·⁻¹)Y)₁(X) = -[X,Y]` conditionally on left/right invariant-field
   commutation at the identity.
-- [ ] Prove the remaining mixed-second-derivative theorem that left- and right-invariant fields
-  commute at the identity and apply the resulting unconditional formula in the targeted Cartan
+- [x] Prove reusable unrestricted and corner-safe within-set Schwarz cancellation for opposite
+  mixed-partial derivative fields under exact first-partial normalization hypotheses and exact
+  `C²`-within regularity of Lie-group multiplication in
+  the identity-centered chart on `range I ×ˢ range I`.
+- [ ] Identify the exact chart pullbacks of left- and right-invariant fields with those mixed partial
+  fields, derive their identity-point commutation, and apply the unconditional formula in the targeted Cartan
   comparison, then prove full candidate
   right-adjoint equivariance, then descend it and derive structural curvature
   laws and a genuine intrinsic `D_A F` theorem.

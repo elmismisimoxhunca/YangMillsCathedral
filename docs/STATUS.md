@@ -4371,8 +4371,14 @@ smooth. `YangMills.Mathematics.LieGroupLeftTrivializedFieldDerivative` now uses 
 universal Maurer--Cartan equation to compute the derivative of any smooth field's left-trivialized
 coefficient. It derives the exact `-[X,Y]` formula for the right-invariant field from the narrowly
 isolated premise that the relevant left/right manifold Lie bracket vanishes at the identity. The
-remaining second-order manifold-calculus bridge is precisely that mixed-derivative commutation
-fact; after it is proved, the targeted principal-form Cartan comparison remains. Descent of the full candidate and a genuine intrinsic `D_A F` theorem remain open.
+`YangMills.Mathematics.MixedPartialLieBracket` proves the unrestricted and corner-safe within-set
+Schwarz cancellation theorem for opposite partial-derivative fields under exact first-partial
+normalization hypotheses, while
+`YangMills.Mathematics.LieGroupChartMultiplication` proves exact `C²` regularity of identity-centered
+chart multiplication within `range I ×ˢ range I`. The remaining bridge is now the exact
+corner-aware identification of the chart pullbacks of the left- and right-invariant fields with
+those two partial fields; after that identification yields commutation, the targeted principal-form
+Cartan comparison remains. Descent of the full candidate and a genuine intrinsic `D_A F` theorem remain open.
 
 The four-dimensional `CurrentStrength` integration record now requires one exact algebraic quantum
 action of its canonical smooth principal gauge group on its same observable family and one
