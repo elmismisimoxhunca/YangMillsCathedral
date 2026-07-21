@@ -777,9 +777,15 @@ committed before higher layers depend on it.
   - [x] Add the first exact Driver Definition 8.1 component: positive-spacing paths in the directed
     nearest-neighbor graph on `εℤ²`, with finite strictly ordered nodes and exact affine bond
     geometry; reject diagonal, stationary, zero-spacing, and singleton-node surrogates.
-  - [ ] Add the full approximating graph family, region/edge surjections, area-order and boundary-word
-    conditions, compact-surface gluing, and Driver's Villain/Wilson lattice-continuum convergence
-    with exact hypotheses, distinct from finite-cutoff, classical, and four-dimensional witnesses.
+  - [x] Add the uninhabited Definition 8.1 approximating graph family on the project's conservative
+    embedded-arc strengthening, with explicit subdivision debt for Driver-permitted loop incidence:
+    one embedded graph at
+    every positive spacing, surjective edge/face maps, exact lattice paths on every fine edge,
+    uniform explicit symmetric-difference area `O(ε)`, and universal exact boundary-choice/word
+    transport.
+  - [ ] Add compact-surface gluing and Driver's Villain/Wilson actions, lattice measures, and
+    lattice-continuum convergence with exact hypotheses, distinct from finite-cutoff, classical, and
+    four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.
   - [x] Add a current-strength continuum core hard-wired to coordinate `ℝ³` with coordinate
     Lebesgue action measure, dependently joining compact-simple gauge/classical data, strict

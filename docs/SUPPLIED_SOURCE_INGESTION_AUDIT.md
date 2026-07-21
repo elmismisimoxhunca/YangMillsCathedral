@@ -168,9 +168,11 @@ adjudication corrections.
 9. Driver PDF p. 27 / printed p. 601 was visually adjudicated on 2026-07-21 for Definition 8.1.
    The page visibly fixes the nearest-neighbor directed graph on `εℤ²`, requires approximating
    graph edges to be paths in it, gives bond/region surjections, requires symmetric-difference area
-   of order `ε`, and preserves admissible boundary sums. The first Lean layer formalizes only exact
-   positive-spacing nearest-neighbor path geometry; graph families, area order, actions, measures,
-   and convergence remain open.
+   of order `ε`, and preserves admissible boundary sums. The Lean layer formalizes exact positive-
+   spacing nearest-neighbor path geometry and an uninhabited Definition 8.1 family on the project's
+   strengthened embedded-arc subclass, with surjective edge/face maps, explicit uniform area order,
+   nonvacuous universal facewise boundary-presentation transport, and explicit loop-subdivision debt;
+   actions, measures, and convergence remain open.
 10. Lévy PDF pp. 24–27 / printed pp. 10–13 were visually adjudicated on 2026-07-21 for §1.6,
    Theorem 1.6.1 and Lemma 1.6.3. The pages visibly define the fine-to-coarse holonomy map, state
    surjectivity and exact measure pushforward, and state strict three-graph composition. The Lean

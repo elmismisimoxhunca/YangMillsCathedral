@@ -729,8 +729,12 @@ pushforward from coherent pairwise refinement laws. No refinement instance is co
 lattice-limit layers remain explicit debt. As the first Definition 8.1 approximation component,
 `EpsilonSquareLatticePathCertificate` now gives exact positive-spacing paths in the directed
 nearest-neighbor graph on `εℤ²`: finite strictly ordered nodes from parameters `0` to `1`, horizontal
-or vertical integer unit steps, and exact affine realization of every bond. No approximating graph
-family, area estimate, action, measure, or convergence claim is yet made.
+or vertical integer unit steps, and exact affine realization of every bond. On the project's conservative embedded-arc strengthening (so Driver-permitted one-edge loop
+incidence requires subdivision), an uninhabited Definition 8.1 sequence now supplies a fine embedded graph at every positive
+spacing, surjective coarse-edge and bounded-face maps, exact lattice certificates on every fine
+edge, one uniform symmetric-difference area `O(ε)` bound, and universal transport of every valid
+boundary presentation with exact mapped orientation/order. No graph sequence, action, measure, or
+convergence witness is constructed.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly

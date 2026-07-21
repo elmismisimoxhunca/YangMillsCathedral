@@ -4641,9 +4641,16 @@ The first Driver Definition 8.1 lattice-approximation component is now exact:
 strictly parameter-ordered node list from `0` to `1`; each integer-coordinate step is exactly one
 horizontal or vertical directed nearest neighbor, and each curve segment is the exact affine
 realization in `εℤ²`. At least one bond is derived, while diagonal, stationary, zero-spacing, and
-singleton-node substitutes are rejected. No approximating graph family, edge/region surjection,
-symmetric-difference area estimate, boundary transport, Villain/Wilson action, lattice measure, or
-continuum convergence is asserted.
+singleton-node substitutes are rejected. Uninhabited
+On the project's conservative embedded-arc strengthening, with subdivision still required for
+Driver-permitted one-edge loop incidence, `TwoDimensionalLatticeApproximatingSequenceData` supplies
+one embedded fine graph at every
+strictly positive spacing, surjective coarse-edge and bounded-face maps, an exact lattice-path
+certificate on every fine edge, one nonnegative constant and positive cutoff giving a uniform
+coordinate-Lebesgue symmetric-difference area `O(ε)` upper bound, and facewise transport of every valid coarse boundary presentation to its own valid fine
+presentation with exact oriented-word and component order. Existing coarse boundary data ensures
+this obligation is nonvacuous without forcing colliding face labels to share one presentation. No graph
+sequence, Villain/Wilson action, lattice measure, or continuum convergence witness is constructed.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.
