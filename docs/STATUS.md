@@ -4561,8 +4561,10 @@ finite-graph prerequisite, `OrientedEdge` stores only one group coordinate per u
 reverse orientation evaluates by inversion, finite words multiply later traversals on the left, and
 reversing a word gives inverse holonomy. Exact oriented endpoints define the target-left vertex-
 gauge action; composability cancels all internal gauge factors, leaving endpoint covariance and
-start-vertex conjugation for a closed word. This is finite algebra only: no arbitrary `Face` type is
-misrepresented as an actual planar complement component.
+start-vertex conjugation for a closed word. The exact finite product of canonical normalized Haar
+probability over those underlying edges is constructed; its edge marginals are Haar and every exact
+endpoint gauge action preserves it. This is finite algebra and measure theory only: no arbitrary
+`Face` type is misrepresented as an actual planar complement component.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

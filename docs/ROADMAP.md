@@ -728,6 +728,9 @@ committed before higher layers depend on it.
     left concatenation.
   - [x] Add oriented source/target semantics, target-left vertex-gauge action, internal-factor
     cancellation for composable words, and exact start-vertex conjugation for closed words.
+  - [x] Construct the reusable finite product of canonical normalized Haar probability over one
+    coordinate per underlying edge; derive exact marginals and preservation by every endpoint gauge
+    action.
   - [ ] Compare the metric's Laplace–Beltrami operator with the basis sum.
   - [ ] Construct exact finite planar embeddings/complement-face certificates and BC-graph
     face-product laws; then add general disconnected-boundary choice independence,
