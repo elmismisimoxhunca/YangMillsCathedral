@@ -4162,8 +4162,9 @@ smooth adjoint-bundle-valued curvature is the principal curvature evaluated at t
 section and exact tangent lifts; throughout the inverse extended chart centered at that section,
 the same principal representative satisfies the already-derived coordinate Bianchi identity.
 Hostile probes reject both a mismatched descended coordinate and a nonzero representative Bianchi
-output. This remains deliberately weaker than intrinsic descended Bianchi: no positive-degree
-adjoint-bundle covariant exterior derivative or adjoint-valued three-form is constructed.
+output. This result-specific bridge was deliberately weaker than intrinsic descended Bianchi; the
+later positive-degree construction now supplies the adjoint-valued `D_A F` three-form and derives
+its conditional intrinsic zero without changing this earlier representative theorem.
 
 ### Principal-connection gauge pullback
 
@@ -4428,8 +4429,14 @@ supplied ordinary curvature exterior certificate. `SmoothManifoldDifferentialFor
 now derives arbitrary-degree alternating-map-valued `C∞` regularity on the exact chart target and
 corner-model range, and `ManifoldPositiveDegreeExteriorDerivativeExtChart` identifies every such
 certificate's centered inverse-chart derivative with the exact `extDerivWithin`, coherently with the
-old one-form theorem at `n = 0`. The final bridge from this intrinsic carrier to the existing
-same-chain coordinate Bianchi zero remains open.
+old one-form theorem at `n = 0`.
+`YangMills.Geometry.PrincipalConnectionIntrinsicBianchiZero` now identifies the exact principal
+candidate at every chart center with the existing same-connection coordinate Bianchi expression,
+uses inverse-chart derivative cancellation to derive global principal zero, and proves the bundled
+intrinsic `D_A F` equals the canonical smooth zero adjoint-valued three-form. This theorem accepts no
+zero or naturality bridge, but still requires the same-index curvature structure certificate and a
+curvature-indexed ordinary exterior certificate; automatic construction of those inputs remains
+open.
 
 The four-dimensional `CurrentStrength` integration record now requires one exact algebraic quantum
 action of its canonical smooth principal gauge group on its same observable family and one

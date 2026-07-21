@@ -284,9 +284,11 @@ committed before higher layers depend on it.
 - [x] Generalize inverse-extended-chart alternating-map regularity to arbitrary degree and prove
   every positive-degree exterior certificate agrees at the chart center with the exact
   corner-aware `extDerivWithin` carrier, including `n = 0` coherence.
-- [ ] Connect the intrinsic `D_A F` representative to the existing same-chain coordinate Bianchi
-  theorem and prove descended Bianchi zero without accepting it as data; automatic curvature
-  structure remains separate debt.
+- [x] Connect the intrinsic `D_A F` representative to the existing same-chain coordinate Bianchi
+  theorem, derive global principal-candidate zero by exact chart tangent cancellation, and prove the
+  bundled descended intrinsic Bianchi identity without accepting a zero or naturality bridge.
+- [ ] Derive automatic same-connection curvature structure and, separately, construct rather than
+  merely accept the ordinary curvature exterior certificate.
 
 ## Phase 3 — classical Yang–Mills semantics
 

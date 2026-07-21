@@ -390,8 +390,9 @@ the same principal curvature evaluated on the chart's local section and tangent 
 representative obeys coordinate Bianchi. That result-specific bridge alone is not an intrinsic
 three-form, but the later general positive-degree construction now supplies the actual descended
 `D_A F` carrier under explicit same-chain certificates. Canonical arbitrary-manifold exterior
-existence, arbitrary-manifold `d²`, arbitrary-manifold graded Leibniz transport, intrinsic descended
-Bianchi zero, and positive curvature-tensor orders remain open. The interpreted observable layer now extends the exact
+existence, arbitrary-manifold `d²`, arbitrary-manifold graded Leibniz transport, automatic
+curvature structure/exterior-certificate construction, and positive curvature-tensor orders remain
+open; conditional intrinsic descended Bianchi zero is now derived. The interpreted observable layer now extends the exact
 unit and `F²` labels to the finite intrinsic fragment `1`, `F²`, `(F²)²`, with exact classical
 carrier coherence. A separate explicit anti-collapse strengthening requires `(F²)²` to be a new
 nontrivial operator in the 4D core; this is not attributed to Clay's footnote. Smooth gauge
@@ -504,8 +505,11 @@ to the actual dependent adjoint-bundle fibers as a smooth positive-degree operat
 specialization is an exact same-connection smooth adjoint-valued three-form carrier `D_A F`,
 conditional on the existing same-index curvature structure certificate and a supplied ordinary
 curvature exterior certificate. Arbitrary-degree inverse-chart regularity and exact centered
-`extDerivWithin` identification are now derived for that supplied certificate, but its intrinsic
-carrier has not yet been identified with the existing coordinate Bianchi zero. Exact inverse-action
+`extDerivWithin` identification are now derived for that supplied certificate. Combining those
+results with the same-connection coordinate Bianchi theorem proves the principal candidate globally
+zero and the intrinsic descended `D_A F` equal to the canonical smooth zero adjoint-valued
+three-form. Curvature structure and the ordinary curvature exterior certificate remain explicit
+same-chain inputs; neither is constructed. Exact inverse-action
 curvature covariance now derives pointwise invariance of both chosen and basis-independent
 canonical curvature densities for the full pulled connection/exterior/certificate chain. The exact
 analytic datum transports to that chain with unchanged designated measure and coupling, deriving

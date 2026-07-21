@@ -96,8 +96,9 @@ zero as twice the cyclic Lie Jacobi sum, pointwise and smoothly. A finite-dimens
 coordinate degree-two covariant expression and Bianchi proof are now derived below. A separate
 finite-dimensional principal-bundle construction conditionally descends `dω + [Θ∧ω]` from a
 supplied ordinary exterior certificate and horizontal/equivariant input, including the same-chain
-`D_A F` carrier; no canonical arbitrary-manifold exterior existence or intrinsic Bianchi-zero
-result is supplied.
+`D_A F` carrier. Exact centered inverse-chart calculus and the derived coordinate identity then
+prove its intrinsic Bianchi zero without a zero/naturality witness. No canonical arbitrary-manifold
+exterior existence or automatic curvature-structure certificate is supplied.
 Joint continuity and coordinate smoothness are derived for Mathlib's actual finite-dimensional
 Lie-group tangent bracket by transport through the canonical normed model coordinates; the
 bracket-wedge is then proved to preserve smooth manifold one-forms.
@@ -270,5 +271,7 @@ action on observable operators and
 broader-observable invariance remain pending. The finite `1`, `F²`, `(F²)²` interpretation records
 do transport to the exact pulled chain with unchanged classical carriers, quantum family/labels,
 and anti-collapse witnesses; this is deliberately only same-family transport. Arbitrary-map/
-two-set exterior naturality, a canonical arbitrary-manifold positive-degree operator, an intrinsic
-descended adjoint-bundle Bianchi theorem, and full gauge covariance remain pending.
+two-set exterior naturality, canonical arbitrary-manifold exterior-certificate construction,
+automatic curvature structure, and full gauge covariance remain pending. The finite-dimensional
+principal construction now derives conditional intrinsic descended adjoint-bundle Bianchi zero from
+same-chain certificates.
