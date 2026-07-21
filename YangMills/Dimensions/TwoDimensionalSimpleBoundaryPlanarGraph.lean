@@ -5,6 +5,7 @@ Authors: Sebastian Rodrigo
 -/
 
 import YangMills.Dimensions.TwoDimensionalGaugeFixedHolonomyMeasure
+import YangMills.Dimensions.TwoDimensionalDriverAdmissibleCurve
 import YangMills.Mathematics.FiniteOrientedEdgeGaugeTransport
 import Mathlib.MeasureTheory.Measure.Lebesgue.Basic
 
@@ -16,12 +17,15 @@ free finite face label. This module introduces a concrete acceptance certificate
 ambient path carrier. Every path receives a continuous coordinate realization in `ℝ²`; graph edges
 select exact ambient paths, are injective on `[0,1]`, and may intersect distinct edges only at shared
 endpoint points. The complement of the total trace is required to be exactly one unbounded region
-plus the supplied bounded connected open face regions. Every face frontier has a once-around Jordan parameterization realized segment-by-segment by one
+plus the supplied bounded connected open face regions. A second finite connected-cell decomposition
+of the complement after adjoining the x-axis retains Driver Definition 6.1's admissible-collection
+finiteness condition. Every face frontier has a once-around Jordan parameterization realized segment-by-segment by one
 nonempty closed composable oriented boundary word with no repeated underlying edge, and its supplied
 positive real area is tied to coordinate Lebesgue volume. This deliberately treats a simple-boundary
-subclass: general BC boundaries with bridge multiplicity remain later work. Driver's piecewise-`C¹`
-vertical/horizontal admissibility is also still a separate strengthening; continuity alone is not
-presented as that source hypothesis.
+subclass: general BC boundaries with bridge multiplicity remain later work. Each selected edge now
+also carries a concrete finite decomposition into vertical segments and affinely reparameterized
+`C¹` horizontal graphs, exactly retaining Driver's admissibility shape rather than relying on the
+ambient path carrier's comment.
 
 This is uninhabited topological geometric acceptance data. It constructs no graph, face, measure, density, or
 Yang--Mills object. It covers only simple-boundary face presentations. Driver's general
@@ -35,7 +39,7 @@ open YangMills.Mathematics
 
 noncomputable section
 
-universe uG uGauge uSample uConnection uVertex uEdge uFace
+universe uG uGauge uSample uConnection uVertex uEdge uFace uXAxisCell
 
 /-- Coordinate Lebesgue volume of a set in literal two-dimensional Euclidean spacetime. The set
 is sent through Mathlib's canonical Euclidean-space coordinate equivalence and measured by the
@@ -45,6 +49,11 @@ noncomputable def twoDimensionalCoordinateLebesgueVolume
     (region : Set EuclideanDimension.two.Spacetime) : ENNReal :=
   (Measure.pi (fun _ : EuclideanDimension.two.CoordinateIndex => MeasureTheory.volume))
     ((EuclideanSpace.equiv EuclideanDimension.two.CoordinateIndex ℝ) '' region)
+
+/-- The literal horizontal coordinate axis used in Driver's admissible-collection finiteness
+condition. -/
+def twoDimensionalXAxis : Set EuclideanDimension.two.Spacetime :=
+  {point | twoDimensionalSecondCoordinate point = 0}
 
 /-- Coordinate trace of one exact selected ambient edge path over the closed unit interval. -/
 def finiteEmbeddedEdgeTrace
@@ -93,8 +102,9 @@ def finiteOrientedEdgeCurve
 
 /-- Concrete topological certificate for a finite directed planar graph whose bounded faces all
 have one simple once-around boundary component. This is a source-facing strengthening to the
-Jordan-boundary subclass of Driver's BC graphs. The face index may be empty, retaining legitimate
-planar trees and empty graphs. -/
+Jordan-boundary subclass of Driver's BC graphs. Every selected edge additionally carries the exact
+finite vertical/`C¹`-horizontal admissibility certificate of Definition 3.8. The face index may be
+empty, retaining legitimate planar trees and empty graphs. -/
 structure TwoDimensionalSimpleBoundaryPlanarGraphData
     {G Gauge Sample Connection : Type*}
     [Group G] [MeasurableSpace G] [Group Gauge] [MeasurableSpace Sample]
@@ -103,14 +113,17 @@ structure TwoDimensionalSimpleBoundaryPlanarGraphData
   Vertex : Type uVertex
   Edge : Type uEdge
   Face : Type uFace
+  /-- Finite connected components after additionally adjoining Driver's x-axis. -/
+  XAxisCell : Type uXAxisCell
   vertexFintype : Fintype Vertex
   edgeFintype : Fintype Edge
   faceFintype : Fintype Face
+  xAxisCellFintype : Fintype XAxisCell
   /-- Literal separated vertex locations in two-dimensional Euclidean spacetime. -/
   vertexPoint : Vertex → EuclideanDimension.two.Spacetime
   vertexPoint_injective : Function.Injective vertexPoint
   /-- Coordinate realization of every exact ambient path, coherent with reversal and concatenation.
-  Source-specific piecewise-`C¹` admissibility remains an additional later strengthening. -/
+  Selected graph edges receive the stronger source-specific certificate below. -/
   pathCurve : base.Path → ℝ → EuclideanDimension.two.Spacetime
   pathCurve_continuous : ∀ path, Continuous (pathCurve path)
   pathCurve_source : ∀ path, pathCurve path 0 = base.pathSource path
@@ -130,6 +143,9 @@ structure TwoDimensionalSimpleBoundaryPlanarGraphData
     base.pathSource (edgePath edge) = vertexPoint (edgeSource edge)
   edgePath_target : ∀ edge,
     base.pathTarget (edgePath edge) = vertexPoint (edgeTarget edge)
+  /-- Exact source-specific Driver admissibility of every selected graph edge. -/
+  edgePath_admissible : ∀ edge,
+    DriverAdmissibleCurveCertificate (pathCurve (edgePath edge))
   /-- No isolated combinatorial vertex is hidden outside the embedded trace. -/
   vertex_incident : ∀ vertex, ∃ edge,
     edgeSource edge = vertex ∨ edgeTarget edge = vertex
@@ -192,7 +208,23 @@ structure TwoDimensionalSimpleBoundaryPlanarGraphData
   complement_decomposition :
     (finiteEmbeddedGraphTrace Edge pathCurve edgePath)ᶜ =
       unboundedRegion ∪ ⋃ face : Face, faceRegion face
-  /-- Boundary-connectedness and exact edge incidence for each face. -/
+  /-- Driver Definition 6.1 additionally requires finitely many complement components after the
+  x-axis is adjoined to the curve union. These concrete cells provide that exact finite
+  decomposition; their frontiers stay in the augmented trace, preventing arbitrary subdivisions
+  of one component. -/
+  xAxisCellRegion : XAxisCell → Set EuclideanDimension.two.Spacetime
+  xAxisCellRegion_nonempty : ∀ cell, (xAxisCellRegion cell).Nonempty
+  xAxisCellRegion_open : ∀ cell, IsOpen (xAxisCellRegion cell)
+  xAxisCellRegion_connected : ∀ cell, IsConnected (xAxisCellRegion cell)
+  xAxisCellRegion_disjoint : ∀ first second, first ≠ second →
+    Disjoint (xAxisCellRegion first) (xAxisCellRegion second)
+  xAxisComplement_decomposition :
+    (finiteEmbeddedGraphTrace Edge pathCurve edgePath ∪ twoDimensionalXAxis)ᶜ =
+      ⋃ cell : XAxisCell, xAxisCellRegion cell
+  xAxisCell_frontier : ∀ cell,
+    frontier (xAxisCellRegion cell) ⊆
+      finiteEmbeddedGraphTrace Edge pathCurve edgePath ∪ twoDimensionalXAxis
+  /-- Simple-boundary exact edge incidence for each face. -/
   face_frontier : ∀ face,
     frontier (faceRegion face) =
       finiteBoundaryWordTrace pathCurve edgePath (boundaryWord face)
@@ -209,6 +241,7 @@ attribute [instance]
   TwoDimensionalSimpleBoundaryPlanarGraphData.vertexFintype
   TwoDimensionalSimpleBoundaryPlanarGraphData.edgeFintype
   TwoDimensionalSimpleBoundaryPlanarGraphData.faceFintype
+  TwoDimensionalSimpleBoundaryPlanarGraphData.xAxisCellFintype
 
 end
 

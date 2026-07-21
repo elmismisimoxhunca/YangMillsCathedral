@@ -684,11 +684,12 @@ supplied nonnegative density slices are proved measurable, yielding the generic 
 `withDensity` carrier; no normalization is inferred for arbitrary words. This is reusable
 algebra/measure theory, not by itself a planar graph certificate or face law. A separate concrete
 uninhabited simple-boundary topological planar certificate now requires exact ambient path curves
-coherent with reversal/concatenation, separated vertices, injective edge arcs, endpoint-only
-crossings, full disjoint complement decomposition, a segmentwise word-realized once-around Jordan
-frontier, and coordinate-Lebesgue area. This is a strengthened subclass, not yet Driver's full BC
-scope: piecewise-`C¹` vertical/horizontal admissibility and bridge-multiplicity boundaries remain
-open. No planar graph instance, heat kernel, planar/Yang–Mills measure, or
+coherent with reversal/concatenation, concrete finite vertical/`C¹`-horizontal admissibility
+decompositions for every edge (with explicitly stronger affine-speed normalization), separated
+vertices, injective edge arcs, endpoint-only crossings, full disjoint complement decomposition, a
+finite connected-cell decomposition after adjoining Driver's x-axis, a segmentwise word-realized
+once-around Jordan frontier, and coordinate-Lebesgue area. This is a strengthened subclass, not yet Driver's full BC scope:
+bridge-multiplicity boundaries remain open. No planar graph instance, heat kernel, planar/Yang–Mills measure, or
 model is constructed; BC/general-boundary face products, refinement/gluing, and lattice-limit
 layers remain explicit debt.
 

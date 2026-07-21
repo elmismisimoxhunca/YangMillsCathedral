@@ -38,6 +38,15 @@ theorem exact_edge_path_endpoints (edge : graph.Edge) :
     base.pathTarget (graph.edgePath edge) = graph.vertexPoint (graph.edgeTarget edge) :=
   ⟨graph.edgePath_source edge, graph.edgePath_target edge⟩
 
+/-- Every selected graph edge carries a nonempty exact finite Driver-admissibility
+decomposition. -/
+theorem exact_edge_driver_admissibility (edge : graph.Edge) :
+    2 ≤ (graph.edgePath_admissible edge).breakpoints.length ∧
+      (graph.edgePath_admissible edge).breakpoints.IsChain
+        (IsDriverAdmissibleCurvePiece (graph.pathCurve (graph.edgePath edge))) :=
+  ⟨(graph.edgePath_admissible edge).two_le_breakpoints_length,
+    (graph.edgePath_admissible edge).pieces⟩
+
 /-- The path realization retains exact reversal on the closed parameter interval. -/
 theorem exact_path_reverse (path : base.Path) (t : ℝ) (ht : t ∈ Set.Icc (0 : ℝ) 1) :
     graph.pathCurve (base.reverse path) t = graph.pathCurve path (1 - t) :=
@@ -114,6 +123,21 @@ theorem exact_complement_decomposition :
     (finiteEmbeddedGraphTrace graph.Edge graph.pathCurve graph.edgePath)ᶜ =
       graph.unboundedRegion ∪ ⋃ face : graph.Face, graph.faceRegion face :=
   graph.complement_decomposition
+
+/-- The finite augmented cells exactly decompose the complement after adjoining Driver's x-axis. -/
+theorem exact_xAxis_complement_decomposition :
+    (finiteEmbeddedGraphTrace graph.Edge graph.pathCurve graph.edgePath ∪
+        twoDimensionalXAxis)ᶜ =
+      ⋃ cell : graph.XAxisCell, graph.xAxisCellRegion cell :=
+  graph.xAxisComplement_decomposition
+
+/-- Every augmented-cell frontier remains in the graph trace or x-axis, preventing a fake
+subdivision of one connected complement component. -/
+theorem exact_xAxis_cell_frontier (cell : graph.XAxisCell) :
+    frontier (graph.xAxisCellRegion cell) ⊆
+      finiteEmbeddedGraphTrace graph.Edge graph.pathCurve graph.edgePath ∪
+        twoDimensionalXAxis :=
+  graph.xAxisCell_frontier cell
 
 /-- The unbounded component is disjoint from every exact bounded face. -/
 theorem exact_unbounded_face_disjoint (face : graph.Face) :

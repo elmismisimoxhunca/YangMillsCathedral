@@ -135,15 +135,26 @@ adjudication corrections.
    gauge-invariant functions; do not call it a canonical measure on smooth connections modulo gauge.
 3. Driver, not Gross–King–Sengupta or Witten, supplies the stated Villain/Wilson lattice-observable
    convergence theorems.
-4. Witten's subdivision/sewing formulas are exact representation-theoretic identities, not by
+4. Driver PDF p. 6 / printed p. 580 and PDF p. 9 / printed p. 583 were visually adjudicated on
+   2026-07-21 for Definitions 3.1/3.8. Definition 3.1 visibly requires a continuous height in the
+   horizontal graph `(t, σ(t))`; Definition 3.8 visibly requires a finite decomposition into
+   vertical line segments and `C¹`-horizontal curves. The retained native extraction agrees,
+   including the superscript `1`. Affine-speed parameterizations in Lean are a project
+   strengthening, not source wording.
+5. Driver PDF p. 17 / printed p. 591 was visually adjudicated on 2026-07-21 for Definitions
+   6.1/6.2. The page visibly requires piecewise `C¹` curves, finitely many connected components of
+   `ℝ² \ (S ∪ {x-axis})`, Definition-3.8 admissibility, no immediate retracing, a finite directed
+   graph on a discrete planar vertex set, endpoint-only crossings, endpoint coherence, and an
+   admissible bond collection. The retained native extraction agrees.
+6. Witten's subdivision/sewing formulas are exact representation-theoretic identities, not by
    themselves a countably additive continuum-measure construction.
-5. Atiyah–Bott is classical gauge geometry, not a source for a quantum probability measure.
-6. Sengupta's orientation-reversing covariance changes to the specified pullback bundle class; it
+7. Atiyah–Bott is classical gauge geometry, not a source for a quantum probability measure.
+8. Sengupta's orientation-reversing covariance changes to the specified pullback bundle class; it
    must not be simplified to same-bundle invariance.
-7. Kluberg-Stern–Zuber's broadest operator-renormalization statements carry dimensional/twist or
+9. Kluberg-Stern–Zuber's broadest operator-renormalization statements carry dimensional/twist or
    conjectural qualifications; they are corroboration, not an unrestricted theorem.
-8. Hollands–Kopper's convergence theorem is not a Yang–Mills convergence theorem.
-9. `yang1954.pdf` begins with one page from a preceding article; the Yang–Mills article starts on
+10. Hollands–Kopper's convergence theorem is not a Yang–Mills convergence theorem.
+11. `yang1954.pdf` begins with one page from a preceding article; the Yang–Mills article starts on
    PDF p. 2.
 
 ## 4. Concrete progress unlocked by the bundle

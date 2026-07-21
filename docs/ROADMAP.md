@@ -736,12 +736,14 @@ committed before higher layers depend on it.
     retaining the face-free endpoint and making no normalization or planarity claim.
   - [ ] Compare the metric's Laplace–Beltrami operator with the basis sum.
   - [x] Define a concrete uninhabited simple-boundary topological planar graph certificate: ambient
-    path realizations in `ℝ²` coherent with reversal/concatenation, separated vertices, injective
-    edge arcs, endpoint-only crossings, exact disjoint complement decomposition, bounded connected
+    path realizations in `ℝ²` coherent with reversal/concatenation, concrete finite vertical/`C¹`-
+    horizontal decompositions for every edge with documented affine-speed strengthening, separated
+    vertices, injective edge arcs, endpoint-only crossings, exact disjoint complement decomposition,
+    a finite connected-cell decomposition after adjoining Driver's x-axis, bounded connected
     open faces, segmentwise word-realized once-around Jordan frontiers, and positive coordinate-
     Lebesgue areas; retain face-free graphs and block doubled circuits.
-  - [ ] Add Driver's piecewise-`C¹` vertical/horizontal admissibility and the full BC scope with
-    bridge-multiplicity boundary walks, then state its face-product expectation law; after that add general
+  - [ ] Extend from the Jordan-boundary subclass to the full BC scope with bridge-multiplicity
+    boundary walks, then state its face-product expectation law; after that add general
     disconnected-boundary choice independence, refinement/projective consistency, compact-surface
     gluing, and Driver's Villain/Wilson lattice-continuum convergence with exact hypotheses,
     distinct from finite-cutoff, classical, and four-dimensional witnesses.

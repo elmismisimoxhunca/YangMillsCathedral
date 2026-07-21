@@ -4575,9 +4575,12 @@ trace complement into one unbounded and all bounded connected open regions, and 
 to coordinate Lebesgue volume. Every face word is nonempty, closed, composable, underlying-edge
 nodup, and segmentwise realizes an injective-on-`[0,1)` once-around frontier parameterization, so a
 doubled circuit is rejected. It permits face-free graphs. This is a topological Jordan-boundary
-subclass: no graph or face is constructed, and Driver's piecewise-`C¹` vertical/horizontal
-admissibility, bridge-multiplicity BC boundaries, and disconnected boundary/cut choices remain
-separate debt.
+subclass: every selected edge now carries a concrete strictly partitioned finite decomposition into
+vertical affine segments or affinely reparameterized `C¹` horizontal graphs. This is documented as
+a normalized parameterization strengthening of Driver Definitions 3.1/3.8, not their verbatim
+speed convention. A second finite connected-cell decomposition of the complement after adjoining
+the x-axis retains Definition 6.1's finite-component condition. No graph or face is constructed; bridge-multiplicity BC boundaries and
+disconnected boundary/cut choices remain separate debt.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.
