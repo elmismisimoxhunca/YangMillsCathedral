@@ -642,6 +642,13 @@ prescribed group element as one selected plaquette holonomy. Every admissible no
 potential therefore has a concrete strictly positive local plaquette density. These remain
 kinematic and finite-cutoff witnesses—not a continuum two-dimensional Yang–Mills theory, OS datum,
 Wightman theory, or mass-gap result—and dimension two is proved distinct from Clay's dimension four.
+The separate uninhabited `TwoDimensionalGaugeFixedHolonomyMeasureData` now records Driver's rigorous
+continuum acceptance nucleus without constructing it: a normalized law on an exact gauge-fixed
+sample carrier maps into a distinct ambient connection carrier, on which gauge transformations,
+endpoint-covariant holonomy, and gauge-invariant physical observables live. Sampled holonomy and
+observables are tied to that exact restriction map. No action or invariant measure is falsely
+asserted on the gauge-fixed slice, and heat-kernel, subdivision/gluing, and lattice-limit layers
+remain explicit debt.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly

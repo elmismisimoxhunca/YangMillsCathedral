@@ -4488,5 +4488,16 @@ Singer's Corollary 4 is now a scoped negative warning against future continuous 
 in the stated `S⁴`/analogous `S³` setting, not an unrestricted no-section claim for every carrier.
 No source ingestion constructs a theory, acceptance witness, or mass gap.
 
+The first source-enabled 2D continuum stone is now formalized as the uninhabited
+`TwoDimensionalGaugeFixedHolonomyMeasureData`. Independent rereading of Driver corrected a tempting
+but false design: the gauge group does not act on the complete-axial-gauge probability carrier.
+Instead the exact probability law lives on a gauge-fixed sample type, an explicit restriction map
+lands in a separate ambient connection type, gauge transformations act there, and random holonomy
+and physical observables are pulled back through that exact restriction. The record retains
+Driver's target-left endpoint covariance and reverse multiplication order for path concatenation,
+requires normalization and nonempty designated path/observable carriers, and exposes hostile probes
+against zero probability and disconnected holonomy/invariance replacements. It constructs no
+measure and supplies no heat-kernel, subdivision, gluing, or lattice-limit theorem.
+
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.
