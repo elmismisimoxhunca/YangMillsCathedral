@@ -1,0 +1,1693 @@
+        ...... ..
+         _    ~   ~.
+
+
+
+
+. ;:· r'~'~
+  ' i                                                                     October, 1976
+       X                                                                  COc;>, ZZZ0-88
+                                                                                                                                -2-
+
+
+
+                                                                                                                             Abstract
+
+                                                                                                  The form of the anomaly in the trace of the energy-momentum
+                               TRACE AND DILATATION ANOMALIES IN
+                                                                                           tensor in a general theory of interacting fermions and nonabelian gauge
+                                          GAUGE THEORIES
+                                                                                           bosons is derived.    The result is shown to involve precisely those gauge-
+
+                                                                                           variant operators which are known to mix with the naive trace under
+                                           John C. Collins*
+                            Joseph Henry Laboratories, Princeton University                renormalization.     The trace is shown to be soft on-mass- shell if and
+
+                                            Anthor.iy Duncan**                             only if the theory is at an eigenvalue of the Callan-Symanzik 13-function.
+                              Institute for Advanced Study, Princeton, N.J.                                                                    ).
+                                                                                           The dilatation anomaly in the matrix element of    e ~   with two electro-
+                                           Satish D. Joglekar**
+                              Institute for Advanced Study, Princeton, N.J.                magnetic currents (to lowest order in electromagnetism, but including
+
+                                                                                           all orders of the strong gauge interaction) is derived and shown to be
+
+                                                                                           infinitely renormalized in finite orders of strong perturbation theory.
+
+                                                                                           This anomaly is then shown to be canonical and given precisely by the
+
+                                                                                           lowest order result provided the strong interactions are summed to all
+
+                                                                                           orders before going to the limit of physical space-time dimensions.
+
+
+
+
+                               '
+
+
+              * Supported in part by NSF under Grant No. MPS 75-22514.
+             ** Research sponsored by the Energy Research and. Development
+                    Administration Grant No. E(ll-1)-2220.
+                                                                                                                                                                                                '
+                                                                                                                                               -4-
+                                        -3-
+                                                                                                                                                                                                "
+                                                                                                                                      8
+                                                                                                      trace was recently derived          for QED: for non-abelian theories, the
+                                 I.   Introduction                                                                                                             9
+                                                                                                      derivation is somewhat complicated by the mixing             of gauge- invariant
+        The behavior of nontrivial, renormalizable quantum field theories
+                                                                                                      with gauge non-invariant operators under renormalization.               In Sec. II,
+under dilatations has been the subject of considerable attention for quite
+                                                                                                      we fix our notation and write down the expression for the trace in terms of
+             1
+some time.       Stimulated mainly by the existence of various scaling
+                                                                                                      bare fields, in the dimensionally regulated version of the theory.             In
+phenomena, the interest has centered on the asymptotic behavior of
+                                                                                                      Sec. III,    we derive an exact expression for the anomalous part of the
+Green 1 s functions.     This behavior exhibits departures from that suggested
+                                                                                                      trace at zero momentum in terms of dimensionally subtracted normal
+by naive dimensional analysis, and can be analyzed on the basis of                                                           10
+                                                                                                      product operators.          In Section IV, the extension of the result of
+                    2                                3
+Callan-Symanzik         or renormalization group         equations (RGE 1 s}, which
+                                                                                                      Section Ill to arbitrary momentum is proved.          We note here that one
+take explicit account df the anomalies in the dilatatio~ Ward Identities
+                                                                                                      result of the computation is that the energy-momentum trace, on-shell
+caused by the inevitable presence of regulator contributions.             The
+                                                                                                      and at non-zero momentum, is soft if and only if j3(g) = 0, that is to say,
+information expressed by the RGE 1 s can also be obtained, less directly,
+                                                                                                      at a Gell-Mann-Low eigenvalue.           In general Green's functions, a hard
+by studying zero-momentum insertions of the trace               6j.L of the energy-
+                                                                  ~                                      (and manifestly gauge-noninvariant) operator survives in the trace, even
+                                                           4
+momentum tensor in general Green's functions.                  There have also been
+                                                                                                         at an eigenvalue.   In Section V, we study the dilatation anomaly in matrix
+attempts to employ dilatation anomalies to extract predictions about low-
+                                                                                                         elements of the energy-momentum trace with the hadronic electromagnetic
+                        5 6
+energy phenomena,        •  such as the 11 PCDC 11 (partial conservation of
+                                                                                                         current, in a theory with nonabelian strong interactions.          It is shown that
+dilatation current) calculation of the E --+ Zy: E -t2n branching ratio.         Here                                                                                  6
+                                                                                                         the "canonical trace anomalies" of Chanowitz and Ellis            are in fact infinitely
+the energy-momentum trace enters directly, as the operator putatively
+                                                                                                         renormalized in higher orders of strong perturbation theory.            It is then
+dominated by an E (''dilaton") pole.
+                                                                                                         demonstrated that, by summing to all orders in the strong coupling,
+        In this paper, we will study the trace of the energy-m.omentwn
+                                                                                                         before passing to physical dimensions (n = 4), the dilatation anomaly is
+tensor directly in theories containing fermions and non-abelian gauge
+                                                                                                         exactly computable and given precisely by the canonical (lowest order)
+                                        7
+vector particles (but no scalars).          The exact form of the anomaly in the
+                                                                                                         result.   Some technical details relevant to the analysis in Sections III and IV
+
+                                                                                                         are relegated to the Appendix.
+
+
+
+
+                                                                                        - ': '·' -_' . '_.·-
+                                                                                                     ~         ~
+     •
+                                                                   -5-
+                                                                                                                                                                                                  -6-
+     "
+                                                            Section II
+                                                                                                                                                         o         o_o o_o
+                                                                                                                                             W        [J Ctf.L oXoXo'l01l ; g , m , S , n, a}
+                                                    [A] Preliminary                                                                               0             a a          0   0 0
+
+                                                                                                                              12
+                 We shall be considering a non-abelian gauge theory with fermions.
+                                                                                                                                                   -      i (
+                                                                                                                                      J[ dAdwdw d~d~] exp-a e
+                                                                                                                                                                    Jn 0         a" _0               _     0
+                                                                                                                                                              S ff + d x (J (xi A (xi + x (xiw (xi + w (xix (xi
+         The unrenormalized but dimensionally regularized Green's functions of                                                                                             Ctf-1         aa            aa
+
+         such a theory can be computed from the effective action (in linear gauges)
+                                                                                                                                                                                                       0             -     0
+                                                                                                                                                                                                  +if (xi ~(xi +~(xi" (xii}
+
+                 Seff(A,w,W,I\l,~; g ,m 0
+                                              0
+                                                            ,s 0 ,n] =                                                                                                                                                                         (2.3)
+
+                                                                                                                                    Here     a    is a loop expansion parameter {to be set to 1 in the end).
+
+                                                   ' +-  .            aA.                                1    va       2
+                 Jdnx(--I4 F     CttJ.V
+                                          (x) F "
+                                               a
+                                                 (xi  ~(x)(1~ + g 0 t                 ra- m 0 )oJ>(x) - z~O (a A v(x))              'l'he unrenorrnalized connected Green's functions are generated by
+
+                                                                                                                                    z 0 = -iln w 0                and the corresponding proper vertices by                     r
+                                                                                                                                                                                                                                   0
+                                                                                                                                                                                                                                       , obtained
+
+                                                       + f;;; (x)( a w (x)- g c..,. A ~(x)w.(x)]}                                   from z        by a Legendre transformation:
+                                                             a      )-L a    0 ""t""t' 1-L t"                                                0
+                                                                                                                           (Z.l)
+                                                                                                                                                         0        0 -0            0    0
+         where                                                                                                                               r
+                                                                                                                                                  0
+                                                                                                                                                       [a , n , n , (. , z;. ; g , m
+                                                                                                                                                                                              0   0
+                                                                                                                                                                                                      ,s 0 , n, a]
+                 Fa (x) = a A a - a A a + g                        c •      A~ A~                                          (Z. Z)
+                  f-1.1.1 ·   1..1.   v           v f.'.'      0    at-'y     IJ.     v
+
+                                                                                                                                             = zo -
+                                                                                                                                                                  n           o (xia o (xi + n o (xix o(xi +X_o lxirl o(xi + r; o(xi" o(xi +ii olxH, o(x,
+         wa(Wa) are the Faddeev-Popov ghosts (and antighosts), g , m ,                                       t       are
+                                                                                                                                                             Jd    X [    J
+                                                                                                                                                                              ll'IJ.ll'fJ.             era               acr
+                                                                                                   0     0       0                                                                                                                             (2.4i
+         the bare coupling, bare mass, and bare gauge parameter respectively.
+!        We have chosen the gauge group to be simple, theta are its generators
+                                                                                                                                    where we have defined,
+
+
+
+
+I
+')
+
+
+i
+         i.n the fermion representation and the c
+
+         structure constants.
+                                                                             A
+                                                                            ae~
+
+
+
+
+                 The unrenormalized Green 1 s functions of the theory are generated
+                                                                                    are its (totally antisymmetric)                          a
+                                                                                                                                                  0
+                                                                                                                                                  a~
+
+
+
+
+                                                                                                                                                  0)
+                                                                                                                                                       (xi=
+
+
+
+
+                                                                                                                                                 I; (x =
+                                                                                                                                                              &zo
+                                                                                                                                                              -
+                                                                                                                                                                  oZ
+                                                                                                                                                                    0
+                                                                                                                                                                    0
+                                                                                                                                                                  oJ (x) ;
+
+
+                                                                                                                                                                      0
+                                                                                                                                                                           -0
+                                                                                                                                                                           rl = - -
+
+                                                                                                                                                                          a"
+                                                                                                                                                                             a
+
+
+
+                                                                                                                                                                              )
+                                                                                                                                                                                &zo
+
+
+
+                                                                                                                                                                                      ~o(xi
+                                                                                                                                                                                             o &zo
+                                                                                                                                                                                           rl = - -
+                                                                                                                                                                                               ,- 0 Ix)
+                                                                                                                                                                                5x a01 x) • a ux a
+
+                                                                                                                                                                                                   .s_
+                                                                                                                                                                                                           0
+                                                                                                                                                              &if (x                                  o" (xi
+         '>y                                                                                                                                                                                                                                    (2. 5i
+
+
+II
+                                                                                                                                    We have the relations,
+                                                              -7-                                                                                                                                    -8-
+
+                                                                                                                                                                                                                                                      ,,
+            0
+                            or 0                       0
+                                                                    or 0          o          oro
+        J
+            a~
+                 (x) = -
+                                   0                 Xa(x)          -=o          ii ( x ) = - - etc.                        (2o 6)          and its analogue for the fermions.                         We also have the equation of motion
+                            oa
+                                   a~
+                                           (x)                      on (xl
+                                                                      a
+                                                                                            6!:,0(x)
+                                                                                                 a                                          for the antighost field:
+
+Further, one may generate Green• a functions with an arbitrary number
+
+of insertions of a local composite operator O(x) simply by modifying the
+                                                                                                                                                    0 = j[dAooo ) {a              (a~w (x)- g 0 c • A~(x)w.(x)) +X 0(x)}
+                                                                                                                                                                            f-L       a                              apy    J.L   t'        a
+
+exponent in Eq. (2. 3) by                        ~                     0
+                                                      jM(x) O(x) d x, where M(x) is a source.
+
+Then if we define z                and r              in an analogous manner [r                     and z          depend
+                                                                                                                                                                                               exp     ai {sef€ + . . . }
+                             0                   0                                           0                 0
+on M and M does not appear in the Legendre transform] we have                                                                                                                                                                                   (Zo 10)
+
+                                                                                                                                            where, in Eq. (2, 9) and (2.10} the exponents are identical to those in
+
+                                                                                                                                            Eqo (Zo 3)o
+                           oz 0
+                           6M(x) =
+                                   ~                                                                                        (2o 7)
+                                                     6M(x)                                                                                          The theory is made finite by the multiplicative renormalizations
+
+                                                                                                                                            given below.   We shall determine the renormalization constants by the
+We further have the WT identity:
+                                                                                                                                            minimal subtraction scheme 11 (i.e. counter terms subtract just the poles
+
+                                                                                                                                            In (n-4)o] Thus,
+                                                             iw (x) [Jd~ J~ (y)(a "•(y) + g 0 c_,. A~ (ylw.(y))
+0 = j[dAo o o o]
+                 . (-.f.
+                   l v a    '='O
+                                   (B          A"(x))-
+                                                               a              t"I.L       I.L '"'                  "'t"" J.L          """
+                                                                                                                                                               JR=Z!JO
+                                                                                                                                                               af-L 3 tl'f-L
+
+
+                           t igo(ii(y)               ,a~(y) - ~ (y)ta ~ (y))J    J                                                                                 R
+                                                                                                                                                               xa=z2xa'
+                                                                                                                                                                        ... !          0
+                                                                                                                                                                                               X
+                                                                                                                                                                                                   R       ..... !
+                                                                                                                                                                                                        =Z2Xa;
+                                                                                                                                                                                                                      0
+
+
+
+
+                                                           + Jdn x [ J 0 (x) A                   0                  -          0
+                           xexp.!{s
+                                           a         eff                         a~
+                                                                                      (x) + ii (x)~(x) + <jo(x)~                   (x)] }
+                                                                                                                                                               ~
+                                                                                                                                                                   R        1
+                                                                                                                                                                       = z~ T1
+                                                                                                                                                                                       0
+                                                                                                                                                                                           .   -R
+                                                                                                                                                                                               ~
+                                                                                                                                                                                                              1
+                                                                                                                                                                                                        = z~ li
+                                                                                                                                                                                                                      0
+
+                                                                                                                           (2o 8)
+                                                                                                                                                                                       n-4                       n-4
+We have the equation of motion for the gauge field:                                                                                                                                        z      -t
+                                                                                                                                                                                                2 1 2 2 2 3 =go~
+                                                                                                                                                                                                                 T    i _              zg
+                                                                                                                                                               gR =So~
+
+
+        0 = j[ dAoo oo]                    -oS-eff + J 0 (x)
+                                           5A a(x)    ctfi
+                                                                     J' exp ai [ s e if +           00   00    )
+                                                                                                              00           (2o 9)                                                 -1                   -I
+                                       [                                                                                                                       mR = zm                     mo • ;R = 2 3 l;o
+                                                 ~
+
+                                                                                                                                                                                                                                                (Z. 11)
+•
+                                                                        -9-
+                                                                                                                                                                                             -10-
+
+•                Then the generating functional of renormalized Green 1 s functions                                           Here,   c£ efi(x) is defined to be the expression in the curly bracket in
+    is (   i:.    {J
+                       a~
+                            .x a .... },k={g,m,;}J                                                                            Eq. (2.1).   The trace of 8
+                                                                                                                                                                      ~v
+                                                                                                                                                                              in n dimensions can be expressed (without
+
+                                                                                                                              use of equations of motion) in the form
+                   ·a R ; "- R ,j..L,n,a],=w [~,[0 ;A. 0 ,n,a)
+                                                                    0
+                 WR~                                                                                                (Z.IZ)
+
+                                                                                                                                                   os                     os
+    and is a finite functional of its arguments at n = 4.                                                                             e~(x) =i(~~                     t
+                                                                                                                                                                          ~q.)
+                                                                                                                                                                                  eff
+                                                                                                                                                                                                + mo ~<.\1
+                                                                                                                                       ~               o'i'
+                 We shall use the notation
+                                                                                                                                                   p          -1 a            v        a       _                                  y         ]
+                                                                                                                                              Z { a [;            A       a       A          + w (a w            - g    c..A A w0 )
+                                                                                                                                                                                                                       0 "'t'Y p 1-'
+                                                                                                                                                              0       p                 11         a    p    a
+                 <F[A,~.~.w,w~
+                                                                                                                                           - w0 aP(apwa- g 0 c~'t A~w~]
+
+                                                                              F[A.~.~.w,w] ex~{s • rr•····}
+                              w0 j[dAdwdwd~d:j;]
+                               1
+                            = - -
+                                                                                                                                                                                   1
+                                                                                                                    (Z.l3)                  - (n-4)(.£eff + ;~ a•(A:a' A:)}
+
+                                                                                                                                                                                                                                                         (Z.l5)
+
+                            [B]     Trace of the Energy~Momentum Tensor
+                                                                                                                                                                                                                                                            14
+                                                                                                                              (i) As we are using a mass-independent renormalization scheme. we have
+                 ConSider the energy momentum tensor as constructed by Freedman,
+                                                  13
+    Mu~inich and Weinberg,                                 modified to include fermions.                 It reads
+                                                                                                                                            m
+                                                                                                                                                0 4;~ = mRN(ijjt.p) =a finite quantity                                                                   (Z.l6)
+
+
+                 ejJ-11 (x) = - g f.LII ;ieff -FaFa-
+                                                .,._cr VO'
+                                                                ;-18p(Aaa•Aa)
+                                                           gfJ.V 0     p   IT
+                                                                                                                              (ii) Using the equations of motion for -¥and ';:j; ,
+
+
+                              + ;- [Aaa (a•Aa) + (~-v)]
+                                 0   v ~
+                                         1
+                                            •                                                                                              -
+                                                                                                                                           <
+                                                                                                                                                   0s
+                                                                                                                                             ~(x) bfl;}
+                                                                                                                                                         eff +
+                                                                                                                                                                          0s
+                                                                                                                                                                          oqo(x)
+                                                                                                                                                                                  elf            ~
+                                                                                                                                                                                              ~(x)/
+                                                                                                                                                                                                                   <-        0    0~
+                                                                                                                                                                                                                        4n1 + ij "'/
+
+                                    i
+                              +-4 [~~ (8
+                                          -            ..
+                                                                   igotaAa) ~-~fa +igota/i.a)~ q. +(~... v)]                                                              l_ i ( ij?x)--%-                              ~
+                                                                                                                                                                                                                                  a ) WO
+                                                                                                                                                                                                                            o(x)--0-
+                                                  ~        v              II          II            II   jJ.
+                                                                                                                                                                          WO   I      a~ (x)                                     a"       (x)
+
+
+
+                                  + [a ;:, (a w                    - 80 c " A~ "'•) + q.. <-> v)]
+                                                                                                                                                                          I
+                                                                                                                                                                                        i(ijR
+                                                                                                                                                                                                       _a_             " R (x)--
+                                                                                                                                                                                                                                      a         )W
+                                        f.L   a       11       a         a'"'y 11 t'                                                                              =wR                                  aijR(x)                   a~ R(xl             R
+                                                                                                                     (Z.l4)
+                                                                                                                                                                  :::iN
+                                                                                                                                                                              ~                                                                           (2. 17)
+                                                               -11-
+                                                                                                                                                                       -12-
+
+
+     The truncated on· shell Green's functions of Nqs vanish at q1 0 and at
+                                                                                                                             cannot have a    ~       singularity because it does not have the quantum
+     q = 0, they equal the number of external fermions (antifermions included)                                                                q
+                                                                                                                             numbers of a gauge field.
+     of the Green's function at q = 0; in particular, they are finite.
+                                                                                                                                       (c) For the sake of completeness, we shall show that the only
+     (iii) Further, by using the equation of motion for the antighost, viz.
+                                                                                                                             other renormalization part in the Green's functions of (2..19), viz. the
+     Eq. (2.10), we obtain
+                                                                                                                             two ghost proper vertex with an insertion of the expression (2.19), is
+
+                                                                                                                             finite.
+
+                    < 2w (x)aP [a w (xi- g
+                           a                  p a              0
+                                                                    c •
+                                                                        atJ'{
+                                                                                AY(xlw.(xil'-
+                                                                                 p    ...   Y                " Cl
+                                                                                                                    0
+                                                                                                    =- 2 /;;; (xix (x1"-
+                                                                                                                    a   /              To summarize, we have shown that the terms in el.l.(x) [see
+                                                                                                                                                                                              ~
+
+                                                                                                                             Eq. (2.15)] apart from the term proportional to {n-4) are finite and for
+                                         z·          0         0                   - 2.i.._     R       0
+                                    + -·-
+                                      wo
+                                          X (x)-0-
+                                                    a         ox (x)
+                                                                                wo -wR      x., -a WR                        physical matrix elements o£ 8).1.,
+                                                                                                ox a
+                                                                a
+                                                                                                                                                                  "
+                                                                                                                                                        (n-4) {/eff + ;~ aP(A:a"A: J}
+                                                                                                                                                                               1
+                               5    iN
+                                         w                                                                                                   e" (x)
+                                                                                                                                              ~
+
+                                                                                                                    (Z.18)
+                                                               15
+     where N       is the counting operator                         for ghosts whose truncated on- shell
+               w
+                                                                                                                                                      = mR NI'V -1'1 + i N_,
+     Green 1 s functions vanish at q                     '* 0 and at q = 0, equals the number of external
+                                                                                                                                                                                                          (2. 20)
+     ghosts and antighosts.                   In particular, therefore, its Green• a functions with
+                                                                                                                             It thus remains to consider the last term in Eq. {2.15).        This gives rise
+     external gauge bosons and fermions only vanish identically.
+                                                                                                                             to the anomaly and will be treated in the next two sections.
+     (iv) Finally, we consider the term in of.l(x):
+                                                                            ~
+
+                                                                                                                                                           III.   The Trace Anomaly
+                                   p { -1         a v     a         _                               y        }
+                      -2       a ;            A                                     ""A "'•I
+                                                    a A 1.1 + ..,a (a p"'a - g 0 c af",                             (Z.l9)
+                                                  p                                     p               f"   ·                         We will now compute the zero-momentum insertion of the anomalous
+
+                                                                                                                             part of the energy-momentum trace in the limit n -+4, expressed in terms
+     Regai:-ding this term we shall show in the Appendix the following:
+                                                                                                                             of renormalized operators.           The derivation is completed by noting
+:l           (a) At q =F 0, its truncated on-shell Green's functions (with physical
+                                                                                                                             (cf. Section IV) that the form obtained must hold for arbitrary momentum,
+     wavefunctions attached) vanish identically.
+
+             (b) At q = O, these Green's functions vanish.                                      This is, of course,
+
+     obvious once one notes that the expression in the curly bracket in (2.19)
+                                                                                                                                                                    -14-
+                                               -13-
+
+
+
+,, by the general theory 9 of renormalization of gauge-invariant operators.                                   The source terms are evidently finite at n = 4, so up to terms vanishing
+
+                                                                                                              at n = 4
+         We begin by noting that, in virtue of the mass-independent
+
+ renormalization scheme we have chosen, the Z's of Eq. (Z.ll) all have
+                                                                                                                                 zi (n-4)/.{ )                        (n-4)
+                                                                                                                                                                              awR)
+                                                                                                                                                                              --aa tio }. .
+                                                                                                                                                                                            .  1
+                                                                                                                                 a        "        e!f                                        WR
+ the functional form
+                                                                                                                                                                                   a. o
+                                n-4
+                            -z-            <                                                                                            (awR               agR)            + awR amR)             +
+                                                                                                                                                                                                      awR       a;R \
+               z = Z(g 0 (n)~             a', ;
+                                                  0
+                                                      (n),n)                                     ( 3.1)                     = (n-4)
+                                                                                                                                        l agR aa '                    0
+                                                                                                                                                                             amR aa  ~
+                                                                                                                                                                                              0
+                                                                                                                                                                                                      a;R       oa {
+                                                                                                                                                                                                                        0
+
+ Note the appearance of the loop- counting parameter a accompanying                                                                        R
+                                                                                                                              aw
+ powers of. g
+              z
+               0
+                                                                                                                            + ____g;_
+                                                                                                                                 aJR
+                                                                                                                                         aJ. \
+                                                                                                                                              '
+                                                                                                                                        Ta ;Jo >.
+                                                                                                                                                       '             + other source terms             J WR  1
+
+                                                                                                                                   i                        •   0
+         At zero mome~tum, the anomalous part of the energy-momentum
+                                                                                                                                                                                                                        (3. 4)
+ trace is just (cf, Eq. (Z.l5))
+                                                                                                              (The a urn over i in (3. 4) includes a spatial integration).                            From (2.11) and
+
+                                                                                                              (3.1) it follows that, setting a = 1,
+               (6~-
+                   ~~hom = - (n-4)~""
+                                   eff
+                                                                                                 (3. Z)
+
+
+
+ We have adopted the convention 8"'"' =                 Jd x 8(x) for an arbitrary local
+                                                          0
+                                                                                                                             .
+                                                                                                                            hm (n-4)
+                                                                                                                            n-4
+                                                                                                                                          2ag )
+                                                                                                                                                  aa
+                                                                                                                                                                     ~(g >=lim
+                                                                                                                                                                        R  n-4
+                                                                                                                                                                                    "aa gR)
+                                                                                                                                                                                        fJ.
+                                                                                                                                                                                                                        (3. 5)
+                                                                                                                                                           ~0                                          ~0
+  operator at zero momentum.              Now we note that zero-tnomentum insertions
+
+ of£,elf can be obtained simply by differentiating the bare funetional                         W0              The other a-derivatives in (3. 4) reduce similarly to the corresponding
+
+ with respect to the loop parameter a:                                                                         anomalous dimensions, yielding (a = 1), in an obvious notation,
+
+
+
+         _1_aw 0)
+         wo a.:- r~. 0=- az (I_-eff + 0 · - + .•. 'f
+                         ..L
+                                                               (J   • A)             >                                       - i(n-4)   i ;££ = i{y 3NA + 't'zNy. + YN)
+                                                                                                                                                                a                   a                       a
+                                      _i_
+                                          z    (t;££jo              _.l J  d x ~0 (x) •
+                                                                            0              -- 0·ow
+                                                                                         . 6W    l                                                         + ~ BgR          ym mR 8mR             Y3 ;R a;R
+                                      a                              a           _        6
+                                                                                           1
+                                                                                           6WR
+                                                                                              (x)     0                                                                                                                     (3. 6)
+
+
+                                  ..L                                ..!. Jdn 1R(x) • -               W
+                           =-
+                                      az       (1..:10 -a                       x-         ~ R(x)         R
+
+                                                                                                    (3. 3)
+                                                                 -15-                                                                                                   -16-
+
+
+                                                                                                                                                                                                      1
+The quantities NA' Nl.jJ, and Nw are just the total number of external                                           Now recall that differentiation of a renormalized Green s function with
+
+gauge, fermion, and ghost lines, and arise from the counting operators                                           respect to a parameter A appearing in (3. 7) amounts to insertion of
+                                                                                                                   at,       )                                                                                              1
+/: _LR , etc., in (3. 4).                                                                                        i( B}..eff              Furthermore, the dependence of renormalized Green s
+ ' aJ i
+                                                                                                                 functions on t;. A'~~· ~w is just
+          The final stage of the computation involves re-expreesing
+                                                                                                                                                                    NA         - N        - N
+                                                                                                                                                                                                w
+N A'   N~,       Nw and the derivatives with respect to the renormalized                                                                                                        ----'!!
+                                                                                                                                         R                          2                         z G            R
+                                                                                                                                                                            ' z
+                                                                                                                                                                               " '
+                                                                                                                             GR(p;~          '~A'~<i''~w) ='A                             w         R(p; ~       , 1,1,1)
+parameters in terms of zero-ntomentum insertions of renormalized
+                                 15
+normal producta.                       To this end, we write the effective normal product                        so that, for excunple, N A can be replaced by the differential operator
+
+Lagrangian in terms of dimensionally subtracted normal producta:                                                         a            These remarks lead directly to the following correspondences
+                                                                                                                   zaf"A
+                                                                                                                                                       d.,.                      -                                              -
+          cteff, N. P.                  J
+                                       "-A+  ./ +
+                                            .VF                       ~g. f. + ata I ~A=~<!>--'•., =I                         NA--i(N[A~ 6A A ]-+zig.f.                                   gRc "-· N[w -~
+                                                                                                                                                                                             at-'Y   a
+                                                                                                                                                                                                       a A 'Vf.L w•]
+                                                                                                                                                                                                                  t-'
+                                                                                       I                                                                   ~
+
+
+
+
+                                                              F~v]                                                                                 + gR N[~ )'(ata<I>J-)
+          j,A =- l.4 ~ A N[F                   Q)J.V           a
+                                                                                                                                                                                                                                    (3. 91
+
+                                                                !
+          LF " !;<!> N~ (i(~- igR ~~-·\tal- mRI'i']                                                     (3. 7)                                     N - - Zi
+                                                                                                                                                       "
+                                                                                                                                                                    ;j,-
+                                                                                                                                                                        F
+                                                                                                                                                                                                                                    ( 3. 10)
+
+
+                                      ~A
+          .i-g. f. =- z;R N[ (a A~ta ]
+                                                                2
+                                                  ~
+                                                                                                                                                   N
+                                                                                                                                                       w
+                                                                                                                                                           - - Zi   ;j_-G                                                           (3.lll
+
+
+
+          .ita                =~ N[w(B~(a6_,.-(.A,gRc"A
+                                 w         a
+                                                            lw.J
+                                                   at"y YJ.L t"
+                                                      f..1.    "'t"
+                                                                           l
+
+                                                                                                                                 gR
+                                                                                                                                       a -iN[ A _
+                                                                                                                                      ag            o¥-_A 1- , . ../-
+                                                                                                                                        R      af.L OA      - o:.tCJVA
+                                                                                                                                                               a~
+
+with
+                                                                       !
+             F            "    atJ. A av - avA lljJ. + gR (. A2 c aj3y A 13!-L A yJJ                    (3. 8)                   - igRc..A.. N[w 'ij~ A      w.]- + ig N[~.! t <I>] -
+                 ct!J.V                                                                                                                 '"'t-'Y a       'Vf.L t-'     R   r'a a
+                                                                                                                                                                                                                                     ( 3. lZ I
+
+                                                                                                                                     a
+                                                                                                                                 ;R a;R - _;j,-g .•
+                                                                                                                                                  f                                                                                  ( 3. ll I
+•
+                                                            -17-
+                                                                                                                                                                                   -18-
+c
+                     a                       -                  -
+           mR amR ~ - i N[ ~ mR ~ 1                                                                       (3.14)                                  oi~                      'a~a w +g :j;,(t~
+                                                                                                                                  b
+                                                                                                                                Oz -
+                                                                                                                                        • A         A
+                                                                                                                                              OlJ. 6 atJ.
+                                                                                                                                                                  o;
+                                                                                                                                                                       a          )J.    a    0           a a
+
+
+    In deriving (3. 9) and {3.12), it is convenient to note the following
+                                                                                                                                 ob3     = - (ow a )wa - goc '-o/Y
+                                                                                                                                                             .....A wa~).1 A Yf-L WA.1-'
+    scaling properties            o£L A:                                                                                                                                                                                          ( 3.17)
+
+                                                                                                                                        -   d
+                                                                                                                                 o b4 = ~(i I"- m 0 l~
+                                         v                  a:£A
+            af.AI                 •                1        -                                             (3.1Sa)
+                                        ~At 2 gR 8gR
+            a,A -A=1
+                                                                                                                                  b           -
+                                                                                                                                 OS          = ~mo~
+
+            a:l~l
+            8                         = t f d x A a~ (x) ~
+                                              4
+                                                          ~
+                                                            (x)
+                                                                    oL ;,_
+                                                                                                           (3.1Sb)        Furthermore, this set is closed under renormalizatio n to all orders.
+                'A   ,       =1
+                         A                                                                                                Defining corresponding renormalized normal product operators, we find
+
+                                                                                                                          that (3.16) becomes simply
+    Substituting (3. 9-14) in (3. 6) gives
+
+
+
+                       v-                    ~   -1-       . -        -
+                                                                                                                                 (9 ~)-
+                                                                                                                                   J-l anom
+                                                                                                                                                          ~ N[ 0
+                                                                                                                                                            gR              1
+                                                                                                                                                                                r + (~ - ~
+                                                                                                                                                                                         gR
+                                                                                                                                                                                                  3 I
+                                                                                                                                                                                                  2
+                                                                                                                                                                                                          N[o
+                                                                                                                                                                                                                    2
+                                                                                                                                                                                                                        +o3   r
+                     4
+            - (n: l.U eff = -                gR ol.JA + ~m N[ ~ mR ~1
+
+
+               ~ ~3                                             -
+                                    otA 1 - gRc N[Oi a~ A w 1 + gRN[;j; ,/{ t ~1
+            +( gR - -2 ) (N[A QJJ. ,--A
+                                                                                      ...        -                   -)                              - 'i N[0 3 1                       ~2 N[041          + ~ m N[O 5 ]
+                                    u
+                                                0
+                                               at''Y a   "fJJ. I"'0        a a                                                                                                                                                    (3.18)
+                                                       a~
+
+
+
+                                                                                                                          1! (as will be demonstrated in Section IV) 8 J-l at arbitrary momenta is
+                                             ~2.t;- ;;.t~                                                                                                                                             ~
+
+                                                                                                                          a linear combination o£ juat these operators, we may remove the
+                                                                                                           (3.16)
+                                                                                                                          restriction to zero-momentum in (3.18)
+            Note the appearance of non-gauge-inva riant operators and ghost
+                                                                                                                                  (6 ~)             = -                      ~ 3 N[o 1
+                                                                                                                                                            ~ N[O 1 + <.1. _ Tl
+                                                                             9
+    terms in the anomaly.                 In fact, it is known                   that the following set of bare                        J-l   anom           gR              1            gR                     2
+
+    operators are the only ones to mix under renormalizatio n with the gauge-                                                                               !!.            ~3
+                                                                                                                                                                                                    1
+                         b                        1                  tJ.V
+                                                                                                                                                      +(
+                                                                                                                                                             gR
+                                                                                                                                                                       _
+                                                                                                                                                                           2 - y )N[o 31 - ~ 2 N[0 4
+    invariant operator 0 1 :: -                   4 F Q'JJJI Fa :
+                                                                                                                                                      + ~m N[ 051
+                                                                                                                                                                                                                                    (3. 19)
+                                     -19-                                                                                                       - ZO-
+
+
+
+                                                                                                                 IV.       Extension to Arbitrary Momentum
+In particular, on mass shell (with external wave-functions~) and
+
+              momentum,      N[0 ] and N[O ] vanish by the ghost and fermion                        Here we shall derive the form of the anomaly in ~                                                (q) valid
+at nonzero                                                                                                                                                                                       ~
+                                 3          4
+                                              16                                          at arbitrary momentum q.                  This form will determine the set of linearly
+equations of motion.     It can also be shown    that N[ o ] vanishes on-a hell
+                                                          2
+at nonzero momentum.       Under these circumstances, therefore                           independent operators that can be present in the anomaly: comparison
+
+                                                                                          with the known value of the anomaly at q = 0 as given by Eq. (3.18) will
+
+
+       (B;)anoml ~"i6'h=l~ ~gR N[01] + ym N[05]
+                                                                                          determine the coefficients of all the operators and thus establish
+
+                                                                                          Eq. (3.19).        The method is a minor modification of that employed in
+
+
+                          = + LZgR N[F ""v F~v
+                                            a
+                                                       + ym N[:j;mR <¥]                   Ref. 9.
+
+                                                                                (3. ZO)             The terms in o~-'-(x) proportional to (n-4) are
+                                                                                                                           ~
+
+
+Putting this result together with Eq. (Z. 20) we obtain the following simple
+
+result for the on-mau- shell full trace
+                                            17
+                                                 at nonzero momentum
+                                                                                                                 ,/
+                                                                                                    - (n-4) ( .:C:.rr(x) + i,
+                                                                                                                                   -I_..
+                                                                                                                                    0
+                                                                                                                                        "   (A.,a(x)a vA av(x)) ) ~ - (n-4) 9(x)                                 (4.1)
+
+
+
+
+        8~~
+        ~     on-shell
+                         =(I+ y ) N[:j;mR<¥] t
+                               m
+                                                   t   gR
+                                                            N[F         F~"J
+                                                                  a..,.r..o a
+                                                                                (3. Zl)   9 (x)   has a simple transformation property under the BRS super field
+                                                                                                                 18
+              q¢0                                                                         transformations:
+
+                                                         8
+       Finally. we note that the recently obtained result !or the anomalous                                                                          ~                                 a~
+                                                                                                    OAa(x)     = (3 ~ (x) + g 0 c..A A                    (x)~        (x))bl- ~ D           ~.lx)bl-
+                                                                                                       ~               1-1 a                .. '"'" fJ.          'i                   fJ.    '"'
+trac;e of the Belinfante tensor in QED is obtainable directly from (3,19) by
+               y3                                                                                   Ow (x)        ho c A            wr.tw      (x)OA.        ow (x) = ~a A II (x)6A                              (4. Z)
+setting ~ = gR 2 , :Y = 0. Also, it is amusing to note that, by (3. 21), the
+                                                                                                       a                       al"''i '"' 'i                   a      '='o 11 a
+                                                                                                    b<¥(x)        ig       ta~(x)wa(x)O>.., b~(x) =                        ig       ~ (x)t w (x)6A
+eigenvalue condition i3(gR) = 0 is a necessary and sufficient condition                                                0                                                        0           a a
+
+for the restoration of softness of the trace in on-mass-shell matrix elements,
+                                                                                          where 6>.. is an X- independent anticommuting c-number.
+though not (because of the appearance of the dimension 4 operator N[0 ])
+                                                                     2                    These transformations satisfy
+in general Green•s functions.
+
+                                                                                            0 = b [Da~ w ]                                     1                                bl>Ji t a wa l                   (4. 3)
+                                                                                                    ~ ~           o[ - •1 c ailvw ~ wv                    o[ t a ""' a ]
+                                                                                                                                                         -ZZ-
+                                                            -21-
+
+
+                                                                                                                  Now consider the effect of BRS transformati ons on the integration
+     The gauge-invar iant part of j; eff is clearly invariant under the BRS
+                                                                                                       variables of W.           The Jacobian of the transformati on is unity.                                 Furthermor e,
+     transformat ions, as they are just a special gauge transformati on on
+                                                                                                       the value of w• should not change under the change of integration variables.
+     A, l.jJ, 4J • Furthermor e, one finds
+                                                                                                       This leads to
+
+
+              b{   -zr-0 1a"
+                        1
+                               Aa)Z _ ;;; &~oa~ w
+                                    v               a       ~      ~
+                                                                       }       0              (4.4)
+                                                                                                                                                             b                    0                b                                 0
+                                                                                                                j[dAdwdwd~d;j;] Jd x { J~~lxi
+                                                                                                                                        0                                                                      i        "
+                                                                                                       0                                                                       + i( (xi            o ) - <Ia   A lxllx (xi
+                                                                                                                                                             0                     a             6L 1x   '=>o v a     a
+                                                                                                                                                          oK         (x)
+                                                                                                                                                                a~                                 a
+              b{..!_AaavA a + w D~w.}                                  ~Aa a"(D~w~)bk         (4. 5)
+                   ;0   ~       v              a        ~   e          ;0 ~
+                                                                                                                            + ii~xi     ~0
+                                                                                                                                                     b
+                                                                                                                                                   - --
+                                                                                                                                                      0
+                                                                                                                                                                 ~
+                                                                                                                                                                     0
+                                                                                                                                                                         (xi      f-· M(x)a~(A af..l. lxlx a0 (x))}
+                                                                                                                                      bH (xi        6H (xi                        '=>o
+     which lead immediately to
+
+                                                                                                                            x exp i { S + ••• )
+                                                                                                                                                                                                                            (4. 9)
+                        1 a~{Aa a"oa~w )bk                                                    (4. 6)
+              68
+                   =f""       ~    v ~
+                        0                                                                              The antighost equation o£ motion has been used to replace a"n:~w (x) by                                     13
+                                                                                                                0
+                                                                                                           ~   Xa(x) in the last term in curly brackets. Had we had a gauge~ invariant
+              Consider now the following generating functional
+                                                                                                       operator multiplying M(x) instead of e (x), this term would have been
+                                                                                                                                                                                                               1
+                                                                                                                        Thus the Ward. Takahashi (WT) identity satie£ied by W                                      is
+      , do o o -o o
+     W ( 6" , K , H , H , L , M] = j[dAdwdwd~d~] exp i{S + Jdnx M(x)
+                                                                                                       absent.
+
+                                                                                                       identical to that satisfied by a generating functional £or insertions o£ a
+                                                                + source terms for field• }
+                                                                                              (4. 7)                                          except £or this term.                        Now we can, as ue~al,
+                                                                                                        gauge~invariant operator,
+
+
+     where the source terms for fields are identical to those in the exponent                           define the generating functional (or proper vertices r• correspondi ng to
+~i
+'i   in Eq. (2.1) and S contains sources for the BRS invariants of Eq. (4. 3)                           W', by Legendre transforming                     Z':: ~ ilnW';
+
+ I                                                                                                                     0 0 -0 0 -0 0
+     -S = S ff + Jd n x {K 0~ D ~w (x) + ig 0 (H-0 t ~ - -~ t a H )wa (x)
+ I        e                 a                   0
+                                            f.lt"                          a
+                                                                                   0                               r•[a ,0 ,0 .~ .~ ,K ,etc.)
+
+
+
+                                                                                                                                             o~             -0 o -0 o - o o
+                                                                                                                                                    _o ~ o +~
+                                        t    t L:g 0 c~yw~wy(x)}                                                    =   z•- f d n x(J af..l.a a   + 11        T1 +X n +n x l
+                                                                                                                                                                                       a     a         a   a
+                                                                                              (4. 8)                                                                                                                         (4.10)
+
+
+      and ia fully invariant under the BRS transformat ions.
+                                                                                                                                                                                -24-
+                                                    -23-
+
+
+
+           o             &z•
+  with a
+           a
+               (x) = - - -             , etc.     For any source K not entering the                                        For example,
+                       bJ~(x)
+                  a
+  Legendre transformation, we have                           bZ'\
+                                                             6K Jo, ...
+                                                                                     = 5K6r'\    0         •
+                                                                                                a , ·••                                      br'             ~               br'            br'
+                                                                                                                                                  0                             R       bKR       (Z 3   ZJ-i                          (4.13)
+  Thus Eq. (4. 9) becomes                                                                                                                    ba              bKO           ba
+                                                                                                                                                  a~            a~              a~           a~
+
+
+
+
+                                         br•                                                                               But the right hand side of Eq. (4. 12) is
+Jdnx{
+           br'        ~                             ~                        0
+                                                                     .!._(a a "(x)) .2!:.:._
+        ba ~(x)
+          0
+                       OK~Jxl          bn° (x)
+                                         a
+                                                       0
+                                                     bL (x)
+                                                       a
+                                                                     so " a                b0°(x)
+                                                                                                a
+           a
+
+                                                                                     Jdn x a1.1 (a 0 (x) --=o              ...!..   a~(ao     br'              ...!.. z3-1 afJ.·I,z'! a RClf.1 z-~
+                                                                                                                                                                                                       __g_:_)
+                  ~              br'            ~        ~} = "f"
+                                                               1                                          6r• )M(x)
+                      0
+                  b'i" (x)
+                             --=o
+                             bH (x)
+                                                  0
+                                                bH (x)
+                                                            -o
+                                                            b'i" (x)             o                   "''       6na (x)      so          a~
+                                                                                                                                             bn°
+                                                                                                                                               a
+                                                                                                                                                               sR                  3                   bnR
+                                                                                                                                                                                                         a
+
+
+                                                                                                                  (4.11)
+                                                                                                                                             = (z          z)-t "["
+                                                                                                                                                                 1
+                                                                                                                                                                    a~,.R             br'
+                                                                                                                                                                                    ~-)
+
+  Differentiating with respect to M(y) and setting M = 0,                                                                                              3                             bn R
+                                                                                                                                                                   R        "''        a
+                                                                                                                                                                                                                                       (4.14)
+
+                             br'                            br'              b                                                                                                                                          Eq. (4.12)
+               Jdnx { ----o;--
+                       6a · 1x
+                               )
+                                 _b_
+                                   0
+                                 bK (x)
+                                        + ---
+                                          bK0 (x) ba ~(x)
+                                                          +.                 0
+                                                                                            0   ••
+                                                                                                                           Thus, expressed in terms of renormalized quantities,
+
+                             a               a~              a~              a                                             has the form
+
+
+                         -1 a a o. 1x l _b_
+                                        60a0 (x)
+                                                 l                br'
+                                                                 bM(y)   I
+                                                                                                                                             Jdnx { ~
+                         S0 " a                                                                                                                                             b                            br• \                 finite functional
+                                                                             M=O                                                                                                            + · · ·}    bM(y) M=O
+                                                                                                                                                             OaR~-'-(x) bKR (x)
+                                                                                                                                                                a
+                                                                                                                                                                          ·~
+                      _ .L a~ ~a o (y)            -=a-
+                                                   br' )                                                                                                                                                                                (4.15)
+                      - so       a~               bQ a(y)
+                                                                                                                  (4.12)    But this WT identity is identical in form to that for a gauge-invariant
+
+  The dotted terms (, .. ) involve 11 conjugate 11 pairs (0                          °, a
+                                                                                     a
+                                                                                           0
+                                                                                          L ), ('i'O ,If),                 operator except that the right hand side is finite instead of zero.                                       Thus
+
+   -0     ll                    0 0 0 -ll                                                                                                                                    br[ aR nR nR]\
+                                                                                                                                                                                                           R        R     R _R
+   (-q, , H-)_.    The sources K , L , H , R are all multiplicatively renormalized                                          the one loop divergence in                                 6 M.(x)         K       =L       =fr~=fr~=N=O
+
+   such that when each term on the left hand side is expressed in terms of re-                                              can be expressed in terms of the field operators that can mix under
+                                                             -    _.!.
+  normalized quantities, a factor of (z z) z can be extracted uniformly.                                                    renormalization with a dimension four gauge invariant operator that is a
+                                       3
+                                                                                                                            Lorentz scalar and has even charge conjugation.                                    But they are precisely
+                                                                                                                                                  • 26-
+                                             -25-
+
+
+                                                                                                  i.e.     <e(x~R = /f, bi o 1[A,w,w, g~R +finite terms
+     the five operators listed in Eq. (3.17). 9 In other words,                                                    'I      '\_;=1                                                             (4.18)
+
+                                                                                                  valid up to N-loop approximation.                Here, the bi are polynomials in
+            or[aR,oR,oR]I                                 ]   ~iv                                 ( ...!.... ).   Now using the fact that this set o£ operators is closed under
+                 6M(x)           0=LR=If-=HR=M=0              I                                     n- 4
+                                                                                                  renormalization we can write,
+
+
+                ...,n)              R    R    R
+                 <-~bi(n,g,!,)   o1[a ,o ,n       :g]
+                                                                                                                                     L:z 1J.. N[O.[A,w,w,g]]                                  (4.19)
+                                                                                                                        <ai)                     J
+                                                                                       (4.16)
+
+     where bi (n, g,;) may be divergent as n -+ 4.        Therefore, we can write,
+                                                                                                  where Z .. has an expansion in a and _!_                    Substituting Eq. (4.19) into
+                                                                                                          1J                           n- 4
+
+
+
+                                         fr b~l) ~i[A,w,w,g 0 ,i, 0 i)J
+                                                                                                  Eq. (4.18), we can rewrite Eq. (4.18) as
+
+     {<e(x~J         = finite terms+
+
+
+
+     The above argument can be extended to higher order a in the same way
+                                                                                       (4.17)
+                                                                                                                     <e(x))rf          t
+                                                                                                                                       1=1
+                                                                                                                                             b:
+                                                                                                                                              1
+                                                                                                                                                  <N[O.[
+                                                                                                                                                      1
+                                                                                                                                                         A,w, w, gJJ"'- + finite terms
+                                                                                                                                                                         y
+                                                                                                                                                                                              (4. 20)
+     as done for gauge invariant operators in Sec. Ill of Ref. 9.           Basically, the
+                                                                                                  We are interested in the limit (n-4) of
+     argument consists in showing that the above set of operators that appear
+
+     as renormalization counter terms for           e (x) themselves satisfy the                                                       5
+                                                                                                    -(n-4) <e(x))1              =-    ~ (n·4) b'. (N[O.(xl]"'-           - (n-4) x (finite terms)
+                                                                                                                                      1=1          1      1    /    cL
+     homogeneous WT identity [i.e. Eq. (4.15) with the right hand aide set                                                                                         0                          (4.21)
+
+     equal to zero.] .    With such an argwnent one can con?ude that the overall                  Note that the above equation is valid at each x. and hence for                     Je(x.) d 0 x.;
+
+     divergence in    (   :~(xJ     inN-loop (N > 1) approximation has the same                    i.e., for the zero-momentum insertion case worked out in the previous
+
+     form as that given by Eq. (4.16).        In other words, we can write,                        section.         Comparison of Eq. (4. 2.1) in the limit (n-4) with Eq. (3.18) tells
+:;
+
+     (e(x) - t ~I
+               i=l 1=1
+                          b(l) al
+                           1
+                                              _ <
+                                    0. [A,w, w, g ]~
+                                     1           0
+                                                          =       .2. b.(N) a N O,(A, w, w,
+                                                                  .LJ
+                                                                  1=l   1       1
+                                                                                         - a 1~
+                                                                                          oa
+                                                                                                   us that the quantities lim (n-4)b~ are finite and given by the coefficients
+                                                                                                                        n-4          1
+
+                                                                                                   of the respective operators in Eq. (3.18). We thus establish Eq. (3.19) for
+
+                                                          + finite terms
+
+
+
+
+!-
+                                                                                                                                                          -Z8-
+                                               -Z7-
+
+
+
+                                               at each x ),       It should be noted that           where q a- (p tp ).           We now employ the methods of Section Ill to
+      an arbitrary momentum q, (i.e.                                                                             1 2
+
+      the extension from q = 0 to q ':f. 0 case has been possible because the                       relate the zero-momentum insertion of                                  e\"' into the renormalized
+                                                                                                    photon propagator to the propagator itself:
+      Green's functions of N(0 ) for the 5 operators in Eq. (4. Zl) remain
+                              1
+      linearly independent at q = a.
+
+
+                       V.   Anomalies in Current Matrix Elements                                         < oJT ARipl ARIOii-Jo)
+                                                                                                                "     v  ).
+
+              In this section, we shall discuss the dilatation anomalies which
+
+      appear in matrix elements of current operators, in order to clarify the
+                                                                                                              a
+                                                                                                       i(~ e aeR + ~ g agR
+                                                                                                                          a                                   a
+                                                                                                                                                           a + y3)
+                                                                                                                                   - (1 +ym)mR OmR - y3 SR a;R                                                 <  "'R   R    ,'\_
+                                                                                                                                                                                                               O[TA" (p)Av(OI[~
+
+                                                                                                5
+      content of the ''partially conserved dilatation current'' (PCDC) hypothesis.
+
+      Specifically, we shall consider the electromagnetic current in a theory
+                                                                                                               - ilp" ~
+                                                                                                                     OptJ.
+                                                                                                                              + Z)    <   OJTAR(pJAR(Oi[O)
+                                                                                                                                                    fJ.          f..l.
+                                                                                                                                                                                                                       (5. Z)
+      with fermions interacting via nonabelian gauge gluons.                 The electro-
+                                                                                                    where we have used the renormalization group equation for the renormalized
+      magnetic interaction will be treated to lowest nontrivial order, and the
+                                                                                                                                                            2
+                                                                                                    photon propagator.        Writing the latter {to order eR) as
+      strong gauge interaction to all orders throughout.               We shall find that the
+                                                                                                                                          p p
+      dilatation anomaly (to be defined below) in the two-current matrix element                                                  g ~~~ - __l!_!C                                                p p
+                                                                                                                                          pZ --                                                  ....JL..!C_
+                                                                                                            DR (p)                                                                                                     I 5. 31
+           8~.... , although renormalized infinitely in any finite order of the strong                                   z z                                                        + SR
+                                                                                                                                                                                                 i//
+      of
+                                                                                                               ""       p (l+eRflR{p,~,mR,gR,nJ)
+
+      interactions, is completely unrenormalized provided we sum to all orders
+                                                                                                    we have
+      in gR (the renormalized strong coupling constant) before passing to the
+                                                                                                                                        e'-). Io)                                                       z z        a
+      limit of physical dimensions, n=4.                                                                  < o [TAR (pi AR 101
+                                                                                                                 "      v
+                                                                                                                                                                           1
+                                                                                                                                                                         ---z-21
+
+                                                                                                                                                                          p )
+                                                                                                                                                                                   (p p
+                                                                                                                                                                                    )J.   II
+                                                                                                                                                                                               - gf.1"P )eR Pf.1 apf.1 nR
+
+
+              Consider the matrix element of 8~                 with two renormalized photon                                                                                                                           (5. 4)
+
+      fields: using gauge invariance, we have                                                       Together with Eq. (5. 1) (at q = 0), Eq. (5. 4) implies
+
+;.l
+.)
+                Z Z
+              p 1 pz
+                       <     -R        R       ->-
+                        O[TA" (p1) Av (0)9>. (q)[O/
+                                                          ,'\                                                                 z
+                                                                                                              V1(p,-p)- p Vz(p,-p)
+                                                                                                                                                          z
+                                                                                                                                                      eR pf.l
+                                                                                                                                                                          a
+                                                                                                                                                                         ap nR{p,)J.,mR,gR,n)                           (5. 5)
+
+                                                                                                                                                                           "
+                       =(p1.pZg"v      p1 Pz ) V1(pl' Pzl
+                                           v "
+                                           z    p          p     z
+                       + (p1" P1p- g"pp1 HPzPz - g vPzl VziPl•Pzl
+                                                      v
+                                                                                            (5.1)
+                                                  -29-                                                                                                             -30-
+
+,,
+                 Now suppose we attempt to saturate -~
+                                                    6 >..               in the mass-shell                           To proceed, we first relate the matrix element of 0>..~ with
+
+     matrixelement          (p1 e 1,p 2 2 JO\ (q)\o) withasingleE( dilaton
+                                         t:.                                       11        11
+                                                                                                  )         two currents to that with two unrenormalized fields, as follows
+
+     pole contribution. Only V (p ,p ) is relevant to this matrix element,
+                                1 1 2
+                                                                                                                                                               4
+                                                                2
+     whereas the relation (5. 5) involves the combination v - p V ,                                         <oiTA~(p)Av(O)e\-lo) = Jd x d\eip·x                                      0 IT A (x)A            (0)8~}.. (y) I o'-
+                                                            1       2                                                                                                                         J..L     II                   '/
+
+                   2
+     However, at p = 0, the right-hand-side of   (5. 5) vaniahea  (for non-
+
+     vanishing bare quark masses), implying that                   v (p,-pll
+                                                                    1
+                                                                      p =0
+                                                                               2
+                                                                              -k
+                                                                                        is zero.                    = - ·~ .:.1'1' lpl<>.vlpl            <Tol T       PIP I (1019\-1          o)
+     In other words, the use of the .!2!!!.            energy-momentum tensor 8 A (q)
+                                                                                                                        n- 4                                  p CT      u p          4
+     to extrapolate the £-field off- shell is incompatible with the assumption                                          -          (p D      (p) - p D (pi)( p D (pi - p D (p)) + O(e )
+                                                                                                                            2        p J.LO'        a f.'P       v                   0
+
+     of maximal smoothness for the*' -Z photon coupling (i.e. an effective                                                                                                                                                       (5. 6)
+
+     tF        Ff.LV interaction)·.    This is because the electromAgnetic and hadronic                     Here ~and Dare the free and unrenormalized photon propagators
+          ~·
+     contributions in        6'~ (q)   cancel exactly in this matrix element at q = 0.                      respectively (the latter being computed to O(e~). all orders in g ):
+                                                                                                                                                                             0
+
+                  The assumption of PCDC is simply that the hadronlc part of                          e\                            gp~-
+                                                                                                                                                ~
+                                                                                                                                                z
+     ia saturated with an t-pole.              In order to implement thia aasumption 1 one                          A
+                                                                                                                        p~
+                                                                                                                             (pI = :..:.______j!
+                                                                                                                                             2             + ~0 ~                                                                (5. 7)
+                                                                                                                                           p                    lpz 1z
+     must define a finite        11 hadronic part 11   of   s\ .   We shall now show that to
+
+     finite orders in strong perturbation theory it ia not possible to unambigu-                                                                    g
+                                                                                                                    D        (p)
+                                                                                                                                                                                         + ~0
+                                                                                                                                                                                                     ~
+                                                                                                                                        2           2     2
+     ously sepa~ate finite hadronic and electromagnetic contribution• in                              s\_               p~
+                                                                                                                                      p (l+e          n (p ;g 0 (n), m 0 (n), nil
+                                                                                                                                                    0 0
+                                                                                                                                                                                                     (p2)Z
+
+
+     (although one can certainly~ a finite hadronic piece, this definition                                                                                                   n-4
+                                                                                                                                                Z n-4                         Z           R                     4
+     amounts to a specific choice of finite part of the counter terms}.                      However.                                11 + e
+                                                                                                                                                0
+                                                                                                                                                    ~      z
+                                                                                                                                                               3 ig 0 inl~         ,nil D
+                                                                                                                                                                                            p~
+                                                                                                                                                                                                 (pi+ O(e )
+                                                                                                                                                                                                         0
+                                                                                                                                                                                                                                 (5. 8)
+     if one sums to all orders of gR before passing to four dimenlions 1 the
+                                                                                                            where
+     hadronic part of the bare trace remains finite and in fact has a completely                                                        n-4
+                                                                                                                                            2                                      4-n           2
+                                                                                                                    z3(go(n)~                   n) = - pole part of (f.L                 n (p ;g (n), m (n), n))
+     calculable zero-momentum vacuum to two-photon matrix element, given                                                                                                                  0     0      0
+                                                                                                                                                                                                                                 (5. 91
+     exactly by the lowest order result.
+                                                         -31-                                                                                                               -32-
+
+
+
+
+The second term in Eq. (5. 6) arises from graphs in which the                                                      in zeroth order of g , to the "canonical trace anomaly of Chanowitz
+                                                                                                                                                                            11
+
+                                                                                                                                       0
+                                      8}.. A (expressed in terms           of bare fields), namely                            6
+electromagnetic part of                                                                                            and Ellis.   We will refer to it as the dilatation anomaly, to distinguish
+     4                                                                                        The graphical
+(n - ) F FfJ.V, inserts directly onto an external photon leg.                                                      it from the anomaly in the trace of the energy-momentum tensor itself,
+   4    ~v
+
+alternatives are summarized in Figure 1.                                                                           discussed in the preceding sections.                            Standard renormalization group
+
+                                                                                                                                       show that the dilatation anomaly is finite up to order g~,
+        The renormalized form of Eq. (5. Z) is just                                                                               19
+                                                                                                                   arguments
+                                                                                                                                                     4
+                                                                                                                   but diverges in order gR (owing to a double pole in z ) and all higher orders.
+                                                                                                                                                                        3
+      /o\T AR(p)AR(O) e~-lo"­                                                                                      This, o£ course, implies that the two- current matrix element o£ 8'A'A                                      is
+      '.:          f.L          v        }..     '/
+                                                                                                                   divergentZO in perturbation theory: it is, in fact, subtractively
+
+        =
+               Z I
+               e-                   (o\T        J~(pl iv(O)B\-io)                                                  renormalizable by precisely the divergences of the anomaly.                                 We conclude
+                  R (pzlz
+
+                                                                         n-4                                       that the assumption of PCDC is nonsense in perturbation theory.
+              z                -I    (           z                        z        n)
+                                                     - p~pv)z3(go(n)~                                                           Nevertheless, it is possible to resurrect the PCDC assumption
+             eR(n-4)
+                              (pz)z g~"P
+                                                                                                                   on a purely nonperturbative basis, as we now demonstrate.                                  Let z       be
+                                                                                                                                                                                                                      3
+            + O(e:) + terms vanishing at n = 4                                                                     the complete photon wave-function renormalization constant:
+                                                                                                          (S.IO)
+                                                                                                                                               n-4                    n-4
+The left-hand side of Eq.                      (5.10) can be related via Eq.            (S. 4) to the                                           z                      2 • n)
+                                                                                                                                                                                             2                 4
+                                                                                                                                                                                         + eR z 3 (gR, n) + O(eR)          (S.IZ)
+                                                                                                                                Z3(go(n)~            e       (n)f-L
+                                                                                                                                                         0
+renormalized photon self-energy, so finally we obtain
+                                                                                                                   Thus
+                                                                                                                                                                                 z
+                                                                                                                                               =~ a~a ln ZJ ~ R ~(gR) + O(eR)
+                                                                                                                                                                                                 4
+      (o\T        T~!p) jv(O)e\-!o)                                                                                             ~3( 0 R' gR)                                 0                                             (S.I3)
+
+
+
+                                                                                         ..!!:..1
+                         z                           a          z                           z                      Here 'Y {gR) is of order unity as gR- 0 .
+            = (g~vP          - p~pv) { P~         ap nR(p l         (n- 4)z !g (n)~
+                                                                          3    0                    n)}
+                                                         ~                                                                                                                       11
+                                                                                                          (S.II)   Note that with minimal subtraction,                                "{ , and hence"{, are independent
+                                                                                                                                                                                        3
+                                                                                                                   of n.       Let !) (gR) be the strong-interaction f)-function in the theory with
+                                                                                                                                     8
+ The last term on the right-hand-side of (5.11) corresponde precisely,
+                                                                                                                    e       set to zero:
+                                                                                                                        0
+(
+
+                                                                                                                                                        -34-
+                                          -33-
+
+
+
+
+                                                                                            ·-
+                         a                                                                  lim Ez (g , 4+E ). However, a Taylor expansion in g will inevitably
+                                                                                                  3 R                                            R
+             ~ g (gRI =~a~                                                         (5.14)      0
+                             gRj e =0
+                                  0                                                         commit us to an expansion around the point at infinity in the E -plane:
+                                 g , n fixed
+                                  0
+
+    One easily derives the following inhomogeneous renormalization group
+                                                                                                                                -        I
+                                                                                                    ~g(gR,<I
+                                                                                                                   - g2 (l t -I '(g )) -
+    equation for z :                                                                                                    R                 •              R
+                     3
+
+
+
+             ~ (gR,<I
+                      az (gR,n)
+                        3
+                        a       + •z3(gR,n) = ~(gRI                                (5.15)
+                                                                                                                       Lu_l- +
+                                                                                                                       gR             t       'i
+                                                                                                                                                         -t y2 ....        )
+
+              g           gR
+
+                                                                                            whereas we are interested in the behavior of z (gR,E) for!!!!..!.!! E.
+    where    E   = n-4   For fixed n   * 4, we may asaume lim g 2 z 3 (g,n) = 0.                                                          3
+
+                    ll                                    g-o                               Inspection of Eq. (5.17) shows that only the integration regions
+    wf! also have                                           .                                                                        11
+                                                                                            g,g' -+0 can be responsible                       for any singularities of z                     as E -+ 0.
+                                                                                                                                                                                         3
+                                                                                            Specifically, the region of interest is (given the assumptions on 'Y• Y
+                        1
+             ~g(gR,<) = 28 R(• t ~(gR))
+                                 -
+                                                                                   (5.16)
+                                                                                                               2                 2            2
+                                                                                            stated above) g        -   E,   g'       - g           -E.         Thus, we can neglect the terms of
+
+
+    where    ~(gR) is of order g: for gR approaching zero.           The solution of
+                                                                                            order   g;   and higher in           Y and those of order g~ and higher in y in
+                                                                                            Eq.   (5.17), as far as the leading singularity of z                                   as t_. 0 is concerned.
+                                                                                                                                                                               3
+    (5. 15) is
+                                                                                            Consequently, de!ining y : y (0), a : lim
+                                                                                                                                 0
+                                                                                                                                                                    ~ .Y<gl,
+                                                                                                                                                               g-O g
+                             gR
+                                                gR  dg'     )
+             zl(gR,n)     f0 dg ----Yi&L
+                                ~g(g,<)
+                                         exp
+                                             (-·f ~_(g' ,<)
+                                                         g
+                                                                                   (5.171
+                                                                                                    z3(gR,4+t)-              J
+                                                                                                                                 gR
+                                                                                                                                          dg
+                                                                                                                                                        2~0         (
+                                                                                                                                                                 exp - E
+                                                                                                                                                                               g
+                                                                                                                                                                               fR            2d g '           )
+                                                                                                                                                        2                                             2
+                                                                                                                       ( -o o                      g(l+ag)                     g    g (t +ag•
+                                                                                                                                                                                     1
+                                                                                                                                                                                                          J
+                                                    21
+    We shall assume (as suggested by scaling             ) that the physical renormalized
+                                                                                                                                                   ~0
+    coupl_ing gR is in the domain of attraction of the origin, so that there are
+
+    no zeroes of "V'(g) in the interval (0, gR) .
+                                                                                            which yields the exact result for the anomaly
+             Now recall that the anomaly we are interested in is just
+                                  -35-                                                                                -36-
+
+
+                                                                                                             5 6
+                                                                                   one is forced to consider, • in addition to E..... 2y, processes such
+       .Hm   t   z (gR,4+t) =yo                                           (5.18)
+                  3
+       •-o                                                                         as E ..... 2rr which involve the dilatation anomalies of chiral current matrix
+
+                                                                                   elements.   However, chiral currents are notoriously difficult to handle
+This concludes the proof of nonrenormalization of the dilatation anomaly.
+
+It should be emphasized that, in contrast to the situation with the triangle       in a dimensional renorrnalization scheme, which has been central to our
+
+                                                                                   analysh.    It remains to be seen whether a canonical dilatation anomaly
+anomaly, the result {5.18) is necessarily nonperturbative, and cannOt be
+
+checked in any finite order of perturbation theory. ZO This is a con~              will also emerge nonperturbatively in such cases.
+
+sequence of the highly nonuniform (in E) character of the expansion in
+                                                                                                            ACKNOWLEDGEMENTS
+powers of.gR.
+
+                                           circumvent~the usual physical
+                                                                                           We wish to thank Prof. S. Adler for stimulating discussions.
+        This result does not, of course,
+
+                                       The enormous width of theE ensures          Two of us (A. D. and S. J,) would also like to express our gratitude to
+objections to the PCDC hypothesis.
+
+that the assumption that the zero~momentum trace
+                                                         ·-
+                                                        8).   couples to an
+
+arbitrary state via a single pole term is crudely qualitative at best.
+                                                                                   The Institute for Advanced Study for its kind hospitality.
+
+
+
+
+Furthermore, in contrast to the case with PCAC, there is not even a
+
+fictional wo.rld (for PCAC, that of massless bare quarks and pions) where
+
+exact calculations can be performed.     If we are not at an eigenvalue of the
+
+Gell~Mann Low function,    then even in the limit of zero bare quark masses
+
+dilatation invariance is explicitly broken, so there is no Goldstone limit
+
+in which spontaneous breakdown of dilatation invariance would force the
+
+appearance of a zero mass particle.      Nevertheless, one could adopt the
+
+PCDC assumption as a testable qualitative hypothesis (at least in principle)
+
+provided that one further difficulty can be resolved.    Namely, the ma:gnitude
+
+of the coupling of the trace to theE ~pole is undertermined.theor..etically, so
+     (                                                                                                                            -38-
+                                           - 37-
+
+
+                                                                                       10.   J.C. Collins, Nucl. Phys. B92, 477 (1975); P. Breitenlohner ancl
+                                       References
+                                                                                                         D. Maison, "Dimensional Renormaliz.ation and the Action
+         1.   S. Coleman, in Properties of the Fundamental Interactions,
+                                                                                                         Principle, 11 Comm. Math. Phys. (to be published), and
+                     A. Zichichi (ed.) (Editrice Compositori, Bologne, 1973) p. 359.
+                                                                                                        ''Dimensionally Renormaliz.ed Green's Functions (or
+         2.   C. G. Callan, Phys. Rev. 02 , 1541 (1970); K. Symanzik, Comm.
+                                                                                                        Theories with Massless Particles II, 11 New York University
+                     Math. Phys. !.§., 227 (1970).
+                                                                                                        Preprint NYU/TR2/76.
+         3.   E. C. G. Stueckelberg and A. Petermann, Helv. Phys. Acta _!2,
+                                                                                       11.   G.   1   t Hooft, Nucl. Phys. B61, 455 {1973); J. C. Collins,
+                     499 (1953); M. Gell-Mann and F. Low, Phys. Rev. 95,
+                                                                                                        Nucl. Phys. B80, 341(1974).
+                     1300 (1954).
+                                                                                       lZ.   E. S. Abers and B. W. Lee, Phys. Reports 9(;, 1 (1973), and
+         4.   C. G. Callan, S. Coleman and R. Jackiw, Ann. Phys. (N.Y.}
+                                                                                                        references therein.
+                     ~.   42 (1970).
+                                                                                       13.   D.   z. Freedman, I. J. Muzinich and E. J. Weinberg, Ann. Phys.
+         5.   P. Carruthers, Phys. Reports IC, 1 (1971); R. J. Crewther,
+                                                                                                         (N.Y.) .§1, 95 (1974);        D. Z. Freedman and E. J. Weinberg,
+                     Phys. Rev. Lett. 28, 1421 (1972).
+                                                                                                         Ann. Phys. (N.Y.)£, 354 (1974).
+         6.   M. S. Chanowitz and J. Ellie, Phya. Rev. 07, 2490 (1973).
+
+         7.   U scalar fields are present, a non-zero "improvement coefficient11
+                                                                                       14.   Since, by Ref. 11, mo 8/8mo          I               :   mRatamRI
+                                                                                                                                      go·I-L· n                  gR,!J.,n
+                     is needed to renormalize      e~v    See Refs. 4 and 13.
+                                                                                       15.   J. H. Lowenstein, Comm. Math. Phys. Z4, 1 {1971).
+         B.   S. L. Adler, J. C. Collins and A. Duncan,      11
+                                                                  Energy-Momentum-
+                                                                                       16.   S. Joglekar, ''Local Operator               Products in Gauge Theories -1,"
+                     Tensor Trace Anomaly in Spin - t Quantum Electrodynamics, 11
+                                                                                                         Princeton lAS pre print C00-ZZ20- 82.
+                     Princeton lAS preprint ....
+                                                                                       17.   This includes matrix elements of 8 fJ.                   with composite interpolating
+         9.   S. D. Joglekar and B. W Lee, Ann. Phys. (N.Y.) 97,160 (1976);                                                                   ~
+
+                                                                                                        fields on their respaetive hadronic rnass-ahells. SeeS. Joglekar,
+                     and references therein.       See also, H. Kluberg-Stern and
+                                                                                                        11
+                                                                                                             Local Operator Products in Gauge Theories - II. 11
+                     J. B. Zuber, Phys. Rev. Dl2, 467 (1975); DlZ, 3159 (1975).
+                                                                                                             Princeton I. A. S. pr eprint.
+                     J. Dixon and J. C. Taylor, Oxford preprint 74/74,
+                                                                                       18.   C. Becchi, A. Rouet and R. Stora, Comm. Math. Phys. 42, 127
+                     J, Dixon and W. Deans, Oxford preprint 2.0/75.
+                                                                                                             (197 5).
+
+
+
+
+                                                                         ··-- ~---
+,,
+                                       -39-                                                                                    -40-
+
+                                                                                                                           Figure Caption
+19.   Using the identities of 't Hoeft (Ref. 11), this statement can be
+                                                                                            Fig. 1 (a}   Insertion of hadronic part of bare trace in a two pOOton
+              shown to follow from the existence of a nonzero fourth
+                                                                                                         matrix elenent.
+              order term in f3       • [For the value of j3         see for example,
+                                 e                              e                           Fig. 1 (b)   Insertion of electraragnetic part of bare trace.
+              E. de Rafael and J. L. Rosner, Ann. Phys. (N.Y.) 82,
+
+              369 (1974)] .   The relevance of j3           is that the Z-loop vacuum
+                                                       e
+              polarization graphs in quantum electrodynamics are equal
+
+              to those in the Yang-Mills theory except for a common
+
+              group- theory factor.
+
+20.   An opposite result, that there are no 2-loop oorrections to the
+
+              anomaly, is found by H.         Sat~,   11
+                                                           Nonrenormalization Theorem
+
+              for the Dilatation-Current Anomaly,'' U. of Minnesota, preprint.
+
+              However, his Eq. (3.19) appears to be in error: Since Sate's
+
+              renormalized coupling constant g has dimension 2 -                 in, this
+              equation needs an extra term (2 • !n)ga n                   ~g in order to
+                                                                     ~v
+
+              agree with the equation of dimensional analysis.
+
+21.   D. J. Gross and F. Wilczek, Phys. Rev. DB, 3633 (1973);
+
+              H. D. Politzer, Phys. Rev. Lett. 30, 1346 (1973).
+{
+,.                                                                                                  A-1
+
+
+
+
+                                                         Appendix A
+
+                               Here, we shall deal with the term
+
+
+
+
+          efL
+         ~ hOdfL
+                               aP{~-l AaavAa +W {8 w - g caf3y Apy w )
+                                   0   p    v  apa      0           13
+                                                                                                     (A.1)
+
+
+
+
+                       in Eq. (2.15)
+
+                               We shall, first, give a simple proof using the discussion of Sec. IV
+
+                       that all the renormalization parts of the above quantity are finite without
+
+                       additional subtractions.     Consider the discussion of Sec. IV. for 9(x).
+         {a)
+                       We note from Eqs. {4. 4) and {4. 5) that the only part of 9(x) that is not
+
+                       BRS invariant is precisely the expression in (A.l).        So the whole discussion
+
+                       for the WT identity for 9(x) and its renormalization applies to this piece
+
+                       as well.     Hence this implies that the renormalization counter terms for
+
+                       this operator can only be those 5 operators listed in {3. 21).     But the
+
+                       expression (A.l), and hence its renorrnalization counterterms themselves,
+
+                       is a (our. divergence.      But there are no such {linear combinations o()
+     /
+         {b)           operators in (3. 2.1).   Hence the proper vertices o( (A.l) must be finite once
+
+                       the wavefunction and coupling constant renormalizations are done.
+
+                                  Next consider the Green 1 s functions o( (A.l) with no external ghosts.
+
+                       They can be expressed via the WT identity o( Eq. (2.. 8) in a simpler form,
+
+                       after a straight!orward manipulation.      The result is
+
+
+
+
+                   •
+                                                                                              J
+                                                                                     A-2
+
+                                                                                              \
+              <         0       0
+              aP[;·I A (xi&"A (x) +w (x)(8 w (x)- g c at-'y
+                  0   p      1.1    a     p a      0
+                                                       • Ay(x)w•(xJJ)
+                                                            p  1-'
+
+
+
+
+              = aP(;;; (x)A 0 (xl) {dny (J~ (y) (a J.1 "'•(y)- ig c,.. Ay(y)w (y))
+                                                                 0 pay 1J.   a
+                    a       p           ·   1-'fl       1-'
+
+
+
+                                    0               -     a
+                    + ig 0 iiilylt .Yiyl            ~ (y)t ~ (y)) "'a(y)
+
+
+                                                                                     (A. 2)
+
+     With the help of Eq. (A, 2) it is easy to see that the truncated Green's
+
+     functions of the lefthand side (with physical wavefunctions attached) vanish
+
+     for q -:# 0 owing to the lack of a single particle pole \_? one o£ the external
+
+     lines.
+
+
+
+
+lI
+I
+
