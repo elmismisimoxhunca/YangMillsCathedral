@@ -4587,8 +4587,13 @@ physical observable through the same selected paths, and its original gauge-fixe
 required to equal integration against exact product Haar weighted by the unchanged selected density
 at exact geometric areas and boundary words. A designated exact unit member derives normalization
 and nonzeroness of this weighted carrier; neither is accepted independently. No graph or face law
-instance is constructed. Full bridge-multiplicity BC boundaries and their law, plus disconnected
-boundary/cut choices, remain separate debt.
+instance is constructed. A new reusable `BoundaryConnectedWordCertificate` defines finite graph
+bridges by the absence of an edge-avoiding source-to-target oriented path, balances bridge uses once
+in each orientation, bounds nonbridge use to one total occurrence, and derives that any repeated
+underlying edge must be a bridge. Hostile probes therefore reject doubling an edge whenever an
+alternative cycle path exists. This is finite combinatorics only: integration with the embedded
+planar complement/frontier geometry, the full bridge-multiplicity BC law, and disconnected
+boundary/cut choices remain separate debt.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

@@ -695,8 +695,11 @@ complex graph function, assigns it an existing ambient gauge-invariant observabl
 edge paths, and requires its expectation to equal integration against product Haar weighted by the
 unchanged selected density at exact face areas and words. The exact unit case derives normalization
 of that carrier. No planar graph instance, heat kernel, planar/Yang–Mills measure, or model is
-constructed; the full BC bridge-multiplicity formula, general-boundary choices, refinement/gluing,
-and lattice-limit layers remain explicit debt.
+constructed. Reusable finite BC word infrastructure now defines a bridge by absence of an
+edge-avoiding source-to-target path, permits at most one traversal in each opposite orientation for
+bridges, permits at most one total traversal for nonbridges, and rejects doubling of cycle edges.
+This combinatorics is not yet an embedded BC planar certificate; the full BC bridge-multiplicity
+formula, general-boundary choices, refinement/gluing, and lattice-limit layers remain explicit debt.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly

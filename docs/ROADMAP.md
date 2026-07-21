@@ -747,8 +747,11 @@ committed before higher layers depend on it.
     pointwise to an existing ambient gauge-invariant observable through the same selected paths,
     use the unchanged density at exact geometric face areas and exact boundary words over product
     Haar, and derive carrier normalization from the constant-one case.
-  - [ ] Extend from that deliberately earlier Jordan-subclass law to full BC bridge-multiplicity
-    boundary walks and its corresponding expectation law; after that add general
+  - [x] Isolate finite BC boundary-word combinatorics: exact alternative-path bridge semantics,
+    equal opposite-orientation bridge multiplicity, at-most-once nonbridge use, and hostile rejection
+    of doubled cycle edges. This is not yet a planar BC certificate.
+  - [ ] Integrate that word certificate with full embedded BC bridge-multiplicity boundaries and
+    their corresponding expectation law; after that add general
     disconnected-boundary choice independence, refinement/projective consistency, compact-surface
     gluing, and Driver's Villain/Wilson lattice-continuum convergence with exact hypotheses,
     distinct from finite-cutoff, classical, and four-dimensional witnesses.
