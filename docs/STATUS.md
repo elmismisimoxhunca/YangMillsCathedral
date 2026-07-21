@@ -4414,8 +4414,13 @@ triangular evaluation: brackets involving the distinguished slot vanish (up to s
 while horizontality kills terms where that fundamental slot survives. It derives the exact ordinary
 vertical derivative, unconditional cancellation of the full candidate on a fundamental slot, and
 full candidate horizontality via vertical tangent generation. The termwise premise is never treated
-as candidate data. Full right-adjoint equivariance, descent, and a genuine intrinsic `D_A F` theorem
-remain open.
+as candidate data. `YangMills.Mathematics.SmoothManifoldDifferentialFormOutputLinear` transports
+smooth forms and positive-degree certificates through exact output continuous-linear maps, while
+`SmoothManifoldDifferentialFormDiffeomorphPullback` constructs the exact smooth pullback carrier.
+`YangMills.Geometry.PrincipalFormCovariantExteriorEquivariance` compares output-`Ad(g⁻¹)` and
+right-translation-pulled certificates on one common-source field family, proving ordinary-derivative
+and full-candidate right-adjoint equivariance. Descent and a genuine intrinsic `D_A F` theorem remain
+open.
 
 The four-dimensional `CurrentStrength` integration record now requires one exact algebraic quantum
 action of its canonical smooth principal gauge group on its same observable family and one

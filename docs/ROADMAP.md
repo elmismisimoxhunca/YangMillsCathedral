@@ -275,8 +275,11 @@ committed before higher layers depend on it.
 - [x] Use that common family plus horizontality to discharge every triangular Cartan evaluation,
   derive the unconditional fundamental-slot cancellation, and combine it with vertical tangent
   generation to prove full candidate horizontality.
-- [ ] Prove full candidate right-adjoint equivariance, then descend it and derive structural curvature
-  laws and a genuine intrinsic `D_A F` theorem.
+- [x] Prove output-linear and diffeomorphism-pullback transport for positive-degree exterior
+  certificates, then use certificate uniqueness to derive full right-adjoint equivariance of the
+  ordinary derivative and complete candidate.
+- [ ] Descend the now-horizontal/equivariant candidate and derive structural curvature laws and a
+  genuine intrinsic `D_A F` theorem.
 
 ## Phase 3 — classical Yang–Mills semantics
 

@@ -496,9 +496,10 @@ certificates, and selected charts while constructing enlarged bundle data with p
 prescribed slot fields can now be assembled on one exact common open source, even for an
 unrestricted index type. Horizontality now discharges all surviving triangular Cartan evaluations;
 fundamental-slot cancellation is unconditional, and vertical tangent generation proves full
-horizontality of the positive-degree covariant-exterior candidate. Proving its full right-adjoint
-equivariance, descending the full candidate, and constructing a genuine intrinsic `D_A F` theorem
-remain open. Exact inverse-action
+horizontality of the positive-degree covariant-exterior candidate. Output-linear transport and
+right-translation pullback of positive-degree exterior certificates now prove full right-adjoint
+equivariance of both the ordinary derivative and the complete candidate. Descending that candidate
+and constructing a genuine intrinsic `D_A F` theorem remain open. Exact inverse-action
 curvature covariance now derives pointwise invariance of both chosen and basis-independent
 canonical curvature densities for the full pulled connection/exterior/certificate chain. The exact
 analytic datum transports to that chain with unchanged designated measure and coupling, deriving
