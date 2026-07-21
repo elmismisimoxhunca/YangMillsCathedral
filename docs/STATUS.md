@@ -4720,7 +4720,11 @@ No arbitrary certified-family record is exposed: `twoDimensionalVillainActionFam
 ordered directed-bond word whose exact source/target lists are the consecutive certified path nodes.
 The measurable word holonomy uses later-on-the-left multiplication, and
 `TwoDimensionalLatticeApproximatingHolonomyData.coarseRestriction` evaluates exact mapped fine-edge
-words. No weak limit, boundary-independence proof, or continuum convergence witness is constructed.
+words. `SmoothUnitaryRepresentationDifferentialData` defines Driver's `p_*` as the exact `mfderiv` of the
+same smooth unitary matrix representation at identity and requires its injectivity.
+`TwoDimensionalRepresentationInducedPairingCoherenceData` identifies the existing invariant inner
+product literally with `-Re tr(p_*X p_*Y)`, blocking an unrelated representation/pairing substitution. The bridge from this pair to the independently parameterized Laplacian/heat and Wilson chains remains open. No weak
+limit, boundary-independence proof, or continuum convergence witness is constructed.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

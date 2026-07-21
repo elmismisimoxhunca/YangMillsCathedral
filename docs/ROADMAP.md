@@ -834,7 +834,10 @@ committed before higher layers depend on it.
     representation injectivity.
   - [x] Strengthen each Definition 8.1 fine edge with an exact nonempty directed-bond word tied to
     every consecutive certified path node; construct measurable fine/coarse holonomy restriction.
-  - [ ] Add full Theorems 8.5/8.10 observable convergence contracts over that exact transport; inhabit/derive box
+  - [x] Add Driver's standing smooth representation derivative `p_*`, its exact injectivity, and
+    coherence of the continuum invariant pairing with `-Re tr(p_*X p_*Y)`.
+  - [ ] Tie the same representation-induced pairing/Laplacian/heat semigroup to the continuum planar
+    law, then add full Theorems 8.5/8.10 convergence over exact transport; inhabit/derive box
     projectivity and Theorem 7.2; add compact-surface gluing with exact hypotheses, distinct from finite-cutoff, classical, and
     four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.

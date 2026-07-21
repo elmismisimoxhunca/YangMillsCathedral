@@ -123,8 +123,15 @@ converge to one normalized measure, and that measure must equal every free finit
 unchanged `Q_{ε²}` chain or one fixed actual trace representation/normalizer; Theorem 8.10
 faithfulness is actual representation injectivity. Each Definition 8.1 fine edge may now carry an exact nonempty ordered directed-bond word tied
 source/target-wise to every consecutive certified path node; measurable later-on-the-left holonomy
-constructs exact coarse restriction along the mapped fine edge. Inhabiting Theorem 7.2/projectivity
-and formalizing Theorems 8.5/8.10 convergence over this transport remain explicit debt.
+constructs exact coarse restriction along the mapped fine edge. Driver's opening §2 and sign-sensitive equation (2.1) were visually adjudicated against PDF p. 3 /
+printed p. 577 on 2026-07-21: `p_*` is the derivative at identity, injectivity is the standing
+hypothesis, and the real form has the leading minus sign `-trace(p_*A p_*B)`. Lean writes the real
+carrier as `-Re trace`; deriving vanishing imaginary part from differentiated unitarity remains part
+of the future analytic chain. Driver's standing §2 representation chain now defines `p_*` as the exact identity `mfderiv` of one
+smooth unitary matrix representation, requires its injectivity, and identifies the continuum
+invariant pairing literally with `-Re tr(p_*X p_*Y)`. Tying the resulting Laplacian/heat semigroup to
+the continuum planar law, inhabiting Theorem 7.2/projectivity, and formalizing Theorems 8.5/8.10
+convergence over exact transport remain explicit debt.
 
 PDF p. 21 / printed p. 595 was independently inspected on 2026-07-21 for Theorem 6.6.
 The page visibly quantifies over a gauge-invariant function on the BC graph configuration space and
