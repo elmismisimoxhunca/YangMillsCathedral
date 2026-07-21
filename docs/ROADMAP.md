@@ -807,8 +807,10 @@ committed before higher layers depend on it.
     to the infinite axial carrier, and represented-coordinate marginal identities.
   - [x] Add an uninhabited exhaustive nested projective finite-presentation contract and an exact
     infinite axial probability/cylinder-law interface with finite-stage and one-coordinate marginals.
-  - [ ] Add exact square-box geometry, boundary-condition weak-limit semantics, compact-surface
-    gluing, and lattice-continuum convergence with exact hypotheses, distinct from finite-cutoff, classical, and
+  - [x] Add exact positive-radius centered square-box plaquette and off-axis axial-coordinate sets,
+    prove literal radius nesting and complete non-tree plaquette-boundary coverage.
+  - [ ] Add box-to-finite-presentation adapters, boundary-condition weak-limit semantics, compact-
+    surface gluing, and lattice-continuum convergence with exact hypotheses, distinct from finite-cutoff, classical, and
     four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.
   - [x] Add a current-strength continuum core hard-wired to coordinate `ℝ³` with coordinate

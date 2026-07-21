@@ -4683,8 +4683,13 @@ inclusions, exact consecutive finite-law pushforward, and exhaustion of every of
 elementary plaquette. `TwoDimensionalAxialInfiniteVolumeCylinderLawData` requires a normalized
 measure on the exact infinite axial carrier whose restriction to every finite represented coordinate
 family is the corresponding normalized finite law; nonzeroness and represented one-coordinate
-marginals derive. Both remain uninhabited acceptance interfaces. No exact square-box geometry,
-boundary-condition weak limit, or continuum convergence witness is constructed.
+marginals derive. Both remain uninhabited acceptance interfaces. `epsilonSquareLatticeBoxPlaquettes` now gives exact
+positive-radius centered boxes with lower-left coordinates `-n,…,n-1`, while
+`epsilonSquareLatticeBoxAxialCoordinates` gives right-directed horizontal coordinates on the
+nonzero rows `-n,…,-1,1,…,n`. Both sets are literally nested with radius; all coordinates are
+off-tree and every selected plaquette's non-tree boundary is covered forward or in reverse. No
+adapter to the abstract finite-presentation carrier, boundary-condition weak limit, or continuum
+convergence witness is constructed.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

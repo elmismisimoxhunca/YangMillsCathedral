@@ -755,8 +755,11 @@ nonzero measure on the exact infinite axial carrier, with exact represented-bond
 marginals. An uninhabited projective sequence contract now requires nested coordinate/plaquette inclusions,
 exact finite-measure pushforward, exhaustion of every off-tree bond and elementary plaquette, and a
 probability measure on the infinite axial carrier with every finite-coordinate cylinder equal to the
-corresponding normalized finite law. It constructs no sequence or law and does not yet encode exact
-square boxes, boundary-condition weak limits, or lattice-continuum convergence.
+corresponding normalized finite law. Exact positive-radius centered square-box geometry is now separate: lower-left plaquette sites run
+from `-n` through `n-1`, independent axial coordinates are right-directed horizontal bonds on rows
+`-n,…,-1,1,…,n`, radii give literal nested finite sets, and every non-tree box-plaquette boundary is
+covered in one coordinate orientation. No adapter from these sets to the abstract finite
+presentations, boundary-condition weak limit, or lattice-continuum convergence is yet constructed.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly

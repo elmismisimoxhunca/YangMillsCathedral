@@ -100,7 +100,10 @@ pushforward and exhaustion of every off-tree bond and elementary plaquette. An i
 probability interface has every finite-coordinate cylinder equal to the corresponding normalized
 finite law. This is only projective cylinder infrastructure motivated by one conclusion of Theorem
 7.2; it does not state uniqueness, exact square boxes, boundary-conditioned measures, weak limits,
-or boundary independence. Exact box geometry, boundary-condition weak limits, and convergence remain explicit debt.
+or boundary independence. Exact positive-radius centered square-box plaquette sets and off-axis right-directed axial coordinate
+sets now use the source `-n,…,n-1` / nonzero-row bounds, are literally nested with radius, and cover
+every non-tree plaquette boundary orientation. The adapter to abstract finite presentations,
+boundary-condition weak limits, and convergence remain explicit debt.
 
 PDF p. 21 / printed p. 595 was independently inspected on 2026-07-21 for Theorem 6.6.
 The page visibly quantifies over a gauge-invariant function on the BC graph configuration space and
