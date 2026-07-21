@@ -4405,8 +4405,11 @@ value, exact open-source smoothness, all-group orbit adaptation, and bracket zer
 fundamental field. `YangMills.Geometry.PrincipalNormalizedTrivialization` left-shifts the fiber
 coordinate to normalize any covered point to group coordinate `1`, proves forward/inverse
 smoothness, conservatively extends the designated atlas by that one chart, and removes the
-coordinate-normalization premise from the adapted-field existence theorem. The remaining geometry
-is assembling all slot fields on one common open source; the termwise premise is not treated as
+coordinate-normalization premise from the adapted-field existence theorem.
+`YangMills.Geometry.PrincipalCommonAdaptedTotalFields` strengthens this to an arbitrary indexed
+family on one exact common normalized-trivialization source, retaining every prescribed value,
+smoothness, all-orbit adaptation, and zero bracket against the designated fundamental field. The
+remaining geometry is using this family plus horizontality to discharge the triangular evaluations; the termwise premise is not treated as
 candidate data. Descent of the full candidate and a genuine intrinsic `D_A F` theorem remain open.
 
 The four-dimensional `CurrentStrength` integration record now requires one exact algebraic quantum

@@ -492,8 +492,10 @@ transported through a designated smooth principal trivialization at points with 
 coordinate `1`, retaining prescribed values, all-orbit adaptation, and total-space bracket zero.
 A principal trivialization can now be normalized at an arbitrary point by left-shifting its group
 coordinate; a conservative one-chart atlas extension retains the exact torsor, projection/action
-certificates, and selected charts while constructing enlarged bundle data with proved smoothness and yields an adapted total field with arbitrary prescribed value at every point. The
-remaining bridge is assembling all slot fields on one common open source to derive the termwise premise on the total space, descent of the full candidate, and a genuine intrinsic
+certificates, and selected charts while constructing enlarged bundle data with proved smoothness and yields an adapted total field with arbitrary prescribed value at every point. All
+prescribed slot fields can now be assembled on one exact common open source, even for an
+unrestricted index type. The remaining bridge is using that family plus horizontality to discharge
+the triangular Cartan bracket evaluations to derive the termwise premise on the total space, descent of the full candidate, and a genuine intrinsic
 `D_A F` theorem remain open. Exact inverse-action
 curvature covariance now derives pointwise invariance of both chosen and basis-independent
 canonical curvature densities for the full pulled connection/exterior/certificate chain. The exact
