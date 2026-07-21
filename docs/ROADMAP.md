@@ -789,8 +789,10 @@ committed before higher layers depend on it.
     Driver's displayed convolution-kernel formula; derive the full inherited action contract,
     including real Haar-integral normalization, plus normalized/nonzero canonical Haar-density
     plaquette measures.
-  - [ ] Add compact-surface gluing and Driver's Wilson action, axial lattice field measures, and
-    lattice-continuum convergence with exact hypotheses, distinct from finite-cutoff, classical, and
+  - [x] Add Driver's Wilson action from the actual trace character of a nonzero finite-dimensional
+    unitary matrix representation, with exact positive Haar-integral normalizers and the full
+    inherited continuous/positive/class/inversion/real-normalization action contract.
+  - [ ] Add compact-surface gluing, axial lattice field measures, and lattice-continuum convergence with exact hypotheses, distinct from finite-cutoff, classical, and
     four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.
   - [x] Add a current-strength continuum core hard-wired to coordinate `ℝ³` with coordinate

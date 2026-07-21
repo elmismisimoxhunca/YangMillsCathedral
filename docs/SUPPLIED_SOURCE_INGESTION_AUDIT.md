@@ -176,8 +176,11 @@ adjudication corrections.
    semigroup density at exact time `ε²`, requiring the exact Definition 4.7
    `∂ₜQ = 1/2 ΔQ` chain, an initial-identity generated operator semigroup, and Driver's displayed
    convolution-kernel identity; its full inherited action contract, including real Haar-integral
-   normalization, and normalized nonzero single-plaquette Haar-density measure are derived. Wilson actions, axial field
-   measures, and convergence remain open.
+   normalization, and normalized nonzero single-plaquette Haar-density measure are derived.
+   Driver's Wilson action now uses the matrix-trace character of an actual continuous nonzero finite-
+   dimensional unitary representation and positive source-indexed normalizers tied to the
+   unnormalized Haar integral; its inherited real action contract is derived. Axial field measures
+   and convergence remain open.
 10. Lévy PDF pp. 24–27 / printed pp. 10–13 were visually adjudicated on 2026-07-21 for §1.6,
    Theorem 1.6.1 and Lemma 1.6.3. The pages visibly define the fine-to-coarse holonomy map, state
    surjectivity and exact measure pushforward, and state strict three-graph composition. The Lean

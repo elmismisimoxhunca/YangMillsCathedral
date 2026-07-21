@@ -4655,7 +4655,11 @@ parameter. It requires the existing Definition 4.7 invariant Laplacian, exact `â
 initial-identity generated operator semigroup, and Driver's displayed convolution-kernel formula.
 Continuity, strict positivity, class/inversion symmetry, real Haar-integral normalization, the exact
 `ENNReal` bridge, and a normalized nonzero canonical Haar-density single-plaquette measure are
-derived. No Wilson action, axial lattice field measure, or continuum convergence witness is
+derived. `twoDimensionalWilsonAction` now uses the matrix-trace character of an actual continuous nonzero
+finite-dimensional unitary representation. Its positive source-indexed normalizer is exactly tied to
+the unnormalized character-weight Haar integral, so continuity, strict positivity, class/inversion
+symmetry, integrability, and real Haar normalization are derived rather than disconnected. No
+representation or action datum, axial lattice field measure, or continuum convergence witness is
 constructed.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary

@@ -738,7 +738,10 @@ is constructed. Driver's Villain single-plaquette action is definitionally the s
 representative of the same selected convolution-semigroup density at `ε²`, requires its exact Definition 4.7 `∂ₜQ = 1/2 ΔQ` heat equation plus an initial-identity generated
 operator semigroup satisfying Driver's displayed convolution-kernel formula, and derives continuity,
 strict positivity, class/inversion symmetry, real Haar-integral normalization, and a normalized
-nonzero canonical Haar-density measure. This still constructs no lattice field or convergence theorem.
+nonzero canonical Haar-density measure. Driver's Wilson action now retains an actual nonzero finite-
+dimensional unitary matrix representation, defines its character by matrix trace, ties each source-
+indexed positive normalizer to the exact unnormalized Haar integral, and derives the same inherited
+real action contract. These layers still construct no lattice field or convergence theorem.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly

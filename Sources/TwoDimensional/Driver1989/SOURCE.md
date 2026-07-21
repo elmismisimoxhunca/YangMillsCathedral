@@ -72,8 +72,10 @@ by identifying the Villain action with the smooth strictly-positive real represe
 unchanged semigroup density at `ε²`, requiring the exact Definition 4.7 `∂ₜQ = 1/2 ΔQ` chain, an initial-identity generated operator
 semigroup, and the displayed convolution-kernel formula. Its full inherited action contract,
 including the real Haar-integral normalization, and its normalized nonzero Haar-density plaquette
-measure are derived. The Wilson action, axial lattice field measures,
-and convergence remain explicit debt.
+measure are derived. Definition 8.4 is represented by an actual continuous nonzero finite-
+dimensional unitary matrix representation, its exact matrix-trace character, and positive source-
+indexed normalizers tied to the unnormalized Haar integral; the complete inherited real action
+contract is derived. Axial lattice field measures and convergence remain explicit debt.
 
 PDF p. 21 / printed p. 595 was independently inspected on 2026-07-21 for Theorem 6.6.
 The page visibly quantifies over a gauge-invariant function on the BC graph configuration space and
