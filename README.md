@@ -775,8 +775,12 @@ extension recovers every finite coordinate, fixes the axial tree, applies invers
 and retains the supplied axial boundary configuration exactly on `Bₙᶜ`; nonidentity boundary data
 cannot collapse to the free identity extension. Driver's interacting plaquette set `J(Bₙ)` is defined by literal boundary incidence with `Bₙ` and
 proved equivalent to the complete `2n × 2n` box plaquette set; no selected plaquette can be
-disconnected from all finite variable bonds. No action density, compatible family, delta-conditioned
-measure, weak limit, or lattice-continuum convergence is constructed.
+disconnected from all finite variable bonds. The exact (7.2) density is now the product of one unchanged action over that same `J(Bₙ)`, evaluated
+on the boundary-retaining extension. Strict positivity and compactness prove the boundary-dependent
+partition function nonzero and finite, constructing normalized nonzero finite-coordinate and
+infinite-carrier pushforward laws. Every frozen bond equals its supplied boundary value almost
+surely. No compatible family, boundary independence, weak limit, or lattice-continuum convergence is
+constructed.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly

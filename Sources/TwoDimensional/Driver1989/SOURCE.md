@@ -112,9 +112,11 @@ represented exactly; nearest-neighbor geometry proves `Bₙ ⊆ B̄ₙ`, and rad
 prevent collapsing them. The finite Haar coordinates for (7.2) are now exact canonical right-directed off-axis horizontal
 `Bₙ` bonds, and their measurable extension retains arbitrary axial boundary data on `Bₙᶜ` rather
 than silently using the free identity extension. `J(Bₙ)` is now defined by literal plaquette-boundary incidence with `Bₙ` and proved exactly equal
-to the complete `2n × 2n` box plaquette set, with hostile omission/disconnection probes. The
-conditioned action density, compatible family, delta-conditioned boundary measures, weak limits, and
-convergence remain explicit debt.
+to the complete `2n × 2n` box plaquette set, with hostile omission/disconnection probes. The exact (7.2) product density over this same `J(Bₙ)` is constructed on the boundary-retaining
+extension. Strict positivity and compactness prove the boundary-dependent normalizer nonzero and
+finite, yielding normalized nonzero finite-coordinate and infinite-carrier pushforward laws with
+almost-sure `Bₙᶜ` retention. Projectivity, boundary independence, weak limits, and convergence remain
+explicit debt.
 
 PDF p. 21 / printed p. 595 was independently inspected on 2026-07-21 for Theorem 6.6.
 The page visibly quantifies over a gauge-invariant function on the BC graph configuration space and

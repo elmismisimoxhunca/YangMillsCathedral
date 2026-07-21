@@ -4707,9 +4707,12 @@ extension recovers these coordinates, freezes the axial tree, inverts reverse bo
 supplied axial boundary configuration on every bond of `Bₙᶜ`; a hostile probe prevents nonidentity
 boundary data from being replaced by the free identity extension. `epsilonSquareLatticeFiniteVolumeInteractingPlaquette` defines `J(Bₙ)` by literal boundary
 incidence, and `.iff_box` proves this is exactly the complete `2n × 2n` box plaquette set; hostile
-probes reject disconnected or omitted interacting plaquettes. No conditioned action density,
-compatible family, delta-conditioned boundary measure, weak limit, or continuum convergence witness
-is constructed.
+probes reject disconnected or omitted interacting plaquettes. `twoDimensionalSquareLatticeConditionedAxialWeight` is the exact (7.2) product of one unchanged
+action over `J(Bₙ)` after the boundary-retaining extension. Strict positivity and compactness prove
+its boundary-dependent partition function nonzero and finite. The resulting finite-coordinate law
+and pushforward to the infinite axial carrier are normalized and nonzero, and every `Bₙᶜ` bond
+equals the supplied boundary value almost surely. No compatible family, boundary-independence proof,
+weak limit, or continuum convergence witness is constructed.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

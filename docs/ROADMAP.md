@@ -823,9 +823,10 @@ committed before higher layers depend on it.
     arbitrary axial boundary data exactly on `Bₙᶜ`.
   - [x] Define `J(Bₙ)` by literal boundary incidence and prove it exactly equals the complete
     `2n × 2n` box plaquette set.
-  - [ ] Add the exact conditioned action density, construct/derive box projectivity and delta-
-    conditioned boundary measures, weak-limit semantics, compact-surface gluing, and lattice-
-    continuum convergence with exact hypotheses, distinct from finite-cutoff, classical, and
+  - [x] Construct the exact (7.2) `J(Bₙ)` action density, finite/nonzero boundary-dependent
+    normalizer, normalized finite-coordinate law, and boundary-retaining infinite-carrier pushforward.
+  - [ ] Construct/derive box projectivity, prove boundary independence and weak-limit semantics,
+    compact-surface gluing, and lattice-continuum convergence with exact hypotheses, distinct from finite-cutoff, classical, and
     four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.
   - [x] Add a current-strength continuum core hard-wired to coordinate `ℝ³` with coordinate
