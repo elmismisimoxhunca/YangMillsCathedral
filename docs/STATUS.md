@@ -4705,7 +4705,9 @@ and explicit radius-one witnesses distinguish the two sets and exhibit a genuine
 off-axis horizontal `Bₙ` bonds, with rows restricted to `Aₙ₋₁`. The measurable conditioned
 extension recovers these coordinates, freezes the axial tree, inverts reverse bonds, and equals the
 supplied axial boundary configuration on every bond of `Bₙᶜ`; a hostile probe prevents nonidentity
-boundary data from being replaced by the free identity extension. No `J(Bₙ)` action density,
+boundary data from being replaced by the free identity extension. `epsilonSquareLatticeFiniteVolumeInteractingPlaquette` defines `J(Bₙ)` by literal boundary
+incidence, and `.iff_box` proves this is exactly the complete `2n × 2n` box plaquette set; hostile
+probes reject disconnected or omitted interacting plaquettes. No conditioned action density,
 compatible family, delta-conditioned boundary measure, weak limit, or continuum convergence witness
 is constructed.
 

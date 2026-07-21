@@ -821,8 +821,11 @@ committed before higher layers depend on it.
     `Bₙ ⊆ B̄ₙ` and hostilely distinguish the two bond sets.
   - [x] Construct exact finite axial `Bₙ` coordinates and a measurable boundary extension retaining
     arbitrary axial boundary data exactly on `Bₙᶜ`.
-  - [ ] Add the exact `J(Bₙ)` action density, construct/derive box projectivity and delta-conditioned
-    boundary measures, weak-limit semantics, compact-surface gluing, and lattice-continuum convergence with exact hypotheses, distinct from finite-cutoff, classical, and
+  - [x] Define `J(Bₙ)` by literal boundary incidence and prove it exactly equals the complete
+    `2n × 2n` box plaquette set.
+  - [ ] Add the exact conditioned action density, construct/derive box projectivity and delta-
+    conditioned boundary measures, weak-limit semantics, compact-surface gluing, and lattice-
+    continuum convergence with exact hypotheses, distinct from finite-cutoff, classical, and
     four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.
   - [x] Add a current-strength continuum core hard-wired to coordinate `ℝ³` with coordinate

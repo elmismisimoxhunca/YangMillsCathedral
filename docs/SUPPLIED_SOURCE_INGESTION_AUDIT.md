@@ -212,8 +212,9 @@ adjudication corrections.
    pushforward obligation is stated. Driver's distinct `Aₙ`, `Aₙ₋₁`, `Bₙ`, `B̄ₙ`, and frozen
    `Bₙᶜ` sets are represented with exact nearest-neighbor containment and noncollapse probes.
    Exact canonical finite axial `Bₙ` coordinates and a measurable extension retaining arbitrary
-   axial boundary data on `Bₙᶜ` are constructed. The `J(Bₙ)` density, compatible family, delta-
-   conditioned measures, and weak limits remain open.
+   axial boundary data on `Bₙᶜ` are constructed. `J(Bₙ)` is defined by literal boundary incidence
+   and proved exactly equal to the full box plaquette set. Its conditioned density, compatible family,
+   delta-conditioned measures, and weak limits remain open.
 11. Lévy PDF pp. 24–27 / printed pp. 10–13 were visually adjudicated on 2026-07-21 for §1.6,
    Theorem 1.6.1 and Lemma 1.6.3. The pages visibly define the fine-to-coarse holonomy map, state
    surjectivity and exact measure pushforward, and state strict three-graph composition. The Lean

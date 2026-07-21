@@ -773,8 +773,10 @@ collapsing the two sets. The exact finite Haar coordinates for the axial conditi
 horizontal `Bₙ` bonds, using rows of `Aₙ₋₁` rather than the larger free-box rows. Their measurable
 extension recovers every finite coordinate, fixes the axial tree, applies inversion on reverse bonds,
 and retains the supplied axial boundary configuration exactly on `Bₙᶜ`; nonidentity boundary data
-cannot collapse to the free identity extension. No action density, compatible family, delta-
-conditioned measure, weak limit, or lattice-continuum convergence is constructed.
+cannot collapse to the free identity extension. Driver's interacting plaquette set `J(Bₙ)` is defined by literal boundary incidence with `Bₙ` and
+proved equivalent to the complete `2n × 2n` box plaquette set; no selected plaquette can be
+disconnected from all finite variable bonds. No action density, compatible family, delta-conditioned
+measure, weak limit, or lattice-continuum convergence is constructed.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly
