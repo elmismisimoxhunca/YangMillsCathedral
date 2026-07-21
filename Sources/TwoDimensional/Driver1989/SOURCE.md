@@ -143,8 +143,11 @@ that tree, Definition 8.1 boundary transport remains face-indexed under collisio
 holonomy restriction commutes. Each `VB(ε)` face additionally has an exact nonempty finite closed-
 square polyomino whose interior has the full graph trace removed (so internal bridge/slit edges are
 not filled), exact positive integer exponent `|R(ε)|/ε²`, eventual bijective face correspondence,
-and mapped-area convergence. Adding the measure-level enlarged product identity, outer common-
-representation/heat coherence, inhabiting Theorem 7.2/projectivity, and formalizing Theorems 8.5/8.10
+and mapped-area convergence. The first displayed equality in the §8 proofs is now an uninhabited
+universal interface: every bounded measurable coarse observable under the action-indexed Theorem 7.2
+law equals its exact normalized `VB(ε)` integral, with the certified BC boundary words, precisely
+`|R(ε)|/ε²` normalized-Haar convolution factors, and the exact `T(ε)`-frozen carrier. Adding the
+Villain convolution-semigroup reduction, outer common-representation/heat coherence, inhabiting Theorem 7.2/projectivity, and formalizing Theorems 8.5/8.10
 convergence remain explicit debt. A visual
 recheck of PDF pp. 27–29 / printed pp. 601–603 found a source-internal Wilson issue that blocks
 canonicalization: Definition 8.4 visibly prints `Aχ^ε(g) = Zε⁻¹ exp Re χ(g)`, with no visible `ε` in

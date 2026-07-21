@@ -807,8 +807,10 @@ words and lattice holonomy restrictions, a BC enlarged approximation, the exact 
 `T(ε)` image, collision-safe facewise boundary transport, and no unrelated enlarged fine edges.
 Every fine enlarged face is also an exact nonempty finite closed-square polyomino interior minus the
 full graph trace, has positive integer exponent `|R(ε)|/ε²`, and participates in an eventually
-bijective area-convergent face correspondence. The enlarged measure/product identity and outer common representation/heat convergence contracts remain
-open. No weak limit, boundary-
+bijective area-convergent face correspondence. The first §8 proof equality now universally rewrites
+the action-indexed Theorem 7.2 expectation as the exact normalized `VB(ε)` integral with certified
+BC words, the `T(ε)`-frozen product Haar carrier, and precisely `|R(ε)|/ε²` convolution factors. The
+Villain semigroup reduction and outer common representation/heat convergence contracts remain open. No weak limit, boundary-
 independence proof, or lattice-continuum convergence is constructed.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
