@@ -137,8 +137,14 @@ and measurable ambient-compatible coarse restriction. Equation (6.1) is now an u
 factors through exact enlarged restriction and its base expectation equals the normalized vertical/x-
 axis-tree-frozen product-Haar integral with canonical BC words and the unchanged area-density law.
 Adding the outer common-representation/heat coherence, inhabiting Theorem 7.2/projectivity, and
-formalizing Theorems 8.5/8.10
-convergence over exact transport remain explicit debt.
+formalizing Theorems 8.5/8.10 convergence over exact transport remain explicit debt. A visual
+recheck of PDF pp. 27–29 / printed pp. 601–603 found a source-internal Wilson issue that blocks
+canonicalization: Definition 8.4 visibly prints `Aχ^ε(g) = Zε⁻¹ exp Re χ(g)`, with no visible `ε` in
+the exponent, whereas Theorem 8.8 and (8.2) require spacing-dependent eigenvalues
+`aτ(ε) = exp(-cτ ε² / 2) + O(ε⁴)` before roughly `t/ε²` convolution powers converge to `Q_t`.
+The existing Wilson constructor therefore remains a literal Definition 8.4 action interface, not a
+Theorem 8.8 witness. Borgs–Seiler Appendix A or an erratum must be obtained and adjudicated before
+a central-limit or Wilson Theorem 8.10 contract is accepted.
 
 PDF p. 21 / printed p. 595 was independently inspected on 2026-07-21 for Theorem 6.6.
 The page visibly quantifies over a gauge-invariant function on the BC graph configuration space and

@@ -844,7 +844,11 @@ committed before higher layers depend on it.
     and ambient holonomy compatibility.
   - [x] State Driver equation (6.1) on `VB` for every bounded measurable coarse function through exact
     restriction, canonical BC words, and normalized vertical/x-axis-tree-frozen area-density measure.
-  - [ ] Add the outer common-heat-chain coherence and Theorems 8.5/8.10 convergence; inhabit/derive box
+  - [ ] Adjudicate Driver Definition 8.4's visibly spacing-independent printed Wilson weight against
+    Theorem 8.8/(8.2) and Borgs–Seiler Appendix A; do not accept a Wilson central-limit interface until
+    the missing `ε`-dependence is authoritatively resolved.
+  - [ ] Add the outer common-heat-chain coherence, exact `VB(ε)` graph/measure bridge, and Theorems
+    8.5/8.10 convergence; inhabit/derive box
     projectivity and Theorem 7.2; add compact-surface gluing with exact hypotheses, distinct from finite-cutoff, classical, and
     four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.
