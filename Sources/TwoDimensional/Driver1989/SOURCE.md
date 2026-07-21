@@ -133,9 +133,11 @@ invariant pairing literally with `-Re tr(p_*X p_*Y)`. A dependent common-chain r
 and infinitesimally injective), Wilson normalization/actions, exact trace pairing, pairing Laplacian,
 and unchanged selected continuum density/heat equation/kernel. The proof-required `B → VB` enlargement now has BC certificates on both graphs, literal coarse-edge
 subdivision paths, the exact vertical/x-axis tree, total coverage excluding unrelated enlarged edges,
-and measurable ambient-compatible coarse restriction. Adding the strip-independence/reflection
-expectation law on this enlargement, inhabiting Theorem 7.2/projectivity, and formalizing Theorems
-8.5/8.10
+and measurable ambient-compatible coarse restriction. Equation (6.1) is now an uninhabited universal interface: every bounded measurable coarse function
+factors through exact enlarged restriction and its base expectation equals the normalized vertical/x-
+axis-tree-frozen product-Haar integral with canonical BC words and the unchanged area-density law.
+Adding the outer common-representation/heat coherence, inhabiting Theorem 7.2/projectivity, and
+formalizing Theorems 8.5/8.10
 convergence over exact transport remain explicit debt.
 
 PDF p. 21 / printed p. 595 was independently inspected on 2026-07-21 for Theorem 6.6.

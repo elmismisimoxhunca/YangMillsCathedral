@@ -799,8 +799,11 @@ normalization/action family and exact invariant pairing, whose Laplacian generat
 continuum selected density and kernel. The source-required axial enlargement `B → VB` is now explicit: both graphs are BC, every coarse
 edge is literally a subdivided enlarged path, the distinguished tree is exactly the vertical/x-axis
 edges, every enlarged edge belongs to a coarse subdivision or that tree, and enlarged configurations
-restrict measurably and recover ambient coarse holonomies. Strip/reflection expectation laws tying
-this geometry to the common heat chain remain open. No weak limit, boundary-
+restrict measurably and recover ambient coarse holonomies. `TwoDimensionalDriverAxialEnlargedHeatExpectationData` now states equation (6.1): every bounded
+measurable coarse function factors through exact enlarged restriction and its continuum expectation
+equals the normalized tree-frozen product-Haar integral with canonical BC words and the unchanged
+area-density law. An outer contract tying that selected law to the common representation/heat chain
+and lattice convergence remains open. No weak limit, boundary-
 independence proof, or lattice-continuum convergence is constructed.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to

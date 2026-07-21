@@ -842,8 +842,9 @@ committed before higher layers depend on it.
   - [x] Add Driver's exact `B → VB` enlargement: BC certificates on both graphs, literal coarse-path
     subdivision, exact vertical/x-axis tree, total enlarged-edge coverage, measurable restriction,
     and ambient holonomy compatibility.
-  - [ ] Add the strip-independence/reflection planar expectation law on `VB`, tie it to the common heat
-    chain, then add Theorems 8.5/8.10 convergence; inhabit/derive box
+  - [x] State Driver equation (6.1) on `VB` for every bounded measurable coarse function through exact
+    restriction, canonical BC words, and normalized vertical/x-axis-tree-frozen area-density measure.
+  - [ ] Add the outer common-heat-chain coherence and Theorems 8.5/8.10 convergence; inhabit/derive box
     projectivity and Theorem 7.2; add compact-surface gluing with exact hypotheses, distinct from finite-cutoff, classical, and
     four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.

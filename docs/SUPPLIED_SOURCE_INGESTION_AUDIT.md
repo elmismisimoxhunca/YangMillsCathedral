@@ -226,8 +226,9 @@ adjudication corrections.
    connected-group representation, Wilson actions, pairing Laplacian, and unchanged selected
    continuum heat density/kernel. The proof-required `B → VB` enlargement now has dual BC geometry,
    literal coarse subdivisions, exact vertical/x-axis tree, total enlarged-edge coverage, and ambient-
-   compatible restriction. Strip/reflection expectation, projectivity, and Theorems 8.5/8.10
-   convergence remain open.
+   compatible restriction. Equation (6.1) now universally equates bounded measurable coarse
+   expectations with the normalized vertical/x-axis-tree-frozen enlarged area-density integral.
+   Outer common-heat coherence, projectivity, and Theorems 8.5/8.10 convergence remain open.
 11. Lévy PDF pp. 24–27 / printed pp. 10–13 were visually adjudicated on 2026-07-21 for §1.6,
    Theorem 1.6.1 and Lemma 1.6.3. The pages visibly define the fine-to-coarse holonomy map, state
    surjectivity and exact measure pushforward, and state strict three-graph composition. The Lean
