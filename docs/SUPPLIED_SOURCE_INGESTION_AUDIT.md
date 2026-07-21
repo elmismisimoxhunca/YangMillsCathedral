@@ -193,7 +193,11 @@ adjudication corrections.
    measurable, and a concrete nonidentity off-axis axial configuration proves non-subsingletonness,
    but no lattice field measure is supplied. Exact elementary plaquettes now have physically scaled
    closed counterclockwise boundaries and measurable/nonzero finite common-action products; finite-
-   volume normalizers remain absent.
+   volume normalizers remain absent at the exact square-box level. Generic finite axial
+   presentations now define exact partition functions and normalized finite product-Haar density
+   measures from orientation-disjoint off-tree coordinates, measurable finite-support extensions,
+   and complete selected-plaquette non-tree boundary-coordinate coverage;
+   they are explicitly not yet Driver's square boxes or infinite-volume limits.
 11. Lévy PDF pp. 24–27 / printed pp. 10–13 were visually adjudicated on 2026-07-21 for §1.6,
    Theorem 1.6.1 and Lemma 1.6.3. The pages visibly define the fine-to-coarse holonomy map, state
    surjectivity and exact measure pushforward, and state strict three-graph composition. The Lean

@@ -80,6 +80,11 @@ def leftBond (plaquette : EpsilonSquareLatticePlaquette spacing) :
     plaquette.leftBond.target = plaquette.bottomBond.source :=
   rfl
 
+/-- Exact directed boundary bonds in counterclockwise traversal order. -/
+def boundaryBonds (plaquette : EpsilonSquareLatticePlaquette spacing) :
+    List (EpsilonSquareLatticeDirectedBond spacing) :=
+  [plaquette.bottomBond, plaquette.rightBond, plaquette.topBond, plaquette.leftBond]
+
 /-- Exact counterclockwise boundary word, traversed bottom, right, top, then left. -/
 def boundaryWord (plaquette : EpsilonSquareLatticePlaquette spacing) :
     List (YangMills.Mathematics.OrientedEdge

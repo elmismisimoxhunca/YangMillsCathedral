@@ -4669,8 +4669,15 @@ projections and identity inhabitants. The integer sites now have an exact physic
 literally closed counterclockwise four-bond boundary, and the fixed later-on-the-left holonomy.
 `epsilonSquareLatticeFinitePlaquetteActionWeight` is the measurable, everywhere-nonzero finite
 product of one unchanged Definition 7.1 action over those holonomies. The nonconstant axial witness
-has nonidentity plaquette holonomy. No finite-volume normalizer, axial lattice field measure, or
-continuum convergence witness is constructed.
+has nonidentity plaquette holonomy. `TwoDimensionalFiniteAxialPlaquettePresentationData` now selects finite orientation-disjoint off-tree
+bond coordinates, recovers each through an injective measurable finite-support axial extension, and
+selects actual elementary plaquettes while requiring every non-tree boundary bond to be represented
+in one of the two coordinate orientations, blocking disconnected constant-action factors. The finite action weight and its exact product-Haar partition
+function are definitions; `TwoDimensionalFiniteAxialNormalizerData` certifies that exact value is
+nonzero and finite, from which the normalized nonzero finite axial measure is derived. A concrete
+unit-group one-coordinate/one-plaquette presentation and normalizer inhabit the API without
+constructing a nontrivial field. No exact square-box sequence, boundary-condition limit, infinite-
+volume measure, or continuum convergence witness is constructed.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

@@ -746,8 +746,12 @@ Wilson adapters and a separate constant-one positive inhabitant. The exact infin
 tree-fixed carrier are now defined with exact physical `(εm, εn)` embedding, signed `ε` bond displacement, measurable coordinate projections, identity inhabitants, and a concrete nonidentity off-axis axial configuration.
 Exact elementary counterclockwise plaquettes now have a literally closed four-bond boundary, the
 fixed later-on-the-left holonomy order, and measurable nonzero finite products of one unchanged
-Definition 7.1 action on the axial carrier. These layers still construct no finite-volume normalizer,
-lattice field measure, or convergence theorem.
+Definition 7.1 action on the axial carrier. A finite axial presentation now selects finitely many orientation-disjoint off-tree bonds, recovers
+them through an exact measurable finite-support extension, and selects actual elementary plaquettes whose every non-tree boundary bond is represented in one
+of the two coordinate orientations. Its action weight, exact partition function, and normalized finite product-Haar density
+measure are defined; total mass one and nonzeroness derive from finiteness/nonvanishing of that same
+partition function. This is not yet an exact square-box family, boundary-condition limit, infinite-
+volume lattice measure, or convergence theorem.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly

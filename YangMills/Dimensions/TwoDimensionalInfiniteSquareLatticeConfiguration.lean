@@ -102,6 +102,14 @@ theorem physical_nearestNeighbor (bond : EpsilonSquareLatticeDirectedBond spacin
   simpa only [point_firstCoordinate, point_secondCoordinate] using
     scaledNearestNeighbor spacing bond.source bond.target bond.nearestNeighbor
 
+@[ext]
+theorem ext {first second : EpsilonSquareLatticeDirectedBond spacing}
+    (source : first.source = second.source) (target : first.target = second.target) :
+    first = second := by
+  cases first
+  cases second
+  simp_all
+
 /-- Nearest-neighbor incidence is symmetric. -/
 theorem nearestNeighbor_symm {first second : ℤ × ℤ}
     (h : SquareLatticeNearestNeighbor first second) :

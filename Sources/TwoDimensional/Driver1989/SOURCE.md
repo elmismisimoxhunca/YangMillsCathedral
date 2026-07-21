@@ -89,7 +89,13 @@ axial-tree-fixed measurable carrier are now explicit, including the vertical plu
 physical `(εm, εn)` embedding with signed `ε` steps, and a concrete nonidentity off-axis axial
 configuration. Exact elementary plaquettes now retain a physically scaled closed counterclockwise
 boundary, Driver's path-product order, and measurable everywhere-nonzero finite products of one
-common action over their holonomies. Finite-volume normalizers and axial lattice field measures and convergence remain explicit debt.
+common action over their holonomies. Generic finite axial presentations now select orientation-
+disjoint off-tree bonds, use injective measurable finite-support extensions, require every selected
+plaquette's non-tree boundary bonds to be represented in one of the two coordinate orientations, and
+define exact product-
+Haar partition functions and normalized finite density measures. These are groundwork for
+(7.2)/(7.4), not exact square boxes. Exact box families, boundary-condition/infinite-volume limits,
+and convergence remain explicit debt.
 
 PDF p. 21 / printed p. 595 was independently inspected on 2026-07-21 for Theorem 6.6.
 The page visibly quantifies over a gauge-invariant function on the BC graph configuration space and

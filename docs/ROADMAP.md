@@ -800,8 +800,12 @@ committed before higher layers depend on it.
     configuration proving the carrier is not subsingleton.
   - [x] Add exact physically scaled elementary plaquettes, closed counterclockwise boundary
     holonomy in Driver order, and measurable/nonzero finite products of one common action.
-  - [ ] Add compact-surface gluing, finite-volume normalizers, axial lattice field measures, and
-    lattice-continuum convergence with exact hypotheses, distinct from finite-cutoff, classical, and
+  - [x] Add generic finite axial presentations with orientation-disjoint off-tree coordinates,
+    measurable finite-support extension, actual plaquettes with complete non-tree boundary-coordinate
+    coverage, exact partition functions, and derived
+    normalized/nonzero finite product-Haar density measures.
+  - [ ] Add exact square-box families, boundary-condition and infinite-volume cylinder limits,
+    compact-surface gluing, and lattice-continuum convergence with exact hypotheses, distinct from finite-cutoff, classical, and
     four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.
   - [x] Add a current-strength continuum core hard-wired to coordinate `ℝ³` with coordinate
