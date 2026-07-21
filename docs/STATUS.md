@@ -4549,9 +4549,11 @@ coefficients unchanged; fixed right translation gives exactly `Ad(h⁻¹)`, so t
 invariance field derives bi-invariance. The reusable
 `positiveBilinear_unitEllipsoid_isVonNBounded` theorem minimizes the quadratic form on the compact
 unit sphere and proves the finite-dimensional von Neumann-bounded unit-ellipsoid obligation; the
-exact tangent-fiber form now satisfies it. This still is not a Mathlib Riemannian metric: smoothness
-of the dependent continuous-bilinear section and the Laplace–Beltrami comparison remain open. No
-planar embedding, simplicity theorem, YM measure,
+exact tangent-fiber form now satisfies it. The parameter-dependent inverse-left-translation
+derivative is also proved smooth in Mathlib's exact tangent coordinates at every center. This still
+is not a Mathlib Riemannian metric: the local equality with the two nested metric Hom-bundle
+coordinate transports, hence smoothness of the dependent continuous-bilinear section, and the
+Laplace–Beltrami comparison remain open. No planar embedding, simplicity theorem, YM measure,
 general face product, refinement, gluing, or lattice-limit theorem is constructed.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary

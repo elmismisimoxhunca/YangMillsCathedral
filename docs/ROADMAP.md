@@ -718,8 +718,11 @@ committed before higher layers depend on it.
   - [x] Prove finite-dimensional von Neumann boundedness of strictly positive continuous bilinear
     unit ellipsoids by a reusable compact-unit-sphere theorem and discharge the exact obligation for
     each pointwise group tangent pairing.
-  - [ ] Prove smoothness of the dependent bilinear-form section, then assemble the actual
-    `ContMDiffRiemannianMetric` and compare its Laplace–Beltrami operator with the basis sum; after
+  - [x] Prove centerwise smoothness of the exact parameter-dependent left Maurer–Cartan derivative
+    after Mathlib's tangent-coordinate transport.
+  - [ ] Reconcile precomposition by those coefficients with the two nested metric Hom-bundle
+    coordinate transports, proving smoothness of the dependent bilinear-form section; then assemble
+    the actual `ContMDiffRiemannianMetric` and compare its Laplace–Beltrami operator with the basis sum; after
     that add finite planar graph/face-product laws, refinement/projective consistency, compact-
     surface gluing, and Driver's Villain/Wilson lattice-continuum convergence
     with exact hypotheses, distinct from finite-cutoff, classical, and four-dimensional witnesses.
