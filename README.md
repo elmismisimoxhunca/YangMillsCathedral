@@ -651,10 +651,13 @@ asserted on the gauge-fixed slice. A separate uninhabited selected-loop strength
 one exact closed loop with positive supplied area, identifies its sampled-holonomy pushforward with
 an `ENNReal` central/inversion-symmetric density against the neutrally constructed canonical
 normalized compact Haar measure, and derives one exact physical class-observable expectation
-formula. This deliberately does not call the supplied density a heat kernel: invariant metric,
-Laplacian/Brownian, heat equation, and semigroup data remain absent. No planar loop embedding, heat
-kernel, measure, or model is constructed; general face products,
-subdivision/gluing, and lattice-limit layers remain explicit debt.
+formula. Neutral reusable convolution now fixes
+`(f⋆g)(z)=∫f(x)g(x⁻¹z)dμ_H`; a further uninhabited same-density certificate requires normalization
+at every positive time, exact addition/convolution, and weak convergence to identity against every
+continuous complex test, deriving the selected-area two-half split. This still deliberately does
+not call the supplied density a heat kernel: invariant metric, Laplacian/Brownian, and heat-equation
+data remain absent. No planar loop embedding, heat kernel, measure, or model is constructed;
+general face products, refinement/gluing, and lattice-limit layers remain explicit debt.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly

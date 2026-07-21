@@ -4507,11 +4507,21 @@ positive supplied area. Its same-chain sampled-holonomy pushforward is exactly a
 central/inversion-symmetric density against that canonical Haar probability; density-measure
 normalization and nonzeroness are derived, and an exact existing physical-observable/class-function
 bridge derives the selected expectation formula. Closedness also derives conjugation by one
-endpoint value from the existing open-path covariance. The interface deliberately does not call
-the density a heat kernel: Driver's connected compact Lie group and metric induced by a representation with injective differential,
-Laplacian/Brownian generator, heat equation, and convolution semigroup are absent. No planar
-embedding, simplicity theorem, heat kernel, measure, general face product, subdivision, gluing, or
-lattice-limit theorem is constructed.
+endpoint value from the existing open-path covariance.
+
+Neutral `normalizedCompactHaarDensityConvolution` now fixes the exact source convention
+`(f⋆g)(z)=∫f(x)g(x⁻¹z)dμ_H`. The uninhabited
+`TwoDimensionalSelectedLoopConvolutionSemigroupData` is indexed by the unchanged marginal law and
+requires every positive-time density to be normalized, the same family to satisfy exact
+addition/convolution, and its measures to converge weakly to the identity against every continuous
+complex test. On the intended Hausdorff compact Lie group, where continuous tests distinguish the
+identity, this blocks a time-constant Haar idempotent. The exact selected area
+is proved to split into two positive half-area density factors with the same primitive orientation.
+The interface still deliberately does not call the density a heat kernel: Driver's connected
+compact Lie group, metric induced by a representation with injective differential,
+Laplacian/Brownian generator, and heat equation remain absent. No planar embedding, simplicity
+theorem, heat kernel, measure, general face product, refinement, gluing, or lattice-limit theorem is
+constructed.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

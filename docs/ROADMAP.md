@@ -700,10 +700,13 @@ committed before higher layers depend on it.
     pushforward is a central/inversion-symmetric density against canonical normalized Haar, and one
     exact physical observable/class-function bridge derives the corresponding expectation formula.
     Deliberately do not call it a heat kernel without metric/Laplacian/Brownian/semigroup data.
+  - [x] Fix neutral normalized-Haar density convolution with the exact `x⁻¹ * g` orientation and add
+    an uninhabited same-density positive-time convolution semigroup: all-time normalization, weak
+    convergence to the identity, and the selected-area two-half split are exact and probed.
   - [ ] Add an exact source-facing heat-kernel certificate with connected compact Lie group,
-    invariant metric/generator, Brownian or heat-equation semantics, normalization and convolution
-    semigroup; then add finite planar graph/face-product laws and subdivision/projective
-    consistency, compact-surface gluing, and Driver's Villain/Wilson lattice-continuum convergence
+    invariant metric/generator and Brownian or heat-equation semantics; then add finite planar
+    graph/face-product laws and refinement/projective consistency, compact-surface gluing, and
+    Driver's Villain/Wilson lattice-continuum convergence
     with exact hypotheses, distinct from finite-cutoff, classical, and four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.
   - [x] Add a current-strength continuum core hard-wired to coordinate `ℝ³` with coordinate
