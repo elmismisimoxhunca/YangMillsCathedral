@@ -750,9 +750,12 @@ committed before higher layers depend on it.
   - [x] Isolate finite BC boundary-word combinatorics: exact alternative-path bridge semantics,
     equal opposite-orientation bridge multiplicity, at-most-once nonbridge use, and hostile rejection
     of doubled cycle edges. This is not yet a planar BC certificate.
-  - [ ] Integrate that word certificate with full embedded BC bridge-multiplicity boundaries and
-    their corresponding expectation law; after that add general
-    disconnected-boundary choice independence, refinement/projective consistency, compact-surface
+  - [x] Factor boundary-neutral embedded geometry and integrate the finite word certificate into an
+    uninhabited strengthened embedded-arc BC certificate: literal connected face frontiers, exact
+    frontier traces, and continuous closed segmentwise ordered traversals with legitimate bridge
+    multiplicity. Retain the explicit edge-subdivision requirement for Driver-permitted loop incidence.
+  - [ ] State the corresponding BC face-product expectation law; after that add general disconnected-
+    boundary choice independence, refinement/projective consistency, compact-surface
     gluing, and Driver's Villain/Wilson lattice-continuum convergence with exact hypotheses,
     distinct from finite-cutoff, classical, and four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.

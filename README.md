@@ -698,8 +698,13 @@ of that carrier. No planar graph instance, heat kernel, planar/Yang–Mills meas
 constructed. Reusable finite BC word infrastructure now defines a bridge by absence of an
 edge-avoiding source-to-target path, permits at most one traversal in each opposite orientation for
 bridges, permits at most one total traversal for nonbridges, and rejects doubling of cycle edges.
-This combinatorics is not yet an embedded BC planar certificate; the full BC bridge-multiplicity
-formula, general-boundary choices, refinement/gluing, and lattice-limit layers remain explicit debt.
+A boundary-neutral embedded geometry now factors the unchanged paths, conservative injective-arc
+strengthening, endpoint-only intersections, exact complement components, x-axis cells, and areas.
+An uninhabited embedded BC certificate adds literal connectedness of every bounded face frontier and
+an exact continuous closed ordered traversal carrying the bridge-aware word. As before, Driver-
+permitted one-edge loop incidence must first be subdivided into embedded arcs. No graph or law
+instance is constructed. The corresponding BC face-product expectation law, general-boundary
+choices, refinement/gluing, and lattice-limit layers remain explicit debt.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly

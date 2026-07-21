@@ -4591,9 +4591,14 @@ instance is constructed. A new reusable `BoundaryConnectedWordCertificate` defin
 bridges by the absence of an edge-avoiding source-to-target oriented path, balances bridge uses once
 in each orientation, bounds nonbridge use to one total occurrence, and derives that any repeated
 underlying edge must be a bridge. Hostile probes therefore reject doubling an edge whenever an
-alternative cycle path exists. This is finite combinatorics only: integration with the embedded
-planar complement/frontier geometry, the full bridge-multiplicity BC law, and disconnected
-boundary/cut choices remain separate debt.
+alternative cycle path exists. Boundary-neutral `TwoDimensionalEmbeddedPlanarGraphData` now factors
+the exact paths, conservative injective-arc geometry, endpoint-only intersections, complement
+components, x-axis cells, and areas; the simple-boundary record forgets to it without changing any
+such field. Uninhabited `TwoDimensionalBoundaryConnectedPlanarGraphData` then imposes literal
+connectedness of every bounded face frontier and exact continuous closed segmentwise ordered
+traversals realizing the bridge-aware words. This remains a conservative embedded-arc strengthening:
+Driver-permitted one-edge loop incidence requires subdivision. No instance is constructed. The BC
+face-product law and disconnected boundary/cut choices remain separate debt.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.
