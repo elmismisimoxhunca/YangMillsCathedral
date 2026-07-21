@@ -46,6 +46,25 @@ variable
     {actionAt : PositiveLatticeSpacing → TwoDimensionalLatticeActionData G}
 
 omit [T2Space G] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Continuity of every lattice action derives measurability of its `ENNReal` density. -/
+theorem exact_action_density_measurable (spacing : PositiveLatticeSpacing) :
+    Measurable (twoDimensionalLatticeActionENNRealDensity (actionAt spacing)) :=
+  twoDimensionalLatticeActionENNRealDensity_measurable (actionAt spacing)
+
+omit [T2Space G] in
+/-- Every repeated normalized-Haar convolution power remains measurable. -/
+theorem exact_convolution_power_measurable
+    (spacing : PositiveLatticeSpacing) (n : ℕ) :
+    Measurable (twoDimensionalLatticeActionConvolutionPower (actionAt spacing) n) :=
+  twoDimensionalLatticeActionConvolutionPower_measurable (actionAt spacing) n
+
+omit [T2Space G] in
+/-- The whole certified finite-face action product is measurably derived. -/
+theorem exact_fine_density_measurable (spacing : PositiveLatticeSpacing) :
+    Measurable (twoDimensionalFineEnlargedActionDensityProduct faceGeometry actionAt spacing) :=
+  twoDimensionalFineEnlargedActionDensityProduct_measurable faceGeometry actionAt spacing
+
+omit [T2Space G] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- The zero recursion index means exactly one action factor, never an identity-function surrogate. -/
 theorem exact_one_factor (spacing : PositiveLatticeSpacing) (g : G) :
     twoDimensionalLatticeActionConvolutionPower (actionAt spacing) 0 g =

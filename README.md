@@ -811,7 +811,9 @@ bijective face correspondence are now derived from symmetric-difference control,
 faces, finiteness, and existing surjectivity rather than accepted as separate assumptions. The first §8 proof equality now universally rewrites
 the action-indexed Theorem 7.2 expectation as the exact normalized `VB(ε)` integral with certified
 BC words, the `T(ε)`-frozen product Haar carrier, and precisely `|R(ε)|/ε²` convolution factors.
-Its normalization and nonzeroness are now derived by applying the universal identity to the constant-
+Continuity of the lattice action now derives measurability of every normalized-Haar convolution power
+and the entire finite face product, eliminating another independent field. Its normalization and
+nonzeroness are derived by applying the universal identity to the constant-
 one observable and the normalized Theorem 7.2 law, rather than stored independently. The
 The Villain semigroup reduction is now derived: `n+1` exact `Q_{ε²}` factors equal
 `Q_{(n+1)ε²}`, so every fine-face power and the full BC product use the unchanged selected density at

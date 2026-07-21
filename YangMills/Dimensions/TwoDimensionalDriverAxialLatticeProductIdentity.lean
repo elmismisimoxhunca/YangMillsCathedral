@@ -53,6 +53,33 @@ def twoDimensionalLatticeActionConvolutionPower
       (twoDimensionalLatticeActionConvolutionPower action n)
       (twoDimensionalLatticeActionENNRealDensity action)
 
+/-- The positive real action gives a measurable `ENNReal` density. -/
+theorem twoDimensionalLatticeActionENNRealDensity_measurable
+    {G : Type uG} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+    [CompactSpace G] [MeasurableSpace G] [BorelSpace G]
+    (action : TwoDimensionalLatticeActionData G) :
+    Measurable (twoDimensionalLatticeActionENNRealDensity action) :=
+  ENNReal.measurable_ofReal.comp action.action_continuous.measurable
+
+/-- Every finite normalized-Haar convolution power of one lattice action is measurable. -/
+theorem twoDimensionalLatticeActionConvolutionPower_measurable
+    {G : Type uG} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+    [CompactSpace G] [MeasurableSpace G] [BorelSpace G]
+    [MeasurableMul₂ G] [MeasurableInv G]
+    (action : TwoDimensionalLatticeActionData G) (n : ℕ) :
+    Measurable (twoDimensionalLatticeActionConvolutionPower action n) := by
+  letI : IsProbabilityMeasure (normalizedCompactHaarMeasure G) :=
+    normalizedCompactHaarMeasure_isProbability G
+  induction n with
+  | zero => exact twoDimensionalLatticeActionENNRealDensity_measurable action
+  | succ n inductionHypothesis =>
+      rw [twoDimensionalLatticeActionConvolutionPower]
+      unfold normalizedCompactHaarDensityConvolution
+      apply Measurable.lintegral_prod_right
+      exact (inductionHypothesis.comp measurable_snd).mul
+        ((twoDimensionalLatticeActionENNRealDensity_measurable action).comp
+          (measurable_snd.inv.mul measurable_fst))
+
 variable
     {G : Type uG} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
     [CompactSpace G] [T2Space G] [MeasurableSpace G] [BorelSpace G]
@@ -96,6 +123,19 @@ def twoDimensionalFineEnlargedActionDensityProduct
       (finiteOrientedWordHolonomy configuration
         ((faceGeometry.latticeEnlargement.fineBoundaryConnected spacing).boundaryWord face))
 
+omit [T2Space G] in
+/-- The exact fine-face action product is measurable, derived from action continuity, measurable
+normalized-Haar convolution, and finite-word holonomy. -/
+theorem twoDimensionalFineEnlargedActionDensityProduct_measurable
+    (spacing : PositiveLatticeSpacing) :
+    Measurable (twoDimensionalFineEnlargedActionDensityProduct faceGeometry actionAt spacing) := by
+  apply Finset.measurable_fun_prod
+  intro face _
+  exact (twoDimensionalLatticeActionConvolutionPower_measurable
+    (actionAt spacing) ((faceGeometry.facePlaquettes spacing face).card - 1)).comp
+      (finiteOrientedWordHolonomy_measurable
+        ((faceGeometry.latticeEnlargement.fineBoundaryConnected spacing).boundaryWord face))
+
 /-- Driver's exact `VB(ε)` carrier: tree-frozen product Haar weighted by action convolution powers. -/
 def twoDimensionalFineEnlargedActionMeasure
     (spacing : PositiveLatticeSpacing) :
@@ -108,9 +148,6 @@ def twoDimensionalFineEnlargedActionMeasure
 structure TwoDimensionalDriverAxialLatticeProductIdentityData where
   latticeLimit : ∀ spacing,
     TwoDimensionalDriverAxialWeakLimitData spacing (actionAt spacing)
-  fineDensity_measurable : ∀ spacing,
-    Measurable (twoDimensionalFineEnlargedActionDensityProduct
-      faceGeometry actionAt spacing)
   expectation_eq_fineEnlargedIntegral : ∀ spacing
       (observable : (coarse.Edge → G) → ℝ),
     Measurable observable →
