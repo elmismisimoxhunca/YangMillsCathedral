@@ -281,8 +281,12 @@ committed before higher layers depend on it.
 - [x] Descend the horizontal/equivariant candidate into the actual dependent adjoint-bundle fibers,
   and specialize it to an exact same-connection smooth intrinsic `D_A F` three-form carrier under
   the existing curvature-structure and supplied curvature-exterior certificates.
-- [ ] Derive automatic curvature structure and identify/prove the intrinsic descended Bianchi zero
-  without accepting it as data.
+- [x] Generalize inverse-extended-chart alternating-map regularity to arbitrary degree and prove
+  every positive-degree exterior certificate agrees at the chart center with the exact
+  corner-aware `extDerivWithin` carrier, including `n = 0` coherence.
+- [ ] Connect the intrinsic `D_A F` representative to the existing same-chain coordinate Bianchi
+  theorem and prove descended Bianchi zero without accepting it as data; automatic curvature
+  structure remains separate debt.
 
 ## Phase 3 — classical Yang–Mills semantics
 

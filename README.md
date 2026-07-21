@@ -503,7 +503,9 @@ equivariance of both the ordinary derivative and the complete candidate. The can
 to the actual dependent adjoint-bundle fibers as a smooth positive-degree operator. Its curvature
 specialization is an exact same-connection smooth adjoint-valued three-form carrier `D_A F`,
 conditional on the existing same-index curvature structure certificate and a supplied ordinary
-curvature exterior certificate; no vanishing or Bianchi claim follows yet. Exact inverse-action
+curvature exterior certificate. Arbitrary-degree inverse-chart regularity and exact centered
+`extDerivWithin` identification are now derived for that supplied certificate, but its intrinsic
+carrier has not yet been identified with the existing coordinate Bianchi zero. Exact inverse-action
 curvature covariance now derives pointwise invariance of both chosen and basis-independent
 canonical curvature densities for the full pulled connection/exterior/certificate chain. The exact
 analytic datum transports to that chain with unchanged designated measure and coupling, deriving

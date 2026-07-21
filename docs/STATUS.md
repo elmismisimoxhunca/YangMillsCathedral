@@ -4424,7 +4424,12 @@ and full-candidate right-adjoint equivariance.
 into the actual dependent adjoint-bundle fibers as a smooth positive-degree form and specializes it
 to the exact same-connection curvature as a smooth adjoint-valued three-form carrier `D_A F`. This
 specialization remains conditional on the existing same-index curvature structure certificate and a
-supplied ordinary curvature exterior certificate, and no intrinsic Bianchi-zero theorem is claimed.
+supplied ordinary curvature exterior certificate. `SmoothManifoldDifferentialFormExtChartRegularity`
+now derives arbitrary-degree alternating-map-valued `C∞` regularity on the exact chart target and
+corner-model range, and `ManifoldPositiveDegreeExteriorDerivativeExtChart` identifies every such
+certificate's centered inverse-chart derivative with the exact `extDerivWithin`, coherently with the
+old one-form theorem at `n = 0`. The final bridge from this intrinsic carrier to the existing
+same-chain coordinate Bianchi zero remains open.
 
 The four-dimensional `CurrentStrength` integration record now requires one exact algebraic quantum
 action of its canonical smooth principal gauge group on its same observable family and one
