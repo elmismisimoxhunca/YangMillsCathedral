@@ -263,9 +263,13 @@ committed before higher layers depend on it.
 - [x] Derive the exact product-manifold within-bracket vanishing theorem for the vertical
   fundamental and prescribed-value adapted product fields at the normalized center, with derivatives
   taken within the natural open domain.
-- [ ] Transport those product fields and that law through the smooth partial principal trivialization to the total space, discharge the termwise triangular premise, derive full candidate tensoriality, then prove full candidate
-  right-adjoint equivariance, then descend it and derive structural curvature
-  laws and a genuine intrinsic `D_A F` theorem.
+- [x] Package open partial-diffeomorphism bracket naturality and transport the adapted fields through
+  a designated smooth principal trivialization at points whose fiber coordinate is normalized to
+  `1`, obtaining arbitrary prescribed values, all-orbit adaptation, and total-space bracket zero.
+- [ ] Normalize a principal trivialization at an arbitrary total-space point, assemble one adapted
+  field per tangent slot on a common open source, discharge the termwise triangular premise, derive
+  full candidate tensoriality and right-adjoint equivariance, then descend it and derive structural
+  curvature laws and a genuine intrinsic `D_A F` theorem.
 
 ## Phase 3 — classical Yang–Mills semantics
 
