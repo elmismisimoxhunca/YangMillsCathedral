@@ -205,12 +205,15 @@ structure TwoDimensionalDriverAxialWeakLimitData
     (spacing : PositiveLatticeSpacing)
     (action : TwoDimensionalLatticeActionData G) : Type uG where
   limitMeasure : Measure (EpsilonSquareLatticeAxialConfiguration G spacing)
-  weak_limit_independent_of_boundary :
-    ∀ boundary : EpsilonSquareLatticeAxialConfiguration G spacing,
-      WeaklyConvergesFiniteMeasures
-        (fun stage => twoDimensionalSquareLatticeConditionedAxialMeasure
-          spacing (driverFiniteVolumeRadius stage) action boundary)
-        limitMeasure
+  limit_finite : limitMeasure univ ≠ ⊤
+  bounded_continuous_convergence :
+    ∀ (boundary : EpsilonSquareLatticeAxialConfiguration G spacing)
+      (observable : BoundedContinuousRealFunction
+        (EpsilonSquareLatticeAxialConfiguration G spacing)),
+      Tendsto (fun stage => ∫ configuration, observable configuration
+        ∂twoDimensionalSquareLatticeConditionedAxialMeasure
+          spacing (driverFiniteVolumeRadius stage) action boundary) atTop
+        (nhds (∫ configuration, observable configuration ∂limitMeasure))
   free_finite_volume_identification :
     ∀ (radius : PositiveSquareLatticeBoxRadius)
       (observable : BoundedContinuousRealFunction
@@ -237,6 +240,27 @@ theorem continuous_test_coverage
         (EpsilonSquareLatticeAxialConfiguration G spacing),
       test.toFun = observable := by
   exact ⟨BoundedContinuousRealFunction.ofContinuous observable continuous, rfl⟩
+
+/-- Exact normalization of every conditioned finite-volume law derives its finiteness; together
+with the one common limit-finiteness obligation and test convergence this reconstructs the full weak
+convergence predicate for every boundary condition. -/
+theorem weak_limit_independent_of_boundary
+    {G : Type uG} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+    [CompactSpace G] [T2Space G] [SecondCountableTopology G]
+    [MeasurableSpace G] [BorelSpace G] [MeasurableMul₂ G] [MeasurableInv G]
+    {spacing : PositiveLatticeSpacing} {action : TwoDimensionalLatticeActionData G}
+    (data : TwoDimensionalDriverAxialWeakLimitData spacing action)
+    (boundary : EpsilonSquareLatticeAxialConfiguration G spacing) :
+    WeaklyConvergesFiniteMeasures
+      (fun stage => twoDimensionalSquareLatticeConditionedAxialMeasure
+        spacing (driverFiniteVolumeRadius stage) action boundary)
+      data.limitMeasure where
+  sequence_finite := by
+    intro stage
+    rw [twoDimensionalSquareLatticeConditionedAxialMeasure.apply_univ]
+    exact ENNReal.one_ne_top
+  limit_finite := data.limit_finite
+  tendsto_integral := data.bounded_continuous_convergence boundary
 
 /-- Weak convergence of normalized conditioned laws derives normalization of the designated common
 limit through the constant-one mass test. -/

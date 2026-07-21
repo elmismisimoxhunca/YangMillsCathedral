@@ -75,6 +75,19 @@ theorem every_continuous_observable_covered
       test.toFun = observable :=
   data.continuous_test_coverage observable continuous
 
+/-- The sole boundary-varying analytic obligation is convergence for every structured bounded
+continuous test. -/
+theorem exact_bounded_continuous_convergence
+    (data : TwoDimensionalDriverAxialWeakLimitData spacing action)
+    (boundary : EpsilonSquareLatticeAxialConfiguration G spacing)
+    (observable : BoundedContinuousRealFunction
+      (EpsilonSquareLatticeAxialConfiguration G spacing)) :
+    Tendsto (fun stage => ∫ configuration, observable configuration
+      ∂twoDimensionalSquareLatticeConditionedAxialMeasure
+        spacing (driverFiniteVolumeRadius stage) action boundary) atTop
+      (nhds (∫ configuration, observable configuration ∂data.limitMeasure)) :=
+  data.bounded_continuous_convergence boundary observable
+
 /-- Every pair of axial boundary conditions converges to the same designated limit. -/
 theorem exact_boundary_independence
     (data : TwoDimensionalDriverAxialWeakLimitData spacing action)
@@ -89,7 +102,7 @@ theorem exact_boundary_independence
         data.limitMeasure :=
   data.boundary_pair first second
 
-/-- Each boundary sequence and its common limit are genuinely finite measures. -/
+/-- Each boundary sequence is finite by exact normalization; limit finiteness is stored only once. -/
 theorem exact_weak_finiteness
     (data : TwoDimensionalDriverAxialWeakLimitData spacing action)
     (boundary : EpsilonSquareLatticeAxialConfiguration G spacing) :

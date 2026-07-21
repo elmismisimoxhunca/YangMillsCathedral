@@ -785,8 +785,9 @@ Theorem 7.2 axial acceptance surface. Closed-embedding proofs now derive compact
 reverse-compatible infinite product carrier and its exact axial-fixed subcarrier. The directed-bond carrier is countable, so the existing comap measurable spaces are proved Borel
 under the source-faithful second-countability hypothesis. Consequently compactness and Borel
 measurability now derive every continuous observable's bounded structured test representative with
-no independent coverage field. Every
-boundary-conditioned sequence must converge to one finite measure; its normalization is now derived
+no independent coverage field. Every boundary-conditioned sequence must converge on all structured tests to one measure. Exact
+normalization of each conditioned law derives sequence finiteness, while limit finiteness is stored
+only once; limit normalization is derived
 from normalized conditioned laws and the constant-one weak mass test, and that measure to agree with each free box law on every bounded
 continuous observable depending only on `Bₙ`. For §8, `positiveLatticeSpacingAtZero` fixes the literal `ε → 0⁺` filter and spacing-indexed action
 families retain either the exact unchanged Villain density `Q_{ε²}` or one fixed actual Wilson trace
