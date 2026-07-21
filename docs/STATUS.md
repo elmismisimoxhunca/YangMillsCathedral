@@ -4659,8 +4659,10 @@ derived. `twoDimensionalWilsonAction` now uses the matrix-trace character of an 
 finite-dimensional unitary representation. Its positive source-indexed normalizer is exactly tied to
 the unnormalized character-weight Haar integral, so continuity, strict positivity, class/inversion
 symmetry, integrability, and real Haar normalization are derived rather than disconnected. No
-representation or action datum, axial lattice field measure, or continuum convergence witness is
-constructed.
+representation or Wilson action datum is constructed. `TwoDimensionalLatticeActionData` now packages
+Driver Definition 7.1 once and has exact Villain/Wilson adapters plus an elementary constant-one
+inhabitant, without conflating the source-qualified families. No axial lattice field measure or
+continuum convergence witness is constructed.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

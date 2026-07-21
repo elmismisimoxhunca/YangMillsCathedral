@@ -180,7 +180,8 @@ adjudication corrections.
    Driver's Wilson action now uses the matrix-trace character of an actual continuous nonzero finite-
    dimensional unitary representation and positive source-indexed normalizers tied to the
    unnormalized Haar integral; its inherited real action contract is derived. Axial field measures
-   and convergence remain open.
+   and convergence remain open. Definition 7.1 is packaged once with exact Villain/Wilson adapters
+   and a separately labeled constant-one nonvacuity inhabitant.
 10. Lévy PDF pp. 24–27 / printed pp. 10–13 were visually adjudicated on 2026-07-21 for §1.6,
    Theorem 1.6.1 and Lemma 1.6.3. The pages visibly define the fine-to-coarse holonomy map, state
    surjectivity and exact measure pushforward, and state strict three-graph composition. The Lean

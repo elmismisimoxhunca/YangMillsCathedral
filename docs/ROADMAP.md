@@ -789,6 +789,8 @@ committed before higher layers depend on it.
     Driver's displayed convolution-kernel formula; derive the full inherited action contract,
     including real Haar-integral normalization, plus normalized/nonzero canonical Haar-density
     plaquette measures.
+  - [x] Package Driver Definition 7.1 as one common action contract with exact Villain/Wilson
+    adapters and an independent constant-one nonvacuity inhabitant.
   - [x] Add Driver's Wilson action from the actual trace character of a nonzero finite-dimensional
     unitary matrix representation, with exact positive Haar-integral normalizers and the full
     inherited continuous/positive/class/inversion/real-normalization action contract.
