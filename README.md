@@ -457,9 +457,9 @@ section, and the descended `F` is proved equal on the unchanged overlap to the c
 of that same `A`. Exact-overlap potential regularity and domain geometry now discharge the
 within-coordinate Bianchi hypotheses, proving this local `dF + [A∧F]` expression vanishes. Every
 such exact local expression is now identified with the corresponding coordinate of the existing
-intrinsic smooth zero adjoint-valued three-form. This result-specific global-carrier bridge does not
-construct positive-degree intrinsic covariant exterior differentiation or nonzero chart-transition
-laws. A reusable finite multilinear telescope now proves lift independence for horizontal principal
+intrinsic smooth zero adjoint-valued three-form. That result-specific bridge alone does not construct
+the later positive-degree operator or nonzero chart-transition laws; the separate conditional
+positive-degree descent now supplies the same-chain intrinsic `D_A F` carrier. A reusable finite multilinear telescope now proves lift independence for horizontal principal
 forms of every degree, with degree two definitionally compatible with the existing curvature chain.
 Right-adjoint representative independence and smooth descent into the actual dependent quotient
 fibers are now derived in every degree, with arbitrary designated-chart coordinate formulas and
