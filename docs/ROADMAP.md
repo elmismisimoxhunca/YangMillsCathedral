@@ -266,8 +266,11 @@ committed before higher layers depend on it.
 - [x] Package open partial-diffeomorphism bracket naturality and transport the adapted fields through
   a designated smooth principal trivialization at points whose fiber coordinate is normalized to
   `1`, obtaining arbitrary prescribed values, all-orbit adaptation, and total-space bracket zero.
-- [ ] Normalize a principal trivialization at an arbitrary total-space point, assemble one adapted
-  field per tangent slot on a common open source, discharge the termwise triangular premise, derive
+- [x] Normalize a principal trivialization at an arbitrary total-space point by an exact left shift
+  of the group coordinate, extend the designated atlas by that one directly certified smooth chart,
+  and obtain an adapted total field with arbitrary prescribed value at every point.
+- [ ] Assemble one adapted field per tangent slot on a common open source, discharge the termwise
+  triangular premise, derive
   full candidate tensoriality and right-adjoint equivariance, then descend it and derive structural
   curvature laws and a genuine intrinsic `D_A F` theorem.
 

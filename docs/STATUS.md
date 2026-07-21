@@ -4402,8 +4402,11 @@ naturality and zero transport, including smooth-principal-trivialization special
 `YangMills.Geometry.PrincipalOrbitAdaptedTotalField` transports the adapted product field to the
 principal total space at points with normalized fiber coordinate `1`, proving arbitrary prescribed
 value, exact open-source smoothness, all-group orbit adaptation, and bracket zero with the principal
-fundamental field. The remaining geometry is normalizing a trivialization at arbitrary points and
-assembling all slot fields on one common open source; the termwise premise is not treated as
+fundamental field. `YangMills.Geometry.PrincipalNormalizedTrivialization` left-shifts the fiber
+coordinate to normalize any covered point to group coordinate `1`, proves forward/inverse
+smoothness, conservatively extends the designated atlas by that one chart, and removes the
+coordinate-normalization premise from the adapted-field existence theorem. The remaining geometry
+is assembling all slot fields on one common open source; the termwise premise is not treated as
 candidate data. Descent of the full candidate and a genuine intrinsic `D_A F` theorem remain open.
 
 The four-dimensional `CurrentStrength` integration record now requires one exact algebraic quantum
