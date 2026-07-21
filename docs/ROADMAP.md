@@ -768,9 +768,14 @@ committed before higher layers depend on it.
   - [x] Add Theorem 6.4's universal tree-freezing clause over every Definition 5.1 tree, with exact
     identity-Dirac/Haar product factors, unchanged choice-indexed face density and ambient
     expectation, and derived frozen/unfrozen, cross-tree/choice, normalization, and nonzero results.
-  - [ ] Add refinement/projective consistency, compact-surface gluing, and Driver's Villain/Wilson
-    lattice-continuum convergence with exact hypotheses, distinct from finite-cutoff, classical, and
-    four-dimensional witnesses.
+  - [x] Add Lévy refinement/projective consistency: exact fine-word configuration maps, reverse
+    substitution, endpoint gauge transport, nonempty edge carriers, literal coarse-path/fine-word
+    equality, derived ambient-holonomy coherence, surjectivity, strict three-stage composition,
+    genuine eligible-observable/ambient-physical-observable coherence between the two existing laws,
+    exact selected weighted-measure pushforward, derived pullback integrals and finite word-family
+    equality in law, and transitive source-facing pushforward on the unchanged density-semigroup chain.
+  - [ ] Add compact-surface gluing and Driver's Villain/Wilson lattice-continuum convergence with
+    exact hypotheses, distinct from finite-cutoff, classical, and four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.
   - [x] Add a current-strength continuum core hard-wired to coordinate `ℝ³` with coordinate
     Lebesgue action measure, dependently joining compact-simple gauge/classical data, strict

@@ -717,8 +717,16 @@ holonomy equality. A further universal Theorem 6.4 strengthening quantifies over
 an underlying-edge set with no nonempty closed distinct-edge path—and uses the exact mixed product
 with identity Dirac mass on tree coordinates and unchanged Haar elsewhere. It retains the unchanged
 choice-indexed density and ambient observable expectation, deriving frozen/unfrozen and cross-tree/
-choice integral equality plus normalization and nonzeroness. Refinement/gluing and lattice-limit
-layers remain explicit debt.
+choice integral equality plus normalization and nonzeroness. A Lévy-facing refinement layer now
+constructs the exact fine-word configuration map, reverse substitution, gauge transport, and strict
+three-stage composition. Source-facing embedded refinements require nonempty edge carriers, retain
+vertex points, identify every coarse ambient path literally with its concatenated fine word, derive
+ambient holonomy coherence, and require surjectivity. An uninhabited law genuinely joins two existing
+general-boundary laws on the unchanged density semigroup through an eligible fine-observable
+pullback with the same ambient physical observable and exact weighted-measure pushforward. It derives
+all eligible coarse-observable pullback integrals, finite word-family equality in law, and direct
+pushforward from coherent pairwise refinement laws. No refinement instance is constructed. Compact-surface gluing and
+lattice-limit layers remain explicit debt.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly

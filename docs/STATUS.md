@@ -4620,6 +4620,22 @@ exact factors, marginals, probability normalization, and empty-tree recovery. Un
 `TwoDimensionalGeneralBoundaryTreeFreezingLawData` universally retains the same boundary choice,
 density, eligible observable, and ambient expectation for every such tree; frozen/unfrozen and
 cross-tree/choice integral equality plus frozen-carrier normalization/nonzeroness are derived.
+Reusable `FiniteGraphRefinementData` now represents every coarse edge by an exact nonempty
+composable fine word with coherent endpoints. Reverse traversal, fine-word substitution, induced
+configuration maps, measurability, endpoint-gauge transport, and strict three-stage composition are
+derived; identity refinements and their composition inhabit the reusable API. Uninhabited
+`TwoDimensionalEmbeddedGraphRefinementData` ties vertices and edge holonomies to two embedded graphs
+over the same ambient continuum chain and requires Lévy Theorem 1.6.1 surjectivity at the exact
+gauge group. `TwoDimensionalGeneralBoundaryRefinementLawData` joins two existing general-boundary
+laws indexed by the unchanged selected-density semigroup, selects valid presentations, constructs
+an eligible fine pullback of every coarse observable, identifies its ambient physical observable
+with the coarse law's exact one, and requires exact pushforward of the fine weighted measure to the
+coarse one. Source-facing refinements require nonempty edge carriers and literal equality of every
+coarse ambient path with its recursively concatenated fine word; ambient connection-holonomy
+compatibility is derived rather than supplied. Integral equality for every eligible coarse
+observable, Corollary 1.6.4 equality in law for every finite coarse-word family and substituted fine
+family, exact embedded-map composition, and direct pushforward from coherent pairwise laws are
+derived. No graph, refinement, or law instance is constructed.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

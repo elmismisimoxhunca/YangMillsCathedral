@@ -165,15 +165,21 @@ adjudication corrections.
    Theorem 6.4. The Lean interface restricts to measurable/integrable complex functions and has
    both a Jordan-boundary subclass and a strengthened embedded-arc BC layer with exact bridge
    multiplicity; no graph or law instance is constructed.
-9. Witten's subdivision/sewing formulas are exact representation-theoretic identities, not by
+9. Lévy PDF pp. 24–27 / printed pp. 10–13 were visually adjudicated on 2026-07-21 for §1.6,
+   Theorem 1.6.1 and Lemma 1.6.3. The pages visibly define the fine-to-coarse holonomy map, state
+   surjectivity and exact measure pushforward, and state strict three-graph composition. The Lean
+   layer constructs the exact finite-word map/composition, requires literal coarse-path/fine-word
+   equality and nonempty edge carriers, records weighted-measure pushforward and coherent observable
+   pullback on the unchanged Driver density chain, and derives finite word-family equality in law.
+10. Witten's subdivision/sewing formulas are exact representation-theoretic identities, not by
    themselves a countably additive continuum-measure construction.
-10. Atiyah–Bott is classical gauge geometry, not a source for a quantum probability measure.
-11. Sengupta's orientation-reversing covariance changes to the specified pullback bundle class; it
+11. Atiyah–Bott is classical gauge geometry, not a source for a quantum probability measure.
+12. Sengupta's orientation-reversing covariance changes to the specified pullback bundle class; it
    must not be simplified to same-bundle invariance.
-12. Kluberg-Stern–Zuber's broadest operator-renormalization statements carry dimensional/twist or
+13. Kluberg-Stern–Zuber's broadest operator-renormalization statements carry dimensional/twist or
    conjectural qualifications; they are corroboration, not an unrestricted theorem.
-13. Hollands–Kopper's convergence theorem is not a Yang–Mills convergence theorem.
-14. `yang1954.pdf` begins with one page from a preceding article; the Yang–Mills article starts on
+14. Hollands–Kopper's convergence theorem is not a Yang–Mills convergence theorem.
+15. `yang1954.pdf` begins with one page from a preceding article; the Yang–Mills article starts on
    PDF p. 2.
 
 ## 4. Concrete progress unlocked by the bundle
