@@ -486,9 +486,9 @@ proved, and the universal Maurer--Cartan certificate derives the unconditional e
 are now derived, reducing the targeted Cartan comparison to an explicit termwise triangular bracket-evaluation
 vanishing premise. The Cartan reduction is now localized to arbitrary open calculus sets. Prescribed-value
 orbit-adapted fields are constructed in base/group product coordinates on an open full-fiber domain,
-with exact all-orbit transport and normalized fiber-bracket vanishing. The remaining bridge is
-first deriving the product-field within-bracket law from the normalized group-level theorem and
-then transporting it through the smooth principal partial trivialization to derive the termwise premise on the total space, descent of the full candidate, and a genuine intrinsic
+with exact all-orbit transport and normalized fiber-bracket vanishing. The exact product-manifold within-bracket vanishing theorem is now derived at the normalized center, with derivatives taken
+within the natural open product domain. The remaining bridge is transporting those fields and that law through the smooth
+principal partial trivialization to derive the termwise premise on the total space, descent of the full candidate, and a genuine intrinsic
 `D_A F` theorem remain open. Exact inverse-action
 curvature covariance now derives pointwise invariance of both chosen and basis-independent
 canonical curvature densities for the full pulled connection/exterior/certificate chain. The exact

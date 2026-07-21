@@ -4394,9 +4394,10 @@ reduction to any explicit open calculus set while retaining all-group orbit adap
 `YangMills.Geometry.PrincipalOrbitAdaptedProductField` constructs prescribed-value fields in
 base/group product coordinates, smooth on an open centered-base-chart source times the whole group,
 with exact all-orbit right transport and normalized fundamental/right-invariant bracket zero. The
-remaining reusable geometry is first deriving a product-field within-bracket law from the
-normalized group-level theorem, then transporting the fields and that law through a smooth
-principal partial trivialization to the total space; the termwise premise is not treated as
+`YangMills.Geometry.PrincipalOrbitAdaptedProductBracket` now derives the exact product-manifold
+within-bracket vanishing theorem for the vertical fundamental and adapted fields at the normalized
+center, with derivatives taken within the natural open product domain. The remaining reusable geometry is transporting the fields and that law through a
+smooth principal partial trivialization to the total space; the termwise premise is not treated as
 candidate data. Descent of the full candidate and a genuine intrinsic `D_A F` theorem remain open.
 
 The four-dimensional `CurrentStrength` integration record now requires one exact algebraic quantum

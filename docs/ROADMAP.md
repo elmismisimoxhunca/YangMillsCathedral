@@ -260,8 +260,10 @@ committed before higher layers depend on it.
 - [x] Localize the Cartan reduction to arbitrary open calculus sets and construct prescribed-value
   orbit-adapted fields in base/group product coordinates, with open full-fiber domain, exact
   all-orbit right transport, and normalized fundamental/adapted fiber bracket zero.
-- [ ] Derive the product-field within-bracket law from the normalized group-level bracket theorem,
-  then transport those product fields and that law through the smooth partial principal trivialization to the total space, discharge the termwise triangular premise, derive full candidate tensoriality, then prove full candidate
+- [x] Derive the exact product-manifold within-bracket vanishing theorem for the vertical
+  fundamental and prescribed-value adapted product fields at the normalized center, with derivatives
+  taken within the natural open domain.
+- [ ] Transport those product fields and that law through the smooth partial principal trivialization to the total space, discharge the termwise triangular premise, derive full candidate tensoriality, then prove full candidate
   right-adjoint equivariance, then descend it and derive structural curvature
   laws and a genuine intrinsic `D_A F` theorem.
 
