@@ -854,8 +854,10 @@ committed before higher layers depend on it.
     exact BC words, `T(ε)`-frozen product Haar, and positive convolution powers.
   - [x] Derive the exact Villain convolution-semigroup reduction from `Q_{ε²}` to `Q_{|R(ε)|}` for
     every fine face and the whole certified BC product.
-  - [ ] Add the outer common-heat-chain coherence and Theorems 8.5/8.10 convergence; inhabit/derive
-    box
+  - [x] Add the exact differential-induced Villain common heat chain without Wilson/global-faithful
+    overstrength, and the uninhabited compact-simple Theorem 8.5 convergence contract.
+  - [ ] Generalize Theorem 8.5 from the project compact-simple specialization to Driver's connected
+    compact Lie-group scope; resolve/formalize Theorem 8.10; inhabit/derive box
     projectivity and Theorem 7.2; add compact-surface gluing with exact hypotheses, distinct from finite-cutoff, classical, and
     four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.

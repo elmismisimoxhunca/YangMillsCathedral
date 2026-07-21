@@ -812,7 +812,11 @@ the action-indexed Theorem 7.2 expectation as the exact normalized `VB(ε)` inte
 BC words, the `T(ε)`-frozen product Haar carrier, and precisely `|R(ε)|/ε²` convolution factors. The
 The Villain semigroup reduction is now derived: `n+1` exact `Q_{ε²}` factors equal
 `Q_{(n+1)ε²}`, so every fine-face power and the full BC product use the unchanged selected density at
-exact fine geometric areas. Outer common representation/heat convergence contracts remain open. No weak limit, boundary-
+exact fine geometric areas. The exact differential-induced Villain common heat chain now avoids
+Wilson/global-faithfulness overstrength, and an uninhabited compact-simple Theorem 8.5 contract turns
+one explicit varying-finite-graph heat-integral limit into convergence for every continuous coarse
+observable. The source-general connected compact-group version, analytic inhabitation, and Wilson
+convergence remain open. No weak limit, boundary-
 independence proof, or lattice-continuum convergence is constructed.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to

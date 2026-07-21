@@ -149,8 +149,14 @@ law equals its exact normalized `VB(ε)` integral, with the certified BC boundar
 `|R(ε)|/ε²` normalized-Haar convolution factors, and the exact `T(ε)`-frozen carrier. Adding the
 The Villain convolution-semigroup reduction is now derived without a new assumption: `n+1` exact
 Villain factors equal `Q_{(n+1)ε²}`, hence every fine-face power is literally `Q_{|R(ε)|}` and the
-full BC product retains the same selected density family and boundary words. Adding the outer common-
-representation/heat coherence, inhabiting Theorem 7.2/projectivity, and formalizing Theorems 8.5/8.10
+full BC product retains the same selected density family and boundary words. A separate Villain
+common chain now follows Theorem 8.5's exact distinction: `p_*` is injective and induces the pairing,
+Laplacian, heat density, and kernel, but no global representation faithfulness or Wilson normalization
+is required. The compact-simple project specialization of Theorem 8.5 is now an uninhabited contract:
+one explicit varying-finite-graph heat-integral limit yields every continuous coarse observable's
+lattice expectation limit through the exact product identity and equation (6.1). This field attests
+the remaining analytic convergence; it does not prove it. Inhabiting Theorem 7.2/projectivity and
+formalizing the source-general connected compact-group version and Theorem 8.10
 convergence remain explicit debt. A visual
 recheck of PDF pp. 27–29 / printed pp. 601–603 found a source-internal Wilson issue that blocks
 canonicalization: Definition 8.4 visibly prints `Aχ^ε(g) = Zε⁻¹ exp Re χ(g)`, with no visible `ε` in
