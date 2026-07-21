@@ -848,7 +848,8 @@ committed before higher layers depend on it.
     Theorem 8.8/(8.2) and Borgs–Seiler Appendix A; do not accept a Wilson central-limit interface until
     the missing `ε`-dependence is authoritatively resolved.
   - [x] Add the exact collision-safe `B(ε) → VB(ε)` graph/holonomy bridge, including commuting
-    refinement words, exact `T(ε)`, and total fine-edge coverage.
+    refinement words, exact `T(ε)`, total fine-edge coverage, slit-aware finite polyomino faces,
+    positive integer convolution exponents, and eventual face-product reindexing.
   - [ ] Add the enlarged measure/product identity, outer common-heat-chain coherence, and Theorems
     8.5/8.10 convergence; inhabit/derive box
     projectivity and Theorem 7.2; add compact-surface gluing with exact hypotheses, distinct from finite-cutoff, classical, and

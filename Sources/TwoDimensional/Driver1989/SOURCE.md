@@ -140,7 +140,10 @@ The proof-required lattice enlargement now separately relates `B(ε)` and `VB(ε
 refinement words commute with the continuum `B → VB` words, `VB(ε)` is BC, `T(ε)` is precisely the
 image of the vertical/x-axis tree, every fine enlarged edge belongs to a coarse-fine subdivision or
 that tree, Definition 8.1 boundary transport remains face-indexed under collisions, and exact lattice
-holonomy restriction commutes. Adding the measure-level enlarged product identity, outer common-
+holonomy restriction commutes. Each `VB(ε)` face additionally has an exact nonempty finite closed-
+square polyomino whose interior has the full graph trace removed (so internal bridge/slit edges are
+not filled), exact positive integer exponent `|R(ε)|/ε²`, eventual bijective face correspondence,
+and mapped-area convergence. Adding the measure-level enlarged product identity, outer common-
 representation/heat coherence, inhabiting Theorem 7.2/projectivity, and formalizing Theorems 8.5/8.10
 convergence remain explicit debt. A visual
 recheck of PDF pp. 27–29 / printed pp. 601–603 found a source-internal Wilson issue that blocks

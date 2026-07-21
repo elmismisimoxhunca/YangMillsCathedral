@@ -804,8 +804,10 @@ measurable coarse function factors through exact enlarged restriction and its co
 equals the normalized tree-frozen product-Haar integral with canonical BC words and the unchanged
 area-density law. The proof-specific `B(ε) → VB(ε)` graph bridge now has commuting exact refinement
 words and lattice holonomy restrictions, a BC enlarged approximation, the exact vertical/x-axis
-`T(ε)` image, collision-safe facewise boundary transport, and no unrelated enlarged fine edges. The
-enlarged measure/product identity and outer common representation/heat convergence contracts remain
+`T(ε)` image, collision-safe facewise boundary transport, and no unrelated enlarged fine edges.
+Every fine enlarged face is also an exact nonempty finite closed-square polyomino interior minus the
+full graph trace, has positive integer exponent `|R(ε)|/ε²`, and participates in an eventually
+bijective area-convergent face correspondence. The enlarged measure/product identity and outer common representation/heat convergence contracts remain
 open. No weak limit, boundary-
 independence proof, or lattice-continuum convergence is constructed.
 
