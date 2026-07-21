@@ -4111,12 +4111,11 @@ Not yet achieved:
 - No concrete inhabitant of the gauge-group certificate has been constructed. Mathlib's algebraic
   `SU(n)` API does not supply the complete manifold/compactness/connectedness/tangent-simplicity
   chain, so positive consistency infrastructure remains open.
-- No concrete smooth gauge-bundle-map witness, principal-connection/curvature/
-  structure-certificate witness, automatic curvature horizontality/equivariance theorem,
-  arbitrary-manifold/descended adjoint-bundle Bianchi or gauge-covariance result, symmetry-group
-  construction, quantum-theory
-  witness, existence theorem, or satisfying mass-gap declaration exists. The smooth adjoint vector
-  bundle and smooth curvature descent layers themselves are implemented.
+- No concrete smooth gauge-bundle-map witness, principal-connection/curvature witness, constructed
+  curvature-exterior certificate, canonical arbitrary-manifold exterior operator, complete gauge-
+  covariance result, symmetry-group construction, quantum-theory witness, existence theorem, or
+  satisfying mass-gap declaration exists. Finite-dimensional curvature structure and conditional
+  intrinsic descended Bianchi are now derived, but construct no geometric or quantum witness.
 - Bosonic observable labels now have exhaustive scalar/stress/residual covariance classification;
   residual labels are covered by finite projected-Lorentz multiplets with component-level exclusion
   of scalar/stress labels and exact in-cover adjoint/conjugate-representation partners. Spinorial
@@ -4434,9 +4433,12 @@ old one-form theorem at `n = 0`.
 candidate at every chart center with the existing same-connection coordinate Bianchi expression,
 uses inverse-chart derivative cancellation to derive global principal zero, and proves the bundled
 intrinsic `D_A F` equals the canonical smooth zero adjoint-valued three-form. This theorem accepts no
-zero or naturality bridge, but still requires the same-index curvature structure certificate and a
-curvature-indexed ordinary exterior certificate; automatic construction of those inputs remains
-open.
+zero or naturality bridge. `YangMills.Geometry.PrincipalCurvatureStructureFiniteDimensional`
+separately derives the formerly supplied curvature structure: connection-specific Cartan calculus
+uses `Θ(X#)=X` to prove horizontality with the exact half-self-wedge normalization, while exterior
+and bracket transport prove right-adjoint equivariance. The finite-dimensional intrinsic Bianchi
+wrapper therefore accepts no structure witness. The connection-indexed first exterior data and
+curvature-indexed ordinary exterior certificate remain supplied; their construction remains open.
 
 The four-dimensional `CurrentStrength` integration record now requires one exact algebraic quantum
 action of its canonical smooth principal gauge group on its same observable family and one

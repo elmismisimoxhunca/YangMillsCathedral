@@ -97,8 +97,9 @@ coordinate degree-two covariant expression and Bianchi proof are now derived bel
 finite-dimensional principal-bundle construction conditionally descends `dω + [Θ∧ω]` from a
 supplied ordinary exterior certificate and horizontal/equivariant input, including the same-chain
 `D_A F` carrier. Exact centered inverse-chart calculus and the derived coordinate identity then
-prove its intrinsic Bianchi zero without a zero/naturality witness. No canonical arbitrary-manifold
-exterior existence or automatic curvature-structure certificate is supplied.
+prove its intrinsic Bianchi zero without a zero/naturality witness. Finite-dimensional
+connection-specific Cartan calculus now also derives the curvature-structure certificate. No
+canonical arbitrary-manifold exterior existence or curvature-exterior certificate is constructed.
 Joint continuity and coordinate smoothness are derived for Mathlib's actual finite-dimensional
 Lie-group tangent bracket by transport through the canonical normed model coordinates; the
 bracket-wedge is then proved to preserve smooth manifold one-forms.
@@ -271,7 +272,7 @@ action on observable operators and
 broader-observable invariance remain pending. The finite `1`, `F²`, `(F²)²` interpretation records
 do transport to the exact pulled chain with unchanged classical carriers, quantum family/labels,
 and anti-collapse witnesses; this is deliberately only same-family transport. Arbitrary-map/
-two-set exterior naturality, canonical arbitrary-manifold exterior-certificate construction,
-automatic curvature structure, and full gauge covariance remain pending. The finite-dimensional
-principal construction now derives conditional intrinsic descended adjoint-bundle Bianchi zero from
-same-chain certificates.
+two-set exterior naturality, canonical arbitrary-manifold exterior-certificate construction, and
+full gauge covariance remain pending. The finite-dimensional principal construction now derives
+curvature structure and intrinsic descended adjoint-bundle Bianchi zero from the remaining
+same-chain exterior certificates.

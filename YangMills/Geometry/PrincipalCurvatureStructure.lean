@@ -14,10 +14,10 @@ This file states those properties using the derivatives of the actual bundle pro
 action. `PrincipalCurvatureStructureCertificate` is indexed by the curvature derived from one exact
 connection and exterior-derivative certificate; it cannot certify an unrelated two-form.
 
-The automatic proofs of these properties from the Cartan certificate and the connection laws remain
-manifold-calculus infrastructure debt. Accordingly, this file introduces an explicit certificate
-surface rather than falsely presenting the implications as already proved. It does not construct a
-connection, curvature, certificate, or Yang--Mills field.
+This file retains the explicit generic certificate surface for contexts without the later
+finite-dimensional calculus. `PrincipalCurvatureStructureFiniteDimensional` derives the exact
+certificate from the Cartan certificate and connection laws when all manifold models are finite
+dimensional. Neither module constructs a connection, curvature, or Yang--Mills field.
 -/
 
 namespace YangMills.Geometry
@@ -70,8 +70,8 @@ def PrincipalTwoForm.IsRightAdEquivariant
       YangMills.Mathematics.lieGroupAdjoint IG g⁻¹ (form p v)
 
 /-- Explicit structural certificate for the exact curvature derived from one connection and its
-certified exterior derivative. This records the still-unproved automatic consequences (1.14) and
-(1.15) without accepting a disconnected curvature witness. -/
+certified exterior derivative. The generic carrier cannot accept a disconnected curvature witness;
+the finite-dimensional specialization is derived automatically in a later module. -/
 structure PrincipalCurvatureStructureCertificate
     [FiniteDimensional ℝ EG]
     (connection : PrincipalConnectionData smoothBundle)

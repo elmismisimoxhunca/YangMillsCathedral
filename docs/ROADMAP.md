@@ -287,8 +287,13 @@ committed before higher layers depend on it.
 - [x] Connect the intrinsic `D_A F` representative to the existing same-chain coordinate Bianchi
   theorem, derive global principal-candidate zero by exact chart tangent cancellation, and prove the
   bundled descended intrinsic Bianchi identity without accepting a zero or naturality bridge.
-- [ ] Derive automatic same-connection curvature structure and, separately, construct rather than
-  merely accept the ordinary curvature exterior certificate.
+- [x] Derive curvature horizontality from vertical generation, connection-specific Cartan
+  cancellation and the exact half-self-wedge normalization; derive right-adjoint equivariance from
+  exterior/bracket transport; package the exact finite-dimensional structure certificate.
+- [x] Specialize the intrinsic `D_A F = 0` theorem so finite-dimensional callers no longer supply a
+  redundant curvature-structure witness.
+- [ ] Construct rather than merely accept the ordinary curvature exterior certificate, while
+  retaining exact same-connection provenance.
 
 ## Phase 3 — classical Yang–Mills semantics
 
