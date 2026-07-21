@@ -758,8 +758,15 @@ committed before higher layers depend on it.
     integrable finite vertex-gauge-invariant complex graph function, with exact ambient-path
     interpretation, unchanged area density, bridge-aware words, product Haar, and unit-derived
     normalization.
-  - [ ] Add general disconnected-boundary choice independence, refinement/projective consistency, compact-surface
-    gluing, and Driver's Villain/Wilson lattice-continuum convergence with exact hypotheses,
+  - [x] Add a general disconnected-boundary interface whose choice carrier is the full structure of
+    every valid simultaneous presentation, not a supplier-selected family: exact finite ordered
+    component words/traversals, nonempty pairwise-disjoint maximal connected frontier traces,
+    Definition 6.3's exact optional coordinate-zero root and conditional restricted gauge
+    invariance, a universal choice-indexed expectation law, and derived integral-level choice
+    independence and normalization.
+    Do not impose false pointwise equality across choices.
+  - [ ] Add Theorem 6.4's universal tree-freezing clause, refinement/projective consistency, compact-
+    surface gluing, and Driver's Villain/Wilson lattice-continuum convergence with exact hypotheses,
     distinct from finite-cutoff, classical, and four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.
   - [x] Add a current-strength continuum core hard-wired to coordinate `ℝ³` with coordinate

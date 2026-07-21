@@ -4602,7 +4602,17 @@ Driver-permitted one-edge loop incidence requires subdivision. No instance is co
 integrable finite vertex-gauge-invariant complex function, ties it pointwise to an existing ambient
 physical observable through the unchanged selected paths, and requires Driver's exact product-Haar
 formula using the unchanged density at exact areas and bridge-aware words. The unit case derives
-normalization and nonzeroness. Disconnected boundary/cut choices remain separate debt.
+normalization and nonzeroness. Separate uninhabited
+`GeneralBoundaryChoice` is the full carrier of every valid simultaneous disconnected-frontier
+presentation, rather than a supplier-selected subtype: each exact finite ordered family has
+continuously traversed bridge-aware words, nonempty pairwise-disjoint traces, and maximal connected-
+frontier semantics rejecting duplicates and artificial splitting. `TwoDimensionalGeneralBoundaryChoiceData`
+records Definition 6.3's optional origin, ties it exactly to coordinate zero when present, and proves
+zero absent from all vertices otherwise. `TwoDimensionalGeneralBoundaryExpectationLawData` requires
+the resulting conditional restricted gauge invariance, exact choice-indexed density products, and one common
+ambient expectation for every choice; integral-level choice independence and per-choice
+normalization/nonzeroness are derived. No pointwise choice equality is asserted. Theorem 6.4's
+additional universal tree-freezing clause remains debt.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

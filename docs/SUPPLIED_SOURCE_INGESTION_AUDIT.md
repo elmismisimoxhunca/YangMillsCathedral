@@ -146,21 +146,28 @@ adjudication corrections.
    `ℝ² \ (S ∪ {x-axis})`, Definition-3.8 admissibility, no immediate retracing, a finite directed
    graph on a discrete planar vertex set, endpoint-only crossings, endpoint coherence, and an
    admissible bond collection. The retained native extraction agrees.
-6. Driver PDF p. 21 / printed p. 595 was visually adjudicated on 2026-07-21 for Theorem
+6. Driver PDF p. 18 / printed p. 592 was visually adjudicated on 2026-07-21 for Definition 6.3
+   and Theorem 6.4. It visibly requires gauge transformations to fix the distinguished origin,
+   states the area-indexed boundary-holonomy product-Haar expectation, asserts independence from
+   all boundary choices, and separately states invariance under freezing any tree. The current Lean
+   interface covers the exact conditional coordinate-zero restricted-gauge clause and quantifies
+   choice independence over the full carrier of valid simultaneous connected-component
+   presentations; universal tree freezing remains open.
+7. Driver PDF p. 21 / printed p. 595 was visually adjudicated on 2026-07-21 for Theorem
    6.6. It visibly quantifies over a gauge-invariant function on a BC graph and equates its
    continuum holonomy expectation with Haar integration weighted by the product of `Q` at exact
    bounded-region areas and boundary holonomies. The proof labels it the BC special case of
    Theorem 6.4. The Lean interface restricts to measurable/integrable complex functions and to its
    stronger Jordan-boundary subclass; full bridge multiplicity remains open.
-7. Witten's subdivision/sewing formulas are exact representation-theoretic identities, not by
+8. Witten's subdivision/sewing formulas are exact representation-theoretic identities, not by
    themselves a countably additive continuum-measure construction.
-8. Atiyah–Bott is classical gauge geometry, not a source for a quantum probability measure.
-9. Sengupta's orientation-reversing covariance changes to the specified pullback bundle class; it
+9. Atiyah–Bott is classical gauge geometry, not a source for a quantum probability measure.
+10. Sengupta's orientation-reversing covariance changes to the specified pullback bundle class; it
    must not be simplified to same-bundle invariance.
-10. Kluberg-Stern–Zuber's broadest operator-renormalization statements carry dimensional/twist or
+11. Kluberg-Stern–Zuber's broadest operator-renormalization statements carry dimensional/twist or
    conjectural qualifications; they are corroboration, not an unrestricted theorem.
-11. Hollands–Kopper's convergence theorem is not a Yang–Mills convergence theorem.
-12. `yang1954.pdf` begins with one page from a preceding article; the Yang–Mills article starts on
+12. Hollands–Kopper's convergence theorem is not a Yang–Mills convergence theorem.
+13. `yang1954.pdf` begins with one page from a preceding article; the Yang–Mills article starts on
    PDF p. 2.
 
 ## 4. Concrete progress unlocked by the bundle

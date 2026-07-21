@@ -706,7 +706,14 @@ permitted one-edge loop incidence must first be subdivided into embedded arcs. N
 quantifies over every measurable, integrable finite vertex-gauge-invariant complex graph function,
 ties it to an existing ambient physical observable through the unchanged paths, and requires the
 exact product-Haar formula with unchanged densities at geometric areas and bridge-aware words. Its
-unit case derives normalization and nonzeroness. General-boundary choices, refinement/gluing, and
+unit case derives normalization and nonzeroness. A separate general-boundary interface now records
+the universal carrier of every valid simultaneous boundary presentation, with finite ordered
+component words, exact traversals, pairwise-disjoint nonempty traces, and maximal connected-frontier
+semantics that reject duplication and artificial splitting. Driver Definition 6.3's origin is
+optional, exactly tied to coordinate zero when present, and proved absent otherwise. The uninhabited
+expectation law uses the corresponding conditional restricted gauge invariance, computes every choice-indexed product-Haar integral from the same
+ambient observable, and derives integral-level choice independence without false pointwise
+holonomy equality. Theorem 6.4's additional universal tree-freezing clause, refinement/gluing, and
 lattice-limit layers remain explicit debt.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to

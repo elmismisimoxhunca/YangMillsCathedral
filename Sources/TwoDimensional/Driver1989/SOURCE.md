@@ -40,6 +40,16 @@ planar vertex set, bonds crossing one another or themselves only at endpoints, e
 coherence, and an admissible collection of bond curves. These conditions agree with the retained
 native extraction.
 
+PDF p. 18 / printed p. 592 was independently inspected on 2026-07-21 for Definition 6.3 and
+Theorem 6.4. The page visibly defines restricted gauge invariance by requiring the vertex gauge to
+be the identity at the distinguished origin, states the area-indexed boundary-holonomy product-Haar
+expectation formula, declares the right-hand side independent of all boundary-holonomy choices, and
+separately states invariance under freezing any tree to the identity. The Lean general-boundary law
+currently formalizes the exact conditional coordinate-zero restricted-gauge clause and quantifies
+choice independence over the full structure of every valid simultaneous presentation, whose traces
+are nonempty, pairwise disjoint, and maximal connected frontier subsets. The universal tree-freezing
+clause remains explicit debt.
+
 PDF p. 21 / printed p. 595 was independently inspected on 2026-07-21 for Theorem 6.6.
 The page visibly quantifies over a gauge-invariant function on the BC graph configuration space and
 states that its continuum holonomy expectation equals integration of that function against one Haar
