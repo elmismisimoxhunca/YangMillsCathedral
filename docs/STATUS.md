@@ -4559,7 +4559,9 @@ planar embedding, simplicity theorem, YM measure,
 general face product, refinement, gluing, or lattice-limit theorem is constructed. As the first
 finite-graph prerequisite, `OrientedEdge` stores only one group coordinate per underlying edge,
 reverse orientation evaluates by inversion, finite words multiply later traversals on the left, and
-reversing a word gives inverse holonomy. This is finite algebra only: no arbitrary `Face` type is
+reversing a word gives inverse holonomy. Exact oriented endpoints define the target-left vertex-
+gauge action; composability cancels all internal gauge factors, leaving endpoint covariance and
+start-vertex conjugation for a closed word. This is finite algebra only: no arbitrary `Face` type is
 misrepresented as an actual planar complement component.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary

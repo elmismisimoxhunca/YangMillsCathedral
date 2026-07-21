@@ -726,6 +726,8 @@ committed before higher layers depend on it.
   - [x] Add reusable finite oriented-edge words with one coordinate per underlying edge, exact
     inversion for reverse orientation, reverse-word inversion, and Driver-compatible later-on-the-
     left concatenation.
+  - [x] Add oriented source/target semantics, target-left vertex-gauge action, internal-factor
+    cancellation for composable words, and exact start-vertex conjugation for closed words.
   - [ ] Compare the metric's Laplace–Beltrami operator with the basis sum.
   - [ ] Construct exact finite planar embeddings/complement-face certificates and BC-graph
     face-product laws; then add general disconnected-boundary choice independence,

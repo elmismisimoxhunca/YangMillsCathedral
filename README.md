@@ -675,7 +675,9 @@ diagonal bilinear precomposition; exact nested Hom-bundle coordinate reconciliat
 the unchanged positive bi-invariant form as Mathlib's full `ContMDiffRiemannianMetric`. No density,
 solution, or process is constructed; Laplace–Beltrami comparison remains open before treating
 this as a completed source heat-kernel chain. Finite oriented-edge words now retain one coordinate
-per underlying edge, inversion under reversal, and Driver's later-on-the-left transport order. This
+per underlying edge, inversion under reversal, and Driver's later-on-the-left transport order.
+Oriented endpoints now derive target-left/source-right-inverse vertex-gauge covariance, cancellation
+at every internal vertex of a composable word, and start-vertex conjugation for a closed word. This
 is reusable algebra, not a planar graph certificate. No planar loop embedding, heat kernel, measure,
 or model is constructed; actual complement-face geometry, general face products,
 refinement/gluing, and lattice-limit layers remain explicit debt.
