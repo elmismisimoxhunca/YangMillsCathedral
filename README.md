@@ -733,8 +733,12 @@ or vertical integer unit steps, and exact affine realization of every bond. On t
 incidence requires subdivision), an uninhabited Definition 8.1 sequence now supplies a fine embedded graph at every positive
 spacing, surjective coarse-edge and bounded-face maps, exact lattice certificates on every fine
 edge, one uniform symmetric-difference area `O(ε)` bound, and universal transport of every valid
-boundary presentation with exact mapped orientation/order. No graph sequence, action, measure, or
-convergence witness is constructed.
+boundary presentation with exact mapped orientation/order. No approximating graph sequence witness
+is constructed. Driver's Villain single-plaquette action is definitionally the smooth strictly-positive real
+representative of the same selected convolution-semigroup density at `ε²`, requires its exact Definition 4.7 `∂ₜQ = 1/2 ΔQ` heat equation plus an initial-identity generated
+operator semigroup satisfying Driver's displayed convolution-kernel formula, and derives continuity,
+strict positivity, class/inversion symmetry, real Haar-integral normalization, and a normalized
+nonzero canonical Haar-density measure. This still constructs no lattice field or convergence theorem.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly

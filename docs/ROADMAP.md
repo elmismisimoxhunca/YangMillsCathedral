@@ -783,7 +783,13 @@ committed before higher layers depend on it.
     every positive spacing, surjective edge/face maps, exact lattice paths on every fine edge,
     uniform explicit symmetric-difference area `O(ε)`, and universal exact boundary-choice/word
     transport.
-  - [ ] Add compact-surface gluing and Driver's Villain/Wilson actions, lattice measures, and
+  - [x] Identify Driver's Villain single-plaquette action with the smooth strictly-positive real
+    representative of the unchanged selected convolution-semigroup density at `ε²`; require the
+    exact Definition 4.7 `∂ₜQ = 1/2 ΔQ` chain, an initial-identity generated operator semigroup, and
+    Driver's displayed convolution-kernel formula; derive the full inherited action contract,
+    including real Haar-integral normalization, plus normalized/nonzero canonical Haar-density
+    plaquette measures.
+  - [ ] Add compact-surface gluing and Driver's Wilson action, axial lattice field measures, and
     lattice-continuum convergence with exact hypotheses, distinct from finite-cutoff, classical, and
     four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.

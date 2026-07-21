@@ -4649,8 +4649,14 @@ strictly positive spacing, surjective coarse-edge and bounded-face maps, an exac
 certificate on every fine edge, one nonnegative constant and positive cutoff giving a uniform
 coordinate-Lebesgue symmetric-difference area `O(ε)` upper bound, and facewise transport of every valid coarse boundary presentation to its own valid fine
 presentation with exact oriented-word and component order. Existing coarse boundary data ensures
-this obligation is nonvacuous without forcing colliding face labels to share one presentation. No graph
-sequence, Villain/Wilson action, lattice measure, or continuum convergence witness is constructed.
+this obligation is nonvacuous without forcing colliding face labels to share one presentation. No graph sequence witness is constructed. `twoDimensionalVillainAction` is definitionally the smooth strictly-positive real representative of
+the unchanged selected convolution-semigroup density at Driver's exact `ε²` plaquette-area
+parameter. It requires the existing Definition 4.7 invariant Laplacian, exact `∂ₜQ = 1/2 ΔQ` equation, an
+initial-identity generated operator semigroup, and Driver's displayed convolution-kernel formula.
+Continuity, strict positivity, class/inversion symmetry, real Haar-integral normalization, the exact
+`ENNReal` bridge, and a normalized nonzero canonical Haar-density single-plaquette measure are
+derived. No Wilson action, axial lattice field measure, or continuum convergence witness is
+constructed.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

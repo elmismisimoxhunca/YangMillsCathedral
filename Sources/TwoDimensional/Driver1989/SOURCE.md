@@ -67,8 +67,13 @@ graph, gives surjections on bonds and bounded regions, requires symmetric-differ
 nearest-neighbor path geometry and an uninhabited Definition 8.1 family on the project's
 conservative embedded-arc strengthening. Driver-permitted one-edge loop incidence requires
 subdivision. The interface has surjective edge/face maps, uniform explicit symmetric-difference area
-order, and universal exact facewise boundary-presentation transport. Actions, lattice
-measures, and convergence remain explicit debt.
+order, and universal exact facewise boundary-presentation transport. Definition 8.3 is represented
+by identifying the Villain action with the smooth strictly-positive real representative of the
+unchanged semigroup density at `ε²`, requiring the exact Definition 4.7 `∂ₜQ = 1/2 ΔQ` chain, an initial-identity generated operator
+semigroup, and the displayed convolution-kernel formula. Its full inherited action contract,
+including the real Haar-integral normalization, and its normalized nonzero Haar-density plaquette
+measure are derived. The Wilson action, axial lattice field measures,
+and convergence remain explicit debt.
 
 PDF p. 21 / printed p. 595 was independently inspected on 2026-07-21 for Theorem 6.6.
 The page visibly quantifies over a gauge-invariant function on the BC graph configuration space and
