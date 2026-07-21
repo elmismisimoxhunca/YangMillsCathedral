@@ -769,8 +769,12 @@ bond/plaquette retention and measurable coordinate restriction. An uninhabited b
 datum requires the successor box measure to push forward exactly to the smaller box measure. Driver's distinct finite-volume sets are also represented exactly: `Bₙ` consists of bonds with one
 endpoint in `Aₙ₋₁`, `B̄ₙ` consists of bonds with both endpoints in `Aₙ`, and boundary conditions
 freeze `Bₙᶜ`; nearest-neighbor geometry proves `Bₙ ⊆ B̄ₙ`, while a radius-one witness prevents
-collapsing the two sets. No compatible family is constructed, and no delta-conditioned measure,
-weak limit, or lattice-continuum convergence is constructed.
+collapsing the two sets. The exact finite Haar coordinates for the axial conditioned law are right-directed off-axis
+horizontal `Bₙ` bonds, using rows of `Aₙ₋₁` rather than the larger free-box rows. Their measurable
+extension recovers every finite coordinate, fixes the axial tree, applies inversion on reverse bonds,
+and retains the supplied axial boundary configuration exactly on `Bₙᶜ`; nonidentity boundary data
+cannot collapse to the free identity extension. No action density, compatible family, delta-
+conditioned measure, weak limit, or lattice-continuum convergence is constructed.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly

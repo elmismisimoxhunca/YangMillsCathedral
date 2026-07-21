@@ -4701,7 +4701,11 @@ the induced coordinate restriction is measurable. The uninhabited
 `TwoDimensionalSquareLatticeBoxProjectiveConsistencyData` requires exact pushforward of every
 successor box measure to its predecessor. The boundary geometry now separately defines Driver's `Aₙ`, `Aₙ₋₁`, finite variable bonds `Bₙ`,
 outer bonds `B̄ₙ`, and frozen complement `Bₙᶜ`. Nearest-neighbor geometry proves `Bₙ ⊆ B̄ₙ`,
-and explicit radius-one witnesses distinguish the two sets and exhibit a genuinely frozen bond. No
+and explicit radius-one witnesses distinguish the two sets and exhibit a genuinely frozen bond. The exact finite coordinates for Driver's axial conditioned law are the canonical right-directed
+off-axis horizontal `Bₙ` bonds, with rows restricted to `Aₙ₋₁`. The measurable conditioned
+extension recovers these coordinates, freezes the axial tree, inverts reverse bonds, and equals the
+supplied axial boundary configuration on every bond of `Bₙᶜ`; a hostile probe prevents nonidentity
+boundary data from being replaced by the free identity extension. No `J(Bₙ)` action density,
 compatible family, delta-conditioned boundary measure, weak limit, or continuum convergence witness
 is constructed.
 

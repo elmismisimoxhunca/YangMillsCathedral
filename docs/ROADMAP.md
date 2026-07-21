@@ -819,8 +819,10 @@ committed before higher layers depend on it.
     state the uninhabited exact consecutive-box measure-pushforward obligation.
   - [x] Define Driver's exact `Aₙ`, `Aₙ₋₁`, `Bₙ`, `B̄ₙ`, and frozen `Bₙᶜ` geometry; prove
     `Bₙ ⊆ B̄ₙ` and hostilely distinguish the two bond sets.
-  - [ ] Construct/derive box projectivity, add delta-conditioned boundary measures and weak-limit
-    semantics, compact-surface gluing, and lattice-continuum convergence with exact hypotheses, distinct from finite-cutoff, classical, and
+  - [x] Construct exact finite axial `Bₙ` coordinates and a measurable boundary extension retaining
+    arbitrary axial boundary data exactly on `Bₙᶜ`.
+  - [ ] Add the exact `J(Bₙ)` action density, construct/derive box projectivity and delta-conditioned
+    boundary measures, weak-limit semantics, compact-surface gluing, and lattice-continuum convergence with exact hypotheses, distinct from finite-cutoff, classical, and
     four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.
   - [x] Add a current-strength continuum core hard-wired to coordinate `ℝ³` with coordinate

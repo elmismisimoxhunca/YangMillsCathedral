@@ -109,8 +109,10 @@ prove its exact partition function finite and nonzero. Normalized finite-coordin
 extension infinite-carrier box measures are constructed. Literal successor-radius coordinate/plaquette inclusions and measurable restriction are constructed;
 an uninhabited projectivity datum states exact consecutive box-measure pushforward. The distinct source sets `Aₙ`, `Aₙ₋₁`, `Bₙ`, `B̄ₙ`, and frozen complement `Bₙᶜ` are now
 represented exactly; nearest-neighbor geometry proves `Bₙ ⊆ B̄ₙ`, and radius-one hostile witnesses
-prevent collapsing them. Deriving or constructing the compatible family, delta-conditioned boundary
-measures, weak limits, and convergence remain explicit debt.
+prevent collapsing them. The finite Haar coordinates for (7.2) are now exact canonical right-directed off-axis horizontal
+`Bₙ` bonds, and their measurable extension retains arbitrary axial boundary data on `Bₙᶜ` rather
+than silently using the free identity extension. The exact `J(Bₙ)` action density, compatible family,
+delta-conditioned boundary measures, weak limits, and convergence remain explicit debt.
 
 PDF p. 21 / printed p. 595 was independently inspected on 2026-07-21 for Theorem 6.6.
 The page visibly quantifies over a gauge-invariant function on the BC graph configuration space and

@@ -211,7 +211,9 @@ adjudication corrections.
    Literal successor box inclusions/restriction are constructed and an uninhabited exact consecutive
    pushforward obligation is stated. Driver's distinct `Aₙ`, `Aₙ₋₁`, `Bₙ`, `B̄ₙ`, and frozen
    `Bₙᶜ` sets are represented with exact nearest-neighbor containment and noncollapse probes.
-   Constructing that compatible family, delta-conditioned measures, and weak limits remain open.
+   Exact canonical finite axial `Bₙ` coordinates and a measurable extension retaining arbitrary
+   axial boundary data on `Bₙᶜ` are constructed. The `J(Bₙ)` density, compatible family, delta-
+   conditioned measures, and weak limits remain open.
 11. Lévy PDF pp. 24–27 / printed pp. 10–13 were visually adjudicated on 2026-07-21 for §1.6,
    Theorem 1.6.1 and Lemma 1.6.3. The pages visibly define the fine-to-coarse holonomy map, state
    surjectivity and exact measure pushforward, and state strict three-graph composition. The Lean
