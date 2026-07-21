@@ -55,14 +55,13 @@ variable
     {data : TwoDimensionalDriverVillainConvergenceData common axial continuum
       coarseApproximation enlargedApproximation faceGeometry}
 
-omit [MeasurableMul₂ G] [MeasurableInv G] in
+omit [IsTopologicalGroup G] [T2Space G] [MeasurableMul₂ G] [MeasurableInv G]
+    [DecidableEq coarse.Edge] in
 /-- Every continuous coarse function is covered explicitly by a measurable bounded test. -/
 theorem exact_continuous_coverage
-    (data : TwoDimensionalDriverVillainConvergenceData common axial continuum
-      coarseApproximation enlargedApproximation faceGeometry)
     (observable : (coarse.Edge → G) → ℝ) (continuous : Continuous observable) :
     ∃ test : BoundedContinuousRealFunction (coarse.Edge → G), test.toFun = observable :=
-  data.continuous_test_coverage observable continuous
+  ⟨BoundedContinuousRealFunction.ofContinuous observable continuous, rfl⟩
 
 omit [MeasurableMul₂ G] [MeasurableInv G] in
 /-- The only new analytic obligation is convergence of the exact finite selected-density integrals. -/

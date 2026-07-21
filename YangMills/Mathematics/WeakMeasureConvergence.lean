@@ -37,6 +37,34 @@ namespace BoundedContinuousRealFunction
 
 variable {Ω : Type uΩ} [MeasurableSpace Ω] [TopologicalSpace Ω]
 
+/-- On a compact Borel space, every continuous real function canonically supplies the explicit
+measurability and global bound required by the weak-convergence test carrier. -/
+noncomputable def ofContinuous
+    [BorelSpace Ω] [CompactSpace Ω]
+    (f : Ω → ℝ) (hf : Continuous f) : BoundedContinuousRealFunction Ω := by
+  have bounded : Bornology.IsBounded (f '' (Set.univ : Set Ω)) :=
+    (isCompact_univ.image hf).isBounded
+  let radius : ℝ := Classical.choose (bounded.subset_closedBall 0)
+  have subset : f '' (Set.univ : Set Ω) ⊆ Metric.closedBall (0 : ℝ) radius :=
+    Classical.choose_spec (bounded.subset_closedBall 0)
+  exact {
+    toFun := f
+    continuous_toFun := hf
+    measurable_toFun := hf.measurable
+    bound := radius
+    abs_le_bound := fun x => by
+      have member : f x ∈ Metric.closedBall (0 : ℝ) radius :=
+        subset ⟨x, Set.mem_univ x, rfl⟩
+      simpa [Metric.mem_closedBall, Real.dist_eq] using member
+  }
+
+@[simp]
+theorem ofContinuous_toFun
+    [BorelSpace Ω] [CompactSpace Ω]
+    (f : Ω → ℝ) (hf : Continuous f) :
+    (ofContinuous f hf).toFun = f :=
+  rfl
+
 instance : CoeFun (BoundedContinuousRealFunction Ω) (fun _ => Ω → ℝ) :=
   ⟨BoundedContinuousRealFunction.toFun⟩
 

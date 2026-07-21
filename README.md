@@ -815,7 +815,8 @@ The Villain semigroup reduction is now derived: `n+1` exact `Q_{ε²}` factors e
 exact fine geometric areas. The exact differential-induced Villain common heat chain now avoids
 Wilson/global-faithfulness overstrength, and an uninhabited compact-simple Theorem 8.5 contract turns
 one explicit varying-finite-graph heat-integral limit into convergence for every continuous coarse
-observable. The source-general connected compact-group version, analytic inhabitation, and Wilson
+observable. Compactness now derives each continuous test's measurability and global bound, eliminating
+a separate coverage assumption. The source-general connected compact-group version, analytic inhabitation, and Wilson
 convergence remain open. No weak limit, boundary-
 independence proof, or lattice-continuum convergence is constructed.
 

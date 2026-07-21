@@ -154,7 +154,8 @@ common chain now follows Theorem 8.5's exact distinction: `p_*` is injective and
 Laplacian, heat density, and kernel, but no global representation faithfulness or Wilson normalization
 is required. The compact-simple project specialization of Theorem 8.5 is now an uninhabited contract:
 one explicit varying-finite-graph heat-integral limit yields every continuous coarse observable's
-lattice expectation limit through the exact product identity and equation (6.1). This field attests
+lattice expectation limit; compactness of the finite edge-product carrier now derives the required
+global bound and Borel measurability rather than storing a separate test-coverage field through the exact product identity and equation (6.1). This field attests
 the remaining analytic convergence; it does not prove it. Inhabiting Theorem 7.2/projectivity and
 formalizing the source-general connected compact-group version and Theorem 8.10
 convergence remain explicit debt. A visual

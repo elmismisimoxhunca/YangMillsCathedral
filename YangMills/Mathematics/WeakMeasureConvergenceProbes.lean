@@ -16,6 +16,19 @@ universe uΩ
 
 variable {Ω : Type uΩ} [MeasurableSpace Ω] [TopologicalSpace Ω]
 
+/-- Compactness derives the explicit bounded measurable test carrier from every continuous
+function; no separate coverage axiom is needed. -/
+theorem compact_continuous_coverage
+    [BorelSpace Ω] [CompactSpace Ω]
+    (f : Ω → ℝ) (hf : Continuous f) :
+    ∃ test : BoundedContinuousRealFunction Ω,
+      test.toFun = f ∧ Measurable test.toFun ∧
+        ∃ bound : ℝ, ∀ x, |test x| ≤ bound :=
+  ⟨BoundedContinuousRealFunction.ofContinuous f hf, rfl,
+    hf.measurable,
+    ⟨(BoundedContinuousRealFunction.ofContinuous f hf).bound,
+      (BoundedContinuousRealFunction.ofContinuous f hf).abs_le_bound⟩⟩
+
 /-- Weak convergence quantifies over the constant-one mass test. -/
 theorem includes_mass_test
     {sequence : ℕ → Measure Ω} {limit : Measure Ω}

@@ -73,9 +73,6 @@ variable
 
 /-- Uninhabited compact-simple project specialization of Driver Theorem 8.5. -/
 structure TwoDimensionalDriverVillainConvergenceData where
-  continuous_test_coverage : ∀ observable : (coarse.Edge → G) → ℝ,
-    Continuous observable →
-      ∃ test : BoundedContinuousRealFunction (coarse.Edge → G), test.toFun = observable
   fineHeatIntegral_tendsto : ∀ test : BoundedContinuousRealFunction (coarse.Edge → G),
     Tendsto
       (fun spacing => ∫ configuration,
@@ -148,8 +145,15 @@ theorem everyContinuous_latticeExpectation_tendsto_continuum
       positiveLatticeSpacingAtZero
       (nhds (∫ sample, observable (fun edge => base.holonomy (coarse.edgePath edge)
         (base.sampleConnection sample)) ∂base.probabilityMeasure)) := by
-  obtain ⟨test, test_eq⟩ := data.continuous_test_coverage observable continuous
-  rw [← test_eq]
+  let test : BoundedContinuousRealFunction (coarse.Edge → G) :=
+    BoundedContinuousRealFunction.ofContinuous observable continuous
+  change Tendsto
+    (fun spacing => ∫ configuration,
+      test (coarseApproximation.coarseRestriction spacing configuration)
+        ∂(productIdentity.latticeLimit spacing).limitMeasure)
+    positiveLatticeSpacingAtZero
+    (nhds (∫ sample, test (fun edge => base.holonomy (coarse.edgePath edge)
+      (base.sampleConnection sample)) ∂base.probabilityMeasure))
   exact TwoDimensionalDriverVillainConvergenceData.latticeExpectation_tendsto_continuum
     common axial continuum coarseApproximation enlargedApproximation faceGeometry
       productIdentity data test
