@@ -205,7 +205,6 @@ structure TwoDimensionalDriverAxialWeakLimitData
     (spacing : PositiveLatticeSpacing)
     (action : TwoDimensionalLatticeActionData G) : Type uG where
   limitMeasure : Measure (EpsilonSquareLatticeAxialConfiguration G spacing)
-  limit_finite : limitMeasure univ ≠ ⊤
   bounded_continuous_convergence :
     ∀ (boundary : EpsilonSquareLatticeAxialConfiguration G spacing)
       (observable : BoundedContinuousRealFunction
@@ -241,29 +240,8 @@ theorem continuous_test_coverage
       test.toFun = observable := by
   exact ⟨BoundedContinuousRealFunction.ofContinuous observable continuous, rfl⟩
 
-/-- Exact normalization of every conditioned finite-volume law derives its finiteness; together
-with the one common limit-finiteness obligation and test convergence this reconstructs the full weak
-convergence predicate for every boundary condition. -/
-theorem weak_limit_independent_of_boundary
-    {G : Type uG} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
-    [CompactSpace G] [T2Space G] [SecondCountableTopology G]
-    [MeasurableSpace G] [BorelSpace G] [MeasurableMul₂ G] [MeasurableInv G]
-    {spacing : PositiveLatticeSpacing} {action : TwoDimensionalLatticeActionData G}
-    (data : TwoDimensionalDriverAxialWeakLimitData spacing action)
-    (boundary : EpsilonSquareLatticeAxialConfiguration G spacing) :
-    WeaklyConvergesFiniteMeasures
-      (fun stage => twoDimensionalSquareLatticeConditionedAxialMeasure
-        spacing (driverFiniteVolumeRadius stage) action boundary)
-      data.limitMeasure where
-  sequence_finite := by
-    intro stage
-    rw [twoDimensionalSquareLatticeConditionedAxialMeasure.apply_univ]
-    exact ENNReal.one_ne_top
-  limit_finite := data.limit_finite
-  tendsto_integral := data.bounded_continuous_convergence boundary
-
-/-- Weak convergence of normalized conditioned laws derives normalization of the designated common
-limit through the constant-one mass test. -/
+/-- Convergence of the constant-one test against normalized conditioned laws derives normalization
+of the designated common limit directly, without separately assuming its finiteness. -/
 theorem limit_normalized
     {G : Type uG} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
     [CompactSpace G] [T2Space G] [SecondCountableTopology G]
@@ -273,8 +251,16 @@ theorem limit_normalized
     data.limitMeasure univ = 1 := by
   let boundary : EpsilonSquareLatticeAxialConfiguration G spacing :=
     EpsilonSquareLatticeAxialConfiguration.identity
-  have weak := data.weak_limit_independent_of_boundary boundary
-  have massTendsto := weak.one_test
+  have massTendsto :
+      Tendsto (fun stage => ∫ _ : EpsilonSquareLatticeAxialConfiguration G spacing, (1 : ℝ)
+        ∂twoDimensionalSquareLatticeConditionedAxialMeasure
+          spacing (driverFiniteVolumeRadius stage) action boundary) atTop
+        (nhds (∫ _ : EpsilonSquareLatticeAxialConfiguration G spacing, (1 : ℝ)
+          ∂data.limitMeasure)) := by
+    simpa [BoundedContinuousRealFunction.one] using
+      data.bounded_continuous_convergence boundary
+        (BoundedContinuousRealFunction.one : BoundedContinuousRealFunction
+          (EpsilonSquareLatticeAxialConfiguration G spacing))
   have sequenceIntegral :
       (fun stage => ∫ _ : EpsilonSquareLatticeAxialConfiguration G spacing, (1 : ℝ)
         ∂twoDimensionalSquareLatticeConditionedAxialMeasure
@@ -293,6 +279,37 @@ theorem limit_normalized
   have toReal_eq_one : (data.limitMeasure univ).toReal = 1 := by
     simpa [Measure.real_def] using limitIntegral
   exact (ENNReal.toReal_eq_one_iff _).mp toReal_eq_one
+
+/-- Finiteness of the common limit is a consequence of its derived normalization. -/
+theorem limit_finite
+    {G : Type uG} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+    [CompactSpace G] [T2Space G] [SecondCountableTopology G]
+    [MeasurableSpace G] [BorelSpace G] [MeasurableMul₂ G] [MeasurableInv G]
+    {spacing : PositiveLatticeSpacing} {action : TwoDimensionalLatticeActionData G}
+    (data : TwoDimensionalDriverAxialWeakLimitData spacing action) :
+    data.limitMeasure univ ≠ ⊤ := by
+  rw [data.limit_normalized]
+  exact ENNReal.one_ne_top
+
+/-- Exact normalization derives finiteness of both the conditioned sequence and its common limit;
+test convergence then reconstructs the full weak-convergence predicate for every boundary. -/
+theorem weak_limit_independent_of_boundary
+    {G : Type uG} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+    [CompactSpace G] [T2Space G] [SecondCountableTopology G]
+    [MeasurableSpace G] [BorelSpace G] [MeasurableMul₂ G] [MeasurableInv G]
+    {spacing : PositiveLatticeSpacing} {action : TwoDimensionalLatticeActionData G}
+    (data : TwoDimensionalDriverAxialWeakLimitData spacing action)
+    (boundary : EpsilonSquareLatticeAxialConfiguration G spacing) :
+    WeaklyConvergesFiniteMeasures
+      (fun stage => twoDimensionalSquareLatticeConditionedAxialMeasure
+        spacing (driverFiniteVolumeRadius stage) action boundary)
+      data.limitMeasure where
+  sequence_finite := by
+    intro stage
+    rw [twoDimensionalSquareLatticeConditionedAxialMeasure.apply_univ]
+    exact ENNReal.one_ne_top
+  limit_finite := data.limit_finite
+  tendsto_integral := data.bounded_continuous_convergence boundary
 
 /-- Every two boundary conditions converge weakly to the same designated limit measure. -/
 theorem boundary_pair

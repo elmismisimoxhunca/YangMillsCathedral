@@ -102,7 +102,7 @@ theorem exact_boundary_independence
         data.limitMeasure :=
   data.boundary_pair first second
 
-/-- Each boundary sequence is finite by exact normalization; limit finiteness is stored only once. -/
+/-- Each boundary sequence and the common limit are finite by derived normalization. -/
 theorem exact_weak_finiteness
     (data : TwoDimensionalDriverAxialWeakLimitData spacing action)
     (boundary : EpsilonSquareLatticeAxialConfiguration G spacing) :

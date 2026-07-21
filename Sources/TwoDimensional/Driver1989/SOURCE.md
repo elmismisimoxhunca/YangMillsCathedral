@@ -121,7 +121,7 @@ countable-product Borel identification now derive the complete continuous-test c
 uninhabited full
 Theorem 7.2 axial contract: every boundary-conditioned sequence must converge on all structured
 tests to one measure. Exact conditioned-law normalization derives sequence finiteness, limit
-finiteness is required once, and limit normalization is derived from normalized conditioned laws and
+and constant-one convergence derives limit normalization and finiteness from normalized conditioned laws and
 the constant-one weak mass test, and that measure must equal every free finite law on all eligible
 `Bₙ` observables as in (7.6). For §8, the punctured `ε → 0⁺` filter and exact spacing-indexed Villain/Wilson families retain the
 unchanged `Q_{ε²}` chain or one fixed actual trace representation/normalizer; Theorem 8.10
