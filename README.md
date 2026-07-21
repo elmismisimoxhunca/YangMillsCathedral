@@ -766,9 +766,11 @@ while strict positivity and product-Haar normalization make its exact partition 
 Thus every box has a constructed finite/nonzero normalizer certificate, normalized nonzero finite-
 coordinate measure, and normalized nonzero same-extension pushforward. Successor-radius coordinate and plaquette inclusions are now constructed literally, with exact
 bond/plaquette retention and measurable coordinate restriction. An uninhabited box-projectivity
-datum requires the successor box measure to push forward exactly to the smaller box measure. No
-compatible family is constructed, and no boundary-conditioned measure, weak limit, or lattice-
-continuum convergence is constructed.
+datum requires the successor box measure to push forward exactly to the smaller box measure. Driver's distinct finite-volume sets are also represented exactly: `Bₙ` consists of bonds with one
+endpoint in `Aₙ₋₁`, `B̄ₙ` consists of bonds with both endpoints in `Aₙ`, and boundary conditions
+freeze `Bₙᶜ`; nearest-neighbor geometry proves `Bₙ ⊆ B̄ₙ`, while a radius-one witness prevents
+collapsing the two sets. No compatible family is constructed, and no delta-conditioned measure,
+weak limit, or lattice-continuum convergence is constructed.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly

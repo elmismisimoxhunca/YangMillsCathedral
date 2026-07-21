@@ -817,7 +817,9 @@ committed before higher layers depend on it.
     carrier pushforward box measures.
   - [x] Construct exact successor-radius coordinate/plaquette inclusions and measurable restriction;
     state the uninhabited exact consecutive-box measure-pushforward obligation.
-  - [ ] Construct/derive box projectivity, add boundary-conditioned box measures and weak-limit
+  - [x] Define Driver's exact `Aₙ`, `Aₙ₋₁`, `Bₙ`, `B̄ₙ`, and frozen `Bₙᶜ` geometry; prove
+    `Bₙ ⊆ B̄ₙ` and hostilely distinguish the two bond sets.
+  - [ ] Construct/derive box projectivity, add delta-conditioned boundary measures and weak-limit
     semantics, compact-surface gluing, and lattice-continuum convergence with exact hypotheses, distinct from finite-cutoff, classical, and
     four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.

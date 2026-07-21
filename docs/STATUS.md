@@ -4699,8 +4699,11 @@ carrier. `epsilonSquareLatticeBoxCoordinateInclusion` and
 `epsilonSquareLatticeBoxPlaquetteInclusion` retain identical bonds/plaquettes at successor radius;
 the induced coordinate restriction is measurable. The uninhabited
 `TwoDimensionalSquareLatticeBoxProjectiveConsistencyData` requires exact pushforward of every
-successor box measure to its predecessor. No compatible family, boundary-conditioned box measure,
-weak limit, or continuum convergence witness is constructed.
+successor box measure to its predecessor. The boundary geometry now separately defines Driver's `Aₙ`, `Aₙ₋₁`, finite variable bonds `Bₙ`,
+outer bonds `B̄ₙ`, and frozen complement `Bₙᶜ`. Nearest-neighbor geometry proves `Bₙ ⊆ B̄ₙ`,
+and explicit radius-one witnesses distinguish the two sets and exhibit a genuinely frozen bond. No
+compatible family, delta-conditioned boundary measure, weak limit, or continuum convergence witness
+is constructed.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.
