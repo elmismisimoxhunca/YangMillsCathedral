@@ -4597,8 +4597,12 @@ components, x-axis cells, and areas; the simple-boundary record forgets to it wi
 such field. Uninhabited `TwoDimensionalBoundaryConnectedPlanarGraphData` then imposes literal
 connectedness of every bounded face frontier and exact continuous closed segmentwise ordered
 traversals realizing the bridge-aware words. This remains a conservative embedded-arc strengthening:
-Driver-permitted one-edge loop incidence requires subdivision. No instance is constructed. The BC
-face-product law and disconnected boundary/cut choices remain separate debt.
+Driver-permitted one-edge loop incidence requires subdivision. No instance is constructed. Uninhabited
+`TwoDimensionalBoundaryConnectedFaceProductLawData` now universally covers every measurable,
+integrable finite vertex-gauge-invariant complex function, ties it pointwise to an existing ambient
+physical observable through the unchanged selected paths, and requires Driver's exact product-Haar
+formula using the unchanged density at exact areas and bridge-aware words. The unit case derives
+normalization and nonzeroness. Disconnected boundary/cut choices remain separate debt.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

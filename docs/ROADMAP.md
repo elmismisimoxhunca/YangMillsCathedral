@@ -754,8 +754,11 @@ committed before higher layers depend on it.
     uninhabited strengthened embedded-arc BC certificate: literal connected face frontiers, exact
     frontier traces, and continuous closed segmentwise ordered traversals with legitimate bridge
     multiplicity. Retain the explicit edge-subdivision requirement for Driver-permitted loop incidence.
-  - [ ] State the corresponding BC face-product expectation law; after that add general disconnected-
-    boundary choice independence, refinement/projective consistency, compact-surface
+  - [x] State the corresponding uninhabited BC face-product law universally over every measurable,
+    integrable finite vertex-gauge-invariant complex graph function, with exact ambient-path
+    interpretation, unchanged area density, bridge-aware words, product Haar, and unit-derived
+    normalization.
+  - [ ] Add general disconnected-boundary choice independence, refinement/projective consistency, compact-surface
     gluing, and Driver's Villain/Wilson lattice-continuum convergence with exact hypotheses,
     distinct from finite-cutoff, classical, and four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.

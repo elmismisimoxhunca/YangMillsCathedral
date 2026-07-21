@@ -702,9 +702,12 @@ A boundary-neutral embedded geometry now factors the unchanged paths, conservati
 strengthening, endpoint-only intersections, exact complement components, x-axis cells, and areas.
 An uninhabited embedded BC certificate adds literal connectedness of every bounded face frontier and
 an exact continuous closed ordered traversal carrying the bridge-aware word. As before, Driver-
-permitted one-edge loop incidence must first be subdivided into embedded arcs. No graph or law
-instance is constructed. The corresponding BC face-product expectation law, general-boundary
-choices, refinement/gluing, and lattice-limit layers remain explicit debt.
+permitted one-edge loop incidence must first be subdivided into embedded arcs. No graph or law instance is constructed. An uninhabited BC face-product law now universally
+quantifies over every measurable, integrable finite vertex-gauge-invariant complex graph function,
+ties it to an existing ambient physical observable through the unchanged paths, and requires the
+exact product-Haar formula with unchanged densities at geometric areas and bridge-aware words. Its
+unit case derives normalization and nonzeroness. General-boundary choices, refinement/gluing, and
+lattice-limit layers remain explicit debt.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly

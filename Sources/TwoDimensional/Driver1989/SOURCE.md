@@ -46,8 +46,11 @@ states that its continuum holonomy expectation equals integration of that functi
 coordinate per bond weighted by the product, over bounded regions, of `Q` evaluated at geometric
 region area and boundary holonomy. The proof visibly identifies this theorem as the BC special case
 of Theorem 6.4. The project's measurable/integrable complex-valued qualification supplies the
-formal hypotheses needed by the Bochner integral; the current topological graph certificate is a
-Jordan-boundary subclass of BC, not Driver's full bridge-multiplicity scope.
+formal hypotheses needed by the Bochner integral. The project retains both a Jordan-boundary
+subclass and a separate strengthened embedded-arc BC interface with graph-theoretic bridge
+multiplicity and the corresponding uninhabited face-product law. The latter conservatively requires
+subdivision of Driver-permitted one-edge loop incidence; no graph or law instance is constructed.
+The general non-BC cut-choice scope of Theorem 6.4 remains separate.
 
 ## Artifact chain
 
