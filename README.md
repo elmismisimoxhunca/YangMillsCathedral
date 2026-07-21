@@ -664,8 +664,12 @@ requires Driver's exact `∂ₜQ=½ΔQ` sign and factor against that same Laplac
 process realization starts at the identity almost surely, has almost-surely continuous paths and
 mutually independent stationary right increments with those unchanged density laws. Its one-time
 marginals are derived, including exact equality at the selected area with the sampled loop-holonomy
-law. No density, solution, or process is constructed; the invariant-pairing-to-manifold-metric
-construction remains open before treating this as a completed source heat-kernel chain. No planar loop
+law. The metric bridge now transports the exact invariant pairing to every group tangent fiber by
+left Maurer–Cartan trivialization and proves its inverse, symmetry, strict positivity, and left/right
+invariance with the exact `Ad(h⁻¹)` convention. No density, solution, or process is constructed;
+dependent-section smoothness, von Neumann bounded unit ellipsoids, full
+`ContMDiffRiemannianMetric` packaging, and Laplace–Beltrami comparison remain open before treating
+this as a completed source heat-kernel chain. No planar loop
 embedding, heat kernel, measure, or model is constructed;
 general face products, refinement/gluing, and lattice-limit layers remain explicit debt.
 

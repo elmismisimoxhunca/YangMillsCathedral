@@ -712,9 +712,14 @@ committed before higher layers depend on it.
   - [x] Add an uninhabited continuous-path group process with exact identity start, mutually
     independent stationary right increments having the unchanged density laws, derived one-time
     marginals, and exact selected-area equality with the sampled loop-holonomy law.
-  - [ ] Construct the invariant-pairing-to-manifold-metric bridge; then add finite planar
-    graph/face-product laws and refinement/projective consistency, compact-surface gluing, and
-    Driver's Villain/Wilson lattice-continuum convergence
+  - [x] Transport the exact invariant pairing pointwise by left Maurer–Cartan trivialization; prove
+    its inverse, symmetry, strict positivity, exact left/right translation formulas, and
+    bi-invariance with the required `Ad(h⁻¹)` convention.
+  - [ ] Prove finite-dimensional von Neumann boundedness of the positive quadratic unit ellipsoids
+    and smoothness of the dependent bilinear-form section, then assemble the actual
+    `ContMDiffRiemannianMetric` and compare its Laplace–Beltrami operator with the basis sum; after
+    that add finite planar graph/face-product laws, refinement/projective consistency, compact-
+    surface gluing, and Driver's Villain/Wilson lattice-continuum convergence
     with exact hypotheses, distinct from finite-cutoff, classical, and four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.
   - [x] Add a current-strength continuum core hard-wired to coordinate `ℝ³` with coordinate

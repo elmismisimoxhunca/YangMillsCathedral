@@ -4537,11 +4537,19 @@ an independent process sample carrier. The same process starts at the group iden
 has almost-surely continuous `NNReal`-time paths, and has mutually independent consecutive right
 increments; every positive increment is assigned the unchanged normalized-Haar density law. The
 one-time marginal is derived from the identity start and stationary increment rather than stored
-again. Each fixed-time coordinate is measurable; joint `NNReal × Ω` measurability is not yet claimed. At the selected positive area, that marginal is proved exactly equal to the sampled loop-
+again. Each fixed-time coordinate is measurable; joint `NNReal × Ω` measurability is not yet
+claimed. At the selected positive area, that marginal is proved exactly equal to the sampled loop-
 holonomy pushforward from the original gauge-fixed continuum nucleus. No process or Brownian motion
-is constructed. The invariant-pairing-to-manifold-metric construction remains open before this is a
-complete source heat-kernel chain. No planar embedding, simplicity theorem, YM measure, general
-face product, refinement, gluing, or lattice-limit theorem is constructed.
+is constructed.
+
+The pointwise metric bridge now makes the previously private inverse of left Maurer–Cartan
+trivialization public and constructs `lieGroupInvariantMetricInner` by precomposing both slots of the
+exact invariant pairing. Symmetry and strict positivity are derived. Fixed left translation leaves
+coefficients unchanged; fixed right translation gives exactly `Ad(h⁻¹)`, so the same adjoint-
+invariance field derives bi-invariance. This still is not a Mathlib Riemannian metric: smoothness of
+the dependent continuous-bilinear section, von Neumann boundedness of its unit ellipsoids, and the
+Laplace–Beltrami comparison remain open. No planar embedding, simplicity theorem, YM measure,
+general face product, refinement, gluing, or lattice-limit theorem is constructed.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.
