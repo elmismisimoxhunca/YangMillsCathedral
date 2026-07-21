@@ -92,8 +92,9 @@ boundary, Driver's path-product order, and measurable everywhere-nonzero finite 
 common action over their holonomies. Generic finite axial presentations now select orientation-
 disjoint off-tree bonds, use injective measurable finite-support extensions, require every selected
 plaquette's non-tree boundary bonds to be represented in one of the two coordinate orientations, and
-define exact product-
-Haar partition functions and normalized finite density measures. These are groundwork for
+define exact product-Haar partition functions and normalized finite density measures. The same
+measurable extensions push these laws to normalized nonzero measures on the exact infinite axial
+carrier with exact represented-coordinate marginals. These are groundwork for
 (7.2)/(7.4), not exact square boxes. Exact box families, boundary-condition/infinite-volume limits,
 and convergence remain explicit debt.
 

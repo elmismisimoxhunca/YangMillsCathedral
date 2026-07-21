@@ -197,7 +197,9 @@ adjudication corrections.
    presentations now define exact partition functions and normalized finite product-Haar density
    measures from orientation-disjoint off-tree coordinates, measurable finite-support extensions,
    and complete selected-plaquette non-tree boundary-coordinate coverage;
-   they are explicitly not yet Driver's square boxes or infinite-volume limits.
+   their same-extension pushforwards are normalized nonzero measures on the exact infinite axial
+   carrier with represented-coordinate marginal identities. They are explicitly not yet Driver's
+   square boxes or infinite-volume limits.
 11. Lévy PDF pp. 24–27 / printed pp. 10–13 were visually adjudicated on 2026-07-21 for §1.6,
    Theorem 1.6.1 and Lemma 1.6.3. The pages visibly define the fine-to-coarse holonomy map, state
    surjectivity and exact measure pushforward, and state strict three-graph composition. The Lean

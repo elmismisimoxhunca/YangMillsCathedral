@@ -803,7 +803,8 @@ committed before higher layers depend on it.
   - [x] Add generic finite axial presentations with orientation-disjoint off-tree coordinates,
     measurable finite-support extension, actual plaquettes with complete non-tree boundary-coordinate
     coverage, exact partition functions, and derived
-    normalized/nonzero finite product-Haar density measures.
+    normalized/nonzero finite product-Haar density measures, their exact finite-support pushforwards
+    to the infinite axial carrier, and represented-coordinate marginal identities.
   - [ ] Add exact square-box families, boundary-condition and infinite-volume cylinder limits,
     compact-surface gluing, and lattice-continuum convergence with exact hypotheses, distinct from finite-cutoff, classical, and
     four-dimensional witnesses.

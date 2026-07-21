@@ -4676,7 +4676,10 @@ in one of the two coordinate orientations, blocking disconnected constant-action
 function are definitions; `TwoDimensionalFiniteAxialNormalizerData` certifies that exact value is
 nonzero and finite, from which the normalized nonzero finite axial measure is derived. A concrete
 unit-group one-coordinate/one-plaquette presentation and normalizer inhabit the API without
-constructing a nontrivial field. No exact square-box sequence, boundary-condition limit, infinite-
+constructing a nontrivial field. `twoDimensionalFiniteAxialPushforwardMeasure` maps that same
+normalized law through the stored measurable extension to the exact infinite axial carrier; total
+mass one, nonzeroness, and every represented-bond coordinate marginal are derived. This is still a
+finite-support pushforward. No exact square-box sequence, boundary-condition limit, infinite-
 volume measure, or continuum convergence witness is constructed.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary

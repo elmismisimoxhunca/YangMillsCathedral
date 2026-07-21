@@ -750,8 +750,10 @@ Definition 7.1 action on the axial carrier. A finite axial presentation now sele
 them through an exact measurable finite-support extension, and selects actual elementary plaquettes whose every non-tree boundary bond is represented in one
 of the two coordinate orientations. Its action weight, exact partition function, and normalized finite product-Haar density
 measure are defined; total mass one and nonzeroness derive from finiteness/nonvanishing of that same
-partition function. This is not yet an exact square-box family, boundary-condition limit, infinite-
-volume lattice measure, or convergence theorem.
+partition function. The same measurable extension now pushes each normalized finite law to an actual normalized,
+nonzero measure on the exact infinite axial carrier, with exact represented-bond coordinate
+marginals. This remains a finite-support pushforward, not an exact square-box family, boundary-
+condition limit, infinite-volume lattice measure, or convergence theorem.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly
