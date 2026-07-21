@@ -731,6 +731,9 @@ committed before higher layers depend on it.
   - [x] Construct the reusable finite product of canonical normalized Haar probability over one
     coordinate per underlying edge; derive exact marginals and preservation by every endpoint gauge
     action.
+  - [x] Prove measurability of finite oriented-word holonomy and finite products of supplied
+    nonnegative density slices; construct the generic product-Haar `withDensity` carrier while
+    retaining the face-free endpoint and making no normalization or planarity claim.
   - [ ] Compare the metric's Laplace–Beltrami operator with the basis sum.
   - [ ] Construct exact finite planar embeddings/complement-face certificates and BC-graph
     face-product laws; then add general disconnected-boundary choice independence,

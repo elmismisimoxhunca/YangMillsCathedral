@@ -679,8 +679,10 @@ per underlying edge, inversion under reversal, and Driver's later-on-the-left tr
 Oriented endpoints now derive target-left/source-right-inverse vertex-gauge covariance, cancellation
 at every internal vertex of a composable word, and start-vertex conjugation for a closed word. The
 finite product of one canonical normalized Haar probability per underlying edge is constructed,
-with exact marginals and endpoint-gauge invariance. This is reusable algebra/measure theory, not a
-planar graph certificate or face law. No planar loop embedding, heat kernel, planar/Yang–Mills
+with exact marginals and endpoint-gauge invariance. Finite word holonomy and finite products of
+supplied nonnegative density slices are proved measurable, yielding the generic product-Haar
+`withDensity` carrier; no normalization is inferred for arbitrary words. This is reusable
+algebra/measure theory, not a planar graph certificate or face law. No planar loop embedding, heat kernel, planar/Yang–Mills
 measure, or model is constructed; actual complement-face geometry, general face products,
 refinement/gluing, and lattice-limit layers remain explicit debt.
 

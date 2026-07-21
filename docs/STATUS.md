@@ -4563,8 +4563,12 @@ reversing a word gives inverse holonomy. Exact oriented endpoints define the tar
 gauge action; composability cancels all internal gauge factors, leaving endpoint covariance and
 start-vertex conjugation for a closed word. The exact finite product of canonical normalized Haar
 probability over those underlying edges is constructed; its edge marginals are Haar and every exact
-endpoint gauge action preserves it. This is finite algebra and measure theory only: no arbitrary
-`Face` type is misrepresented as an actual planar complement component.
+endpoint gauge action preserves it. Finite oriented-word holonomy is measurable, as is every finite
+product of supplied measurable nonnegative density slices; this defines a generic product-Haar
+`withDensity` carrier. Arbitrary finite face labels/words do not imply normalization, and the
+face-free finite endpoint reduces exactly to unweighted product Haar. This is finite algebra and
+measure theory only: no arbitrary `Face` type is misrepresented as an actual planar complement
+component.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.
