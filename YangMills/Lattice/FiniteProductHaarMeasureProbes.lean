@@ -17,6 +17,7 @@ No compact gauge-group certificate, potential measurability datum, or Gibbs theo
 namespace YangMills.Lattice.FiniteProductHaarMeasure.Probes
 
 open MeasureTheory
+open YangMills.Mathematics
 
 variable
     {d : EuclideanDimension} {Λ : FinitePeriodicLattice}
