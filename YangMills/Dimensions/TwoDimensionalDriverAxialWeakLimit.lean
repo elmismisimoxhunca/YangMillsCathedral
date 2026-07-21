@@ -67,6 +67,117 @@ theorem continuous_apply
 
 end EpsilonSquareLatticeAxialConfiguration
 
+/-- The coordinate map is a closed embedding: reverse compatibility is the intersection of
+closed coordinate equalizers. -/
+theorem epsilonSquareLatticeConfiguration_isClosedEmbedding
+    {G : Type uG} [Group G] [TopologicalSpace G] [IsTopologicalGroup G] [T2Space G]
+    {spacing : PositiveLatticeSpacing} :
+    Topology.IsClosedEmbedding
+      (EpsilonSquareLatticeConfiguration.value (G := G) (spacing := spacing)) := by
+  let f := EpsilonSquareLatticeConfiguration.value (G := G) (spacing := spacing)
+  refine { eq_induced := rfl, injective := ?_, isClosed_range := ?_ }
+  · intro x y equality
+    cases x with
+    | mk xValue xReverse =>
+      cases y with
+      | mk yValue yReverse =>
+        change xValue = yValue at equality
+        subst yValue
+        rfl
+  · have range_eq : Set.range f =
+        ⋂ bond, {value : EpsilonSquareLatticeDirectedBond spacing → G |
+          value bond.reverse = (value bond)⁻¹} := by
+      ext value
+      simp only [Set.mem_range, Set.mem_iInter, Set.mem_setOf_eq]
+      constructor
+      · rintro ⟨configuration, rfl⟩ bond
+        exact configuration.reverse_value bond
+      · intro reverseValue
+        exact ⟨⟨value, reverseValue⟩, rfl⟩
+    rw [range_eq]
+    exact isClosed_iInter fun bond =>
+      isClosed_eq (_root_.continuous_apply bond.reverse)
+        ((_root_.continuous_apply bond).inv)
+
+/-- Reverse-compatible configurations inherit compactness from the compact coordinate product. -/
+instance epsilonSquareLatticeConfigurationCompactSpace
+    {G : Type uG} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+    [CompactSpace G] [T2Space G]
+    {spacing : PositiveLatticeSpacing} :
+    CompactSpace (EpsilonSquareLatticeConfiguration G spacing) :=
+  epsilonSquareLatticeConfiguration_isClosedEmbedding.compactSpace
+
+/-- The exact axial carrier is closedly embedded in the reverse-compatible configuration carrier. -/
+theorem epsilonSquareLatticeAxialConfiguration_isClosedEmbedding
+    {G : Type uG} [Group G] [TopologicalSpace G] [IsTopologicalGroup G] [T2Space G]
+    {spacing : PositiveLatticeSpacing} :
+    Topology.IsClosedEmbedding
+      (EpsilonSquareLatticeAxialConfiguration.configuration (G := G) (spacing := spacing)) := by
+  let f := EpsilonSquareLatticeAxialConfiguration.configuration
+    (G := G) (spacing := spacing)
+  refine { eq_induced := rfl, injective := ?_, isClosed_range := ?_ }
+  · intro x y equality
+    cases x with
+    | mk xConfiguration xFixed =>
+      cases y with
+      | mk yConfiguration yFixed =>
+        change xConfiguration = yConfiguration at equality
+        subst yConfiguration
+        rfl
+  · have range_eq : Set.range f =
+        ⋂ (bond : EpsilonSquareLatticeDirectedBond spacing),
+          ⋂ (_tree : epsilonSquareLatticeIsAxialTreeBond bond),
+            {configuration : EpsilonSquareLatticeConfiguration G spacing |
+              configuration bond = 1} := by
+      ext configuration
+      simp only [Set.mem_range, Set.mem_iInter, Set.mem_setOf_eq]
+      constructor
+      · rintro ⟨axial, rfl⟩ bond tree
+        exact axial.axialTree_fixed bond tree
+      · intro fixed
+        exact ⟨⟨configuration, fixed⟩, rfl⟩
+    rw [range_eq]
+    exact isClosed_iInter fun bond => isClosed_iInter fun _tree =>
+      isClosed_eq (EpsilonSquareLatticeConfiguration.continuous_apply bond) continuous_const
+
+/-- For the countable lattice bond carrier, the induced measurable space on reverse-compatible
+configurations is exactly Borel whenever the group topology is second countable. -/
+instance epsilonSquareLatticeConfigurationBorelSpace
+    {G : Type uG} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+    [T2Space G] [MeasurableSpace G] [BorelSpace G] [SecondCountableTopology G]
+    {spacing : PositiveLatticeSpacing} :
+    BorelSpace (EpsilonSquareLatticeConfiguration G spacing) := by
+  let f := EpsilonSquareLatticeConfiguration.value (G := G) (spacing := spacing)
+  have closedEmbedding : Topology.IsClosedEmbedding f :=
+    epsilonSquareLatticeConfiguration_isClosedEmbedding
+  have measurableEmbedding : MeasurableEmbedding f :=
+    MeasurableEmbedding.iff_comap_eq.mpr
+      ⟨closedEmbedding.injective, rfl, closedEmbedding.isClosed_range.measurableSet⟩
+  exact measurableEmbedding.borelSpace closedEmbedding.isInducing
+
+/-- Axial gauge fixing inherits compactness as a closed condition. -/
+instance epsilonSquareLatticeAxialConfigurationCompactSpace
+    {G : Type uG} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+    [CompactSpace G] [T2Space G]
+    {spacing : PositiveLatticeSpacing} :
+    CompactSpace (EpsilonSquareLatticeAxialConfiguration G spacing) :=
+  epsilonSquareLatticeAxialConfiguration_isClosedEmbedding.compactSpace
+
+/-- Under the same countability hypothesis, the existing axial comap measurable space is Borel. -/
+instance epsilonSquareLatticeAxialConfigurationBorelSpace
+    {G : Type uG} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+    [T2Space G] [MeasurableSpace G] [BorelSpace G] [SecondCountableTopology G]
+    {spacing : PositiveLatticeSpacing} :
+    BorelSpace (EpsilonSquareLatticeAxialConfiguration G spacing) := by
+  let f := EpsilonSquareLatticeAxialConfiguration.configuration
+    (G := G) (spacing := spacing)
+  have closedEmbedding : Topology.IsClosedEmbedding f :=
+    epsilonSquareLatticeAxialConfiguration_isClosedEmbedding
+  have measurableEmbedding : MeasurableEmbedding f :=
+    MeasurableEmbedding.iff_comap_eq.mpr
+      ⟨closedEmbedding.injective, rfl, closedEmbedding.isClosed_range.measurableSet⟩
+  exact measurableEmbedding.borelSpace closedEmbedding.isInducing
+
 /-- Positive box radius `N+1` used to index Driver's boundary-conditioned sequence by naturals. -/
 def driverFiniteVolumeRadius (stage : ℕ) : PositiveSquareLatticeBoxRadius :=
   ⟨stage + 1, Nat.zero_lt_succ stage⟩
@@ -89,16 +200,10 @@ def TwoDimensionalAxialObservableDependsOnFiniteVolume
 /-- Source-facing acceptance surface for the gauge-fixed assertions of Driver Theorem 7.2. -/
 structure TwoDimensionalDriverAxialWeakLimitData
     {G : Type uG} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
-    [CompactSpace G] [T2Space G] [MeasurableSpace G] [BorelSpace G]
-    [MeasurableMul₂ G] [MeasurableInv G]
+    [CompactSpace G] [T2Space G] [SecondCountableTopology G]
+    [MeasurableSpace G] [BorelSpace G] [MeasurableMul₂ G] [MeasurableInv G]
     (spacing : PositiveLatticeSpacing)
     (action : TwoDimensionalLatticeActionData G) : Type uG where
-  continuous_test_coverage :
-    ∀ observable : EpsilonSquareLatticeAxialConfiguration G spacing → ℝ,
-      Continuous observable →
-      ∃ test : BoundedContinuousRealFunction
-          (EpsilonSquareLatticeAxialConfiguration G spacing),
-        test.toFun = observable
   limitMeasure : Measure (EpsilonSquareLatticeAxialConfiguration G spacing)
   weak_limit_independent_of_boundary :
     ∀ boundary : EpsilonSquareLatticeAxialConfiguration G spacing,
@@ -118,12 +223,27 @@ structure TwoDimensionalDriverAxialWeakLimitData
 
 namespace TwoDimensionalDriverAxialWeakLimitData
 
+/-- Countable-product Borel identification and compactness of the exact closed axial carrier derive
+all structured continuous-test coverage. -/
+theorem continuous_test_coverage
+    {G : Type uG} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+    [CompactSpace G] [T2Space G] [SecondCountableTopology G]
+    [MeasurableSpace G] [BorelSpace G] [MeasurableMul₂ G] [MeasurableInv G]
+    {spacing : PositiveLatticeSpacing} {action : TwoDimensionalLatticeActionData G}
+    (_data : TwoDimensionalDriverAxialWeakLimitData spacing action)
+    (observable : EpsilonSquareLatticeAxialConfiguration G spacing → ℝ)
+    (continuous : Continuous observable) :
+    ∃ test : BoundedContinuousRealFunction
+        (EpsilonSquareLatticeAxialConfiguration G spacing),
+      test.toFun = observable := by
+  exact ⟨BoundedContinuousRealFunction.ofContinuous observable continuous, rfl⟩
+
 /-- Weak convergence of normalized conditioned laws derives normalization of the designated common
 limit through the constant-one mass test. -/
 theorem limit_normalized
     {G : Type uG} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
-    [CompactSpace G] [T2Space G] [MeasurableSpace G] [BorelSpace G]
-    [MeasurableMul₂ G] [MeasurableInv G]
+    [CompactSpace G] [T2Space G] [SecondCountableTopology G]
+    [MeasurableSpace G] [BorelSpace G] [MeasurableMul₂ G] [MeasurableInv G]
     {spacing : PositiveLatticeSpacing} {action : TwoDimensionalLatticeActionData G}
     (data : TwoDimensionalDriverAxialWeakLimitData spacing action) :
     data.limitMeasure univ = 1 := by
@@ -153,8 +273,8 @@ theorem limit_normalized
 /-- Every two boundary conditions converge weakly to the same designated limit measure. -/
 theorem boundary_pair
     {G : Type uG} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
-    [CompactSpace G] [T2Space G] [MeasurableSpace G] [BorelSpace G]
-    [MeasurableMul₂ G] [MeasurableInv G]
+    [CompactSpace G] [T2Space G] [SecondCountableTopology G]
+    [MeasurableSpace G] [BorelSpace G] [MeasurableMul₂ G] [MeasurableInv G]
     {spacing : PositiveLatticeSpacing} {action : TwoDimensionalLatticeActionData G}
     (data : TwoDimensionalDriverAxialWeakLimitData spacing action)
     (first second : EpsilonSquareLatticeAxialConfiguration G spacing) :

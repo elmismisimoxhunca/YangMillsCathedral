@@ -17,6 +17,11 @@ noncomputable section
 
 variable {spacing : PositiveLatticeSpacing}
 
+/-- The exact directed-bond carrier is countable through its integer source/target coordinates. -/
+theorem directed_bond_countable :
+    Countable (EpsilonSquareLatticeDirectedBond spacing) :=
+  inferInstance
+
 /-- A concrete vertical nearest-neighbor bond. -/
 def verticalBond : EpsilonSquareLatticeDirectedBond spacing where
   source := (0, 1)

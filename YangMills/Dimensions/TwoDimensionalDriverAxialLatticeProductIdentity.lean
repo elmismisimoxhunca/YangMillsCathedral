@@ -82,8 +82,8 @@ theorem twoDimensionalLatticeActionConvolutionPower_measurable
 
 variable
     {G : Type uG} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
-    [CompactSpace G] [T2Space G] [MeasurableSpace G] [BorelSpace G]
-    [MeasurableMul₂ G] [MeasurableInv G]
+    [CompactSpace G] [T2Space G] [SecondCountableTopology G]
+    [MeasurableSpace G] [BorelSpace G] [MeasurableMul₂ G] [MeasurableInv G]
     {Gauge : Type uGauge} [Group Gauge]
     {Sample : Type uSample} [MeasurableSpace Sample]
     {Connection : Type uConnection}
@@ -123,7 +123,7 @@ def twoDimensionalFineEnlargedActionDensityProduct
       (finiteOrientedWordHolonomy configuration
         ((faceGeometry.latticeEnlargement.fineBoundaryConnected spacing).boundaryWord face))
 
-omit [T2Space G] in
+omit [T2Space G] [SecondCountableTopology G] in
 /-- The exact fine-face action product is measurable, derived from action continuity, measurable
 normalized-Haar convolution, and finite-word holonomy. -/
 theorem twoDimensionalFineEnlargedActionDensityProduct_measurable

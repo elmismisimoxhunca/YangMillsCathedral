@@ -37,11 +37,12 @@ namespace BoundedContinuousRealFunction
 
 variable {Ω : Type uΩ} [MeasurableSpace Ω] [TopologicalSpace Ω]
 
-/-- On a compact Borel space, every continuous real function canonically supplies the explicit
-measurability and global bound required by the weak-convergence test carrier. -/
-noncomputable def ofContinuous
-    [BorelSpace Ω] [CompactSpace Ω]
-    (f : Ω → ℝ) (hf : Continuous f) : BoundedContinuousRealFunction Ω := by
+/-- On a compact space, an explicitly measurable continuous real function canonically supplies
+the global bound required by the weak-convergence test carrier. -/
+noncomputable def ofContinuousMeasurable
+    [CompactSpace Ω]
+    (f : Ω → ℝ) (hf : Continuous f) (hm : Measurable f) :
+    BoundedContinuousRealFunction Ω := by
   have bounded : Bornology.IsBounded (f '' (Set.univ : Set Ω)) :=
     (isCompact_univ.image hf).isBounded
   let radius : ℝ := Classical.choose (bounded.subset_closedBall 0)
@@ -50,13 +51,27 @@ noncomputable def ofContinuous
   exact {
     toFun := f
     continuous_toFun := hf
-    measurable_toFun := hf.measurable
+    measurable_toFun := hm
     bound := radius
     abs_le_bound := fun x => by
       have member : f x ∈ Metric.closedBall (0 : ℝ) radius :=
         subset ⟨x, Set.mem_univ x, rfl⟩
       simpa [Metric.mem_closedBall, Real.dist_eq] using member
   }
+
+@[simp]
+theorem ofContinuousMeasurable_toFun
+    [CompactSpace Ω]
+    (f : Ω → ℝ) (hf : Continuous f) (hm : Measurable f) :
+    (ofContinuousMeasurable f hf hm).toFun = f :=
+  rfl
+
+/-- On a compact Borel space, continuity supplies measurability as well as the canonical explicit
+global bound. -/
+noncomputable def ofContinuous
+    [BorelSpace Ω] [CompactSpace Ω]
+    (f : Ω → ℝ) (hf : Continuous f) : BoundedContinuousRealFunction Ω :=
+  ofContinuousMeasurable f hf hf.measurable
 
 @[simp]
 theorem ofContinuous_toFun

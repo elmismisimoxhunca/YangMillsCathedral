@@ -215,8 +215,10 @@ adjudication corrections.
    axial boundary data on `Bₙᶜ` are constructed. `J(Bₙ)` is defined by literal boundary incidence
    and proved exactly equal to the full box plaquette set. The exact (7.2) density, finite/nonzero
    boundary-dependent normalizer, normalized finite/pushforward laws, and almost-sure `Bₙᶜ`
-   retention are constructed. A genuinely-finite measurable bounded-continuous convergence predicate, all-continuous-test coverage bridge, and uninhabited full
-   Theorem 7.2 axial contract require a common normalized boundary-independent limit and every free
+   retention are constructed. A genuinely-finite measurable bounded-continuous convergence predicate,
+   closed/compact exact carriers, countable-product Borel identification, derived all-continuous-test
+   coverage, and an uninhabited full Theorem 7.2 axial contract require a common
+   boundary-independent finite limit whose normalization is derived and every free
    `Bₙ` expectation. The exact `ε → 0⁺` filter and spacing-indexed Villain/Wilson families retain
    `Q_{ε²}` or one fixed actual trace representation, with Theorem 8.10 faithfulness as injectivity.
    Definition 8.1 fine edges now have a strengthened exact directed-bond-word interface tied to every

@@ -23,7 +23,8 @@ attribute [local instance]
 
 variable
     {G : Type uG} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
-    [CompactSpace G] [T2Space G] [MeasurableSpace G] [BorelSpace G]
+    [CompactSpace G] [T2Space G] [SecondCountableTopology G]
+    [MeasurableSpace G] [BorelSpace G]
     [MeasurableMul₂ G] [MeasurableInv G]
     {Gauge : Type uGauge} [Group Gauge] {Sample : Type uSample} [MeasurableSpace Sample]
     {Connection : Type uConnection}
@@ -45,33 +46,33 @@ variable
       (enlargedApproximation := enlargedApproximation)}
     {actionAt : PositiveLatticeSpacing → TwoDimensionalLatticeActionData G}
 
-omit [T2Space G] [MeasurableMul₂ G] [MeasurableInv G] in
+omit [T2Space G] [SecondCountableTopology G] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Continuity of every lattice action derives measurability of its `ENNReal` density. -/
 theorem exact_action_density_measurable (spacing : PositiveLatticeSpacing) :
     Measurable (twoDimensionalLatticeActionENNRealDensity (actionAt spacing)) :=
   twoDimensionalLatticeActionENNRealDensity_measurable (actionAt spacing)
 
-omit [T2Space G] in
+omit [T2Space G] [SecondCountableTopology G] in
 /-- Every repeated normalized-Haar convolution power remains measurable. -/
 theorem exact_convolution_power_measurable
     (spacing : PositiveLatticeSpacing) (n : ℕ) :
     Measurable (twoDimensionalLatticeActionConvolutionPower (actionAt spacing) n) :=
   twoDimensionalLatticeActionConvolutionPower_measurable (actionAt spacing) n
 
-omit [T2Space G] in
+omit [T2Space G] [SecondCountableTopology G] in
 /-- The whole certified finite-face action product is measurably derived. -/
 theorem exact_fine_density_measurable (spacing : PositiveLatticeSpacing) :
     Measurable (twoDimensionalFineEnlargedActionDensityProduct faceGeometry actionAt spacing) :=
   twoDimensionalFineEnlargedActionDensityProduct_measurable faceGeometry actionAt spacing
 
-omit [T2Space G] [MeasurableMul₂ G] [MeasurableInv G] in
+omit [T2Space G] [SecondCountableTopology G] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- The zero recursion index means exactly one action factor, never an identity-function surrogate. -/
 theorem exact_one_factor (spacing : PositiveLatticeSpacing) (g : G) :
     twoDimensionalLatticeActionConvolutionPower (actionAt spacing) 0 g =
       ENNReal.ofReal ((actionAt spacing).action g) :=
   rfl
 
-omit [T2Space G] [MeasurableMul₂ G] [MeasurableInv G] in
+omit [T2Space G] [SecondCountableTopology G] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- The successor recursion uses Driver's fixed normalized-Haar `x⁻¹z` convolution orientation. -/
 theorem exact_successor_orientation (spacing : PositiveLatticeSpacing) (n : ℕ) (g : G) :
     twoDimensionalLatticeActionConvolutionPower (actionAt spacing) (n + 1) g =
@@ -104,7 +105,7 @@ theorem exact_fine_coarse_restriction
         configuration (coarseApproximation.edgeMap spacing edge) :=
   rfl
 
-omit [T2Space G] [MeasurableMul₂ G] [MeasurableInv G] in
+omit [T2Space G] [SecondCountableTopology G] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- The face density uses the certified fine BC word, not an unrelated loop. -/
 theorem exact_fine_boundary_density
     (spacing : PositiveLatticeSpacing)
@@ -129,7 +130,7 @@ theorem changed_fine_restriction_blocked
         configuration (coarseApproximation.edgeMap spacing edge)) : False :=
   changed rfl
 
-omit [T2Space G] [MeasurableMul₂ G] [MeasurableInv G] in
+omit [T2Space G] [SecondCountableTopology G] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Replacing the certified BC boundary word in the density is hostilely rejected. -/
 theorem changed_fine_boundary_density_blocked
     (spacing : PositiveLatticeSpacing)
@@ -144,7 +145,7 @@ theorem changed_fine_boundary_density_blocked
     False :=
   changed rfl
 
-omit [T2Space G] [MeasurableMul₂ G] [MeasurableInv G] in
+omit [T2Space G] [SecondCountableTopology G] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- The `VB(ε)` measure is literally a density over the exact tree-frozen product Haar carrier. -/
 theorem exact_fine_measure (spacing : PositiveLatticeSpacing) :
     twoDimensionalFineEnlargedActionMeasure faceGeometry actionAt spacing =

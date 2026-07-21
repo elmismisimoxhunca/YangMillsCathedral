@@ -116,7 +116,9 @@ to the complete `2n × 2n` box plaquette set, with hostile omission/disconnectio
 extension. Strict positivity and compactness prove the boundary-dependent normalizer nonzero and
 finite, yielding normalized nonzero finite-coordinate and infinite-carrier pushforward laws with
 almost-sure `Bₙᶜ` retention. A genuinely-finite convergence predicate over measurable bounded-continuous tests, natural axial
-product topology, and explicit all-continuous-test coverage bridge now support an uninhabited full
+product topology, closed-embedding derivations of compactness for both exact infinite carriers, and a
+countable-product Borel identification now derive the complete continuous-test coverage for an
+uninhabited full
 Theorem 7.2 axial contract: every boundary-conditioned sequence must
 converge to one finite measure; its normalization is now derived from normalized conditioned laws and
 the constant-one weak mass test, and that measure must equal every free finite law on all eligible

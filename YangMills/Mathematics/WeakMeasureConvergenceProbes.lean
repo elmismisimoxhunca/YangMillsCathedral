@@ -16,6 +16,17 @@ universe uΩ
 
 variable {Ω : Type uΩ} [MeasurableSpace Ω] [TopologicalSpace Ω]
 
+/-- Compactness derives the explicit global bound once measurability and continuity are supplied,
+without any Borel-space identification. -/
+theorem compact_continuous_measurable_coverage
+    [CompactSpace Ω]
+    (f : Ω → ℝ) (hf : Continuous f) (hm : Measurable f) :
+    ∃ test : BoundedContinuousRealFunction Ω,
+      test.toFun = f ∧ ∃ bound : ℝ, ∀ x, |test x| ≤ bound :=
+  ⟨BoundedContinuousRealFunction.ofContinuousMeasurable f hf hm, rfl,
+    ⟨(BoundedContinuousRealFunction.ofContinuousMeasurable f hf hm).bound,
+      (BoundedContinuousRealFunction.ofContinuousMeasurable f hf hm).abs_le_bound⟩⟩
+
 /-- Compactness derives the explicit bounded measurable test carrier from every continuous
 function; no separate coverage axiom is needed. -/
 theorem compact_continuous_coverage

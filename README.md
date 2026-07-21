@@ -781,8 +781,11 @@ partition function nonzero and finite, constructing normalized nonzero finite-co
 infinite-carrier pushforward laws. Every frozen bond equals its supplied boundary value almost
 surely. A reusable finite-measure convergence predicate using measurable bounded-continuous tests and the
 natural induced product topology on the exact axial carrier now support an uninhabited full
-Theorem 7.2 axial acceptance surface. It additionally requires every continuous real observable to admit an explicitly measurable bounded
-test representative, closing the topology/measurability and compact-boundedness bridge. Every
+Theorem 7.2 axial acceptance surface. Closed-embedding proofs now derive compactness of both the
+reverse-compatible infinite product carrier and its exact axial-fixed subcarrier. The directed-bond carrier is countable, so the existing comap measurable spaces are proved Borel
+under the source-faithful second-countability hypothesis. Consequently compactness and Borel
+measurability now derive every continuous observable's bounded structured test representative with
+no independent coverage field. Every
 boundary-conditioned sequence must converge to one finite measure; its normalization is now derived
 from normalized conditioned laws and the constant-one weak mass test, and that measure to agree with each free box law on every bounded
 continuous observable depending only on `Bₙ`. For §8, `positiveLatticeSpacingAtZero` fixes the literal `ε → 0⁺` filter and spacing-indexed action

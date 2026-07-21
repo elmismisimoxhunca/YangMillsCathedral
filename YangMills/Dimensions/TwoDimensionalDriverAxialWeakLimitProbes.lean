@@ -22,11 +22,13 @@ universe uG
 
 variable
     {G : Type uG} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
-    [CompactSpace G] [T2Space G] [MeasurableSpace G] [BorelSpace G]
+    [CompactSpace G] [T2Space G] [SecondCountableTopology G]
+    [MeasurableSpace G] [BorelSpace G]
     [MeasurableMul₂ G] [MeasurableInv G]
     (spacing : PositiveLatticeSpacing) (action : TwoDimensionalLatticeActionData G)
 
-omit [IsTopologicalGroup G] [CompactSpace G] [T2Space G] [MeasurableSpace G]
+omit [IsTopologicalGroup G] [CompactSpace G] [T2Space G] [SecondCountableTopology G]
+    [MeasurableSpace G]
     [BorelSpace G] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Bond evaluation is continuous in the exact induced product topology. -/
 theorem exact_coordinate_continuous (bond : EpsilonSquareLatticeDirectedBond spacing) :
@@ -34,8 +36,25 @@ theorem exact_coordinate_continuous (bond : EpsilonSquareLatticeDirectedBond spa
       configuration bond) :=
   EpsilonSquareLatticeAxialConfiguration.continuous_apply bond
 
+omit [SecondCountableTopology G] [MeasurableSpace G] [BorelSpace G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Reverse compatibility and axial fixing are closed conditions, so both exact infinite product
+carriers inherit compactness rather than assuming bounded observables. -/
+theorem exact_configuration_compactness :
+    CompactSpace (EpsilonSquareLatticeConfiguration G spacing) ∧
+      CompactSpace (EpsilonSquareLatticeAxialConfiguration G spacing) :=
+  ⟨inferInstance, inferInstance⟩
+
+omit [CompactSpace G] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Countability of the exact directed-bond carrier identifies both induced product sigma algebras
+with the corresponding Borel spaces. -/
+theorem exact_configuration_borel :
+    BorelSpace (EpsilonSquareLatticeConfiguration G spacing) ∧
+      BorelSpace (EpsilonSquareLatticeAxialConfiguration G spacing) :=
+  ⟨inferInstance, inferInstance⟩
+
 omit [IsTopologicalGroup G] [CompactSpace G] [T2Space G]
-    [BorelSpace G] [MeasurableMul₂ G] [MeasurableInv G] in
+    [SecondCountableTopology G] [BorelSpace G] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- The constant-one observable makes the finite-volume dependence scope nonempty. -/
 theorem constant_one_depends_on_every_finite_volume
     (radius : PositiveSquareLatticeBoxRadius) :

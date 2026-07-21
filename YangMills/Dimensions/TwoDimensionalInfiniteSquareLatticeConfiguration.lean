@@ -33,6 +33,20 @@ structure EpsilonSquareLatticeDirectedBond (spacing : PositiveLatticeSpacing) wh
   nearestNeighbor : SquareLatticeNearestNeighbor source target
   deriving DecidableEq
 
+instance epsilonSquareLatticeDirectedBondCountable
+    (spacing : PositiveLatticeSpacing) :
+    Countable (EpsilonSquareLatticeDirectedBond spacing) := by
+  apply Function.Injective.countable
+    (f := fun bond => (bond.source, bond.target))
+  intro first second equality
+  cases first with
+  | mk firstSource firstTarget firstNearest =>
+    cases second with
+    | mk secondSource secondTarget secondNearest =>
+      simp only [Prod.mk.injEq] at equality
+      rcases equality with ⟨rfl, rfl⟩
+      rfl
+
 namespace EpsilonSquareLatticeDirectedBond
 
 variable {spacing : PositiveLatticeSpacing}

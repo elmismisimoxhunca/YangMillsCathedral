@@ -826,7 +826,8 @@ committed before higher layers depend on it.
   - [x] Construct the exact (7.2) `J(Bₙ)` action density, finite/nonzero boundary-dependent
     normalizer, normalized finite-coordinate law, and boundary-retaining infinite-carrier pushforward.
   - [x] Add genuinely-finite convergence over measurable bounded-continuous tests, natural axial
-    product topology, an explicit all-continuous-test coverage bridge, and an uninhabited full
+    product topology, closed/compact exact carriers, countable-product Borel identification, derived
+    all-continuous-test coverage, and an uninhabited full
     Theorem 7.2 axial contract requiring common boundary-independent weak limit
     plus exact free finite-volume expectations on every eligible `Bₙ` observable.
   - [x] Define the exact `ε → 0⁺` filter and spacing-indexed action families retaining the unchanged
