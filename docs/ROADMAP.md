@@ -832,7 +832,9 @@ committed before higher layers depend on it.
   - [x] Define the exact `ε → 0⁺` filter and spacing-indexed action families retaining the unchanged
     Villain `Q_{ε²}` chain or one fixed Wilson trace representation; make Wilson faithfulness actual
     representation injectivity.
-  - [ ] Add full Theorems 8.5/8.10 observable-transport and convergence contracts; inhabit/derive box
+  - [x] Strengthen each Definition 8.1 fine edge with an exact nonempty directed-bond word tied to
+    every consecutive certified path node; construct measurable fine/coarse holonomy restriction.
+  - [ ] Add full Theorems 8.5/8.10 observable convergence contracts over that exact transport; inhabit/derive box
     projectivity and Theorem 7.2; add compact-surface gluing with exact hypotheses, distinct from finite-cutoff, classical, and
     four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.

@@ -4716,8 +4716,11 @@ configuration carriers now have their induced product topologies with continuous
 The uninhabited `TwoDimensionalDriverAxialWeakLimitData` separately requires every continuous real observable to have such a measurable bounded representative, then requires all axial boundary-conditioned
 sequences to converge weakly to the same normalized measure and requires exact agreement with each
 free box law on every bounded continuous observable depending only on `Bₙ`, matching (7.6). `positiveLatticeSpacingAtZero` is the punctured right-neighborhood filter and
-No arbitrary certified-family record is exposed: `twoDimensionalVillainActionFamily` is exactly the unchanged Villain `Q_{ε²}` chain, while `FaithfulWilsonActionFamilyData` bundles the same Wilson trace representation, normalizer, and actual injectivity used by every spacing-indexed action. No weak limit, boundary-independence proof, or continuum convergence witness
-is constructed.
+No arbitrary certified-family record is exposed: `twoDimensionalVillainActionFamily` is exactly the unchanged Villain `Q_{ε²}` chain, while `FaithfulWilsonActionFamilyData` bundles the same Wilson trace representation, normalizer, and actual injectivity used by every spacing-indexed action. `EpsilonSquareLatticePathBondWordData` strengthens every Definition 8.1 fine edge with a nonempty
+ordered directed-bond word whose exact source/target lists are the consecutive certified path nodes.
+The measurable word holonomy uses later-on-the-left multiplication, and
+`TwoDimensionalLatticeApproximatingHolonomyData.coarseRestriction` evaluates exact mapped fine-edge
+words. No weak limit, boundary-independence proof, or continuum convergence witness is constructed.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

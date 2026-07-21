@@ -787,8 +787,11 @@ boundary-conditioned sequence must converge to one normalized finite measure, an
 continuous observable depending only on `Bₙ`. For §8, `positiveLatticeSpacingAtZero` fixes the literal `ε → 0⁺` filter and spacing-indexed action
 families retain either the exact unchanged Villain density `Q_{ε²}` or one fixed actual Wilson trace
 representation and normalizer at every spacing. Wilson faithfulness is actual injectivity of that
-same matrix representation. No weak limit, boundary-independence proof, or lattice-continuum
-convergence is constructed.
+same matrix representation. Each Definition 8.1 fine edge can now be strengthened by an exact nonempty ordered directed-bond
+word whose sources and targets are literally the consecutive certified path nodes. Its measurable
+holonomy uses the fixed later-on-the-left convention, and exact coarse restriction evaluates the word
+on the mapped fine edge. No weak limit, boundary-independence proof, or lattice-continuum convergence
+is constructed.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly
