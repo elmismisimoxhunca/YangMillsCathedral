@@ -1,0 +1,1464 @@
+PHYSIC A L REVIEW D                              VOLUME         12, NUMBER 10                                 15 NOV EMB ER 1975
+
+            Renormalization          of non-Abelian gauge theories in a background-field                              gauge.
+                                                II. Gauge-invariant           operators
+                                                H. Kluberg-Stern* and J. B. Zuber~
+            Service de Physique   Theorique,   Centre d'Etudes lVucleaires de Saclay,   BP N0. 2-91190 Gif-sur-Yvette, France
+                                                         (Received 8 April 1975)
+             The Ward-Slavnov identities satisfied by the Green's functions with one insertion of a gauge-invariant operator
+           are studied in the background-field gauge. As a consequence, the counterterms for a given gauge-invariant
+           operator must satisfy a system of equations, whose general solution is found in the simplest cases of operators
+           of low dimension (d & 6) or low twist (v & 3) and conjectured in the general case. It then follows that the
+           renormalized Green's functions satisfy the same Ward identities as the bare, regularized ones. We deduce a
+           definite prescription for the practical calculation of the anomalous dimensions of gauge-invariant operators
+           which do not vanish in the classical limit: this prescription is formulated in the background gauge or in the
+           usual Fermi-type gauge.
+
+
+
+
+                   I. INTRODUCTION                                       ties. Let us recall that this gauge is a generalized
+                                                                         Fermi gauge where the gauge-fixing term depends
+   The quantization procedure for Yang-Mills theo-                       on a parameter n and on an external vector fieM,
+ries breaks explicitly gauge invariance and thus                         the background field, and is covariant under class-
+one must check that the computed value of any                            ical gauge transformations (type-1 transforma-
+measurable quantity satisfies the requirement of                         tions) associated with the classical field. The
+gauge independence:     It must be independent of the                    quantization,  as well as the renormalization, ' pre-
+breaking term introduced for the quantization.                           serves the invariance under these type-1 transfor-
+This problem is particularly tough in the case of a                      mations, while breaking the gauge invariance re-
+nonspontaneously    broken gauge theory where the                        lated to the quantized field. Also, the variation of
+8 matrix probably does not exist in a perturbative                       the background field is simply a change of gauge
+sense. In this case, anomalous dimensions of                             for the quantized field. As a consequence, the
+gauge-invariant operators appear as observables:                         wave-function renormalization of the classical
+For example, they determine, according to Ref. 1,                        field was found to be the coupling-constant renor-
+the deep-inelastic behavior of the structure func-                       malization g/g, . This result indicated that the
+tions relevant to leptoproduction.    The computation                    background gauge is convenient for a direct com-
+
+                                               '
+in Ref. 1 of these anomalous dimensions to first
+order gave rise to various problems. ' The study
+of an explicit example, the operator F„„', in Ref. 4
+                                                                         putation of gauge-independent   quantities such as
+                                                                         P(g). The results of the present study, which are
+                                                                         summarized below, indeed confirm this idea.
+showed that the renormalization of an operator in-                          The renormalization of a classical gauge-invari-
+variant under classical gauge transformations in-                        ant operator (class-I operator) which depends on
+volves a coupling to noninvariant operators and that                     gauge fields and on matter fields and which does
+this mixing cannot be ignored for the computation                        not vanish by virtue of the classical equations of
+of the gauge-independent anomalous dimension,                            motion in the absence of sources involves either
+even in the one-loop approximation.     This result                      (a) class-I operators,   (b) class-IIa operators
+was obtained by algebraic manipulations which did                        which    are gauge invariant, but vanish in the classi-
+not lead to a geometrical interpretation of the                          cal limit because of the equations of motion in the
+spurious non-gauge-invariant     operators. Also, the                    absence ot sources, or (c) class-IIb operators
+necessity of a blind computation of the full renor-                      which are not gauge invariant and which depend
+malization matrix associated with the original                           both on gauge and matter fields and on Faddeev-
+gauge-invariant operator clearly seems redundant.                        Popov fields: A precise generic expression is
+Therefore, we have taken up the problem again                            given for these operators. Class-II operators are
+with the aim of a better understanding and charac-                       renormalized only among themselves and this
+terization of the spurious operators and of reducing                     block-triangular structure of the renormalization
+through a simple prescription the computation of                         matrix leads to a natural prescription for the com-
+gauge-independent    anomalous dimensions.                               putation of the a-independent anomalous dimen-
+   A previous study of the Green's functions in the                      sions relative to class-I operators. This prescrip-
+background gauge' suggests that this gauge is well                       tion is stated both for the background gauge and
+suited for the study of gauge-independent quanti-                        for the Fermi gauge. In the background gauge, the
+
+                                                              12         3159
+3160                         H. KLUBERG -STERN AND             J. B. ZUBER
+graphs with only external legs of matter and back-      presses the invariance under generalized super-
+ground fields need only gauge-invariant     counter-    gauge transformations   (type-2 transformations);
+terms, namely of class I and class IIa. This auto-      this generalized type-2 invariance is the remaining
+matic elimination of class-IIb counterterms is the      symmetry associated with the initial gauge sym-
+main practical advantage of the background gauge        metry for the quantized field after renormalization.
+over the Fermi gauge, where, however, fewer ver-        The latter preserves trivially the initial type-1
+tices appear in the effective computation. The se-      symmetry connected with the gauge transforma, —
+lection of class-I counterterms at the exclusion of     tions of the background field. Section III F estab-
+class-IIa counterterms in the background gauge or       lishes the n independence of the block of the re-
+of class-II counterterms in the Fermi gauge in-         normalization   matrix relative to class-I operators.
+volves inspection of the'structure of the spurious      We have no proof for the a dependence of the rest
+operators which are characterized with precision.       of this matrix; this point is particularly puzzling
+Finally, our prescription fails for gauge-invariant     in view of the existence of the gauge-invariant
+operators of class-IIa for which the mixing prob-        class-IIa operators. All previous results are ex-
+lem seems entire: No triangular structure emerges       tended briefly to a theory including fermions in
+for the renormalization matrix between class-IIa        Sec. IGG. The considerations of Sec. HI are illus-
+and class-IIb operators. No serious argument ex-                                                      '
+                                                        trated at various points by the operator F~, intro-
+ists concerning this question; however, the general     duced in Ref. 4.
+"mythology" says that class-IIa operators are un-           The reader interested only in the effective com-
+physical, despite their gauge invaria, nce.             putation of n-independent anoma, ious dimensions
+   Section II is devoted to notations and a brief re-    may skip Sec. III, since the results of this section
+minder of results of Ref. 5: The Ward identities        are summarized in Sec. IVA. The computation in
+ and the renormalization of Green's functions in the    the background gauge is described in Sec. IVB and
+background gauge. Section III gives the derivation      involves only graphs with external legs of back-
+ of our results which is ba, sed on a systematic ex-    ground and matter fields. This result was claimed
+ploitation of Ward-Slavnov identities (WI). The WI      by Sarkar and Strubbe' and by Crewther, fortwist-
+for a single insertion of a class-I operator yield      two symmetric operators, in the one-loop approxi-
+a constraint equation for the possible counterterms     mation. The counterterms of the mentioned graphs
+ (Sec. III A). The equation involves a linear differ-   involve, however, also class-IIa operators which
+ential operator with a vanishing square. The solu-      must be eliminated by hand; we give some clues
+tion of this equation is a nontrivia, l cohomology      for this operation and illustrate them by some ex-
+problem, This algebraic problem is reduced and          amples, A similar work is performed for the Fer-
+ solved exactly in the Appendix only for a few cases    mi gauge in Sec. IVC, The Fermi gauge is just a
+ (operators of dimension d & 6 or of low twist 7 & 3    special case of the background gauge where the
+or ~ & 5 depending on the symmetry of Lorentz in-       background field is set equal to zero. The counter-
+dices). In the general case the solution is conjec-     terms for graphs with external legs of Yang-Mills
+tured: The only possible counterterms are class-I       and matter fields involve also class-IIb operators,
+counterterms and class-II counterterms defined by       and therefore the selection of the class-I operators
+the action of the linear differential operator men-     is, in general, more difficult in the Fermi gauge.
+tioned above on a polynomial with definite dimen-       The case of symmetric traceless operators of
+sion, ghost number, and Lorentz covariance.             twist two appears particularly simple in both gauges
+These class-II operators obey WI (Sec. IIIB) which      and this study confirms computations of Ref. 1 and
+prevent any coupling to class-I operators by re-        of Ref. 3 and 6. Higher-order perturbations dis-
+normalization.    The insertion of operators leads      cussed in Sec. IVD reintroduce some complexity
+to contributions of diagrams with self-contractions     for practical calculations: The superficial diver-
+of the variables appearing in the expression of the     gence of a diagram can be extracted only after re-
+operators at the one-loop level; these contributions    normalization of all subdiagrams which need, in
+are subtracted in Sec. III C without modification of    fa. ct, all class-I and -II counterterms.  Section IV E
+the Ward identities which hold for regularized          ends with some comments relative to the contribu-
+quantities to all orders of perturbation theory.        tion of class-II operators to Wilson expansion and
+   Section IIID completes the proof of WI for re-       to the renormalization of several insertions of
+normalized quantities by recursion on the number        c lass -I operators.
+of loops. In Sec. III E the generating functional for      The method of investigation was developed by
+renormalized Green's functions with a single in-        Zinn-Justin. ~ It consists of a thorough use of WI
+sertion of a class-I operator or a class-II operator    derived from supergauge transformations which
+is shown to satisfy a WI analogous to those for a       were introduced by Becchi, Rouet, and Stora' and
+bare insertion of a class-I operator, which ex-         extended in Ref. 4. The ingredients are functional
+12                    RENORMALIZATION                    ON     NON-ABELIAN                  GAUGE. . . . II. . . .              3161
+
+
+imal renormalization.        "'
+methods, gauge-invariant regularization,     and min-
+                             A gauge-invariant  reg-
+ularization' is supposed to associate an unambig-
+                                                                             where  f '»j denote the structure constants of a com-
+                                                                             pact semisimple Lie algebra. The x symbol is a
+                                                                             shortcut for
+uous finite value to each graph in a way which pre-
+serves the equations of motion and Ward-Slavnov                                  (Ax 8)' =   f" AjB".
+identities independently of the regulating parame-                           Summation over repeated indices is assumed. The
+ter. No proof was given for the existence at all                             quantization of this classical Lagrangian requires
+orders of perturbation theory of such a regulari-                            the insertion of a term which breaks the gauge in-
+zation, ' especially for a massless theory including                         variance. In the background gauge of Ref. 5, the
+composite operators. We do not attempt to prove                              gauge term, after a translation of the gauge field
+this assumption. The functional methods are legit-                           Q,'= Q„+ A„, takes the expression —(I/2n)[D„"(A)
+imate algebraic operations, ' once a gauge-invari-                           x Qj]', where the external field A„is the background
+ant regularization has been applied.                                         field. A corresponding Faddeev-Popov term must
+                                                                             be introduced and the full action reads
+                        II. PRELIMINARY
+                                                                                 8'=    d~x   g   +A         D'~ A
+  The classical Yang-Mills Lagrangian
+     ~(Q„)= —-'(&„Q. —&„Q„+g4„x Q.)'(x)                     (2. 1)
+is invariant under the following local gauge trans-
+                                                                                              + C, D„"(A)D'„(A+ Q)C
+                                                                                                                      ).          (2.3)
+
+formations:                                                                  The generating functional of Feynman graphs, de-
+                                                                             noted by Z(A„, q„, $;, $i, Z„, K, L„) depends, of course,
+     5Q&(x) = D&j(Q)6(d j(x)
+                                                                             on the variables g„, $„and g, , which are the
+                 (s 5i j + +f i»jQ»)5+ j(x)                 (2.2)            sources of Q„and of the ghosts C, and C;:
+
+
+     Z(A&   0l    (j il Tj K L&)      f        dQACdC wlP     ((S+f d x(0l 0[l + Cl(l+ 5 C ))                                    (2.4)
+
+The modified action S contains sources S„, K, L„of composite operators (see Refs. 4 and 5) introduced only
+for a linearization of Ward identities satisfied by the generating functional of one-particle-irreducible (1PI)
+graphs:
+
+     0 = [ d x D(A„+ Q„) — [D'„(A)Q]]'+[d~ +C
+                          2n
+                                                                     lD(   )][AD(j+AQ)C +I[]+AC, (0[„KL„),+ —K, (Cx C),
+                                                                                                              .
+
+                                                                                                                        )
+                                                                                                                             .
+
+
+
+                                                                                                    (2. 5)
+The auxiliary sources T„, K, and L„which depend on space-time x should be set to zero for practical cal-
+culations of counterterms.    The action S is invariant under the following transformations.
+  (a) type-1 transformations.
+     5A„'(x) = D'„' (A)Ru'(x) .                                                                                                  (2.6)
+Q~, C, , C, , Z„, K, L„ transform       according to the adjoint representation.
+  (b) type-2     transformations" '.
+
+     5Qq(x) = [Dqj(A+ Q)Cj+ Lj](x)53 =
+                                                 5J„'x
+     5A'„(x) = —Lj (x)5X,
+
+     5C'(x) =
+                 2
+                   (C x C)'(x)Q.   =,      .
+                                    |)K' x 5A, ,
+                                                                                                                                 (2. I)
+
+
+     5 C; (x) = — —[D'„j(A)Q]j ](x)5j].,
+where 5A, is the anticommuting x-independent parameter.
+  The generating functional of 1PI regularized graphs, I'(A„, (Qi„, C„C„S„,K, L„), is defined as the Legen-
+                                                T„KL)+fdic(0„'Q"
+dre transform with respect to q„, g „and $,. of the functional II"
+     W(A, q„, $„ t'i,     J, K, L„)=i InZ(A„, q„, (i, $i, Sq, K, Lq),
+                                                                                                                                 (2.8)
+     C(X„,Q„, C;, Cl, J„,K, L)+W(X„ll„, i, , (,,                                               +C(, +(C)(x)=0,
+3162                                    H. KLUBERG-STERN AND                                J. B. ZUBER
+where
+              98'                 8$'                 BS'
+      m))     aqui       )                   C. =+
+                                                        i
+
+The functiona11 (I' =r —(1/2o) J d x[D&'(A)Q", )') satisfies identities (a) and (b) which follow from the in-
+variance of the action under type-1 and -2 transformations and identity (c), which is the equation of motion
+for the ghost'":
+
+
+      &'F = D„'(A),
+                             ( )
+                                   ~sf" (Q„'(x),( ) +C'(x), ( )+C'(x) —,( )
+                                                                                                                                  (2. 9a)
+
+(b)
+                 a   r       ai             ar"      ar","     .      ar
+                                                                                                                                   (2.9b)
+               aiI)„'(x) a J„'(x)       aC'(x) aK'(x)               aA„'(x)
+
+(c)
+
+                                                                                                                                   (2.9c)
+
+For identity (b) we have made use of the invariance of the integration measure                             dQ dC dC under   type-2 trans-
+f ormations
+           c)S                    BS
+                                                                                                           (2. 10)
+                   aZ„'(x)ac„'(y)
+      aq„*(x)aJ„'(y)
+Obviously, S (S=S —(I/2n) J [D&'(A)Q,")'d x) satisfies identities (2.9) (r -S). Identity (2.9a) is specific of
+the background gauge; in a Fermi gauge (A„= L„=O) only an integrated version remains, corresponding to
+invariance under global transformations.    According to Ref. 5, the renormalization procedure ("minimal
+renormalization")
+atorss              can be performed  in a way that ensures the validity of identities (2.9) for the renormal-
+ized action S and the renormalized 1PI functional I "; the action S has the same functional form as the
+bare functional S:
+      S (A~, Q~, C;, C;, J~, K, L~, g, n) = S(A'„, Q„', C,'. , O', , J„', K', L„', g', o('),                                      (2.1 1)
+where the bare variables denote A„=(g/g')A„, Q„', =Z, ' 2Q„, CO=Z, ' 'C:. C,', =Z, ' 'C„TO, =Z, ' 'f„,
+K', =Z, ' 'K, L„'=( g/g) Z, -' 'iZ, -' ')L„, o,(=nZ„adn wIhere g', Z„andZ, are, respectively, coupling-
+constant and wave-function renormalizations.        In the following, when we consider insertions of composite oper-
+       O(A„+ Q, g), it will be under stood that we have perf or med an intermediate renormalization on the gener-
+ating functional Z' (A„, q„, $;, $;, T„, K, L~, ~, g, n):
+
+      Z~ =     dQ dC dC exp         i S A„',         „, C,', C';, J„', K, L„', g', +'
+                                        +          Xo A +      ~   g + Z3     Itp       y+ Z3   Cj + C j                           (2.12)
+
+However, for simplicity of notation we shall drop in the following 0 indices and the wave-function renor-
+malization factors Zq ' ', one can readily check that the Ward identities are not altered by this simplifi-
+cation.
+
+                                                  III. INSERTION OF A GAUGE-INVARIANT OPERATOR
+
+  The proof of the block-triangular structure of the renormalization matrix is giveninSecs. IIIA-IIIC. We
+derive the Ward identities in the tree approximation for class-I and class-II operators, respectively in
+Secs. IIIA and III B. Next we introduce a prescription (Sec. IIIC) for the insertion of operators which elim-
+inates some of the most singular self-contractions of operators and which allows us to extend the validity
+of our WI to all orders for the bare regularized generating functional. Finally, the proof of these WI for
+the renormalized generating functional to all orders is given in Sec. IIID: The WI for class-II operators
+12                     RENORMALIZATION                      ON    NON-ABE LIAN GAUGE. . . . II . .                            3163
+
+yield the block-triangular structure of the renormalization matrix; the proof of WI for class-I operators
+rests on our conjecture. Section III E is devoted to comments concerning the geometrical interpretation of
+the WI after renormalization,   the role of. the equations of motion in the presence of non-supergauge-invari-
+ant operators, and the peculiarities of class-IIa operators. In Sec. III F we derive new WI which imply the
+n independence of the block of the renormalization matrix relative to class-I operators. All previous re-
+sults are extended to a theory including fermions in Sec. IIIG.
+
+                                        A. Ward identity in the tree approximation     for a class-I operator
+
+  Let us add a new term to the action S of Eq. (2. 5), namely
+
+      S=S+         d xXxO A„+           -„x,    -.
+                                                                                                                              (3.1)
+
+where 0 denotes a local classical gauge-invariant operator. Clearly, the WI for the 1PI functional F are
+not affected by this insertion. Thus, the 1PI generating functional of graphs with one insertion of 0, de-
+noted by I'o, I'o=BI'/BX(x) ~» o, obeys the following identities:
+
+
+      @„F,=O,                                                                                                                (3.2a)
+
+(b)
+                             BI'    8
+                         BQ„'(x) BZ„'(x)
+                                               81"      8
+                                             BJ'„(x) BQ„'(x)
+                                                                   BI"     8
+                                                                 8 C'(x) BK'(x)
+                                                                                          BI'
+                                                                                        BK'(x) BC'(x)
+                                                                                                     8;         "
+                                                                                                                      8
+                                                                                                                    84'(x)   (3.2b)
+
+(c)
+       D'~(A)                                                                                                                (3.2c)
+      (            BJ,'( )    BC*( )
+
+Let us assume that the same identities hold in the                                       ~„O'=0,                             (3.4a)
+one-loop approximation for the bare regularized
+functional, denoted also by I'o (this property is re-                             (b) 8~0' = 0,                              (3.4b)
+alized by the dimensional regularization).    Then,
+to the same order, the singular part Fo d;„of I'~,                                                                           (3.4c)
+which is a local functional, verifies (3.2a), (3.2c),
+and the following identity:                                                   Equations (3.4a) and (3.4c) are easy to solve.
+                                                                            According to Eq. (3.4a) 0' is a type-1 invariant
+      ~s Fo, div                                               (3.3)        function which depends on Z„and C; only through
+The identity (3.3) follows from the absence of di-                          the combination [J& D~ (A)C;] —  [Eq. (3.4c)]. Con-
+vergences of the functional I'(X =0) and from its                           cerning identity (3.4b), the linear differential op-
+value in the tree approximation:                                            erators 8~ and ~z verify the identities &~ =0, 8~'=0.
+                                                                            This follows, after some algebra, from the anti-
+      1„„(X=0) =S.                                                          commuting character of the variables C;, C;, J„,K,
+Let us remark that the operator 0 obviously obeys                           L„and from identity (2.9b) for I' and S. Thus we
+identity (3.3), since 0 is gauge invariant:                                 have found, apart from our classical gauge-invari-
+                                                                            ant operators of class I, other solutions of Eq.
+                                                                            (3.4b):
+                                                                                     0'= ~~I' class-II operators.
+                             d xD~~ Q+     C~; Ap+ „=0                      Do there exist any solutions other than the previous
+                                                                            ones to Eq. (3.4b) which are type-1 invariant, de-
+The set of counterterms XO' necessary to renor-                             pend only on J„' —D„"(A)C', and have a total ghost
+malize in the one-loop approximation the graphs                             y number equal to zero:
+with one insertion of 0 contains all polynomials in
+                                                                            y(J„) =y(C) = —1, y(K) = —2, and y(C) =y(I„) =+1.
+A„, Q, C;, C;, X„, K, L„which have the same sym-
+metry properties as 0 (Lorentz covariance, par-                             This question is discussed in the Appendix where
+ity, . . . ), a dimension less than or equal to that of                     the identity (3.4b) is simplified with the help of
+the operator, and which verify the identities                               identities (3.4a) and (3.4c) and solved completely
+3164                                    H. KLUBERG-STERN AND                              J. B. ZUBER                                                      12
+
+for the case of low dimensions (4, 5, 6) and low
+twist (2, 3) in a theory including fermions. In gen-
+                                                                                       0, + 20,' = z BS        ddX{ [Jq —Dq'(A)C~] Qq+K'C'),
+eral, for arbitrary dimension and nonce' value                                                                                                          (3.6}
+of ghost number for the operator O', Eq. (3.4b)                                        03=~~         d4x K'C'        .
+possesses other solutions than class-II operators.
+For the operators under consideration (y = 0} we                                           B. Ward identity        in the tree approximation   for
+will assume in the following that all counterterms                                                             a class-II operator
+of a class-I operator belong either to class I or to
+class II.                                                                            Instead of a class-I operator, we add to the ac-
+  As an example, let us return to the operator                                    tion S of Eq. (2. 5) a source term for an operator
+——,' J d'xP„,'(x) = 0, and perform the same alge-                                 I' which depends on C; and J„' only through the com-
+braic manipulations as in Ref. 4 to find the coun-                                bination [J'„' —D„'~(A)C, ] and which has ghost num-
+terterms of this operator in the background gauge.                                ber equal to —1:
+They take the following form:
+                                                                                       3 =S+         d'x Y(x)Z(x).                                      (3.
+
+                                                                                  The associated source Y(x) is of anticommuting
+                                                                                  character. E is supposed to be invariant under
+                                                                                  type-1 transformations [Eq. (2. 6)]. In the follow-
+                                                                                  ing we derive the WI relating the generating func-
+                                                                   (3.5)                                   „
+                                                                                  tional I'~ and F& for 1PI Green's functions with
+                                                                                  one insertion of the operator I' and 8~I', respec-
+                                                                                  tively, in the tree approximation
+       0,'=     d      C', -K', S.                                                     ~a, z = ~r~z
+(0, +-,'0,') and 0,', as one immediately verifies, are                            The generating functional Z associated with the
+class-II operators:                                                               action 8 of Eq. (3.7)
+
+
+       Z(A, 0„, (;, (;, j„,K, L)=            dqdCdC exp i(pef (0                  Q„z(C, +C4))                                                          (3.8)
+
+obeys the following identity which expresses the invariance                            of S under type-2 transformations                  of Eq. (2. 7):
+
+   1          4,.   BZ
+           d'x I„'(x),
+                            ( )
+
+
+                                  dQ dC dC     d~x     j)'„(x)+        d4z   Y(z);;                       + $'(x)+       d'z Y(z)
+
+
+                                                       +   —D'„'(A)q'„(x) g'(x) — d'z Y(z) BC'—,x + d'z Y(z)f,„'(x)
+                                                           Cl
+
+
+
+                                               & exp       i 8+        g„' „+;C]+C(                                                                    (3.9)
+
+Clearly,   to complete the right-hand side of Eq. (3.9) to the expression BsE, we need terms of the form
+[By'(z)/BJ„'(x)] [BS/BQ„'(x)] and [BF(z)/BK'(x)[BS/BC'(x)] for which information is obtained for the equations of
+motion:
+
+         dQ dC dC     jl'   (x)+;BSx +
+                                  BQ&
+                                              d    zr(z),
+                                                       BZ(z)
+                                                          .
+                                                            x
+                                                              exp i 0+
+                                                            BQ„'
+                                                                                         (0     Q„+(;C, +C, (;))]=0,                                 (3. 10a)
+
+         d    dCdC    -$' x +                     d'zx(z),B~. (z) exP        z'
+                                                                                  0+     (ij,       j +(p+zCC))             =0(. ,.       ,.     (3.10b)
+
+Appplication       of the operators J d~z Y(z)[ EB( ) z/JB„'(x)] and J d'z Y'(z) [BE(z)/BK'(x)] on Eqs. (3.10a) and (3.10b),
+respectively,
+
+         dpdCdC
+                    yields the identities
+
+                        d'zx(z)           Bj'(z)
+                                     0'z(z);         +;;    BS        BE
+                                                                             exP i 0+           (
+                                                                                                      '
+                                                                                                            eeCQ;e+eC    ())d                        (3.11a)
+                 RENORMALIZATION                              ON NON -ABE LIAN                     GAUGE. . . . II.                           3165
+
+
+      dQdCdC           d'zp(z) —
+
+Note that we have taken advantage
+                                      ('(x),    .
+                                                        +;;
+                                              of the locality of the operator
+                                                                                  exp i B+         (B, Q, +(,. C+C\)) ,. =D
+                                                                                                       ~
+                                                                                                                                  ~
+
+
+
+
+                                                                                              E and of the antic om muting character
+                                                                                                                                           (3.1 1b)
+
+                                                                                                                                               of
+the source Y
+    Y2(x) = 0                                                                                                                               (3. 12)
+to discard the terms quadratic in Y in identity (3.11b) and that we have omitted one-loop contributions of the
+form &'E(z)/&@I'(x)&J„(x) which will be considered in Sec. IIIC. Combining Eq. (3.9) and (3.11) we derive
+identity for Z:
+
+    d'x L„'(x);          +q„'(x),            +P     (x), + —g'(x)Dt~(A),
+                                                              .                           .        Z
+
+
+                                                        dpdCdCJ d'xx(x)BP(x)exP ~(B+J(B Qze(;C;+C(;)) . (B (i)
+This identity yields immediately            the announced                identity between the 1PI generating        functionals       after a Le-
+g e nd r e transf orm ation:
+    Ia Sz =Brrz                                                                                        (3.14)
+In the tree approximation this result is trivial; however, as we shall s ee in the following, the same alge-
+bra as the one used in the tree approximation works to all orders. This relation implies the abs enc e of
+coupling of class -II operators to c lass -I operators.
+
+                         C. Extension of the Ward identities to all orders for the bare regularized functionals
+
+   In the derivation of Eq. (3.13) we have omitted contributions like &'E(z)/SJI'(x)SQI'(x) since these terms
+arising from self-contractions of the operator E(z) are one-loop contributions. These terms are dangerous
+when we wish to extend the derivation of (3.13) to higher order, since they involve 5'(0) in view of the lo-
+cality of the operator E. In this section we will show that we can subtract the contributions of these self-
+contractions in a consistent manner and without spoiling the equations of motion and WI; this is achieved
+by a prescription which we introduce in the following.
+   Of course, this method is not entirely convincing, since we implicitly assume that the dimensiona 1 r eg-
+ularization applied to the class -I operators 0; and to the operators E, , which sets to zero all contributions
+from self -contractions, does not spoil the geometric properties which yield the WI. The case of class -II
+operators B~E' is somewhat special, however, since in our derivation of equations of motion it is obtained
+explicitly by calculating the product of two operators, Thus, we start by multiplying operators at different
+points x and y, subtract the dangerous contributions, and then take the limit x-y. Our prescriptions are
+defined by
+
+
+     sq„'(x) aJ„'(x)     „,          sqt(x) sJ'„(y)                 ~'          sqt(x) sJ„'(y)
+
+       BS       BE
+        ;(*) Q;()
+                   .
+                  =!'.     BE
+                       „() Q;(.
+                                      BS
+                                                    )
+                                                         ".       B~B~
+                                                                   'o'"         B2E
+                                                                           Q;(*)l"())
+       BS       BE           .        BS      BE          .               B2E
+     BC'(x) BK'(x),              ,   BC'(x) BK'(X)                BC'(x)elC'(X))'
+                                                                                                                                            (3.15)
+                                                                          B2F
+                         ..
+       BS       BE                    BS      BE              .
+     BQ', (x) Bd'(x)                 BQ'„(x) Bd'„(p)               BQ„'(x)ed'„(X))'
+
+
+       Dze(A)QB(x)      —,
+                             () —)im
+                                            —
+                                            D(@ (z) A— (z—
+                                                         )x+BP                    ''', (),     .       .
+                                                                                                           ()),
+
+                        sQ„(x) ~J„'(x)              sJt(x) BQt(x)                sC'(x) BK'(x)              BK'(x) s C'(x)        "      sg„'(x)
+12                     RENORMALIZATION                            ON      NON-ABE LIAN GAUGE. . . . II. .                               3167
+
+                                                                               to order n. Since the regularized functionals with
+     g„„o"-d"d„"(l-—) Q'(x)                                                    one insertion of any class-I operator 0; 1 & i & N
+                                                                               or any class-II operator (BzE;) N+ I &i &P both sat-
+                                                                 dF            isfy identity (3.2b),
+                                                       dQ&(x) dJ~(y)
+                                                                                                                                       (3.18)
+
+  FIG, 4. Contribution from [BS/BQ&(x)][BE/BP&(y)] elim-                       then the 1PI functional for one ihsertion of a given
+inated by the prescription.
+                                                                               0;, say O„with all the counterterms to order n
+                                                                               also obeys Eq. (3.2b). Its singular piece at order
+                                                                               (n+1) verifies Bz I'o~ "d~,„=0 and, according to our
+normalized action S ~" contains only counterterms
+                                   ~
+                                                                               conjecture, the counterterm is of the form
+of the form
+                                                                                          Z&" +'&O +
+                                                                                           li
+                                                                                                                Z&""'B
+                                                                                                                 la   sE
+                                                                                    i=1                i=   1
+
+
+                                                                               Again, without altering the finiteness at order
+The 1PI functional I'& ) "z~ satisfies identity (3.16)                         (n+1) we change the counterterm QZ„B~E, to QZ„.
+                                                                                     )."
+                                       &
+
+
+and its divergent part at order (n+ 1), I's&g~&&". &'„.'„&,                    (BzE,     This ends the recursion proof.
+obeys the identity                                                               Returning to our example F„,', the renormali-
+      Z'&If'](ff +&) —
+        &ass&
+                     = Bs Z &[~](f1+&)
+                            z di,                                     (3.17)   zation matrix for        0„0,
+                                                                                                         + —,' 0,', and 0,' is identical
+                                                                               to the one which we computed in a Fermi gauge in
+At order        (n+1) the new counterterm has the ex-                          Ref. 4. In this basis the renormalization matrix
+pression                                                                       was indeed triangular.
+
+      QZ(n+i& B E
+                                                                                       E. Comments on symmetry after renormalization
+
+Without altering the counterterm at order (n+ 1),                                Type-1 symmetry is exactly preserved by the
+we introduce in the action instead of the previous                             renormalization procedure used here: All coun-
+expression the subtracted counterterm"                                         terterms are invariant under the initial transfor-
+                                                                               mations of Eqs. (2. 6), as well as the measure of
+              Z(n+1)
+                                                                               integration. Type-2 symmetry is, of course, re-
+                                                                               normalized; however, the algebraic structure of
+The renormalization action S" " ' with these coun-                             the supergauge transformation is preserved by re-
+terterms gives rise to a generating functional                                 normalization.   We remark that the generating
+I'&J"~". which obeys again identity (3.16). Thus, we
+         &l                                                                    functional Z&&»for a single insertion of the oper-
+have acheived our proof that the operators of                                  ator (B~E) obeys the same type-2 identities as the
+class II are coupled only to themselves and not to                             class-I gauge-invariant operators: This is, in
+class-I operators.                                                             fact, an equivalent version of Eq. (3.18). Let us
+   Now we are ready to showby recursionthatclass-                              simplify Eq. (3.9) by use of the ghost equation of
+I operators generate to all orders of perturbation                             motion which is unaltered by the presence of the
+theory counterterms which are either class-I or                                source F for an operator E depending only on
+class-II operators. Suppose again that this is true                            [J„' —D„"(A„)C, ]; this yields the following identity:
+
+
+
+                          dF
+                                                                                    d~C; (y)
+
+                          y ~ ~y
+                                             i%d~        d   F                                                      ih g f
+                                                    d Qp(x) dC)(y)                                                           e,"(y) Q„'(x)
+                                                                                                                                   d
+
+
+                                           --A
+                                                     dQp(x) d Jp (y)
+                                                                                  FIG. 6. The graph of Fig. 6 is the contribution omitted
+   FIG. 5. Contribution from (1/e) D~&'(A)Q&(x) fBE/BC'(y)]                     in the right-hand side of Fig. 2; it diverges less rapidly
+eliminated by the prescription: the three dots denote less                      than the term ih(B~&B~/tl) fB E/BJ'„(y)BQ&(x)] in the limit
+singular operators.                                                             x~p,
+                                               H. KI UBERG-STERN AND                  J. B. DAUBER                                12
+
+]     d~x    j.„'(x);9 ( ) +/ „'(x);9( ) + $ '(x), { )
+                  ~                        ~
+
+
+
+
+where the differential operator 0 verifies                    0'=0. Thus,     the generating   functional Z&, » for one insertion of
+the operator (BzE) satisfies the WI
+    '5Z(g y) 0          y                                                                                                     (3.20)
+which is equivalent               to the following formal property        of (sz):
+
+     (s, )'=0.                                                                                                                {3.21)
+By use of the equation of motion for the ghost, the generating                       functional Z~, for a single insertion of 0, and
+of its counterterms obeys the following identity:
+
+
+                                                                                                                              (3.22)
+
+where the expression of the renormalized                      operator   0, reads
+     O,    =g Z„O, + p Z„. (s,F, ).                                                                                           (3.23)
+
+Identity (3.22) expresses the invariance of the generating functional Zo, under the following type-2 trans-
+formations, up to source terms:
+                       sgR
+     Cq„'(x) =
+
+
+     eW„'(x) = —I,„'(x) m. ,
+                                                                                                                              (3.24)
+                            ggR
+     5C'(x) = +               ;( ) 5A. ,
+                       —
+                       1
+     5C'(x) = — D„"(A)q„"(x)5z,
+
+where 8 denotes the action renormalized                        to first order in the source X
+
+     8"=S+ d4xXx O~ ~.
+This geometrical interpretation of Eq. (3.22) is, however,                       formal, because the Jacobian of the transfor-
+mation (3.24) is highly singular:
+                      g2 gR                    g   2'
+            sq„'(x) BJ„'(x)            sc'(x) sK'(x) '
+Finally, let us note that identity (3.22) is not valid for the generating functional Z (A„, q„, t, g, J„,K, I,„,X),
+where Xis the source of the operator 0, :
+
+            d'x        Lq(x);( +q„'(x),                  +&   '(x);      +   —&'(x)D~" (A);        Z"(    X) = O(X').
+
+This means that in order to preserve WI for Z"(      X) through renormalization it is necessary to introduce
+other terms in the action proportional to X' or, equivalently, to consider generalized type-2 transforma-
+tion, analogous to those of Eq. (3.24), which contain X' contributions.
+   A comment concerning the operator &z might be usefuL The operator (&zE) coincides with the variation
+of the operator F under a supergauge transformation up to terms which vanish in the absence of sources
+because of the equations of motion. To see this we introduce again the explicit dependence of F on the
+ghost field C; and we express ~~ in terms of the full action S instead of S by use of the ghost equation of
+                        RENORMALIZATION                        ON NON -ABE LIAN                 GAUGE. . . . II. . . .          3169
+
+motion.    This yie lds
+
+
+
+For operators of class I, both (&~0) and (50/5X) vanish exactly       . he class-II operators are supergauge
+                                                                      T
+invariant up to terms which vanish because of the equations of motion in the absence of the non-gauge-in-
+variant sources for the fields Q„', C', and C'.
+   Finally, let us notice that class II contains operators which are gauge invariant under the classical gauge
+transformations:    5Q„'(x) =D~" (A +Q) 5+~( x). These operators vanish in the classical limit if one considers
+the classical equation of motion of a Yang-Mills field in the absence of the gauge term        (1/2a)[D„'~(A)Q~~]'}   {-
+of the corresponding Faddeev-Popov term and of the source terms; these operators (class-IIa) have the
+generic expression
+
+     O'=,BQ„', x (A+ Q)G„'(A, + Q„)(x),                                                                                       (3.25)
+
+where G„(A„+Q„)transforms according to the adjoint representation of the group. To illustrate this point,
+it appears more convenient to use a different version for our cohomology operation ~~, namely the opera-
+tion 8 which yields an equivalent set of class-II operators (see Appendix):
+
+                " BB'(*) Bz" '2 " " Bc () ' '"
+                                       ( )                                          " BK'( )          " " SA'(*)) '           (3.26)
+
+     0 —( E)     pter   —gl   D (J(A
+
+                 L&~=L&+ D&g A&)C&
+
+                 Bl' =XI'+Q
+
+
+for any local type-1-invariant polynomial E in the variables A„, 8„, C;, Z~, K, L~. With this expression of
+class-II operators it is clear that the latter corresponds to a polynomial E linear in J„:
+     0'=&s[z„"(x)c„'(a)])~g                                                                                                   (3.2'I)
+The other class-II operators,                 denoted by class IIb, are associated with a polynomial              E such as
+                                         =0                                                                                   (3.28)
+     sJ„"(x) ))) =A)
+                C. = J~& =K = L~&= 0
+                              ~
+
+
+
+
+and vanish for all fields and sources, except A„, set equal to zero. The presence of class-IIa operators
+causes several problems which will be discussed further.
+                                                  F. 0. dependence of the renorrnalization   matrix
+
+  As in Ref. 5, the u dependence of various Green's functions is obtained by examination of Ward identities
+in the presence of a source term L for the operator [O'D„"(A)Q„+S„Q"+ a K C]. The action 8: S=S
+ J
++ 14xÃ(x)0, (x) is inva, riant under the following transformations:
+
+     5n =2nl5A. ,
+     5A„'(x) = —L„'(x)5A. ,
+
+     5Q&(x) = [Dt~(A+ Q)C'(x)+ L„'(x)] Q.            =,   Qg
+                                                          .
+                                                       5Z'„x
+                                                                5A. ,
+
+
+
+     5C'(x) = —(C x C)'(x)m. =
+                                                                                                                              (3.29)
+     oc (.) =           —
+                        1
+                          c„(~)c„(.) c (.)c)o.,
+     M'(x) = —J~(x) LN. ,
+     5K'(x) = —aK '(x) L N. ,
+     5I.„*(x)= 5I. =0.
+3170                                      H. KLUBERG-STERN AND                                                  J. B. ZUBER
+This invariance property is expressed by the following identity for the regularized                                               IPI generating func-
+tional I"p 1 for graphs with one insertion of the operator 0, :
+                          8                                    8                        8       —                8
+    O'I'                                        Q„'(&);( ) -J„'(x),( ) —C'(x) —,( )
+                                                                           ~                        ~
+
+
+                = L 2a.         +     d x
+
+                                                            8                                   8
+                                                +a    C'x BC'
+                                                          BC'tx
+                                                                -K'                 ~
+                                                                                                                I'1 a ro =0                            (3.30)
+                                                                                            K
+where 5' verifies
+    6"=0.                                                                                                                                              (3.31)
+Identity    (3.30) for the generating functional I'o, (A) for Green's functions with only external A„ legs reads
+            9                   BI                   C)I
+    2n, r, , (A„)+, , ( ) (A„), , pg"( ) (A„) =0.                                                                                                      (3.32)
+
+This derivation of (3.32) is valid in the one-loop approximation.      The counterterms for I'o (A„) belong either
+to class I or to class Ila. Identity (3.32) implies that the o. -dependent counterterms are the class-IIa coun-
+terterms; thus class-I counterterms are a independent.
+  To extend the proof to higher orders, we proceed according to the methods of Secs. IIIA-IIID, except
+that we now take into account the source L,. Operators of class II
+
+           a, +2Ln            ZF
+
+obey the following identity in the tree approximation:
+
+                                                           9           4
+                                                                                ~           8               ~
+                                                                                                                     8
+            +2m ~(f)/'~~)j~z~
+                                =    ~r   + ~ 2+                   +
+
+
+                                                                               —C'(x) —,                +   aC'(x),      , —  aZ'(x),    ,    I", (3.33)
+where I ~ denotes the 1PI generating functional in the absence of the operator F but in the presence of the
+opera. tor L. The main simplification is the reduction of the bracket of the right-hand side of Eq. (3.33) to
+[8~+ 2Ln(S/Sn)] in the tree approximation, where S is the action for L =0. To. higher orders one first
+writes identity (3.33) for the bare functional I". . . before intermediate renormalization;    this identity in-
+volves the bare variables of Eq. (2. 11); then we derive identity (3.33) for I'. . . after our intermediate re-
+normalization, which involves the renormalized variables n, . . ., using the following results of Ref. 4:
+
+    I.'=Z 3 -'/'Z 3 -'/' 1++ 8 o. ].nZ      '
+
+                                                                                                                                                       (3.34)
+    a(g, n) —1 = [a(go, no) —1][1++(&/su)in Z3] —2n(8/so. )ln Z3.
+All the considerations in this section rest on our choice of a "minimal renormabzation" where g, is n in-
+dependent: e dependence and n, dependences are thus equivalent. The recursion proof on the number of
+loops then goes through for class-II operators as in Sec. IIID.
+  Similarly, identity (3.30) can be derived for the regularized functional I'o, after an intermediate renor-
+malization and the singular part of I'p 1 verifies
+
+                                                                                                                                                       (3.35)
+
+With the help of our conjecture for the solution of ~~ T = 0 one shows immediately                                              that the solution of
+
+       ~q+2La ~               T =0
+
+is of the form
+
+    T=     Q Z,. (g) 0,. +                                                                                                                             (3.36)
+12                              RENORMALIZATION                               ON       NON-ABE LIAN GAUGE. . . . II. .                                                 3171
+
+where Z, for 1 &i & N is independent of 0. . With these ingredients, a recursion proof establishes the vali-
+dity of Eq. (3.30) for the renormalized functional ro, and the independence of S, , 1 &i & N, with respect to
+n to all orders of perturbation theory.
+
+                                                                   G. Introduction of matter fields
+
+  For the sake of definiteness, we consider spinor fields, which transform like some irreducible repre-
+sentation of the gauge group; we denote by (T'),. b the Hermitian matrices which are the generators of this
+representation.   The classical Lagrangian (2. 1) now reads
+         ~(Q„0., 0,) = '(e„Q, e„Q„+gQ„xQ,) +$.(~y
+                                   —,
+                                                                                            ~
+                                                                                                ~e., )~„                                                            (3.3v)
+where D'„'g, is the covariant derivative of g, :
+                        -                          ',
+         D'„'g, ( x) =e, P, (x) —igq„'(x) T, q, (x) .
+
+This Lagrangian                 is invariant under the local transformations                                of both Q„and g, , Iti, given by (2.2) and
+
+         5g, (x) = igT.', ear'(x) g, (x),
+                                        '.                                                                                                                           (3.38)
+         ep, (x) = —igp, (x) T, Ru'(x) .
+After introduction of the gauge-fixing                         term, Faddeev-Popov                         ghosts, and auxiliary                  sources, the total action
+takes the form [cf.(2.5)]
+
+         S=           d4x 2(A + Q, p„g~) —                   [D"(A)Qt,']'+[J„'+ C' D'„'(A)][D„"(A+Q)c'+ j.                              ']
+                            +gC,. (Q„xL"), + —K~(CxC); —imp, TC IM+ig', ,M'T,', ,C'g,                                    ),                                          (3.39)
+
+where the new sources M, and M, have been introduced for convenience (M, and M, will be considered as
+commuting sources). The results of Sec. IIIB are then readily extended: The action S is invaria. nt under
+both "type-1" transformations  (g, , M, , g, , M, transform according to the same representation T'~) and
+"type-2" (supergauge) tranformations given by (2. 7) and
+                                                        8S
+         eq. (x) = igT.*,C'(x) y, (x)m. =
+                                                                                                                                                                     (3.4o)
+         ep. (x) = —age„(x)z", c'(x)e~  .          =,    85
+
+As a consequence,                 the 1PI functional I' satisfies the following identitie. .'
+
+                        er      er
+                      eQ„'(x) eJ„'(x)
+                                              er
+                                             ec'(x) eK'(x)
+                                                             er,          .
+                                                                          "
+                                                                                       er
+                                                                                   eA„'(x)
+                                                                                                     er
+                                                                                                 eg'(x) eM, (x)
+                                                                                                                    er         er
+                                                                                                                              ep, (x) eM, (x)
+                                                                                                                                             er
+                                                                                                                                                                    (3.41a)
+
+     ,   u'r=          D'„'(W) Z'~           gy, , , (q'(     ),@'~ ~+c ), &~      (                      C'(   ),Z~
+                                   i                                                             i                        i
+                                                                      8                          8                       8
+                                                        +z'(x)
+                                                                                        ~                       ~
+
+
+
+
+                                                                  «, ( ) + zI(x) q, ( )+uj, (x) i,, ( ))
+                       + zgv.
+                                          8
+                                ', p, (x)=,    —
+                                            , +M,            (x), 8
+                                                                          ,        igT.'„y,(x)
+                                                                                                            8
+                                                                                                                . , +M,   (x),      8
+                                                                                                                                                  r =O,             (3.41b)
+
+whereas the ghost equation of motion (2.9c) remains unchanged. It is then easy to see that the functional
+ro with one insertion of a gauge-invariant operator O(A~+ Q, g„P,) satisfies the equations
+         ~, Fo= 0,
+         8qI'o = 0,                                                                                                                                                  (3.42)
+              ~   ~         8           8
+                            , (x)- ec ( )       o=o
+
+where now u„ is the differential                        oPerator defined in (3.41b) and er denotes
+Si72                                                                 H. KLUBERG-STERN AND                                         J. B. ZUBER                                 12
+
+               f                   BP       8                                 BP         8           BI'     8                BI'            8
+                                 sq„'(x) sJ„'(x)                          eZ„'(x) eq„'(x)           eC*(x) sZ'((x)        sZ'(x) sC'(x)
+                                               8                     81              8             BI'        8         BI'             8           8 I'        8
+                                      "xA', (x)                                                                                                                       '   (3.43)
+                                                                    x(. (x) xlif. (x)            xXX. (x)    x(.(x)   8().(x) xM. (x)             xM. (x) sX.(x))
+The identity 8~ =0 remains valid. We are now faced with the problem of solving the system of equations
+    (a) n,'0'=O,
+    (b) 8~0'= 0,                                                                                                                                                          (3.44)
+
+    (c) (D"(A)                                         — —                     0'=0
+                                          &(       )                  (   ))
+for local polynomial functionals 0' of the variables Q„, A„, C;, C;, X„, K, L„, g„'P„M„and M, which
+conserve the total number of ghosts. Some clues to this resolution are given in the Appendix where we
+prove our conjecture in the simplest cases: Any solution of Eq. (3.44) is of the form
+    0;,(A~+ Q~, (t, , g, )+B~E.
+  The generalization of Secs. III B-III F in the presence of matter fields is then straightforward. The op-
+erators (&~E) [where now contractionsbetween &/&M (&/&M, ) and the kinetic part of &S/&P, (BS/&y, ) are also
+forbidden] form a set of operators stable by renormalization,    and the addition of counterterms does not
+modify the Ward identities (3.42) satisfied by I'o. Class-IIa operators have the form
+
+          dx
+                   8
+                       ~
+                           „, ~ ~ j„
+                           ~
+                           ~ ~    ~   (A„+
+                                        ~ Q„,        a )G„'(A„+
+                                           ~ t a t f),          ~ t P„P,
+                                                                ~
+
+
+
+
+                                                             ~ Q„,
+                                                                          ~
+                                                                     a t ~ )(x),t
+                                                                               ~St
+                                                                                     ~       ~           ~
+
+
+                                                                ),
+                             ~    ~
+
+
+
+
+                                             p  pt g„p,
+           dxH, (A„+ Q„, g,gs, P,g g~ I ,~ (A„+Q„,  g& g ), or                                                        dx,
+                                                                                                                       5y, jxj
+                                                                                                                               H,   ,       (A~   Q+„, g, , II), ),
+
+where the assignments for G, H, and FI to given representations and fermion numbers are obvious. Exact-
+ly as in Sec. IIIF, it can be seen that only these operators contribute to the n dependence of the divergent
+part of Green's functions with one insertion of a gauge-invariant operator and only external legs of A„, g„
+and II), . Finally, one can show that class-II operators of the form
+
+              H, (A„, Q„, P, , (I),-, C;, C;) or H, (A~, Q„, P„P„C,, C,. )
+        V'a                                                                                                                   a
+
+are separately stable by renormalization.
+
+                                      IV. RECIPE FOR THE COMPUTATION OF n-INDEPENDENT ANOMALOUS DIMENSIONS
+                                                                                                    A. Summary of results
+
+   Let us collect first the results of the previous section concerning the renormalization matrix relative to
+a gauge-invariant operator which does not vanish in the classical limit (class-I operator). We conjecture
+and prove in the Appendix for operators of dimension d & 6, or of twist 7 ~ 5 for totally symmetric opera-
+tors, or of hvist ~ & 3 for operators antisymmetric in two indices and symmetric in the other indices, the
+following assertion. The renormalizaiion matrix (Z;, ) acts in the space of class-I operators and of class-
+II operators 0' which are defined by the following equation:
+    0'(A„+ Q„, g, , $„C;, C;) =[(6E(Aq, Bq, P„f, , C;, Xq, K, Lq, M„M, ))] 8                                                                                               (4.1)
+                                                                                                                                                  g' = -D'&(A) C
+                                                                                                                                                  L ~= D&&(A)C.
+                                                                                                                                                  K] = N @=A =0
+The operation 8 introduced in the Appendix in the presence of fermions denotes, for M and M equal to
+zero, the expression
+                                  Bg                 Bg
+    h
+    ~ ~~        ~ 4~
+                                           8
+                                                 ~          x ~8 ~ Bg            8
+                                 9B„'(x)
+                                   ~
+                                      ~
+                                         BJ„"(x)   e(j),
+                                                       ~I
+                                                       a (x)~
+                                                             sM,
+                                                               a (x) eII),
+                                                                         a (x) M,
+                                                                                a (x)
+                      RENORMALIZATION                       ON    NON-ABE LIAN GAUGE. . . . II.                   ~
+
+
+
+
+andthe( ) product [Eq. (3.7)] subtracts dangerous                      sion d, Lorentz covariance, and other symmetry
+graphs with a closed loop and no propagator (Fig.                      properties (like parity, for example), construct (i)
+1). The sources J„'(x), K'(x), L„'(x) are elements of                  all gauge-invariant operators with dimension less
+the adjoint representation of the Lie algebra and                      or equal to d, the same Lorentz covariance and
+have dimension 2 and ghost number y: y(J'„)                            symmetry properties as O„and (ii) all type-1 in-
+    y(I—„') =2y(K;) = —1 with the convention y(c)                      variant operators F,. with dimension less or equal
+= -y(C) =+1. The sources M, and M, belong to the                       to (d —1), the same Lorentz covariance and sym-
+same representation as the fermion fields P and
+                  ', ghost number y = —1, and a
+                                                                       metry properties as       0„aghost number equal to
+have dimension —,                                                      ( —1), a fermion number equal to zero, and which
+fermion number E:                                                      depend on the variables A„, B„, g„P„C;, f„', K,
+                                                                       L„', M, , and M, . Then operate on each polynomial
+                                                                       E, as indicated in Eqs. (4. 1} and (4.2}. The( ) pre-
+                                                                       scription is unessential for the value of 0 in the
+2 is a shorthand     notation for the classical action                 tree appr oximation. This procedure yields a re-
+of B~, tj, , g, [Eq. (3.37)].                                          dundant set. For example, there exist gauge-in-
+  To find all operators coupled by renormalization                     variant operators which have the expression dE
+to a given class-I operator 0, with definite dimen-                    (class IIa.)
+
+
+       ;, , (A~+@, g, , P, )G";(A„+Q, g, , $,) or                 —, (A + Q„, g, , $, )H'(A„+ Q,     (, , g, ).
+Therefore, class I is defined as the set of allgauge-                  class-IIb counterterms, since these class-IIb
+invariant operators which do not belong to class                       operators vanish for all fields and sources, but
+IIa. Other elements of class II are denoted by                         A„, g, and P, set to zero. This remark leads
+class IIb. Notice that the described procedure                         directly to the recipe for the computation of the
+yields a redundant set of operators; the reduction                      n -independent    anomalous     dimensions        relative to
+of this set to a basis of independent operators can                     class-I operators in the background gauge.
+be achieved by a systematic and tedious use of the
+Jacobi identity, anticommutation relations (and
+partial integrations for operators at zero momen-                                     B. Recipe in the background gauge
+tum).
+                                                                          The superficial divergence of a 1PI graph with
+  With this basis, the matrix 1Z,, takes the form    j                 an insertion of a class-I operator 0; and external
+                                               IIa    IIb              legs of the background field A„and fermion fields
+                   independent                                         g, and $, gives contributions to counterterms both
+                                                                       of class I and class IIa and thus the remaining
+                                               a Py'zovz
+                                           a dependent      (4.3a)     problem is the extraction of the class I counter-
+                                                                       terms from the superficial divergences of the
+                                                                       mentioned graphs. The first task is, of course,
+The counterterms Z;,. are obtained directly from                       to list all class-I and -IIa operators of the same
+the superficial divergences of various 1PI graphs                      Lorentz covariance and the same dimension as 0;.
+containing an insertion of an operator 0,. or 0, ,           '.
+                                                                       In the absence of fermions in the theory, the sepa-
+after extraction of the wave-function renormaliza-                     ration of class-IIa operators would be automatic
+tion from each external leg of the graph and cou-                      if we could choose the background field to verify
+pling-constants renormalization,    go and n, (see                     the condition
+Sec. II); in the following, mention of a superficial
+divergence refers to the superficial divergence                            8Z (A, )
+af ter this intermediate renormalization.                                                                                         (4. 4)
+                                                                           ea„'(x)
+   The multiplicatively renormalizable eigenvec-
+tors 9, associated with the n-independent counter-                     which is indeed preserved by renormalization;
+terms of class I, take the expression                                  however, we do not know how to realize this con-
+                                                                       dition in a consistent fashion. Therefore, an al-
+   0,. = Q                                                             ternative procedure is to compute the superficial
+         class-I
+                   tjI,.q(g)O, +     Q y, , (n, g)Oq.
+                                    class-II
+                                                            (4.3b)
+                                                                       divergence of one of the following:
+       operalor3                   operators
+                                                                          (i) a given 1PI Green's function with definite
+  Finally, graphs with only external legs of the                       Lorentz behavior which may contribute to class-I
+background field 4„, g, and $ do not give rise to                      operators only, because the expression of class-
+3174                             H. KLUBERG-STERN AND                        J. B. ZUBER
+IIa operators in the tree approximation does not                      their 'indices       p, and    v,       at nonzero momentum:
+display an element with the same tensor behavior
+(to perform the computation consistently, you need                        0, =i $(y„D„-y„D„)f,
+as many independent tensors as class-I operators),
+or (ii) a 1PI graph with definite external legs which                     O, =i P(y, D, -y, D„)f,
+                                                                                                                                     (4. 6)
+does not appear in the expression of any class-IIa                                     ,
+                                                                          O, =i Po„. $g,
+operator in the tree approximation (again, one
+needs as many independent graphs as class-I oper-                         O, =i jlIIo„, g.
+ators), or (iii) if the previous procedures are not
+possible, either a given 1PI graph with various                       These operators are independent. No class-I or
+tensor behaviors in the external momenta or var-                      -IIa operator can be constructed from the gauge
+ious 1PI graphs and eliminate by hand the contri-                     field (A+ Q)„only. 0, and 04 are class-IIa opera-
+bution to class-IIa operators by performing linear                    tors. In order to determine the renormalization
+combinations between the various computed coun-
+                                                                      factor + i relative to Oi we o"ly need to compute
+                                                                      the divergent part of the two-point function with
+terterms.
+                                                                      one insertion of 0;, of tensorial structureP&y,
+   Let us illustrate these considerations by the ex-                  —P, y„(see Fig. 7). Similarly, for 0„ the diver-
+ample of traceless twist-two operators at zero
+momentum.      For totally symmetric twist-two op-                    gent part of the 2-point function with tensor struc-
+erators there exist no class-IIa operators. Indeed,                   ture q„y, —q, y„yields the counterterm Z, , relative
+the operator I' associated with such a class-IIa                      to the operator 0, .
+operator should be constructed from a function
+                                                                                           C. Recipe in the Fermi gauge
+H„. . . „(B)of twist zero, totally symmetric in
+                                                                         In our approach, the Fermi gauge is just a limit-
+                                                                      ing case of the background gauge where one sets
+    E„.. . „(x)= J„',(x)H„' . . . „(x)                                the field A„ to zero after all algebraic manipula-
+                  + (permutations   p, —p,      „.. „).
+                                                      , p,
+                                                             (4. 5)
+                                                                      tions. This procedure applied to Eq. (4. 1) yields
+                                                                      the complete list of class-II operators coupled by
+                                                                      renormalization to a class-I operator of a given
+A type-1    covariant object H~' . . . ~ (B) can be built             spin and dimension. The graphs with external legs
+only from the covariant objects D„"(B)and E„'„(B)                     of the fields Q„, g, , and $, which seem suited for
+which is eliminated by the simultaneous require-                      the computation of class-I counterterms, need,
+ments of total symmetry and of twist zero (this                       however, also class-IIb counterterms in contra-
+forbids any contraction which raises the twist);                      distinction to the graphs selected in the background
+finally, no covariant object can be built only with                   gauge. A complete list of class-I and -II operators
+the tensor D„"(B) at zero momentum.     In the pres-                  of given spin and dimension must be established
+ence of fermions, this argument can be implemen-                      and the extraction of class-I counterterms pro-
+ted. Class-IIa operators constructed with f ermion                    ceeds according to the same general rules as in
+fields have at least twist four, unless y„matrices                    the background gauge: Either one chooses suitable
+lower the twist; however, the product y„y„which                       tensor contributions of certain graphs or computes
+brings the twist to the value of two, does not con-                   graphs with different number of legs.
+tribute to symmetric traceless operators. This                           Again, in this Fermi gauge the traceless sym-
+result confirms the computation of Sarkar and                         metric twist-two operators at zero momentum are
+Strubbe' and Crewther' of the anomalous dimension                     simple. Because of the symmetry and twist con-
+of traceless symmetric twist-two operators in the                     str3ints, there exist no class-II operators con-
+one-loop approximation.                                               structed with fermions and thus the superficial
+   Our next example is given by the operators of                      divergence of graphs with fermion external legs
+twist two and dimension four, antisymmetric in                        yields autometically class-I counterterms, depend-
+
+
+
+
+                                         I   = 1, 2
+
+
+                                                                                                    p, a, i       -p, p, j
+
+  FIG. 7. The contribution of these graphs determines                   FIG. 8. The contribution of this graph determines the
+the renormalization  factors &;~ and &;2 relative to the              anomalous  dimension of symmetric traceless twist-two
+operators 0; of Eqs. (4.6).                                           operators [Eq. (4.7)].
+12                   RENORMALIZATION                            ON           NON-ABELIAN                    GAUGE. . . . II. . . .                     3175
+
+ing on fermion fields. For graphs with external                                           needs only class-I counterterms, depending on the
+legs of the field Q~, the two-point Q„ function with                                      field Q„. To see this, we notice that the function
+the following tensor structure (see Fig. 8)                                               E [Eq. (4. 1)j must be linear in S„' and independent
+                                                                                          of K and L„' because of the simultaneous require-
+     5, , g„&p~      p„(n even)                                     (4. I)                ment of twist (+1) and ghost number ( —1):
+
+
+
+     E~   . „= d'xJ&'(x)H~. . . (A, B)+(perm   &
+                                                                        ut   ati ons p,       -g, . . . , p, ).                                       (4.8)
+
+The polynomial H can be constructed from the type-1 covariants D&~(B), (B-A)„', and E„',(B), which is,
+however, eliminated by the simultaneous requirements of twist zero and symmetry in all indices. The
+generic form of class-II operators is therefore given by
+
+
+
+
+                    + (permutations       p.   , —p. 2, . . . , p, „)                                                                                 (4.9)
+
+The contribution       of these operators to the two-point                       Q„ function in the tree approximation
+     5, &[p p„'      p„(g„„g„~+g„g s)-p„' 'p„(p„g„&+psg„„)+ (permutations                                                        p.   ,   - „.. . , g„)]
+                                                                                                                                            p,
+
+                                                                                                                                                     (4. 10)
+
+
+vanishes for the peculiar tensor selected in Eq.                                          with the N n-independent anomalous dimensions,
+(4. 't). The authors of Ref. 1 seem to have computed                                      on the space of class-I operators, namely the func-
+the counterterm associated with the particular                                            tions P, &(g) of Eq. (4.3b). These simplifications
+function of Eq. (4.7), which gives indeed the cor-                                        are a direct consequence of the block-triangular
+rect n-independent anomalous dimension.                                                   structure of the renormalization matrix.
+  The operator F„,' at zero momentum is an ex-
+ample of a case where there exist no class-IIa                                                                    E. Final comments
+operators and thus the prescription is trivial in
+the background gauge and not a priori in the Fermi                                           Let us end with some trivial comments. The
+gauge.                                                                                    presence of class-IIa operators constitutes a re-
+                                                                                          striction of our method since it does not apply to
+      D. Computation       of anomalous dimensions at order g                             them. These operators might, however, be un-
+                                                                                          physical, but we dispose of no convincing criteria
+   Suppose we are interested only by the value of                                         of "physicality. " A necessary, but not sufficient,
+the anomalous dimensions at some order n of per-                                          criteria would be the presence of other n-indepen-
+turbation theory, and not by the complete expres-                                         dent dimensions than the N n-independent ones
+sion of the corresponding multiplicatively renor-                                         relative to class-I operators. No general proof
+malizable operators, and we have picked accord-                                           could be given concerning this n dependence. Even
+ing to the recipes of the previous sections a con-                                        a counterexample showing explicit n dependence
+venient graph with definite tensor structure. Then                                        cannot settle the question, since we know of an ex-
+the extraction of the superficial divergence from                                         plicit example of a class-IIb operator with n-inde-
+this graph at order n requires preliminary renor-                                         pendent anomalous dimension: It is the conserved
+malization of all subgraphs. This implies the corn-                                       operator CMC studied in Ref. 4. This example
+putation at order (n —1) of all counterterms Z, , for                                     shows that accidents may occur.
+i & N if N denotes the number of independent class-                                       -
+                                                                                            The next point we would like to emphasize is the
+I operators. This includes the class-II counter-                                          fact that the variation of all class-II operators un-
+                       j
+terms relative to &N. However, the rest of the                                            der a supergauge transformation (Ref. 8) vanishes
+matrix (Z„.) (i& N) is irrelevant for the computa-                                        in the absence of sources of the quantized fields
+tion of the N e -independent anomalous dimensions.                                        because of the equations of motion (see Sec. III D4).
+The computation of the counterterms Z&,. for i & N                                        Therefore, we have at the moment no plausible
+yields, of course, also the components of the mul-                                        argument to exclude a contribution to the Wilson
+tiplicatively     renormalizable       operators,         associated                      expansion of a product of gauge-invariant currents
+                            H. KLUBERG-STERN AND               J. B. Z UBER                              12
+
+arising from a class-II operator associated with       lects automatically class-I and -IIa operators,
+an n-independent anomalous dimension.                  eliminating thereby class-IIb operators; the num-
+   The study of the Wilson expansion involves a        ber of vertices in this gauge is, however, larger
+preliminary work on the renormalization of a pro-      than in the Fermi gauge.
+duct of two local class-I operators which can pre-       Tne above mentioned prescription rests on a
+sumably be carried out along similar lines to those    conjecture which was proved only in a few cases:
+followed here, namely the exploitation of WI de-       Only class-I and -II operators mix with class-I
+rived from the supergauge transformations.      In     operators under renormalization.      This conj ecture
+fact, if the renormalization of a single insertion     seems quite reasonable in view of the properties
+of a class-I operator can be performed in a way        of the class-II operators: same WI as for class-I
+which preserves the form of the bare WI for the        operators and block-triangular structure for the
+regularized functional (as noted in Sec. IIID), then   renormalization matrix. The complete proof of
+the counterterms for a bilocal product of two op-      this conjecture was achieved for the following op-
+erators are again class-II operators, at least at      erators, which are involved in the Wilson expan-
+the one-loop level. Thus, the class-II operators       sion of currents for a gauge theory including fer-
+seem to play an important role in the renormali-       mions: (i) operators of dimension d& 6; (ii) totally
+zation of gauge-invariant operators.                   symmetric traceless operators    0„. „of..
+                                                                                           P '''Pg
+                                                                                                      twist
+                                                       w ~ 5; (iii) operators 0„,„.
+                                                                                  . . .   totally  symmetric
+                                                       and traceless in n indices and antisymmetric in
+                  V, CONCLUSIONS
+                                                       the other two indices, of twist v ~ 3. Finally, the
+   We have achieved by means of Ward-Slavnov           insertion of the class-II counterterms, which is
+identities a systematic study of the renormaliza-      intimately related to the equations of motion, leaves
+tion of single insertions of classical gauge-invari-   invariant the renormalized action in the presence
+ant operators of arbitrary momentum which applies      of a class-I operator under a generalized super-
+also to the compensation of non-"logarithmic" di-      gauge invariance which depends on the source of
+vergences. The classical gauge-invariant opera-        the class-I operator: The situation is similar to
+tors, which do not vanish in the classical limit in    the familiar one in the absence of the operator
+the absence of sources and of the gauge-fixing term    where the renormalization of the coupling constant
+and correlated Faddeev-Popov ghosts, are denoted       appears as a renormalization of the supergauge
+by class-I operators. The latter couple by renor-      transfor mation.
+malization to gauge-invariant operators, which            The applications of this work to practical com-
+vanish in the above mentioned classical limit (they    putations are numerous. Aside from the original
+are referred to as class-IIa operators), and to        calculations of Ref. 1, calculations of anomalous
+non-gauge-invariant    operators which involve gauge   dimensions are involved in various physical prob-
+and matter fields as well as Faddeev-Popov fields      lems of nori-Abelian gauge theories; as an exam-
+(the latter are referred to as class-IIb operators).   ple, we may quote the dynamical realization of
+Class-II operators which mix with a given class-I      octet enhancement which was pointed out by Gail-
+operator 0 of dimension d are generated by the         lard and Lee, and by Altarelli and Maiani (Ref. 12).
+action of a linear differential operator on poly-      We hope that our prescription will avoid unneces-
+nomials which have ghost number (-1), dimension        sary computations of the full renormalization ma-
+less than or equal to (d —1), and the same Lorentz     trix.
+covariance as 0. The class-II operators obey             There remain several open problems. The tech-
+peculiar Ward identities, which imply for class-II     nical ones are the general solution of the cohomo-
+operators the same WI as those for single inser-       logy problem, which was only conjectured, and the
+tions of class-I operators and which yield a block-    derivation of a basis of operators of given twist
+triangular form for the renormalization matrix:        which exhausts relations arising from the Jacobi
+The renormalization of class-II operators involves     identity, anticommutation relations, and eventually
+only class-II operators. The block-triangular          partial space integrations for operators at zero
+structure of the renormalization matrix simplifies     momentum.      Next, the existence of class-IIa op-
+greatly the computation of the n-independent ele-      erators raises the questions of the existence of
+ments of the class-I counterterms.     Explicit pre-   other Q. -independent anomalous dimensions than
+scriptions for this computation were given and         those relative to class-I operators, and of their
+illustrated by some examples, both in the Fermi        contribution to Wilson expansions of physical op-
+gauge and in the background gauge. In this respect     erators. Finally, this work opens a tractable path
+the computation in the latter gauge of the superfi-    for the study of Wilson expansion, for which the
+cial divergence of 1PI graphs with external legs of
+matter fields and of the background field only se-
+                                                       proper treatment of the renormalization of gauge-
+                                                       invariant operators appeared as a preliminary.   ""
+ 12                     RENORMALIZATION                        ON         NON-ABELIAN                   GAUGE. . . . II. .
+
+                        ACKNOWLEDGMENTS
+                                                                                           (c) D„J(A)
+                                                                                                               8
+                                                                                                               J( )
+                                                                                                                      — —8
+                                                                                                                         L-   —0 =0.         (3.44)
+                                                                                                                              )
+   It is a pleasure to thank J. Zinn-Justin for care-
+ ful reading of the manuscript, C. Itzykson, A.
+ Rouet, and R. Rora for-fruitful discussions and                                                             1. Change of variables
+ R. Crewther, G. Altarelli, aqd L. Maiani for com-                                       We first perform some changes of variables and
+ munication of their results p.rior. . to publication.                                 combinations of these equations. By Eq. (3.44c),
+                                                                                       0' is a function of C' and J& only through the com-
+             APPENDIX: SOLUTIONS OF EQS: {3.44)
+                                                                                       bination J„"=—J' —D„'J(A)C' In. terms of the vari-
+    In this appendix, we want to study the'solutions                                   ables Aq, Bq A„=+Q„, C;, Xq, I„"=L~+Dq~(A)CJ,
+  of Eqs. (3.44) satisfied by the counterterms af a                                    $„(I)„M„and M„ it is straightforward to see
+, gauge-invariant   operator. We consider the. -generai1, , :                          that the differential operator 8
+  case, with possible presence of matter (spinor)
+ fields:                                                                                   8 =8s+
+       (a) u,*o =o,
+       (b)   s, O'=0,                                                                  takes the form
+
+
+              dx            .       +             —            +                         +—[C(x) x C(x) j
+                                         ey. (x) eM, (x)           sy, (x) sM, (x)         2                       sC(x)
+                   —L'(x)                — „(B)JP(x'')+(XIVI(x)T $(x),—iX ',J,(x)T,' M (x})                                                    (A2)
+                                          (D
+
+ where, here and in the following,              2 is a shorthand               notation for        f dx g(B, g, (I})(z), 2 defined in (3.37). In
+ those variables, S„' reads
+
+
+
+                            8                                                                  8
+             +g C(x)x           +.),'(x)x ~„+K(x)x BK(x) +L)(,
+                                                            " x)x 8 Lt((x          '
+
+
+
+
+                                                                                                                                               (A3)
+
+
+ It is clear that this operator 8 still satisfies 8'=-0
+                                                                                                   8        8
+       8'=     d x -Dti'(B)              + lgT
+                                            ~
+
+                                                  (tI B(Bx)
+                                                                           ~
+
+
+                                                                           V Ta( 4(x)                   2 &If((                                (A4)
+                                BBJ( )                        B&y (   )                        y ( )
+
+ and the right-hand side vanishes,              because of the local gauge invariance of Z. If we are now able to prove
+ that some solution of
+       (a) so =o,                                                                                                                              (AS)
+       (b) n„o'=0
+ is of the form
+       O'=BI' with 5)„E =0,
+ it follows from the definition (Al) that an equivalent expression for 0' is given by 0' = a~ I". The advantage
+ of this new operator 5 is to provide a better separation of variables. Notice that the local equation (3.44a),
+ which is valid because we are working in the background gauge, has played an important role in this sim-
+ p lification.
+
+                                                   2. Elimination of the variables L„' and A„
+
+      The integration of 80'= 0 with respect to variables A„and L&is straightforward,  since the operator
+ L&
+       ' 8/8A„anticommutes with the operator 8, and is linear in L„'. Indeed, the operator E, defined by
+3178                                         H. KLUBERG -STERN AND                             J. B. Z UBER                                     12
+
+
+       F, (A„, B„, . . . , i9, ) =—
+                                             1
+                                                 —(A —B)~ ' -, [0'(B + t(A„—B„),B„,C, T', K, tL„', g„$„M„M,) ]                               (A6)
+
+
+satisfies
+
+       BE, =
+                0
+                     dt     [—
+                             0'(B +t(A —B ), . . . tL~, . . .) ]
+                                                           ,
+
+
+           = 0'( Aq, B~, C, T„', K, Lq, f„$„M„M,) —0'( B„,B„,C, S„', K, 0; P„y„M„M,) .
+
+By construction, E, is a type-1 invariant: S„F,=O, so BE, is also a type-1 invariant   and the problem now
+reduces to the solution of Eq. (A5) for operators 0' independent of A and L„'. Unfortunately, thp remain
+ing cohomology equation is nontrivial and we have thus checked the validity of our conjecture only in the
+simplest cases.
+
+                                                         3. Low-dimension or low-twist operators
+
+   In the case of low-dimension 4, or low-twist 7 operators, the possible ghost-number conserving solu-
+tions 0' are polynomials of small degree in C; (d = T = 1), S„' (d =2, T = 1), K (d = T = 2), M„or M, (d =r = —,
+                                                                                                              ').
+However, in the presence of spinal fields, one can use y matrices to lower the twist of the operator and
+the possible degree in C; depends on the Lorentz structure.
+   It is easy to see that operators of dimension d=8 (4, 5, 6) or twist v =2, 8 (4, 5), completely symmetric
+and traceless in their Lorentz indices, are, at most, linear (quadratic) in the C's. On the other hand,
+operators of twist 7 =2 or 3 antisymmetric in two indices pv and completely symmetric and traceless in
+the other indices p,          „.
+                         . . , p.„may be quadratic in C, for example, the operator
+    M, T,', &x„„(y„D„'' ' D'" '"+permu-tations) M, (C xC)'.
+
+                                                               (a) Operators at most linear in C
+
+   After elimination of the variables L„' and A„, the remaining                                solutions    0', independent   of L„' and A„, sat-
+isfy the following equation:
+               Bg         B0'           BZ        B0'      Bg          B0'                                 B0'
+  d4                                                                              g(     (       ( ))
+           BB„(x) BT,(x)           By.(x) BM. (x)         By.(x) BM.(x)           2                     BC(x)
+                                                                                                                                  80'
+                                                                             j,
+                                                                —[D„"(B) ' &(x) +ig. M, (x)T,'qg~(x) —igP, (x)T,'qM~(x)];( )=0, (A8)
+
+
+which, by application of two derivatives [B/BC;(y)]                                   The following proof shows that for operators quad-
+x[B/BC&(z)] implies, for operators at most linear                                     ratic in C, ~& is a trivial cohomology operation;
+in C;, the independence of 0' with respect to the                                     this means that all solutions of equation (A9) take
+variable C;. By ghost-number conservation, 0'                                         the form
+can therefore depend only on B„, g„and $, and
+satisfies automatically Eq. (A8). Equation (A5b)                                             0'= —
+                                                                                                 g 8G
+                                                                                                    C                                       (All)
+for 0'(B„, P„g,) tells us that 0' is a type-1 inva-
+riant, and thus a gauge-invariant polynomial of                                       where G denotes a, type-1 invariant (Eq. (A5b} local
+B„=A„+Q„, g„and g, .                                                                  polynomial in the variables A&, B„, Z„', C, and K.
+                                                                                      This identity (All) reduces the problem to the case
+                    (b) Operators at most quadratic in C                              of operators linear in C, which was solved in the
+                                                                                      previous paragraph. Indeed, the polynomial 0"
+  The piece of 0' quadratic in the variable C, de-
+noted by 0", satisfies the identity                                                          0"= 0' —8G
+       Bc0"= d'x(CxC)                    = 0"=0,                                       satisfies Eq. (A8), is type-1 invariant, and is, at
+                                    ~
+                                                                      (A9}
+                                        ~C                                             most, linear in C. The main problem is to prove
+                                                                                      that the polynomial B'0'(u)/BC, (x)BC&'y) is anti-
+where the operator ~~ is again a cohomology oper-
+ator                                                                                  symmetric in the group indices i and and thus j
+                                                                                      symmetric in space-time variables (x, y). This
+       (Bc)' =0.                                                     (Alo)            property is trivial for operators of dimension d(6,
+12                   RENORMALIZATION                          ON   NON-ABELIAN            GAUGE. . . . II. . .                     3179
+
+since one may proceed by inspection of the inde-                        application of two derivatives on the latter equation
+pendent polynomials.     For operators of given twist,                  implies type-1 invariance for Bs0,"z'/BC&(y)BC;(x),
+this property is not obvious, and we indicate only                                  g20ls (2)
+the successive steps of the rather intricate deri-                                                   0                            (A16)
+                                                                                  BC, (y)BC, (x)
+vation. The application of three derivatives on
+Eq. (A8) yields the following equation:                                which must thus be proportional              to 5, , :
+                    g2ol'                                                            "
+                                                                              B'0, "(u)
+                                                                                                                                  (AIV)
+           y)
+                BC„( )BC, (x)                                               BC, (y)BC, (x)
+
+           + 2 permutations                                             By insertion of the expression            (A17) into identity
+                                                                        (A12), the latter reduces to
+                                                              (A12)
+                                                                            5(x —y)C (u;y, z)+(x-y -z) = 0
+which after some algebraic manipulations says
+that the ij a-ntisymmetric part of B'0'/B C; (x)B C,. (y)              and one can convince oneself that this implies the
+can be cast in the form                                                vanishing of the distribution 4 which is of finite
+           g20l           g2 pl
+                                                                       order. Thus we have achieved the proof.
+   ' d&;(x)&4(V) &t:;(d)d4(~))
+                                                                                         (c) Operators of higher degree in C
+                                                g20l
+           =f. ..f„(x-dy)j dz                   ()      (
+                                                               (A13)     This method fails for operators of degree three
+                                                                       in C. Indeed, there exist solutions of Eqs. (A5)
+C, denotes the eigenvalue of the Casimir operator                      which are not af the form BI"; for example, the
+in the adjoint representation:                                         polynomial f;,„C(x) C( x)C~(y) satisfies (A5) be-
+                                                                       cause of the Jacobi identity: Cx(CxC) =0 but
+     f,af;i =C2~ai                                             (A14)
+                                                                       cannot be cast in the form 8E. However, we have
+Equation (A13) yields the announcedyacc,
+                                      result (A11)                     found no simple counterexample of a ghost-num-
+for the antisymmetric           part 0,",                              ber conserving operator which would be a solution
+                                                                       of Eq. (A5) and which is not of the form BE; for
+                                          g20l(2)
+     0,'u' = —,'   dxdy C, (y)C, (x)            )'                     example, consider 0':
+                                            (          ( )
+                                                                           0'= f;, C;(x)C, (x)C„(y)K. , (x)D'"(B)J "(x) = BE',
+                                                                       where E denotes I' =-,'(C&&C) . C(K. K). The ghost-
+
+     G=   —
+          1
+            f„,
+            2
+                       dydz C„(y)
+                                          g20l
+                                          ( )          ()
+                                                       z
+                                                          .   (A15)
+                                                                       number conservation plays a crucial role for the
+                                                                       validity of our conjecture, for which a general
+                                                                       proof is probably not trivial. The first step, to
+0,'"' satisfies all requirements          and we are now               our view, would be to set up a basis of polynomials
+able to show that the symmetric part 0, must            ''"            which are independent by Jacobi identity and which
+vanish in view of Eq. (A13) and Eq. (A5b). The                         separate the C variables and (C &&C) variables.
+
+
+
+
+*Chargee de Recherches au CNRS.                                          G. 't Hooft and M. Veltman, Nucl. Phys. B44, 189
+)Attache de Recherches au CNRS.                                           (1972); G. 't Hooft, ibid. B61, 455 (1973).
+ H. Georgi and H. D. Politzer, Phys. Rev. D 9, 416                        Strictly speaking, the first term in Eq. (2.9a) should be
+  (1974); D. J. Gross and F. Wilczek, ibid. 9, 980 (1974).                written —[BI'/BA&(x)1D&"( A &(x)). However, the short-
+2J. A. Dixon and     J.
+                    C. Taylor, Nucl. Phys. B78, 552                       hand notation causes no change in the following.
+ (1974).                                                                ~~M fact, when inserting the counterterm at order (n +1)
+3S. Sarkar, Nucl. Phys. 882, 447 (1974); S. Sarkar and                    relative to the insertion of the operators (Bs E&l and
+ H. Strubbe, ibtd. B90, 45 (1975).                                        Og, we immediately perform an intermediate renormal-
+4H. Kluberg-Stern and J. B. Zuber, Phys. Rev. D 12,                       ization by replacing in their expressions all the vari-
+ 467 (1975).                                                                                    .
+                                                                          ables A &, Q, .. ,g, u by the bare variables Ao&,
+5H. Kluberg-Stern and J. B. Zuber, Phys. Rev. D 12,                           .
+                                                                          Q~&, . ., go, u defined in Eq. {2.11). This procedure
+ 482 (1975).                                                              does not alter the counterterms at order (n +1) and
+ R. Crewther, private communication.                                      yields the desired Ward identities for the quantities
+TJ. Zinn-Justin, Lecture Notes Bonn 1974, Saclay Report                   renormalized to order (n +1).
+ No. DPh-T/74/88 (unpublished).                                         ~~M. K. Gaillard and B. W. Lee, Phys. Rev. Lett. 33,
+ C. Becchi, A. Rouet, and R. Stora, CPT report Mar-                       108 (1974); G. Altarelli and L. Maiani, Phys. Lett. 52B,
+ seille, 1974 (unpublished)      .                                        351 (1974); G. Altarelli, K. Ellis, L. Maiani, and
+3180                           H. KLUB ERG -STERN AND               J. B. Z USER                                     12
+                                                                                                                      4
+
+
+ R. Petronzio, Nucl. Phys. B88, 215 f975).                     symmetric twist-two operators at zero momentum,
+~3J. A. Dixon and J. C. Taylor, Oxford Report No. 74/74,       and in this respect, our first example, F»~, appears
+                                                                                                '
+ 1974 (unpublished). This report, which we received            as a general case, in our view. , rather than as an ex-
+ after completion of our own manuscript, treats the            ception.
+ same problem through extensive use of a claimed             ~4Note added in proof. The insertion of a class-II oper-
+ theorem: Counterterms may be generated by renormal-           ator can be absorbed by a change of fields and a
+ ization of gauge transformations.   The classification of     change of gauge function which are- believed to leave
+ operators coincides with the one introduced by this          physical quantities invariant. However, the new gauge
+ work. However, our conclusion is quite different:             function is a priori of dimension & 2 and involves ghost
+ The computation of the Q. -independent anomalous di-          fields. The renormalization program does not seem
+ mensions is highly nontrivial, even after the simplifi-       immediate in such a gauge. Thi's remark was pointed-
+ cations introduced by this study, except for traceless        out to us byJ.   Zinn-Justin.
+

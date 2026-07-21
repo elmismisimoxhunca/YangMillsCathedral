@@ -1,0 +1,864 @@
+Commun. math. Phys. 24, 87---t06 (1972)
+© by Springer-Verlag 1972
+
+
+
+
+     Operator Product Expansions and Composite
+      Field Operators in the General Framework
+              of Quantum Field Theory
+                                KENNETH G. WILSON
+             Laboratory of Nuclear Studies, Cornell University, Ithaca, New York
+
+                               WOLFHART ZIMMERMANN"/~
+                 Department of Physics, New York University, New York, N.Y.
+
+                                   Received July 26, 1971
+
+     Abstract. The short distance behavior of field operator products is analyzed. It is
+shown that under certain conditions operator product expansions can be derived which
+give complete information on the short distance behavior and lead to the construction of
+composite field operators.
+
+
+                                      1. Introduction
+   A central problem in local quantum field theory is the definition of
+products of field operators at the same point. Important examples of
+such composite field operators are Lagrangian densities, energy-momen-
+tum tensors, interaction terms of local field equations and current
+operators associated with internal symmetries. Let A 1.... , A , be field
+operators satisfying the usual postulates of local quantum field theory 2
+The difficulty in constructing composite operators such as
+
+                                      A I ( x ) . . . Aa(x )                       (1.1)
+originates in the singularity of the operator product
+
+                                     A 1 ( x l ) . . . A,,(x,)                     (1.2)
+
+for coinciding arguments. Such singularities inevitably occur as a conse-
+quence of relativistic invariance and positive definite metric in Hilbert
+space [1].
+    In Ref. [2] an expansion of the operator product (1.2) was proposed
+which exhibits the singularities near Xi = x and simultaneously allows
+   * Supported in parts by funds from the National Science Foundation Grant No.
+GP-25609.
+      Each of the operators Aj may have several components transforming like a tensor
+under homogeneous Lorentz transformations.
+7   Commun. math. Phys., Vol. 24
+88                         K, G. Wilson and W, Z i m m e r m a n n :
+
+
+the construction of composite operators. The hypothesis is that any
+operator product (1.2) may be expanded in the form 2
+
+     A, (x + ~1) ... Aa(X + ~) = ~ fk(~l . . . . . ~ ) 8k(x) + R(x, ~1. . . . .   ~o) (1,3)
+                                      k=l
+
+where the remainder R vanishes at ~j = 0 while the functions fk become
+singular (or non-vanishing) in the limit ~j--, 0. The operators Bk are local
+and may be regarded as composite field operators associated with the
+formal product (1.1).
+    In Ref. [3] this hypothesis was generalized by assuming that any
+operator product (1.2) may be represented as a series
+
+               At(x+~t) ... Aa(x+¢.)= ~ fk(¢t ..... ¢a)Bk(x).                         (1.4)
+                                                  k=l
+
+The series is asymptotic in the sense that the coefficients
+
+
+
+vanish stronger than QN for k~=k(N) provided k(N) is chosen large
+enough. In addition dimensional rules were given in Ref. [-2,33 which
+provide detailed information on the operators Bk and the singularities
+of the coefficients fk.
+    We summarize the results concerning operator product expansions
+and the properties of composite field operators which so far have been
+obtained in the perturbation theory of renormalizable interactions, and
+exactly for lower dimensional models. Local field equations with properly
+defined interaction terms were first introduced by Valatin [4] and have
+been verified in all orders of perturbation theory [5, 63. Independent of
+perturbation theory Glimm and Jaffe have derived local field equations
+for the model of ~4-coupling in two dimensions [73. Similar results have
+been obtained for other twodimensional models [8, 9] 3. The principal
+parts (1.3) of operator products were derived by Brandt [5], moreover the
+asymptotic expansion (1.4) has been confirmed in perturbation theory
+[10,113. Operator product expansions and composite operators have been
+studied in detail for the Thirring model [8]. In perturbation theory a
+definition of composite operators can easily be given by applying
+Bogoliubov's renormalization technique to the Gell-Mann Low expan-
+sion of the relevant Green's functions. Under certain conditions it has
+been possible to define current operators which have the required prop-
+erties, such as conservation laws, commutation relations, etc. [10, 12]. In
+     2 The product fkBk may include a sum over some Lorentz indices offk and Bk.
+     s Earlier references can be found in Ref. [t13,
+                          Operator Product Expansions                     89
+
+particular it has been shown that in a renormalizable theory it is always
+possible to construct an energy-momentum tensor [10, 12].
+    The purpose of this paper is to show how an operator product expan-
+sion can be derived from general principles. We begin with a brief outline
+of the method, leaving questions of mathematical rigor for the detailed
+discussion of the following sections. Our aim is to
+     (i) define local operators associated with the formal product (1.1),
+    (ii) to completely analyze the asymptotic behaviour of (1.2) for xj ~ x.
+We introduce fixed vectors and a scaling parameter ~ by
+                                                           a--1
+                    xj=x+~o2~(t/),            2j(t/)= ~ C J h          (1.5)
+                                                           i=1
+with
+                        O(xl ... x . )
+                                             4=0     for      a~0
+
+and consider the operator product (L2) as a function of x, t/j and 0
+
+                         p(x, ~, 6) = A(Xl) ... A(Xa)
+                                                                       (1.6)
+                                   r/= (th ..... t/~_,).
+   If P diverges for 6 ~ 0 we define an operator
+
+                           C~(xrl) = lim P(xrlo)                       (1.7)
+
+
+dividing P by a suitable function f> The singularity of fl is restricted
+by the condition that the result be finite and different from zero. A suit-
+able fl can be found if we make the assumption that there are "most
+singular" matrix elements
+                              (~, P(xf/6) T)                          (1.8)
+
+of P. A matrix element (1.8) is called most singular if it is as singular or
+more singular than any other matrix element of P near 6 = 0. Choosing
+one of the matrix elements (1.8) as the function fl the operator (1.7) will
+be finite and not identically zero. Evidently C 1 is a local operator. In
+many cases C1 turns out to be a multiple of the identity [13]. However,
+more composite operators can be found by further examining the be-
+havior of P(xtlo ) for 6 ~ 0 . Defining an operator P; by
+
+                     n(xrl6) = fl (6) C~ (xrl) + n2(x~/e)              (1.9)
+we have
+                                  lira P2
+                                  e-~O Z -     = 0
+90                     K.G. Wilson and W, Zimmermann:
+
+as follows from (1.7). If
+                                       lim/'2 = 0
+
+(1.9) already gives complete information on the singularities of P near
+Q= 0. If, however, some of the matrix elements of P2 diverge at 0 = 0 the
+product P has additional singularities. In this case we repeat the pro-
+cedure for P2 and obtain
+                     P2 (xr/Q) -= f2 (Q) C2 (xr/) q- P3 (xr/o)         (1.10)
+where
+                                                P2(xt/o)
+                            C2 (xq) = lim                              (1.11)
+                                      0~0         f2(o)
+is a local, non-vanishing field operator. The function f2 is one of the
+most singular matrix elements of P2- It diverges in the limit
+
+                                  lim f 2 ( o ) = o0,
+
+but is less singular than f1
+                                 lim f 2 ( o ) = 0 .
+                                 ~ o fl(o)
+Proceeding in this way we construct operators Pk(x, rlq), Ck(X, "1) and
+functions fk(o) by the recursion formulae
+
+                            Ck(Xrl)= lim Pk(xrlo)                      (1.12)
+                                     Q~o fk(e)             '
+
+
+
+                   Pk(xtlo) = fk(O) Ck(Xtl) + Pk +a(xtlo) ,            (1.13)
+where fk(e) is chosen to be one of the most singular matrix elements of
+Pk- We continue this procedure until we arrive at an operator Pk+~
+which vanishes in the limit e-+0. Then the operator product becomes
+         P(xtlo) = k(O) C~(xrl) +"" + L(O) C,,(xq) + P,+, (XrlO)       (1.14)
+with
+                              lim P,+z(xrlo)=O.                        (1.15)
+                              co--~0
+(1.14) represents the principal part of the expansion near 0 = 0 . The
+functions fk carry the singularities of P and are ordered according to
+decreasing strength of singularity
+
+         tim fk+a --0,          limJ},(O)=oo for k = l ..... n - l ,   (1.16)
+         co-*o f k
+                   lim f , ( 0 ) = 7~ or lim f,(~)~e0.                 (1.17)
+                    0~0                         co-~O
+                          Operator Product Expansions                               91
+
+The field operators C k are given by
+                                               k
+                                       P - Z f, C,
+                           Ck = lim         l=,                                 (t.18)
+                                 Q~O           fk
+and satisfy the causality conditions
+                     [C~(x, ~), OOO] ± = O,                                     (i. 19)
+                                                     (X    -   -   y)2 <ZO
+                  [c~(~, ~), C,(y, ~)] + = o                                    (1.2o)
+with commutators or anticommutators taken appropriately. O(y) denotes
+a field operator which (anti)commutes with A1, ...,A, at spacelike
+distances.
+    In deriving the principal part (1.t4-15) some assumptions have been
+used which seem to be plausible but at present cannot be inferred from
+Wightman's postulates. The precise formulation of the hypothesis needed
+will be given in Section 2 (Eq. (2.15) and Hypothesis 1). Eq. (2.15) excludes
+oscillations at 0 = 0. For models which violate this hypothesis the fol-
+lowing alternatives will be found in Section 5:
+    (a) P(x, ~lO)has no leading singularities as operator, i.e., to any matrix
+element of P another one can be found which is more singular at Q = 0.
+    (b) The remainder P,+I (x, t/Q) has no leading singularity as an oper-
+ator, for some value of n. Then (I.14) holds with
+
+           lim fk+l = 0 ,       limfk(~)=oO          for           k=l,...,n,   (1.21)
+           ~o+o fk
+                               lira P" + 1 = 0.
+                               0"+0    fk
+In this case (1.14) gives the leading singularity for only some of the
+matrix elements of P.
+    (c) (1.14) and (1.21) hold for any n, but no P, vanishes at ~o= 0 with
+all matrix elements.
+    In order to obtain the asymptotic expansion (1.4) we construct an
+infinite sequence of operators Ck and functions fk using the recursion
+formulae (1.12-13). If Pk vanishes at Q= 0 we take fk as one of the matrix
+elements of Pk which vanish most weakly for ~-+0. Under suitable
+assumptions on the matrix elements of P (Hypothesis 2 of Section 2) it
+will be shown in Section 4 that Pk and fk vanish stronger than any power
+of 0 provided k is sufficiently large. With this we have
+         P(xrl~)=f,(o)C~(xrl)+ "" + fk(O)Ck(Xq)+ Pk+l(X~lO)                     (1.22)
+where
+                            lim Pk+l(XrlO)
+                                                    =0                          (1.23)
+92                       K, G. Wilson and W. Zimmermann:
+
+for any N provided k > k(N). In addition the functions fk satisfy
+
+                                lim -fk+,(Q)
+                                       -     = O.                               (1.24)
+                                o,,o f~(e)
+The local operators Ck are given by (1.18) and can be chosen to be
+linearly independent. The Eq. (1.22-23) represent by definition the
+asymptotic expansion           oo
+
+                           P(x'lo) = ~ fk(Q) Ck(Xtl).                           (1.25)
+                                       k=l
+
+    The following sections contain the rigorous derivation of these results.
+In Section 2 the assumptions are formulated from which the principal
+part (Section 3) and the asymptotic expansion (Section 4) are derived.
+Alternatives to the assumptions and modifications are discussed in
+Section 5.
+
+                             2. General Assumptions
+     We consider field operators
+                                  o3 (x) ..... Q(x)                              (2.1)
+which satisfy Wightman's postulates of a local, relativistic quantum field
+theory [14]. Each of the operators O~ may have several components Oj=
+transforming under a representation of the homogeneous Lorentz group.
+With O~ also the hermitian conjugate O* is listed in (2.1). D Odenotes the
+joint domain of definition of the smeared operators
+                     Oj(f) = 5 d x f ( x ) Oa(x)      f ~ 5:(R4) ,               (2.2)
+which is obtained by applying a polynomial of the Oa(f) to the vacuum
+state f2. Do is dense in the Hilbert space Jr.
+    In the work that follows a family
+                    Q(g) = S dzl "'" dz, g(z, ,.. z,) Q(zl ... z,)
+of operators in Hilbert space is called a distribution in 5°jl ..... (A)
+                              Q(zl ... z , ) e ~rL ..... CA)
+if Q(g) is defined for every g e 5:z ...... on the dense set A and if each
+matrix element
+                         (4, Q(g) 7") ,~, 7' e a
+is a distribution in 5:"...... (A). We further write
+               lira QQ(za ... z,)= Q(z 1 ... z,)       in      5:j, ..... (A)    (2.3)
+               ~0
+
+if
+                       Q~e;~ ..... CA),        Q ~ d r L ..... (a)
+                               Operator Product Expansions                                                           93
+
+and
+             lim (q~, Qo(g) 70 = (4, Q(9) 71) for                  ~ ~ Jr,            ~ ~A                     (2.4)
+
+(2.4) implies
+     lim (4~, Qo(z,... z,) 7s) = (q~, Q(zl... z,)~)              in     y / , .....    if      ~b, T ~ A,
+
+Instead of the operator product (t.2) we introduce the smeared operator
+
+                              P(t, O) = ~ dx dr~ t(xr/) P(xr/o)
+                                   dr/= dr/, ... dr/a_ 1                                                       (2.5)
+                            P(xrle ) = A a(xl) ... Aa(x,)
+with the variables (1.5). A1.... , A, denote linear combinations of oper-
+ators Oj or derivatives thereof. Our aim is to study the behavior of P(t, Q)
+for 0-+0. First we show that for every real ~ + 0 P(t,O) can be defined
+as a distribution in ~/,(Do). For ~9, T ~ D O the matrix elements
+(,b, A~ ( f ~) ... Aa(f~) 70 = ~ dx, ... dx, f ~(xO... f,(x,) (cb, A, (xO ... A,(x,) ~)
+                                                                                    (2.6)
+may be extended to distributions in the variables x,, ..., x~. We introduce
+new independent variables x, r/t .... , t/~_ t by (1.5). Then
+         (~, P(to) 7*) = ~ dx dth ... drip_ 1 t(Xth ... tla_,)(q~, P(xtlo ) ~)                                 (2.7)
+is a distribution in the variables x, r/, ..... q~_, for Q + 0. Likewise the
+vacuum expectation values
+                                         (O, ... Q,)                                                           (2.8)
+with either
+
+or
+                              Q~ = P(x~ t/(~)0)             (0 4=0)
+may be interpreted as distributions in all the variables x~, n (~) #~)                  "IK1    °"   "   'IK   a -   1"
+
+From the vacuum expectation values (2.8) the operator (2.5) is constructed
+on the domain D o in the usual manner. The distributions (2.7) are the
+matrix elements of P(t, Q) between vectors D 0. Hence (2.5) is a distribu-
+tion in 5P',(Do).
+    We state the following properties of P.
+    (i) Lorentz Invariance. Under an inhomogeneous Lorentz trans-
+formation
+      x' = A x + a,      r/'r= dr~r,         g)' = U(A, a) 4 ,             ~P' = U(A, a)
+                                                                                                               (2.9)
+                       t'(x', ~i, ..., ~ ; - ~ ) = t(x, r/1 . . . . , r/o- ,)
+94                           K . G . Wilson and W. Z i m m e r m a n n :
+
+the components of P~ transform according to
+     (~,', L,(t', Q) ~") = F~D~,~(A) (~o P~(t, e) ~')               ~, ~ ~ ,   ~' E Do (2.t0)
+
+where D(A) is a finite dimensional representation of the homogeneous
+Lorentz group.
+   (ii) Causality. Let t e Nx,, f e 3 , be test functions satisfying
+                                  t(xt h ... t/a_l)f(~/) = 0                           (2.11)
+if (xr - y)2 > 0 for at least one r = 1..... n. Then
+                         [P(t,o),Oj(f)]+_~=O               if   kVeDo.                 (2.12)
+    We want to formulate a hypothesis concerning the relative growth
+of matrix elements of P for 0 ~ 0 . To this end we consider the set d N
+of all functions
+                                   A
+                       4)(0) = ~ ( ~ , P ~ ( t ~ , e ) kv~),        ~eDo               (2.13)
+
+which do not vanish stronger than QN in the limit ~ ~ 0 , i.e. 4
+
+                                       lira
+                                       ~-,o ~~b(q) 4:0.                                (2.14)
+
+In (2.13) the ~ are arbitrary vectors of Hilbert space, the ~ are elements
+of the domain D o. The t~ denote test functions in 2P(R4a ).
+    We first assume that the ratio of any given two functions of dN has
+only one accumulation point, i.e.,
+
+                     lim ~bl(O) exists or              lim q~--!(fi)= oe.              (2.15)
+                     ~ o (~(o)                         ~ o q~(e)
+   We then define an equivalence relation in .~N- qS~, q~2 are said to
+have the same behavior near 0 = 0
+
+
+if their ratio is finite in the limit q--, 0
+
+                                       lim ~-2
+                                       e~o q~l 4=0' co "
+
+Otherwise we say that 4,t and ~b2 behave differently near Q = 0 and use
+the notation                           qh
+                     qSl>q~ 2 if lim ~-2 = o e
+
+     '~ This includes the case that e~01im~ -    = oo.
+                            Operator Product Expansions                   95
+
+and
+                                                  1
+                          ~b~<q~2      if tim          =0.
+
+
+With respect to the relation ~ we introduce equivalence classes of tiN.
+For two equivalence classes 4, qf' we write
+
+                                       cg > cg,
+if
+
+                  lim ~ , ---oo        for    q~eCg,     ¢,e~,.
+                  ~'~0q)
+
+We formulate the following hypotheses:
+   Hypothesis 1. There are at most n functions (2.13) which do not
+vanish at e = 0 and behave differently near 0 = 0. In other words, the
+number of equivalence classes of d o is finite.
+    Hypothesis 2. For every N there are at most n(N) functions (2.13)
+which do not vanish stronger than ~N and behave differently near 0 = 0.
+In other words, the number of equivalence classes of dN is finite.
+    Hypothesis 3. sd denotes the set of all functions (2.13) without further
+restrictions. (2.15) is again assumed for any two functions of d .
+    Let ~b be a function of d and d o denote the set of all Z e d with
+)~< ~b. Then we assume that d and any d ~ contain maximal elements.
+    An element ~0 of a subset ~ c d is called maximal if
+
+                               ~P>X      or     W~X
+for any other Z ~ N.
+
+                               3. Principal Part
+    The operator p~(t, ~) was defined by Eq. (2.5) as a distribution in
+~],(Do). We prove for P~ the following
+    Theorem 1. Hypothesis 1 is necessary and sufficient for the existence
+of the principal part
+
+                       P~(t, O) = ~ fk(o) Ck~(t) + R~(t, O)            (3.1)
+                                 k=l
+with the properties
+    (a) The remainder R is a distribution in ~9~,(Do) and vanishes weakly
+for 0-~0
+             ~im° (4, R(t, ~) ~) = 0 for ~ ~ 3 f ,   tP ~ D o .      (3.2)
+96                       K. G. Wilson and W. Zimmermann:
+
+   (b) Near ~ = 0 the functions fk(6) are non-vanishing and ordered ac-
+cordin 9 to decreasing singularity
+
+                                  lim f k + l ( 6 ) = 0 .                                    (3,3)
+                                             L(6)
+                                      ~i.mof, (6) 4=0.                                       (3.4)
+
+    (c) The Ck(t ) are linear operators on Do and distributions in ,~£n(Do).
+The operators Ck(t) can be chosen linearly independent. The Lorentz
+invariance of the theory implies
+    Lorentz Invarianee of Ck( t). Under a homogeneous Lorentz transforma-
+tion (2.9) the components Ck~ transjorm according to
+     (¢', CkAt') T ' ) = Z D~,~(A)(¢, Ck,(t) T)                   ¢ ~ ~¢,          71 e D O. (3.5)
+
+The causality postulate implies
+   Locality of C~(t). The operators Ck(t) and Oi(f) (anti-) commute
+                     [Ck(t), 02(r)]+ T = O           for      TeD o                          (3.6)
+if the test functions t e ~ , and f e ~y satisfy
+                t(xql ... q , _ t ) f ( y ) = 0     for     (x-y) z >0.                      (3.7)
+The operators Ck(t) and Cl(s) (anti-)commute
+        (C*(t) cb, C,(s) T) 4- (C?(s) q~, Ck(t ) T) = 0 for                 ¢, T e D O       (3.8)
+if the test functions satisfy
+           t(x~l...t/~_l)s(y~l...~,_0=0                     for       (x-y)2>0.              (3.9)
+
+   Proof. We first show that Hypothesis 1 follows from (3.1) and (a)-(c).
+Let ¢ e 9f, T e Do, then each matrix element of P, is represented by
+
+              P (t, e) '/') =         A(6)                        +     R (t, e)
+                                k=l
+
+                                lim (¢, R~(t, e) T) = 0
+                                g~O
+
+which shows that d o has only a finite number of equivalence classes.
+   We next prove that Hypothesis 1 is sufficient. If d o is empty
+
+                      lim (¢, P~(t, 6) T) = O,               T e Do
+                      Q~0
+
+and we may set
+                                  L ( t, 6) = R~(t, 6)-
+                               Operator Product Expansions                  97
+
+If ~¢o is not empty we denote its equivalence classes by cg1..... cg, and
+number them according to decreasing strength of singularities
+
+                                      ~fi> "'" > (g,.
+Let
+                           q~(e) = Z (4~, L~(t~, ~) T~) s (gl           (3.10)
+be an element of ~gl. Since either
+                               lim ( ~ , P~(t~, e) T~) = 0
+                               q-~O
+or
+                                  Ljt , e) %)              -<%
+there must be a matrix element
+
+
+belonging to ~f~ for at least one value of ~c. We will show that the limit
+
+                                   C~(t) = lira P(t, e)                 (3.12)
+
+exists in the weak sense and defines a non-vanishing field operator. First
+we note that the limit
+                                   lira (~' Pit, e) T)                  (3.t3)
+                                               /i(e)
+exists for all @ e af, T e D o. It does not vanish identically since
+
+                                 lim (~' P~(/' 0) 79) = 1
+
+
+(3.13) implies the existence of a vector X(t) with
+
+                           lim e,               T      =(e,X(t))        (3.14)
+                           e~o         fl(0)
+
+for every ¢ e J r , T e D o s
+                                       X = C,(t) T                      (3.15)
+defines a linear operator C~(t) on the domain Do. This yields (3.1.2) in
+the sense of weak convergence.
+    Since
+                          (q~, C1 (t) T) = lim (~b, P(t, Q) T)
+
+      s This follows from the weak completeness of the Hilbert space.
+98                      K.G. Wilson and W. Zimmermann:
+
+
+the matrix elements (~b,Cl(t ) T) are distributions in 5fj, for every
+(b, T e Do. Hence
+                                           P(ttl~)
+                            Cl(x~t) = lim - - -                         (3.16)
+                                        o-,o     k(e)
+exists as a distribution in ,Y~(Do).
+    Starting from
+                    P~(t,~)=P(t,Q),        C~(t)    and   f~(~)
+
+we will construct a sequence of operators Pk(t, ~), Ck(t) and functions
+fk(Q) which are related by the recursion formulae
+
+                          Ck(t) = lim Pk(t'.Q-) * O,                    (3.17)
+                                   ~o     f~(e)
+                       Pk(t, Q) = fk(e) Ck(t) + Pk ~1 (t, e) -          (3.18)
+We use the following hypothesis of induction:
+     (i) Distribution properties. For ~o4=0 the operator Pk(t, o~) is a dis-
+tribution in 2fxn(Do).
+    (ii) Growth of matrix elements for ~ 0 . Let ~¢o(Pk) denote the set
+of all functions
+¢(e) = ~ (¢~, P~(t~, e) %),        (P~e24(,      T~Do,       t~Y(R4~)   (3.19)
+with the property
+                                 lim ¢(e) 4: O.                         (3.20)
+                                 Q-*O
+Then                                       n
+                                do(nk) = ~ cdj.                         (3.21)
+                                           j=k
+
+    Under this hypothesis we will prove that (3.17) exists and that the
+operator Pk+l defined by (3.18) again satisfies the conditions of the
+hypothesis.
+    First we choose the function fk(~) which will be used for defining C k
+as a non-vanishing operator. According to statement (ii) of the hypothesis
+any function 4)~ cdk is also an element of ~¢o(Pk) and can therefore be
+written as
+                ¢(e) = y" (q~, Pk~(t~, e) T~),          T~ ~ Do.
+Since either
+                          lim (qs, Pk~(t~, Q) T~) = 0
+                          Q~O
+or
+
+                        ( ~ , Pkg.(<, e) %) e %(~)< %
+                             Operator Product Expansions                           99
+
+it follows
+                              (~, Pk~(t~, ~) %) e %                             (3.22)
+for at least one value of ~c.We choose (3.22) as the function fk(~)- AS in
+the case of C~ it follows that the weak limit (3.17) defines a non-vanishing
+distribution in 5%(Do). By (3.18) the distribution properties (i) follow for
+Pk+I"
+      In order to prove (3.21) for Pk+l we first show
+                                ~ o ( 5 +0 = ~o(Pk) •                           (3.23)
+Indeed we have
+
+
+since
+             (q), Pk+,,~(t, Q) ~) = (q), Pk,:(t, 0~)~ ) - (~9,Pk,~(t, Q)X)
+               X = (¢b, Cg,~(t) ~) ~ ,     fk(Q)= ($, nk,a({, Q) t~).
+Next we show that the type % is missing in do(Pk+t). Since
+
+        lira (¢' Pk +, (t, ~) t/J) = lira @' Ck(t' ~) T)   _ (q~,Ck(t) T) = 0
+        ~o         fk(e)             o~o     fk(~)
+holds for any matrix element of Pk + ~ between ~b E W, 7~ e D o it follows
+
+                                   tim qS(~o) _ 0
+
+for q~(Q)e Sgo(Pk+O. Hence q~(Q) belongs to a type (g with cg < %
+                                %C~40(Pk+~) = 0.                                (3.24)
+Finally we check that any c~l(/>j) is contained in do(Pk+~). Let
+q~E c~l(1> k), then (statement (ii) for Pk)
+             q~(~o)= Y.(~b~,Pk~(t~, 0) ~ ) = fk(O~)E (Cb~,C~(t~) 7~)
+                     + ~ ( ~ , P~+~,~(t~, o) v~).
+From fk e cdk and
+                            (e~, Pk+l,~(t~, ~) % ) < L                       (3.25)
+it follows that
+                                ( ~ , ck~(t~) ~,~) = 0
+and
+                         ~(~) = Y~(e~, Pk+l,,~(t~, 4) %).
+Hence
+                           ~lc=No(P~+O for l > k .
+100                        K.G. Wilson and W. Zimmermann:
+
+(3.23-25) imply the desired relation
+
+                               ~¢o(P~+~)= ~ %.
+                                             ~=k+l
+
+This completes the proof of the hypothesis of induction.
+   Iterating the recursion formula (3.18) we obtain (3ot) with
+
+                                R(t, Q) = P,+~ (t, a).
+Since Ao(P,+I)=0 we have (3.2). fk(o)e~ k implies (3.3-4). Hence all
+conditions (a)-(c) are fulfilled.
+   In order to check the transformation law (3.5) we assume that for
+some value of k the relation
+
+(4)',Pk~,(t',~) tP')=~D~,~(A)(~,Pk~(t,~) ~)              q~e~,     tPeD o (3.26)
+                     ot
+
+
+
+has been shown for a Lorentz transformation (2.9). Dividing (3.26) by
+fk(q) and taking the limit ~--,0 we obtain
+       (qY, Ck~,(t')}t")=~D~,,(A)(~,Cu~(t)W)             q~3f,         tP~D o (3.27)
+
+as transformation law for Ck. By the recursion formula (3.18) relation
+(3.26) is then also true for Pk+l.
+    For the proof of the local properties we assume as hypothesis of
+induction that
+     (i) the (anti)commutation relation
+
+                     [Pk(t, ~), Oj(f)] ± }g = 0,         tp e Do              (3.28)
+
+holds for test function t E 2Px,, f e SPy which satisfy
+
+                              t(x, 01... tl,-1) f(y) = 0                      (3.29)
+unless
+(x-y)2<0       and    (x~-y)2<0,          r=l,...,a,       x~=x+QA~(t/).      (3.30)
+
+      (ii) The (anti)commutation relation
+
+               (Pk(t, 4)* q), Cj(S) }P) +__(C*(s) ~, Pk(t, o~)}g)= 0
+                                                                              (3.31)
+                      for cb, 7~eD0,         j=l,...,k-1
+
+holds for test functions t e @~,, s ~ ~,¢ which satisfy
+
+                          t(xrh ... t/~_l) s(y~ ... (,-1) = 0                 (3.32)
+unless (3.30) is valid.
+                                Operator Product Expansions                             101
+
+
+    (iii) The (anti)commutation relation
+             (Pk(t, ~)* q~, Pk(S, a) 7") +_(Pk(S, a)* q~, Pk(t, ~) T) = 0
+                                                                                     (3.33)
+                                    for    ~,7"~Do
+holds for test functions t ~ ~x,1, s ~ ~y~ which satisfy (3.32) unless
+                         ( x - y)2 < 0    and      (xr - y.)2 < 0
+                                                                                     (3.34)
+                        x, = x + ~2r(t/),        y~ = y + 82~(~).
+Under this hypothesis we will prove that the operator Pk ÷ 1 again satisfies
+the conditions (i)-(iii).
+    Suppose the test function t e ~ , and f e ~y satisfy
+                    t(xr h ...t/a_~)f(y)=O         if ( x - - y ) 2 > 0 .            (3.35)
+Then (3.28) holds provided Q is small enough that all x + p ~ h in the
+support of t are sufficiently close to x such that (3.29---30) is satisfied. For
+matrix elements between vectors ~, 7" e Do one obtains
+
+         0 = (~, [P(t, ~), Oj(t)] + 7") -- (q~, P(t, ~) 7") +_(q~; P(t, ~) T)
+                         7" = Oj(f) 7" ,         ~' = O*(f) el).
+Dividing by fk(Q) and taking the limit ~ ~ 0
+           0 = (~,, Ck(t) 7") +_(¢", C~(t) 7") = (¢,, [Ck(t), Oj(f)] +_ 7')
+follows. Since this relation holds for any q~ e Do we have
+                          [Ck(t ), Oj(f)] + 7" = 0         7" ~ D O                  (3.36)
+
+for test functions satisfying (3.35). (3.28) and (3.36) imply
+                       [Pk+~(t,~),Oj(f)]+_ T = 0             T~D o                   (3.37)
+for test functions which satisfy (3.29) unless (3.30) is valid.
+    Dividing (3.33) by fk(a) and taking the limit o-~0 we find that (3.31)
+is also valid for j = k 6. Dividing (3.31) by fk(~O) and taking the limit
+  ~ 0 we obtain
+                   (C~(t)* ~, C/s) 7") + (C?(s) ¢, C~(t) 7") = 0
+                                                                                     (3.38)
+                          for     q~, 7" e Do,     j = l ..... k
+    6 It is used here that the adjoint operators C*(t), P*(tQ) are defined on Do and satisfy
+
+                                                  P*(tO)
+                                    C~(t) = lira - - -
+                                            ~-o Fk(o)
+weakly on Do. A proof of this statement will be given in a separate paper by comparison
+of the expansions of 1'1(re) and P~(t~).
+t02                         K. G, Wilson and W. Zimmermann:
+
+for test functions satisfying
+               t(Xrh.,.q,_Os(y~l...(a_l)=O                   if ( x - y ) 2 > 0 .       (3.39)
+From (3.31) and (3.38)
+                 (Pk+l(t)* ~, Cj(s) T)+_ (Cj(s)* q), Pk+l(t) T ) = 0 ,
+                                                                                        (3.40)
+                                ¢,T~Do,          j = l .... , k ,
+follows for test functions which satisfy (3.29) unless (3.30) holds.
+    For test functions t, s with (3.32) unless (3.34) the relations
+        (Pk+ 1 (t, e)* 4~, Pk +1 (s, a) T) + (Pk + 1 (s, a)* ~b, Pk + 1 (t, ~) T) = 0
+                                                                                        (3.41)
+                                      for qs, T e D o
+follow from (3.33), (3.31) (with j = k) and (3.38),
+    The relations (3.37), (3.40-41) confirm the local properties (i)-(iii) for
+the operator Pk +1. (3.36) and (3.38) represent the local properties (3.6-9)
+stated in Theorem t.
+    We finally prove that the Ck can be chosen to be linearly independent
+without changing the properties (3.1-9). Suppose there is a linear relation
+
+                                       ~ a~Ck =O
+
+with all a~ #: O. We express the Ck~ with the highest subscript b = k~ by
+C1, ..., Cb- 1
+                                              b-1
+
+
+                                              k=l
+Then
+                          b-1                        ~,,
+                     P : 2 (fk + flk fb) Ck +              fk Ck + P, +1.
+                          k=l                       j=l
+The new coefficients again satisfy the conditions (3.3-4). By induction
+all linear relations among the Ck can be eliminated until an expansion
+(3.1) with linearly independent Ck is obtained. This completes the proof
+of Theorem 1.
+
+
+                                4. Asymptotic Expansion
+    Concerning the asymptotic expansion of P(t, ~) near Q = 0 we state
+the following
+      Theorem 2. Hypothesis 2 is necessary and sufficient for the asymptotic
+expansion
+               P(t,Q)=ji(~)C,(t)+ .., + fk(o)(k(t)+P,,+l(t,O))                           (4.1)
+                                    Operator Product Expansions                            103
+
+with the properties
+    (a) the remainder Pk+l is a distribution in 5~.(Do) and satisfies
+                (4~, Pk +1 (t, Q) T)
+         lira             5~            =0      /f k > k(N),                              (4.2)
+        Q~O
+                                                                        • ~H,   T~D o ,
+        tim (q~'Pk+l(t' 5) T) = 0 .                                                       (4,3)
+        ~o-~o     fk(5)
+     (b) the functions fk satisfy
+
+                                       lim fk + 1(5) = 0.                                 (4.4)
+                                       ~0    fk@
+    (c) The Ck(O are linear operators on D O and distributions in ~/,,(Do).
+It can be arranged that a finite number of Ck(t ) are linearly independent.
+Moreover, the operators Ck(t ) have the invariance and locality properties
+stated in Theorem I.
+    Proof. Let ~ denote the set of all functions (2.13) which satisfy (2.14)
+for some value of N. We have
+
+                                                 N=I
+
+We denote the equivalence classes of ~ by
+
+                                       (~l >   "'" >(~k       >   "'"
+where
+                                        ~1 > "" > ~n(N)
+
+are the equivalence classes of ,~¢s. The induction procedure of the last
+section is then easily extended to any value of k. To this end statement
+(ii) (below Eq. (3.18)) is generalized to
+     (ii) Let ~v(Pk) denote the set of all functions
+
+                                   ¢(5) = Z ( ~ , Pk~(t~, 5) ~ )
+                                 q~ e g/t~, T~ e D o , t~ e SP~.
+with the property
+
+                                          lim --ch(°~'~)# 0
+
+then                                                   n(N)
+                                        ~¢u(Pk) = Z c~j.
+                                                       j=k
+
+Eq. (4.2) then follows from the fact that the set dN(Pk+I) is empty for
+k > n(N).
+8 Commun. math. Phys., Vol. 24
+104                     K.G. Wilson and W. Zimmermann:
+
+      We finally have
+    Theorem 3. Hypothesis 3 is necessary and sufficient for the expansion
+(4.1) with properties (a), (b) and (c) except for Eq. (4.2).
+      For the proof we construct an infinite sequence of equivalence classes
+                                 ~ > qQ > ..-                            (4.5)
+of d in the following way. cg~ is the set of all maximal elements of d .
+Let q5 be an element of cgk. Then % + ~ is defined as the set of all maximal
+elements of d~. The induction procedure of the last section can then be
+applied to the sequence (4.5).
+
+
+                          5. Miscellaneous Remarks
+     Throughout this work Eq. (2.15) was assumed which excludes oscil-
+lations at ~ = 0. If (2.15) is violated operator product expansions may
+still be set up by considering special sequences 0. with lira 0. = 0.
+    The Hypotheses 1-3 can be relaxed in many ways by restricting the
+test functions and state vectors in the definition of the functions (2.31).
+We list the following possibilities:
+    (1) The test functions t~ are different from zero for space-like t/only
+                           t~(x,q)=0     if q f > 0 .
+      (2) The test functions t~ are different from zero for time-like ~q only
+                           t~(x,q)=o     if qf_<0.
+    (3) The Fourier transforms of t~ have compact support.
+    (4) The vectors ~P~,~ represent states of bounded energy-momentum.
+The definition of classes ~ , is then modified accordingly. If Hypotheses 1
+or 2 are used with (4) the expressions
+                                  (4, ck(t)                             (5.1)
+might not define linear operators Ck(t) in Hilbert space. But (5.t) may
+still be interpreted as a bilinear form in @ and ~.
+     We next discuss the alternatives which occur in case Hypothesis 1 is
+not valid in any acceptable form. Let d o be the class of functions (2.13)
+which do not vanish for 0 ~ 0 and are defined with appropriate restric-
+tions on the test functions and state vectors. If Hypothesis 1 does not
+hold there are an infinite number of equivalence classes in ~o- They are
+totally ordered by the relation >. We then have the following cases
+     (a) There exists no maximal element among the equivalence classes
+of do. Then to any function (2.31) which does not vanish at 0 = 0 another
+                             Operator Product Expansions                              105
+
+function ~b' in d o can be found such that
+
+                                    lim
+                                          4' =
+
+This means that P(t, 4), considered as an operator, does not have a leading
+singularity.
+    (b) There exists a maximal element cd1 a m o n g the equivalence classes
+of d o . Then a sequence of classes
+                             ~1 > c~2 > "" > cdj > "'"                              (5.2)
+
+can be constructed such that F~ is the maximal element of the difference set
+                                              j-1
+                                 Aj = o4o-
+                                              cz=l
+
+We then have the two possibilities
+    (bl) The sequence (5.2) terminates for j = m because Aj has no maxi-
+mal element. Then (3. t) holds for n = m, but some matrix elements of R
+diverge for ~ ~ 0 and the o p e r a t o r R does not have a leading singularity.
+Eq. (3.1) gives the leading singularity for at least some matrix elements
+of P.
+    (b2) The sequence (5.2) does not terminate. Then (3.1) holds for any n,
+but some matrix elements of R diverge for Q~ 0.
+    The form of the principal part and the asymptotic series is of course
+not unique. New operators C~ and functions J~ m a y be introduced by
+certain triangular transformations without changing the conditions
+(3.2-6) and (4.2-4). These problems will be discussed in a separate paper.
+
+
+     One of us (W.Z.) thanks Dr. G. Dell'Antonio for many helpful discussions. We are
+grateful to the members of the Aspen Center for Physics for their hospitality during our
+stay at Aspen where this work was begun.
+
+
+
+                                      References
+ t. Lehmann, H. : Nuovo Cimento I1,342 (1954).
+ 2. Wilson, K.: On products of quantum field operators at short distances. Cornell Report
+    (1964).
+ 3. - - Phys. Rev. 179, 1499 (1969).
+ 4. Valatin, J.: Proc. Roy. Soc. A 225, 535 and 226, 254 (1954).
+ 5. Brandt, R. : Ann. Phys. 52, I22 (t969) and Fortschritte der Physik.
+ 6. Zimmermann, W.: Commun. math. Phys. 6, 161 (t967), 10, 325 (1968).
+ 7. Glimm, J., Jaffe, A.: Ann. Math. 91,362 (1970).
+ 8. Lowenstein, J. : Commun. math. Phys. 16, 265 (I970).
+    Wilson, K. : Phys. Rev. D, Oct. i5 (1970).
+S*
+t06       K.G. Wilson and W. Zimmermann: Operator Product Expansions
+
+  9. Rosen, L.: The (~oZ~)~quantum field theory, higher order estimates, NYU-preprint,
+     to be published in Pure and Applied Mathematics.
+     Dimock, J. : Estimates, renormalized currents and field equations for the Yukawa field
+     theory, Harvard Thesis, to be published.
+10. Wilson, K. : Unpublished.
+11. Zimmermann, W. : 1970 Brandeis lectures, Vol. I. Cambridge: MIT Press 1970.
+12. Symanzik, K. : Cargese lecture notes and private communication.
+     Lowenstein, K. : Normal product quantization of currents in lagrangian field theory.
+     Preprint University of Pittsburgh (1971).
+     Stora, R. : In preparation.
+t 3. de Mottoni, R., Genz, H. : Nuovo Cimento 6"7 B, 1 (t970).
+14. See, for instance, R. Streater and A. Wightman, PCT, Spin and Statistics. New York:
+     Benjamin 1964.
+
+
+W. Zimmermann                                Kenneth G. Wilson
+Department of Physics                        Laboratory of Nuclear Studies
+New York University                          Cornell University
+251 Mercer Street                            Ithaca, N.Y., USA
+New York, N.Y. 10012, USA
+

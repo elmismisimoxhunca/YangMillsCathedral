@@ -8,12 +8,15 @@
 - DOI: <https://doi.org/10.1103/PhysRevD.16.438>.
 - Preprint report `COO-2220-88`, October 1976.
 - Stable KEK scan: <https://lib-extopc.kek.jp/preprints/PDF/1977/7701/7701010.pdf>.
-- Retained scan: `trace_dilatation_anomalies_gauge_theories.pdf`, 22 PDF pages.
-- Exact `pdftotext -layout` extraction: `trace_dilatation_anomalies_gauge_theories.txt`.
+- Retained KEK preprint scan: `trace_dilatation_anomalies_gauge_theories.pdf`, 22 PDF pages.
+- Retained supplied published article: `trace_dilatation_anomalies_published.pdf`, 12 PDF pages.
+- Exact `pdftotext -layout` extractions use the corresponding `.txt` filenames.
 
 The retained KEK artifact is a library scan of the authors' preprint, not a retyped secondary
-source. Its title, authors, report number, abstract, and equations agree with the published article
-identity recorded by DOI/Crossref and INSPIRE (`Collins:1976yq`).
+source. The user-supplied bundle also contains the published APS article. Their title, authors,
+abstract, and numbered formulas agree with the DOI/Crossref and INSPIRE (`Collins:1976yq`) identity.
+The published article is preferred for final printed-page citations; the preprint preserves clearer
+manuscript equation images and report pagination.
 
 ## Load-bearing locators
 

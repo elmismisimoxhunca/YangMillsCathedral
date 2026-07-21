@@ -1,0 +1,195 @@
+VOLUME 33, NUMBER 4                   PHYSICAL REVIEW LETTERS                                                  22 JUx, v 1974
+
+
+
+                Asymptotic Behavior of Non-Abelian                Gauge Theories to Two-Loop Order*
+
+                                                    William     E. Caswell
+                   Joseph Henry   I.aboratories,    PH'nceton University, Princeton,   ¹seJersey 08540
+                                                    (Received 2 May 1974)
+
+                   We have calculated the value of the Callan-Symanzik P function to order g~ for non-Abe-
+                lian gauge theories with fermions. We discuss internal consistency of the calculation,
+                and consider the approach to the aymptotic energy range in such theories.
+
+
+  There has recently been much interest in non-Abelian gauge theories of the strong interactions. Re-
+normalization-group  parameters have been calculated to lowest order, ' and a subclass of these theo-
+ries has been found to asymptotically free. ' The value of P in g' order is interesting for study of the
+approach to the asymptotic energy range. It also provides some control over the "effective coupling
+            "
+constant, leading to fieM theories with short- and long-distance behavior calculable in perturbation
+theory. We present below the result of a calculation of P.
+  The bare Lagrangian for a theory of interacting fermions and gauge mesons is
+    2 = ——,'Tr{8„B„—
+                   8,B„+i g[B„,B„])'—n 'Tr{(8"B„)'j
+                                                   + 2 Tr{8&cp*8"y+ i g8&y*[B&, qr) )+$(i) —ggit'o', —M)g.
+
+The gauge field is B„=p,B„'T„ the r, are the matrices of the adjoint representation of G, a compact
+Lie group. The ghost field is y =p, y'v, , the fermion field is g=p, g'o, , and the v, are the ma-
+trices of R, the representation of G under which the fermions transform. The term o. ' fixes the
+gauge. The group invariants which enter into the result are C2(G) and C, (R), the quadratic Casimir
+operators of the adjoint and fermion representations, and the trace T(R) of the fermion representa-
+tion, defined by T(R)5, ~ = Tr {o', o't, ).
+   P was calculated using the dimensional-regularization     technique of 't Hooft and Veltman. ' The scal-
+ing  equations in this renormalization      framework were derived  by t Hooft.
+                                                                                         '
+                                                                                  The Green's functions of
+the theory with E fermions, m gauge bosons, and rs ghosts satisfy the "new" renormalization-group
+equations~ '
+
+        8
+             +B(g)
+                      8                             8
+                          +&(g, o) ~tv +y~(g)M ~M + my~(g, n)+2ny~(g, n)+ ly ~ga)      2(      G{l, '"
+                                                                                                 ' m, n) =0.
+                                                                                                                         (2)
+       Bp.           Bg
+
+The renormalized coupling constant is g, the gauge parameter is o. , the renormalization scale param-
+eter is p. , and the fermion mass matrix is M. Within this renormalization framework, P is indepen-
+dent of &.' For simplicity, P was evaluated in Feynman gauge (a =1).
+  The renormalization counterterms were fixed by requiring that they be of the form
+   Z = 1+@/e+ higher order terms in 1/e,
+where n is the dimension of space-time and & =4 —n. Z and ~ are power series ing' and the gauge pa-
+rameter o. . The counterterms calculated include those for the ghost propagator (Z, ), the ghost gauge
+boson vertex (Z~), the gauge boson propagator (Z3), and the triple boson vertex (Z, ). These are relat-
+ed by a Ward-Takahashi identity, 8 Z, /Z~ =Z, /ZB. To check the calculation, all four were computed in-
+dependently.  The connection between P and the counterterms is given by+'
+   P(g) =g (8/8g')(Z, —Zs —~Z~) =g (8/8g')(Z, —2ZS).                                                                     (4)
+There are similar formulas for anomalous dimensions of the fields. The technique used to calculate
+the pole terms will be explained in detail in a future publication.
+  There are several internal checks on the calculation. No terms of the form 1nq' or (equivalently, in
+this theory) yE (Euler's constant) should appear The dou. ble-pole (1/e') terms may be independently
+calculated using the scaling equations of t Hooft. Only the check using the Ward identities is nontrivi-
+al. Because of the complexity of the algebra, this check was considered necessary.
+VOLUME 33, NUMBER 4                               PHYSICAL REVIEW LETTERS                                              22 Jvx, v 1974
+
+  We find that
+                          3               5
+         P(g)= —b. 16 2+b,                                      b. =~C2(G) —yT'(R),
+                                    (16 2)2+0(g'),
+         b, = —~24 C2'(G) + ~6 C2(G)T (R) + 4C2(R)T (R).
+In the following examples we will specialize to SU(N), and choose for R the vector representation.       We
+assume m fermion multiplets. The relevant group invariants are then C, (G) =Ã, T(R) = 2m, and C, (R)
+= (N' —1)/2N. '
+   For SU(3), P(g)/g near the origin is presented in Fig. 1. The effective perturbation-expansion      pa-
+rameter is g'C2(SU(N))/16'/'. We may choose the number of fermion multiplets to obtain the theory
+with the smallest value of the first nontrivial zero of P. With sixteen fermion multiplets we obtain a
+theory with calculable short-distance (g-0) and long-distance                           (g-
+                                                                       g, ) behavior, for g initially be-
+tween 0 and g, . g, is P's first zero past the origin, g, '/16w'=1/302+higher-order     corrections. The
+fractional correction due to the three-loop contribution is expected to be roughly (g, 2/16w2)T(R)-»,
+and is probably negligible. If the coefficient of the three-loop term is surprisingly large, we may con-
+sider SU(N) for N larger than 3. Choosing m to minimize the first (bo) term, we may ensure the ex-
+istence of a zero of P(g) valid in perturbation theory, even for abnormally large g' contributions.       g,
+                                                                                                                              '
+is a simple zero of P(g). Asg-g„ the theory approaches a dilatation- and conformal-invariant           Gell-
+Mann-Low limit theory. ' Solving the renormalization group equations, with A, scaling all momenta of
+the Green's functions (t = Ink), we find deviations from the limit theory smaller by powers of A. rather
+than by logarithms (which characterize the          end):          g-0
+                                          16/6)
+     g
+           2
+                g2(t g)        ) 2bl(2l                yl/452
+                                                                                                                                  (6)
+for SU(3) with sixteen fermion multiplets.
+  For pure gauge theories the g' term is negative, and the approach to the asymptotic region is en-
+hanced. We might expect the domain of attraction of the origin to be large (which would be appealing
+in a theory of the strong interactions).  The effective coupling constant g(t, g) satisfies
+         &g/dt = P(g),        g(0, g) = g.
+As )l. —~ (t- ~), g approaches                    zero as
+     I//    (t, g)        1        b, lnt              1
+           ] 6g2
+For SU(3) with three fermion triplets, which may be relevant for theories of the strong interactions,
+     g2(t g)              1      16 lnt            1
+           16 '       18t       729 t'            t~
+
+
+
+
+ 0. 25
+
+
+
+
+                                                                               FIG. 1. Shape of p (g)/g near the origin, for SU(S)
+                                                                             with m fermion multiplets. g =effective expansion
+                                                                             parameter = (g2/162 2) Q2(SU(3)).
+
+
+
+
+-0.2 5
+
+
+
+                                                                                                                                  245
+VQLUME 33, NUMBER 4                        PHYSICAL REVIEW LETTERS                                             22 Jux. v 1974
+
+
+The second-order             term slightly enhances the approach to zero. For m =16,
+      g2(t, g)       3       1359 lnt       1
+                         +
+                              2      ,
+                                   —, +O    ,
+                                           —,                                                                           (10)
+
+and, as we expect for P(g) small, g approaches its asymptotic values (g= 0 and g =g, ) only slowly.
+   We do not expect to find a gauge theory of the above type where P starts out positive and goes nega-
+tive near enough to the origin for the zero to be valid in perturbation theory. If the lowest-order term
+is fixed to be zero, then
+      P(&0 = o) = g'(16~')        'f7~2'(G)+ 1 1~/(G)G2(fl)3» i
+for an arbitrary gauge group G. This is approximately the case for SU(3) with m =17 (b, = —3).
+  I am grateful to C. Callan for his advice and support throughout this project. I wish to thank
+T. Regge, E. Speer, and particularly F. Wilczek for helpful conversations.
+
+
+   *Research supported in part by the National Science Foundation under Grant No. GP-30738X.
+    D. J. Gross and F. Wilczek, Phys. Rev. Lett. 26, 1342 (1973); H. Politzer, Phys. Rev. Lett. 26, 1346 (1973);
+G. 't Hooft, unpublished.
+    S. Coleman and D. Gross, Phys. Rev. Lett. 31, 851 (1973).
+   36. 't Hooft and M. Veltman, Nucl. Phys. B44, 189 (1972), and CERN Report No. 73-9 (unpublished); E. Speer,
+J. Math. Phys. (N. Y.) 15, 1 (1974).
+   4G. 't Hooft, Nucl. Phys. B61, 455 (1973).
+   5They may be derived using 't Hooft's results and the chain rule for partial derivatives. Other techniques for
+showing this connection have appeared in J. C. Collins and A. J. MacFarlane, to be published; S. Y. Lee, to be pub-
+lished.
+    S. Weinberg, Phys. Rev. D 8, 3497 (1973); C. Callan, unpublished.
+   ~W. E, Caswell and F. Wilczek, Phys. Lett. B49, 291 (1974),
+   8G. 't Hooft, Nucl. Phys. 833, 173 (1971); G. 't Hooft and M. Veltman, Nucl. Phys. 850, 318 (1972); 8. W. Lee,
+Phys. Rev. D 5, 3121 (1972).
+    In theories as the above for which g& is calcul. able in perturbation theory, the effective coupling constant is con-
+strained to remain small for aQ momenta. We expect a range of theories, for differing group structures, which
+have a finite zero of p. The possibility of dynamical quark confinement, arising from an infinite effective coupling
+constant in the infrared region, is not realized in this class of theories. Whether a group structure exists such
+                                                                                                    "
+that p is negative definite, providing a possible mechanism for achieving "infrared slavery, is a nonperturbative
+question.
+  ' G. Mack, %~ong Interaction Physics (Springer-Verlag,          New York,   1973), and references therein.
+
+
+
+
+      Is the Cross Section for e+e -+ Hadrons Time Dependent in Colliding Beam Machines' ?*
+
+                                       T. Goldmang and Patrizio Vinciarellif.
+                   Stanford Linear Accelerator Center, Stanford University, Stanford,      California 94305
+                                                (Received 1 April 1974)
+
+                   If e++e           —
+                               4 hadrons, where 4 is a scalar, radiative beam polarization in storage
+                 rings will induce an apparent time dependence of the cross section during an experimental
+                 run. This should provide a critical test for models which rely on such a scalar mecha-
+                 nism to enhance the cross section in the present energy range. A model of this kind is
+                 presented which identifies 4 with a composite Higgs field in gauge theories. We check
+                 for consistency with other processes and note that there may be an important relation to
+                 the shoulder in the dimuon mass distribution in pp- p+p X.
+
+  Synchrotron radiation in an e'e storage ring                     nitude of the polarization builds up toward a lim-
+leads to transversely polarized beams where the                    iting value from the time of injection of the beams
+electrons (positrons) are polarized antiparallel                   into the ring, with a characteristic time constant
+(parallel) to the guide magnetic field. ' The mag-                 dependent upon the energy and other machine pa-
+
+246
+

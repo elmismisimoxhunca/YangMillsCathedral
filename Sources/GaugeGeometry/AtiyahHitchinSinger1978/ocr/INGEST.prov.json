@@ -1,0 +1,23 @@
+{
+  "MOCK": false,
+  "downloaded_artifacts": [
+    {
+      "path": "/root/mathpix-extractor/output/atiyah1978/06afa18d-459f-4eea-8ceb-ce1f80c6fd00.mmd",
+      "sha256": "070c4fa95392ed01b121aadc8e4d2633825dd27190a157a83f315b659c66748d"
+    },
+    {
+      "path": "/root/mathpix-extractor/output/atiyah1978/06afa18d-459f-4eea-8ceb-ce1f80c6fd00.lines.json",
+      "sha256": "0cb1cde70168e5c92da34a86c30fde2b8184fe69932eeb2cb05695725bb6e719"
+    },
+    {
+      "path": "/root/mathpix-extractor/output/atiyah1978/06afa18d-459f-4eea-8ceb-ce1f80c6fd00.tex.zip",
+      "sha256": "3209808d55226aecf7187c297965eade91b975973b7e9c99070a35354697ccd3"
+    }
+  ],
+  "dry_run": false,
+  "endpoint": "https://api.mathpix.com/v3/pdf/06afa18d-459f-4eea-8ceb-ce1f80c6fd00",
+  "pdf_id": "06afa18d-459f-4eea-8ceb-ce1f80c6fd00",
+  "source_pdf": "/root/atiyah1978.pdf",
+  "source_pdf_sha256": "7076a56585fe2663829949eb63b623619a3946645789f27b2190fc481516d100",
+  "timestamp": "2026-07-19T07:17:34Z"
+}

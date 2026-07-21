@@ -1,0 +1,2249 @@
+ANNALS      OF PHYSICS   194,    655112 (1989)
+
+
+
+
+                           Two Dimensional    Yang-Mills    Theory
+                           via Stochastic Differential   Equations
+                LEONARDGROSS*, CHRISTOPHER
+                                         KING, AND AMBAR SENGUPTA
+
+                    Department      of Mathematics,     Cornell    University,   Ithaca,   New    York   14853
+
+                                                Received February 15, 1989
+
+
+           The equation of parallel transport is given meaning in the quantized two dimensional
+         Euclidean Yang-Mills theory by interpreting it as a stochastic differential equation in the
+         complete axial gauge. The expectation of products of Wilson loops is evaluated using the
+         stochastic differential calculus and a method of Bralic. Euclidean invariance of the theory is
+         proven. c 1989 Academic Press, Inc.
+
+
+
+                                                      1. INTRODUCTION
+
+   This paper presents an analysis of quantized Euclidean Yang-Mills gauge theory
+in two space time dimensions. The theory is formulated in the continuum without
+a cutoff. This is possible because in complete axial gauge the Euclidean Yang-Mills
+action defines a Gaussian measure for the gauge field. The long range goal of our
+analysis is to explore the regularity properties of new observables called “lassos”
+which have been considered before in several contexts [6, 7, l&12, 14-18, 2&22,
+25-29, 31-33, 351. In most formulations            of quantized Yang-Mills  theory, the
+Wilson loop variables (i.e., holonomy group elements) play a fundamental role. It
+is the expectation of products of these observables that we shall investigate in this
+paper in preparation.for an analysis of the lassos in a later work. It is expected that
+the Wilson loop variables are highly singular in three and four space time dimen-
+sions and that averaging over paths will not improve the situation. In contrast there
+is reason to believe that the lassos will be more regular in this respect. Our main
+tool in this article is the stochastic differential calculus.
+   We first show that the differential equation for parallel translation along a
+smooth curve in R2 with respect to a typical gauge potential A can be intrepreted
+as a stochastic differential equation. This relies on our use of a gauge for which the
+Yang-Mills action is Gaussian. We compute the expectation of products of Wilson
+loops using the beautiful technique of N. Bralic [ 111. We show that Bralic’s method
+takes on its proper mathematical meaning in the context of stochastic differential
+calculus. It has long been recognized [23] that the expectation of Wilson loop
+
+  *This research was supported in part by NSF Grant DMS-8701312                                   and by the Institute for
+Mathematics and its Applications at the University of Minnesota.
+                                                                  65
+                                                                                                           0003-4916/89$7.50
+                                                                                          Copyright   0 1989 by Academic Press. Inc.
+                                                                                     All rights of reproduction in any form reserved
+66                           GROSS, KING, AND SENGUPTA
+
+variables are the proper nonabelian generalization of the Fourier transform. We
+believe that Bralic’s method combined with stochastic calculus is the corresponding
+nonabelian calculational tool for Gaussian measures. In Section 3 we derive Bralic’s
+differential equation, whose solution gives the expectation of products of Wilson
+loop variables. In order to make this into a useful computational       technique it has
+been necessary to prove a commutativity         theorem (Section 4) which, surprisingly
+(or not), requires use of the infinitesimal braid relations of knot theory. In the
+remaining sections we derive canonical forms for these expectations.
+   Two dimensional pure Yang-Mills        theories have been investigated from several
+points of view. References [8, 11, 13, 201 evaluate explicitly the expectation of
+products of certain Wilson loops while [ 1-5, 231 study this theory in an axiomatic
+way. Our starting point differs from these in that we take the differential equation
+of parallel translation in the continuum as fundamental and interpret it as a
+stochastic differential equation. It is close in spirit to the recent work of B. Driver
+ [15] who bridges the lattice and continuum theories of the previous works.
+
+
+
+                 2. STOCHASTIC   PARALLEL      TRANSLATION    FOR YM,
+
+
+   We let G be a closed subgroup of U(N). Denote by Q its Lie algebra. An element
+of ‘9 is a skew Hermitian     matrix and (S, T) : = trace(T*S),   where T* is the
+Hermitian adjoint of T, is an inner product on 9. Choose an orthonormal (O.N.)
+basis {T,}; of B with r = dimension Y. We define a B valued white noise F on R2
+as follows. Let F" be independent white noises on R2 with constant density p-‘.
+Thus, by definition, for each Bore1 set B c R2 with finite Lebesgue measure, F"(B)
+is a mean zero Gaussian random variable with
+
+                          E(F"(A)Fb(B))=~-16"6           IAnBI.                    (2.1)
+
+Moreover,   F"(A u B) = F"(A) + F"(B) if A and B are disjoint. We put
+
+                                 F(B)=1       F"(B)T,.                             (2.2)
+                                          n
+If S and T are in ‘9 then (2.1) implies that
+
+              E(CC W))(T,     F(B)) = B-‘(X     T) IA n 4,        S, T in 9,       (2.3)
+which in fact is equivalent to (2.1). It follows from (2.3) that for any orthogonal
+transformation R: 9 + Y the process B --+RF(B) is again a 9 valued white noise
+with the same distribution as F. In particular F is invariant in distribution under
+the action of the adjoint representation of G on 9.
+   In order to motivate the next definition let us write, informally, for a Bore1 set
+                                  YANGMILLS              THEORY                                      67
+
+B of finite measure, F(B) = JB F(x, v) dx dy. Then the white noise F is determined
+by the informal expression
+
+               dp(F) = 2-i     exp (D/2) lRZ trace(F(x, y)‘) dx dy] 9F,                            (2.4)
+                                      C
+
+where 9F is an infinite dimensional      “Lebesgue measure” on some space of
+generalized Y valued functions F. Proceeding informally we write
+
+                                 A,(x, y) = j; F(x, t) dr.                                         (2.5
+
+Then
+
+                                      +%(x,       Y) = F(x, Y)                                     (2.6 )
+
+and
+
+                                A,(% O)=O,                  x in R.
+Put A, = 0 and A = A i dx + A, dy. Then A is a Y valued (generalized) l-form in the
+complete axial gauge. Its curvature is F21(x, y) = 8,A ,(x, y) = F(x, v). Since A and
+F are linearly related we have, informally, 9F= const 9A. Hence (2.4) is the usual
+YM, Euclidean measure. If rr: [a, 61 + R is C’ then parallel translation with
+respect to A along the curve x + (x, a(x)) is defined informally by the equation
+
+                    dU(x)/dx    = -A ,(x, c(x))            U(x),         U(a) = I                  (2.7)
+
+since the evaluation of A in the tangent direction (1, a’(x)) is just A,. Here U(x)
+is an operator on @“’ and I is the identity operator. Now A, is highly singular in
+view of (2.5) and therefore (2.7) needs to be interpreted carefully. To do this we put
+
+                                M(x) = j-’ A,@, a(s)) ds.                                          (2.8)
+                                         a
+
+By (2.5) we therefore have
+
+                               M(x)       = j-; j;(‘)    F(s, t) dr ds
+
+which is a well-defined      Gaussian random              variable    for each x when interpreted
+simply as
+
+                       M(x) = F(“area under 0 from a to x”).
+
+More specifically, if B& {(s,t):a<s<x,                  O<t<a(s)}        while C= ((8, t):a<sdx,
+o(s) < t < 0} then we define
+68                                     GROSS,     KING,    AND    SENGUPTA
+
+
+     DEFINITION 2.1.      M(x)=F(B)--F(C).
+It is clear that x + M(x) has independent mean zero Gaussian increments and is
+therefore a martingale. Since A i(x, a(x)) = dM(x)/dx, Eq. (2.7) may be interpreted
+as a stochastic differential equation, &J(x) = -dM(x) U(x). However, as is well
+known, the solution U(x) to this equation does not remain in G unless the equation
+is interpreted in the Fisk-Stratonowicz   sense.
+   Let
+
+
+
+
+be the Casimir operator and note that Definition 2.1 implies that E((M”(x + dx) -
+M”(x))(M’(x    + dx) -Mb(x)))  = b-‘Pb la(x)1 dx + o(dx) for small positive Ax.
+Hence the quadratic variation (i.e., square function) for M is
+
+                              (dM”(x)       d@‘(x))         = /FIPb      lo(x)1 dx.                    (2.9)
+
+     LEMMA 2.2.    The solution to the Ito stochastic dljjferential                   equation
+
+                dU(t)=      -dM(t)        U(t) + $‘C             [a(t)\ U(t) dt,       U(a) = I       (2.10)
+
+on the interval [a, b] lies in G for each t.
+
+   Prooj: The proof of existence and uniqueness of solutions to such stochastic dif-
+ferential equations is well known [19, 30, 341. The proof that U(t) lies in G follows
+by a standard method [ 193 which we include here for the reader’s convenience in
+this simple case. Let f: M, + R be a function on the set M, of all N x N complex
+matrices. Assume that as a function on R2N2 it is C” and has the property that
+f(gm)=f(     m 1 f or all m in MN and all gin G. Writef’(m)(u)=df(m+su)/dsI,=,
+and f”(m)(u, v) =df’(m+         sv)(u)/dslsXO for the first and second directional
+derivatives. Then for any element T in Q and m in M, we have f(e”=m) = f(m) for
+all real s. Thus 0 = df(eXrm)/ds =f’( esTm)(esTTm). Take the derivative again at
+s=O to get
+
+                              f “(m)( Tm, Tm) +f’(m)(                  T’m)    = 0.                   (2.11)
+
+The previous equation at s = 0 reads
+
+                                                f’(m)(Tm)=O.                                          (2.12)
+
+     By Ito’s Lemma,      (2.9), and (2.10) we have
+
+          df(U(t)m)=f’(U(t)m)<dU(t)m)                       + &f”(U(t)m)(dU(t)m,           dU(t)m)
+                         =f’(U(t)m)(            -(dM(t))        U(t)m + ;f’C       la(t)1 U(t)m dt)
+                            + -zf”(U(t)m)(           -(dM(t))       U(t)m, -(d&f(t))      U(t)m)
+                                           YANG-MILLSTHEORY                                             69
+
+
+
+
+                             +$-’       la(t)1 ~f”(U(t)m)(T,U(t)m,                 T,U(t)m)     dt.
+                                                a
+The first line is zero by (2.12). The second and third lines add to zero by (2.11).
+Hence df( U(t)m) = 0. Thus f( U(t)m) =f(m)       since U(0) = I. Choose for f a
+function of compact support which is one exactly on G. For example if h is a C”
+function on GL(N, C)/G with compact support such that h = 1 exactly on the image
+of Z in the quotient space, then its pullback to GL(N, C) is one exactly on G and
+has compact support in GL(N, C). We may take f to be this pullback extended to
+be zero off GL(N, C). Putting m = Z we therefore have f( U(t)) = f(Z) = 1 for all t in
+ [a, b]. So U(t) is in G.
+
+
+
+                                3. BRALIC'S DIFFERENTIAL EQUATION
+
+   We consider 2k curves in R2 lying over an interval [c, d] of the x-axis. Each
+curve is the graph of a piecewise C’ function uj: [c, d] -+ R, j= 1, .... 2k. Define
+Mj(x) for oj just as M(x) was defined for (T in Section 2 and write UJx) for the
+corresponding stochastic parallel translation operator along aj. Writing M,(x) =
+C:, = 1 M;(x) T, as before it follows from (2.1) and Definition 2.1 that the quadratic
+covariations of these martingales are given by
+
+                   (&f;(x)          dMf(x))     = fleldabmii(x),            l<i,     j<2k,            (3.1)
+
+where
+
+                                    min{ Igi(x)IF lajtx)l 1          if   a,(x) ai       >0
+                   m&d=             o                                if   a,(x) ai       < 0.         (3.2)
+                                {
+
+Consider the k-fold tensor product representation of G. Put g”‘= g0 ... 0 g (k
+factors) operating on the k-fold tensor product (CN)k. Denote by 93 the cornmutant
+algebra. That is,
+
+                   98 = {B: (@“)k + (@)k; gtk)B=              Bgck) for all g in G}.                  (3.3)
+
+If P is in the group Sk of permutations               of { 1, .... k} then the operator P defined by
+
+                               &,@        .” @x,)=x,(,,@             .” @xX,(,,                       (3.4)
+
+is clearly in W.
+70                                    GROSS,       KING,        AND      SENGUPTA
+
+
+     We define a map cp(c, x) on ?.8by
+
+                        cpfc, x)B=m~,+,(x)-‘O                                   ... 0 U,,(x)-‘)
+                                               x B(U,(x)         0 . . . 0 U,(x))1                                    (3.5)
+for B in ~49and c < x < d. We call cp(c, x) Bralic’s map for the interval                                  [c, x].
+
+     LEMMA   3.1. q(c, x)B is in 649.
+   Proof: We shall use global gauge invariance. Fix g in G. Put U;(x) =
+gujw g-l, Fg(A) = gF(A)g-’          for any Bore1 set A c R2 and put M;(X) =
+gM,(x) g-l. Multiplying    (2.10) on the left by g and on the right by g-’ we see that
+Ug is the solution to (2.10) determined by the martingale Mg since gC= Cg. Thus
+UT(x) is the parallel translation operator induced by the white noise Fg. As already
+noted F and Fg have the same distributions. Hence the right side of (3.5) is equal to
+
+               EC(K+        l(X) 0 . . . 0 u;k(x))-’                    B( Uf(x) 0 . . . 0 u;(x))]
+which equals
+
+       mk(Uk+lw3                ... 0 U,,(x))-’             (g-‘lk        &kw,(x)O            ... 0 U,(x) 1ckl.
+Since (g-l)(k)Bg(k)= B we have cp(c, x)B=gCk’rp(c,                                   x) B(g-l)‘k).     Hen ce dc, x)B
+is in 9Y.
+   For any operator T on CN we write
+
+                                                                                                                      (3.6)
+on (@“)k, where the non identity factor T operates on the jth factor. For our basis
+{T,} of Y we write T,U) for (T,)(j). Note that T(j) always commutes with T(‘). For
+any operator B on (C”)” we define
+
+                         S, jB = 1 BTb” Th”,                                               l<i,jQk                    (3.7)
+                                 (I
+                   Sk+i,k+jB=x      Tt’Tb”B,                                               l<i,j<k                    (3.8)
+                                 (I
+                     Sk+j,iB=         Si,k+j      B=       -c        Tb”BTb”,              1 6 i, j 6 k.              (3.9)
+                                                                (I
+Clearly S, j = Sj.i for 1 < i, j < 2k.
+
+  LEMMA      3.2. Si,j takes 98 into ~49for 16 i, j < 2k. Moreover for B in %!I
+
+                                      z        S,B=O,                  i= 1, .... 2k.                                (3.10)
+                                     j=l
+
+  Proof:     Since the adjoint representation                        of G on 9 is an orthogonal            action there
+                                              YANGMILLSTHEORY                                                        71
+
+is an orthogonal matrix ( g&} such that g- ’ T, g = & gb, Tb. Hence for B in a and
+16 i, j< k we have, using summation        convention, (g-‘)k   Si,iBg(k) = (g-‘)‘k’
+Bg(k)(g-‘)kTbl’)Tbj)g(k) = B(g-‘T,g)(‘)                          (g-’ Tag)“’ = Bgb,g,,~~‘~~’                = BT~)T~
+ = S, jB. So S, jB is in 9. A similar proof applies to the other ranges of i, j.
+   To prove (3.10) observe that if T is in B and B is in W then (esT)(“)B= B(e”r)‘k’
+for all real s. Differentiating this at s = 0 gives
+
+                                               [iI             T”‘, B]=O.                                        (3.11)
+
+Now suppose 1 < i < k. Then
+
+                      f S,,B= 5 c BT;‘Th”-                                      5 1 Ty’BTb”
+                     j=l                j=l          a                         j=l     a
+
+
+                                   =c          [B,         5      T6”] Tl”
+                                         a               j=l
+
+                                   = 0.
+
+A similar proof of (3.10) holds in case k + 1~ i < 2k.
+  Now we define an operator H(x): &I + 9!9by
+
+                               H(x)=           -(2/?-l               f        q(x)         s, j’                 (3.12)
+                                                                   ,,I=   1
+
+
+
+  THEOREM     3.3 (Bralic’s     differential               equation).                cp(c,x) satisfies the differential
+equation
+
+                           ddc, x)ldx = -dc,                     x) H(x)               on Cc,4                   (3.13)
+
+and the initial condition cp(c, c) = I.
+
+   Proof Using the product rule d(XY) = XdY+ Y dX+ (dXdY),           for stochastic
+differentials, one has by induction the multivariable product rule for real valued
+semimartingales X, , .... X,:
+
+              4x1 . ..X.)=        i       X,X,...(dx,)Xi+,...X,
+                                 i=l
+
+                                  + c Xl. ..(dx.)X,+,...(dx,)X,+,...X,.
+                                       i-cj
+                                                                                                                 (3.14)
+
+We have omitted here the quadratic covariation bracket ( ) in the second term.
+But it should be understood in this and the following equations. If the semi-
+martingales Xi, .... X, take their values in the space of operators on some finite
+dimensional vector space then by choosing a basis for operators one sees from
+72                                       GROSS,                KING,        AND         SENGUPTA
+
+
+multilinearity that (3.14) holds if some of the products in X,, .... X, are operator
+products and some are tensor products. Since the Casimir operator C is Hermitian
+and U(x) is unitary we may take the adjoint of Eq. (2.10) to get
+
+                         dU(x)-‘=       U(x)-‘dM(x)+                                fp-‘CU(x)-’              la(x)1 dx,                  (3.15)
+where we have used M(x)* = -M(x). We put V(x) = Uk + i(x))i Q . . . 0 Uz,Jx)-’
+and W(x) = U,(x) @ ... @ UJX), and we define the following Ito stochastic
+differentials :
+
+       vi(x)=    uk+l(X)-‘0            ... @(dUk+i(x)p’)@                                  ‘.. @ UZ~(X)~‘,                    l<i<k
+      W,(x) = U,(x) 0 ... Q (dUi(x))                           0 ... 0 U,(X),                                                 l<i<k
+     Vi,JX)=Uk+l(X)-l@                 ... @(dUk+i(x)-l)
+                 0 ... C3(dU,+j(x)-1)@                             a.. @I Uz,Jx)-l,                                           l<i<j<k
+
+     wi,j(X)=    u,(x)0          *.* Q(dUi(x))
+                 0 ... Q (dUj(x))@                     *a. @U,(X),                                                            l<i<j<k.
+
+Then by (3.14) we have for B in g
+
+                d( v(X) BW(x)) = i                     (Vi(X)          BW(X)            + V(X)     BWi(X))
+                                             i=    1
+
+
+                                              +        5          Vj(X)      BWi(X)
+                                                   i,j=      1
+
+                                              +            1              (V,j(X)         BW(X)      + V(X)       BW,j(X)).              (3.16)
+                                                   l<i<j<k
+
+
+Let us now compute the quadratic differentials.                                            By (2.10) and (3.1) and the usual
+rules of the stochastic calculus we have
+
+                 dUi(X) 0 dUj(X) = -(dM,(X))                                 U,(X) 6 (-dM,(x))                   Us
+
+                                                           T, u,(x) 0 Tb U,(x)(dM:(x)                             dM;(x)       >
+                                          =z
+
+                                          =Bpl               (C        To0 Ta) mu(x) U,(x)8                        uj(x) dx.
+                                                                  a
+Placing U,(x) and Uj(x) in their correct positions in W(x) we therefore have, with
+T,,ZJ’. = C allo-
+              Tf’) T”’
+
+                              Wi,j(x) = flmv(x)                       TV W(x) dx,                  l<i<j<k.                              (3.17)
+
+Similarly
+                         V,Jx)      = P-‘m        k+i.k+jtX)                v(x)Tudx,                   l<i<j<k                          (3.18)
+                                    YANGMILLSTHEORY                                           73
+
+and
+
+       vj(X) BWi(X) = f’mi,k+j(X)         v(X)(Si, k+jB) w(X) dx,         1 <i,j<k.        (3.19)
+
+Hence the second and third terms in (3.16) add to
+
+                         B-’ c           m,,(x)WWr,,B)w(x)dx,
+Now the first term on the right of (2.10) has expectation                 zero since M is a
+martingale. Hence
+
+           a Ux) BWi(X))
+                = fj-’    Iai(   E(V(x) B(Z@ ... @C’“@             ... @Z) W(x)) dx
+
+                = (2P)V’ Iai(X)I E(v(X)(Si,iB)          w(X)) dx
+and similarly
+
+
+
+Thus
+
+            MC, x)B=ECd(W)              BW))l
+
+                         = W-’     5 b,(x)l dc, x1 &,J dx
+                                  r=l
+
+
+                           +E v(x)p-’
+                             [
+                                                  c
+                                            1 <r<s<2k
+                                                          ~r,,(xNX,Aw(x) dx    1
+                         = -cp(c, x) H(x)B dx.
+
+This proves (3.13). Since Vi(c) = Z for all j we have cp(c, c)B = B.
+
+   REMARK 3.4. Since cp(c, x) satisfies a first order differential              equation    with
+identity initial condition we have
+
+                     dx9 Y) cp(Y,z) = cpk zh             cdx<y<zdd.                        (3.20)
+
+This also follows directly from the definition (3.5) because the matrix elements U,,
+of a parallel translation operator along a curve lying over an interval (x, y) are
+independent of the matrix elements of the parallel translation operator for a curve
+lying over a disjoint interval (y, z). This in turn is a consequence of the fact that
+the increments dM(t) in (2.10) are independent.
+    We shall explain now the connection between Bralic’s map cp(c, d) and the
+expectation of Wilson loops constructed from the 2k curves rrI, .... 82&.
+74                                     GROSS,     KING,      AND    SENGUPTA
+
+
+     A cycle of length r > 1 is a permutation                   C of (1, .... k} of the form
+
+                                                                s = 1, .... r - 1
+                                      Ci,= li+l’                                                                (3.21)
+                                          1’ 3                  s=r
+
+while Cn = n if n is not in the set 1Cl : = {i,, .... i,>. Any permutation                              of (1, .... k)
+is uniquely a product of disjoint cycles;
+
+                                                  P=C,        . ..c.,                                           (3.22)
+
+where 1Gil n 1Cjl = Qr if i #i and wherein                                      we adopt       the convention     that
+LJiT ;I Gil = { 1, ee.3k}.
+        ,, ... .. Ak are operators on CN we write
+
+                                                AC = A,,A,, . . . A,.                                           (3.23)
+
+
+     LEMMA    3.5. IfA,,        .... A, are operators on 6ZN and P is given by (3.22) then
+
+
+                             trace[(A,O         ... 0 Ak)p]             = fi      trace[Aq].                    (3.24)
+                                                                          j=l
+
+
+
+  Proof.  Consider first the case in which P consists of just one cycle (k, .... 2, l),
+which takes j to j+ 1 for j= 1, .... k- 1. If (e,} is an O.N. basis for CN then
+
+             trace[(A,      @ +.. 0 A,)P]
+                   =       c       ((A,@     ... @A,)pe,,@                . . . @errK, e,,@ +.. @eak)
+                        a,, .... OLk
+                   =c       ((A,@ ..- OA,)(e,,O                 ... Oe,,Oe,,),             ~~63 ... Be,)
+
+                   =c       tAlem2, eJA+,,,               erz) . ..(AA.,           eak)
+
+                   =I       tA,),,.,tAA,m,         ... t4Aw
+                   =trace[A,A,...A,].
+
+   We reduce the general case to the preceding case as follows. Let rj be the length
+of Cj and put kj=r,+         ... +rjpI if j>2 and put k,=O. Write Cj=(if ,,..., i$,i{)
+and put R(kj+ S) = ii for s = 1, .... rj, j= 1, .... m. Then Dj := R- ‘C,R =
+(kj + rj, ---v kj+l).   Put Bi=ARcil for i=l,...,k  and Bi=(Bk,+1@Bkj+2@        ...a
+Bkj+ ,Jrj,    -., 1)” on (C”)? Then
+                                         YANG-MILLSTHEORY                                                            75
+
+       trace[(A,   0 ... @Ak)P]           = trace[&Ar                  @ . . * @Ak) P(R-‘PR)^]
+                                          = trace[(B,@                       ... @Ek)BI        . ..B.]
+                                          =trace[B’@                    ... @B”]
+
+                                          = fi          trace[B’]
+                                              j=l
+                                                   m
+                                          = n traceC&,+1..-B,,+,,l
+                                              j=    1
+
+
+                                          = fi          trace[ACJ].
+                                              j=    1
+
+
+
+   DEFINITION 3.6. Let U, , .... Uk, V, , .... V, be operators on CN. Let P and Q be
+permutations in Sk. An operator loop for P, Q is a product of the form
+
+                     vi”uP(i)   vQP(i)    uPQP(i)        .   . v(QP)‘-l(i)        u PCQP)‘--‘(~)F                 (3.25)
+
+where (QP)’ (i) = i and r is the length of somecycle in the cycle decompositionof QP.
+
+
+  EXAMPLE 3.7. For k = 2 and P = Q = Z there are two operator loops, namely,
+V, U, and V2Uz. For k = 2, P = r12, Q = Z there is only one operator loop up to
+cyclic permutation, namely, V, U2 Vz U1.
+
+   Remark 3.8. Two operator loops either coincide after a cyclic permutation        or
+else no operator Ui or Vj that occurs in one product occurs in the other. (The
+operators U,, .... V, are to be regarded as distinct in this statement.) We say two
+operator loops are distinct if one cannot be changed into the other by a cyclic per-
+mutation. The distinct operator loops are therefore in one-to-one correspondence
+with the cycles in QP.
+   Note that each operator Vj that occurs in an operator loop is preceded on the
+right by the operator UpCjj and each operator U, in the operator loop is preceded
+on the right by VQCj,, if one interprets this in the cyclic sense that the operator on
+the far left precedes the operator on the far right.
+
+  COROLLARY 3.9. Let U1, .... Uk, V,, .... V, be operators on CN and let P and Q
+be in Sk. Then
+
+            trace[ Q( V, 0 ... @V,)P(U,@                          ... 0 U,)] = fi                   trace[ W,],   (3.26)
+                                                                                         J=I
+
+
+
+
+where W, , .... W,,, are the distinct operator loopsfor P, Q.
+76                                                          GROSS,   KING,   AND    SENGUPTA
+
+
+     ProoJ     The left side of (3.26) equals
+
+
+
+
+Put Ai = ViUpciJ, i= 1, .... k and apply Lemma 3.5 to A,, .... A, and to the cycle
+decomposition of QP. Since a typical AC is of the form AiACBpjtij.. . ACppJ,-lCij we
+see from (3.25) that the operators AC are just the operator loops Wj. Thus (3.24)
+reduces to (3.26).
+   To obtain the expectation of Wilson loops from Bralic’s map consider the 2k
+curves of Theorem 3.3. Write Uj for the parallel translation operator along the
+graph of aj from c to d, j= 1, .... 2k. Then Vi : = Vii j is a parallel translation from
+(d, y,(d)) to (c, y,(c)) (i.e., from right to left) along the graph of y, : = ok +j. Now let
+P and Q be permutations in Sk and let Cj be a cycle in QP beginning with i. So
+(QP)’ (i) = i if r is the length of Cj. We denote by rj the curve (which is the graph
+of) yi oriented from right to left preceded by the vertical segment from a,(,)(d) to
+y,(d) and then preceded by the curve 0,(i) oriented from left to right and then
+preceded by the vertical segment from Yap                to a,(i,(c) and then preceded by
+yepci) oriented from right to left, etc., until we arrive finally at (d, y,(d)) again. If
+U(zj) denotes parallel translation around the closed curve rj then it is clear from its
+construction thatU(rj) is exactly an operator loop for P, Q since parallel translation
+along a vertical line segment is the identity operator. In this way each cycle in the
+decomposition of QP gives a closed curve consisting of the graphs of some of the
+us, s = 1, ...) k oriented toward the right interspersed with the graphs of some of the
+gk+s, s = 1, . ... k oriented toward the left. The two sets of curves are connected by
+vertical line segments at the two endpoints in accordance with instructions
+determined by the permutation P (for connections at the right endpoint) and Q (for
+connections at the left endpoint). By Corollary 3.6 we have
+
+             trace[&(V,~...OV,)P(u,O...Ouk)]=~                                                       trace[U(zj)].    (3.27)
+                                                                                               j=l
+
+
+In view of the Definition 3.5 we may now evaluate the expectations on the right of
+(3.27) in terms of Bralic’s map cp(c, d) since P is in g. We summarize in the follow-
+ing theorem.
+
+  THEOREM   3.10. Let ul, .... o2k be continuous real valued functions on [c, d]. Let
+P and Q be permutations in Sk. Denote by 7 1, .... T,,, the closed curves constructed
+above from r~, , .... uZk, P, Q and by U(zj) parallel translation around zj. Then
+
+                                                   E ,fii trace[ U(r,)]          = trace[$cp(c, d)P].                 (3.28)
+                                                      (.                     >
+  Remark        3.11.                            Although   only the permutations         p in %?Jare needed for evaluation
+                                          YANGMILLSTHEORY                                 77
+
+of Wilson loops as in (3.28) nevertheless we must consider the action of cp(c, x) on
+all of W because it is this algebra which is invariant under cp(c,x). (Use of a larger
+algebra would not permit a derivation of some important identities of the next
+section.)
+
+
+                                       4. LOCAL COMMUTATIVITY
+
+    We shall prove in this section that the operators H(x) and H(x’) commute if the
+graphs of the functions cl, .... czn do not cross between x and x’. We put /I = 1
+henceforth. Equations (4.1) and (4.2) of the next Lemmas constitute the
+infinitesimal braid relations of knot theory, which was studied in the context of a
+complex simple group in [9,24].
+
+   LEMMA4.1. Consider three representations of the Lie algebra 9. Denote by M,,
+NLU  P, the respective images of T, in the three representations. Put
+R12=Co M,QN,@I,      R13=Ca M,@I@P,         and Rz3=C0 IQN,@P,.        Then
+
+                                          [R,z,R,,+&,l=O.                               (4.1)
+
+  Proof: Define structure constants by [T,, TJ = CC f & T,. Since the map
+T + [T, T,] is a skew symmetric operator on 3 relative to the trace inner product
+and (T,};= , is an O.N. basis of 3 the structure constants satisfy f zb= -f zb.
+Hence
+
+
+
+
+   LEMMA     4.2.    The operators         S, defined in (3.7), (3.8), and (3.9) satisfy the
+identities
+
+                    Cs(j,   sim   +   sjml = O,   i, j, m distinct in { 1, .... 2k).    (4.2)
+
+   ProoJ By Lemma 4.1 with M, = N, = P, = T, the operators Tti = C, Ty’ T y’,
+1 < i < j< k satisfy the identities [TV, T, + Ti,] = 0 for distinct i, j, m in { 1, . ... k}
+since the extra factors of I in T, don’t affect (4.1) nor does the order of the factor
+spaces. Hence, by (3.7) and (3.8),. Eq. (4.2) holds if i, j, m all lie in { 1, .... k} or all
+78                               GROSS,      KING,   AND   SENGUPTA
+
+
+lie in {k + 1, .... 2k). In case i < k and m > k + 1 then two of the three operators in
+(4.2) are of the form (3.9). Consider the case 1 < i< j< k and m 2 k + 1. Put
+M, = N, = T, in Lemma 4.1 and P, = - Ti where prime denotes transpose. Thus
+P, is the contragredient       representation of Q on the dual space (a=“)*. Upon
+inserting 2k - 3 factors of the identity, (4.1) reads
+
+                 c
+                 L1
+                       Ty)T($,   1
+                                 b
+                                     Tr)(-T;)(m)+x
+                                                           b
+                                                               T~)(-T;)(“)
+                                                                             1
+                                                                             =-j
+                                                                                      (4.3)
+
+wherein each operator operates on (@“‘)“a ((C”)*)“. But for any finite dimensional
+vector space V the space V@ V* is linearly isomorphic to the space dp( Y) of linear
+operators on V under the linear extension of u of + (u + Q(u)). Moreover a pair
+of operators R, S on V determines a map B + RBS from T(V) into itself which
+under the isomorphism corresponds to R @ s’, as one verifies easily. Put V= (C”)”
+and apply this isomorphism to (4.3). By the definitions of S, j the identity (4.3) then
+is equivalent to (4.2). The proof for i < k, m > j 2 k + 1 is similar. One applies
+Lemma 4.1 with M, = T, and N, = P, = - Ti this time. And finally the case i < k,
+m<k, jak+l       follows by using M,=P,=T,,       N,= -Ti.
+
+   THEOREM    4.3. Fix x and x’ in [c, d] and assume that for any i and j either
+ai(t)>aj(t)  for t =x and x’ or oi(t)<cj(t)  for t=x and x’. Then H(x) and H(x’)
+commute. In particular, if the functions a1, ,,., azk do not cross over [c, d] in the
+sense that for any i and j either a,(x) > ai   for all x in [c, d] or ur(x) < am for
+all x in [c, d] then H(x) and H(x’) commute for all x and x’ in [c, d].
+   Proof     Fix x and x’ as above and choose a permutation         i,, .... i,, so that
+uin(t) < uin+,(t) for n = 1, .... 2k - 1 and t = x and x’. For example choose i, in
+{i : a,(x) = infi oj(x)} n {i : (TV = infj ai(     which cannot be empty without
+violating the hypothesis. i2 may be chosen similarly after removing oil from the
+procedure.
+   Write y, = ci,(x). Since m@(x) and S, are both symmetric in i and j we may write
+
+                     - 2H(x) = F m,,(x)S,,            + 2 “2 ’ C mi,ip(x)Si,ip.      (4.4)
+                               r=l                          r=l     p>r
+Let rO = min{r : y, >O}. Then by (3.2) mJx) = 0 unless r and p are both greater
+or equal to rO or both strictly less than rO. In the first instance mi,ip = yr if r < p and
+in the second instance mbip = 1y,( = -yp if r < p. Thus using S, = S, and (3.10) we
+have
+                     2 C        mi,i,(x)si,,=   -2    C Ypsi,ip
+                        rl)>p>r                    rlJ>p>r
+                                              = -2    1    y,s.. k’p
+                                                   rg>r>p
+                                                     = +2 1 Yr 1 si,ip.
+                                                          ‘0 > , par
+                                               YANGMILLSTHEORY                                                                          79
+
+Hence
+                  -2H(x)=          C    Yrsiri,-                    1    Yrsi,i,+2                              1     C    YrSi,ip
+                                 r z ro                           , < rg                                      r>ro   p>r
+
+
+                                  +     2 1            Yr      C               si,ip
+                                           r < ‘0             par
+
+
+                             =     t      Yrsi,i,+                2     ‘z’                Yr     1         si,tp.
+                                 r=l                                      r=l                    P>r
+
+
+Put
+                                        -Hr=                ($Jsi,i,+                       C      si,ip.                            (4.5 1
+                                                                                           Pzr
+
+
+Then
+                                                 H(x)=                    :                y,H,.                                      (4.6)
+                                                                         r=l
+
+
+Similarly H(x’) is a’linear combination of the same operators H, since the ordinates
+oi,(x’) are also nondecreasing. It suffices therefore to show that the operators H,
+commute.
+   Since each T, commutes with the Casimir operator C it follows that
+[Si,i, S, p] = 0 for all i, r, p. Moreover
+
+                        Csi,j9         sm,nl= O                          if {i,j}n{m,n}=fa                                            (4.7 1
+
+also follows easily from the definition of S, j. Suppose then that r < n. We shall
+show that [H,, H,] = 0. It suflkes to show that [H,, Si,J = 0 for r <n < p. But by
+ (4.7)
+
+                                 CHr, Sin,,1= CSi,,in+Si,,;p~
+                                                            Si..i,,l
+which is zero by Lemma 4.2.
+
+      COROLLARY   4.4. In the notation of Theorem 4.3 put
+
+                                   Ej=-i                       Hi,                         j = 1, .... 2k.                            (4.8 1
+                                                     i=l
+
+
+ Then the operators Ej commute with each other and
+                                                            2k - I
+
+                                        H(X)=                 C            (J’+             I -Y,)Ej.                                 (4.9 1
+                                                            j=l
+
+
+ Moreover
+
+                                                Ej=          b(f)                      i         Si,,ip                              (4.10)
+                                                                                r,p= I
+
+
+595/194/l-6
+80                               GROSS, KING, AND SENGUPTA
+
+and
+
+                                          Ej>O,                          j= 1, .... 2k                        (4.11)
+
+in the trace inner product on 3?.
+  Proof: The operators Ej commute among themselves because the operators Hi
+commute, as shown in the proof of the theorem. Using (4.6) and a standard sum-
+mation by parts identity we have H(x) = C,‘“=; I (yj+ 1- yj) Ej - y,,&. We show
+Ezk = 0. By (4.5) and (4.8) we have
+
+                               EZk= -:                          H,
+                                                r=l
+
+
+
+                                   =      (4)          F    sir,i,          +     F      1           si,,iP
+                                                      r= 1.                     r=l     p>r
+
+
+
+                                   =(i)                 F        sj,j+(i)               C     si,j
+                                                      j=l                             i#i
+
+
+                                   =($                      f        si,j
+                                                      i,j=l
+
+
+which is zero on a by Lemma 3.2. This proves (4.9). To prove (4.10) note that
+E’=C!=l      (2-‘si~,,+Cp,,si,,ip)=CI;=l           (2-‘s,,,-Cp.,s,,ip)           by Lemma   3.2.
+Remove the diagonal in the second sum and use the symmetry of S, j in i, j to get
+Ej=~~=l-2-‘Si,,i,-2-1~,~,+,~jSi,,ip=                    -2-‘Cj,,=,Si,,iP.         To prove that
+Ej>Oput      N’,B= -BTy)for            l<j<kandput          N’,B=T~-k’Bfork+1dj<2k.It
+follows from (3.7), (3.8), and (3.9) that S,=C, NiN$                      Moreover in the inner
+product (A, B) = trace B*A each N’, is skew adjoint because each Tf/) is skew
+adjoint on (@N)k. Further [NL, NL] = 0 for all i, j. Hence if we put P, = C!=, Ni
+then (4.10) gives 2Ej= -C, Pz which is positive since Pt = -P,.
+   Remark 4.5.      If {ur}fE i are all distinct then (4.10) can be written in the useful
+forms
+
+                                -2Ej=                                1                S,,
+                                                  ‘.P:YrGY,,YpCY,
+
+                                            =
+                                                                   c                           S&P.           (4.12)
+                                                  r,p:u,(x)~y,.u~(X)Cy,
+
+
+
+     COROLLARY      4.6. If G is irreducible on cN then E, = Ezk- 1 = (a/2)1 where
+C = -al      is the value of the Casimir operator.
+     Proox    Since S, is left or right multiplication                                  by Cci) we have
+
+                                   Sii = -al,                               i = 1, .... 2k.                   (4.13)
+                                       YANG-MILLSTHEORY                                              81
+
+Hence        El= -H1=~Silil+C~=2Si,ip=            -+~i,i,+Ci2k_l           si,j=   -f~i,i,=(a/2)1.
+Moreover   Ezk _ , = E,, + HZk = 0 - is,,, izk= (a/2)1.
+
+   COROLLARY 4.7. Assume that ol, .... ozk do not cross in [c, d] in the sense
+described in Theorem 4.3. Choose i 1, .... izk so that a,,+,(x) 2 a,,(x) for all x in [c, d J
+and j= 1, .... 2k - 1. Let Ai = lz (ai,+, -o&t)) dt. Then the solution to Bralic’s
+differential equation is
+                                                      Zk-I
+
+                            dc,   xl    =   exp   -   jF,    AAx)   Ej].                        (4.14)
+
+   Proof     Since H(x) is a commuting family of operators the solution to (3.13)
+with identity initial condition is cp(c, x) = exp[-Jf H(x’) dx] which, in view of
+(4.9) is (4.14).
+   In view of the appearance of the operators Ej in (4.14) as the coefficients of the
+areas between adjacent curves we shall refer to the Ej as the area operators
+associated t0 the curves 0 1, .... (T2kover (c, d). In particular Ej is the area operator
+associated to the region between ai, and cri,+, over (c, d).
+
+   COROLLARY 4.8. Let o,, .... oZk be continuous real functions on [a, b] whose
+graphs have only finitely many intersection points with each other and denote by
+a, < a2 < . . . < a,, the x coordinates in (a, b) of these intersection points. Denote by
+B the union of the graphs of ol, .... ozk over (a, b). Let K,, .... K,,, denote the bounded
+connected components of ((a, b) x R) - B. Put a, = a and a,, + , = b. Over the interval
+(a,- 1, a,) the curues ol, .... o2k do not cross and we denote by E’9P the area operator
+on 2 associated to Kp n ((a,- I, a,) x R) z KS, zf this intersection is nonempty.
+Otherwise we put E’*P=O. Then
+        (i) E’*p = E”, p tf KL and Kg are both nonempty. That is, E’* p depends only
+ on Kp wherever possible. The common value, EP, will be called the area operator
+ associated to K,.
+        (ii) EP and Eq commute if Kp and K, have overlapping projections on the x
+ axis. In particular tf Kp projects onto all of (a, b) then EP commutes with all Eq.
+       (iii) Bralic’s map cp(a, b) is a product of all the operators {exp[ - IKpI EP]}F= 1
+ in some order where IKpl denotes the area of K,. If a boundary point of Kp lies
+ on the left hand boundary of the strip, i.e., on the line x = a, then the factor
+ exp[ - IK,l E,] may be placed on the far left in this product. If a boundary point of
+ Kp lies on the right hand boundary of the strip then this factor may be placed on the
+far right in this product.
+
+  Proof: Each curve aj disconnects the strip (a, 6) x R. Hence two points in Kp
+both lie above cri or both lie below aj. Consequently if K; and Kz are both non-
+empty then the same set of curves in {a,, .... a2k} lies below both. It fOllOWS from
+Remark 4.5 that E’rP = E”*P.
+82                               GROSS, KING, AND SENGUPTA
+
+   Now the projection of the connected open set Kp on the x axis is an open interval
+which is a union of one or more of the intervals (a,-, , a,) with some endpoints
+adjoined. If Kp and K, have overlapping projections on the x axis then for some r
+K; and K; are both non empty. ErSP and ErSq are two of the area operators over
+(a,- i, a,) discussed in Corollary 4.4 and therefore commute. This proves (ii).
+   To prove (iii), apply Corollary 4.7 to express the solution to Bralic’s differential
+equation as a product of exponentials, one for each interval (a,- ,, a,). We have
+thus
+
+           cp(u, b) =exp
+                           [
+                               - f
+                                p=l
+                                        1K.j ElaP
+                                                    1 [
+                                                     . . . exp   _    f
+
+                                                                     p=l
+                                                                            IK;+ll      E”+I.P
+
+                                                                                                 1
+in that order (because H(x) appears on the right in (3.13). By (i) we may write
+
+               &a, b) = exp       - f
+                                       p=l           1 [
+                                             /Kil EP . . . exp       -pzl      /K;+‘I      Ep]         (4.15)
+
+since the E’yP that are defined as zero have IK;I =0 anyway. Since IKpI =
+C:L: 1K;j it suffices to show that the factors in (4.15) can be rearranged
+suitably. Consider a connected component which, after relabeling, we may call K,
+and which contains (a, a,) in its projection on the x axis. If lK;l # 0 for exactly
+r=l , .... j then E’*’ = E’ occurs with a non zero coefficient in each of the j leftmost
+factors in (4.15) and nowhere else. Moreover E i commutes with all of the EP in
+these j factors by (ii) and hence e-l”;’ E’ may be commuted to the left from the rth
+factor for r = 1, .... j giving a factor exp[ - )K, I E ‘1 on the far left and leaving no
+other factor involving E1 anywhere. Now we proceed by induction as follows.
+Having picked and relabeled components K,, .... Kp and written cp(u, b) =
+exp[ - 1K,I E ‘1. . . exp[ - lKpl EP] . F where F is a product of exponentials not
+involving El,..., EP we choose from among the remaining connected components
+one whose projection on the x-axis extends at least as far to the left as any of the
+others that remain. Label this K,, 1. The argument given for K, applies now to
+show that one can write F=exp[-IK,+,I             Ep”] F’ where F’ is a product of
+exponentials not involving E p+l . This proves (iii) since a similar argument can be
+applied starting from the far right. We note that the K, that we started with can
+be any component with a boundary point on the line x = a.
+
+   COROLLARY 4.9. Let {a,} be a uniformly bounded sequence of continuous
+functions on [a, b]. Suppose that o: [a, b] + R is also continuous and that o.,(x)
+converges to a(x) for each x in (a, b). Then U(a,) converges to U(a) in Lp (white
+noise) for 1 < p < 00.
+  Proof. Since the operators U(o,) are all unitary, hence, uniformly                             bounded, it
+suffices to prove convergence in L2. But
+
+       E(tr[(U(a,)   - U(a))*         (U(a,) - U(a))])    = 2 Re tr E[I-             U(a)* U(a,)].
+                                     YANGMILLSTHEORY                                    83
+
+By (3.5) E(U(o)* U(a,)) = (~,,(a, b)Z where qPn(a, b) is the Bralic map for k = 1
+determined by the two curves 6, and 6. It is therefore the solution to the differential
+equation &,(a, x)/dx = -(~“(a, x) H,(x) with initial condition (~~(a, a) = I,. By
+(4.9) H,(x) may be represented for each x in the form H,(x)= +(a,(~)-a(x))E,
+where -2E, = Sll or Sz2. Hence IIZZ,(x)ll, Gconst. la,(x)-a(x         Thus IIH,(x)ll,
+converges to zero boundedly on (a, b). Hence (~“(a, x) converges to its initial value
+Za for each x in [a, b] and in particular ~,(a, b)Z converges to I. Therefore
+tr[Z- E( U(o)* U(o,))] converges to zero.
+    Remark 4.10. Suppose that (a,} is a sequence of continuous functions on
+ [a, b] which converges pointwise and boundedly on [a, b] to a function c which
+is itself continuous except at the points a, < a2 < . . . < uy-, in (a, b) and which has
+left and right hand limits at these points. Note that if ai is the restriction of [T,, to
+(a,- 1, a,) with a, = a and a, = b then U(a,) = U(aX) ... U(oA). By Corollary 4.9
+each factor U(a;) converges in Lp (white noise) for 1 < p < cc to U(rY). It follows
+that U(o,) converges in Lp to U(oq). . sU(a’). Since parallel translation along a ver-
+tical line segment is the identity operator this product may be interpreted as parallel
+translation along the curve formed from the graph of (5 by joining the disconnected
+portions by vertical line segments above the jump points a,. It would be natural
+therefore to define U(c) by this product for such a piecewise continuous function
+cr. In effect we do this in the following sections. It is clear in fact from the definition
+(2.10) of parallel translation as well as the proof of Corollary 4.9 that U(a) could
+be defined for any bounded measurable function r~ on [a, b] and is continuous
+in g in the L’(u, b) norm into Lp (white noise) for 1 <p < cc. But the geometric
+meaning of U(a) seems to be lost and we shall not use it.
+
+
+                              5. CONNECTION OPERATORS
+
+   In order to evaluate the expectation of the product of the Wilson loop variables
+associated, for example, to two concentric circles it will be necessary to extend the
+previous formalism. Consider the configuration of curves shown in Figs. 5.la and
+b. In both cases the number of curves lying above a point x on the x axis changes
+
+
+
+
+                                 b         c   ab
+
+                               (a)                       04
+
+                                         FIGURE 5.1
+84                                GROSS, KING, AND SENGUPTA
+
+at b as x moves from left to right. Denote by 99k the algebra of operators on (@“)k
+which commute with g UC)for all g in G. This was denoted by 2? in Sections 3 and
+4. But we want to use a different k over different intervals. Let m <k. We consider
+in general 2m continuous real valued functions (TV,.... urn, yl, .... ym on the bounded
+interval [a, c] and 2(k -m)            real valued continuous functions cr,,,+ 1, .... ck,
+Y m + 1) ...7 yk on the subinterval [a,  b]. Define J: i?&,,+ .!G%~
+                                                                  by
+
+                                  JB= B@I,p,,                            Bin &?,,,,                      (5.1)
+where Ike-m is the identity operator on (CN)k-m. Note that JB is indeed in ak since
+g~k~(B~Zk_,)(g-‘)~k~=g~“)B(g-l)~”~~Ik_,=B~Zk_,             for all gin G. We define
+
+                                q:=         cp(~,b)Jq(b,c):a,,,+a~,
+
+where cp(b, c): g,,, + @,, is defined as in Section 3 using the graphs of ur, .... y,,, over
+[b, c] and cp(a, b): 9Yk+ gk is defined using the graphs of (or, .... yk over [a, b]. We
+assert that just as in Theorem 3.6 the map cp determines the expectation of products
+of all the Wilson loops obtainable from cl, .... yk as follows. We refer to the curves
+which are the graphs of ol, .... (T,, yt, .... ym over [a, c] as the long curves and the
+graphs of orn + 1, ***, ok, Ym+ 1, ***,yk over the subinterval [a, b] as the short curves.
+Parallel translation along oj will always be taken from left to right and denoted
+U(aj) while parallel translation along yj will always be taken from right to left and
+denoted J’(Yj). For j= m + 1, .... k we join the short curve aj to the short curve yj
+by a vertical line segment above x = b from (b, aj(b)) to (b, y,(b)) as in Figure 5.la.
+Above the endpoints a and c we join the curves by vertical line segments in a
+manner similar to that of Theorem 3.6. Specifically, we choose permutations P in
+S, and Q in Sk to index the joining procedure. For j= 1, .... m we join a,(i) to yj
+by a vertical line segment above c. These two curves will then contribute a factor
+v(Yj) U(aP(j) ) to our final Wilson loops. For j= 1, . ... k we join yeci, to crj by a
+vertical line segment above a. These two curves will then contribute a factor
+U(crj) V(yeCj,) to our final Wilson loops. As in the discussion preceding Theorem
+3.6 we obtain a finite number of closed curves rj, i= 1, .... r, for which
+
+      h    trace U(rj)
+     j=l
+
+             = trace[&( V(y,)@        ‘..   @   V(yk))(~~zk-m)(u((TL)O                ...   @   wk))i.   (5.2)
+
+
+Note that the factor P@I Zk-,,, is the operator needed for connecting the long curves
+by P over c and connecting the short curves by the identity permutation over b.
+
+     LEMMA     5.1 (cf. Fig. 5.la).
+
+
+                                                   1  = trace[&cp(a, b) Jq(b, c)f].                      (5.3)
+                                              YANG-MILLS           THEORY                                                    85
+
+    ProoJ   For j= 1, .... k write Uj for parallel translation along aj from c1to b and
+ Vi for parallel translation along yj from b to a. For j= 1, .... m write U,’ (respec-
+tively, Vi) for parallel translation along aj from b to c (respectively, along yj from
+c to 6). Then for the long curves U(Oj) = Ui Uj and P’(rj) = Vi Vi’, j= 1, .... m and for
+the short curves U(aj) = U, and V(rj) = Vj, j = m + 1, .... k. All primed operators are
+independent of all unprimed operators. Substitute these products into the right side
+of (5.2) and take the expectation first with respect to the primed operators to get
+
+
+
+
+           = E[trace &( V, 0 . . . @ Vk)
+
+                x(E(F’;@            ... 0 v~)fi(u;o              ... @KJ)@~,-,)(u,@                      .‘. OU,,]
+           = trace &E[ ( V, 0 . ..oV.)({cp(b,c)Ei}OZ,-,)U,O                                      . ..OU.l
+           = trace &(a,             b) Jcp(b, c)p                                                                    (5.4)
+
+ which proves (5.3).
+   The machinery for representing the situation of Fig. 5.lb is similar. The long
+curves are again the graphs of continuous functions (rl, .... o,,,, yl, .... y, on the
+whole interval [a, c], but this time short curves are the graphs of continuous func-
+tions (Tm+ 1, ..-, Ok, Y,,,+ 1, .... yk on the other subinterval [b, c]. Moreover the right
+hand connection permutation P is in Sk this time while Q is in S,. We join the
+short curves by a vertical line segment over b which joins (b, y,(b)) to (b, oj(b)),
+j=m+    1, .... k. As before the configuration decomposes into closed curves t,, .... 7,.
+and we have this time
+
+    fi   trace U(T,)
+   j=l
+
+          =trace[(&Ozk~rn)(V(Y1)O                      .”    8    v(yk))~(u(ol)@           ‘.’   @   U(ok))l         (5.5)
+
+
+
+wherein the f&Or      zkp, effects the connections above b. As before we decompose
+the parallel translation operators along the long curves into independent factors
+and take first the expectation with respect to the operators over [b, c] to get
+
+
+                                       I
+                  = E[trace{(Q@Z,P,)(V,                     0 ... 0 V,OZ,-,)(cp(b,                c)P)
+                      x(U,O         ... @ um@zk-m)}l
+                  = E[trace{ Q( I/, @ . . . 0 ~,)(J*cp(b,                          cPw10    ... 0 Urn)}],
+where .Z*: Bk + L8m is the adjoint               of J relative to the trace inner products. Here J
+86                                     GROSS, KING, AND SENGUPTA
+
+should be regarded as operating on all of L#((C~)~) into g((C”)“)                  by
+JB = B@ Zk-,,,, but this does not affect the value of J* on gk which is easily seen
+to lie in L!&. Upon taking the final expectation we obtain the identity which reduces
+Fig. 5.lb to Bralic maps, namely
+
+     LEMMA   5.2 (cf. Fig. 5.lb).
+
+                      E    fi
+                          j=    I
+                                    trace U(r,)] = trace[&cp(a, b) J*cp(b, c)P
+                                                                                 1               (5.6)
+
+    We shall refer to the operators J and J* as connection operators since they con-
+tain the algebraic information which effects the connection of the short curves along
+vertical line segments at x = b in Figs. 5.la and 5.lb.
+    In addition to these connection operators we shall need another type of connec-
+tion operator. Suppose that in Fig. 5.la the curves c2 and yz continue on to the left
+of a over some interval [d, a] while 0, and y1 stop at a as shown. Over the interval
+ [d, a] we have k = 1. The subscripts that label our curves are important because
+they determine the position of the corresponding parallel translation operators Uj
+and Vi in Eq. (3.5). Thus the curves c2 and yz should be labeled rrr and y1 over
+ [d, a] but cannot be so labeled over [a, b] without causing labeling inconsistency
+for the other two curves over [a, c] which are already shown in Fig. 5.la.
+    We define therefore a relabeling operator as follows. With a < b < c as before we
+suppose that we are given 2k continuous functions whose restrictions to [b, c] we
+label c;, .... ob, r;, .... 7; and whose corresponding restrictions to [a, b] we label
+                    y . Thus (Tagand ai are restrictions of the same continuous function
+~~~d~a~&?&t&~ls.           Write u(n) = j, and j?(r) = i,. Then ct and /I are in S,. Define
+
+                                                RB=ai-‘B/j                                        (5.7)
+
+for B in z2&. Clearly RB is also in ~47~.
+
+   LEMMA 5.3. The map cp:= cp(a,6) Rq(b, c) determines the expectation of Wilson
+loops in the canonical way: tr(&cpP) is the expectation of the product of Wilson loops
+determined by connecting the continuous curves at a and c by Q and P, respectively.
+     Proof   Write Uj= U(aj), Vi= V(y,), Ui = V(ai), and Vi = V(yj) and observe the
+identity
+
+tr[$(V,@       ~~~OV,)B-‘((V~@               . ..@V.)B(V;@      . . . @ZJ;))$(U,@       . . . @U,)]
+       = tr[/$cV’((       Vi, Vi)@ ..’ O(vj~v~))~((u~ui~)O            *‘* O(uLuik))].             (5.8)
+
+By independence of primed from unprimed operators the expectation of the left side
+is trace(&?).     But by Corollary 3.9 the right side is a product of traces of disjoint
+operators loops in which the typical sequences that appear in a loop are
+ Vj, Vi U&,, Uip,,) and 17; U, V, Vi where j, = ja-~88(r) = tLa- ‘Q/?(r) = Qir. Thus Vj, is
+                                 YANGMILLSTHEORY                                       87
+
+preceded by V,! as desired, V: is preceded by U&,       as desired, and U, is preceded
+by VQt, as desired.
+
+   EXAMPLE 5.4. Let Ci and C2 be two intersecting circles with centers on the x
+axis and oriented clockwise. Denote by a < b < c < d the intersection points with the
+x axis. Let (T, and y1 be the functions on [a, c] whose graphs give the upper and
+lower halves of the leftmost circle C, while e2 and y2 are the functions on [b, d]
+whose graphs give the upper and lower halves of C2. Let a = /I = r be the transposi-
+tion in S, and denote by R: B2 + g2 the relabeling operator; RB = t^C’BQ. Write
+JB = B@ I, for B in 93r and Zr = identity operator on CN as in (5.1) with k = 2,
+m = 1. Pick a point c’ with b < c’ < c. Then the Bralic map for the two circles is
+
+                       q = da, b) J*cp(b, c’) Rq(c’, c) Jdc, d),
+
+where cp(a, b) is determined by or and y I over [a, b], cp(b, c’) is determined by
+or, c2, yl, yz (in this order) over [b, c’], cp(c’, c) is determined by Do, cI, y2, y1 (in
+this order) over [c’, c], and cp(c, d) is determined by crz, y2 over [c, d]. The right
+hand factor .Z closes the circle C, on the right (as in Figure 5.la) by a vertical
+segment (of length zero) and at the same time connects c2 1 [c’, c] to (TV1 [c, d].
+It also connects y2 1 Cc’, c] to y2 1 [c, d]. The relabeling operator R reverses the
+order of factors at c’ so that .Z* may close the circle C2 at b and properly connect
+rrr 1 [a, b] to or 1 [b, c’] andy, 1 [a, b] toy1 1 [b, c’]. Wemaysimplifycp by observing
+that (p(c’, c) converges to Zso2as c’ ? c while cp(b,c’) converges to cp(b,c). Hence we
+have q=cp(a, 6) J*cp(b, c) RJq$c, d). Here RJ closes the circle C, at c and
+simultaneously makes the correct lateral linking of c2 on the right and left of c.
+Alternatively we could have put c’ = b obtaining q = cp(a,6) J*Rq(b, c) Jq(c, d) in
+which cp(b,c) now has a different meaning since it is determined by 02, cr, , y2, y I
+instead of o,, cr2, y,, y2. To get the expectation of the product of the two Wilson
+loops take P = Q = Z (which is the only choice since k = 1 on the end intervals). The
+expectation is then trace[qZ,].        It follows from Corollary 4.8 and the equation
+cp= cp(a,b) J*cp(b, c) RJq$c, d) that the expectation is a function of the seven finite
+areas determined by the two circles and the two inner vertical tangent lines. But in
+the next section we shall show that it depends only on the areas of the three bounded
+connected components determined by the two circles.
+   Remark 5.5. If two or more curves should close on the left over some point b
+(cf. Fig. 5.1 b) while two or more other curves close on the right over the same point
+b (cf. Fig. la) then the overall Bralic map for this configuration can be constructed
+as before in either of the forms J15; or JT J4 where the Jj are injections as in (5.1).
+This can be derived directly as in the previous cases or by simply applying the
+results for Figs, 5.la and 5.lb consecutively in either order.
+   Remark 5.6. As noted in Remark 4.10 parallel translation along the graphs of
+piecewise continuous functions is a well defined notion. Moreover one need only
+look at Eqs. (5.4), (5.5), and (5.8) to see that the linking operators J, J*, and R
+88                              GROSS, KING, AND SENGUPTA
+
+ over a point b implement the lateral connection of two graphs even if there is a
+jump discontinuity of the combined graphs at b.
+   We summarize the results of this section in the following theorem.
+
+   THEOREM 5.7. Supposethat a, < a, < . . . < a,, are real numbers and k, , .... k, are
+strictly positive integers. Let a;, .... ai,, y;, .... y;, be continuous real functions on
+[a,- ,, a,.]. There exist operators Ji: 9#r+, + ak,, i= 1, .... n - 1 such that the
+operator cp:6A3k.+ gk, defined by
+
+
+
+
+determines the expectation of all Wilson loops constructed from the curves of, yi by
+spectfied interior lateral and vertical connections at a,, .... a,- 1 as in the preceding
+cases.For vertical connections at the endpoints a, and a,, spectjiiedby permutations
+Q in Sk, and P in Sk. the expectation is trace(&pP). Each Ji is a product of an injec-
+tion J as in (5.1), the adjoint of such an injection, and a relabeling operator R such
+as in (5.7). One or more of these three factors could be the identity operator.
+
+      Remark 5.8. The vertical connections at the endpoints a, and a,, can be
+represented by connection operators also. Define 9&, to be @ and extend the defini-
+tion (5.1) to m = 0 by putting J@‘z = zl,, for z in C. Choose a = I and fl= P in (5.7)
+to get the relabeling operator R,B = BP. Choose cl-l = Q and fl= I to get the
+relabeling operator L,B= QB. Then, in the notation of Theorem 5.7 we see that
+               J’kn’ is an operator
+J’kl)*@&                            on @ consisting of multiplication by the number
+(J’ki“LocpR,J(kn)l, 1) = (&cpP, J@l)l) = ($qP, Ik,) = trace(&cpP),     which is the
+expectation of the desired products of Wilson loops.
+
+
+
+                        6. A STANDARD FORM FOR BRALIC'S MAP
+
+    Let  Ol,  . . . . ckl, yl, . . . . yk, be continuous functions on .[a, b] while a;, .... ah,,
+24 >aa.7y;, are continuous functions on [b, c]. We suppose specified lateral and verti-
+cal connections among the graphs of these functions at x = b as in Section 5, so that
+some curves extend continuously across b while others are joined by vertical line
+segments at b to curves on the same side of b but going in the opposite direction
+(i.e., a cri to a yj). The linking operator at b that accomplishes this may be chosen
+of the form I= R, J, R, J:R3 where the Ri are relabeling operators. Let W be the
+union of the graphs of all these functions, cri, yi, oi, yj’, along with the vertical
+segments. If K, is a connected component of ((a, b) x R) - W and K2 is a connected
+component of ((b, c) x R) - W we shall say that K, and K2 are adjacent (at b) if
+there is a curve in ((a, c) x R) - W joining some point p1 in K, to some point p2
+in K,. In Fig. 6.1, K,, K, is an adjacent pair. K,, K; is another adjacent pair.
+                                           YANG-MILLSTHEORY                                   89
+
+
+
+
+                         a                                   b                          c
+
+                                                 FIGURE 6.1
+
+
+
+  THEOREM 6.1. Suppose that K, and K2 are adjacent components at b and that
+E: LAYS,
+      -+ Bk, and P. Bk2 + L??lkl
+                              are the associated area operators. Then
+
+                                                     El = JF.                               (6.1)
+
+  The proof relies on the following lemmas. We shall use this theorem in Section 6
+and Section 7 to show that the expectation of products of Wilson loops depends in
+a certain sense on the areas of the bounded connected components of the comple-
+ment of the loops.
+
+  LEMMA 6.2. Supposethat .f is simply an injection J as in Eq. (5.1) and K, and K,
+are bounded. Then Theorem 6.1 holds.
+  ProoJ: This is the situation of Fig. 5.la which also illustrates a pair pl, pz.
+Write k, = k and k, =m < k for this case and put pi= (xi, zi) for i= 1, 2. Using
+(4.9) we have
+                                               2k-     1
+                                  H(XI)=         C         (Yj+,-Yj)Ej
+                                                j=l
+
+and
+                                               2m-     1
+                                  Wx2)=          c         (Y:+, -Y;)%,
+                                                n=l
+
+
+where Ej acts on Bk, E,!, acts on L&,,, the numbers yj are the ordinates
+ {oi(xl), yi(xI)}~,I labeled in some nondecreasing order, and yk are obtained the
+same way from {cri(x2), y,.(~~)};=~. Since p1 and p2 do not lie on any graph there
+is a unique j and a unique n such that
+                                                                                        I
+                     yj<zl<Yj+l                        and               Y~,<z~<Y,+,.       (6.2)
+90                                 GROSS,         KING,        AND           SENGUPTA
+
+
+Then the area operator for K, is Ei and the area operator for K, is EL. We must
+show that
+
+                                                    EjJ=           JE;.                                              (6.3)
+
+As in Section 5, for i= 1, .... m, we refer to 0; v ai and yi v yi as the long curves.
+The remaining graphs, over [a, b], will be called the short curves. Since any long
+curve disconnects the vertical strip (a, c) x R each long curve lies above both points
+pi and pz or lies below both. Hence the set of long curves lying below pi is the
+same as the set lying below pz. By (4.10) we have
+
+                                            -2E,=              i             Si,,iP.                                 (6.4)
+                                                           r,p=l
+
+
+Here S,,, acts on ~8~ and p and r run over a subset of { 1, .... 2k). Let L = {r : i, E
+( 4 ***,m, k + 1, .... k+m}}. Then L consists of the indices r for which i, refers to
+a long curve in the notation uk+ r = yI. We write x; for the sum over (1, .... j} n L
+and CT for the sum over { 1, .... j} -L. Define
+
+                                            -24        = y         C’ s,,,.
+                                                           r         P
+
+It follows from (6.4), from the similar definition of EA, from the definition of Si,,iP)
+and from the fact that the set of long curves lying below p1 is the same set as that
+for p2, that
+
+                        F,(BOZ,-,)=(E~B)OZ,_,                                           for B in 9?,,,.
+
+It suffices therefore to show that (E,-F,)(BOZ,-,)=O.                                          Now   if m<i,<k    then for
+any p in (1, .... 2k) we have
+
+                                  (S,p+S,+,p)(BOZk-m)=O                                                              (4.5)
+because Tz) commutes with BQ I,-,,, so that the left side of (6.5) is (e.g., for
+ 1 <p<k)   C, [(B@Zk-m)    T~)T~)-T~)(B@Zk-,)       Tbp)]=O. If m<i<k     then p1
+cannot lie between the graphs of the short curves cri and yi because the open set
+lying between these graphs is disconnected from the rest of (a, c) x R by W.
+Hence p, lies above both graphs or neither. It therefore follows from (6.5) that
+x:’ S,J B@ Zk _ ,) = 0 since C:’ is a sum over ail short curves lying below pl.
+Hence
+
+      -2(E,-~j)(B~I,-,)=(~’                       C”+C”                  C’+C”           x”)   S,~ip(BOZk-~)=O.
+                                            P      r           P         r         P      r
+
+
+  LEMMA     6.3.    Suppose that j=         J as in Lemma 6.1 but that K, is unbounded. Then
+
+                                                       EJ=O.                                                         (6.6)
+                                  YANGMILLS        THEORY                           91
+
+   Proof    We continue the notation of the proof of Lemma 6.2. We must show that
+Ej J = 0. Since p 1 is in an unbounded component of ((a, c) x R) - W either there are
+no long curves which lie below p, (as, e.g., pi in Fig. S.la) or all long curves lie
+below p1 (as, e.g., p;‘). In the former case we have in the notation of Lemma 6.2,
+-2E,=C:      Cl: S,,, and since p, lies above both short curves rri and yi or above
+neither we have, as before, that C:’ S,,,(B @ Zk _ ,) = 0. Hence EjJ= 0. In the latter
+case pI lies above all curves with the exception of an even number of short curves
+which come in matched pairs oi, yi. If we denote by C:” a sum over these matched
+pairs then C:” S,,JB@ ZkPm) = 0 because of (6.5). Hence
+
+
+
+
+                         = i F si,,(B@zk~,)=o by (3.10).
+                           p=1   i=l
+
+
+  Remark 6.4. By (4.9) EZk =0 and hence the area operator of an unbounded
+component is zero. Thus by Lemma 6.3, Theorem 6.1 holds if j = J and K2 is
+unbounded. It clearly holds if both K, and K, are unbounded.
+
+  LEMMA    6.5. Suppose that 3 is the adjoint J* of an injection. Then Theorem 6.1
+holds. In particular if K, is unbounded then J* F= 0.
+   Proof    To take advantage of the extensive notation developed in Lemma 6.2 we
+interchange the left and right intervals in this proof. Thus we take the unprimed
+functions cir yi, i= 1, .... k to be defined over [b, c] while ai, ri, j= 1, .... m are
+defined over [a, b]. Moreover cri is connected to yi at b for i= m + 1, .... k. The
+short curves therefore lie over [b, c] now. This is the situation for which the linking
+operator is J* where J: g,,, + ak is given again by (5.1) as in Lemma 6.2. Assume
+p, lies over (6, c) now while p2 lies over (a, b). We let Ej: .G@~   -+ & be the area
+operator associated to the component K2 of ((b, c) x R) - W containing p1 and let
+EL: g,,, + a,,, be that associated to the component K, of ((a, b) x R) - W containing
+p2. As before pI and pz are assumed to lie in the same connected component of
+((a, c) x R) - W. Then we must show
+
+                                       J*Ej=   E;J*                               (6.7)
+if K, is bounded and
+
+                                         J*Ej=O,                                  (6.8)
+
+if K, is unbounded. The algebraic definitions of J, Ej, and EA are the same as in
+Lemma 6.2 even though the associated picture is different (the short curves now lie
+over [b, c] ). Hence by Lemma 6.2, EjJ= JEA. By Corollary 4.4 E, and EA are
+Hermitian   in the trace inner products on gk and gm, respectively. Hence the
+adjoint of (6.3) gives (6.7) while the adjoint of (6.6) gives (6.8).
+92                              GROSS, KING, AND SENGUPTA
+
+     LEMMA   6.6. If .? is simply a relabeling operator R then Theorem 6.1 holds.
+   Proof: In this case the number, k, of curves over [a, b] is the same as the
+number over [b, c]. We use the notation of Lemma 5.3. p1 lies over the interval
+(a, b) on the x-axis and pz lies over (b, c). Ej is the area operator for K, and EA is
+the area operator for K,. Both act on gk as in Lemma 6.2. We wish to show that
+E,R= RE:,.
+   We may assume that the connected components in question are bounded since
+otherwise Ej = Ei = 0. Let Ifi be the permutation in Slk given by $(i) = p(i) and
+$(k+i)=k+a(i)           for i=l, .... k. Using the definitions (3.6) in Section 3 it is
+straightforward to verify that di-‘Ty’oi = TF(‘)) and hence RTr)(R-‘B) = TF(‘))B
+while R{(R-‘B) Tf’} = BT~?‘” for i= 1, .... k where RB= oi-‘Bb for all B in
+End(CN)k. Consequently RS,R-‘= S$Cij,tiCjj for i, j= 1, .... 2k in view of the
+definitions (3.7), (3.8), and (3.9). We write a,(x) =yiek(x)                and ai =Y:-~ for
+i=k+l      , .... 2k in order to apply the notation of Section 4. By (4.10) we have
+ -2Ej= Cr,psA S,,and          -2E~=~,,p.BS,pwhereA={s~{1,...,2k}:o,(x,)<z,}
+and B= (r E { 1, .... 2k): 0:(x*) < z2}. But since p, and p2 lie in the same connected
+component of ((a, c) x R) - W we have 0:(x*) <z, if and only if rrJll,)(xI) <z,.
+Hence A =$(B). Thus -2RELR-’ =Cr,rcB SILCrj,IL(pj=Cs,qEASs.4= -2Ej.
+
+   Proof of Theorem 6.1. By the previous lemmas the theorem holds in case j is
+any one of the factors Jr, J;, or Ri. We get all the other cases by a procedure
+which we illustrate for the case j= J, 5;. Pick a curve C in ((a, c) x R) - W with
+endpoints p, and p2 in K, and K2, respectively. We may assume p1 lies to the left
+of x = b. By assumption K, lies in (a, b) x R. So we may choose 6’ < b so that pI
+is to the left of the line x = 6’. For each pair rri, yi of curves over [a, b] which are
+connected to each other at b by 1, let us shift the point of connection to b’, remov-
+ing from W the vertical line segment at x = b which makes the connection and
+replacing it by the vertical line segment from (b’, ui(b’)) to (b’, y,(b’)) which makes
+the new connection. Furthermore remove the leftover portions of the graphs of bi
+and yi which lie over (b’, b]. W has thereby been replaced by a new closed set W’.
+Let KJ be the connected component of ((b’, b) x R) - W’ through which the curve
+C passes and let G: Z?i,,,+ %Y,,,be the associated area operator. Then GJ: = JTF by
+Lemma 6.5 and EJ, = J, G by Lemmas 6.2 and 6.3. Combining these gives EJ1 J; =
+J, JF F.
+
+   Remark 6.7. Although it was not necessary to take the limit b’ /* b in the last
+proof the convergence is easily established because parallel translation U(x) along
+the graph of a continuous function 0 from c to x is continuous into Lp (white noise)
+for all p < cc as a function of x since it is the solution of a stochastic differential
+equation and continuity into L2 for unitaries U(x) implies continuity into Lp.
+
+   THEOREM 6.8. Let a = a,, < a, c . . . c a,= b be real numbers. Suppose that
+0; 1..., u;,, y; 7.... y;, are continuous real valuedfunctions on [a,- 1, a,] for r = 1, .... n.
+                                 YANGMILLS    THEORY                                 93
+
+For r = 1, .... n - 1 we assume that some of the curves c$ are connected on the right
+by vertical line segments above a, to corresponding curves yi in the manner described
+in Section 5 while some of the curves al + 1 are connected on the left above a, to some
+corresponding y; + ‘. The other curves are connected laterally to curves over the
+adjacent intervals, cf: Fig. 6.1. All of this information is encoded in a connection
+operator J,.: ak, -+ ak,-, for each r = 1, .... n - 1 as described in Section 5. Let
+cpr = rp(f,- 1y 4): gk, + %,        be the Bralic       map for    [a,- 1, a,] and write
+cp=4”1JOP2-4      . .. cp,,for the overall Bralic map for  [a, b].
+   Denote by W the union of the graphs of all the functions al, yl together with the
+vertical connecting line segmentsabove the points a,, .... a,- ,. We assumethat the
+graphs intersect in only finitely many points and that the vertical line segmentsare
+disjoint. Denote by K, , .... Kr the bounded connected componentsof ((a, b) x R) - W.
+For each component K, pick a vertical strip (a,- 1, a,) x R which intersects K, and let
+E’“’ denote the area operator on %Y,.,associatedto any one of the nonempty connected
+components Kz of K, n ((a,- ,, a,) x R). Let A, be the area of K,. Then cp is a
+product in some order of the linking operators .?, , .... j,-,          and the operators
+exp[ - A,E’“‘], s = 1, .... p.
+
+   Proof: The projection      of a component K, onto the x-axis is an interval
+which intersects one or more adjacent intervals (aj- 1, aj). For such a j, K, n
+((ai_, , aj) x R) is a nonempty open set. Let K’ be one of its components and let
+E: S&, + S&, be the area operator associated to K’ by Corollary 4.8. qj is a product
+of exponentials one of which is exp[ - IK’I E]. Moreover if K’ borders the left
+(respectively, right) edge of the strip (aj- r, ai) x R then this exponential factor may
+be placed on the left (respectively, right) side of the product by Corollary 4.8. Pick
+a point in KY and a point in K’ and choose a piecewise linear curve in K, which
+connects these two points, which has no vertical segments and has no changes of
+slope above the points a,,, .... a,. This is possible because K, is open and connected.
+If K’ #KY then the furthest point along the curve which is not in K’ lies above ajp 1
+or aj and therefore the curve enters K’ from the left or right boundary of the strip,
+respectively. In the former case K’ borders the left edge of the strip (aj- 1, a,) x R
+and the curve enters K’ from a connected component “K” of K, n ((ai+,, aj- I) x R)
+whose area operator F: 9$-, + g,+, satisfies FJj- I = Jj- 1E by Theorem 6.1. Hence
+exp[-IK’I     F]j,-,  =jj-i exp[-[K’l     E]. Thus the factor exp[-IK’I     E], which can
+be placed on the left of qj, can be commuted to the left of jj- 1 if one replaces E
+by F. If the curve enters K’ from the right edge of the strip (a,- I, aj) x R we can
+similarly commute this factor in qj past jj upon replacing E by some area operator
+on %,+,. By following backwards along the piecewise linear curve to KY one may,
+in this manner, commute the factor e-IrI E in q past the connection operators and
+Bralic maps vi by Theorem 6.1 and Corollary 4.8, changing E when necessary, till
+one arrives at KY. The factor e-lR” E has then changed to e-lK” da) which may be
+combined with the factor e-IKzI E’S’in cpI to give a factor exp[ -(lK’l + IKZI) EC”‘].
+If we carry out this procedure for each connected component K’ of every nonempty
+intersection K, n ((aj- i, aj) x R) we may combine all the exponential factors
+94                             GROSS,   KING,   AND   SENGUPTA
+
+
+associated to KS in this way into one factor exp[ - IK,( E’“‘]. Upon carrying this
+out for all s all the exponential factors in all the Bralic maps are exhausted by
+Corollary 4.8.
+
+
+                     7. INVARIANCE      PROPERTIES          OF EXPECTATIONS
+
+
+   Using the results established in the previous sections, we will now analyze the
+expectation of a general product of Wilson loops. Theorem 6.8 allows us to write
+this expectation as a product (in some order) of connection operators {si} and
+exponential operators (exp - A.E'"'}, where {A,} are the areas of the connected
+components of the complement of the loops. This expression superficially depends
+on our gauge choice; a different choice of directions for the coordinate axes in R*
+leads (in general) to different cornmutant algebras {L#~,}, different connection
+operators, and different area operators (see the statement of Theorem 6.8). Our task
+in this section is to ‘prove that the expectation does not depend on the coordinate
+directions chosen. We do this by rewriting the expectation in a standard representa-
+tion (see Definition 7.21) which displays the expected invariance properties. The
+result we get implies, in particular, Euclidean invariance of expectations, and
+factorization over disjoint components.
+   Our first task is to describe the type of curves to which our results apply.
+
+   DEFINITION   7.1. A curve is a continuous piecewise C1 function cr: [0, 1] =
+Z-t R*. The image of .c will be denoted o(Z). The curve c is closed if a(O) = a(l),
+and (T is simple if a(tr) # a(t,), for all 0 < tr < t2 < 1 unless tr = 0 and t2 = 1.
+   We will consider only curves with tangent vectors defined and nonzero at all but
+a finite number of points in 03’. The tangent vector to cr will be denoted a’(t).
+
+   DEFINITION    7.2. Given an interval A c 03, denote by A x R the cylinder           set
+{(x, y) 1 x E A}. The curve 0 is a finite union of graphs over the interval A if
+
+
+                                a(Z) n (A x R) = fi a(Z,),
+                                                      i=l
+
+
+where {Zi}, 1 < i < n, is a collection of disjoint intervals in [0, 11, and each set a(Z,)
+is the graph of a continuous, piecewise C’ function on A. The curve (T is a finite
+union of graphs if there exist a,, <a, < . . . < a4 such that a(Z) c [a,, aq] x R, and
+cr is a finite union of graphs over each interval (a, _ r, a,), for 1~ r < q.
+   As an example of Definition 7.2, we display a closed curve in Fig. 7.1 and indicate
+the intervals over which 0 is a finite union of graphs.
+   Next we define operations on curves, including the definition of inverse and.an
+extended product for two curves.
+                                                              YANGMILLS                 THEORY                                     95
+
+
+
+
+                                   FIG.   7.1. A closed curve which is a finite union of graphs.
+
+
+      DEFINITION                7.3. The inverse of the curve (r is the curve CJ-’ defined by
+
+                                                       a-‘(t)=a(l-t),                       O<t<l.
+
+      DEFINITION                7.4. (a) Let oi(t) = (xi(t), y,(t)), i = 1, 2, be two curves satisfying
+ x1( 1) =x,(O).                 We define the extended product of 0, and c2 as the curve
+
+                                             al(4t),                                                          0gt&
+                   fJ,*o,(t)=                (x,(l),         (2t-~)y2(0)-(2?-5)y,(l),                         $<f<$
+
+                                           { fl,(4t - 3),                                                     $<t<l.
+
+      (b) Let a(t) = (x(t), v(t)) satisfy x( 1) = x(0). We define the closing of u to be
+ the closed curve
+
+                                           42th                                                            O<tg$
+                          *a(t)=          i (x(1),(2t-l)y(O)-(2t-2)y(l)),                                  $<t<l.
+
+    Remark 7.5. In this last definition, we consider a curve whose endpoints have
+ the same x-coordinate. By adding on a vertical curve connecting these endpoints,
+ we obtain a closed curve. This construction will be useful later when we define the
+ standard representation of an expectation.
+    In Section 2, we defined parallel transport along any curve whose image is the
+ graph of a continuous function. Any curve 0 which is a ‘finite union of graphs can
+ be written (up to change of parametrization)   as the product of a finite number of
+ curves,
+
+
+ where ai      is either the graph of a function, or else has constant x-coordinate,
+ for 1 < i < n. Parallel transport is trivial in the latter case. We then define parallel
+ transport along c as
+
+                                                   U(a) = U(a,) U(U”-,)                      ‘*. U(a,).
+
+ It is important                 to notice that this definition                          is independent   of the parametrization
+
+595/194/l-7
+96                                 GROSS,    KING,   AND    SENGUPTA
+
+
+of the curve cr. Accordingly, when discussing parallel transport we wll not mention
+parametrization.
+   We will denote by W= { nl, .... o,} a collection of curves, and by W(Z) the union
+of the images of these curves.
+
+   DEFINITION  7.6. Let W= {or, .... on} be a collection of curves. The point
+p E W(Z) is an intersection point of W if any of the following equations is satisfied:
+
+            p = cri(t) = ai( t’)            someO<t<t’<l,          some l<i<n
+            p = Oi( t) = a,( t’)            some O<t#r’<l,         some l<i<j<n.
+
+   DEFINITION   7.7. The finite collection of closed curves W is admissible if W has
+a finite number of intersection points, and if each curve in W is a finite union of
+graphs. The finite collection W is weakly admissible if W(Z)’ has a finite number of
+connected components, and if each curve in W is a finite union of graphs.
+
+  Remark 7.8. The complement of the image of an admissible collection of closed
+curves is a finite union of disjoint, connected open sets, one of which is unbounded,
+and the rest of which are bounded. Thus an admissible collection is weakly
+admissible (the converse need not be true).
+
+
+  DEFINITION  7.9. Let W= {a,, .... a,} be a weakly admissible collection of closed
+curves. We define the expectation of W to be
+
+
+
+
+   Remark 7.10. Since W is weakly admissible, there exist a0 < a, c ... c a4 such
+that each curve in W is a finite union of graphs over each interval (a,- r, u,), for
+1 < r < q, and W(Z) is a subset of [a,,, a41 x R. Correspondingly, there is a Bralic
+map cpr for each interval (a, _, , a,), and a connection operator 1, for each endpoint
+a,. Theorem 5.7 and Remark 5.8 imply that the expectation of W is given by
+
+
+
+   This expression implies invariance of ( W) under translations in the x-direction,
+since the operators { cp,} and {jr} are invariant under translations in the
+x-direction. Furthermore,    suppose that W= W, v W,, where W, and W, are
+collections of curves whose images W,(Z) and W,(Z) are disjoint, and suppose that
+there is a vertical hne which is disjoint from W(Z), such that W,(Z) and W,(Z) lie
+on different sides of the line. Let (a, 0) be the point where this line intersects the
+x-axis, and suppose that a E (a,- r, a,). Then the connection operators at the left
+                                          YANGMILLS      THEORY                         97
+
+and right hand ends of the interval (a,- r, a,), namely I,- 1 and jr, have the algebra
+&, = @ as domain and range, respectively. Remark 5.8 implies that
+
+                                  <w,>=jo(P*~l...(P,-lQr-l
+                                  w2>=.t(Pr+r(P4~q.
+Since cpr is equal to one, this implies
+
+
+
+   We will now analyze the expectation of an admissible collection W, and show
+that it equals the expectation of another collection, called a standard representa-
+tion. The following definitions will provide an inductive procedure for finding this
+standard representation.
+
+  DEFINITION    7.11. Let W be an admissible collection of closed curves, and let
+{Ro, R,, .... Rk}  be the connected components of W(Z)c, where R, is the unbounded
+component. We associate to this a graph V(W) on k + 1 vertices (uO, ur, .... u,},
+with edges connecting each pair of vertices vi and vi for which aRi n aRj contains
+a nonempty open subset of W(Z).
+   Remark 7.12. For an admissible collection W, the associated graph V( W) is
+connected. Fig. 7.2 shows several examples of collections with their associated
+graphs.
+
+  DEFINITION   7.13. Let V be a connected graph. A tree on V is a minimal
+connected subset of V which contains every vertex. The distance between two
+vertices v and O’ in T is the number of edges in the smallest connected subset of T
+containing o and u’.
+  With the choice of a base vertex, a tree becomes a partially ordered set, in the
+
+
+
+
+                                    w                              vw
+                  FIG.   7.2.   Collections   of curves with their associated graphs.
+98                                GROSS,   KING,   AND   SENGUPTA
+
+
+following way. Suppose T is a tree on V( IV), and the base vertex is u,,. Then there
+is a unique sequence in T from u0 to u,, for each 1 <m <k. We define a partial
+order on the vertices in T by saying ui c u, if vi belongs to the sequence connecting
+v. to u,. So, for example, u. < v, for all 1 ,< m < k. The set of vertices {vi ) vi < u, >
+is an ordered set, and we define v* as the (unique) maximum element of this set,
+for l<m<k.
+    Now let W= {ran, .... a,} be an admissible collection of closed curves. By trans-
+lation invariance in the x-direction, we can assume that W(I) lies to the left of the
+y-axis. Let T be a tree on V(W). For each pair of vertices vi, vi connected by an
+edge in T, choose a point in aRi n aRj which is not an intersection point of W, and
+at which the tangent vector exists and is nonzero. If vi> vi, call this point pi;
+otherwise call it pi. Define p. to be the origin in the plane. We will call pi the gate
+for the region Ri, and we will denote by Ti the tangent vector to the parametrized
+curve at pF Note that each region R, has at least one gate on its boundary, namely
+pm, for 1 <m <k. If pj is another gate on the boundary, then I= m.
+
+
+     DEFINITION 7.14. Let T be a tree on V(W) and let {p,} be gates for the regions
+{R,}.     For each m = 1, .... k, let r,,, be a simple C’ curve with r,(O) = pm and
+f,,,(l) =plit, such that r,(t)~ R, for O< t < 1. If rii =O, we require that r,(t) E
+R. n ((x, y) ( x c O> for 0 c t < 1. We also require that at each gate pm, the vectors
+ T,,,, f;(O) and {r;(l)     lj= m} should be non-zero, and no two of these vectors
+should be parallel. Let f be the collection of these curves. Then we say that r is
+a tree on W if r has no intersection points other than the gates { po, pl, .... pk}, and
+if each curve r,,, is a finite union of graphs.
+
+   Remark 7.15. The existence of these curves (r, > follows from our assumptions
+on W, as explained in Lemma Al in the Appendix. Fig. 7.3 shows an example of a
+tree r on a collection W. We will use r to extract from W some information about
+how the regions { Ro, R, , .... R, > are arranged relative to the curves in W. It will
+turn out that this information, along with the areas of the components (R,}, will
+completely determine ( W). First we recall the following definition.
+
+  DEFINITION   7.16. Let v = (vi, v2) and w = (wi, wJ be two vectors given by their
+Cartesian coordinates. We define
+
+                                 sgn(0, w) = sgn(v, w2 - v2 wi).
+
+
+  DEFINITION      7.17.    For each m, j = 1, .... k, we define
+
+                          4,, = sgn(UO), T,)
+
+                   W, j) = sfimK(l)~
+                                   C(l))                   if fi=j, m#j#O
+                           0                               otherwise.
+                                      YANGMILLS     THEORY                            99
+
+
+
+
+                                 (4
+
+
+
+
+                                (e)
+                            (4 W (b) VW (cl T Cd)gates k-3 r
+
+                   FIG. 7.3. Constructing a tree f as a collection of curves IV.
+
+
+
+    DEFINITION 7.18. We shall say that the 2k distinct              numbers {a,, .... a,;
+b , , .... bk} are ordered according to Z if the following conditions are satisfied:
+
+       0) a, <b,,                      ldm<k
+      (ii)   a,-cu,<b,<b,              if   v,<vj
+     (iii)   uj<bj<u,<b,               if   6(m, j)= 1.
+
+   Remark 7.19. These conditions are suffkient to determine the ordering of the 2k
+numbers {a,, .... a,; bl, .... bk}. The relevance of Definition 7.18 will become clear
+when we define the standard representation for ( W). Our standard representation
+uses k non-intersecting curves in the right half-plane with endpoints lying on the
+y-axis. The curves will enclose regions corresponding to the bounded components
+of W(Z)‘, and their endpoints on the y-axis will be ordered according to Z. As an
+example, we present below the ordering obtained from the example in Fig. 7.3.
+100                                GROSS,    KING,      AND    SENGUPTA
+
+
+  EXAMPLE       7.20.   From Fig. 7.3, we get the following:
+
+                           f&=6,=&=1;                6,=&=&=&=                 -1
+                           6(2,3)=6(1,5)=6(1,7)=6(5,7)=                            1
+                           6(3,2)=6(5,        1)=6(7,         1)=6(7,5)=           -1
+                           6(m, j) = 0          otherwise.
+
+This gives the following ordering on {a,, .... a,; b,, .... b,}:
+
+             a,<b,<a,<a,<b,<b,<a,<a,<a,<b,<b,<a,<b,<b,.
+
+    The final piece of information we need concerns the relative positions of the gates
+on the curves. Each gate belongs to a curve (TVin W, and the curve oi gives an
+ordering for the gates belonging to it. If 0 < ti < I, < 1, we will write o(ti) < a(tz)
+to indicate that a(ti) precedes a(tz). Let g(i) be the number of gates in ai(        We
+list the gates in a,(Z) in order along the curve, as piI <pi2 < . . . <pi,,,. Corre-
+spondingly, let 19,~be the part of the curve rri connecting two adjacent gates pij and
+pi,+, (Oi,,,i, connects pigci,and pi,). Then the curve oi can be written as the product
+
+                         Qi = 8, g(i) * 8i g(i)- 1 * ’ . . * ej, 1)         l<i<n       (7.1)
+
+(here we have reparametrized cri so that it starts at pi,). We can now define the
+standard representation, using the information described above. We will denote by
+int(a) the union of the bounded connected components of a(Z)‘, for any closed
+curve cr.
+
+   DEFINITION   7.21. Let {a,, .... a,; b,, .... bk} be ordered according to Z, and let
+(wm = (0, a,); z, = (0, b,)},   1 <m < k, be the corresponding 2k points on the
+y-axis. For each m = 1, .... k, let yrn be a simple C’ curve with y,(O) = ‘yv,,,and
+Ym(l)=zm      and with r,(t)~ {(x, y) ( x>O} for all 0 < t < 1. Define n closed curves
+as follows (see Definitions 7.3, 7.4):
+                            ei = *yfkE;)* . . . * yi2 ai2* yf;,           1 <i<n        (7.2)
+                                    8
+
+(where ys = y *’ is either y or its inverse). We will call the collection of curves
+w= (cT1, ...) 8n} a standard representation for W if the following conditions hold:
+      (i)   each curve I?~is a finite union of graphs
+    (ii)    the only intersection points of IV lie on the y-axis and
+   (iii)
+                                       u     inf(*yi)     = IR,I,           l<m<k.      (7.3)
+                                     V,~wn
+                                               YANG-MILLS        THEORY                                             101
+
+   Remark 7.22. Our standard representation should be seen as resulting from a
+particular deformation of the curves in W which preserves the areas of the com-
+ponents of the complement. Each curve oi is deformed into cfi, and all the intersec-
+tion points of the curves end up on the y-axis. The condition (7.3) ensures that the
+areas of components of W(Z)’ are preserved. Figure 7.4 illustrates the construction
+of a standard representation for the collection of curves in Fig. 7.3.
+   We now have our main invariance result, which states that ( W) can be com-
+puted from the information recorded in the tree r, the ordering of gates around
+curves, and the areas of the components (R,, .... Rk}.
+
+  THEOREM 7.23. Let W be an admissiblecollection of closed curves, and let w be
+a standard representation of W. Then
+                                                    (W)=(Rf).
+
+In order to prove Theorem 7.23, we will construct a family of collections of curves
+ { m(a)} which interpolate between W and IV, for 0 < 01d 1. This will involve the
+following definition of a squashed curve.
+
+  DEFINITION 7.24. Let a(t) = (x(t), y(t)) be a curve, and let u satisfy 0 < tl < 1.
+Then we define the squashed curve a(~) by
+                                               da; t) = (x(t), q(t)).
+
+                                          Zl
+
+                                          z2
+
+                                          w2
+
+                                          z3
+
+                                          z4
+
+                                          w4
+
+                                          w3
+
+                                          Wl
+
+                                          25
+
+                                          z6
+
+                                          w6
+
+                                          w5
+
+                                          z7
+
+                                          w7
+   FIG. 7.4.   Standard  representation        for the curves   in Fig. 7.3. The   region   corresponding   to R,   has
+been denoted    8,. for m = 1, . ... 7.
+102                            GROSS,       KING,   AND    SENCUPTA
+
+
+   Note that if c is the graph of a function over the interval (a, b), then so also is
+a(a), for O<a<l.
+   Now let Z be a tree on      W.
+                                By taking products of curves in Z, we can obtain a
+                                                                         k.
+simple curve r,,, connecting pm to pO, for each m = 1, .... (So p,JZ) is the minimal
+connected subset of T(Z) which contains pm and p,,.) Then we define an extension
+of the curve gi in the following way (recall that the definition of IV involves the
+curves (y,, .... yk}):
+
+
+
+
+    The reader should compare Eqs. (7.4) and (7.1). As an example. Fig. 7.5
+illustrates the case of two curves g1 and (TV, along with their extensions 5i and 5,.
+The curves have been separated so that they can be distinguished easily. In fact, we
+will prove our results by approximating the curves {c?~} in just this way, so that the
+collections will be admissible. By taking a limit where the width of the “tubes” goes
+to zero, we will recover the result for the curves defined by Eq. (7.4). Furthermore,
+the reader can check that the vertical ordering of the loops y,, y2, and y3 in Fig. 7.5
+is determined by the tree Z in accordance with Definition 7.18. This should serve
+as a motivation     for our definitions, and should help the interested reader. to
+construct a standard representation for any other collection of curves.
+
+
+
+
+                                      (4
+
+
+
+
+                                      (b)
+
+
+
+
+                       FIG.   7.5.   Construction    of interpolating   curves.
+                                            YANGMILLSTHEORY                              103
+
+   Now we use Definition 7.24 to squash this curve in the following                 way. For
+0 < cx< 1, define the curve
+
+                5i-a = e,g(j)( 1 - a) * Flsb( 1 --01) * y2;)(GI) * pjg(,j( l - a)
+                       *~~~*tr,,,(l-a)*~~;‘(1-a)*~~~~(a)*~i,(1-2).                      (7.5 1
+
+    Note that every curve to the left of the y-axis has been squashed by a factor
+ 1 -a, while every curve to the right of the y-axis has been squashed by a factor LY.
+This is designed to keep fixed the areas of the connected components of the comple-
+ment of the curves. For example in Fig. 7.5, if we neglect the areas contained in the
+“tubes”, each connected component (there are only three) has equal areas on the
+right and left of the y-axis. When the curves are squashed according to Eq. (7.5),
+the total area of each connected component does not change as a function of a. In
+the limiting case u = 0, the reader can check that parallel transport around the
+curves 8,,, and d,,, is the same as for the original curves crl and u2. Similarly, when
+CI= 1, we get the parallel transport for the curves 6, and cYz.We will prove that the
+expectation does not change as the curves are squashed in this way, and this will
+imply Theorem 7.23.
+    Now let @(a) be the collection of closed curves {a,,,, .... a,,}, for each 0 < a 6 1.
+Note that #‘(a) is a weakly admissible collection of closed curves (it is not
+admissible since the intersection points form an open set).
+
+  PROPOSITION     7.25.    ( w(a))          is independent of a, for 0 < tl d 1.
+  Before proving Proposition 7.25, we use it to deduce Theorem 7.23, and we also
+deduce our main results about invariance properties of expectations.
+  Proof of Theorem 7.23.         By Proposition                 7.25 we have
+
+                                            oww=                mw.
+When a =O, the squashed curve yi(a) lies entirely on the x-axis, where parallel
+transport is trivial. Therefore (7.1) and (7.5) imply that parallel transport along C’i.O
+is given by
+
+                                 u(5i,0)=          u(ei,g(i))      .‘.   u(ei,l)
+
+                                               =   U(a,).
+
+
+Hence we deduce
+                                             <mw=               (W>.
+Furthermore,    when CL= 1, (7.2) and (7.5) imply that
+
+                                 u(ai,l) = U(yfy                  . . . Uoq’)
+                                               = U(Si)
+104                          GROSS, KING, AND SENGUPTA
+
+and hence
+
+                                   (lV(l))=(W).
+
+   If w= (cr, ...) a,,] is a collection of curves and cp: IV + [w2is a C’ mapping,    we
+will denote by W, the collection of curves { cpo ai, .... cpo a,,}.
+
+  THEOREM 7.26. Let W= {a,, .... a,,} be an admissiblecollection of closed curves,
+and let qr: [w2-+ Iw2be an orientation-preserving diffeomorphism. Let (R,, .... Rk) be
+the bounded connected components of W(Z)‘, and let {cp(R,), .... rp(R,)} be the
+corresponding components of W,(Z)‘. Suppose that W, is an admissible collection
+and that
+
+
+
+Then
+
+
+
+    Proof Let Z be a tree on W (see Definition 7.14), and let cp0 Z be the image of
+Z under cp.By translation in the x-direction, if necessary, we can assume that W,(Z)
+and cp0 T(Z) lie to the left of the y-axis (see Remark 7.10). By adding on a C1 curve
+connecting the translated endpoint of cp0 Z to the origin, and applying Lemma A3
+from the Appendix, we obtain a tree Zcp on W,. Since cp is orientation preserving,
+the values of the coefficients (6,) and {s(m, j)} are preserved under rp, for each
+m, j = 1, .... k. Therefore Z and r, define the same ordering for 2k points {a,, .... a,;
+b i, .... bk}. Furthermore the ordering of gates on each curve ai is preserved under
+cp. Therefore since the areas of the corresponding connected components in W(Z)’
+and W,(Z)’ are equal, it follows that Wand W, share the same standard represen-
+tations. Hence Theorem 7.23 implies that ( W) = ( W,).
+
+   COROLLARY 7.27 (Euclidean invariance).    Let cp: [w2+ Iw2be a rotation or trans-
+lation. Let W be an admissiblecollection, and supposeW, is also admissible.Then
+
+
+
+   COROLLARY 7.28 (Factorization of components).      Let W be an admissiblecollec-
+tion of closed curves. Let rp: [w + Iw2 be a continuous, simple curve satisfying
+q(t) = (t, 0) for 1tl > T, for some T> 0, such that the image of cp is disjoint from
+W(Z). Let W, and W2 be the subcollections of curves in W whoseimages W,(Z) and
+ W,(Z) belong to different componentsof the complement of the image of cp. Then
+
+
+
+  Proof The proof follows by choosing an appropriate tree Z on Wand applying
+Remark 7.10. By translation invariance, we can translate Wand cpso that W(Z) lies
+                                    YANGMILLS      THEORY                            10.5
+
+to the left of the y-axis, and so that the translation of the curve cp passes through
+the origin in the plane. The translated curve cp divides the plane into two com-
+ponents N, and N,, where N1 lies above the x-axis asymptotically,          and Nz lies
+below. Without loss of generality, we can assume W,(I) c N,, and so we can
+choose the curves in r attached to W, so that their images all lie in N, also
+(excluding endpoints at the origin). Similarly the curves in f attached to W, can
+be chosen to lie in N2, except for the endpoints at the origin. With this choice of
+r, we can find a standard representation r for which the curves associated with
+ W, all lie above the x-axis, and the curves associated with W, all lie below. By
+rotation invariance, we can rotate the curves in P through 90”, in which case the
+y-axis separates the curves into disjoint sets. Since the expectation factorizes in this
+case (see Remark 7.10), it also factorizes for wand hence for W.
+    Proof of Proposition 7.25. We will construct a sequence of admissible collections
+ of curves @(a; E) depending on a parameter E, which converge pointwise to @(a)
+as E + 0. For each value of E, we will prove that ( w(a; E) ) is independent of a, and
+therefore (m(a))       also will be independent of a (see Remark 4.10). Figure 7.5
+illustrates how these approximations       are constructed, namely by replacing the
+curves in the tree r by non-intersecting “tubes”. Each region R, in W(l)’ is
+connected by a tube to a region of equal area on the right of the y-axis. This new
+collection of curves is admissible, and after squashing by a factor 1 - a on the left
+ of the y-axis and by a on the right, we obtain the collection @(a; a). Except for
+ some overlap of lines on the y-axis, the collection @(a; E) is also admissible.
+Therefore by the result of Section 5, we can write (i?‘(a; a)) as a product of Bralic
+maps and connection operators. First we will show that the dependence on a occurs
+only in the Bralic maps (cp,]. Then we will show that these Bralic maps may be
+ combined in such a way that the dependence on a disappears (this uses the results
+ of Section 6). It is important to notice that the vertical ordering of points on the
+y-axis produced by r is exactly that which allows us to construct disjoint tubes
+connecting W with the standard representation.
+    Now let E> 0, and let B,(p) be the disk of radius E centered at p. We will assume
+E is sufficiently small so that the disks about the gates {B,(p,)},   0 <m <k, are dis-
+joint. For each m = 1, .... k, choose two points q,,,, r,,, in B,(p,) which lie on the
+curve containing pm, and satisfy qm < pm < r,,, (see remarks after Example 7.20). We
+will denote by 3, the part of the curve in W which connects q,,, to r,, and passes
+through pm. Furthermore, for any two adjacent gates pi, and ps+, on a curve ni in
+ W, let xti be the part of ci connecting r+ to qi,+ ,. Then we have the following
+representation of (TV(compare with (7.1)) :
+
+               gi= Xi,g(i) * @it(i) * X&g(i)-1 * “‘*   Xi,1 *   @i,,   1 <i,<n.    (7.6)
+
+   We now use the following result, which makes concrete the “tubes” illustrated in
+Fig. 7.5. The result says that each curve p,,, (which connects pm to po, the origin)
+can be replaced by a tube bounded by two curves P,,, and t,, in such a way that
+all the new curves {p,, z,> are disjoint.
+106                                              GROSS,           KING,      AND     SENGUPTA
+
+
+   LEMMA    7.29. There are 2k distinct points { wL, zk}, m = 1, .... k, on the y-axis
+within distance E of the origin, whose y-coordinates are ordered according to Z, and
+2k curves {p,, z,}, m = l,..., k, satisfying the following conditions:
+
+        0)    P,(~)=w&,              r,(l)=.&
+       (ii)   p,(O)=q,,              Zm(0)=rm                    ifcS,=l;          pm(0)=rm,       Tm(0)=qm   ifs,=   -1
+      (iii) excluding endpoints, the curves {p,, z,.; xigj} are disjoint, for all 1 <m,
+m’ < k, 1 < i < n, and 1 < j < g(i), each curve is a finite union of graphs, and each
+curve lies to the left of the y-axis
+     (iv) the images p,(I)                       and z,(Z)                belong to the e-neighborhood of the set r,,,(Z),
+for each 1 <m<k.
+   This lemma is proved in the Appendix; we will now use it to establish Proposi-
+tion 7.25. Let R be a standard representation for W, so that @ is a collection of
+n closed curves {a,, .... a,} built out of the k curves {yl, .... yk}. We will consider
+a different set of curves (/I,, .... Bk} which closely approximate {rI, .... yk}. They are
+constructed according to Definition 7.21, but with the area condition (iii) slightly
+modified. We shall specify the corresponding condition shortly. Then for each
+m = 1, .... k we define the curve
+
+                                                           Cm=T;l*pm*pm.                                                    (7.7)
+  Using these curves, we construct n closed curves {p,, .... pL,} as follows:
+
+                                      pi=&&)                  * q-y         * Xi,g(i)-I * “‘*      Xi,2
+
+                                                 * c;;          * xi,* * c$               l<i<n.                            (7.8)
+  Again C6 = C +I is either the curve C or its inverse. We will denote by R(E) the
+weakly admissible collection of curves {p,, . ... ,u,}. Next we define squashed curves
+as before. First we have
+
+                    c,,, = r,‘(l                    -a) * IL(a) * PA1 -a),                            l<m<k                 (7.9)
+for 0 <a < 1. This then gives us
+
+                          ~i,.=Xi,g(i)(1-2)*c~~!l*Xi,g(i)--l(1-cO*”’
+
+                                        * &J( 1 - a) * c?11.a                           1 <i<n.                            (7.10)
+
+    We will denote by m(cr; E) the weakly admissible collection of curves
+{P 1,m,.... pu,,,>, Consider the part of @(a; E)(Z)~ lying to the left of the y-axis. Each
+bounded component of this set contains on its boundary an interval on the y-axis,
+lying inside the disk of radius E about the origin. The endpoints of these intervals
+belong to the set of points { wL, zk}, m = 1, .... k. We will collect these components
+into sets {K,}, m = 1, .... k, according to the intervals on their boundaries. For
+brevity, we will denote by [a, b] the interval on the y-axis with endpoints a and 6;
+                                   YANG-MILLS   THEORY                                 107
+
+where a lies below b. For each M = 1, .... k, let K,,, be the union of the connected
+components whose boundaries contain one of the intervals [wk, z;], [wk, wi],
+ {zj, zL] or [z;, wj] with j= i= m. These intervals have been chosen so that in the
+limit E + 0, the set K,,, will converge to R,, along with some part of the tree f. For
+each m, the set K,,, contains (say) d, connected components {K,,,, 1, .... Km,dm}. We
+can now define the area constraint for the curve pm:
+
+
+                 1W*B,)I f+>%l
+                           u int(*Bi)= i=ffI lKmJ, l<m<k.                            (7.11)
+
+   In the limit E+ 0, the area of the set K, converges to IR,I. It is straightforward
+to show that we can find curves {pi, .... /lk} which converge to the original curves
+ b 1, .... yk} as E + 0. In this case the collection of curves w(a; E) converges to w(a).
+   The boundary of the connected set int(*/?,)/u,,         “, int(Qj) contains intervals on
+the y-axis whose endpoints belong to the set { wl, .... w,; z,, ,.., zk}. These intervals
+are precisely those described above for K,,,, but with each wh, z& replaced by w,,
+z,, for a = i, j, m.
+   We now consider the expectation (m(s)).              There is a set of numbers c,, <
+c,< ... <c,<o<c,+l<             ... <c,+, such that R(E) is a finite union of graphs over
+each interval (c, ~ 1, c,), for 1 ,< r < p + q. Therefore we have
+
+               mm       =~ocp~~~cp*~~~~p-~l(pp(Pp+l~p+l      -(Pp+q.fp+q
+where {.?,, cp,} are the corresponding connection operators and Bralic maps. Note
+that the connection operator at x=0 is the identity, since the vertical ordering of
+the curves arriving from both sides is given by the tree K In any interval (c, _ 1, c,),
+the Bralic map is a product of exponentials
+
+
+
+where { A,,i} are the areas of connected components, and ( E,,i} are the area
+operators. If each curve in this interval is squashed by a factor a, the corresponding
+Bralic map is
+
+
+   Furthermore, the positions of the points {co, ci, .... cP+,} and the connection
+operators (jr> do not change when curves are squashed. Therefore we also have,
+for O<a< 1,
+
+
+                       . . . ~pp+qbVp+q.
+
+  The limiting cases a = 0, 1 follow from Corollary 4.9 and Remark 4.10 on con-
+vergence of expectations. Note that the dependence on a occurs only in the Bralic
+maps, and not the connection operators.
+108                              GROSS,       KING,      AND    SENGUPTA
+
+
+   Now consider one of the sets K,,, lying to the left of the y-axis (these were intro-
+duced after Eq. (7.10)). It is composed of d,,, connected sets (K,,,,, .... Km,,), and
+by construction each component K,,,i intersects the vertical strip (cP, 0) x R. For
+each Km,i, we choose one connected component of Kmqin ((c,, 0) x R), and we let
+Em,i be the area operator associated to this component. We define a new Bralic map
+for the interval (c,, 0), namely,
+
+                    @,(l -a)=exp              -(l-a)            5     g    IL,J   Em,i .
+                                          [                    m=l   i=l                  I
+
+
+Since the complement of all curves lying to the left of the y-axis is the union of the
+sets {K,), it follows from Corollary 4.8 and Theorem 6.8 that
+
+         ( W(a; E)) = .lJ,      ...Jp-I$p(l            -a)(Pp+,(a)j,+,...cp,+,(a)~~+,,.
+
+  Corresponding        to the set Km, there is the connected component
+W*LMJ,,,          int(*bi)  lying on the right of the y-axis; we will denote this set by
+L,, for convenience. Equation (7.11) implies that K,,, and L, have equal areas.
+Furthermore, there is a l-l correspondence between the bounded components of
+(c,,O)xR      and of (O,c,+,)xR,    namely that given by the vertical ordering of the
+lines. It follows that the area operator for a component of (cP, 0) x R which con-
+tains the interval [wL, zk] on its boundary is equal to the area operator for the
+component of (0, cP+ i) x 03 which contains [w,, z,] on its boundary (see the
+discussion before and after Eq. (7.11) for this notation), and similarly for the other
+intervals [wh, wj], [zj, z&] and [zj’, w:].
+    For each value of m, we have already chosen d,,, components of (c,, 0) x R. Let
+us pick one of these components, and call its area operator E,!,,. Then EI, is also the
+area operator of the corresponding component of (0, cP+ ,) x R, and by construc-
+tion this component belongs to L,. Since L, is connected, we can again apply
+Corollary 4.8 and Theorem 6.8. We get a new Bralic map over (0, cP+ ,)
+
+
+
+
+and we then have
+                           ^ A
+          (@(a;   E))   = foJl ~~.~p-l~.p(l-a)~p+,(a)~~+f.~-~~++---~jp+q.
+
+   Finally we make use of the relation (7.11). In the proof of Theorem 6.8, we
+established the result by moving operators exp[ - lK[ E] from one interval to
+another. The end result was that each connected component was represented by
+one single exponential operator exp[ - A,E’“)], which contained the total area A,
+of the component. However, we could now undo this process, and split up the
+operator exp[ - A,E(“‘] among different intervals, in each of which it would appear
+as another exponential operator. But there is no reason why the coefficients of the
+                                    YANG-MILLS             THEORY                        109
+
+area operators in these exponentials should be the same as in the original expres-
+sion. Indeed as long as their sum is exactly A,, so that they can be recombined into
+the single area operator exp[ - A,E’“‘],   these individual coefficients can be chosen
+freely.
+   Consider now the d,,, components of (c,, 0) x R which were chosen previously.
+Their corresponding components in (0, cP+ 1) x IR all belong to L,, and their area
+operators are {E,,i}. Therefore if we define
+
+                                            -a       ,f
+                                                    m=l                    1
+                                                                5 IK,J Em.; ,
+                                                               i=l
+
+
+it follows from (7.11) and the previous discussion that
+
+               (@(a;   E)) =I0 . ..jp-I~p(l-a)~.+,(a)~~+,.,.j,+,.
+
+This expression is independent      of a, for any E sufficiently small. Therefore ( #‘(a))
+is also independent of a.
+
+
+
+                                           APPENDIX
+
+
+   We state below three lemmas which imply the results used in Definition 7.14,
+Theorem 7.26 and Lemma 7.29. In each case, W is an admissible collection of
+closed curves, and p, p’ are points in the image W(Z). We will assume that p, p’ are
+not intersection points of W, and that the tangent vectors are defined at these
+points.
+
+    LEMMA   Al. Let T be the tangent vector at p, and let v be any other vector
+satisfying sgn( T, v) # 0. Then there is a C’ curve y satisfying y(O) = p, y’(O) = v and
+y(t) e W(Z)‘for   all 0 < t < 1.
+   Remark.   The proof of this lemma is illustrated in Fig. Al. Since ail curves in W
+are continuous, and since the tangent vector is defined at p, there is a
+
+
+
+
+                                           FIGURE         Al
+110                          GROSS, KING, AND SENGUPTA
+
+
+
+
+                             (4                         (b)
+                                           FIGURE A2
+
+ neighbourhood of p in which the curve looks like the picture in Fig. Al. Lemma Al
+implies the existence of the curves {r,,,} in Definition 7.14.
+
+    LEMMA A2. Let (yl, .... y,} be C1 curues satisfying ri( 1) = p, sgn(y:( l), T) > 0
+for all 1~ i < m, where T is the tangent vector at p. We assumefurthermore that the
+ curves are disjoint, and do not intersect W(Z), except at the point p. Then the curves
+ can be deformed in a neighborhood of p so that they becomecompletely disjoint, with
+ distinct endpoints on the curve near p,
+  Remark. The lemma is illustrated in Fig. A2, which also serves as the proof.
+Note that the condition sgn(y;(l), T) >O, 1 <i< m, can be replaced by the
+condition sgn(yj( I), T) < 0, for 1 < i< m.
+
+   LEMMA A3. Let r be a C’ curve with f(0) =p and ZJ 1) =p’, whose image is
+otherwise disjoint from W(Z). Let N,(T) be the E-neighborhood of the set T(Z). Let
+(4 1, .... q,,,} be distinct points lying on the same curve to which p belongs, and within
+a distance Efrom p. Then there exist C’ curves {y,, .... y,} satisfying y,(O)= qi,
+yi( 1) = p’ for 1 < i< m. Furthermore, for E sufficiently small, these curves may be
+chosen so that yi(t) belongs to N,(T) n W(Z)c for 0 < t c 1, each 1 6 i < m, and so
+that the curves are disjoint except at p’.
+  Remark.    Once again the proof of this lemma is illustrated     in Fig. A3.
+
+
+
+                                       P
+                                                         P’
+                                                r
+
+                              .                     a
+
+
+
+
+                                                b
+
+                                           FIGURE A3
+                               YANGMILLS         THEORY                          111
+
+
+
+
+                                       FIGUREA4
+
+
+
+    We can now address the proof of Lemma 7.29. We have a tree Z on the set W(Z),
+connecting the gates by C ’ curves. At each gate pm, there are a number of incoming
+curves and one outgoing curve. By Lemma A2, the incoming curves can be
+deformed so that their endpoints are disjoint. Since they originate from different
+gates, these deformed curves are now entirely disjoint. Let Zi* be one such curve,
+so that Zi*(0) = pi. The points qi, ri lie on the same curve as pi, within a distance
+E. Therefore by Lemmas A3 and A2, we can find two disjoint curves within the
+s-neighborhood of Zi* (I) which connect qi and ri to points on the curve near p,.
+This procedure is followed for every incoming curve at pm, in such a way that all
+the resulting curves are disjoint, and so that their endpoints all lie between qm and
+I,. The resulting situation at p, is illustrated in Figure A4. It is clear that the
+ordering of the endpoints between q,,, and r,,, is determined by the coefficients
+(XL 4). F ur th ermore, suppose that ti = j, so that the two outgoing curves shown
+in Fig. A4, whose initial points are qm and r,,,, go through the region Rj and ter-
+minate on the curve near pi, between qj and rj. Then by Lemmas A3 and A2 all
+the incoming curves near pm can be extended through the region Rj so that their
+endpoints lie on the curve near pi, and so that they remain disjoint. The result is
+illustrated in Fig. A5 By iterating this construction at every gate in the tree Z, we
+generate 2k disjoint curves which connect the points {qm, r,} to distinct points on
+the y-axis near p,,. These are the curves (p,, r,}.
+
+
+
+
+                                           FIGURE AS
+
+
+595119411.8
+112                                 GROSS,   KING,      AND   SENGUPTA
+
+
+                                              REFERENCES
+
+
+ 1. S. ALBEVERIO,  R. HOEGH-KROHN,    AND H. HOLDEN, J. Funct. Anal. 78 (1988) 154.
+ 2. S. ALBEVERIO,  R. HOEGH-KROHN, AND H. HOLDEN, “Stochastic processes, mathematics and physics,
+    in “Lecture Notes in Mathematics,” Vol. 1158 (S. Albeverio and P. Blanchard, Eds.), Springer-
+    Verlag, New York, 1986.
+ 3. S. ALBEVERIO, R. HOEGH-KROHN,     AND H. HOLDEN, “Stochastic processes in classical and quantum
+    systems, in “Lecture Notes in Physics, Vol. 262 (S. Albeverio, et al., Eds.), Springer-Verlag, New
+    York, 1986.
+ 4. S. ALBEVERFO, R. HOEGH-KROHN,      AND H. HOLDEN, in “Stochastic Space-Time Models and Limit
+    Theorems (Arnold and Kotelenez, Eds.), Reidel, Boston, 1985.
+ 5. S. ALBEVERIO, R. HOEGH-KROHN,    AND H. HOLDEN, “Stochastic Methods and Computer Techniques
+    in Quantum Dynamics, in “Acta Physica Austriaca Supl.” Vol. 26, Springer-Verlag, New York, 1984.
+ 6. W. AMBROSE AND I. M. SINGER, Trans. Amer. Math. Sot. 75 (1953), 428.
+ 7. I. YA. AREF’EVA, Theor. Math. Phys. 43 (1980), 353.
+ 8. R. BALIAN, J. M. DROUFFE,C. ITZYKSON, Phys. Rev. D 10 (1974) 3376; 11 (1975) 2098 and 2104.
+ 9. A. A. BELAVIN AND V. G. DRINFELD, Functional   Anal. Appl. 16 (1982), 159. [English]
+10. I. BIALYNICKI-BIRULA,     Bull. Acad. Pal. Sci. 11 (1963), 135.
+Il. N. BRALIC, Phys. Rev. D 22 (1980), 3090.
+12. CHAN HONG-MO,         PETER SCHARBACH AND Tsou SHEUNGTSUN, Ann. Phys. 166 (1986), 396.
+13. H. G. DUTCH AND V. F. MILLER, Fortschr. Phys. 27 (1979), 547.
+14. B. DRIVER, J. Funcf. Anal. 83 (1989), 185.
+15. B. DRIVER, Commun. Math. Phys., in press.
+16. P. FISHBANE AND S. GASIOROWICZ, P. KAUS, Phys. Reo. D 24 (1981), 2324.
+17. L. GROSS,J. Funct. Anal. 63 (1985), 1.
+18. L. GROSS, Canad. Math. Sot. Conf: Proc. 9 (1988), 193.
+19. N. IKEDA AND S. WATANABE, “Stochastic Differential Equations and Diffusion Processes,” p. 464,
+    North-Holland, New York, 1981.
+20. V. KAZAKOV, Nucl. Phys. B 179 (1981), 283.
+21. V. KAZAKOV, AND J. KOSTOV, Phys. Lett. B 105 (1981), 453.
+22.   V. KAZAKOV, Nucl. Phys. B 176 (1980), 199.
+23.   S. KLIMEK AND W. KONDRACKI,      Commun. Math. Phys. 113 (1987), 389.
+24.   T. KOHNO, Ann. Inst. Fourier Univ. Grenoble 4, No. 37(1987), 139.
+25.   C. N. KOZAMEH AND E. T. NEWMAN, Phys. Rev. D. 31 (1985), 801.
+26.   A. LICHNEROWICZ,    Theorie globale des connexions et des groupes d’holonomie,  in “Cons&ho
+      Nazionale delle Ricerche Monogratie Matematiche 2,” Edizioni Cremonese, Roma, 1962.
+27. S. MANDELSTAM,  Ann. Phys. 19 (1962), 1.
+28. S. MANDELSTAM,  Ann. Phys. (1962), 25.
+29. S. MANDELSTAM,  Phys. Reu. 175 (1968), 1580.
+30. H. P. MCKEAN JR., “Stochastic Integrals,” p. 140; Academic Press, New York, 1969.
+31. A. A. MIGDAL, Ann. Phys. 126 (1980), 279.
+32. Y. NAMBU, Phys. L&t. B 80 (1979), 372.
+33. A. M.POLYAKO~‘, Nucl. Phys. B 164 (1979), 171.
+34. D. STR~~~K AND S. VARADHAN,       “Multidimensional  Diffusion Processes,” p. 338, Springer-Verlag,
+      New York, 1979.
+35. TUNG-MOW        YAN, Phys. Reo. D 22 (1980),     1652.
+

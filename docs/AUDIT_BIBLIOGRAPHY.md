@@ -46,10 +46,14 @@ These sources already support canonical declarations in `docs/SOURCE_MAP.md`.
 | Kenneth G. Wilson, *Confinement of quarks* (1974) | <https://doi.org/10.1103/PhysRevD.10.2445> | Lattice links, plaquettes, action, Wilson loops and continuum-limit motivation |
 | Konrad Osterwalder and Erhard Seiler, *Gauge field theories on a lattice* (1978) | <https://doi.org/10.1016/0003-4916(78)90039-8> | Product-Haar/Gibbs lattice theory and finite-cutoff reflection positivity |
 
-## B. Sources required for remaining canonical work
+## B. Retained sources for remaining canonical work
 
-These are the minimal additions currently needed before the corresponding unfinished interfaces can
-be called source-complete.
+The complete user-supplied 33-PDF bundle was ingested after this bibliography was first assembled.
+The sources below are now retained, hash-manifested, and text-extracted; the two image-only Royal
+Society scans additionally carry Mathpix provenance and independent visual adjudications. Their
+presence closes the acquisition gap, not the Lean implementation or exact-locator review gap. See
+`docs/SUPPLIED_SOURCE_INGESTION_AUDIT.md`. A future public release must separately resolve
+redistribution rights for purchased books and publisher PDFs.
 
 ### B.1 Hodge/action and metric volume
 
@@ -58,8 +62,9 @@ be called source-complete.
 | Jürgen Jost, *Riemannian Geometry and Geometric Analysis* (2017) | <https://doi.org/10.1007/978-3-319-61860-9> | General oriented-Riemannian definitions and compatibility of the Hodge star, metric volume and integration in the dimension-generic manifold interface |
 | Michael Atiyah, Nigel Hitchin and Isadore Singer, *Self-duality in four-dimensional Riemannian geometry* (1978) | <https://doi.org/10.1098/rspa.1978.0143> | Four-dimensional specialization, Hodge decomposition, Yang–Mills action and instanton-sector consistency |
 
-Freed remains sufficient for the pending same-connection Bianchi and covariant-derivative work; no
-new paper is required merely to complete those proofs.
+Jost and Atiyah–Hitchin–Singer are now retained. Freed remains sufficient for the principal
+connection-form spine; no new paper is required merely to complete those proofs. The remaining
+Hodge/volume obstacle is formal infrastructure and exact theorem integration, not acquisition.
 
 ### B.2 Poincaré covering and joint spectral measure
 
@@ -90,15 +95,18 @@ A constructive renormalized-operator mixing theory, scheme analysis, and unrestr
 EOM treatment still require the B.3 source chain. Caswell is retained below as an independent
 optional cross-check, not a replacement.
 
-### B.5 Rigorous two-dimensional consistency evidence
+### B.5 Rigorous two-dimensional consistency evidence (now retained)
 
 | Source | Identifier | Required use |
 |---|---|---|
 | Bruce Driver, *YM2: Continuum expectations, lattice convergence, and lassos* (1989) | <https://doi.org/10.1007/BF01218586> | Rigorous two-dimensional continuum expectations and lattice convergence; a natural primary anchor for the 2D consistency contract |
 | Leonard Gross, Christopher King and Ambar Sengupta, *Two dimensional Yang-Mills theory via stochastic differential equations* (1989) | <https://doi.org/10.1016/0003-4916(89)90032-8> | Independent stochastic construction of the 2D Yang–Mills measure/holonomy theory |
 | Ambar Sengupta, *Gauge theory on compact surfaces* (1997) | <https://doi.org/10.1090/memo/0600> | Compact-surface measure, gauge invariance and holonomy formulas |
+| Thierry Lévy, *Yang-Mills measure on compact surfaces* (2003) | <https://doi.org/10.1090/memo/0790>; arXiv `math/0101239` | Unified discrete/continuum random-holonomy construction, subdivision invariance and surface-surgery behavior |
+| Edward Witten, *On quantum gauge theories in two dimensions* (1991) | <https://doi.org/10.1007/BF02100009> | Exact heat-kernel/character subdivision and sewing formulas; physical cross-check rather than sole measure construction |
+| Michael Atiyah and Raoul Bott, *The Yang-Mills equations over Riemann surfaces* (1983) | <https://doi.org/10.1098/rsta.1983.0017> | Classical connection/gauge/Yang–Mills geometry only; not a quantum-measure source |
 
-A 2D source may inhabit only a source-specific 2D consistency interface. It cannot inhabit the 4D
+All six source chains above are now retained. A 2D source may inhabit only a source-specific 2D consistency interface. It cannot inhabit the 4D
 Clay contract or automatically supply scalar OS-II/Wightman fields, a stress tensor, OPE, or the
 same-PVM Clay mass gap.
 

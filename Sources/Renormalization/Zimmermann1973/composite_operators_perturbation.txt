@@ -1,0 +1,1355 @@
+ANNALS       OF PHYSICS:     77, 536-569 (1973)
+
+
+
+
+                  Composite          Operators              in the Perturbation               Theory      of
+                                     Renormaiizable                  Interactions*+
+
+                                            WOLFHART            ZIMMERMANN
+
+                       Department     of Physics,     New     York    Uniuersity,   New   York,   10003
+
+                                                Received May 23, 1972
+
+
+         In perturbation theory the Green’s functions of composite operators are constructed
+       by applying Bogoliubov’s method of renormalization. Normalization conditions for the
+       composite operators are derived, as well as identities which relate composite operators
+       of different degree.
+
+
+
+                                                     1. INTR~DLJCTION
+
+  The purpose of this paper is to define composite operators and discuss some of
+their properties in the perturbation theory of renormalizable interactions. As an
+example we consider the model of a scalar field with a mixed ,43- and A*-coupling
+
+
+
+
+                                     A#0                                                                       (1.4)
+Z{A} will be used as an effective Lagrangian in the following sense. m, g and A
+represent the renormalized mass and coupling constants. The parameters a and b
+are power series in g and A with finite coefficients depending on m. The coefficients
+are recursively defined by the condition that the propagator has a pole at m2 of
+residue i. In contradistinction to the Lagrangian of conventional renormalization
+theory =!?{A} does not contain infinite parameters.
+   * This work was supported in part by the National Science Foundation Grant No. GP-25609.
+   + A preliminary version of the material contained in this paper appeared in W. Zimmermann,
+Renormalization    and Composite Field Operators, in “Lectures on Elementary Particles and
+Quantum Field Theory” (S. Deser, M. Grisaru, and H. Pendleton, Eds.), 1970 Brandeis Summer
+Institute in Theoretical Physics, Vol. I, MIT Press, Cambridge, Mass. (1971).
+                                                              536
+Copyright      0 1973 by Academic Press, Inc.
+All rights   of reproduction in any form reserved.
+                                 COMPOSITE    OPERATORS                                     531
+
+  The time ordered Green’s functions of the theory are defined by the Gell-Mann
+Low expansion [1]
+
+
+
+
+A0 denotes a free scalar field of mass m, O. the free field vacuum expectation value.
+The symbol ‘Fin’ indicates that the finite part of the contribution from each
+Feynman diagram should be taken. Various methods for separating the finite part
+from a divergent Feynman integral are available [2-7]l. In the original version of
+Bogoliubov’s method the finite part is first defined for the regularized contribution
+from a given diagram [2]. As was shown by Hepp the finite part thus defined
+approaches a well defined distribution when the regularization is removed [3]. In
+this paper Bogoliubov’s method is used in the version of [5]. Without regularization
+the finite part is separated by taking suitable subtractions for the integrand of a
+Feynman integral in momentum space, as in the original work of Dyson and
+Salam [S-9]. The appropriate subtraction terms are obtained by applying
+Bogoliubov’s R-operation to the unrenormalized integrand. The resulting integrals
+can be shown to be convergent as a consequence of the power counting theorem [5].
+   Composite operators B(x) will be defined through their Green’s function
+                                 <Wan ml)        ... KY?&                                  Cl.61
+The matrix elements of B(x) between incoming and outgoing states can be expressed
+in terms of the Green’s functions (1.6) by using the reduction formulas. It is not
+obvious, however, that the time ordered Green’s functions of the operator thus
+defined are identical to the original functions (1.6). For this certain consistency
+conditions2 on the corresponding retarded functions are required which also yield
+the locality of B. This point will not be discussed in the present paper.
+   Let
+                                     A4 = M{A(x))                               (1.7)
+be a monomial of the field A and its derivatives. Our aim is to define an operator B
+which can be interpreted as the finite part of (1.7). Formally the time ordered
+Green’s functions of A4 are given by the Gell-Mann Low expansion
+           mww~          N.Yl) ... 4.a
+                 = ((TedJP&tdZM{Ao(x)} A”(yl) .+. A”( yn))o/(TeiJYAtds)o)                  uw
+This suggests defining the Green’s functions
+                                 <WXI~JQ         .*. &A>                                   (1.9)
+  1 The Epstein-Glaser method [6] including some applications   is reviewed in ref. [7].
+  2 For a formulation of the consistency conditions see [lo].
+538                                ZIMMERMANN
+
+
+of the composite operator B by taking the finite part of (I .8). B may be called a
+normal product of (1.7), in generalization of Wick’s definition of a normal product
+in the free field case [1 11.
+   The Feynman diagrams appearing in the expansion (1.8) contain a new vertex x
+which requires additional subtractions. Depending on the number of subtractions
+employed for removing the new divergencies we obtain different versions of the
+normal product. The minimal normal product of (1.7) is constructed by making
+only those subtractions which are required for removing all divergencies. In this
+paper a family
+                                         NaPfM4N                              (1.10)
+
+of normal products will be introduced. The normal product (1.10) of degree u is
+constructed by making a - r + 1 over-all subtractions for any proper diagram
+which contains x and has r external lines. It will be shown that this operator is
+finite provided
+                                    tz 2 d(M)                               (1.11)
+
+where d(M) is the dimension of the monomial M. If the degree equals the dimen-
+sion we use the notation
+
+
+
+
+and say that the normal product is of minimal degree. If the A3-coupling is absent,
+i.e., g = 0, the operators (1.12) represent the minimal normal products. For g # 0
+the operators (1.12) are not minimal. In the general case the minimal operators do
+not seem to be very useful and will not be considered in this paper.
+   Alternative methods of defining composite operators have been developed by
+Epstein-Glaser [6, 71 and Wilson [12]. Wilson’s method uses a renormalized
+version of the relations
+
+
+
+                                                                             (1.13)
+
+
+
+On the basis of these relations the short distance expansion and composite opera-
+tors are constructed recursively in perturbation theory.
+   In the method of Epstein and Glaser composite operators are first constructed
+for a model where the coupling constant is replaced by an external source A(x).
+                                  COMPOSITE      OPERATORS                                  539
+
+The adiabatic limit h(x) -+ A is then shown to exist [6, 71. One advantage is that
+composite operators are constructed directly as local operators-without     reference
+to Green’s functions. On the other hand the method described in the present paper
+seems to be more suitable for investigating anomalies [ 18, 19, 261.
+   In Section 2 some definitions of Green’s functions are collected. After a review
+of the renormalization of Feynman integrals (Section 3) the Green’s ftmctions of
+composite operators are constructed and their normalization conditions derived
+(Section 4). The integrands of Feynman integrals contributing           to composite
+operators satisfy certain algebraic identities which will be derived in Section 5.
+These identities imply that any normal product
+
+                                              Nb Pf 1                                    (1.14)
+may be written as a linear combination           of normal products of degree a, for any
+given integer a > b
+                             fft,[W = z %Of> W NaPi”                                     (1.15)
+(Section 6). The sum contains only a finite number of terms, it extends over all
+monomials M’ for which the dimension d(M) is less or equal than the degree a,
+                                         d(M)     < a.                                   (1.16)
+
+As a consequence of (1.15) any composite operator (1.10) may be linearly expressed
+in terms of the operators (I. 12).
+   We finally review some applications of the normal product algorithm [17-19,
+24-291. The field operator A satisfies a finite field equation which has the form of
+the Euler-Lagrange equation derived from the effective Lagrangian (l.l-3), but
+with normal products Ns applied to the interaction terms. The Wilson expansion
+may be used to express the normal product in terms of A by the point-splitting
+method. In this way Valatin’s form of the field equation is obtained [13-1713.
+   Lowenstein [ 181 constructed a finite energy-momentum tensor [l 9-2214
+
+
+in perturbation theory which has all required properties, in particular the appro-
+priate Ward identities are satisfied. 0&Vis the formal energy-momentum tensor
+                               euu= (aqaauj             avA- guvz
+of the Lagrangian (l .l-3), c is an arbitrary constant. As was shown by Lowenstein
+   3A derivation of local field equations in the framework of the Epstein-Cilasermethod was
+given by Stora [7].
+   4The improved energy-momentum tensor introduced in [21] for a regularized theory with
+M-coupling doesnot have a finite limit when the regularization is removed. Symanzik[22] found
+a correctedform of this tensor containing one free parameter which in the limit approaches(1.17).
+540                                    ZIMMERMANN
+
+the trace of the tensor (1.17) is never soft in perturbation theory, no matter how c
+is chosen.
+   In a paper by Schroer it was shown that independent of perturbation theory the
+trace of the tensor (1.17) is soft for suitable c provided a Gell-Mann Low eigen-
+value of the coupling constant exists. This would imply the asymptotic conformal
+invariance of the Green’s functions [23].
+   Lowenstein [25] found an elegant proof of the Callan-Symanzik equation [23]
+and derived a differential equation of the renormalization        group. Anomalous
+Ward identities and gauge invariance problems were studied for various cases [26].
+Field equations were derived for a very general class of interactions [27, 291.
+Lam proposed a generalization of the subtraction scheme which is particularly
+ useful for studying nonlinear transformations [27]. Finally, the normal product
+algorithm has been extended by Lowenstein to Green’s functions involving
+several composite operators [25].
+
+
+                        2. NOTATION OF GREEN'S FUNCTIONS
+
+  In this section we collect some definitions concerning Green’s functions. For the
+Fourier transform fof a functionf of PIfour vectors xr ,..., X~ we use the unsym-
+metric definition
+
+
+
+
+Let TOI         ... On(xn) be a suitably defined time ordered product of components
+0 I ,..., On of local field operators such as the scalar field A, derivatives thereof or
+composite field operators. The Fourier transform or partial Fourier transform of
+TWd        ... OJxJ will be denoted by
+
+            mPJ      ... &Jp,J     = j” dxl ... dxn ~i~p~~~TOl(xl) ... On(xn)      (2.2)
+
+                  Wbd         ..’ ~rLx~~ a+AP?.+d ... mP?J
+
+                        = 1 &+I      ‘.. dxn eiz~=r+lTOl(.~J ... On(xn)            (2.3)
+
+For the Fourier transform JF’( p) of the propagator
+                      d/(z)      = <T4xl   NY)),       z=x-y                       (2.4)
+we have
+                                COMPOSITE    OPERATORS                               541
+
+
+
+
+( ) denotes the vacuum expectation value.
+   The connected part of a time ordered vacuum expectation value is recursively
+defined by
+
+      (TOl(xl)   ... On(xn)) = z (TU~JX~J         ...)conn ..* (TOjAl(xjAl) *-.Yonn (2.7)
+
+
+
+
+The Fourier transform of the connected part is of the form
+
+       GmPl~... QdPnD
+                    imrm = (27r)4 8 (2~~) (TOl(pl)               ... &(pn))-‘c      (2.8)
+
+0 trunc is called the truncated part. A Fourier transformation        with respect to pl
+yields
+
+
+The generalized Wick product
+                                   :O1(xl) ... OJxJ:
+is defined recursively by
+
+    TWxJ     ... On(xJ = :&(x1) ... On(xn): + z (TOjJXjJ        *.*) : ojll(xjll) *...
+                                                                                   (2.10)
+The sum extends over all partitions of (x1 ,..., x,J into classes
+
+                             G$ol 9 xjo2 ,...h GilI 9 XilZY..)
+where the second class may be empty.
+  The mixed product
+
+
+is defined by
+542                                      ZIMMERMANN
+
+
+Next we introduce the factorization        by
+
+
+
+
+The sum extends over all ordered partitions of yI ,..., ym into n + 1 classes
+
+                      CYiol>YiozY...A tYt,l 3Yi13Y..)>...? (Yin1 3Yin23-j
+(yijI ...) is assigned to xj(j = l,.,., n). ( yiOI ...) may be empty.
+   We give some simple properties of the factorization. For m = n
+
+      (T{A(xl)   ... A&))   A( yl) ... A(yJ)       = 1 A;(xil          - yl) ... &‘(X& - yn)
+                                                                                          (2.13)
+with the sum taken over all permutations           of the xj .
+
+          G’YOdxd ... O&,d Ol’tyb ... O~‘~Y,J~~~~~               = (3         for   n > i?z
+                                                                                              (2.14)
+             mm-N       GCYll ... art~YmDfact      = Gm4         OlCYl) ... RdYmU
+   Let Gm(xI ,..., xR ; yI ,..., yTrJ be a set of Green’s functions which are symmetric
+in yl ,..., yrn . We may take, for instance,
+            Gm(xl ... xn ; ~1 ... yvnl = CT :4--d      ... 44:         4~1)   ... 4ymD        (2.15)
+or
+                        Grnk ~1 ... YA = <Wxj          4~11 ... &~rnE                         (2.16)
+where B(x) is a composite operator. We introduce the proper part Ggop of Gm by
+the recursion formula
+
+
+
+                                      x (T{A(zl)      ... A(zJ} A(yl) ... A(y&)               (2.17)
+
+For a unique definition we must require Gzpp to be symmetric in yI ,..., ym . We
+give a few examples. For the set
+                        G&x; yl ... ym) = <TA(x) A( yd ... A( y,&
+of Green’s functions we have
+                               (TA(x) A( y))prop = 8(x - y)
+                                                                                              (2.18)
+                     (T/i(x) A(yl) ... A( yw”)pop = 0             if     171>1.
+                                COMPOSITE OPERATORS                                 543
+
+For (2.15) we find
+                                                <~4PJ      ... ~~pJ:&lD           (2.19)
+             (T:A(pl)   ... A(pn):A(q))P~OP =
+                                                           &‘CP)
+
+For later reference we give the free field value of the proper parts
+
+
+
+
+with the sum extending over all permutations        P of y1 ,..., yn. Derivatives of the
+field operator will be denoted by
+
+
+where
+                                    (PI = (PI >...>/4
+                                                                                  (2.22)
+                                    i?(J = aUl ... aua.
+
+The time ordered product of field operator derivatives is defined by
+
+
+
+
+         3. FEYNMAN     RULES FOR RENORMALIZED          GREEN'S    FUNCTIONS
+
+  In perturbation    theory the Green’s function
+
+                                  <~4%)    . . . 4&J)                              (3.1)
+
+is defined by the finite part of the Gell-Mann Low expansion (I 5) which we write
+as an expansion with respect to Feynman diagrams
+544                                       ZIMMERMANN
+
+The sum extends over the set %?%of Feynman diagrams with endpoints x1 ,..., x,,
+which can be built by using 4-vertices (corresponding to the A4-term), 3-vertices
+(corresponding to the A3-term) and 2-vertices (corresponding to the quadratic
+terms in Zint). Disconnected closed loops (i.e., connected components to which no
+coordinates x9 are attached) are excluded.
+    Let r e %‘nbe a diagram with N vertices. The endpoints carrying the coordinates
+x1 ,.. ., X~ are called exterior5 vertices and are denoted by V1 ,..., I’n . The remaining
+vertices Vn+l ,..., VN are called interior vertices. The lines connecting the vertices
+ I’a, Vb will be denoted by Lab0 (c = l,..., v(&)). Va , I’b are called endpoints
+of Lab connecting an exterior vertex IJ’~with another vertex are called exterior
+lines. The exterior line Lao is also denoted by La . Lines connecting a vertex with
+itself will be excluded.‘j
+    In momentum space the unrenormalized contribution from the connected
+diagram r E %n has the form
+
+
+                                                                                           (3.3)
+                                                                                           . ,
+                                sj- = (2Tr)4 stp1 + **- + Pn)
+
+The symmetry number 9’(r)          is
+                                        Y(r)      = cP(3 !)O                                w
+where cxis the number of double lines (i.e., pairs of vertices connected by two lines
+in Fig. l), /I is the number of triple lines (pairs of vertices connected by three lines
+in Fig. 2), and u is the number of automorphisms of the diagram, i.e., permutations
+of vertices which leave the diagram unchanged.
+   The integrand 1r is constructed according to the following insertion rules. Each
+line Lab0 carries the internal momentum
+
+
+
+To the exterior vertices VI ,..., Vn the external momenta
+
+                                               p1 ,..., P7Z                                 (3.6)
+are assigned. For an interior vertex the external momentum is set equal to zero
+
+                             pj = 0            if j = n + l,..., N.                         (3.7)
+   5 Exterior lines should be distinguished from external lines which will be introduced later in
+connection with subdiagrams.
+   6 Contributions from diagrams containing such loops would vanish anyhow after renormaliza-
+tion.
+                                COMPOSITE OPERATORS                            545
+
+
+
+
+                                 FIG. 1. Doubleline.
+
+
+
+
+                                  FIG. 2. Triple line.
+
+
+The momenta are subject to momentum conservation at each vertex
+
+
+                         $Lbc      = pa,       a = L..., N                     (3.8)
+
+
+X~J denotes the sum over all lines Lab0 of r with Va as one of its endpoints. The
+internal momenta are written as linear combinations
+
+
+
+The qabvare linear combinations of the external momentap     = (pI .** p,J and form
+a particular solution of
+
+                                                                              (3.10)
+
+The kab,, are linear combination of s independent internal momenta k = (kl ... kJ
+and form the general solution of the homogeneous equations
+
+                                                                              (3.11)
+546                                 ZIMMERMANN
+
+With these notations the insertion rules of lr are:
+
+                                                                                (3.12)
+
+
+with
+
+                                                                                (3.13)
+
+  PC = -iA for a 4-vertex,
+  PC = -ig for a 3-vertex,
+  PC = ia + ib(lz - m2) for a 2-vertex,
+  (*Z is the momentum    of the lines joining at the 2-vertex)
+  PC = I for an exterior vertex,
+  and &, given by (3.9).
+
+The products IJabOr and J&r extend over all lines or vertices of the diagram I’.
+  The renormalized contribution of the connected diagram F is given by the finite
+part of (3.3)
+
+
+
+
+   Rr is constructed by applying Bogoliubov’s subtraction rules to the original
+integrand Ir (for details see [5]). The number of subtractions used in the definition
+of RF is specified by the degree
+
+
+
+
+which is assigned to every proper subdiagram y of r. r(y) denotes the number of
+external lines of y (for a precise definition see the Appendix). As is shown in the
+Appendix the degree (3.15) satisfies conditions which are sufficient for the con-
+vergence of (3.14). In particular 8(y) is greater or equal than the dimension d(y) of
+the unrenormalized integral
+
+
+
+with z&) denoting the number of 3-vertices in y.
+   If the diagram I’ is not connected the contribution factorizes in the usual way.
+Let rconsist of the connected components F1 ,..., rC . Some of the rj may consist
+                                   COMPOSITE OPERATORS                             547
+
+of a single disconnected line. Let pjl ,..., pjnj be the external momenta attached to
+ry . Then the contribution from r is
+
+
+
+
+where
+
+
+
+                                                                                 (3.18)
+                        eo        = fl ~Vjl,        RI- = n hj,
+                                     1                     ,
+k 1 ,.**>ks are the independent    internal momenta of all nontrivial   connected com-
+ponents.
+
+
+                 4. DEFINITION      OF COMPOSITE FIELD    OPERATORS
+
+   In this section we will define composite field operators through         their time-
+ordered functions. We consider the monomial
+
+
+
+
+The dimension of the monomial (4.1) is
+
+
+
+
+#S denotes the number of elements of a set 3,
+                                       #CPlj = 4l
+548                                                    ZIMMERMANN
+
+
+We begin with the definition of the normal product
+                                              4dG4 = NJ,fd44H                (4.4)
+of minimal degree. The time ordered Green’s functions of (4.4) are defined by the
+finite part of the expansion
+
+
+                     = Fin((Te~~~~nt~z~~~~~~o(~)}A’(JJ~) a.. ~“(~~))o/(Te~~~~nt~z)o)                                        (4.5)
+
+The diagrams contributing to (4.5) contain a new vertex with the coordinate x
+which requires additional subtractions. The number of subtractions will be specified
+later. We first give the rules for constructing the unrenormalized integral of the
+contribution
+                                              mua              4%)      . . . &nIoA                                         (4.6)
+from a given diagram A. +Ym+,,is the set of all diagrams contributing                                            to the Green’s
+function
+                                      V4Xl)          ..* mm) NY11 ... 4YnD.
+Let r be such a diagram with coordinates x1 ,..., X~ ; y1 ,..., JJ~and corresponding
+exterior vertices VI ,..., I& ; Vm+1,..., Vm+n . The interior vertices are Vm+n+l,..., VN.
+Identifying the coordinates xj by setting xj = x we obtain a diagram contributing
+to (4.6). For diagrams r, A related in this way we use the notation
+                                                  A = p,               r = A.                                               (4.7)
+The new exterior vertex of A obtained by identifying VI ,..., Vm will be denoted by
+V. . The exterior vertices of A are then V. , Vm+l ,..., Vm+ , the interior vertices
+km Vm+n+l ,..., VN . The set of all diagrams contributing to (4.6) will be denoted by
+Smn . (4.7) represents a one-to-one correspondence between Vm+n and gmfl .
+  Let r E Vm.+%have the following connected components:
+
+                              r 1,...,rc ,              rlr ,...,r;, ,            r; ,...,r:” .                             (4.8)
+
+To rj at least one xi and one yj are attached. To rj’ only y’s are attached and to
+rj’ only x’s. With this the unrenormalized contribution from I’ becomes
+
+
+
+
+      ar   =   fi     (2T)4   is (5     pja   +     z   qj*)    fi    (27r)4   s (;         q&J    fi   (277)4   s (&l;J
+               i=l                a=1               m=l         j=l                   a=1         j=l               LY=l
+                                                                                                                           (4.10)
+                                             COMPOSITE OPERATORS                              549
+
+PG ,**a, pjmtj) and qjl ,..., qj.n(j) denote the external momenta ofp1 ,..., pm or ql ,..., qn
+which   belong to exterior lines of the connected component rj . Likewise
+     ,
+%l            denote the momenta of ql ,..., qs belonging to rj‘ and pIl ,..., p&cjJ
+         3*-.> d&~(j)
+denote the external momenta of p1 ,..., pTfi which belong to rj’. To simplify the
+notation we set
+
+                                        q1   =    Pm+1   >-..> qT2 =   P?n+7l.             (4.11)
+
+Zr is given by (3.12-13) with
+
+                                                 P = (PI ,.‘.3 P.m+?J                      (4.12)
+
+A Fourier transformation              with respect to pj yields
+
+
+
+
+with
+
+
+                                                                                           (4.14)
+
+Introducing             new variables of integration
+
+
+
+                                                                                           (4.15)
+
+
+
+and carrying out the integration over Kjmj , Kjym;
+
+
+
+
+In PtMj and Z= the substitutions                   (4.15) are made for the external momenta. The
+550                                     ZIMMERMANN
+
+product nj is restricted to valuesj with my > 1, ny is restricted to values ofj with
+rnJ 2 1. Setting Xj = x and taking a Fourier transformation with respect to x we
+get
+
+
+
+
+                                                                               (4.18)
+
+where
+
+
+
+
+and
+                                ZA(u)    =   Sfju)ZJ-                          (4.20)
+
+The substitution operator S prescribes that the substitutions (4.15) be made for
+momenta p1 ,..., Z7m. According to (4.20) the insertion rules for the construction
+of ZAare the usual ones except that the monomial Z’(J is assigned to the vertex V,, .
+   The renormahzed Green’s function (4.5) is then defined by
+
+
+
+
+with the Fourier transform of
+
+
+
+given by the finite part of (4.18), namely
+
+
+
+
+We still have to specify the number of subtractions to be used in constructing RL’)
+from the unrenormalized integrand ZA . This is done by prescribing the degree
+a&) of any proper subdiagram 7 of A. If y does not contain V0 we define ad(y) by
+(3.15). If 7 contains V0 we define ad(y) by
+                                COMPOSITE       OPERATORS                            551
+
+where d is the dimension (4.3) of the operator B$jl and F(Y) denotes the number of
+external lines of y (for a precise definition of P(Y) see the Appendix). As is shown in
+the Appendix Sd(y) satisfies the conditions (A.39 and (A.36) which are sufficient
+for the convergence of (4.23).
+   We will also need composite operators
+
+
+
+which are constructed with additional subtractions. The degree a of the operator
+may be any integer which is greater or equal to the dimension (4.3)
+
+                           a> d             a - d = 0, 1, 2 ,...                 (4.26)
+
+The Green’s functions
+
+
+
+
+are defined similarly to (4.4), (4.21-23) but with a larger number of subtractions
+
+
+
+
+                                                                                 (4.28)
+
+
+
+
+In order to specify the number of subtractions used in constructing RF’ from 1d we
+assign a degree SJy) to any proper subdiagram S of A. If y does not contain VOwe
+set
+                                      &zw = %I                                   (4.29)
+
+If VObelongs to y we set
+
+                                   UY) = a - 4~)                                 (4.30)
+
+According to (4.24)
+
+                      SJy) = SJy) + a - d if F’,, belongs to y.                  (4.31)
+Again the degree SJy) satisfies the conditions (A.35), (A.36) of the Appendix which
+are sufficient for the convergence of (4.28).
+552                                 ZIMMERMANN
+
+
+  For the derivation of some normalization conditions           we write down the
+expansion of the proper part, as defined by (2.16-17);
+
+
+
+
+                                                                               (4.32)
+The first term on the right side
+
+
+
+
+represents the zero order contribution and comes from the trivial diagram con-
+sisting of the vertex V. only. A0 denotes a free field, ( ). the free field vacuum
+expectation value. The sum &G9mn on the right side of (4.32) extends over the set
+Sm,, of all proper diagrams CDwhich can be obtained by dropping the lines with
+endpoints y1 ,..., y%from a diagram CD* contributing to (YZ{$(x) A(yr) ... A(y,J).
+   In momentum space the contribution from a diagram @ is
+
+
+
+
+in the notation of (4.28). The renormalized integrand Rg) can be written as
+                                J&$ zzz(1 - t’) @’                             (4.35)
+
+where to denotes the Taylor operator with respect to ql ,..., qn up to and including
+the order aa(   For the definition of i?g’ see [5]. Equation (4.35) implies
+
+
+
+
+                                                                               (4.37)
+
+
+                                                                               (4.38)
+                                  COMPOSITE   OPERATORS                           553
+
+Hence
+
+
+
+
+In these equations the following notations were used. Two sets (P)~, (v)~ are called
+equivalent
+                                     wi - a                                   (4.41)
+
+if(v)? is a permutation    of ($L){. {pj and {v} are called equivalent
+
+                                          b-4 - b4                              (4.42)
+
+if n = m and if there is a permutation ((v)~~,..., (v)~~)of {v} such that
+
+
+
+Otherwise we write {p} + {v}, s1 ,..., Soare the numbers of equivalent (P)~ occurring
+in {PI. aja is the number of LX’Soccurring in (P)~ .
+   We finally show that the vacuum expectation values
+
+
+
+vanish. The contribution     from a Feynman diagram A is given by
+
+
+
+
+If A is proper the integrand is of the form
+
+
+
+and vanishes since R(@ does not depend on p. If A is not proper it contains at least
+554                                   ZIMMERMANN
+
+
+one proper subdiagram y with one external momentum                  p only and degree
+b = 8(y) > 0. Such a diagram contributes to Ry' the factor
+
+
+
+since Rib’ does not depend on py.
+   As has been emphasized by Lowenstein [13] the time ordered Green’s functions
+defined in this section are not uniquely determined. It frequently occurs that the
+same local operator B(x) may be represented by different polynomials of A(x)
+
+                             BCx)zz 2 CjNa,L”jIACx)}l                             (4.45)
+                             BCxj zz x Cj’Na,‘~“j’~A~x~}l                         (4.46)
+
+Mj , Mj’ denote monomials of A and its derivatives, j includes Lorentz indices.
+While the time ordered functions of a given monomial were uniquely prescribed
+the Green’s function
+
+                               tm-4     4Yd      “. &Yn))                         (4.47)
+
+as calculated from the representation        (4.45) and (4.46) may differ by a-function
+terms.
+
+
+                              5. ALGEBRAIC         IDENTITIES
+
+
+   Let r be a diagram of 9m+n and A = F 6 arnn . In this section we will investigate
+the relation between Rr and the integrand Ry' which we used in (4.28) for defining
+the Green’s functions of composite operators. Using the explicit formulas derived
+in [5, Section 31, Rr and Ry' may be written as
+
+
+
+
+IT and IA are related by (4.20). U(r) is the set of all T-forests, UJA) the set of all
+A-forests relative to the degree 8Jy). For the definition of the substitution opera-
+tors S,, see [5]. In addition we introduce the substitution operator St, . If applied to
+a function of the momenta lflbO(p,k) the operator S” prescribes the substitutions
+
+
+
+if Lab0 belongs to y E 7Jbut not to any other y’ 6 U with y’ C y.
+                                COMPOSITE        OPERATORS                            555
+
+  Apparently
+                                  t?&l)     = e(r)     u @                           (5.3)
+
+where @ is the set of all d-forests with at least one element y containing V0 . From
+(5.1-3)
+
+                                 Ry' = SPlujRr + X                                  (5.4)
+with
+
+
+
+
+Our aim is to write X in a more convenient form. First we note that any two
+elements y, y’ of U containing V0 must satisfy
+
+                                     y C y’ or y’ C y
+
+For y and y’ are not disjoint since they have the vertex V,, in common. Hence
+among all elements y e U containing V’,,there is a smallest one which we call T.
+Then
+                                  u = u1 u u2 u {T}                                  (5.6)
+
+Ul is the set of all y E U(y # 7) with T C 7 or T and 7 disjoint. U2 is the set of all
+y E U(y # T) with y C T. (5.6) implies
+
+                                                                                     (5.7)
+
+With this information    Eq. (5.5) becomes
+
+
+
+
+Here Ta denotes the set of all proper subdiagrams T of LI which contain V,, and
+have degree 6a(~) > 0. &Y7 is the set of all .&forests lJl which have the property
+that each y E Ul satisfies
+
+                               TCY          Or   Tny     = a.
+
+U(T) is the set of all T-fOn%tS. (5.4) and (5.8) represent the final form of the algebraic
+identities.
+   We finally discuss a generalization of (5.4), (5.8) which will be needed in the
+following section for establishing relations between normal products of different
+556                                       ZIMMERMANN
+
+
+degrees. Suppose Rp) and RLbJ are formed with different degrees Sa and &, defined
+through (4.29-30), assummg u > b. We have
+
+                            R$=’ = SA         x         n       (-ta”S,,)   SuIA    (5.9)
+                                          r.eJac4 -6 r/
+
+                                                                                   (5.10)
+
+In (5.10) we used the convention
+
+                                   thy = 0         if       &,(y) < 0.
+
+For any y containing P’,,we split
+
+                                     tay = tb’ + (t,,: - t(,‘)                     (5.11)
+while
+                                                                                   (5.12)
+
+holds for all y’s which do not contain V,, . Substituting (5.1 I) into (5.9) we obtain
+
+                                                                                   (5.13)
+
+Here s(U)       is the family of functions with the property
+
+        (i)   Fy = -t$S,,   Or   Fy = -(t@y       - t$) Sy
+              if y contains V0 ,
+        (ii) Fy = -t($!q, = - tbySy
+             if y does not contain V0 .
+
+For any U there is a function F,, in s(U) which assigns Fy = -taySy to any y G l7.
+Taking out all terms with F = FO we find
+
+                                                                                   (5.14)
+                                                                                   (5.15)
+
+
+Q!’ is the set of all forests having at least one element 7 which contains V,, . Our
+aim is again to write Xin a convenient form. For F # F,, there is a smallest element
+-r in U which contains VO and satisfies
+                                     F7 = -(taT             -    tb7) ST           (5.16)
+                               COMPOSITE OPERATORS                              557
+
+For given U and F we decompose
+
+                                u = u1 u u2 u {r}                             (5.17)
+
+where Ul and Uz are defined as below Eq. (5.6). As generalization of (5.4), (5.8) we
+finally obtain
+
+     RP’ = R2’ + X
+                                                                              (5.18)
+
+
+
+Ta , J&‘~are defined as below Eq. (5.8).
+
+
+
+      6. RELATIONS    BETWEEN COMPOSITE OPERATORS OF DIFFERENT DEGREE
+
+  In this section we will derive some identities which relate composite operators of
+558                                         ZIMMERMANN
+
+
+According to (4.28) the contributions          from the diagram LI are given by
+
+          v-~;:kP~ 4%)      ... &&A
+
+
+
+
+The renormalized integrands Ry) and RLb’ are related by the identity (5.14-15). We
+first determine the set Ta appearing in (5.15). By definition Ta is the set of all proper
+subdiagrams of d which contain V0 and have nonnegative degree
+                                             &(4      2 0.                         (6.10)
+
+The definition (4.24) of the degree yields the inequality
+                                             a-r>0                                 (6.11)
+
+where r is the number of external lines of T. This implies
+                                             r = l,..., a                          (6.12)
+
+The case r = 0 may be excluded since
+
+
+
+vanishes if T has no external lines. For then all momenta I& are independent of
+the external momenta pT. Hence To is the set of all proper subdiagrams of which
+contain V0 and have r = l,.,., a external lines.
+   The unrenormahzed integral Zd factorize according to
+                           IA   =   zAhz~            (see Eq. (A.26)).             (6.13)
+
+With (6.13) the identity (5.1415) becomes
+
+
+
+                                                                                   (6.14)
+                               COMPOSITE    OPERATORS                              559
+
+In order to work out the explicit form of the differential operator tO: - &,Twe list
+all nonvanishing external momenta of T. The external lines of T are given by (A.2).
+Some of the subscripts uj may be zero. In this case external lines of T are attached
+to V,, . The nonvanishing external momenta of T are then
+
+                                    PO’ = PO = P
+and
+
+
+
+corresponding to the external lines (A.2). The momenta pm+l = ql ,..., pm+n = qs
+cannot be external to T. For the corresponding exterior vertices Vm+l ,..., Vm+n do
+not belong to T since T is proper. The sum of all external momenta of T must vanish
+
+                                                                                 (6.15)
+
+Since T is connected (6.15) is the only linear relation among the external momenta.
+Choosing PIT,..., prT as linearly independent external momenta we have
+
+
+
+
+                                                                                 (6.17)
+
+
+
+
+The sum zF$ extends over all sets {f} with
+
+                                                                                 (6.18)
+
+The operator & prescribes that the external momenta pjr be set equal to zero. Let
+S,, be the first substitution operator of
+
+
+
+to act on (6.16). That is, p is either I’ or the smallest element of lJ1 which contains
+T. SMthen effects the substitution
+
+                                   PjT + PjTtku> P”l
+                                       ZIMMERMANN
+
+
+
+
+                p;(k’, p“) = -l$,ici           = -&jbjc,jWl      - d&&f‘~     (6.19)
+
+In (6.14) we may therefore replace
+                   . . . su ... p&   ... d(&     ...
+
+by
+                   . . . & -.. ~-~~~lblolh”~l..* (-iz&+.J(&-i)~        ....
+
+We thus obtain the following factorization             of X:
+
+
+
+
+                                                                              (6.22)
+
+In (6.21) the substitution f = Y/T was used. For the notion of the reduced diagram
+A/r and related definitions see the Appendix. ZA,7{,,}is defined by
+
+
+
+
+Integrating (6.20) over the internal momenta, summing over all A and taking a
+Fourier transformation with respect to p, ql ,..., qn we obtain
+
+ <mw       -4Yd .-. &Y?J) = v&k4                 &Yd       *** 4Y&
+
+
+
+
+                                                                              (6.25)
+                                COMPOSITE   OPERATORS                                561
+
+where fl? is the set of all nontrivial diagrams contributing     to the proper part. The
+notation in (6.25) is similar to (2.24), i.e.,
+
+
+                                                                                  (6.26)
+
+
+
+                  (7-:/lo(u)~(o) a** Ao(p)m(o): @qO)    *** A~~qo))prop
+
+from the trivial diagram (with the notation of (2.24)) vanishes because
+
+
+
+in (6.24), and therefore {p} + {p). Hence
+
+
+
+for the coefficients of (6.24) with the notation (6.26). According to this the GF)(‘)
+are invariant tensors which can be composed of gUV-and cUVDO-tensors    only.
+   Applying the reduction technique to the variables y1 ,..., y% of Eq. (6.24) we
+obtain the operator identity
+
+
+
+
+with the coefficients given by (6.27). If the reduction technique is applied to only
+part of the variables yj we obtain (6.24) in operator form
+
+
+
+
+The coefficients Gj$tPl can also be calculated directly from (6.24) and the normaliza-
+tion conditions (4.40) of the normal products.
+562                                ZIMMERMANN
+
+
+   We finally derive a formula which expresses Bji{ in terms of the operators Bipj
+of minimal degree. To this end we write (6.28) for a = b + I
+
+                                                                            (6.30)
+
+The sum is restricted by
+
+                           b<r+i#(p)j<b+l.
+                                      j==l
+
+Hence the degree b + 1 equals the dimension of the composite operators appearing
+in the sum
+
+
+
+
+With the abbreviation
+
+
+
+we find
+
+                                                                            (6.32)
+
+Here d denotes the dimension of B(J
+
+
+
+The sum is restricted by
+
+                                                                           (6.33)
+
+A corresponding formula holds for time ordered products
+
+
+
+
+Many examples for the relations (6.24-34) can be found in the applications of the
+normal product algorithm by Lowenstein and Schroer [18, 24-261.
+                                     COMPOSITE OPERATORS                                         563
+
+                 APPENDIX:         SUBDIAGRAM       AND REDUCED        DIAGRAMS
+
+  The conventions concerning subdiagrams and reduced diagrams used in this
+paper are slightly different from those of [5]. We briefly introduce the relevant
+modifications.
+  A subdiagram y of FE 9?n or A E gvnn
+
+                                      YCF          or      yCA
+is defined by a nonempty subset of lines of r.7 The vertices of y are formed by all
+endpoints of lines belonging to y. A line of r or A not belonging to 7 is called an
+external line of y if one or both endpoints lie in y.
+   We next introduce external and internal momenta for y. Let
+
+
+
+be the vertices and
+
+
+
+be the external lines of y. The indices uj , bj are ordered such that uj refers to the
+endpoint Va, which belongs to y. If both endpoints Va and Vb of a line Lab,, belong
+to y this line is listed twice in (A.2) as L&, and &a0 .
+   As external momenta of y we introduce
+
+                                            P Cl 2’..>Pq                                       (A.3)
+(corresponding to each vertex (A.4) of 7) and the new variables
+
+                                                                                               (A.4)
+corresponding to each external line of y as listed in (A.2). The combined sets (A.3)
+and (A.4) of variables will be denoted by the symbol
+
+                                PY = CPClY...,PC, >Ply,..., PT?                                CA.51
+The momenta pcj associated with an interior vertex VCj of r or A vanish. Hence
+only those momenta pj in (A.3) can be different from zero which belong to the
+exterior vertices
+                                   v 1 ,..., vn     of      rdn                                64.6)
+   ’ The empty set or a trivial diagram consisting of a single vertex and no line is not a subdiagram
+in the sense of this definition. On the other hand the full diagram itself is considered as a sub-
+diagram.
+564                                           ZIMMERMANN
+
+
+Or
+
+
+                          vll   , Kn+1     ,...,   vnk+n      of    Acgmn.     (A.7)
+
+     At each vertex Va of 7 we introduce the total external momentum
+
+
+
+
+The sum extends over all external lines L a6jCjof y which are attached to Va . These
+are all lines listed in (A.2) with uj = u.
+   The internal momenta lib,, are required to satisfy momentum conservation at
+each vertex of y
+
+                                         1; Gm = %zYPY~                        (A.9)
+
+The l& will be written in the form
+
+
+
+where the q&(p~) are linear combinations of the external momenta py and form a
+particular solution of
+
+                       1; Go = 9;cPyh                       9& + 9&# = 0.    (A.1 I)
+
+The k&, are linear combinations of s(y) independent internal momenta
+
+                                         ky = (kl”,..., k&,,)
+
+and form the general solution of
+
+                                                                             (A.12)
+
+ky and py are expressed in terms of k and p
+
+                            kv = ky(k, p),                 PY = p%      P)   (A.13)
+by requiring
+
+                                    LW’,           $3 = L4k        PI        (A.14)
+
+for each internal line of y and
+
+                                         P& = - kdk           P)             (A.15)
+
+for each external line of y,
+                                COMPOSITE   OPERATORS                               565
+
+   Let p be a subdiagram of y C lY In an analogous way we introduce the func-
+tions
+                        k” = ky”(kv, py),     P* = Pv”(ky>Py)                   (A.16)
+by setting
+
+                               Z&(k”, pw) = Go(ky, P”)                          (A.17)
+
+for every line Lab0 of ,u. Moreover, we require
+
+                                                                                (A.18)
+
+if L ,+,, is an external line of p, but not of y, and
+
+                                        PY = PkY                                (A.19)
+
+if L a8PJ -- Lkbkok is an external line of p and y. (The numbering (A.2) of external
+lines may be different for p and y, hence j # k in general.)
+   The choice of the particular solutions q&p) of (A. 11) should be such that ky
+depends on k only and k” on ,kyonly in (A.13) and (A.16)
+
+                            k = k(b),       k” = k,,@(ky).                      (A.20)
+
+As was shown in [5] such qabo(p), q&,(py) can always be constructed.
+   The unrenormalized Feynman integral associated with a subdiagram               y of
+I’ E %?,,or A E arnn is given by
+
+                                                                                (A.21)
+
+where
+                               4 = ny Amv n,, Pc                                (A.22)
+                                      aba         c
+
+
+with the usual insertion rules. The products extend over all lines and vertices of y.
+The dimension d(y) is defined by the dimension of the integral (A.21).
+   A diagram is called trivial if it consists of a single vertex and no line. A diagram
+is called proper if it cannot be separated in two parts by cutting a single line. Two
+diagrams are called disjoint if they have neither a line nor a vertex in common. Let
+y be a subdiagram of I’ E %?%  or A E Bmn . Let y1 ,..., yc be mutually disjoint proper
+subdiagrams of y. The reduced diagram
+
+                                     P = Y/Y1 ... Yc                            (A.23)
+
+is then defined by reducing each yi in 7 to a vertex. In other words, the lines of 7
+566                                  ZIMMERMANN
+
+
+are formed by those lines of y which do not belong to any yj . The vertices which
+are formed by the corresponding endpoints but with all vertices identified which
+belong to the same yj . The unrenormalized Feynman integral associated with
+(A.23) is given by
+
+                              JT =       dklv ... dk&) Iv                      {A.24)
+                                     J
+where
+                                                                               (A.25)
+
+is formed with the usual insertion rules. The products extend over the lines and
+vertices of y which do not belong to any yj . Accordingly the factor I is assigned to
+each reduced vertex. ZY, Ivjyl. ..~~and Iy. are related by
+                                          3
+
+
+
+  Let y be a subdiagram of r E %Yn. The dimension d(y) of y is defined by the
+dimension of the integral (A.21) which is given by
+
+
+
+Here s(y) is the number of independent internal momenta of y, Qy) the number
+of 2-vertices, Z(y) the number of lines belonging to y. The dimension d(y) of the
+reduced diagram, i.e., the dimension of the corresponding integral (A.24), is
+given by
+                          47) = 4$(y) + 2a;($        - 2Z(y)                  (A.28)
+
+where ~~‘(7) is the number of original 2-vertices belonging to 7 (i.e., not counting
+those 2-vertices which were obtained by reducing proper self-diagrams of y). The
+relation
+
+
+
+
+then follows from (A.27-28). This is obvious in the absence of 2-vertices in y.
+Moreover, the insertion of 2-vertices into the lines of y does not change (A.29)
+since the degree of a factor A + B(P - &) is cancelled by the degree of an
+additional Feynman denominator. Hence (A.29) holds in general.
+   We next derive two conditions for the degree a(y) defined by (3.15). (A.24) may
+also be written as
+                                  COMPOSITE OPERATORS                                     567
+
+Here r(y) is the number of external lines of y with those external lines counted
+twice for which both endpoints lie in 7. ~~(7) denotes the number of 3-vertices in y.
+From (3.15) and (A.27) we obtain
+
+                                    a(Y) = d(y) + h(Y)                                 (A.31)
+which implies
+                                    a(Y) 2 4y).                                        (A.32)
+
+Moreover, (A.29) (A.31) and
+
+
+
+
+imply
+
+
+
+
+The conditions (A.32) and (A.34) guarantee that the final renormalized integral
+(3.14) is absolutely convergent and approaches a distribution in the limit l -+ +O.*
+   We finally derive the corresponding formulas for the contribution from a
+diagram A E Bmn to the Green’s function (4.28) of the operator B& . Let 7 be a
+subdiagram of A. We have to verify that the degree function aa as defined by
+(4.3 1) satisfies the conditions
+
+
+
+                                                                                        (A.36)
+
+for any reduced diagram (A.23). Only the case where y contains the vertex V,, need
+be checked. In this case the dimension of y is given by
+
+                       dtY) = 1 #CPlj + 4stY) + 2%CY) - 2zCY)                           (A.37)
+which may also be written as
+
+
+
+ d is the dimension (4.3) of the operator Bi$ , s(y) the number of independent inter-
+ nal momenta of y, am        the number of 2-vertices (excluding V,,), us(y) the number
+    * See ref. [5]. Apart from minor changes the convergence proof is not affected by the modi-
+ fications of this paper.
+568                                    ZIMMERMANN
+
+of 3-vertices (excluding V,,), Z[y) the number of lines belonging to y. (4.30) and
+(A.38) imply
+
+
+yielding (A.35).
+   In order to check (A.36) we note that (A-37) implies
+
+
+
+
+in the absence of 2-vertices. Since the insertion of a 2-vertex does not change the
+dimension of a diagram Eq. (A.40) holds in general. Assuming that none of the
+subdiagrams y1 ,..., yc contains V,, we have
+
+                                      &&I     = w.                                     (A.41)
+
+Then (A.31), (A.39), (A.41), and
+
+                                                                                       (A.42)
+
+imply (A.36). Next we assume that yj contains V0 . Since y1 ,..., yc are disjoint only
+yj contains V,, . Hence
+
+                            UYJ    = 4yd + 64          + Q - ci
+                            U4     = 4nl + &4             if i #j.
+
+Combined with (A.39), (A.42) these relations imply (A.36).
+
+
+                                       REFERENCES
+
+ 1. M. GELL-MANN     AND F. Low, P&.     Reu. 84 (1951), 350.
+ 2. N. N. B~OLI~OV      AND D. V. SHIRKOV, “Introduction   to the Theory of Quantized Fields,”
+    Interscience, New York, 1960.
+ 3. K. HEPP, Cornm. Mzfh. Whys. 6 (1967), 161.
+ 4. E. SPEER, Generalized Feynman Amplitudes, in “Annals of Mathematics Studies,” No. 62,
+    Princeton Univ. Press, Princeton, 1969.
+ 5. W. ZIM~RMANN,      Comm. Math. Phys. 15 (1969), 208.
+ 6. H. EPSTEIN AND V. GLASER, in “Statistical Mechanics and Quantum Field Theory,” Les
+    Houches 1970, Gordon and Breach, New York, in press; preprint CERN, No. Th 1344 and
+    1400 (1971).
+ 7. R. STORA, Lecture Notes, Les Houches Summer School, 1971.
+ 8. F. DYSON, Phys. Rev. 75 (1949), 1736.
+                                    COMPOSITE    OPERATORS                                    569
+
+  9. A. SALAM, P/IJX Reu. 82 (1951), 217; 84 (1951), 426.
+10. 0. STEINMANN, “Perturbation          Expansions in Axiomatic Field Theory, Theorem 2.1, p. 16,
+     Springer-Verlag,     Heidelberg, 1971.
+11. G. WICK, P&K Reu. 80 (1950), 268.
+ 12. K. WIUON,      unpublished.
+13. J. VALATIN,    Proc. Roy. ,Soc. A 225 (1954), 535; 226 (1954), 254.
+14. K. WILSON, On products of quantum field operators at short distances, Cornell Report, 1964.
+15. R. BRANDT,      ,4nn. Phys. 44 (1967), 221; ,4rzn. Phys. 52 (1969), 122 and Fortschr. Physk
+     19 (1970), 249.
+16. W. ZIMMERMANN,        Comm. Mazh. Phys. 6 (1967), 161; 10 (1968), 325.
+17. W. ZIMMERMANN,         in “Lectures on Elementary Particles and Quantum FieId Theory,” 1970
+     Brandeis Summer Institute in Theoretical Physics (S. Deser, M. Grisaru, and H. Pendleton,
+     Eds.), Chap. 4, MIT Press, Cambridge, Mass., 1971.
+18. R. LOWENSTEIN, Phys. Rev. D4 (1971), 2281.
+19. H. ROUET AND R. STORA, CNRS preprints (1972).
+20. K. WILSON, A finite energy-momentum tensor was first constructed in perturbation theory,
+     unpublished.
+21. C. CALLAN, S. COLEMAN, AND R. JACKIW, Ann. Phys. (N. Y.) 59 (1970), 42.
+22. K. SYMANZIK, private communication.
+23. C. CALLAN, Phys. Rev. D 2 (1970), 1951; K. SYMANZIK, Comm. Math. Phys. 18 (1970), 227.
+24. B. SCHROER, Lett, Nuovo Cimento 2 (1971), 867.
+25. J. LOWENSTEIN,      Commun.    Math. Phys. 24 (1971), 1.
+26. J. LOWENSTEIN AND B. SCHROER, Phys. Rev. D 6 (1972), 1553; and to be published.
+27. Y. LAM, Phys. Rev. D 6 (1972), 2145,216l; and to be published.
+28. M. GOM~S AND J. LOWENSTEIN, Nucl. Phys. B 45 (1972), 252.
+29. M. GOMES AND J. LOWENSTEIN, Nucl. Phys. B (September, 1972)
+

@@ -1,0 +1,2 @@
+fec2a85052c359999a4a281795363f3ac4bbc998dc0e75c9318f304d694d60c8  gauge_theory_compact_surfaces.pdf
+868d4b7810118d1e8ba69367642850ae9f41ddd313f25a1d3e574d6678e51504  gauge_theory_compact_surfaces.txt

@@ -1,0 +1,2415 @@
+ANNALS       OF PHYSIC-S    97, 160-215 (1976)
+
+
+
+
+                                 General Theory               of Renormalization
+                                      of Gauge Invariant                  Operators
+
+                            SATISH         D. JOGLEKAR*         AND       BENJAMIN       W. LEE
+
+                        Fermi   National     Accelerator   Laboratory,+      Batavia,   Illinois   60510
+
+                                                Received   October 30, 1975
+
+
+          We study the question of renormalization of gauge invariant operators in the gauge
+       theories. Our discussion applies to gauge invariant operators of arbitrary dimensions
+       and tensor structure. We show that the gauge noninvariant (and ghost) operators that
+       mix with a given set of gauge invariant operators form a complete set of local solutions
+       of a functional differential equation. We show that this set of gauge noninvariant
+       operators together with the gauge invariant operators close under renormalization to
+       all orders. We obtain a complete set of local solutions of the differential equation. The
+       form of these solutions has recently been conjectured by Kluberg Stern and Zuber.
+       With the help of our solutions, we show that there exists a basis of operators in which
+       the gauge noninvariant operators “decouple” from the gauge invariant operators to all
+       orders in the sense that eigenvalues corresponding to the eigenstates containing gauge
+       invariant operators can be computed without having to compute the full renormaliza-
+       tion metrix. We further discuss the substructure of the renormalization matrix.
+
+
+                                                     I. INTRODUCTION
+
+   The problem of operator product expansion in gauge theories [I] has been
+studied extensively following the initial work of Georgi and Politzer [2], and
+Gross and Wilczek [3]. A salient feature of this problem, unique to gauge theories,
+is the possibility that the so-called Faddeev-Popov [4] ghost fields may participate
+in the operator product expansion of, say, two gauge invariant currents. Gross
+and Wilczek [3] dealt with this situation in the axial gauge, where the Faddeev-
+Popov ghost fields are absent (i.e., are free fields), and showed that the anomalous
+dimensionsof gauge invariant operators are correctly given when possiblecouplings
+of the ghost fields are ignored in other gauges,at least in one-loop approximation.
+Subsequently, a number of authors, including Dixon and Taylor [5], Kluberg-
+Stern and Zuber [6, 71, Sarkar and Strubbe [8], have elaborated on and extended
+this result in some respects.
+   * Address after September 1, 1975: Institute for Advanced Study, Princeton, New Jersey.
+  t Operated by Universities Research Association Inc. under contract with the Energy Research
+and Development Administration.
+                                                             160
+Copyright      0 1976 by Academic   Press, Inc.
+All rights   of reproduction in any form reserved.
+                             GAUGE     INVARIANT       OPERATORS                     161
+
+   The purpose of this paper is to give a general discussion of the renormalization
+of gauge invariant operators of arbitrary dimension and twist, and valid to any
+order of perturbation theory, along the lines exploited previously by Dixon and
+Taylor [5], and Kluberg-Stern     and Zuber [6, 71. In the course of this discussion,
+we will extend their results and prove conjectures made by some of the previous
+workers.
+   We base our discussion on the proof of renormalizability         of gauge theories in
+the form presented by one of us [9] and streamlined by Zinn-Justin [IO] by means
+of the Becchi-Rouet-Stora    [l l] (BRS) transformation.     This is briefly summarized
+in Section II. The BRS transformation       is a transformation     of fields by an anti-
+commuting c-number h, which leaves invariant the effective action L-&r defined
+in the gauge specified by fu :
+
+
+
+
+where Ai is the gauge field, c, and T, are the Fadeev-Popov ghost fields, and g is
+the coupling constant.
+   In Section III, we show that only a subset of possible gauge noninvariant
+operators together with a set of gauge invariant operators of the same dimension
+and twist form a closed set under renormalization to all orders, and in Section IV,
+we give a complete characterization of the gauge noninvariant operators in this set.
+The problem reduces to finding a complete set of local functionals H[@, c, %C,L]
+of a given dimension and ghost number that satisfy
+
+                                             VH     = 0,                            (1.2)
+where the differential   operator    3’ is
+
+
+
+
+L, being the source of the operator -~g,,f&,cBc,,
+                                                .
+  We solve Eq. (1.2) completely in Section IV, by a method suggested by Dixon
+and Taylor. Various mathematical lemmas necessary are proved in Appendices A
+and B. In all of these, the observation that
+
+                                             (Y)”   = 0,                            (1.4)
+or more generally, that the BRS transformation on Ai and c, is nilpotent, plays
+a crucial role. We confirm the conjecture of Kluberg-Stern  and Zuber [7] on
+162                                  JOGLEKAR       AND   LEE
+
+
+solutions of Eq. (1.2), for arbitrary dimension and twist. Actually, the construction
+suggested by Dixon and Taylor does not make clear the locality of solution [12],
+but we have explicitly shown in Section IV and in Appendix C, the locality of
+solutions that is crucial to the arguments of Section V.
+   Section V is devoted to the study of the renormalization matrix of these opera-
+tors. It is shown there that the renormalization matrix is in a block triangle form
+when the basis of operators closed under renormalization is appropriately chosen,
+and that in this basis, eigenvalues of the matrix corresponding to the eigenvectors
+containing gauge invariant operators are computable by neglecting couplings to
+gauge noninvariant operators.
+   We do not discuss the operator product expansion of gauge invariant currents
+per se in this paper, leaving it to a future communication.
+
+
+                                          II.   REVIEW
+
+
+A. Preliminary
+   In this section, we shall briefly review the definitions of generating functionals
+in a gauge theory, the BRS [ll] (Becchi, Rouet, Stora) transformations and WT
+identities satisfied by the generating functionals. We shall use the condensed
+summation-integration    convention as used, for example, in [9].
+   It is well known that the Feynman rules for constructing Green’s functions
+of a gauge theory can be deduced from the effective action 3&r.
+
+                   dpeff[A,   c,   21= -q&41 - 3{.IM>” + Qf,,c, ,                  (2.1)
+
+where 5$[A] is the Lagrangian for the Yang-Mills fields (possible interacting with
+matter fields, in which case A denotes collectively gauge fields and matter fields),
+and
+                                    %Vl = -Ha4~“~                                  (2.2)
+
+are the gauge fixing terms and 2, , c, are the Faddeev-Popov ghost fields.
+   The Lagrangian TOIA] is invariant under the infinitesimal local gauge trans-
+formations of a compact Lie group G, which we shall choose to be a simple group
+solely for the sake of notational simplicity. Extention to the case of a direct product
+of simple compact groups is obvious.
+   Thus, ZOIA] is invariant under the infinitesimal transformation,
+
+
+
+                                                                                  (2.3)
+                                GAUGE      INVARIANT     OPERATORS                                 163
+
+The Ai’s are hermitian fields, so that the matrices {t”: (tQ = t;} are real anti-
+symmetric representations of the generators of G. The g, is the (unrenormalized)
+coupling constant of the group G.
+  We shall work in linear gauges defined by,
+
+                                         &[A]   = 7#%yAi      )                                  (2.4)
+
+where T,, is an arbitrary real positive number.
+  Then, M,,[A] of Eq. (2.1) is defined by
+
+
+
+
+   The BRS supertransformations             consist of
+                                   6Ai = caDia 6x,
+
+
+
+
+where 6h is an x-independent infinitesimal               anticommuting      c-number.     We note
+that under the BRS transformations
+                 s(g)   = 0;            8(caDia) = 0;       ~(4fa&C?J       = 0;
+                                                                                                 (2.7)
+                  6(-gf,2[A]      + CMc) = 0;             W&f,       c, 21) = 0.
+
+  We shall also find it useful to consider only the following              transformations:
+                                          6Ai = c,Diol 6h;
+                                                                                                 w3)
+                           SC,= -430~BvcBcv6x9                    SC= 0.
+Under these transformations,        (Zo[A] + S;Mc) is invariant.         This is expressed as
+
+                                    Yo($PIA] + CMc) = 0,                                         (2.9)
+
+where 9,, is the differential     operator defined by
+
+                                6{F[A, T, c]} = Y,$[A,       c, C] ah,                        (2.1Oa)
+
+where 8F refers to the change in the functional F[A, c, ~1 under the transformations
+of Eq. (2.8). If F[A, c, Z] is a functional containing an equal number of c, C with
+all E’s appearing before all c’s. 9” may be expressed as
+
+                                                                                              (2. lob)
+164                                           JOGLEKAR           AND     LEE
+
+
+In terms of 9, , the group condition                     on D,“[A] viz.,
+
+
+
+i.e.,
+                                          t;&”    - tfJ$m = f anyDiY,                                                (2.1 lb)
+
+can be expressed elegantly as the operator identity:
+
+                                                     c?Yo2
+                                                         Es 0.                                                        (2.12)
+
+B. Generating Functionals of a Gauge Theory; WT Identities
+   In the following, we shall be dealing with unrenormalized but dimensionally
+regularized quantities. Following Zinn-Justin,    we introduce sources for the
+composite operators c,Dia and ~g,j&,c,c,, and define:
+
+                       S[A, C, 2, K, 11 = -%ff[A,        C, ?]   +     K&%         -      ~&f&CnCv~,       .          (2.13)
+
+We define the generating functional                  of Green’s functions,
+
+W[j,    (,   8,   K,   11 =       [dA dc dC] Exp i{S[A, c, C, K, I]            +   jiAi      +    &,   +   I?,(,},    (2.14)
+                              s
+
+where t, E are anticommuting    sources for the ghost fields. The generating func-
+tional of the connected Green’s functions is defined by,
+
+                                    a, 4, t, K,4 = --i In w, t, f, 4 4.                                               (2.15)
+
+We define expectation values of fields in presence of sources:
+
+                                                                                                                      (2.16)
+
+where it is understood that the partial derivatives are taken with the rest of the
+sources fixed.
+  The generating functional of the proper vertices is given by
+
+                       n+, Q, .n, ‘5 11= XL 6, t-9K, 11- .A& - t&a - CL, 1                                            (2.17)
+
+The sources j, f, [ can be expressed as a functional of 4, Q, G, K, 1 by the relations:
+
+                                                                                                                      (2.18)
+                                           GAUGE           INVARIANT                  OPERATORS                                       165
+
+where as a matter of convention,                           partial derivatives                             of r such as S.F/SC#~stand for
+
+
+
+With this convention,               we also note,
+
+                                               sr
+                                               -=-         sz                   sr             --.
+                                                                                                         sz                        (2.20)
+                                               SKi         8Ki       ’          S,,            -         81,
+
+
+   By consideration of an arbitrary change 6T, in the W[j, f, 4, K, I] of Eq. (2.14),
+we can obtain the equation of motion for the antighost field. It is expressed in
+terms of r as
+
+                                                                                                                                   (2.21)
+
+
+By considering the BRS transformations    of Eq. (2.6) in the integration variables
+of W of Eq. (2.14) one can obtain the WT identity for W. It can be transformed
+into WT identity for r and simplified using Eq. (2.21). The final result is
+
+
+                                                                                                                                   (2.22)
+
+
+
+
+   The theory is made finite by wave-function,                                         and coupling constant renormaliza-
+tions:
+
+                     A.        =   A !r)z1’2                             “l/2         b)
+                          z          z                      c,   =       z       c,        )               c,    =   .P&
+
+                                                      go    1     gx.pz-l/2                          ,                             (2.24)
+                                          Ki = ~VK,                  )          1a zr Zll2L LX-
+
+Alternatively,    we can write the renormalized                                       effective action as
+
+                 S(T)[z‘t(T), c(‘),        +,        K, L] = S[/i, C, 2, K, I]
+                              = S[A”‘,          cc’), P,         K, L] + dS[A”‘,                                cc’), P), K, L],   (2.25)
+
+where dS represents local counterterms. It is a well-known     result that Z, 2, and
+X in Eq. (2.24) can be chosen in successive loop approximations           so that the
+resulting renormalized r is finite in terms of g and renormalized quantities.
+166                                    JOGLEKAR          AND       LEE
+
+
+                                                  III.
+
+A. Generating Functionals with an Insertion of a Local Operator
+   In order to discuss renormalization     of an operator, one needs to relate two
+quantities: Green’s functions, involving an insertion of the operators that are
+independent of the renormalization     point, the so-called unrenormalized Green’s
+functions, and the finite (i.e., renormalized) Green’s functions, which, however,
+depend on the renormalization point. In the following, we shall give the definitions
+for the generating functionals for these two Green’s functions.
+   We consider a local (though it is not necessary for these definitions) operator
+ OJA, c, 21, which may carry additional Lorentz indices. Let Ni denotes (in general,
+x-dependent) source for OJA, c, C]. The generating functional of the unrenor-
+malized Green’s functions with an arbitrary number of insertions of Oi is given by
+
+
+
+       s [dA dc dC] exp i{S[A, c, T, K, I] + jiAi
+   =                                                           +   Cm.&    -I-   &c,    +   NiO&4,   c, Cl},    (3.1)
+
+whose derivatives with respect to various sources are independent of the renor-
+malization point for obvious reasons. The corresponding generating functionals
+of connected Green’s functions and of proper vertices are defined analogs to
+Eqs. (2.15)-(2.18) of the last section viz.
+               aj, E,F,K, 4 Nl = --i In mj, t, 6 K,L m                                                         (3.2a)
+             r[+, Qn,0, K,I, Nl = W, & f, K,6 N -.i& - f&t?, - t%i .                                           (3.2b)
+We further note that, as in Eq. (2.20)
+                            WW         lru~,sx~~ = WSNi                   I~t.~.ti.c.                           (3.3)
+The Fourier transform of the above quantity (6rjSNi)N=,=K=~        generates the
+unrenormalized     proper vertices with a single insertion of Oi at an arbitrary
+momentum.      Insertions at zero momentum      can be obtained by considering
+J- d”x(W/SN(x)),,,,,,,       .
+   To renormalize
+                                 J”,[#J, 0, a] = SrjSNi              IN=K=L=O                                   (3.4)
+in one loop approximation,     one needs to compute {TN}& expressed in terms of
+renormalized field @‘, w, (3 and renormalized parameters: (renormalized according
+to some convention) and define
+                                      GAUGE         INVARIANT                 OPERATORS                                        167
+
+so that rNR is finite in four space-time dimensions. r, as a function of renor-
+malized fields and parameters can be best obtained from another generating
+functional
+
+W(‘)[J,   i, 5, K, L, N] = s [dA dc d?] exp 1’{S(‘)[A, c, 2, K, L] + JiA, + Lc, + Q,
+
+                                 + NiOJZl/“Ai                      ) mc,           ) zwa          ) g(x/m:2),         7pq>.   (3.5)
+
+Here, the sources J, 5, {, K, L stand for the renormalized sources. This FVr) is
+in fact equal to W(U.r) of Eq. (3.1). This can be seen by performing the trans-
+formations
+
+          j   =   Z-lPJ,   6 =         Z-1125,             f   =    z-1/2<,             K =       zl/zK,        1 =   ZIP,5
+
+                                 go     =     gX/.2Zl~2,                      70    =   yZ-l12,
+
+
+with a simultaneous        change of integration                        variables
+
+
+
+and dropping the overall infinite constant and superscript (Y).
+  (We shall find it convenient to switch back and forth between FV”+ and FP’).
+W(“‘r) is especially useful to see the symmetry properties of W while it is Wcr),
+which can give us {rN}div as a functional of renormalized fields and parameters.)
+
+B. WT Identity for the Generating Functional                                        of Proper              Vertices with a Single
+   Insertion of a Gauge Invariant Operator
+  Our object here is to write down the WT identity satisfied by r,[@, w, W] in
+one loop approximation, when N refers to the source of a gauge invariant operator,
+and use it to find the properties of gauge noninvariant operators that enter in
+(r,p, o, ~pv.
+   To do this, we consider the BRS transformations   of Eq. (2.6) on the integration
+variables of W[j, 6, z, K, I, N] of Eq. (3.1), with O,[A, c, C;] = OG’[A]. We note
+that the extra term NOG’[A] is invariant under these transformations.     Therefore,
+the WT identity satisfied by W[J, 5, 5, K, L, N] is (i.e., expressed in terms of
+renormalized sources) and by I’[@, w, ~5, K, L, N] will be identical in form as the
+WT identities for these generating functionals at N = 0. Thus,
+
+                                                                                                                              (3.6)
+and
+                                        sr, w -- sr, sr,                                      o                               (3.7)
+                                        SOi 6Ki                     SW, 6L,              =        .
+168                                    JOGLEKAR         AND      LEE
+
+
+We differentiate    Eqs. (3.8) and (3.7) with respect to N and set N = 0. We thus
+obtain,
+
+                                                                                              (3.8)
+
+               --sr, sr, +=m------
+                            sr, sr,                   sr,     sr,           srN sro = o 9
+                                                                                              (3.9)
+                 SCDi 6Ki                             6L,     &I&           SW, 6L,
+with
+
+               r,   = rN[qw,w,K,L]                =    Sro[@,w, 6, K L Nl                    (3.10)
+                                                                       SN             N=o
+
+
+Equating the one-loop divergence on both sides of the Eqs. (3.8) and (3.9) and
+remembering that r. INzO is a finite functional, we learn,
+
+                                                                                             (3.11)
+
+
+
+
+                                                                                             (3.12)
+
+with
+
+       S[@,W, cS, KY L] = To[@] + c,M,B[@]w~                     +KiDi"w,      - +L&~oBw~,   (3.13)
+
+{rid@, w, 6, K U?‘” is a local polynomial            of @, w, W, K, L of dimensions equal
+to that of OG’[O]. Thus, {r&D,            W, W, K, L]}fiv can be expressed in terms of a
+complete set of local polynomial         solutions of the equations:
+
+                               w,c&K,L]           = ai&              O[@,w,&     K, L],      (3.14)
+                                                                 z
+                         --               -~6s" 6 O[@,w, W,K,L]                    = 0.      (3.15)
+                                           6CDi 6K, I
+   Thus, {I’,[@, W, w]}~‘” = {r&B,    W, w, K, L]IK,L,o}~    can be expressed                    in
+terms of the complete set of local solutions of the equation
+
+                              sop,     w, w]
+                                             = aiaQi[@. w, w],                               (3.16)
+                                     SW,
+
+                                                            ss                        ss
+              goO[@P,
+                   w>61 = -PA@, 0, 61 m                              + R,[@, w, w] 6w,,      (3.17)
+                              GAUGE   INVARIANT     OPERATORS                               169
+
+where Qi[@, w, w] and R,[@, w, w] are local functionals of CD,w, w possessing
+appropriate transformation    properties under the global transformations      of group G
+and Lorentz transformations.     (As we shall see later, the integrability of Eqs. (3.16)
+and (3.17) will restrict the set {QJ and {RJ.)
+   We shall obtain the complete set of local solutions of the Eqs. (3.14) and (3.15)
+in the next section. In this section, we wish to show that the set of operators
+t~G’PII 0 {W@>w, &]I (the latter being the set of all gauge noninvariant solu-
+tions of Eqs. (3.16) and (3.17)); closes under renormalization         to all orders. For
+this purpose, it is not necessary to know the set (O[@, w, &I} explicitly.
+
+C. Closure Property in One-Loop Approximation
+  We consider the generating functional of Green’s functions W of Eq. (3.5) with
+OJA, c, Z] being any one of the gauge noninvariant operators of the set. Our
+objective is to show that {P,[@, o, w]}:‘” thus computed for any of the gauge
+noninvariant   operators can be expanded in terms of the same set {OG’[@]} @
+{W, a, WI>.
+   We shall find it convenient to use W(“+          (in terms of unrenormalized        sources)
+to exhibit its symmetry properties:
+
+            W’““’   = i’ [dA dc d?] exp i{=.Y,,[A] + TMc - +f,“[A] + K~‘DT’c,
+                       - 4L’fe8ycac,+ N’O[A, c, 4 + .A-4 + G, + &cJ.                     (3.18)
+
+   We note that (PO + TMc - +Sp2[A] + N’O[A,                c, I?]} is invariant    under the
+transformations:
+
+                    6A, = (Di”c, + N’Qi) 6h = c,D;” %I,
+                    SC, = (-$goJ&oyc,,-cy + N’R,)     Sh = -g&fa;ycocy      ,             (3.19)
+                    62, = -T$~~[A]     6x,
+to the first order in N’. Here, Qi and R, are the functions corresponding          to O[A, c, C]
+that enter Eqs. (3.16) and (3.17). To see this, we note
+            8(%f[A,    c, ?] + N’O[A, c, T]} = 0 + U(N’) + O(Nf2) + ... ,
+
+and O(N’) terms are given by,
+
+                                                                                          (3.20)
+
+
+
+     = 0,                                                                                 (3.21)
+170                                    JOGLEKAR       AND    LEE
+
+
+on account of Eqs. (3.16) and (3.17). We further note that
+
+                                      6(D:=c,J = O(N’) # 0,                                  (3.22)
+                                 w&Jq3cJ           = O(N’) # 0.
+We use the invariance of Eq. (3.21) under transformations of Eq. (3.19) to write
+down a WT identity of FVZL+ of Eq. (3.18). We note that the change in the Jacobian
+for the transformations of Eq. (3.19) is
+                CC(Qi,i - I?,,,) CCa4(x) or its dirivatives at x = 0,
+
+since Qi and R, are local functionals. We are using dimensional regularization,
+so that the Jacobian can be taken to be unity. We thus write the WT identity for
+W(“*7) (see Eq. (3.18)).
+
+              0 = j IdA dc ~Wi~;“C, - h&&&3cv                         + rl;‘2Yul 5,
+                   + terms of O(K’N’,             I’N’, N’2 v-.)} Exp i{**.>.                (3.23)
+
+We note that the WT identity of Eq. (3.23) is the same as the WT identity for the
+insertion of a gauge invariant operator, except for terms of O(K’N’, I’N’, N’2,...).
+Further, by transformation of the antighost field Z, -+ 2, + 62, (where 6T, are
+independent of fields), we obtain the equation of motion for the antighost field:
+
+             0=       [dA dc dC]{ai”DiDc, + N’(80/8?,)              + &} exp i{**-}.         (3.24)
+                  s
+Using Eq. (3.16) and the definition         of Dp[A], we may write Eq. (3.24) as
+
+                      0 = j [dA dc dZ]{atD;‘cs              + .f,} exp i{-es}.              (3.25)
+
+We can transcribe Eqs. (3.23) and (3.25) in terms of the renormalized                  sources:
+
+0 = 1pi &      + L&i          + $‘tL      [--i A] i.]       W”‘K 5, 5, K’, L’, N’l/ K,=L,=N,=O
+                                                                                             3
+                                                                                            (3.26)
+and
+                   0=         aja &       + &] W”‘[J,        5, %, K’, L’, N’].             (3.27)
+                          [           2
+  These can be translated in terms of the WT identity for proper vertices in the
+usual manner (and Eq. (3.26) simplified with the help of Eq. (3.27)) yielding,
+                             GAUGE    INVARIANT      OPERATORS                         171
+
+and
+
+                                                                         .           (3.29)
+
+
+Therefore, it is clear that {r,,[@, w, w]}~‘~ 1s also expressible in terms of the
+complete set of solutions of Eqs. (3.16) and (3.17), i.e., {OG’[@]} @ {O[@, w, CS]}.
+This completes the proof of the closure property in one loop approximation.
+
+D. Renormalization     of Insertion   of Operators    and the Closure Property   in Higher
+   Orders
+   Next, we shah consider the renormalization   of Green’s functions (and proper
+vertices) with one insertion of operators in higher orders; and show that the
+closure property holds to all orders. To show the closure property, it is sufficient
+to know how to renormalize
+
+                     rN!K=O=L,        %I          = = 7    Jg
+                                              KLo                K=L=o
+
+
+   We consider the complete set of independent                triplets of functionals
+{[O’P’[@, w, 81, Qp[@, w, w], Ry’[@, w, w]) (and these include gauge invariant
+operators) such that each member (triplet) of the set satisfies Eqs. (3.16) and (3.17).
+(Some entries in the triplets may be zero, e.g., there may be more nonvanishing
+Q/g) than there are gauge noninvariant operators, etc.) Then,
+
+
+
+
+                                                                                    (3.30)
+
+
+
+
+(q runs over the complete set). Thus,
+
+
+
+
+                                                                                    (3.31)
+172                                          JOGLEKAR                    AND            LEE
+
+
+where
+                                             Z,, = S,, + a * .zti,                                                                      (3.32)
+
+where a is the loop expansion parameter.
+   The generating functional of Green’s functions with a single operator insertion,
+in which all the internal subtractions up to one loop approximation   (for the three
+types of Green’s functions in Eq. (3.28)) have been performed, is expressed as
+
+        wj, E,E,K’, 1’9NJ
+            =        [a% dc a%] exp i{Zff              +   jiAi          +       (,C,         +       c&       +    NDZsQO(g)[A,   c, i’]
+                I‘
+
+                + ~i’(DiOc,+ N&,qQz!n) + Z,‘[--fr&wy                                                       + N,Z,,&‘l).                 (3.33)
+
+   We have expressed W in terms of the unrenormalized      sources only because the
+expression is simpler. The overall two-loop      divergence is to be computed by
+expressing the corresponding    generating functional for proper vertices in terms
+of renormalized quantities.
+   It is obvious that the definition of Eq. (3.31) can be extended to all orders
+simply by determining the renormalization matrix Z,, in successive orders:
+
+                                 Z
+                                     m
+                                         =    6
+                                                  BP
+                                                       +   az(l)
+                                                                   z1*
+                                                                             +    a2zt2)
+                                                                                           DQ
+                                                                                                  +        - ** ,                       (3.34)
+
+where a is the loop expansion parameter, provided the counter terms needed are
+restricted to the set {[O(g), Qjn), R:‘]};   in other words, if the closure property
+holds to all orders. In the following, we shall show that this is true.
+   The proof proceeds by induction; and is very similar to the proof for the case
+of the one loop approximation.       Let us assume that the closure property holds
+up to (n - 1)-loop approximation.        Then, Z,, is determined up to (n - 1)-loop
+approximation in Eq. (3.33). We note that under the transformation      of integration
+variables,
+
+
+
+
+                         8{-%[4 c, Cl + N,Z,,O’W,                                          c, ?I>= O[N21,                               (3.36)
+
+which is again a consequence of the fact that {O(fl), QiD), RpYZ)))satisfy the Eqs. (3.14)
+and (3.15). One can derive the WT identity satisfied by r[@, w, 6, K, L, N]. As
+                                    GAUGE    INVARIANT           OPERATORS                                             173
+
+before, the WT identity satisfied by single insertions                         of any of the operators
+(Oc’} 0 {@A, c, i;]} is the same viz.
+
+            sr, sr, sr, SrN sr, srN srN sr, 4
+          i-3q-SK,‘+ srp,6Ki’ SW, 6L, 6w, 6L,‘j K’=L’=O = 0. (3.37)
+  We equate the n-loop div,ergence on both sides noting
+
+  wN I                   = finite                                    = finite,         r < n -             1, (3.38)
+I SK,’ ! r-loop
+         K’=L’=N=,,                                   K’=L’=N=,,
+
+we get
+
+
+
+
+                                                                                                                   (3.39)
+                                                                                      K'=L'=o        '
+
+and thus
+                                                            div
+                                                                        ss srN                           div
+
+                                                K’=L’=,,    ;n          SW,   I 6L,    I K’=L’-otn             -   (3’40)
+
+
+  Similarly, the equation of motion for the T field has the sameform
+                                                                               div
+                                                                            ( .
+                                                                     K’=L’=,, 1~
+                                                                                                                   (3.41)
+
+
+Thus, it is clear that {r,[@, W, WI>: can be expressedin terms of the sameset of
+operators {OG1[@]}@ {O[@, w, w]>. Thus, the proof by induction is complete.
+
+
+                  IV.   FORM   OF THE       GAUGE        NONINVARIANT           OPERATORS
+
+
+  In this section, we shall show that the complete set of gauge noninvariant local
+solutions [14] of the Eqs. (3.16) and (3.17) can be written in the form
+
+
+
+
+                           + %oP, w, WI w,                 w, WI,                                                   (4-l)
+where F[@, w, W] and X,[@, w, W] are arbitrary local polynomials of @, w, w
+possessingthe appropriate ghost number and appropriate transformation proper-
+174                                JOGLEKAR      AND       LEE
+
+
+ties under global transformations of G and under Lorentz transformations. This
+form of the operators {O[@, w, ~1) will be the basis of our proof of “decoupling”
+in the next section.
+   Terms in Q[@, w, W, K, L] that vanish when multiplied by ai= do not have a
+counter part in O[@, w, W, K, L] as seen from Eq. (3.14). Therefore, we may
+choose to write O[@, w, W, K, L] such that
+
+                         SO[@, w, 2, K, L]
+                                           = Q&Z’, w, cii, K, L].                (4.2)
+                              S(&i&
+
+We shall find it convenient to consider Eqs. (3.14) and (3.15) at K = 0 instead
+of Eqs. (3.16) and (3.17). Replacing Qi in Eq. (3.15) by the expression (4.2) and
+setting K = 0, we obtain
+
+             !          --6s  6     2s      6          )
+                 y. -    sw, sL, + 6~li s(a,>if            O[@, w, 6 K Ll = 0.   (4.3)
+
+We define a new differential operator
+
+                                                                                 (4.4)
+
+which can be easily shown to satisfy
+                                         9’2 =    0                              (4.5)
+
+It is easy to see that all functionals of the form S’F[@, w, W, L] are solutions of
+Eq. (4.3). It is also easy to see that all gauge invariant operators are solutions of
+Eq. (4.3). Our objective is to show that the two types of solutions are the only local
+solutions of Eq. (4.3). Thus, we state our theorem:
+
+   MAIN   THEOREM.   The complete set of independent local solutions of the Eq. (4.3)
+with ghost number zero can be expressed as
+
+
+
+where F[@, w, &] are arbitrary local polynomials with ghost number (- 1). Here,
+the ghost number is defined as the d@erence between the powers of w and cz in the
+expression. {OG1[@]}’ refers to the set of gauge invariant operators not expressible
+as 9%; i.e., as (8.S?/&Di) Fi’ [14].
+  We shall prove first a lemma which we shall find very useful in the proof. The
+method is essentially similar to that employed by Dixon and Taylor.
+                                     GAUGE               INVARIANT                  OPERATORS                           175
+
+  LEMMA     1 (Dixon-Taylor).   Let 3 be a local d@rential operator in @, w, 6, L.
+Let it be possible to expand 9 in powers of some parameter /3 as
+
+                                        9(P) = A + BB + B”C,                                                          (4.6)
+and let 3(‘(p) satisfy,
+                                     g263 = 0,                          for arbitrary                      ,%.        (4.7)
+Then, all polynomial solutions of the equation
+
+                                                     YB> fmn                     = 0,                                 (4.8)
+where H(p) can be expanded as a power series in /3:
+
+                                             H(p) = c Hen)/+,                                                         (4.9)
+                                                                      TL=O
+
+can be expressed as
+
+                          H(P) = g(B) J(/%                                       .I@) = c gnF,                       (4.10)
+                                                                                        n=o
+provided that the equation A Y = 0 implies that there exists a X such that
+
+                                                             Y=AX,                                                   (4.11)
+where Y has the same quantum numbers as H.
+     Proof.   Equation (4.7) can be written as
+                                                                                 A2 = 0,                            (4.12a)
+                                                  AB+BA=O,                                                          (4.12b)
+                                             CA+AC+B2=0,                                                            (4.12c)
+                                                            BC + CB = 0,                                            (4.12d)
+                                                                  c2 = 0.                                           (4.12e)
+Equation (4.9) gives,
+                             AH'"'           +       BHW-1,               +      ("(n-2)               =       0.    (4.13)
+We have to show that P)              exists such that
+                             H(n)       =        AJ'")        +       JjJ("-1)             +       CJW-2).           (4.14)
+Let us assume that we have determined P                                          for n < r. We thus know that
+                          H@-1)         =        AJ(r-1)          +       BJ+2)                +     CJW-31,
+
+                          H(7-2)        =        AJ"-2,           +       BJ(r-3,              +     (79-4).         (4.15)
+
+595/97/I-12
+    176                                      JOGLEKAR                AND           LEE
+
+
+    Then, Eq. (4.13) yields,
+AH”’      z     -B[AJ’T-1’   +    BJ+2)      +       CJ’T-3’1        -       C[AJ”-2’             +        BJ(T-3)   +   CJ”-4’1.      (4.16)
+
+Using Eqs. (4.12) in Eq. (4.16),
+                                      AH”’       =     ABJ+1)                +    ACJ(r-2),
+
+i.e.,                                                                                                                                 (4.17)
+                                   A[H”’     -       BJW-1)          -       CJ”-2’1          =       0.
+
+
+We then can determine the desired Jcr) if the Eq. (4.17) implies that there exists Jc7)
+such that
+                       H(T) -  BJ(‘-1)  _ CJ(‘-2)  =   AJ’7’.                    (4.18)
+
+   Applying the same argument                    for        r   = 0, we learn that we can determine J(O) if
+the equation
+                                                        AH(O) = 0                                                                     (4.19)
+
+implies that there exists a J(O) such that
+                                                     H’O’        =   AJ’O’                                                            (4.20)
+
+   Thus, Eqs. (4.19) and (4.20), and Eqs. (4.17) and (4.18) imply that J(O) and J(?)
+r 3 1 can be determined successively if the equation AY = 0 implies that there
+exists an X such that Y = AX, proving the lemma.
+   Comments.    (i) If Eq. (4.11) holds, J(p) can be found. However,                                                            this J(p) is
+not unique, for we may add to J@) a polynomial K(p) such that
+
+                                                 w3)            fw       = 0.                                                         (4.21)
+
+In particular, K@) need not start as /3O, it may start as some positive                                                             or some
+negative integral power of p. If J(p) exists,
+
+
+
+is the most general expression satisfying %J’ = H. Therefore, there is no loss of
+generality in assuming that J(p) starts as PO.
+      (ii) We may use special cases of the lemma such as putting C = 0.
+     (iii) Given that H is local, the lemma does not make any statement as to
+whether J can be chosen to be local.
+   Now, let us return to the Eq. (4.3), which we have to solve. Let us expand a
+local solution PP’[@, w, W]
+
+&‘[@,         w, 6, L] = F(“[@]       + (i%), Qi(“[C’, w, c;j] + terms proportional                                           to L. (4.22)
+                                 GAUGE       INVARIANT      OPERATORS                            177
+
+(We have used Eq. (3.14).) We note that the terms proportional    to L involve at
+least two factors of o. Substituting Eq. (4.22) in Eq. (4.3) and comparing the
+coefficients of the lowest power in w, (3 (i.e., (6)O wl), we get
+
+                                                                                              (4.23)
+
+where,
+
+                                Qi”P1    =                                  .                 (4.24)
+                                                                  UJ=OJ=O
+
+
+Our method will be
+         (i)   To show that all particular         solutions    of Eq. (4.23) can be expressed as
+
+                                         WI = -%,iW@l>                                        (4.25)
+
+S,[@] being an arbitrary        local functional         (Theorem I).
+      (ii) To isolate all the solutions of Eq. (4.3) that must have a nonzero F[@]
+in Eq. (4.22). The rest of the independent solutions may be assumed to contain
+at least one ghost (w).
+     (iii) To solve for such solutions (containing                    at least one ghost) by using
+the Dixon-Taylor   lemma in two stages:
+  Step I.      We write Eq. (4.23) as
+
+                                                                                              (4.26)
+
+where go is defined in Eq. (2.10) and satisfies go2 = 0. We thus have
+
+                                         ~o(wuQi”=%.i)= 0.                                    (4.27)
+We define an operator
+                                  9 = g0 - covariance terms,                                  (4.28)
+
+where covariant terms are obtained by “varying”                  the free indices of the functional
+on which it acts according to the following law:
+
+                  (covariance   terms) AJ@, w, W] = -gt&+4j[@,                  w, W],
+                                                                                              (4.29)
+                  (covariance   terms) A,[@, w, w] = -gfBvk++4v[@,               w, ~51.
+
+It can be shown that, in general,
+
+                                                 92 = 0.                                      (4.30)
+178                                     JOGLEKAR       AND   LEE
+
+
+We note that
+
+                                                                                       (4.3 1)
+
+Using Eq. (4.31), Eq. (4.27) can be written as
+
+                                   +%J44mw -%,i = 0.                                   (4.32)
+
+This is the integrability condition for a solution of Eq. (4.23) to exist given Qi”.
+   Using Lemma A2 in Appendix A, we infer from Eq. (4.32) that
+
+                    WJ,Q~“C@I)= wsqJ,,,C~l Diy + w~,X~[@l Z,.i ,                       (4.33)
+
+where
+                         Yi”,BPl = c Y~~~!.i,+J@l%A, ... %.i,+z 7                      (4.34)
+                                        T
+with
+
+
+
+   It is shown in the Appendix              B that Eq. (4.33) implies that there exist local
+functions T and U such that
+
+              co,Qia = CO,T,~D,' + waU$So,j + solutions of %(w,Qiti[@]) = 0,          (4.36)
+
+where
+
+
+
+                                                                                      (4.38)
+
+  Therefore, the set of Qiu[@]‘s for which a solution to Eq. (4.23) exists, and
+hence, satisfies Eq. (4.32), can be divided into two classes
+
+       (9     {QiOLhassl
+                      = {Td!l          0 { G=%.,~.                                    (4.39)
+
+  They satisfy
+                                       QSu(class 1) Z0.i = 0,                         (4.40)
+
+and therefore, a particular solution F[@] for Qia in class 1 can be taken to be zero.
+       (ii)    Qia[@], which satisfy
+                                            3(q,Qia)    = 0.                          (4.41)
+                                  GAUGE    INVARIANT        OPERATORS                               179
+
+As shown by Dixon and Taylor, for each such Qia[@] satisfying                        Eq. (4.41), there
+exists a polynomial &[@I such that
+
+                                          w,Qia = S$[@].                                        (4.42)
+
+(These follow essentially by the use of the Dixon Taylor lemma for the operator 9
+of Eq. (4.28)) It is shown in Appendix C that S,[@] can be chosen to be local.
+Therefore, a particular solution of Eq. (4.23) may be chosen to be
+
+                                          F&q     = 9~*,S,[@].                                  (4.43)
+
+   We also note that the particular solution of Eq. (4.23) is unique modulo gauge
+invariant functionals.
+   Thus, we have proved Theorem I.
+
+   Step II. We note that because of the property F2 = 0, %‘sjP)[@](&~),     is a
+solution of Eq. (4.3). Therefore, we separate independent solutions of Eq. (4.3)
+in to two classes:
+
+  {&‘[tD,        w, w, L]} = {Ysj”‘[@](acz)i}          @ (O”D’[@, w, L3, L] - xs~p)[@](aci&},
+                                                                                                (4.44)
+where SIP) is related to F(n) of Eq. (4.22) by Eq. (4.43).
+  We note that
+
+              Fmp’[@](ac5)i   = q&P]       s;qq         + g(xJ) 3 t:.w
+                                                                   32 as@
+                                                                        z + ~o(acs)i si(p)
+                              = P[@]       - (&5), [%sj”‘].
+
+Thus, we see that
+        (i)     O’p)[ds, w, W, L] - S’Sj”)[@]          does not contain      terms   independent    of
+w, w.
+     (ii)       The terms linear in W, w are
+
+                                 (a~3)~ [Q;‘p’[@] co, - KSi’“‘[cD]],
+
+which are expressible         as (8~)~ (T$‘)Difl + I!,$~‘Z~,~) w, by virtue of Eqs. (4.39)
+and (4.42).
+   The problem is thus, reduced to finding solutions                    of Eq. (4.3) that contain    at
+least one factor of w, .
+
+  Step III.        We note that the operator           9’ can be expressed as
+
+                                       9’ = A + gB + g2C,                                       (4.45)
+180                                 JOGLEKAR      AND   LEE
+
+
+where
+
+                   A =    ,a&!&         - Dij@j                                        (4.46)
+                                   B
+                                    Di@j = %,i Lo,                                     (4.47)
+
+and 9’ satisfies CF2 = 0.
+   Solutions of our interest can be expanded in powers.of g (we may assume that
+the expansion begins as go)
+                          op,   w, 0, L] = Cg”O’n’[@,         w, CG,L].               (4.48)
+
+The Dixon-Taylor         lemma tells us that there exists a functional         F[@, w, W, L]
+such that,
+                            O[@, w, 6, L] = 9’F[@, co, w, L],                          (4.49)
+
+if the equation (Y[@, o, W, L] has the same quantum numbers as 0)
+                                   AY[@, w, 8, L] = 0,                                (4.50)
+
+implies that there exists a functional     X[@, w, W, L] such that
+
+                             Y[@, w, c& L] = AX[@, w, w, L].                          (4.51)
+
+Thus, we have to prove Eq. (4.51) given Eq. (4.50). To do this, we consider a
+scaling transformation on w and L:
+                 B = ld,          L = EL’,          @’ = CD,        co’ = w.          (4.52)
+
+  Then, in terms of the new variables Eq. (4.50) becomes (dropping primes)
+                          (A, + (l/ar) A,) Y[@, w, a&, a2L] = 0,                      (4.53)
+where
+                                   A,    = G%n(V~~~),                                 (4.54)
+
+                         Al = -Dij@                                                   (4.55)
+
+We note that in Eq. (4.50), we need to consider Y[@, w, W, L], which are local
+polynomials in G and L, and therefore, Y[@, w, or&, a2L] contains a finite maximum
+power of Q, which may be determined given the dimension of the operators we
+are interested in. Multiplying Eq. (4.53) by 01,we get
+                           (A, + aA,){ Y[@, to, aw, a2L]} = 0.                        (4.56)
+                           GAUGE   INVARIANT    OPERATORS                      181
+
+
+We further note that,
+
+                          (A, + “&I2     = 0,     for any 01.                (4.57)
+
+Thus, we may apply the Dixon-Taylor     lemma to Eq. (4.56) and deduce that there
+exists a local polynomial Y[@, w, W, L, a] such that
+
+                 Y[@,w, olw,c?L] = (A, + cd,) xp,, 0, w, L, a],              (4.58)
+
+provided for any local functional Z[@, w, W, L] with the same quantum numbers
+as Y {and therefore, O[@, w, W, L]) satisfying
+
+                               A,Z[@,   w, aw, L] = 0,                       (4.59)
+
+implies that there exists a local functional V[@, w, &,     L] such that
+                        zp, co,acTI,L] = A,V[@, w, aw, L].                   (4.60)
+
+Since O[@, w, a&, L] is proportional to at least one w, it must be Z of Eq. (4.59).
+(At this point we note that we could have written Eq. (4.53) as
+
+                        yYA, + yA,) YPt, w, G/y, L/Y21= 0                    (4.61)
+
+with y = l/a and N is some finite integer; and attempted proving statement of
+Eq. (4.60) for A, instead of A, . However since,
+
+                                                 6
+                                                                             (4.62)
+
+
+where @,,” is the longitudinal gauge field defined by,
+
+                        Gi = a+= + aieq=;            aiei= = 0,              (4.63)
+
+and thus, involves a derivative with respect to QL that is not a local functional
+of @. Thus, even though a statement analogous to Eq. (4.60) may hold, it is
+difficult to decide whether the corresponding V can be chosen to be local. In fact,
+there are instances when a V exists but can never be chosen to be local.)
+   To prove Eq. (4.60) given Eq. (4.59) we expand Z in powers of L:
+182                                  JOGLEKAR              AND      LEE
+
+
+Compare the coefficients (L)” on both sides of Eq. (4.59):
+                                                     ~Zh-tl)
+         (D@)i-A-
+            S(&i&
+                       Ztn)   +   (aG)i   ai'    r
+                                                               a
+                                                                    =     O,     0 < n < m -       1,   (4.65)
+
+
+
+
+   In Eq. (4.64), we can always assume Z(m)oll’**ir- to be completely                          symmetric in
+ol, -.- a, :
+
+
+
+  We will begin with Eq. (4.66). We expand Ztnz) further in a&:
+
+
+
+where we may choose
+                                                                                                        (4.69)
+
+Here, A is the total antisymmetrizer            of its arguments:
+                                     A = (I/r!)                c f&P,
+                                                               P
+
+
+6, = fl, according as P is an even or odd permutation of (1, 2,..., I).
+   An application of the reasoning of Lemma Al to Eq. (4.66), taking due account
+of the antisymmetry in il ,..., i, , leads to the decomposition
+            z~vn.r~l...am = Z’“‘“’                                                                      (4.70)
+              Z1.“2,          i,...iF + (AlPI *.*B,l <:::~~I ‘fi’f:                        8:: 9
+                                          /
+with
+                                    z;~~.yqDq,                     = 0.                                 (4.71)
+
+We may assume that Z’ does not contain terms -ai.                              , s = l,..., r. The reasoning
+of Lemma Al tells us that
+
+                                                                                                        (4.72)
+
+where
+                                                                                                        (4.73)
+                               GAUGE INVARIANT           OPERATORS                           183
+
+and
+                    SP, , j, *-*jJ WjJ’pr:::c”J, = 0,                1 <s<r.              (4.74)
+
+Therefore, W(p) is completely antisymmetric in il ,..., i, , symmetric in i1 ... j, ,
+and satisfies the constraint, Eq. (4.74). We denote by e the identity element of
+the symmetric group S,.,, on r + p objects, so that
+
+
+
+The identity element e, has a resolution in terms of Young operators Yc! where
+ r’s are standard Young tableaux [ 131. We order the r + p induces iI ,..., i, ,
+ji ... j, in this order. Then, the only Young operators that do not annihilate
+  Wi, ’ ’ ’ i, , ji ... j, with the given symmetries, Eqs. (4.69), (4.73), and (4.74), corre-
+ spond to Ihe Young tableau I’, shown in Fig. 1. Therefore, we may write Eq. (4.75)
+ as
+
+                           wil...i,,jl...i,   = f     Yr8wil...il,j,...ip   )              (4.76)
+                                                S=l
+
+
+
+
+FIG. 1. Young tableaux r, , s = I,..., m whose Young operators do not annihilate W61...“l,fl...j .
+                                                                                                I)
+
+where the Y,‘s normalized         to be idempotent:
+
+                                          yryr, = KJr~ *                                   (4.77)
+
+Using Eq. (4.76) together with Eq. (4.72), we can write
+184                                                       JOGLEKAR                AND           LEE
+
+
+where      VrnsT,*) satisfies the symmetry                               conditions
+
+                                     A& ... I&T+II                       VZ~:~i,~l,kl...kp--l             =      0,                       (4.79)
+
+                                     $b             *.. ks-21 V~~:Tiv$I,~l...~gMI = 0,                                                    (4.80)
+and in fact,
+
+                                                                                                                                          (4.81)
+
+
+
+
+                                                                                                                                          (4.82)
+
+
+
+              u(m+l) = z2 (a6ji,                         .. wjjs           (l/b         + 1))(-4m,                    ... B,i J;;;:::;)
+
+
+                                x   a;;      ...      a;:LeI       -..    L,~L~,                                                          (4.83)
+
+Likewise,     we define
+
+                   v(")p, w, am, L] = v(~)~~-~q@,~, awl L,, ... Lmm.                                                                      (4.84)
+
+  What we have shown                  so far is that, given
+
+                                                   (D@)j (s/s(aciq,)                    2F            = 0,                                (4.85)
+
+there exist Vfnz)and Um+l), such that
+
+                  Z(m) = (Otqi (s/s(aG)j) v(m) + (afs)j a,=(s/sLJ tP+l).                                                                  (4.86)
+
+Further,     note that
+                                             (Lxqi (s/s(ae)j)                         cP+1’           = 0,                                (4.87)
+
+as evident from Eq. (4.83).
+  Now, assume that
+
+            z(n) = (0~)~ (s(s(a6),) v(n) + (a6ji aiq6(6L,)[u(n+l) + vfn+lq,
+                                                                                                                                          (4.88)
+                                                                                                       V(,m+l)         E   0.
+                         (oqj             (s/s(ac+)            u(n+l)             =     0,
+                                GAUGE          INVARIANT           OPERATORS                                  185
+
+Then, by virtue of Eq. (4.65), we have
+
+        (mqi    (s/s(acG),) Z’n-1) + @c$ a,qs/sLJ{(D@),                        (S/S@GJ)j) v(n)}       0, (4.89)
+
+because
+                                       {(&.&      a&s/sL,))2          = 0.
+
+Equation       (4.89) can be written     as
+
+                    (mqi   (Sp@,)J{Z’“-1’                - (&)j      aj”(s/sL,)     v(n)} = 0.            (4.90)
+
+This is the same equation          as Eq. (4.85). Therefore,                      there exist V-l)    and iYn)
+such that
+
+           Z-1)      = (LNqi (s/s(aG)i)          v-1)        + (&i& &“(S/SL,)[V’”            + W)],       (4.91)
+
+with
+                                    (D@)i (s/s(acs))               V(Q) = 0.
+
+Thus, our inductive        argument      is complete and it terminates                     when 12- -l=Ois
+reached. That is
+
+                                                                                                          (4.92)
+
+where
+
+                                        v = f             (I/n!)    f-1,
+                                                  Tl=O
+
+
+
+                                        u = 2 (l/n!)                U’n+l).
+                                                  7l=O
+
+
+  This completes the proof of Eq. (4.60), and noting the arguments given between
+Eqs. (4.48) and (4.60), we conclude that all the solutions of the Eq. (4.3) containing
+equal numbers of ghosts and antighosts and at least one of each can be expressed
+as VF[@, w, W, L]. Since we had shown earlier that all other solutions with an
+equal number of c, E’s can be expressed as, {YF[@, w, G,]} @ {OG’[@]}, the Main
+Theorem is proved [14].
+  We may now expand F[@, w, 63, L] as
+
+                        F[@, co, 6, L] = F[@, w, w] - L,X, + O(L2).                                          (4.93)
+Then
+                            ss 6                      SS
+                                 s(ae)i 1 FPP,w, 61+ 6wa A’,[@,co,~1.
+~'W-f', w, 8, LIILzo (go + -&Pi ___                                   (4.94)
+ 186                             JOGLEKAR AND LEE
+
+                V. STRUCTURE OF THE RENORMALIZATION MATRIX
+
+   In this section, we shall prove another important result. It was shown in the
+last section that the complete set of gauge noninvariant operators that mix with
+a given set of gauge invariant operators can be expressed as
+
+                                                                                    (5.1)
+
+ where F and X, are arbitrary local polynomials of appropriate ghost number and
+ appropriate global and Lorentz transformation       properties. It is clear that one
+ can expand the divergence in r,[@, w, W] in the basis that consists of all inde-
+ pendent linear combinations of the operators {OG1[@]}’ @ {O[@, w, w]}. It is
+ important to recognize the trivial fact that the matrix elements of the matrix Z,
+will depend on the basis one has chosen; and therefore, any statement about
+relationships of matrix elements of Z with its eigenvalues are bound to be basis
+ dependent, in general.
+   In this section, we shall show that mixing with gauge noninvariant operators
+(and ghost operators) can be made irrelevant in the limited sense that there exists
+a basis of operators such that when the matrix Z is expressed in this basis, the
+diagonal submatrix ZG’ of Z yields, in fact, the correct eigenvalues corresponding
+to all eigenvectors of Z that involve gauge invariant operators. The basis is, in fact,
+{OG’[@]}’ @ gauge noninvariant operators of the form O[@, w, ~31 of Eq. (5.1);
+and the diagonal submatrix ZG’ relates the divergences in the insertions of gauge
+invariant operators that are proportional to {OG’[@]}’ when expanded in this basis.
+   To show this, it is sufficient to show that the divergence in the insertion of a
+gauge noninvariant operator of the form O[@, w, &] of Eq. (5.1) does not contain
+terms proportional    to gauge invariant operators {Ocl}’ when expanded in the
+above basis.
+   We consider the generating functional of Green’s functions
+
+W[j, N] = j [dA dc dC] exp i{S[A, c, C] - $(jJA]}z     + jiAi + NO[A,    c, TJ),   (5.2)
+                      Ss SF[A, c ,?I
+          OIA, c, 4 = ni   S@&       + g a X&k        c, 4 + YoF[A, c, cl.         (5.3)
+
+To see if gauge invariant operators appear in the divergence with a single insertion,
+it is sufficient to compute F,[@, w = 0, d = 01, i.e., it suffices to consider W as
+a function ofj omitting the dependence on ghost sources. We perform an N-depen-
+dent transformation of the integration variables:
+                       Ai = Ai’ - N SF[A, c, ?]/S(a& .
+                        c, = c,’ - NX,M c A         z zzz 2’.                      (5.4)
+                               GAUGE       INVARIANT        OPERATORS                              187
+
+We also note that F and A’, are local functionals                       and the Jacobian J of these
+transformation is
+                                                       6F
+                               In J = N       ( SAj s(a+         255
+                                                                        SC, 1’
+
+and In J is proportional to a4(0) or derivatives of 84(x) at x = 0. We shall use
+dimensional regularization, wherein a4(0), or are interpreted to be zero, Thus,
+W[j, N] is given by
+
+       W[j, N] = J’ [CIA’ dc’ &‘I exp i [S[A’, c’, Z] - i q0 [aim [A,’ - N-&$-]I”
+
+
+
+
+   Omitting     primes, we obtain
+
+        1 8Wj, Nl     G (qj
+       WA   m     N=O
+
+
+
+
+   Next, consider
+
+                 (F)j   = s [dA dc dC] F[A, c, Z] exp i{2’&4,                c, 21 + j&I.          (5.8)
+
+We perform the BRS transformations on the integration variables given in Eq. (2.6)
+and equate the total change to zero. Noting that the Jacobian of the transformation
+is one, we obtain.
+
+0 = j [dA dc dc] /,goF + &                 ~oajEAjaio - ijiDivmF!           exp i{=%rf + jiAi},    (5.9)
+                                       z
+i.e.
+                                                                                                  (5.10)
+
+Using Eq. (5.10) in Eq. (5.7), we get
+
+                           <O?j= -ji (&)j                    + lidD?coF)j.                        (5.11)
+188                                    JOGLEKAR   AND      LEE
+
+
+We write
+
+                                                                                  (5.12)
+
+and thus obtain,
+
+
+
+                                                                                 &3)
+The last term vanishes since
+
+                                   -
+                                       SF -
+                                                                                 (5.14)
+                                       SC,
+
+                                                                               = 0.
+
+
+
+                                                                                 (5.15)
+
+
+                                                                                 (5.16)
+
+
+                                                                                 (5.17)
+
+   gi[+] is to be renormalized in each loop approximation   {gi[~]}iiv, the overall
+divergence in %[c$] expressed in terms of renormalized fields and parameters,
+always can be expressed in terms of a complete set of functionals with the same
+Lorentz and global transformation   properties and dimensions as &[$I. Let this
+set be {FJ(“)[@]}. Then
+
+
+
+Thus
+
+                         {(0)j}p         = 9            c &‘Fj”‘[@].             (5.19)
+                                                         P
+But SJZJS@~ Fi*)[@] are precisely the ghost independent terms of the gauge non-
+invariant operators in our basis: WFjp)(@      . It should be noted that, in the set of
+gauge noninvariant operators 3’F, F runs over all functionals of the appropriate
+kind. Therefore, {(0)}d,‘” [CD, w, a~] is expressible as a linear combination of O’s
+in Eq. (5.1) not including O,,‘s.
+                             GAUGE         INVARIANT            OPERATORS                                189
+
+  We further note that in Eq. (5.1), functionals F[@, w, 631 and X,[@, o, W] are
+uncorrelated, so that it is convenient to separate the basis into two parts.
+
+    class I    operators:   &&+                           9oF
+                                                                                                    (5.20)
+                                           ss
+    class IT    GNI operators:         z             X,[@, a, 4.
+                                                oi
+
+(Class I operators, in addition to GNI operators, contains GZ operators that have
+the form S&/SAiFi[A].)   The divergence in the single insertion of a class II operator
+can be expanded in terms of class II operators only. To see this, consider the
+generating functional:
+
+   W[j, (, (, N] = / [dA dc dE] exp i [#[A, c, T] - k{&}’                      +jiAi     4 Ng      X,(
+
+                       + f&, + CiL *                                                                (5.21)
+
+  By performing     a transformation            on c, only
+
+                                           c, -       c, + NX, ,                                    (5.22)
+
+and noting that the change in the Jacobian is zero [X=,, N @(O)] in dimentional
+regularization. We obtain (dropping primes)
+
+W[j, 4, $, N] = 5 [dA dc dC] exp i{$4,                   c, 21 - K2 + jiAi + c,& + &c, + &NX,)
+                   + O(N2) terms.                                                                   (5.23)
+Thus,
+
+
+
+                                                                                                    (5.24)
+
+(XU)j,E,z is a functional of Sp, w, W. It is to be renormalized                     as we renormalized    F.
+(See the discussion following Eq. (5.17).) Thus,
+                                                                     div
+                   {r&D, w, G]}d,iv= w1 SW, 5, f, Nl
+                                                     I SN       N=O 1n
+                                             = SS[@,co,w] {(z-wc,)}d,‘“,                             (5.25)
+                                                  hx
+and is expressible as the sum of class II GNI operators                     only.
+190                                  JOGLEKAR AND LEE
+
+  We have thus shown that the matrix Z has the structure:
+                                          GZ’        I          II
+
+
+
+
+                                     I I-
+                             GI’         zG1'
+                                      _________
+
+                      z=        1           0                                             (5.26)
+                                      _-_------__----
+                               11         0          0    /
+
+   It is obvious that eigenvalues of ZG” are also the eigenvalues of Z. Furthermore,
+the eigenstates of Z corresponding to these eigenvalues are the only eigenstates
+that involve a gauge invariant operators {OG’}’ in this basis. Thus, the eigenvalues
+corresponding to the eigenstates of Z that involve a gauge invariant operator in
+this basis can be obtained only by computing ZG”. One cannot, however, compute
+these eigenstates simply by knowing ZGi’. In practice, ZG” can be computed by
+finding some distinguishing property of (OG’[@]}’ that sets it apart from the gauge
+noninvariant operators with which it mixes. For example, in the case of the twist
+two operators, only the 2-point function of OG”[@] [F.T. (SOG’[@]/SsP,%%DV~)]
+contains terms proportionvl to g,, , while the GNZ operators with which it mixes
+do not.
+
+                                        APPENDIX     A.
+
+  In this Appendix, we wish to show that a local solution of the equation
+                                    =%.d@l~i”Pl = 0,                                       (Al)
+has a structure discussed in Lemma A2 below. We begin with a series of definitions
+and a lemma.
+  We define
+                       Dii = &da2g,v - W> s4(x - 9,                            @a
+where i = (01,t.~,x) and J = (/3, v, v). Note that
+                                   L?$,<j[jP= 0] = -Dij         e                          (A3)
+We define the transverse and longitudinal          projection       operators, Tij and Lii by
+                           Dij = ai2Tii ,         Sij = Tii + Lij )                        (A4)
+which satisfy
+                            TiRTkj = Tij ,     LikLkj = Lij 3                              645)
+                                 TikL,.j = L,,Tk, = 0.                                     (‘46)
+  We consider first a simpler case.
+                                   GAUGE        INVARIANT          OPERATORS                                       191
+
+    LEMMA     Al.    Any functional            Pia[@] that contains at most n fields,                         and that
+satisfies
+                                               P&E’] DijQj         = 0,                                           (A7)
+can be represented as
+
+                                                                                                                  648)
+where
+
+
+
+with
+
+
+
+   The symbol &)           denotes summation                 over permutations                of the r + 2 indices
+(4 , 4 ,..., i,+J.
+    Proof of Al.       It suffices to consider a monomial
+
+                                  P,“[@] = P;,il*..i,@ilOi*                 ... Qi, .                            (Al 1)
+The kernel Pifli,...i, is completely                symmetric             in the II indices (il ,..., i,>. Equa-
+tion (A7) then implies
+                                           c        f’iqil...i,Di,i,,+,      = 0,                                6412)
+                                    {i,*....i,+,)
+where the summation is over permutations of the n + 1 indices {il ,..., i,,,).
+   We can decompose P&l...i, with respect to each of its indices using the partition
+of identity (A4). For example, we write
+
+                             PF,il-..i, = LikPi,i,...<n + TikPz,<l...i, -                                        W3)
+The first term on the right does not contribute at all in Eq. (A12), and yields the
+first term on the right of Eq. (A8), Zar6aiBwith a suitably defined functional PB.
+From now on, we shall assume that P;i,...i I is transverse with respect to i.
+    We shall write
+
+                             p~,jl...jn = f       C P~,(~~...i,;j,+l...j, 3                                      6414)
+                                          s=o(il.. . .i,}
+where Pfv~...i,;i,+l .. .. .i tais transverse with respect to ii , I < j < s, and is longitudinal
+with respect to ij , j 3 s + 1. Substituting Eq. (A14) in Eq. (A12) and setting
+
+               PT!~~~..~s:ia+l...i,,= V:~~~,...j~;8,+,...A,~ji~j,i,            ... ~,,,,a;;      . . . 8; ,      (Al9
+
+59519711-13
+192                                JOGLEKAR    AND   LEE
+
+
+we obtain
+                                                                   4: = 0.        (Al@
+     For s = 0, we must have
+
+                                                                                  (A171
+For s # 0, we may set, without loss of generality,
+
+                                                                                  6418)
+
+The structure implied by Eqs. (A9) and (AlO) follows from (A17) and (A18). This
+completes the proof of Lemma Al.
+   For later use, we note the special case when P,“[@] is restricted to be a local
+functional. This means that
+
+              P;,~~...~, = jya,) 84(x1 - x,) syxil   - .$,) ... 6yxin - x,),     6419)
+where f(3,) is a polynomial in differential operators. In general, a functional        of
+the transverse and longitudinal components of the vector field Qi :
+
+
+or
+
+                               QI* = (aji - ai & ai) tDsi,                       WO)
+
+
+
+
+is not a local unless GiT and QaL enter the expression (i) through the combination
+!DiT + k3jW@WL, or (ii) in the form a2GjT = DjiGi and a2aaL = a$Di .
+   Consider the term in Eq. (A14), which contains the highest power of QpiT, i.e.,
+the term with s = n. In this case, Eq. (A18) reads
+
+
+
+Suppose now V$!$, has a factor aG2a<’ ... a;: (note that Vji,...j, must be sym-
+metric in j, ,..., j, .) Then, Eq. (A21) tells us that Vijl...,, must have a factor aT2,
+and consequently, from Eq. (A15) Py,r.‘.,i ; is not local. Therefore, V$?.jn must
+be local. Repeating this argument, and taking into account the points (i) and (ii)
+above, we find that for a local functional satisfying (A7), V$T!tv+l must be a local
+functional of ai3Di .
+                            GAUGE INVARIANT     OPERATORS                      193
+
+  We are now prepared to prove the Main Lemma.
+
+  LEMMA    A2.   Any local functional Pia     of Qj that satisfies:
+
+                                 P,“E@l%,i[@l = 0,                          (A221
+can be representedas
+
+                    P,“[@] = J?[@] Di”[@] + Y$[@] 9&q,                      (~23)
+
+where Xafl and Y,pjare suitablejiinctionals of !Dk .
+   Since P,“[@] is restricted to a local functional, we can meaningfully discussits
+dimension. Since P& has a definite dimension, we may assume,without loss of
+generality, that P,*[@] has a definite dimension N. We prove this lemma by means
+of the previous one.
+  Proof of A2.    We expand Pi”[@] as
+
+                           P,*[@] = 5 PTjl...j,@jl .‘* @jn)                 (~24)
+                                     ?Z=O
+
+
+
+and substitute it in Eq. (A22). We equate the coefficient of lowest power of @ to
+zero and obtain
+                              Piti[6i = 0] DijQj = 0.                       (A251
+
+By the previous lemma, we have
+
+                                                                            WW
+We now define
+
+                           P,““‘[@] = P,“[@] - XoODis[@].                   (~27)
+
+P:(l) is a local functional with dimension N, begins with first power of @, and
+satisfies
+                                P;‘q@] L?O,i[Cq= 0.                         WW
+
+Obviously, this process can be continued. Assume Prtn) is a local functional of
+dimension N, begins with @*, and satisfies
+
+                                Pi”‘“‘[@] 90,i[@] = 0.                      (f-9)
+
+Let the @ term of PpCn)
+                   z be [Pipcn)].Then,
+                                  [P$la)] D,$jj = 0.                        6430)
+194                              JOGLEKAR      AND       LEE
+
+
+Then, by Lemma Al, we have
+
+
+
+
+where Xa@fn)and V”fn,r) are nth and (n - r)th order functionals of Qi of dimension
+N - 1 and N - 3r, respectively. We then construct
+
+   p$n+1) [@‘I = P,“‘“‘[@] - X”R(n)[@] DiR[@] - -f v;$‘f:$pq        Ij: .EpOo.j*[@] (A32)
+                                                         C=l        s=1
+
+
+                              Pp+q@]        90,i[@] = 0.
+
+which is a local functional of dimension N and begins with @+I.
+   This process must terminate at some step, because the only solution to Eq. (A30)
+for a fixed dimension N and large enough n is zero. Suppose that [Pi”‘“‘] = 0 for
+n > m. Then, Ptcm’ = 0.
+   We can solve the system of equations [A321 for n = 0, I,..., m - 1 for P.”* = P:(O)
+                                                                                   2
+and find that it has the form
+
+                    P,“[@] = XNB[@] D,y@] + Y;[a@] g&D].
+
+
+                                    APPENDIX         B
+
+  DEFINITIONS.    We define the symmetrizer S[i, ... i,] by
+
+
+
+
+where the summation is over permutations of the p indices {il *** ip} and A denotes
+collectively other indices. We define the complement S[i, ... i,] of S[i, *.. i,] by
+
+                            S[i, *** &I + Sk *.* i,] = 1.                            032)
+
+The symmetrizer and its complement           are projection    operators and commute
+with 9 of Eq. (4.28)
+                                s2 = s,    9 zzzs,
+                                                                                     033)
+                                  ss = 0 = ss,
+                                [ST?,
+                                   S] = 0 = [9, S].                                  (B4)
+                                  GAUGE     INVARIANT       OPERATORS                   195
+
+   LEMMA       Bl.    All solutions of
+
+                                     f    C,Yi,...fr...in[@] Dir = 0                  (B5)
+                                    r=1
+
+can be expressed as
+
+                                                                           .. .       036)
+
+
+with
+                                     S[Yl . . . rt] E(w-4      = 0.
+                                                                                      (B7)
+   (A hat denotes the absence of that index.)
+   Proof of Bl. The proof proceeds much the same way as the Lemma A2 in
+Appendix A. We can always assume that CY has a definite dimensions. We assume
+that C:...i,...i begins with a term -djm. We denote the Qjm terms in 0’ by Pm).
+Equatiig the%” terms in Eq. (B5) to zero we obtain
+
+
+
+Now     C’!““.                                         can be expanded in powers of momenta
+assoc~atenti’~~~~i~,{~}.   7 . c “2,...i,...i,,il...jm
+                       1 .. n , which are independent. We write
+C$!..,...i,    = C;jl?.ir...in + C a;pciYpi!$p...inf 1 a~~a~ai",ci:g~!~',8,Y...i,
+                                                                        + ... . (B9)
+                                 ),                  PY
+   Thus, Eq. (B8) implies
+                                               c;i(~l.r,...i, = 0                    @lOI
+
+                                   S[y, a] C~~!T’irlpi, = 0.                         W 1)
+
+                           Sly,   ... YJ c~~;::ur;,y...l*...“,
+                                                          = 0,          etc.         0312)
+                                                        f
+We then form
+
+
+
+
+Thus, C@m+lJof Eq. (B13) satisfies Eq. (B5) and begins as terms P+l. This
+process can be continued, in each step increasing the power of 0 in Cy by one.
+196                                 JOGLEKAR AND LEE
+
+The process will terminate when the power of @ exceeds the dimension of 0’.
+Then, Eq. (B13) together with its analogs imply the structure of Eq. (B6) for Cy.
+
+  LEMMA       B2.   Supposea local functional P,[@, w] satisfies
+
+                            LY(PJ@,w]) = W,A+[@, w] DiY[@],                         (B14)
+where Pi may carry additional indices. Then there exists a local functional Z6[@, w]
+such that
+                     3(Pi[@, w] - Zfl[@, w] DB[@]) = 0.                        (BW
+  Proof ofB2.        Equation (B14) implies:
+
+                                 ~(w,XoLy[@,w]) Diy = 0.                            0316)
+
+We multiply     Eq. (Bll)   by @. Since aiUDiy = M”Y[@] is invertible,   we have
+
+                                         qw,Jy      = 0.                            0317)
+
+We can now apply the Dixon-Taylor      lemma to Eq. (B17). This, together with the
+discussion of locality in Appendix C, implies
+
+                                      w,xmv = qzq,                                  @W
+for some local Zy[@, w]. Now, since %(DiY) = 0,
+
+                             S[ZB[@, w] Dp[@]] = w,XDLyDiy                          0319)
+                                                                                   Q.E.D.
+
+  LEMMA       B3.   Given the equation
+
+                                                                                    0320)
+
+we can always redejine CTl...rV...in without altering [EL, C~...p,...i,D:,,] such that
+
+                                 9[C&..I,...i,[@,   WI] = 0,                        0321)
+
+where the C’s are local functionals and may carry additional indices.
+
+  Proof of B3.       Eq. (B20) implies
+
+                                 El ~(C&..~~...~J DL = 0.                           @W
+                                         GAUGE        INVARIANT           OPERATORS                                  197
+
+Lemma Bl as applied to Eq. (B22) implies
+
+                                                                                                                   (~23)
+
+
+with
+                                              Sh       . . . rt] EY’““t         = 0.                               (~24)
+
+Henceforth, we suppress suffixes whenever                           inessential.
+  We define
+                                                                          n-t
+             E ‘Yl”‘Yt = S[y, . . . Yt-l] &,l                  . . . rt] 1 EYl”“‘tf~DYtl-1 . . . DYt+v             W5)
+                                                                          p=o
+
+with
+                                                         S[y] = 1.
+
+Then, IP%“‘Yt satisfies
+                    i$,,     . . . rr]     E”‘l”‘Yt      =    0,          2<r<t,            t>2,                   @26)
+
+because
+
+       %9 ... rrl &             ... rtl = SLY,-.* rtl SCYI... rJ                       0,           for   r < t.   (B27)
+
+Further,   using
+
+                                                                                        . Ynl,                     W-8)
+
+and Eq. (B24), we find that
+
+                                  h”‘YtD%             . . . DYt = c        EYl”‘YtD%   . . . D’t.
+                           CE                                                                                      (~29)
+                           t=2                                      t=2
+
+Thus, Eq. (B23) implies
+
+                                                                                                                   @30)
+
+or
+                   s[ylyz] CJ2 (E’WF’tD~S . .. D”‘) = G&E+‘2) = 0,                                                 @31)
+                             t=2
+198                                       JOGLEKAR       AND      LEE
+
+
+where use has been made of Eq. (B26). Repeating this process we find that
+
+                                 g(E ‘yl-yt> = 0,              2<t<n.                                    (~32)
+By the Dixon-Taylor          lemma, therefore, there exist FYI**‘Y~,such that
+
+                                          E W1”*?‘t= @JFYlYJt,                                           (B33)
+with
+                                       S[Yl . . . rt] p”“t        = 0.
+                                                                                                         (B34)
+We can write Eq. (B23) as
+
+                                           wq.:.,/..inl        = 0                                      (B35)
+with
+
+
+
+and
+
+
+
+on account of Eq. (B34).                                                                               Q.E.D.
+
+   LEMMA      B4. Let a set of local functionals                        B,“14..,7...in[@] (1 < r <n)      and
+A;l...,,[@l    satisfy
+
+                                zl &‘;..I,...~~D:~ = A&..s,,$&                 .                        (B37)
+
+Then, there exist local functionals C;IY..ir...illk[@] such that
+
+                        f    B:;. .. r,. ,.i,,DTr = iI   C:,g. .r,. . .i,,&.kD;,   .                    (B38)
+
+A, B, and C may carry additional indices.
+   Proof of B4. Since L& and Dia have definite dimensions, we may assume
+that A and B have also. We assume that A begins with a term @--I and B with Qzm.
+We expand qbm-l terms in A and P terms in B in powers of independent momenta
+associated with the points (iI ... i, ..* ill):
+
+   A$.;:!     = q?:;!       + C a:sz;?&.             +, + C a;Ba&4:y!!;7;&.i, + -as.                    W')
+                                                             94
+                               GAUGE     INVARIANT       OPERATORS         199
+
+We now compare the coefficients of Qrn in Eq. (B37) and thus obtain,
+
+
+                                                                         0340
+
+with
+                                                                         (~42)
+
+We substitute the expansions of Eqs. (B39) and (B40) in Eq. (B41) and compare
+coefficients of various independent polynomials of momenta and obtain a set of
+equations:
+
+                 C A~~...i,k,il...fs...jmDlcjs = 0,
+                  s
+
+             C A~~...ip...ink,jl...fll...jmDICis = BiT...tp...i,,.(i}    (B43)
+              s
+
+
+
+
+From Eqs. (B43) it follows that
+
+
+                                                                         0345)
+
+We define,
+
+                                                                         0346)
+
+and
+
+                                                                         0347)
+200                                             JOGLEKAR              AND        LEE
+
+
+It is clear that A’oLrnl and B’pa[m+ll may contain terms that go as Grn-l and @,
+respectively. But they satisfy
+
+                                     A;,“!y&D,pj                  = 0 + Oppm+l]                             (B48)
+and
+
+                                                                                                            (B49)
+
+From the proof of Lemmas Al and A2, we know that given Eq. (B48) we can
+always construct a local functional H;l...i,k[@] such that
+
+                                                     H;l...i,,,=&,,         = 0                             WO)
+                                          H:...i,k      = A;$?;nk + O[@m].                                  (B51)
+From           the proof of Lemma (Bl)                   we know            that there exists a local functional
+J?”Z1’..P,...i,k  [a] such that
+                                                T Ji;..+..i,kD;,,                = 0                        (~52)
+
+and
+                                                                                                            0353)
+Then we form,
+                                   Ad”1         =     AP[“]’      _   Ho     -        Opq                   0354)
+                               B~~[~+ll         =     Boa[m+l]'       _     Jo    -     o[@+q,              0355)
+which satisfy Eq. (B37) viz.
+
+
+
+This process can obviously be repeated. Each step increases the power of @ in A
+and B by one; while their dimension remains constant. The process terminates
+when the power of CDexceeds their dimension. The structure of Eq. (B47) and its
+analogs lead us to the statement of Eq. (B38).
+  We consider a local polynomial functional &,[a,       w]. Here, A denotes the
+additional indices (if any) collectively. Let the power of w in QiA be p. Let
+D = dim(Qi,). We define dim’(Qi,) = D - p.
+
+     LEMMA         B5.   Let
+                                                     (SQi,) %.i = 0.                                        0357)
+                                GAUGE     INVARIANT     OPERATORS                            201
+
+Then, there exists a local functional         PiA[@, w] such that
+
+                                        w&4     + PiA) = 0,                                (B58)
+                                                PiA$PO,i = 0.                              (BW
+   We note that QiA and PiA have the same power of w and the same dimensions.
+   In other words, given Eq. (B57), one can redefine QiA such that 9QiA = 0
+without altering QiaP& .
+   We shall prove the lemma by induction. We shall omit the additional indices A
+whenever unessential.
+     Proof of B5.   According     to Lemma A2,
+
+
+with
+
+
+
+with
+
+
+      (i) Suppose that dim’(Qia) < 3. Then,                 Yii = 0 and the proposition   is true
+for dim’(QiA) < 3 by virtue of Lemma B2.
+     (ii) Let us assume that the proposition                is true for dim’(Q,,)   < N, for all
+possible A and all possible p > 0.
+     We wish now to prove it for dim’(QiA)            = N. From Eq. (B60)
+
+                                (9X,)    DiY = -%(Y<j)’        2o.j .                      (B63)
+According    to Lemma B4, there exists a local functional               WTj such that
+
+                                         9x,     = w,p!qj                                  (B64)
+or
+                                        3( Wyj) c5fO.j = 0.                                (B65)
+    Since dim’( Wyj) = dim(X:J - 3 = N - 4, we can apply the proposition     of
+this lemma to Eq. (B65) to conclude that we can always redefine (if necessary)
+ W,j without altering Wyj-Lpo,j such that
+
+                                           9( W,j) = 0.                                    W6)
+We can apply the Dixon-Taylor            lemma and write
+
+                                          w,j = 9x,, .                                     (B67)
+202                                        JOGLEKAR         AND    LEE
+
+
+Therefore, from Eqs. (B64) and (B67),
+
+
+or
+                                                                                    @@3)
+with
+                                                                                    (B69)
+     Substituting   Eq. (B68) in Eq. (B60), we obtain,
+
+                           9Qi = Xy”D<y + (XyjDiy + Yij) 9o.j                       (B70)
+where from Eq. (B69)
+                                             9(&O)         Diy = 0.                 (B71)
+By Lemma B2, there exists a local functional                      Tvo, such that
+
+                                                 x,0 = cqT,O)                       (~72)
+or
+                           fe(Q, -         TyoDiy) = (X,jD,y          + Yij) Zo,j   (B73)
+and thus
+                                ‘3(XyJD:         + Y,j) gosi = 0.                   (B74)
+Further, dim’(XyjDiY + Yij) = N - 3. Therefore, we may apply the proposition
+to conclude that there exists a local functional Pij such that
+                                                 PijZo,j     = 0                    (B75)
+and
+                                  g(XyjDi’         + Yij + Pij)          = 0.       (B76)
+From Lemma A2, we may express Pij as
+
+                                                                                    (B77)
+
+with
+                                                                                    (B78)
+We define
+                            Y;;;;...i,+,     =    Y~~~*.‘.i,+, + PI;;,. ..<,+p .    (B79)
+Then, on account of Eqs. (B78) and (B62)
+                                    S[il **- i,,, ] Y;$!ir+2 = 0.                   w30)
+                             GAUGE      INVARIANT      OPERATORS                        203
+
+and
+
+
+
+We may thus write Eq. (B76) as
+
+                            '3(XyjDiy + X,'iDj'+         Yij) = 0.                    WW
+We now define
+
+
+
+
+                                                                                      (B83)
+
+and from Eq. (B82) it satisfies
+
+                            ?q’(cjy) = 0,           S[ij] clp = 0.                    (B84)
+
+By the Dixon-Taylor      lemma, there exists a local functional      UJ:’ such that
+
+
+
+Using Eqs. (B85) and (B83) in Eq. (B73), it may be written as
+
+       3[Qi - TyODi' - U$)So,j] = {$[X,j + XGj] Di" + (i-j)]           + S[ij] Yij} L?$o,f
+                                     = {X,"jDiy + X$Djy + S[[j] Ylj} To,i             ww
+with
+                                     X,“j = $(Xyj + X:j)*                             (B87)
+Further, from Eq. (B82)
+
+
+
+We note that S[ij] Y& contains at least one factor of Z& , since S[ij] Yj’p) = 0. Let
+
+                                S[ij] Yij = -2ijk90,k.                                0389)
+
+Thus, Eq. (B88) can be written as
+204                            JOGLEKAR    AND   LEE
+
+
+Applying Lemma B4 to Eq. (B90), we learn that there exist local functionals     CYj,
+such that
+
+
+
+
+                     ~(CyjkZi,~J DC + ~(CviA%,d Dj’ = 0.                       (~92)
+
+We apply Lemma B3 to Eq. (B92) to conclude that we can choose C,,lczO,, such
+that
+                            ~(Gjk) %*k = 0,                            (B93)
+
+without altering (C,jkDi’ + C,,ikDjy) To,, . Further, dim’(C& = dim’(XJ =
+N - 3. Thus, we may further apply the proposition to conclude that we may
+redefine Cj, further so that
+
+
+
+with C,,k&k unchanged. By the Dixon-Taylor         lemma, there exists a local func-
+tional Wyj, such that
+
+
+
+We may write Eq. (B91) as,
+
+                    3[ WyjkDiy + Wyi,Dj’    - Ziik] 2o.k = 0.                  0396)
+
+Since dim’[ WyjkDiy + (i ++j) - Zijk] = dim’(&)       = N - 3, we may apply the
+proposition to conclude that there exists a local functional Rijk such that
+
+                   g[WyjkDiy   + WyikDj’   - Zijk - RJ      = 0,               (B97)
+with
+                                  Rij&f’o,k = 0.                               0398)
+From Lemma A2
+                                  GAUGE     INVARIANT           OPERATORS                                     205
+
+From the discussion under Eq. (B78), it is clear that we may define Y;!r!i,+, (Y > 1)
+so that
+                       S[ij] Y$ = -z;j,$&       = Zij&,k   )                   (B102)
+
+while Yil.. i,+z still satisfy
+                                      S[il ... ir+2 ] Ypi7+2 = 0.                                         (B103)
+We thus have
+                     3[ W,.jrDl         + W,ikDjy + R;ijD,’            - Z;jk] = 0.                       (B104)
+
+We further note that Eq. (B91) implies, with the help of Eq. (B95)
+
+
+i.e.,
+
+
+
+
+On account of Eq. (B105) we may write
+                             (XJj -     W&&J       90>jDiy = 9(T:))            0;.                        (B107)
+
+Further, Eq. (B104) yields
+
+                 g[S[ijk]{     Wvj,cDiy + WvilcDjy + RGijD,’ - Ziik)]                     = 0.            (BlO8)
+
+Thus, there exists a local functional           U&j such that
+
+                S[ijk]{ W,,jrcDiy + WyihDjy + RGijDkY - Zijlc} = S(U$)                                    (B109)
+with
+                             S[zj] u$ = 0,              S[ijk] U”‘(ijk)      = 0.                         (BllO)
+
+Using Eq. (B107) and (B109) in Eq. (B106) we get
+
+          g[Qi - (Ty’ + Ty’) Di” - UiO,3o,j - Uif,9o,j9o,k]
+                = {S[ijk] X;,Diy          - S&k] Z&}            ~o,~6poo.j
+
+                = {S&k]        X;xDiy     + S&k]        i     Yi(;r&;!..i190,il ... zo&     -Itpo,j-Epo,l,(Bill)
+                                                        r=1
+206                                                JOGLEKAR              AND         LEE
+
+
+where
+              S[ijk]       X&D;           = S[ijk]{              Wy,kDiy + WyikDjy + RcijD,Y)                             (B112)
+and
+
+
+
+  This process clearly can be continued to the end with the help of Lemmas B3
+and B4. In the end, one would obtain
+                               n+1
+
+              9       Qi   -   c
+                               T=O
+                                     f)DiY            -      i
+                                                             r=0
+                                                                     u~;~...i,+,dpoo.i,          ***   $Po,i,+e
+                                                                                                                  1
+                                                                                                                  =   0   (B114)
+
+                                          S[i, *a- ir+2 ] uj;!++,                         = 0.                            (B115)
+Further,
+
+                  y
+                  r=0
+                           T>)Diy     -      i
+                                             7=0
+                                                     Ui(~~...i,+z9~,i,
+                                                                                                       1
+                                                                                     *** 90,io,i,+z LZo,i = 0.            (B116)
+
+                                                                                                                          Q.E.D.
+
+
+                                                          APPENDIX               C
+
+  In Appendix B we have applied the Dixon-Taylor lemma to the operator 3 of
+Eq. (4.28). One may apply the lemma since the Eq. (4.11) holds for A = w,(S/&PnL),
+when X is proportional to at least one ghost field w. Here, we have decomposed
+9 as
+                                          3 =A+gB,                                 592 = 0.                                 (Cl)
+
+However, because of the presence of the derivative with respect to @*” in A, one
+does not know, as mentioned in Section IV, whether X of Eq. (4.11) can be chosen
+to be local, given that Y is local. It should be emphasized that there are instances
+in which the Dixon-Taylor     construction can be used to construct J of Eq. (4.10),
+however, it is impossible to choose J to be local even though H of Eq. (4.9) is local.
+We shall show that in the cases of our interest in Appendix B, it is possible to
+choose the solution “J” to be local by showing that in the cases of our interest
+the Eq.
+                                 BY=O,         Y local                            (C2)
+
+implies that Y may be expressed as
+                                                    Y=BX+AW,                                                                (C3)
+                           GAUGE     INVARIANT      OPERATORS                     207
+
+for some local X and W. (In particular, W may be zero, which will be the case in
+all applications of Appendix B so that the Dixon-Taylor         construction can be
+carried out “backwards.“) This way, the locality of the solution is clear. We con-
+sider the Eq. (C2), where Y carried a free index, say 1. The following relations are
+easily verified.
+
+                     B(@P,) = 0,      B(tZ) = 0,          B(,f+J   = 0.          (C4)
+
+The last two imply
+                                       mu”)      = 0.                            (C5)
+Further,
+                             B&j)    = 0,         B@,,) = 0.                     W4
+Also, we define
+                                    B(P(X - y)) = 0.                             (C7)
+However,
+
+
+and
+                              BbJ4     = +f%dw%          f 0,                    (C9)
+nevertheless,
+                                     B(d)i       = 0.                           WO)
+Without loss of generality, we may consider Y(w, a)>, which involves a fixed
+number of w and @
+
+
+
+Then, Eq. (C2) together with B(Gi) = 0 implies
+
+                             BbJ,, ..* wm,Y&:p:k,]        = 0.                  cc13
+
+Thus, it is sufficient to consider Y not containing fields @ but carrying an arbitrary
+number of indices. Now, the operator B does not alter the number of derivatives
+in a functional. Hence, we may assume that Y contains a fixed number of deriva-
+tives.
+   We shall first consider the case in which Y does not contain any derivatives.
+The considerations involved in this case will be useful in the case in which Y
+contains derivatives. In this case, Ylgf;:?P, consists only of the B-invariants, so
+that Eq. (C12) implies
+
+                              Bba, . . . w,,] y~l.~Tz = 0,                      (Cl3)
+
+595!97/1-14
+208                                             JOGLEKAR           AND         LEE
+
+
+where we have suppressed the extra free indices. Thus,
+
+                                   f ~W,+lW~l . . . w,n+ly%"'%+l~                         = 0                             ((34)
+Thus, the totally antisymmetric part of J;IOLnOln+lYUl”“+-l” vanishes. It consists of
+a sum of ((n + 1)/2) = n(n + 1)/2 terms, smce the above is already antisymmetric
+in (0~~... 01~~~)and in (a~,, CL,+~).We write one of these terms as
+                                    yal..%-l~       =      _   ~an--l"nya,+loil.'-On-l~          +      .. .
+                     f 7l%Pn+1
+                                                           ~~alrrzy%'-%=n+l~                  + ... ,                     (Cl5)
+
+where we have shown two typical terms on the right-hand side. Since Y does not
+contain derivatives, each term contains a product of same 6 functions that can
+be extracted. Thus, in Eq. (lo), we shall assume that the terms have no space-time
+dependence. We multiply Eq. (Cl 5) by fcoLnum+, and use,
+
+
+so that,
+
+
+
+
+and thus,
+                                     cq..~a,-~C
+           q?wal **- %,y-%Y                   = - (&o*fna,~lOwan~,“J yQ::::;y*                                    + *.*
+
+                                                        - &ae~rrlwazfco~                   y$~$~-,             + .. . .   (Cl 8)
+
+In the first term on the right-hand                  side of Eq. (Cl@, we use,
+
+
+                                                = ~w,n-lwcfa,-+&l                         9                               ((39)
+
+and thus, we can write Eq. ((38) as
+                                                                                                     K
+                                                                                al..%-3o~~ >, (pJ0)
+                                                                   + A 2f ea.4YWpal'.wan--3
+      w 5 0.. w~,Y”~““~-~        = ~f~SKwrwS{Alf~~~Y~:::~~-zr,
+                                                        -1     n-2
+where A, and A2 are some numbers depending on n and C, .
+  Even though the argument following Eq. (C14) does not go through in the case
+when n equals the number of generators of the group, the relation of the form
+of Eq. (C20) still holds (with A2 = 0). This can be seen by explicitly working
+out the right-hand side of Eq. (C20) for this case. As we shall see later, we shall
+                             GAUGE   INVARIANT    OPERATORS                                209
+
+need the relation   only for the case of SU(2) (i.e., three ghosts) in which        case we
+see that
+              k%?$-%wdEA,n Y,%lJ, = &oyWgW~{-svAs~?, + S,,S,,} YAan
+                                  = Y”aYaloiw 80 Y’                                   (CW
+
+  Using Eq. (C20) we define an XKal...a+2 by,
+                yw~%Lw      .. .     = gfvsKWyWgXKal"'~¶-z~~~
+                                                         .** W,,-a.                   cw
+                          a1 -n
+A%.“*++2 is clearly antisymmetric in its last (n - 2) indices. Therefore, it can be
+expressedas a sum of two terms each having either one of the permutation sym-
+metries of Young tableaux in Fig. 2. We write
+                                     x=x’+x”,                                         (c23)
+where X’ is totally antisymmetric in (~01~... OL,-&. Substituting the decomposition
+of Eq. (C23) in Eq. (C22), we get a corresponding decomposition for Y
+                                      Y = Y’ + Y”.                                    (c24)
+
+
+
+
+                            El
+                              K                  --_-     -
+                                                              an-2
+                             Ql
+
+
+
+
+                             an-2
+
+
+
+                            (a)                     (b)
+    FIG. 2. Young Tableaux for the permutation   symmetries of A” and A”’ of Eq. (C.23).
+
+It is clear that Y’ may be expressedas,
+
+                    Y m,...u*w,~ ... co,%_N B(w,XKOi""an-zw,l ... wmn-,),             K25)
+where N meansequal within a numerical factor, and
+                                         BY" = 0.                                      CW
+Thus, showing that BY = 0 3 Y = BX (X local), in our casesof interest amounts
+to examining B-invariants of the form Y” (related to x” with the permutation
+symmetry of the Young tableau of Fig. (2b) by Eq. (C22)), and showing that such
+B-invariants do not occur in the casesof our interest. We define such B-invariants
+as anomalous invariants. The anomalous invariants cannot be expressed as BZ
+210                                JOGLEKAR            AND      LEE
+
+
+since the X-function of Eq. (C22) for BZ for any Z always can be chosen to be
+antisymmetric    (and in fact proportional    to Z). Since the classification of
+B-invariants depends entirely on the indices of Y contracted with ghosts; it follows
+that:
+         (i) If Yi[w, @] is an anomalous invariant, so is Y,[@] T,[@], where T,[@]
+is a local functional not containing derivatives.
+       (ii) If Y(l) and Y@) are anomalous invariants, so is Y(l) + Yt2).
+      (iii) If Yi[w, a] is an anomalous invariant, and Yi[w, ds] = &[w, @] &[@I,
+where L is local, &[w, @] is also an anomalous invariant, (i.e., the part of K
+that contributes to KijLj).
+  Therefore, let us consider Eq. (C22), where Y is an anomalous invariant. Using
+B(Y) = 0, we get,
+
+                                            X Kal”‘%-z = 0 7
+                                 Z Ka1”‘0in--2                                                (C27)
+with,
+                z Kor~~~Tc,-~
+                          = 4%    *** 01,-21{fKvsWyWsf,le,WEW,0,a                *** %n-,17   Wf9
+
+and thus, Z as well as X has the permutation                   symmetry of the Young tableau of
+Fig. (2b). Further, for n = 3, Z satisfies
+                                          SXKZ,, = 0,                                         (~29)
+on account of the Jacobi identity.
+  An examination of Lemmas B3 and B5, shows that we have applied the Dixon-
+Taylor lemma for 5!?in the cases when H of Eq. (4.8) contains two, three, or four
+ghosts. Therefore, we shall need to examine only these possibilities.
+        (i)   Two ghosts: Here, Eq. (C22) gives
+                          w,wBYmp = &,sw,wsXK                       = B(w,X”),
+
+without exceptions. Thus, there are no anomalous invariants containing two ghosts.
+      (ii) Three ghosts: Eqs. (C27) and (C29) imply that the traceless symmetric
+part of XK” (which is already given to be symmetric in (K, a)) vanishes. Thus,
+XKoLmust be proportional to W. This argument does not apply to the case of the
+group SU(2) because there, Z vanishes identically. But in this case, it is clear that
+only the part of XK” proportional to W contributes tofK,dw,waXK”w, . Thus, such
+anomalous B-invariants have the disconnected form
+
+
+where X carries all other indices that Y does.
+                              GAUGE     INVARIANT      OPERATORS                                211
+
+      (iii) Four ghosts: Here, we shall not need to know the form of the anomalous
+invariants. We have used the Dixon-Taylor          lemma after Eq. (B32), where E
+contains four ghosts. We shall showthat E’ can be chosen not to contain anomalous
+invariants. We note that in Eq. (B23) the terms containing no derivatives on the
+right-hand side arise entirely from the action of B on the terms in C not containing
+derivatives, since C is local. Thus, this term on the right-hand side of Eq. (B32)
+is expressible as BZ, and by definition, does not contain anomalous invariants.
+Therefore, it is clear that terms in E not containing derivatives may be chosen not
+to contain anomalous invariants. Since E’ are a linear combination of product
+of E and DiY’s, it is clear that terms with no derivatives in E’ do not contain
+anomalous invariants, if such terms in E do not.
+   Therefore, we need only to worry about the application of the lemma to terms
+containing three ghosts. Application to Eq. (B66) is a typical example that was
+repeated at each subsequent stage in Appendix B.
+   We note that in Eq. (B64), X,, is a local functional containing two ghosts. Thus,
+terms in WYj90,j not containing derivatives do not contain the anomalous invariants
+as argued in the discussion in the case of four ghosts. Therefore, terms in Wyj
+not containing derivatives may be assumed not to contain anomalous invariants.
+The question then, is whether one needs to add such terms to W.,j so as to make
+Eq. (B66) valid. This will be so if
+
+                           g( K-j [@I) = -~tL3vWaWBWy~[@I)
+                                       = 9&-wwJ,~(~[@I).                                      (C30)
+On the right-hand   side, X[@] is a local functional           with no derivatives   in it. Thus,
+
+                           qxpq>       = AX[@]      = w,a,~x,,[@].
+
+Then, Eq. (C30) becomes
+
+                       g( wrj[@l) = -fasvW~WgWyW,ai’x,i[~l.                                  (C3Oa)
+
+The terms in the left-hand side of Eq. (C30a) that contain one derivative can come
+from either the action of A on terms containing no derivatives (= w,w~+U~B~[@]),
+or the action on B on terms containing one derivative (= w,w~w~V~~~‘&~).      Thus,
+we have to see if the following equation is possible:
+
+      -w,w~w,,w,~~~@“[@]           + B(w,w,+J,)     V;“““[@]    &.’ + w,w~w,,~‘~~~~B(ii~~)
+           = -f,oY~,~s~,~,aiv”xi         .                                                    (C31)
+From Eq. (C31), it is clear that aks must be contracted            with a ghost. Then, letting
+
+                           W,W/$oyvp%k6       = w,aiuq$JyviBy[@],
+212                                                   JOGLEKAR                AND   LEE
+
+
+we get
+
+
+
+But this is impossible, since Uarsydoes not contain a factor of the formf,,, .
+   Next, we consider the case when Y contains derivatives. Let Y contain exactly
+r derivatives at least p (0 < p < I) of which are contracted with w in the form
+w,ain. Therefore, BY consists of a sum of terms containing (n + 1) ghosts, r deriva-
+tives, at least p of which are contracted with w’s. We write
+
+
+
+
+The terms in BY containing precisely p derivatives contracted with ghosts come
+from the action of B on (w,, a*- o,,-~ ) only. These terms must separately vanish.
+Thus,
+
+
+
+We note that the momenta carried by all free space-time points except I are
+independent. Further, Yr’j,...jp is totally antisymmetrized in (j, *..j,). Using these
+and comparing coefficients of independent moment a, we find,
+
+                                                                                                       (C34)
+
+which is precisely the equation we solved earlier; with the result that (we suppress
+some indices here)
+
+
+
+We now construct
+y(l)=    y       em&,,        ...w                ,~l.‘.an-p-1.81...B,-~a~~
+                                     ~n-p-~xX1,*1...jP*4...Ie)c)                          . .. cw . a)je.
+    1        1           =I
+                                                                                                       (C35)
+Now, Yil) satisfies BY:') = 0, and contains at least (p + 1) derivatives contracted
+with ghosts. This process can be obviously continued until the end [15].
+   Finally, we prove the locality of Si of Eq. (4.22), which together with proof
+given by Dixon and Taylor in [5] completes the proof of the statement of Eq. (4.43).
+Here, we use the Dixon-Taylor     lemma for functionals with one ghost. We thus
+have to show that
+                                 B(w,Y@J]) = 0                                (C36)
+                              GAUGE     INVARIANT        OPERATORS                                          213
+
+implies that for some local Xjoi[@] and Z,“[@],
+
+                           wDIY,“[@] = B(X,“[@])             + A(Z~“[@]).                                 (C37)
+
+From the discussion       given earlier in this Appendix, we need to consider Yi,
+which is independent      of 0, carrying an arbitrary number of additional indices in
+
+                                         B[w,Y,“]      = 0.                                               CC38)
+
+Now,     Yia must contain at least one derivative for otherwise
+
+                             B[w,Yi~]     = ~gfaDvwBw,,Yia = 0                                            (C39)
+
+implies Yia = 0. Further, one of the derivatives                    in Yiti must be contracted             with
+w, in the form (~,a,~), for, if we write
+
+                       W,YiE = Waan,=Yp]            + w,a;        .-* as,k, Y?-,,                         (C40)
+                                                              1              z,kl...k,
+
+
+where the last term does not contain a factor w,&*, then, comparing                                coefficients
+of terms in Eq. (C38) not containing such a factor, we get
+
+                           4 gf~~vw.$Lly[a~~ *. ’ a2nY;;$.y$                = 0,                          (C41)
+                                           1
+showing that the last term in Eq. (C40) vanishes. Let us first consider the case in
+which YAi does not contain derivatives. Then, remembering that Yki is a local
+functional either [ 151
+
+                                      YA ,,.. = CL, y;i ,... 9                                            (c42)
+or
+             w,~iy@]     = w,amar~ip] = w,amyDm(~jqy~ip~                                 64(-g),          (C43)
+
+where,   in F[@], all @ are contracted         with f’s       or t’s. In the latter case, we may
+write
+              wa~iqq      = - wccamycqp+l (6~,py6~~) 6y-.)
+                             + ~{(1/2~p + l)W@J””                       FiPl 84(...)),                    VW
+where, the first term on the right-hand side is itself a B-invariant and has the form
+of the term in Eq. (C42). Thus, we need consider YAi of the form of the right-hand
+side of Eq. (C42) only. Then,
+214                                     JOGLEKAR AND LEE
+
+Equations (C44) and (C45) prove the result for this case. Finally,                        in the case
+when Y,, contains derivatives, we write
+
+                               w,~ia = waamaa;z
+                                             ... a;; Y:;;.%~, ,                                   (C46)
+
+where Y38lf::.j: has the appropriate        symmetry. Then, B(w,Y,*) = 0 implies
+                           wma;oyak9~1ajsB
+                                        2 ... a;;y$yl?.jn,... = 0,                                (C47)
+i.e.,
+                                  t$ Y$$=jn       - (k H m) = 0.                                  (C48)
+It is easy to verify that such a relation necessarily requires that the group index
+in m is attached to a tzl . Then, Eq. (C46) can be written as
+
+                              WaYiN = w01am7;,aF
+                                             1 ..- appj;:.$.~,
+                                                            n                                     W9)
+Then, Eq. (C48) implies that K~$:~~~z is symmetric                     under the interchange          of
+(&. , j,.) t) (71). Thus, we may write
+
+                                                                                                  (C50)
+proving the result.
+
+
+                                             REFERENCES
+
+ 1. For a discussion of renormalization     of gauge theories, see B. W. LEE AND J. ZINN-JUSTIN,
+    Phys. Rev. DS (1972), 3121, 3137, 3155; D7 (1973), 1049; G. ‘T HOOFT AND M. VELTMAN,
+    Nucl. Phys. B; B. W. LEE, Phys. Rev. D9 (1974), 938.
+ 2. H. GE~RGI AND D. POLITZER, Phys. Rev. D9 (11973), 416.
+ 3. D. GROIN AND F. WILCZEK, Phys. Rev. D8 (1973); Phys. Rev. D9 (1974), 980.
+ 4. FADDEEV AND N. POPOV, Phys. Lerr. 25B (1967), 29.
+ 5. J. A. DIXON AND J. C. TAYLOR, Nucl. Phys. B78 (1974), 552; Univ. Oxford preprint, (74-74).
+    We, however, disagree with their statement that the case of F;,F,“, is exceptional.
+ 6. H. KLUBERG-STERN AND J. B. ZUBER, Saclay preprint DPh-T/74/56, to appear. We, however,
+    believe that the language used in the conclusion of their discussion of renormalization            of
+    F;,Jiy is incorrect. As emphasized in Section V, the question is not whether the diagonal
+    element gives the correct eigenvalue in an arbitrarily chosen “simple” basis, but rather, the
+    question is whether there is a basis in which it is true, and if so, how the basis is characterized.
+ 7. H. KLUBERG-STERN AND J. B. ZUBER, Saclay preprint DPh-T/75/28.
+ 8. S. SARKAR, Nucl. Pltys. BS2 (1974), 447; S. SARKAR AND H. STRIJBBE, CERN preprint TH/
+    1929, 1974.
+ 9. B. W. LEE, Phys. Rev. D9 (1974), 938.
+10. J. ZINN-JUSTIN, Lecture at “International    Summer Institute for Theoretical Physics,” Bonn,
+    1974.
+                               GAUGE    INVARIANT     OPERATORS                               215
+
+11. C. BECCHI, A. ROUET, AND R. STORA, “Renormalization      of the Abelian Higgs-Kibble Model,”
+    CPT preprint, Marseille, 1974.
+12. Here “solution” does not refer to the solution of Eq. (1.2), but to the solution obtained by
+    the Dixon-Taylor    construction.
+13. See, for example, M. HAMERMESH, “Group Theory,” p. 244. Addison-Wesley, Reading,
+    Mass. 1962.
+14. There may be gauge invariant operators which may be expressible in this form (YF). They
+    are expressible as (6=-Y,,/6Ai) F&4], where Fi is a covariant local functional, i.e., QF, = 0.
+    We thank Dr. Zuber for pointing out this to us. In the case of twist two operators, however,
+    there are no such gauge invariant operators.
+15. Since we are interested in solving Q W = 0, i.e., (A + gB) W = 0, only those B-invariants
+    that can occur in a 9 invariant Ware of interest to us.
+

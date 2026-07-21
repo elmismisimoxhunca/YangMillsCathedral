@@ -1,0 +1,873 @@
+Commun. math. Phys. 18, 227--246 (1970)
+@ by Springer-Verlag 1970
+
+
+
+
+         Small Distance Behaviour in Field Theory
+                   and Power Counting
+                                       K. SYMANZIK
+                       Deutsches Elektronen-Synchrotron DESY, Hamburg
+
+                                    Received May !2, 1970
+
+      Abstract. For infinitesimal changes of vertex functions under infinitesimal variation
+of all renormalized parameters, linear combinations are found such that the net infinitesimal
+changes of all vertex functions are negtigibIe relative to those functions themselves at
+large momenta in all orders of renormalized perturbation theory. The resulting linear first
+order partial differential equations for the asymptotic forms of the vertex functions are,
+in quantum electrodynamics, solved in terms of one universal function of one variable and
+ one function of one variable for each vertex function whereby, in contrast to the renormali-
+zation group treatment of this problem, the universal function is obtained from nonasympto-
+tic considerations. A relation to the breaking of scale invariance in renormalizable theories
+is described.
+
+
+                                        Introduction
+      The small distance behaviour of Green's and vertex functions in
+renormalizable q u a n t u m field theories has been extensively studied in
+a formal w a y via the renormalization g r o u p [1, 2] and, with equivalent
+results, some other approaches [8, 9]. Here we offer an alternative ap-
+p r o a c h to the same problem, which appears to be rather m o r e direct.
+It leads to formulas that are exact and b e c o m e the usual asymptotic
+ones u p o n a, in principle controllable, neglect.
+      W e study the effect of inserting one extra mass vertex, or a generalized
+mass vertex in the sense o f Wilson [3], into all F e y n m a n diagrams for
+all vertex functions. (Such vertices are defined as those for which the
+sum of the mass dimensions of the c o m p o s i n g fields, a scalar and the
+electromagnetic field having dimension one, a spinor field dimension
+three half, a derivative dimension one, is less than four, e.g. two for a
+scalar mass vertex and three for a spinor mass vertex.) By such insertion,
+the superficial divergence D of the corresponding F e y n m a n integral is
+reduced 1 (e.g. by two and by one, respectively, for a scalar and a spinor
+mass vertex). R e d u c t i o n of the superficial divergence, however, results
+in decrease of the l a r g e - m o m e n t u m behaviour by the corresponding
+p o w e r of an overall scale factorL This relation between dimension of
+      1 See, e.g., Ref. [2] p. 321; the index co(G) we call D. Also ibid., p. 341.
+i6   Commun. math. Phys., Vol. 18
+228                                    K. Symanzik:
+
+the vertices (i.e., of the terms in the interaction Lagrangian density in
+the Dyson formula) and large-momentum behaviour is basic in renormali-
+zation theory [2] and in many applications (Weinberg sum rules a, re-
+normalization of theories with broken symmetry [4-7]).
+    We now consider, however, the insertion of one such vertex as the
+infinitesimal operation to the insertion of such interaction term into the
+Lagrangian density. If this type of vertex is already in the Lagrangian,
+this change of the theory is expressible as a change of the renormalized
+masses and coupling constants that completely specify the theory.
+    Thus, the insertion of one such vertex into all diagrams for a vertex
+function is equivalent to forming some linear combination of the partial
+derivatives of that vertex function with respect to all renormalized para-
+meters. The coefficients in this linear combination are independent of
+momenta or of the vertex function selected, and therefore can be deter-
+mined by calculating the effect of the insertion operation upon the vertex
+functions of nonnegative superficial divergence degree, which themselves
+define, at particular momenta, the renormalized parameters of the theory.
+Once these coefficients have been determined, we have obtained for
+every vertex functions at all (in this process, fixed) momenta a linear
+partial differential equation, the inhomogeneous term being the vertex
+function with that extra vertex inserted into all diagrams, which is
+expressible in standard fashion by certain integral operations.
+    If in such partial differential equation the inhomogeneous term is
+neglected, we obtain a partial differential equation for the asymptotic
+form of that vertex function. To see this, we recall from the usual discussion
+of small distance behaviour [1, 2] that asymptotically, all momenta be-
+coming large in the sense p~~ 2 p i , 2-~m, the vertex function behaves,
+in renormalized perturbation theory, like 3 2D multiplied by, e.g., in
+quantum electrodynamics, a double power series in the fine structure
+constant e and in e ln2, whereby all neglected terms have relative to
+these one or more factor)~- 1. In the partial differential equation described,
+by power counting, the inhomogeneous term_ does have l, a one or more
+factor 2-1 relative to all the homogeneous terms, such that the asymptotic
+form does obey the homogeneous linear partial differential equation.
+    The solution of this equation is trivial and involves an unknown
+function, e.g., the value the asymptotic form takes for )l = 1 as a function
+of the coupling constant. The further discussion of this solution, identical
+with the one from renormalization group arguments [1, 2], is familiar.
+What has been achieved, for asymptotic formulas, is only that the uni-
+       See, e.g., the discussion in Ref. [3].
+     3 The present statements hold in general only if no nontrivial partial sum of momenta
+vanishes, and conform with Weinberg's results [28], as far as these are applicable, cp. Refs.
+[20, 29].
+                          SmaII Distance Behaviour in Field Theory             229
+
+
+versal function (v2(z) in (II.25) below) of the coupling constant needed
+in the usual approach [1, 2] is here obtained implicitly from the coefficient
+functions, which were determined without asymptotic considerations.
+However, in principle, the differential equations are more informative
+than merely to lead to the usual and, as is well known, essentially useless
+asymptotic formulas. We elaborate on this point in the discussion. On
+the other hand, our technique yields, at least directly, only formulas
+relating to overall scaling, such that other results on asymptotic be-
+haviour, obtained either by more involved uses of the renormalization
+group [2], by direct asymptotic estimates [8], or by summation of
+leading logarithmic terms in the perturbation theoretical expansions [9],
+are so far not covered.
+    The inhomogeneous partial differential equations allow an amusing
+application to the problem of the breaking of scale invariance 4, since
+they yield, except in theories with scalar or pseudoscalar fields, a new
+expression for the divergence of the local current associated with scale
+transformations. The Wilson dimension [3] of this operator is, mani-
+festly, four, such that, as one should anticipate in view of the logarithmic
+factors in asymptotic formulas, the breaking of scale invariance in
+renormalizable quantum field theories is not a simple one.
+    For transparency, we present the method first in Section I applied
+to the model of a hermitean scalar field in quartic self interaction, and
+also, because the application, given in the appendix, to the breaking of
+scale invariance is more interesting in such a model. In Section II, we
+apply the method to quantum electrodynamics, derive the consequences
+of current conservation, and obtain familiar [1, 2] asymptotic formulas.
+In the discussion we make remarks on the possible usefulness of our
+results.
+                                     L The ~4-Theory
+                  I.I Derivation of Partial Differential Equations
+      We consider the theory described by the Lagrangian density
+
+                  L =g(0u~bu0
+                      ~       , q ~ , - m u2¢ u2) - ~ 9 ~ ¢   4. + AL(4),).   (Lt)
+
+This expression, containing unrenormalized quantities, is formal and
+so are the manipulations at the beginning of this section, but the final,
+renormalized, formulas are correct. A rigorous derivation in the frame-
+work of renormalized perturbation theory can be given by first regu-
+larizing [10, 11] the theory (I.1) and letting the regulator masses go to
+infinity in the final formulas. For brevity, we omit showing this.
+      4 See, e.g., Ref. [-3] and references given there.
+t6"
+230                                    K. Symanzik:
+
+
+The generating functional s
+
+Gdi~{J} = ~ (n!)-li"S "'" Sdxl ... dx, J (xl) ... J(x,) Gai~(xl ... x,)                0.2)
+             n=O
+
+of the renormalized Green's functions
+
+
+
+is for the theory (I.1) (see, e.g., Ref. [27])
+           AL
+          Gai~{J } = const exp[i f dx A L ( - i Z ~ f i / a J ( x ) ) ] Ga~¢{J }       (I.3)
+
+where G~i~{J} is the generating functional for the theory (L1) with A L
+set zero, and const is such that Gdi~
+                                  ~L {0} = 1. We now choose 6
+                              A L(~b~) -- - ~t A m ~2" q~.2 ".                         (Ii.4)
+
+Then, clearly,
+             AL
+            Gai~c{J}(m2, g)=G,ti~{(l+Az)J}(mZ+AmZ, 9+Ag)                               (I.5)
+
+where m and 9 are the renormalized mass and coupling constant that
+specify the theory, and we have taken into account that renormalization
+also implies an amplitude renormalization convention that will in general
+not be observed by the Green's functions defined by (I.3).
+    The infinitesimal form of (I.3), with the choice (I.4), is
+                                        2
+            A Gai~c{J} = ½-iZa Am,                                                   (I.6a)
+                            " eadx[Gai~c xx{J} - Gai~¢{J} Gai,c xx{0}]
+while (I.5) gives
+
+A Gai~o{J} = (Am 2 [a/&n 2] + A g[O/a0]
+                                                                                     (I.6b)
+                                 + A z I dx J(x) Ea/aJ(x)]) G i o{J}.
+
+(In (I.6a), subscripts denote 5 functional derivatives, such that, in view
+of (I.2),
+                        Gei~. . . . . . . . {0} = i"Gdi~o(x, ... x,).)
+
+    s The concepts and notation used here and later on are described in Ref. [5~.
+    6 A trilinear term could be dealt with in an analogous manner, but would break the
+symmetrie ~b-~ - ~b of the undisturbed part in (I.1) such that more re-normalization para-
+meters would have to be introduced. Since also the combinatorics with a trilinear term [121
+is more complicated and such terms appear also to be of less practical interest, we consider
+only ordinary mass terms in this paper.
+                      Small Distance Behaviour in Field Theory                 231
+
+
+For connected Green's functions, with generating functional G{J}
+= ln G~i=o{J}, (I.6) gives
+
+
+                        "f dx[G~,~{J} + Gx{g } Gx{a } -- G:,~{O}]
+                                                                             (I.7)
+                      = (A m 2 [0/0 m 2] + A g [O/Og]
+                          + A z ! dx J(x) [6/,SJ(x)]) G{J}.
+The transition to vertex functions s, with generating functional F { d }
+such that
+                             V(x~ ... x,) = L,..,xo{O}
+is described by
+                                - iG~{J} = dg(x),                           (I.8 a)
+                                  J(x) = i F ~ { d } ,                      (L8b)
+                        F{ag} = G{J} - i I dx J(x) oJ(x),                   (I.Sc)
+
+                               O=,,{J) = r2,, ~ { a e } .                   (I.8d)
+In view of (I.8 c),
+                          A F{~4}~fixe d = A G{J}Jfixe d
+
+such that (I.7) gives
+
+             A F {N} = ~ ~- Zs Am.2
+                           - I dx I F 2 ) {~¢} - d ( x ) d ( x ) + O(xx)]
+                                                                             (I.9)
+                        = (A m2[~/Om 2] + A a [ ~ / ~ g ]
+                           - A z I dx   d(x) [fi/c5 ag(x)]) r{.4}.
+In particular, from (I.9),
+
+       A r ( y l y2) = - i z 3 A m~ a(yi - y2)
+                      -½iZ3Am~.fdxdzduG(xz) G(xu)F(zuyly2)                  (I.t0)
+                  = (~ m ~ [ ~ / ~ m ~] + A O[~/~g] - 2A z) V(y~ y~)
+and
+
+A F(yl Y2Y3Y4) = - iZ 3 A m2
+                  . ~ dx dz du G(xz) G(xu) {½F(zu YlY2Y3Y4)
+                                                                            (I.11)
+                + S dv dw G(vw) [F(zv YlY2) F(wu Y3Y,,)
+                + F(zv YlY3) F(wu Y2Y~)+ F(zv YlY4) F(wu Y2Y3)]} •
+232                                          K. Symanzik:
+
+
+                     1.2 Determination of Coefficient Functions
+   Determination of A m z, A g, A z in (I.9) requires to fix A mZ~ by some
+normalization. We introduce Fourier transforms by
+         y dy t ... dynF(y I ... y;~)e x p ( i p l y ~ + ... + ip,y,)
+                                               -- (2704 6(p 1 + . . . + p,) F(pl ... p,)
+and similarly for the A F(...), as this notation will not lead to confusion.
+A F ( p ( - p ) ) has, by power counting, superficial divergence degree D = 0
+and, by (L 10), satisfies an inhomogeneous Bethe-Salpeter (BS) equation,
+with the inhomogeneous term eliminated by one subtraction imposing,
+as convenient choice,
+                              r@(-p))tp2 =m2 = - i m 2 •                (L12)
+Thereupon, A F ( p ( - p)) for all p, and all other A F(...), can be calculated
+to all orders in renormalized perturbation theory. E.g., the renormalized
+form of 0.11) is
+               AF(Yl .-- Y4) = ~ dz du dz' du' AF(zu)
+                                   • 6(zz') c(uu') {½rz~(Z'U', yly2y3y4)
+                                   + 5 dv dw G(vw) [as in(I.11)]}
+where Fzi(Z'V', Yl Y2Y3Y4) is the vertex function two-particle irreducible 7
+between the first and the second group of arguments and definable by
+a BS-type integral equation.
+For the normalization (I.12), we rewrite (I.9) as
+               A F ( p t . . . P2,) = (0:(9) m2 [0/Omz]
+                                                                                             (L13)
+                                       + fl(9) [6/09] - 2n Y(9)) F(p~... P2,).
+From the renormalization conditions
+                                   F ( p ( - p))tp2=~2 = 0,                                (I.14a)
+                              [6/6 p2] F(p( - p))[p2=,.2 = i,                              (I. 14 b)
+
+                            F(Pl   "   "   P4)[symmetry point = -- i q ,                   (I.14c)
+where the symmetry point is defined by PiPj = ~ m2(4 6 i j - 1), (L13), and
+(L12) we have
+          _   im 2 = _ im2~(g),
+                        [a/ap 23 A r ( p ( - p))tp2=,.~
+                  = - ~(g) m 2 [a/ap=] = r ( p ( - p))tp==,.=- 2 i?,(0),
+      7 For the concepts and equations used here, see e.g. Refs, [12-14].
+                          Small Distance Behaviour in Field Theory                              233
+
+and
+
+A F ( p 1 ... P4)Isymmetry point
+                           3
+                                                                                     I
+            = - ½~(g) ~ p,, [~/Op,,3 r(pl p2p3 ( - p~ - p2 - P3))'~rm~try point
+                            i=1
+                - ifl(g) + 4 i g y ( g ) ,
+
+whereby we have used
+
+              m2[O/Om2]r(p(-p))=(-pZ[O/~pZ]+l)F(p(-p))                                     (I.15a)
+and
+                       2n-1
+{m2[~/Om z] + ½ ~             Pi.[O/c~Pit,]
+                      i=1                                                                  (I.15b)
+                 + n - 2} F(p 1 ... P z . - l ( - P l         .....       Pen-l)) = 0
+for n = 2. We find
+                                   e(9) = 1 ,                                              (I.16a)
+                                   fl(g) = bog 2 + b~g 3 + . . . ,                         (I.16b)
+                                   7(9) = co g 2 + cl g3 + . . . ,                         (t. 16 c)
+with
+                                         b o = 3(32rc2) -1
+                                         Co = (21t3n4)- 1.
+
+
+                    1.3 Asymptotic Forms of Vertex Functions
+   As explained in the introduction, (I.13) yields 3 for the asymptotic
+forms of the vertex functions, with (I.16a),
+
+(m2163/6~m2] -t- fl(g) [O/Sg]                                                               (I.17)
+
+                - 2n 7(a)) r a s ( p l . . , p 2 . - i ( - p~ . . . . .    p2,,-1)) = O,
+
+whose general solution is
+
+         E~(pl ... P 2 n - I ( - P l . . . . .       Pzn- 1))
+                                                                                             (L18)
+                                             = a(g)"q~p.... p2,-~(- Inm 2 + O(g))
+where
+
+                              a(g)=expf2 ! dg' fi(g')-1y(g') ]                             (I. 19 a)
+234                                            K. Symanzik:
+
+
+and
+                                         ~(g) = ~ d9' fl(9,)-1.                  (I.19b)
+                                                   go
+
+Thus, for dimensional reasons,
+          ra~(;<p, .,. 2 p z , - 1 ( -    2pl . . . . .   2p2,,- ~))
+                                                                                  (I .20)
+                        = 24-2"a(g)"4~m..,p2o 1(- Inm e + in 22 + o(g)).
+As to scattering amplitudes, (I.20) gives a result only for amplitudes 3
+extrapolated to all p2 = 0, i.e. for '~massless external particles".
+    The function q~ in (I.20) expresses the deviation of the asymptotic
+form of the vertex function from scale invariant form, that is, 4~ = const.
+Our method, like the, in this respect, equivalent one of the renormali-
+zation group [2], gives no information concerning the ln2Z-dependence
+of this function. The only conclusion that can be drawn with some con-
+fidence (the flaw being that F~ may not be asymptotic to F, and may
+even not exist) from (I.20) is the analog of a famous result of Gell-Mann
+and Low [1]
+lim 22'~-4a(g)-"Fa~(2pl ... 2p2,_ 1 ( - 2 p l . . . . . 2pzn_ 1))
+~,-+0o                                                                            (I.21)
+                            =~m..,~,_~(oo) independent ofg.
+
+There are relations between the ~-functions in (I.20), which stem from
+the renormalized coupled nonlinear integral equations [12-14] among
+vertex functions. We will not study these relations here. Otherwise, only
+perturbation theory is available to complement (Lt7). One has to cal-
+culate F,s along a noncharacteristic curve in the m 2, 9 plane, the charac-
+teristics being the curves ~(g) - Inm 2 = const. Here, we give the simplest
+expansion formulas only for the convenience of the reader as their
+derivation follows familiar patterns. One sets
+                               F ( p ( - p)) = ip z d([p2/m2], g)- I
+
+and has, from (I.18) with (I.19),
+
+d ~,([P 2 / m 2 ],9) ± 1 =     ~ (n!)-l(ln [p2/m2])"
+                             ,=o                                                  (I.22)
+                             • (fi(g) [~?/c3g] +_ 27(0))" [d,~(1, g)] ±*
+with the same sign at all three places. Some power series in g ln(pZ/m 2)
+in these formulas are summed by ([p2/m2] =- x)
+      a(g) d,~(x, g) = 1 + 2b o 1 Cog [1 - 9 bolnx
+                             +gb,bo*ln(1-gbolnx)+gr]-l                 +O(g 3)    (L23)
+                               S m a l l D i s t a n c e B e h a v i o u r in Field T h e o r y        235
+
+
+where we have used (I.16) and
+                      r - - c o b o 1 - ½ q c ~ 1 - ½boPoCo 1 + ½blbo 1
+with Po from
+                                      da~(t, g) = 1 + pog 2 + 0(93),
+and in (I.23) it is understood that
+
+                           1-gbolnx>O,                       j g - l - b o l n x l - I = O(g).
+
+Under similar conditions 3
+
+       Fas(J'Pl •"' )~P3( -- J~Pl . . . . .               2p3)) = -- ig(l -- 2g b o ln2)- 1 + O (gZ)
+and
+
+       Fas(2~Pl • " " ) ~ P 2 n - 1 ( - - 2 P l   .....      2 Pz~,- 1))
+        = - i 2 4 - 2 " C ( p l . . . p 2 , _ , ) g " ( 1 - 2 g b o l n 2 ) - " + O ( 9 ~+1) (n>2)
+
+by which formulas the leading logarithms are summed. Final remarks
+on (I.13) in comparison with the usual approach are made in the dis-
+cussion.
+
+                                    II. Quantum Electrodynamies
+                    II.! Derivation of Partial Differential Equations
+    In analogy to Section 1.1, we consider the change of the Lagrangian
+density by a Fermion mass term. Such a term, if sufficiently carefully
+defined, observes all invariances of quantum electrodynamics (QED)
+and, in particular, is invariant 8 under gauge transformations of the
+second kind, such that current conservation is not affected. In explicit
+terms, this means that Ward identities obtain no contribution from such
+an extra vertex (at zero momentum as needed here, but also at finite
+momentum) in the Feynman diagrams, a condition that will in turn
+lead us to the complete definition of that vertex in terms of subtraction
+prescriptions.
+    We introduce, for conciseness, the usual anticommuting spinor
+sources [15, 16] g(x) and q(x) along with J(x), whereby we suppress
+spinor and vector indices wherever expendable. Anticommutators of
+spinor sources and functional derivatives with respect to them, among
+themselves and with the spinor fields, all vanish except
+
+                        {,V~ ~(x), ~(y)} = {~/,~ ~(x), ~(y)} = ~(x - y).
+      8 This is related to the fact t h a t the self m a s s of the electron is g a u g e invariant.
+236                                        K. Symanzik:
+
+We understand all derivatives as left ones, such that e.g.
+                      [~(x) ,V&(x), UP(y)~(y)] = UP(y),I(x) 6(x - y).
+We use the notation
+
+        ~I [6/cSg(x,)] F[ [6/6rl(Yj)] I] [c~/6J(zk)] Gdi~{q, rh J}
+        i=1               j=l               k=l
+
+
+                       = i''-"+t < (~p(xl)... tp(xm) UP(y,)... Up(y,) A(zO... A(zt)
+                         • exp [i I dx(g(x) ~(x) + ffp(x) rl(x ) + J(x) A(x))])+ ) .
+(I.3) becomes, with, instead of (I.4),
+                                A L(UP,, tp,, A,) = - A rn.~,~p.,                        (II.t)
+replaced by
+  zlL     --
+
+c ~ o { , . ~. s}                                                                        (II.2)
+         = const e x p ( - iZ2Arn . f. dx[62/a~l(x) 6g(x)]) Gd~{g, q, J}
+
+and (I.5) by
+  AL      --
+Gais¢{//,/1], J} (rn, e)
+         =Gai~{(l+Az2)~,(l+Azz)rh(l+Az3)J}(m+Am,                            e+Ae)        (Ii.3)
+               + gauge correction terms,
+
+whereof the °'gauge correction terms" will be discussed later. Infinitesi-
+mally, in analogy to (I.6),
+
+         A Gdisc{}t,/7, J} = - i Z 2 A m u                                             (II.4a)
+             • ~ dx[~i~o .... {g. ~. J} - ~i~o{~. ~. J) ~ i ...... {0. 0. 0}3
+and
+A Gdi~ {q, r/, J } = (Am [0/~?m] + A e [~/0 e-1
+                         + I ax(a z2g(x) [~16g(x)] + A z2~(x) [al6,(x)]
+                                                                                      (iI,4b)
+                         + A z 3 J ( x ) [6/6 J(x)])) Gdis~{g, r/, J}
+                         + gauge correction terms.
+
+For connected functions, in analogy to (I.7),
+AG{~,q,J} = - i Z 2 A m .
+                   • f d x [ G .... {~, r/, J} + Gx,,{g, rhJ} G~,,{q,~l,J} - G .... {0, 0, 0}]
+                 = (as in (II.4b))G{~-, t/, J} + gauge correction terms.                 (II.5)
+                          Small Distance Behaviour in Field Theory                                    237
+
+We now set, in analogy to (I.8),
+                                      -    iGx,,{g, ~/, J} = q~(x),                               (II.6a)
+                                          i G x, {g, r/, J} = Up(x),                              (II.6 b)
+                                  -       iG,,~{g,   r/, J} = d ( x ) ,                           (II.6c)
+                                      tl(x) = irx,,{up, q~, ~4},                                  (II.6d)
+                                 g(x) = - i F ~,{UP,~0, ag},                                      (II.6 e)
+                                      J (x) = i F ,~{ UP,q~, ag} ,                                (II .6t)
+
+F{UP, ~, ~4} = G{~', r/, J}                                                                       (II.6g)
+               - i I d x [ ~ ( x ) e ( x ) + Up(x) ~(x) + J(x) ~¢(x)],
+whereby in (II.6d-f) a notation analogous to the one described before
+(ILl) is used, with
+         F~, ...... y~,..y,,~, ..... {0, 0, 0} = F ( x a . . . Xm, Y l ' . . Y,, z , . . . Zl).
+tn analogy to (I.8d), (see Note added in proof)
+            G . , . {~. , . J} = - i[a/ag(x); ~o(y)
+                                                                                                  (II.6h)
+                               =-i(Ea/aup(.)]~(.));¢                 = c ~,,,
+                                                                          -~ {~o,
+                                                                              - q~, d }   ,
+
+and F(x, y , ) = - G - l ( x , y,) is the negative inverse electron propagator,
+while F ( , , zz') = - G - * (,, zz') is the negative inverse photon propagator.
+The analog of (I.9) is
+
+         A F{UP, q~, ad}                                                                          (II.7 a)
+             = - Z2~m°ax[r2~.{up. ~o. d } - ~(x) ~o(x) + ~(x. x.)]
+and
+A F {Up, ~p, ag} = (A m [O/c~m] + A e [~?/Qe]
+                     -   5 ax(~ zSo(x) [a/a Up(x)] + A z2~o(x) [ a / & , ( x ) ]
+                                                                                                  (II.7b)
+                     @~ Z3~(X ) [6/6 ~(X)]))/"{UP, (D,°~}
+                     + gauge correction term.
+
+To save space, we do not write down the analoga of (I.10) and (I.1t).
+
+ I i . 2 Current Conservation and Determination o f Coefficient Functions
+    Proceeding as in section 1.2, we next discuss the superficial divergence
+degrees D of the Fourier transforms A F(p 1 ... Pro, ql ..- q,, kl ... kf). They
+are all negative except for m = n = 1, l = 0, and for m = n = 0, l = 2, other
+238                                  K. Symanzik:
+
+combinations being excluded by gauge invariance of the first kind and/or
+charge conjugation invariance. Power counting gives D = 0 for A F(p, - p,)
+and also 9 for A F(,, k(-k)). Thus it suffices to specify- each function at
+one momentum, to calculate them for all momenta using coupled once-
+subtracted BS-equations. Since A F(p, -p,) is infrared divergent on the
+mass shell, we set
+                           A F~p(O, 0,) = - imcS~lJ                   (II.8)
+
+which yields the overall normalization for the mass vertex, since
+
+                                  A F~ ~(,, 0 0) = 0                            (II.9)
+from current conservation similarly as
+                               F~w;.(,, 0 0 0 0) = 0.                         (iI.10)
+
+Similarly as in the latter case [17], however, to have (II.9) b01d requires
+to complement the mass vertex by an AA-vertex witb finite, but inte-
+gration-convention dependent coefficient. We think that term, which
+is, besides attention to other invariances, part of the "sufficiently careful
+definition" mentioned at the beginning of Section II.1, tacitly implied
+in all previous formulas that indicate the formal definition of the mass
+vertex. In Gupta-Bleuler gauge and symmetric integration convention
+[18], the finite term to be subtracted from the unadjusted A F,~(,, k(-k))
+is i m2(492) - i eZg,~. (See Note added in proof.)
+     Once (II.9) has been secured, however, Al~v(,, k ( - k ) ) is transverse
+at all momenta, while F,~(,, k ( - k ) ) it is added to has also a gauge-
+dependent longitudinal part. This mismatch is the reason for the occur-
+rence of the gauge correction term in (II.1) and, going backwards, all
+previous equations. We shall find that term by studying the consequences
+of current conservation generally.
+     For definiteness, we choose Gupta-Bleuler gauge. We have the familiar
+Ward-Takahashi identities [t9] in the form
+
+[] O,[6/6Ju(z)] Gai~c{g, tl, J}
+            = ( - leg(z) [6/6~(z)] + ieq(z) [6/6~I(z)] -iOuJU(z) ) Gai,~{~, q, J}
+
+wherefrom, for vertex functions, using (II.6),
+
+i [] (?,~lU(z) : ( - ie@(z) [(5/6 @(z)]                                       (II. 11)
+                 + iecp(z) [ 6/6q)(z)] + O,[ 6/6 agu(z)]) F { Up,(p, d } .
+    9 Because of Furry's theorem, there will be precisely one closed loop with an odd
+number of corners, namelythe one containingthe mass vertex. Since this vertex has unit
+Dirac matrix, the highest loop momentumpower drops out in the Dirac trace.
+                         Small Distance Behaviourin Field Theory                              239
+
+in particular,
+                             V..(, , zz')~o.~ = ia.O~a(z - z')                             (II.12)
+
+from the inhomogeneous term in (II.1t).
+Upon the convention-dependent correction that ensures (II.9), all A F(..)
+satisfy, homogeneous Ward-Takahashi identities, i.e.
+
+         ( - i e ~ ( z ) [6/aUp(z)] + iep(z) [6/6q~(z)]
+                                                                                           (II.13)
+                                    + a.[a/a d.(~)]) ~r{~,          q,, d )   = o,
+
+as obtained by applying formally the defining operation (II.7a) on
+(II.11). A simple calculation shows that (II.Tb) and (II.13) are consistent
+if and only if
+                                A e = eA z 3                         (II.14)
+and (see Note added in proof)
+      gauge correction term in ( I I . 7 b ) = - i.f d z [ ~ u d U ( z ) ] 2 . A z 3 .    (II.15)
+
+The gauge correction terms in (II.3) that follow from (tI.15) are more
+complicated and need not be given here. It is not possible to modify
+the defining linear operation for A Gai~c, (II.4a), by terms of Wilson [3]
+dimension < 3 in a way that would correspond to a simple renormalized
+linear operation on Gaisc as in (II.4b), since the candidate for the un-
+renormalized operation is of dimension four. However, all gauge correc-
+tion terms vanish if one uses the transverse (Landau) gauge where both
+(II.12) and (II.15) are consistently replaceable by zero.
+    The intermediate renormalization [20] we adopt Io is described by
+
+                                    F(p, - P,)t~=m= 0,                                   (II.16a)
+
+                             [o/op.] V(p, - p,)[,,= o = i~,.,                            (II.16b)
+
+                                      F,~(,, 0 0) = 0,                                   (II.16c)
+
+                               [a/ak2 r.~(,, k ( - k))ik= 0 = 0,                         (II.16d)
+
+                   [#2/#k~Okpl F,~(,, k ( - k))lk= 0 = - 2 i g , v9 ~                    (II.16e)
+corresponding to
+
+               Fur(,, k ( - k)) = - ik2 gu, + i(k2 gu, -        kuk~)O(k2).
+    lo This formulation of the renormalizationused in Ref. [20] has been proposed by
+K. Hepp (private communication).
+240                                         K. Symanzik:
+
+The identities (II.11) supply (II.10) and
+                                      r,(O, 0, O) = - i e T , .                              (I1.17)
+For the normalization (ILS), we rewrite (II.7b) explicitly in Fourier
+space as (see Note added in proof)
+AF(pl ... P,, ql .., q,, kl ... kl) = (cffe) m[O/Om]
+      + )~3(e) [e(O/~e) -- I] -- 2nY2(e)) F(p 1 ... p,, ql .-. q,, kl ... kz)                (II,18)
+      + ~3(e) i(kauk2 v + kl vk2u) (~nO(~12 •
+Using also
+
+m[e/Or~] r ~ 1 .., Pn, ql .', q,, kl ... k,- I ( - P l . . . . .         kt- 1))
+
+       =-      .= p~u[c?/Op~,]- i=~ qiu[O/Oq~u]-~=~ k~u[c~/Ok~u]+4-3n-~
+
+         • F(Pl ,.. P,, ql ... G, kl ,.. k z - t ( - P ~ . . . . .   k~-O)                   (II.19)
+we have from (II.I6-18) (see Note added in proof)
+                 A F(0, 0,) = (e(e)+ 73(e) e[0/Oe] - 272(e)) F(0, 0,),                      (II,20a)
+                        [O/~pu ] A F(p, - P,)[p=o = - 2i72(e) 7~,                           (II,20b)
+                                        A Fu~(,, 0 0) = 0,                                  (iI.20c)
+                             [O/&~] A G , ( , , k ( - k))i~= o = 0,                         (n.20d)
+          [a2/OkZk ] r . ( , , k ( - k))Go
+                                                                                            (ILNe)
+                                         = 2i73(e) (2g,,,g ~p -      g,~ g,,~ - g~,¢ g,3,
+
+                                 A Fu(0, 0, 0) = 2i~'2(e) e?,u,                             (II.20 f)
+                                    A F , , ~ ( , , 0 0 0 0) = 0.                           (It.20g)
+While (It.20c) is (II.9) and has been discussed before, (II.20d) is trivial,
+and (IL20g) is satisfied and yields no further information. The identities
+(11.13) secure consistency of (II.20b) with (II.20f). F r o m the remaining
+equations we find
+                             cx(e) = 1 + O(e2),                     (II.21 a)
+                                 yz(e) = (8 =2)- 1e 2 + O(e4),                              (II.21 b)
+                                y3(e) = (12~z2) - te2 + O(e4).                              (II.21c)
+While these functions are gauge dependent, it follows e.g. from its
+relation to the asymptotic forms of the (gauge independent) pure photon
+vertex functions that the ratio 7a(e)/~(e) is gauge independent, and also
+the identity (II.t4) holds in all gauges.
+                        Small Distance Behaviour in Field Theory                        241
+
+                   II.3 Asymptotic Form of Vertex Functions
+    For the two-photon vertex function, we set
+
+          Fu~(, , k ( - k)) = i(-9uvk 2 + k,k.,) d(Ek2/m2], e2) - I - i k u k , .
+
+As in Section 1.3, the step justified in the introduction gives from (II.18)
+
+     (m2 [a/am 2] + ~(e)- 1e273 (e) [e- z + (a/~?e2)]) d~s([kZ/mZ], e 2) = 0
+
+or, with e2~3(e)/.(e)= o-(e2),
+
+           ( - k 2 [a/ak 2] + a(e 2) [a/ae2]) [e 2 das([lg2/m2], e2)] = O. (II.22)
+
+With e 2 = e and kZ/m 2 = x, the general solution of (II.22) is
+                                   c~das(X, ~) = ~b(lnx + Q(0¢))                    (II.23)
+where
+
+                                    0(e) = i d~'o-(c()- 1                           (II.24)
+
+Writing (II.23) as
+                           lnx = - ~o(.) + ~ - 1 (O~das(X , ~))
+
+we compare it with the formula ~ of Gell-Mann and Low
+
+                   ~d~ (x,e)
+           lnx =       ~        dz ~c,(z)-~ - ~'(~d~s(x, c~))- ~P(c~d~(1, ~)).      (II.25)
+                   ~das (1,~)
+
+Thus, the present method supplies implicitly the function ~p or T if
+d.s(1, ~) is known since 0(e) was determined by relatively rigorous
+nonasymptotic considerations.
+    In practical terms, the difference is that in the series
+
+    d,~(x, e) = t + ~(alo + a l i tnx) + :d(a20 + a a l l n x + a22 [lnx]2) + ...
+
+(or in the analogous series for d~(x, ~)-1) in the present method only
+the a.0 need be calculated, while in the usual procedure [2, 21, 22] one
+needs more coefficients to construct, implicitly, also the power series
+for ~p(z). Since, apparently, calculation of the a.o requires calculation
+also of all a.k, k > 0, there is no practical gain. However, in principle our
+    11 Formula (5.9) of Ref. [1]
+242                                   K~ Symanzik:
+
+method appears to be superior, as we will argue in the discussion. We
+refrain from deriving from (II.18) further asymptotic formulas as these
+are identical with known [2] renormalization group results.
+
+                                      Discussion
+    The present method to derive asymptotic formulas for vertex func-
+tions from power counting arguments alone appears to be more direct
+than the usual one [2] based on the renormalization group, where the
+correctness of certain statements on qualitative subtraction parameter
+dependence is not easily [21] established. Moreover, due to the well-
+defined left hand sides in (I.13) and (ILl8), in principle, corrections to
+the asymptotic forms could be calculated.
+    More important is the fact that (I.13) and (II.18) involve the vertex
+functions themselves rather than their relatively artificial asymptotic
+tbrms, such that information on e.g. initial data, for the asymptotic
+forms most difficult to obtain, to supplement the partial differential
+equations, could be sought from nonperturbation theoretical sources.
+No analysis of (I.13) or (II.18) along such lines has been attempted in
+this paper.
+    In fact, the asymptotic forms (I.18), and similarly for QED, of the
+vertex functions are explicitly expressible by a simple modification,
+which is justified on the basis of the large-momentum behaviour of A F
+discussed in the Introduction, of the elementary solution formulas for
+the inhomogeneous equations (I.13) and (II.18).
+    Our formula (I.18) andits QED analog relate only to overall scaling,
+while already known techniques [2, 8, 91 allow more detailed statements.
+However, the relations, mentioned after (I.21), between the 4~-functions
+have not been exploited here and do supply more information in those
+cases where the dominant contributions to asymptotic behaviour come
+from the integration region of large momenta 12 in the nonlinear integral
+equations of Refs. [12-14]. (See Note added in proof.)
+    Finally, we remark that formulas (I.13) and (II.18), and their analoga
+in other renormalizable theories, could be used to complement the
+renormalization rules of Ward [23], whereupon this scheme would give
+results identical with those obtained on the basis of Bogoliubov-Parasiuk-
+Hepp [2, 241 renormalization theory.
+    Formulas analogous to (A.5), (A.7) and (A.8) in more realistic theories
+could be useful in phenomenological discussions of the breaking of
+scale invariance.
+    Acknowledgement. The presentation in the appendix was strongly influenced by the
+author's earlier discussions with and an important private communication from S. Coleman.
+The author is much indebted to S, Coleman for these discussions and the communication.
+    12 Cp. the technique of Ref. [8] and the discussion of integration regions in Ref. [9].
+                        Small Distance Behaviour in Field Theory                        243
+
+
+                                        Appendix
+                         The Breaking of Scale Invariance
+   The current S"(x) associated with scale transformations ~3 is defined
+such that its Green's functions 5 satisfy the Ward identities
+
+         3,((SU(x) A(yl) ... A(y,))+ )
+
+                           = (([O,S"(x)] A(yl)... A(y.))+ >                           (A. 1)
+
+                               - i ~ ~ (x - y3 (di + y~ a,,,) <(A(yl)... A(y,)) + >
+                                  i=l
+
+where d~ is the mass dimension of the it~ field operator, with argument
+Yi (d = 1 for scalar and vector fields, d = 3/2 for spinor fields). Integration
+of (A.1) gives, if there are no masstess particles in the theory that could
+give rise to nonvanishing boundary terms,
+
+         I dx (([0,S"(x)] A(yh) ... A(y,))+ 5
+
+                                        = i ~ (d i + y;O,v ) ((A(ya) ... A(y,))+).
+                                           i=i
+For dimensional reasons,
+
+                 " Yi~iv - m[a/Orn]           d i • ((A(yl)... A(yn))+) = 0
+             i
+
+provided all masses are kept in fixed proportion to m. Thus,
+
+         f dx (([OuSU(x)] A(yl)... A(y,,))+ 5
+                                                                                      (A.2)
+                                  = 2 im z [0/c3m2] ((A (Y 1)... A(y,))+ 5.
+
+If we regularize [10, 11] the theory such that the Lagrangian expression
+is meaningful, and keep also the regulator masses in fixed proportion to
+m such that (A.2) remains valid, we can evaluate the right hand side of
+(A.2) using the Schwinger action principle [15, 27], with the result
+ dx (([cgy(x)] A(yO ... A(y.))+ )
+= - 2 m 2 ~ dx(T([(~L(x)/Om 2) - ((OL(x)/Om2))] A(yl)... A(y,))).                     (A.3)
+
+For definiteness, we now consider the theory (I.1) (with A L = 0), but
+will, for brevity, omit to indicate the regularization explicitly. Then,
+in (A.3),
+             m2(c~L(x)/~rn 2) = rnu2 ((?L(x)/Om,)2 = - ~1 m.2 ~.(x) 2 . (A.4)
+    13 See, e.g., Ref. [3, 25, 26] and earlier references given there,
+t7 Commtm.math. Phys.,Vok 18
+244                                  K. Symanzik:
+
+However, that ~b,(x)2 is only logarithmically but mu2 quadratically di-
+vergent indicates that the regularized form of (A.4) will involve compli-
+cated cancellations of (in the regularization limit) quadratically divergent
+expressions. While it is clear from (A.2) and (A.3) that, at least in the
+space-time integration, all divergences will be removed, (A.4) yields an
+inconvenient form for the rigth hand side of (A.3).
+    Therefore, it is suggestive to use (I.6b) in (A.2). With the normali-
+zation (I.12) of A m,2,, we obtain for the right hand side of (A.2), in the
+theory (I.t), using again the action principle,
+y dx (T({ZaAm~c)(x) z + 2fl(g) [QL(x)/ag]
+   -2iny(9)+infl(g) [~ lnZ3/09]- vac. exp. val.} 0(Y0 ... ~b(y,))). (A.5)
+Here we use
+ i n (r(~(y~t ~.. ~ 0',,))) = i I dx ~ a(x - Yi) ( r ( ~ c v l ) ... q~(y,))>
+                                      i=I
+
+                             = ½ y dx {(T([[2 &,(x)2] 4~(Y0-.-~b(y,)))          (1.6)
+                               -- Dx ( r(4.(x)2 4(yl) ... qS(y.)))},
+
+where in the curly bracket the second term may be omitted,
+       ½ [] 4),(x) 2 = Oug~,(x) a"¢,(x) + 4,(x) [ - m~,,(x) - 1 g,~,(x)3],
+and
+             a L(x)/O g = - ½ d~,(x)Z(~?ma,/Og) - ~ 4)u(x)'*((?gJO g) .
+Altogether, (A.5) becomes
+
+I dx(([ay(x)] O(yd... 4,(y~))+>
+       = [, d x ( T({Za A m2. ~b(x); - ½fl(g) [a(Z 3m~ffag] ~b(x)2
+          - ~ fl(g) [a(Z~a.)/(?9] 4(x) 4 + [fl(g) ( a Z J O a ) - 2z3 y(g)]     (A.7)
+      3.q~(x) OuCh(x)+ 27(g) [Z3 m 20(x) 2 + ~ Z~g.(a(x) 4]
+          -vac. exp. val.} qS(yx).,, q~(y.))).
+We examine the terms in the curly bracket. The first term is finite by
+construction since by finiteness we understand the one of the Green's
+functions, The second term is to order g2 (cp. (I.t6)) simply proportional
+to a quadratic divergence that is, however, to this order precisely (i.e.,
+also in its, regularized form) cancelled by the divergent term separated
+from the third term by converting it into a Wick product. The fourth
+and fifth term are finite to order gZ Thus, while in (A.3) with (A.4) the
+problem of correct cancellation of divergences arises already in order g,
+with (A.7) it appears not before order g 3.
+                        Small Distance Behaviour in Field Theory                          245
+
+   The right hand side of (A.7) makes it evident that scale invariance is
+broken by terms of Wilson [3] dimension four t4, since, with (I.16),
+          { } of (A.7) = finite term proportional: 4~(x)2:
+                                                                                         (1.8)
+                     __ 1 b o g 2 . ~ ( x ) 4 : _ 2 c 0 9 2 ~#~o(x) c~@(x): + O(~/3) .
+
+However, (A.8) cannot be identified with ~,S"(x). The reason is that
+the steps that led to (A.7) are meaningful only in the regularized theory,
+and for that theory, if on the right hand side of (A.6) the square of the
+regularized field is used, that side is zero, such that the identification
+contemplated is possible only up to a term proportional to :[] 4~(x)Z:
+that cannot be specified by an analysis based only on the integrated form
+(A.2) of (A.1). Moreover, St(x) and the energy-momentum tensor OUr(x)
+it is related to [26] by S"(x)= x,O~V(x) do have a corresponding ambi-
+quity, formally expressible by
+                     o.~(x)--, o ~ ( x ) + ;~(g~v[] - ~ ~) ~(x) 2,
+because (A,1) specifies S"(x) incompletely without independent charac-
+terization of O,S"(x).
+    This ambiguity can be exploited to make O"*(x) and S"(x) renorma-
+tizable operators 25. However, the terms of dimension four in (A.8)
+cannot, of course, thereby be removed.
+    In QED, where no such ambiguity arises [26], the electron self mass
+is only logarithmically divergent, but a (non-gauge-invariant counter)
+term in the Lagrangian density of the form ~'square of the vector potential
+multiplied by a quadratically divergent coefficient" similar to (11) leads
+also here, as in all renormalizable theories, to a breaking of scale in-
+variance by terms of dimension four, as one should anticipate in view
+of the logarithmic terms that multiply scale invariant expressions for
+vertex functions (cp. Sections 1.3 and II.3) at large momenta.
+      No~e added in proof. Formula (It.6h) is oversimplified, the matrix inversion involved
+being extensive. - The adjustment term discussed after (II.10) is nonzero also in higher
+orders, and in these logarithmically divergent. (The author thanks R. A, Brandt for a
+discussion.) - Insertion of a mass vertex into all vertex functions in QED results in such
+infinitesimal change of gauge that the change of the longitudinal part of the photon propaga-
+tor due to change of the amplitude renormalization factor is precisely compensated. (IL t 5)
+and consequently (II.18) and (II.20) are incomplete, and the coefficient functions (II.21)
+need be calculated for varying gauge. The transverse (Landau) gauge, the only one stable
+under mass vertex insertion, has in (II.21b) y2(e)=O(e4). The correct gauge terms in
+(II.15) and (II.18) for arbitrary gauges will be given elsewhere. - The integral relations be-
+tween ~ functions mentioned in the Discussion are the usual ones for vertex functions
+[t2-14] but for the (non-scale invariant) theory with massless particles,
+      1¢ The observation that the dimension of the divergence of the scaling current in the
+         scalar model is four was privately communicated to the author by S. Coleman.
+      15 Cp., in this connection, Ref. [26].
+17"
+246            K. Symanzik: Small Distance Behaviour in Fieid Theory
+
+                                     References
+ 1. Gell-Mann, M., Low, F, E.: Phys. Rev. 95, 1300 (J954).
+ 2. Bogoliubov, N. N., Shirkov, D. V,: Introduction to the Theory of Quantized Fields.
+    New York: Interscience PubL 1959.
+ 3. Wilson, K.: Phys. Rev. 179, 1499 (t969).
+ 4. Gell-Mann, M., Zachariasen, F.: Phys. Rev. 123, 1065 (1961).
+ 5. Symanzik, K.: Commun. Math. Phys. 16, 48 (1970).
+ 6. - - Coral Gables Conference on Fundamental Interactions at High Energy II, p. 263,
+    Eds. A. Perlmutter, G. J, Iverson, R. M. Williams, New York: Gordon and Breach,
+    1970.
+ 7. Stora, R., Symanzik, K.: (in preparation).
+ 8. Landau, L. D., Abrikosov, A., Halatnikov,-L. : Suppl. at Nuovo Cimento 3, 80 (1956).
+ 9. Appelquist, T., Primack, J. R.: Phys. Rev. 1D, 1144 (1970).
+10. Pais, A., Uhlenbeck, G. E.: Phys. Rev. 79, 145 (1950).
+11. Gupta, S. N. : Proc. Phys. Soc. (London) A 66, 129 (1953).
+I2. Johnson, R. W.: J. Math. Phys. 10, (to appear).
+13. Symanzik, K.: In: Lectures on High Energy Physics, Ed. B. Jakgid, Zagreb: 1961.
+    Reprinted. NewYork: Gordon and Breach 1966.
+14. Taylor, J. G. : Suppl. al Nuovo Cimento 1,857 (t963).
+15. Schwinger, J.: Proc. Natl. Acad. Sci. U.S. 37, 452, 455 (1951).
+~6. --~ Proc.Natl.Acad. Sci. U.S. 48, 603 (1962).
+t7. Brandt, R. A.: Ann. Phys. (N. Y.) 52, 122(t969).
+t8. Jauch, J. M , Rohrlich, F.: The Theory of Photons and Electrons. Cambridge (Mass.):
+    Addison-Wesley ~955.
+19. Kazes, E.: Nuovo Cimento 13, 1226 (1959).
+20. Bjorken, J. D., Drell, S. D. : Relativistic Quantum Fields. New York: McGraw-Hill
+    1965.
+2t. Eriksson, K. E. : Nuovo Cimento 27, 178 (1963).
+22. Jackiw, R.: Nucl. Phys. B 5, 158 (1968).
+23. Ward, J. C.: Phys. Rev. 84, 897 (1951).
+24. Hepp, K.: Commun. Math. Phys. 2, 301 (1966).
+25. Gross, D. J., Wess, J.: Phys. Rev., (to appear).
+26. Callan Jr., C. G., Coleman, S., Jackiw, R.: Ann. Phys. (N. Y.), (to appear).
+27. Lam, C. S. : Nuovo Cimento 38, 1755 (t965).
+28. Weinberg, S. : Phys. Rev. 118, 838 (1960).
+29. Fink, J. P.: J. Math. Phys. 9, 1389 (1968).
+
+                                            K. Symanzik
+                                            Deutsches Elektronen-Synchroton DESY
+                                            D-2000 Hamburg 52, Notkestieg t
+

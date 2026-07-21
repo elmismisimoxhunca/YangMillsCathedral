@@ -1,0 +1,2 @@
+840b02897cb1bb3acaa6bf49a30c9a508f82612015615fb4156d7b3718e78509  broken_scale_invariance.pdf
+dfc3005644f46c8d2fd7e1dc09d471962a70af73b16dd7c756cbccdae7de844c  broken_scale_invariance.txt

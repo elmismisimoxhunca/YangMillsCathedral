@@ -1,0 +1,554 @@
+                CONJECTURED                  SET OF EXAC 1 BOOTSTRAP EQUAT1ONS                                                    154i
+
+internal lines. Clearly the contribution of this par-                 tions we have a prescription for calculating any n-legged
+ticular singularity to the s-channel absorptive part is               amplitude. We then have here a set of exact bootstrap
+T&    X T 2,' that is, precisely the e-body intermediate              equations written in closed form, with which one can
+state contribution to the unitarity relation.                         study questions of existence and uniqueness of solu-
+   Thus it seems that the required singularities are                  tions, and which present a basis for systematic
+present; what we cannot yet show is that only these are               approximations.
+present.
+   Finally, if the situation regarding unitarity can be                                 ACKNOWLEDGMENTS
+satisfactorily cleared up, we have dered a theory with
+all the desired properties of a true bootstrap theory. We               We want to express our gratitude to the Aspen Center
+have a well-defined set of equations, (3) and (4), for a             for Physics, where most of this work was done, and to
+set of vertex functions and propagators. They incor-                 our colleagues there, especially M. Gell-Mann and S.
+porate crossing and analyticity, and if they have solu-              Sakita, for many interesting discussions.
+
+
+
+P H YSI CAL     REVI EW      D                       VOLUME         2, NUM BER 8                              15 OCTOB ER 1970
+
+                              Broken Scale Invariance in Scalar Field Theory*
+                                                       CURTIs G. CALI AN) JR.f
+                                    California Institute of Technology, Pasadena, California   Ã109
+                                                                  QM
+                                      Institute for Advanced Study, Princeton,   ¹to Jersey 08540
+                                                        (Received 4 June 1970)
+
+                We use scalar-Beld perturbation theory as a laboratory to study broken scale invariance. We pay particular
+             attention to scaling laws (Ward identities for the scale current) and find that they have unusual anomalies
+             whose presence might have been guessed from renormalization-group          arguments. The scaling laws also
+             appear to provide a relatively simple way of computing the renormalized amplitudes of the theory, which
+             sidesteps the overlapping-divergence  problem.
+
+
+                     INTRODUCTION                                     leads to a simple prescription for computing the re-
+                                                                      normalized Green's functions of the theory. Finally,
+      HE perturbation        theory of a self-interacting scalar
+                                                                      in Sec. IV, we shall demonstrate an interesting connec-
+         6eld is about the simplest available model 6eld
+                                                                      tion between the scaling law and the predictions of the
+theory, and a convenient laboratory for testing new                   renormalization group.
+ideas in strong-interaction        physics. In this paper we
+shall be concerned with studying the concept of broken
+scale invariance within such a framework. We shall                                I. BROKEN SCALE INVARIANCE
+find that the model calls for some unexpected modi-                     In simple canonical held theories it is possible to
+fications of our ideas on broken scale invariance. At the             introduce   an acceptable energy-momentum           tensor' '
+same time, the approach suggested by broken scale                     0'„„having the following properties: (a)               0=
+                                                                                                                            0„&is
+invariance leads to an interesting, and simple, new
+                                                                      proportional to those terms in the Lagrangian having
+approach to renormalization. We hope that this mutual
+illumination of two interesting questions justifies yet
+another paper on scalar field theory.
+                                                                                               f
+                                                                      dimensional coupling constants (such as mass terms);
+                                                                      (b) the charge, D= d'co Sv, formed from the current
+                                                                     5„=   O„„a;",acts as the generator of scale transformations,
+    In Sec. I we shall review the general properties of
+scale invariance as a broken symmetry, leading up to
+the idea of a scaling law (the analog for scale invariance
+                                                                                     [D(xo),y(x)    j= i(d+x —
+                                                                                                             a)y(x), .
+of PCAC low-energy theorems). ln Sec. II we shall see                 where d is the dimension of the field; (c) the current        S„
+how the general structure of renormalized perturbation                satis6es 8&S„=0~ so that it is conserved when there are
+theory constrains the allowable form of the scaling law               no dimensional coupling constants in the Lagrangian.
+and forces it to differ from naive expectations. In Sec.              With the help of the current S„andits equal-time com-
+III we shall show how the existence of the scaling law                mutation relations with fields, given above, one is able
+   * Vi7ork supported in part by the U. S. Atomic Energy Commis-        ' C. G. Callan, Jr. , S. Coleman, and R. Jackiw, Ann. Phys.
+sion under Contract No. AT(11-1)-68 and by the U. S. Air Force        (N. Y.) 59, 42 (1970).
+OfTice of Scienti6c Research under Contract No. AFOSR 70-1866.          ~   M. Gell-Mann, University of Hawaii Summer School lectures,
+   t Alfred P. Sloan Foundation Fellow.                               1969 (unpublished).
+                                               CURTIS G. CAI LAN, JR.
+ to derive a standard sort of Ward identity                       factor of 4 — nd rather than n(d 4—  )+4, arises entirely
+                                                                                                      6
+                                                                  from the diferent dimensions of and G.
+
+       )+4
+  ~(~ 4—          2—p'
+                           8
+
+                                i-
+                                  — "p -i)
+                                  G(pi
+                                                                     We shall eventually be dealing with a simple theory in
+                                                                  which the only dimensional parameter is the particle
+                                              0
+                                           &F(—Pi" P--i)          mass p. In such a case, ordinary dimensional reasoning
+                                                            (2)
+ where                                                            requires that 6' have the following dependence on p..
+
+
+
+                                                                  (ft is perhaps worth inspecting a Feynman diagram or
+                                                                  two to convince oneself that the dimension of 6' in
+                        dydee
+                                                                                                )—
+                                                                  power of mass is just 4 n The. n we have the identity
+
+
+
+                                  P. i)
+                                                                      4—~ — P'
+                                                                             2            G(P—
+                                                                                             i P- i) =~ -G(Pi
+                                                                                                               8
+                                                                                                                     —P--i)
+ I, 2~)'b(q+Q P,)F(V, Vi                                                            Bp;                        Bp
+            ;=a
+                                                                  which leads to an equivalent    form of Eq. (4):
+                                    dx„e'&'&+'~"'*'
+                                                                      fy8/By+ 87G(p          p„)= —'F(0, p„),(5)p
+                       &&«I &(8(r)4(~      )" 4(~-))10) (») where
+The significance of such an e'quation is clear: If 0=0,
+so that Ii=0, the particle Green's functions satisfy              From now on, we sha11 refer to the operator in square
+SG=O, where S is the linear operator appearing in                 brackets as S.
+square brackets in Eq. (2). One can always find the                  We remarked earlier that d was the dimension of the
+general solution of such an equation, and it turns out            field. For a scalar field the dimension in powers of mass
+to imply that, apart from explicit kinematic factors, G           is unity, so that one expects d —      1=0. However, as
+depends only on dimensionless ratios of momentum                  Wilson' has pointed out, when there are interactions it
+variables. This is precisely what one expects from naive          is not guaranteed that the naive dimension and the
+dimensional reasoning in the event that no dimensional            dimension defined by the commutator of the generator
+coupling constants are present in the theory. Therefore,          of scale transformations with the field Las in Eq. (I)
+                                                                  are the same. Therefore, we shall let the term (d       1)n-
+                                                                                                                              j
+the scaling law, Eq. (2), says that the matrix elements
+F of act as the source of violations of simple dimen-
+      O~
+
+
+sional scaling in the particle matrix elements        |
+                                                 . It also
+appears to be of general validity, not depending on the
+                                                                  in Eq. (5) stand. The question now is whether the scaling
+                                                                  law of Eq. (5) actually holds in renormalized pertur-
+                                                                  bation theory, and if not, whether there is a simple
+details of the theory, providing a general framework for          equation which replaces it.
+the study of broken scale invariance. We want to ask                 The question seems interesting since the scaling law
+whether such a relation, which we shall refer to as a             is the only obvious direct, and model-independent,
+scaling law, actually holds in a simple renormalizable            expression of how specific forms of scale-invariance
+field theory.                                                     breaking affect particle scattering amplitudes. Also it
+   It is convenient to define the scaling law for "one-           brings in the dimension of the 6eld in a way which may
+particle-irreducible" Green's functions rather than the           be of phenomenological significance.
+full Green's functions defined in Eq. (3). The one-
+particle-irreducible  Green's functions, which we shall                    II. GENERAL CONSTRAINTS                  ON
+denote by 6 and F, are obtained from the full Green's                                 SCALING LAW
+functions by first throwing away all diagrammatic                    To settle the questions raised in Sec. I, we shall
+contributions which fall into disjoint pieces when one
+                                                                  study perturbation theory for a massive scalar held
+internal line is cut, and then dividing out of the re-            interacting through X@4:
+mainder one factor of the propagator for each external
+leg. This simply turns full vertices into proper vertices.
+The same formal arguments which led to the Ward
+identity for G allow one to derive a Ward identity for. 6':       Since the only term in the Lagrangian with a dimen-
+                                                                  sional coupling constant is the mass term, we expect
+                   a                                              0'= p'P' to be the source for violations of scale
+ 4—md — p;.P             G(pi''    p —i)                          invariance.
+                                                                     Since this is a renormalizable theory, there are a
+                                          iF(0 pi. . p„—
+                                                       i). (4)    finite number of amplitudes which require subtractions.
+
+The difference between          the two Ward identities,   the      K. Wilson, Phys. Rev. 1'79, 1499 (1969).
+                BROKE;N SCAr E                      r   NVAkrANCa        r N   scALAR. srELD THEORY
+The standard lore tells us that 6'"' requires two sub-                  Green's functions (6&'&, 6&'&, and F&") are known,
+tractions, 6(4) requires one, and F(2) requires one, with               presumably the scaling operator S should be such that
+all other amplitudes requiring no subtractions. That                            —
+                                                                        $6'("& = iF("& is automatically true for n&4 once it is
+j&" &s& is the only matrix element   of     requiring a sub-
+                                               O~                       true fore(4.     The required property of S is that it be
+ traction follows, via the usual power-counting argu-                   "distributive" in the following sense:
+ments, from our requirement that          be proportional to
+                                          O~                               I et us consider a particular diagram in the skeleton
+&&&&'. As a consequence of these subtractions, F &" and 6 "&            expansion of 6& &. If it is a diagram with i vertices and
+ are determined up to an arbitrary constant, while
+6('~ is determined up to an arbitrary first-order poly-
+                                                                        j  internal lines, its contribution to 6(") is gotten by
+                                                                        replacing each vertex by 6'( and each internal line by
+                                                                                                              &
+
+
+
+ nomial in p'. This arbitrariness means that we can                       —6&s& ' and doing the integrations over loop
+                                                                        [ j
+choose G&4&(0), 6&'&(0), (d/dp')6&2&(p') o,                 and E&'&(0) momenta:
+at will. These parameters, which we call —      iX, —
+                                                        I
+
+                                                     ip', iZ,
+and 2m', respectively, play the role of arbitrary pa-                   6&"'                                            6&4&), fsg&ors
+                                                                                 d (loop momenta)         (6&4&
+rameters in terms of which all the Green's functions of
+the theory are determined. 4                                                                   X([ 6 P ' ' '[ 6 j ) rsc&ors                              ~
+
+
+   The Green's functions of the theory which do not
+need a subtraction (6'"&, n)4; j&'&"&, n)2) have the                    %hat happens     when we act on this integral with the
+useful property of being directly expressible via the                   scaling operator found in Sec. I, S= p&f/&fp+n&'&? By the
+skeleton expansion in terms of t ('), 6(4), and             A   F"'.    chain rule for differentiation, pc&/c&p gives a sum of
+skeleton diagram for 6(") is a Feynman diagram con-                     terms in which it acts independently on each factor in
+taining no subgraphs identifiable as a contribution to                  the integral for 6("~:
+6('~ or 6(4), while a skeleton for F(") is a Feynman
+diagram containing no subgraphs identifiable as 6('),
+                                                                                              6'(')       —e(')
+                                                                                                          &
+                                                                                                              Bp
+0(", or F('). The skeleton expansion for a given Green's
+                                                                                                                   a
+function is obtained by taking all skeleton graphs for
+that Green's function and replacing all point four-
+                                                                                6&2&pl   ~[           —
+                                                                                                 g&2&g r ~             g&2&
+                                                                                                                              [ gis&g —  &
+
+
+
+                                                                                                                   Bp
+particle vertices by 6&'&, all internal lines by —  6&'&$ ', '
+                                                            [
+and all point insertions of    0"  by 7&2&. Since the higher               Sy virtue of the trivial topological relation n = 4i —2                   j,
+Green's functions are determined once the fundamental                   the term n'o has the same behavior. So, if S= &JB/&fII+n8,
+
+
+S        d (loop momenta)   6'4&(1)     [—6&'&(j)j '
+            d (loop momenta)    {([SG&&(1)]6&4&(2) . 6& &(i)+(i —1 similar terms))             [—6& &(1)] ' [—6& &(j)] '
+                  +6"'(1) 6"'(f){I:—6"'(1)j '[Sg'"( ) jL —6'"(1)&'[—6'"(2)3 "L—6"'(a)?'               '
+                                                                              +(j—1 similar terms)}),
+ which is to say that $ acts in succession on each vertex               vergent amplitude, it has itself a skeleton expansion.
+ and inserts $6(') in succession on each internal line                  Therefore, the action of replacing a vertex by E'"
+ (see Fig. 1). Any S with this property will be called                  gives a sum of sleketons for F( ) in which the vertex
+ distributive. Obviously, we can add to $ any kind of                   in question is replaced in turn by all the skeletons in the
+ differentiation operation, such as differentiation with                expansion for F"). Therefore, S turns a single skeleton
+ respect to coupling constant, without changing its                     for 6("' into a sum of skeletons for F("). If, when we
+ distributive nature.                                                   sum all skeletons for 6'("~, we get all skeletons for F("),
+    Now if $6'(') = —   iF(') and $6'4) = — i''4), the above            we have the desired result SG("'=  ——iF("'.
+ recipe  for acting  with  $  on a given skeleton  for 9(") is             I et us show that the above recipe for turning 6
+ as follows: Insert F") in succession on eachinternal                   skeletons into F skeletons exhausts all possibilities.
+ line and replace each vertex 6 "&(prp2ps) in succession                 Consider a particular skeleton, $~ for F("). YVhen we
+ by j&'&4&(0,p&psps). Inserting F&2& on an internal line
+ gives directly a skeleton for F'"'. Since F(4) is a con-
+   4 The subtraction can be made at
+                                      any axed value of momentum.                                                                        +   0   ~   ~
+
+
+ Since we subtract at zero four-momentum,         the parameter p is
+ not identical to the physical mass.
+    ' The amplitude which    we called G(') is identical to the prop-
+ agator. The passage to g(~) involves dividing out two factors of         Fro. 1. Action of S on a particular     skeleton for C&'&. The
+ the propagator from G&2&, so that 6&'& ca PG&2&] '                                      cross stands for insertion of 0+.
+                                              CURTIS G. CALLAN,                        JR.
+remove from it the insertion of F &2~, it becomes a graph           parameters         (), f, and    m':
+(& for 6("&, which may or may not be a skeleton.    Suppose
+it is a skeleton, S~g. Then S~ is created by inserting F "&                                          8= ~o;)
+on some internal line of Sig. Suppose () is not a skeleton.
+Then it contains a subgraph identifiable as a          6"'
+                                                        or a
+                                                                                                     f= P 2n—)i.,
+6'(4) within which is contained the line from which F&2)
+                                                                                                    m'= p'(1+-', n) .
+was removed to create g in the first place. Actually, this          If we look at the lowest-order contributions to o. and
+subgraph cannot be a 6&2&, since that would mean, on                p, we find that they are both Op, '). This has the im-
+putting back the F&2~ insertion, that the original graph            mediate consequence that fAO, except possibly for
+S~' contained an insertion identifiable as an F "~, which
+                                                                    some specific value of A, .~ Therefore, we have to live
+is not allowed for an F skeleton. So, (& contains a sub-            with the general form of the scaling law, Eq. (6). We
+ graph identifiable as a 6&4&, which, if shrunk to a point          return to the question of interpretation later on. It
+vertex, turns (& into a skeleton 52' for 6'"&. Also, if we          should also be noted that the scaling law determines, to
+put the F") insertion back into this subgraph, the sub-             any desired order in perturbation, the funny constants
+graph becomes a skeleton for F &4&. So, in this case, S~            () and f appearing in S.
+is obtained from $2~, a skeleton for G("~, by replacing
+ one of the vertices by a skeleton for F(:4~. Putting these
+ two cases together, we see that all the sleketons for F &")
+                                                                                  III. COMPUTING               FUNDAMENTAL
+                                                                                          GREEN'S FUNCTIONS
+ are obtained by acting on all the skeletons for 6'") in
+precisely the manner described in the previous para-                   '6'e have yet to show, of course, that the scaling law
+graph. Therefore, a distributive S is guaranteed to                 is satisfied for the full Green's functions 6('& and                6").
+satisfy the scaling law $6'") = —    iF'"' for all n if it is       This is rendered somewhat difficult by the fact that
+true for m=2 and 4.                                                 6~2) and 6&" are beset by overlapping divergences and
+   The scaling operator S=pB/B&i+n(& suggested by                   not easy to calculate by standard techniques. What we
+formal arguments on broken scale invariance is of                   can do, however, is to use the scaling law to compute
+course distributive. It remains so if we add to it differ-          6&'& and 6&4' in a systematic way which not only guaran-
+entiation with respect to any parameter. The only                   tees that they satisfy the scaling law, but automaticalh.
+parameter in the theory apart from the mass p, is the               solves the overlapping divergence problem. To see how
+coupling constant X. This suggests a more general form              this goes, let us consider the scaling law for 6'4', slightly
+for S:                                                              rearranged:
+               S=Ii8/By+eh(X)+ f(X) 8/H, .                    (6)
+The question is whether one has to make use of this                 &
+                                                                         —6 (Papzp3) = —4&+f                     6   (Pip2ps)
+freedom. One would be happier with a scaling law not                     Bp                                 BX
+involving differentiation with respect to the coupling
+constant, since that would leave open some hope of
+                                                                                                                        "'(o' p p p )
+direct phenomenological application.                                                                   =@(p p p      6(&) 6(4) F(2))     (7)
+   The simplest way to answer this question is to study
+the scaling-law constraints on the fundamental con-                 This is a differential equation for G(4& which can easily
+stants of the theory. One easily Gnds that                          be integrated:
+
+ 56(')(0) = iF('&(0)—
+                    m (1+8)&i'=m'                                                                     'dn
+                                                                    6(')(p, p, p, ) = —zX —            —C(np, np„np, 6(') 6('& F('&)
+                                                                                                                 ,
+                                         BZ
+56(2) (0)' = —iI'(') (0)'   ~ 2f'&Z+ f
+                                                                     Lthe convergence of the integral is guaranteed by our
+                                              8                      choice of and f, which implies that C (0,0,0) = 0). The
+                                                                                  (&
+                                                  F(&)(0 p)
+                                                  2                  contribution to this integral of a particular order in X
+                                                                    involves in the integrand the fundamental          Green's
+ 56('&(0) = i F(4'(0)       ~— .+f=P=F(4)(0).
+                               4Q.                                  functions only to lower orders in X Lthis is because both
+
+The quantities n and p correspond to Green's functions
+                                                                    (& and    fare O(X') and F(4& has a skeleton expansion].
+                                                                    Therefore, we have a systematic scheme for determining
+not requiring subtractions, and so can be calculated in             6(4': If the fundamental Green's functions are known
+terms of the basic parameters of the theory to any                  to OP " '), the requirement that C'(4) satisfy the scaling
+desired order. If we make the conventional choice                   law uniquely determines 6(4) to 0(X") and no conver-
+Z=1, ' we can explicitly solve these equations for the              gence difFiculties arise. It should be remembered that
+  'This choice of Z does not leave the propagator correctly         the condition C (0,0,0) = 0 is what is used to determine
+normalized at the physical particle pole, meaning that a Gnite
+rescaling eventually has to be carried out. This does not aRect        ' It is worth pointing out that we may impose 8 =0 at the price
+any of our arguments.                                               of fixing Z to be a function of X such that 8Z /N =o./p.
+               BROKEN SCALE                        I NVARIANCE                    IN SCALAR              F IELD THEORY                  i545
+
+the eth-order contributions to and f, thus completing
+                                         &)                                      The convergence of the integral is guaranteed because
+the induction. If we had a. scheme for computing F('~                            8 is so chosen that X(0,0) =0. Also, this equa, tion de-
+in terms of lower-order fundamental Green's functions,                           termines the nth-order contribution to 8 in terms of
+we could use the scaling law 56("= —     iE~" to compute                         lower-order quantities. Just as in the analysis of Eq.
+6(') systematically in the same way.                                             (7), we see tha, t to calculate the right-hand side of this
+   F(" is beset with overlapping divergences, as are 6("                         equation to O(X") requires the knowledge of g&'&, g&4),
+a.nd 6(4&, and is not easy to handle        directly. We                         and F&'& only up to 0(&&" '). Therefore, taken together
+can sidestep this problem by studying the scaling                                with the corresponding equations for 6"& and 6"',
+law satisfied by J"("~ rather than 6("&. The Green's                             this equation provides a systematic scheme for cornput-
+function F&")(q,p&. p„)is really quite analogous to                              ing the fundamental Green's functions of the theory to
+       —
+C&"+') instead of being a matrix element of n+I                                  successively higher orders in perturbation theory in a
+identical fields, it is a matrix element of n identical                          way automatically consistent with the scaling law. This
+6elds plus another Geld identifiable as the trace of the                         method also completely avoids divergence difficulties
+energy-momentum       tensor. Therefore, we expect that                          since the calculations always start with amplitudes
+when it is operated on by the appropriate scaling oper-                          possessing a skeleton expansion.
+ator 5, it yields the matrix element H("~ of n identical                            The amplitudes 6('& and 6(4~ so computed are not
+fields plus Aeo traces, one of which carries zero four-                          obviously identical to those one would determine by
+momentum:                                                                        the usual methods of renormalized perturbation theory.
+                                                                                 We therefore are obligated to verify that they possess
+       iF&")(&,p,      p„,) = —iH&")(oz;            p&      p„.&).               the usual properties of analyticity and unitarity. If
+                                                                          b~.    they do, then they must be perfectly a, cceptable ampli-
+Such an equation is easy to derive heuristically
+                                                                                 tudes, and in fact identical to the amplitudes computed
+standard Ward-identity methods, and one Ands
+                                                                                 in the usual way.
+                    .SIl,   &&/'(=&p+ n'&')+ 1')   2,    —                          I,et us erst consider the question of analyticity. The
+                                                                                 amplitude g«) is computed from Eq. (7) by successive
+where the 6 accounts for the difference between the real                         approximations: The fundamental        Green's functions
+and naive dimension of O~ in the same way that takes              &)             correct to order n —i are inserted on the right-hand
+care of the possible anomaly in the dimension of the                             side, and the equation is then integrated to get G(4'
+field g. The virtue of this scaling law is that the usual                        correct to order rs:
+power-counting arguments tell us that all of the matrix
+elements H &" are primitively convergent, even for n = 2.'
+                                                                                                           ' do.
+                &
+
+
+
+
+Therefore, all H'"' have skeleton expansions in terms of                         F~
+                                                                                      4
+                                                                                          (p&p2p3) = —iX —   —4'(op, ,op„op,; g ',g ', F ' ) .
+the fundamenta, l Green's functions 6('~ 6( &, and E('&
+   The Jf' '"~ with e)
+                     2 are all primitively convergent and
+                                                                                 If 4 (p) p2p3) has a, cut of the usual form, say, along the
+possess skeleton expansions in terms of          6(", and6"',                    line (2AM)'(pP( ~, then of course so does
+F(".  Therefore, we want the corresponding equations
+          —
+5F'"&= iH("& to be automatically valid once the                                                          ' do.
+                                              —
+fundamental equations $6( &= iF~ ~ 56& &= iF( ',                 —                                        —(np), np„np3) .
+                                                                                                                 C
+                —
+and SF('&= iH(') are assumed valid. Precisely the
+same type of argument that led to the requirement that
+S be distributive then implies that S=S+8 2. The                —                In fact, so long as the cuts in C are of the usual sort in
+quantity 5 is then determined by the equation SF&"(0)                            s, t, u, and masses, then 6(4' has precisely the same cuts,
+   —
+ = iH&'&(0) in a perfectly straightforward way, and is                           with different discontinuities across the cuts. But the
+found to be O(X).                                                                cuts of C to a given order are just the cuts of 6(4' to
+    The scaling law for F(') can now be rewritten as                             lower order and the cuts of F&'&(O, p, p, p, ) to the same
+                                                                                 order. Since F&'&(0; p, p, p, ) is constructed via a standard
+(u~/~~ —2)F")(q; p)                                                              skeleton expansion, it will have the usual cuts which,
+                = ( 28 —8 f8/(&&. )F&—') (q, p) —
+                                                —iH             &2)
+                                                                      (q&t; p)   because the momentum         arguments      are the same,
+                = X(q p g(&) g(4) P(2))                                          coincide with those of 6(4~. Since we are proceeding by
+                                                                                 induction, we assume that 6(4) to lower order has the
+Upon integration,       this gives                                               proper cuts. Then C will have exactly the same singu-
+                                                                                 larity structure as we would expect for 6(4), which means
+                                    ' do.                                        that the next approximation to 6(4&, gotten by inte-
+  F(2)(q p)f    f7(2)(0 0)               Q—
+                                          (~II op g(&) g(4) F&2))
+                                                                                 grating C, has the right singularity structure. The same
+                                                                                 sort of arguments, of course, apply to 6&'& since it is
+    8 Each insertion   of qb' (remember that O~~qP in this theory)               computed in much the same way.
+ reduces the degree of divergence bv 2. The only divergent matrix
+element with one insertion of 0& is g(~&, and its degree of divergence              The question of unitarity is less trivial but is attacked
+i.s 0. Therefore, B'&~& has degree of divergence    2.  —                        in a similar manner. Let us for simplicity consider the
+                                                  CURTIS G. CALLAN, JR.
+                                                                        used [see Eq. (7) et seq.
+                                                                        satis6es
+                                                                                                       ] imply that to order X", G(')
+
+  Pro. 2. Action of S on the two-body unitarity        integral. The
+                                                                                          ,—
+                                                                                           [DG«)
+                                                                                            RIM
+                                                                                                          D—nG«)]=0
+cross stands for insertion of 0& and the wavy line stands for replac-
+ing  the  affected propagators by their discontinuity across the        This allows the solution
+single-particle pole.
+                                                                          DG(4&    —D„6(4&= momentum-independent              constant.
+amplitude      6(4& in a kinematic
+                                region where only a two-
+particle cut in the variable (pr+ p2) ' exists. The normal              Since there is a kinematic region where both Do'~4~ and
+unitarity prediction for the discontinuity across this                  D„G(4) vanish (below the two-particle threshold), the
+cut ls                                                                  constant on the right-hand side of this equation must
+                                                                        in fact vanish. Therefore, we can show inductively that
+DQG      ' (p,p, p3p4)                                                  6(4' satisfies the usual unitarity relation. Similar
+                                                                        arguments, of course, apply to 6'(2'.
+                      d4/     d'l'
+                                                                           These arguments for analyticity and unitarity are
+                                     (2')'() (p g+ p. +I+I')
+                                                                        somewhat sketchy, but presumably         could be made
+                    (2m)4 (2~)'
+                                                                                   "
+                                                       .
+                            X{G (p, p, II')A(I)A(P)(" (II'p.p.,)},
+                                                                        rigorous. They seem, however, sufhciently convincing
+                                                                        to make us believe the proposed scheme for computing
+                                                                        (""' and 6(').
+where D(l) is the discontinuity of the propagator across
+                                                                           To summarize, we have done two things by this
+its single-particle pole [if the physical mass is p'-                   rather long argument. First of all, we have shown that
+a, nd the propatagor   is conventionally normalized, A(l)               the particle amplitudes in this theory satisfy a scaling
+=2~8(l' —  p')8(lo)]. If we act on this equation with the               law, albeit one which diHers in a profound way from the
+scaling operator 5, the distributive property of 5 means                one suggested by naive broken-scale-invariance        re-
+that we get four terms, corresponding to S acting in                    quirements. Secondly, we have shown how this scaling
+succession on each of the four terms in curly brackets:                 law is used to compute the amplitudes of the theory in a
+SD.G"'(p~p2p8p4)                                                        way which automatically avoids all questions of diver-
+                                                                        gence, overlapping or otherwise. Finally, it should be
+             de    d41t'                                                noted that these arguments will generalize in an obvious
+                            (2~)'8(p)+p, +I+I')                         way to any renormalizable      field theory, and might
+           (2~)4 (2~)'                                                  even be of some use in making simpler calculations of
+            x(LsG"'(p~p2II')]A(I)~(I')G") (It'psp4)                     higher-order quantities.
+
+              +6(')(p, p, ll')[SA(l')]A(t)G(')(lt'pap4)+          }.       IV. INTERPRETATION AND CONNECTION
+Since 5 acting                          since 5 acting on
+                     on g(4& gives F('& and                                    WITH RENORMALIZATION GROUP
+the propagator gives the insertion of E('& on the propa-                   At this point we should make some eRort to under-
+gator, ' these four terms can be represented graphically                stand why the scaling law takes on the form it does.
+as in Fig. 2. These terms are immediately recognized as                 If we could somehow "turn off" the explicit scale-
+the standard unitarity contributions to the two-particle                invariance-breaking     terms in the Lagrangian          —
+                                                                                                                           in this
+discontinuity of — iF (') (0; p, p, p, p4), which, because it is                                   —
+                                                                        case, the mass term then the particle amplitudes
+computed from a skeleton expansion, is known to satisfy                 would satisfy SG(") =-0. If S were simply p8/Bp+nl), this
+normal unitarity. Therefore, if we let D stand for the                  would imply that the functions 6'") are homogeneous
+operation of taking the discontinuity, we have, sche-                   functions of their momentum         arguments   of degree
+matically,                                                              4—  nd, with d=-1 —        "
+                                                                                                b. This is what one might call
+                                                                        naive scaling, appropriately modified for the anomalous
+     S[D G(4)] = D[ —ji'(4)] = D[SG(4)]= S[DG(4)]                       dimensions of the fields. "Turning o6" the mass terms
+where the last equation follows because the operations                  can actually be achieved in practice by taking appro-
+5 and taking the discontinuity commute. Therefore,                      priate asymptotic limits of momenta, and one would
+S[DG(') —D G(4)]=0. 7'e gave arguments for this                         expect the Green's functions to satisfy naive scaling in
+equation on the two-particle cut only, but it obviously                 such li)nits. In fact, S= ~8/dp+n8+ f8/BX, so that even
+works for any cut and we can take it to be true in general.             though we can achieve SG("'= 0 in appropriate asymp-
+If we assume that 6(4' satisfies normal unitarity up to                 totic regions, this does not mean that the 6"") satisfy
+order X" ', then arguments of the kind we have often                    naive scaling in the same limit. It appears that naive
+                                                                        scaling is replaced by some restriction on the joint de-
+   9%'e assume, and can show directly, that S acting on the
+disconbnlity 6 of the propagator gives the Chscontinuity of the           ' See in this connection T. T. 'IA"u, Phys. Rev. 125, 1436 '1.962).
+                                                                                                  =4 —nd —Pp; 8/Bp;.
+                                                                                                                                     t,
+
+insertion of F( ) on the propagator.                                      "Recall that p8/dIJ, +nb—
+             BROKEN SCALE INVARIANCE                              IN SCALAR           FIELD THEORY                   1547
+
+pendence of 6'(") on momenta and coupling constant.              one to extract renormalization-group    conclusions in an
+                              f
+That S contains the term P.) 8/Bh is apparently equiv-           expeditious manner.
+alent to saying that even in the absence of explicit
+symmetry-breaking   terms (mass terms), scale invariance
+                                                                                     CONCLUSIONS
+is still broken by some mechanism. The nature of this
+mechanism is not hard to 6nd: We assumed that in                    We undertook this investigation in the hope of finding
+the Lagrangian                                                   out just how scale invariance is broken in a model field
+                                                                 theory. We found that the source (in the sense of the
+                                                                 scaling law) for violations of naive dimensional scaling
+                                                                 was not simply those terms in the Lagrangian having
+                                                                 dimensional coupling constants. The interpretation of
+only the mass term p'p' contributes to scale-invariance          this is relatively simple: A term in the Lagrangian will
+breaking. In fact, any term in the Lagrangian with               not break scale invariance only if its dimension (as
+dimension diGerent from four will contribute. ' The              defined by commutation with the dilation generator) is
+interaction term XP' has dimension four to lowest order          exactly equal to four. But the terms in the Lagrangian
+in perturbation theory, but, just as (3I) has a dimension        with dimensionless coupling constants are guaranteed to
+different from one when interactions are considered, '           have dimension four only to lowest order in pertur-
+so will p' have a dimension different from four. There-                —
+                                                                 bation when the e6ects of interactions are considered,
+fore, one can expect the XP' term to contribute to scale-        their dimensions will change and they will contribute to
+invariance breaking even though it has a dimensionless           scale-invariance    breaking. The surprising thing we
+coupling constant. The interesting thing about the               found was that these "implicit" breaking terms could be
+scaling law is that it provides a simple analytic expres-        incorporated in the scaling law by a rather simple
+sion of the e6ect of this implicit sort of symmetry              change in its form. The resulting scaling law probably
+breaking.                                                        cannot be used in a direct phenomenological fashion, but
+   We mentioned that whenever the right-hand side of             by studying a special asymptotic limit we were able to
+the equation SG= —      iF could be neglected, one obtained      recover the results of the renormalization group. There
+a constraint on the joint dependence of G on momenta             are other asymptotic limits in which field-theory
+and coupling constant rather than naive scaling. We              scattering amplitudes are supposed to have simple
+would like to pursue this somewhat further in order to           forms (the impact-parameter        representation, for in-
+establish a connection with the renormalization group.           stance) and one might find useful constraints on such
+Consider for a moment the scaling law for the two-               forms by studying their compatibility with the scaling
+particle amplitude: SG(')(p') = —     iF(')(O, p). If we take    law. Another aspect of this is that the scaling law
+the limit p'    ~   —~, Weinberg s theorem" implies              appears to provide a particularly simple approach to
+P(')—   &(p') )& (powers of Inp') while 0(') ~    (p') X (pow-   renormalization —   one can use it to completely sidestep
+ers of lnp'). If we collect together all those terms in 6(')     questions of overlapping      divergences and obtain a,
+which are proportional to p' and denote them by p'               relatively simple prescription for computing renormal-
+C(ln( —  p'/p'), )i), the scaling law clearly implies that       ized amplitudes.
+SC =0, a rather severe restriction on the form of C. In             Finally, it should be said that we confined ourselves
+fact, since S= p8/Bp+ f(X) 8/&+ 26 is a linear operator,         to a scalar-held theory only for the sake of simplicity,
+it is quite easy to get the general solution for C:              It seems quite clear that the general ideas which we have
+                                                                 developed are applicable, with simple modifications, to
+                                                                 any renormalizable theory. It is not clear that any of
+                                                                 this has immediate practical importance. Nonetheless,
+where                                                            it is always useful to see an old problem in a new
+                                   dA.
+                                         '                       light, and we hope that this, along with whatever clar-
+                     &(x) =                                      ification of the problems of broken scale invariance we
+                                  2f( ')                         may have achieved, justifies yet another paper on scalar
+                                                                 field theory.
+and C is an arbitrary function of one variable. This                Note added is maemscri pt: For another, not dissimilar,
+kind of correlation between the asymptotic dependence            approach to these questions, the reader should consult
+on momentum and the dependence on coupling constant
+is typical of renormalization-group    arguments,      "
+                                                     and
+                                                                 a, recent paper by K. Wilson, this issue, Phys. Rev. D
+                                                                 2, 147S (197O).
+it is interesting to see how easily it emerges from the
+scaling law. Similar considerations would apply to other
+amplitudes than the propagator, and presumably allow                             ACKNOWLEDGMENT
+                                                                   It is a pleasure to acknowledge many discussions with
+  ""J.S. Weinberg, Phys. Rev. 118, 838 (1960).
+         D. Bjorken and S. Drell, Relativism Quuetgiiz Fields    Sidney Coleman, without which this paper could not
+(McGraw-Hil1, New York, 1965), Vol. II, p. 368.                  have been written.
+

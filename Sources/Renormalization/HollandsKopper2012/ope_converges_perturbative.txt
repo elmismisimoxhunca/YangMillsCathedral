@@ -1,0 +1,2484 @@
+Commun. Math. Phys. 313, 257–290 (2012)
+                                                                          Communications in
+Digital Object Identifier (DOI) 10.1007/s00220-012-1457-4
+                                                                           Mathematical
+                                                                             Physics
+
+
+
+
+The Operator Product Expansion Converges
+in Perturbative Field Theory
+Stefan Hollands1 , Christoph Kopper2
+1 School of Mathematics, Cardiff University, Cardiff, UK. E-mail: hollandss@cf.ac.uk
+2 Centre de Physique Théorique, CNRS, UMR 7644, Ecole Polytechnique, 91128 Palaiseau, France.
+  E-mail: kopper@cpht.polytechnique.fr
+
+Received: 27 May 2011 / Accepted: 1 November 2011
+Published online: 6 March 2012 – © Springer-Verlag 2012
+
+
+Abstract: We show, within the framework of the massive Euclidean ϕ 4 -quantum field
+theory in four dimensions, that the Wilson operator product expansion (OPE) is not only
+an asymptotic expansion at short distances as previously believed, but even converges at
+arbitrary finite distances. Our proof rests on a detailed estimation of the remainder term
+in the OPE, of an arbitrary product of composite fields, inserted as usual into a correla-
+tion function with further “spectator fields”. The estimates are obtained using a suitably
+adapted version of the method of renormalization group flow equations. Convergence
+follows because the remainder is seen to become arbitrarily small as the OPE is carried
+out to sufficiently high order, i.e. to operators of sufficiently high dimension. Our results
+hold for arbitrary, but finite, loop orders. As an interesting side-result of our estimates,
+we can also prove that the “gradient expansion” of the effective action is convergent.
+
+
+1. Introduction
+
+All quantum field theories with well-behaved ultra violet behavior are believed to have
+an operator product expansion (OPE) [18–20]. This means that the product of any two
+local fields located at nearby points x and y can be expanded in the form
+                                         
+                        O A (x)O B (y) ∼     C CAB (x − y) OC (y),                  (1)
+                                               C
+
+where A, B, C are labels for the various local fields in the given theory (incorporat-
+ing also their tensor character/spin), and where C CAB are certain numerical coefficient
+functions—or rather distributions—that depend on the theory under consideration, the
+coupling constants, etc. The sign “∼” indicates that this can be understood as an asymp-
+totic expansion: If the sum on the right side is carried out to a sufficiently large but
+finite order, then the remainder goes to zero fast as x → y in the sense of operator
+insertions into a quantum state, or into a correlation function. The purpose of this paper
+258                                                                                  S. Hollands, Ch. Kopper
+
+
+is to demonstrate in a specific model that the expansion is not only asymptotic in this
+sense, but even converges at finite (!) distances, to arbitrary loop orders, in a perturbative
+Euclidean quantum field theory.
+    Our result is not merely a technical footnote, but it furnishes an important insight
+into the general structure of quantum field theory. Although our result is formulated in
+a Euclidean setting, this is maybe best explained in the Minkowskian context. There,
+the analogue of our result would be that correlation functions such as the two-point
+function O A (x)O B (y) in a state1  are entirely determined by the collection of OPE
+coefficients which are state independent, together with the 1-point functions OC (y) :
+                                          
+                    O A (x)O B (y) =       C CAB (x − y) OC (y) ,                    (2)
+                                                   C
+
+where the infinite sum over “C” would be convergent, and (x − y)2 would not necessarily
+have to be small2 . An analogous statement would apply to the higher n-point functions.
+Thus, the OPE coefficients capture the state-independent algebraic structure of QFT,
+while all the information about the quantum state, i.e. n-point functions, is contained in
+the 1-point functions (“form factors”) only. Our result is relevant also in that it supports
+recent approaches to QFT such as [2–4] wherein the OPE is taken as the fundamental
+input.
+   In this paper, we prove convergence of the OPE in the context of perturbative Euclid-
+ean QFT, to arbitrary loop orders. The model that we consider is a hermitian scalar field
+with self-interaction gϕ 4 and mass m > 0 on flat 4-dimensional Euclidean space. The
+composite fields O A in this model are simply linear combinations of monomials in the
+basic field ϕ and its derivatives and are denoted by
+                             O A = ∂ w1 ϕ · · · ∂ wn ϕ ,        A = {n, w},                                (3)
+where each wi is a 4-dimensional multi-index, see “notations and conventions” for more
+on multi-index notation. We define the engineering dimension of such a field as usual
+by
+                                           
+                                [A] = n +      |wi |.                              (4)
+                                                         i
+
+Each OPE coefficient C CAB (x − y) is itself a formal power series in  (“loop expansion”).
+As usual in perturbation theory, we will not be concerned with the convergence of these
+expansions in . Instead, in this paper, we will be concerned with the convergence of
+the OPE (i.e. the expansion in “C”) at arbitrary but fixed order l in .
+   To analyze this issue, we must insert the left- and right sides of (1) into a correlation
+function containing suitable “spectator fields”, which play the role of a quantum state in
+the Euclidean context. A simple and natural choice for the spectator fields is e.g.
+                                        
+                            ϕ( f pi ) := d 4 x ϕ(x) f pi (x),                            (5)
+
+where pi is a 4-momentum, and where f pi is a smooth function whose Fourier transform
+ fˆpi (q) has compact support for q in a ball of radius  around pi . Our main result is the
+following:
+  1 The state should have a well-behaved high energy behavior. In the Minkowskian context, it should e.g.
+have bounded energy E, see below for an appropriate replacement in the Euclidean context.
+  2 Note however that one expects convergence to hold in the relativistic context only for spacelike distances,
+(x − y)2 > 0, because of locality.
+Operator Product Expansion Converges in Perturbative Field Theory                                              259
+
+                                
+Theorem. Let the sum               C in the operator product expansion (1) be over all C such
+that
+                                         [C] − [A] − [B] ≤ ,                                                   (6)
+where  is some positive integer. Then for each such , we have the following bound
+for the “remainder” in the OPE in loop order l:
+                                                                                      
+      
+       O A (x)O B (0) ϕ( f p ) · · · ϕ( f p ) −  C AB (x) OC (0) ϕ( f p1 ) · · · ϕ( f pn ) 
+                                                    C
+                            1              n
+                                                             C
+                            
+         ≤m    [A]+[B]+n
+                                [A]![B]! K̃   [A]+[B]
+                                                                 sup | fˆpi |
+                                                         i
+                                                                                  | p|
+                     | p|n 2([A]+[B])(n+2l+1)+3n  logλ sup(1, mn )
+                                                          n/2+2l
+            × sup(1,       )
+                        m                                 2λ λ!
+                                                             λ=0
+                                                                    
+              1                                | p|n n+2l+1
+            ×√           K̃ m |x| sup(1,             )                  .                                       (7)
+              !                                  m
+
+    Here,  .  denote correlation functions, and K̃ is a constant depending on n, l. Fur-
+thermore, | p|n is defined in Eq. (51), and f pi are smooth test functions in position space,
+whose support in momentum space is contained in a ball of radius  around pi .
+    This result establishes the convergence of the OPE, i.e. the sum over C, at each fixed
+order in perturbation theory, because the remainder evidently goes to zero as  → ∞.
+There are no conditions on x, so the OPE converges even at arbitrarily large distances!
+But we note that such conditions could arise if we were to allow a wider class of spectator
+fields, for example, if we were to replace f pi by test-functions whose Fourier transforms
+are only decaying in momentum space, but are not of compact support. This type of
+behavior can be understood in a way by the fact that | p|n gives a measure for the
+“typical energy” of the “state” in which we try to carry out the OPE. As the high energy
+behavior of the “state” becomes worse, so do the convergence properties of the OPE.
+    To prove the theorem, one first has to give a prescription for defining the Schwinger
+functions and OPE coefficients in renormalized perturbation theory. There are several
+options; in this paper we find it convenient to use the Wilson-Wegner-Polchinski flow
+equation method [15,17–19]. In this method, one first introduces an infrared cutoff called
+, and an ultraviolet cutoff called 0 . One then defines the quantities of interest for finite
+values of the cutoffs, and derives for them a flow equation as a function of . For suit-
+able boundary conditions its solutions may be bounded inductively and uniformly in the
+ultraviolet cutoff 0 . The last fact makes it possible to remove the cutoff3 and at the
+same time provides non-trivial bounds. In our case, we need bounds for the remainder
+in the OPE. Again, such bounds are verified inductively.
+    While the general strategy is rather clear conceptually, it gets more involved in prac-
+tice. This is because a relatively refined induction hypothesis is required to ensure that
+it replicates itself in the induction process. The verification of the induction step is thus
+the main technical task of this paper.
+   3 To show not only boundedness but also convergence in the limit  → ∞, one also has to study a version
+                                                                           0
+of the flow equation that is differentiated w.r.t. the cutoff. We do not perform this step here since it has already
+been performed in the literature for all quantities of interest in [7,8]. The bounds obtained there were less
+precise than those obtained here, but this does not matter because also such less stringent bounds are sufficient
+to merely show convergence in 0 .
+260                                                                         S. Hollands, Ch. Kopper
+
+
+   A side result of our estimations which may be of some interest is that the “gradient
+expansion” (68) of the effective action converges at each fixed number of loops; the
+precise statement may be found in Cor. 3.1.
+
+Notations and conventions. Our convention for the Fourier transform in R4 is
+                                             
+                                                    d 4 p i px ˆ
+                  f (x) =     fˆ( p) ei px :=              e   f ( p).                         (8)
+                                                R4 (2π )
+                                                         4
+                            p
+
+We also use a standard multi-index notation. Our multi-indices are elements w =
+(w1 , . . . , wn ) ∈ N4n , so that each wi ∈ N4 is a four-dimensional multi-index whose
+entries are wi,μ ∈ N and μ = 1, . . . , 4. If f ( p) is a smooth function on R4n , we set
+                                                           wi,μ
+                                                    ∂
+                            ∂ w f ( p) =                         f ( p)                      (9)
+                                                  ∂ pi,μ
+                                            i,μ
+
+and
+                                                           
+                           w! =          wi,μ ! , |w| =           wi,μ .                      (10)
+                                   i,μ                      i,μ
+
+We often need to take derivatives ∂ w of a product of functions f 1 . . . f n . Using the Leib-
+niz rule, such derivatives get distributed over the factors resulting in the sum of all terms
+of the form c{vi } ∂ v1 f 1 . . . ∂ vr fr , where each vi is now a 4n-dimensional multi-index,
+where v1 + · · · + vr = w, and where
+                                         (v1 + · · · + vr )!
+                              c{vi } =                       ≤ r |w|                          (11)
+                                            v1 ! . . . vr !
+is the associated weight factor.
+    If F(ϕ) is a differentiable function (in the Frechet space sense) of the Schwartz space
+function ϕ ∈ S (R4 ), we denote its functional derivative as
+                                      
+                d                             δ F(ϕ)
+                  F(ϕ + tψ)|t=0 = d 4 x              ψ(x) , ψ ∈ S (R4 ),               (12)
+               dt                              δϕ(x)
+where the right side is understood in the sense of distributions in S (R4 ). Multiple
+functional derivatives are denoted in a similar way and define in general distributions
+on multiple cartesian copies of R4 .
+
+
+2. Basic Setup, Flow Equation Framework
+In this section we introduce the quantities of interest in this paper, namely the Schwinger
+functions . . . , and the OPE coefficient functions, C CAB . For this purpose, we will also
+derive various useful auxiliary quantities such as connected and amputated Schwinger
+functions, as well as certain “normal products”. The reason for defining these is that they
+satisfy a suitably simple version of the flow equations, which we also give below. Ren-
+ormalization theory based on the flow equation (FE) [15,17–19] of the renormalization
+group has been reviewed quite often in the literature, so we will be relatively brief. The
+first presentation in the form we use it here is in [9]. Reviews are in [14] and in [13] (in
+German).
+Operator Product Expansion Converges in Perturbative Field Theory                                      261
+
+
+2.1. Connected amputated Green functions (CAG’s). To begin, we introduce an infra-
+red4 cutoff , and an ultraviolet cutoff 0 . These cutoffs enter the definition of the
+theory through the propagator C ,0 which is defined in momentum space by
+                                                                        
+           ,0           1               p2 + m 2             p2 + m 2
+         C      ( p) = 2          exp −              − exp −               .       (13)
+                       p + m2                20                  2
+
+The full propagator is recovered for  → 0 and 0 → ∞ , and we always assume
+
+                               0 <  , κ := sup(, m) < 0 .                                         (14)
+
+Other choices of regularization are of course admissible. The one chosen in (13) has the
+advantage of being analytic in p 2 for  > 0. The propagator defines a corresponding
+Gaussian measure μ,0 , whose covariance is C ,0 . The factor of  is inserted to
+obtain a consistent loop expansion in the following. The interaction is taken to be
+                         
+             L (ϕ) = d 4 x a 0 ϕ(x)2 + b0 ∂ϕ(x)2 + c0 ϕ(x)4 .
+               0
+                                                                                    (15)
+
+It contains suitable counterterms satisfying a 0 = O(), b0 = O(2 ) and c0 =
+ g
+4! + O(). They will be adjusted–and actually diverge–when 0 → ∞ in order to
+obtain a well defined limit of the quantities of interest for us. We have anticipated this
+by making them “running couplings”, i.e. functions of the ultra violet cutoff 0 . The
+correlation (= Schwinger-) functions of n basic fields with cutoff are then given by
+                                        
+                                                            1
+    ϕ(x1 ) · · · ϕ(xn ) := (Z ,0 )−1 dμ,0 exp − L 0 ϕ(x1 ) · · · ϕ(xn ). (16)
+                                                            
+This is just the standard Euclidean path-integral, but note that the free part in the Lagrang-
+ian has been absorbed into the Gaussian measure dμ,0 . The normalization factor is
+chosen so that 1 = 1. This factor is finite only as long as we impose an additional
+volume cutoff. But the infinite volume limit can be taken without difficulty once we
+pass to perturbative connected correlation functions which we will do in a moment.
+For more details on this limit see [11,14]. The path integral will be analyzed in the
+perturbative sense, i.e. the exponentials are expanded out and the Gaussian integrals
+are then performed. The full theory is obtained by sending the cutoffs 0 → ∞ and
+ → 0, for a suitable choice of the running couplings. In the flow equation technique,
+the correct behavior of the running couplings, necessary for a well-defined limit, is
+obtained by deriving first a differential equation for the Schwinger functions in , and
+by then defining the running couplings implicitly through the boundary conditions for
+this equation.
+    These flow equations are written more conveniently in terms of the hierarchy of “con-
+nected, amputated Schwinger functions” (CAG’s). Their generating functional is defined
+through the convolution5 of the Gaussian measure with the exponentiated interaction.
+                                                             1 0
+               − L ,0 :=  log μ,0            exp    −     L       −  log Z ,0 .              (17)
+                                                             
+  4 Such a cutoff is of course not necessary in a massive theory. The IR behavior is substantially modified
+only for  above m.
+                                                                 
+  5 The convolution is defined in general by (μ,0 F)(ϕ) = dμ,0 (ϕ ) F(ϕ + ϕ ).
+262                                                                                         S. Hollands, Ch. Kopper
+
+
+The functional L ,0 has an expansion as a formal power series in terms of Feynman
+diagrams with precisely l loops, n external legs, and propagator C ,0 ( p). As the name
+suggests, only connected diagrams contribute, and the (free) propagators on the external
+legs are removed. We will not use decompositions in terms of Feynman diagrams. But
+we will also analyze the functional (17) in the sense of formal power series, i.e. we
+consider the terms in the formal power series
+                   ∞ 
+                       ∞    
+     L ,0 (ϕ) :=         l d 4 x1 . . . d 4 xn L,
+                                                   n,l (x 1 , . . . , x n ) ϕ(x 1 ) · · · ϕ(x n ), (18)
+                                                       0
+
+                            n>0 l=0
+
+where ϕ ∈ S (R4 ) is any Schwartz space function. No statement is made about the
+convergence of the series in . The objects on the right side, the CAG’s, are the basic
+quantities in our analysis because they are easier to work with than the full Schwinger
+functions. But the latter can of course be recovered from the CAG’s.
+   Because the connected amputated functions in position space are translation invariant,
+their Fourier transforms, denoted L,
+                                    n,l ( p1 , . . . , pn ), are supported at p1 +· · ·+ pn = 0.
+                                        0
+
+We consequently write, by abuse of notation
+                                                       
+                                                       n
+                     L,
+                      n,l ( p1 , . . . , pn ) = δ (
+                          0                      4
+                                                             pi ) L,
+                                                                   n,l ( p1 , . . . , pn−1 ),
+                                                                       0
+                                                                                                                 (19)
+                                                       i=1
+i.e. one of the momenta is determined in terms of the remaining n − 1 independent
+momenta by momentum conservation. It is straightforward to see that, as functions of
+these remaining independent momenta, the connected amputated Green functions are
+smooth, L,                            ∞
+           n,l ( p1 , . . . , pn−1 ) ∈ C (R
+               0                           4(n−1) ). It is much less obvious, but will be
+
+demonstrated later in Cor. 3.1, that they are in fact even analytic functions near p = 0,
+even after the cutoffs are removed.
+    The flow equations are obtained by taking a -derivative of Eq. (17):
+                                   δ        δ
+                 ∂ L ,0 =        , Ċ      L ,0
+                                  2 δϕ      δϕ
+                                   1 δ                δ ,0
+                                  −  L ,0 , Ċ      L     + ∂ log Z ,0 .                                (20)
+                                   2 δϕ              δϕ
+Here we use the shorthand Ċ  for ∂ C ,0 , which, as we note, does not depend on 0 .
+By  ,  we denote the standard scalar product in L 2 (R4 , d 4 x) , and denotes convolution
+in R4 . For example
+                                                
+                         δ              δ                                          δ      δ
+                      , Ċ                = d 4 xd 4 y Ċ  (x − y)                                            (21)
+                        δϕ            δϕ                                        δϕ(x) δϕ(y)
+is the “functional Laplace operator”. When expanded out in ϕ, the flow equations (20)
+read in momentum space:
+                                                           
+                                              2n + 2
+   ∂ L,
+         2n,l
+              0
+                ( p 1 , . . . p 2n−1 )  =                       Ċ  (k) L,
+                                                                           2n+2,l−1 (k, −k, p1 , . . . p2n−1 )
+                                                                               0
+                                                  2           k
+                                                                                                                    
+     −2            n 1 n 2 S L,       0
+                                          (
+                                  2n 1 ,l1 1p , . . . , p 2n 1 −1 ) Ċ 
+                                                                         (q) L,0
+                                                                              2n 2 ,l2 (−q, p 2n 1 , . . . , p 2n−1 )
+              l1 +l2 =l,
+            n 1 +n 2 =n+1
+
+                                                                                                                 (22)
+      with      q = − p1 − · · · − p2n 1 −1 = p2n 1 + p2n 1 +1 + · · · + p2n .
+Operator Product Expansion Converges in Perturbative Field Theory                                              263
+
+
+The symbol S is an operator which acts on the functions of momenta ( p1 , . . . , p2n ) by
+taking the mean value over those permutations π of (1, . . . , 2n) , for which π(1) <
+π(2) < · · · < π(2n 1 − 1) and π(2n 1 ) < π(2n 1 + 1) < · · · < π(2n) . And we used the
+fact that for the theory proposed through (15), only even moments of the effective action
+will be non-vanishing due to the symmetry ϕ → −ϕ , and we thus wrote the equations
+only for those.
+   We will also need the FE’s differentiated w.r.t. to components of the momentum
+variables. We obtain:6
+   ∂ ∂ w L,
+           2n,l ( p1 , . . . , p2n−1 )
+               0
+
+                                                                              
+          2n + 2
+     =                   Ċ  (k) ∂ w L,
+                                       2n+2,l−1 (k, −k, p1 , . . . p2n−1 ) − 2
+                                           0
+                                                                                  n 1 n 2 c{w j }
+            2         k                                                      l +l =l  1 2
+                                                                                  w1 + w2 + w3 = w
+                                                                                   n1 + n2 = n + 1
+                                                                                                 
+            w1 ,0                               w3      w2 ,0
+        ×S ∂ L2n 1 ,l1 ( p1 , . . . , p2n 1 −1 ) ∂ Ċ (q) ∂ L2n 2 ,l2 (−q, p2n 1 , . . . , p2n−1 ) .
+
+                                                                                                             (23)
+   To define the CAG’s through the flow equations, we have to impose boundary condi-
+tions. These are,7 using the multi-index convention introduced above in “notations and
+conventions”:
+                           0 
+                                                g
+                  ∂ w L0,
+                       n,l (0) = δw,0 δn,4 δl,0    for n + |w| ≤ 4,               (24)
+                                                4!
+as well as
+                                ∂ w L 0 ,0
+                                     n,l     ( p) = 0     for n + |w| > 4.                                  (25)
+The CAG’s are then determined by integrating the flow equations subject to these bound-
+ary conditions, see [9,14]. In our context this is described in detail when we come to the
+estimates of the CAG’s in Sect. 3.
+
+
+2.2. Insertions of composite fields, normal products and OPE coefficients. For the pur-
+poses of this paper, and also in many applications, one would like to define not only
+Schwinger functions of products of the basic field, but also ones containing composite
+operators. These are obtained by replacing the action L 0 with an action containing
+additional sources. To set things up properly, it is useful to introduce first some notation.
+       ∞ be the space of smooth local, polynomial functionals F(ϕ) of ϕ ∈ S (R4 ).
+Let Floc
+Any such functional can be written by definition as
+                          
+                 F(ϕ) =          d 4 x O A (x) f A (x), f A ∈ C0∞ (R4 ),                (26)
+                                  A
+   6 In distributing the derivatives over the three factors in the second term on the r.h.s. with the Leibniz rule,
+                                                                                ,
+we have tacitly assumed that the momentum pi appears among those from L2n ,l0 . If this is not the case one
+                                                                                   1 1
+                       ,0
+has to parametrize L2n ,l in terms of (say) ( p2 , . . . p2n 1 −1 , q) with q = p2n 1 + · · · + p2n , in order to
+                         1 1
+                                    ,
+introduce the pi -dependence in L2n ,l0 . For a fully systematic treatment see [1].
+                                      1 1
+   7 We restrict to BPHZ renormalization conditions in their simplest form; more general choices are of course
+equally admissible.
+264                                                                                        S. Hollands, Ch. Kopper
+
+
+where O A are composite operators as in Eq. (3) and where the sum is finite. We now
+consider instead of L 0 a modified action containing sources f A , given by replacing
+                                                            ∞
+                                                            
+                       L 0 → L 
+                                F := L
+                                  0    0
+                                          +F+                     B
+                                                                   j (F
+                                                                     0
+                                                                        ⊗ ·
+                                                                             · · ⊗ F),                          (27)
+                                                            j=0                  j
+
+where the last term represents the counterterms and is for each j a suitable linear func-
+tional8
+                                         B      ∞ ⊗j
+                                          j : (Floc )
+                                            0
+                                                      → F ∞,                                                     (28)
+that is symmetric, and of order O(). These counterterms are designed to eliminate the
+divergences arising from composite field insertions in the Schwinger functions when
+one takes 0 → ∞. The Schwinger functions with insertions of r composite operators
+are defined with the aid of functional derivatives with respect to the sources, setting the
+sources f Ai = 0 afterwards:
+      O A1 (x1 ) · · · O Ar (xr )
+                                                                                                   
+                             δr                                                          1 0       
+        := r A                              (Z ,0 −1
+                                                    )     dμ,0 exp                 −     L F (ϕ)          .
+              δ f 1 (x1 ) . . . δ f Ar (xr )                                                         f Ai =0
+                                                                                                            (29)
+
+The4 previous definition of the CAG’s    is a special case of this; there we take F =
+  d x f (x) ϕ(x), and we have B    j
+                                      0
+                                        (F ⊗ j ) = 0, because no extra counterterms are
+
+required for this simple insertion. As above, we can define a corresponding effective
+action as
+                                                        ∞
+                                                        
+                                         1 0
+   − L , 0
+             :=  log  μ,0
+                               exp    −    (L     + F +    Bj (F
+                                                              0   ⊗j
+                                                                     )) − log Z ,0
+        F
+                                         
+                                                                        j=0
+                                                                                                                 (30)
+which is now a functional of the sources f Ai , as well as of ϕ. Differentiating r times
+with respect to the sources, and setting them to zero afterwards, gives the generating
+functionals of the CAG’s with r operator insertions, namely:
+                                                                                 
+                                                          δr L ,     0         
+                                                                                 
+        L ,0 (O A1 (x1 ) ⊗ · · · ⊗ O Ar (xr )) =                F
+                                                                                           . (31)
+                                                   δ f 1 (x1 ) . . . δ f r (xr )  f Ai =0
+                                                      A                  A
+
+The CAG’s with insertions satisfy a number of obvious properties, e.g. they are multi-
+linear–as indicated by the tensor product notation–and symmetric in the insertions.
+    As the CAG’s without insertions, the CAG’s with insertions can be further expanded
+in ϕ and , and this is denoted as
+                   
+                   r
+         L ,0            O Ai (xi )
+                    i=1
+                                                          
+                                                            r                                   n
+           =           
+                       l
+                               d 4 y1 . . . d 4 yn L,
+                                                    n,l
+                                                        0
+                                                                  O Ai (xi ); y1 , . . . , yn         ϕ(y j ).
+               n,l≥0                                        i=1                                 j=1
+   8 As we will see it is possible to impose boundary conditions such that the multiply inserted Schwinger
+functions become less singular at short distances (xi − x j )2 → 0. In this case the maps B j take their values
+in the space F ∞ of non-local functionals on Schwartz space.
+Operator Product Expansion Converges in Perturbative Field Theory                         265
+
+
+Due to the insertions in L,
+                            n,l (⊗ j O A j (x j ), p
+                                0
+                                                   ), there is no restriction on the momentum
+set p. However it follows from translation invariance that functions with insertions at a
+translated set of points x j + a are obtained from those at a = 0 upon multiplication by
+                                                  n
+                                            eia    i=1 pi   .                            (32)
+
+The CAG’s with insertions satisfy a flow equation of a similar nature as those without
+insertions, and these are again obtained by taking derivatives of Eq. (20) with respect to
+the sources. For example, for one insertion, the flow equation (FE) is:
+
+                        δ              δ                    δ                      δ ,0
+∂ L ,0 (O A ) =       , Ċ           L ,0 (O A ) −  L ,0 (O A ), Ċ       L    
+                       2 δϕ            δϕ                   δϕ                     δϕ
+                      + ∂ log Z ,0 .                                                  (33)
+
+It is important to note that this FE is linear and homogeneous w.r.t. the functional
+L ,0 (O A ) . The FE’s for multiple insertions are obtained similarly by taking more
+functional derivatives with respect to the sources, for example for two insertions:
+
+                                δ         δ
+ ∂ L ,0 (O A ⊗ O B ) =        , Ċ       L ,0 (O A ⊗ O B )
+                               2 δϕ       δϕ
+                                  δ                           δ ,0
+                               − L ,0 (O A ⊗ O B ), Ċ      L      
+                                 δϕ                          δϕ
+                                  δ                     δ ,0
+                               − L ,0 (O A ), Ċ      L     (O B ) + ∂ log Z ,0 .
+                                 δϕ                    δϕ
+                                                                                     (34)
+
+Thus, the flow equation for the CAG’s with two insertions is not linear homogeneous,
+but involves a “source term” which is quadratic in the CAG’s with one insertion. If we
+want to integrate the flow equations with insertions, we therefore have to ascend in the
+number of insertions.
+   Expanding the FE’s for the generating functionals in terms of  and ϕ gives us again
+a corresponding hierarchy of FE’s satisfied by the L,
+                                                     n,l (⊗i O Ai ; p
+                                                         0
+                                                                    ). For one insertion,
+these equations are given below in Eq. (47), whereas for two insertions, they are given
+below in Eq. (48) (without the index “D”).
+   The CAG’s with one insertion are not uniquely defined without imposing suitable
+boundary conditions on the corresponding FE. For an operator O A and A = {n , w } (so
+that its dimension is [A] = n + |w |) the simplest choice of boundary conditions, which
+also goes under the name of “normal product”, is
+
+                   ∂ w L 0 ,0
+                        n,l     (O A (0); p) = 0 for n + |w| > n + |w |,                (35)
+
+and
+
+         ∂ w L0,
+              n,l (O A (0); 0) = i
+                  0                |w|
+                                       w! δw,w δn,n δl,0 for n + |w| ≤ n + |w |.         (36)
+
+The δ-symbol only depends on the sets {w} = {w1 , . . . , wn } and {w } = {w1 , . . . , wn }.
+Due to the linearity of the FE, linear superpositions of normal products are also solutions
+of the system of FE, and their boundary values are the corresponding superpositions.
+266                                                                          S. Hollands, Ch. Kopper
+
+
+It is also possible to extend the definition of the normal products in the following sense
+which leads to the appearance of an additional index, D, measuring the degree of regular-
+ity. For one insertion, these “oversubtracted” normal products are denoted L,
+                                                                              n,l,D (O A ; p
+                                                                                  0
+                                                                                           )
+and are defined for any D ≥ [A] through
+
+                     ∂ w L 0 ,0
+                          n,l,D (O A (0); p
+                                          ) = 0 for n + |w| > D,                               (37)
+and
+      ∂ w L0,                   D−n−|w| |w|
+           n,l,D (O A (0); 0) = m        i w! δw,w δn,n δl,0 for n + |w| ≤ D.
+               0
+                                                                                                (38)
+
+In particular, for D = n +|w | = [A], the oversubtracted normal products agree with the
+previous ones, because they then satisfy the same FE and the same boundary conditions.
+    As the CAG’s with one insertion, the CAG’s with multiple insertions are not uniquely
+defined by the FE without imposing a boundary condition. The simplest boundary con-
+ditions for two insertions are given by:
+
+              ∂ w L 0 ,0
+                   n,l     (O A (x) ⊗ O B (0); p) = 0 for all n + |w| ≥ 0,                     (39)
+and for all A, B. Imposing these boundary conditions means that no regularizing counter
+terms for the corresponding operator product are introduced. The FE’s for the CAG’s
+with insertions may be integrated subject to these boundary conditions, and this will be
+our prescription for actually defining them. In the end, the cutoffs , 0 are taken away,
+and the limits will be controlled by the estimates that are given in the next Sect. 3.
+    Regularized operator products for two or more insertions are denoted L,n,l,D (⊗i O Ai ;
+                                                                                 0
+
+p) and are defined for any D ≥ 0. They are defined as the solutions to the FE (34),
+together with the boundary conditions
+
+                    ∂ w L0,                    
+                         n,l,D (⊗i O Ai (x i ); 0) = 0 for n + |w| ≤ D,
+                             0
+                                                                                                (40)
+                    ∂ w L 0 ,0
+                         n,l,D (⊗i O Ai (x i ); p
+                                                ) = 0 for n + |w| > D.                         (41)
+In particular, for D = −1, the normal products agree with the previously defined CAG’s
+with multiple insertions, because they then satisfy the same boundary conditions and
+FE.
+    A useful property of the CAG’s (both ‘standard’ and ‘oversubtracted’), which fol-
+lows from our choice of boundary conditions, is the following. Let O A be as usual a
+monomial in ϕ and its derivatives. Furthermore, for any multi-index w ∈ N4 , let ∂ w O A
+be the linear combination of monomials that are obtained by carrying out the derivatives
+in the obvious way. Then the CAG’s are seen [7,8] to satisfy the “Lowenstein rule”:
+
+ ∂xwi L ,
+        D
+            0
+              (O A1 (x1 ) ⊗ · · · ⊗ O Ar (0))
+       
+         L ,  0
+                  (O A1 (x1 ) ⊗ . . . ∂xwi O Ai (xi ) ⊗ . . . O Ar (0)) for r ≥ 2, i ≤r − 1, D ≥ 0,
+    =      D
+           ,0
+         L D+|w| (∂xw1 O A1 (x1 ))                                      for r = 1, i = 1, D ≥ [A1 ].
+                                                                                                (42)
+This property is important in order to define insertions containing derivatives in a con-
+sistent way and has also been termed “action Ward identity”, or “Leibniz rule”. See [5,6]
+for a discussion of such conditions in other setups of renormalization theory.
+    A major advantage of the CAG’s for our purposes is that the OPE coefficients can
+be expressed in terms of them in a relatively simple manner, as we now explain. For
+Operator Product Expansion Converges in Perturbative Field Theory                                                      267
+
+
+F(ϕ) a differentiable functional of Schwartz space functions ϕ ∈ S (R4 ), let D A be the
+operator defined as
+                                                     
+       (−i)|w| w              δn                     
+  D F=A
+              ∂ p                             F(ϕ)            , where A = {n, w}.                                 (43)
+        n! w!      δ ϕ̂( p1 ) · · · δ ϕ̂( pn )        ϕ̂=0, p=0
+
+
+Also, for a sufficiently smooth function f on R4 , let the Taylor expansion operator T j
+be defined as
+                                                         xw
+                                       T j f (x) =                   ∂ w f (0).                                      (44)
+                                                                w!
+                                                       |w|= j
+
+Then the OPE coefficients are defined as follows:
+Definition 2.1. For a finite UV-cutoff 0 , the OPE coefficients, C CAB (x) are defined as
+follows:
+1. Let [C] − [A] − [B] < 0. Then we define
+                                                                                
+                                                        0,0
+                              C CAB (x) := DC        L [C]−1 (O A (x) ⊗ O B (0)) .                                  (45)
+
+2. Let [C] − [A] − [B] ≥ 0. Then we define
+                                   
+                                                    [C]−[A]−[B]−1 j
+              C CAB (x) := DC       L 0,
+                                       [C]−1 ((1 −  j=0
+                                           0
+                                                                 T )O A (x) ⊗ O B (0)) −
+                                                                                          
+                                                    [C]−[A]−[B]
+                                      − L 0, 0
+                                          [C]−[B] (T            O A (x)) L 0,0
+                                                                           [B]  (O B (0))  .                         (46)
+
+Our bounds in the subsequent sections, or those in [8], imply that we can remove the
+cutoff 0 in the CAG’s in the above formulas, and that the C CAB are well-defined (as
+smooth functions for x ∈ R4 \{0}) in the limit as 0 → ∞. The OPE coefficients of the
+theory without cutoffs are defined to be this limit.
+    For our analysis of the operator products we need the FE’s expanded w.r.t. the number
+of fields and loops. For one insertion we obtain from (33):
+                                                         
+                                             2n + 2
+ ∂ L,
+     2n,l
+          0
+            (O A ; p 1 , . . . , p 2n  ) =                    Ċ  (k) L,2n+2,l−1 (O A ; k, −k, p1 , . . . p2n )
+                                                                                0
+                                                 2          k
+                                                                                                                        
+     −4          n 1 n 2 S L,        0
+                                 2n 1 ,l1 (O A ; q, p 1 , . . . , p 2n 1 −1 )Ċ 
+                                                                                  (q) L,0
+                                                                                       2n 2 ,l2 ( p 2n 1 , . . . , p 2n )
+            l1 + l2 = l
+          n1 + n2 = n + 1
+
+                                                                                                                     (47)
+
+             with9 q = p2n 1 + · · · + p2n .
+    9 Note that by symmetry and translation invariance L,0 ( p                         ,0
+                                                        2n 2 ,l2 2n 1 , . . . , p2n ) = L2n 2 ,l2 ( −q, p2n 1 ,
+. . . , p2n−1 ).
+268                                                                                          S. Hollands, Ch. Kopper
+
+
+When expanded out in moments and powers of  the FE’s for two insertions (34) read:
+∂ L,
+    2n,l,D (O A ⊗ O B ; p1 , . . . , p2n )
+         0
+
+                                                                                   
+      2n + 2
+  =                 Ċ  (k) L,
+                              2n+2,l−1,D (O A ⊗ O B ; k, −k, p1 , . . . , p2n ) − 4
+                                    0
+                                                                                             n1n2
+          2       k                                                               l + l = l,          1 2
+                                                                                                   n1 + n2 = n + 1
+        
+      ×S L,                                                        ,0
+          2n 1 ,l1 ,D (O A ⊗ O B ; q, p1 , . . . , p2n 1 −1 ) Ċ (q) L2n 2 ,l2 ( p2n 1 , . . . , p2n )
+                0
+
+
+                                                                                                                 
+      −           L,                                               ,0
+                   2n 1 ,l1 (O A ; k, p1 , . . . , p2n 1 −1 ) Ċ (k) L2n 2 ,l2 (O B ; −k, p2n 1 , . . . , p2n )
+                         0
+
+              k
+      with          q = p2n 1 + · · · + p2n .                                                                         (48)
+The symmetrization operator S is defined as above in (22).
+
+3. Bounds on CAG’s
+In this section, we will derive bounds on the CAG’s, including those with insertions.
+These bounds will imply the existence of the limits  → 0 and 0 → ∞, but they will
+also be sufficient to prove the main result Thm. 3 of this paper.
+   The bounds on the CAG’s depend on the choice of the coupling constant g enter-
+                                                          0 
+ing the flow equation via the boundary condition L0,             g
+                                                      4,0 (0) = 4! . The loop expanded
+(inserted or non inserted) CAG’s depend on this coupling in an obvious way; the nonin-
+                                          2n−2
+serted functions L2n,l carry a power of g 2 +l for example. To simplify the subsequent
+bounds, we will always set g = 1 in the following.
+
+
+3.1. A collection of useful bounds. The following bounds which largely stem from [12]
+will be useful to control the solutions of the various FE’s: The -derivative of the
+propagator (13) is given by
+                                                             2 − p2 +m2 2
+                                            Ċ  ( p) = −       e  .                                                 (49)
+                                                             3
+We find
+1)
+                                 m 3 − m 22        m N − m 22      √
+                                     2e      ≤ 1,      e       ≤   N !.               (50)
+                                 3                N
+2)     For given momentum set ( p1 , . . . , pn ) we use the (shorthand) definitions
+                                                       
+            p ≡ ( p1 , . . . , pn ) , | p|n ≡ sup |      pi | , pn+2 ≡ ( p, k, −k). (51)
+                                                         J ⊂{1,...,n} i∈J
+
+       Subsequently we sometimes simply write | p| instead of | p|2n . Then we claim
+                    
+                           1 k 2              | p|2n+2 κ
+                        e− 2 (  ) logλ (sup(          , ))
+                      k
+                      
+                                                   κ    m
+                                    | p| κ
+                                  ≤ logλ (sup(
+                                         , )) + [λ!]1/2 , κ = sup(, m).                                              (52)
+                                     κ m
+       The proof is in [12] , Lemma 4 and (54)–(58).
+Operator Product Expansion Converges in Perturbative Field Theory                                                         269
+
+
+3)     For s ∈ N,
+                    λ=l−1
+                                        0                                                           
+                                 1                                                | p|2n κ
+                                                 d  −s−1           logλ (sup(          , )) + [λ!]1/2
+                               2λ λ!                                                κ    m
+                      λ=0
+
+                                    −s λ=l−1
+                                                   1             | p|2n κ
+                         ≤ 5                            logλ sup(        , ).                                        (53)
+                                    s             2λ λ!               κ   m
+                                          λ=0
+
+       We wrote κ = sup( , m) . For the proof10 see Lemma 5 in [12].
+4)     For integers n , n 1 , n 2 ≥ 1 , l , l1 , λ1 , l2 , λ2 ≥ 0,
+                                             1                 n!         λ! (n 1 + l1 − 1)! (n 2 + l2 − 1)!
+                             (l1   + 1)2 (l   2 + 1) n 1 n 2 n 1 ! n 2 ! λ1 ! λ2 !      (n + l − 1)!
+                                                    2  2   2
+             l1 +l2 =l ,
+          n 1 +n 2 =n+1 ,
+         λ1 ≤l1 , λ2 ≤l2 ,
+            λ1 +λ2 =λ
+
+                                  1    1
+                  ≤ 20                     .                                                                         (54)
+                              (l + 1)2 n 2
+       For the proof see Lemma 2 in [12].
+                                                                                   2
+5)     We will repeatedly use bounds on the Hermite polynomials Hn (x) = (−1)n e x
+        d    −x 2 :
+       dxn e
+                                   √
+                         Hn (x) ≤ k n! 2n/2 e x /2 , k = 1.086 . . . .
+                                               2
+                                                                              (55)
+       For a proof see [16], p. 324. It then follows directly from this bound that
+                             2 2                                  2
+                      w − q +m2
+                                                                          2
+                                                          |w|   − q    −m
+                     ∂ e          | ≤ k −|w| |w|! 2 2 e 22 e 2 .                                                 (56)
+
+
+3.2. Bounds on higher derivatives of CAG’s without insertions. Bounds on higher deriv-
+atives of CAG’s are proven inductively with the aid of the flow equation. As compared to
+the bounds to be found in the literature [12] the new ingredient here is a sufficiently pre-
+cise control of those bounds as regards their dependence on the the number of derivatives
+|w|. We want to show
+Proposition 3.1. There exists a constant K > 0 such that for 2n + |w| ≥ 5,
+
+      |∂ w L,
+            2n,l ( p1 , . . . , pn−1 )|
+                0
+
+
+                                                                                  λ=(n,l)
+                                             (2n+4l−4)(|w|+1)
+                                                                                            logλ (sup( |κp| , mκ ))
+        ≤       |w|!        4−2n−|w|
+                                        K                        (n + l − 2)!                                         .
+                                                                                                    2λ λ!
+                                                                                    λ=0
+                                                                                                                     (57)
+Here
+                             (n, l) = l if n ≥ 2 , (n, l) = l − 1 if n = 1.                                        (58)
+     The proposition is a consequence of the subsequent
+ 10 In fact, the proof in [12] is given for  ≥ m, but it can be extended to  < m without any problem.
+270                                                                                  S. Hollands, Ch. Kopper
+
+
+Lemma 3.1. There exists a constant K > 0 such that for 2n + |w| ≥ 5,
+   |∂ w L,
+         2n,l ( p1 , . . . , p2n−1 )|
+             0
+
+
+                                                                     λ=
+                                                                 logλ (sup( , κ ))      | p|
+                                K (2n+4l−4)(|w|+1)                           κ m
+      ≤       |w|! 4−2n−|w|                       (n + l − 1)!                     .                    (59)
+                                 (l + 1)2 n! n 3                         2λ λ!
+                                                                      λ=0
+Remark. The lemma is sharper than the proposition, and the stated bound is suited as an
+inductive statement for its proof. Subsequently we will however use the (shorter) bound
+from the proposition.
+Proof. The proof is based on the standard inductive scheme which goes up in n + l and
+for given n + l goes up in l, and for given n, l descends in |w| . For 2n + |w| ≤ 4 we
+will use the bounds from the theorem and proposition11 in [12] :
+                                                λ=l                       
+              ,0             K 2l                logλ sup( |κp| , mκ )
+            |L4,l ( p)| ≤             (1 + l)!                              ,         (60)
+                           (l + 1)2 24                     2λ λ!
+                                                λ=0
+                                                         λ=l−1                    
+                                                2l−1       logλ sup( | p| , κ )
+           w ,0                      2−|w| K                                 κ m
+        |∂ L2,l ( p)| ≤ sup(| p|, κ)                  l!                             . (61)
+                                             (l + 1)2                     2λ λ!
+                                                                     λ=0
+A) The first term on the r.h.s. of the FE. Integrating the FE (23) w.r.t. the flow parameter
+ from  to 0 gives the following bound12 for the first term on the r.h.s. of the FE
+(writing κ = sup( , m) ):
+         0                                           λ=l−1
+                                                          logλ (sup( | p|2n+2 , κ ))
+                       2 − k 2 +m2 2                                        κ     m
+               d           e          4−(2n+2)−|w|
+                                                                        λ λ!
+                   k   3                                            2
+                                                                    λ=0
+                   (2n + 1)(2n + 2)       K (2n+4l−6)(|w|+1)
+                 ×                    |w|! 2                  (n + l − 1)!
+                          2               l (n + 1)! (n + 1)3
+                                                                           λ=l−1
+                                                                              1
+                    n 3          K (2n+4l−6)(|w|+1)
+               ≤(     ) (2n + 1)                      (n + l − 1)!   |w|!
+                  n+1                 l 2 n! n 3                                  2λ λ!
+                                                                             λ=0
+                    0                          
+                                          −m
+                                              2
+                                                      −k
+                                                         2
+                                                                      | p|2n+2 κ
+                ×       d  3−2n−|w| e  2          e  2 logλ (sup(          , )).                     (62)
+                                                  k                      κ      m
+Using
+                                          | p|2n+2 ≤ | p| + |k|                                        (63)
+we bound the momentum integral with the aid of (52). On performing the integral over
+ in (62) and using (53) we therefore obtain the following bound for (62):
+                                                                         λ=
+                                                                  logλ (sup( , κ ))        | p|
+                          K (2n+4l−4)(|w|+1)                                  κ m
+              4−2n−|w|                      (n + l − 1)!   |w|!
+                               l 2 n! n 3                                 2λ λ!
+                                                                          λ=0
+                                     n 3       2n + 1
+           × 5 K −2(|w|+1) 2|w| (         )              .                                               (64)
+                                    n + 1 2n + |w| − 4
+We realize that (64) is smaller than the inductive bound divided by 2 if K ≥ 4 .
+ 11 We have slightly simplified the respective expressions which is possible if admitting for a slightly larger
+K as compared to [12].
+ 12 We assume l ≥ 1 , otherwise the contribution is zero.
+Operator Product Expansion Converges in Perturbative Field Theory                                     271
+
+
+B) The second term on the r.h.s. of the FE. We assume without loss that 2n + 4l ≥ 6 ,
+otherwise the contribution is zero. Subsequently we will also assume that neither term
+is a two-point function with |w| ≤ 1 . If one of them is so, we first have to bound the
+                                                                                              2
+                                                                                        − q
+term sup(q, κ )2−|w| arising from (61) together with the exponential e 2 2 from the
+differentiated propagator, remember also (55, 56), by 2  2−|w| . Afterwards this contri-
+bution can be absorbed into the subsequent proof at the cost of a factor of 2 in the lower
+bound on K .
+    Integrating the inductive bound on the second term on the r.h.s. of the FE from  to
+0 then gives us the following bound - where we also understand that the sup w.r.t. the
+permutations of the momentum attributions has been taken
+ 0
+       d  8−(2n+2)−|w1 |−|w2 | K (2n+4l−6)(|w1 |+|w2 |+2)
+ 
+                                             n1                   n2
+      ×                     2 c{wi }
+             l1 + l2 = l,
+                                       (l1 + 1)2 n 1 ! n 31 (l2 + 1)2 n 2 ! n 32
+          w1 + w2 + w3 = w,
+           n1 + n2 = n + 1
+                                             λ
+                                               1 =1
+                                                             
+                                     logλ1 sup( |κp| , κm ) 2            q 2 +m 2
+                                                                      w3 −  2
+      × |w1 |! (n 1 + l1 − 1)!                                     |∂    e          |
+                                             2λ1 λ1 !           3
+                               λ1 =0
+                               λ
+                                2 =2
+                                                             
+                                      logλ2 sup( |κp| , κm ) )
+      × |w2 |! (n 2 + l2 − 1)!
+                                              2λ2 λ2 !
+                                               λ2 =0
+                                     1           1       n!
+  ≤
+          l1 + l2 = l,
+                             (l1 + 1) (l2 + 1) n 1 n 2 n 1 ! n 2 !
+                                     2        2  2   2
+       n 1 + n 2 = n + 1,
+       λ1 ≤ l1 , λ2 ≤ l2
+
+        (λ1 + λ2 )! (n 1 + l1 − 1)! (n 2 + l2 − 1)!
+      ×
+          λ1 ! λ2 !           (n + l − 1)!
+                                           0                                   
+                                                                          λ1 +λ2 sup( | p| , κ )
+                                                                                                  
+             (2n+4l−6)(|w|+2) (n+l −1)!               6−2n−|w1 |−|w2 | log              κ     m
+      ×2K                                        d 
+                                  n!                                      2λ1 +λ2 (λ1 +λ2 )!
+                              2             2
+                                          − q +m
+                                                 2 
+      ×                c{wi } 3 |∂ w3 e  2 | |w1 |! |w2 |!.
+         w +w +w =w
+                             
+           1     2     3
+
+
+
+Using (54, 56) we then arrive at the bound13
+
+                          1      1
+                20                   2 K (2n+4l−6)(|w|+2)
+                      (l + 1)2 n 2
+                                             0                                             
+                       1                                               logλ sup( | p| , κ )
+                                                                                   κ      m
+                     × (n + l − 1)!              d    3−2n−|w|
+                       n!                                                    2λ λ!
+                                                                     0≤λ≤
+                                    1        
+                     ×      c{wi } 2 2 |w3 | k |w1 |! |w2 |! |w3 |!.                                 (65)
+                            wi
+
+ 13 Note that if 2n = 2 we have 2n = 2n = 2 , and the restriction to λ ≤  in the sum over λ is justified.
+                                  1    2
+272                                                                               S. Hollands, Ch. Kopper
+
+
+Using also (53) we verify the inductive bound
+                                                                                              
+                                         1    1 1                      logλ sup( | p| , κ )
+                  (2n+4l−4)(|w|+1)                                                  κ m
+ 4−2n−|w|
+              K                                      (n + l − 1)! |w|!
+                                     (l + 1)2 n 3 n!                           2λ λ!
+                                                                            0≤λ≤
+
+multiplied by 1/4, on imposing the lower bound on K ,
+                                            n                1
+                     K −2(|w|+2) 40                  c{wi } 2 2 |w3 | ≤ 1/4,                        (66)
+                                      2n + |w| − 4 w
+                                                                i
+
+
+which is satisfied if
+                                                        1           1
+                                          K ≥ (640) 4 3 2 .
+
+                                                                                                        
+                                                                                                        
+
+The following variant of Lemma 3.1 is proven analogously:
+Corollary 3.1. There exists a constant K > 0 such that for 2n + |w| ≥ 5,
+
+                                                            K (2n+4l−4)(|w|+1)
+      |∂ w L,
+            2n,l ( p
+                0
+                   )| ≤     |w|! (|w| + 2n − 4)! κ 4−2n−|w|                    (n + l − 1)!
+                                                                     n!
+                              λ=l
+                                 logλ (sup( |κp| , mκ ))
+                           ×                               .                               (67)
+                                         2λ λ!
+                             λ=0
+
+As a consequence, the “gradient expansion” of the effective action
+                        
+            L 0,∞ (ϕ) =         aw,n,l ϕ(x) ∂ w1 ϕ(x) · · · ∂ wn−1 ϕ(x) d 4 x                       (68)
+                              n,l,w R
+                                      4
+
+
+
+with
+
+                                               l              
+                                   aw,n,l :=      (−i∂)w L0,∞
+                                                          n,l (0)                                   (69)
+                                               w!
+converges absolutely for each fixed loop order l, for each fixed n, and each Schwartz-
+space configuration ϕ such that ϕ̂( p) has support in a sufficiently small ball around
+p = 0 in momentum space. Furthermore, the expansion in l is locally Borel summable.
+
+√ The bound √ (67) is weaker than the one of Eq. (59), in the sense that it replaces
+  |w|! by |w|! (|w| + 2n − 4)! , and stronger in the sense that it replaces 4−2n−|w|
+by κ 4−2n−|w| (14). In the proof there is no change as regards the first term on the r.h.s. of
+the FE ; as regards the second term we use the bound (50)14 which permits to transform
+negative powers of  into negative powers of κ at the cost of a square root of a factorial.
+In the following we will only need Proposition 3.1.
+                                                    2       2
+ 14 Note that in the previous proof the factor of e−m / is simply bounded by one and thus is still at our
+disposal.
+Operator Product Expansion Converges in Perturbative Field Theory                                   273
+
+
+3.3. Bounds on CAG’s with one insertion. Throughout this section, we fix a monomial
+O A with A = {n , w }, and we denote the dimension of this monomial by
+
+                                        D := n + |w | = [A].                                       (70)
+
+For simplicity, we also assume that n is even, the odd case can be treated similarly. We
+begin by rewriting the FE (47) with this insertion, with additional momentum derivatives:
+
+
+              ∂ ∂ w L,
+                      2n,l,D (O A ; p1 , . . . p2n )
+                           0
+
+                               
+                     2n + 2
+                =                 Ċ  (k) ∂ w L,
+                                                  2n+2,l−1,D (O A ; k, −k, p1 , . . . p2n )
+                                                         0
+                       2        k
+                                         
+                  −     4n 1 n 2 c{w j } S ∂ w1 L,
+                                                   2n 1 ,l1 ,D (O A ; q, p1 , . . . , p2n 1 −1 )
+                                                         0
+
+                   l1 + l2 = l,
+                w1 + w2 + w3 = w,
+                 n1 + n2 = n + 1
+                                                                           
+                   ×∂ w3 Ċ  (q) ∂ w2 L,   0
+                                        2n 2 ,l2 ( p 2n 1 , . . . , p 2n )  .                      (71)
+
+
+As always in this subsection, the insertion is at the point x = 0. Inspection of the FE
+shows that the renormalizability proof for the functions L,    0
+                                                             n,l,D can be performed on
+using the same inductive scheme as the one used for the L,     n,l
+                                                                     0
+                                                                       , namely going up in
+n + l, for fixed n + l ascending in l , and for fixed n, l descending in |w| . Bounds on the
+functions without insertions L,n,l
+                                      0
+                                         are taken from the previous section. The boundary
+conditions for the L, 0
+                    n,l,D were given above in Eqs. (37), (38). We consider the case
+D = D = n + |w | , (36), and denote L,           ) simply by L,
+                                     2n,l,D (O A ; p
+                                          0
+                                                                 2n,l (O A ; p
+                                                                     0
+                                                                             ) if
+D = [A] .
+
+Theorem 1. There exists a constant K > 0 such that for  > 0,
+
+
+              |∂ w L,         )| ≤  D−2n−|w| K (4n+8l−4)|w| K D(n+2l)
+                                                                                      3
+                    2n,l (O A ; p
+                        0
+
+
+                                                     (n,l)      | p|
+                                          | p| μ  logλ (sup( κ , mκ ))
+                             d(D,n,l,w)
+                                         1
+                × |w |! |w|!            √ ( )                              .                       (72)
+                                         μ!                 2λ λ!
+                                μ=0                  λ=0
+
+
+We set
+
+                d(D, n, l, w) := D(2n + 2l) + sup(D + 1 − 2n − |w|, 0),                            (73)
+                      (n, l) := 2l + n − 1.                                                       (74)
+
+Proof. We use the notation and the bounds of Proposition 3.1 and proceed similarly as
+there. If not written explicitly the arguments of  are supposed to be n, l , those of 1
+to be n 1 , l1 . We start considering
+274                                                                                                 S. Hollands, Ch. Kopper
+
+
+I) Irrelevant terms with 2n + |w| > D .
+A) The first term on the r.h.s. of the FE. Integrating the inductive bound on the first term
+from the r.h.s. of the FE (71) over  between 0 and  gives the following bound15 :
+  0                                                                 
+                                                                  d(D,n+1,l−1,w)
+                       2 − k 2 +m2 2                                                        1  | p|2n+2 μ
+           d             e          D−(2n+2)−|w|                                        √ (          )
+                    k                                                                      μ!     
+                        3
+                                                                           μ=0
+              λ=
+               −1       logλ (sup( | p|κ2n+2 , κm ))     2n + 2 
+                                                                   |w |! |w|! K (4n+8l−8)|w| K D(n+2l−1)
+                                                                                                         3
+          ×
+                                  2λ λ!                      2
+               λ=0
+
+                                                                                         λ=
+                                                                                           −1
+              2n + 2                                                                               1
+                                |w |! |w|! K (4n+8l−8)|w| K D(n+2l−1)
+                                                                                      3
+      ≤
+                2                                                                                2λ λ!
+                                                                                          λ=0
+               0                                     
+                                                    d(D,n,l,w)          
+                                                                  1                   | p|2n+2 μ
+          ×             d  D−1−2n−|w|                          √                (            )
+                                                                  μ!       k/           
+                                                       μ=0
+                        | p|2n+2 κ   −k
+                                         2
+          × logλ (               , ) e 2 .                                                                           (75)
+                            κ     m
+Using (51) we show that
+                                                    | p|2n+2 ≤ | p| + |k|
+and bound the momentum integral by
+
+ d                                 
+      1                | p|2n+2 μ                        | p|2n+2 κ                                              k
+          sup{e−x /2 (                  e−x /2 logλ (sup(
+                 2                         2
+     √                          ) }                                , ))                                     (x =     )
+       μ!  x                         x                       κ     m                                              
+ μ=0
+        d       μ
+              1  μ                            | p| ρ μ−ρ μ − ρ              | p|2n κ
+      ≤      √                             (        ) 2 2 (      )! logλ (sup(        , )) + (λ!)1/2
+         μ=0
+              μ! ρ=0 ρ                                      2                    κ    m
+                                                                                                                      (76)
+with the aid of (52). The first factor in (76) can then be bounded by
+
+          μ
+       1  μ
+   d
+                                       | p| ρ μ − ρ     μ−ρ
+      √                            (        ) (      )! 2 2
+  μ=0
+       μ! ρ=0 ρ                                 2
+
+              
+              d
+                 | p|  1
+                        d
+                                                μ  μ−ρ       μ−ρ
+       ≤        ( )ρ       √                           ()! 2 2
+                      μ=ρ
+                            μ!                  ρ   2
+              ρ=0
+                                                              !
+              d
+                   1  | p| 
+                            d−μ
+                                                ρ+μ   ρ     ρ       μ!         
+                                                                               d
+                                                                                  1 | p|
+       ≤          √ ( )μ                            ( )! 2 2              ≤ 2d   √ ( )μ ,
+              μ=0
+                   μ!      ρ=0
+                                                 μ    2          (ρ + μ)!         μ!                μ=0
+                                                                                                                      (77)
+where the last bound is obtained from Stirling and binomial type estimates.
+ 15 Assuming l ≥ 1, otherwise the contribution is zero, and writing κ = sup( , m) .
+Operator Product Expansion Converges in Perturbative Field Theory                                               275
+
+
+   Performing the integral over  in (75) and using (53), we therefore obtain the fol-
+lowing bound for (75):
+
+                                                       d             −1 logλ (sup( | p| , κ ))
+                                                                     λ=
+                                                            1  | p|                  κ m
+   D−2n−|w| K D(n+2l) K (4n+8l−4)|w|                      √ ( )μ
+                                   3
+
+                                                            μ!                  2λ λ!
+                                                       μ=0            λ=0
+                                   (n + 1)(2n + 1)
+      × K −D[(n+2l)(n+2l−1)+1]−|w| 5                2d K −2D(n+2l)(n+2l−1)−3|w| .                          (78)
+                                     2n + |w| − D
+
+As a consequence, this contribution to ∂ w L,
+                                            2n,l (O A , p
+                                                0
+                                                        ) satisfies the inductive bound
+multiplied by
+
+                            A(D, n, l, w) := 1/8 K −|w| K −2D[(n+2l)(n+2l−1)+1] ,                          (79)
+
+if we assume K to be sufficiently large such that
+
+                            5(n + 1)(2n + 1) 2d K −2D(n+2l)(n+2l−1)−3|w| ≤ 1/8.                            (80)
+
+B) The second term on the r.h.s. of the FE. Integrating the inductive bound on the second
+term on the r.h.s. of the FE over  between  and 0 gives the following bound,16
+using that | p|2n 1 , | p|2n 2 ≤ | p|2n ≡ | p| and taking the sup w.r.t. the permutations of the
+momentum assignments:
+ 0
+     d  D+4−2n−2−|w1 |−|w2 | K (4n 1 +8l1 −4+2n 2 +4l2 −4)(|w1 |+|w2 |+1) K D(n 1 +2l1 )
+                                                                                           3
+
+ 
+                                                       1 ,l1 ,w1 )           λ1 =1                   
+                                                   
+                                                 d(D,n
+                                                                    1  | p|   logλ1 sup( | p| , κ )
+                                                                                            κ
+      ×         4 c{wi } n 1 n 2    |w |! |w1 |!                   √ ( )μ                          m
+                                                                    μ!                2λ1 λ1 !
+       l1 +l2 =l,                                    μ=0                     λ =0      1
+     w1 +w2 +w3 =w,
+      n 1 +n 2 =n+1
+
+                                                 λ
+                                                  2 =2
+                                                                               
+        2       q 2 +m 2 
+            w3 −  2                                    logλ2 sup( |κp| , κm )
+      × 3 |∂ e          | |w2 |! (n 2 + l2 − 2)!
+                                                              2λ2 λ2 !
+                                                                    λ2 =0
+                                      (λ1 + λ2 )! (4n+8l−6)(|w|+1) D(n 1 +2l1 )3
+  ≤                 (n 2 + l2 )! 4 n 1             K               K
+                                         λ1 ! λ2 !
+         l1 +l2 =l,
+       n 1 +n 2 =n+1,
+      λ1 ≤1 , λ2 ≤2
+
+           0                                            1 ,l1 ,w1 )
+                                                                                                   | p|   
+                                                                           | p| μ logλ1 +λ2 sup( κ , κm )
+                                                    d(D,n
+                               D+2−2n−|w1 |−|w2 |                        1
+      ×             d                                                 √ ( )
+                                                                        μ!           2λ1 +λ2 (λ1 + λ2 )!
+                                                         μ=0
+                         2           2 2
+                                   − q +m
+      ×            c{wi } 3 |∂ w3 e  2 | |w |! |w1 |! |w2 |!.
+        w +w +w =w
+                         
+          1     2       3
+
+
+  16 Note that the lowest possible value of 4n + 8l − 4 which may give a nonvanishing contribution on the
+r.h.s. is 4. This is realized for (n = 2, l = 0). Thus the corresponding exponent of K in the inductive bound is
+never negative. A negative exponent could give a bound incompatible with the boundary contributions from
+(36).
+276                                                                                  S. Hollands, Ch. Kopper
+
+
+Using (56) and the fact that 1 + 2 ≤  , we arrive at the bound
+                 
+                     (n 2 + l2 )! 4 n 1  2 K (4n+8l−6)(|w|+1) K D(n 1 +2l1 )
+                                                                               3
+
+
+                       l1 +l2 =l
+                     n 1 +n 2 =n+1
+                                             1        
+                        ×            c{wi } 2 2 |w3 | k |w |! |w3 |! |w1 |! |w2 |!
+                             wi
+
+                                 
+                             d(D,n 1 ,l1 ,w1 )      0
+                                   1       | p|
+                        ×         √ ( )μ                d  D−2n−|w|−1
+                                   μ!               
+                           μ=0
+                                     |  |      
+                           logλ sup( , κ )
+                                        p
+                                       κ       m
+                        ×                          .                                                   (81)
+                                  2λ λ!
+                            0≤λ≤
+
+Using also (53) we verify the bound
+
+                                                                           
+                                                                        d(D,n 1 ,l1 ,w1 )
+                                (4n+8l−4)|w|+D(n+2l)3                                      1  | p|
+            D−2n−|w|
+                            K                                |w |! |w|!                   √ ( )μ
+                                                                                           μ!  
+                                                                            ν=0
+                                    
+              logλ sup( | p| , κ )
+                          κ m
+           ×                           ,                                                               (82)
+                     2λ λ!
+                0≤λ≤
+
+multiplied by (79)–on imposing the lower bound on K ,
+                                                   
+            K −2D(n+2l)[(n+2l)−1]+(4n+8l−6)−|w| 5k    (n 2 + l2 )! 4 n 1  2
+                                                                     l1 +l2 =l
+                                                                   n 1 +n 2 =n+1
+                                       |w3 |    1
+                 ×          c{wi } 2 2 ≤           ,                                                   (83)
+                      wi
+                                                 8
+
+where we used that n 1 + 2l1 ≤ n + 2l − 1 . Noting also 2n 1 + 2l1 ≤ 2n + 2l − 2 we
+verify that
+                                      d(D, n 1 , l1 , w1 ) ≤ d(D, n, l, w),                            (84)
+with the aid of definition (73), so that (82) is bounded by (72), as required.
+   Adding the bounds on the first and second terms on the r.h.s. of the FE we verify the
+bound (72) multiplied by 2A(D, n, l, w) for K sufficiently large to satisfy (80), (83).
+II) Relevant terms at vanishing external momentum. Relevant terms - i.e. 2n + |w| ≤ D
+- are first constructed at zero external momentum with the aid of the Taylor series
+                                          p w w+v
+             ∂ vp f 2n ( p) =                  [∂    f 2n ](0)
+                                            w! p
+                              |w|≤D−2n−|v|
+                                                  1
+                                                          (1 − τ )|w|−1 w+v
+                                 +           p w     dτ               [∂ p f 2n ](τ p).             (85)
+                                                    0      (|w| − 1)!
+                                  |w|=D+1−2n−|v|
+
+We note that for the relevant terms we also have to take into account the contribution
+from the boundary condition, see (36); the factor of w! δw,w in the boundary condition
+Operator Product Expansion Converges in Perturbative Field Theory                                  277
+
+                      √
+exhausts the factor of w! w ! present in the inductive bound (72), which thus cannot be
+                                                                               ,0        
+sharpened in this respect. We consider the r.h.s. of the FE for the term ∂ w+v
+                                                                           p L2n,l (O A , 0)
+with 2n + |w + v| ≤ D .
+A) The first term on the r.h.s. of the FE. Integrating the FE (71) w.r.t.  from 0 to
+ –assuming again without loss of generality l ≥ 1–gives the following bound for the
+first term on the r.h.s. of the FE:
+                                                          
+   2n + 2      (4n+8l−8)|w+v| D(n+2l−1)3
+             K                 K           |w |! |w + v|!     d  D−(2n+2)−|w+v|
+      2                                                    0
+                            
+                   2 2 d(D,n,l,w+v)              −1 logλ (sup( |k| , κ ))
+                                               λ=
+         2      − k +m               1 |k|                       κ m
+     × 3 e 2                       √ ( )μ
+         k                          μ!                     2λ λ!
+                              μ=0                       λ=0
+
+                                                                       λ=
+                                                                         −1 1
+                                           3 
+                                                           d(D,n,l,w+v)
+        2n + 2
+  ≤            K (4n+8l−8)|w+v| K D(n+2l−1) |w |! |w + v|!
+          2                                                                  2λ λ!
+                                                               μ=0       λ=0
+                                     2 
+                                    −m          1 |k|              |k| κ     −k
+                                                                                2
+      ×2     d  D−(2n+1)−|w+v| e  2         √ ( )μ logλ (sup( , )) e  2 .
+          0                                |k|  μ! 
+                                                                    κ m
+                                                                                                  (86)
+
+We bound the momentum integral as before in (76) by
+
+                              μ  1  μ         κ
+                            2 2 √ ( )! [logλ ( ) + (λ!)1/2 ].                                     (87)
+                                 μ! 2         m
+                                                    √     √
+Summing over μ , and using ( μ2 )! ≤ 2−μ/2           μ + 1 μ! , the first term from (87) can
+then be bounded by
+
+                      
+                  d(D,n,l,w+v)
+                                  μ     μ   
+                                 2 2 2− 2    μ + 1 ≤ 2 d(D, n, l, w + v)3/2 .                     (88)
+                      μ=0
+
+Using that
+            
+                                            κ − m2
+                d  D−(2n+1)−|w+v| logλ ( ) e  2
+             0                              m
+                             
+                                  λ  κ
+                               log ( m )                if D − 2n − |w + v| > 0,
+              ≤  D−2n−|w+v|                                                                      (89)
+                               2(λ + 1)−1 logλ+1 ( mκ ) if D − 2n − |w + v| = 0,
+
+we therefore obtain for (86) the bound
+
+                  2n + 2                                          
+                             K (4n+8l−8)|w+v| K D(n+2l−1)
+                                                              3
+                                                                   |w |! |w + v|!
+                    2
+                                                                    λ=
+                                                                          1               κ
+                  ×  D−2n−|w+v| 2 d(D, n, l, w + v)3/2 6                         logλ (     ).   (90)
+                                                                          2λ λ!            m
+                                                                    λ=0
+278                                                                                              S. Hollands, Ch. Kopper
+
+
+As a consequence, this contribution to ∂ w+v L,         
+                                              2n,l (O A , 0) satisfies the inductive bound
+                                                  0
+
+multiplied by (79) (with w → w + v) under the condition that
+
+                    2n + 2
+           12                        d(D, n, l, w + v)3/2 K −2D(n+2l)(n+2l−1)−3|w+v| ≤ 1/8.
+                      2
+
+B) The second term on the r.h.s. of the FE. Integrating the inductive bound on the second
+term on the r.h.s. of the FE from 0 to  gives the following bound at zero momentum:
+
+                                  
+                      4 n1n2                d  D+4−2n−2−|w1 |−|w2 |
+      l1 +l2 =l,                       0
+  w1 +w2 +w3 =w+v,
+     n 1 +n 2 =n+1
+                                                                              
+          ×K (4n 1 +8l1 −4+2n 2 +4l2 −4)(|w1 |+|w2 |+1) K D(n 1 +2l1 ) c{wi } |w |! |w1 |!
+                                                                      3
+
+
+
+              logλ1 ( κ ) 2 
+            λ1 =1                                         
+                                                  q 2 +m 2                              λ
+                                                                                           2 =2
+                                                                                                 logλ2 ( κm )
+          ×                m           ∂ w3 e−  2             |w   |! (n   + l   − 2)!
+                     2λ1 λ1 !  3                                 2       2     2
+                                                            q=0                                   2λ2 λ2 !
+              λ1 =0                                                                                    λ2 =0
+                                              (λ1 + λ2 )! (4n+8l−6)(|w|+|v|+1) D(n 1 +2l1 )3
+      ≤               (n 2 + l2 )! 4 n 1                   K                   K
+                                                 λ1 ! λ2 !
+             l1 +l2 =l,
+           n 1 +n 2 =n+1,
+          λ1 ≤1 , λ2 ≤2
+
+                                 
+                                                                              logλ1 +λ2 ( κm )
+          ×            c{wi }              d  D+2−2n−|w1 |−|w2 |
+              w1 +w2 +w3         0                                           2λ1 +λ2 (λ1 + λ2 )!
+                =w+v
+                                   
+               2  w3 − q 2 +m2 2     
+          ×        ∂  e   
+                                         |w |!|w1 |!|w2 |!,
+               3
+                                     q=0
+
+
+remembering (74) and (58) which imply that 1 + 2 ≤  . Using (56) we obtain the
+bound
+                            
+                                     (n 2 + l2 )! 4 n 1 l2l K (4n+8l−6)(|w+v|+1) K D(n 1 +2l1 )
+                                                                                                        3
+
+
+                        l1 +l2 =l,
+                       n 1 +n 2 =n+1
+                                                 1         
+                            ×          c{wi } k 2 2 |w3 |    |w |! |w3 |! |w1 |! |w2 |!
+                                wi
+                                                                               2     logλ ( κ )
+                                                                           − m2                m
+                            ×              d  D−2n−|w+v|−1 e                                    .               (91)
+                                 0                                                        2λ λ!
+                                                                                     0≤λ≤
+
+
+Using also (53) and proceeding as in (89, 90) we verify the inductive bound (72),
+
+                                                                                              logλ ( κ )
+           D−2n−|w+v| K (4n+8l−4)|w+v|+D(n+2l)
+                                                                   3                                   m
+                                                                           |w |! |w + v|!                  ,
+                                                                                                  2λ λ!
+                                                                                             0≤λ≤
+Operator Product Expansion Converges in Perturbative Field Theory                     279
+
+
+multiplied by (79) (with w → w + v) on imposing the lower bound on K ,
+                                                    
+           6 K −2D(n+2l)(n+2l−1)+(4n+8l−6)−|w+v| 5k    (n 2 + l2 )! 4 n 1  2
+                                                            l1 +l2 =l,
+                                                           n 1 +n 2 =n+1
+                                       |w3 |     1
+              ×                 c{wi } 2 2 ≤        .                                (92)
+                                                 8
+                      wi =w+v
+
+   For |w+v|+2n = D we have to add the boundary
+                                         √          term from (36). Since it is non-van-
+ishing only if w+v = w we can bound it by |w + v|!|w |! and it is thus accommodated
+for by the bound from Theorem 1 multiplied by 18 , remember also footnote 16.
+III) Schwinger functions with |v| + 2n ≤ D at arbitrary external momenta. We have to
+sum the series (85).
+                                               p w w+v ,0
+                                    
+  |∂ vp L,   0
+                  (O   , 
+                         p )|  =                     ∂   L2n,l (O A , 0)
+                                                  w! p
+           2n,l      A
+                                   |w|≤D−2n−|v|
+                                1                                            
+                                      (1 − τ )|w|−1 w+v ,0                   
+         +                p w                       ∂ p L1,2n,l (O A , τ p)  (93)
+                                  0     (|w| − 1)!
+        |w|=D+1−2n−|v|
+                               | p| |w|
+    ≤                         (       ) 4 A(D, n, l, w + v) K (4n+8l−4)|w+v|
+                                 
+          |w|≤D−2n−|v|
+          √              λ=
+          |w |! |w + v|!  logλ ( mκ )                                       | p|
+      ×                                +                 4 A(D, n, l, w + v) ( )|w| |w|
+               w!              2λ λ!                                           
+                         λ=0           |w|=D+1−2n−|v|
+                        √                 1
+                          |w |! |w + v|!
+      ×K (4n+8l−4)|w+v|                      dτ (1 − τ )|w|−1
+                              |w|!         0
+                                   λ=           τ | p|      
+                     1 τ | p| μ  logλ (sup( κ , mκ ))
+        d(D,n,l,w+v)
+                                                                          3
+      ×              √ (       )                                K D(n+2l)  D−2n−|v| ,
+                      μ!                     2λ λ!
+              μ=0                           λ=0
+                                                                                     (94)
+where A is given in (79). We used the induction hypothesis, after transforming powers
+of p into powers of p over  multiplied by powers of .
+   Using the following estimate:
+      √                   √                         √
+        |w |! |w + v|!      |w |! |v|! |w+v| |w|!     |w |! |v|! |w|+|v|
+                       ≤    √         2 2         ≤   √         2 2 (8n)|w| ,
+            w!                |w|!            w!        |w|!
+we obtain a bound for 2n + |v| ≤ D :
+                                           
+      |∂ vp L,
+                                                                 3
+              2n,l (O A , p
+                          )| ≤  D−2n−|v| |w |! |v|! K D(n+2l)
+                  0
+
+                                                   1      | p| |w| |w|+|v|
+             ×                 4 A(D, n, l, w + v) √      (      ) 2 2 (8n)|w|
+                                                     |w|!   
+                 w,2n+|v+w|≤D
+                                  λ=
+                                        logλ ( mκ )
+          ×K (4n+8l−4)|w+v|
+                                           2λ λ!
+                                  λ=0
+280                                                                                        S. Hollands, Ch. Kopper
+
+                                               1   | p|
+         +                4 A(D, n, l, w + v) √    ( )|w| |w|
+           w,|w|=D+1−2n−|v|
+                                               |w|! 
+                                 |w|+|v|+2
+        ×K (4n+8l−4)|w+v| 2 2 (8n)|w|                                                (95)
+           1                                             λ=            τ |  | κ 
+                                             1 τ | p| μ  log (sup( κ , m ))
+                                                                     λ
+                               d(D,n,l,w+v)                                   p
+        ×     dτ (1 − τ )|w|−1              √ (        )
+            0                                 μ!                      2λ λ!
+                                   μ=0                     λ=0
+                                        3
+       ≤  D−2n−|v| |w |! |v|! K D(n+l)
+                                           1     | p| |w| |w|+|v|
+        ×                4 A(D, n, l, w) √       (      ) 2 2 (8n)|w|
+               w,2n+|v+w|≤D
+                                             |w|! 
+                              λ=
+              (4+8l−4)|w+v|
+                                    logλ ( mκ )
+         ×K
+                                       2λ λ!
+                               λ=0
+                                                                           |w|+|v|+2
+         +             4 A(D, n, l, w) |w| K (4n+8l−4)|w+v| 2                   2       (8n)|w|
+        |w|=D+1−2n−|v|
+                                  μ       λ=          | p|     
+                               2 2 | p|  logλ (sup( κ , mκ ))
+             d(D,n,l,w+v)+|w|
+         ×                      √ ( )μ                            .                                          (96)
+                                 μ!               2λ λ!
+                   μ=0                    λ=0
+
+These bounds are compatible with the induction hypothesis since
+ i)
+
+                              d(D, n, l, w + v) + |w| ≤ d(D, n, l, v)                                        (97)
+
+       for |w| ≤ D − 2n − |v| + 1 , as a consequence of the definition of d (73),
+ ii)
+                                       d(D,n,l,v)
+                            (8n)|w| 2       2      +|w|
+                                                          |w| K (4n+8l−4)|w| 4 A(D, n, l, w) ≤ 1
+         |w|≤D+1−2n−|v|
+
+       for K sufficiently large.        
+                                        
+
+Corollary 3.2. For  ≤ m and K sufficiently large we have the bounds
+
+             |∂ w L,         )| ≤ m D−2n−|w| K (4n+8l−4)|w| K D(n+2l)
+                                                                                             3
+                   2n,l (O A , p
+                       0
+
+
+                                                                                   λ=           | p|
+                                                                          | p| μ  logλ+ ( m )
+                                                          d(D,n,l,w)
+              ×       |w |! |w|! [2n + |w| − D]+ !                     (        )                .           (98)
+                                                                            m          2λ λ!
+                                                             μ=0                    λ=0
+
+Remark. These bounds show that the functions L,   2n,l (O A ; p
+                                                        0
+                                                                ) have a convergent Tay-
+lor expansion around zero momentum, since the growth of the Taylor coefficients is
+bounded by K̃ |w| |w|! for w large and suitable K̃ .
+
+Proof. To prove the corollary we may insert the bounds of Theorem 1 on the r.h.s. of
+the FE. We may then use the factors exp(−m 2 / 2 ) present in both terms to bound the
+negative powers of  by a square root of a factorial:
+Operator Product Expansion Converges in Perturbative Field Theory                        281
+
+                    m
+                                          2 
+                                                D−2n−|w|−μ−1
+                       d exp(−m 2 / )            √
+                    0                                μ!
+                                      √
+                                         (2n + |w| + μ − D)+ !
+                     ≤ m D−2n−|w|−μ              √
+                                                  μ!
+                        1
+                          (2n+|w|+μ−D)
+                                                       
+                     ≤ 22              + m D−2n−|w|−μ
+                                                         (2n + |w| − D)+ !.
+These bounds cannot serve as a viable induction hypothesis however, since the powers
+of momenta (now without √1μ! ) would create additional square roots of factorials in the
+next step of induction. 
+                        
+   For later use, we also note the
+Corollary 3.3. The inductive proof of Theorem 1 is valid for a somewhat larger constant
+K also if we replace d in the statement of the theorem by 2d, or if we replace  by  + 1.
+Proof. The key properties for d that enter the proof are the inequalities (84) and (97),
+which are evidently also satisfied for 2d. The key properties required for  =  (n, l)
+are that  (n + 1, l − 1) <  (n, l) for l ≥ 1 and  (n 1 , l1 ) + (n 2 , l2 ) <  (n, l) on
+the r.h.s. of the FE, where (n, l) is as in Eq. (58). These properties are evidently also
+satisfied by the quantity  + 1.  
+
+
+3.4. Bounds on normal products with two insertions. We now provide bounds on the
+normal products L,
+                  n,l,D (O A ⊗ O B ; p
+                      0
+                                     ) with two insertions. Each of these insertions is
+a monomial in the basic fields with A = {n , w } and B = {n , w }. Again, we will
+assume for simplicity that both n and n are even. We will use the notation D for the
+combined dimension of the two insertions,
+                          D := [A] + [B] = n + n + |w | + |w |.                         (99)
+These normal products were defined above in Sect. 2 as the solutions to the FE’s (48),
+and the boundary conditions are given above in Eq. (40) and Eq. (41). Our bounds are
+given in the following theorem:
+Theorem 2. There exists a constant K > 0 such that for |w| ≤ D + 1:
+
+       |∂ w L,                 )| ≤  D −2n−|w| K (4n+8l−4)|w| K D (n+2l)
+                                                                               3
+             2n,l,D (O A ⊗ O B ; p
+                  0
+
+
+                           d (n,l,w,D
+                                ) 1             λ= +1        | p|
+                                         | p| μ  logλ (sup( κ , mκ ))
+          |w|! |w |! |w |!            √ ( )                              ,             (100)
+                                       μ!                 2λ λ!
+                               μ=0                λ=0
+         d = 2[D (2n + 2l) + sup(D + 1 − 2n − |w|, 0)] ,  (n, l) = 2l + n − 1.
+                                                                              (101)
+Proof. To prove this theorem, we use the FE’s for normal products with two insertions,
+given above in Eq. (48). We apply a derivative ∂ w
+                                                 p to both sides of the equation. Then we
+integrate the FE’s over  subject to the appropriate boundary condition, using the same
+inductive scheme as described in the previous subsections. Depending on the boundary
+condition, we again have to distinguish the cases 2n + |w| ≤ D and 2n + |w| > D . The
+right side of the FE, Eq. (48), has three terms. The first two terms involve the CAG’s
+282                                                                                            S. Hollands, Ch. Kopper
+
+
+with two insertions, whereas the last term only involves the CAG’s with one insertion,
+for which we already have the bounds in Theorem 1. The structure of the bound for the
+CAG’s with two insertions claimed in the theorem is exactly the same as that for one
+insertion, and the first two terms on the right side of the FE also have exactly the same
+structure as the corresponding two terms in the FE for one insertion. Therefore, in view
+of Cor. 3.3, the first two terms in the FE can be treated in literally the same manner as in
+the previous section with D = D there. The third term on the right side of the FE has a
+different form, but it involves only the CAG’s with one insertion, for which we already
+have bounds. Thus, we can concentrate only on the third term on the right side of the
+FE, and we need to show that this term satisfies our inductive bound. We begin with the
+following
+Lemma 3.2. For |w| ≤ D + 1, n + 1 = n 1 + n 2 , l = l1 +l2 , we have the following bound:
+                                                                                                     
+    w     ,0                                              ,0                                      
+   ∂    L2n 1 ,l1 (O A ; k, p1 , . . . , p2n 1 −1 ) Ċ (k) L2n 2 ,l2 (O B ; −k, p2n 1 , . . . , p2n )
+                                                       
+    p
+              k
+                    (4n+8l−4)|w|        D (n+2l)3
+                                                     
+                                        |w|! |w |! |w |!  D −2n−|w|−1 e−m /
+                                                                                                          2   2
+         ≤ M K1                      K1
+             d (n,l,w,D                                       √
+                  ) 1              λ=             | p|
+                            | p| μ  logλ (sup( κ , mκ )) + λ!
+           ×            √ ( )                                      .                                                (102)
+                         μ!                        2λ λ!
+                    μ=0                           λ=0
+
+Here K 1 is the constant from Theorem 1, and M = 5|w| 2|w|/2 22d ( + 1)2 +1 .
+Proof. We can pull the ∂ w
+                         p inside the integral. Then we first use the transformation
+properties of the CAG’s under translations to write
+        ,0                                                       ,0
+  ∂w                                                     
+   p [L2n 1 ,l1 (O A (x); k, p1 , . . . , p2n 1 −1 ) Ċ (k) L2n 2 ,l2 (O B (0); −k, p2n 1 , . . . , p2n )]
+              
+     =                  c{wi } ∂ w 3 i x(k+ p1 +...+ p2n 1 −1 )
+                                 p e                           ∂w 1 ,0
+                                                                 p L2n 1 +1,l1 (O A (0); k, p1 , . . . , p2n 1 −1 )
+       w1 +w2 +w3 =w
+
+       ×Ċ  (k) ∂ w 2 ,0
+                   p L2n 2 ,l2 (O B (0); −k, p2n 1 , . . . , p2n ).                                                (103)
+
+Now, the p-derivatives on ∂ w            3 i x(k+ p1 +...+ p2n 1 −1 )
+                                       p e                             can be converted into k-derivatives,
+and then in the subsequent k-integral in (102) moved onto the other terms by means of
+a partial integration, because the integrand decays sufficiently rapidly for large k by the
+bounds in Theorem 1. We can then insert these bounds, and we can also use the standard
+multi-nomial bound c{wi } ≤ 3|w| . Carrying out these manipulations, and using also (56),
+and the inequality D (n + 2l)3 ≥ [A](n 1 + 2l1 )3 + [B](n 2 + 2l2 )3 in view of (99), results
+in the bound:
+                                                                                                                        
+      w         ,0                                                     ,0                                            
+     ∂       L           (O   ; k, p   ,  . . . , p         ) Ċ 
+                                                                    (k) L          (O   ;  −k,    p      , . . . , p    ) 
+      p        2n 1 ,l1    A        1              2n 1 −1              2n 2 ,l2    B             2n 1             2n 
+            k
+                    (4n+8l−4)|w|         D (n+2l)3
+                                                       
+                                                          |w|! |w |! |w |!  D −2n−|w|−5 e−m /
+                                                                                                              2    2
+       ≤ M0 K 1                     K1
+                                                                                      | p|+|k|
+                                                      | + |k| μ  logλ (sup( κ , mκ ))
+             d
+              1 +d2
+                         1                       2 |p
+                                  e−|k| /2 (
+                                         2
+          ×           √                                          )                                         ,           (104)
+                          μ! k                                                      2λ λ!
+                  μ=0                                               λ=0
+
+for the constant K 1 provided by Theorem 1, and M0 = 5|w| 2 +1 2d1 +d2 ( +1)2|w|/2 . Here,
+n + 1 = n 1 + n 2 , l = l1 +l2 , and d1 = [A](2n 1 + 2l1 ) + sup([A] + 1 − 2n 1 − |w1 |, 0), d2 =
+Operator Product Expansion Converges in Perturbative Field Theory                                                   283
+
+
+[B](2n 2 + 2l2 ) + sup([B] +1−2n 2 −|w2 |, 0) is as in Theorem 1. Using that |w| ≤ D + 1,
+we can show that d1 + d2 ≤ d , so we can replace the upper limit of the sum over μ by
+d . Furthermore, we can now bound the k-integral in (104) exactly as in (76) and (77),
+leading to the bound
+               d                                                               | p|+|k|
+                                          | p| + |k| μ  logλ (sup( κ                      , mκ ))
+                             e−|k| /2 (
+                                  2    2
+                                                      )
+                                                                  2λ λ!
+               μ=0 k/                                     λ=0
+                            d (n,l,w,D                                                             √
+                                 )         1
+                                                                | p|
+                                               | p|  logλ (sup( κ , mκ )) +                          λ!
+                  ≤2   d
+                                           √ ( )μ                                                           .   (105)
+                                            μ!                  2λ λ!
+                               μ=0                   λ=0
+
+Inserting this into the previous bound gives the statement of the lemma.                                
+                                                                                                        
+    We now return to the inductive step, which consists in integrating ∂ w
+                                                                         p on the right side
+of the FE Eq. (48) against , subject to appropriate boundary conditions. Concerning
+these boundary conditions, we must as usual consider separately two cases:
+
+The case 2n + |w| > D . In this case the boundary condition is ∂ w L             0 ,0
+                                                                                2n,l,D (O A ⊗
+O B ; p) = 0, so we integrate the right side of the FE differentiated by ∂ w
+                                                                            p from 0 down
+to . We have to consider the three terms on the right side separately. The first two can
+be handled as in the previous subsection. So we need to focus only on the third term on
+the right side of the FE. Using the previous lemma, and the inequality (53), we get
+  0          
+
+
+
+             w
+        d ∂ p    L  ,0                                       
+                    2n 1 ,l1 (O A ; k, p1 , . . . , p2n 1 −1 ) Ċ (k)
+                  k
+                                                 
+                                                 
+    ×L  ,0
+      2n 2 ,l2 (O B ; −k, p 2n 1 , . . . , p   )
+                                             2n 
+                                                 
+
+                                                                   0
+       (4n+8l−4)|w|  D (n+2l)3
+                                                                            d  −1+D −2n−|w| e−m /
+                                                                                                                2    2
+  ≤ M K1            K1                         |w|! |w |! |w |!
+                                                                       
+        d (n,l,w,D                                                          √
+             )         1  | p|
+                                       
+                                              logλ (sup( |κp| , κm )) +       λ!
+    ×                  √ ( )μ
+                        μ!                               2λ λ!
+            μ=0                  λ=0
+               (4n+8l−4)|w|      D (n+2l)3
+                                               
+  ≤ 10M K 1                    K1                  |w|! |w |! |w |!  D −2n−|w|
+        d (n,l,w,D
+             )                              | p|
+                        1  | p|  logλ (sup( κ , mκ ))
+    ×                  √ ( )μ                           .                                                       (106)
+                        μ!               2λ λ!
+            μ=0                  λ=0
+
+In order to bound the  -integral of the third term on the right side of the FE, we must
+additionally multiply this by 4n 1 n 2 , apply the symmetrization operator S, and sum over
+n 1 , n 2 , l1 , l2 , subject to n + 1 = n 1 + n 2 , l = l1 + l2 . Then we see that we reproduce
+the inductive bound in Theorem 2 on the FE multiplied by 1/8 by choosing K ≥ K 1
+sufficiently large such that
+                                                        D (n+l)3       1 D (n+l)3
+                           40(l + 1)(n + 1)3 M K 1                 ≤     K        ,                             (107)
+                                                                       8
+which is possible in view of D ≥ 2n + |w| + 1.
+284                                                                                       S. Hollands, Ch. Kopper
+
+
+The case 2n + |w| ≤ D . In this case the boundary condition is ∂ w L0,       2n,l,D (O A ⊗
+                                                                                  0
+
+       = 0, so we integrate the right side of the FE differentiated by ∂ w from  down
+O B ; 0)                                                                   p
+to 0. We have to consider the three terms on the right side separately. The first two can be
+handled as in the previous subsection. So we need to focus again only on the third term
+on the right side of the FE. This is done first for zero momentum p = 0,  and the results
+for arbitrary momentum are then constructed using the Taylor formula with remainder.
+Using the previous lemma, we now get
+                                                                                                     
+                           ,0                                        ,0                             
+            d  ∂ w
+                          L         (O   ; k, 0, . . . , 0) Ċ 
+                                                                 (k) L          (O   ; −k, 0, . . . , 0) 
+                  p      2n 1 ,l1    A                               2n 2 ,l2    B                     
+          0             k
+                (4n+8l−4)|w|                  3 
+          ≤ M K1                  K 1D (n+2l) |w|! |w |! |w |!
+                                                                              √
+                            D −2n−|w|−1 −m 2 / 2
+                                                                logλ ( κm ) + λ!
+            ×        d                       e                                      ,                  (108)
+               0                                                       2λ λ!
+                                                                λ=0
+
+
+noting that there is no boundary term. The  -integral is now bounded by
+
+                                                                   √
+                D −2n−|w|−1           −m 2 / 2
+                                                   logλ ( κ ) +
+                                                              m           λ!
+        d                       e
+   0                                                          2λ λ!
+                                                  λ=0
+                                       ⎧ 1                  √
+                       
+                             1        ⎨ λ+1 logλ+1 ( mκ ) + λ! log( mκ ) + 1 if D − 2n − |w| = 0,
+      ≤  D −2n−|w|                            √
+                           2λ λ! ⎩ logλ ( mκ )+ λ!                                      if D − 2n − |w| > 0
+                       λ=0          D −2n−|w|
+                                   +1
+                                      logλ ( κ )
+      ≤ 6(l + 1) D −2n−|w|                       m
+                                                      .                                                    (109)
+                                           2λ λ!
+                                  λ=0
+
+
+In order to bound the  integral of the third term on the right side of the FE, we must
+additionally multiply (108) by 4n 1 n 2 , apply the symmetrization operator S, and sum
+over n 1 , n 2 , l1 , l2 , subject to n + 1 = n 1 + n 2 , l = l1 + l2 . Then we see that we reproduce
+the inductive bound in Theorem 2 on the FE multiplied by 1/8 provided that
+
+                                                          D (n+l)3       1 D (n+l)3
+            4 · 6(l + 1)( + 1) (n + 1)3 M K 1                       ≤     K        ,    K1 ≤ K ,         (110)
+                                                                         8
+
+which can be satisfied for K sufficiently large in view of |w| ≤ D +1. The bounds at non-
+zero momentum are obtained using the Taylor expansion with remainder technique as in
+Eq. (93), but now for two insertions. The arguments are in parallel with the case of one
+insertion, noting that d satisfies the key property d (D , n, l, w+v)+|w| ≤ d (D , n, l, v)
+analogous to (97). Thus, each of the two terms in Eq. (93) satisfies the inductive bound
+multiplied by 1/8 for sufficiently large K .
+    Hence, we have seen that ∂ w    p of the third term in the FE (48), integrated against
+, can be estimated by 1/2 of the inductive bound. The first two terms can be treated
+in the same manner as the corresponding terms in the FE with one insertion, and can
+thereby be bounded by 1/2 times the inductive bound as well for sufficiently large K .
+This concludes the proof of the theorem.       
+Operator Product Expansion Converges in Perturbative Field Theory                                          285
+
+
+   We can insert the bound obtained in the previous theorem one more time into the
+FE’s and integrate from 0 to m . If this is done, and if we also carry out the sum over μ in
+the bound, we obtain, in the same way as Corollary 3.2 was obtained17 from Theorem 1:
+
+Corollary 3.4. There exists a constant K > 0 such that:
+
+             |L0,
+               2n,l,D (O A (x) ⊗ O B (0); p
+                   0
+                                          )|
+                                                                                               | p|
+                                                                             | p| d  logλ+ ( m )
+                                                                                      2l+n
+                 ≤ m D −2n K D (n+2l)
+                                         3
+                                                 |w |! |w |! sup(1,                )                 .   (111)
+                                                                               m           2λ λ!
+                                                                                     λ=0
+
+Here, d = 2[D (2n + 2l) + sup(D + 1 − 2n, 0)].
+
+
+4. Bound on the Remainder in the OPE
+
+The bounds on the CAG’s obtained in the previous section put us in a position to give the
+proof of our main result, namely the bound on the remainder of the OPE. As stated in the
+Introduction, we introduce test-functions f pi chosen such that the support supp fˆpi ⊂
+{q ∈ R4 | | pi − q| ≤ } for some arbitrary but fixed . In terms of these test-functions,
+the spectator fields are defined as ϕ( f pi ) = d 4 x ϕ(x) f pi (x). We use the same nota-
+tion as in the previous section concerning the composite fields: D = [A] + [B], and
+A = {n , w }, B = {n , w }. Our result, which we presented already in the Introduction,
+is
+                           
+Theorem 3. Let the sum C in the operator product expansion (1) be over all C such
+that
+
+                                       [C] − [A] − [B] ≤ ,                                              (112)
+
+where  is some positive integer. Then for each such , we have the following bound
+for the “remainder” in the OPE in loop order l:
+                                                                                        
+                                                                                             
+       O A (x)O B (0) ϕ( f p ) · · · ϕ( f p ) −  C C
+                                                       (x)   O  (0) ϕ( f    ) · · · ϕ( f   )  
+                            1              n       AB        C          p1              pn 
+                                                           C
+                           
+        ≤m    [A]+[B]+n
+                               [A]![B]! K̃   [A]+[B]
+                                                               sup | fˆpi |
+                                                       i
+                                                                 | p|
+                      | p|n 2([A]+[B])(n+2l+1)+3n  logλ sup(1, mn )
+                                                   2l+n/2
+        × sup(1,            )
+                         m                                 2λ λ!
+                                                      λ=0
+                                                        
+          1                               | p|n n+2l+1
+        ×√            K̃ m |x| sup(1,             )               .
+          !                                 m
+
+Here, there are n spectator fields,  .  denote Schwinger functions, and K̃ is a constant
+depending on n, l. Furthermore, | p|n is defined in Eq. (51).
+                 
+ 17 The factor    (2n − D )+ ! can be absorbed by choosing K slightly larger.
+286                                                                                                   S. Hollands, Ch. Kopper
+
+
+Proof. Let us begin by defining the “remainder functional” for D = 0, 1, 2, . . . by
+
+R ,
+  D
+      0
+        (O A (x)⊗O B (0)) := L ,0 (O A (x)⊗O B (0))− L ,0 (O A (x))L ,0 (O B (0))
+                               
+                             −     C CAB (x) L ,0 (OC (0)),                     (113)
+                                                       C
+
+where the sum is over all C with [C] ≤ D. The corresponding moments of this func-
+tional are written as R,    0
+                         D,n,l . Going through the definitions given in Sect. 2, we can write
+the remainder in the OPE - with UV-cutoff 0 and IR-cutoff set to  = 0, and still
+considering the full formal power series in  - as
+                                                                                         
+          O A (x)O B (0) ϕ̂( p1 ) · · · ϕ̂( pn ) −  C CAB (x) OC (0) ϕ̂( p1 ) · · · ϕ̂( pn )
+                                                                      C
+                               
+            =−                                   n+l+1− j
+                                                             R D,|I1 |,l1 (O A (x) ⊗ O B (0); p I1 ) L̃0,
+                                                              0,0
+                                                                                                        |I2 |,l2 ( p
+                                                                                                              0
+                                                                                                                    I2 )
+                    I1 ∪...∪I j ={1,...,n},
+                          l, l1 +...+l j =l
+
+                                                  n
+               · · · L̃0,
+                       |I j |,l j ( p
+                             0
+                                    I j )            C 0,0 ( pi ).                                                        (114)
+                                              i=1
+
+Here, L̃0,
+        n,l ( p
+            0
+              ) are the expansion coefficients of the generating functional L̃ 0,0 (ϕ) =
+−L 0,0 (ϕ) + 21 ϕ, (C 0,0 )−1 ϕ, without any momentum conservation delta-functions
+taken out. Thus, we need to estimate the quantities L0,                    0,0
+                                                      n,l , the quantities R D,n,l , and the
+                                                         0
+
+covariances C 0,0 . Our bounds on the CAG’s without insertions give us
+
+                                                                                    
+                                                                                    l
+                                                                                      logλ sup(1, | p| )
+              |L0,
+                2n,l ( p
+                    0
+                       )| ≤ m 4−2n K 2n+4l−4 (n + l − 1)!                                                m
+                                                                                                               ,            (115)
+                                                                                                2λ λ!
+                                                                                    λ=0
+
+and we also have the trivial bound C 0,0 ( p) ≤ [sup(| p|, m)]−2 . Thus, what remains is
+to give bounds on R0, 0
+                   D,n,l . We have the following lemma about the remainder functional:
+
+Lemma 4.1. Let T j be the Taylor operator introduced in Eq. (44). Then the remainder
+functionals satisfy:
+
+      R ,
+        D
+            0
+              (O A (x) ⊗ O B (0))
+                              %                                                                &
+                                   ,0
+        = (1 −    j=0 T j
+                            )   L D    (O A (x) ⊗ O B (0)) − L ,0
+                                                                     (O A (x))L ,0
+                                                                                     (O B (0))   ,
+
+where  := D − D , D = [A] + [B]. For  < 0 the sum is by definition empty.
+
+Proof. Recalling the definition of the “oversubtracted” CAG’s with two insertions, we
+first consider the telescopic sum
+
+            L ,0 (O A ⊗ O B )
+                                                           
+                                                           D
+              = L ,
+                  D
+                      0
+                        (O A ⊗ O B ) +                           [L ,                 ,0
+                                                                    j−1 (O A ⊗ O B ) − L j
+                                                                        0
+                                                                                             (O A ⊗ O B )], (116)
+                                                           j=0
+Operator Product Expansion Converges in Perturbative Field Theory                             287
+
+
+where D < D = [A] + [B]. Next, for any 0 ≤ j, we prove the relation
+
+                       L ,
+                         j−1 (O A ⊗ O B ) − L j
+                             0                 ,0
+                                                    (O A ⊗ O B )
+                                    '                    ( ,
+                         =        DC L 0,j−1 (O A ⊗ O B ) L
+                                             0                   0 (O ).
+                                                                     C                      (117)
+                            C:[C]= j
+
+To see this, we make the observation that both sides of the equation obey the same homo-
+geneous FE, and the same boundary conditions, owing to the choice for the boundary
+conditions made for the CAG’s. Hence they must be equal. In view of our definition of
+the OPE-coefficients C CAB for [C] < D Eq. (45), we conclude that, for D < D , we
+have
+                                                          
+         L ,0 (O A ⊗ O B ) = L ,
+                                   D
+                                       0
+                                         (O A ⊗ O B ) +       C CAB L ,0 (OC ).   (118)
+                                                               [C]≤D
+
+We now subtract from both sides L ,0 (O A )L ,0 (O B ), and we bring the sum with
+the OPE coefficients over to the left. Then we get the claim of the lemma for D < D .
+The case of general D now works by induction. We first observe that, for  = D − D ,
+we have
+                  %                                                     &
+            T+1 L ,
+                      D+1
+                          0
+                            (O A ⊗  O  B ) − L ,0
+                                                    (O A )L ,0
+                                                                 (O B )
+                               %                                &
+              =−            DC L 0,0 (T+1 O A )L 0,0 (O B ) L ,0 (OC ).    (119)
+                       [C]=D+1
+
+This follows again because both sides satisfy the same linear, homogeneous FE with
+the same boundary conditions. Next, using the inductive hypothesis, and making trivial
+re-arrangements in the sums:
+
+           R ,                  ,0
+             D+1 (O A ⊗ O B ) = R D
+                 0
+                                       (O A ⊗ O B ) − [C]=D+1 C CAB L ,0 (OC )
+                              %                                                  &
+                                  ,0
+             = (1 −  
+                      j=0 T ) L D
+                           j
+                                       (O A ⊗ O B ) − L ,0 (O A )L ,0 (O B )
+              −[C]=D+1 C CAB L ,0 (OC )
+                                 %                                                      &
+                                      ,0
+             = (1 −  +1
+                      j=0 T j
+                              )    L D+1  (O   A ⊗ O B ) − L ,0
+                                                                    (O A )L ,0
+                                                                                 (O B )
+                                   %                                              &
+              +(1 −  j=0 T ) L ,
+                               j
+                                       D
+                                          0
+                                            (O A ⊗ O B ) − L ,
+                                                               D+1 (O A ⊗ O B )
+                                                                   0
+
+                     %                                                        &
+              +T+1 L ,D+1
+                               0
+                                  (O A ⊗ O   B ) − L ,0
+                                                          (O A )L ,0
+                                                                       (O B )
+               −[C]=D+1 C CAB L ,0 (OC ).                                                (120)
+We are now in a position to substitute the formulas (117) and (119) for the second and
+third term on the right side, together with the definition of C CAB for [C] ≥ D for the
+fourth term. Then the last three terms are seen to cancel out, and we are left with the
+claim of the lemma.   
+   Note that for a function f on R4 of differentiability class C N +1 , we have the formula
+                                      xw  1
+           (1 −  j=0 T ) f (x) =
+                    N     j
+                                                    (1 − τ ) N ∂ w f (τ x) dτ          (121)
+                                            N! 0
+                                         |w|=N +1
+288                                                                                      S. Hollands, Ch. Kopper
+
+
+for the remainder of a Taylor expansion in x carried out to order N . By [8], the function-
+als L ,
+      D
+          0
+            (O A (x) ⊗ O B (0)) are of differentiability class C  in the variable x, where
+ = D − D, whereas the functionals L ,0 (O A (x)) are smooth         in x. We write the
+operator 1− j≤ T j in the statement of the previous lemma as (1− j≤−1 T j )−T ,
+and we rewrite the first operator in parenthesis as a remainder in a Taylor expansion to
+order N =  − 1 as in (121). Then, by the previous lemma and the Lowenstein-rules,
+we can write the remainder as:
+                                      xw             1
+     R , 0
+             (O A (x) ⊗ O B (0)) =                        dτ (1 − τ )−1
+       D
+                                           ( − 1)! 0
+                                             |w|=
+
+      × L ,
+           D
+               0
+                 (∂ w O A (τ x) ⊗ O B (0)) − L ,0 (∂ w O A (τ x))L ,0 (O B (0))
+                                                                                                         
+        xw
+      −    L , 0
+                    (∂ w O A (0) ⊗ O B (0)) − L ,0 (∂ w O A (0))L ,0 (O B (0))                        ,
+        w!    D
+
+                                                                                                         (122)
+where ∂ w O A on the right side denotes the linear combination of insertions obtained by
+formally carrying out the differentiations:
+                                
+                 ∂wOA =                 c{wi } ∂ w1 +w 1 ϕ · · · ∂ wn +w n ϕ.      (123)
+                                   w1 +...+wn =w
+
+Taking the moments of this equation, and setting also  = 0, gives:
+                                              xw        1
+            0,0
+          R D,n,l (O A (x) ⊗ O B (0); p) =                   dτ (1 − τ )−1
+                                                 ( − 1)! 0
+                                                        |w|=
+
+                         w
+            × L0,
+               n,l−1,D (∂ O A (τ x) ⊗ O B (0); p
+                   0
+                                               )
+                                
+                                                       w
+                    −                      L0,                     I1 )L0,
+                                            |I1 |,l1 (∂ O A (τ x); p
+                                                  0
+                                                                          |I2 |,l2 (O B (0); p
+                                                                                0
+                                                                                              I2 )
+                        I1 ∪ I2 = {1, . . . , n}
+                             l1 + l2 = l
+
+              xw            w
+          −      L0,
+                  n,l−1,D (∂ O A (0) ⊗ O B (0); p
+                      0
+                                                    )
+              w!
+                                                                                        
+                                           w
+                 −            L0,   0
+                               |I1 |,l1 (∂   O A (0); 
+                                                      p I 1 )L0,0
+                                                              |I2 |,l2 (O B (0); 
+                                                                                 p I 2 )   .
+                        I1 ∪ I2 = {1, . . . , n}
+                             l1 + l2 = l
+
+
+At this stage, we can use our previous bounds on the CAG’s to control the remainder.
+Using Cor. 3.4, the first term in [. . . ] can be bounded by
+                            1                                                        
+                  xw                                                                 
+                               dτ (1 − τ )       Ln,l−1,D (∂ O A (τ x) ⊗ O B (0); p)
+                                             −1 0,0        w
+                 ( − 1)! 0
+           |w|=
+                                                                         
+                 |x|                   0,0                              
+            ≤                          
+                                sup Ln,l−1,D (∂ O A (τ x) ⊗ O B (0); p)
+                                                    w
+               ( − 1)!        0≤τ ≤1
+                           |w|=
+Operator Product Expansion Converges in Perturbative Field Theory                                              289
+
+
+                  |x|                      3 
+            ≤            m D−n K D(n/2+2l−2) (|w | + )! |w |!
+                ( − 1)!
+                                                                                        logλ+ ( |mp| )
+                                                                                2l+n/2−2
+                                                      | p| 2D(n+2l−1)
+                ×                       c{wi } sup(1,      )
+                            w +...+w =w
+                                                       m                                     2λ λ!
+                    |w|=    1        n                                           λ=0
+                    D −n         (n/2+2l−2)3              D (n/2+2l−2)3
+            ≤ m             (K         m|x|) K
+                                          √                         | p|
+                                            |w |! |w |!  logλ+ ( m )
+                                                       2l+n/2−2
+                         | p| 2D(n+2l−1)
+                × sup(1,      )              √                            .                                  (124)
+                          m                    !               2λ λ!
+                                                          λ=0
+
+The last inequality holds for a somewhat larger constant K needed in order to absorb
+factors , (4n ) ≤ (4n + 4n ) ≤ [4(n + 2l + 1)] from the sum over w, and 2 D +
+from (|w | + )! ≤ 2|w |+ |w |!! ≤ 2 D + |w |! !. The other three terms in [. . . ] can
+be estimated in the same way using also our estimates for the CAG’s with one operator
+insertion given in Cor. 3.2. They are bounded by an expression of the same form. Putting
+these straightforward estimates together, and defining also K̃ := K (n/2+2l) , we thereby
+                                                                            3
+
+demonstrate the following lemma:
+Lemma 4.2. Let D = [A] + [B], D = D + ,  = 0, 1, 2, . . . and A = {n , w }, B =
+{n , w }. The remainder functional satisfies the uniform bound
+
+   |R0,
+     D,n,l (O A (x) ⊗ O B (0); p
+         0
+                               )|
+                                                                        √                          | p|
+                                                                            |w |! |w |!  logλ+ ( m )
+                                                                                        2l+n/2
+           D −n                                     | p| 2D(n+2l+1)
+     ≤m             ( K̃ m |x|) K̃        D
+                                              sup(1,      )                  √
+                                                      m                        !              2λ λ!
+                                                                                         λ=0
+                                                                                                             (125)
+with a constant K̃ depending only on n, l.
+    Substituting the bound stated in the lemma into Eq. (114), using the trivial estimate
+C 0,0 ( p) ≤ [sup(m, | p|)]−2 , the estimate (115), and the fact that fˆpi is supported in a
+ball of radius  around pi , we get the statement of the theorem for a sufficiently large
+new constant K̃ . This completes the proof.    
+
+Acknowledgements. S.H. would like to thank CPHT, Ecole Polytechnique, for hospitality and financial sup-
+port. He also acknowledges support under ERC grant QC&C259562.
+
+
+References
+ 1. Guida, R., Kopper, Ch.: All order uniform momentum bounds for massless Euclidean φ44 Theory. To
+    appear
+ 2. Hollands, S.: Quantum field theory in terms of consistency conditions. I. General framework, and per-
+    turbation theory via Hochschild cohomology. Sigma 5, 090 (2009)
+ 3. Hollands, S., Olbermann, H.: Perturbative Quantum Field Theory via Vertex Algebras. J. Math. Phys. 50,
+    112304 (2009)
+ 4. Hollands, S., Wald, R.M.: Axiomatic quantum field theory in curved spacetime. Commun. Math.
+    Phys. 293, 85–125 (2010)
+ 5. Hollands, S., Wald, R.M.: Conservation of the stress tensor in interacting quantum field theory in curved
+    spacetimes. Rev. Math. Phys. 17, 227–312 (2005)
+ 6. Duetsch, M., Fredenhagen, K.: Causal perturbation theory in terms of retarded products, and a proof of
+    the action Ward identity. Rev. Math. Phys. 16(10), 1291–1348 (2004)
+290                                                                               S. Hollands, Ch. Kopper
+
+
+ 7. Keller, G., Kopper, Ch.: Perturbative Renormalization of Composite Operators via Flow Equations I.
+    Commun. Math. Phys. 148, 445–467 (1992)
+ 8. Keller, G., Kopper, Ch.: Perturbative Renormalization of Composite Operators via Flow Equations II,
+    Short distance expansion. Commun. Math. Phys. 153, 245–276 (1993)
+ 9. Keller, G., Kopper, Ch., Salmhofer, M.: Perturbative renormalization and effective Lagrangians in 44 .
+    Helv. Phys. Acta 156, 32–52 (1992)
+10. Kopper, Ch., Meunier, F.: Large momentum bounds from Flow equations. Ann. Henri Poincaré 3, 435–
+    450 (2002)
+11. Kopper, Ch., Müller, V.F., Reisz, Th.: Temperature Independent Renormalization of Finite Temperature
+    Field Theory. Ann. Henri Poincaré 2, 387–402 (2001)
+12. Kopper, Ch.: On the local Borel Transform of Perturbation Theory. Commun. Math. Phys. 295, 669–
+    699 (2010)
+13. Kopper, Ch.: Renormierungstheorie mit Flußgleichungen. Aachen: Shaker Verlag, 1998
+14. Müller, V.F.: Perturbative Renormalization by Flow Equations. Rev. Math. Phys. 15, 491–557 (2003)
+15. Polchinski, J.: Renormalization and Effective Lagrangians. Nucl. Phys. B231, 269–295 (1984)
+16. Sansone, G.: Orthogonal Functions. London-New York: Dover Publications, 2004
+17. Wegner, F., Houghton, A.: Renormalization Group Equations for Critical Phenomena. Phys. Rev. A8,
+    401–412 (1973)
+18. Wilson, K.: Renormalization group and critical phenomena I. Renormalization group and the Kadanoff
+    scaling picture. Phys. Rev. B4, 3174–3183 (1971)
+19. Wilson, K.: Renormalization group and critical phenomena II. Phase cell analysis of critical behaviour.
+    Phys. Rev. B4, 3184–3205 (1971)
+20. Zimmermann, W.: Local operator products and renormalization in quantum field theory. In: Lectures on
+    Elementary Particles and Quantum Field Theory, Brandeis Summer Institute 1970, S. Deser, M. Grisaru,
+    H. Pendleton, eds., Cambridge, MA: MIT Press, 1970
+
+Communicated by M. Salmhofer
+

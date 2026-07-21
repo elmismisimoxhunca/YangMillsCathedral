@@ -4472,5 +4472,21 @@ requires this exact normalization, selection, and reduced identity on its alread
 `F²`, normalized-beta, and classical-reference chain. Collins–Duncan–Joglekar's unrestricted
 mixing family is not erased or promoted to an all-domain operator identity. No datum is constructed.
 
+The previously unindexed user literature bundle under `/root/` is now fully ingested. Seven of its
+33 PDFs are byte-identical to already canonical Clay, Freed, Aharony, Hall-notes, OS-I, OS-II, and
+Wightman artifacts. Twenty-six distinct artifacts are now retained or added to the Collins record,
+with exact native text extraction for 31 bundle PDFs overall. The two image-only Royal Society
+papers, Atiyah–Hitchin–Singer 1978 and Atiyah–Bott 1983, retain the updated Mathpix extractor's raw
+provenance/line artifacts, calibrated per-printed-page machine drafts, and independent visual
+adjudications; the extractor selftest passes, and the adjudications demonstrate why raw confidence
+flags are not sufficient for mathematical citation. `docs/SUPPLIED_SOURCE_INGESTION_AUDIT.md`
+records every disposition and its impact on current definitions. The audit validates the current
+principal geometry, physical-reduced trace, and generic weak-OPE scope; closes known source
+acquisition debt for rigorous 2D evidence, Hodge/volume, Poincaré/`SL(2,ℂ)`, Hall–Wightman analytic
+continuation, and BRST/EOM operator mixing; and leaves their Lean construction honestly open.
+Singer's Corollary 4 is now a scoped negative warning against future continuous global gauge choices
+in the stated `S⁴`/analogous `S³` setting, not an unrestricted no-section claim for every carrier.
+No source ingestion constructs a theory, acceptance witness, or mass gap.
+
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

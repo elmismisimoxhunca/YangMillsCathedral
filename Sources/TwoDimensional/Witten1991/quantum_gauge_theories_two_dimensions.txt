@@ -1,0 +1,2771 @@
+Commun. Math. Phys.141,153-209 (1991)                               Communications in
+                                                                    Mathematical
+                                                                           Physics
+                                                                    9 Springer-Verlag 1991
+
+
+
+
+On Quantum Gauge Theories in Two Dimensions
+Edward Witten*
+School of Natural Sciences,Institute for Advanced Study, Olden Lane, Princeton, NJ 08540, USA
+Received February 22, 1991
+
+
+Abstract. Two dimensional quantum Yang-Mills theory is studied from three
+points of view: (i) by standard physical methods; (ii) by relating it to the large k
+limit of three dimensional Chern-Simons theory and two dimensional conformal
+field theory; (iii) by relating its weak coupling limit to the theory of Reidemeister-
+Ray-Singer torsion. The results obtained from the three points of view agree and
+give formulas for the volumes of the moduli spaces of representations of
+fundamental groups of two dimensional surfaces.
+
+
+1. Introduction
+
+Let ~ be a compact two dimensional manifold. Pick a compact gauge group G. Let
+E be a G bundle over 2~, with a connection A and curvature F--- dA = A A A. F is a
+two form with values in the adjoint bundle, which we will denote as ad(E).
+   Let J4 be the moduli space of flat connections on E, up to gauge transforma-
+tion. If S is orientable, d / h a s a natural symplectic structure co [1, 2] and thus a
+natural volume form
+                                              (,O n
+                                                                                        (1.1)
+
+where n = d i m d / / 2 . Even if E is not orientable, a natural measure on ~ / c a n be
+defined using the theory of Reidemeister torsion (or Ray-Singer analytic torsion
+[3]); this measure agrees with 0 in the orientable case, as we will verify in Sect. 4.2.
+The volume Vol(d/) o f , # , obtained by integrating this measure, will be our main
+interest in this paper.
+   If ~ is orientable, this volume is a rational number for the following reason. The
+symplectic structure ~ohas integral periods and represents the first Chern class of a
+certain natural line bundle over J / . Hence 0 represents a rational class (the
+
+* Research supported in part by NSF Grant PHY86-20266
+154                                                                              E. Witten
+
+denominator coming from the explicit n! in (1.1)). No such rationality of Vol(~r
+can be expected in the unorientable ease.
+    In the orientable case, a formula for Vol(~g) can be obtained by picking a
+complex structure J on •, so that J / c a n be identified (by a theorem of Narasimhan
+and Seshadri [4]) with the moduli space ~/s of stable holomorphic Gr bundles on
+2; (of topological type determined by E). Moreover, the line bundle Sa can then be
+identified as a holomorphic line bundle over Jgs. Verlinde [5] extracted from
+physical arguments in conformal field theory a formula, which we will recall in
+Sect. 3, for the dimension of H~           5Y*k). (A rigorous proof of the Verlinde
+formula as a statement about the number of conformal blocks in conformal field
+theory can be found in [6], and the relation of this with H~        ~| is sketched in
+[7], along with a sketch of a short proof of the Verlinde formula. A direct algebra-
+geometric proof of Verlinde's formula has not yet been given.) By the Riemann-
+Roch formula, the volume of ~ / i s
+                        Vol(J[) = lim k-" dim H~           5e|                       (1.2)
+and so can be extracted from Verlinde's formula. For instance, as we will see in
+Sect. 3, for G=SU(2), and S a Riemann surface of genus g, one finds Vol(~')
+= 2. (2n2)1-g. ~(2g- 2), where ~(s) is the Riemann zeta function. Rationality of this
+number follows from Euler's well known evaluation of the zeta function at positive
+even integers [9]. Independently of the present work, Thaddeus [10] has recently
+extracted this result and many other topological consequences of Verlinde's
+formula.
+    As we will see in Sect. 3, in connection with Eq. (3.18) for the volume of twisted
+moduli spaces, the rationality of the Hurwitz zeta function (closely related to
+Dirichlet L-functions) at special values can also be seen as a consequence of
+Verlinde's formula.
+    Verlinde's formula is based on fairly sophisticated physics or mathematics. The
+main purpose of this paper is to present a computation of Vol(~g) based on much
+more elementary arguments. This computation does not contain all the informa-
+tion present in Verlinde's formula, but at least in the semiclassical limit of large k,
+it renders transparent the most mysterious part of Verlinde's results, which is the
+"diagonalization of the fusion rules."
+    This "elementary" computation of V o l ( ~ also has the virtue that it extends to
+the case that S is unorientable. For instance, for G = SU(2) and ~ the connected
+sum of an orientable surface of genus g with the projective plane RP 2, the volume
+of dr is an elementary multiple of r     - 1) (as we will see in Sect. 4.6). In contrast to
+the values of the zeta function at positive even integers, the values of ~(s) at positive
+odd integers are little understood; there is no reason to expect the multiple of
+~(2g- 1) that arises here to be rational. Of course, we do not expect any rationality
+when ~ is unorientable.
+    Certain generalizations are also natural. One involves deleting n points
+P1 ..... P, from ~ and considering the moduli space of flat connections on
+   - {P1,---, P,} with prescribed monodromies around the Pi. We will compute the
+volumes of these more general moduli spaces. Another generalization (which turns
+out to be related) involves computing intersection numbers of certain algebraic
+cycles on J[. It will not be pursued here.
+    This paper is organized as follows. In Sect. 2, we introduce the quantum gauge
+theories on which the analysis will focus, and describe a physical version of the
+computation of Vol(~/) and some of its generalizations. In Sect. 3, we review the
+Quantum Gauge Theories in Two Dimensions                                                155
+
+Verlinde formulas. In Sect. 4, we carry out a mathematically precise version of the
+calculation of Vol(~), using the interpretation as Reidemeister torsion. This
+computation proceeds by imitating the steps in Sect. 2. The background material
+to Sect. 4 (which we have, however, tried to make self-contained) can be found in
+[11-13]. This paper is written in such a way that it can be understood while
+omitting certain parts of Sect. 2 or most of Sect. 4.
+   Two dimensional quantum Yang-Mills theory, which is our basic tool in
+Sect. 2, has previously been analyzed by Fine 1-14] using a fairly explicit analysis of
+the continuum path integral. His results agree with ours at least in genus zero
+(where he obtains explicit formulas). I understand that results similar to part of
+Sect. 2 were also obtained some years ago in unpublished work by W. Nahm and
+K. Uhlenbeck.
+
+
+2. The Quantum Theories
+
+We will be studying certain quantum gauge theories, with compact gauge group G,
+on a two dimensional manifold E. To define these theories, we must pick an
+invariant quadratic form on the Lie algebra ~. If G is simple (an assumption whose
+role is only to simplify the notation in what follows), this quadratic form is unique
+up to normalization. Though the normalization will not be important in this
+section, we will find a certain choice useful in Sect. 3. The Lie algebra fa of G
+coincides with that of the universal cover G' of G. A quadratic form ( , ) on
+determines a characteristic class ~ e H4(BG ', R), which can be represented in de
+Rham theory by the four form
+                                        1
+                                       8rc2 (F, F),                                   (2.1)
+
+where F is the curvature of a connection on the universal bundle over BG'. We pick
+( , ) so that (2.1) is the fundamental integer-valued characteristic class of G' bundles
+(i.e., ~ generates the image of H4(BG',Z) in H4(BG',R)). For G=SU(N), one has
+( a , b ) = - T r a b , where Tr is the trace in the N dimensional representation.
+Motivated by this example, we denote ( , ) as Tr for any G 1.
+     The Yang-Mills action or Lagrangian on a Riemannian manifold S of any
+dimension n is the functional of connections defined by
+                                       1
+                           I(A)= -         ~.d#gikg jl Tr FijFkl,                     (2.2)
+
+where gij is the metric of 2~, # is the Riemannian measure, and e is a real constant,
+the gauge coupling constant. It has long been known [15] that for ~ of dimension
+two, the quantum field theory associated with this action is exactly soluble and
+indeed trivial locally. At a fundamental level, the reason for this is that in two
+dimensions, the Yang-Mills action depends only on the measure # determined by
+the metric g. In particular, (2.2) is invariant under the group of area preserving
+diffeomorphisms of Z. This is such a large group that the quantum theory
+associated with (2.2), which we might characterize as an area preserving quantum
+field theory, has a flavor similar to topological field theory.
+1 We consider the Lie algebra of a compact group to consist of anti-hermitianmatrices,so the
+quadratic form (a, b)= -Trab is positive definite
+156                                                                           E. Witten
+
+    To exhibit the fact that in two dimensions, (2.2) really only depends on the
+choice of a measure, note that if E is oriented, a metric determines a volume form e,
+and we can define an ad (E)-valued zero form f by F = ~f For Z unorientable, ~ does
+not exist as a two form, but still exists as a two form with values in the orientation
+bundle tr (which is a real line bundle with structure group 7Z,2).In that case we can
+still write F = ~f with f an ad(E)-valued section ofa. The action can then be written
+                                           1
+                               I(A)= - ~       ! d # T r f 2,                      (2.3)
+
+making explicit the fact that it depends only on a choice of measure, and not on a
+metric.
+  The only invariant of a measure on a Riemann surface E is the total area,
+                                        Q= I d#.                                   (2.4)
+
+Note that I(A) is invariant under e2~te 2, #~#/t for any real number t. (The
+relation F = e f shows that under such a scaling, one has f ~ t f . )
+   The quantity of prime interest in this paper will be the partition function
+                                Zx( e2, Q)= IDA e -i(a) .                          (2.5)
+Here DA denotes the Feynman path integral over the space of connections
+(divided by the volume of the gauge group, as we will discuss later). In the simple
+two dimensional theory under consideration here, this integral can be defined
+rigorously by a lattice regularization [15] that we will recall in Sect. 2.3. Because of
+the scaling law noted in the last paragraph, Z~ in fact is a function only of the
+invariant combination e2Q, so we will denote it as Zx(eZQ) or simply as Z(e2Q) if E is
+understood.
+Comparison of Different Regularizations. We will now make a technical discursion.
+The quantum field theory just introduced is superrenormalizable according to the
+standard criteria, and in perturbation theory one encounters no infinities involving
+the gauge fields. However, the one loop amplitude in an external gravitational field
+has quadratic and logarithmic divergences that (in an arbitrary regularization
+scheme) can be renormalized by adding to the Lagrangian multiples of f d# and
+    d#R, respectively. (R is the curvature scalar.) Thus, we should more properly
+$
+begin with a Lagrangian containing counterterms depending on the metric and
+topology of 2;:
+                                                                R
+                          I(A, g) = I(A) + u ~I d# + v ~I d# ~ .                   (2.6)
+
+
+(The two counterterms are of course the volume and Euler characteristic of E.) As
+is standard in such superrenormalizable theories, the partition functions Z~(e2Q)
+and Z'z(e2Q) computed in two different regularizations will differ by terms that can
+be interpreted as corrections to u and v:
+
+                   Z'~(e2q)= Zx(eZQ)exp Au ~ dl~ + Av ! d# ~ - ,                   (2.7)
+Quantum Gauge Theories in Two Dimensions                                             157
+
+with Au and Av being constants (independent of S but perhaps depending on e). (In
+other words, what is regarded in one regularization as the partition function at
+u = v = 0 is interpreted in the other regularization as the partition function at some
+nonzero values of u and v.) If the scaling symmetry under e 2 ~ t e 2, Q ~ / t is
+maintained in each regularization (as we will ensure), then
+                                   Au = e2uo,          Av = Vo,                    (2.8)
+with Uo, v0 being independent of e 2.
+   In practice, we will make careful comparisons of different regularizations only
+in the limit e ~ 0 (and similar topologically invariant situations). Equation (2.8)
+shows that the ambiguity in the definition of u will not affect such comparisons. On
+the other hand, the ambiguity in the definition of v corresponds to a one parameter
+ambiguity
+                                Zr(O)---,e av .x~r). Zr(O)                       (2.9)
+in the definition of the partition function in the limit e = 0. Such factors will appear
+in this paper when we compare calculations based on a lattice regularization to
+calculations of a more precise type.
+
+
+2.1. Some Related Theories
+
+Much of the interest of the two dimensional Yang-Mills theory that we have
+introduced above derives from certain alternative interpretations that it possesses.
+First of all, let ~bbe an ad(E) valued zero form (or in the unorientable case, an ad(E)
+valued section of a), and consider the action functional
+                                          e2
+                        rtA,        = -        !           2 - i ! Tr             (2.10)
+
+for a theory in which the dynamical variables are ~band A. The partition function is
+                                                     e2
+
+                        Zr(e2Q) = ~ Dd?DA eTSd#Tro2 e iSTroF .                    (2.11)
+Performing first the Gaussian integral over ~b, using
+                                                e2
+                            + oo dx           - Tx 2-ixy
+                               I          e                = e -r2/ze2,           (2.12)
+
+we find that (2.11) reduces to (2.5), so
+                                      2r(e2o) = Zr(e2Q).                          (2.13)
+   The advantage of this formulation is that it is relatively straightforward to take
+the limit e ~ 0 of (2.10). In fact at e = 0 , the action is
+                                   I"(A, ~ ) = - i ~ Tr ~bF,                      (2.14)
+
+a n d the partition function is
+                                   Zr(O ) = ~ D ~ D A e iSTr4~F.                  (2.15)
+This theory is topologically invariant; the measure d# no longer enters. Indeed
+(2.15) is a slightly nonlinear variant of the quantum field theory that was
+158                                                                               E. Witten
+
+introduced many years ago by Schwarz [16] in connection with Ray-Singer
+analytic torsion. We will explain how the analytic torsion enters in Sect. 2.2.
+   If one's interest is to study the partition function Zz(0) of the topological field
+theory (2.14), one might think that one should tackle this directly instead of the
+generalization Z~(e2o). However, we will see that considering the generalization
+makes obvious a certain "diagonalization" (which is related to Verlinde's
+diagonalization of the fusion rules) which drastically simplifies the computation.
+   To complete the story, there is one more closely related theory that should be
+considered. This is the three dimensional Chern-Simons theory. Let B be a
+connection on a G bundle E on an oriented three manifold X. Suppose for
+simplicity that E is trivial. Picking a trivialization, identify B as an ad(E) valued
+one form. The Chern-Simons action is then
+
+                    Ic.s.(B) = -      xl Tr   B ^dB + B ^ B A B ,                    (2.16)
+
+where k is a positive integer, the level. The Feynman path integral is
+                                                            2
+               Zx(k)= IDB'exp[i4-t4k SxTr(B^dB+ ~ B A B A B ) l .                    (2.17)
+
+   Now take X = S 1 x2~, where S 1 is the circle 0 < t < l (with t = 0 and t = l
+identified), and ~ is an oriented surface. Let w:S ~ x S---,~ be the projection. For
+connections of the special form
+                                   B = w*(~)dt + w*(a),                              (2.i8)
+
+where ~band A are ad(E) valued zero and one forms on ~, the Chern-Simons action
+is
+                                              ik
+                              Ic.s.(B) = - ~       ! Tr q~F(A),                      (2.19)
+
+and so coincides with the topological action (2.14), apart from a factor of k/2zc. This
+factor can be absorbed in the definition of ~bat the cost of multiplying the partition
+function by a factor of the type (2.9), for some value ofAv. A factor of this type will
+appear because two theories (such as (2.14) and (2.19)) that are equivalent
+classically will differ quantum mechanically only by a renormalization effect. For
+the topologically invariant theories (2.14) and (2.19), the Av term is the only
+relevant renormalization.
+    In general, we are not entitled in quantum theory to arbitrarily restrict to
+connections of the form (2.18); we wish to evaluate the Feynman integral (2.17)
+over all connections. However, for large k, the integral for Zx(k) is dominated by
+stationary phase, expanding around flat connections. If the center of G is trivial, an
+irreducible flat connection on X = S~ x ~ is the pullback of a flat connection on ~ 2.
+More generally, if the center of G is a finite set with # Z(G) elements, then the
+moduli space ~/x of irreducible fiat connections on X consists of # Z(G) copies of
+the moduli space ~ / o f irreducible flat connections on ~; the factor of # Z(G) arises
+because, given an irreducible flat connection in the S directions, one can form a flat
+connection on X by taking the holonomy around S ~ to be any element of the
+
+2 The reducible flat connections can be seen to make subdominant contributions for large k
+Quantum Gauge Theories in Two Dimensions                                               159
+
+center of G. In the semi-classical evaluation of the Chern-Simons partition
+function for large k, each of the # Z(G) copies of ~g make the same contribution.
+The Chern-Simons partition function for large k is hence # Z ( G ) t i m e s the
+partition function of the two dimensional theory (2.19). As (2.19) differs from (2.14)
+only by a rescaling of ~b, which brings the renormalization effect indicated at the
+end of the last paragraph, the relation between the large k behavior of the Chern-
+Simons partition Zx(k) and the partition function Zz(0) of (2.14) is
+
+                            Zx(k)'~ 4~Z( G) . e ~v x(~ . Z~(O) ,                    (2.20)
+where Av may depend on k but not on Z. With an explicit choice (such as zeta
+function regularization) for defining the determinants that appear in evaluating
+the left- and right-hand sides of (2.20), an a priori computation of Av can be given.
+We will not do so in this paper.
+
+
+2.2. Extracting the Torsion
+
+We now wish to explain the relation of the partition function (2.15) with
+Reidemeister-Ray-Singer torsion.
+    First we briefly recall the Fadde'ev-Popov-BRST gauge fixing of the gauge
+theory with Lagrangian (2.14). Let d be the group of maps of Z to G. The path
+integral over the space of all connections is divergent because of gauge invariances,
+and one wishes, formally, to render it finite by dividing by the volume of G.
+Formally one would like to integrate over the space ~r of all connections and then
+divide by the volume of G. These two operations are each ill-defined, and one
+considers instead the better-defined procedure of integrating over the quotient
+~r     There is a subtlety (usually neglected) that we have to take into account here.
+Let DA denote the formal path integral measure over ~r let rc : d ~ d / d      be the
+projection, and let/~ be Haar measure on d. Formally, the quotient measure DA'
+on ~r is the measure such that DA = n*(DA'). ~. In a finite dimensional analog of
+this situation (such as we will frequently encounter in Sect. 4), one has
+                                1
+                             v o l d S D A e - ~ = S DA' e -Se                      (2.21)
+
+provided that G acts freely on d , at least generically. In the present case, this is true
+only if the center of the gauge group G is trivial. Indeed, the gauge transformations
+that leave invariant a generic connection are precisely the constant maps of Z to
+the center of G. Let # Z(G) denote the number of elements in that center. The
+general formula that replaces (2.21) is
+                          1                  1
+                        vol d ~ DA e- ~e_ ~ Z(G~ ~ DA' e- ~e.                       (2.22)
+
+The Fadde'ev-Popov procedure constructs ~ DA' e - ~, and as what we want is the
+left-hand side of (2.22), we will have to divide by hand by a factor of # Z(G). [In
+most physical applications, this factor can be neglected since it cancels out when
+one computes correlation functions. We have assumed G semi-simple, so that
+   Z(G) is finite. In general, this factor would be replaced by the volume of the
+center of G, computed with an appropriate measure.]
+160                                                                         E. Witten
+
+   The Fadde'ev-Popov-BRST procedure for constructing the quotient measure
+on ~r involves introducing the standard ghost field r which is an anticommut-
+ing zero form with values in ad(E), and BRST transformation laws
+                             6Ai = -  Dic = -- (Oic + [ A i , C]),
+                              6c = 89[c, c].                                   (2.23)
+
+One also requires an antighost multiplet. This is conveniently chosen to consist of
+an anticommuting zero form 6 and a commuting zero form w with values in ad(E),
+with
+                                     6~ = iw ,     6w = 0.                     (2.24)
+The gauge fixing term is IGF = --6 V with a suitable V. Even though no metric
+appears in the classical action (2.14), natural choices of V depend on a choice of
+metric on Z.
+   Actually, there is a topological obstruction (coming from the topology of ~) to
+finding any suitable global choice of V. We make appropriate local choices, each
+suitable for computing the path integral over a certain region in the space of fields
+modulo gauge transformations, and patch together the results (after verifying
+independence of the local choices). In a neighborhood of any connection Ato),
+writing A = Ato) + B, and letting D~~ be the covariant derivative at the connection
+Ato), a convenient local choice is
+                                    V = - ~ d# Tr 6DI~ ~.                      (2.25)
+
+This gives
+                          IGF = S d# T r ( + iwD~~ ~- ~Dl~                     (2.26)
+                                Z
+The Euler-Lagrange equation obtained by varying this action with respect to w is
+                                         0 =D~~ ~,                             (2.27)
+and this is the gauge condition placed on the quantum theory if it is gauge fixed
+with this choice of V.
+   Allowing for the factor explained in (2.22), the partition function (2.15) is now
+                      1
+          z (o) =    Z(Gi S OAO4
+                               OcOeOw
+                    xexp(i!Tr49F-i!d#wD~~176                                   (2.28)
+
+The Orientable Case. We will now try to clarify the origin of the integration
+measure. In doing so, we first assume that Z is orientable. The space d of
+connections on S has in that case a natural symplectic structure. Indeed, a tangent
+vector to ~r (at some base connection At0)) is an ad(E)-valued one form. Given two
+such one forms ~ and fl, one defines the skew pairing
+
+                                                 1 ~Tra^fl,                    (2.29)
+
+which defines a symplectic structure on ~1. Formally, ~1, as a symplectic manifold,
+acquires a measure.
+Quantum Gauge Theories in Two Dimensions                                             161
+
+  By contrast, the space r of ad(E) valued zero forms does not have a natural
+measure. Any measure on S (such as the Riemannian measure of the metric that
+was used in the definition of V) determines a metric on ad(E), say
+                                         1
+                             (f, g) =        .[ d/~ Tr(fg).                        (2.30)
+                                        47r2 2
+
+A metric formally determines a Riemannian measure on ad(E) (namely FI dfi,
+                                                                         k
+where the f~ are an orthonormal basis of r           Given a metric on s (actually a
+                                                 /
+conformal structure is enough), we can also define a metric on ~r
+
+                               (ct,/~)= 4 ~ ! Trot^ 9 ft.                          (2.31)
+
+The metric (2.31) and symplectic structure (2.29) are compatible in the sense that
+together they define a Kahler structure.
+    In (2.28), c, g, ~b, and w are all zero forms with values in ad(E), but tk and w are
+bosonic while c, g are fermionic. Though there is no natural measure separately on
+the space of bosonic or fermionic sections of ad(E), the ambiguity cancels formally
+when one has equal numbers of bosons and fermions. (Under a change of metric in
+(2.30), the Riemannian measure on r changes by a Jacobian factor which appears
+in the numerator for bosons, and in the denominator for fermions.) In practice,
+therefore, we can consider the measure in the integration over c, g, ~b, and w to be
+determined by any metric on ad(E), as long as we treat all these fields alike. We will
+ensure this by using the zeta function definition of determinants [3].
+    To evaluate (2.28), we perform the integral first over ~band w. Using again (2.12),
+we get
+             1
+  Z~(0) = # Z(G~ "I DADcDgexp ( -       ! d# TrDl~            . ~s 6(F(x))6(D'~ B(x)).
+                                                                                   (2.32)
+The equations
+                                    0 = F = D t~ B                                 (2.33)
+are local equations which cut out the moduli space v# of flat connections, inside
+the space ~r of all connections. At this point we may as well suppose that the base
+connection At0) is flat, so that B = 0 is a solution of (2.33). Temporarily let us
+suppose (unrealistically) that it is an isolated solution. Equation (2.33) is a
+nonlinear equation for B (as F has a quadratic term). The linearization of this
+equation     is     an   elliptic    equation     QB = 0, where Q : t21(ad(E))
+-~t22(ad(E))@O~           is the operator
+                                    Q=D@*D..                                       (2.34)
+The general principle in performing the integral over A in (2.32) is that if H: R"-~R n
+is a smooth map with an isolated nondegenerate zero at the origin, and H' is the
+linear operator obtained by linearizing H near x~= 0, then
+                                                       1
+                            dxl ... dx,6"(H(x))= IdetH'~"                          (2.35)
+162                                                                              E. Witten
+
+On the other hand, the integral over c and ? in (2.32) is Gaussian, and gives the
+determinant of the corresponding elliptic operator, which is the Laplacian
+A0 = * D * D (acting on zero forms; Aq will denote the Laplacian * D * D + D * D *
+acting on q forms). Hence, if B = 0 were an isolated solution of (2.33), the result of
+the path integral would be
+                                        1     detAo
+                                     4~Z(G) " ldetQl "                              (2.36)
+The particular combination of determinants of elliptic operators appearing in
+(2.36) is the analytic torsion of the fiat connection At0) [3]. The role of analytic
+torsion in quantum field theory was first explained by Schwarz [16]. A
+computation just like the present one also arises (for the same reason) in three
+dimensional gravity with zero cosmological constant [17].
+    One can readily show that [det Q I = ]/det A0 det A2.3 Hence, the contribution of
+an isolated flat connection Ato) would be l/det Ao/det A2" ( # Z(G))- 1. It is also true
+that on an orientable manifold, Ao and A2 have the same spectrum, and thus the
+same determinants (as the * operator gives a natural identification between them).
+So actually, on an orientable manifold, an isolated irreducible flat connection
+would just contribute 1 / ~ Z(G). This is a special case of the statement that "on an
+even dimensional orientable manifold, the analytic torsion is trivial."
+    Now we must consider the more realistic case in which the solution B = 0 to
+(2.33) is not isolated. (We will, however, assume that Ao has no kernel, and this
+means that we are restricted to genus > 2.) In this case, the solutions to (2.33) are a
+vector space which can be identified with T~r162the tangent space to the moduli
+space of fiat connections. We write
+                                 f2l(ad (E)) = T ~ ' @ I2]_,                        (2.37)
+
+where t2 ~, is the orthocomplement to T~r The symplectic form (2.29) restricts to
+symplectic forms, and hence measures, on both T J / and f2~. The induced
+symplectic form on T J / i s the one associated with the natural symplectic form ~o
+on Jg, which enters in the formula (1.1) for the natural volume form on ~ . A priori,
+the measure on Jr defined by the path integral is not simply this elementary,
+natural measure, but receives a correction factor from the rest of the path integral.
+Repeating the derivation of (2.36), the correction factor is
+                                         1    detAo
+                                  w = # Z(G~ [det Q•                                (2.38)
+
+where now Q j_= QI~,~. By the facts cited in the last paragraph, this correction factor
+is just 1 / ~ Z ( G ) for Z orientable.
+    Thus, the "triviality" of torsion in this situation means simply that the measure
+on ~r162
+       determined by the torsion - or by the quantum field theory (2.14) - reduces
+to the elementary measure defined by the symplectic structure, divided by the
+elementary factor ~ Z(G). The reason that this fact is useful is that the torsion - or
+the quantum field theory - can be studied by powerful methods, which are not
+directly available for the symplectic volume, despite its elementary definition.
+
+3 First, [detQ ~ * .     (Here Q* is the operator D@ 9 D 9 : r176 2--,r   But QQ* = Ao@A2,
+so [detQ[= ~/detQQ* = ~fdetA0 9detA2
+Quantum Gauge Theories in Two Dimensions                                             163
+
+The Unorientable Case. Let us now consider the case of 27 unorientable. One then
+does not have a symplectic structure (2.29) on the space of connections. It is
+therefore less obvious why the quantum field theory associated with the
+Lagrangian (2.14) works. I will not attempt a full explanation, but just state some
+facts. Though there is no symplectic structure on ~r once a metric is picked on S, a
+metric on ~r can be defined by the formula (2.31). This induces a metric, and hence
+a measure, on the fiber of T J / a t an arbitrary point Ato); hence, it induces a
+measure t o on J / . This measure is not "natural" but depends on the conformal
+structure used in (2.31). The correction factor w from the path integral is still given
+by (2.38) and is not simply 1 / # Z(G) in the unorientable case. The measure on J /
+determined by the quantum field theory (2.14) is z = WZo.The proof of topological
+invariance of analytic torsion [3] means that z is independent of the metric on X. A
+quantum field theorist would formulate this argument as an expression of the fact
+that the dependence of the gauge fixed Lagrangian [the exponent in (2.28)] on the
+metric on X is a BRST commutator. The tools involved in formulating the
+argument this way are similar to those that enter in establishing the topological
+invariance of three dimensional quantum Chern-Simons theory. (See e.g. the last
+section of [30].)
+
+2.3. Combinatorial Treatment
+We will now explain how a combinatorial approach (originally introduced by
+Migdal [15] for the case • = R 2) can be used to compute the partition function
+Z~(e2Q). We may as well set e2= 1.
+    In general, to make sense of the Feynman path integral over some function
+space ~r, it is sometimes convenient to make an approximation to ~ r of some
+finite dimension n. One then tries to prove that the limit as n ~          exists and is
+independent of whatever arbitrary choices may have been made in constructing
+the finite dimensional approximation. In Yang-Mills theory, a finite dimensional
+approximation can be made via "lattice gauge theory" [18]. One "triangulates" ~,
+or more generally one covers it by polygons, not necessarily triangles (Fig. 1). One
+restricts the bundle E to the finite set 6e consisting of the vertices of the polygons.
+(Of course, this is a drastic step in which the topology of E is lost, and the
+subsequent computation therefore gives the Yang-Mills partition function
+summed over all topological types of G bundle on S.) In lattice gauge theory, the
+interiors of the polygons are usually called plaquettes. A lattice gauge transfor-
+mation is a map from 60 to G, that is, an assignment of a group element gx ~ G to
+every x e 6e. One then introduces a lattice version of a connection in which one
+considers parallel transport only along the edges of the polygons. To every edge ~,
+with endpoints x and y, one assigns a G element Uv, regarded as the operator of
+parallel transport from x to y. U v should be thought of as a map Ex~Er, and under
+a gauge transformation it transforms as
+                                    U v~ gy U~g~ 1.                               (2.39)
+One then tries to define a suitable lattice version of the Yang-Mills action. In any
+dimension, it is possible to approximate Yang-Mins theory in this way, and in
+dimensions =<4 it is believed (and in some instances proved) that in the limit as the
+triangulation becomes finer, the desired continuum theory can be recovered. What
+is special about dimension two is that it is possible [15] to formulate the lattice
+theory in such a way that the partition function is invariant under subdivision of
+the lattice. This is what we now wish to explain.
+J64                                                                                       E. Witten
+
+
+
+
+                                                                      y
+
+
+
+
+                    (a)
+
+
+
+
+                                 /~
+         (b)              u~                                    (e)
+
+Fig. la-c. Covering a surface Z by polygons (a). Ur is an edge with endpoints x and y. A plaquette
+(b) with connection elements U1,..., U, associated with the edges and holonomy q/= UL..... U,.
+Subdivision of one of the plaquettes (e)
+
+
+      The integrand in the Feynman path integral is of the general form exp ( - S ~ ] ,
+                                                                                      k          /
+where ~ is some local functional. If Z is given as a union of smaller pieces - in the
+case at hand these will be the plaquettes w~ - then we have
+
+
+
+Thus, the integrand in the path integral is a product of local factors, one for each w i.
+This is a feature that we wish to preserve.
+    Since the continuum limit of the two dimensional theory requires a choice of
+measure (but not metric), it is natural to introduce a lattice version of the measure.
+We assign an area 0i to each wi, in such a way that Z 0~= 0, the total area of Z.
+    A given plaquette w, of area 0w, is bounded by edges xl, x2 ..... x, (Fig. lb). A
+lattice connection assigns to these edges group elements U x, U2,..., U,. The only
+gauge invariant quantity that can be made from these is the holonomy
+                                      ~ / = U1U2... U,.                                      (2.41)
+More exactly, the conjugacy class of the holonomy is gauge invariant. The local
+factor associated with a plaquette must be a class function of the holonomy. Such a
+class function must be a linear combination of the group characters, which are a
+basis for the class functions. For every isomorphism class ~ of irreducible
+representations of G, let Z~(~) be the corresponding character (the trace of q/in the
+  representation). Migdal's considerations suggest the local factors
+                      F(q/, Ow)= Z dim ~. X,(q/). exp(-Qwc2(e)/2),                           (2.42)
+Quantum Gauge Theories in Two Dimensions                                              165
+
+where the sum runs over all isomorphism classes of representations, dims is the
+dimension of the representation ~, and c2(00 is the quadratic Casimir operator of
+the group G, associated with the quadratic form on f~ introduced earlier.
+   This formula obviously requires some explanation. First of all, let us consider
+the behavior as Q--*0. One has
+                                   d i m s . X~(q/)= 6 ( q / - 1),                 (2.43)
+                              ~t
+
+
+where 6 ( q / - 1) is the delta function supported at q / = 1. This behavior is desirable
+because, if the lattice theory is to have a continuum limit, the holonomy around a
+loop of area Oshould approach I as 0 ~ 0 . In particular, (2.43) explains the factor of
+dim0c in (2.42), which will play a pivotal role as we will see.
+   The main justification for (2.42), however, is that it leads to a theory invariant
+under subdivision. Let us now explain this point. Once one has picked a covering
+X of ~ by polygons, one can define the corresponding lattice approximation to the
+path integral:
+                            Z~,x(O) = ~ I-I dU~ I] F(qli, 0,).                     (2.44)
+                                                       i
+
+
+Here dUr denotes Haar measure on G, normalized so that the volume of G is 1.
+(Note: in Sect. 4, a different normalization of the Haar measure will be used in
+connection with a more precise computation.) In (2.44), ? runs over all edges and i
+runs over all plaquettes. We now wish to show that with the particular choice (2.42)
+for the local factors F, the partition function (2.44) is in fact independent of X.
+     To prove this, one must establish invariance under subdivision. So consider a
+case in which one of the polygons in X is subdivided to get a finer covering X'. For
+definiteness we consider (Fig. lc) the case in which a square is subdivided into two
+triangles. Let Qo, 0', and Q" be the area of the square and of the two triangles (so
+0 ' + 0 " = 0o). The factor associated with the square is
+                   F = ~ dim ~. x,(U 1U2 U3 U4)" exp ( - QoC2(~)/2) 9              (2.45)
+                       ~t
+
+
+When the square is subdivided into two triangles, one introduces an extra edge
+with an extra group variable V. The product of the factors associated with the two
+triangles is
+  F'F"= ~ d i m s . dim/~. X~,(U1U2V)xt~(V- ~U3U,,)exp(--Q' c2(o~)/2--Q"cz(~)/2).
+          ~t, I3
+
+                                                                                   (2.46)
+To prove that Z~,x =Z~,x,, it suffices to prove that
+                                         dVF'F"= F,                                (2.47)
+since this means that integrating over the extra variable V that appears in the
+definition of Z~,x, will give back the integral representation of Zz, x. But (2.47) is a
+consequence of the formula
+                                                            1
+                      I dVz,(AV)zt~( V- ~B)= 6~a. d~m~ 9z,(AB)                    (2.48)
+
+(which is related to the orthonormality of the characters and their realization as
+functions on the group manifold; see [-19, Chap. II, Theorem (4.5)]).
+166                                                                                  E. Witten
+
+
+
+
+Fig. 2. An orientable surface of genus g can be built by gluing together the sides of a 4g-sided
+polygon, shown here for g = 3
+
+   Notice that in the verification of (2.46), it is essential that the dependence on Qis
+exponential. However, the quadratic Casimir c2(e) could have been replaced by
+any other function of e. The use of the quadratic Casimir is appropriate because
+the continuum theory (2.3) that we are trying to reproduce has a Lagrangian
+density T r f z that is quadratic in f In principle one could consider a continuum
+Lagrangian with T r f 2 replaced by TrP(f), for any function P(f); this would
+correspond to replacing c2(e) by a more complicated function. To show that c2(e) is
+the correct function that goes with the quadratic function in (2.3) is a standard
+computation (which we will not review here) using canonical quantization to
+construct the Hamiltonian, from which the Qdependence of the continuum theory
+can be computed.
+First Computations. One of the advantages of the discrete formulation, with
+invariance under subdivision, is that it makes it clear that the partition function
+Zz(Q) is computable. In fact, by considering a very fine lattice we would expect to
+get a result converging to the continuum theory, but invariance under subdivision
+means that one may in fact do the computation on an arbitrarily crude lattice.
+    Consider for simplicity the case that X is an orientable surface of genus g. We
+can cover X with a single 4g-sided polygon (Fig. 2). This corresponds to the well-
+known description of the fundamental group of such a surface with 2g generators
+ai, bj, i, j = 1 ... g and one relation a l b l a [ tb[ la2b2a 2 lb i 1... aoboa~ lb~ 1 = 1.
+Denoting the holonomies around the generating cycles as Ui and Vj, the Yang-
+Mills partition function for a surface 2; with this combinatorial description is
+      Z~(Q) = F, dime- e -0c2(~)12 . S dUidVjz,(U1Vx U'~ a1/1- ~ ... U, VoU; ~Vo- 1), (2.49)
+
+The integrals over the U~ and Vj can be done one at a time using (2.48) and the
+related formula
+                                                   1
+                      I d U z , ( A U B U - 1) = ~   z~(A)z~(B)"          (2.50)
+
+Every time one integrates over a U i or Vs one gets a factor of 1/dime from (2.48) or
+(2.50). At the end one is left with Z~(1)--dime. Altogether one gets finally
+                                                e -- ~'c2(~t)/2
+
+                                   Zg(Q)= ~ (dime)2g_ 2                                  (2.51)
+
+for the Yang-Mills partition function on an orientable surface of genus g.
+Q u a n t u m Gauge Theories in Two Dimensions                                                          167
+
+
+
+
+                                                                    ~L                                   ER
+
+
+
+
+                               c
+  (a)      ~L                                      YR             (b)
+Fig. 3a, b. A surface S " c u t " on a circle C, dividing Z into picccs St, and ~R (a). A cell decomposition
+of C - which can be taken to have just one zero-cell and one one-cell - can be extended to a
+covering of S by polygons. A more general case (b) in which 27is divided into 2:L and 2:R by cutting
+on several circles C1 ..... C,
+
+
+
+Physical Hilbert Space and Axioms of Quantum Field Theory. It is useful, however,
+to rederive this formula from a slightly different point of view. Consider a surface 2~
+"cut" along a circle C to divide it into pieces 27z. and 27R, with areas QL and OR
+(Fig. 3). To introduce lattice gauge theory in a way compatible with this cutting, we
+first make a cell decomposition of C - we may as well take the simplest one with a
+single vertex or zero-cell and a single edge or one-cell - and then extend this to
+coverings of ~z. and ~R by polygons. If we do cover C with a single one-cell, then in
+lattice gauge theory for this covering, there is precisely one group element U
+attached to C (more generally the holonomy ~d around C will play the role of U).
+Other group variables UL, ~and UR, ~ are associated with edges that lie on 27i. or 27R.
+    It is convenient to carry out the integration over the gauge variables by
+integrating first over the UL, ~ and UR, ~ and only at the end over U. The integral
+over UR,~, for fixed U, defines a function of U that we will call ~p~(U),
+                                   lPR(U)=~dUR,,~ I] F(q/,,Q~).                                      (2.52)
+                                                       wie~R
+
+The product on the right runs over the plaquettes making up 2~R. Because of the
+reality of the weight factors in the lattice path integral, and the fact that the
+individual characters obey x~(A)= x~(A-1), IpR(U) obeys
+                                          ~pR(U)= ~PR(U- 1).                                         (2.53)
+Similarly, the path integral on 2~L defines a function WL:
+                                ~PL(U-1)= ~dUL, r I] F(q/,,e,)"                                      (2.54)
+                                                         WIE~L
+
+We denote the right-hand side of (2.54) as ~pL(U- 1) rather than ~p~.(U) because of
+the reversal of orientation in regarding C as the boundary of S L rather than SR. Of
+course, lpL also obeys (2.53). In addition, gauge invariance implies that WL and lpR
+are class functions,
+                       tpL(AUA - 1) = ~pr~(U), ~pR(AUA - 1)= ~pR(U)"                                 (2.55)
+   To compute the partition function Z~(O),we must now perform the final integral
+over U, to get
+                      Zx(O)= ~dU ~pz(V- 1)tPR(U)= ~dUtpL(U)vgR(U).                                   (2.56)
+168                                                                               E. Witten
+
+It is natural now to introduce the Hitbert space ~ consisting of class functions on
+G with inner product
+                              ( f g) = ~ dUf(U)g(U).                          (2.57)
+~PL and ~PR are vectors in Yf, and the partition function is
+                                      z~(a) = (w~, w.)..                             (2.58)
+   There is also a very useful alternative way to formulate this. According to
+standard results in representation theory, the characters x,(U) form an ortho-
+normal basis of ~vg,
+                   ~dUz~,(U)zp(U)=6~,,a;           and      1= E IZ~)'(Z~I.          (2.59)
+
+As a result,
+                              (lPL, ~/)R) = ~, (lPL, •a)" (Za, lPR)"                 (2.60)
+                                            G
+The factors on the right-hand side have convenient path integral representations,
+in which one integrates over all variables on SL or Z,R including the boundary
+values. For instance,
+                 (z,(U),w~(U))= IdV~dV~,~                1-I F(~,Q,).z~(U).          (2.61)
+                                                        W~E~,R
+
+    More generally, consider a Riemann surface S of area Q with a boundary
+consisting of circles C 1..... C., and let UI .... , U. be the holonomies about these
+circles. For every labeling of the circles by representations ~1,..-, ~., one defines a
+partition function Z~(Q; 0q,..., ~,) by modifying the original definition of the lattice
+path integral to include a factor of Z~,(Ui) for each i:
+
+                  Z~(r ~ , . . . , ~t.)= S I] dUr I-I F(q/,, Q,). I~I Z~,(U,).       (2.62)
+                                           y        i              i=1
+By arguments along the lines that we have already given, it is possible to formulate
+a general cutting law (which amounts to the axioms of what one might call "area-
+preserving quantum field theory" in a sense analogous to axiomatizations of
+conformal and topological field theory in 1-7] and [20]). If a surface 2: is cut into
+pieces S~, p = 1,..., k, of areas 0,, by cutting on circles Ci, i = 1.... , n (Fig. 4), then
+the partition function of 2~can be computed as follows. Pick orientations of the Ci
+and label them by representations a~. (C~ with opposite orientation is then labeled
+by N.) The partition function ofs with the induced labeling of its boundary will be
+called Zz.(~,; {~}). The partition function of ~ is then
+                                Zs(Q) = Y. H Zz,(Q~,; {a}).                          (2.63)
+
+The proof is a repetition of the reasoning that led to the special case (2.58).
+
+Relation to Canonical Quantization. The structure that we have found- associating
+a Hilbert space ~ with every circle C, with the factorization law (2.63)- is precisely
+the structure that is predicted by formal canonical quantization of the Lagrangian
+(2.3). Indeed, standard considerations of canonical quantization predict that
+should be the Hilbert space of class functions that we have just found.
+    In Yang-Mills theory in d dimensions, the physical Hilbert space associated
+with a d - 1 manifold Y (endowed with a G bundle E) is always L2(d/~), where
+Quantum Gauge Theories in Two Dimensions                                                      169
+
+
+
+
+Fig. 4. A more general cutting of a surface Z on circles C~; the path integral can be evaluated by
+assigning a representation ~i to each C~,evaluating the path integrals over the components of Z,
+and summing over the ~
+
+
+is the space of connections on E and d--- Maps(Y, G). In one dimension, as the only
+gauge invariant of a connection is the conjugacy class of the monodromy, ~r is
+the space of conjugacy classes in G, and therefore L 2 ( d / d ) is the Hilbert space of
+class functions that we have found above. As we have already noted, the Q
+dependence in our formulas is derived in the canonical formalism by showing that
+the Hamiltonian - as an operator on L 2 ( ~ / d ) - is a multiple of the quadratic
+Casimir operator.
+    Moreover, since the Lagrangian (2.3) is invariant under the group of area-
+preserving diffeormorphisms, and since every diffeomorphism of C arises as the
+restriction of an area-preserving diffeomorphism of a neighborhood of C, the
+formal reasoning predicts that the group diffC of diffeomorphisms of C should act
+on ~r It is indeed easy to describe the action of diffC. An orientation-preserving
+diffeomorphism leaves unchanged the holonomy U around C and acts therefore as
+the identity on any function ~p(U). On the other hand, an orientation-reversing
+diffeomorphism maps U to U- 1 and so maps ~p(U) to lp(U- 1). On the basis of ovg
+given by the characters z,(U), the action of an orientation-reversing diffeomor-
+phism is
+                              z , ( U ) ~ z ~ ( U - 1) = )~(U),                    (2.64)
+where ~ is the representation dual or complex conjugate to ~.
+
+
+2.4 More Calculations
+
+In this subsection, we will redo the calculation of Zz(0) for 2? an orientable surface
+of genus g > 1. Then we will consider some additional cases.
+   An orientable surface of genus g > 1 can be decomposed into 2 g - 2 three holed
+spheres by cutting, as in Fig. 5a, on 3 g - 3 circles. To compute its partition function
+170                                                                                        E. Witten
+
+
+
+
+       (a)
+
+
+
+
+                                                                                      -I
+
+       (b)                                              (c)
+                         v                                                  v
+
+
+
+
+                   (d)
+Fig. 5a--d.An orientable surface of genus g > 1 can be decomposed into 2g-2 three holed spheres
+by cutting on 3g-3 circles a. A three holed sphere can be conveniently covered with a single
+polygon 6; an unwrapped version of this is in e. An orientable surface of genus g with n holes can be
+made by gluing together 2g-2 + n three holed spheres, as illustrated for g = 2 and n = 1 in d
+
+
+using (2.63), the main point is to understand the partition function Za(Q; ~, fl, y) of a
+three holed sphere of area Qo and boundary components labeled by representa-
+tions ~, fl, and 7. To do this, we pick a convenient covering of the three holed
+sphere by a single polygon, as sketched in Fig. 5b, c. Denoting the holonomies
+around the three holes as U, V, and W,,and the gauge variables in the interior of the
+three holed sphere as X, Y, the definition (2.62) of the partition function of a surface
+with labeled boundary reduces in this case to
+             Z3(#o; ct, fl, ~) = ~, dima e-Q~
+                                 ~r
+                x S dXdYdUdVdWz,(X- 1 U X V Y - ~WY). x~(U)zp(V)xr(W).                        (2.65)
+Using (2.50) to do the integrals over X and Y, and then using the orthonormality
+(2.59) of the characters to integrate over U, V, and W, we get
+                                                       e -~176
+                                Z3(Q; 0~,f l , ~ ) :    dim~     "6,,p,~.                     (2.66)
+
+Here 6,.8, r is one for ~t=fl=y and zero otherwise.
+   Now we can compute the partition function for an orientable surface of genus g.
+Cutting as in Fig. 5a, we then label the 3 g - 3 circles Ci by representations cti, and
+perform the product and sum in (2.63). Because of the fi,,p,r in (2.66), a nonzero
+Quantum Gauge Theories in Two Dimensions                                                      171
+
+
+
+
+Fig. 6. The connected sum of a surface of genus one and a Klein bottle can be made by gluing
+together two three holed spheres along their boundary circles but an orientation-reversing
+diffeomorphism of one of the boundary circles,which is crudely sketched here on the right, is made
+before the gluing
+
+
+
+contribution only arises when all ~ are equal. Each of the 2 g - 2 three holed
+spheres gives a factor of 1/dim~. So we get again
+                                                                   1
+                               Zg(O) = y~ e - Qc2~,)/2(dim a) 2~- z.                       (2.67)
+
+   We also will need the corresponding formula for the partition function of a
+surface of genus g with n holes labeled by representations al ..... ~n. Such a surface
+can be made by gluing together 2 g - 2 + n three holed spheres, as in Fig. 5d. The
+partition function vanishes unless the ~ are all equal, because of the 6,.p, r in (2.66),
+while if they are equal one gets n extra factors of 1/(dim ~) compared to the previous
+computation. So the partition function in this case is
+                                                                               1
+                  Zg(Q; al,.        ~,)=6,,              9e -Qc2~')/2.                     (2.68)
+                               ""             ..... ""                   (dim~)2~ 2 +,.
+Unorientable Surfaces. We now want to consider unorientable surfaces. First we
+consider the easy case of a connected sum of an orientable surface of genus g with s
+copies of the Klein bottle. Such a surface Z0,s can be built as a union of 2 g - 2 + 2s
+three holed spheres, glued together along their boundary components, but one
+makes orientation-reversing diffeomorphisms of s of the boundary components
+prior to the gluing (Fig. 6). According to (2.64), an orientation-reversing dif-
+feomorphism of the boundary changes the label from ~ to ~. Because of the 6,,a, ~in
+the amplitude for a three holed sphere, this actually means that, when we use the
+formula (2.63) to evaluate the partition function of Z0.s, a nonzero contribution
+arises only for representations such that ~ = ~, that is, representations that are
+isomorphic to their complex conjugates. Once one restricts to such a representa-
+tion, the contribution to the partition function of Z0,, is the same as it would be for
+an orientable surface of the same Euler characteristic, and so the partition function
+is
+                                               e-OC2(~t)/2
+                                Zo,~(Q) L=~ (dima)Zo- 2 + 2~.                              (2.69)
+
+   We now want to consider connected sums with copies of RP 2. In so doing we
+will need the following formula from the theory of compact groups:
+                                         I dUz~(U2) = f,,                                  (2.70)
+where f , = 1 if there is a symmetric invariant bilinear form a|          f , = - 1 if
+there is an antisymmetric invariant bilinear form a | ~ r and f , = 0 if there is no
+172                                                                                           E. Witten
+
+
+
+
+            (a)~              u
+                                                           (b)            U
+Fig. 7a, b. A copy of RP 2 with one hole can be built by gluing together the lines labeled Y in a.
+Cutting along the line labeled as X, this can be unwrapped to give b
+
+
+invariant bilinear form ~ |              (see [19, Chap. II, Proposition(6.8)]). In
+particular, f , = 0 unless 0~= ~, and if ~ = 0~then ffl = 1.
+    A connected sum with copies of R P 2 cannot be built by gluing together three
+holed spheres, so we will have to do some work. Let 27' be a copy o f R P 2 with a ball
+removed. Thus, the boundary of Z' consists of a single circle; let U denote the
+holonomy about this circle. Label the boundary of 27' by a representation ~, and let
+Q' be the area of Z'. We want to compute the partition function Z'(Q'; ct) for this
+situation. Z' can be covered with one polygon as shown in Fig. 7. This involves
+introducing internal integration variables which are labeled as X and Y in the
+figure. The general definition (2.62) of the partition function of a surface with
+labeled boundary gives in this case
+           Z'(Q'; ~)= y. dim//-e -Q'c2t~)/2 S d X d Y d U z ~ ( U X Y 2 X -   1). ~ ( U ) .      (2.71)
+
+Using (2.50) to integrate over X and then integrating over Y with (2.70) and
+integrating over U using the orthonormality of the characters, we get
+                                    Z'(O'; ~) = f~ e -0'~(')/2 9                                 (2.72)
+
+   Now let 27g.... be the connected sum of a surface of genus g with s copies of the
+Klein bottle and r copies of the projective plane. Such a surface can be built by
+gluing together 2 g - 2 + 2s + r three holed spheres and r one holed R p 2 ' s . The
+evaluation of (2.63) gives for the partition function
+                                                f f e - Qc2(~t)/2
+                               Zg, s,r(Q)= ~ (dim ~)2g- 2 + 2s+r.                                (2.73)
+
+(This is written for r > 0. I f r = 0 and s > 0, the sum must be restricted to ~ such that
+  = ~.) Since f 3 = f , for all ~, this formula is compatible with the fact that the
+connected sum of three copies of R P 2 is the same as the connected sum of R P 2 and
+a Klein bottle.
+Twisted E x t e r n a l States. We will now discuss the analog in Yang-Mills theory of
+permitting "punctures" in rational conformal field theory. We consider a surface S
+with boundary consisting of a circle C (the generalization to the case in which the
+boundary has several components will be immediate). Let O be some conjugacy
+class in G. We want to calculate the Yang-Mills path integral over all connections
+on 27for which the holonomy around C is in the conjugacy class O. We shall denote
+the partition function integrated over connections with this property as Zz(p; 6)).
+This partition function can be computed as follows. If U denotes the holonomy of
+the connection around C, then according to our above discussion, the path integral
+Quantum Gauge Theories in Two Dimensions                                                      173
+
+on Z, as a function of U, defines a vector ~p(U). Previously, picking a representation
+s of G, we paired ~p with z~(U) to define
+                                  Z~(O; s) = (z,(U), ~p(U)).                                (2.74)
+Now we simply want to replace the wave function z,(U) by a state IO) with delta
+function support on the conjugacy class 19, and define
+                                           Zz(Q; 19) =(19, ~p).                             (2.75)
+Using the orthonormality of the characters, we have
+                             119)= • Is)(8119)= Y~Is)" Z~(19) 9                             (2.76)
+
+Actually, the notion of a "delta function supported on the conjugacy class O" is
+somewhat imprecise, since the normalization of such a delta function depends on
+the choice of a measure on the space of conjugacy classes. We have made a
+particular choice in (2.76); another choice would change 119)to f(19) 119),where f is
+some class function. (In Sect. 4, we will discuss more critically the appropriate
+measure on the space of class functions.)
+   We thus have
+                             Zz(q; O)= E Z~(q; s). z~(O).                      (2.77)
+
+More generally, if Z has n boundary components, and we integrate over
+connections whose holonomy around the ich boundary component is in a
+conjugacy class Of, then the corresponding partition function is
+          Zz(Q; O, .... ,0,)=           E          Zz(Q;sl,...,s,)" Z,,(Oa) ..." X,,(O,).   (2.78)
+                                 atl,   9 9 .,~l
+
+
+
+But the right-hand side of (2.78) has been evaluated in (2.68). So in fact we get
+
+             Z$(~0; 191, "", O n ) = Z e-~C2(')/2            l              l~ z~(Oi).      (2.79)
+                                     9            ( d i m s ) 20-2+n        ~=1
+
+If the 119i) are transformed as indicated at the end of the last paragraph, this
+formula will transform as
+
+                   Zz(e; 19~..... 19,)~Zz(e; 19~..... 19,). 1~ f(19,)                       (2.80)
+                                                                      i=1
+for some class function f.
+   One can easily generalize (2.79) to the case of an unorientable surface, but we
+will forgo this.
+Synthesis. We have noted in Sect. 2.1 that two dimensional Yang-Mills theory is
+closely related to the large k limit of three dimensional Chern-Simons theory and
+thus to the large k limit of two dimensional current algebra. The reader familiar
+with the latter subject will notice that many facts familiar in rational conformal
+field theory (and explained, for the most part, in [5]) have much simpler echos in
+the above discussion. The fact that the Hilbert space a~ associated with every circle
+has one basis vector for every irreducible representation of G is the large k limit of
+what happens in the conformal field theory problem where (at level k) only a
+certain finite list of representations is permitted. The fact that the amplitude for a
+three holed sphere is "diagonal" [(2.66) vanishes unless s =/~ = 7] is the large k limit
+174                                                                                      E. Witten
+
+                                     LS,~6
+
+
+
+
+Fig. 8. A closed immersed loop drawn on a two sphere, which has been projected to the plane. The
+loop is labeled by a representation c,.The plane is divided in regions D~of area Qa.Each region D~is
+labeled by a representation/~. The loop is divided by its self-crossingsinto segments Lo. In the
+course of the computation these acquire labels ~
+
+
+of Verlinde's diagonalization of the fusion rules. And indeed the formulas that we
+obtained for the Yang-Mills partition function are closely related to Verlinde's
+formulas, as we will see presently.
+
+2.5 Comparison to IRF Models
+This subsection will be devoted to a matter that is somewhat removed from our
+main subject. We want to briefly indicate the relation of two dimensional Yang-
+Mills theory to IRF models of statistical mechanics [21].
+   This connection arises when one considers "Wilson lines." We pick an
+immersed circle C on a surface Z of area Q (we will only consider the case that the
+singularities of C are all simple crossings) and associate with it a representation ~.
+Given a connection A on S, we form the holonomy V = P exp ~ A of the connection
+                                                                c
+A around C and take its character in the ~ representation to get a functional of A:
+                                        Wc,~(A)= z~(V) .                                     (2.81)
+More generally, we consider several circles C~, labeled by representations ~i, and
+define the corresponding functionals Wc,,,,(A)=z,,(Vi), with V~ the holonomy
+around Ci. Then we wish to calculate the path integral with an insertion of these
+factors
+                  Z~(0; C~, cti)= S DA e x p ( - I ( A ) ) 1] Wc,.~(A) 9     (2.82)
+
+Physically, the Wc.,(A) are called Wilson line functionals, and the ratio Z~(O; Ci,~)/Z
+is called the expectation value of the product of Wilson lines. Such expectation
+values in two dimensional gauge theories have been computed from several points
+of view [15, 22-24]. (L. Gross has suggested, in connection with [24], that this
+problem is related to quantum groups, and this may be connected to the discussion
+here.) We will formulate this in a way that exhibits the relation to IRF models -
+which also appear, after a much more difficult analysis, in computing Wilson line
+expectation values in three dimensional Chern-Simons theory [25]. For conve-
+nience, we will consider first the case that Z has genus zero.
+    As indicated in Fig. 8, the loops C~ are divided by their self-intersections into
+segments L , that are topologically one-cells. (We will not consider the case in
+Quantum Gauge Theories in Two Dimensions                                                     175
+
+which one of the C~ does not intersect itself or the others, in which event this
+assertion is not true. The required generalization is not difficult, however.) Z is
+divided by the loops into regions Dk of areas Qk. By our general discussion, in
+formulating lattice gauge theory, we can use any division of S into polygons as the
+starting point; we shall take the division in which the L, are the edges and the Dk
+are the plaquettes. Consequently, we introduce a group-valued integration
+variable U, for each edge. In the simplicial version of the path integral, we must
+label each D k by a representation ilk. The local factor associated to Dk is
+                         F(Dk) = ~ dimflk, e -e'~c2(#:O/2 . Ztj~(qlk),                    (2.83)
+
+where 0//kis the holonomy of the lattice connection around the boundary ofD k. The
+lattice version of the path integral is
+                    Zz(Q; C,, at)= E I I-[ dU~ l-I Y(Ok) l-I Wc,,,,(V~),                  (2.84)
+                                   {0k} r       k         i
+where of course the holonomies V~around the Ci are computed using the lattice
+connection.
+    We want to show that after performing the integration over the U~, (2.84)
+reduces to a lattice statistical mechanics expression (of a type familiar in IRF
+models) in which the statistical variables are the ilk, associated with the Dk, and
+certain discrete variables ~ associated with the edges L~, which will appear
+presently. The Boltzmann weights in this statistical model will be a product of local
+weights associated with the crossings in Fig. 8. To extract such a picture, we notice
+first that each U~ appears in three places in the integrand in (2.84). It appears in
+Wc, ' ~ - where C zis the circle containing L ~ - and in r(D~) and r(Dk,), where D k and
+Dk, are the two regions bordered by L~. The part of the integral that contains U~ is
+therefore
+                        SdU,)c~,(XU)za~(YU))~pz,(ZU)                     (2.85)
+for some X, Y, and Z. If write R~(U)I,for the matrix representating U in the
+representation, then we have
+                                  )~(X U) = R~(X)I' R~(U)I, ,                             (2.86)
+and after using this three times, we see that to compute the integral (2.85) it is
+enough to know
+                                d U R~,(U)I,R#~(U)~,R~,(u)k, .                            (2.87)
+To make a general statement about (2.87), consider for every three representations
+a, ~', ~" of G the finite dimensional vector space ~vf~,~, ~,,= (c~|174             Let d~,~,,~,,
+be its dimension. A vector e E ~vf~,~,,~,, can be represented by an invariant tensor
+ei. ~,,i,', where i, i', and i" run over bases of ~, ~', and ~" respectively. It is possible to
+pick a basis e,(a, ct', ~") of ~(f~,~,~,, such that
+
+           ~dUR~(U)I'R~'(U~'R~"(U) k'=          E     e,(~,Ct',~")Uke,(a,~',Cd)i'j'k ""   (2.88)
+                                               /L=I
+
+Henceforth, for each trio of representations ct, a', a", we fix a basis with this
+property.
+   We can integrate over all of the Ur's in (2.84) by using (2.88) once for each 7. At
+the end of this, of course, each edge L~ is labeled by an appropriate e~ [which ranges
+176                                                                                      E. Witten
+
+                    e3
+
+                                                                            P2           e3
+                                   ~3
+
+                                              %
+       s    0t2                P   a2                                                         P3
+
+                                   P,
+                     o,.
+ (a)                       I                           (b)    ~1                          ~4
+Fig. 9a, b. The configuration near a particular vertex P is sketched in a. The data present is that
+which is required to single out an IRF configuration, often drawn as in b
+
+
+over a finite set consisting of a basis of the appropriate ~ chosen to obey (2.88)]. At
+this point the variables over which we must sum are discrete variables: the E~ and er
+by which the plaquettes and edges in Fig. 8 are labeled, and the indices i,j, k which
+have proliferated in equations such as (2.88).
+    The summation over these indices can be carried out in a convenient way. The
+point is that the indices in (2.88) appear in a "factorized" form. One factor, e,,
+contains indices that "live" at one end of the edge Lr, and the other factor, gu, has
+indices that "live" at the other end. Thus, each index is naturally associated with a
+particular end of an edge or in other words with a particular vertex P. Thus, the
+problem of summing over the indices is a local problem that must be solved for
+each vertex. This problem depends only on the labeling of the regions D~ and edges
+L~ adjoining P.
+    Every vertex P~ (Fig. 9) is at a crossing of two circles, which are labeled by
+representations eft. The four edges L~ that meet at P~ are each labeled by an er. The
+four plaquettes Da with corners at PQ are labeled by representations Elk. After
+summing the product of the four e's over all their indices, we get a local factor
+which we will call GQ(~i; Elk; e~). (It is essentially the definition of the Wigner-Racah
+classical 6j symbol, but we will not pause to spell this out.)
+    After integrating over the U~'s and summing over the indices in the fashion
+described above, (2.84) reduces to a lattice statistical mechanics formula
+              Z~(Q; Ci, ~i)= Y, • l'] dim(E~)" e-~c2(P~)/2" l] Ge(cti; E~; e~)                 (2.89)
+                                   #x e7 ),                        Q
+
+that is obviously reminiscent of IRF models.
+    The generalization of (2.89) to Wilson lines on a surface of higher genus is
+straightforward. The only difference is that the Wilson lines divide the surface into
+regions Dz that are not necessarily discs but more generally (in the orientable case,
+for simplicity) surfaces of genus gx with n~ holes. In this case, according to (2.68), we
+need only replace the factors of dim(E~) in (2.89) with (dim(Ea)) 2- 2g.z-n.z.
+    The elementary considerations that we have explained do not immediately shed
+much light on integrable IRF models [which have additional features, notably the
+spectral parameter, that are missing in (2.89)], but perhaps these considerations
+are a useful starting point for further attempts to derive IRF models from gauge
+theories.
+Quantum Gauge Theories in Two Dimensions                                                177
+
+3. Use of Verlinde's Formula
+
+Let us now return to the situation considered in the introduction. We recall that J//
+is the moduli space of fiat G bundles on a surface Z. Once a complex structure is
+picked on Z, ~ / c a n be regarded as the moduli space of holomorphic bundles on Z.
+Over J / i s a holomorphic line bundle ~ , whose first Chern class is represented in
+de Rham cohomology by the symplectic structure co of J//. That symplectic
+structure is given by the formula
+                                       1
+                                 co= ~ 2 ! Tr6A ^ 6A.                                  (3.1)
+
+This formula means that if a, b are ad(E)-valued one forms representing tangent
+vectors to ~r162then
+
+                                co(a, b)= ~ 1u2 ! Tra ^ b                              (3.2)
+
+   Verlinde 1-5] gave a formula for the dimension of the space of conformal blocks
+in conformal field theory, and this can be interpreted as a formula for the
+dimension of H~162 ~e|       In this section we will use the Verlinde formula to get
+results which we will compare both with the Yang-Mills theory studied in the last
+section and with the treatment via Reidemeister torsion that will occupy Sect. 4.
+We will be rather brief and refer to 1-5] for more detail. Though Verlinde's formula
+is completely general, we will for simplicity focus on the cases G=SU(2) and
+G = SO(3). For related discussions, see 1-10, 26].
+   Verlinde's formula is
+                                                    1
+                             dimH~ ~ , Lr174 = ~Z S2g- 2"                              (3.3)
+                                                         0,~
+
+Here ~ runs over representations of G which are highest weights of integrable
+representations of the loop group ~eG at level k, S~p is a matrix that arises in the
+theory of loop groups 4, and "0" denotes the trivial representation. For instance, in
+the case of G=SU(2), the integrable representations are the representations of
+dimension 1, 2 ..... k + 1. We use the letter s, 0 < s < k, to refer to the representation
+of dimension s + 1. One has
+
+                                  ]/   2   sin ~Z(i+ l) (j + l)                        (3.4)
+                            SU=
+                                  Vk+2              k+2         '
+and hence
+
+               <.im.O..."): ('<+')' ' k                             1
+                                                                                       (3.5)
+                                                   fof.        -O +I)V' - :
+                                                        t,s'nT -)
+Since our goal is to obtain a formula for the volume of J~, we need to extract a term
+proportional to k dimc~ = k 3~ 3 for k ~ c~. A term that grows as fast as this arises
+only because l/sin(rc(j + 1)/(k + 2)) is of order k for large k and fixed j or fixed k - j .
+4 ~fz~(z)isthecharacter~fthe~Grepresentati~nat~eve~kwithhighestweight~thenSisde~ned
+by the formula Z , ( - l/z) = ~ S=az#(z)
+178                                                                                       E. Witten
+
+ The two regions ofj ~ k and k - j ~ k make equal contributions in (3.5). Assuming
+j ~ k, we get
+                                          1
+                            sin(n(] + l)/(k + 2))
+                                                      ~k/zrq+ 1),                             (3.6)
+
+so including both contributions, (3.5) becomes
+
+               dimHO(..g,.Lp|                                     k + 2 ~20-2
+                                                           j=o \ ~ J : - - ~ ] "              (3.7)
+This reduces to
+                                   k30-3                                 k3O-3
+       dimHO(j/, ~r174 2 2g_ lX2o_2 . ~= 1 n2--7~_
+                                              1 2 = 2 2 o - 17[20- 2 ( ( 2 g - 2),            (3.8)
+
+with ~(s) the Riemann zeta function.
+   According to the Riemann-Roch formula, the left-hand side of(3.7) is (provided
+the higher cohomology vanishes, which is true on general grounds at least for large
+enough k)
+                       d i m HO(j//, ~ |      = (ekcx(..W)Td (J//), J l ) ,                   (3.9)
+where Td(Jl) denotes the Todd class. For large k, (3.9) gives
+                                               kao- 3
+                   dimHO(.//g, s174           _ _     (c1(s               3, d//).           (3.10)
+                                              (3g-3)!
+Now [as ct(~) is represented by the symplectic form co in de Rham cohomology],
+(cl(~)a~                  coincides with the volume Vol(Jt) that we aim to
+compute. Thus, (3.10) and (3.8) combine to give
+                                      1
+                                              9 ~
+                                                                            ((2g 2)
+                  Vol(Jg) = 2- (2rc2)~         ,=1- n - ( 2 0 -" 2) --m.2 - ( 2 ~ - - r      (3.1 1)
+
+for G=SU(2).
+   In Sect94, we will recover this result from the point of view of Reidemeister
+torsion. For the moment, let us compare it to our results in Sect. 2. There, we found
+that the partition function of Yang-Mills theory in genus g (at e2Q = 0) is
+                                           Z=((2g-2).                                        (3.12)
+According to Sect. 2, the relation between the volume and Z is to be
+                                Vol (Jg) = Z- 2. eav(2- 20),                                 (3.13)
+
+where 2, which is the order of the center of SU(2), is the number of gauge
+symmetries of a generic SU(2) flat connection, and Av is a constant, explained in
+Eq. (2.7), that depends on the renormalization convention used in defining Z. We
+see that (3.11) and (3.12) are in accord with this relation, with e~v= 21/'2~. (The
+value of Av is of limited significance. By rescaling the Haar measures and local
+factors used in Sect. 2.3, whose normalization depended on an arbitrarily chosen
+constant, we could have obtained a different theory, still invariant under
+subdivision, but leading to a different Av.)
+Quantum Gauge Theories in Two Dimensions                                                  179
+
+   N o w we want to generalize this to the case of a Riemann surface Z of genus g
+with marked points xl ..... x~. We pick rational numbers 0i between 0 and 1 and let
+
+                                  O'~ (eo ~               e-0~'~                       (3.14)
+
+be corresponding conjugacy classes in SU(2). We let ~'to~ be the moduli space of
+fiat connections on X - { x i } such that the monodromy around x~ is in the
+conjugacy class Ov Then the formula (3.1) still makes sense and defines a
+symplectic structure co on dCto~. However, the periods of co are no longer integers,
+but are multiples of 1/m, where m is the least common denominator of the rational
+numbers 0~. The latter statement can be proved by exhibiting a line bundle L~|
+(which has a natural topological construction [27]) whose first Chern class is
+represented in de Rham cohomology by mco. (We call this line bundle La| though
+it is in fact no longer the mth tensor power of a line bundle ~e.) The existence of La|
+implies that
+
+                                 [co] ~H2 ( ~ , 1 Z ) .                                (3.15)
+
+(This can also be proved by considering a suitable m-fold covering of X, as we will
+do in Sect. 4.7.)
+   Verlinde , s considerations give a formula for d i m H 0 (~/~o~,~ @k), where k is any
+integral multiple of m (so that a line bundle ~ @k = ( ~ @m) @k-/mexists). The formula
+is
+                                                     k               1
+                    dimH~174                   = ~ $2a-2+~ 9 FI St,j,                  (3.16)
+                                                    j=O        O,j        i=1
+
+where 0~= ri/k. We wish to extract the large k behavior of this formula. It is
+convenient to assume first that none of the 0i is 0 or 1 and thus no r~ is 0 or k. [The
+cases that 0 i = 0 or 1 are special since the corresponding conjugacy classes are in
+the center of SU(2). If some 0 i = 0, then the monodromy about xi is trivial and x i
+can be forgotten. The case that some 0~= 1 will be considered later.] With this
+restriction, the dimension of Jr      is 3 g - 3 + s, and we wish to extract the term in
+(3.16) proportional to k 3g- a + ~in the limit of large k with fixed 0 i = ri/k. Repeating
+the derivation of (3.11), we find that in this limit,
+
+                                               k3g-a+~            I1 sin(rm0~)
+              dimHO(~,o~,&p|                 2g-ire 2g-2+~ n~= l i=l/,/2g- 2 + s       (3.17)
+
+Repeating the use of the Riemann-Roch formula, we learn that the volume of ~ o ~
+is
+                                                                          sin(TrnOi)
+                   Vol(d/~o,) = 2 "             1               ~ i=I~I1               (3.18)
+                                      2 g - 1 ~ 2 g - - 2 +s             n2g-2+s
+                                                               /1=1
+
+   Let us compare this to the formula (2.79) for the Yang-Mins partition function.
+Setting Q = O, and recalling that the character of the n dimensional representation
+of SU(2) is
+                                             sin(lrn0)                                 (3.19)
+                                      X,(0)- sin(n0)'
+180                                                                            E. Witten
+
+the Yang-Mills partition function is
+                                    l~I sin(nnO~)/sinOzO~)
+                        Z~({O})= ~ ~=~
+                                  1   n =  hE0- 2 +s                              (3.20)
+
+The relation between the two is supposed to be
+
+                   Vol(J/~o}) = 2. Z~({O}) 9e (2- 2o-s)av. I] f(O,),               (3.21)
+                                                             i=1
+
+for some function f(O), where we have included the usual factor of 2 coming from
+the center of SU(2), as well as the normalization ambiguities cited in (2.7) and
+(2.80). (The latter reflect the fact that no attempt was made in Sect. 2 to pick a
+particularly felicitous normalization; this will be remedied in Sect. 4.) (3.21) is easy
+to verify.
+    Now let us briefly discuss the number theoretic implications of Eq. (3.18).
+Because of (3.15), Vol (Jg~o}) must be a rational number, whose denominator must
+divide m'. r!, where r = dim Jg~o}/2. Let us identify this rational number, following
+[9, Chap. 12]. The Hurwitz zeta function is defined for R e z > 1 by
+
+                                 ~(z,a)= ,=o
+                                          Z (n+1a)z'                              (3.22)
+
+and is then continued holomorphically throughout the complex z plane, except for
+a pole at z = 1. The periodic zeta function is defined by
+                                                    e2ninx
+                                 F(x,z)= ~            ,z                          (3.23)
+                                              n=l
+
+
+A formula of Hurwitz (Theorem 12.6 in [9]) asserts that for 0 < a < 1 and Rez > 1,
+                               r(z)
+                 ((1 - z, a) = (~)~ 9(e-i~'/2F(a, z) + e~i'/2V(- a, z)).           (3.24)
+
+These functions are closely related to Dirichlet L-functions. Let us now, for
+illustrative purposes, consider (3.18) for a surface of genus g with one puncture. We
+set a=O/2, z = 2 g - 1 , and by comparing (3.18) and (3.24), we find
+                                       2o( - 1)~ + 1
+                       Vol(~'~o}) = r(2g- 1) ( ( 2 - 2g, 8/2).                    (3.25)
+
+Thus, the known facts about the volume of J//to~ amount to the statement that for
+positive integer g and rational 0 between 0 and 1, ( ( 2 - 2g, 8/2) is a rational number,
+with an explicit bound on the denominator. This is in accord with the explicit
+evaluation of ((z,a) for negative integral z (Theorem 12.12 of [9]). The more
+general case of (3.18) with more than one puncture can be treated similarly,
+expanding the product of sines on the right-hand side of (3.18) as a sum of sines or
+cosines and expressing the volume as a sum of values of ((z, a).
+
+
+3.1. Corresponding Formulas for SO(3)
+
+While there is only one topological type of an SU(2) bundle on a two dimensional
+closed surface X, there are two topological types of SO(3) bundles, corresponding
+Quantum Gauge Theories in Two Dimensions                                                          181
+
+to w2 = 0 and w2 4: 0, respectively. The moduli space JV' of flat SO(3) bundles on S
+thus has two components, which we will call Jff' and ~/'", corresponding to flat
+connections on bundles of these two types. Y ' and jtr" are both symplectic
+manifolds, with symplectic structures deduced from (3.1). We recall from the
+beginning of Sect. 2 that we use the same quadratic form Tr on the SU(2) and SO(3)
+Lie algebras, which are in fact naturally isomorphic. The formula (3.1) thus makes
+sense for SO(3), though it defines a symplectic structure whose periods are in
+general half integral. That symplectic structure gives a definition of volume forms
+on both components of Jff.
+    We will use the Verlinde formula to determine the volumes of both Jff' and Y " .
+F o r Jff' this is easy. The natural transformation from an SU(2) bundle E to the
+adjoint bundle ad(E) gives a map from Jg to X ' . This map is locally an
+isomorphism; globally it is an unramified cover of degree 2 2g. This factor arises
+because if r/is a fiat complex line bundle of order 2, then the flat SU(2) bundle
+E'= E|       has ad(E')~ ad(E); there are 2 2o choices of q. We thus have
+                                                       1
+              Vol(JV") = 2 - 20 Vol(J[) = 21 - 20. (2n2)~ 1 , = 1 n - ~20- 2)                  (3.26)
+
+   To determine the volume of Jff" is less trivial. To this end, we return to our
+study of SU(2), and consider the previously neglected case that one of the O's is 1, so
+that the corresponding r is k, and the m o n o d r o m y around the corresponding
+puncture is the central element - 1 of SU(2). In fact, let us consider the case in
+which there is just one puncture x, with this monodromy. Let ~/g(-1) be the
+corresponding moduli space, r i g ( - 1 ) has dimension 3 g - 3 (just like J / ) so its
+volume is to be computed by extracting the coefficient of k 3g- 3 in the asymptotic
+behavior of (3.16). Since SjJSoi=(-l) i for j=k (as one sees from the explicit
+formula for S), the steps leading to (3.11) are readily repeated, with the result
+                                         1
+                  Vol(J/( - 1)) = 2. (2n:)g_, 9,=1 (--1)n+ l n - ( 2 ~              ,          (3.27)
+
+   A fiat SU(2) connection A on Z - { x } , with m o n o d r o m y - 1 about x,
+determines a flat SO(3) connection A' on an SO(3) bundle with w2 :~ 0 (simply
+because the m o n o d r o m y - 1 is undetectable at the S0(3) level). This gives a natural
+map J / ( - 1 ) + X " , which is an isomorphism locally and which globally is a cover
+of order 22g [again, because twisting by a flat line bundle of order two is
+undetectable at the SO(3) level]. Hence we have
+
+      Vol(JV.,,)=Z_2oVol(J/t(_l))=2a_2o"                      1      ~ ( - 1 ) " + ' n -(20-2). (3.28)
+                                                          (2n~)0-1 , = x
+   Adding (3.26) to (3.28), the combined volume of the SO(3) moduli space is
+                                                      1                                 1
+            Vol ( X ) = Vol (Jff') + Vol (Jff") = (8nz)o_ 1 n = l , 53,, . . . •   n2O- 2 "    (3.29)
+
+Since the dimensions of SO(3) representations are the odd integers 1, 3, 5 .... , the
+Yang-Mills formula (2.51) gives in this case
+                                   Zz=        ~,      Ft-(20-2)                                (3.30)
+                                          n=1,3,5,...
+We see thus the expected relation
+                                   V ol ( ~ ) = Z~. e z v. czg- 2),                            (3.31)
+182                                                                            E. Witten
+
+with a suitable value of Av. No factor of 2 appears here, since the center of S0(3) is
+trivial.
+    Notice that, although in Sect. 2 we never addressed the question of the
+classification of G bundles on S, the computation carried out there automatically
+gave the correct answer summed over all topological types of G bundles. Indeed
+the sewing rules used in Sect. 2 would not be compatible with any restriction on the
+topological type of the bundle.
+    Obviously we could go on to combine the above constructions and consider
+SO(3) flat connections on surfaces with punctures. There are no essentially new
+issues, so we will forgo this step.
+
+
+4. Evaluation of the Torsion
+
+4.1. Preliminaries
+
+In this section, we will use the purely combinatorial definition of the Reidemeister
+torsion of a fiat connection to give a direct computation of the volumes of moduli
+space of representations of fundamental groups of two dimensional surfaces. (The
+combinatorial torsion is known 1-29,28] to be equivalent to the Ray-Singer
+analytic torsion, which arose more naturally in Sect. 2. The equivalence is actually
+elementary for orientable even dimensional manifolds since both are"trivial.") The
+computation will proceed by imitating some of the steps in Sects. 2.3-4 in the
+context of torsion. However, in contrast to that discussion, where an arbitrary
+lattice regularization made it impossible to nail down the renormalization
+constant Av of Eq. (2.9), here we will be precise with all of the constants. Hence, we
+must at the outset state a few conventions.
+    We will restrict ourselves to compact, semi-simple, connected (but not
+necessarily simply connected) gauge groups G. In what follows, (a, b), which we will
+denote for convenience as - T r ab, denotes an arbitrary invariant quadratic form
+on the Lie algebra fg of G, which is used consistently in defining all Haar measures,
+volumes on chain groups, etc. In case G is simple, there is a particular choice,
+described at the beginning of Sect. 2, that is convenient for comparing to formulas
+of conformal field theory. For G = SU(N), this choice is (a, b) = - Trab, where Tr is
+the trace in the N dimensional representation. For instance, for G = SU(2), if we
+write an element of G as
+
+                                   U = ( a- b -   ~) '                             (4.1,
+
+with 6a + b-b= 1, then the metric is
+                                ds 2 2(dad6 + dbdb) .
+                                    =                                              (4.2)
+This is twice the usual metric on the SU(2) manifold. We emphasize, though, that
+the formulas of this section are valid with any invariant metric on f#, as long as it is
+consistently used throughout.
+   An invariant metric on fr determines a left and right invariant measure on G,
+namely the Riemannian volume element #. We will refer to this measure as Haar
+measure on G. (In Sect. 2.3, where we carried out a less precise calculation, we
+simply normalized Haar measure so that the volume of G was one.) Computing the
+Quantum Gauge Theories in Two Dimensions                                           183
+
+
+
+
+Fig. 10. A cell decomposition determined by a covering of I~ by polygons
+
+
+volume of the SU(2) manifold with the metric (4.2), we find VoI(SU(2)) = 25/27~ 2,
+23/2 times larger that the usual expression because of the 2 in (4.2). The volume of
+SO(3) is half this or 2a/2rc2.
+    We also will be interested in the maximal torus T and in the moduli space L of
+conjugacy classes in G; we recall that for compact, connected G, the latter is
+L = T/W, with W the Weyl group. The metric on f# restricts to a metric on the Lie
+algebra ~d- of T. The latter determines a Riemannian measure on T, which we will
+call the Haar measure Vo. Since (away from the singularities in the Weyl action,
+which occur on a set of positive codimension), L is locally modeled on T, the Haar
+measure on T determines a measure on L which we will also call vo. (Of course, the
+volume of L i n the Vomeasure is less than the Vo volume of T b y a factor of ~ W, the
+order of the Weyl group.)
+    There is a second important measure on L which arises as follows. The
+association of a group element with its conjugacy class gives a natural map u : G
+~ L . We set v = u.(#). The precise comparison between v and Vo will be important
+later.
+    We will take advantage of the following simplifications. First of all, since we
+consider volumes to be positive by definition, and since we will always be
+multiplying rather than adding torsions, we do not need to worry about the overall
+sign of the torsion. Thus, like much of the literature, our description of the torsion
+will be valid only up to sign. Also, as our goal is only to compute volumes,
+exceptional sets of positive codimension will not contribute, and will frequently be
+discarded. (Among other things, it is for this reason that we need not be concerned
+about singularities of ~g.)
+   The computation that we will carry out is fairly short and elementary. The
+length of this section comes from the attempt to be self-contained in explaining the
+combinatorial torsion and from the fact that we work out several cases in detail.
+Further background about combinatorial torsion can be found in [-11-13].
+
+
+4.2. Definition of the Torsion
+
+To begin with, consider a particular flat connection A on a G bundle E over a
+surface S`. Let ad(E) denote the corresponding adjoint bundle. If A is irreducible,
+then Ho(S, ad(E))=H2(S`, ad(E))=0, and HI(S,, ad(E))= T*JllA is the cotangent
+space to J / at A. This will play an important role, so we want to recall the
+combinatorial definition of the homology of S` with values in ad(E). We consider a
+cell decomposition X of 2~ of the same type that we used in lattice gauge theory in
+Sect. 2.3, consisting of a covering o f ~ by polygons (Fig. 10). The polygons are two-
+cells, and their edges and vertices are one-cells and zero-cells. If the cell
+184                                                                                    E. Witten
+
+
+
+
+Fig. 11. Subdivision of an n-gon by adding one-cells y~(indicated with dotted lines)
+
+
+decomposition is fine enough, the fiat connection A is trivial on any given cell, and
+then for each cell w we define a vector space Vw consisting of parallel sections of
+ad(E) over w. (It will be convenient later to allow less fine cell decompositions in
+which some one or two cell w may be large enough that AI~ is not trivial; then one
+defines V~ to consist of parallel sections over the interior of w. The definition of the
+boundary operator a that we are about to give then needs a slight refinement.)
+Metrics on the Vw's are defined by saying that the inner product of parallel sections
+s and s' is the constant - T r ss'.
+   Given a real vector space A, we let detA denote the top exterior power of A. By a
+measure on A we mean a nonzero linear functional on detA. A metric on A
+determines (up to a sign, which as noted above we will not keep track of) such a
+measure, namely the functional that maps x 1 ^ Xz... ^ xn to 1, where the x~ are an
+orthonormal basis of A. So the metrics on the Vwendow those vector spaces with
+measures.
+      F o r q = 0, 1,2, let Cq = @ Vw, where w runs over all q-cells. If the boundary of w
+                              w
+
+is a union of q - 1-cells Yi, then one defines a map 0 : Vw~ @ Vr, by 0s = @ sir,. This
+gives a chain complex C~
+                                            0            0
+                                  0 ~ C 2       )   C1       , Co~O.                       (4.3)
+The homology of this chain complex is H.(Z, ad(E)).
+    It is instructive to recall the proof that up to canonical isomorphism,
+H.(S, ad(E)) is independent of the choice of cell decomposition. The main step is to
+verify invariance under subdivision. As a typical example, let w be a two-cell (which
+we take to be an n-gon) which is to be subdivided by adding an extra vertex p
+(Fig. 11). In the refined cell decomposition )?, w is the union of n two-cells
+wl ..... w,; n one-cells yl ..... ya have been added. The refined cell decomposition J?
+gives a new chain complex C~
+                .  .  .   .    .
+   A natural mjectwe     chain    map l: Cq ~ r is
+                                                 "
+                                                   defined as follows. Any cell wf in
+                                                                                   9    .
+                                                                                      X is
+subdivided into a union of cells vj in )? (for w'+-w, there is just one v): one maps
+Vw,C C. to @. V~jC ~o by i(s) = @. slvj. As this map is injective, we get a short exact
+               ./                      3
+sequence of chain complexes,
+                                                i
+                                   O--.C.           , C.---.C'~--.O,                       (4.4)
+where C; is the quotient C . / C . . The associated long exact sequence of homology,
+                      0--*H2(C) ~ H2(C)---* H2(C' )--*... --*Ho(C')--*O                    (4.5)
+Quantum Gauge Theories in Two Dimensions                                               185
+
+shows that H . ( C ) is canonically isomorphic to H.(C) - as we wished to prove -
+provided H.(C') = O.
+   To compute H.(C'), we note that E can be parallelized over w (or at least its
+interior) and hence will play no role in the computation. We may as well take the
+coefficient group to be N, and in that case, for any cell y, we let [y] denote the basis
+of the one dimensional vector space Vr corresponding to the section 1. The
+quotient C" = Co ~Co comes from cells added as a result of the subdivision of X.
+So C~ has one generator [p], C'~ has n generators [71] ..... [y,], and C~ has n
+generators [wl] .... , [w,] with one relation
+                             [wl] + [w2] + ... + [w,] = 0 .                          (4.6)
+The boundary operator is
+                                 a[wJ = [yi+l]- [yJ,
+                                                                                     (4.7)
+                                   [ y J = [p]
+(where we identify [Yi+n] = [Yi]). It is easily seen that this complex is acyclic, as we
+wished to show.
+   Now we wish to introduce the torsion, which is defined, in an appropriate sense,
+for any chain complex of vector spaces with measures. We will follow [131. Let
+                 F. 9O--~F n o , F . _ 1 o ' . . . o >F 1 o , F o ~ 0               (4.8)
+
+be a chain complex of finite dimensional vector spaces, with volumes
+~k ~ (det Fk)- 1. (This can also be relaxed slightly, if one has only the products of the
+a k that appear later rather than individual ~tk'S.)We first consider the case that Fo is
+acyclic. If kj dim im O: Fj ~ F j_ 1, pick Sj ~ /k k~Fj such that OSj :~ O. The expression
+             =
+
+
+
+
+                      U = + (OSj+ 1 A Sj) (- 1)-/6 + (detFj)t- 1)J                   (4.9)
+                          j=O                     j=O
+is independent of the choices of the sj, so we can define the torsion as
+
+                                  z(F~ + ~ ( - l ) k                                (4.10)
+                                            k=O
+More generally, any chain complex F. can be split (unnaturally) as F~ = F;GF;',
+where F~ is acyclic and F~" has zero differential. (Hence F," "         are the
+homology groups of F~ Now letting k j = dim im a : Fj' ~ F j_' 1 and picking
+sj ~ ^ k:F'kj such that Osj +-O, we define
+                            k
+                      u = (~ (Osj+l ^ sj) ~- 1)J~ + (detF~)~- iV                    (4.11)
+                           j=O                    j=O
+and
+
+         z ( F . ) = u + (~j)<-1)J~ + (detF~),-1)J+,= + (detHj(F))(-1)J+,.          (4.12)
+                   j=O            j=O                   j=O
+
+Thus z lies in the dual of the one dimensional vector space + (detHi(F.))(-1),
+which is usually called detH.(F.),                            i=o
+   In particular, going back to the chain complex C. that computes H.(~, ad(E)),
+we    can     define    the    torsion    z(C.),  which    is    a  vector    in
+(detHo(X, ad(E)))-a|             ad(E))|           ad(E)))-1. For an irreducible
+186                                                                                E. Witten
+
+flat connection, Ho(S, ad(E))= H2(~", ad(E))= 0, so z(Ce) is defined as a vector in
+detnl(2% ad(E)).
+    We want to verify first that z(Co) depends only on the connection A and is
+independent of the choice of cell decomposition X. The main step is to show
+invariance under subdivision, so we return to the short exact sequence (4.4), which
+in more detail is a commuting diagram
+
+                                    0         0        0
+
+
+
+                            0     ' C2      ' ~2     ~'C2      ,0
+
+
+
+                            0     , Ct      ' C1     , C~      ,0                     (4.13)
+
+
+
+                            0     , Co      ' ~-o    , C~      ,0
+
+                                     I        I         l
+                                     0        0         0
+
+whose columns are the chain complexes Co, ~o, and C~. Each chain group here has
+a volume. The rows are acyclic, and it is obvious from the definitions that the
+torsion of each row is 1. A general proposition proved by linear algebra
+(Proposition (21) of [12]) then asserts that the alternating product of the torsions
+of the columns is also 1, that is,
+                                 z(Co)z(~,)- lz(C~)= 1.                               (4.14)
+To obtain the desired result z(Co)= Z(~o) showing the invariance of the torsion
+under subdivision, we thus need to know that z(C~)= 1. This can be routinely
+verified from the explicit description of C' in (4.7).
+    We will describe the fact that the rows in (4.13) have torsion 1 by saying that the
+exact sequence (4.4) is volume-exact Equation (4.14) is then the assertion that in an
+exact sequence of complexes which is also volume-exact, the alternating product of
+the torsions is one.
+    Consider now the moduli space ~ / o f flat G-valued connections on S. The
+association to a connection A of the corresponding HI(~, ad(E)) defines a vector
+bundle over J t which is none other than the cotangent bundle T ' J / . The torsion
+z(A) is a section of det ( T ' J / ) , or in other words a differential form of top degree on
+~ . Actually, since we have not paid attention to signs, it is really only the absolute
+value ofz that is well-defined; this is properly regarded as a measure on ~/. In any
+case, we have achieved our goal of giving a topological construction of a measure
+on J / , without assuming orientability of ~.
+    We define the volume of ~ / t o be
+                                               1
+                                Vo1(~r162 (2rc)aim.a ~ z,                             (4.15)
+Quantum Gauge Theories in Two Dimensions                                                 187
+
+where dimdr is the (real) dimension of ~ ' . The reason for the power of 21r is to
+agree, as we will see shortly, with the normalization that is natural from the
+symplectic point of view and was used in Sect. 3.
+Comparison to the Symplectic Volume. We now wish, for Z orientable, to compare
+the measure on ~ / g i v e n by the torsion to that which can be constructed using the
+symplectic structure on J / .
+   To begin with, we consider, algebraically, what we will call a symplectic
+complex. This is a complex
+
+                            O~C.-----*C,_i        ~ ...   ~CocO                       (4.16)
+with n = 2 mod 4, and with non-degenerate pairings 2p,._p: Cp| C n _ p ~ R (collec-
+tively we will call them 2) which are skew-symmetric in the sense that itp,n_p(a, b)
+ =(-1)P2._p p(b,a), and are compatible with O in the sense that 2p._p(Ox, b)
+ = ( - 1)p+ '2~' ._p(x, db).
+     The compatibility of 2 with d means that the it's induce pairings
+                              -Zp.n_ p: Up(C) | Hn _ p(C) --.F.,,                     (4.17)
+which by linear algebra are seen to be nondegenerate. Pick a lift of Hp(C) to Cp, and
+let C~ be the image. IfC~ denotes the kernel ofitp.~_p: Cp|                    then we get a
+splitting C.=C;OC;,: which is compatible with it in the sense that for aeC'p,
+b e C~_ p, 2p, n- p(a, b) = 0. C; is an acyclic chain complex, and C~ is a complex with
+zero boundary operator.
+    Given "~p,n--P:Cp|247                there is an induced map d e t C p |
+which we will call det2p,._ p. It is an element of (det Cp| det Cn- p)- 1. For p = n/2,
+given an orientation of det C./2, itn/2,n/2e det C~ ] has a natural square root which
+we call the Pfaffian, Pfaff),n/2, n/2. It is an element of (det Cn/2)- 1. (Actually, since we
+are not keeping track of the overall sign of the torsion, we do not need the
+canonical square root of det2./2,n/2.) A system of measures ctpe (det Cp)- ~ will be
+called compatible with the 2p, n_p if ~p|                               for all p, and ~,/2
+ = Pfaffitn/2, n/2"
+    We now claim that the torsion of a symplectic complex (C., 2) computed using a
+compatible set of measures is "trivial" in the sense that
+                           n]2-1
+                 z(C.) =    (~) (det~-p,._p) t- 1)'|162               ~)"/~.          (4.18)
+                           p=0
+
+In view of the splitting C. = C~@ Cg, it is enough to check the cases that Co is acyclic
+or has zero boundary operator. If the boundary operator is zero, then (4.18) is the
+definition of the torsion. If C~ is acyclic, then the claim is that z(C.) = 1. Given that 2
+can be regarded as an identification of Co with the dual complex C. = Horn(C~ R),
+this is a special case of the relation between the torsion of a complex and that of the
+dual complex. See for instance Proposition (14) of [-12].
+   We now return to our problem of comparing the measure on , / / g i v e n by the
+torsion to the measure determined by the symplectic structure. The symplectic
+structure is equivalent to a nondegenerate skew map Hi(Z, ad(E))|                  , ad(E))
+~ R , and we wish to see this map combinatorially.
+   For every cell decomposition X of Z by polygons, there is a dual cell
+decomposition X' with q cells replaced by 2 - q cells (Fig. 12). X and X' correspond
+to chain complexes C~ and C~, each with metrics and measures on the chain
+188                                                                                    E. Witten
+                                                                               //
+                                                                          //
+
+
+
+
+                                        /            ....
+
+
+
+                                  ///                       /     x\\\\
+                                 X'
+Fig. 12. A cell division X and its dual X'
+
+
+groups. Invariance of the torsion under subdivision means that z(Co)= z(C~), We
+will study the complex D. = C~ @C'. with the product measures; its torsion is
+                                z(D,) = z(C,), z(C;) = z(C,) 2 .                          (4.19)
+Natural pairings C p |              can be defined essentially by counting intersec-
+tions of cells. Let w and w' be a p-cell and a 2 - p - c e l l in Cp and C~_p, respectively.
+The corresponding spaces VwC Cp and Vw,CC'2-v consist of parallel sections of
+ad(E) over w and w', respectively. Given sections s and s' defining elements of Vw
+and Vw,, we let
+                              2(s,s')=-Tr(ss').                   Z       (__+1),         (4.20)
+                                                                P~wnw"
+
+where the sign associated with P E wc~w'is the usual algebraic intersection number.
+(We have defined X and X' so that wnw' contains at most one point.) By defining
+2(s,! s) = ( - 1)172(s, s t ), and defining 2 to vanish on Cp| C 2 _ p and on Cp! | C !2 -- p, we
+extend the 2's to symplectic pairings 2v,2_ v : D p |                     These give D~ the
+structure of a symplectic complex, and moreover, the 2's are compatible with the
+natural measures on D~ Hence we get
+                              z(D.) = det Zo, 2 | (Pfaff2-1,1) - 1                        (4.21)
+
+For an irreducible flat connection, Ho(Z, ad(E))= H2(Z, ad(E))= 0, so
+                                    z(O.) = (Pfaff2,, ,)--1                               (4.22)
+   Now, in terms of the decomposition Ha(D.) ~ HI(C.)OHI(C~)), 2-i, 1 has a block
+form,
+
+                                            2-~,, = ( _ ~         ~),                     (4.23)
+
+where, as Hi(C.) and Hi(C;) are both canonically isomorphic to HI(Z, ad(E)), O
+can be regarded as a skew form A2HI(Z, ad(E))~N. 5 We have
+Pfaff2-1,1 = ( P f a f f 0 2. As also z(D.)= z(Co) 2, we get
+                              z(Co) = (Pfaff0- ~= Pfaff(0- '),                            (4.24)
+5 Our argument here does not prove the skewness, but this is standard
+Quantum Gauge Theories in Two Dimensions                                                  189
+
+
+
+
+                    (a)
+                              ~'L                                       T"R
+
+
+
+
+        (b)
+Fig. 13a, b. Cutting a surface Z on a circle S to decompose it into pieces ZL and Z R, with
+corresponding cell decompositions a. Decomposing an oriented surface Z of genus g into 2 g - 2
+three holed spheres b
+
+
+
+where p-~ : A2HI(S, a d ( E ) ) ~ R is the inverse to ~. (If q is given by a matrix ~ij in
+some basis on H~, then Q- ~ is given in the dual basis on H a by the inverse matrix.)
+   Now, H~(S, ad(E)) is the tangent space to the moduli space J / of fiat
+connections, and hence Q- ~ : A2H~(~, a d ( E ) ) ~ R is a two form on J[. If Jr has
+dimension dim J / = 2 r , then PfaffQ-1 is the top form
+
+                                       PfaffQ - 1 - (e-x)r                              (4.25)
+                                                          r!
+
+Actually, because we have defined Q and Q- 1 by intersection of cycles, Q- 1 may be
+described explicitly in the de Rham model by saying that to a, fl c H~(S, ad(E)), Q-
+assigns the value
+
+                                     Q- l(a, fl) = ~ Tr(a A fl).                        (4.26)
+
+Comparing this to the definition of the symplectic form (D, which was
+
+                                                   1
+                                    a)(a, fl)= ~       ! Tr(a A fl),                    (4.27)
+
+we see Q-1 = 4~2(D. Hence, with (4.24) and (4.25), we see that the torsion volume of
+Jg as defined in (4.15) indeed agrees with the symplectic volume:
+
+                                                   1                   (D r
+                            Vol(,////)= (27c)dim~ ~ 7:= ~ ~-.I"                         (4.28)
+
+Cutting Formula. In the quantum field theory computation of Sects. 2.34, one
+important ingredient was the ability to compute by decomposing a surface into
+elementary pieces. The analog of that here is a certain refinement of the Mayer-
+Vietoris sequence. Consider cutting Z on a circle S to decompose it into pieces Z L
+and Z R (Fig. 13a). We pick a cell decomposition of Z by polygons which restricts to
+cell decompositions of S, ZL, Z R, as in the figure. From this, one gets a short exact
+190                                                                                E. Witten
+
+sequence of chain complexes,
+                            0--. C s . ~ CrL. @ CrR.~ C ~ . ~ 0.                       (4.29)
+The long exact sequence of cohomology that follows from (4.29) implies that
+  det H.(Z, ad (E)) = det H.(ZL, ad (E)) | det H . ( Z a, ad (E)) | (det H.(S, ad (E)))- 1
+                                                                                       (4.30)
+Moreover, (4.29) is easily seen to be volume-exact, so the alternating product of the
+torsions is 1 [as in (4.14)]. If we denote the torsion of the chain complex that
+computes H.(W, ad(E)) as z(W) (for W = Z , ZL, ~R, or S), then
+                              "/7(~)-~-"C(~L)| ~'(~R) |      1.                        (4.31)
+Equation (4.30), which asserts that the left- and right-hand sides of (4.31) lie in the
+same vector space, is necessary for (4.31) to make sense.
+   This can be repeated (Fig. 13b). If Z is an orientable surface of genus g, and we
+decompose Z into 2 g - 2 three holed spheres W1.... , W2o-2 by cutting on 3 g - 3
+circles $1,..., $3o- 3, then a repetition of the type of argument that led to (4.31) gives
+                                     20-2        30'-3
+                              z(Z)= (~) z(W/) (~) z(Sj) -1 .                        (4.32)
+                                      i=1         j=l
+Thus to compute z(Z), we need only understand the torsions of flat connections on
+circles and three holed spheres.
+    We shall assume G is connected, which ensures that any G bundle E is trivial
+over any of the S i or 27j. The type of computation that we will perform below sums
+over all possibilities for gluing along the Si and therefore means that the volume
+that we will compute will be the sum over all topological types of G bundles of the
+volume of the moduli space of flat connections for that topological type.
+
+
+4.3. The Torsion of the Three Holed Sphere
+
+In this subsection, Z is a sphere with three holes, G is a connected semi-simple
+gauge group. Semi-simplicity means that the center Z(G) is a finite set; we set
+Go = G/Z(G). Semisimplicity also ensures that the generic flat connection on the
+three holed sphere is irreducible, with H.(S, ad(E)) vanishing except in dimension
+one. We let Jff denote the moduli space of irreducible flat connections on X. Then
+H1(2;, ad(E))~ T*(Jff). The torsion hence defines a measure on Jff which we will
+call z(Jff); we wish to study this.
+   It is useful to introduce the moduli space ~/~ of based irreducible flat
+connections on S. Thus, one picks a base point P e Z, and considers the moduli
+space ~ of flat connections on S, up to gauge transformations that equal the
+identity at P. There is a natural projection Q: ~ J f f . The fiber is a copy of the
+adjoint group Go. One has then a short exact sequence of cotangent spaces:
+                             O~ T*,N'~ T* ~r--* T*Go ~O.                               (4.33)
+    This sequence appears naturally in the following way. Pick a cell decomposition
+X of Z, of the type considered in the previous subsection, with P as one of the zero-
+cells. The choice of X determines a chain complex C. that computes H.(Z, ad(E)).
+Quantum Gauge Theories in Two Dimensions                                          191
+
+
+
+
+                                                P
+Fig. 14. A small cell decomposition of the three holed sphere
+
+
+Let Cee be the subcomplex of this consisting only of the chain group lie in
+dimension zero. It is a very short chain complex
+                                      0~Cl, o = VetO                           (4.34)
+with differential zero. Cv. has a natural embedding in Co, Let C~ be the quotient, so
+one has a short exact sequence of complexes,
+                                   O--,Cv.~Ce--,C~--*O .                       (4.35)
+The long exact homology sequence derived from (4.35) reduces to
+                            O~ H x ( C . ) ~ Hx( C'e)~ Ho(Ce.)~O               (4.36)
+as all the other homology groups vanish. This sequence may be identified with
+(4.33), as Hx(C.)~- T*sV', HI(C~ ) ~- T*,/V', and Ho(Ce. ) ~- T*G o.
+    With the usual measures on each chain group, the sequence (4.35) is volume-
+exact, so
+                                   z( C.) = z( C~) . z( Ceo) .                 (4.37)
+Here we encounter a slight subtlety. As in the last section, z(Ce) and z(C~) lie in
+detHl(Co)_~detT*JV" and detH1(C~)~-detT*J/', and so define measures on sV"
+and A~. As for z(Ced, however, it lies in (detHo(Ce)) -1 -~(detT*Go) -1, and so
+transforms as the inverse of a measure on G o. In fact, as the boundary operator of
+the very short complex Ce. is zero, z(Ce.)- 1 is the natural Haar measure # on Go
+determined by the metric on if, as discussed in Sect. 4.1. Taking advantage of the
+fibering Q : ~ ,    (4.37) can be rewritten in the form
+                                    z(C') = Q*(z(C)). I~.                      (4.38)
+[-In this paper, we regard measures as sections of appropriate real line bundles, and
+the product on the right-hand side of (4.38) is really a tensor product of such
+sections.] Equation (4.38) can also be inverted to give
+                                           1
+                                z(C) = Vol(G0-~--~ "Q.(z(C')),                 (4.39)
+
+where the volume of Go is computed with the measure #.
+    We are thus reduced to computing z(C'), and this is elementary. The three holed
+sphere can be given a cell decomposition with one two cell w, three one cells xt, x2,
+and x3, and one zero cell P (Fig. 14). A irreducible flat connection can be described
+in a fashion that is unique up to a unique gauge transformation that is 1 at P by
+giving its holonomies U~, U2, and U 3 around xl, x2, and x3. They are arbitrary
+except for one relation
+                                       Ux U2 U3 = 1.                           (4.40)
+192                                                                               E. Witten
+
+As this equation can be uniquely solved for U 3 in terms of U, and U2, ~/~ is
+isomorphic to G x G. We will see that z(C') is the Haar measure on G x G.
+   To describe the chain complex and the boundary operator in this situation (and
+similar situations that we will consider later) takes a little care, since ad(E) can be
+parallelized only over the interiors of the cells. Given a cell u, one defines ~ to
+consist of parallel sections of ad(E) over the interior ofu. If t is such a section, 8t is
+computed by taking the limiting values of t as one approaches the interiors of the
+various boundary cells. It might happen that some of the cells in the boundary of u
+coincide (up to signs determined by the orientations); for instance, each end of the
+one-cells x~ of Fig. 14 consists of the same zero-cell P. In this case, one simply adds
+the contributions at the various ends.
+   In the case at hand, the complex C~ that computes the tangent space to Y is
+particularly simple to describe. C~ contains nonzero chain groups in dimensions
+two and one only (the zero dimensional chain group lip is precisely what is
+                                                                             3
+eliminated in passing from Co to CA). In detail, C~ = Vw, and C'~ = O Vx,. The
+                                                                            i=1
+boundary operator is as follows. For s a parallel section of ad(E) over w,
+                                  ~s=slx, ~slx~ tgslx3.                              (4.41)
+To compute the torsion of this complex, let Ee be the subcomplex whose only chain
+group is V~:@V~3 in dimension 1. Then Hx(E)= T*(G x G). We have an exact
+sequence
+                               0~E. ~ C~Fo ~0,                              (4.42)
+where Fo is the complex
+                                  0 ~ Vw~ Vx,--,0~0                                  (4.43)
+(in dimensions 2 and 1) with boundary operator ~s=sl~,. With the natural
+measures on E~ and Fo, (4.42) is volume exact. F. is acyclic, and its torsion is 1.
+Hence z(CA)= r(E.). However, Eo has zero boundary operator, so its torsion is the
+Haar measure on G x G. This establishes our claim that z(C;) is equal to that Haar
+measure.
+   Having determined z(CA), we can now in principle use (4.39) to determine z(C.),
+by pushing down from ~ to X . It is not convenient to do this, however, because in
+contrast to X , ~ r is awkward to describe explicitly. The following variant is more
+useful.
+   Let L be the moduli space of conjugacy classes in G. Since we assume G compact
+and connected, L = T/W with T the maximal torus and W the Weyl group.
+   The association to a fiat connection A on the three holed sphere of the
+conjugacy classes O 1, O 2, and O 3 of the monodromy around the three holes gives a
+natural map a: J f f ~ L x L x L. We will determine tr.(z(C)). According to (4.39), this
+is
+                                        1
+                           a.(z(C))- Vol(G0
+                                     ~      (Qa). (z(C')).                           (4.44)
+
+   As ~ runs over all irreducible representations of G, the characters Z~(O)are in an
+appropriate sense (a precise statement appears shortly) a basis of functions on L.
+Hence, to understand the measure a.(z(C)) on L x L x L, it suffices to compute
+                                                       3
+                         14z~,,~,~,~,= ~     a.('r(C)) ~ X~,,(Oi)                    (4.45)
+                                     LxLxL            i=1
+Quantum Gauge Theories in Two Dimensions                                             193
+
+for arbitrary ~i. This is
+                                     1                3
+                                          z( C') ~=1 (Qtr)*X~'(O i) "
+                                 VolGo Ix
+                                                                                  (4.46)
+                                                 "=
+Recalling that the monodromies obey U 1U2 U3 = 1, and that z(C') is H a a r measure
+on G x G, we get
+                           1
+             1'V~,~2,~3- VolG ~ ~dU1dU2Zal(U1)~2(U2)xct3(U21Ull),                 (4.47)
+
+where dU denotes Haar measure on G. This can be evaluated using the integral
+
+                      dU z~(UA)x#(U- t B) = 6~ # Z~,!AB) . Vol(G)                 (4.48)
+                                                  '       aImct
+
+which for similar reasons played a key role in Sects. 2.3-4. [In Sect. 2.3, we defined
+the Haar measure so that Vol(G)--1.] Using (4.48) twice and recalling that
+Z~(1)=dim~, Vol(G)/Vol(Go)= ~Z(G), we get
+                                             1
+                     W~,~2, ~3= 6 ~ , ~ , ~ - dim---~"Vol(G) 9 ~ Z(G).            (4.49)
+
+    Actually, it is now easy to determine the measure a,(z(C)) that gives rise to
+(4.49). Let/~ be Haar measure on G, u: G ~ L the natural projection (from a group
+element to its conjugacy class), and v = u.(#). The basic result on orthonormality of
+characters asserts that
+                            I dv)~(O) Z#(O) = 6~#" Vol (G).                       (4.50)
+                            L
+The measure a,(z(C)) that leads to the evaluation (4.49) of (4.45) is hence
+                            # Z(G)       1
+                  a,(z(C))= Vol(G) 2 ~ ~               ~I Z~(Oi)" vlv2v3,
+                                                      i=1                         (4.51)
+
+where v~, i = 1 ... 3 is the measure v on the it~ copy of L in L • L x L, and vlv2v 3 is
+hence the product measure on L • L x L.
+
+
+4.4. The Torsion of a Circle
+
+We now let ~ denote the moduli space of flat connections on a circle S. A
+connection on S (any connection is fiat) is determined up to gauge transformation
+by the conjugacy class of the holonomy, which is arbitrary. Hence .~ is isomorphic
+to the moduli space L = T/W of conjugacy classes.
+    Decompose the Lie algebra ff of G as (g = ~--G ~ , where ~- is the Lie algebra of
+T, and ~ is the orthocomplement. Tacts on ~ by restricting the adjoint action of G
+on ft. An important function on T (the square of the denominator in the Weyl
+character formula) is
+                                 F(U) = det~(1 - U)                          (4.52)
+for U e T .
+   On L, as we noted in Sect. 4.1, there are two natural measures. The metric on f#
+restricts to a metric on #-, which determines a Haar measure vo on. T; and we use
+194                                                                               E. Witten
+
+                                                         Y
+
+
+
+
+                                                P
+Fig. 15. A simple cell decomposition of the circle
+
+
+the same name for the measure on L determined by the local isomorphism of L and
+T. On the other hand, Haar measure on G pushes down (under the natural map
+from a group element to its conjugacy class) to a measure v on L. A formula due to
+Weyl asserts
+                                  Vol(G)
+                              v= - -      9v o 9F ( U )                      (4.53)
+                                  Vol(T)
+(see [19, Chap. IV, Formula (1.11)]).
+    A generic conjugacy class - and hence a generic connection on S - has a
+stabilizer F isomorphic to T. H~         ad(E)) is the Lie algebra of this stabilizer and so
+is isomorphic to ~". H i ( S , ad(E)) is the tangent space to ~ ~ T / W a n d can again be
+identified with f . The torsion z of a connection A on S takes values (according to
+the general discussion of torsion) in the real line
+                         detHl(S , a d ( E ) ) |                   ad(E))) -~ .       (4.54)
+From what we have just said, this ratio is canonically trivial, However, it will be
+more natural to write z the way it naturally appears in (4.54), as a ratio of two
+measures on 2. Indeed, we will see that
+
+                                       +(s)    =
+                                                   v Vol(T)
+                                                   - .
+                                                                                      (4.55)
+                                                   Vo Vol(6)
+
+     In fact, ad(E) has a decomposition ad(E) = ad(E)o ~ad(E)l, where ad(E)o is the
+sub-bundle of ad(E) invariant under the stabilizer F of the fiat connection, and
+ad(E)l is the orthocomplement. (Note that ad(E)o is the trivial flat bundle ad(E)o
+= S x ~--.) If we compute the torsion of a connection on S by picking a cell
+decomposition and studying the corresponding chain complex Co, then one has
+C . = Coo@C~., where Co. (which is the T invariant part) and C1. (which is the
+orthocomplement) compute H . ( S , ad(E)o) and H . ( S , ad(E)0, respectively. Hence
+                                              z(S) = z o 9z l ,                       (4.56)
+where Zo and zl are the torsions of ad(E)o and ad(E)l, respectively.
+      In fact, we can take a very simple cell decomposition of S (Fig. 15) with one
+l-cell y and one 0-cell P. The corresponding chain complex Do that computes
+H . ( S , R ) has a one dimensional chain group in dimension zero, a one dimensional
+chain group in dimension one, and boundary operator zero (as Oy = 0). Since
+ad(E)o~SxJ,           the chain complex Co. that computes H . ( S , ad(E)o ) is
+Co~= D | ~'-. In particular, the boundary operator of C0,,is zero, the zero and one
+dimensional chain groups Ve and Vr are copies of 3- with its natural measure, and
+SO
+                                         to = z(Co~ = Vo.                             (4.57)
+                                                              +%
+Quantum Gauge Theories in Two Dimensions                                                195
+
+   As for ad(E)~, it is acyclic, so the torsion will be a number or more exactly a
+function on ~. The chain complex Ca. that computes H.(S, ad(E)0 has one and
+zero dimensional chain groups V~and V~,consisting of parallel sections of ad(E)~
+over the interior o f y and over P, respectively. Vr and Vp can each be identified with
+   with its natural measure. With appropriate parallelizations of E over y and over
+the interior of w, the boundary map 8 : V ~ Ve, if E is defined by a flat connection
+with holonomy U, is
+                                    8 s = s - UsU- ~                              (4.58)
+[To see this, first pick a basis si for Ee. There is a unique basis of parallel sections s'~
+of E over the interior ofy which, as one approaches 8y on the left, coincide with the
+s~. As one approaches Oy on the right, s'~ will approach Us~U-~, U being the
+holonomy. Allowing for the opposite orientations at the two ends to determine the
+signs, one gets (4.58).] The torsion is hence
+                                z ~= det~(1 - U) = F(U).                             (4.59)
+Combining (4.59), (4.56), and (4.53), we arrive at the claimed formula (4.55) for the
+torsion of a connection on the circle.
+
+4.5. The Volume of ~,[ for S, Orientable
+
+N o w we can finally put the pieces together and compute the volume of the moduli
+space J g of flat connections on an orientable surface Z.
+    We decompose 2; as a union o f 2 g - 2 three holed spheres W~,joined along 3 g - 3
+circles St. Let ~ and .~ be the moduli space of flat connections on W~ and St.
+Given a flat connection A on a G bundle E over 2;, we write z(Z), z(W~), or ~(Sr) for
+the torsion of ad(E) restricted to the space in question. Each 9 is a vector in an
+appropriate real line. The generalized Mayer-Vietoris formula (4.32) asserts that
+                                                      1
+                                z(S) = i(~ z(Wi) r(~ ~(Sv)"                          (4.60)
+
+   There is a natural map
+                                       J g ~ I-I ~                                   (4.61)
+                                              i
+
+that mapsaflat connectionA on Z to (Alw, .... , AIw~, 2)"This map is not surjective,
+since if W~nW~ contains a circle St, then AIw, and AIwj are automatically
+isomorphic when restricted to St-while ~ ~ would consist of flat connections on
+the W~chosen independently with no such restriction. Let ~/" be the subspace of
+ I-I ~ consisting of gauge equivalence classes of families of flat connections A~i) on
+the W~such that A~0 and Ao~ are gauge equivalent on Win Wj. Obviously, the image
+of J / l i e s in ~ ' .
+          The natural map J / / ~ ' is surjective, a fact that can be seen as follows.
+Given a family of flat connections A~i) on W~, defining a point in JV", proceed as
+follows. Each circle Sr appears as a component of the boundary of two W's (or
+appears twice in the boundary of one W). Let i(y) and i'(7) be the two values of i for
+which S~cSW~. By definition of Y ' , A~)) and A~,~)) are gauge equivalent when
+restricted to S~. So let ~br be a gauge equivalence between them:
+                                 ~b~: A~))ls~- A~i,~))ls~ 9                          (4.62)
+196                                                                               E. Witten
+
+Using the ~brto glue together the bundles and connections on the various W~,we get
+a flat connection A on I; that maps to (A~a).... , A~2o_z)) under the natural map
+J / - - , X ' ; this shows that that map is surjective.
+      However, the map J l - . . A r ' is not one to one. The reason is that the ~b~are not
+unique. Let A be a flat connection on Z. For each 7, let Fr be the group of gauge
+transformations that leaves Als, invariant. Fr is determined up to isomorphism by
+the conjugacy class of the holonomy around St, and for generic A, each Fr is a copy
+of the maximal torus T. Throwing away a set of measure zero, we henceforth
+consider only A's for which this is true for each 7, and we write T~for Ft. The group
+T ' = 1-It T~acts on the fiber of J / / ~ JV" containing A as follows. Letting A , ) = AIw,,
+A can be considered to arise by gluing together the A(0 with some gluing data, as in
+(4.62). Given an element I1 tr e T' = 11 T~, and transforming the gluing data by
+                                         ~b~--,~b,tr,                                 (4.63)
+we get a new set of gluing data that gives a family of flat connections parametrized
+by the t r.
+    The group T' acts transitively on the fibers of J / / ~ J f f ' , since if q~r:Al,(~))
+~AI,,(~)) and/~r :Al(,r))~Al,,(r)) are two families of identifications of Al(~(r)) and
+AI,,(~)), then ~ - ~b~ are isomorphisms of Al(/(r)) and thus elements of T~. However, in
+general T' does not act freely on the fibers. It may happen that for some tr, the
+change of gluing data (4.63) does not affect the gauge equivalence class of the glued
+connection. This will occur precisely if there exist automorphisms u~ of AIw, such
+that the transformation (4.63) of the gluing data can be absorbed in the
+automorphisms ui of the objects that are being glued. A family of automorphisms
+u~ of AIw, will transform the t r in (4.63) by
+                                      t~~ bli,(z)trui-(e ~ .                          (4.64)
+
+    If AIw, is irreducible, then its only automorphisms are constant gauge
+transformations by elements of the center of G. Throwing away a set of measure
+zero, we can henceforth assume that each AIw~ is irreducible. This being so, the
+automorphisms (u~..... u2g-z) in (4.64) are all elements of the center Z(G). There
+are ~ Z(G) 2~- 2 ways to choose this number of elements of Z(G), but since the ratios
+ui,~r)ui~r~ that appear in (4.64) are all one if the u's are all equal, those ratios have
+4~Z(G) 2g- 3 possible values. The set of those values is a subgroup ~ of T' of order
+4~Z(G) 2g- 3, and in the T' action on the fibers of ~ ~ Y ' , the stabilizer of a generic
+point is precisely ~ .
+    Let T" = T'/~. T" acts freely on the fibers of J / / ~ j t r ' , so we have a fibration
+                                         T"         ,J/
+
+
+                                                       1
+                                                          ~                           (4.65)
+
+
+                                                     ,A/".
+
+Any measure on J/g, such as the torsion measure ~, can be factored as
+                                         = 2.7~*(~'),                                 (4.66)
+where 2 is Haar measure on T" and ~' is some measure on ~/". Integrating over the
+fibers of re, and remembering from (4,15) that what we have called the volume of ~ /
+Quantum Gauge Theories in Two Dimensions                                           197
+
+is defined with a factor of (2~z)-dim~a, we get
+                         VolJg =            Vol(T)3g- 3
+                                     (2~) a i ' ~ 9 ~ Z(G) 2g- a 9~:,
+                                                                   ~ z'.        (4.67)
+
+Final Evaluation. There is a natural map v: Jl:'--+ [I ~ that maps a family of
+                                                                Y
+connections A(0 on W~, with compatible restrictions Als: to their restrictions
+(AIs, .... ,A[s3,_~). We can rewrite (4.67) as
+                                   Vol(T)30 -3                             !
+                Vol(dd)= (2rc)dira~ ~ Z(G)2g_ 3 -~1•            a3,-~J
+                                                                •      v.z .    (4.68)
+
+    It remains to determine v.z' and compute the integral. This can be done as
+follows, starting with the generalized Mayer-Vietoris formula,
+                                                           1
+                                 z(Z) = @ z(W~) @r z(Sr) "                      (4.69)
+
+We use (4.51) for r(Wi) (or rather its push-forward by v) and (4.55) for T(Sr). In the
+denominator of (4.55) appears the Haar measure Vo, which is naturally interpreted
+as Haar measure on the group T~ of automorphisms of AIs: The Vo ~ actually
+appear in the numerator in (4.69) [since they are in the denominator in (4.55)], and
+their product Vo,~ ... v0, 3g- 3 is precisely the Haar measure 2 on T" that appears in
+(4.66). Hence, to compute z', we just evaluate the Mayer-Vietoris product (4.69)
+suppressing the Vo'S in (4.55).
+    Actually, what we will compute is the pushforward v.(z'), a measure on 1] ~ .
+Apart from the v0's that we are now suppressing, the only explicit measures that
+appear in (4.51) and (4.55) are factors of v. We recall that v is the measure on
+L = T / W that comes by pushing down Haar measure on G. For 7 --- 1..... 3 g - 3, we
+get two factors of the Haar measure vr in the numerator of the Mayer-Vietoris
+formula (since each Sr is in the boundary of two W~),and one in the denominator
+(from the formula for z(Sy)). Altogether, then, v.(z') is [I v~ times some factors
+appearing in (4.51) and (4.55). Explicitly,
+                                                          (Vol(G)~ ~'-~
+                     =                                    \vo        J
+                          x I] vy.        Z          H     %(-7)(0y)9           (4.70)
+
+Here we pick an orientation around each S 7, Oy is the holonomy of A around Sy
+with this orientation, and ~(~7)(Or) is equal to X~,(Or) or Z,,(O~) depending on
+whether the chosen orientation of Sr agrees with its induced orientation as a
+component of OSr.
+   Finally, we evaluate (4.68), using
+                                dv. Z~(O)Z#(O)= 6~.#. VoI(G)                    (4.71)
+                            L
+
+
+to perform the integral over the ~r. We get simply
+                                # Z(G). (Vol(G)) z"- 2              1
+                 Vol(~/) =             (2rc)dim~U          " ~ (dim a)2g- 2,    (4.72)
+
+where a runs over all isomorphism classes of irreducible representations of G.
+198                                                                             E. Witten
+
+    For example, for G=SU(2), ~ Z ( G ) = 2 , Vol(SU(2))=25/2~z 2 with our defi-
+nitions (as was explained in Sect. 4.1), dim de' = 6 g - 6 , and the dimensions of the
+irreducible representations are 1, 2, 3,..., so
+                                             1                       1
+                  Vol(~'(SU(2))) = 2. (2rc2)g_ 1 ",=1.2.3~... n2g - 2-             (4.73)
+
+For G = SO(3), ~ Z(G) = 1, Vol(SO(3)) = 23/2n 2, dim~r            6 g - 6, and the dimen-
+sions of irreducible representations are 1, 3, 5..... so
+                                           1                         1
+                   Vol(d/(SO(3)))                                                  (4.74)
+                                       (8~2)8-1   , = x.aL..5 .... n2O- 2"
+
+These results agree, of course, with the earlier formulas (3.11) and (3.29) based on
+the Vedinde formula (and they agree within the by now standard renormalization
+factor with the quantum Yang-Mills theory calculation of Sects. 2.3--4).
+
+
+4.6. Unorientable Surfaces
+
+We will now very briefly extend these considerations to compute the volumes of
+moduli spaces of flat connections on unorientable Riemann surfaces.
+    First, we consider a surface Sg.~ which is the connected sum of a surface of genus
+g with s Klein bottles. Such a surface can be constructed by gluing together
+2 g - 2 + 2 s three holed spheres along circles S 7, with orientation-reversing
+diffeomorphisms of s of the circles prior to the gluing (recall Fig. 6). The
+computation can hence be carried out using precisely the building blocks that we
+have just considered. Only one novelty arises. An orientation-reversing dif-
+feomorphism replaces a character z~(O~)by the conjugate character X~(Or) = g~(07)
+(~ is the complex conjugate representation of ~). The absence of a consistent
+orientation of the surface means that at one or more points in the computation,
+one will encounter not
+                                  dvx~(O)Z~(O) = Vol(G),                            (4.75)
+                              L
+
+but
+                                 z,(O)z~(O) = 6,,~ Vol(G).                          (4.76)
+                             L
+
+(6,,~ = 1 if ~ and ~ are isomorphic and zero otherwise). So repeating the earlier
+steps, the volume of the moduli space of the connected sum of a surface of genus g
+with s Klein bottles is
+                           Z(G). (Vol(G)) 2"- 2 + 2~            1
+             Vol(,//) =         (2r0d~m:a            , ~ (dim ~)20- 2 + 2s.         (4.77)
+
+The Projective Plane. Now we consider the more difficult case of a connected sum
+with copies of RP 2. This case cannot be reduced to gluing together three holed
+spheres, so we actually must make a new computation of torsions. We let ~' be RP 2
+with an open ball removed; ~27'is a circle S. ~ and ~ will denote the moduli spaces
+of flat connections on U a n d on S.There is a natural map u: ~--,,~ by restriction of
+a flat connection to the boundary.
+Quantum Gauge Theories in Two Dimensions                                             199
+
+
+
+
+                                                P
+Fig. 16. A simple cell decomposition of R P 2 with a ball removed
+
+
+    In Fig. 16, we indicate a simple cell decomposition of 27, with a two cell w, one
+cells x and y (y appears twice in the picture; the two copies are identified to make
+S'), and a zero cell which is the base point P. The holonomies U and V of a flat
+connection around y and x obey one relation
+                                           V= U2.                                 (4.78)
+Since V is thus determined by U, a flat connection on 27 is determined up to gauge
+transformation by the conjugacy class of U. Thus, the moduli space ~ of flat
+connections on S', like the moduli space .~ of flat connections on S, is a copy of
+L = T/W. However, the map u: ~--*.~ is not the identity; it is the map U--* V = U z.
+The stabilizer of a generic flat connection on X' is a copy of T, the maximal torus,
+that commutes with U (and V).
+   The torsion of a flat connection on 27 is a vector
+                                                      1
+                        z ~ detHl(X', ad(E))| det Ho(27,, ad(E))"                 (4.79)
+
+As for the denominator, Ho(S', ad(E)) is generically isomorphic to Ho(S, ad(E)),
+with both of them being the Lie algebra f f of the stabilizer T. Since H0 9 0, the
+torsion is not a measure on ~ , but rather we can write
+
+                                             = --,                                (4.80)
+                                               Vo
+with ~ a measure on ~ , and Vo the H a a r measure on T.
+    As in discussing the three holed sphere, it is convenient to introduce the moduli
+space ~ of based flat connections on 2;'. There is a generic fibering r: ~         with
+fiber G/T. The fiber is G/T because T is the stabilizer of a generic flat connection on
+S'. Considering the natural projection s : G ~ G/T, there is a measure #' on G/T such
+that
+                                    # = s*(#') 9Vo,                               (4.81)
+where/~ is Haar measure on G and Vo is Haar measure on T. Then
+                                               Vol(G)
+                                         dff---                                   (4.82)
+                                     o/r       VoI(T) "
+   As in the discussion of the three holed sphere, let C. be the complex, determined
+by a cell decomposition of 27, that computes H . ( S ' , ad(E)), let Cv,, be the
+subcomplex supported at the base point P ~ 27', and let C~ be the quotient complex:
+                                  O - - . C ~ C o ~C~ ~O .                        (4.83)
+C~is acyclic except in dimension one, and Ha(C;) ~ T ' P , so the torsion ~ = z(C~) is a
+measure on ~ . C ~ is acyclic except in dimension zero, so its torsion takes values in
+200                                                                               E. Witten
+
+det-lHo(Ceo)~det~. Indeed, identifying fr with the tangent space to G, the
+torsion of Co is just # - 1, p being Haar measure on G. The volume-exactness of the
+exact sequence (4.83) implies that z = ~. # - 1. If as in (4.80) we write T= f/Vo, and as
+in (4.81) we write #=#/Vo, then we have
+
+                                          f=/.t-;"                                   (4.84)
+Hence
+                                  1                  Vol(T)
+                     u,(~ = Vol(G/T) (ur), (~) = Vol(G----~(ur),(z*).                (4.85)
+
+So to compute u,(~), we just need to determine ~.
+   If we use the cell decomposition of Fig. 16, the reduced complex Cg whose
+torsion is ~ has chain groups C'2=Vw, C'x=V~@Vy, and C~=0. Let F. be the
+subcomplex of C~ whose boundary operator is zero and whose only nonzero chain
+group is F 1 = Vr. Let G,, be the quotient:
+                                  O~ Fo ~C~ ~Go ~O.                                  (4.86)
+It is easy to see that Go is an acyclic complex with torsion one. From the volume-
+exact sequence (4.86), it follows that r             z(Fo). As Fo has zero boundary
+operator, z(Fo ) is just the natural measure on F1. But F 1 -~ fq-~ T ~ , so f is just Haar
+measure on ~-~ G.
+    Together with (4.85), this gives a description of u,(f), but not yet in a convenient
+form. For any representation ~ of G, let
+                                      c~= S u,(~x~(V),                               (4.87)
+
+where we recall that V is the holonomy around the boundary. From (4.85), this is
+                                       Vol(T)
+                                c,= Vol(G                                            (4.88)
+We have determined in the foregoing that ~ = G, that V - U 2, and that ~ is just
+Haar measure on U. So
+                                     Vol(T)
+                                c~ = Vol(G-----)S dUz~(U2)"                          (4.89)
+
+The integral on the right also arose in Sect. 2.4, and is
+                                 dUz~(U 2) = f~. Vol(G),                             (4.90)
+where f~ is 1, - 1 , or 0 depending on whether the representation a admits a
+symmetric invariant bilinear form, an antisymmetric invariant bilinear form, or no
+invariant bilinear form at all. So
+                                      c~ = Vol(T).f,.                                (4.91)
+This evaluation of the integrals (4.87), together with the usual orthonormality of
+the characters, gives a more convenient description of the measure u,(~:
+                             u,(~ = Vol(T)
+                                    Vol(G) "v. ~ f~x~(O),                           (4.92)
+
+with O the conjugacy class of the holonomy V around the boundary of Z'.
+Q u a n t u m Gauge Theories in Two Dimensions                                              201
+
+
+   Now, we can compute the volume of the moduli space ~r162 of fiat connections
+on the connected sum Zg.... of an orientable surface of genus g with s Klein bottles
+and r copies of the projective plane. Repeating all of the previous steps, one finds
+(for r >0)
+                                      V o l ( G ) 2 0 - 2 + 2s +r           f r
+            Vol(~//g,~,,)= #Z(G).         (2n)dim~ *....            ~ (dima)2g_2+2~+~.   (4.93)
+
+[For r = 0 and s > 0, the sum over ct must be restricted to representations for which
+ = ~. This restriction is built into (4.93) for r > 0 as f~= 0 unless a = ~.]
+   For example, let G = S U(2). For n = 1, 2, 3..... the n dimensional representation
+has f ~ = ( - 1 ) "+1. The dimension of ~g.~,~ is 6 g - g + 6 s + 3 r . For r odd, we get
+                                                            (_1) .+1
+                V~                    = (2n2)o-21+,+,/2 .=1
+                                                         ~ n~ff: 2-~-~-+,                (4.94)
+
+One has
+                                ~ ( - 1 ) "+1
+                              , =1      n-----7---= (1 - 21 -2)~(s),                     (4.95)
+
+with if(s) the Riemann zeta function, so the volume of ~/g.~,r, for odd r, is an
+elementary multiple of a value of the zeta function at an odd positive integer. For
+even r, (4.93) shows that as regards the volume of moduli space, r copies of RP 2 are
+equivalent to r/2 Klein bottles.
+
+
+4.7. Twisted External States
+We will now use the same methods to compute the volume of the moduli space of
+fiat connections on a punctured surface, with given monodromies around the
+punctures.
+    Let Z be a compact surface without boundary, and let Z ' = Z - { P 1 .... , P,} be
+the surface obtained by deleting marked points P1,-.., P,. Let Oi be conjugacy
+classes in G, and let ~r ~ be the moduli space of fiat connections on 2f' with
+holonomy about Pi in the conjugacy class tgi. A symplectic structure on J/~o~ is
+defined much as in the unpunctured case. The tangent space to J/~o~ at an
+irreducible flat connection is H~(Z', ad(E)) (Hi is cohomology with compact
+support). Given ad(E)-valued one forms a and b of compact support on Z', the
+expression
+                                                 1
+                                  a~(a, b) = ~        ! Tr a ^ b                         (4.96)
+
+defines the symplectic structure.
+    Suppose that the @i are all conjugacy classes of finite order, say of order m. The
+following device then gives a short cut to understanding the integrality properties
+of (4.96) (which were stated in (3.15) and used in comparing to the Verlinde
+formula) and will also give a short cut to understanding how to set up a
+combinatorial computation of the torsion. Pick (noncanonically) an m-fold cyclic
+cover Z of Z, with m-fold branching over the points Pi (in doing this one may
+enlarge the list of Pi to include additional punctures with monodromy one). Thus,
+the cyclic group F =•/mTZ, acts on Z, and Z = S/F. Let rc : 2 ~ Z be the projection. A
+202                                                                               E. Witten
+
+
+G bundle and connection E and A on ~' = S - {P1 .... , P,} pull back to bundles and
+connection n*(E) and rc*(A) on Z - {P1 .... , P,}. (We will usually refer to the lifts of
+the Pi to Z as P~, but will call t h e m / ~ when more precision is needed.) If the
+monodromy of A around each of the Pi is of order m, then n*(E) and z*(A) extend
+naturally to a G bundle and flat connection E and .4 on Z. This operation gives a
+natural embedding i: J g ~ o ~ r where ~r is the moduli space of flat connections
+on Z. F acts on ~ , and ~r is a component of the fixed point set. At the tangent
+space level, this implies that
+                                   T,~:~o ~= ( i* T J I ) e ,                        (4.97)
+where r denotes the F invariant part. A symplectic structure on ~ is defined by the
+usual formula
+                                           1
+                                   03= ~       ~ T r a ^ b-,                         (4.98)
+                                               2
+with ~i, b-being ad(E)-valued one forms on ~. As one has
+                                               1 ,
+                                      co = -- i (o5),                                (4.99)
+                                           m
+the integrality of 03 implies that moo is integral, as was claimed in (3.15).
+
+Preliminaries About the Torsion. The main difficulty in computing the volume of
+~t#~ is to obtain a technical result comparing torsions of certain complexes
+associated with ~co~- We will therefore launch on a relatively long excursion with
+this aim.
+    We want to use (4.97) to construct combinatorial models for computing T~to~.
+If X is any sufficiently fine covering of Z by polygons, then taking the inverse
+images of the polygons in X, one gets an F-invariant covering X of ~ by polygons.
+From the cell decomposition X of ~, we construct in the standard way a chain
+complex Co that computes H,(2~, ad(E-)). Of course, for an irreducible flat
+connection, H,(2, ad(E)) is zero except in dimension one. Moreover, according to
+(4.97), the F-invariant part of this is T ~ c o ). Hence, if Co -- C[ is the F-invariant
+subcomplex of Co, then HI(Co ) = T ~ o ). Computing the torsion of Co will give a
+definition of torsion for flat connections on ~' with prescribed monodromy.
+    In carrying out this program, there are different kinds of cell decompositions X
+to consider. Focussing on the behavior near a particular puncture P (Fig. 17), we
+will consider two possibilities: (i) P is in the interior of one of the two-cells; (ii) P is
+one of the vertices or zero-cells.
+    First we take X to be of type (i). P is contained in a two-cell w. # = ~ - l(w) is a
+two-cell in ~. By contrast, if v is a cell in Z not containing a puncture, then ~ - l(v)
+ = vl w... ufm is a disjoint union of m cells in S that are cyclically permuted by F.
+We recall that the chain complex Ce is a direct sum of spaces V~of parallel sections
+ofad(E-) over ~. Each of these is a copy of the Lie algebra ~. For every cell v in S not
+containing a puncture, the F invariant part of VD1@... @ VDmis a copy of f~ which
+can be identified with the space of parallel sections ofad(E) over v; we call this V~.If
+there are no punctures at all, Co = C~ will thus be the standard complex computing
+H,(Z, ad(E)).
+    Things are more interesting if we consider V~, where P e w. We consider a flat
+connection A on Z whose monodromy around P is U. V~ is again a copy of
+Quantum Gauge Theories in Two Dimensions                                                     203
+
+
+
+
+                                                        ,b,/ \
+Fig. 17. Celldecompositions(i) in whicha givenpunctureP is in the interiorof one ofthe two-cells,
+and (ii) in which P is one of the vertices
+
+consisting of parallel sections of E over ~. The generator of the cyclic group F acts
+on V, by conjugation by U. So Vw= V~ is just the U-invariant subspace of ~.
+    This can be stated more intrinsically: Vwconsists of parallel sections of ad(E)
+over w - P. In particular, if the monodromy around P is trivial, then P plays no role
+and can be reinserted in ~. (Thus, the extra punctures with trivial monodromy that
+may have been introduced in constructed ~ can be harmlessly disposed of at this
+point.) However, if the holonomy around P is in a generic conjugacy class, then V~
+is a copy of the Lie algebra • of the maximal torus T. Henceforth, we only consider
+punctures with such generic monodromies.
+    The boundary operator of Co, deduced by restricting the boundary operator of
+C. to the F-invariant part, is precisely as in Sect. 4.2. Ifz is a q-cell whose boundary
+is a union of q - 1-cells y~, and s ~ Vzis a parallel section of ad(E) over z (or z - P)
+then Os= ~ sly,.
+    This completes the description' of the complex associated with a cell decompo-
+sition of type (i). Now we consider the case of type (ii). We consider a cell
+decomposition X' of S, with P as one of the zero-cells. This lifts to a cell
+decomposition X" of 2~,with/~ (the lift of P) as one of the zero cells. The reasoning is
+then precisely as before except that now the exceptional cells are zero cells. The
+complex Cg constructed from X' has for its F invariant part a complex C~that may
+be described as follows. To every cell z in X' other than P, we associate the space V~
+of parallel sections of ad(E) over z. To P, we associate the space lipconsisting of the
+U-invariant part of the fiber of E over P.
+    The boundary operator of C; is of course constructed by restricting the
+boundary operator of C~ to the F-invariant subspace. In describing it explicitly,
+there is only one subtlety. Over a neighborhood of P, ad(E) has a natural
+decomposition ad(E) = ad(E)o ~ad(E)j_, where ad(E)o is the monodromy invariant
+part and ad(E)• is the orthocomplement. Now, let y be a one-cell in X one of whose
+endpoints is P, as in Fig. 17b. In defining the boundary map ~:Vy~Ve, one first
+projects a parallel section s of ad(E) onto ad(E)o and then considers the limiting
+value at P, which is a well-defined element of Vp. Other components of the
+boundary map of C; have the standard definition.
+    The standard invariance under subdivision gives a canonical isomorphism
+between H.(Co) and H,(C~). Taking the F invariant parts, this restricts to a
+204                                                                                         E. Witten
+
+
+
+
+Fig. 18. Regarding X ' as a subdivision ofX. X ' is created from X by cutting the two-cell w on new
+one-cells Yl,.--, Y. to make n two-cells wl ..... w,
+
+
+canonical isomorphism between H,(C.) and H,(C~). It is instructive to see this
+directly9 We can obtain a cell decomposition of Z of the type X', with P as a zero-
+cell, by subdividing a cell decomposition X in which P is in the interior of a two cell
+(Fig. 18). With the choice in the figure, in creating X', the two-cell w is subdivided
+into n two-cells wl .... , w, by cutting on one-cells yl .... ,y.. There is a natural
+injective map t : C. C~ of the corresponding complexes. [The definition is just like
+that of the map called i in (4.4). In particular, ifs is a parallel section of ad(E) over
+w-P, then i(s)= i~) Slw,.i We let Ko be the quotient:
+
+                                  O~Co i , C;, I .~K . ~ 0 .                                 (4.100)
+The long exact homology sequence of (4.100) is the desired isomorphism of H,(C)
+and H,(C'), if H,(K)= O.
+   Since i is an isomorphism except on the cells that are subdivided or created in
+going from X to X', K can be described locally, just in terms of the number n of new
+one-cells and the monodromy U. In particular, K has a decomposition
+K=Ko~K• where K o is the monodromy invariant part and K• is the
+orthocomplement (using the metrics on the various cells). Ko is just the tensor
+product with f of the complex defined in (49 and (49 In particular, it is acyclic
+and has torsion 1. K• is more interesting. The nonzero chain groups are in
+dimensions one and two. In dimension two, K •                  = O        Vw, , where Vw, consists of
+                                                                   i=1
+parallel sections of ad(E)l over wi. Likewise, in dimension one, K• = C) Vrj,
+                                                                                             j=l
+where Vyj consists of parallel sections of ad(E).L over yj. For si ~ Vw,,the boundary
+operator is of course
+                                ~Si=Sily,+ 1 --Sily i ~ Vyi+ 1(~ Vy i .                       (49
+(We identify yi+, with Yv) This complex is acyclic (since in defining K I . we have
+removed the monodromy invariants), completing the proof of isomorphism of
+H,(C) and H,(C').
+   Though Ko~ has torsion 1, this is not true for K•176In fact, the complex (4.58) that
+computes the torsion of a connection on a circle is the same as the n = 1 case of K•
+Quantum Gauge Theories in Two Dimensions                                                  205
+
+except that in (4.58) the dimensions are 0 and 1 instead of I and 2. The complex
+K• with dimensions shifted, is actually the complex that we would get to compute
+the torsion of a connection on a circle, provided that we had covered the circle with
+n one-cells and n zero-cells, as opposed to the choice n = 1 that was used to derive
+(4.58). The dimension-shifting by an odd amount replaces the torsion by its inverse,
+so in contrast to (4.59), the torsion of Kj_o is
+                                                  1
+                                     z(K • = F(U~-)"                                  (4.102)
+
+The volume-exactness of (4.100) thus gives us the result
+                                                      1
+                                   z(C;) = z(C.). F(U--~'                             (4.103)
+
+if there is only one puncture with non-trivial monodromy. In general, if there are
+generic (regular) monodromies about several punctures P1,-.., P,, and O i is the
+conjugacy class of the monodromy about Pi, then
+
+                               z(C~) = z(Co). I]          1                           (4.104)
+                                                i= 1 F ( O i ) "
+
+This is the technical result that we have been aiming for. The complexes C~ and C~
+both compute Tdr }, but their torsions differ. The rest of the discussion is
+relatively routine.
+Comparison with the Symplectic Volume. We want to compare the volume forms on
+~r that can be defined using the torsion with the symplectic volume form oY/rl,
+with r = dim J/r     The strategy of the computation will be the same as it was in
+Sect. 4.2, where we considered the unpunctured case. We consider a cell division X
+of Z and a dual cell division X', which determine chain complexes C~ and C~, in
+such a way that Do = Co @ C~ has a natural structure of a symplectic complex. The
+torsion of Do is then "trivial" and can be related to the symplectic volume. In the
+unpunctured case, the formula so obtained is (4.28). We now reconsider this in the
+punctured case.
+   In the punctured case, if the complex X is of type (i), with a given puncture P in
+the interior of one of the two-cells, then to have a natural intersection pairing
+between Co and C& we must take P to be a vertex in C;, as shown in Fig. 19. In this
+case, the symplectic pairing 2 on D~ C~         is defined precisely as in (4.20), and
+exactly as in (4.22) we get
+                                   z(Do) = (Pfaff2-1,1)-1.                            (4.105)
+Now, however, we have because of (4.104),
+
+                       z(D~176176                      2" I1         1                (4.106)
+                                                           i= 1 F ( O i ) '
+so
+                               9               - lq    1                              (4.107)
+                                                 i=1 ~ "
+
+As V~IX) is related to the symplectic volume by precisely the considerations of
+Sect. 4.2, the analog of (4.28) is
+
+                 Vol(J#{o})=          1          j" z(C.). ~                  1       (4.108)
+                                                                    I     F1/Y ,) "
+206                                                                                        E. Witten
+
+
+
+
+Fig. 19. A complex of type (i) (solid lines) and its dual (dotted lines), which is of type (ii)
+
+
+
+
+                               ~L                                    ~R
+Fig. 20. A sphere of genus g with n punctures can be built by gluing together 2 g - 2 + n three holed
+spheres and n once punctured discs. This is illustrated here for g = 2, n = 1
+
+
+   With this equation in hand, our task is elementary. An orientable surface S' of
+genus g with n punctures can be built by gluing together 2 g - 2 + n three holed
+spheres Wi and n once punctured discs D, along 3 g - 3 + 2n circles Sr (Fig. 20). As
+we already know the torsion of the three holed sphere and the circle, we must
+compute the torsion of a flat connection on the once-punctured disc. Then we can
+repeat the standard analysis using the generalized Mayer-Vietoris formula. One
+could also, of course, use similar methods to compute the volume of ~r for S an
+unoriented surface; this involves no ideas that we have not already introduced, and
+will not be considered here.
+The Torsion of the Punctured Disc. We now let D be a disc, and let D' = D - {P} be a
+disc with one point P deleted. We now want to compute the torsion of a flat
+connection on D' with given m o n o d r o m y about P. We pick a conjugacy class O
+and let ~ e be the moduli space of flat connections on D' with m o n o d r o m y about P
+conjugate to O. Actually, any connection with this property is gauge equivalent to
+a standard one, so ~ e consists of only one point. This one point corresponds to a
+connection that is reducible. We will consider only the case of a generic conjugacy
+class for which the stabilizer is a copy of the maximal torus T.
+   In Fig. 21 we indicate a cell decomposition of D which is of type (i) in our above
+terminology, There is a single two-cell w, with P in its interior. The boundary of D
+has been divided into a certain number of one-cells and an equal number of zero-
+Quantum Gauge Theories in Two Dimensions                                             207
+
+
+
+
+Fig. 21. The celldecompositionusedto computethe torsionofa connectionon the punctureddisc
+
+
+cells. This decomposition determines a chain complex Co whose torsion we will
+compute. The homology of this complex is Ho(C ) ~ 9- (because ~r is the Lie
+algebra of the stabilizer group), and HI(C)=Hz(C)=O (the vanishing of H1 is
+related to the fact that any deformation of the flat connection preserving the
+monodromy is gauge equivalent to zero). To verify these assertions and compute
+the torsion, we use the decomposition Co=Co.@C•        where Co~ is the mono-
+dromy invariant part and C•176is the orthocomplement. It follows from this
+decomposition that
+                               z(C,) = z( Coo)|                  •176
+                                                                   ).            (4.109)
+We have Co~        |     where/7, is the standard complex that would compute the
+real homology of the unpunctured disc. Hence Ho(C)~-3 ", and the higher
+homology vanishes. It is straightforward to compute that the torsion of Co. is
+"trivial" in the sense that
+                                                  1
+                                        z(Coo) = - - ,                           (4.110)
+                                                 Vo
+where as usual vo is the measure on 3 determined by its metric. This statement can
+be interpreted as a reflection of the fact that the unpunctured disc is contractible to
+a point.
+   As for Cj_o,this is again precisely the complex (4.58) that computes the torsion of
+a connection on the circle [or rather, C• is the generalization of (4.58) to a less
+economical cell decomposition of the circle], so
+                                       z(C•       = F(@).                        (4.111)
+Combining the above results, therefore, the torsion of a flat connection on the
+punctured disc is
+                                     z(C~ = F(O). vo ' .                         (4.112)
+The Volume of ~l{o }. We can now solve our problem. We consider an orientable
+surface Z with s marked points P1 ..... Pr We pick s generic (regular) conjugacy
+classes 01 .... , O,, and let M/to) be the moduli space of flat connections on Z with
+monodromy about P, conjugate to O,, for a = 1,..., s. As in Fig. 20, S can be made
+by gluing together 2 g - 2 + s three holed spheres Wi, and s punctured discs D~,
+along 3 g - 3 + 2s circles C r The generalized Mayer-Vietoris formula then asserts
+that
+                          z(~,) = @ z(Wi) @ z(D~) @ z(C~)- 1.                  (4.113)
+                                 i            a             ~,
+
+Since we have evaluated the various factors in (4.113), z(~) can be computed and
+integrated over J/to} using techniques that by now are familiar. One small novelty
+is that the factors of Vol(T) no longer cancel out. This is because of the 1/Vo in
+(4.112) or more fundamentally because, since/t flat connection on the punctured
+208                                                                                  E. Witten
+
+disc has T as a g r o u p of symmetries, there is no gluing a m b i g u i t y in gluing on a
+punctured disc. A n o t h e r small novelty is that one must r e m e m b e r the factors of
+1/l//ff in (4.108) in c o m p u t i n g the v o l u m e of J//{o}. O n e gets finally
+                   ,z(G). Vol( )                        1
+      V~      )=   ~     :     ~             " ~ (dim~)2a-2+~ ",~=1
+                                                                                        (4.114)
+   F o r instance, for G = SU(2), # Z(G)= 2, dim Jr = 6g - 6 + 2s, Vol(G) = 25/2~r2,
+and Vol(T)=23/2~r.Also, if ~ is the n dimensional representation and O~ is the
+conjugacy class
+
+                                      (e? 00,) '
+then Z~(Ov)=sin(~nO~)/sin(r~Ov)
+                              and           F(Ov)=4sin2(rcOv).Putting the pieces to-
+gether, we get
+
+               V~162                     1 2 +s ~ n2O-2+s
+                             = 2 " 20-17r2g-         1 h sinOrnO,)                      (4.116)
+                                                n=l       i=1
+
+in pleasant agreement with the expression (3.18) that we o b t a i n e d previously by
+c o m p a r i n g to the Verlinde formula.
+
+
+References
+
+ 1. Atiyah, M.F., Bott, R.: The Yang-Mills equations over Riemann surfaces. Phil. Trans. R. Soc.
+    London A308, 523 (1982)
+ 2. Goldman, W.: The symplectic nature of fundamental groups of surfaces. Adv. Math. 54, 200
+    (1984)
+ 3. Ray, D., Singer, I.: R-torsion and the Laplacian on Riemannian manifolds. Adv. Math. 7, 145
+    (1971)
+ 4. Narasimhan, M.S., Seshadri, C.: Stable and unitary bundles on a compact Riemann surface.
+    Ann. Math. 82, 540 (1965)
+ 5. Verlinde, E.: Fusion rules and modular transformations in 2d conformal field theory. Nucl.
+    Phys. B 300, 360 (1988)
+ 6. Tsuchiya, A., Ueno, K., Yamada, Y.: Conformal field theory on universal family of stable
+    curves with gauge symmetries. Max-Planck-Institut preprint MPI/89/18
+ 7. Segal, G.: Two dimensional conformal field theories and modular functors. In: IXth
+    International Conference on Mathematical Physics (Swansea, July, 1988) Simon, B., Truman,
+    A., Davies, I.M. (eds.). Bristol: Adam Hilger (1989) 22, and preprint (to appear)
+ 8. Witten, E.: Quantum field theory and the Jones polynomial. Commun. Math. Phys. 121, 351
+    (1989)
+ 9. Apostol, T.M.: Introduction to analytic number theory. Berlin, Heidelberg, New York:
+    Springer 1984
+10. Thaddeus, M.: Conformal field theory and the moduli space of stable bundles. Oxford
+    University preprint
+11. Milnor, J.: Whitehead torsion. Bull. Am. Math. Soc. 72, 358(1966)
+12. Johnson, D.: A geometric form of Casson's invariant, and its connection to Reidemeister
+    torsion. Unpublished lecture notes
+13. Freed, D.: Reidemeister torsion, spectral sequences, and Breiskorn spheres. Preprint
+    (University of Texas)
+14. Fine, D.: Quantum Yang-Mills theory on the two sphere. Commun. Math. Phys. 134, 273
+    (1990); Quantum Yang-Mills on a Riemann surface. Commun. Math. Phys. 140, 321-338
+    (1991)
+15. Migdal, A.: Zh. Eksp. Teor. Fiz. 69, 810 (1975) (Sov. Phys. Jetp. 42, 413)
+Quantum Gauge Theories in Two Dimensions                                                       209
+
+16. Schwarz, A.: The partition function of degenerate quadratic functional and Ray-Singer
+    invariants. Lett. Math. Phys. 2, 247 (1978)
+17. Witten, E.: Topology-changing amplitudes in 2 + 1 dimensional gravity. Nucl. Phys. 323, 113
+    (1989)
+18. Wilson, K.: Phys. Rev. D 10, 2445 (1974)
+19. Brocker, T., tom Dieck, T.: Representations of compact Lie groups. Berlin, Heidelberg, New
+    York: Springer 1985
+20. Atiyah, M.F.: Geometry and physics ofknots. Cambridge: Cambridge University Press 1990
+21. Jimbo, M., Miwa, T., Okada, M.: Lett. Math. Phys. 14, 123 (1987); Mod. Phys. Lett. B 1, 73
+    (1987); Commun. Math. Phys. 116, 507 (1988)
+22. Bralic, N.: Phys. Rec. D22, 3090 (1980)
+23. Kazakov, V., Kostov, I.: Nucl. Phys. B 176, 199 (1980); Phys. Lett. B 105, 453 (1981); Nucl.
+    Phys. B 179, 283 (1981)
+24. Gross, L., King, C., Sengupta, A.: Ann. Phys. 194, 65 (1989)
+25. Witten, E.: Gauge theories and integrable lattice models. Nucl. Phys. B 322, 629 (1989)
+26. Bott, R.: On E. Verlinde's formula in the context of stable bundles. Int. J. Mod. Phys. 6, 2847
+    (1991)
+27. Axelrod, S.: Ph.D. thesis (Princeton University, 1991)
+    Axelrod, S., Witten, E.: Unpublished
+28. Cheeger, J.: Analytic torsion and the heat equation. Adv. Math. 28, 233 (1978)
+29. Muller, W.: Analytic torsion and the R-torsion of Riemannian manifolds. Ann. Math. 109 (2),
+    259 (1979)
+30. Bar-Natan, D., Witten, E.: Perturbative expansion of Chern-Simons theory with non-
+    compact gauge group. Commun. Math. Phys. (to appear)
+
+
+Communicated by A. Jaffe
+

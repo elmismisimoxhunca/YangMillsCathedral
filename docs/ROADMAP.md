@@ -687,8 +687,12 @@ committed before higher layers depend on it.
 - [ ] Add rigorous `d = 2` consistency models.
   - [x] Prove first nondegeneracy witnesses: a nonzero area two-form, spatial ray, nonzero spacelike
     tests, and a concrete positive-density elementary plaquette for every admissible potential.
-  - [ ] Add source-backed continuum two-dimensional Yang–Mills consistency evidence distinct from
-    the finite-cutoff and kinematic witnesses.
+  - [x] Ingest and audit Driver, Gross–King–Sengupta, Sengupta, Lévy, Witten, and Atiyah–Bott with
+    exact role separation for rigorous probability/holonomy, lattice convergence, heat-kernel
+    sewing, and classical geometry.
+  - [ ] Formalize the source-specific continuum two-dimensional Yang–Mills probability/holonomy
+    consistency records and lattice-continuum bridge, distinct from finite-cutoff, classical, and
+    four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.
   - [x] Add a current-strength continuum core hard-wired to coordinate `ℝ³` with coordinate
     Lebesgue action measure, dependently joining compact-simple gauge/classical data, strict
@@ -715,10 +719,14 @@ committed before higher layers depend on it.
     `11 C₂(G)/(3·16π²)`; identify the exact classical outer coupling with that same running coupling
     at an explicit UV reference scale. This remains supplied convention/normalization data, not a
     connection-level field-rescaling theorem or perturbative calculation.
+  - [x] Ingest and audit the supplied Hall/Bargmann/Hall–Wightman, Hodge/volume, composite-operator,
+    BRST/EOM mixing, power-counting, and perturbative OPE source chain.
   - [ ] Construct concrete inhomogeneous `SL(2,ℂ)`, identify its matrix-sign kernel with the accepted
-    literal-sign projection kernel, and construct the named affine-target group law; add
-    source-faithful curvature-polynomial/OPE mixing, calculated perturbative remainders and
-    scheme dependence, trace anomaly, and final universal compact-simple-group quantification.
+    literal-sign projection kernel, and construct the named affine-target group law; add the now
+    source-ready curvature/covariant-derivative grammar, BRST/EOM operator mixing, calculated
+    perturbative remainders and scheme dependence, and final universal compact-simple-group
+    quantification. The physical-reduced trace anomaly is present; unrestricted mixing-complete
+    trace semantics remain part of the operator-mixing debt.
 - [x] Define the exact Clay endpoint predicate, reject every lower dimension `1`–`3`, and prove no
   lower-dimensional Euclidean coordinate carrier (especially the 3D core base) is real-linearly
   equivalent to the four-dimensional carrier.

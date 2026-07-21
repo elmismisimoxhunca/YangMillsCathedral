@@ -690,7 +690,12 @@ edition of Streater–Wightman are hash-pinned with exact text extractions. Load
 Wightman-axiom pages were visually verified. Wilson 1974 and Osterwalder–Seiler 1978 lattice sources
 are also pinned and visually checked without identifying finite-cutoff results with the continuum
 target. Wilson's 1969 OPE paper and the independent Gross–Wilczek/Politzer 1973 asymptotic-freedom
-papers are pinned as observable and ultraviolet-consistency evidence. The
-Collins–Duncan–Joglekar trace-anomaly preprint scan is also pinned and visually checked at its
-mixing and physical-reduction equations. Source acquisition constructs
+papers are pinned as observable and ultraviolet-consistency evidence. The Collins–Duncan–Joglekar trace-anomaly preprint and supplied published article are pinned and
+cross-checked at their mixing and physical-reduction equations. The complete 33-PDF user literature
+bundle is now inventoried: seven files are byte-identical to existing canonical artifacts and 26
+distinct sources are retained with manifests and native extraction, except that the two image-only
+Atiyah scans use calibrated Mathpix per-page drafts plus independent visual adjudication. This
+closes the known acquisition gap for rigorous 2D evidence, Hodge/volume, Poincaré/`SL(2,ℂ)`,
+extended-tube, and composite-operator/BRST mixing work; it does not implement those remaining Lean
+interfaces. See `docs/SUPPLIED_SOURCE_INGESTION_AUDIT.md`. Source acquisition constructs
 no Euclidean, lattice, observable, renormalized, or Wightman theory.

@@ -1,0 +1,2052 @@
+                                                                     Communicalions in
+Commun. Math. Phys. 123, 575-616 (1989)                              Ma lem
+                                                                        Phys
+                                                                     © Springer-Verlag 1989
+
+
+
+
+YM2:Continuum Expectations, Lattice Convergence, and
+Lassos
+Bruce K. Driver
+Department of Mathematics,Universityof California,San Diego,La Jolla, CA 92093,USA
+
+
+   Abstract. The two dimensional Yang-Mills theory (YM2) is analyzed in both the
+   continuum and the lattice. In the complete axial gauge the continuum theory may
+   be defined in terms of a Lie algebra valued white noise, and parallel translation
+   may be defined by stochastic differential equations. This machinery is used to
+   compute the expectations of gauge invariant functions of the parallel translation
+   operators along a collection of curves T. The expectation values are expressed as
+   finite dimensional integrals with densities that are products of the heat kernel
+   on the structure group. The time parameters of the heat kernels are determined
+   by the areas enclosed by the collection ~, and the arguments are determined by
+   the crossing topologies of the curves in cg. The expectations for the Wilson lattice
+   models have a similar structure, and from this it follows that in the limit of small
+   lattice spacing the lattice expectations converge to the continuum expectations.
+   It is also shown that the lasso variables advocated by L. Gross [36] exist and are
+   sufficient to generate all the measurable functions on the YM2-measure space.
+
+1. Introduction
+The informal expression for the Yang-Mills' measure is:
+
+                  # ( d A ) = Z - l e x p ~ l - ~ ! ~ tracep(F~(x)2)dx]~A,              (1.1)
+                                     LZgo R i<j
+where A runs over a space of connection forms ( d ) on the trivial unitary vector bundle
+                                                                d
+
+CN x R d, F a = dA + A ^ A is the curvature of A, ~A = I-[=1 -~]-Id(A'(x))is "infinite
+                                                                =   x~R
+dimensional Lebesgue measure" on ~¢, g~ is a positive "coupling" constant, and Z is
+a normalization constant which makes # a probability measure. The connection
+forms are restricted to take values in the Lie algebra f9 of the structure (or gauge)
+group G - - a subgroup of U(N). The trace is taken with respect to some
+representation p of G.
+    It is well known that the expression (1.t) is ill defined, see Gross [35]. Despite the
+many technical problems, when d = 2 it is possible to define a "gauge fixed" version
+of # as mean zero Gaussian measure on a space of generalized connection 1-forms,
+576                                                                          B.K. Driver
+
+see Definitions 2.5 and 2.7. Heuristicly, this gauge fixed measure should agree with #
+in (1.1) on gauge invariant functions, and be unrelated for non-gauge invariant
+functions. The purpose of this paper is to study this continuum YM2-measure and its
+lattice approximations with an emphasis on using gauge invariant observables. By
+using gauge invariant functions, one is forced to consider non-linear functionals of
+the measure space. This makes the theory less trivial than one might first think.
+    There has been considerable effort in understanding (1.1) for d = 3 and d = 4, and
+in fact, much progress has been made by Balaban [7]-[17], and Federbush 124]-
+ [31] in controlling the renormalization group flow of the lattice approximations (or
+in Federbush's case an infinite directed sequence of lattices). The group of R. Seneor
+et al. are trying to use a continuum regularization. Despite success in proving
+stability results for these flows, a YM 3 or YM4 theory with gauge invariant
+observables is still missing.
+    One question is what should the gauge invariant observables be? The most
+common suggestion is the Wilson loop variables (traces of parallel translation
+operators), but these variables are quite singular in d = 3 and especially d = 4. As an
+alternative to these variables, U Gross [-36] has advocated using"lasso-variables." A
+lasso-variable is the curvature tensor transported back to the origin by the parallel
+translation operator along a curve, see Definition 9.1. It is shown in [36], with
+generalizations by Driver [21] to base spaces with non-trivial topologies, that the
+lassos generate the gauge invariant functions. So expectations of functions of the
+lassos would completely characterize the YM-measure on the gauge invariant
+sigma-field.
+    The lassos are smoothable random variables for the measure in (1.1) if the
+structure group G = U(1). (In this abelian case it is well known how to interpret the
+measure # as a generalized gaussian process, see for example [22, 37].) This is in
+contrast to the Wilson loops in d = 4, which do not seem to be smoothable. (There
+are proposals of how to work with the expectations of these singular Wilson loops,
+see Seiler [44].) Another success of the lassos is their use in proving that on the
+"current sector," the U(1)-lattice gauge theories converge to the continuum U(1)-
+theory, see Gross [37] when d = 3 and Driver [22] when d = 4.
+    When d = 2, parallel translation may be defined by stochastic differential
+equations, see Definition 3.3 and Gross, King, and Sen Gupta [34]. This means that
+in two space-time dimensions the Wilson loop variables are well defined. In this
+paper, I will give explicit formulas for the YM2-expectations Offunctions depending
+on the parallel translation operators on a finite "admissible collection" (cg)of curves,
+see Theorem 4.12. The results are given as finite dimensional integrals involving
+densities that are certain products of the convolution heat kernel on G. If the
+function integrated is gauge invariant, the density simplifies in such a way that the
+arguments of the heat kernels are determined by the crossing topology of the curves
+in c~, and the time parameters are determined by the areas enclosed by the collection
+c~, see Theorem 6.4. This result immediately shows, Corollary 6.7, that gauge
+invariant expectations are Euclidean invariant--a fact that is not a priori obvious
+when using the gauge fixed measure.
+    Results showing that the expectations depend only on the enclosed areas and
+crossing topologies of the curves in ~ have been obtained by a number of different
+YM2:Expectations and Lassos                                                            577
+
+
+authors with varying degrees of rigor, see [19, 34,39,40,41] and the references
+therein. The methods of this paper are a variation of the methods in Gross et al. [34]
+which were inspired by Brali6 [19]. However, the form of the results in this paper
+were most influenced by Dosch and Miiller [23], where it was shown that for
+G = U(1) or SU(2), the lattice theory converges, and the resulting answer depends
+on the collection (cg) only via the enclosed areas and crossing topologies.
+    Formulas similar to those given here for the expectations of gauge invariant
+functions have already been discovered. Most notably, Albeverio, H~begh-Krohn,
+and Holden [1-5] have such formulas and show that these formulas may be used as
+a definition of a random process indexed by planar "complexes." This point of view
+of defining the YMz-theory has also appeared in Klimek and Kondracki [42].
+    It will also be shown that the (gauge fixed) Wilson [48] lattice approximations
+converge (on arbitrary functions) on gauge invariant functions to the continuum
+YMz-measure, see Theorems 8.5 and 8.10 and their corollaries. This statement is
+valid for both the Villain and the Wilson action. These limits have been shown in less
+generality to exist if G = U(1) and G = SU(2) by Dosch and Miiller [23] and
+Albeverio et al. [5]. The existence of the limit is also alluded to in Klimek and
+Kondracki [42]. However, a direct connection of the limiting values with the gauge
+fixed YM2-measure seems to have been missing.
+    Finally, it will be shown that the lasso variables with "polygonal tails" exist for
+the continuum YMz-theory, and do generate the full algebra of measurable
+functions on the gauge-fixed measure space, see Theorems 9.5 and 10.1. While this is
+not a conclusive test as to whether the lasso variables are smoother than the Wilson
+variables, it does show they are no worse.
+
+
+2. The Continuum YM2-Measure
+The continuum YMz-measure will be defined in this section, but first some basic
+notation will be given. For the purposes of this paper G will denote a connected
+compact Lie group with Lie algebra ft. Without loss of generality, G will be taken to
+be a closed subgroup of U(N) for some N and ff a Lie subalgebra of the N x N skew
+adjoint matrices. If p is any finite dimensional representation of G, let Zp = trace (p)
+be the character of p, Vp be the representation space of p, do = dim Vp, and
+p,(A)=d/dtlop(exptA) for all AeN be the differential of p. We define a real
+bi-linear form on ~ by
+                              (A, B)p = -- trace (p,(A)p,(B)),                        (2.1)
+for all A, B s ~. The bi-linear form in (2.1) is non-negative and in fact positive definite
+if p, is one to one. For the rest of this paper p will be a fixed representation of G for
+which p, is injective. Also let F = F(G) be a complete collection of inequivalent
+irreducible representations of G.
+Definition 2.1. Let ~ be any finite dimensional representation of G. The Casmir
+operator C, on V, is
+                                           dim
+                                     C~ = Z z(T") 2,
+                                           a=l
+578                                                                            B.K. Driver
+
+
+where t:Ta~d~a=1 is an (.,.)p-orthonormal basis for ~, and z(Ta):= d/dtloz(e'r°).
+Remarks 2.2. 1. The Casmir operator C~ is independent of the orthonormal basis
+{Ta}~.
+2. [C~,z(g)]=OVgeG, since {g-tT~g}, is also an orthonormal basis. Hence
+        =       X      l r°g) 2 =
+3. If z~F(G) is irreducible, then by Shur's lemma, C~ = cj , where c~ is a constant.
+Furthermore, with respect to a G-invariant inner product on V~, z(T~) * = - z(T~),
+which shows that c~ < 0 with equality iffT is the trivial representation.
+    The first problem to overcome in defining the measure in (1.1) is the "gauge"
+invariance of the exponent. Namely, if g: R d ~ G is a gauge transformation, under
+which the connection 1-form A transforms to A ° = g- ~Ag + g- ~dg, then it is well
+known ([43]) that F A" = 9-IFag • Since traces are invariant under conjugation, it
+follows that the exponent of (1.1) is invariant under the action of g e G T, where GT is
+the set of gauge transformations. This has the serious consequence that even at an
+informal level it is impossible to choose the normalization constant Z so that # is a
+probability measure. As is well known, the first step in overcoming this problem is to
+interpret the Yang-Mills measure on the space d / G T of connections module the
+gauge transformations. This is a very appealing geometrical interpretation, however
+on a technical level it is easier to define the measure by choosing a "transversal" slice
+of the space of connections and restrict the measure p to that slice. The price one
+pays for this procedure is to lose the manifest Euclidean invariance. Nevertheless,
+Euclidean invariance will be recovered, Corollary 6.7, also see Gross et al. [34] on
+this point.
+    We now restrict to d = 2 , and let G T = {geC®(R2, G)tg(O)= eeG} be the
+restricted gauge transformations, d be the set of f¢-valued connection 1-forms on
+R 2, and d f = { A ~ d l A = A l d x l and AI = 0 on the x-axis}. A element in d : is said
+to be in the complete axial gauge.
+    The following theorems stated without proof are only to help to motivate the
+definition of the YM2-measure.
+Proposition 2.3. Define a left action of G T on d by
+                              g.A:=Ag-~:=gAg -1 +gdg -1,
+then the map
+                                ( g , A ) ~ g . A : GT x d : ~ d                     (2.2)
+is a surjection. Furthermore the action of G T on d is affine with the linear part leaving
+the subspace d : invariant.
+     This proposition indicates that it should be possible to "restrict" the measure
+# to d r provided one only integrates functions which are invariant under the left
+action of GT on d . Notice that
+                    F = curvature(A) = - O2Aldx ^ dy:= F2ady ^ dx                    (2.3)
+for A ~ ¢ : .
+Meta-Theorem 2.4. The "measure" # when "restricted" to s~¢: is given informally by
+YM2:Expectations and Lassos                                                            579
+
+
+                ~(dA)~Z-lexp[~gl~ ~R2(02AI(X),O2AI(X))pdx]~A ,                       (2.4)
+
+
+where A ~ ¢ y. The content here is that the Jacobian factor coming from the change of
+variables from d coordinates to G T x d f coordinates is a constant.
+   We now identify F with Fzt = ~2A1, and make the linear change of variables
+F = 02A 1 in Eq. (2.4) to find that
+
+
+                                         L ZOo ~2              j
+But this last equation is the informal expression for dim (~)-independent white
+noises on R a.
+    From now on the coupling constant g~ will be set to one, this amounts to a trivial
+scaling of the F's. Let {T ~} be an orthonormal basis for ~ with respect to the inner
+product (.,-)p, where p , is assumed to be injective.
+                                                                           dim~
+Definition 2.5. The q-valued white noise (£2, ~ , E, F) is the process F = Y" F a T a on a
+                                                                           a=i
+probability space (£2, ~ , E), where {F, } ~=~ are independent real valued white noises on
+R 2. That is, each F, satisfies
+
+1. For each Borel subset R c R 2 with IR [:= Lebesgue measure (R) < ~ , Fa(R) is a
+mean zero Gaussian random variable with variance IR I.
+2. I f R and S are disjoint subsets of R 2 each with finite Lebesgue measure, then
+Fa(R) and Fa(S) are independent and F~(R u S) = F,(R) + F,(S).
+Remark 2.6. For a simple L2-function f = ~ eilR~, put F ( f ) = ~ ciF(Ri). By taking
+LE-limits, it is possible to extend F ( f ) to all functions f~LE(R2).
+   Informally, the connection A = A ~dx may be recovered from the process F by
+                                              y
+                                Al(x, y) = ~ F(x, y')dy'.                            (2.6)
+                                              0
+Of course F evaluated at a point is not well defined. To make this more precise,
+multiply Eq. (2.6) by a test function g, integrate over R 2, and use Fubini's theorem
+(heuristicly) to get
+                         A(g) := ~ A(x, y)g(x, y)dxdy = f(O),
+                                    R2
+where
+                      9(x, y) = ~ O(x, y')[lo<=y<=y,- ly,=<,~o]dy'.
+                                R
+
+The definition A(g) = F(0) is well defined for g~SP(RZ)-the space of Schwartz test
+functions.
+Definition 2.7. The (gauge fixed) continuum YMz-measure (#) is the distribution
+measure on Re 5e'(R 2) ® ff of the random variables {A(g) }o~gey,(g2).
+580                                                                          B.K. Driver
+
+In the sequel, no distinction will be made between the measures # and E, and both
+will be called the YMz-measure.
+
+3. Parallel Translation along Horizontal Paths
+As already noted it is only the expectations of Gauge invariant functions that have
+the interpretation of being expectations with respect to the YM2-measure informally
+defined in (1.1). The standard examples of such functions in the physics literature are
+the Wilson loop variables W(a), where a is a closed curve in the plane. The Wilson
+loop variable is defined to be the trace in some representation of the parallel
+translation operator around the curve a. The purpose of this section is to define
+parallel translation with respect to the random connections A. Because of the
+singular nature of the random connections (A's) it is necessary to define parallel
+translation by stochastic differential equations rather than ordinary differential
+equations.
+Definition 3.1. A horizontal path in R 2 is a path ~ which may be written in the
+form ~(t)= (t, a(t)) for some continuous function o-: [a, b] ~ R .
+    To avoid a clutter of notation the function a and the path ~ will both be denoted by
+a. It should be clear from the context which meaning of a is b~ng used. Parallel
+translation along an arbitrary curve will be defined in terms of parallel translation
+along these horizontal curves.
+    To motivate the definition of parallel translation along horizontal paths, I will
+follow the discussion in [34]. First recall that the parallel translation operator
+(P, = PA(a)) with respect to a smooth connection A along a curve a parameterized
+on [a, b] is the solution to the differential equation
+                     d
+                     ~Pt+A<a'(t)>Pt=O              with   P,=e~G,
+
+where e is the identity in G. For A e d I and a a horizontal curve the differential
+equation becomes
+                               d
+                               -~Pt + Al(t, a(t))Pt = O.
+
+Put R*(t) to be the region in the plane bounded by the lines xl = a, xl = t, x2 = 0 and
+the path att,,,r Let R~+(t)(R~(t)) be the portion of R*(t) contained in the upper
+(lower) half plane. With this notation and the fundamental theorem of calculus we
+may rewrite A~(t, a(t)) as:
+
+                     ¢(t)               d t ¢(t)
+        Al(t'a(t))= ! 02Al(t's)ds =--~dta o~ F(u,s)duds
+
+
+                     at (R%(t) R_(~)               J
+                      d
+                   =:~M~(t),
+YMz:Expeetationsand Lassos                                                                   581
+
+where F = Fzl = 632A 1. So the equation for parallel translation may be written as
+                                 d
+                                 ~Pt + d m,(t). Pt = O.
+
+In the case where F is the ~q-valued white noise, M'(t) is a martingale, for which the
+paths are differentiable almost nowhere. Hence we are forced to consider the above
+equation as a stochastic differential equation. We now study the process M'(t).
+Proposition 3.2 (Martingale). Let F be the ~q-valued white noise (Definition 2.5),
+                                                                             dim ~
+and a be a horizontal path, then there exists a version M ' ( t ) = ~ M~(t)T" of
+                                                                             a=l
+F ( R ~ ( t ) ) - F(R~_(t)) such that the process {M ~(t)}t=,
+                                                          b is continuous E-a.s. Further-
+more the process M'(t) satisfies:
+1. Each component M~ is a time changed Brownian motion.
+2. M~(t) has independent increments.
+3. M'(t) is a martingale with respect to the filtration                    ~=        (-] a(F(R):
+                                                                                     ~>0
+   R ~ {(xl,x2):a <- x~ < t + e}.)
+4. Suppose that • is another horizontal curve on [a, b], put
+                         dM'(t)dM~(t) := ~ dMg(t)dM~(t) T" T b,
+                                            a,b
+
+   where dM~(t) is the It6 differential of M~. Then
+
+          dM~(t)dM~(t):= d ( MO, M~)(t) = Cl~,)~(o~omin(la(t)l, Iz(t)l)dt,                 (3.1)
+   where C := d ~ ~ (T,)2.
+                   a=l
+
+
+Proof. For the moment let M~(t) be any version of F(R~+(t))--F(R~(t)). Set
+• (t) = IR~(')l-l(t), where ISI denotes the Lebcsgue measure of a subset S c R 2.
+Then one checks that each component of M~(z(t)) is a mean zero Gaussian
+process with the same covariance as the Brownian motion, and so is a Brownian
+motion. It is standard that the Brownian motion can be chosen to be continuous,
+and this is done in such a way that M~(t) is ~ - m e a s u r a b l e . From these facts
+and standard facts about Brownian motion, the first three items follow easily.
+     The martingales M~ and M~ have independent increments, and hence their
+square differentials may be computed as dM~dM~ = (d/dt)E(M~M~)dt. It is now an
+easy computation using the definition of the white noise to find
+                                    t
+            e(M:(t)M~(t)) = 6~b~ 1,¢~),(~)__>o min (l a(s)l, [z(s) l)ds.   Q.E.D.
+                                    a
+
+
+
+Definition 3.3. Stochastic parallel translation along the horizontal curve a on [a, b] is
+the continuous process Pt(a) which solves the stochastic differential equation:
+
+                   dPt(a) + dM'(t)opt(a) = O, and           P~(a) = e~G,
+where M ~ is the martingale defined in Proposition 3.2. The symbol "o" indicates that
+the differential are to be taken in the sence of Stratonovich. In terms of lto differentials
+582                                                                            B.K. Driver
+
+the equation becomes:
+                     dPt(a) + dM~(t)P~(a) -- ½da~(t)CpPt(a) = O,
+where a~(t)= IRa(t)[. We will abbreviate Pb(a) by P(a).
+    Proposition 3.2 and the definition of the Stratonovich differential in terms of the
+Ito differential (dX o y = d X Y + ½dXdY) was used to go from the first equality to the
+second equality.
+Remark 3.4. The existence and uniqueness to such stochastic differential equations
+is standard, see [38]. It is also well known with the choice of the Stratonovich
+differential, the operators Pt(tr) will remain in the compact group G. For this reason
+there is no blow up in the solution to the parallel translation stochastic differential
+equation, and hence Pt(a) is defined on [a, b]. If the Ito differential were used rather
+than the Stratonovich differential, these remarks would no longer be true.
+Proposition 3.5. Suppose that a ~ C([a, b], R) and z ~ C([b, c], R) are two functions
+satisfying a(b) = z(b). Let
+
+                               • ~(t) = ~(t),    if t~[b,c];
+                                        (a(t),   iftm[a,b],
+and "~ := ~"~. Then P(za):= Pc(za) = Pb(Z)Pc(a) =: P(z)P(a).
+Proof. Noting that M*~(t) = M~(b) + M'(t) for all t~[b, c], it follows that P,(za) and
+g(t) := P,(z)Pb(a ) satisfies the same stochastic parallel translation equation on [b, c].
+Since g(b)= Pb(za), the proposition follows from the uniqueness theorem for
+solution to stochastic differential equations. Q.E.D.
+    So far we have defined parallel translation for horizontal paths moving from left
+to right. The next proposition shows that, as one would expect, parallel translation
+along a horizontal path from right to left is the inverse of parallel translation along
+the same path from left to right.
+Proposition 3.6. Let a~C(I, R), where I = [a, b], then parallel translation along the
+path determined by the 9raph of z movino from right to left is equal to Pb(a) -1. More
+precisely if 9(t) is the solution to the stochastic differential equation
+                     d_g(t) + d_M~(t)og(t) = O,       and      9(b) = e,
+
+then 9(a)= Pb(a) -~. In this last equation, d_ denotes the backwards pointing
+differential.
+Remark 3.7. Note that M~(t) - M~(b) is a reverse martingale with respect to the
+filtration {~-tb}t~. Hence the parallel translation equation for g(0 is well defined.
+Proof. Set h(t) := Pt(a)Pb(Cr)- 1, then because of Proposition 3.5, h(t) = Pb(a Itt,bl) and
+so is ~'~-measurable. It is also clear that h(b) = g(b) = e, so it suffices to show that h
+satisfies the same stochastic differential equation as g- Because of the symmetry in
+the defmition of the Stratonovich integral one has
+                               t                       t
+                  Pt(a) = e -- ~ dM*(t) oP,(a) = e - ~ d_ M~(t) ° Pt(a).
+                               a                      a
+YM2:Expectations and Lassos                                                             583
+
+
+Multiply this last equation on the right by Pb(a)-1 to conclude that h(t) satisfied
+           t
+h(t) = e - S d_M~(t)oh(t). Hence one finds that
+           a
+                                       b                     b
+               h(t) - e = h(t) - h(b) = S d_M'(t)oh(t) = - ~ d_M'(t)oh(t),
+                                       t                     t
+
+which is the same stochastic integral equation satisfied by g. So by uniqueness of
+solutions to stochastic differential equations, it follows that h = g (a.s.). In particular,
+g(a) = h(a) = Pb(a)-1. Q.E.D.
+Definition 3.8. A continuous curve in the plane is called admissible if it can be broken
+into a finite number of pieces consisting of vertical line segments and Cl-horizontal
+curl)es.
+
+    The parallel translation along an admissible curve is now defined to be products
+of parallel translations along the horizontal parts of the curve. These products are
+taken in the order determined by the path. Parallel translation along any vertical
+segments is defined to be the identity in G. This definition of parallel translation is
+consistent because of Propositions 3.5 and 3.6. Also because of the definitions and
+these last two propositions, parallel translation along any curve is determined by
+parallel translation along left to right moving horizontal curves. Because of the
+independence of ~-~ and ~-~ if [a, b] c~[c, d] = and the continuity of the parallel
+translation operators along the path, it follows that the random parallel translation
+operators restricted to curves lying in the vertical strip {(X1, x2):a--< Xt <=b} are
+independent of those restricted to curves lying in the strip {(xi, x2):b < xl N c}.
+Therefore, in order to understand expectations of parallel translation operators
+along any admissible curves it is enough to understand parallel translation along
+horizontal curves in a fixed vertical interval. The key to computing these
+expectations is Ito's Lemma. The computation of these expectations will be the
+subject of the next section.
+
+
+4. Expectations of Functions of Parallel Translation
+In order to facilitate the application of Itf's lemma, it is helpful to introduce some
+standard notation.
+Definition 4.1. Let G be a Lie group with Lie algebra ~ which is taken to be the
+tangent space to G at the identity. Also suppose that f is a C~-function on G. Then for
+each Aef# there is a unique right invariant vector field (again denoted by A) which
+agrees with Aef¢ at the identity. This vector fieId is given by
+
+                                        d Iof(exp(ta)g),
+                                AT(g) = Yi
+
+where exp is the exponential on f#.
+Remark 4.2. If G is a group of matrices contained J l - - t h e matrix algebra on some
+finite dimensional vector space, then the exponential function is the ordinary
+exponential. Furthermore, i f f is a C~-function on J / ( a matrix algebra) and A~f#
+584                                                                                           B. K. Driver
+
+
+c dt, then
+
+                 Af(a)        d of(e ,Ag ) = d d- ~Io f ( g + t A g ) = f ( g') (     A g},         (4.1)
+
+where i f ( g ) ( - } is the differential as a function on the vector space J//.
+   It will also be necessary to know how to compute iterated applications of right
+invariant vector fields on functions defined on ~ .
+Proposition   4.3. Let f be a C~°-funetion on s/z[ and A, B~f~, then
+                         A B f (g) = if(g) <Ag, Bg ) + if(g) <BAg >.
+Proof.
+                                          I                    d I
+                                d     d       f(e t B es A g)=ds, of'(e~Ag)(Be~Ag)
+                 ABf(g) := ~ o ds-to
+                           = if(g) (Ag, Bg ) + if(g) ( B A g ) .                    Q.E.D.
+ Lemma 4.4. Suppose that G is a compact matrix group contained in J/l and f is a C ~-
+function on G. Also suppose that M (t) is a q-valued continuous martingale (on some
+ probability space (£2, ~ , E)), and that Pt is the solution to the stochastic parallel
+ translation equation
+                           dPt + dM(t)oP, = O, and                    Po = eeG,
+then the differential of f(PO is
+               df(PO = - dm(t)f(PO              + ½(dm(t))2 f(P,)
+                      := - y" T"f(P,)dMa(t) + ½~ T"Tbf(Pt)dM.(t)dMb(t)
+                                a                             a,b
+
+                      =: --    riM(t) of (Pt),
+where M(t) = ~Mu(t)T", and {T a) is a basis for ~.
+Proof. Since G is an embedded submanifold of J / , it is possible to choose a C ~-
+function F on J g which agrees with f on G. Thus f(Pt) = F(Pt), and so it is enough to
+compute the differential of F(Pt). By ItS's lemma:
+                      dF(Pt) = F'(Pt) ( dRt } + ½F"(Pt) ( dPt, dPt },
+which may be rewritten as
+              dF(Pt) = _ F'(Pt) ( Ptdm(t) )
+                       + ½(F'(Pt) ( Pt(dM(t))2 } + F"(Pt) (dM(t), dM(t) ))
+                     = - dm(t)F(P3              + ½(dm(t))2F(P3
+
+                     = - dM(t)f(P3              + ½(dM(t))Zf(P3,
+
+using the stochastic differential equation for P,, Remark 4.2 and Proposition 4.3.
+                                                                           Q.E.D.
+  If one were to use a more intrinsic definition of solutions to stochastic differential
+equations taking values in a manifold, this last proposition would essentially
+become a definition. For this point of view the reader is referred to Ikeda and
+Y M 2: Expectationsand Lassos                                                             585
+
+Watanabe 1-38]. Now suppose that a l , . . . , a, are horizontal curves in R 2 defined on
+the interval I = [a, b]. Set Mi(t) = M*'(t) and P~ = Pt(o-i) for 1 _< i < n. The next
+corollary is a direct consequence of the above proposition applied to the Lie group
+G" and the ff"-martingale M(t) = (Ml(t) .... , M,(t)). In order to state the result we
+need:
+Definition 4.5. For A Ef#, set A~ to be the right invariant vector field on G n defined by
+A , f (g l, . . . , g,) = d/dt lof (g l . . . . . etA g~, . . . , g,).
+Note that the vector fields Ai and Bj commute if i # j, where A and B are in f¢.
+Corollary 4.6. Suppose that f is a C~°-function on G", then
+              df (P ~. . . . . P'~) = ( d M t (t) + "'" + dM,(t) ) f (P~t . . . . . PT)
+                                    + ½(dMl(t) + . . . + dM,(t))2f(P~ .... , PT),
+where dMi(t) = ~, T~(dM~)a is a right invariant differential vector field acting on the i th
+                  a
+variable of G".
+    The next step is to simplify the expression for the second order differential vector
+field (dMt(t) + ... + dM,(t)) 2. This is easily done using Proposition 3.2. In order to
+state the result it is useful to introduce a number of different "Laplacians" on G".
+Definition 4.7. Let {Ta},~t~=~ be a (., .)o-orthonormal basis Jor ~¢. The Laplacian A on G
+is defined to be the second order differential operator
+                                                        dimf¢
+                                               A = E ( Ta)2'
+                                                        a=l
+
+where T a is considered to be a right invariant vector field on G. More generally, the ith
+Laplacian (Ai) is the second order differential operator on G" defined by
+                                           dira ~
+                                    A i = ~ ( T ~ + . . . + T ~ ) 2.
+                                           a=l
+
+Remark 4.8. It is easy to check that the Laplacians defined above arc independent of
+the orthonormal basis chosen for ~.
+Proposition 4.9. Suppose that ai' s are horizontal curves lying in the upper half plane
+parameterized by t = x 1. Also assume at time t the a's are labeled such that
+al(t ) > a2(t ) > -.. > an(t). Then, in the notation of Corollary 4,6:
+
+                   (dMl(t) + ... + dM,(t)) 2 = ~, (ai(t) - ai+ l(t))Aidt,
+                                                                i=1
+
+where a,+l(t):= 0 for all t.
+Proof. The proof will go by induction on n. n := 1,
+
+                      (dMl(t))2/dt = ( ~ dM~l(t)T~ ) 2
+
+                                      = ~, dM~(t)dM~'(t)Ta~ T~
+                                         a,b
+
+                                      = a i ( t ) ~ ( T ~ ) 2 = O'l(t)A 1.
+                                                    a
+586                                                                                         B.K. Driver
+
+Now assume that the proposition is true for n-curves, and consider the case of
+(n + 1)-curves:
+       (dMl(t) +... + dM,+ 1(0) 2 = (dMl(t) + ... + dM~(t)) 2 + (dMn+ 1(0) 2
+
+                                         + 2 ~ dM~(t)dM.+ ~(t)
+                                                 i=l
+                                         rt--I
+
+                                      = ~ (tzi(t) -- tri+ l(t))Aidt + an(t)Andt
+                                         i=1
+
+
+                                         + (dM.+ 1(0) 2 + 2 ~ dMi(t)dM.+ l(t)
+                                                                       i=1
+
+
+                                      = ~ (ai(t)- a~+l(t))Aidt + cr,+:(t)A,dt
+                                         /=1
+
+
+                                         +a.+l                      T.+l) + 2~T~T.+I
+                                                            \   a                 i,a   /
+
+
+                                      = ~ (ai(t) - ai+l(t))zlidt + a.+l(t)A.+ldt
+                                         i=1
+
+                                         n+l
+                                      = ~ (ai(t)-- tri+l(t))Aidt ,
+                                         i=1
+
+where o-,+ 2(t) is now defined to be zero. To carry out these computations, we have
+made repeated use of Proposition 3.2 and the fact that M~(t) and M~(t) are
+independent and hence have zero bracket if a ~ b. Q.E.D.
+    Before we can make use of this last result it will be necessary to know that the
+different A~'s commute with one another. This fact follows from the "infinitesimal
+braid relations" (see FrBhlich [32]) of the next proposition. These relations are also
+used in Gross, King, and Sen Gupta [34]. The author is grateful to L. Gross for
+showing me these relations.
+Proposition 4.10 (Infinitesimal Braid Relations). Let T~ denote the action of T a
+acting on the i th variable of Gn as in Definition 4.5. Then ~,[T~T~, T b + T~] = O,
+                                                                             t~
+
+for all i and j.
+Proof. Let {fabc} be the structure constants for the ff with respect to the Ta's.
+Using the identities [AB, C] = A[B, C] + [A, C]B valid for linear operators A, B
+and C, and [ T i~, T~]
+                    b = 0 if i ~ j , one shows that
+
+                       Z [Ti~Tj,~ T~ + T~] = Z (f~b~ +f~b.)T i.Tjb
+                        a                              ac
+
+
+for i # j and twice the right-hand side i f / = j . So to finish the proposition it suffices to
+show that f f b c = _fibs. Now recall that the T~'s were chosen such tat
+- trace (T"T b) = 3~b, so that
+               f ~ = - trace ( [ T ~, T b] T ~) = - trace (T~[T b, T~]) = fb%
+Because of the skew symmetry of the bracket it follows that fab~ = fbCa = _ fib,.
+                                                                          Q.E.D.
+YM2:Expectations and Lassos                                                                      587
+
+Corollary 4.11. The operators (A[s) commute with one another.
+Proof. Let j > i, then
+               A j = A~+ a > , + 2 ~ ( T ~ + - - - + T'Z)(T~+ 1 + ... + T~),
+                                        a
+
+
+where A>~:= ~(T~+ 1 + --- + T~). So [A~,Aj] = 2 ~ [ A i , T~ + ... + T~](T~+ 1 + -..
+               a                                              a
+
++ T~). Finally the expression [Ai, T~ + -.. + TT] is easily shown to be zero by
+expanding out A i and then using the infinitesimal braid relations and the
+commutativity of T~ and T b for i Cj. Q.E.D.
+Theorem 4.12. Let {cri}7 be a collection of horizontal curves in the upper half plane
+which, when considered as real value functions, satisfy' al(t) >_a2(t) > --- > a,(t) >= 0
+for te [a, b]--the domain of the a[s. Let P~ = Pt(cr~) be parallel translation along at,
+and let f be a bounded measurable function on G". Then
+
+            Ef(Pt .... , P , ) -   ~ f ( g l , . . . , g , ) [ I Qa,+l(gig(+~)dgi ...dg,,       (4.2)
+                                   On                 i=1
+
+                                                                                            b
+where Q~ is the convolution kernel for the operator exptA/2 and Aij:= ~ (ai(t)-
+                                                                                            a
+
+aj(t) )dt--the signed area between the horizontal curves ai(t ) and %(0.
+Remark 4.13. The notation e t~/2 stands for the contraction semigroup associated
+with the heat equation a,u =½Au. The relationship between Qt and e ta/2 is
+daf(g) = ~Qt(h- lg)f(h)dh. The fact that this semigroup has a convolution kernel is a
+         G
+consequence of the Laplacian (A) on G commuting with left and right multiplication
+by elements of G. The explicit series expression for Qt is
+                              Qt(g) = ~ exp(tG/2)'d,;(,(g),
+                                        ~:er(G)
+
+where c~ is defined in Remarks 2.2. Recall that F is a set of inequivalent irreducible
+representations of G.
+Proof. Define a new function F(t, gl,..., g,) on I x G" as the solution to the
+backwards heat equation
+                                                  1   "
+                       t~,F(t, gi ..... g.) = -- ~ i~=lAiF(t, gi ..... g,),
+
+                         F(b, g~,..,, g.) = f(9~ .... , g,).
+The solution F can be expressed more suggestively as
+
+                       F(t, gl ..... g,) = I~I (e (1/2)a~(t) a~f)(gl,.., g.),                   (4.3)
+                                            i=1
+                b
+where Ai(t):= ~a~(t)- ai+ i(t)dt--the area between the horizontal paths ai(t) and
+                t
+a~+ i(t) on the xi-interval [t, b]. The operator e tl/2a' denotes the semigroup on G"
+generated by A~. The representation in (4.3) for F is valid because the different
+Laplacians all commute--Corollary 4.11.
+588                                                                                                                    B.K. Driver
+
+
+    At this point the careful reader may be concerned that et/z a, may not be well
+defined because A~is a degenerate elliptic operator. This problem is easily overcome
+by realizing that it is enough to prove the proposition for an algebra d of functions f
+which generate the measurable function on Gn. A particularly nice algebra is the
+                                                                              n
+
+finite sums of functions of the form f(g~ . . . . . g,) = I-[ fi(gi), where each fi is a matrix
+                                                                            i=1
+element of a finite dimensional representation of G. Since A z u = ~ z~k(A)Zkj, if z u are
+the matrix elements of a representation z and A e N is considered to be a right
+invariant vector field. Hence, it follows that this algebra is invariant under the action
+of A~ for each i. Since this algebra of functions is A~-invariant, the heat equation
+reduces to an ordinary linear differential equation. Finally, by the Peter-Weyl
+theorem (see [20]) the algebra a¢ is uniformly dense in the continuous function on
+G", and hence the algebra generates the measurable functions on G n.
+    Now apply It6's lemma to compute the differential of the process F(t, P ~ , . . . , P'~).
+One gets the expression in Corollary 4.6 with f ~ F plus a term ¢3tF(t, P~, .... PT)dt.
+Because of Proposition 4.9 and the definition of F, only the martingale terms survive
+to leave:
+                   d F ( t , P ~ . . . . . PT) = ( d M , (t) + ... + d M , ( t ) )F(t, P~ .... , PT).
+
+This shows that the process F(t, P~ ..... P~) is a martingale, and in particular
+
+                     Ef(P~, . . . . . P~,) = EF(b, P ~ , . . . , P~) = EF(a, P~ .... , P~,)
+                                          = EF(a, e . . . . , e) = F(a, e , . . . , e).
+
+The theorem now follows from the next lemma.                                      Q.E.D.
+
+Lemma 4.14.
+
+              F(a, e . . . . , e) = [ I (e(A*(a))/2A~f)(el . . . . . e)
+                                   i=l
+
+
+                                --- ~ f ( g l , . . . , g.) [ I QA,+,(gigf+ll)d91 "'" dg~.
+                                   Gn                     i= 1
+
+Proof. Let D i : G n- i + 1 ~ G" be defined by D i(g, gi + 1,..., g,) := (g . . . . . g, gi + 1,..., gn),
+and set Ai:= Ao+ 1 := Ai(a). The first step in the proof is to show that (eta*f) °
+D i = e'al(foD~). This follows from the fact that ( A i f ) o D i = A l ( f o D i ) which is seen
+by the following computation:
+
+                                               d     d      y~f(e ( s + t ) T a g . . . . . e (~+'~°,7~ , g i + l . . . . .   gn)
+      ( A i f ) ( g . . . . ,g,9i+l .... 'g"):=d-t o ~s o .
+
+                                               d     d      --               (s_t_OT ~
+                                                          o~f°Di( e                      g,g,+l . . . . . g,)
+                                                   o dS
+
+                                           = A I ( f ° D 3 ( g , a , + ~,..., an).
+Now F(a, e , . . . , e) may be expressed as
+YM2:Expectations and Lassos                                                                          589
+
+
+                                       n--1
+        r(a,e ..... e) = ea'/2a" 1-[ eA'/za~f oD.(e)   I
+                           \           i=1
+
+                         =eA"/2a'COiea'/2a'foD.)(e )
+
+                                           ("'ll ea'a~f )(g..... ,g.)dg.
+                           a               \i=a
+
+                         = ~ QA,(g21)             e a'/2a,         oD,_l(g,,g,)dg"
+
+                         =~"'~.An[-e"/
+                                   gn"eA'~-'an-'"(-I2eAd2&f~°Dn)~
+                                                             i=1           j    - 1(gn' gn)d~n
+
+                                                 "-~
+                                                (n                  )(
+                           Gf Qa,(O#')e~"-'/2a'\ i%~ (ea'/2a'f °D,-1 gn, g,)don
+                         = G
+                                                     ( ea'/2a'f
+                           ~ Qa.(gn 1)Oa._ ~(g,g,-11)\ .~-2{.=_1 ) oO,_ i(gn-1~ gn)dgn.
+After iterating these steps n-times one arrives at the claimed result.                      Q.E.D.
+     Theorem 4.12              gives   a      method           for     computing      the    expectation
+Ef(P(al) ..... P(a,)) for any function (f) and "admissible collection" of curves
+a D . . . , 0,. The goal of the next two sections is to simplify these results for the special
+case that f ( P ( a l ) , . . . , P(an)) is a "gauge invariant" function. The idea will be to undo
+the gauge fixing which is inherent in Theorem 4.12. This will yield a simple
+expression for the final result. The main ideas will be borrowed from the lattice gauge
+theory techniques and will also be used for the lattice computations.
+
+
+5. Tree Theorem
+For the purposes of this section let A be a finite set and let B be an oriented graph on
+A. So B is a finite set of "bonds" (b) satisfying:
+1. There is a surjection (the orientation reversing map) b ---)b:B --+B for which b # b
+and b = b.
+2. There are mappings b ~ b ~, and b ~ b ¢ from B onto A which satisfy ~i = b ¢. We
+say that bi(b f ) is the initial (final) point of the bond (b). The pair {bi, b I } are called the
+end points of b.
+A path (a) in B is a finite sequence (b.(~),.. bl) of bonds in B which satisfy b~ + l = b {
+                                                        .,
+
+
+for 1 = i < n(~). Such a path will be denoted by b.(~)..- bl and will be called a path
+from ~i := b] to ors := b{. The orientation reversing map will be extended to paths by
+(~ :~'~- hi "'" bn(a).
+   If T is a subset of B, let T' denote the set of endpoints of all of the bonds in T.
+Finally if b~B let [b] = {b,b}. We now are in a position to define a tree.
+Definition 5.1 (Tree). A subset T of B is called a tree if T = T, and there are no loops in
+590                                                                             B.K. Driver
+
+T--that is there is no closed path a = bn... bl with bi~B and all [bi] distinct subsets
+of T The tree is said to be connected if there is a path in T which joins any two
+points of T'.
+Remark 5.2. It is easily checked that for a connected tree T, there is a unique path
+o- = b,..-b 1 in T between any two points of T' such that all of the [b~] are distinct.
+    Now suppose that G is a compact Lie group as above. Set ~ = {g: B ~ G I
+g(b)=g(b)-lVbeB}, g r is a tree contained in B, s e t DTa=H dg([b])
+                                                                              [b]~T
+ 1-I 6e(da Eb] ), where do([b]) = H a a r (do(b)) and 6e(da) = 6(0)Haar (dg) is the point
+[b]e,T
+mass at e = ideG. (This is well defined, since the point mass at the identity and Haar
+measure are both invariant under g ~ g - 1.) If T = B we will write Dg = DBg. The
+group element g(b) is to be interpreted as parallel translation along the bond b.
+   In this setting the gauge transformations are elements of the set G A:= {O:A -* G}
+which act on ~ v i a g°(b) = O(bl) - lg(b)O(bi). Haar measure on G aWill be denoted by
+DO which is equal to I-[ Haar(dO(x)).
+                        xeA
+
+Theorem 5.3 (Tree). Let f be a measurable function on ~, r = U T~ be a tree with
+connected components Ti in B, and fix a "root" xie T'~ for each i. Then
+            ~f(g)Dg=      ~ f(g°)DrgDO=         ~ f(g°)l-[se(O(x,))DTgDO.             (5.t)
+            ~2          ~Jx O A               ~x GA        i
+
+Proof. For simplicity I will give the proof for the case that the tree has only one
+connected component and the root of T is labeled xr. For the moment consider the
+third integral above with the P-integrals fixed. Make the change of variables
+g(b)--* O(bZ)g(b)O(b~)- 1 for all b¢T. By invariance of Haar measure, this operation
+leaves the integral unchanged. With this change of variables
+                               -~ ~ g(b),         if b(E T;
+                          g°(b) [ O(bl)O(b i)- 1, otherwise,
+Drg almost everywhere. Now fix the g-integrals and choose an outer bond/?eT.
+That is/~ is a bond in T which satisfies the property; ifb is any bond in Twith b s =/~I
+then b =/~. We further assume that b I # xr. It is always possible to find such a bond.
+Now make the change of variables 0 ( y ) ~ 0(/~I)0(/~), and rename O(bI) = g(~).
+Setting T~ = T \ [/~], it is now easy to check that
+                 Jo A f (g°)5~(O(x~))DrgDO = a ~o ~ f (g°)gje(O(x')Dr'gDO"
+
+The proof that the third and first integral in (5.1) are equal may now be completed by
+induction on the size of the tree T. From the argument given above it is easily
+checked, at the last step in the induction and upon doing all integrals except the
+dO(x~)-integral, that the integrand of the 0(x~)-integral is of the form:
+constnat-5(0(x~)). Hence, one may remove the delta function without altering the
+value of the integral. Q.E.D.
+As an immediate corollary we have:
+Corollary 5.4 (Tree). Let f b e afunction on .Qfor which f(9 °) = f(g) for all 0 ~ G a such
+YM2:Expectations and Lassos                                                                    591
+
+
+that O(xi) = eeG for all roots xl. Then
+
+                                        f(g)Og = ~ f(g)Drg.
+                                    g2            .O
+
+
+6. Gauge Invariant Expectations
+In this section, the results of the last two sections will be used to compute the
+expectations of certain gauge invariant functions. The typical application is to gauge
+invariant functions of the form f(P(a~), .... P((r,)), where { a l , . . . , a , } is an
+"admissible collection" of curves.
+Definition 6.1. A collection {tri}7=, of planar curves is an admissible collection if the
+following conditions hold:
+1. Each of the curves a i are piecewise C 1.
+2. I f S := S(a l , . . . , (r,) is the union of the images of the curves {o-/}, then the number of
+connected compounds R2\(S u {x-axis}) is required to be finite.
+3. Each curve a~ is an admissible curve, Definition 3.8.
+4. I f tri is parameterized by arc-length, then there is no time z and e > 0 such that
+~i(T - t) = ~/(~ + t) f o r I tl < ~.
+The last requirement is a condition that the curves do not immediately retrace
+themselves at any time. This condition is not a real restriction, since by the definition
+of parallel translation, any such retraces may be removed without affecting the value
+of P(a).
+Definiton 6.2, A planar graph B is a finite directed graph on a discrete subset A of R 2
+for which the bonds of B are directed curves joining the points of A. The bonds (curves)
+may only cross one another and themselves at the endpoints. The endpoint maps are
+required to correspond to the endpoints of the directed curves making up the bonds.
+Furthermore, it will be assumed that the bonds in B form an admissible collection of
+curves.
+    Our goal is to compute E[f(PtB)] for any gauge invariant function f on £2 = ~(B),
+where B is a planar graph. In order to state the result, we need the following notation.
+If B is a planar graph, set ~ = ~(B) to be the collection of bounded connected
+components of R2\S(B), where S(B) is the union of the images of all the bonds in b.
+For R ~ , the boundary of R may decompose into a number of connected pieces. Let
+(OR)/denote any path around the ith connected component of OR consistent with an
+arbitrary but fixed orientation on R. Write formally OR = ~ (0R)i, see Fig. 1 for an
+example. In this figure R is the shaded region. There are three connected boundary
+components for the OR. An admissible choice for OR is OR = bl + b4 + b2b3b2.
+Notice the b 2 terms were included in this expression but according to Theorem 6.4
+the bz bonds could have been omitted.
+    For any Oe ~2, let g(0R):= 1~ g((0R)/), where order of the product is taken in any
+                                    i
+fixed arbitrary manner. Admittedly, there is considerable ambiguity in the definition
+of g(OR). It is part of the content of the next theorem that this ambiguity does not
+affect the final answer.
+592                                                                             B.K. Driver
+
+
+
+
+                                     Fig. 1. Boundary of R
+
+
+ Definition 6.3. Suppose that B is a planar graph on A. A restricted gauge invariant
+function f o n ~2(B) = {g: B ~ Gig(b) = g(b)- i } is a function satisfyingf(g °) = f(g) for
+ all O~G A with the restriction that 0(0)= e~G if O~A.
+Theorem 6.4 (Gauge Invariant Expectation). Let B be a planar graph, and f be a
+restricted gauge invariant function on £2(13). Then
+                        E[f(P]B)] = ~ f(g) I I QIRI(g(OR))Dg,
+                                        ~Q(B)         R~
+
+where JR l is the area of the region R. The right-hand side of this equation is independent
+of any of the choices made in defining g(OR). Furthermore, if T is any tree in B, then the
+above integral is unchanged by "freezi~ig" g iT to the identity, that is
+                       E[f(PI,~)] = j" f(g) 1] QTRt(g(~R))DTg,
+                                       ~(B)          Re~'
+where, as bejbre, OTg = I] 3~(dg(b)) [ ] dg(b).
+                           [b]e[T]              [b]¢[T]
+    The idea of the proof of the theorem is to first compute the expectation using the
+Horizontal Expectation Theorem 4.12 and then to remove the gauge fixing uslng the
+Tree Corollary 5.4. The next step is to do a number of the integrals over the
+"spurious" bond variables. The remaining spurious variables are gauged away by an
+application of the Tree Theorem. In order to get the independence of the choices in
+g(~R), it will actually be necessary to enlarge the graph B before we start this
+procedure in such a way that the regions in M are all simply connected.
+    In order to better understand the theorem and the notation, we will pause for
+some examples. These examples will be concerned with computing
+Ef(P(al),..., P(a,)), where {a~}~'=1 is an admissible collection of planar curves.
+Given a collection of admissible curves {a~}~=1 we associate a directed planar graph
+B = B(a~,..., a,) over a subset A = A(a 1.... , a,,) as follows. Let S = S(oD..., a,) be
+as above, then a point x e S is in A if either x is an endpoint of some a~ or there is no
+open neighborhood N of x such that N c~S is homeomorphic to an open interval.
+The set B is now composed of the directed curve segments of S which join any two
+points of A without passing through any other points of A. With these definitions
+and the obvious endpoint maps, the set B becomes an oriented planar graph A. To
+each of the curves a~ there is a naturally defined path in B which corresponds to
+breaking ai into directed segments (i.e. bonds) in B. We will identify the curves ~ with
+their paths in B.
+YM2:Expectations and Lassos                                                                  593
+
+
+
+
+                     oj,@
+                                  (a)                                (b)
+
+                                    02
+
+                             R1
+
+                   gll                            g4                            g2
+
+
+
+                                   (e)                                 (d)
+                                    Fig. 2. Some simple Wilson loops
+
+
+
+    For the examples to follow, t/is taken to be a representation of G, and Xl and )~2
+are characters on G. The reader is referred to Fig. 2 when studying these examples.
+(a) Let o- be the curve in Fig. 2a then
+                                    E(z~(P(a)) = ~ z.(g)Q,Rl(g)dg •
+                                                   O
+
+If q is an irreducible representation of G, then the result may be simplified to
+exp (c,]R I/2), where c, is the eigenvalue of the Laplacian acting on q. If t/is not
+irreducible, then the result will have the form ~ k~ exp (c~[R t/2), where the sum is
+                                                            $
+
+
+
+over the irreducible representations of G. The coefficients k~ are determined by the
+decomposition •. = ~ k~z~ of the character X. into irreducible characters. Thus all
+but a finite number of the k~'s are non-zero.
+(b) Let ¢ be the curve in Fig. 2b and t/be irreducible, then
+             Ez~(P(a)) = S Z,(Olge)QIR,I(g2 l gl)QlR21(gz)dgldg2
+                               G2
+
+
+                             = d~-1 ~ zu(gZlQIR21(gldg"t z,(glQIR,l(o) dg"
+
+Since, Z,~(g2 .) = trace 0/(g) ® q(g)) - 2trace (r/(g) ® tl(g)] v ,, v,), it is possible to de-
+                         .                                       .         r/        .   .
+
+compose Z, into a finite sum of characters corresponding to the decomposmon of the
+tensor representations. Hence, again the general form of the answer will be a finite
+sum of exponentials of the form exp (ca IR11 + czlRzl).
+(c) Let a~ and a2 be the curve in Fig. 2c, then
+594                                                                            B.K. Driver
+
+
+
+
+                    Fig. 3. Cutting the region U to make it simple connected
+
+
+
+      Ezl (P(al) )i~:(P(aE) )
+          = ~ z2(g? lg; ~)z~(g2 lo; 1)QtR,l(e3gl)O~R~t(g; lg2)Q~R~(g2g4)dgl.., dg,
+            Ga
+          = 6.3~ Q~t(gl)" Q~(g3)~(g3g~)z2(g;~eOdgl.dg~.
+Again by representation theory this last result may be expressed as a finite sum of
+exponentials with arguments linear in the areas of R 1 . . . . . R 3,
+(d) Let 0 1 and a 2 be the curve in Fig. 2d, then
+          EzI(P(trl))z2(P(0"2)) = f zl(gl)z2(g2)QIRll(gl)QIR21(g2gl)dgldg2"
+                                  o2
+
+Notice that the density in this example is not a gauge invariant function.
+We now return to the proof of the Gauge Invariant Expectation Theorem 6.4. The
+proof will proceed by a number of lemmas.
+Lemma 6.5. Let B be a planar graph, and U ~ ( B ) . Suppose that boundary of U is
+disconnected and OU = ; (~U)~ with (SU)i a path around the ith component of the
+boundary of U. Assume that {8U} is enumerated so that (SU)o is the path around the
+boundary component of the unbounded component of R2\U. For each i choose
+xi~(8U)~--recall that (0 U)'i denotes the set of endpoints of all the bonds in (aU)i. Then
+there exists non-crossing admissible paths {be,..., bN} such that bi is a path from xi to
+xi+ 1. The paths b~ lie in U except for the endpoints.
+    Such a collection of paths will be called cuts, since they cut the region U so as to
+make it simply connected, see Fig. 3. In this figure, U is the shaded region, the dots
+indicate the endpoints of bonds, and the boundary of U is shown by the solid lines. A
+possible collection of cuts which make U simply connected are shown in dashed
+lines.
+Proof. The set U is path connected. So the existence of a path b o from x o to x~ is
+assured. This path can be chosen to be admissible with no self crossings. Now
+assume that {b0 ..... bj} have been chosen to satisfy the lemma. One sees that the
+closure of U\(Images of be ..... bj) is still path connected, for if not some pair of
+{be,..., bj} must intersect at some point other than an endpoint. Hence, one may
+continue inductively and pick bj+ 1. Q.E.D.
+Y M z : E x p e c t a t i o n s a n d Lassos                                         595
+
+
+    Let Bc be the directed graph containing B and a collection of cuts as described in
+the above lemma. Cuts are added for each U ~ for which the boundary is not
+connected--or in other words for which U is not simply connected. This graph Bc
+satisfies the following property: for each R ~ ~(Bc) the OR is connected. A graph with
+this property wilt be called a BC-graph-BC for boundary connected. For regions R
+with connected boundary it is easily seen that the only ambiguity in g(dR) is a cyclic
+ordering of the group elements corresponding to a starting point for a path around
+the boundary. Since Q~ is a class function, the function Qt(g(OR)) is unambiguously
+defined once the orientation on R is chosen. Since Qt(g) = Qt(g-1), it follows that
+Qt(g(OR)) is also independent of the orientation chosen for R. Then next theorem is a
+special case of Theorem 6.4, where B is a BC-graph.
+Theorem 6.6 Assume that B is a BC-directed-planar-graph, and that f is a gauge
+invariant function on ~2(B), then
+                                      E[f(PI~)] = S f(g) 1-I QIRI(g(OR))Dg •
+
+Proof. Set S = S(B) to be union of the images of all the bonds in B. Let X c R be the
+set consisting of the union of the x-coordinates of the points in A and the x-
+coordinates of the points where a bond in B cross the x-axis or has a vertical tangent.
+Set ao to be the left to right oriented line segment on the x-axis from x = rain (X) to
+x = max (X). For each x E X, set ax = min {y I(x, y) ~ S} and b~ = max {Yl (x, y) ~ S}.
+Lable the points in X by x l , . . . , Xm, and set ak to be the upwards oriented vertical
+line segment at x = x k going from y = a~,k to y = bx~ for 1 < k _< m. Now set
+VA = A({b}b~s, al .... , a,,), and liB = B({b}b~s, a~ .... , am) as described in the
+discussion after Definition 6.1. Also put VN = N(VB) and VI2 = I2(VB). Let Tbe
+the tree in VB consisting of all vertical bonds and any bonds on the x-axis.
+    A couple of remarks about VB are in order. First, the directed graph VB is still
+boundary connected. Second, there is a natural embedding of the graph B into the
+paths on VB arising from the fact that the bonds in B are subdivided in the process of
+going to the graph VB. Thus ifgEg2(VB) and bEB, it makes sense to write g(b). With
+this understanding, apply Theorem 4.12, use the independence of the continuum
+YM2-measure over disjoint vertical strips, and the symmetry of the YMz-measure
+with respect to reflections about the x-axis to conclude
+                                      Ef(PIB) = ~ f(gln) [ I QI~I(o(~R))DTg.        (6.1)
+                                                V~       R~V~
+
+(This last equation is valid for arbitrary functions f on ~(B).) Now apply the Tree
+Corollary 5.4 to this last integral (for f gauge invariant) to conclude that
+
+                                       Ef(ei~) = ~ f(glB) I~ Q~RI(a(~R))Dg.         (6.2)
+                                                VO       REV~
+
+    Now do the integrals over bonds in VB which are in the unbounded component
+of R2\S. Put ~ := ~ R, and set V~' = {R ~ V~ IR c R2\~}. If V~' is not empty,
+                                 R~
+there is a region R in V~' which contains a bond b ~ ~R which is not contained in the
+boundaries of any other elements of V ~ or in the decomposition of the paths of any
+of the bonds in B. Thus the only place that g(b) appears in the integrand of Eq. 6.2 is
+596                                                                            B . K . Driver
+
+
+in the term Qtm(g(t3R)). Owing to the fact that ~ QiRl(kh)dh = 1 for all keG, the term
+                                                    G
+QtRI(g(OR)) may be omitted from the integrand. Continuing inductively in this way,
+it is possible to omit all terms of the form QIRI(g(tOR)) for which R e VN'.
+     The next step is to now do integral with respect to the variables #(vb) for all bonds
+vb e VB for which neither vb or vb occur in the decomposition of any of the bonds in
+B--these vb will all come from the added vertical bonds. These bond variables
+appear in the integrand of (6.2) in the form
+                       "'" QIRI(g(0R))QIuI(O(OU))''',
+where vbeOR n OU. Now using the basic semigroup property of Q,, namely
+                        Qt(gh)Q~(h- ~k)dh = Q,+~(gk)V 9, keG,
+one finds that
+
+              f(91B) I-[ QIRI(g(OR))Dg = ~ f(glB) l-I QIRI(g(OR))Dg,
+
+where B# is the subgraph of VB gotten by removing the vertical bonds which do not
+occur in the decomposition of any bond in B. (Notice that B is still naturally
+embedded in the paths in B#.)
+    In order to finish the proof it is necessary to show that 12# = £2(B#) may be
+replaced by £2. Notice that the bond variables in O#in the decomposition ofo(b) for
+a bond beB always occur as definite ordered product, and these variables do not
+occur in the ordered products for any other bond variable desides b. So by the
+invariance of Haar measure, all but any one of the integrals of the bond variables
+associated to a bond beB is redundant. Hence, the value of the second integral in the
+above equation is unchanged by replacing £2# by 12. Q.E.D.
+Completion of the proof of the Gauge invariant Expectation Theorem 6.4. Let B be as
+in Theorem6.4 and Bc=Bw(cuts)               as described after Lemma6.5. Then by
+Theorem 6.6,
+                    E[f(PIB)] = S f(glB) YI QIRI(g(t?R))D9 .                           (6.3)
+                                   s~(Bc)        R~(Bc)
+
+Now suppose that T is a tree in B, let ~F= T w (Be\B). The set 7"is still a tree, for if
+ were not a tree there would be a simple loop a in T. Since both Tand Bc\B are trees,
+there must be bonds from both 7" and Bc\B in the decomposition of a. But there are
+no simple loops in Bc which contains a cut (an element of Bc\B), because each point
+in a simple loop is in the boundary of at least two distinct regions of B~. But by
+construction, the region on each side of a cut is the same, see Fig. 3. Here we have
+used the fact that the region inside of a is made up of the closure of elements in ~(B~).
+    Because B~ is a BC-graph, each of the functions QtRI(#(SR)) are gauge invariant
+functions on £2(B,). Thus the integrand in the right-hand side of (6.3) is gauge
+invariant. Hence the Tree Theorem 5.3 applies and we conclude from (6.3) that
+                  E[f(PIB)] = ~ f(g[B) 1F-[ QIRI(O(aR))Dtg
+
+                               = ~ f(#) 1-1 QIRI(g(tOR))Dg,
+                                 O(B)       R~
+YMz:Expectationsand Lassos                                                           597
+
+where the ordering of g(OR) is determined by the particular cuts used to create Be.
+One may now check that the ambiguity choosing the cuts corresponds precisely with
+the ambiguity in the expression g(OR). But this last equation is valid for any system of
+cuts, and hence the final result is independent of the ambiguities in g(OR).
+                                                                                 Q.E.D.
+    It follows immediately from the Gauge Invariant Expectation Theorem 6.4 that:
+Corollary 6.7. The expectation value E [ f ( P IB)] for gauge invariant functions f is
+invariant under area preserving diffeomorphisms of R 2 provided the image graph is still
+admissible. Notice that a diffeomorphism (D) acts naturally on a bond b as D o b, so that
+D transforms B to a new graph DB.
+
+7. Lattice YM2 Expectations
+In this section, the lattice YMz-measures will be introduced and it will be shown that
+expectations with respect to these measures have the identical structure as
+expectations with respect to the continuum measure. Once this fact is established it
+will be an easy matter to show that the appropriate lattice measures converge to the
+corresponding continuum measures as the lattice spacing tends to zero.
+    Throughout this section let G be a compact Lie group, Z z be the unit square
+lattice in R 2, B® be the infinite directed graph on Z 2 consisting of nearest neighbor
+directed bonds, and/2go =/2(B®) = {g: Boo ~ Gig(b)= g(b)-1}. Also for each posi-
+tive integer n, let A, be the closed square of side 2n centered at zero in R 2 and put
+B, = {beB~olb i or b l e A , _ l } and B, = {beB00jbi, b~ea,}.
+Definition 7.1. An action function A is a continuous positive class function on G for
+which A ( g - 1 ) = A(g)VgeG. We further assume that A has been normalized so that
+ A(g)dg = 1.
+0
+   We also set A n to be the n-fold convolution of A.
+Associated to an action A we will introduce two measures on /2®, one of the
+measures will be a gauge fixed version of the other. These measures will be the
+unique infinite volume limits of the finite volume measures to be defined presently.
+   For each "boundary condition" h~/200, define #n(';h) to be the unique
+probability measure on/200 such that
+                           1
+            #,(f;h) = ~ ' 7 i s ~ f ( g )     I]        A(g(~n))b(g = h on B~,)Dg   (7.1)
+                         ~ntn) a~           e~Jc(ff.)
+
+for all continuous functions f on /200, where D g = D ° B =        YI dHaar(g(b)) (a
+                                                                 [bl~[B]
+probability measure on/2®), and Zn(h) is the normalization constant to make #,(-; h)
+a probability measure. Because of the delta-function, the integral in (7.1) is finite
+dimensional.
+   In order to define the gauge fixed version of this measure, let T be the tree in Boo
+consisting of all vertical bonds and all bonds which are on the x-axis. Then the finite
+volume axial-gauge fixed measure is defined analogously for each h~/2oo satisfying
+hiT- id to be the unique measure #,~(.;h) on/2oo such that
+598                                                                              B.K. Driver
+
+                           1
+           #,(f;
+            " h)= ~ a ~              f(g) I-I A(g(OP))6(g = h on B~,)DTg               (7.2)
+
+for all continuous functions f on g2oo.
+Theorem 7.2. The weak infinite volume limits of the measures defined in (7.1) and (7.2)
+exist and are independent of the boundary conditions h. (These limits will be denoted by
+#(f) and p"(f) respectively.) Furthermore, the resulting measures when restricted to
+functions depending on finitely many bond variables are the corresponding finite
+volume measures with 'free" boundary conditions. More precisely, if An, Bn are as
+above the measures with free boundary conditions are
+
+                           #,(f):=Z-~ a~ f(g) 1-[ A(g(OP))Dg,                          (7.3)
+                                                        Pe,~(Bn)
+and
+                               a          1
+                           ttn(f):=-~n ~ f(g) 1-[ A(g((3P))DTg.                        (7.4)
+
+With this notation the theorem states that
+                                   #(f) = lim #N(f; h) = #,(f),                        (7.5)
+                                              N-~oo
+and
+                                   #"(f) = lim #~(f; h) = #~(f)                        (7,6)
+                                              N--~ go
+
+for all continuous functions f on 12o~which depend only on the bond variables over B,.
+    This theorem is basically contained in Dosch and Miiller [23]. The proof is
+instructive so it will be given. We do however borrow the following elementary
+lemma from [23].
+Lemma 7.3. Let A be an action, then A k - ~ 1 uniformly as k ~ o0.
+Proof of Theorem 7.2. Since the continuous functions depending on only finitely
+many variables is dense in all continuous functions on Oo~ with the sup-norm
+topology (Stone Weierstrass Theorem), it suffices, by an e/3-argument, to show that
+Eqs. (7.5) and (7.6) hold,
+     Suppose that f is a continuous function on ~ which depends only on the bond
+variables over B, - that is f(g) = F(gIB,) for some function F on 0,:= 12(B,).
+     I will first concentrate on the non-gauge fixed measures. Suppose that N > n, and
+let c be the path in BN corresponding to the directed line segment on the y-axis of R E
+going from y = n to y = N. The region R = AN\(A, wS(c)) is simply connected. By
+integrating over all of the bond variables in B N\(B, w (the bonds in c)) and using the
+invariance of Haar measure one finds that
+                                      1
+                   #N(f ; h) = Z.(h) {k~G}{g~a"2n}F(g)
+                                       I] A(g(tOP))Ae~R)(k-~g(a.)kh(SN))Dg dk,         (7.7)
+                                     e~(~)
+where #(R)= N 2 -    n 2   is the number of plaquettes in R, and ak is the counter-
+YM2:Expectations and Lassos                                                           599
+
+clockwise path around the boundary of A k starting at (0,k)~Z 2. So by the
+Dominated Convergence Theorem and Lemma 7.3,
+                     ~ F(g) 1-[ A(g(~P))A#(R)(k-lg(a,)kh(SN)Dg dk
+
+                 +    ~ F(g)1-I           A(g(~P))Dg        as   n---too.
+
+Taking n = 0 and F:= 1 in this last equation shows that limN_.~ ZN(h) = 1. The
+combination of these last two limits along with (7.7) gives (7.5).
+    Now to the proof for the gauge fixed measure. Again let N > n andf(g) = F(g lB,)
+for some continuous function F on £2,. Because of the gauge fixing, the bond
+variables in different vertical strips are jointly independent with respect to the
+measure/PN('; h). Using this fact and performing the bond variable integrations for
+bonds outside of/3,, one finds that
+                                                 n--1
+          #?v(f;h)= ~ F(g) I~ A(g(dP)) I-[ A(N-,)(g(b(i,n))h(b(i,N))-~),             (7.8)
+                     12a       p~(B--n)          i = -- n
+
+                           A(N-,)(g(b(i, - n) )h(b(i, - N) )- ~)Drg,                 (7.9)
+where b(i,j) is the left to right directed horizontal bond in B® starting at (i,j)eZ 2.
+The proof now follows by the same reasoning as the non-gauged fixed measure case.
+                                                                               Q.E.D.
+
+    The next two theorems show that the structure of these lattice measures are in
+close correspondence with continuum YMz-measure.
+
+Theorem 7.4. Let B be a directed planar graph of paths in Bo~ and f be a function on
+12~ of the form f(g)= F(gIB ) for some function F on I-2(B). Then
+                       #a(f)----.     ~ F(gIB) 1-I AIRI(g(~R))DTg,
+                                    12(VB)       R~t
+where VB is directed graph derived from B by subdividing the original bonds and
+adding certain vertical bonds as in the proof of Theorem 6.6 and T is the tree in VB
+consisting of the vertical bonds and bonds on the x-axis.
+Proof. Choose n to be a sul~ciently large integer such that B may be embedded in
+B,. Then by Theorem 7.2, l#(f) = #~,(FIB)-Let VB # be the collection of bonds (b) in
+B, such that b occurs in the decomposition of some bond in VB. (Notice that, like B,
+VB is a directed planar graph consisting of paths in Boo.) Using the definition of A,
+and the assumption that the integral of A is normalized to one, it is easy to integrate
+over all of the variables corresponding to the horizontal bonds in B , \ V B # and
+conclude that
+                     #~(f)=         ~ F(gln)     1-I Aml(g(dR))Dv~g"
+                                t~(vB#)        R~(VB#)
+In this last expression, T a is the tree in VB # consisting of any bonds on the x-axis and
+any vertical bonds in VB#. In going from the graph VB to VB#, the bonds of VB were
+subdivided into unit bonds in Boo. This process is easily reversed with the aid of the
+following formula,
+600                                                                            B.K. Driver
+
+
+                                   k
+          f H(ut vt ..... Ukvk) H AM,(U,U[-+~)AN,(V,v['+~)du~.., dukdV~.., dVk
+         G 2k                    i= 1
+                                  k
+            = ~ H(v~,...,vk) I-] AM,+N,(V,V;-+~)dv,""dvk,
+                Gk               i= 1
+
+which is valid for an arbitrary function H, and non-negative integers M~ and Ni. This
+formula is easily verified by using the definition of A., making the change of
+variables vi ~ u71 v, and then do the u-integrals in the order that they are labeled.
+Repeated use of this formula "splices" the split bonds together to yield
+                       Ita(f)_S F(glB) H AIRI(g(OR))Drg • Q.E.D.
+                            ~(vB)       Re~(VB)
+Theorem 7.5. Let B be a directed planar graph of paths in B ~ and f be a function on
+~ of the form f(g)= F(gIB)for some gauge invariant function F on 12(B). Then
+                          It(f) = a!B F(gIB) H AfRf(g(ag))Dg
+                                           )        Re~
+
+                                 = S F(gIB) H AIRl(g(aR))Org,
+                                       .f2(B)       Re~
+
+where T is any tree in B.
+Proof. By Theorem 7.2, ifn is chosen sufficientlylarge, then It(f) = #,(FJQ. Now for
+the moment forget that B is embedded in R E, and introduce the graph Bc =
+B u(cuts), where the cuts are paths as described after Lemma 6.5. Overlay these
+cuts onto B,, to create a new directed graph/~ by subdividing the bonds of B n for
+each crossing of a cut. It may be checked that
+                         It,(f)= ~ F(gIQ H                AIRI(g(aR))Dg"            (7.10)
+
+This is done by integrating out the bond variables which make up the cuts and then
+using the invariance of Haar measure to get rid of the subdivisions of the bonds in
+B~ as was done at the end of the proof of Theorem 6.6.
+    Consider the right-hand side of Eq. (7.10). By integrating out the bond variables
+in B~ which do not occur in the decomposition of the cuts or the bonds in B (see proof
+of Theorem 6.6) one finds that
+
+                     It(f)=#.(FlB)=             ~ t(gln) H    AIRI(g(OR))Dg,
+
+where B~is the planar graph consisting of the bonds in B along with the cuts. Finally
+as in the conclusion of the proof of Theorem 6.4, the Tree Corollary 5.4 may be
+applied to this last equation to prove the theorem. Q.E.D.
+
+8. Continuum Limit
+The goal of this section is to show that the continuum YM2-measure may be
+recovered by choosing appropriate actions A and letting the lattice spacing tend to
+zero. Dosch and Miiller 1-23] have shown that the continuum limit exists for the
+YM2-1attice measures if the structure group is U(1) of SU(2). But their expression for
+YMz:Expectationsand Lassos                                                          601
+
+the limit is rather complicated and is hard to compare with the continuum YM 2-
+measure. Basically, their result is the same as ours except that the heat kernels are
+always expanded in terms of the characters.
+    Throughout this section eZ 2 will be the e-square lattice in R 2, B~(e) will be the
+infinite directed graph on eZ 2 consisting of nearest neighbor directed bonds, and
+~   (e) = ~ ( B go (e)).
+Definition 8.1. Suppose that B is a directed planar graph. A lattice approximating
+sequence to B is a collection {B(e)}~o>~> 0 of directed planar graphs B(e) of paths in
+Boo(e) with surjections (b ~ b(e)): B-~ B(e) and (R ~ g(e)): ~(B) ~ ~(B(e)) satisfying
+the following conditions.
+1. The area IR\R(e)I + IR(e)\R[ is of order e.
+2. I f the surjection (b-q,b(e)) is denoted by i~, and dR denotes an admissible sum of
+paths for the boundary R ~ 1 then i,(OR) should be an admissible sum of paths for the
+boundary of R(e).
+The following lemma is easy to prove and will be stated without proof.
+
+Lemma 8.2. Given a directed planar graph B, there exist lattice approximating
+sequences.
+    Now suppose that {W},> 0 is a collection of actions. By Theorem 7.2 we may
+define unique measures #~ and #, on/-2® (e) associated to the given action A t. (Z 2 has
+been trivially replaced by eZ2.) The next theorem asserts that the measure #~
+converges to the continuum YM2-measure, and the measure #, converges to the
+continuum measure on gauge invariant functions. The two actions that will interest
+us are the Villain action and the Wilson action.
+
+Definition 8.3 (Villain). A Villain action is an action of the form W(g) = Q~.(g), where
+Qt is the convolution heat-kernel for e ta/2, where A is defined in Definition 4.7.
+
+Definition8.4 (Wilson). A Wilson action is an action of the form A~(g)=
+Z~ 1 exp Re X(g), where X is the character of a unitary representation of G and Z~
+is chosen to normalize A~ to have integral one.
+Theorem 8.5. Suppose that p is a representation of G for which p. is injective. Let Qt
+denote the usual convolution semigroup associated to the representation p, and A ~ be
+the Villain action based on Q. Suppose that B is a directed planar graph, {B(e)} is a
+lattice approximating sequence to B, and f is a continuous function on ~(B). Then
+                             lim #~(fo i[ 1 IB~))= EF(PI~),
+                             e-~0
+
+where #~ is the axial gauge fixed measure on eZ 2 with action W.
+Proof. Suppose that VB and VB(e) are as described in the proof of Theorem 6.6,
+then it may be shown that {VB(e)} is an approximating sequence to the directed
+graph VB. If T(T(e)) is the tree in VB(VB(e)) consisting of the vertical bonds and the
+bonds on the x-axis, then by Theorem 7.4, the definition W, and the definition of an
+approximating sequence, we find,
+602                                                                            B.K. Driver
+
+
+
+
+                          =       ~. f(gJ.) ~         A~R(~w/g(tR(e)))Dr(,)g
+                               .e(V B)       R~(VB)
+
+                          =      ~ f(g[,)      I~     QIRl+o(o(g(3R))Dvg"
+
+The limit as e tends to zero is now easily taken to yield,
+                  lim#~(f°i~-llB(~)) =       S f(giB) 1-I QmlDrg,
+                  e-'*O                    .,Q(VB)        R~(VB)
+
+which is precisely the answer one gets by computing EF(P[~) by Theorem 4.12.
+                                                                      Q.E.D.
+Corollary 8.6. Assuming the same hypothesis of the above theorem, with the additional
+hypothesis that f is now gauge invariant, then
+                              lim # t ( f o i j 1 IB(s) = EF(P[~),
+                              t---~O
+
+Proof. By the Tree Theorem 5.3 and Theorem 7.2 it follows that
+                              #~(foi;- 1[B(t))= #s(foi~ 1 [B(~)).
+This along with the Theorem 8.5, and Theorem 7.5 proves the Corollary.
+                                                                                  Q.E.D.
+Remark 8.7. This corollary could have been proved directly by using Theorem 7.5
+and Theorem 6.4.
+    The analogues of Theorem 8.5 and Corollary 8.6 hold in case the Villain action is
+replaced by the Wilson action. The key added ingredient in the proof is a "central
+limit theorem" for group valued random variables. The version that we will need is
+essentially Theorem A.2. of Borgs and Seiler [18].
+Theorem 8.8 (Borgs and Seller). Let p be a faithful representation of a compact Lie
+Group G, and let A t be the Wilson action associated with p. Suppose that t(e) is a
+positive function such that t(e)/e 2 is a positive integer for all e. Also suppose that
+                                              s
+t(e) = t + 0(8) as ~ ~ 0, where t > O, then Arts)/s2  Qt uniformly as e ~ O.
+Proof. Decompose A ~ and Qt into irreducible characters as
+
+                    A s= ~ d,G(e)Z,,        and      Qt = ~ d," exp-~-Z,,
+                                                                    tc,
+
+where the sums are over z s F - - a complete set of irreducible representations of G.
+The eigenvalues of A s and Qt as convolution operators are a, and exp(tG/2)
+respectively. The Laplacian A is negative so that c, < 0, see also Remarks 2.2. Also it
+is easy to show that Re X, is a positive semi-definite function in the sense that for
+{g~}7'=1 = G the matrix {Re;G(g,oj-~)}~ is positive semi-definite. Therefore, the
+Wilson action A t is positive semi-definite, and hence as a convolution operator A s is
+non-negative. This shows that G(e)> O, see Borgs and Seiler [18] Lemma II.1 for
+another proof of this fact. Furthermore, by the orthogonality of the Z,'S,
+G(e) = (1/d,)SAt(g)z~(g)dg, from which it follows that a,(e)< 1.
+             G
+YM2:Expectations and Lassos                                                                   603
+
+
+    In Appendix A of [18] it is shown that
+                         Trace[A,~/,2,-Qt*]~0                    as     e~0,                 (8.1)
+(where F , denotes the operator on L2(G) given by convolution by the function F),
+and that
+                                ., ,             --C~:~;2
+                              a,t~) - e x p ~ 2 -           < const c2e4.                    (8.2)
+
+Using the fact that the degeneracy of the (simultaneous) eigenspaces for A** and Qt*
+are d~, Eq. (8.1) may be rewritten as
+
+                       ~d2VateV/~2-exp tc~                         as    8 "-'~0.            (8.3)
+
+It is easy to conclude from Eqs. (8.2) and (8.3), and the fact that 0 ____as(e),
+exp (tcJ2) < 1, that
+
+                       ~d~ a~(e)t(")/"2-exp~- ~ 0
+                                                       tc l        as e ~ 0 .
+
+(This is a special case of Griimm's convergence theorem, see Simon [46] Theorem
+2.19.) But from the series representations for A~and Qt and the estimate ILX~LI~ =<d~
+one finds
+                                                                    tc~ !
+                      ItQ, -- At(,)/~:
+                                ~ II~ =< ~ dE a~(e)'(~)/": - - e x p , - .          Q.E.D.
+
+Remark 8.9. The full strength of Theorem 8.8 is not needed here. The equation (8.2)
+and Lemma 9.6 of the next section would be adequate for the proof of the next
+theorem.
+Theorem 8.10. Suppose that p is a faithful representation of G. Let Qt denote the usual
+convolution semigroup associated to the representation p, and
+                                                            •
+                                                               A ~ = A~p be the .Wilson
+                                                                                     .
+action. Suppose that B is a directed planar graph, {B(e)} ts a lattice apprommatmg
+sequence to B, and f is a bounded measurable function on O(B). Then
+                               lim lt~(f oi~ I lBt,~) = EF(PIB),
+                               e--~ O
+
+
+where E denotes the continuum YM2-expectation.
+Proof. Proceeding with the notation and the beginning of the proof of Theorem 8.5
+one computes that
+
+               /~(f°i~-~lBt~)) --        ~ f(grB) 1~ A~gr+o(,)(g(Sg))Drg.
+                                       g2(V B)         Re~(VB}
+
+With the aid of Theorem 8.8, the conclusion of the proof follows identically to the
+proof of Theorem 8.5. Q.E.D.
+Again we have the immediate corollary.
+Corollary 8.11. Assuming the same hypothesis of the above theorem, with the
+604                                                                                   B.K. Driver
+
+additional hypothesis that f is now gauge invariant, then
+                                       lim #~(foi~ 1 [n(~))= EF(PIB).
+                                       ~-'0
+
+
+
+9. Existence of Lassos
+One of the motivations for this paper is the extreme singularity of the Wilson loop
+variables in the four dimensional theory. Using the U4(1)-model as a test case, it
+would seem that there is no reasonable way to smooth the Wilson loop variables to
+get genuine random variables. This recta-fact initiated the work in Gross [361
+where it was shown that "Lassos and integrated Lassos" could be used to
+parameterize smooth gauge theories. These results were generalized in Driver [21]
+to show that the lassos and integrated lassos may be used to classify bundle
+connection pairs over a fixed simply connected manifold.
+    We now recall the definition of a lasso in the special case of a trivial vector bundle
+                                                           a
+E = C N x R a with (g-valued connection 1-form A = ~ Aidx ~.
+                                                                      i=l
+
+Definition 9.1. The Lasso L = L A associated to the pair (E, A) is the path two form
+L =       ~.         Li~dxidx j, where Lij is the (g-valued function on the paths (a) in R a
+      l <i<=j<--_d
+starting at zero given by
+                                       Lij(a) = P(a)- 1Fii(ay)p(a),
+where F = F a = dA + A ^ A is the curvature 2-form.
+    If the structure group G of the bundle is U(1), then the definition of L essentially
+reduces to the curvature F. For the U(1)-Yang-Mills-measure, the curvature is a
+smoothable random variable. Furthermore, it was shown in Gross [37] for d = 3
+and Driver [22] for d = 4 that, on the "current sector" (d'F), the Wilson lattice gauge
+theories converge to the continuum theory. So at least for the abelian models Lasso's
+behave better than the Wilson loops.
+    In this section, it willbe shown that lassos are smoothable random variables with
+respect to the YM2-measure. The key to this result is the computation of the lasso
+two point function. The result may be summarized informally as:
+                               dimf¢
+            E(L(a)L(z)) = ~ E[Adv(~)-lv(~)(T")" T a]'6(a y - z f) + J(a, z),                (9.1)
+                               a=l
+
+where J(.,-) is a bounded function when restricted to polygonal paths of a fixed
+"order." Strictly speaking, L(a) is not defined, since this requires evaluating the white
+noise F at the point trYeR z. Therefore to get started we introduce the regularized
+lasso variables. In the following discussion d will always be two.
+Definition 9.2. The e-regularized lasso (L~) is the random variable given by
+                                       P(cr)- 1[P(I~ (a) ) - P(I. (a) - l) ] P(a)
+                            L~(a) -                       2e 2                    ,
+
+where l~(tT)is the clockwise oriented square loop of side ~ with the lower left-hand corner
+at tTf~R2.
+YMz:Expectations and Lassos                                                                                605
+
+Remark 9.3. If A is a smooth connection 1-form on 112 then it is well known that
+
+                               lim [P(l~(tr) - P(l~(a)- 1] = F12 (tr),
+                               e-,o            2~ 2
+
+so that lim~_~o L~ = L12 , with L i 2 defined as above for smooth connections.
+    The main goal of this section is to show that lira S L~(tr)dm(a) exists for a suitable
+class of measures on ~ - - t h e continuous paths o n 112 starting at 0~112. I will now
+describe two classes of measures for which the desired limit exists. Fix a positive
+integer N, and write the elements of R 2N as x = (xl . . . . . XN) with each x~ in R 2. Let
+aN:R2N~      be the m a p which takes the N-points (x 1.... ,XN) and assigns the
+piecewise linear path in ~ found by connecting 0 ~ R 2 to x l , x l to x 2, etc. Each
+segment of the path is directed from x~ to x~+ 1, where x o = 0. The measures to be
+considered will come from pushing measures on R 2N to ~ by the m a p aN. So given a
+measure (m) on 112Nit will be identified with the measure m oa~ 1 on ~ . It should be
+clear from context whether m refers to the measure on R 2N or the push forward to ~ .
+Definition 9.4. A measure m on R 2N is said to be of type I, if m has an L 1 continuous
+density with respect to Lebesgue measure. The measure m is of type I I if it has the form
+m ( d x l . . . d x n ) = r a ~ N ( d x l . . . d x n _ l ) d x n , where ~ for each x u R 2 is a measure on
+R N- 1 satisfying:
+
+1. The measure m should be a finite signed measure.
+2. I f K is a compact set of !i 2 then flax is concentrated on a fixed compact subset of
+R N - i for x E K .
+3. The mapping
+                               (x,f)~rh~(f):R 2 x Cb(RN-1)~R
+should be continuous, where Cb(11N- l) are the bounded continuous functions on R N- 1
+with the sup-norm topology.
+Theorem 9.5 (Existence of Lassos). Let m be a measure of type I or type 11, then
+L 2 - lira S L,(a)dm(a) =:L(m) exists. Furthermore if n is another measure of type I or
+       e"* O ~,
+II, then
+
+  E(L(m)L(n)) =
+                       s
+                     ~xN[.   a =1                                                          1
+                                    E(Ade~)-,e¢~))(r~) • T ~"6(u f - zf) + J(a, z) dm(u)dn(z),
+
+                                                                                                          (9.2)
+
+where the first term is interpreted in the obvious way. For example, if m and n are both
+of type II, then
+             r(tr, z)6(tr I - "c~)dm(u)dn('c) =         ~           F(x, y)tfi~,, (dx < ) ~ (dy <)dx s,
+      ~×~                                         R 2 N - I ×R 2N
+
+
+where F(x, y):= F(UN(X), ZN(y) ), X < = (Xl . . . . . XN- 1), and y = (y <, XN).
+    The proof will be given after a number of preparatory results. A key ingredient
+in the proof is that d preserves the space of polynomial functions on G with degree
+less than some fixed number. Therefore, the A restricted to such a space of
+606                                                                                 B.K. Driver
+
+polynomials is a bounded operator. From this observation, one may deduce
+smoothness and good bounds on the function da/2p(g)= SQt(gh-1)p(h)dh and
+                                                                        G
+its derivatives when p is a polynomial. The next lemma clears the way for using
+these facts. In the sequel, K(--.) will denote a positive function which is
+non-decreasing in its arguments.
+Lemma 9.6. Let B be a directed planar graph, and p:.Q(B) ~ C be polynomial function
+of the matrix elements of g(b) for b~B. Then there is a choice of bonds {bR }R~ such
+that
+         I~(P):= J" P(g) l-[ QIRI(g(OR))Dg = ~ /5(g) ]-] QIRl(g(bg))Dg,
+                    ~(B)      RE~                    .Q(B)    R~(B)
+
+where/5 is another polynomial with deg(/5)__<K(deg (p), #(B))for some function K.
+Furthermore if p is a product of g(b)'s with possible repetition, then/5 is also of this
+form.
+Proof. Choose R 1e ~ = ~/(B) such that OR~ meets the boundary of the unbounded
+component of R 2\S(B), and let b~ be a bond in this intersection. Notice that the only
+term in the product ~ QtRI(g(OR)) that the bond variable gl:--g(bO enters is
+                           Rag~
+Qlml(g(OR1)), and this term has the form QiR~l(glh), where h is a function on ~(B)
+not depending on 01 = g(bl). Thus by making the change of variables (gl ~ gl h- 1)
+and using the invariance of Haar measure, the integral may be written as
+                   IB(P) =    .[     1~ QIRI(g(~R))'QImI(g(bl))Pl(g)Dg,
+                             .Q(B) Reg,(B1)
+
+where pa is another polynomial, and B1 = B \ [b 1]. If p is a product of g(b)'s, then so is
+Pl. Also one sees that deg(pl)<__deg(p)+#(B) d¢gtp). Continuing this process
+                                                           ¢~ ~#~) such that
+inductively one finds bonds ~bts~=~#(~)xand polynomials ~e~s~=
+                                               J
+      IB(p)= ~         I-I QIaI(g(SR))" I] Ql~,t(g(b~))P~(g)Dg        for   l<j<=#(~),
+               ~(B) Re~(BO                    i= 1
+                   i
+where Bi = B\( U [bk]). The polynomial 13= po(e)is the desired polynomial.
+              ~=~                                                      Q.E.D.
+
+Corollary 9.7. Assuming the same notation as the Iemma, there exists a C°°-function F
+on R ~ such that IB(p)= F({[R[}R~). Furthermore, if p is a product of g(b)'s, then
+11Ftk) I1go~ K (k, deg (p), #( B) ),for some function K, where F ~k)is the kth fold differential
+of F, and the sup-norm is over all S~R ~ such that S(R) >__0 for all R ~ .
+Proof. The fact that such a Coo-function (in fact analytic) function F exists follows
+from Lemma 9.6 and the comments prior to it. The norm estimate holds because
+taking a derivative with respect to an S-variable brings down a A acting on p, and
+hence the sup-norm of the resulting polynomial may be estimated as C IIP tlgo for
+some constant C = C(deg (p)). Since, there is only a finite number of polynomials
+of a fixed degree which are products of g(b)'s, one gets the estimate that
+tIz]1"p[[go < K(k, deg (p), #(B)), where d k denotes the product ofk - A's each acting on
+possibly different variables. This estimate and the fact that S Q~(h)dh = 1 for t > 0,
+                                                                  G
+gives the norm estimate. Q.E.D.
+YM2:Expectations and Lassos                                                               607
+
+These last results along with the next elementary facts about C ~O.functions will prove
+to be a powerful tool in approximating E(L,(a)L~(z)) for e and 6 small.
+Lemma 9.8. All functions in this lemma are assumed to be smooth.
+1. Suppose that F is a function on R N, then
+                                        1                              1
+                  f(x) = f(O) + ~ F'(tx) ( x ) dt = F(O) + ~ dr f(tx)dt.
+                                        0                              0
+
+(Recall that ~vF(x):= (d/dt)loF(x + tv).)
+2. Next suppose that F is a function on R N × R M, and that F(x, O) = F(O, y) = Ofor all
+x and y, then F(x,y) = ~ d:,dyF(sx, ty)dsdt, where I = [0, 1].
+                            I×1
+
+Pro@ The first item follows from the Fundamental Theorem of Calculus applied to
+the function t-~ F(tx). The second item follows from two applications of the first:
+                       F(x, y)= ~yF(x, ty)dt= ~ ¢3~yF(sx, ty)dsdt.              Q.E.D.
+                                  I                   Ixl
+
+Theorem 9.9. Let a and • be two piecewise linear curves in ~ , each with at most N
+linear segments. Set At(o) (A~(z)) to be the ~ (~) square in R 2 with left lower corner at
+as (~:). Then on the set where At(a)nA~(z ) is empty we have ItE(L~(o)Lo(~)) li ~ K(N)
+and if a: # T:, then lira E(Lt(a)Lo(r)) =:J(a, x) exists.
+                        t,ff-~0
+
+Proof. Assume that At(o)c~A~(~) is empty. Put B = B(a,% It(o), lo(z)), ~ = ~(B),
+~ = { R ~ [ R ~ A~(a)}, and ~ 2 = { R ~ [ R ~ Ao(~)}. Let I = E(Lt(a)L~(r)), and F
+be the C~-function on R a (via Lemma 9.6) such that 4e262I = F({IR]}R~a), so F is
+       F(S) = ~ Ada(~) ,(g(l~(a)) - g(l~(a))-1).Adg~¢)- ,(g(l~(z)) - g(I~(z))-1)
+               .Q(B)
+
+               • 1-[ Qs(m(g(~R))Dg •                                                     (9.3)
+
+Notice, that if S is such that S le~ = 0, then the terms Qs~m = Qo = 3 for R e N t . This is
+easily seen to force g(L,) = id in the integrand above, and hence integral is zero. The
+same argument applies to S such that Sle~ = 0, which shows that F(S)= 0 if either
+SI~ = 0 or S l ~ = O.
+    F o r S~R ~ and u, w I put
+                                     fS(R),           if R 6 ~ t 2 ;
+                             S~:(R)=JuS(R),           if R ~ ;
+                                     ~vS(R),          if R ~ 2.
+Then by Lemma 9.8 it follows that
+
+                  I=          ~             4s2(~2 ~! ~s(m)ds(n=)F(S,,~)dudv,            (9.4)
+                        RI~I,R2~,q? 2
+
+where S(R)=IRI   for all ReN. But clearly IRxlIReI/(4~262)<=l/4, so that
+III<=#(~)IIFII~<K(N). The last inequality was obtained with the help of
+Corollary 9.7.
+    So it only remains to show that the limit o f / = I(e, ~) exists as e, 3 ~ 0. The key to
+this is to note that for e and ~ small enough the topological type of the graph B
+608                                                                                     B.K. Driver
+
+
+
+
+   Fig. 4. A possible configurationnear the heads of seperated lassos for small epsilon and delta
+stabilizes and must have the form depicted in Fig. 4. From Fig. 4 one sees that there
+are constants CR1 and C R2 such that [R i I = CRI e2 and [R 21 = CR2~i2 for Ri ~ ~ i and
+R E G ~ 2. Hence, taking the limit of Eq. (9.4) gives
+
+                     lim I = ~           CRI CR2 ~s(~)as~R2)F(So,o) =:J(a, z),
+                    e,t~O        R1,R2
+
+where S(R) = 1R] for R ~ ( B ( a , z)). We have been tacitly using the fact that for e and
+ small, the graphs B(a, z, l~(a), l~(z)) are all isomorphic. Q.E.D.
+Theorem 9.10. Let a and z be the piecewise linear paths in ~. Denote by 6z the
+piecewise linear path consisting z followed by the strai#ht line segment from z f ~ a f
+and then followin# ~rbackwards back to the origin in the plane. There exist a constant
+K(N), where N is the number of line segments in a and z, such that
+
+             E[L~(a)L~(z)]_ E [ I~=~Adv(e,)T .T~ ,A~(a)c~A~(z)le22(~           < K(N)
+
+on the set where A~(a)nA~(z) ~ ~ .
+Proof. Let B = B(a, z, l~(a), la(z)), and F(S) be given by (9.3). Also define the following
+subsets of R:
+                        ~o = {R ~ [ R c A~(a)n A~(z) },
+                        ~ l = {R E~t[R c A~(a)\ A~(a) c~A~(z) },
+                        ~2 = { R ~ ] R c Ao(z)\A~(a ) n A~(z)},
+
+
+so that ~ is the disjoint union of the ~,'s. Corresponding to this splitting o f ~ , write
+S = (S o, S 1, $2, $3) and by abuse of notation F(S) = F(S o, S l, $2, Sa), where S i = S [~.
+Suppose that S o = 0 and S~ = 0, then the terms in (9.3) Qs(g)(g(t3R)) for R e ~ o u R~
+are now ~-funcfions, which forces g(l~(a)) = id. This causes g(l~(a)) - g(I~(a))- 1 = O,
+and hence makes F = 0. A similar argument shows that F = 0 if So = 0, and $2 = 0.
+Suppressing $3 from the notation for the moment, this implies by Lemma 9.8 that
+                                              1
+        F(So, Si, $2) = F(0, S i, $2) + ~C?soF(uSo,S1, S2)du                                   (9.5)
+                                              0
+
+                            11                                 1
+                       = ~ ~ Os, C~s~r(o,uSD vS2)du dv + ~C3sor(uSo, S~, S2)du.                (9.6)
+                            O0                                0
+YM2:Expectations and Lassos                                                                   609
+
+
+To simplify notation write I:= E[L~(a)L~(z)], and I ~ H(o-, z, e, J) if
+II1 -- H(a, z, e, J)II < K(N) for some constant K(N) only depending on N. Then by
+(9.6) and Lemma 9.6, it follows that
+                                      1     1
+                              I "~ ~ ! O s o F ( U S   o, $1, S2)du,
+
+where S(R) = t R I. This is because IR 1 [ IR2t =<e 262 for R1 e ~ l and R 2E~2. By similar
+arguments we may also expand OsoF with respect to the So, Sx and $2 arguments to
+conclude I ~ (1/4e2j2)OsoF(O, 0, 0, $3).
+     Let 1 be the directed straight line segment from a f ~ z I. There are two
+possibilities; either lis contained in A~(a) w A~(z) or it is not. In the latter case, we split
+9t 3 into the disjoint union ~ u g ~ where ~t~ consists of the regions in ~3 which are
+contained in the triangular region (TR) bounded by l and O(A~(a)w Ao(z)). In order
+to treat both cases at once, when in the first case write S~ = $3 and interpret any
+statement involving S~ to be vacuous. Using the fact that the area of this triangular
+region is no more than e262/2, it follows, by expanding with respect to S~, that
+                                      1
+                              Ig ~         OSoF(0, 0, 0, S~ = 0, S~).                     (9.7)
+
+
+    Now we are in a position to compute the derivative aSo F. Enumerate ~ o = U R~
+                                                                                        i=1
+and write So = s = (s I .... , s") and write f(s) = F(s, 0, 0, S~ = 0, Sg). The immediate
+goal is to show
+
+                 O~,f(O)=4 I               Ado(e~)Ta'T,    1-[ Qs(R)(g(OR))Dg,            (9.8)
+                              .O(B)                        Re~
+
+where S = (0, 0, 0, S~ = 0, S~). To take this derivative, we may assume that sj = 0 if
+j # i. For such s, the J-functions in the integrand of (9.3) enable one to conclude that
+variables g(c) may be set to the identity, where c is a closed path in B which lies in the
+region (A~(a)wA~(T)wTR)kRk This coupled with the fact that the regions R j are
+simply connected, enables one to deform the paths l~(a) and/o(z) to paths bordering
+the boundary of R ~ in such a way that f(s) may be written as
+       f(0 ..... st,..., 0) = ~ Adott~)-~ Ad,,,)(g(0R i) - g(ORi) - 1)
+
+                              •Adg(o-,Adg~)(a(eRi)-g(ORi)-l)l-IQs(R)(g(~R))Dg.            (9.9)
+                                                                        REg~
+
+Where, in this last equation, ~/is a path in B, OR ~is a path around the boundary ofR *,
+and la is the path a followed by the path I. In view of this last expression, the
+derivative to be computed may be written in the form:
+
+                 j : = d ~ Q,(h) Ada(h)( h _ h - ~)Adk(~)(h -- h - ~)O(h)dh,
+                       at[o 6
+
+where g, k: G ~ G and D: G ~ R is a smooth density. A straightforward calculation
+shows:
+610                                                                                B.K. Driver
+
+             J = ~ ½d 5(h) Adg(,)(h - h - 1) Adk(h)(h - h- 1)D(h)dh
+                   G
+
+               = ½d [Adg(h)(h - h-1) Adk(h)(h - h- 1)D(h)] lh=id
+                   .12 I dtm~
+               = 2d~- o a~l [Adg(er°)(e~Ta --e-'r°)Adkcr°)(e~T°--e-~r")D(e~r")]
+                   dimf¢
+               = ~ [Adg(e)(T~)Adk(~)T~-D(e)].                                          (9.10)
+                   a=l
+
+
+From this last Computation and Eq. (9.9) we conclude that
+
+            ~,f(0) = 4 j" Adg(t~)-~g(,)T~'Adg(o-,g(~) T~- H Qs(R)(g((~R))Dg•
+                           ~(B)                                          Re~
+
+
+This last equation is identical to Eq. 9.8, because for any k and g in G,
+
+                            ~ Adg(Ta) Adk(T~) = ~, Adgk-~(Ta) T~.
+                             a                                a
+
+
+This is proven by noticing that ~ Ad,(T,)Ad k(Ta) is independent of the orthonormal
+                                        a
+basis { T, } of ~ and so one may choose the orthonormal basis {Ad k i T, } instead of
+{Ta}.
+      From (9.8) we conclude that
+
+              ~soF(O,O,O, Sa- , 3j=                          s~     ~ Adg(~)T~T~
+                                                       i=1        )a=l
+
+
+                                                   "l-I Qs(R)(g(aR))Dg,
+                                                      Re~
+
+where S = (0, 0, 0, S~ = 0, S~), and So = s. So setting si= IRil, it follows that
+                   tA~(a)(~A~(z)[             '~
+              I~           ~252             ~ ~ Adg(~,)T.'T. [-I Qs(R)(g(dR))Dg,
+                                        .Q(B) a = 1                 R~.~
+
+where S is still S = (0, 0, 0, S~ = 0, S~). Finally, by reversing the arguments that led to
+(9.7), this last equation is still valid for S such that S(R) = tRI for all R s ~ . But for
+S(R) = IR I, the right-hand side of this last approximation is exactly
+                                        E[ ~ Adp(~)Ta" T~]. Q.E.D.
+
+We now return to the proof of Theorem 9.5.
+
+Proof of Theorem 9.5. Let m and n be two measures of type I or II, and write
+L~(m) = ~L,(a)dm(a). Also put
+
+                   J,,a(a, z) = ~ E(L,(a)L~(z)), if A~(a)c~A~(z) ~ f25;
+                                  (0,                         otherwise.
+Then according to Theorems 9.9 and 9.10,
+YM2:Expectations and Lassos                                                           611
+
+                          fA~(a!~A,(,) [ dim~
+        E(L,(m)L,(n))= {~ (    e262   ELan=1Ade(,~)Ta'Ta I + J~,~(a, z)
+
+                           + 1A,(~)~Ao(~),o"O(1)}dm(a)dn(z).                        (9.11)
+
+The last term in this equation goes to zero as e and b go to zero, since
+                     limsup,,~0 [ 1A~(,)~A~(,)#~" 0(1)[ < K(N)" 1,1=,y
+which is zero m × n-almost everywhere. The second term in the equation
+converges to ~ J(a,z)dm(a)dn(z) by the dominated convergence theorem and
+               ~×#
+Theorem 9.9. So it is only the first term that needs attention.
+   A short computation shows that ~ (([A~(x)c~Ao(y) j)/e2b 2)dx = 1 for e, b > 0 and
+                                        R2
+y s R 2. This shows that (([A~(x)c~Ao(y)[)/e2b2) is a sequence of approximate 6-
+functions. Now it is easy to check that E Adv(~N(~))p(,N(~,))is a continuous and uniformly
+bounded function of (x, y)~R N x R n. This fact along with the properties assumed on
+m and n implies, by standard techniques of approximate g-functions, that the first
+term in (9.11) converges to the first term in (9.2). Finally, to see that L~(m) converges
+in L 2 take m = n in the above computations, to show the lim E( - trace (L,(m)L,(m))
+                                                            e,t~0
+exists. This proves the L2-1imit exists, since - trace (AB) = trace (A'B) is the Hilbert
+Schmidt norm on ~. Q.E.D.
+
+
+10. Lassos Generate the Measurable Functions
+In this last section, we will show that the g-valued white noise can be recovered from
+the lassos. Or in other words, the lassos generated all measurable functions on
+(f2, ~ , E). Let g be a real valued C~-function with compact support on R 2. Let m he
+the measure on R 2 x R 2 given by m(du, dv)= b(u-(vl,0))g(v)dudv. Then the
+corresponding measure on ~ is concentrated on "L-shaped" paths.
+Theorem 10.1. Assuming the above notation, then L(m)= -F(g) E-almost surely.
+This theorem is what we should expect from Remark 9.3. Recall that F was identified
+with F21, which explains the sign discrepancy. The key fact needed for the proof is:
+Lemma 10.2. Let a be an L-shaped path, and x = a f be the final point of the path.
+Then
+                 E(L~(a)F(g)) = ( - 1/~2)(g, I&@)C + lsupp(o)(x)Oo(8),
+where C = T" T:= E TaT a, (-,-) denotes the LZ-inner product on R z, and Og(s) is a
+                     a
+
+function depending on g which when divided by e remains bounded uniformly in a which
+has been suppressed from the notation. The same estimate also holds for E(F(g)L~(a)).
+Proof of Theorem 10.1. We will now prove the theorem assuming the lemma. In
+order to do this we will show that E(L(m) + F(g)) 2 = 0. By the definition of the white
+612                                                                                          B.K. Driver
+
+noise it follows that EF(g) 2 = (0, g)C. By Eq. (9.2) of Theorem 9.5, one finds that
+                       EL(m) 2 = (g, g)C +               S J(a, z)m(da)m(dz),
+
+where we have noticed that if a and z are L-shaped curves which agree at their final
+points, then a = z. Since, m concentrates on L-shaped curves, it follows that
+E Adp(a)-1et~).b(af -- z f) : E Adp(~)-1p(a)'O(af -- "of) = Id'J(a f -- Tf) m x m-a.s.
+    Now we show that J(a, z) = 0 for two non-equal L-shaped curves. Let J~,,(a, z) be
+as in the proof of Theorem 9.5, then for ~ sufficiently small it follows by Theorem 6.4
+(with T equal to the bonds in the decomposition of a and z) that
+                 J~,.(a, ~) = ~ (k - k - ~)(h - h- ~)Q~(k)Q~(h)dk dh = O.
+
+This shows that J(a, z ) = lim J~,~(a, z ) = 0, and so EL(m)2 = (g, g)C.
+                             e~O
+   Therefore E(L(m) + F(g)) 2 = 2(g, g)C + E(L(m)F(g)) + E(V(g)L(m)), and so it
+only remains to show E(L(m)F(g))= E(F(g)L(m))= - ( g , g)C. Now compute
+               E(L(m)F(g)) = lim ~ E[L~(a)F(o) ] din(a)
+                             e--~O~
+                             = -- lira f F ~ ( 1 A ~ ( J ) , o ) C   d-Oa(g.)lsupp(o)(af)]dm(a)
+                                     ,       o~L 6
+
+
+
+
+                             = - (o, a) c ,
+
+where in the second inequality we used Lemma 10.2, and in the last inequality we
+used the fact the (1/e2)lA~(x) is a sequence approaching the delta-function at x e R 2.
+The computation for E(F(g)L(m)) is identical. Q.E.D.
+Proof of Lemma 10.2. Only the statement concerning E(L~(a)F(g)) will be proved,
+since the estimate for E(F(o)L~(a)) has a similar proof. Because of symmetry
+considerations, there is no loss in generality assuming that x = a T is in the first
+quadrant. It is now necessary to introduce a considerable amount of notation. For
+what follows it will be understood that the variable t is in [xl, xl + el.
+    First we define three regions in the plane: A ( t ) = [ x l , t ] X [ X z , X2+e],
+B(t)= [xl,t] x [0,x2], and D(t)=A(t)wB(t). Now we need the six martingales:
+M(t) = F(D(t)), N(t) = F(B(t)), 6(t) = F(A(t)) = M(t) - U(t), f(t) = F(glD(t)), k(t) =
+F(glB(o), and a(t) = F(glA(o) = f(t) -- k(t). (All of these martingales are taken to be
+continuous in t, the existence of such versions can be deduced from Theorem 4.3
+of [38].) Next, let Pt and Qt be parallel translation with respect to the martingales
+M(t) and N(t) respectively, see Definition 3.3. Finally, let a(t)= (g, 1A(o), b(t)=
+(g, 1~(0), and d(t) = (9 2,1D~t)).
+    Because we are using the complete axial gauge, parallel translation along L-
+shaped curves is equal to the identity operator. Therefore
+                                         1           1
+                         L,(a) = ~fie2([QL +~P~, +,] - [ . ' . ] - 1),
+YM2:Expectations and Lassos                                                                           613
+
+which is measurable with respect to the a-algebra generated by the functions
+{F(A)} A=D(x,+~)"By the independence properties of the white noise, this implies that
+
+              ~ j . i : = l E(L~(a)F(g))=I_~_£E(([Q_~Ipa] - [ . . . ] - l ) F ( g l o ( o ) )       (10.1)
+
+
+                      = 21e2"EH(Pa, QtJ, f(fl)),
+
+where f l = x ~ + ~ , and H is the function on GZxf# given by H ( p , q , f ) : =
+[q- lp _ p - 1q] f. So following the method used in proving Theorem 4.12, we need to
+compute dHt:= d H ( P , Qt, f(t)). This can be done in the same manner as the proof of
+Proposition 4.9. To state the final result of It6's lemma, we define for each TeN the
+vector fields T ~ , T 2 and T3 on G 2 x f ~ by T 1 H ( p , q , f ) = ( d / d t ) l o H ( e t r p , q,f),
+T2 H(p, q, f ) = (did O IoH(p, etrq, f), and T 3H(p, q, f ) = (did O [oH(p, q, f + t T). Also
+let ~ ' = M1 + N2 - f a - - a vector field valued martingale. With this notation
+        d n , = - dJ.[(t)oHt:= - d d g ( t ) n ( P , Q,, f(t)) + ½ d ~ ( t ) 2 H ( p , Qt, f(t)).
+Arguing as in the proof of Theorem 4.12, we conclude that
+                                                    #
+                                               ½1d~(O2
+                                          I = e x,    H(e,e,O).
+So compute
+        d~/2 := d(M i + N z - df3) 2
+                 = [d(N 1 + N2 - ks) + d(61 - - 0 ~ 3 ) ] 2
+                 =   d(N i + N 2 - - k3) 2 + d(61 - 0~3)2
+                 = d(N1 + N2) 2 + dk 2 + d62 + d~ 2 - 2d(N1 + N2)dk3 - 2d61da3
+                 = d(N~ + N2) 2 + d f 2 + d62 - 2d(N 1 + NE)dk a - 2d61da a,
+where the independence of (N 1 + N 2 - - ka) and (31 - a3) were used in the third
+equality, and the independence of k 3 and ~a were used in the last equality. Now
+define the following second order differential operators on G2 x f#:C~=
+T/'Ti = ~(T~) 2, Ci2 = Tx2"T12:=~(T~ + T~) 2, Ti'Ta = ~ T ~ T ~ , and T~2"T 3 =
+          a                                     a                            a
+
+~ ( T ] + T~2)T~a. Using the fact that all of the martingales considered have
+a
+
+independent increments, the above equation for d,///2 is easily shown to be equal to:
+      dJg(t) 2 = {ydtC12 - 2da(t)T1. Ta} + [d(d(t))C3 + edtC 1 - 2db(t)T12. 7"3]
+                 =:dV~ (t) + dV2(t ).
+Now all the terms in this last equation commute with one another except for the
+terms in {..-}, which do commute with the terms in [ . . - ] b u t not necessarily with
+one another. The desired commutators are shown to be zero with the aid of the
+infinitesimal braid relations (Proposition 4.10), and the fact that the T~'s commute
+with everything. Since d V 1 commutes with d V 2, it follows that
+
+
+                                    I =     ~           e ~   H)(e,e,O),
+614                                                                                         B.K. Driver
+
+where y:= x 2 is the second component of a y.
+    Now dV2(t)H=edtC~H=edtCH,           since C 3 H = 0 , (TI+T2)H=O, and
+C1 H = CH. Since C commutes with the matrices in G and f9 (Remarks 2.2), it follows
+that
+
+         I = e('/2)~ C~e "'       H ) (e, e, O) = e('/2)'~C(e('/2)"c'~-a(a)r"r'H)(e ' e, 0).
+
+Expanding out the exponential in this last expression shows
+
+             1:e(1/2)~2c(H-k ~=~--l(½yeC~2'n-~(a{fl'T"T3,H)(e,e,O),
+                                                      ~
+where it has been noted that C12 H = 0 and T~. T3 C~2 TI" T3 H = 0 for all k > 0. Thus
+                     I - e(1/:)'2C(n + (a(fl)Tl"T3)H)(e, e, O)
+
+                         =e(~/2)~:c(,=~ - l       (½YeCl:)'-~(a(fl)T ~. T3,H)(e,e,O,.
+
+Because H is a polynomial in all of its arguments, the right-hand side of this last
+expression may easily be estimated by
+                                     I[r.h.s II < Kyela(fl)] eKrL
+Now      using     the    last   two     equations,       and     the    equalities     H(e,e,O)=O,
+TI" Tan(e,e,O)= 2C, and ]a(fl)[ = Og(e2) we have
+       I = e(1/a)':c(- 2a(fl)C + e°(r~))O(yela(fi)l) = - 2a(fl)C + lsupp (g)(x)Og(e3).
+Using this last equation and the definition of I (Eq. 10.1) proves the lemma upon
+recalling that a(fl) = a(x~ + e) = (g, 1A,(~)). Q.E.D.
+
+Acknowledgement. The author is very grateful to L. Gross for introducing me to this problem and also for
+many informative discussions.
+
+
+References
+1. Albeverio, S., H~egh-Krohn, R., Holden, H.: Stochastic multiplicative measures, generalized markov
+   semigroups, and group-valued stochastic processes and fields. J. Funct. Anal. 78, 154-184 (1988)
+2. Albeverio, S., Hglegh-Krohn, R., Holden, H.: Stochastic Lie group-valued measures and their
+   relations to stochastic curve integrals, gauge-fields and Markov cosurfaces. In: Stochastic processes,
+   mathematics and physics. Lecture Notes in Mathematics, vol. 1158. Albeverio, S., Blanchard, P.
+   (eds.). Berlin, Heidelberg, New York: Springer 1986
+3. Albeverio, S., H~egh-Krohn, R., Holden, H.: Random fields with values in Lie groups and Higgs
+   fields. In: Stochastic processes in classical and quantum systems--Lecture Notes in Physics, vol. 262.
+   Albeverio, S. et. al. (eds.). Berlin, Heidelberg, New York: Springer 1986
+4. Albeverio, S., H~begh-Krohn, R., Holden, H.: Markov processes on infinite dimensional spaces,
+   Markov fields and Markov cosurfaces. In: Stochastic space-time models and limit theorems. Arnold,
+   L., Kotelenez (eds.). Dordrecht, Boston, Lancaster: D. Reidel 1985
+5. Albeverio, S., H~egh-Krohn, R., Holden, H.: Cosurfaces and gauge fields. In: Stochastic methods and
+   computer techniques in quantum dynamics--Acta Physica Austriaca Supl. XXVI. Wien, New York:
+   Springer 1984
+YM2:Expectations and Lassos                                                                            615
+
+ 6. Balian, R., Drouffe, J. M., Itzykson, C.: Gauge fields on a lattice. I. General outlook. Phys. Rev. D10,
+    3376-3395 (1974); II. Gauge-invariant Ising model D l l 2098-2103 (1975) and III. Strong-coupling
+    expansions and transition points, DI1, 2104-2119 (1975)
+ 7. Balaban, T.: Regularity and decay of lattice Green's functions. Commun. Math. Phys. 89, 571-597
+    (1983)
+ 8. Balaban, T.: Renormalization group methods in non-abelian gauge theories, Harvard preprint,
+    HUTMP B134
+ 9. Balaban, T.: Propagators and renormalization transformations for lattice gauge theories. I.
+    Commun. Math. Phys. 95, 17-40 (1984)
+10. Balaban, T.: Propagators and renormalization transformations for lattice gauge theories. II.
+    Commun. Math. Phys. 96, 223-250 (1984)
+11. Balaban, T.: Recent results in constructing gauge fields. Physica 124A, 79-90 (1984)
+t2. Balaban, T.: Averaging operations for lattice gauge theories. Commun. Math. Phys.98, 17-51(1985).
+13. Balaban, T.: Spaces of regular gauge field configurations on a lattice and gauge fixing conditions.
+    Commun. Math. Phys. 99, 75-102 (1985)
+14. Balaban, T.: Propagators and renormalization transformations for lattice gauge theories. II.
+    Commun. Math. Phys. 96, 223-250 (1984)
+t5. Balaban, T.: Ultraviolet stability of three-dimensional lattice pure gauge field theories. Commun.
+    Math. Phys. 102, 255-275 (1985)
+16. Balaban, T.: The variational problem and background fields in renormalization group method for
+    lattice gauge theories. Commun. Math. Phys. 102, 277-309 (1985)
+17. Balaban, T.: Renormalization group approach to lattice gauge fields theories. I. Generation of
+    effective actions in a small fields approximation and a coupling constant renormalization in four
+    dimensions. Commun. Math. Phys. 109, 249-301 (1987)
+t8. Borgs, C., Seller, E.: Lattice Yang-MiUs theory at nonzero temperature and the confinementproblem.
+    Commun. Math. Phys. 91, 329-380 (1983)
+19. Brali6 Ninoslav, E., Exact computation of loop averages in two-dimensional Yang-Mills theory.
+    Phys. Rev. D22, 3090-3103 (1980)
+20. Br6cker, Theodor, Dieck, Tarnmao tom: Representations of Compact Lie Groups. Berlin,
+    Heidelberg, New York: Springer 1985
+21. Driver, Bruce, K.: Classifications of bundle connection pairs by parallel translation and Lassos. J.
+    Funct. Anal.
+22. Driver, Bruce, K.: Convergence of the U4(1) lattice gauge theory to its continuum limit. Commun.
+    Math. Phys. 110, 479-501 (1987)
+23. Dosch, H. G., Mfiller, V. F.: Lattice gauge theory in two spacetime dimensions. Fortschr. Phys. 27,
+     547-559 (1979)
+24. Federbush, P.: A phase ceU approach to Yang-Mills theory, O. Introductory exposition, University of
+    Michigan preprint (t984)
+25. Federbush, P.: A phase cell approach to Yang-Mills theory, I. Small field modes, University of
+    Michigan preprint (1984)
+26. Federbush, P.: A phase celt approach to Yang-Mills theory, IV. General modes and general stability.
+    University of Michigan preprint (1985)
+27. Federbush, P.: A phase cell approach to Yang-Mills theory, V. Stability and interpolation in the small
+    field region, covariance fall-off, University of Michigan preprint (1986)
+28. Federbush, P.: A phase call approach to Yang-MiUs theory, VI. Non-abelian lattice-continuum
+    duality, University of Michigan preprint (1986)
+29. Federbush, P.: A phase cell approach to Yang-Mitls theory, I. Modes, lattice-continuum duality.
+    Commun. Math. Phys. 107, 319-329 (1986)
+30. Federbush, P.: A phase cell approach to Yang-Mills theory, III. Stability, modified renormalization
+    group transformation. Commun. Math. Phys. 110, 293-309 (1987)
+31. Federbush, P.: A phase cell approach to Yang-Mills theory, IV. The choice of variables. Commun.
+    Math. Phys. 114, 317-343 (1988)
+32. Fr6hlich, J.: Statistics of Fields, the Yang-Baxter Equations, and the Theory of Knots and Links.
+    Preprint (1987)
+616                                                                                           B.K. Driver
+
+33. Fr6hlich, J.: Some results and comments on quantized gauge fields. In: Recent developments in gauge
+    theories. G. 't Hooft et al. (ed.). New York: Plenum Press 1980
+34. Gross, L., King, C., Sen Gupta, A.: Two dimensional Yang-Mills via stochastic differential equations,
+    preprint (1988)
+35. Gross, L.: Lattice gauge theory; Heuristics and convergence. In: Stochastic processes--Mathematics
+    and physics. Lecture Notes in Mathematics, vol. 1158. Albeverio, S., Batanchard Ph., Streit, L. (eds.),
+    Berlin, Heidelberg, New York: Springer 1986
+36. Gross, L.: A poincar6 lemma for connection forms. J. Funct. Anal. 63, 1-46 (1985)
+37. Gross, L.: Convergence of the U3(1) lattice gauge theory to its continuum limit. Commun. Math.
+    Phys. 92, 137-162 (1983)
+38. Ikeda, N., Shinzo, W.: Stochastic differential equations and diffusion processes. Amsterdam, Oxford,
+    New York: North-Holland 1981
+39. Kazakov, V.: Wilson loop average for an arbitrary contour in two-dimensional U(N) gauge theory.
+    Nucl. Phys. B179, 283-292 (1981)
+40. Kazakov, V.,Kostov, J= ComputationoftheWilsonloopfunctionalintwo-dimensional U(o~)lattice
+    gauge theory. Phys. Letts. 105B, 453-456 (1981)
+41. Kazakov, V., Kostov, J.: Non-linear strings in two-dimensional U(~) gauge theory. Nucl. Phys.
+    B176, 199-215 (1980)
+42. Klimek, S., Kondracki, W.: A construction of two-dimensional quantum chromodynamics.
+    Commun. Math. Phys. 113, 389-402 (1987)
+43. Kobayashi, S., Nomizu, K.: Foundations of differential geometry, vol. 1. New York: Interscience
+    1963
+44. Seller, E.: Gauge Theories as a problem of constructive quantum field theory and statistical
+    mechanics. Lecture Notes in Physics, vol. 159. Berlin, Heidelberg, New York: Springer 1982
+45. Simon, B.: Functional integration and quantum physics. New York: Academic Press 1979
+46. Simon, B.: Trace ideals and their applications. London Mathematical Society Lecture Note Series,
+    vol. 35. Cambridge, London, New York, Melbourne: Cambridge University Press 1979
+47. Walsh, J.B.: An introduction to stochastic partial differential equations. In: Ecole d'Ete de
+    Probabilites de Saint-Flour XIV-1984. Lectur~ Notes in Mathematics, vol. 1180. Hennequin, P. L.
+    (ed.). Berlin, Heidelberg, New York: Springer 1986
+48. Wilson, K. G.: Confinement of quarks. Phys. Rev. DI0, 2445-2459 (1974)
+
+Communicated by K. Gawedzki
+
+Received October 13, 1988
+
