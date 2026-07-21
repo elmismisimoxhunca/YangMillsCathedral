@@ -512,7 +512,9 @@ three-form. Finite-dimensional Cartan calculus now also derives curvature horizo
 right-adjoint equivariance from the connection laws, so the strengthened intrinsic Bianchi API no
 longer accepts a structure certificate from the caller. The connection-indexed first exterior data
 and curvature-indexed ordinary exterior certificate remain explicit same-chain inputs; neither is
-constructed. Exact inverse-action
+constructed. Arbitrary-degree Cartan transport for arbitrary local smooth fields, certificate-free
+field-extension independence, and exact set-germ locality are now available as the reusable
+infrastructure for constructing the remaining curvature exterior certificate without circularity. Exact inverse-action
 curvature covariance now derives pointwise invariance of both chosen and basis-independent
 canonical curvature densities for the full pulled connection/exterior/certificate chain. The exact
 analytic datum transports to that chain with unchanged designated measure and coupling, deriving

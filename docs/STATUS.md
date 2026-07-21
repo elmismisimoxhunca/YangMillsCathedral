@@ -4439,6 +4439,11 @@ uses `Θ(X#)=X` to prove horizontality with the exact half-self-wedge normalizat
 and bracket transport prove right-adjoint equivariance. The finite-dimensional intrinsic Bianchi
 wrapper therefore accepts no structure witness. The connection-indexed first exterior data and
 curvature-indexed ordinary exterior certificate remain supplied; their construction remains open.
+`YangMills.Mathematics.PositiveDegreeCartanArbitraryFieldChartTransport` now removes the main
+circularity barrier: the full triangular Cartan expression transports for arbitrary local smooth
+fields through the exact set `(extChartAt I p).symm ⁻¹' s ∩ range I`, is independent of admissible
+field extensions in finite dimensions without using a certificate, and is local under equality of
+set germs.
 
 The four-dimensional `CurrentStrength` integration record now requires one exact algebraic quantum
 action of its canonical smooth principal gauge group on its same observable family and one

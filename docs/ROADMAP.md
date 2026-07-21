@@ -292,8 +292,11 @@ committed before higher layers depend on it.
   exterior/bracket transport; package the exact finite-dimensional structure certificate.
 - [x] Specialize the intrinsic `D_A F = 0` theorem so finite-dimensional callers no longer supply a
   redundant curvature-structure witness.
-- [ ] Construct rather than merely accept the ordinary curvature exterior certificate, while
-  retaining exact same-connection provenance.
+- [x] Prove arbitrary-degree Cartan transport for arbitrary local smooth fields on the exact
+  corner-aware chart set, certificate-free field-extension independence, and set-germ locality.
+- [ ] Use that tensorial/local Cartan infrastructure plus coordinate Bianchi to construct rather
+  than merely accept the ordinary curvature exterior certificate, retaining exact same-connection
+  provenance.
 
 ## Phase 3 — classical Yang–Mills semantics
 
