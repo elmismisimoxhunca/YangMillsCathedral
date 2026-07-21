@@ -4661,8 +4661,12 @@ the unnormalized character-weight Haar integral, so continuity, strict positivit
 symmetry, integrability, and real Haar normalization are derived rather than disconnected. No
 representation or Wilson action datum is constructed. `TwoDimensionalLatticeActionData` now packages
 Driver Definition 7.1 once and has exact Villain/Wilson adapters plus an elementary constant-one
-inhabitant, without conflating the source-qualified families. No axial lattice field measure or
-continuum convergence witness is constructed.
+inhabitant, without conflating the source-qualified families. `EpsilonSquareLatticeDirectedBond` now gives the exact infinite directed nearest-neighbor bond
+carrier at each positive spacing; `EpsilonSquareLatticeConfiguration` enforces reverse-bond
+inversion, while `EpsilonSquareLatticeAxialConfiguration` fixes every vertical bond and every
+horizontal x-axis bond to the identity. Both induced measurable carriers have measurable coordinate
+projections and identity inhabitants. The integer sites now have an exact physical embedding at coordinates `(εm, εn)`, every bond derives a signed physical `ε` step, and a concrete multiplicative-integer axial configuration gives a nonidentity horizontal row-one coordinate and proves the axial carrier is not subsingleton. No axial
+lattice field measure or continuum convergence witness is constructed.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

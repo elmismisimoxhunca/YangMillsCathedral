@@ -794,6 +794,10 @@ committed before higher layers depend on it.
   - [x] Add Driver's Wilson action from the actual trace character of a nonzero finite-dimensional
     unitary matrix representation, with exact positive Haar-integral normalizers and the full
     inherited continuous/positive/class/inversion/real-normalization action contract.
+  - [x] Add the exact infinite directed `εℤ²` bond/configuration carrier and Driver axial tree, with
+    exact physical `(εm, εn)` embedding and signed `ε` steps, reverse-bond inversion, measurable
+    coordinates, exact tree freezing, identity inhabitants, and a nonidentity off-axis axial
+    configuration proving the carrier is not subsingleton.
   - [ ] Add compact-surface gluing, axial lattice field measures, and lattice-continuum convergence with exact hypotheses, distinct from finite-cutoff, classical, and
     four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.

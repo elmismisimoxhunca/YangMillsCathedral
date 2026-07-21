@@ -742,8 +742,9 @@ nonzero canonical Haar-density measure. Driver's Wilson action now retains an ac
 dimensional unitary matrix representation, defines its character by matrix trace, ties each source-
 indexed positive normalizer to the exact unnormalized Haar integral, and derives the same inherited
 real action contract. A common `TwoDimensionalLatticeActionData` packages Definition 7.1 once, with exact Villain and
-Wilson adapters and a separate constant-one positive inhabitant. These layers still construct no
-lattice field or convergence theorem.
+Wilson adapters and a separate constant-one positive inhabitant. The exact infinite directed `εℤ²` bond carrier, reverse-inversion configuration carrier, and axial-
+tree-fixed carrier are now defined with exact physical `(εm, εn)` embedding, signed `ε` bond displacement, measurable coordinate projections, identity inhabitants, and a concrete nonidentity off-axis axial configuration.
+These layers still construct no lattice field measure or convergence theorem.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly

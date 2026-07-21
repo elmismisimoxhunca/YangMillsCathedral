@@ -76,7 +76,11 @@ measure are derived. Definition 8.4 is represented by an actual continuous nonze
 dimensional unitary matrix representation, its exact matrix-trace character, and positive source-
 indexed normalizers tied to the unnormalized Haar integral; the complete inherited real action
 contract is derived. Definition 7.1 is also packaged as one common action interface with exact
-Villain/Wilson adapters and a separately labeled constant-one inhabitant. Axial lattice field measures and convergence remain explicit debt.
+Villain/Wilson adapters and a separately labeled constant-one inhabitant. The exact infinite directed `εℤ²` bond carrier, reverse-inversion configurations, and
+axial-tree-fixed measurable carrier are now explicit, including the vertical plus x-axis tree, exact
+physical `(εm, εn)` embedding with signed `ε` steps, and a concrete nonidentity off-axis axial
+configuration.
+Axial lattice field measures and convergence remain explicit debt.
 
 PDF p. 21 / printed p. 595 was independently inspected on 2026-07-21 for Theorem 6.6.
 The page visibly quantifies over a gauge-invariant function on the BC graph configuration space and
