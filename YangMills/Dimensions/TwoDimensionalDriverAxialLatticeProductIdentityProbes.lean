@@ -155,7 +155,8 @@ theorem exact_normalized_nonzero
     (spacing : PositiveLatticeSpacing) :
     twoDimensionalFineEnlargedActionMeasure faceGeometry actionAt spacing univ = 1 ∧
       twoDimensionalFineEnlargedActionMeasure faceGeometry actionAt spacing ≠ 0 :=
-  ⟨data.fineMeasure_normalized spacing,
+  ⟨TwoDimensionalDriverAxialLatticeProductIdentityData.fineMeasure_univ
+      faceGeometry actionAt data spacing,
     TwoDimensionalDriverAxialLatticeProductIdentityData.fineMeasure_ne_zero
       faceGeometry actionAt data spacing⟩
 

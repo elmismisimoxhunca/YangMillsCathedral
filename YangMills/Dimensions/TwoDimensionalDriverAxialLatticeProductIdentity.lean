@@ -111,8 +111,6 @@ structure TwoDimensionalDriverAxialLatticeProductIdentityData where
   fineDensity_measurable : ∀ spacing,
     Measurable (twoDimensionalFineEnlargedActionDensityProduct
       faceGeometry actionAt spacing)
-  fineMeasure_normalized : ∀ spacing,
-    twoDimensionalFineEnlargedActionMeasure faceGeometry actionAt spacing univ = 1
   expectation_eq_fineEnlargedIntegral : ∀ spacing
       (observable : (coarse.Edge → G) → ℝ),
     Measurable observable →
@@ -126,13 +124,39 @@ structure TwoDimensionalDriverAxialLatticeProductIdentityData where
 
 namespace TwoDimensionalDriverAxialLatticeProductIdentityData
 
-/-- Every exact enlarged action carrier is nonzero. -/
+/-- The universal identity at the constant-one observable derives normalization of the exact fine
+carrier from normalization of the same action-indexed Theorem 7.2 law. -/
+theorem fineMeasure_univ
+    (data : TwoDimensionalDriverAxialLatticeProductIdentityData faceGeometry actionAt)
+    (spacing : PositiveLatticeSpacing) :
+    twoDimensionalFineEnlargedActionMeasure faceGeometry actionAt spacing univ = 1 := by
+  have formula := data.expectation_eq_fineEnlargedIntegral spacing
+    (fun _ : coarse.Edge → G => (1 : ℝ)) measurable_const
+    ⟨1, fun _ => by norm_num⟩
+  have latticeIntegral :
+      (∫ _ : EpsilonSquareLatticeAxialConfiguration G spacing, (1 : ℝ)
+        ∂(data.latticeLimit spacing).limitMeasure) = 1 := by
+    rw [integral_const, Measure.real_def, (data.latticeLimit spacing).limit_normalized]
+    norm_num
+  have fineIntegral :
+      (∫ _ : (enlargedApproximation.fine spacing).Edge → G, (1 : ℝ)
+        ∂twoDimensionalFineEnlargedActionMeasure faceGeometry actionAt spacing) = 1 := by
+    rw [← formula]
+    exact latticeIntegral
+  rw [integral_const] at fineIntegral
+  have toReal_eq_one :
+      (twoDimensionalFineEnlargedActionMeasure faceGeometry actionAt spacing univ).toReal = 1 := by
+    simpa [Measure.real_def] using fineIntegral
+  exact (ENNReal.toReal_eq_one_iff _).mp toReal_eq_one
+
+/-- Every exact enlarged action carrier is nonzero by derived normalization. -/
 theorem fineMeasure_ne_zero
     (data : TwoDimensionalDriverAxialLatticeProductIdentityData faceGeometry actionAt)
     (spacing : PositiveLatticeSpacing) :
     twoDimensionalFineEnlargedActionMeasure faceGeometry actionAt spacing ≠ 0 := by
   intro zeroMeasure
-  have normalized := data.fineMeasure_normalized spacing
+  have normalized := TwoDimensionalDriverAxialLatticeProductIdentityData.fineMeasure_univ
+    faceGeometry actionAt data spacing
   rw [zeroMeasure] at normalized
   simp at normalized
 

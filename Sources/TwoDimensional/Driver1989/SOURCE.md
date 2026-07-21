@@ -148,7 +148,9 @@ face areas, the symmetric-difference triangle inequality, finiteness, and existi
 eventual bijective face correspondence rather than storing either conclusion as a field. The first displayed equality in the §8 proofs is now an uninhabited
 universal interface: every bounded measurable coarse observable under the action-indexed Theorem 7.2
 law equals its exact normalized `VB(ε)` integral, with the certified BC boundary words, precisely
-`|R(ε)|/ε²` normalized-Haar convolution factors, and the exact `T(ε)`-frozen carrier. Adding the
+`|R(ε)|/ε²` normalized-Haar convolution factors, and the exact `T(ε)`-frozen carrier. The
+fine carrier's normalization and nonzeroness are derived from this universal identity at constant
+one and the normalized Theorem 7.2 law, not supplied as a separate field. Adding the
 The Villain convolution-semigroup reduction is now derived without a new assumption: `n+1` exact
 Villain factors equal `Q_{(n+1)ε²}`, hence every fine-face power is literally `Q_{|R(ε)|}` and the
 full BC product retains the same selected density family and boundary words. A separate Villain
