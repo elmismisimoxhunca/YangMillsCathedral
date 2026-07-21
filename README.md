@@ -796,8 +796,11 @@ continuum invariant inner product to be literally `-Re tr(p_*X p_*Y)`. This bloc
 representation/pairing substitution; `TwoDimensionalWilsonCommonHeatChainData` now closes that dependency chain: the same connected-group
 smooth representation is globally faithful and infinitesimally injective, supplies the Wilson
 normalization/action family and exact invariant pairing, whose Laplacian generates the unchanged
-continuum selected density and kernel. Tying this common chain to a full planar continuum expectation
-law remains open. No weak limit, boundary-
+continuum selected density and kernel. The source-required axial enlargement `B → VB` is now explicit: both graphs are BC, every coarse
+edge is literally a subdivided enlarged path, the distinguished tree is exactly the vertical/x-axis
+edges, every enlarged edge belongs to a coarse subdivision or that tree, and enlarged configurations
+restrict measurably and recover ambient coarse holonomies. Strip/reflection expectation laws tying
+this geometry to the common heat chain remain open. No weak limit, boundary-
 independence proof, or lattice-continuum convergence is constructed.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to

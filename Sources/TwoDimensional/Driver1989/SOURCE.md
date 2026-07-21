@@ -131,8 +131,11 @@ of the future analytic chain. Driver's standing §2 representation chain now def
 smooth unitary matrix representation, requires its injectivity, and identifies the continuum
 invariant pairing literally with `-Re tr(p_*X p_*Y)`. A dependent common-chain record now ties the same connected-group representation (globally faithful
 and infinitesimally injective), Wilson normalization/actions, exact trace pairing, pairing Laplacian,
-and unchanged selected continuum density/heat equation/kernel. Tying this chain to the full planar
-continuum expectation law, inhabiting Theorem 7.2/projectivity, and formalizing Theorems 8.5/8.10
+and unchanged selected continuum density/heat equation/kernel. The proof-required `B → VB` enlargement now has BC certificates on both graphs, literal coarse-edge
+subdivision paths, the exact vertical/x-axis tree, total coverage excluding unrelated enlarged edges,
+and measurable ambient-compatible coarse restriction. Adding the strip-independence/reflection
+expectation law on this enlargement, inhabiting Theorem 7.2/projectivity, and formalizing Theorems
+8.5/8.10
 convergence over exact transport remain explicit debt.
 
 PDF p. 21 / printed p. 595 was independently inspected on 2026-07-21 for Theorem 6.6.

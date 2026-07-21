@@ -839,8 +839,11 @@ committed before higher layers depend on it.
   - [x] Tie one connected-group smooth globally faithful and infinitesimally injective representation
     to the Wilson normalization/actions, exact trace pairing, pairing Laplacian, unchanged selected
     continuum heat density, and kernel.
-  - [ ] Tie that common chain to the full planar continuum expectation law, then add Theorems 8.5/8.10
-    convergence over exact transport; inhabit/derive box
+  - [x] Add Driver's exact `B → VB` enlargement: BC certificates on both graphs, literal coarse-path
+    subdivision, exact vertical/x-axis tree, total enlarged-edge coverage, measurable restriction,
+    and ambient holonomy compatibility.
+  - [ ] Add the strip-independence/reflection planar expectation law on `VB`, tie it to the common heat
+    chain, then add Theorems 8.5/8.10 convergence; inhabit/derive box
     projectivity and Theorem 7.2; add compact-surface gluing with exact hypotheses, distinct from finite-cutoff, classical, and
     four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.

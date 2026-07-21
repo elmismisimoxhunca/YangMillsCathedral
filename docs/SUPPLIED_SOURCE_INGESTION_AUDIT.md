@@ -224,8 +224,10 @@ adjudication corrections.
    Driver's standing representation derivative `p_*` is now the exact identity `mfderiv`, injective,
    with invariant pairing literally `-Re tr(p_*X p_*Y)`. A dependent common chain ties the same
    connected-group representation, Wilson actions, pairing Laplacian, and unchanged selected
-   continuum heat density/kernel. The full planar expectation-law bridge, projectivity, and Theorems
-   8.5/8.10 convergence over exact transport remain open.
+   continuum heat density/kernel. The proof-required `B → VB` enlargement now has dual BC geometry,
+   literal coarse subdivisions, exact vertical/x-axis tree, total enlarged-edge coverage, and ambient-
+   compatible restriction. Strip/reflection expectation, projectivity, and Theorems 8.5/8.10
+   convergence remain open.
 11. Lévy PDF pp. 24–27 / printed pp. 10–13 were visually adjudicated on 2026-07-21 for §1.6,
    Theorem 1.6.1 and Lemma 1.6.3. The pages visibly define the fine-to-coarse holonomy map, state
    surjectivity and exact measure pushforward, and state strict three-graph composition. The Lean
