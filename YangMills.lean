@@ -34,6 +34,8 @@ import YangMills.Mathematics.LieGroupAdjointBracket
 import YangMills.Mathematics.LieGroupAdjointBracketProbes
 import YangMills.Mathematics.LieGroupRightInvariantField
 import YangMills.Mathematics.LieGroupRightInvariantFieldProbes
+import YangMills.Mathematics.LieGroupRightInvariantScalarLaplacian
+import YangMills.Mathematics.LieGroupRightInvariantScalarLaplacianProbes
 import YangMills.Mathematics.LieGroupLeftTrivializedFieldDerivative
 import YangMills.Mathematics.LieGroupLeftTrivializedFieldDerivativeProbes
 import YangMills.Mathematics.MixedPartialLieBracket
@@ -143,6 +145,8 @@ import YangMills.Geometry.LieGroup
 import YangMills.Geometry.LieGroupProbes
 import YangMills.Geometry.InvariantInnerProduct
 import YangMills.Geometry.InvariantInnerProductProbes
+import YangMills.Geometry.InvariantPairingOrthonormalBasis
+import YangMills.Geometry.InvariantPairingOrthonormalBasisProbes
 import YangMills.Geometry.AdjointBundle
 import YangMills.Geometry.AdjointBundleProbes
 import YangMills.Geometry.AdjointBundleTopology

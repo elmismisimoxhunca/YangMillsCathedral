@@ -4517,9 +4517,15 @@ addition/convolution, and its measures to converge weakly to the identity agains
 complex test. On the intended Hausdorff compact Lie group, where continuous tests distinguish the
 identity, this blocks a time-constant Haar idempotent. The exact selected area
 is proved to split into two positive half-area density factors with the same primitive orientation.
-The interface still deliberately does not call the density a heat kernel: Driver's connected
-compact Lie group, metric induced by a representation with injective differential,
-Laplacian/Brownian generator, and heat equation remain absent. No planar embedding, simplicity
+The next reusable calculus stone constructs scalar first and iterated derivatives by applying the
+actual manifold derivative to the already constructed right-invariant fields. Driver's
+orthonormal-basis sum is `rightInvariantScalarLaplacianInBasis`. A nonempty
+`InvariantPairingOrthonormalBasisData` is tied to the exact explicit invariant pairing, while the
+uninhabited `RightInvariantPairingLaplacianData` requires every other basis orthonormal for that same
+pairing to compute the identical operator. Constant annihilation is derived. The interface still
+deliberately does not call the density a heat kernel: no construction of the representation-induced
+manifold metric, no smooth real representative of the `ENNReal` density, no
+`∂ₜQ = ½ΔQ` same-density bridge, and no Brownian generator exist. No planar embedding, simplicity
 theorem, heat kernel, measure, general face product, refinement, gluing, or lattice-limit theorem is
 constructed.
 

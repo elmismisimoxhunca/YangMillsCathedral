@@ -654,9 +654,13 @@ normalized compact Haar measure, and derives one exact physical class-observable
 formula. Neutral reusable convolution now fixes
 `(f⋆g)(z)=∫f(x)g(x⁻¹z)dμ_H`; a further uninhabited same-density certificate requires normalization
 at every positive time, exact addition/convolution, and weak convergence to identity against every
-continuous complex test, deriving the selected-area two-half split. This still deliberately does
-not call the supplied density a heat kernel: invariant metric, Laplacian/Brownian, and heat-equation
-data remain absent. No planar loop embedding, heat kernel, measure, or model is constructed;
+continuous complex test, deriving the selected-area two-half split. Reusable manifold calculus now
+constructs scalar first and iterated derivatives along the exact right-invariant group fields and
+Driver's finite orthonormal-basis Laplacian sum; an uninhabited certificate ties the basis to the
+same explicit invariant pairing and requires independence from every other such basis. This still
+deliberately does not call the supplied density a heat kernel: no smooth real density bridge,
+`∂ₜQ=½ΔQ`, Brownian generator, or manifold metric construction is present. No planar loop
+embedding, heat kernel, measure, or model is constructed;
 general face products, refinement/gluing, and lattice-limit layers remain explicit debt.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to

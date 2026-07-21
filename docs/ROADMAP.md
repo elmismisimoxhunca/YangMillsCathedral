@@ -703,10 +703,14 @@ committed before higher layers depend on it.
   - [x] Fix neutral normalized-Haar density convolution with the exact `x⁻¹ * g` orientation and add
     an uninhabited same-density positive-time convolution semigroup: all-time normalization, weak
     convergence to the identity, and the selected-area two-half split are exact and probed.
-  - [ ] Add an exact source-facing heat-kernel certificate with connected compact Lie group,
-    invariant metric/generator and Brownian or heat-equation semantics; then add finite planar
-    graph/face-product laws and refinement/projective consistency, compact-surface gluing, and
-    Driver's Villain/Wilson lattice-continuum convergence
+  - [x] Construct scalar first and iterated derivatives along the exact right-invariant group fields;
+    package Driver's nonempty invariant-pairing-orthonormal basis sum and require exact independence
+    from every other orthonormal basis. Constants are derived to lie in the kernel.
+  - [ ] Add the same-density smooth real representative, exact `∂ₜQ = ½ΔQ` bridge to that
+    right-invariant pairing Laplacian (with Driver's sign/factor convention), and Brownian or
+    equivalent generator semantics; then add finite planar graph/face-product laws and
+    refinement/projective consistency, compact-surface gluing, and Driver's Villain/Wilson
+    lattice-continuum convergence
     with exact hypotheses, distinct from finite-cutoff, classical, and four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.
   - [x] Add a current-strength continuum core hard-wired to coordinate `ℝ³` with coordinate
