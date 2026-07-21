@@ -674,9 +674,11 @@ coordinate transport at every center. Finite-dimensional evaluation mathematics 
 diagonal bilinear precomposition; exact nested Hom-bundle coordinate reconciliation then packages
 the unchanged positive bi-invariant form as Mathlib's full `ContMDiffRiemannianMetric`. No density,
 solution, or process is constructed; Laplace–Beltrami comparison remains open before treating
-this as a completed source heat-kernel chain. No planar loop
-embedding, heat kernel, measure, or model is constructed;
-general face products, refinement/gluing, and lattice-limit layers remain explicit debt.
+this as a completed source heat-kernel chain. Finite oriented-edge words now retain one coordinate
+per underlying edge, inversion under reversal, and Driver's later-on-the-left transport order. This
+is reusable algebra, not a planar graph certificate. No planar loop embedding, heat kernel, measure,
+or model is constructed; actual complement-face geometry, general face products,
+refinement/gluing, and lattice-limit layers remain explicit debt.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly

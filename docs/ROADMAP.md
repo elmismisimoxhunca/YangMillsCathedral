@@ -723,10 +723,15 @@ committed before higher layers depend on it.
   - [x] Prove finite-dimensional smooth diagonal bilinear precomposition, reconcile it exactly with
     the two nested metric Hom-bundle coordinate transports, derive dependent-section smoothness,
     and assemble the actual `ContMDiffRiemannianMetric` with the unchanged pointwise form.
-  - [ ] Compare its Laplace–Beltrami operator with the basis sum; after that add finite planar
-    graph/face-product laws, refinement/projective consistency, compact-
-    surface gluing, and Driver's Villain/Wilson lattice-continuum convergence
-    with exact hypotheses, distinct from finite-cutoff, classical, and four-dimensional witnesses.
+  - [x] Add reusable finite oriented-edge words with one coordinate per underlying edge, exact
+    inversion for reverse orientation, reverse-word inversion, and Driver-compatible later-on-the-
+    left concatenation.
+  - [ ] Compare the metric's Laplace–Beltrami operator with the basis sum.
+  - [ ] Construct exact finite planar embeddings/complement-face certificates and BC-graph
+    face-product laws; then add general disconnected-boundary choice independence,
+    refinement/projective consistency, compact-surface gluing, and Driver's Villain/Wilson lattice-
+    continuum convergence with exact hypotheses, distinct from finite-cutoff, classical, and four-
+    dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.
   - [x] Add a current-strength continuum core hard-wired to coordinate `ℝ³` with coordinate
     Lebesgue action measure, dependently joining compact-simple gauge/classical data, strict
