@@ -40,6 +40,15 @@ planar vertex set, bonds crossing one another or themselves only at endpoints, e
 coherence, and an admissible collection of bond curves. These conditions agree with the retained
 native extraction.
 
+PDF p. 21 / printed p. 595 was independently inspected on 2026-07-21 for Theorem 6.6.
+The page visibly quantifies over a gauge-invariant function on the BC graph configuration space and
+states that its continuum holonomy expectation equals integration of that function against one Haar
+coordinate per bond weighted by the product, over bounded regions, of `Q` evaluated at geometric
+region area and boundary holonomy. The proof visibly identifies this theorem as the BC special case
+of Theorem 6.4. The project's measurable/integrable complex-valued qualification supplies the
+formal hypotheses needed by the Bochner integral; the current topological graph certificate is a
+Jordan-boundary subclass of BC, not Driver's full bridge-multiplicity scope.
+
 ## Artifact chain
 
 - `FETCH_TIMESTAMP.txt` records repository ingestion time.

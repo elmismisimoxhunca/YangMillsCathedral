@@ -689,9 +689,14 @@ decompositions for every edge (with explicitly stronger affine-speed normalizati
 vertices, injective edge arcs, endpoint-only crossings, full disjoint complement decomposition, a
 finite connected-cell decomposition after adjoining Driver's x-axis, a segmentwise word-realized
 once-around Jordan frontier, and coordinate-Lebesgue area. This is a strengthened subclass, not yet Driver's full BC scope:
-bridge-multiplicity boundaries remain open. No planar graph instance, heat kernel, planar/Yang–Mills measure, or
-model is constructed; BC/general-boundary face products, refinement/gluing, and lattice-limit
-layers remain explicit debt.
+bridge-multiplicity boundaries remain open. On this exact Jordan subclass, an uninhabited
+face-product law now quantifies over every measurable, integrable finite vertex-gauge-invariant
+complex graph function, assigns it an existing ambient gauge-invariant observable through the same
+edge paths, and requires its expectation to equal integration against product Haar weighted by the
+unchanged selected density at exact face areas and words. The exact unit case derives normalization
+of that carrier. No planar graph instance, heat kernel, planar/Yang–Mills measure, or model is
+constructed; the full BC bridge-multiplicity formula, general-boundary choices, refinement/gluing,
+and lattice-limit layers remain explicit debt.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly

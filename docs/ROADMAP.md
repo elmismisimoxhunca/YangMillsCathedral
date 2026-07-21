@@ -742,8 +742,13 @@ committed before higher layers depend on it.
     a finite connected-cell decomposition after adjoining Driver's x-axis, bounded connected
     open faces, segmentwise word-realized once-around Jordan frontiers, and positive coordinate-
     Lebesgue areas; retain face-free graphs and block doubled circuits.
-  - [ ] Extend from the Jordan-boundary subclass to the full BC scope with bridge-multiplicity
-    boundary walks, then state its face-product expectation law; after that add general
+  - [x] State an uninhabited Jordan-boundary-subclass face-product law universally over every
+    measurable, integrable finite vertex-gauge-invariant complex graph function; tie each function
+    pointwise to an existing ambient gauge-invariant observable through the same selected paths,
+    use the unchanged density at exact geometric face areas and exact boundary words over product
+    Haar, and derive carrier normalization from the constant-one case.
+  - [ ] Extend from that deliberately earlier Jordan-subclass law to full BC bridge-multiplicity
+    boundary walks and its corresponding expectation law; after that add general
     disconnected-boundary choice independence, refinement/projective consistency, compact-surface
     gluing, and Driver's Villain/Wilson lattice-continuum convergence with exact hypotheses,
     distinct from finite-cutoff, classical, and four-dimensional witnesses.

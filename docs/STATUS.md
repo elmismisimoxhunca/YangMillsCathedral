@@ -4579,8 +4579,16 @@ subclass: every selected edge now carries a concrete strictly partitioned finite
 vertical affine segments or affinely reparameterized `C¹` horizontal graphs. This is documented as
 a normalized parameterization strengthening of Driver Definitions 3.1/3.8, not their verbatim
 speed convention. A second finite connected-cell decomposition of the complement after adjoining
-the x-axis retains Definition 6.1's finite-component condition. No graph or face is constructed; bridge-multiplicity BC boundaries and
-disconnected boundary/cut choices remain separate debt.
+the x-axis retains Definition 6.1's finite-component condition. An uninhabited
+`TwoDimensionalSimpleBoundaryFaceProductLawData` now states the corresponding restricted
+Jordan-subclass formula universally for every measurable, integrable finite vertex-gauge-invariant
+complex function on the exact edge configuration. Each such function is tied to an existing ambient
+physical observable through the same selected paths, and its original gauge-fixed expectation is
+required to equal integration against exact product Haar weighted by the unchanged selected density
+at exact geometric areas and boundary words. A designated exact unit member derives normalization
+and nonzeroness of this weighted carrier; neither is accepted independently. No graph or face law
+instance is constructed. Full bridge-multiplicity BC boundaries and their law, plus disconnected
+boundary/cut choices, remain separate debt.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.
