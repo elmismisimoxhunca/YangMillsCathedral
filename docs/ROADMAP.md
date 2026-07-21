@@ -812,8 +812,11 @@ committed before higher layers depend on it.
   - [x] Construct the exact square-box adapter to generic finite axial presentations, including a
     measurable reverse/identity extension, coordinate recovery, orientation disjointness, finite
     support, and inherited boundary coverage.
-  - [ ] Add box partition-function certificates/measures, boundary-condition weak-limit semantics,
-    compact-surface gluing, and lattice-continuum convergence with exact hypotheses, distinct from finite-cutoff, classical, and
+  - [x] Prove exact box partition functions finite and nonzero from compact action bounds, strict
+    positivity and product-Haar normalization; construct normalized finite-coordinate and infinite-
+    carrier pushforward box measures.
+  - [ ] Add boundary-conditioned box measures and weak-limit semantics, compact-surface gluing, and
+    lattice-continuum convergence with exact hypotheses, distinct from finite-cutoff, classical, and
     four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.
   - [x] Add a current-strength continuum core hard-wired to coordinate `ℝ³` with coordinate

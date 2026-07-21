@@ -104,9 +104,10 @@ or boundary independence. Exact positive-radius centered square-box plaquette se
 sets now use the source `-n,…,n-1` / nonzero-row bounds, are literally nested with radius, and cover
 every non-tree plaquette boundary orientation. The concrete box adapter now produces the generic
 finite presentation using exact subtypes and a measurable extension that applies inversion to
-reverse coordinates and identity elsewhere, with exact recovery/support/coverage. Box-specific
-partition-function certificates, boundary-condition weak limits, and convergence remain explicit
-debt.
+reverse coordinates and identity elsewhere, with exact recovery/support/coverage. Compactness now bounds the exact box action weight and strict positivity/product-Haar normalization
+prove its exact partition function finite and nonzero. Normalized finite-coordinate and same-
+extension infinite-carrier box measures are constructed. Boundary-conditioned box measures, weak
+limits, and convergence remain explicit debt.
 
 PDF p. 21 / printed p. 595 was independently inspected on 2026-07-21 for Theorem 6.6.
 The page visibly quantifies over a gauge-invariant function on the BC graph configuration space and

@@ -761,8 +761,11 @@ from `-n` through `n-1`, independent axial coordinates are right-directed horizo
 covered in one coordinate orientation. `twoDimensionalSquareLatticeBoxPresentation` now adapts these exact finite sets to the generic
 presentation: coordinates are orientation-disjoint, arbitrary values extend measurably by reverse
 inversion and identity elsewhere, every coordinate is recovered, and every selected boundary is
-covered. This constructs no partition-function certificate for the boxes, boundary-condition weak
-limit, or lattice-continuum convergence.
+covered. Compactness of the common action and finite box geometry now bounds the exact action weight,
+while strict positivity and product-Haar normalization make its exact partition function nonzero.
+Thus every box has a constructed finite/nonzero normalizer certificate, normalized nonzero finite-
+coordinate measure, and normalized nonzero same-extension pushforward. No boundary-conditioned
+measure, weak limit, or lattice-continuum convergence is constructed.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly
