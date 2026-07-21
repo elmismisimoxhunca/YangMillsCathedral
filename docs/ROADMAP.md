@@ -805,8 +805,10 @@ committed before higher layers depend on it.
     coverage, exact partition functions, and derived
     normalized/nonzero finite product-Haar density measures, their exact finite-support pushforwards
     to the infinite axial carrier, and represented-coordinate marginal identities.
-  - [ ] Add exact square-box families, boundary-condition and infinite-volume cylinder limits,
-    compact-surface gluing, and lattice-continuum convergence with exact hypotheses, distinct from finite-cutoff, classical, and
+  - [x] Add an uninhabited exhaustive nested projective finite-presentation contract and an exact
+    infinite axial probability/cylinder-law interface with finite-stage and one-coordinate marginals.
+  - [ ] Add exact square-box geometry, boundary-condition weak-limit semantics, compact-surface
+    gluing, and lattice-continuum convergence with exact hypotheses, distinct from finite-cutoff, classical, and
     four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.
   - [x] Add a current-strength continuum core hard-wired to coordinate `ℝ³` with coordinate

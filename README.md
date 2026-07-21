@@ -752,8 +752,11 @@ of the two coordinate orientations. Its action weight, exact partition function,
 measure are defined; total mass one and nonzeroness derive from finiteness/nonvanishing of that same
 partition function. The same measurable extension now pushes each normalized finite law to an actual normalized,
 nonzero measure on the exact infinite axial carrier, with exact represented-bond coordinate
-marginals. This remains a finite-support pushforward, not an exact square-box family, boundary-
-condition limit, infinite-volume lattice measure, or convergence theorem.
+marginals. An uninhabited projective sequence contract now requires nested coordinate/plaquette inclusions,
+exact finite-measure pushforward, exhaustion of every off-tree bond and elementary plaquette, and a
+probability measure on the infinite axial carrier with every finite-coordinate cylinder equal to the
+corresponding normalized finite law. It constructs no sequence or law and does not yet encode exact
+square boxes, boundary-condition weak limits, or lattice-continuum convergence.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly

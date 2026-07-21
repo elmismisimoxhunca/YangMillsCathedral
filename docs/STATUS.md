@@ -4678,9 +4678,13 @@ nonzero and finite, from which the normalized nonzero finite axial measure is de
 unit-group one-coordinate/one-plaquette presentation and normalizer inhabit the API without
 constructing a nontrivial field. `twoDimensionalFiniteAxialPushforwardMeasure` maps that same
 normalized law through the stored measurable extension to the exact infinite axial carrier; total
-mass one, nonzeroness, and every represented-bond coordinate marginal are derived. This is still a
-finite-support pushforward. No exact square-box sequence, boundary-condition limit, infinite-
-volume measure, or continuum convergence witness is constructed.
+mass one, nonzeroness, and every represented-bond coordinate marginal are derived. `TwoDimensionalFiniteAxialProjectiveSequenceData` now requires nested coordinate and plaquette
+inclusions, exact consecutive finite-law pushforward, and exhaustion of every off-tree bond and every
+elementary plaquette. `TwoDimensionalAxialInfiniteVolumeCylinderLawData` requires a normalized
+measure on the exact infinite axial carrier whose restriction to every finite represented coordinate
+family is the corresponding normalized finite law; nonzeroness and represented one-coordinate
+marginals derive. Both remain uninhabited acceptance interfaces. No exact square-box geometry,
+boundary-condition weak limit, or continuum convergence witness is constructed.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

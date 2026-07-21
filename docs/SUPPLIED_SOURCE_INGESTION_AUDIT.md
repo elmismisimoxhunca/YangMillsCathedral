@@ -166,10 +166,11 @@ adjudication corrections.
    both a Jordan-boundary subclass and a strengthened embedded-arc BC layer with exact bridge
    multiplicity; no graph or law instance is constructed.
 9. Driver PDF p. 8 / printed p. 582 and PDF pp. 23–24 / printed pp. 597–598 were
-   visually adjudicated on 2026-07-21 for Proposition 3.5, Definition 7.1, and equations
-   (7.1)–(7.4). The visible formulas confirm later-on-the-left path multiplication, the complete
-   action contract, the vertical-plus-x-axis axial tree, finite plaquette products, delta boundary
-   conditions, and free-boundary formulas. The current layer locks plaquette order through the
+   visually adjudicated on 2026-07-21 for Proposition 3.5, Definition 7.1, equations
+   (7.1)–(7.4), and Theorem 7.2. The visible formulas confirm later-on-the-left path multiplication,
+   the complete action contract, the vertical-plus-x-axis axial tree, finite plaquette products,
+   delta boundary conditions, free-boundary formulas, weak limits, boundary independence, and the
+   finite-cylinder restriction conclusion. The current layer locks plaquette order through the
    reusable finite-oriented-word evaluator but constructs no finite-volume measure.
 10. Driver PDF p. 27 / printed p. 601 was visually adjudicated on 2026-07-21 for Definition 8.1.
    The page visibly fixes the nearest-neighbor directed graph on `εℤ²`, requires approximating
@@ -199,7 +200,9 @@ adjudication corrections.
    and complete selected-plaquette non-tree boundary-coordinate coverage;
    their same-extension pushforwards are normalized nonzero measures on the exact infinite axial
    carrier with represented-coordinate marginal identities. They are explicitly not yet Driver's
-   square boxes or infinite-volume limits.
+   square boxes or constructed infinite-volume limits. An uninhabited projective-sequence contract
+   now requires nested finite-law pushforward plus exhaustive bonds/plaquettes, and an infinite axial
+   probability interface requires all finite-coordinate cylinder laws exactly.
 11. Lévy PDF pp. 24–27 / printed pp. 10–13 were visually adjudicated on 2026-07-21 for §1.6,
    Theorem 1.6.1 and Lemma 1.6.3. The pages visibly define the fine-to-coarse holonomy map, state
    surjectivity and exact measure pushforward, and state strict three-graph composition. The Lean

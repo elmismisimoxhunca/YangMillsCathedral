@@ -62,9 +62,10 @@ identity-Dirac/Haar product, and retains the unchanged face density and ambient 
 PDF p. 8 / printed p. 582 was independently inspected on 2026-07-21 for Proposition 3.5; the
 visible formula confirms that traversing `σ` and then `τ` gives `P(τ)P(σ)`, fixing later traversal on
 the left. PDF pp. 23–24 / printed pp. 597–598 were independently inspected the same day for
-Definition 7.1 and equations (7.1)–(7.4); continuity, positivity, class/inversion symmetry, real Haar
-normalization, the vertical-plus-x-axis axial tree, plaquette products, delta boundary conditions,
-and free-boundary formulas were confirmed. No finite-volume measure is yet claimed by the current
+Definition 7.1, equations (7.1)–(7.4), and Theorem 7.2; continuity, positivity, class/inversion
+symmetry, real Haar normalization, the vertical-plus-x-axis axial tree, plaquette products, delta
+boundary conditions, free-boundary formulas, weak limits, boundary independence, and finite-cylinder
+restriction were confirmed. No finite-volume measure is yet claimed by the current
 plaquette-product layer.
 
 PDF p. 27 / printed p. 601 was independently inspected on 2026-07-21 for Definition 8.1 and the
@@ -94,9 +95,12 @@ disjoint off-tree bonds, use injective measurable finite-support extensions, req
 plaquette's non-tree boundary bonds to be represented in one of the two coordinate orientations, and
 define exact product-Haar partition functions and normalized finite density measures. The same
 measurable extensions push these laws to normalized nonzero measures on the exact infinite axial
-carrier with exact represented-coordinate marginals. These are groundwork for
-(7.2)/(7.4), not exact square boxes. Exact box families, boundary-condition/infinite-volume limits,
-and convergence remain explicit debt.
+carrier with exact represented-coordinate marginals. An uninhabited nested projective-sequence contract additionally requires exact consecutive finite-law
+pushforward and exhaustion of every off-tree bond and elementary plaquette. An infinite axial
+probability interface has every finite-coordinate cylinder equal to the corresponding normalized
+finite law. This is only projective cylinder infrastructure motivated by one conclusion of Theorem
+7.2; it does not state uniqueness, exact square boxes, boundary-conditioned measures, weak limits,
+or boundary independence. Exact box geometry, boundary-condition weak limits, and convergence remain explicit debt.
 
 PDF p. 21 / printed p. 595 was independently inspected on 2026-07-21 for Theorem 6.6.
 The page visibly quantifies over a gauge-invariant function on the BC graph configuration space and
