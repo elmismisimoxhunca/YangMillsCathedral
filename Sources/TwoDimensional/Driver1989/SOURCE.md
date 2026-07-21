@@ -136,8 +136,13 @@ subdivision paths, the exact vertical/x-axis tree, total coverage excluding unre
 and measurable ambient-compatible coarse restriction. Equation (6.1) is now an uninhabited universal interface: every bounded measurable coarse function
 factors through exact enlarged restriction and its base expectation equals the normalized vertical/x-
 axis-tree-frozen product-Haar integral with canonical BC words and the unchanged area-density law.
-Adding the outer common-representation/heat coherence, inhabiting Theorem 7.2/projectivity, and
-formalizing Theorems 8.5/8.10 convergence over exact transport remain explicit debt. A visual
+The proof-required lattice enlargement now separately relates `B(ε)` and `VB(ε)`: exact embedded
+refinement words commute with the continuum `B → VB` words, `VB(ε)` is BC, `T(ε)` is precisely the
+image of the vertical/x-axis tree, every fine enlarged edge belongs to a coarse-fine subdivision or
+that tree, Definition 8.1 boundary transport remains face-indexed under collisions, and exact lattice
+holonomy restriction commutes. Adding the measure-level enlarged product identity, outer common-
+representation/heat coherence, inhabiting Theorem 7.2/projectivity, and formalizing Theorems 8.5/8.10
+convergence remain explicit debt. A visual
 recheck of PDF pp. 27–29 / printed pp. 601–603 found a source-internal Wilson issue that blocks
 canonicalization: Definition 8.4 visibly prints `Aχ^ε(g) = Zε⁻¹ exp Re χ(g)`, with no visible `ε` in
 the exponent, whereas Theorem 8.8 and (8.2) require spacing-dependent eigenvalues

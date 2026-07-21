@@ -802,8 +802,11 @@ edges, every enlarged edge belongs to a coarse subdivision or that tree, and enl
 restrict measurably and recover ambient coarse holonomies. `TwoDimensionalDriverAxialEnlargedHeatExpectationData` now states equation (6.1): every bounded
 measurable coarse function factors through exact enlarged restriction and its continuum expectation
 equals the normalized tree-frozen product-Haar integral with canonical BC words and the unchanged
-area-density law. An outer contract tying that selected law to the common representation/heat chain
-and lattice convergence remains open. No weak limit, boundary-
+area-density law. The proof-specific `B(ε) → VB(ε)` graph bridge now has commuting exact refinement
+words and lattice holonomy restrictions, a BC enlarged approximation, the exact vertical/x-axis
+`T(ε)` image, collision-safe facewise boundary transport, and no unrelated enlarged fine edges. The
+enlarged measure/product identity and outer common representation/heat convergence contracts remain
+open. No weak limit, boundary-
 independence proof, or lattice-continuum convergence is constructed.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
