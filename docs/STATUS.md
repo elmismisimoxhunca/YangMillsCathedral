@@ -4546,9 +4546,12 @@ The pointwise metric bridge now makes the previously private inverse of left Mau
 trivialization public and constructs `lieGroupInvariantMetricInner` by precomposing both slots of the
 exact invariant pairing. Symmetry and strict positivity are derived. Fixed left translation leaves
 coefficients unchanged; fixed right translation gives exactly `Ad(h⁻¹)`, so the same adjoint-
-invariance field derives bi-invariance. This still is not a Mathlib Riemannian metric: smoothness of
-the dependent continuous-bilinear section, von Neumann boundedness of its unit ellipsoids, and the
-Laplace–Beltrami comparison remain open. No planar embedding, simplicity theorem, YM measure,
+invariance field derives bi-invariance. The reusable
+`positiveBilinear_unitEllipsoid_isVonNBounded` theorem minimizes the quadratic form on the compact
+unit sphere and proves the finite-dimensional von Neumann-bounded unit-ellipsoid obligation; the
+exact tangent-fiber form now satisfies it. This still is not a Mathlib Riemannian metric: smoothness
+of the dependent continuous-bilinear section and the Laplace–Beltrami comparison remain open. No
+planar embedding, simplicity theorem, YM measure,
 general face product, refinement, gluing, or lattice-limit theorem is constructed.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary

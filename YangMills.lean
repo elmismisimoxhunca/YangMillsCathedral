@@ -151,6 +151,8 @@ import YangMills.Geometry.InvariantInnerProduct
 import YangMills.Geometry.InvariantInnerProductProbes
 import YangMills.Geometry.InvariantPairingOrthonormalBasis
 import YangMills.Geometry.InvariantPairingOrthonormalBasisProbes
+import YangMills.Mathematics.PositiveBilinearUnitEllipsoid
+import YangMills.Mathematics.PositiveBilinearUnitEllipsoidProbes
 import YangMills.Geometry.LieGroupInvariantMetricPairing
 import YangMills.Geometry.LieGroupInvariantMetricPairingProbes
 import YangMills.Geometry.AdjointBundle

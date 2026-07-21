@@ -666,9 +666,11 @@ mutually independent stationary right increments with those unchanged density la
 marginals are derived, including exact equality at the selected area with the sampled loop-holonomy
 law. The metric bridge now transports the exact invariant pairing to every group tangent fiber by
 left Maurer–Cartan trivialization and proves its inverse, symmetry, strict positivity, and left/right
-invariance with the exact `Ad(h⁻¹)` convention. No density, solution, or process is constructed;
-dependent-section smoothness, von Neumann bounded unit ellipsoids, full
-`ContMDiffRiemannianMetric` packaging, and Laplace–Beltrami comparison remain open before treating
+invariance with the exact `Ad(h⁻¹)` convention. A reusable finite-dimensional compact-unit-sphere
+argument now proves von Neumann boundedness of every strictly positive continuous bilinear unit
+ellipsoid and discharges that exact obligation for each group tangent fiber. No density, solution,
+or process is constructed; dependent-section smoothness, full `ContMDiffRiemannianMetric`
+packaging, and Laplace–Beltrami comparison remain open before treating
 this as a completed source heat-kernel chain. No planar loop
 embedding, heat kernel, measure, or model is constructed;
 general face products, refinement/gluing, and lattice-limit layers remain explicit debt.

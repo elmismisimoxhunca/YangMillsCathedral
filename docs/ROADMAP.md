@@ -715,8 +715,10 @@ committed before higher layers depend on it.
   - [x] Transport the exact invariant pairing pointwise by left Maurer–Cartan trivialization; prove
     its inverse, symmetry, strict positivity, exact left/right translation formulas, and
     bi-invariance with the required `Ad(h⁻¹)` convention.
-  - [ ] Prove finite-dimensional von Neumann boundedness of the positive quadratic unit ellipsoids
-    and smoothness of the dependent bilinear-form section, then assemble the actual
+  - [x] Prove finite-dimensional von Neumann boundedness of strictly positive continuous bilinear
+    unit ellipsoids by a reusable compact-unit-sphere theorem and discharge the exact obligation for
+    each pointwise group tangent pairing.
+  - [ ] Prove smoothness of the dependent bilinear-form section, then assemble the actual
     `ContMDiffRiemannianMetric` and compare its Laplace–Beltrami operator with the basis sum; after
     that add finite planar graph/face-product laws, refinement/projective consistency, compact-
     surface gluing, and Driver's Villain/Wilson lattice-continuum convergence

@@ -10,8 +10,8 @@ import YangMills.Geometry.LieGroupInvariantMetricPairing
 # Hostile probes for the pointwise invariant group metric pairing
 
 The probes expose exact Maurer--Cartan inversion, strict positivity, both translation conventions,
-and bi-invariance. They reject a disconnected pointwise pairing but do not claim smooth
-Riemannian-metric packaging.
+bi-invariance, and finite-dimensional von Neumann boundedness. They reject a disconnected
+pointwise pairing but do not claim smooth Riemannian-metric packaging.
 -/
 
 namespace YangMills.Geometry.LieGroupInvariantMetricPairing.Probes
@@ -78,6 +78,14 @@ theorem exact_right_invariance
       (lieGroupRightTranslationDifferential h g w) =
     lieGroupInvariantMetricInner inner g v w :=
   lieGroupInvariantMetricInner_right_invariant inner g h v w
+
+/-- The exact metric unit ellipsoid has Mathlib's required von Neumann boundedness in finite
+dimensions. -/
+theorem exact_pointwise_unitEllipsoid_isVonNBounded
+    [FiniteDimensional ℝ E] (g : G) :
+    Bornology.IsVonNBounded ℝ
+      {v : TangentSpace I g | lieGroupInvariantMetricInner inner g v v < 1} :=
+  lieGroupInvariantMetricInner_isVonNBounded inner g
 
 /-- A changed scalar cannot replace the exact pointwise pairing when it is distinguishable. -/
 theorem changed_pointwise_pairing_blocked

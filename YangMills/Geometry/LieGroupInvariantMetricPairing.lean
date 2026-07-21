@@ -6,6 +6,7 @@ Authors: Sebastian Rodrigo
 
 import YangMills.Geometry.PrincipalConnectionAffineGaugeTransformation
 import YangMills.Geometry.InvariantInnerProduct
+import YangMills.Mathematics.PositiveBilinearUnitEllipsoid
 
 /-!
 # Pointwise bi-invariant metric pairing on a Lie group
@@ -16,9 +17,10 @@ constructs a pointwise continuous bilinear pairing. Its symmetry and strict posi
 and translation naturality proves left and right invariance; right invariance uses the exact
 `Ad(h⁻¹)` convention and the stored adjoint invariance of the same pairing.
 
-This is the algebraic/pointwise part of the invariant-pairing-to-manifold-metric bridge. It does not
-yet prove the dependent bilinear-form section smooth or its unit ellipsoids von Neumann bounded, so
-it does not construct a Mathlib `ContMDiffRiemannianMetric` or identify a Laplace--Beltrami operator.
+This is the algebraic/pointwise part of the invariant-pairing-to-manifold-metric bridge. In finite
+dimensions its unit ellipsoids are proved von Neumann bounded by reusable compact-sphere
+mathematics. The dependent bilinear-form section is not yet proved smooth, so this module does not
+construct a Mathlib `ContMDiffRiemannianMetric` or identify a Laplace--Beltrami operator.
 -/
 
 namespace YangMills.Geometry
@@ -196,6 +198,17 @@ theorem lieGroupInvariantMetricInner_right_invariant
   simp only [lieGroupInvariantMetricInner_apply,
     leftMaurerCartanApply_rightTranslationDifferential]
   exact inner.adjoint_invariant h⁻¹ _ _
+
+/-- In finite dimensions, every pointwise metric unit ellipsoid satisfies exactly Mathlib's
+von Neumann boundedness obligation for a Riemannian metric. -/
+theorem lieGroupInvariantMetricInner_isVonNBounded
+    [FiniteDimensional ℝ E]
+    (inner : InvariantInnerProductData (I := I) (G := G)) (g : G) :
+    Bornology.IsVonNBounded ℝ
+      {v : TangentSpace I g | lieGroupInvariantMetricInner inner g v v < 1} :=
+  YangMills.Mathematics.positiveBilinear_unitEllipsoid_isVonNBounded (E := E)
+    (lieGroupInvariantMetricInner inner g)
+    (fun v hv => lieGroupInvariantMetricInner_positive inner g v hv)
 
 end
 
