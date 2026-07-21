@@ -34,6 +34,19 @@ namespace OrientedEdge
 
 variable {Edge : Type uEdge}
 
+/-- Forget orientation while retaining the exact stored underlying edge. -/
+def underlying : OrientedEdge Edge → Edge
+  | forward edge => edge
+  | reverse edge => edge
+
+@[simp]
+theorem underlying_forward (edge : Edge) : underlying (forward edge) = edge :=
+  rfl
+
+@[simp]
+theorem underlying_reverse (edge : Edge) : underlying (reverse edge) = edge :=
+  rfl
+
 /-- Reverse the orientation without changing the underlying stored edge. -/
 def flip : OrientedEdge Edge → OrientedEdge Edge
   | forward edge => reverse edge
@@ -49,6 +62,10 @@ theorem flip_reverse (edge : Edge) : flip (reverse edge) = forward edge :=
 
 @[simp]
 theorem flip_flip (edge : OrientedEdge Edge) : flip (flip edge) = edge := by
+  cases edge <;> rfl
+
+@[simp]
+theorem underlying_flip (edge : OrientedEdge Edge) : underlying (flip edge) = underlying edge := by
   cases edge <;> rfl
 
 /-- Evaluate an oriented edge using one exact group coordinate per underlying edge. -/

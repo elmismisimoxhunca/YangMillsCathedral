@@ -19,6 +19,11 @@ universe uEdge uG
 
 variable {Edge : Type uEdge} {G : Type uG} [Group G]
 
+/-- Reversal never introduces a second underlying edge coordinate. -/
+theorem exact_underlying_edge_preserved (edge : OrientedEdge Edge) :
+    OrientedEdge.underlying (OrientedEdge.flip edge) = OrientedEdge.underlying edge :=
+  OrientedEdge.underlying_flip edge
+
 /-- Reverse orientation evaluates by inversion of the same stored edge coordinate. -/
 theorem exact_reverse_coordinate (configuration : Edge → G) (edge : Edge) :
     OrientedEdge.eval configuration (.reverse edge) = (configuration edge)⁻¹ :=

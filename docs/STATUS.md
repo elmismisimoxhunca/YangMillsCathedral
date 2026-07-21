@@ -4568,7 +4568,16 @@ product of supplied measurable nonnegative density slices; this defines a generi
 `withDensity` carrier. Arbitrary finite face labels/words do not imply normalization, and the
 face-free finite endpoint reduces exactly to unweighted product Haar. This is finite algebra and
 measure theory only: no arbitrary `Face` type is misrepresented as an actual planar complement
-component.
+component. The new uninhabited `TwoDimensionalSimpleBoundaryPlanarGraphData` instead demands a
+literal `ℝ²` realization of every ambient path coherent with reversal/concatenation, injective edge
+arcs, separated vertices, crossings only at shared endpoints, exact disjoint decomposition of the
+trace complement into one unbounded and all bounded connected open regions, and positive area equal
+to coordinate Lebesgue volume. Every face word is nonempty, closed, composable, underlying-edge
+nodup, and segmentwise realizes an injective-on-`[0,1)` once-around frontier parameterization, so a
+doubled circuit is rejected. It permits face-free graphs. This is a topological Jordan-boundary
+subclass: no graph or face is constructed, and Driver's piecewise-`C¹` vertical/horizontal
+admissibility, bridge-multiplicity BC boundaries, and disconnected boundary/cut choices remain
+separate debt.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

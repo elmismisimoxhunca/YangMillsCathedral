@@ -682,9 +682,15 @@ finite product of one canonical normalized Haar probability per underlying edge 
 with exact marginals and endpoint-gauge invariance. Finite word holonomy and finite products of
 supplied nonnegative density slices are proved measurable, yielding the generic product-Haar
 `withDensity` carrier; no normalization is inferred for arbitrary words. This is reusable
-algebra/measure theory, not a planar graph certificate or face law. No planar loop embedding, heat kernel, planar/Yang–Mills
-measure, or model is constructed; actual complement-face geometry, general face products,
-refinement/gluing, and lattice-limit layers remain explicit debt.
+algebra/measure theory, not by itself a planar graph certificate or face law. A separate concrete
+uninhabited simple-boundary topological planar certificate now requires exact ambient path curves
+coherent with reversal/concatenation, separated vertices, injective edge arcs, endpoint-only
+crossings, full disjoint complement decomposition, a segmentwise word-realized once-around Jordan
+frontier, and coordinate-Lebesgue area. This is a strengthened subclass, not yet Driver's full BC
+scope: piecewise-`C¹` vertical/horizontal admissibility and bridge-multiplicity boundaries remain
+open. No planar graph instance, heat kernel, planar/Yang–Mills measure, or
+model is constructed; BC/general-boundary face products, refinement/gluing, and lattice-limit
+layers remain explicit debt.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly

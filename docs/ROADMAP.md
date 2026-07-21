@@ -735,11 +735,16 @@ committed before higher layers depend on it.
     nonnegative density slices; construct the generic product-Haar `withDensity` carrier while
     retaining the face-free endpoint and making no normalization or planarity claim.
   - [ ] Compare the metric's Laplace–Beltrami operator with the basis sum.
-  - [ ] Construct exact finite planar embeddings/complement-face certificates and BC-graph
-    face-product laws; then add general disconnected-boundary choice independence,
-    refinement/projective consistency, compact-surface gluing, and Driver's Villain/Wilson lattice-
-    continuum convergence with exact hypotheses, distinct from finite-cutoff, classical, and four-
-    dimensional witnesses.
+  - [x] Define a concrete uninhabited simple-boundary topological planar graph certificate: ambient
+    path realizations in `ℝ²` coherent with reversal/concatenation, separated vertices, injective
+    edge arcs, endpoint-only crossings, exact disjoint complement decomposition, bounded connected
+    open faces, segmentwise word-realized once-around Jordan frontiers, and positive coordinate-
+    Lebesgue areas; retain face-free graphs and block doubled circuits.
+  - [ ] Add Driver's piecewise-`C¹` vertical/horizontal admissibility and the full BC scope with
+    bridge-multiplicity boundary walks, then state its face-product expectation law; after that add general
+    disconnected-boundary choice independence, refinement/projective consistency, compact-surface
+    gluing, and Driver's Villain/Wilson lattice-continuum convergence with exact hypotheses,
+    distinct from finite-cutoff, classical, and four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.
   - [x] Add a current-strength continuum core hard-wired to coordinate `ℝ³` with coordinate
     Lebesgue action measure, dependently joining compact-simple gauge/classical data, strict
