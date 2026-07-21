@@ -26,6 +26,7 @@ import YangMills.Observables.SmoothPrincipalGaugeQuantumObservableAction
 import YangMills.Reconstruction.CorrectedOSIIReconstructionAcceptance
 import YangMills.Renormalization.AdjointCasimirNormalization
 import YangMills.Renormalization.AsymptoticFreedomOPE
+import YangMills.Renormalization.StressTensorTraceAnomaly
 
 /-!
 # Four-dimensional current-strength continuum core acceptance
@@ -63,8 +64,10 @@ exact same-family OPE. The running coupling's leading coefficient is now tied to
 pairing-orthonormal basis and adjoint-Casimir identity, and its value at an explicit ultraviolet
 reference scale is the exact outer coupling in the classical action. The connection-level
 field-rescaling convention, independent curvature contractions/covariant-derivative observables,
-calculated OPE coefficients, operator mixing, scheme dependence, and
-perturbative remainders remain absent; no source-facing OS completed-tensor carrier, inhabitant, theory,
+calculated OPE coefficients, general operator mixing, scheme dependence, and
+perturbative remainders remain absent. A physical reduced trace-anomaly sector is now required on
+one exact selected on-shell/nonzero-momentum weak-matrix-element domain, with an explicit supplied
+source-to-outer-coupling `F²` normalization bridge; no unrestricted trace identity is asserted; no source-facing OS completed-tensor carrier, inhabitant, theory,
 existence theorem, or mass-gap proof is constructed.
 -/
 
@@ -154,6 +157,11 @@ structure FourDimensionalCurrentStrengthContinuumCoreAcceptanceData
   classicalRunningCouplingReference :
     Renormalization.ClassicalRunningCouplingReferenceData
       asymptoticFreedom classicalAction.coupling
+  /-- Explicit supplied conversion from the source trace-anomaly convention to the exact geometric
+  `F²` and outer classical coupling convention, tied to this same normalized beta and reference. -/
+  traceAnomalyNormalization :
+    Renormalization.StressTensorTraceAnomalyNormalizationData
+      groupNormalizedOneLoopBeta classicalRunningCouplingReference
   /-- One exact scalar Schwinger distribution family in Euclidean spacetime dimension four. -/
   schwingerFamily : ScalarSchwingerDistributionFamily EuclideanDimension.four
   /-- Current-strength Euclidean package with carrier-exact OS-II `(E0′)` on the coincidence-flat
@@ -258,6 +266,16 @@ structure FourDimensionalCurrentStrengthContinuumCoreAcceptanceData
       curvatureSquaredOPECoherence.outputLabel ≠ 0
   /-- Symmetric, Hermitian, covariant, local, weakly conserved stress tensor in the same family. -/
   stressEnergy : Minkowski.LocalStressEnergyTensorData observableFamily
+  /-- Nonempty physical, on-shell, nonzero-momentum reduced matrix-element sector detecting the
+  exact existing interpreted `F²` operator. -/
+  traceAnomalyPhysicalSelection :
+    Renormalization.PhysicalReducedTraceMatrixElementSelectionData
+      curvatureSquaredInterpretation
+  /-- Renormalized trace anomaly on exactly that selected sector, using the same stress components,
+  interpreted `F²`, normalized beta, and classical reference chain. -/
+  stressTraceAnomaly : Renormalization.StressTensorTraceAnomalyData
+    curvatureSquaredInterpretation stressEnergy traceAnomalyNormalization
+      traceAnomalyPhysicalSelection
   /-- Stress labels are disjoint from the scalar sector and fixed by the global family adjoint. -/
   stressCovarianceSeparation :
     Minkowski.ScalarStressCovarianceSeparationData covariantObservableFamily stressEnergy

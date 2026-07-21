@@ -359,8 +359,12 @@ committed before higher layers depend on it.
   nonzero non-unit energy-density witness.
 - [x] Connect controlled `T^{0ν}` charge limits to common-domain momentum generators tied to the
   same physical translation unitaries and joint PVM, with all-family infinitesimal Ward identities.
-- [ ] State trace/trace-anomaly semantics and the required renormalized four-dimensional relation;
-  the classical trace identity is not silently promoted to the quantum theory.
+- [x] Define the mostly-minus trace from the exact existing stress components and state the
+  renormalized four-dimensional trace anomaly only on an explicit nonempty physical, on-shell,
+  nonzero-momentum weak-matrix-element selection, tied to the exact interpreted `F²`, normalized
+  beta function, and classical reference. Keep the CDJ source convention and the separately
+  supplied project outer-coupling operator-rescaling bridge explicit; do not promote classical
+  tracelessness or assert an unrestricted quantum operator identity.
 - [x] Tie a basic nonzero/non-unit quantum `F²` label to the exact canonical curvature density and
   exact classical/quantum spacetime dimension, without asserting a global injective quantization map.
 - [x] Extend that exact label to the finite intrinsic scalar fragment `1`, `F²`, `(F²)²`, expose

@@ -671,13 +671,18 @@ four-dimensional pure-gauge running-coupling/beta normal form with an exact supp
 adjoint-Casimir/invariant-pairing one-loop normalization, exact same-family bilocal products/weak OPE, supplied regular-variation scaling by that same
 coupling, and an anti-disconnection bridge forcing the interpreted `F² × F²` input to have one
 nonzero contracted zeroth-order OPE term whose coupling exponent and leading scaling distribution
-are both nonzero. Its Euclidean package retains explicit ambient tempered extensions but restricts
+are both nonzero. The mostly-minus trace is now defined directly from the same stress components,
+and a supplied Collins–Duncan–Joglekar physical-reduced anomaly interface requires one nonempty
+on-shell/nonzero-momentum weak sector tied to the exact interpreted `F²`, normalized beta, and
+classical reference. The source `β(g)/(2g)` convention and a separately supplied `g⁻²`
+renormalized-operator conversion to the project's outer-coupling convention remain explicit; no
+unrestricted trace identity is asserted. Its Euclidean package retains explicit ambient tempered extensions but restricts
 to carrier-exact OS-II `(E0′)` and requires corrected same-lift, universe-relative reconstruction
 acceptance with heterogeneous Hilbert-unitary equivalence and full tempered-distribution uniqueness.
 This is still not the final Clay contract: concrete inhomogeneous `SL(2,ℂ)`, matrix realization of
 the accepted literal-sign kernel, and construction of the named affine-target group law,
-source-faithful curvature-polynomial observables,
-renormalized OPE coefficients/remainders and trace-anomaly semantics remain open. No inhabitant is
+source-faithful curvature-polynomial observables, renormalized OPE coefficients/remainders, and
+mixing-complete trace semantics beyond the selected physical reduction remain open. No inhabitant is
 constructed.
 
 Primary OS-I and correcting OS-II article scans, Wightman's 1956 paper, and the corrected Princeton
@@ -685,5 +690,7 @@ edition of Streater–Wightman are hash-pinned with exact text extractions. Load
 Wightman-axiom pages were visually verified. Wilson 1974 and Osterwalder–Seiler 1978 lattice sources
 are also pinned and visually checked without identifying finite-cutoff results with the continuum
 target. Wilson's 1969 OPE paper and the independent Gross–Wilczek/Politzer 1973 asymptotic-freedom
-papers are pinned as observable and ultraviolet-consistency evidence. Source acquisition constructs
+papers are pinned as observable and ultraviolet-consistency evidence. The
+Collins–Duncan–Joglekar trace-anomaly preprint scan is also pinned and visually checked at its
+mixing and physical-reduction equations. Source acquisition constructs
 no Euclidean, lattice, observable, renormalized, or Wightman theory.

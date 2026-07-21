@@ -4459,5 +4459,18 @@ invariance under the same designated action. No injectivity or all-power anti-co
 This adds coherence only: it constructs no representation and does not close the missing observable
 grammar or further classical/quantum transformation-law debt.
 
+`YangMills.Minkowski.StressEnergyTrace` now defines the mostly-minus trace directly from the exact
+same-family stress components and proves its four-dimensional `T⁰⁰-T¹¹-T²²-T³³` expansion.
+`YangMills.Renormalization.StressTensorTraceAnomalyNormalization` retains the source
+`β(g)/(2g)` convention and requires an explicit source-to-project renormalized `F²` scale for the
+outer `(4g²)⁻¹` action convention; `β(g)/(2g³)` is derived only after that supplied bridge.
+`YangMills.Renormalization.StressTensorTraceAnomaly` exposes separate physical-bra, on-shell-bra,
+physical-ket, on-shell-ket, and nonzero-momentum-test predicates. Its anomaly identity is required
+only on their exact admissible conjunction, and one admissible triple must detect the existing
+interpreted `F²`; nonzero trace action follows. The four-dimensional `CurrentStrength` core now
+requires this exact normalization, selection, and reduced identity on its already connected stress,
+`F²`, normalized-beta, and classical-reference chain. Collins–Duncan–Joglekar's unrestricted
+mixing family is not erased or promoted to an all-domain operator identity. No datum is constructed.
+
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

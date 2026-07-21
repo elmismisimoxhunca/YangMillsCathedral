@@ -42,6 +42,7 @@ These sources already support canonical declarations in `docs/SOURCE_MAP.md`.
 | David J. Gross and Frank Wilczek, *Ultraviolet Behavior of Non-Abelian Gauge Theories* (1973) | <https://doi.org/10.1103/PhysRevLett.30.1343> | Negative leading beta function and ultraviolet freedom |
 | H. David Politzer, *Reliable Perturbative Results for Strong Interactions?* (1973) | <https://doi.org/10.1103/PhysRevLett.30.1346> | Independent UV/deep-Euclidean analysis and explicit limits on infrared conclusions |
 | Daniel N. Blaschke, François Gieres, Méril Reboud and Manfred Schweda, *The energy–momentum tensor(s) in classical gauge theories* (2016) | <https://doi.org/10.1016/j.nuclphysb.2016.07.001>; arXiv `1605.01121` | Classical symmetric gauge-invariant stress tensor, conservation and translation charge formula |
+| John Collins, Anthony Duncan and Satish Joglekar, *Trace and dilatation anomalies in gauge theories* (1977) | <https://doi.org/10.1103/PhysRevD.16.438>; retained KEK preprint scan `COO-2220-88` | Renormalized trace mixing family and the physical on-shell/nonzero-momentum reduction to the beta-function `F²` term; source/project coupling normalization remains explicit |
 | Kenneth G. Wilson, *Confinement of quarks* (1974) | <https://doi.org/10.1103/PhysRevD.10.2445> | Lattice links, plaquettes, action, Wilson loops and continuum-limit motivation |
 | Konrad Osterwalder and Erhard Seiler, *Gauge field theories on a lattice* (1978) | <https://doi.org/10.1016/0003-4916(78)90039-8> | Product-Haar/Gibbs lattice theory and finite-cutoff reflection positivity |
 
@@ -79,15 +80,15 @@ new paper is required merely to complete those proofs.
 | Glenn Barnich, Friedemann Brandt and Marc Henneaux, *Local BRST cohomology in gauge theories* (2000) | <https://doi.org/10.1016/S0370-1573(00)00049-1> | Authoritative review for the typed local grammar built from curvature and covariant derivatives and for distinctions among strict invariance, BRST classes, total derivatives and on-shell equivalence |
 | Kurt Symanzik, *Small distance behaviour in field theory and power counting* (1970) | <https://doi.org/10.1007/BF01649434> | Required short-distance/power-counting audit for the roadmap's planned controlled perturbative remainder layer |
 
-### B.4 Beta-function normalization and trace anomaly
+### B.4 Remaining beta/trace normalization work
 
-| Source | Identifier | Required use |
-|---|---|---|
-| John Collins, Anthony Duncan and Satish Joglekar, *Trace and dilatation anomalies in gauge theories* (1977) | <https://doi.org/10.1103/PhysRevD.16.438> | Required source for the renormalized gauge-theory trace identity tying the same beta function to the same renormalized `F²` mixing class, with BRST/EOM/contact-term qualifications |
-
-Gross–Wilczek and Politzer remain the primary sources for the leading asymptotic-freedom result.
-The Lean bridge must still define `C_A` relative to the selected invariant pairing and coupling
-convention; Caswell is retained below as an independent optional cross-check, not a replacement.
+The Collins–Duncan–Joglekar preprint scan is now retained and load-bearing for the physical-reduced
+trace-anomaly interface. Gross–Wilczek and Politzer remain the primary sources for the leading
+asymptotic-freedom result. The exact group/pairing normalization is represented by supplied
+basis-level data, while the source-to-project `F²` rescaling is a separate supplied obligation.
+A constructive renormalized-operator mixing theory, scheme analysis, and unrestricted contact/BRST/
+EOM treatment still require the B.3 source chain. Caswell is retained below as an independent
+optional cross-check, not a replacement.
 
 ### B.5 Rigorous two-dimensional consistency evidence
 

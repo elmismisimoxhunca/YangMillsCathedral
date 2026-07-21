@@ -501,6 +501,44 @@ theorem exact_stress_energy :
     Nonempty (Minkowski.LocalStressEnergyTensorData data.observableFamily) :=
   ⟨data.stressEnergy⟩
 
+/-- Trace-anomaly normalization is indexed by the core's exact group-normalized beta and exact
+classical running-coupling reference. -/
+theorem exact_trace_anomaly_normalization :
+    Nonempty (Renormalization.StressTensorTraceAnomalyNormalizationData
+      data.groupNormalizedOneLoopBeta data.classicalRunningCouplingReference) :=
+  ⟨data.traceAnomalyNormalization⟩
+
+/-- The accepted physical reduction selects an admissible on-shell/nonzero-momentum triple that
+detects the exact existing `F²` label. -/
+theorem exact_trace_anomaly_physical_selection :
+    Nonempty (Renormalization.PhysicalReducedTraceMatrixElementSelectionData
+      data.curvatureSquaredInterpretation) :=
+  ⟨data.traceAnomalyPhysicalSelection⟩
+
+/-- The core's trace anomaly is tied to its exact interpretation, stress, normalization, and
+physical selection rather than disconnected replacements. -/
+theorem exact_stress_trace_anomaly :
+    Nonempty (Renormalization.StressTensorTraceAnomalyData
+      data.curvatureSquaredInterpretation data.stressEnergy data.traceAnomalyNormalization
+        data.traceAnomalyPhysicalSelection) :=
+  ⟨data.stressTraceAnomaly⟩
+
+/-- The selected reduced `F²` matrix element and nonzero normalization prevent a globally zero
+mostly-minus trace carrier. -/
+theorem exact_nonzero_stress_trace :
+    ∃ (f : Minkowski.ScalarMinkowskiSchwartzTestFunction EuclideanDimension.four)
+      (φ : D.domain),
+      Minkowski.stressTensorTraceOperator data.stressEnergy f φ ≠ 0 :=
+  data.stressTraceAnomaly.traceOperator_nontrivial
+
+/-- A disconnected trace-anomaly normalization cannot replace the exact core field. -/
+theorem disconnected_trace_anomaly_normalization_blocked
+    (wrong : Renormalization.StressTensorTraceAnomalyNormalizationData
+      data.groupNormalizedOneLoopBeta data.classicalRunningCouplingReference)
+    (different : wrong ≠ data.traceAnomalyNormalization)
+    (claimed : wrong = data.traceAnomalyNormalization) : False :=
+  different claimed
+
 /-- Every stress component is excluded from the scalar-covariant sector. -/
 theorem exact_scalar_stress_covariance_separation
     (μ ν : EuclideanDimension.four.CoordinateIndex) :

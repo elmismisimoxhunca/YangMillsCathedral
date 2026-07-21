@@ -502,6 +502,7 @@ import YangMills.Minkowski.WightmanLocalObservableCoherence
 import YangMills.Minkowski.WightmanLocalObservableCoherenceProbes
 import YangMills.Minkowski.LocalStressEnergyTensor
 import YangMills.Minkowski.LocalStressEnergyTensorProbes
+import YangMills.Minkowski.StressEnergyTrace
 import YangMills.Minkowski.StressEnergyTranslationWard
 import YangMills.Minkowski.StressEnergyTranslationWardProbes
 import YangMills.Minkowski.WightmanCyclicity
@@ -528,6 +529,10 @@ import YangMills.Renormalization.SchwartzScaling
 import YangMills.Renormalization.SchwartzScalingProbes
 import YangMills.Renormalization.AdjointCasimirNormalization
 import YangMills.Renormalization.AdjointCasimirNormalizationProbes
+import YangMills.Renormalization.StressTensorTraceAnomalyNormalization
+import YangMills.Renormalization.StressTensorTraceAnomalyNormalizationProbes
+import YangMills.Renormalization.StressTensorTraceAnomaly
+import YangMills.Renormalization.StressTensorTraceAnomalyProbes
 import YangMills.Renormalization.AsymptoticFreedomOPE
 import YangMills.Renormalization.AsymptoticFreedomOPEProbes
 import YangMills.Minkowski.PhysicalMassGapSupremum
