@@ -694,9 +694,17 @@ committed before higher layers depend on it.
     the sample law is normalized and exact, gauge transformations act only on a separate ambient
     connection carrier, sampled holonomy/observables use the exact restriction map, and physical
     invariance is not falsely promoted to invariance of the gauge-fixed slice measure.
-  - [ ] Add heat-kernel face laws, subdivision/projective consistency, compact-surface gluing, and
-    Driver's Villain/Wilson lattice-continuum convergence with their exact hypotheses, distinct from
-    finite-cutoff, classical, and four-dimensional witnesses.
+  - [x] Extract probability-normalized compact Haar measure and its left/right/inversion invariance
+    into neutral reusable mathematics shared by lattice and continuum layers.
+  - [x] Add one uninhabited selected closed positive-area loop marginal: its exact sampled-holonomy
+    pushforward is a central/inversion-symmetric density against canonical normalized Haar, and one
+    exact physical observable/class-function bridge derives the corresponding expectation formula.
+    Deliberately do not call it a heat kernel without metric/Laplacian/Brownian/semigroup data.
+  - [ ] Add an exact source-facing heat-kernel certificate with connected compact Lie group,
+    invariant metric/generator, Brownian or heat-equation semantics, normalization and convolution
+    semigroup; then add finite planar graph/face-product laws and subdivision/projective
+    consistency, compact-surface gluing, and Driver's Villain/Wilson lattice-continuum convergence
+    with exact hypotheses, distinct from finite-cutoff, classical, and four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.
   - [x] Add a current-strength continuum core hard-wired to coordinate `ℝ³` with coordinate
     Lebesgue action measure, dependently joining compact-simple gauge/classical data, strict

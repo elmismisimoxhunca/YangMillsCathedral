@@ -4497,7 +4497,21 @@ and physical observables are pulled back through that exact restriction. The rec
 Driver's target-left endpoint covariance and reverse multiplication order for path concatenation,
 requires normalization and nonempty designated path/observable carriers, and exposes hostile probes
 against zero probability and disconnected holonomy/invariance replacements. It constructs no
-measure and supplies no heat-kernel, subdivision, gluing, or lattice-limit theorem.
+measure.
+
+The next 2D stone extracts the single-group normalized compact Haar construction from the lattice
+namespace into `Mathematics.NormalizedCompactHaarMeasure`, preserving the existing derived left,
+right, and inversion invariance while removing a continuum-to-lattice dependency. The uninhabited
+`TwoDimensionalSelectedLoopHaarDensityLawData` then adds one exact closed loop with strictly
+positive supplied area. Its same-chain sampled-holonomy pushforward is exactly an `ENNReal`
+central/inversion-symmetric density against that canonical Haar probability; density-measure
+normalization and nonzeroness are derived, and an exact existing physical-observable/class-function
+bridge derives the selected expectation formula. Closedness also derives conjugation by one
+endpoint value from the existing open-path covariance. The interface deliberately does not call
+the density a heat kernel: Driver's connected compact Lie group and metric induced by a representation with injective differential,
+Laplacian/Brownian generator, heat equation, and convolution semigroup are absent. No planar
+embedding, simplicity theorem, heat kernel, measure, general face product, subdivision, gluing, or
+lattice-limit theorem is constructed.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

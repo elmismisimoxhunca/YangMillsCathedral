@@ -647,8 +647,14 @@ continuum acceptance nucleus without constructing it: a normalized law on an exa
 sample carrier maps into a distinct ambient connection carrier, on which gauge transformations,
 endpoint-covariant holonomy, and gauge-invariant physical observables live. Sampled holonomy and
 observables are tied to that exact restriction map. No action or invariant measure is falsely
-asserted on the gauge-fixed slice, and heat-kernel, subdivision/gluing, and lattice-limit layers
-remain explicit debt.
+asserted on the gauge-fixed slice. A separate uninhabited selected-loop strengthening now requires
+one exact closed loop with positive supplied area, identifies its sampled-holonomy pushforward with
+an `ENNReal` central/inversion-symmetric density against the neutrally constructed canonical
+normalized compact Haar measure, and derives one exact physical class-observable expectation
+formula. This deliberately does not call the supplied density a heat kernel: invariant metric,
+Laplacian/Brownian, heat equation, and semigroup data remain absent. No planar loop embedding, heat
+kernel, measure, or model is constructed; general face products,
+subdivision/gluing, and lattice-limit layers remain explicit debt.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly

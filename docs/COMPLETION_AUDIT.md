@@ -83,7 +83,7 @@ Criteria 15–18 are currently decisive failures; several earlier criteria are a
 | OPE and asymptotic freedom | `WeakOperatorProductExpansion.lean`, `RunningCoupling.lean`, `AdjointCasimirNormalization.lean`, `AsymptoticFreedomOPE.lean`, `CurvatureSquaredOPECoherence.lean` | Nonzero coefficient/term, same-coupling, regular-variation, and normalization probes | Partial | Calculated coefficients, anomalous dimensions, general renormalized mixing, scheme dependence, perturbative remainders, and prescribed singularities remain open |
 | Explicit Euclidean/Wightman bridge | Reverse/strict/source Wick-continuation modules; same-field and corrected OS-II reconstruction acceptance | Bridge probes preserve exact source, lift, field, and full distributions | Partial | No reconstructed output is constructed; actual completed source infrastructure remains open |
 | Dimension 1 boundary | `Dimensions/OneDimensionalBoundary.lean` | Degenerate two-form/plaquette and surviving-holonomy probes | Implemented consistency boundary | Not a theory/model, correctly not used for 4D |
-| Dimension 2 consistency | `Dimensions/TwoDimensionalNondegeneracy.lean`; `Dimensions/TwoDimensionalGaugeFixedHolonomyMeasure.lean`; retained Driver/Gross–King–Sengupta/Sengupta/Lévy/Witten/Atiyah–Bott chain | Nonzero area, spacelike tests, plaquette probes; uninhabited gauge-fixed probability/ambient-holonomy nucleus with exact restriction, endpoint covariance, Driver-order concatenation, and designated-observable probes | Partial | No rigorous measure is constructed; heat-kernel face law, subdivision/projective consistency, compact-surface gluing, and lattice convergence remain absent; no 2D result may inhabit the 4D endpoint |
+| Dimension 2 consistency | Kinematic layer; gauge-fixed holonomy nucleus; selected-loop Haar-density law; retained Driver/Gross–King–Sengupta/Sengupta/Lévy/Witten/Atiyah–Bott chain | Plaquette probes; exact gauge-fixed restriction/ambient covariance; closed positive-area loop pushforward to canonical normalized-Haar density; derived normalization and physical class-observable expectation | Partial | The density is explicitly not a heat kernel: connected Lie/metric/Laplacian/Brownian/semigroup data are absent. No rigorous measure or planar loop geometry is constructed; general face products, subdivision/projective consistency, compact-surface gluing, and lattice convergence remain absent; no 2D result may inhabit 4D |
 | Dimension 3 contract | `ThreeDimensionalContinuumCoreAcceptance.lean` | Core probes and exact base-rank separation | Partial | Explicitly named `CurrentStrength`; corrected full reconstruction, completed tensors, final observable/renormalization obligations, and final contract are absent |
 | Dimension 4 contract | `FourDimensionalContinuumCoreAcceptance.lean` | Extensive core probes, exact endpoint and same-chain checks | Partial | Explicitly named `CurrentStrength`; not the final Clay contract and still carries the open debts listed below |
 | Lower-dimensional separation | `FourDimensionalContractSeparation.lean` | Index and finite-rank separation probes | Partial | Witness-level separation cannot be stated until the final acceptance proposition exists |
@@ -161,10 +161,10 @@ numbers above are historical evidence for one inspected baseline only.
 6. **Renormalized short distance:** calculated OPE coefficients, anomalous dimensions/mixing,
    scheme dependence, controlled remainders, prescribed singularities, and mixing-complete trace
    semantics beyond the selected physical reduction are absent.
-7. **Dimension contracts:** the rigorous 2D literature and gauge-fixed probability/ambient-holonomy
-   nucleus are present, but heat-kernel, projective/gluing, and lattice-convergence interfaces remain
-   absent; 3D/4D remain `CurrentStrength`; witness-level lower-dimensional separation awaits the
-   final proposition.
+7. **Dimension contracts:** the 2D gauge-fixed nucleus and one selected-loop normalized-Haar
+   density marginal are present, but exact heat-kernel semantics, planar geometry, general face-product/semigroup,
+   projective/gluing, and lattice-convergence interfaces remain absent; 3D/4D remain
+   `CurrentStrength`; witness-level lower-dimensional separation awaits the final proposition.
 8. **Archaeology consolidation:** the legacy ledger is not exhaustive and the preserved
    20-question clarification has no identified single artifact in the standalone repository.
 9. **Publication:** no writable remote is configured in this checkout, and no push or PR evidence is
