@@ -779,8 +779,13 @@ disconnected from all finite variable bonds. The exact (7.2) density is now the 
 on the boundary-retaining extension. Strict positivity and compactness prove the boundary-dependent
 partition function nonzero and finite, constructing normalized nonzero finite-coordinate and
 infinite-carrier pushforward laws. Every frozen bond equals its supplied boundary value almost
-surely. No compatible family, boundary independence, weak limit, or lattice-continuum convergence is
-constructed.
+surely. A reusable finite-measure convergence predicate using measurable bounded-continuous tests and the
+natural induced product topology on the exact axial carrier now support an uninhabited full
+Theorem 7.2 axial acceptance surface. It additionally requires every continuous real observable to admit an explicitly measurable bounded
+test representative, closing the topology/measurability and compact-boundedness bridge. Every
+boundary-conditioned sequence must converge to one normalized finite measure, and that measure to agree with each free box law on every bounded
+continuous observable depending only on `Bₙ`. No weak limit, boundary-independence proof, or lattice-
+continuum convergence is constructed.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly

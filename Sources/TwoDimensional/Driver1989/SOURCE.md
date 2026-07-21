@@ -115,8 +115,12 @@ than silently using the free identity extension. `J(Bₙ)` is now defined by lit
 to the complete `2n × 2n` box plaquette set, with hostile omission/disconnection probes. The exact (7.2) product density over this same `J(Bₙ)` is constructed on the boundary-retaining
 extension. Strict positivity and compactness prove the boundary-dependent normalizer nonzero and
 finite, yielding normalized nonzero finite-coordinate and infinite-carrier pushforward laws with
-almost-sure `Bₙᶜ` retention. Projectivity, boundary independence, weak limits, and convergence remain
-explicit debt.
+almost-sure `Bₙᶜ` retention. A genuinely-finite convergence predicate over measurable bounded-continuous tests, natural axial
+product topology, and explicit all-continuous-test coverage bridge now support an uninhabited full
+Theorem 7.2 axial contract: every boundary-conditioned sequence must
+converge to one normalized measure, and that measure must equal every free finite law on all eligible
+`Bₙ` observables as in (7.6). Inhabiting this contract/projectivity and lattice-continuum convergence
+remain explicit debt.
 
 PDF p. 21 / printed p. 595 was independently inspected on 2026-07-21 for Theorem 6.6.
 The page visibly quantifies over a gauge-invariant function on the BC graph configuration space and

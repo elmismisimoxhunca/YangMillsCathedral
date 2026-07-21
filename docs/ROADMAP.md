@@ -825,8 +825,12 @@ committed before higher layers depend on it.
     `2n × 2n` box plaquette set.
   - [x] Construct the exact (7.2) `J(Bₙ)` action density, finite/nonzero boundary-dependent
     normalizer, normalized finite-coordinate law, and boundary-retaining infinite-carrier pushforward.
-  - [ ] Construct/derive box projectivity, prove boundary independence and weak-limit semantics,
-    compact-surface gluing, and lattice-continuum convergence with exact hypotheses, distinct from finite-cutoff, classical, and
+  - [x] Add genuinely-finite convergence over measurable bounded-continuous tests, natural axial
+    product topology, an explicit all-continuous-test coverage bridge, and an uninhabited full
+    Theorem 7.2 axial contract requiring common boundary-independent weak limit
+    plus exact free finite-volume expectations on every eligible `Bₙ` observable.
+  - [ ] Inhabit/derive box projectivity and Theorem 7.2, add compact-surface gluing, and prove the
+    sourced lattice-continuum convergence contracts with exact hypotheses, distinct from finite-cutoff, classical, and
     four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.
   - [x] Add a current-strength continuum core hard-wired to coordinate `ℝ³` with coordinate

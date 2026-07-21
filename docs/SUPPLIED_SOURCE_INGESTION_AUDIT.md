@@ -215,7 +215,9 @@ adjudication corrections.
    axial boundary data on `Bₙᶜ` are constructed. `J(Bₙ)` is defined by literal boundary incidence
    and proved exactly equal to the full box plaquette set. The exact (7.2) density, finite/nonzero
    boundary-dependent normalizer, normalized finite/pushforward laws, and almost-sure `Bₙᶜ`
-   retention are constructed. Compatible families, boundary independence, and weak limits remain open.
+   retention are constructed. A genuinely-finite measurable bounded-continuous convergence predicate, all-continuous-test coverage bridge, and uninhabited full
+   Theorem 7.2 axial contract require a common normalized boundary-independent limit and every free
+   `Bₙ` expectation. Inhabitation/projectivity remains open.
 11. Lévy PDF pp. 24–27 / printed pp. 10–13 were visually adjudicated on 2026-07-21 for §1.6,
    Theorem 1.6.1 and Lemma 1.6.3. The pages visibly define the fine-to-coarse holonomy map, state
    surjectivity and exact measure pushforward, and state strict three-graph composition. The Lean

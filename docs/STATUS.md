@@ -4711,8 +4711,12 @@ probes reject disconnected or omitted interacting plaquettes. `twoDimensionalSqu
 action over `J(Bₙ)` after the boundary-retaining extension. Strict positivity and compactness prove
 its boundary-dependent partition function nonzero and finite. The resulting finite-coordinate law
 and pushforward to the infinite axial carrier are normalized and nonzero, and every `Bₙᶜ` bond
-equals the supplied boundary value almost surely. No compatible family, boundary-independence proof,
-weak limit, or continuum convergence witness is constructed.
+equals the supplied boundary value almost surely. `WeaklyConvergesFiniteMeasures` requires every sequence member and limit to be finite and tests every explicitly measurable bounded continuous real observable. The exact
+configuration carriers now have their induced product topologies with continuous bond evaluation.
+The uninhabited `TwoDimensionalDriverAxialWeakLimitData` separately requires every continuous real observable to have such a measurable bounded representative, then requires all axial boundary-conditioned
+sequences to converge weakly to the same normalized measure and requires exact agreement with each
+free box law on every bounded continuous observable depending only on `Bₙ`, matching (7.6). No weak
+limit, boundary-independence proof, or continuum convergence witness is constructed.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.
