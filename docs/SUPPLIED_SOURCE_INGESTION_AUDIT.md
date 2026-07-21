@@ -146,28 +146,34 @@ adjudication corrections.
    `ℝ² \ (S ∪ {x-axis})`, Definition-3.8 admissibility, no immediate retracing, a finite directed
    graph on a discrete planar vertex set, endpoint-only crossings, endpoint coherence, and an
    admissible bond collection. The retained native extraction agrees.
-6. Driver PDF p. 18 / printed p. 592 was visually adjudicated on 2026-07-21 for Definition 6.3
+6. Driver PDF pp. 15–16 / printed pp. 589–590 were visually adjudicated on 2026-07-21 for
+   Definition 5.1 and the exact `D_T g` measure. They visibly define a tree by orientation stability
+   and absence of a nonempty closed path using distinct unoriented bonds, with connectedness as a
+   separate strengthening; tree bonds receive identity point mass and all others receive Haar.
+7. Driver PDF p. 18 / printed p. 592 was visually adjudicated on 2026-07-21 for Definition 6.3
    and Theorem 6.4. It visibly requires gauge transformations to fix the distinguished origin,
    states the area-indexed boundary-holonomy product-Haar expectation, asserts independence from
    all boundary choices, and separately states invariance under freezing any tree. The current Lean
    interface covers the exact conditional coordinate-zero restricted-gauge clause and quantifies
    choice independence over the full carrier of valid simultaneous connected-component
-   presentations; universal tree freezing remains open.
-7. Driver PDF p. 21 / printed p. 595 was visually adjudicated on 2026-07-21 for Theorem
+   presentations. The universal tree-freezing strengthening now uses Definition 5.1's exact
+   no-loop predicate and the exact mixed identity-Dirac/Haar product.
+8. Driver PDF p. 21 / printed p. 595 was visually adjudicated on 2026-07-21 for Theorem
    6.6. It visibly quantifies over a gauge-invariant function on a BC graph and equates its
    continuum holonomy expectation with Haar integration weighted by the product of `Q` at exact
    bounded-region areas and boundary holonomies. The proof labels it the BC special case of
-   Theorem 6.4. The Lean interface restricts to measurable/integrable complex functions and to its
-   stronger Jordan-boundary subclass; full bridge multiplicity remains open.
-8. Witten's subdivision/sewing formulas are exact representation-theoretic identities, not by
+   Theorem 6.4. The Lean interface restricts to measurable/integrable complex functions and has
+   both a Jordan-boundary subclass and a strengthened embedded-arc BC layer with exact bridge
+   multiplicity; no graph or law instance is constructed.
+9. Witten's subdivision/sewing formulas are exact representation-theoretic identities, not by
    themselves a countably additive continuum-measure construction.
-9. Atiyah–Bott is classical gauge geometry, not a source for a quantum probability measure.
-10. Sengupta's orientation-reversing covariance changes to the specified pullback bundle class; it
+10. Atiyah–Bott is classical gauge geometry, not a source for a quantum probability measure.
+11. Sengupta's orientation-reversing covariance changes to the specified pullback bundle class; it
    must not be simplified to same-bundle invariance.
-11. Kluberg-Stern–Zuber's broadest operator-renormalization statements carry dimensional/twist or
+12. Kluberg-Stern–Zuber's broadest operator-renormalization statements carry dimensional/twist or
    conjectural qualifications; they are corroboration, not an unrestricted theorem.
-12. Hollands–Kopper's convergence theorem is not a Yang–Mills convergence theorem.
-13. `yang1954.pdf` begins with one page from a preceding article; the Yang–Mills article starts on
+13. Hollands–Kopper's convergence theorem is not a Yang–Mills convergence theorem.
+14. `yang1954.pdf` begins with one page from a preceding article; the Yang–Mills article starts on
    PDF p. 2.
 
 ## 4. Concrete progress unlocked by the bundle

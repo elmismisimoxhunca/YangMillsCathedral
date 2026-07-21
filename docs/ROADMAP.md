@@ -765,9 +765,12 @@ committed before higher layers depend on it.
     invariance, a universal choice-indexed expectation law, and derived integral-level choice
     independence and normalization.
     Do not impose false pointwise equality across choices.
-  - [ ] Add Theorem 6.4's universal tree-freezing clause, refinement/projective consistency, compact-
-    surface gluing, and Driver's Villain/Wilson lattice-continuum convergence with exact hypotheses,
-    distinct from finite-cutoff, classical, and four-dimensional witnesses.
+  - [x] Add Theorem 6.4's universal tree-freezing clause over every Definition 5.1 tree, with exact
+    identity-Dirac/Haar product factors, unchanged choice-indexed face density and ambient
+    expectation, and derived frozen/unfrozen, cross-tree/choice, normalization, and nonzero results.
+  - [ ] Add refinement/projective consistency, compact-surface gluing, and Driver's Villain/Wilson
+    lattice-continuum convergence with exact hypotheses, distinct from finite-cutoff, classical, and
+    four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.
   - [x] Add a current-strength continuum core hard-wired to coordinate `ℝ³` with coordinate
     Lebesgue action measure, dependently joining compact-simple gauge/classical data, strict

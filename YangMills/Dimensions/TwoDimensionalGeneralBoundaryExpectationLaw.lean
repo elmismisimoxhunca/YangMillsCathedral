@@ -17,8 +17,8 @@ same geometric face area but at that choice's ordered component holonomy. The sa
 observable expectation equals every such integral, from which integral-level choice independence is
 derived. No false pointwise equality of boundary holonomies or density products is imposed.
 
-The law uses Driver Definition 6.3's restricted gauge invariance: finite vertex gauges fix the
-supplied origin vertex. It is uninhabited acceptance data and constructs no graph, cut system,
+The law uses Driver Definition 6.3's conditional restricted gauge invariance: finite vertex gauges
+fix the coordinate-zero vertex exactly when that vertex is present. It is uninhabited acceptance data and constructs no graph, cut system,
 probability law, or Yang--Mills theory. The project's embedded-arc subdivision strengthening remains
 explicit. The theorem's separate universal tree-freezing clause remains later work.
 -/

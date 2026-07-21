@@ -4611,8 +4611,15 @@ records Definition 6.3's optional origin, ties it exactly to coordinate zero whe
 zero absent from all vertices otherwise. `TwoDimensionalGeneralBoundaryExpectationLawData` requires
 the resulting conditional restricted gauge invariance, exact choice-indexed density products, and one common
 ambient expectation for every choice; integral-level choice independence and per-choice
-normalization/nonzeroness are derived. No pointwise choice equality is asserted. Theorem 6.4's
-additional universal tree-freezing clause remains debt.
+normalization/nonzeroness are derived. No pointwise choice equality is asserted.
+`FiniteGraphEdgeSetIsTree` now transcribes Definition 5.1 exactly on the one-coordinate-per-
+underlying-edge representation: no nonempty closed composable word supported in the set may use
+distinct underlying edges, while connectedness and spanning are not silently added. The mixed finite
+product uses identity Dirac mass on tree coordinates and unchanged normalized Haar otherwise, with
+exact factors, marginals, probability normalization, and empty-tree recovery. Uninhabited
+`TwoDimensionalGeneralBoundaryTreeFreezingLawData` universally retains the same boundary choice,
+density, eligible observable, and ambient expectation for every such tree; frozen/unfrozen and
+cross-tree/choice integral equality plus frozen-carrier normalization/nonzeroness are derived.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

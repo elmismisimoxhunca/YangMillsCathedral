@@ -713,8 +713,12 @@ semantics that reject duplication and artificial splitting. Driver Definition 6.
 optional, exactly tied to coordinate zero when present, and proved absent otherwise. The uninhabited
 expectation law uses the corresponding conditional restricted gauge invariance, computes every choice-indexed product-Haar integral from the same
 ambient observable, and derives integral-level choice independence without false pointwise
-holonomy equality. Theorem 6.4's additional universal tree-freezing clause, refinement/gluing, and
-lattice-limit layers remain explicit debt.
+holonomy equality. A further universal Theorem 6.4 strengthening quantifies over every Driver tree—
+an underlying-edge set with no nonempty closed distinct-edge path—and uses the exact mixed product
+with identity Dirac mass on tree coordinates and unchanged Haar elsewhere. It retains the unchanged
+choice-indexed density and ambient observable expectation, deriving frozen/unfrozen and cross-tree/
+choice integral equality plus normalization and nonzeroness. Refinement/gluing and lattice-limit
+layers remain explicit debt.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly

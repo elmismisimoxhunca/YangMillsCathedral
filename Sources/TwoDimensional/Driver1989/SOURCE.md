@@ -40,6 +40,14 @@ planar vertex set, bonds crossing one another or themselves only at endpoints, e
 coherence, and an admissible collection of bond curves. These conditions agree with the retained
 native extraction.
 
+PDF pp. 15–16 / printed pp. 589–590 were independently inspected on 2026-07-21 for
+Definition 5.1 and the exact `D_T g` measure preceding Theorem 5.3. The pages visibly define a tree
+as an orientation-stable bond subset with no nonempty closed path using distinct unoriented bonds;
+connectedness is a separate strengthening, not part of the base tree condition. They visibly assign
+identity point mass to tree bonds and Haar measure to all other underlying bond coordinates. The Lean
+underlying-edge representation makes orientation stability automatic and formalizes exactly this
+no-loop predicate and mixed finite product measure.
+
 PDF p. 18 / printed p. 592 was independently inspected on 2026-07-21 for Definition 6.3 and
 Theorem 6.4. The page visibly defines restricted gauge invariance by requiring the vertex gauge to
 be the identity at the distinguished origin, states the area-indexed boundary-holonomy product-Haar
@@ -47,8 +55,9 @@ expectation formula, declares the right-hand side independent of all boundary-ho
 separately states invariance under freezing any tree to the identity. The Lean general-boundary law
 currently formalizes the exact conditional coordinate-zero restricted-gauge clause and quantifies
 choice independence over the full structure of every valid simultaneous presentation, whose traces
-are nonempty, pairwise disjoint, and maximal connected frontier subsets. The universal tree-freezing
-clause remains explicit debt.
+are nonempty, pairwise disjoint, and maximal connected frontier subsets. The universal tree-
+freezing strengthening now quantifies over every exact Definition 5.1 tree, uses the exact mixed
+identity-Dirac/Haar product, and retains the unchanged face density and ambient expectation.
 
 PDF p. 21 / printed p. 595 was independently inspected on 2026-07-21 for Theorem 6.6.
 The page visibly quantifies over a gauge-invariant function on the BC graph configuration space and
