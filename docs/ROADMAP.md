@@ -798,7 +798,10 @@ committed before higher layers depend on it.
     exact physical `(εm, εn)` embedding and signed `ε` steps, reverse-bond inversion, measurable
     coordinates, exact tree freezing, identity inhabitants, and a nonidentity off-axis axial
     configuration proving the carrier is not subsingleton.
-  - [ ] Add compact-surface gluing, axial lattice field measures, and lattice-continuum convergence with exact hypotheses, distinct from finite-cutoff, classical, and
+  - [x] Add exact physically scaled elementary plaquettes, closed counterclockwise boundary
+    holonomy in Driver order, and measurable/nonzero finite products of one common action.
+  - [ ] Add compact-surface gluing, finite-volume normalizers, axial lattice field measures, and
+    lattice-continuum convergence with exact hypotheses, distinct from finite-cutoff, classical, and
     four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.
   - [x] Add a current-strength continuum core hard-wired to coordinate `ℝ³` with coordinate

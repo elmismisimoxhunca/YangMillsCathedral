@@ -4665,8 +4665,12 @@ inhabitant, without conflating the source-qualified families. `EpsilonSquareLatt
 carrier at each positive spacing; `EpsilonSquareLatticeConfiguration` enforces reverse-bond
 inversion, while `EpsilonSquareLatticeAxialConfiguration` fixes every vertical bond and every
 horizontal x-axis bond to the identity. Both induced measurable carriers have measurable coordinate
-projections and identity inhabitants. The integer sites now have an exact physical embedding at coordinates `(εm, εn)`, every bond derives a signed physical `ε` step, and a concrete multiplicative-integer axial configuration gives a nonidentity horizontal row-one coordinate and proves the axial carrier is not subsingleton. No axial
-lattice field measure or continuum convergence witness is constructed.
+projections and identity inhabitants. The integer sites now have an exact physical embedding at coordinates `(εm, εn)`, every bond derives a signed physical `ε` step, and a concrete multiplicative-integer axial configuration gives a nonidentity horizontal row-one coordinate and proves the axial carrier is not subsingleton. `EpsilonSquareLatticePlaquette` now supplies the exact physically scaled elementary square, a
+literally closed counterclockwise four-bond boundary, and the fixed later-on-the-left holonomy.
+`epsilonSquareLatticeFinitePlaquetteActionWeight` is the measurable, everywhere-nonzero finite
+product of one unchanged Definition 7.1 action over those holonomies. The nonconstant axial witness
+has nonidentity plaquette holonomy. No finite-volume normalizer, axial lattice field measure, or
+continuum convergence witness is constructed.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

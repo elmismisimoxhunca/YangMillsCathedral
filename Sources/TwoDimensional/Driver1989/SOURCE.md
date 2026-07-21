@@ -59,6 +59,14 @@ are nonempty, pairwise disjoint, and maximal connected frontier subsets. The uni
 freezing strengthening now quantifies over every exact Definition 5.1 tree, uses the exact mixed
 identity-Dirac/Haar product, and retains the unchanged face density and ambient expectation.
 
+PDF p. 8 / printed p. 582 was independently inspected on 2026-07-21 for Proposition 3.5; the
+visible formula confirms that traversing `σ` and then `τ` gives `P(τ)P(σ)`, fixing later traversal on
+the left. PDF pp. 23–24 / printed pp. 597–598 were independently inspected the same day for
+Definition 7.1 and equations (7.1)–(7.4); continuity, positivity, class/inversion symmetry, real Haar
+normalization, the vertical-plus-x-axis axial tree, plaquette products, delta boundary conditions,
+and free-boundary formulas were confirmed. No finite-volume measure is yet claimed by the current
+plaquette-product layer.
+
 PDF p. 27 / printed p. 601 was independently inspected on 2026-07-21 for Definition 8.1 and the
 opening statements of Definitions 8.3/8.4 and Theorem 8.5. The page visibly fixes the infinite
 nearest-neighbor directed graph on `εℤ²`, requires approximating graph edges to be paths in that
@@ -79,8 +87,9 @@ contract is derived. Definition 7.1 is also packaged as one common action interf
 Villain/Wilson adapters and a separately labeled constant-one inhabitant. The exact infinite directed `εℤ²` bond carrier, reverse-inversion configurations, and
 axial-tree-fixed measurable carrier are now explicit, including the vertical plus x-axis tree, exact
 physical `(εm, εn)` embedding with signed `ε` steps, and a concrete nonidentity off-axis axial
-configuration.
-Axial lattice field measures and convergence remain explicit debt.
+configuration. Exact elementary plaquettes now retain a physically scaled closed counterclockwise
+boundary, Driver's path-product order, and measurable everywhere-nonzero finite products of one
+common action over their holonomies. Finite-volume normalizers and axial lattice field measures and convergence remain explicit debt.
 
 PDF p. 21 / printed p. 595 was independently inspected on 2026-07-21 for Theorem 6.6.
 The page visibly quantifies over a gauge-invariant function on the BC graph configuration space and

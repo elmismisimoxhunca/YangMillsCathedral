@@ -744,7 +744,10 @@ indexed positive normalizer to the exact unnormalized Haar integral, and derives
 real action contract. A common `TwoDimensionalLatticeActionData` packages Definition 7.1 once, with exact Villain and
 Wilson adapters and a separate constant-one positive inhabitant. The exact infinite directed `εℤ²` bond carrier, reverse-inversion configuration carrier, and axial-
 tree-fixed carrier are now defined with exact physical `(εm, εn)` embedding, signed `ε` bond displacement, measurable coordinate projections, identity inhabitants, and a concrete nonidentity off-axis axial configuration.
-These layers still construct no lattice field measure or convergence theorem.
+Exact elementary counterclockwise plaquettes now have a literally closed four-bond boundary, the
+fixed later-on-the-left holonomy order, and measurable nonzero finite products of one unchanged
+Definition 7.1 action on the axial carrier. These layers still construct no finite-volume normalizer,
+lattice field measure, or convergence theorem.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly

@@ -165,7 +165,13 @@ adjudication corrections.
    Theorem 6.4. The Lean interface restricts to measurable/integrable complex functions and has
    both a Jordan-boundary subclass and a strengthened embedded-arc BC layer with exact bridge
    multiplicity; no graph or law instance is constructed.
-9. Driver PDF p. 27 / printed p. 601 was visually adjudicated on 2026-07-21 for Definition 8.1.
+9. Driver PDF p. 8 / printed p. 582 and PDF pp. 23–24 / printed pp. 597–598 were
+   visually adjudicated on 2026-07-21 for Proposition 3.5, Definition 7.1, and equations
+   (7.1)–(7.4). The visible formulas confirm later-on-the-left path multiplication, the complete
+   action contract, the vertical-plus-x-axis axial tree, finite plaquette products, delta boundary
+   conditions, and free-boundary formulas. The current layer locks plaquette order through the
+   reusable finite-oriented-word evaluator but constructs no finite-volume measure.
+10. Driver PDF p. 27 / printed p. 601 was visually adjudicated on 2026-07-21 for Definition 8.1.
    The page visibly fixes the nearest-neighbor directed graph on `εℤ²`, requires approximating
    graph edges to be paths in it, gives bond/region surjections, requires symmetric-difference area
    of order `ε`, and preserves admissible boundary sums. The Lean layer formalizes exact positive-
@@ -185,14 +191,16 @@ adjudication corrections.
    reverse-inversion configuration, and exact vertical-plus-x-axis axial-tree carriers are explicit;
    sites embed at `(εm, εn)`, bonds have signed physical `ε` steps, coordinate projections are
    measurable, and a concrete nonidentity off-axis axial configuration proves non-subsingletonness,
-   but no lattice field measure is supplied.
-10. Lévy PDF pp. 24–27 / printed pp. 10–13 were visually adjudicated on 2026-07-21 for §1.6,
+   but no lattice field measure is supplied. Exact elementary plaquettes now have physically scaled
+   closed counterclockwise boundaries and measurable/nonzero finite common-action products; finite-
+   volume normalizers remain absent.
+11. Lévy PDF pp. 24–27 / printed pp. 10–13 were visually adjudicated on 2026-07-21 for §1.6,
    Theorem 1.6.1 and Lemma 1.6.3. The pages visibly define the fine-to-coarse holonomy map, state
    surjectivity and exact measure pushforward, and state strict three-graph composition. The Lean
    layer constructs the exact finite-word map/composition, requires literal coarse-path/fine-word
    equality and nonempty edge carriers, records weighted-measure pushforward and coherent observable
    pullback on the unchanged Driver density chain, and derives finite word-family equality in law.
-11. Witten's subdivision/sewing formulas are exact representation-theoretic identities, not by
+12. Witten's subdivision/sewing formulas are exact representation-theoretic identities, not by
    themselves a countably additive continuum-measure construction.
 12. Atiyah–Bott is classical gauge geometry, not a source for a quantum probability measure.
 13. Sengupta's orientation-reversing covariance changes to the specified pullback bundle class; it
