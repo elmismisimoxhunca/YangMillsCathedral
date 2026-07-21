@@ -709,10 +709,12 @@ committed before higher layers depend on it.
   - [x] Add a strictly positive spatially smooth real representative tied pointwise by
     `ENNReal.ofReal` to the unchanged density, indexed by the exact compact-connected-simple group,
     semigroup and pairing Laplacian, and require Driver's exact `∂ₜQ = ½ΔQ` sign/factor convention.
-  - [ ] Add Brownian or equivalent martingale/generator semantics and construct the
-    invariant-pairing-to-manifold-metric bridge; then add finite planar graph/face-product laws and
-    refinement/projective consistency, compact-surface gluing, and Driver's Villain/Wilson
-    lattice-continuum convergence
+  - [x] Add an uninhabited continuous-path group process with exact identity start, mutually
+    independent stationary right increments having the unchanged density laws, derived one-time
+    marginals, and exact selected-area equality with the sampled loop-holonomy law.
+  - [ ] Construct the invariant-pairing-to-manifold-metric bridge; then add finite planar
+    graph/face-product laws and refinement/projective consistency, compact-surface gluing, and
+    Driver's Villain/Wilson lattice-continuum convergence
     with exact hypotheses, distinct from finite-cutoff, classical, and four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.
   - [x] Add a current-strength continuum core hard-wired to coordinate `ℝ³` with coordinate

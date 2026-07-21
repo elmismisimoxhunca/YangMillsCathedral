@@ -4530,10 +4530,18 @@ unchanged convolution semigroup, and pairing Laplacian. It supplies one strictly
 representative that is spatially `C∞` at every positive time and is tied pointwise by
 `ENNReal.ofReal` to the same `ENNReal` density. Its ordinary time derivative must equal exactly
 `+½` times the same Laplacian. Real centrality and inversion symmetry are derived through the
-bridge. No density or PDE solution is constructed. Brownian/martingale generator semantics and the
-construction identifying the explicit pairing with a manifold metric remain open before this is a
-complete source heat-kernel chain. No planar embedding, simplicity theorem, measure, general face
-product, refinement, gluing, or lattice-limit theorem is constructed.
+bridge. No density or PDE solution is constructed.
+
+The uninhabited `TwoDimensionalSelectedLoopBrownianRealizationData` adds an exact probability law on
+an independent process sample carrier. The same process starts at the group identity almost surely,
+has almost-surely continuous `NNReal`-time paths, and has mutually independent consecutive right
+increments; every positive increment is assigned the unchanged normalized-Haar density law. The
+one-time marginal is derived from the identity start and stationary increment rather than stored
+again. Each fixed-time coordinate is measurable; joint `NNReal × Ω` measurability is not yet claimed. At the selected positive area, that marginal is proved exactly equal to the sampled loop-
+holonomy pushforward from the original gauge-fixed continuum nucleus. No process or Brownian motion
+is constructed. The invariant-pairing-to-manifold-metric construction remains open before this is a
+complete source heat-kernel chain. No planar embedding, simplicity theorem, YM measure, general
+face product, refinement, gluing, or lattice-limit theorem is constructed.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

@@ -660,10 +660,12 @@ Driver's finite orthonormal-basis Laplacian sum; an uninhabited certificate ties
 same explicit invariant pairing and requires independence from every other such basis. The next
 uninhabited layer is indexed by the exact compact-connected-simple project group and ties a strictly
 positive spatially smooth real family pointwise, via `ENNReal.ofReal`, to the unchanged density; it
-requires Driver's exact `∂ₜQ=½ΔQ` sign and factor against that same Laplacian. No density or solution
-is constructed, and Brownian/martingale generator semantics plus the invariant-pairing-to-manifold-
-metric construction remain open before treating this as a completed source heat-kernel chain. No
-planar loop
+requires Driver's exact `∂ₜQ=½ΔQ` sign and factor against that same Laplacian. A further uninhabited
+process realization starts at the identity almost surely, has almost-surely continuous paths and
+mutually independent stationary right increments with those unchanged density laws. Its one-time
+marginals are derived, including exact equality at the selected area with the sampled loop-holonomy
+law. No density, solution, or process is constructed; the invariant-pairing-to-manifold-metric
+construction remains open before treating this as a completed source heat-kernel chain. No planar loop
 embedding, heat kernel, measure, or model is constructed;
 general face products, refinement/gluing, and lattice-limit layers remain explicit debt.
 
