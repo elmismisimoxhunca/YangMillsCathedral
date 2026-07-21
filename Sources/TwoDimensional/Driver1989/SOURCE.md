@@ -118,7 +118,8 @@ finite, yielding normalized nonzero finite-coordinate and infinite-carrier pushf
 almost-sure `Bₙᶜ` retention. A genuinely-finite convergence predicate over measurable bounded-continuous tests, natural axial
 product topology, and explicit all-continuous-test coverage bridge now support an uninhabited full
 Theorem 7.2 axial contract: every boundary-conditioned sequence must
-converge to one normalized measure, and that measure must equal every free finite law on all eligible
+converge to one finite measure; its normalization is now derived from normalized conditioned laws and
+the constant-one weak mass test, and that measure must equal every free finite law on all eligible
 `Bₙ` observables as in (7.6). For §8, the punctured `ε → 0⁺` filter and exact spacing-indexed Villain/Wilson families retain the
 unchanged `Q_{ε²}` chain or one fixed actual trace representation/normalizer; Theorem 8.10
 faithfulness is actual representation injectivity. Each Definition 8.1 fine edge may now carry an exact nonempty ordered directed-bond word tied

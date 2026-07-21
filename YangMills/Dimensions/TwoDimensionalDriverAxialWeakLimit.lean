@@ -100,7 +100,6 @@ structure TwoDimensionalDriverAxialWeakLimitData
           (EpsilonSquareLatticeAxialConfiguration G spacing),
         test.toFun = observable
   limitMeasure : Measure (EpsilonSquareLatticeAxialConfiguration G spacing)
-  limit_normalized : limitMeasure univ = 1
   weak_limit_independent_of_boundary :
     ∀ boundary : EpsilonSquareLatticeAxialConfiguration G spacing,
       WeaklyConvergesFiniteMeasures
@@ -118,6 +117,38 @@ structure TwoDimensionalDriverAxialWeakLimitData
           ∂twoDimensionalSquareLatticeBoxPushforwardMeasure spacing radius action
 
 namespace TwoDimensionalDriverAxialWeakLimitData
+
+/-- Weak convergence of normalized conditioned laws derives normalization of the designated common
+limit through the constant-one mass test. -/
+theorem limit_normalized
+    {G : Type uG} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+    [CompactSpace G] [T2Space G] [MeasurableSpace G] [BorelSpace G]
+    [MeasurableMul₂ G] [MeasurableInv G]
+    {spacing : PositiveLatticeSpacing} {action : TwoDimensionalLatticeActionData G}
+    (data : TwoDimensionalDriverAxialWeakLimitData spacing action) :
+    data.limitMeasure univ = 1 := by
+  let boundary : EpsilonSquareLatticeAxialConfiguration G spacing :=
+    EpsilonSquareLatticeAxialConfiguration.identity
+  have weak := data.weak_limit_independent_of_boundary boundary
+  have massTendsto := weak.one_test
+  have sequenceIntegral :
+      (fun stage => ∫ _ : EpsilonSquareLatticeAxialConfiguration G spacing, (1 : ℝ)
+        ∂twoDimensionalSquareLatticeConditionedAxialMeasure
+          spacing (driverFiniteVolumeRadius stage) action boundary) =
+      fun _stage => (1 : ℝ) := by
+    funext stage
+    rw [integral_const, Measure.real_def,
+      twoDimensionalSquareLatticeConditionedAxialMeasure.apply_univ]
+    norm_num
+  rw [sequenceIntegral] at massTendsto
+  have limitIntegral :
+      (∫ _ : EpsilonSquareLatticeAxialConfiguration G spacing, (1 : ℝ)
+        ∂data.limitMeasure) = 1 :=
+    tendsto_nhds_unique massTendsto tendsto_const_nhds
+  rw [integral_const] at limitIntegral
+  have toReal_eq_one : (data.limitMeasure univ).toReal = 1 := by
+    simpa [Measure.real_def] using limitIntegral
+  exact (ENNReal.toReal_eq_one_iff _).mp toReal_eq_one
 
 /-- Every two boundary conditions converge weakly to the same designated limit measure. -/
 theorem boundary_pair

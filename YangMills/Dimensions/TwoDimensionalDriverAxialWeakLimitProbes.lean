@@ -93,7 +93,14 @@ theorem exact_free_finite_identification
         ∂twoDimensionalSquareLatticeBoxPushforwardMeasure spacing radius action :=
   data.free_finite_volume_identification radius observable depends
 
-/-- A zero designated weak limit is hostilely rejected by normalization. -/
+/-- Normalization of the common weak limit is derived from normalized conditioned laws and the
+constant-one mass test. -/
+theorem exact_derived_limit_normalization
+    (data : TwoDimensionalDriverAxialWeakLimitData spacing action) :
+    data.limitMeasure univ = 1 :=
+  data.limit_normalized
+
+/-- A zero designated weak limit is hostilely rejected by derived normalization. -/
 theorem zero_limit_blocked
     (data : TwoDimensionalDriverAxialWeakLimitData spacing action)
     (claimed : data.limitMeasure = 0) : False := by
