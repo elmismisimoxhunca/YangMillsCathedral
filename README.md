@@ -784,8 +784,11 @@ natural induced product topology on the exact axial carrier now support an uninh
 Theorem 7.2 axial acceptance surface. It additionally requires every continuous real observable to admit an explicitly measurable bounded
 test representative, closing the topology/measurability and compact-boundedness bridge. Every
 boundary-conditioned sequence must converge to one normalized finite measure, and that measure to agree with each free box law on every bounded
-continuous observable depending only on `Bₙ`. No weak limit, boundary-independence proof, or lattice-
-continuum convergence is constructed.
+continuous observable depending only on `Bₙ`. For §8, `positiveLatticeSpacingAtZero` fixes the literal `ε → 0⁺` filter and spacing-indexed action
+families retain either the exact unchanged Villain density `Q_{ε²}` or one fixed actual Wilson trace
+representation and normalizer at every spacing. Wilson faithfulness is actual injectivity of that
+same matrix representation. No weak limit, boundary-independence proof, or lattice-continuum
+convergence is constructed.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly

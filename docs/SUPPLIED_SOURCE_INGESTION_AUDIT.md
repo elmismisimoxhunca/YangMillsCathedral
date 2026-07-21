@@ -217,7 +217,9 @@ adjudication corrections.
    boundary-dependent normalizer, normalized finite/pushforward laws, and almost-sure `Bₙᶜ`
    retention are constructed. A genuinely-finite measurable bounded-continuous convergence predicate, all-continuous-test coverage bridge, and uninhabited full
    Theorem 7.2 axial contract require a common normalized boundary-independent limit and every free
-   `Bₙ` expectation. Inhabitation/projectivity remains open.
+   `Bₙ` expectation. The exact `ε → 0⁺` filter and spacing-indexed Villain/Wilson families retain
+   `Q_{ε²}` or one fixed actual trace representation, with Theorem 8.10 faithfulness as injectivity.
+   Inhabitation/projectivity and Theorems 8.5/8.10 observable convergence remain open.
 11. Lévy PDF pp. 24–27 / printed pp. 10–13 were visually adjudicated on 2026-07-21 for §1.6,
    Theorem 1.6.1 and Lemma 1.6.3. The pages visibly define the fine-to-coarse holonomy map, state
    surjectivity and exact measure pushforward, and state strict three-graph composition. The Lean

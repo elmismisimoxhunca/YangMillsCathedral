@@ -119,8 +119,10 @@ almost-sure `Bₙᶜ` retention. A genuinely-finite convergence predicate over m
 product topology, and explicit all-continuous-test coverage bridge now support an uninhabited full
 Theorem 7.2 axial contract: every boundary-conditioned sequence must
 converge to one normalized measure, and that measure must equal every free finite law on all eligible
-`Bₙ` observables as in (7.6). Inhabiting this contract/projectivity and lattice-continuum convergence
-remain explicit debt.
+`Bₙ` observables as in (7.6). For §8, the punctured `ε → 0⁺` filter and exact spacing-indexed Villain/Wilson families retain the
+unchanged `Q_{ε²}` chain or one fixed actual trace representation/normalizer; Theorem 8.10
+faithfulness is actual representation injectivity. Inhabiting the Theorem 7.2 contract/projectivity
+and formalizing Theorems 8.5/8.10 observable transport/convergence remain explicit debt.
 
 PDF p. 21 / printed p. 595 was independently inspected on 2026-07-21 for Theorem 6.6.
 The page visibly quantifies over a gauge-invariant function on the BC graph configuration space and
