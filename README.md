@@ -494,9 +494,11 @@ A principal trivialization can now be normalized at an arbitrary point by left-s
 coordinate; a conservative one-chart atlas extension retains the exact torsor, projection/action
 certificates, and selected charts while constructing enlarged bundle data with proved smoothness and yields an adapted total field with arbitrary prescribed value at every point. All
 prescribed slot fields can now be assembled on one exact common open source, even for an
-unrestricted index type. The remaining bridge is using that family plus horizontality to discharge
-the triangular Cartan bracket evaluations to derive the termwise premise on the total space, descent of the full candidate, and a genuine intrinsic
-`D_A F` theorem remain open. Exact inverse-action
+unrestricted index type. Horizontality now discharges all surviving triangular Cartan evaluations;
+fundamental-slot cancellation is unconditional, and vertical tangent generation proves full
+horizontality of the positive-degree covariant-exterior candidate. Proving its full right-adjoint
+equivariance, descending the full candidate, and constructing a genuine intrinsic `D_A F` theorem
+remain open. Exact inverse-action
 curvature covariance now derives pointwise invariance of both chosen and basis-independent
 canonical curvature densities for the full pulled connection/exterior/certificate chain. The exact
 analytic datum transports to that chain with unchanged designated measure and coupling, deriving

@@ -4408,9 +4408,14 @@ smoothness, conservatively extends the designated atlas by that one chart, and r
 coordinate-normalization premise from the adapted-field existence theorem.
 `YangMills.Geometry.PrincipalCommonAdaptedTotalFields` strengthens this to an arbitrary indexed
 family on one exact common normalized-trivialization source, retaining every prescribed value,
-smoothness, all-orbit adaptation, and zero bracket against the designated fundamental field. The
-remaining geometry is using this family plus horizontality to discharge the triangular evaluations; the termwise premise is not treated as
-candidate data. Descent of the full candidate and a genuine intrinsic `D_A F` theorem remain open.
+smoothness, all-orbit adaptation, and zero bracket against the designated fundamental field.
+`YangMills.Geometry.PrincipalCartanTriangularDischarge` uses that family to discharge every
+triangular evaluation: brackets involving the distinguished slot vanish (up to skew symmetry),
+while horizontality kills terms where that fundamental slot survives. It derives the exact ordinary
+vertical derivative, unconditional cancellation of the full candidate on a fundamental slot, and
+full candidate horizontality via vertical tangent generation. The termwise premise is never treated
+as candidate data. Full right-adjoint equivariance, descent, and a genuine intrinsic `D_A F` theorem
+remain open.
 
 The four-dimensional `CurrentStrength` integration record now requires one exact algebraic quantum
 action of its canonical smooth principal gauge group on its same observable family and one

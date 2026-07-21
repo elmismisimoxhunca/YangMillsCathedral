@@ -272,9 +272,11 @@ committed before higher layers depend on it.
 - [x] Assemble arbitrary indexed families of adapted fields with prescribed values on one exact
   common normalized-trivialization source, with simultaneous smoothness, all-orbit adaptation, and
   zero bracket against the designated principal fundamental field.
-- [ ] Use that common family plus horizontality to discharge the termwise triangular premise, derive
-  full candidate tensoriality and right-adjoint equivariance, then descend it and derive structural
-  curvature laws and a genuine intrinsic `D_A F` theorem.
+- [x] Use that common family plus horizontality to discharge every triangular Cartan evaluation,
+  derive the unconditional fundamental-slot cancellation, and combine it with vertical tangent
+  generation to prove full candidate horizontality.
+- [ ] Prove full candidate right-adjoint equivariance, then descend it and derive structural curvature
+  laws and a genuine intrinsic `D_A F` theorem.
 
 ## Phase 3 — classical Yang–Mills semantics
 
