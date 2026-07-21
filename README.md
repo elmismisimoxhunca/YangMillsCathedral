@@ -657,9 +657,13 @@ at every positive time, exact addition/convolution, and weak convergence to iden
 continuous complex test, deriving the selected-area two-half split. Reusable manifold calculus now
 constructs scalar first and iterated derivatives along the exact right-invariant group fields and
 Driver's finite orthonormal-basis Laplacian sum; an uninhabited certificate ties the basis to the
-same explicit invariant pairing and requires independence from every other such basis. This still
-deliberately does not call the supplied density a heat kernel: no smooth real density bridge,
-`∂ₜQ=½ΔQ`, Brownian generator, or manifold metric construction is present. No planar loop
+same explicit invariant pairing and requires independence from every other such basis. The next
+uninhabited layer is indexed by the exact compact-connected-simple project group and ties a strictly
+positive spatially smooth real family pointwise, via `ENNReal.ofReal`, to the unchanged density; it
+requires Driver's exact `∂ₜQ=½ΔQ` sign and factor against that same Laplacian. No density or solution
+is constructed, and Brownian/martingale generator semantics plus the invariant-pairing-to-manifold-
+metric construction remain open before treating this as a completed source heat-kernel chain. No
+planar loop
 embedding, heat kernel, measure, or model is constructed;
 general face products, refinement/gluing, and lattice-limit layers remain explicit debt.
 

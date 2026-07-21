@@ -4522,12 +4522,18 @@ actual manifold derivative to the already constructed right-invariant fields. Dr
 orthonormal-basis sum is `rightInvariantScalarLaplacianInBasis`. A nonempty
 `InvariantPairingOrthonormalBasisData` is tied to the exact explicit invariant pairing, while the
 uninhabited `RightInvariantPairingLaplacianData` requires every other basis orthonormal for that same
-pairing to compute the identical operator. Constant annihilation is derived. The interface still
-deliberately does not call the density a heat kernel: no construction of the representation-induced
-manifold metric, no smooth real representative of the `ENNReal` density, no
-`∂ₜQ = ½ΔQ` same-density bridge, and no Brownian generator exist. No planar embedding, simplicity
-theorem, heat kernel, measure, general face product, refinement, gluing, or lattice-limit theorem is
-constructed.
+pairing to compute the identical operator. Constant annihilation is derived.
+
+The uninhabited `TwoDimensionalSelectedLoopHeatEquationData` is indexed simultaneously by the exact
+compact-connected-simple project group, invariant pairing, unchanged selected-loop density law,
+unchanged convolution semigroup, and pairing Laplacian. It supplies one strictly positive real
+representative that is spatially `C∞` at every positive time and is tied pointwise by
+`ENNReal.ofReal` to the same `ENNReal` density. Its ordinary time derivative must equal exactly
+`+½` times the same Laplacian. Real centrality and inversion symmetry are derived through the
+bridge. No density or PDE solution is constructed. Brownian/martingale generator semantics and the
+construction identifying the explicit pairing with a manifold metric remain open before this is a
+complete source heat-kernel chain. No planar embedding, simplicity theorem, measure, general face
+product, refinement, gluing, or lattice-limit theorem is constructed.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

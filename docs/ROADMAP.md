@@ -706,9 +706,11 @@ committed before higher layers depend on it.
   - [x] Construct scalar first and iterated derivatives along the exact right-invariant group fields;
     package Driver's nonempty invariant-pairing-orthonormal basis sum and require exact independence
     from every other orthonormal basis. Constants are derived to lie in the kernel.
-  - [ ] Add the same-density smooth real representative, exact `∂ₜQ = ½ΔQ` bridge to that
-    right-invariant pairing Laplacian (with Driver's sign/factor convention), and Brownian or
-    equivalent generator semantics; then add finite planar graph/face-product laws and
+  - [x] Add a strictly positive spatially smooth real representative tied pointwise by
+    `ENNReal.ofReal` to the unchanged density, indexed by the exact compact-connected-simple group,
+    semigroup and pairing Laplacian, and require Driver's exact `∂ₜQ = ½ΔQ` sign/factor convention.
+  - [ ] Add Brownian or equivalent martingale/generator semantics and construct the
+    invariant-pairing-to-manifold-metric bridge; then add finite planar graph/face-product laws and
     refinement/projective consistency, compact-surface gluing, and Driver's Villain/Wilson
     lattice-continuum convergence
     with exact hypotheses, distinct from finite-cutoff, classical, and four-dimensional witnesses.
