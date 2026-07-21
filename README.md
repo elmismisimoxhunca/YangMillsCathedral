@@ -793,8 +793,11 @@ holonomy uses the fixed later-on-the-left convention, and exact coarse restricti
 on the mapped fine edge. Driver's standing §2 chain now has an explicit smooth unitary representation, its exact manifold
 derivative `p_*` at the identity, injectivity of that derivative, and coherence requiring the
 continuum invariant inner product to be literally `-Re tr(p_*X p_*Y)`. This blocks an unrelated
-representation/pairing substitution; tying that pairing to the existing Laplacian/heat chain and the
-Wilson family remains open. No weak limit, boundary-
+representation/pairing substitution; `TwoDimensionalWilsonCommonHeatChainData` now closes that dependency chain: the same connected-group
+smooth representation is globally faithful and infinitesimally injective, supplies the Wilson
+normalization/action family and exact invariant pairing, whose Laplacian generates the unchanged
+continuum selected density and kernel. Tying this common chain to a full planar continuum expectation
+law remains open. No weak limit, boundary-
 independence proof, or lattice-continuum convergence is constructed.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to

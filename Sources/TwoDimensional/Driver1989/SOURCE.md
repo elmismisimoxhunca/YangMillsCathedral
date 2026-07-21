@@ -129,8 +129,10 @@ hypothesis, and the real form has the leading minus sign `-trace(p_*A p_*B)`. Le
 carrier as `-Re trace`; deriving vanishing imaginary part from differentiated unitarity remains part
 of the future analytic chain. Driver's standing §2 representation chain now defines `p_*` as the exact identity `mfderiv` of one
 smooth unitary matrix representation, requires its injectivity, and identifies the continuum
-invariant pairing literally with `-Re tr(p_*X p_*Y)`. Tying the resulting Laplacian/heat semigroup to
-the continuum planar law, inhabiting Theorem 7.2/projectivity, and formalizing Theorems 8.5/8.10
+invariant pairing literally with `-Re tr(p_*X p_*Y)`. A dependent common-chain record now ties the same connected-group representation (globally faithful
+and infinitesimally injective), Wilson normalization/actions, exact trace pairing, pairing Laplacian,
+and unchanged selected continuum density/heat equation/kernel. Tying this chain to the full planar
+continuum expectation law, inhabiting Theorem 7.2/projectivity, and formalizing Theorems 8.5/8.10
 convergence over exact transport remain explicit debt.
 
 PDF p. 21 / printed p. 595 was independently inspected on 2026-07-21 for Theorem 6.6.
