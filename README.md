@@ -387,10 +387,11 @@ naturality and the same-connection coordinate Bianchi theorem at every actual ch
 without accepting naturality, regularity, or Bianchi witnesses. The exact smooth adjoint-bundle
 curvature descent is now joined to this result chartwise: its designated base-chart coordinate is
 the same principal curvature evaluated on the chart's local section and tangent lifts, and that same
-representative obeys coordinate Bianchi. This is not an intrinsic descended three-form. Canonical
-arbitrary-manifold existence, chart independence, arbitrary-manifold `d²`, arbitrary-manifold graded
-Leibniz transport, positive-degree adjoint-bundle covariant exterior differentiation, intrinsic
-descended Bianchi, and positive curvature-tensor orders remain open. The interpreted observable layer now extends the exact
+representative obeys coordinate Bianchi. That result-specific bridge alone is not an intrinsic
+three-form, but the later general positive-degree construction now supplies the actual descended
+`D_A F` carrier under explicit same-chain certificates. Canonical arbitrary-manifold exterior
+existence, arbitrary-manifold `d²`, arbitrary-manifold graded Leibniz transport, intrinsic descended
+Bianchi zero, and positive curvature-tensor orders remain open. The interpreted observable layer now extends the exact
 unit and `F²` labels to the finite intrinsic fragment `1`, `F²`, `(F²)²`, with exact classical
 carrier coherence. A separate explicit anti-collapse strengthening requires `(F²)²` to be a new
 nontrivial operator in the 4D core; this is not attributed to Clay's footnote. Smooth gauge
@@ -498,8 +499,11 @@ unrestricted index type. Horizontality now discharges all surviving triangular C
 fundamental-slot cancellation is unconditional, and vertical tangent generation proves full
 horizontality of the positive-degree covariant-exterior candidate. Output-linear transport and
 right-translation pullback of positive-degree exterior certificates now prove full right-adjoint
-equivariance of both the ordinary derivative and the complete candidate. Descending that candidate
-and constructing a genuine intrinsic `D_A F` theorem remain open. Exact inverse-action
+equivariance of both the ordinary derivative and the complete candidate. The candidate now descends
+to the actual dependent adjoint-bundle fibers as a smooth positive-degree operator. Its curvature
+specialization is an exact same-connection smooth adjoint-valued three-form carrier `D_A F`,
+conditional on the existing same-index curvature structure certificate and a supplied ordinary
+curvature exterior certificate; no vanishing or Bianchi claim follows yet. Exact inverse-action
 curvature covariance now derives pointwise invariance of both chosen and basis-independent
 canonical curvature densities for the full pulled connection/exterior/certificate chain. The exact
 analytic datum transports to that chain with unchanged designated measure and coupling, deriving

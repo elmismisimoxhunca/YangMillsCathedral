@@ -4419,8 +4419,12 @@ smooth forms and positive-degree certificates through exact output continuous-li
 `SmoothManifoldDifferentialFormDiffeomorphPullback` constructs the exact smooth pullback carrier.
 `YangMills.Geometry.PrincipalFormCovariantExteriorEquivariance` compares output-`Ad(g⁻¹)` and
 right-translation-pulled certificates on one common-source field family, proving ordinary-derivative
-and full-candidate right-adjoint equivariance. Descent and a genuine intrinsic `D_A F` theorem remain
-open.
+and full-candidate right-adjoint equivariance.
+`YangMills.Geometry.AdjointBundlePositiveCovariantExteriorDerivative` descends the same candidate
+into the actual dependent adjoint-bundle fibers as a smooth positive-degree form and specializes it
+to the exact same-connection curvature as a smooth adjoint-valued three-form carrier `D_A F`. This
+specialization remains conditional on the existing same-index curvature structure certificate and a
+supplied ordinary curvature exterior certificate, and no intrinsic Bianchi-zero theorem is claimed.
 
 The four-dimensional `CurrentStrength` integration record now requires one exact algebraic quantum
 action of its canonical smooth principal gauge group on its same observable family and one

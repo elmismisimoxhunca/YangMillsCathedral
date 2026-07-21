@@ -278,8 +278,11 @@ committed before higher layers depend on it.
 - [x] Prove output-linear and diffeomorphism-pullback transport for positive-degree exterior
   certificates, then use certificate uniqueness to derive full right-adjoint equivariance of the
   ordinary derivative and complete candidate.
-- [ ] Descend the now-horizontal/equivariant candidate and derive structural curvature laws and a
-  genuine intrinsic `D_A F` theorem.
+- [x] Descend the horizontal/equivariant candidate into the actual dependent adjoint-bundle fibers,
+  and specialize it to an exact same-connection smooth intrinsic `D_A F` three-form carrier under
+  the existing curvature-structure and supplied curvature-exterior certificates.
+- [ ] Derive automatic curvature structure and identify/prove the intrinsic descended Bianchi zero
+  without accepting it as data.
 
 ## Phase 3 — classical Yang–Mills semantics
 

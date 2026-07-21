@@ -93,8 +93,11 @@ smooth coordinate-bracket certificate now proves smooth closure of this exact gr
 finite signed sum. Additivity and real-scalarity in both arguments are derived as reusable project
 algebra. The cubic self-bracket is also expanded with the fixed normalization and proved
 zero as twice the cyclic Lie Jacobi sum, pointwise and smoothly. A finite-dimensional normed-
-coordinate degree-two covariant expression and Bianchi proof are now derived below; no
-arbitrary-manifold or principal-bundle positive-degree operator is supplied.
+coordinate degree-two covariant expression and Bianchi proof are now derived below. A separate
+finite-dimensional principal-bundle construction conditionally descends `dω + [Θ∧ω]` from a
+supplied ordinary exterior certificate and horizontal/equivariant input, including the same-chain
+`D_A F` carrier; no canonical arbitrary-manifold exterior existence or intrinsic Bianchi-zero
+result is supplied.
 Joint continuity and coordinate smoothness are derived for Mathlib's actual finite-dimensional
 Lie-group tangent bracket by transport through the canonical normed model coordinates; the
 bracket-wedge is then proved to preserve smooth manifold one-forms.
