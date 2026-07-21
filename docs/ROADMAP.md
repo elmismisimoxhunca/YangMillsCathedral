@@ -294,9 +294,12 @@ committed before higher layers depend on it.
   redundant curvature-structure witness.
 - [x] Prove arbitrary-degree Cartan transport for arbitrary local smooth fields on the exact
   corner-aware chart set, certificate-free field-extension independence, and set-germ locality.
-- [ ] Use that tensorial/local Cartan infrastructure plus coordinate Bianchi to construct rather
-  than merely accept the ordinary curvature exterior certificate, retaining exact same-connection
-  provenance.
+- [x] Use that tensorial/local Cartan infrastructure plus coordinate Bianchi to construct the
+  finite-dimensional ordinary curvature exterior certificate as `dF = -[A∧F]`, retaining exact
+  same-connection provenance.
+- [ ] Construct rather than accept the connection-indexed first exterior data; retain the generic
+  arbitrary-manifold curvature structure/exterior certificate interfaces until their hypotheses can
+  also be discharged.
 
 ## Phase 3 — classical Yang–Mills semantics
 

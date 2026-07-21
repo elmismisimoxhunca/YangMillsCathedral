@@ -510,11 +510,13 @@ results with the same-connection coordinate Bianchi theorem proves the principal
 zero and the intrinsic descended `D_A F` equal to the canonical smooth zero adjoint-valued
 three-form. Finite-dimensional Cartan calculus now also derives curvature horizontality and
 right-adjoint equivariance from the connection laws, so the strengthened intrinsic Bianchi API no
-longer accepts a structure certificate from the caller. The connection-indexed first exterior data
-and curvature-indexed ordinary exterior certificate remain explicit same-chain inputs; neither is
-constructed. Arbitrary-degree Cartan transport for arbitrary local smooth fields, certificate-free
-field-extension independence, and exact set-germ locality are now available as the reusable
-infrastructure for constructing the remaining curvature exterior certificate without circularity. Exact inverse-action
+longer accepts a structure certificate from the caller. In finite-dimensional manifold models, arbitrary-degree Cartan transport for arbitrary local smooth
+fields, certificate-free field-extension independence, exact set-germ locality, and coordinate
+Bianchi now construct the curvature-indexed ordinary exterior certificate itself as
+`dF = -[A∧F]`. Thus finite-dimensional intrinsic `D_A F = 0` requires only the connection and its
+exact connection-indexed first exterior data; that first exterior datum remains supplied rather than
+constructed. Generic arbitrary-manifold curvature structure and curvature-exterior construction
+remain open. Exact inverse-action
 curvature covariance now derives pointwise invariance of both chosen and basis-independent
 canonical curvature densities for the full pulled connection/exterior/certificate chain. The exact
 analytic datum transports to that chain with unchanged designated measure and coupling, deriving

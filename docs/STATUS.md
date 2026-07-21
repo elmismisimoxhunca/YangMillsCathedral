@@ -4437,13 +4437,16 @@ zero or naturality bridge. `YangMills.Geometry.PrincipalCurvatureStructureFinite
 separately derives the formerly supplied curvature structure: connection-specific Cartan calculus
 uses `Θ(X#)=X` to prove horizontality with the exact half-self-wedge normalization, while exterior
 and bracket transport prove right-adjoint equivariance. The finite-dimensional intrinsic Bianchi
-wrapper therefore accepts no structure witness. The connection-indexed first exterior data and
-curvature-indexed ordinary exterior certificate remain supplied; their construction remains open.
-`YangMills.Mathematics.PositiveDegreeCartanArbitraryFieldChartTransport` now removes the main
-circularity barrier: the full triangular Cartan expression transports for arbitrary local smooth
-fields through the exact set `(extChartAt I p).symm ⁻¹' s ∩ range I`, is independent of admissible
-field extensions in finite dimensions without using a certificate, and is local under equality of
-set germs.
+wrapper therefore accepts no structure witness. The full triangular Cartan expression transports
+for arbitrary local smooth fields through the exact set
+`(extChartAt I p).symm ⁻¹' s ∩ range I`, is independent of admissible field extensions in finite
+dimensions without using a certificate, and is local under equality of set germs.
+`YangMills.Geometry.PrincipalCurvatureExteriorCertificateFiniteDimensional` combines this
+infrastructure with coordinate Bianchi to construct the exact ordinary curvature certificate
+`dF = -[A∧F]`. Consequently its derived finite-dimensional intrinsic Bianchi theorem accepts only
+the connection and the exact connection-indexed first exterior data. Construction of that first
+exterior datum, and generic arbitrary-manifold curvature structure/exterior construction, remain
+open.
 
 The four-dimensional `CurrentStrength` integration record now requires one exact algebraic quantum
 action of its canonical smooth principal gauge group on its same observable family and one
