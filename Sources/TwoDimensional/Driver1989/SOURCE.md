@@ -142,8 +142,10 @@ image of the vertical/x-axis tree, every fine enlarged edge belongs to a coarse-
 that tree, Definition 8.1 boundary transport remains face-indexed under collisions, and exact lattice
 holonomy restriction commutes. Each `VB(ε)` face additionally has an exact nonempty finite closed-
 square polyomino whose interior has the full graph trace removed (so internal bridge/slit edges are
-not filled), exact positive integer exponent `|R(ε)|/ε²`, eventual bijective face correspondence,
-and mapped-area convergence. The first displayed equality in the §8 proofs is now an uninhabited
+not filled), exact positive integer exponent `|R(ε)|/ε²`; the first-order mapped-area bound and convergence are
+now derived from Definition 8.1's symmetric-difference estimate, while positive disjoint continuum
+face areas, the symmetric-difference triangle inequality, finiteness, and existing surjectivity derive
+eventual bijective face correspondence rather than storing either conclusion as a field. The first displayed equality in the §8 proofs is now an uninhabited
 universal interface: every bounded measurable coarse observable under the action-indexed Theorem 7.2
 law equals its exact normalized `VB(ε)` integral, with the certified BC boundary words, precisely
 `|R(ε)|/ε²` normalized-Haar convolution factors, and the exact `T(ε)`-frozen carrier. Adding the

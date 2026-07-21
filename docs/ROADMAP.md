@@ -849,7 +849,8 @@ committed before higher layers depend on it.
     the missing `ε`-dependence is authoritatively resolved.
   - [x] Add the exact collision-safe `B(ε) → VB(ε)` graph/holonomy bridge, including commuting
     refinement words, exact `T(ε)`, total fine-edge coverage, slit-aware finite polyomino faces,
-    positive integer convolution exponents, and eventual face-product reindexing.
+    positive integer convolution exponents, and derived mapped-area convergence/eventual face-product
+    reindexing.
   - [x] State the universal enlarged measure/product identity from the first §8 proof equality, with
     exact BC words, `T(ε)`-frozen product Haar, and positive convolution powers.
   - [x] Derive the exact Villain convolution-semigroup reduction from `Q_{ε²}` to `Q_{|R(ε)|}` for

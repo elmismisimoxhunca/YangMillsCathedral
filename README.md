@@ -806,8 +806,9 @@ area-density law. The proof-specific `B(ε) → VB(ε)` graph bridge now has com
 words and lattice holonomy restrictions, a BC enlarged approximation, the exact vertical/x-axis
 `T(ε)` image, collision-safe facewise boundary transport, and no unrelated enlarged fine edges.
 Every fine enlarged face is also an exact nonempty finite closed-square polyomino interior minus the
-full graph trace, has positive integer exponent `|R(ε)|/ε²`, and participates in an eventually
-bijective area-convergent face correspondence. The first §8 proof equality now universally rewrites
+full graph trace and has positive integer exponent `|R(ε)|/ε²`. The area convergence and eventual
+bijective face correspondence are now derived from symmetric-difference control, positive disjoint
+faces, finiteness, and existing surjectivity rather than accepted as separate assumptions. The first §8 proof equality now universally rewrites
 the action-indexed Theorem 7.2 expectation as the exact normalized `VB(ε)` integral with certified
 BC words, the `T(ε)`-frozen product Haar carrier, and precisely `|R(ε)|/ε²` convolution factors. The
 The Villain semigroup reduction is now derived: `n+1` exact `Q_{ε²}` factors equal

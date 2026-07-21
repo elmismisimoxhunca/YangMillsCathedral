@@ -88,28 +88,43 @@ theorem exact_positive_convolution_exponent
 
 omit [TopologicalSpace G] [IsTopologicalGroup G] [CompactSpace G] [BorelSpace G]
     [MeasurableMul₂ G] [MeasurableInv G] in
-/-- Product reindexing requires bijectivity only eventually, preserving collision-safe Definition 8.1. -/
-theorem exact_eventual_face_bijection
-    (data : TwoDimensionalDriverAxialLatticeFaceGeometryData
-      (axial := axial) (coarseApproximation := coarseApproximation)
-      (enlargedApproximation := enlargedApproximation)) :
+/-- Distinct continuum faces are eventually protected against a colliding fine label. -/
+theorem distinct_face_collision_eventually_blocked
+    (first second : enlarged.Face) (different : first ≠ second) :
     ∀ᶠ spacing in positiveLatticeSpacingAtZero,
-      Function.Bijective (enlargedApproximation.faceMap spacing) :=
-  data.faceMap_eventually_bijective
+      enlargedApproximation.faceMap spacing first ≠
+        enlargedApproximation.faceMap spacing second :=
+  twoDimensionalFaceMap_eventually_pairwise_ne first second different
 
 omit [TopologicalSpace G] [IsTopologicalGroup G] [CompactSpace G] [BorelSpace G]
     [MeasurableMul₂ G] [MeasurableInv G] in
-/-- Each mapped polyomino area tends to its exact continuum face area. -/
-theorem exact_mapped_area_limit
-    (data : TwoDimensionalDriverAxialLatticeFaceGeometryData
-      (axial := axial) (coarseApproximation := coarseApproximation)
-      (enlargedApproximation := enlargedApproximation))
+/-- Product reindexing requires bijectivity only eventually, preserving collision-safe Definition 8.1. -/
+theorem exact_eventual_face_bijection :
+    ∀ᶠ spacing in positiveLatticeSpacingAtZero,
+      Function.Bijective (enlargedApproximation.faceMap spacing) :=
+  twoDimensionalFaceMap_eventually_bijective
+
+omit [TopologicalSpace G] [IsTopologicalGroup G] [CompactSpace G] [BorelSpace G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
+/-- The uniform geometric estimate gives an exact first-order mapped-area bound. -/
+theorem exact_mapped_area_bound
+    (spacing : PositiveLatticeSpacing)
+    (belowCutoff : spacing.1 < enlargedApproximation.areaOrderCutoff)
     (face : enlarged.Face) :
+    |(enlargedApproximation.fine spacing).faceArea
+        (enlargedApproximation.faceMap spacing face) - enlarged.faceArea face| ≤
+      enlargedApproximation.areaOrderConstant * spacing.1 :=
+  twoDimensionalMappedFaceArea_abs_sub_le spacing belowCutoff face
+
+omit [TopologicalSpace G] [IsTopologicalGroup G] [CompactSpace G] [BorelSpace G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Each mapped polyomino area tends to its exact continuum face area by derivation, not a field. -/
+theorem exact_mapped_area_limit (face : enlarged.Face) :
     Tendsto
       (fun spacing => (enlargedApproximation.fine spacing).faceArea
         (enlargedApproximation.faceMap spacing face))
       positiveLatticeSpacingAtZero (nhds (enlarged.faceArea face)) :=
-  data.mappedFaceArea_tendsto face
+  twoDimensionalMappedFaceArea_tendsto face
 
 omit [TopologicalSpace G] [IsTopologicalGroup G] [CompactSpace G] [BorelSpace G]
     [MeasurableMul₂ G] [MeasurableInv G] in
