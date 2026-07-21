@@ -204,7 +204,9 @@ adjudication corrections.
    now requires nested finite-law pushforward plus exhaustive bonds/plaquettes, and an infinite axial
    probability interface requires all finite-coordinate cylinder laws exactly. Exact positive-radius
    centered square-box plaquette/off-axis-coordinate sets are now separately defined with literal
-   radius nesting and complete non-tree boundary coverage; their presentation adapter remains open.
+   radius nesting and complete non-tree boundary coverage. Their concrete generic-presentation
+   adapter now has exact coordinate/plaquette subtypes and a measurable reverse/identity extension;
+   box-specific partition-function certificates remain open.
 11. Lévy PDF pp. 24–27 / printed pp. 10–13 were visually adjudicated on 2026-07-21 for §1.6,
    Theorem 1.6.1 and Lemma 1.6.3. The pages visibly define the fine-to-coarse holonomy map, state
    surjectivity and exact measure pushforward, and state strict three-graph composition. The Lean

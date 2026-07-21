@@ -173,6 +173,25 @@ theorem mono
     have smallBounds := (squareLatticeBoxOffAxisRows.mem_iff smaller site.2).mp row
     exact ⟨by omega, by omega, smallBounds.2.2⟩
 
+/-- The reverse of a stored right-directed coordinate is never stored independently. -/
+theorem reverse_not_mem
+    (spacing : PositiveLatticeSpacing) (radius : PositiveSquareLatticeBoxRadius)
+    (bond : EpsilonSquareLatticeDirectedBond spacing)
+    (membership : bond ∈ epsilonSquareLatticeBoxAxialCoordinates spacing radius) :
+    bond.reverse ∉ epsilonSquareLatticeBoxAxialCoordinates spacing radius := by
+  intro reverseMembership
+  simp only [epsilonSquareLatticeBoxAxialCoordinates, Finset.mem_image] at membership reverseMembership
+  obtain ⟨firstSite, _, firstEquality⟩ := membership
+  obtain ⟨secondSite, _, secondEquality⟩ := reverseMembership
+  have sourceEquality := congrArg EpsilonSquareLatticeDirectedBond.source
+    (firstEquality.trans (congrArg EpsilonSquareLatticeDirectedBond.reverse secondEquality.symm))
+  have targetEquality := congrArg EpsilonSquareLatticeDirectedBond.target
+    (firstEquality.trans (congrArg EpsilonSquareLatticeDirectedBond.reverse secondEquality.symm))
+  have sourceFirst := congrArg Prod.fst sourceEquality
+  have targetFirst := congrArg Prod.fst targetEquality
+  simp [epsilonSquareLatticeRightBond] at sourceFirst targetFirst
+  omega
+
 /-- Every box coordinate is genuinely off Driver's axial tree. -/
 theorem not_axial
     (spacing : PositiveLatticeSpacing) (radius : PositiveSquareLatticeBoxRadius)

@@ -758,8 +758,11 @@ probability measure on the infinite axial carrier with every finite-coordinate c
 corresponding normalized finite law. Exact positive-radius centered square-box geometry is now separate: lower-left plaquette sites run
 from `-n` through `n-1`, independent axial coordinates are right-directed horizontal bonds on rows
 `-n,…,-1,1,…,n`, radii give literal nested finite sets, and every non-tree box-plaquette boundary is
-covered in one coordinate orientation. No adapter from these sets to the abstract finite
-presentations, boundary-condition weak limit, or lattice-continuum convergence is yet constructed.
+covered in one coordinate orientation. `twoDimensionalSquareLatticeBoxPresentation` now adapts these exact finite sets to the generic
+presentation: coordinates are orientation-disjoint, arbitrary values extend measurably by reverse
+inversion and identity elsewhere, every coordinate is recovered, and every selected boundary is
+covered. This constructs no partition-function certificate for the boxes, boundary-condition weak
+limit, or lattice-continuum convergence.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly

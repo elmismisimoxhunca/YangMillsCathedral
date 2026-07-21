@@ -4687,9 +4687,12 @@ marginals derive. Both remain uninhabited acceptance interfaces. `epsilonSquareL
 positive-radius centered boxes with lower-left coordinates `-n,…,n-1`, while
 `epsilonSquareLatticeBoxAxialCoordinates` gives right-directed horizontal coordinates on the
 nonzero rows `-n,…,-1,1,…,n`. Both sets are literally nested with radius; all coordinates are
-off-tree and every selected plaquette's non-tree boundary is covered forward or in reverse. No
-adapter to the abstract finite-presentation carrier, boundary-condition weak limit, or continuum
-convergence witness is constructed.
+off-tree and every selected plaquette's non-tree boundary is covered forward or in reverse. `twoDimensionalSquareLatticeBoxPresentation` now uses the exact coordinate/plaquette subtypes,
+constructs a measurable extension taking represented bonds to arbitrary coordinates, reverse bonds
+to inverses, and all other bonds to the identity, and proves exact coordinate recovery, finite
+support, orientation disjointness, and boundary coverage. A nonidentity multiplicative-integer
+coordinate survives the extension. No box-specific partition-function certificate, boundary-
+condition weak limit, or continuum convergence witness is constructed.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.
