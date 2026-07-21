@@ -4550,10 +4550,12 @@ invariance field derives bi-invariance. The reusable
 `positiveBilinear_unitEllipsoid_isVonNBounded` theorem minimizes the quadratic form on the compact
 unit sphere and proves the finite-dimensional von Neumann-bounded unit-ellipsoid obligation; the
 exact tangent-fiber form now satisfies it. The parameter-dependent inverse-left-translation
-derivative is also proved smooth in Mathlib's exact tangent coordinates at every center. This still
-is not a Mathlib Riemannian metric: the local equality with the two nested metric Hom-bundle
-coordinate transports, hence smoothness of the dependent continuous-bilinear section, and the
-Laplace–Beltrami comparison remain open. No planar embedding, simplicity theorem, YM measure,
+derivative is also proved smooth in Mathlib's exact tangent coordinates at every center. Reusable
+finite-dimensional mathematics proves smooth diagonal precomposition of a continuous bilinear map.
+On each exact tangent-trivialization base set, the two nested Hom-bundle coordinates are proved equal
+to that polynomial model; neighborhood equality supplies dependent-section smoothness and packages
+`lieGroupInvariantContMDiffRiemannianMetric`. The Laplace–Beltrami comparison remains open. No
+planar embedding, simplicity theorem, YM measure,
 general face product, refinement, gluing, or lattice-limit theorem is constructed.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary

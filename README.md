@@ -670,9 +670,10 @@ invariance with the exact `Ad(h⁻¹)` convention. A reusable finite-dimensional
 argument now proves von Neumann boundedness of every strictly positive continuous bilinear unit
 ellipsoid and discharges that exact obligation for each group tangent fiber. The exact
 parameter-dependent derivative `D_y(x⁻¹y)|_{y=x}` is now proved smooth after Mathlib's tangent
-coordinate transport at every center. No density, solution, or process is constructed; reconciling
-the two nested metric Hom-bundle coordinate transports, full `ContMDiffRiemannianMetric`
-packaging, and Laplace–Beltrami comparison remain open before treating
+coordinate transport at every center. Finite-dimensional evaluation mathematics proves smooth
+diagonal bilinear precomposition; exact nested Hom-bundle coordinate reconciliation then packages
+the unchanged positive bi-invariant form as Mathlib's full `ContMDiffRiemannianMetric`. No density,
+solution, or process is constructed; Laplace–Beltrami comparison remains open before treating
 this as a completed source heat-kernel chain. No planar loop
 embedding, heat kernel, measure, or model is constructed;
 general face products, refinement/gluing, and lattice-limit layers remain explicit debt.

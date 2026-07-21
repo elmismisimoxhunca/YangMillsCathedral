@@ -720,10 +720,11 @@ committed before higher layers depend on it.
     each pointwise group tangent pairing.
   - [x] Prove centerwise smoothness of the exact parameter-dependent left Maurer–Cartan derivative
     after Mathlib's tangent-coordinate transport.
-  - [ ] Reconcile precomposition by those coefficients with the two nested metric Hom-bundle
-    coordinate transports, proving smoothness of the dependent bilinear-form section; then assemble
-    the actual `ContMDiffRiemannianMetric` and compare its Laplace–Beltrami operator with the basis sum; after
-    that add finite planar graph/face-product laws, refinement/projective consistency, compact-
+  - [x] Prove finite-dimensional smooth diagonal bilinear precomposition, reconcile it exactly with
+    the two nested metric Hom-bundle coordinate transports, derive dependent-section smoothness,
+    and assemble the actual `ContMDiffRiemannianMetric` with the unchanged pointwise form.
+  - [ ] Compare its Laplace–Beltrami operator with the basis sum; after that add finite planar
+    graph/face-product laws, refinement/projective consistency, compact-
     surface gluing, and Driver's Villain/Wilson lattice-continuum convergence
     with exact hypotheses, distinct from finite-cutoff, classical, and four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.
