@@ -4636,6 +4636,14 @@ compatibility is derived rather than supplied. Integral equality for every eligi
 observable, Corollary 1.6.4 equality in law for every finite coarse-word family and substituted fine
 family, exact embedded-map composition, and direct pushforward from coherent pairwise laws are
 derived. No graph, refinement, or law instance is constructed.
+The first Driver Definition 8.1 lattice-approximation component is now exact:
+`EpsilonSquareLatticePathCertificate` fixes `ε > 0`, a continuous literal `ℝ²` curve, and a finite
+strictly parameter-ordered node list from `0` to `1`; each integer-coordinate step is exactly one
+horizontal or vertical directed nearest neighbor, and each curve segment is the exact affine
+realization in `εℤ²`. At least one bond is derived, while diagonal, stationary, zero-spacing, and
+singleton-node substitutes are rejected. No approximating graph family, edge/region surjection,
+symmetric-difference area estimate, boundary transport, Villain/Wilson action, lattice measure, or
+continuum convergence is asserted.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

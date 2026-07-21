@@ -774,8 +774,12 @@ committed before higher layers depend on it.
     genuine eligible-observable/ambient-physical-observable coherence between the two existing laws,
     exact selected weighted-measure pushforward, derived pullback integrals and finite word-family
     equality in law, and transitive source-facing pushforward on the unchanged density-semigroup chain.
-  - [ ] Add compact-surface gluing and Driver's Villain/Wilson lattice-continuum convergence with
-    exact hypotheses, distinct from finite-cutoff, classical, and four-dimensional witnesses.
+  - [x] Add the first exact Driver Definition 8.1 component: positive-spacing paths in the directed
+    nearest-neighbor graph on `εℤ²`, with finite strictly ordered nodes and exact affine bond
+    geometry; reject diagonal, stationary, zero-spacing, and singleton-node surrogates.
+  - [ ] Add the full approximating graph family, region/edge surjections, area-order and boundary-word
+    conditions, compact-surface gluing, and Driver's Villain/Wilson lattice-continuum convergence
+    with exact hypotheses, distinct from finite-cutoff, classical, and four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.
   - [x] Add a current-strength continuum core hard-wired to coordinate `ℝ³` with coordinate
     Lebesgue action measure, dependently joining compact-simple gauge/classical data, strict

@@ -726,7 +726,11 @@ general-boundary laws on the unchanged density semigroup through an eligible fin
 pullback with the same ambient physical observable and exact weighted-measure pushforward. It derives
 all eligible coarse-observable pullback integrals, finite word-family equality in law, and direct
 pushforward from coherent pairwise refinement laws. No refinement instance is constructed. Compact-surface gluing and
-lattice-limit layers remain explicit debt.
+lattice-limit layers remain explicit debt. As the first Definition 8.1 approximation component,
+`EpsilonSquareLatticePathCertificate` now gives exact positive-spacing paths in the directed
+nearest-neighbor graph on `εℤ²`: finite strictly ordered nodes from parameters `0` to `1`, horizontal
+or vertical integer unit steps, and exact affine realization of every bond. No approximating graph
+family, area estimate, action, measure, or convergence claim is yet made.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly

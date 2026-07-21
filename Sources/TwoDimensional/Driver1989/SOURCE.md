@@ -59,6 +59,14 @@ are nonempty, pairwise disjoint, and maximal connected frontier subsets. The uni
 freezing strengthening now quantifies over every exact Definition 5.1 tree, uses the exact mixed
 identity-Dirac/Haar product, and retains the unchanged face density and ambient expectation.
 
+PDF p. 27 / printed p. 601 was independently inspected on 2026-07-21 for Definition 8.1 and the
+opening statements of Definitions 8.3/8.4 and Theorem 8.5. The page visibly fixes the infinite
+nearest-neighbor directed graph on `εℤ²`, requires approximating graph edges to be paths in that
+graph, gives surjections on bonds and bounded regions, requires symmetric-difference area of order
+`ε`, and preserves admissible boundary sums. The first Lean lattice-approximation layer currently
+formalizes only the exact positive-spacing nearest-neighbor path geometry; approximating graph
+families, area order, actions, measures, and convergence remain explicit debt.
+
 PDF p. 21 / printed p. 595 was independently inspected on 2026-07-21 for Theorem 6.6.
 The page visibly quantifies over a gauge-invariant function on the BC graph configuration space and
 states that its continuum holonomy expectation equals integration of that function against one Haar
