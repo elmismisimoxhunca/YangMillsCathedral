@@ -815,8 +815,10 @@ committed before higher layers depend on it.
   - [x] Prove exact box partition functions finite and nonzero from compact action bounds, strict
     positivity and product-Haar normalization; construct normalized finite-coordinate and infinite-
     carrier pushforward box measures.
-  - [ ] Add boundary-conditioned box measures and weak-limit semantics, compact-surface gluing, and
-    lattice-continuum convergence with exact hypotheses, distinct from finite-cutoff, classical, and
+  - [x] Construct exact successor-radius coordinate/plaquette inclusions and measurable restriction;
+    state the uninhabited exact consecutive-box measure-pushforward obligation.
+  - [ ] Construct/derive box projectivity, add boundary-conditioned box measures and weak-limit
+    semantics, compact-surface gluing, and lattice-continuum convergence with exact hypotheses, distinct from finite-cutoff, classical, and
     four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.
   - [x] Add a current-strength continuum core hard-wired to coordinate `ℝ³` with coordinate

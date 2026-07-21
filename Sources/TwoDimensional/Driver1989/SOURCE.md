@@ -106,8 +106,10 @@ every non-tree plaquette boundary orientation. The concrete box adapter now prod
 finite presentation using exact subtypes and a measurable extension that applies inversion to
 reverse coordinates and identity elsewhere, with exact recovery/support/coverage. Compactness now bounds the exact box action weight and strict positivity/product-Haar normalization
 prove its exact partition function finite and nonzero. Normalized finite-coordinate and same-
-extension infinite-carrier box measures are constructed. Boundary-conditioned box measures, weak
-limits, and convergence remain explicit debt.
+extension infinite-carrier box measures are constructed. Literal successor-radius coordinate/plaquette inclusions and measurable restriction are constructed;
+an uninhabited projectivity datum states exact consecutive box-measure pushforward. Deriving or
+constructing this compatible family, boundary-conditioned box measures, weak limits, and convergence
+remain explicit debt.
 
 PDF p. 21 / printed p. 595 was independently inspected on 2026-07-21 for Theorem 6.6.
 The page visibly quantifies over a gauge-invariant function on the BC graph configuration space and

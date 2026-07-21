@@ -4695,8 +4695,12 @@ coordinate survives the extension. `twoDimensionalSquareLatticeBoxNormalizer` is
 weight. Strict positivity proves nonzeroness, while compactness uniformly bounds the common action
 and proves finiteness. The resulting normalizer certificate constructs normalized nonzero finite-
 coordinate box measures and normalized nonzero same-extension pushforwards to the infinite axial
-carrier. No boundary-conditioned box measure, weak limit, or continuum convergence witness is
-constructed.
+carrier. `epsilonSquareLatticeBoxCoordinateInclusion` and
+`epsilonSquareLatticeBoxPlaquetteInclusion` retain identical bonds/plaquettes at successor radius;
+the induced coordinate restriction is measurable. The uninhabited
+`TwoDimensionalSquareLatticeBoxProjectiveConsistencyData` requires exact pushforward of every
+successor box measure to its predecessor. No compatible family, boundary-conditioned box measure,
+weak limit, or continuum convergence witness is constructed.
 
 The absence of an acceptance declaration is intentional: no placeholder theorem or arbitrary
 structure is introduced merely to make the project appear advanced.

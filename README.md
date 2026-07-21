@@ -764,8 +764,11 @@ inversion and identity elsewhere, every coordinate is recovered, and every selec
 covered. Compactness of the common action and finite box geometry now bounds the exact action weight,
 while strict positivity and product-Haar normalization make its exact partition function nonzero.
 Thus every box has a constructed finite/nonzero normalizer certificate, normalized nonzero finite-
-coordinate measure, and normalized nonzero same-extension pushforward. No boundary-conditioned
-measure, weak limit, or lattice-continuum convergence is constructed.
+coordinate measure, and normalized nonzero same-extension pushforward. Successor-radius coordinate and plaquette inclusions are now constructed literally, with exact
+bond/plaquette retention and measurable coordinate restriction. An uninhabited box-projectivity
+datum requires the successor box measure to push forward exactly to the smaller box measure. No
+compatible family is constructed, and no boundary-conditioned measure, weak limit, or lattice-
+continuum convergence is constructed.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly
