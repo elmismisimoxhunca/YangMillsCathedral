@@ -805,8 +805,11 @@ committed before higher layers depend on it.
     coverage, exact partition functions, and derived
     normalized/nonzero finite product-Haar density measures, their exact finite-support pushforwards
     to the infinite axial carrier, and represented-coordinate marginal identities.
-  - [x] Add an uninhabited exhaustive nested projective finite-presentation contract and an exact
+  - [x] Add an exhaustive nested projective finite-presentation contract and a separate exact
     infinite axial probability/cylinder-law interface with finite-stage and one-coordinate marginals.
+  - [x] Construct the finite projective sequence from exact radii `stage+1`, exhaustive off-tree
+    bond/plaquette coverage, and derived consecutive box projectivity; retain the infinite cylinder
+    measure as a separate uninhabited obligation.
   - [x] Add exact positive-radius centered square-box plaquette and off-axis axial-coordinate sets,
     prove literal radius nesting and complete non-tree plaquette-boundary coverage.
   - [x] Construct the exact square-box adapter to generic finite axial presentations, including a

@@ -4821,7 +4821,11 @@ inclusions, exact consecutive finite-law pushforward, and exhaustion of every of
 elementary plaquette. `TwoDimensionalAxialInfiniteVolumeCylinderLawData` requires a measure on the
 exact infinite axial carrier whose restriction to every finite represented coordinate family is the
 corresponding normalized finite law; normalization from any one exact cylinder, nonzeroness, and
-represented one-coordinate marginals derive. Both remain uninhabited acceptance interfaces. `epsilonSquareLatticeBoxPlaquettes` now gives exact
+represented one-coordinate marginals derive. `squareLatticeBoxProjectiveRadius` is definitionally
+`stage+1`; exact nearest-neighbor orientation analysis and `Int.natAbs` bounds prove every off-tree
+bond and every plaquette eventually occurs. Together with derived consecutive box projectivity this
+constructs `twoDimensionalSquareLatticeBoxProjectiveSequenceData` for every normalized action. Only
+the infinite cylinder-law interface remains uninhabited. `epsilonSquareLatticeBoxPlaquettes` now gives exact
 positive-radius centered boxes with lower-left coordinates `-n,…,n-1`, while
 `epsilonSquareLatticeBoxAxialCoordinates` gives right-directed horizontal coordinates on the
 nonzero rows `-n,…,-1,1,…,n`. Both sets are literally nested with radius; all coordinates are

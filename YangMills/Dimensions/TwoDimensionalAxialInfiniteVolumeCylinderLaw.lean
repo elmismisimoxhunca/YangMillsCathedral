@@ -14,8 +14,10 @@ pushforward consistency under coordinate restriction, and a probability measure 
 infinite axial carrier whose every finite-coordinate law is the corresponding normalized finite
 measure.
 
-This is uninhabited acceptance data. It constructs no box sequence, infinite-volume measure, weak
-limit, lattice-continuum limit, Yang--Mills theory, or mass gap.
+The finite projective-sequence interface is now inhabited downstream by exhaustive exact square
+boxes in `TwoDimensionalSquareLatticeBoxProjectiveSequence`. The infinite cylinder-law record
+remains uninhabited: no infinite-volume measure, weak limit, lattice-continuum limit, Yang--Mills
+theory, or mass gap is constructed.
 -/
 
 namespace YangMills.Dimensions
