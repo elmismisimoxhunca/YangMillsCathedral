@@ -4835,7 +4835,11 @@ the source-order-sensitive nonabelian formula `H(x,y)=U(x,y+1)⁻¹U(x,y)` for e
 Separately packaged `Mathematics.RootedGroupDifference` now constructs the upper rooted transform
 `D₀=U₀⁻¹`, `Dᵢ₊₁=Uᵢ₊₁⁻¹Uᵢ` and lower rooted transform
 `D₀=U₀`, `Dᵢ₊₁=Uᵢ⁻¹Uᵢ₊₁`, proves explicit recursive recovery in both directions without
-commutativity, and packages both as measurable equivalences. Together these are the first
+commutativity, and packages both as measurable equivalences. A final-coordinate splitting and
+measurable skew-product induction proves that both transforms and recursive inverses preserve every
+finite product of a common sigma-finite bi-invariant, inversion-invariant measure, covering the
+normalized compact Haar use without assuming coordinate independence after the fact. Together these
+are the first
 triangular-coordinate steps toward deriving box projectivity and do not falsely identify every
 plaquette holonomy with one raw coordinate. A nonidentity multiplicative-integer
 coordinate survives the extension. `twoDimensionalSquareLatticeBoxNormalizer` is the exact product-Haar integral of the exact box
