@@ -12,6 +12,7 @@ import YangMills.Dimensions.TwoDimensionalRepresentationInducedPairing
 
 namespace YangMills.Dimensions.TwoDimensionalRepresentationInducedPairing.Probes
 
+open YangMills.Mathematics
 open scoped Manifold ContDiff
 
 noncomputable section
@@ -54,9 +55,29 @@ theorem exact_trace_pairing
     (coherence : TwoDimensionalRepresentationInducedPairingCoherenceData representation inner)
     (first second : GroupLieAlgebra (modelWithCornersSelf ℝ E) G) :
     inner.pairing first second =
-      -(Matrix.trace
-        (representation.differential first * representation.differential second)).re :=
+      -(Matrix.trace (finiteMatrixMulContinuousBilinear representation.dimension
+        (representation.differential first) (representation.differential second))).re :=
   coherence.pairing_eq_trace first second
+
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- Differentiated unitarity makes the exact representation derivative conjugate-transpose skew. -/
+theorem exact_differential_conjTranspose_skew
+    (representation : SmoothUnitaryRepresentationDifferentialData (E := E) (G := G))
+    (direction : GroupLieAlgebra (modelWithCornersSelf ℝ E) G) :
+    Matrix.conjTranspose (representation.differential direction) =
+      -representation.differential direction :=
+  representation.representationDifferential_conjTranspose_eq_neg direction
+
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- The trace pairing's underlying genuine matrix product has no imaginary part. -/
+theorem exact_trace_product_imaginary_zero
+    (representation : SmoothUnitaryRepresentationDifferentialData (E := E) (G := G))
+    (first second : GroupLieAlgebra (modelWithCornersSelf ℝ E) G) :
+    (Matrix.trace (finiteMatrixMulContinuousBilinear representation.dimension
+      (representation.differential first) (representation.differential second))).im = 0 :=
+  representationDifferential_trace_matrixMul_im representation first second
 
 omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
     [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in

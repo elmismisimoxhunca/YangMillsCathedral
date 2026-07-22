@@ -130,8 +130,10 @@ source/target-wise to every consecutive certified path node; measurable later-on
 constructs exact coarse restriction along the mapped fine edge. Driver's opening §2 and sign-sensitive equation (2.1) were visually adjudicated against PDF p. 3 /
 printed p. 577 on 2026-07-21: `p_*` is the derivative at identity, injectivity is the standing
 hypothesis, and the real form has the leading minus sign `-trace(p_*A p_*B)`. Lean writes the real
-carrier as `-Re trace`; deriving vanishing imaginary part from differentiated unitarity remains part
-of the future analytic chain. Driver's standing §2 representation chain now defines `p_*` as the exact identity `mfderiv` of one
+carrier as `-Re trace` of the genuine contracted matrix product. A separately packaged continuous
+real-bilinear matrix multiplication prevents accidental pointwise function multiplication.
+Differentiating the unchanged unitarity equation now proves `p_*X` conjugate-transpose skew, and
+trace cyclicity derives the vanishing imaginary part. Driver's standing §2 representation chain now defines `p_*` as the exact identity `mfderiv` of one
 smooth unitary matrix representation, requires its injectivity, and identifies the continuum
 invariant pairing literally with `-Re tr(p_*X p_*Y)`. A dependent common-chain record now ties the same connected-group representation (globally faithful
 and infinitesimally injective), Wilson normalization/actions, exact trace pairing, pairing Laplacian,

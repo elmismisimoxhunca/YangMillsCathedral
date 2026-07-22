@@ -6,6 +6,8 @@ Authors: Sebastian Rodrigo
 
 import YangMills.Dimensions.TwoDimensionalLatticeSpacingActionFamily
 import YangMills.Geometry.InvariantInnerProduct
+import YangMills.Mathematics.FiniteMatrixRealContinuousBilinear
+import Mathlib.Geometry.Manifold.MFDeriv.SpecificFunctions
 
 /-!
 # Driver's representation differential and induced Lie-algebra pairing
@@ -19,7 +21,7 @@ inner product, heat kernel, or convergence theorem.
 namespace YangMills.Dimensions
 
 open YangMills.Mathematics
-open scoped Manifold ContDiff
+open scoped Manifold ContDiff BigOperators
 
 noncomputable section
 
@@ -67,13 +69,100 @@ theorem differential_injective_exact
     Function.Injective data.differential :=
   data.differential_injective
 
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- Differentiated unitarity: the exact representation derivative is conjugate-transpose skew. -/
+theorem representationDifferential_conjTranspose_eq_neg
+    (data : SmoothUnitaryRepresentationDifferentialData (E := E) (G := G))
+    (X : GroupLieAlgebra (modelWithCornersSelf ℝ E) G) :
+    Matrix.conjTranspose (data.differential X) = -data.differential X := by
+  let V := Fin data.dimension → Fin data.dimension → ℂ
+  let ρ : G → V := fun g => data.representation g
+  have hρmd : MDifferentiableAt (modelWithCornersSelf ℝ E)
+      (modelWithCornersSelf ℝ V) ρ 1 := by
+    exact data.representation_contMDiff.mdifferentiableAt (by simp)
+  have hρ : HasMFDerivAt (modelWithCornersSelf ℝ E)
+      (modelWithCornersSelf ℝ V) ρ 1 data.differential := by
+    simpa [SmoothUnitaryRepresentationDifferentialData.differential, ρ, V] using
+      hρmd.hasMFDerivAt
+  let Slin : V →ₗ[ℝ] V :=
+    { toFun := Matrix.conjTranspose
+      map_add' := Matrix.conjTranspose_add
+      map_smul' := by
+        intro r M
+        ext i j
+        change star ((r : ℂ) * M j i) = (r : ℂ) * star (M j i)
+        rw [star_mul]
+        simp [mul_comm] }
+  let S : V →L[ℝ] V := LinearMap.toContinuousLinearMap Slin
+  have hS : HasMFDerivAt (modelWithCornersSelf ℝ V) (modelWithCornersSelf ℝ V)
+      S (ρ 1) S := S.hasFDerivAt.hasMFDerivAt
+  have hstar := hS.comp (1 : G) hρ
+  let B : V →L[ℝ] V →L[ℝ] V := finiteMatrixMulContinuousBilinear data.dimension
+  have hBf := B.hasFDerivAt_of_bilinear
+    (hasFDerivAt_fst (𝕜 := ℝ) (p := (S (ρ 1), ρ 1)))
+    (hasFDerivAt_snd (𝕜 := ℝ) (p := (S (ρ 1), ρ 1)))
+  have hB := hBf.hasMFDerivAt
+  have hpair := hstar.prodMk hρ
+  have hprod := hB.comp (1 : G) hpair
+  let I : V := fun i j => if i = j then 1 else 0
+  have hfun : ((fun p : V × V => B p.1 p.2) ∘
+      fun y : G => ((S ∘ ρ) y, ρ y)) = (fun _g : G => I) := by
+    funext g
+    ext i j
+    change B (S (ρ g)) (ρ g) i j = I i j
+    rw [finiteMatrixMulContinuousBilinear_apply]
+    change (∑ k, (data.representation g).conjTranspose i k *
+      data.representation g k j) = I i j
+    have hu := data.representation_unitary g
+    rw [Matrix.star_eq_conjTranspose] at hu
+    simpa [I, Matrix.one_apply, Matrix.mul_apply, Matrix.conjTranspose_apply] using
+      congrFun (congrFun hu i) j
+  have hd := hprod.mfderiv
+  rw [mfderiv_congr hfun, mfderiv_const] at hd
+  have hx := congrArg (fun L => L X) hd
+  ext i j
+  have hxij := congrFun (congrFun hx i) j
+  change 0 = (B (S (ρ 1)) (data.differential X) +
+    B (S (data.differential X)) (ρ 1)) i j at hxij
+  simp [ρ, V, S, Slin, B, finiteMatrixMulContinuousBilinear,
+    finiteMatrixMulRealLinear, Matrix.one_apply] at hxij ⊢
+  exact eq_neg_of_add_eq_zero_right hxij.symm
+
 end SmoothUnitaryRepresentationDifferentialData
 
 /-- Exact real trace pairing induced by the same representation differential. -/
 def twoDimensionalRepresentationTracePairing
     (representation : SmoothUnitaryRepresentationDifferentialData (E := E) (G := G))
     (first second : GroupLieAlgebra (modelWithCornersSelf ℝ E) G) : ℝ :=
-  -(Matrix.trace (representation.differential first * representation.differential second)).re
+  -(Matrix.trace (finiteMatrixMulContinuousBilinear representation.dimension
+    (representation.differential first) (representation.differential second))).re
+
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- The trace of the genuine matrix product of two exact differential values has zero imaginary
+part, derived from differentiated unitarity and cyclicity of matrix trace. -/
+theorem representationDifferential_trace_matrixMul_im
+    (data : SmoothUnitaryRepresentationDifferentialData (E := E) (G := G))
+    (X Y : GroupLieAlgebra (modelWithCornersSelf ℝ E) G) :
+    (Matrix.trace (finiteMatrixMulContinuousBilinear data.dimension
+      (data.differential X) (data.differential Y))).im = 0 := by
+  let A : Matrix (Fin data.dimension) (Fin data.dimension) ℂ := data.differential X
+  let C : Matrix (Fin data.dimension) (Fin data.dimension) ℂ := data.differential Y
+  change (Matrix.trace (A * C)).im = 0
+  apply Complex.conj_eq_iff_im.mp
+  have hA : A.conjTranspose = -A :=
+    data.representationDifferential_conjTranspose_eq_neg X
+  have hC : C.conjTranspose = -C :=
+    data.representationDifferential_conjTranspose_eq_neg Y
+  calc
+    (starRingEnd ℂ) (Matrix.trace (A * C)) =
+        Matrix.trace ((A * C).conjTranspose) :=
+      (Matrix.trace_conjTranspose (A * C)).symm
+    _ = Matrix.trace (C.conjTranspose * A.conjTranspose) := by
+      rw [Matrix.conjTranspose_mul]
+    _ = Matrix.trace (C * A) := by rw [hA, hC]; simp
+    _ = Matrix.trace (A * C) := Matrix.trace_mul_comm C A
 
 /-- The continuum invariant inner product is exactly Driver's representation-induced trace pairing,
 not an independently chosen normalization. -/

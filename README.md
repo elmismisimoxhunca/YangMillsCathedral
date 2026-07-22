@@ -797,7 +797,9 @@ word whose sources and targets are literally the consecutive certified path node
 holonomy uses the fixed later-on-the-left convention, and exact coarse restriction evaluates the word
 on the mapped fine edge. Driver's standing §2 chain now has an explicit smooth unitary representation, its exact manifold
 derivative `p_*` at the identity, injectivity of that derivative, and coherence requiring the
-continuum invariant inner product to be literally `-Re tr(p_*X p_*Y)`. This blocks an unrelated
+continuum invariant inner product to be literally `-Re tr(p_*X p_*Y)` using genuine contracted matrix
+multiplication rather than pointwise function multiplication. Differentiated unitarity derives
+conjugate-transpose skewness and the trace product's zero imaginary part. This blocks an unrelated
 representation/pairing substitution; `TwoDimensionalWilsonCommonHeatChainData` now closes that dependency chain at connected compact
 Lie-group scope without a compact-simple index: the same connected-group
 smooth representation is globally faithful and infinitesimally injective, supplies the Wilson

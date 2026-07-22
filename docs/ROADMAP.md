@@ -836,7 +836,8 @@ committed before higher layers depend on it.
   - [x] Strengthen each Definition 8.1 fine edge with an exact nonempty directed-bond word tied to
     every consecutive certified path node; construct measurable fine/coarse holonomy restriction.
   - [x] Add Driver's standing smooth representation derivative `p_*`, its exact injectivity, and
-    coherence of the continuum invariant pairing with `-Re tr(p_*X p_*Y)`.
+    coherence of the continuum invariant pairing with `-Re tr(p_*X p_*Y)` using genuine contracted
+    matrix multiplication; derive conjugate-transpose skewness and trace reality from unitarity.
   - [x] Tie one connected-group smooth globally faithful and infinitesimally injective representation
     to the Wilson normalization/actions, exact trace pairing, pairing Laplacian, unchanged selected
     continuum heat density, and kernel.
