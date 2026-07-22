@@ -4540,8 +4540,11 @@ has almost-surely continuous `NNReal`-time paths, and has mutually independent c
 increments; every positive increment is assigned the unchanged normalized-Haar density law. Applying
 that law at one positive time derives process-carrier normalization rather than storing it. The
 one-time marginal is derived from the identity start and stationary increment rather than stored
-again. Each fixed-time coordinate is measurable; joint `NNReal × Ω` measurability is not yet
-claimed. At the selected positive area, that marginal is proved exactly equal to the sampled loop-
+again. From the almost-sure continuous-path event, a measurable null hull of all discontinuity
+points is constructed. Replacing paths by the identity on that hull gives an everywhere-continuous
+jointly `NNReal × Ω` measurable modification, simultaneously almost surely equal to the original at
+all times. Every fixed-time law and positive stationary right-increment law is unchanged. At the
+selected positive area, the original marginal is proved exactly equal to the sampled loop-
 holonomy pushforward from the original gauge-fixed continuum nucleus. No process or Brownian motion
 is constructed.
 

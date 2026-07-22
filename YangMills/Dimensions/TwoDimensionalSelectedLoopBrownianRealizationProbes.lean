@@ -85,6 +85,56 @@ theorem exact_continuous_paths
       ae brownian.probabilityMeasure :=
   brownian.continuous_paths
 
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- A measurable null hull supports an everywhere-continuous, jointly measurable modification
+that agrees with the original process at every time simultaneously almost surely. -/
+theorem exact_jointly_measurable_continuous_modification
+    (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
+      inner law semigroup laplacian heat Ω) :
+    MeasurableSet brownian.pathDiscontinuityHull ∧
+      brownian.probabilityMeasure brownian.pathDiscontinuityHull = 0 ∧
+      (∀ samplePoint, Continuous
+        (fun t => brownian.jointlyMeasurableProcess t samplePoint)) ∧
+      Measurable (Function.uncurry brownian.jointlyMeasurableProcess) ∧
+      ∀ᵐ samplePoint ∂brownian.probabilityMeasure,
+        ∀ t, brownian.jointlyMeasurableProcess t samplePoint = brownian.process t samplePoint :=
+  ⟨measurableSet_toMeasurable _ _, brownian.pathDiscontinuityHull_null,
+    brownian.jointlyMeasurableProcess_continuous,
+    brownian.jointlyMeasurableProcess_measurable,
+    brownian.jointlyMeasurableProcess_ae_eq⟩
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Joint nonmeasurability of the derived continuous modification is hostilely rejected. -/
+theorem joint_nonmeasurability_blocked
+    (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
+      inner law semigroup laplacian heat Ω)
+    (wrong : ¬Measurable (Function.uncurry brownian.jointlyMeasurableProcess)) : False :=
+  wrong brownian.jointlyMeasurableProcess_measurable
+
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
+/-- The modification preserves every fixed-time law exactly. -/
+theorem exact_modified_fixed_time_law
+    (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
+      inner law semigroup laplacian heat Ω) (t : NNReal) :
+    Measure.map (brownian.jointlyMeasurableProcess t) brownian.probabilityMeasure =
+      Measure.map (brownian.process t) brownian.probabilityMeasure :=
+  brownian.jointlyMeasurableProcess_map_eq t
+
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
+/-- The modified process retains the exact positive stationary right-increment law. -/
+theorem exact_modified_stationary_increment_law
+    (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
+      inner law semigroup laplacian heat Ω)
+    (s t : NNReal) (ht : 0 < t) :
+    Measure.map (fun samplePoint =>
+      (brownian.jointlyMeasurableProcess s samplePoint)⁻¹ *
+        brownian.jointlyMeasurableProcess (s + t) samplePoint) brownian.probabilityMeasure =
+      (normalizedCompactHaarMeasure G).withDensity
+        (law.selectedAreaDensity (t : ℝ)) :=
+  brownian.jointlyMeasurableProcess_stationary_increment_law s t ht
+
 omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
     [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Every positive stationary right increment has the unchanged density law. -/
