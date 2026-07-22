@@ -4669,7 +4669,9 @@ right tangent. Exact points on both actual component ranges and nonempty pair in
 zero-pair, duplicate-component, and zero-speed surrogates are hostilely blocked.
 `CompactSurfaceBoundaryGluingQuotient` is now the minimal `Relation.EqvGen` quotient of the exact
 disjoint union by those paired points. It has the genuine quotient topology, continuous canonical
-maps from both full surfaces, exact paired-boundary equality, and a universal lift for sidewise
+maps from both full surfaces, compactness derived from the compact disjoint union, connectedness
+derived from the two connected ranges meeting at a positive seam, exact paired-boundary equality,
+and a universal lift for sidewise
 functions agreeing on every generator. Primitive same-left and same-right relations are hostilely
 absent. No Hausdorff theorem, descended smooth manifold/orientation, or sewn area measure is constructed.
 `CompactSurfaceBoundaryGluingSmoothDescentData` now exposes the exact uninhabited obligation on the

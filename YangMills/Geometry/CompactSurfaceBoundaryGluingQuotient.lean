@@ -93,6 +93,21 @@ variable (identification : CompactSurfaceBoundaryIdentification leftSurface left
 instance : TopologicalSpace (CompactSurfaceBoundaryGluingQuotient identification) :=
   instTopologicalSpaceQuot
 
+/-- Compactness descends from the compact disjoint union through the continuous surjective quotient
+projection. -/
+instance compactSurfaceBoundaryGluingQuotientCompactSpace :
+    CompactSpace (CompactSurfaceBoundaryGluingQuotient identification) :=
+  isCompact_univ_iff.mp (by
+    have compactImage := (isCompact_univ : IsCompact (Set.univ : Set (SL ⊕ SR))).image
+      (continuous_quot_mk : Continuous
+        (Quot.mk (Relation.EqvGen (compactSurfaceBoundaryGluingRelation identification))))
+    have compactRange : IsCompact
+        (Set.range (Quot.mk
+          (Relation.EqvGen (compactSurfaceBoundaryGluingRelation identification)))) := by
+      simpa only [Set.image_univ] using compactImage
+    rw [Quot.mk_surjective.range_eq] at compactRange
+    exact compactRange)
+
 /-- Canonical quotient projection from the full disjoint union. -/
 def projection : SL ⊕ SR → CompactSurfaceBoundaryGluingQuotient identification :=
   Quot.mk _
@@ -129,6 +144,46 @@ theorem leftInclusion_continuous : Continuous (leftInclusion identification) :=
 /-- The full right-surface map is continuous. -/
 theorem rightInclusion_continuous : Continuous (rightInclusion identification) :=
   (projection_continuous identification).comp continuous_inr
+
+/-- The two side ranges cover the whole exact quotient. -/
+theorem range_leftInclusion_union_range_rightInclusion :
+    Set.range (leftInclusion identification) ∪ Set.range (rightInclusion identification) = Set.univ := by
+  ext quotientPoint
+  constructor
+  · intro _
+    exact Set.mem_univ quotientPoint
+  · intro _
+    refine Quot.inductionOn quotientPoint ?_
+    intro sidePoint
+    cases sidePoint with
+    | inl leftPoint => exact Or.inl ⟨leftPoint, rfl⟩
+    | inr rightPoint => exact Or.inr ⟨rightPoint, rfl⟩
+
+/-- The exact quotient is connected: both connected side images meet at any one of the positively
+many paired seam points and together cover the quotient. -/
+theorem quotient_isConnected :
+    IsConnected (Set.univ : Set (CompactSurfaceBoundaryGluingQuotient identification)) := by
+  have leftConnected : IsConnected (Set.range (leftInclusion identification)) := by
+    simpa only [Set.image_univ] using leftSurface.connected.image
+      (leftInclusion identification) (leftInclusion_continuous identification).continuousOn
+  have rightConnected : IsConnected (Set.range (rightInclusion identification)) := by
+    simpa only [Set.image_univ] using rightSurface.connected.image
+      (rightInclusion identification) (rightInclusion_continuous identification).continuousOn
+  obtain ⟨pair⟩ := identification.pairIndex_nonempty
+  let seamPoint := leftInclusion identification (identification.leftBoundaryPoint pair 1)
+  have rangesMeet :
+      (Set.range (leftInclusion identification) ∩
+        Set.range (rightInclusion identification)).Nonempty := by
+    refine ⟨seamPoint, ⟨⟨identification.leftBoundaryPoint pair 1, rfl⟩, ?_⟩⟩
+    refine ⟨identification.rightBoundaryPoint pair 1, ?_⟩
+    exact (paired_boundary_points_equal identification pair 1).symm
+  have connectedUnion := IsConnected.union rangesMeet leftConnected rightConnected
+  rw [range_leftInclusion_union_range_rightInclusion identification] at connectedUnion
+  exact connectedUnion
+
+instance compactSurfaceBoundaryGluingQuotientConnectedSpace :
+    ConnectedSpace (CompactSurfaceBoundaryGluingQuotient identification) :=
+  connectedSpace_iff_univ.mpr (quotient_isConnected identification)
 
 /-- Universal lift of sidewise functions agreeing on every exact paired boundary point. -/
 def lift {Target : Type uTarget}

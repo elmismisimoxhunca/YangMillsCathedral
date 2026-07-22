@@ -60,6 +60,24 @@ theorem no_primitive_right_right_relation (first second : SR) :
       (Sum.inr first) (Sum.inr second) := by
   simp [compactSurfaceBoundaryGluingRelation]
 
+/-- Compactness is derived from the compact disjoint union and quotient projection, rather than
+supplied by later smooth-descent acceptance data. -/
+@[reducible] def exact_quotient_compactSpace :
+    CompactSpace (CompactSurfaceBoundaryGluingQuotient identification) :=
+  inferInstance
+
+/-- Positive-arity gluing joins the two connected side images, deriving connectedness rather than
+leaving it to the later smooth-descent record. -/
+@[reducible] def exact_quotient_connectedSpace :
+    ConnectedSpace (CompactSurfaceBoundaryGluingQuotient identification) :=
+  inferInstance
+
+/-- The two full-side ranges cover the exact quotient. -/
+theorem exact_side_range_cover :
+    Set.range (CompactSurfaceBoundaryGluingQuotient.leftInclusion identification) ∪
+      Set.range (CompactSurfaceBoundaryGluingQuotient.rightInclusion identification) = Set.univ :=
+  CompactSurfaceBoundaryGluingQuotient.range_leftInclusion_union_range_rightInclusion identification
+
 /-- Every designated paired boundary point is literally equal in the exact quotient. -/
 theorem exact_paired_points_equal (pair : Fin identification.pairCount)
     (circlePoint : Circle) :

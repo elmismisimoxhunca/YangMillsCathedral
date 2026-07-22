@@ -71,7 +71,6 @@ variable
     [BorelSpace (GluedSurfaceCarrier (identification := identification))]
     [ChartedSpace HG (GluedSurfaceCarrier (identification := identification))]
     [IsManifold IG ∞ (GluedSurfaceCarrier (identification := identification))]
-    [CompactSpace (GluedSurfaceCarrier (identification := identification))]
     [T2Space (GluedSurfaceCarrier (identification := identification))]
     [SecondCountableTopology (GluedSurfaceCarrier (identification := identification))]
 
