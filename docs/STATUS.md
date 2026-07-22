@@ -5034,8 +5034,13 @@ the original matrix trace. Exact coordinate matrix coefficients, their continuit
 continuous matrix family, trace continuity, diagonal trace decomposition, and conjugacy invariance
 are derived. Driver's existing Wilson representation now exposes this same Mathlib representation,
 and its character continuity and centrality are independently rederived rather than relying only on
-stored fields. No Haar orthogonality, irreducibility theorem, Fourier inversion, Peter–Weyl density,
-or heat-kernel spectral expansion is claimed.
+stored fields. The next analytic slice defines representation-valued Fourier coefficients
+coordinatewise with the exact inverse convention `∫f(g)ρ(g⁻¹)`. Continuity and compactness derive
+actual integrability against every compact-finite measure, with a named probability-normalized Haar
+specialization. Addition, complex scaling, and zero laws are derived, and taking matrix trace is
+proved to recover the scalar coefficient against the inverse trace character. No Haar orthogonality,
+irreducibility theorem, Fourier inversion, Peter–Weyl density, or heat-kernel spectral expansion is
+claimed.
 
 The full two-dimensional literature chain is now an explicit validation target: a future final 2D
 acceptance proposition must join the Driver/Lévy/Sengupta finite, continuum, Brownian, compact-surface,

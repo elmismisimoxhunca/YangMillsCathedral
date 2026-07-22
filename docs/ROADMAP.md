@@ -696,8 +696,11 @@ committed before higher layers depend on it.
   inner products and unitarization for continuous compact-group representations.
 - [ ] Develop the analytic Schur lemma and Haar orthogonality of matrix coefficients for irreducible
   unitary representations, including exact dimension normalization.
-- [ ] Define representation-valued compact-group Fourier coefficients and prove convolution becomes
-  matrix composition with the project's fixed convolution order.
+- [x] Define coordinatewise representation-valued Fourier coefficients with exact inverse
+  convention, derive continuous compact-domain integrability, addition/scalar/zero laws, specialize
+  to probability-normalized Haar, and identify matrix trace with the scalar inverse-character
+  coefficient.
+- [ ] Prove convolution becomes matrix composition with the project's fixed convolution order.
 - [ ] Construct finite coefficient subspaces, algebraic Plancherel, and character orthogonality for
   central functions.
 - [ ] Prove Stone–Weierstrass separation and Peter–Weyl density/completeness in continuous and `L²`
