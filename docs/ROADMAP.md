@@ -734,8 +734,11 @@ committed before higher layers depend on it.
 - [x] Define the exact complex Haar convolution `(f⋆g)(z)=∫f(x)g(x⁻¹z)dμ_H` and prove by
   compact-product integrability, Fubini, and left-Haar substitution that the inverse-convention
   matrix Fourier transform satisfies `(f⋆g)̂(ρ)=ĝ(ρ)f̂(ρ)` in the forced reversed order.
-- [ ] Construct finite coefficient subspaces, algebraic Plancherel, and character orthogonality for
-  central functions.
+- [x] Construct the finite coefficient-synthesis map and its range subspace; compute the exact block
+  transform `f̂(ρ)=n⁻¹Aᵀ`, prove synthesis injective, identify the range with the full matrix space,
+  and derive exact coefficient-subspace dimension `n²`.
+- [ ] Derive finite-block algebraic Plancherel identities and extend character orthogonality to
+  explicitly packaged finite central-character spans.
 - [ ] Prove Stone–Weierstrass separation and Peter–Weyl density/completeness in continuous and `L²`
   carriers with explicit topology and measure hypotheses.
 - [ ] State and prove only convergence-justified Fourier inversion and central character expansions;

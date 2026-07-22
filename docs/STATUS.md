@@ -5082,8 +5082,12 @@ pairing. A hostile probe rejects a nonzero inequivalent character pairing. Combi
 with the exact inverse-entry Fourier convention now computes the representation-valued transform
 of `ρ(g)ₐᵦ` at `ρ` as the forced transposed matrix unit `n⁻¹Eᵦₐ`, and as zero at an explicitly
 inequivalent irreducible representation. A hostile probe shows that replacing `Eᵦₐ` by `Eₐᵦ`
-for distinct indices is contradictory. Equivalent-but-differently-presented transport, arbitrary
-finite coefficient subspaces, Fourier inversion, Peter–Weyl density, and heat-kernel spectral
+for distinct indices is contradictory. The finite coefficient block is now explicitly packaged:
+`A ↦ ∑ᵢⱼ Aᵢⱼρᵢⱼ` is a linear synthesis map into `G → ℂ`, its transform is exactly
+`n⁻¹Aᵀ`, and Fourier extraction proves synthesis injective. Its range is therefore linearly
+equivalent to the full matrix space and has exact dimension `n²`; hostile probes reject both
+pointwise coefficient collapse and a wrong block dimension. Equivalent-but-differently-presented
+transport, finite-block Plancherel, Fourier inversion, Peter–Weyl density, and heat-kernel spectral
 expansion remain open.
 
 The full two-dimensional literature chain is now an explicit validation target: a future final 2D
