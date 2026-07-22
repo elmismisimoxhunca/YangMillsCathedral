@@ -5068,7 +5068,10 @@ initially avoid assigning an unproved value. The value is now derived in a separ
 cyclicity of matrix trace and probability-Haar mass one prove that conjugation averaging preserves
 `tr(A)`, so the selected scalar obeys `n·c_A=tr(A)` and, when `n>0`, exactly
 `c_A=tr(A)/n`. A hostile probe rejects changing this scalar normalization. The unitary
-inverse/conjugate-entry bridge remains open. No full Haar orthogonality,
+coordinate bridge is now also derived: one-sided `ρ(g)ᴴρ(g)=1`, together with the exact
+homomorphic right inverse `ρ(g⁻¹)`, proves `ρ(g⁻¹)=ρ(g)ᴴ`. Thus inverse entries transpose and
+conjugate, the full inverse character is the complex conjugate character, and Driver's stored
+real-part inversion law is independently rederived. No full Haar orthogonality,
 irreducibility theorem, Fourier inversion, Peter–Weyl density, or heat-kernel spectral expansion is
 claimed.
 

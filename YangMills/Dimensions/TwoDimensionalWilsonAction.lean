@@ -7,6 +7,7 @@ Authors: Sebastian Rodrigo
 import YangMills.Dimensions.TwoDimensionalLatticeApproximatingSequence
 import YangMills.Mathematics.NormalizedCompactHaarMeasure
 import YangMills.Mathematics.MatrixRepresentationCharacter
+import YangMills.Mathematics.UnitaryMatrixRepresentationInverse
 import Mathlib.LinearAlgebra.Matrix.ConjTranspose
 import Mathlib.LinearAlgebra.Matrix.Trace
 import Mathlib.MeasureTheory.Integral.Bochner.Basic
@@ -82,6 +83,30 @@ theorem character_central_derived
     Matrix.trace (data.representation (h * g * h⁻¹)) =
       Matrix.trace (data.representation g) :=
   matrixRepresentation_trace_conj data.representation g h
+
+/-- The exact inverse matrix is the conjugate transpose, derived from the same stored unitarity
+law and representation homomorphism. -/
+theorem representation_inv_eq_conjTranspose_derived
+    (data : FiniteDimensionalUnitaryRepresentationCharacterData G) (g : G) :
+    data.representation g⁻¹ = Matrix.conjTranspose (data.representation g) :=
+  unitaryMatrixRepresentation_inv_eq_conjTranspose
+    data.representation data.representation_unitary g
+
+/-- The full complex trace character at the inverse is the complex conjugate character. -/
+theorem character_inv_derived
+    (data : FiniteDimensionalUnitaryRepresentationCharacterData G) (g : G) :
+    Matrix.trace (data.representation g⁻¹) =
+      star (Matrix.trace (data.representation g)) :=
+  unitaryMatrixRepresentation_trace_inv
+    data.representation data.representation_unitary g
+
+/-- The stored real inversion law is independently derived from the stronger complex law. -/
+theorem character_inv_re_derived
+    (data : FiniteDimensionalUnitaryRepresentationCharacterData G) (g : G) :
+    (Matrix.trace (data.representation g⁻¹)).re =
+      (Matrix.trace (data.representation g)).re :=
+  unitaryMatrixRepresentation_trace_inv_re
+    data.representation data.representation_unitary g
 
 /-- The character is definitionally the trace of the same representation. -/
 def character (data : FiniteDimensionalUnitaryRepresentationCharacterData G) : G → ℂ :=

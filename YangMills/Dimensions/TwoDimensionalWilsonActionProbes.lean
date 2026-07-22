@@ -52,6 +52,20 @@ theorem exact_derived_character_laws :
     representation.character_central_derived⟩
 
 omit [IsTopologicalGroup G] [CompactSpace G] [MeasurableSpace G] [BorelSpace G] in
+/-- Unitarity derives the exact inverse/conjugate-transpose matrix law and full complex character
+conjugation, strengthening the stored real-part law. -/
+theorem exact_derived_inverse_laws (g : G) :
+    representation.representation g⁻¹ =
+        Matrix.conjTranspose (representation.representation g) ∧
+      Matrix.trace (representation.representation g⁻¹) =
+        star (Matrix.trace (representation.representation g)) ∧
+      (Matrix.trace (representation.representation g⁻¹)).re =
+        (Matrix.trace (representation.representation g)).re :=
+  ⟨representation.representation_inv_eq_conjTranspose_derived g,
+    representation.character_inv_derived g,
+    representation.character_inv_re_derived g⟩
+
+omit [IsTopologicalGroup G] [CompactSpace G] [MeasurableSpace G] [BorelSpace G] in
 /-- The supplied representation is genuinely unitary. -/
 theorem exact_unitarity (g : G) :
     star (representation.representation g) * representation.representation g = 1 :=

@@ -713,8 +713,11 @@ committed before higher layers depend on it.
   guessing its value.
 - [x] Prove normalized-Haar conjugation averaging preserves matrix trace; derive
   `n·c_A=tr(A)` and, for `n>0`, the exact self-case Schur scalar `c_A=tr(A)/n`.
-- [ ] Add the unitary inverse/conjugate-entry bridge and conclude full Haar orthogonality of matrix
-  coefficients with this exact dimension normalization.
+- [x] Derive from the exact representation homomorphism and one-sided unitary law that
+  `ρ(g⁻¹)=ρ(g)ᴴ`, including transposed conjugate entry and full inverse-character conjugation laws;
+  rederive Driver's stored real character inversion law from this stronger theorem.
+- [ ] Conclude full Haar orthogonality of matrix coefficients with the exact dimension
+  normalization.
 - [x] Define coordinatewise representation-valued Fourier coefficients with exact inverse
   convention, derive continuous compact-domain integrability, addition/scalar/zero laws, specialize
   to probability-normalized Haar, and identify matrix trace with the scalar inverse-character
