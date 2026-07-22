@@ -164,6 +164,33 @@ theorem representationDifferential_trace_matrixMul_im
     _ = Matrix.trace (C * A) := by rw [hA, hC]; simp
     _ = Matrix.trace (A * C) := Matrix.trace_mul_comm C A
 
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- Driver's real pairing is symmetric by cyclicity of the genuine matrix trace. -/
+theorem twoDimensionalRepresentationTracePairing_symmetric
+    (data : SmoothUnitaryRepresentationDifferentialData (E := E) (G := G))
+    (X Y : GroupLieAlgebra (modelWithCornersSelf ℝ E) G) :
+    twoDimensionalRepresentationTracePairing data X Y =
+      twoDimensionalRepresentationTracePairing data Y X := by
+  let A : Matrix (Fin data.dimension) (Fin data.dimension) ℂ := data.differential X
+  let C : Matrix (Fin data.dimension) (Fin data.dimension) ℂ := data.differential Y
+  change -(Matrix.trace (A * C)).re = -(Matrix.trace (C * A)).re
+  rw [Matrix.trace_mul_comm A C]
+
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- Because the genuine trace product is real, the real-valued pairing recovers Driver's displayed
+complex trace formula exactly. -/
+theorem representationDifferential_trace_matrixMul_eq_neg_pairing
+    (data : SmoothUnitaryRepresentationDifferentialData (E := E) (G := G))
+    (X Y : GroupLieAlgebra (modelWithCornersSelf ℝ E) G) :
+    Matrix.trace (finiteMatrixMulContinuousBilinear data.dimension
+      (data.differential X) (data.differential Y)) =
+      -(twoDimensionalRepresentationTracePairing data X Y : ℂ) := by
+  apply Complex.ext
+  · simp [twoDimensionalRepresentationTracePairing]
+  · simp [representationDifferential_trace_matrixMul_im data X Y]
+
 /-- The continuum invariant inner product is exactly Driver's representation-induced trace pairing,
 not an independently chosen normalization. -/
 structure TwoDimensionalRepresentationInducedPairingCoherenceData

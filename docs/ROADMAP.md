@@ -837,7 +837,7 @@ committed before higher layers depend on it.
     every consecutive certified path node; construct measurable fine/coarse holonomy restriction.
   - [x] Add Driver's standing smooth representation derivative `p_*`, its exact injectivity, and
     coherence of the continuum invariant pairing with `-Re tr(p_*X p_*Y)` using genuine contracted
-    matrix multiplication; derive conjugate-transpose skewness and trace reality from unitarity.
+    matrix multiplication; derive conjugate-transpose skewness, trace reality, pairing symmetry, and exact complex-trace recovery from unitarity.
   - [x] Tie one connected-group smooth globally faithful and infinitesimally injective representation
     to the Wilson normalization/actions, exact trace pairing, pairing Laplacian, unchanged selected
     continuum heat density, and kernel.

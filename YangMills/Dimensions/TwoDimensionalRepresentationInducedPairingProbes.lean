@@ -81,6 +81,27 @@ theorem exact_trace_product_imaginary_zero
 
 omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
     [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- The genuine representation-induced pairing is symmetric. -/
+theorem exact_trace_pairing_symmetric
+    (representation : SmoothUnitaryRepresentationDifferentialData (E := E) (G := G))
+    (first second : GroupLieAlgebra (modelWithCornersSelf ℝ E) G) :
+    twoDimensionalRepresentationTracePairing representation first second =
+      twoDimensionalRepresentationTracePairing representation second first :=
+  twoDimensionalRepresentationTracePairing_symmetric representation first second
+
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- The real carrier recovers Driver's displayed negative complex trace exactly. -/
+theorem exact_complex_trace_formula
+    (representation : SmoothUnitaryRepresentationDifferentialData (E := E) (G := G))
+    (first second : GroupLieAlgebra (modelWithCornersSelf ℝ E) G) :
+    Matrix.trace (finiteMatrixMulContinuousBilinear representation.dimension
+      (representation.differential first) (representation.differential second)) =
+      -(twoDimensionalRepresentationTracePairing representation first second : ℂ) :=
+  representationDifferential_trace_matrixMul_eq_neg_pairing representation first second
+
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
 /-- A nonzero Lie-algebra direction cannot collapse under `p_*`. -/
 theorem collapsed_nonzero_direction_blocked
     (representation : SmoothUnitaryRepresentationDifferentialData (E := E) (G := G))
