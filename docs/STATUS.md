@@ -5115,9 +5115,14 @@ result to an unspecified larger carrier. On the same direct sum, additive coeffi
 pairings now prove all-coordinate-class algebraic Plancherel:
 `⟨f_A,f_B⟩=∑qd_q⁻¹⟨A(q),B(q)⟩ₕₛ=∑qd_q⟨f̂_A(q),f̂_B(q)⟩ₕₛ`. A scope probe exposes the
 actual finite support and prevents this identity from being read as an infinite-series theorem.
-This quotient is not yet identified with Lévy's smooth compact-Lie-group dual: abstract coordinate
-realization/unitarization, continuity-to-smoothness, countability, infinite-series/`L²` Plancherel,
-Fourier inversion, Peter–Weyl density, and heat-kernel spectral expansion remain open.
+A separate smooth coordinate dual now stores exact `ContMDiff` matrix coordinates and maps
+injectively into the continuous dual. Its image is exactly the classes satisfying
+`HasSmoothRepresentative`; comparison surjectivity is proved equivalent to every continuous class
+having such a representative. A hostile probe shows one missing smooth representative blocks
+surjectivity, so no silent dual equivalence is possible. Surjectivity/automatic
+continuity-to-smoothness, remaining abstract coordinate realization/unitarization, countability,
+infinite-series/`L²` Plancherel, Fourier inversion, Peter–Weyl density, and heat-kernel spectral
+expansion remain open.
 
 The full two-dimensional literature chain is now an explicit validation target: a future final 2D
 acceptance proposition must join the Driver/Lévy/Sengupta finite, continuum, Brownian, compact-surface,

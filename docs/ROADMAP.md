@@ -761,10 +761,14 @@ committed before higher layers depend on it.
   coefficient and Fourier pairings and derive
   `⟨f_A,f_B⟩=∑qd_q⁻¹⟨A(q),B(q)⟩ₕₛ=∑qd_q⟨f̂_A(q),f̂_B(q)⟩ₕₛ`, with the
   first-family direct-sum support making every displayed sum finite.
-- [ ] Identify the continuous coordinate quotient with the smooth compact-Lie-group irreducible
-  dual used by Lévy (including coordinate realization/unitarization and any countability theorem),
-  and only then formulate infinite-series and `L²` Plancherel statements with explicit
-  summability/completeness hypotheses.
+- [x] Define the smooth coordinate unitary dual using exact `ContMDiff` matrix coordinates and
+  construct its canonical injective map into the continuous coordinate dual; characterize the image
+  by `HasSmoothRepresentative` and prove surjectivity equivalent to smooth representability of every
+  continuous class.
+- [ ] Prove that comparison map surjective for the intended compact Lie groups (or replace the
+  continuous quotient by a source-justified smooth realization theorem), establish any required
+  countability theorem, and only then formulate infinite-series and `L²` Plancherel statements with
+  explicit summability/completeness hypotheses.
 - [ ] Prove Stone–Weierstrass separation and Peter–Weyl density/completeness in continuous and `L²`
   carriers with explicit topology and measure hypotheses.
 - [ ] State and prove only convergence-justified Fourier inversion and central character expansions;

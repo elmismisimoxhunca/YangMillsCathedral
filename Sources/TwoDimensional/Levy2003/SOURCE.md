@@ -54,12 +54,16 @@ of equivalence classes of irreducible representations, states the central Peter�
 basis/density theorem, and gives the dimension/Casimir-weighted heat-kernel expansion with both
 `L²` and pointwise convergence claims.
 
-The Lean `UnitaryMatrixDual` construction formalizes only the quotient-carrier portion for explicitly
+The Lean `UnitaryMatrixDual` construction formalizes the quotient-carrier portion for explicitly
 bundled positive-dimensional **continuous** irreducible unitary matrix representations. It derives
-class equality, representative coverage, and distinct-class inequivalence from the quotient; it does
-not yet identify this continuous coordinate bundle with Lévy's smooth compact-Lie-group dual. Such
-an identification requires a separate continuity-to-smoothness/unitarization/coordinate-realization
-bridge. The visually verified Peter–Weyl basis, density, countability/summability consequences,
+class equality, representative coverage, and distinct-class inequivalence from the quotient. A
+separate `SmoothUnitaryMatrixDual` now stores exact `ContMDiff` matrix coordinates and maps
+injectively into the continuous quotient; its image is explicitly `HasSmoothRepresentative`, and
+surjectivity is equivalent to every continuous class having such a smooth representative. No
+continuity-to-smoothness theorem or surjectivity proof is supplied, so the continuous coordinate
+bundle is still not identified with Lévy's smooth compact-Lie-group dual. Such an identification
+also requires any remaining abstract coordinate-realization/unitarization bridge. The visually
+verified Peter–Weyl basis, density, countability/summability consequences,
 Casimir action, and heat-kernel expansion remain source-backed targets rather than consequences of
 the quotient definition.
 
