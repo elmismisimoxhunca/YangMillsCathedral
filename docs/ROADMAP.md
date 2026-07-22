@@ -891,6 +891,9 @@ committed before higher layers depend on it.
   - [x] Prove the derivative-level linear transport endpoint: tangent-hyperplane preservation gives
     an exact normal-coordinate multiplier formula, and positive-normal continuous linear
     equivalences preserve and reflect the full two-sided outward-ray predicate.
+  - [x] Prove the nonlinear tangent-cone step: a locally half-space-valued within derivative at a
+    boundary image maps bidirectional tangent-cone vectors into the boundary hyperplane and has
+    nonnegative normal coordinate on every one-sided inward cone vector.
   - [x] Add positive-arity distinct-component boundary identifications by genuine circle
     diffeomorphisms with exact derivative-level orientation reversal and hostile vacuity probes.
   - [x] Construct the minimal equivalence-closure quotient of the disjoint union by exact paired

@@ -4671,11 +4671,15 @@ extra hypothesis. Reusable linear-transport infrastructure now proves that any c
 map preserving the boundary tangent hyperplane has output normal coordinate equal to the input
 normal coordinate times the image-normal multiplier. A positive multiplier preserves strict
 outwardness, and a continuous linear equivalence satisfying the corresponding forward/inverse
-conditions preserves and reflects the full two-sided ray predicate. This isolates the exact
-linear-algebra endpoint needed from the derivative of an atlas transition. Pinned Mathlib still
-lacks a general installed boundary-submanifold instance; deriving those tangent-hyperplane and
-positive-normal facts from the nonlinear extended coordinate change, and closure data, remain
-separate. `CompactSurfaceOrientationReversingBoundaryIdentificationData`
+conditions preserves and reflects the full two-sided ray predicate. A new nonlinear tangent-cone
+layer proves that the target normal coordinate of any locally half-space-valued differentiable map
+has a genuine local minimum at a boundary image. Mathlib's tangent-cone Fermat theorem then forces
+every bidirectional source tangent direction into the target boundary hyperplane and makes every
+one-sided inward normal derivative nonnegative. Combined with the linear endpoint, chart
+independence is reduced to exact source tangent-cone membership, derivative invertibility, and the
+strictness argument using the inverse transition. Pinned Mathlib still lacks a general installed
+boundary-submanifold instance; discharging those remaining facts for the actual extended coordinate
+change, and closure data, remain separate. `CompactSurfaceOrientationReversingBoundaryIdentificationData`
 now chooses an exact positive number of distinct boundary components on each of two oriented
 surfaces, equips every pair with a genuine smooth circle diffeomorphism, and requires its derivative
 to send the selected positive left tangent to a strictly negative multiple of the selected positive
