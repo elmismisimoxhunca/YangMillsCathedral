@@ -4667,8 +4667,15 @@ the exact two-sided ray condition is equivalent to strict negativity of the zero
 coordinate. For every actual manifold boundary point, zeroth preferred-chart coordinate vanishing
 is derived from Mathlib's exact frontier definition; consequently every stored outward field on an
 exact presented boundary circle has the strict negative charted-tangent coordinate without an
-extra hypothesis. Pinned Mathlib still lacks a general installed boundary-submanifold instance;
-transition-chart independence of this preferred-chart sign/ray and closure data remain separate. `CompactSurfaceOrientationReversingBoundaryIdentificationData`
+extra hypothesis. Reusable linear-transport infrastructure now proves that any continuous linear
+map preserving the boundary tangent hyperplane has output normal coordinate equal to the input
+normal coordinate times the image-normal multiplier. A positive multiplier preserves strict
+outwardness, and a continuous linear equivalence satisfying the corresponding forward/inverse
+conditions preserves and reflects the full two-sided ray predicate. This isolates the exact
+linear-algebra endpoint needed from the derivative of an atlas transition. Pinned Mathlib still
+lacks a general installed boundary-submanifold instance; deriving those tangent-hyperplane and
+positive-normal facts from the nonlinear extended coordinate change, and closure data, remain
+separate. `CompactSurfaceOrientationReversingBoundaryIdentificationData`
 now chooses an exact positive number of distinct boundary components on each of two oriented
 surfaces, equips every pair with a genuine smooth circle diffeomorphism, and requires its derivative
 to send the selected positive left tangent to a strictly negative multiple of the selected positive

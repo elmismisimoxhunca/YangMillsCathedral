@@ -888,6 +888,9 @@ committed before higher layers depend on it.
   - [x] Characterize exact straight outward rays in the Euclidean half-space by strict negativity
     of the zeroth tangent coordinate, derive boundary-coordinate vanishing from Mathlib's frontier
     definition, and apply the sign theorem to every exact presented boundary-circle field.
+  - [x] Prove the derivative-level linear transport endpoint: tangent-hyperplane preservation gives
+    an exact normal-coordinate multiplier formula, and positive-normal continuous linear
+    equivalences preserve and reflect the full two-sided outward-ray predicate.
   - [x] Add positive-arity distinct-component boundary identifications by genuine circle
     diffeomorphisms with exact derivative-level orientation reversal and hostile vacuity probes.
   - [x] Construct the minimal equivalence-closure quotient of the disjoint union by exact paired
