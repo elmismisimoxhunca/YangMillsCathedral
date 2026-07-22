@@ -808,8 +808,12 @@ committed before higher layers depend on it.
   - [x] Add an exhaustive nested projective finite-presentation contract and a separate exact
     infinite axial probability/cylinder-law interface with finite-stage and one-coordinate marginals.
   - [x] Construct the finite projective sequence from exact radii `stage+1`, exhaustive off-tree
-    bond/plaquette coverage, and derived consecutive box projectivity; retain the infinite cylinder
-    measure as a separate uninhabited obligation.
+    bond/plaquette coverage, and derived consecutive box projectivity.
+  - [x] Construct measurable noncommutative infinite axial recovery from arbitrary plaquette values,
+    with exact finite-box coherence and pointwise recovery of every plaquette holonomy.
+  - [x] Construct the iid infinite plaquette-action product measure and push it through axial
+    recovery; prove all exact-box coordinate marginals and inhabit the infinite cylinder-law record.
+    Keep this separate from boundary-conditioned Driver Theorem 7.2 and continuum convergence.
   - [x] Add exact positive-radius centered square-box plaquette and off-axis axial-coordinate sets,
     prove literal radius nesting and complete non-tree plaquette-boundary coverage.
   - [x] Construct the exact square-box adapter to generic finite axial presentations, including a

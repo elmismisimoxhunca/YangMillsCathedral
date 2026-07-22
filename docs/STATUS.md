@@ -4829,8 +4829,16 @@ constructs `twoDimensionalSquareLatticeBoxProjectiveSequenceData` for every norm
 all elementary plaquettes: upper/lower horizontal rows use finite rooted noncommutative products,
 reverse bonds invert, and the axial tree is one. The map is measurable, its holonomy recovers every
 input plaquette, and every exact box coordinate restriction equals the existing finite recursive
-recovery. No measure is introduced in this recovery layer. Only the infinite cylinder-law interface
-remains uninhabited. `epsilonSquareLatticeBoxPlaquettes` now gives exact
+recovery. No measure is introduced in this recovery layer.
+
+The infinite cylinder-law interface is now inhabited for the exhaustive exact-box sequence. The
+construction takes the countable iid product of the unchanged normalized one-plaquette action law,
+pushes it through `infiniteAxialRecover`, proves every finite plaquette marginal by the exact
+`Measure.pi` projection theorem, and transports those marginals through finite recovery to identify
+every box coordinate cylinder with `twoDimensionalSquareLatticeBoxMeasure`. Thus
+`twoDimensionalSquareLatticeInfiniteAxialCylinderLawData` is a concrete infinite-volume lattice law.
+It is not Driver Theorem 7.2: it supplies no boundary-conditioned weak convergence, no continuum
+limit, no Wilson/Villain convergence theorem, and no 4D theory or mass gap. `epsilonSquareLatticeBoxPlaquettes` now gives exact
 positive-radius centered boxes with lower-left coordinates `-n,…,n-1`, while
 `epsilonSquareLatticeBoxAxialCoordinates` gives right-directed horizontal coordinates on the
 nonzero rows `-n,…,-1,1,…,n`. Both sets are literally nested with radius; all coordinates are
