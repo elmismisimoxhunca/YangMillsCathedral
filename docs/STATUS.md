@@ -4653,7 +4653,15 @@ conjugator, not by independently chosen coordinate conjugators. Equality and dia
 exact, and the quotient carries the final measurable space induced by its projection. A hostile
 parameterized theorem rejects coordinatewise-conjugate families whenever no common conjugator
 exists; the empty-index quotient is explicitly subsingleton, so source-facing observation families
-must retain nonemptiness where needed. Quotient topology and standard-Borel results remain open.
+must retain nonemptiness where needed. Lévy §2.10 is now visually adjudicated at PDF pp. 62–63 /
+printed pp. 48–49: one common diagonal conjugator applies only to loops at one fixed base point,
+while mixed-basepoint families are tuples of separate joint classes. `NonemptyFiniteFamily` now
+enforces literal positive arity `n+1`; existence is equivalent to nonemptiness of the caller-supplied
+fixed-base loop carrier. Every resulting finite joint holonomy class is measurable on the exact generated sigma field, measurable one-loop holonomies put
+that field below any ambient sample field, and exact ambient equality requires the converse coverage
+inclusion. Sample-dependent common conjugation at that fixed base leaves every full family observation
+unchanged; no theorem applies one conjugator across mixed-basepoint groups.
+Quotient topology and standard-Borel results remain open.
 
 `BoundaryConditionedProductDisintegrationData` now packages reusable genuine conditional semantics:
 Mathlib's `Measure.IsCondKernel` disintegrates the exact joint boundary/whole pushforward; the Markov

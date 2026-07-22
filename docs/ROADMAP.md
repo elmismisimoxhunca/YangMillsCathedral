@@ -863,7 +863,9 @@ committed before higher layers depend on it.
   - [x] Visually adjudicate Lévy Chapter 5, Theorem 5.1.1, equation (5.1), and the nonabelian
     sigma-field warning; add reusable dependent-observation generated-measurable-space mathematics.
   - [x] Add the exact simultaneous-conjugacy quotient for indexed holonomy families, its final
-    measurable space, and hostile coordinatewise/empty-family probes.
+    measurable space, exact positive-arity finite holonomy observations/generated sigma field over
+    one fixed-base loop carrier, mixed-basepoint separation, and hostile coordinatewise/empty-family
+    probes.
   - [x] Add reusable genuine joint conditional-kernel disintegration with zero mass outside every
     exact boundary fiber, involutive reversal, all-value product restrictions, and derived bind/
     marginal laws.
