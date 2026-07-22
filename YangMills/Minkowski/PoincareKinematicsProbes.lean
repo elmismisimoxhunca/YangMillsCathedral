@@ -35,6 +35,39 @@ theorem transformed_time_is_unit_timelike
     d.minkowskiQuadraticForm (L.linear (d.basisVector d.timeIndex)) = 1 :=
   L.transformed_time_minkowski_norm
 
+/-- Bilinear preservation is forced by the same quadratic-form certificate. -/
+theorem exact_polarized_lorentz_preservation
+    {d : EuclideanDimension} (L : ProperOrthochronousLorentzTransformation d)
+    (x y : Spacetime d) :
+    minkowskiBilinearForm d (L.linear x) (L.linear y) =
+      minkowskiBilinearForm d x y :=
+  L.preserves_minkowskiBilinear x y
+
+/-- The inverse linear map has exactly the same time-orientation coefficient. -/
+theorem exact_inverse_time_coefficient
+    {d : EuclideanDimension} (L : ProperOrthochronousLorentzTransformation d) :
+    (L.linear.symm (d.basisVector d.timeIndex)) d.timeIndex =
+      (L.linear (d.basisVector d.timeIndex)) d.timeIndex :=
+  L.inverse_time_eq_forward_time
+
+/-- Inverse time orientation is derived rather than supplied. -/
+theorem exact_inverse_future_orientation
+    {d : EuclideanDimension} (L : ProperOrthochronousLorentzTransformation d) :
+    0 < (L.linear.symm (d.basisVector d.timeIndex)) d.timeIndex :=
+  L.inverse_future_time_positive
+
+/-- Inversion now remains inside the exact proof-carrying proper-orthochronous carrier. -/
+theorem exact_inverse_closure
+    {d : EuclideanDimension} (L : ProperOrthochronousLorentzTransformation d) :
+    (L.inverse.linear : Spacetime d → Spacetime d) = L.linear.symm :=
+  rfl
+
+/-- The constructed inverse retains determinant one. -/
+theorem exact_inverse_determinant
+    {d : EuclideanDimension} (L : ProperOrthochronousLorentzTransformation d) :
+    LinearMap.det L.inverse.linear.toLinearMap = 1 :=
+  L.inverse.determinant_one
+
 /-- Every available transformed spatial basis retains Minkowski value minus one. -/
 theorem transformed_spatial_is_unit_spacelike
     {d : EuclideanDimension} (L : ProperOrthochronousLorentzTransformation d)

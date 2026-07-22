@@ -581,8 +581,11 @@ committed before higher layers depend on it.
   signs injectively as the central determinant-one scalar matrices `±I`, derive an abstract
   multiplicative equivalence from every accepted two-sheet kernel to this exact image subgroup, and
   install the exact matrix-subspace topology as a Hausdorff topological group.
-- [ ] Construct the target law from proper-orthochronous future-cone closure, build the concrete
-  inhomogeneous semidirect-product cover, realize its actual projection kernel as that matrix-sign
+- [x] Polarize the exact mostly-minus quadratic form, derive zero-time nonpositivity and bilinear
+  preservation, prove inverse time-orientation equality, and construct the exact inverse inside the
+  proper-orthochronous Lorentz carrier.
+- [ ] Prove whole-future-sheet preservation and composition closure, construct the affine target law,
+  build the concrete inhomogeneous semidirect-product cover, and realize its actual projection kernel as that matrix-sign
   image inside the same ambient group rather than merely by abstract equivalence, and upgrade
   relative sheet labels to this realization; then add the required Lie-group/manifold structure.
 - [x] Define a normalized Poincaré-invariant vacuum whose full invariant subspace is exactly one

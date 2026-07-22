@@ -5017,6 +5017,16 @@ abstract subgroup equivalence only: no ambient lift-to-matrix-group identificati
 Lorentz projection, Lie-group/manifold structure, inhomogeneous semidirect product, or cover
 inhabitant is constructed.
 
+The real mostly-minus quadratic form now has an exact coordinate bilinear polarization layer.
+Self-pairing, symmetry, exact time-coordinate extraction, the polarization identity, and
+nonpositivity at zero time are derived in every supported dimension. Any real-linear quadratic
+isometry consequently preserves this same bilinear form. Applied to the existing proof-carrying
+proper-orthochronous Lorentz carrier, this derives bilinear preservation and proves that the inverse
+image of the time basis has exactly the forward time coefficient. The exact inverse linear
+equivalence therefore retains positive time orientation and determinant one, yielding a concrete
+inverse inside the same carrier. Whole-future-sheet preservation, composition closure, the full
+Lorentz/affine group law, and its topological-group proof remain open.
+
 The preliminary `FourDimensionalCurrentStrengthUniversalAcceptance` declaration is intentionally
 qualified and uninhabited. No final source-complete acceptance declaration, placeholder inhabitance
 theorem, or arbitrary structure is introduced merely to make the project appear complete.

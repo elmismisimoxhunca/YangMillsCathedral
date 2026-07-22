@@ -669,6 +669,8 @@ import YangMills.Euclidean.SchwingerClusteringForm
 import YangMills.Euclidean.SchwingerClusteringFormProbes
 import YangMills.Euclidean.SchwingerEuclideanCandidate
 import YangMills.Euclidean.SchwingerEuclideanCandidateProbes
+import YangMills.Minkowski.MinkowskiBilinearForm
+import YangMills.Minkowski.MinkowskiBilinearFormProbes
 import YangMills.Minkowski.PoincareKinematics
 import YangMills.Minkowski.PoincareKinematicsProbes
 import YangMills.Minkowski.QuadraticTopology

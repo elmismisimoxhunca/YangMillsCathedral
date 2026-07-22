@@ -4,7 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Sebastian Rodrigo
 -/
 
-import YangMills.Foundation.Signatures
+import YangMills.Minkowski.MinkowskiBilinearForm
 
 /-!
 # Proper-orthochronous Minkowski/Poincaré kinematics
@@ -63,6 +63,69 @@ theorem transformed_time_minkowski_norm
     d.minkowskiQuadraticForm (L.linear (d.basisVector d.timeIndex)) = 1 := by
   rw [L.preserves_minkowski]
   exact d.minkowskiQuadraticForm_time_basisVector
+
+/-- Every accepted Lorentz transformation preserves the exact polarized Minkowski bilinear form.
+This is derived from its existing quadratic-form field rather than supplied independently. -/
+theorem preserves_minkowskiBilinear
+    {d : EuclideanDimension} (L : ProperOrthochronousLorentzTransformation d)
+    (x y : Spacetime d) :
+    minkowskiBilinearForm d (L.linear x) (L.linear y) =
+      minkowskiBilinearForm d x y :=
+  minkowskiBilinearForm_map_eq_of_quadratic_preserving d
+    L.linear.toLinearMap L.preserves_minkowski x y
+
+/-- The time component of the inverse image of the time basis equals the forward time-basis
+component. This is the key algebraic orientation fact needed for inverse closure. -/
+theorem inverse_time_eq_forward_time
+    {d : EuclideanDimension} (L : ProperOrthochronousLorentzTransformation d) :
+    (L.linear.symm (d.basisVector d.timeIndex)) d.timeIndex =
+      (L.linear (d.basisVector d.timeIndex)) d.timeIndex := by
+  have preserved := L.preserves_minkowskiBilinear
+    (d.basisVector d.timeIndex)
+    (L.linear.symm (d.basisVector d.timeIndex))
+  rw [L.linear.apply_symm_apply,
+    minkowskiBilinearForm_timeBasis_left,
+    minkowskiBilinearForm_timeBasis_right] at preserved
+  exact preserved.symm
+
+/-- The inverse linear transformation sends the time basis to positive time. -/
+theorem inverse_future_time_positive
+    {d : EuclideanDimension} (L : ProperOrthochronousLorentzTransformation d) :
+    0 < (L.linear.symm (d.basisVector d.timeIndex)) d.timeIndex := by
+  rw [L.inverse_time_eq_forward_time]
+  exact L.future_time_positive
+
+/-- The exact inverse of a proper-orthochronous Lorentz transformation is again
+proper-orthochronous. All four fields are derived from the original transformation. -/
+noncomputable def inverse
+    {d : EuclideanDimension} (L : ProperOrthochronousLorentzTransformation d) :
+    ProperOrthochronousLorentzTransformation d where
+  linear := L.linear.symm
+  preserves_minkowski := by
+    intro x
+    calc
+      d.minkowskiQuadraticForm (L.linear.symm x) =
+          d.minkowskiQuadraticForm (L.linear (L.linear.symm x)) :=
+        (L.preserves_minkowski (L.linear.symm x)).symm
+      _ = d.minkowskiQuadraticForm x := by rw [L.linear.apply_symm_apply]
+  determinant_one := by
+    have composition : L.linear.toLinearMap ∘ₗ L.linear.symm.toLinearMap =
+        LinearMap.id := by
+      apply LinearMap.ext
+      intro x
+      exact L.linear.apply_symm_apply x
+    have determinantComposition := congrArg LinearMap.det composition
+    rw [LinearMap.det_comp, L.determinant_one, one_mul,
+      LinearMap.det_id] at determinantComposition
+    exact determinantComposition
+  future_time_positive := L.inverse_future_time_positive
+
+/-- The constructed inverse has exactly the inverse linear equivalence. -/
+@[simp]
+theorem inverse_linear
+    {d : EuclideanDimension} (L : ProperOrthochronousLorentzTransformation d) :
+    L.inverse.linear = L.linear.symm :=
+  rfl
 
 /-- A candidate sending the selected future time basis to time component `-1` is rejected. -/
 theorem time_reversal_blocked
