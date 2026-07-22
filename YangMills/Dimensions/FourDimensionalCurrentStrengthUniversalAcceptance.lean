@@ -104,6 +104,80 @@ def FourDimensionalCurrentStrengthUniversalAcceptance : Prop :=
       (FourDimensionalCurrentStrengthTheoryWitness.{uEG, uGauge, uEP, uHP, uP, uLift, uH, uLabel}
         EG GaugeGroup gauge)
 
+namespace FourDimensionalCurrentStrengthTheoryWitness
+
+variable
+    {EG : Type uEG} {GaugeGroup : Type uGauge}
+    [NormedAddCommGroup EG] [NormedSpace ℝ EG] [FiniteDimensional ℝ EG]
+    [Group GaugeGroup] [TopologicalSpace GaugeGroup] [T2Space GaugeGroup]
+    [SecondCountableTopology GaugeGroup] [ChartedSpace EG GaugeGroup]
+    [LieGroup (modelWithCornersSelf ℝ EG) ∞ GaugeGroup]
+    {gauge : Geometry.CompactSimpleGaugeGroupData GaugeGroup EG}
+
+/-- Exact current-strength headline consequences carried by one packaged witness: positive finite
+same-spectrum gap and an explicitly nonzero/non-unit Wightman field. -/
+def SatisfiesClayHeadline
+    (witness : FourDimensionalCurrentStrengthTheoryWitness.{
+      uEG, uGauge, uEP, uHP, uP, uLift, uH, uLabel} EG GaugeGroup gauge) : Prop :=
+  letI : IsTopologicalGroup GaugeGroup := witness.gaugeTopologicalGroup
+  letI : NormedAddCommGroup witness.EP := witness.epNormedAddCommGroup
+  letI : NormedSpace ℝ witness.EP := witness.epNormedSpace
+  letI : TopologicalSpace witness.HP := witness.hpTopologicalSpace
+  letI : TopologicalSpace witness.P := witness.pTopologicalSpace
+  letI : ChartedSpace witness.HP witness.P := witness.pChartedSpace
+  letI : IsManifold witness.IP ∞ witness.P := witness.pIsManifold
+  letI : Group witness.PoincareLiftGroup := witness.liftGroup
+  letI : TopologicalSpace witness.PoincareLiftGroup := witness.liftTopology
+  letI : IsTopologicalGroup witness.PoincareLiftGroup := witness.liftTopologicalGroup
+  letI : NormedAddCommGroup witness.H := witness.hNormedAddCommGroup
+  letI : InnerProductSpace ℂ witness.H := witness.hInnerProductSpace
+  letI : CompleteSpace witness.H := witness.hCompleteSpace
+  letI : TopologicalSpace.SeparableSpace witness.H := witness.hSeparableSpace
+  0 < witness.core.gapThreshold ∧
+    Minkowski.HasFinitePositivePhysicalMassGap witness.vacuumData
+      witness.core.wightmanSurface.spectrum ∧
+    ∃ (test : Minkowski.ScalarMinkowskiSchwartzTestFunction EuclideanDimension.four)
+      (vector : witness.D.domain),
+      witness.fieldData.field test vector ≠ 0 ∧
+      witness.fieldData.field test vector ≠
+        witness.core.observableFamily.operator witness.core.observableFamily.unitLabel test vector
+
+end FourDimensionalCurrentStrengthTheoryWitness
+
+/-- If the preliminary universal proposition were inhabited, then every caller-supplied exact
+compact-simple input would receive a witness satisfying the positive finite same-spectrum gap and
+nontrivial-field headline. This theorem is conditional and does not inhabit the proposition. -/
+theorem FourDimensionalCurrentStrengthUniversalAcceptance.implies_headline
+    (acceptance : FourDimensionalCurrentStrengthUniversalAcceptance.{
+      uEG, uGauge, uEP, uHP, uP, uLift, uH, uLabel})
+    (EG : Type uEG) (GaugeGroup : Type uGauge)
+    [NormedAddCommGroup EG] [NormedSpace ℝ EG] [FiniteDimensional ℝ EG]
+    [Group GaugeGroup] [TopologicalSpace GaugeGroup] [T2Space GaugeGroup]
+    [SecondCountableTopology GaugeGroup] [ChartedSpace EG GaugeGroup]
+    [LieGroup (modelWithCornersSelf ℝ EG) ∞ GaugeGroup]
+    (gauge : Geometry.CompactSimpleGaugeGroupData GaugeGroup EG) :
+    ∃ witness : FourDimensionalCurrentStrengthTheoryWitness.{
+        uEG, uGauge, uEP, uHP, uP, uLift, uH, uLabel} EG GaugeGroup gauge,
+      witness.SatisfiesClayHeadline := by
+  rcases acceptance EG GaugeGroup gauge with ⟨witness⟩
+  refine ⟨witness, ?_⟩
+  letI : IsTopologicalGroup GaugeGroup := witness.gaugeTopologicalGroup
+  letI : NormedAddCommGroup witness.EP := witness.epNormedAddCommGroup
+  letI : NormedSpace ℝ witness.EP := witness.epNormedSpace
+  letI : TopologicalSpace witness.HP := witness.hpTopologicalSpace
+  letI : TopologicalSpace witness.P := witness.pTopologicalSpace
+  letI : ChartedSpace witness.HP witness.P := witness.pChartedSpace
+  letI : IsManifold witness.IP ∞ witness.P := witness.pIsManifold
+  letI : Group witness.PoincareLiftGroup := witness.liftGroup
+  letI : TopologicalSpace witness.PoincareLiftGroup := witness.liftTopology
+  letI : IsTopologicalGroup witness.PoincareLiftGroup := witness.liftTopologicalGroup
+  letI : NormedAddCommGroup witness.H := witness.hNormedAddCommGroup
+  letI : InnerProductSpace ℂ witness.H := witness.hInnerProductSpace
+  letI : CompleteSpace witness.H := witness.hCompleteSpace
+  letI : TopologicalSpace.SeparableSpace witness.H := witness.hSeparableSpace
+  exact ⟨witness.core.gapThreshold_pos, witness.core.hasFinitePositivePhysicalMassGap,
+    witness.core.wightmanField_nontrivial⟩
+
 end
 
 end YangMills.Dimensions

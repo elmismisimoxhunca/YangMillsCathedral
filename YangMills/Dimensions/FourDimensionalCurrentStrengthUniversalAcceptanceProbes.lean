@@ -40,6 +40,17 @@ theorem exact_universal_specialization
         uEG, uGauge, uEP, uHP, uP, uLift, uH, uLabel} EG GaugeGroup gauge) :=
   acceptance EG GaugeGroup gauge
 
+/-- Conditional on the preliminary target, every exact compact-simple input receives a witness
+with the positive finite same-spectrum gap and nontrivial-field headline. This does not construct or
+inhabit the target. -/
+theorem exact_universal_headline_projection
+    (acceptance : FourDimensionalCurrentStrengthUniversalAcceptance.{
+      uEG, uGauge, uEP, uHP, uP, uLift, uH, uLabel}) :
+    ∃ witness : FourDimensionalCurrentStrengthTheoryWitness.{
+        uEG, uGauge, uEP, uHP, uP, uLift, uH, uLabel} EG GaugeGroup gauge,
+      witness.SatisfiesClayHeadline :=
+  acceptance.implies_headline EG GaugeGroup gauge
+
 /-- A packaged witness's core uses exactly the caller-supplied gauge certificate and remains
 hard-wired to four spacetime dimensions. -/
 theorem exact_witness_gauge_and_dimension

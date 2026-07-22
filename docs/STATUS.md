@@ -4125,7 +4125,10 @@ Not yet achieved:
   packages all construction-specific classical and quantum carriers into one same-core witness.
   It is intentionally uninhabited and explicitly not final. Wrapper probes preserve the core's
   nonzero Wightman-field witness and nonzero same-PVM physical time generator, so the packaged
-  `Nonempty` cannot be mistaken for a trivial quantum chain. Existing source-strength debts must
+  `Nonempty` cannot be mistaken for a trivial quantum chain. A conditional projection theorem now
+  shows that inhabiting the preliminary universal proposition would give every exact input a witness
+  with a positive finite same-spectrum gap and explicit nonzero/non-unit field; the theorem does not
+  inhabit that premise. Existing source-strength debts must
   close before a full Clay acceptance proposition can replace it.
 - No standalone Git remote is configured in this checkout. The tested candidate
   `git@github.com:elmismisimoxhunca/lean-yangmills-adaly.git` does not exist, and the available SSH

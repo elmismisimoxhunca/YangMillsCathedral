@@ -997,7 +997,9 @@ committed before higher layers depend on it.
   - [x] Add a preliminary, explicitly `CurrentStrength` universal target quantifying over every
     caller-supplied exact compact-simple gauge certificate while existentially packaging all
     construction-specific bundle, connection, Poincare, Hilbert, field, and unchanged core carriers.
-    No inhabitance theorem is supplied, and this is not the final Clay proposition.
+    Derive conditionally that any inhabitant would provide every exact input a witness with positive
+    finite same-spectrum gap and an explicit nonzero/non-unit field. No inhabitance theorem is
+    supplied, and this is not the final Clay proposition.
   - [ ] Construct concrete inhomogeneous `SL(2,ℂ)`, identify its matrix-sign kernel with the accepted
     literal-sign projection kernel, and construct the named affine-target group law; add the now
     source-ready curvature/covariant-derivative grammar, BRST/EOM operator mixing, calculated
