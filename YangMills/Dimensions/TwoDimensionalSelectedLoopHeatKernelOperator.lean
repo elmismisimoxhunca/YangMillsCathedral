@@ -35,7 +35,6 @@ variable
     {Gauge : Type uGauge} [Group Gauge]
     {Sample : Type uSample} [MeasurableSpace Sample]
     {Connection : Type uConnection}
-    {gaugeGroup : Geometry.CompactSimpleGaugeGroupData G E}
     {inner : Geometry.InvariantInnerProductData
       (I := modelWithCornersSelf ℝ E) (G := G)}
     {base : TwoDimensionalGaugeFixedHolonomyMeasureData G Gauge Sample Connection}
@@ -45,8 +44,8 @@ variable
 
 /-- Exact operator-semigroup meaning of the unchanged selected density as Driver's heat kernel. -/
 structure TwoDimensionalSelectedLoopHeatKernelOperatorData
-    (heat : TwoDimensionalSelectedLoopHeatEquationData
-      gaugeGroup inner law semigroup laplacian) where
+    (heat : TwoDimensionalSelectedLoopHeatEquationCoreData
+      inner law semigroup laplacian) where
   /-- Designated `exp(t Δ / 2)` operator on continuous real functions. -/
   heatOperator : ℝ → C(G, ℝ) → C(G, ℝ)
   /-- Initial identity operator. -/

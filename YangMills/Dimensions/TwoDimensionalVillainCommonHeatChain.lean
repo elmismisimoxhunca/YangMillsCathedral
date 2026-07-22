@@ -13,8 +13,8 @@ import YangMills.Dimensions.TwoDimensionalSelectedLoopHeatKernelOperator
 Driver Theorem 8.5 assumes injectivity of the exact representation differential `p_*`, not global
 faithfulness of the group representation and not Wilson normalization. This record retains exactly
 that distinction while tying the same differential-induced pairing to the Laplacian, selected heat
-density, and kernel. The surrounding project currently specializes Driver's connected compact
-Lie-group statement to its compact-simple gauge-group scope.
+density, and kernel. The record now has Driver's connected compact Lie-group scope: connectedness is
+explicit, while compact simplicity is deliberately absent.
 -/
 
 namespace YangMills.Dimensions
@@ -40,7 +40,7 @@ variable
     (semigroup : TwoDimensionalSelectedLoopConvolutionSemigroupData law)
 
 /-- Driver 8.5's exact differential-induced Villain heat chain, without Wilson assumptions. -/
-structure TwoDimensionalVillainCommonHeatChainData where
+structure TwoDimensionalVillainCommonHeatChainCoreData where
   group_connected : IsConnected (Set.univ : Set G)
   representation : SmoothUnitaryRepresentationDifferentialData (E := E) (G := G)
   inner : Geometry.InvariantInnerProductData
@@ -48,22 +48,35 @@ structure TwoDimensionalVillainCommonHeatChainData where
   pairing_coherence :
     TwoDimensionalRepresentationInducedPairingCoherenceData representation inner
   laplacian : RightInvariantPairingLaplacianData inner
-  heat : TwoDimensionalSelectedLoopHeatEquationData
-    gaugeGroup inner law semigroup laplacian
+  heat : TwoDimensionalSelectedLoopHeatEquationCoreData
+    inner law semigroup laplacian
   kernel : TwoDimensionalSelectedLoopHeatKernelOperatorData heat
 
-namespace TwoDimensionalVillainCommonHeatChainData
+set_option linter.unusedVariables false
+/-- Compatibility alias for the former compact-simple-indexed surface. The index is phantom; the
+underlying theorem data has connected compact Lie-group scope. This is type-only compatibility;
+declarations live in the core namespace. -/
+abbrev TwoDimensionalVillainCommonHeatChainData
+    (gaugeGroup : Geometry.CompactSimpleGaugeGroupData G E)
+    {base : TwoDimensionalGaugeFixedHolonomyMeasureData G Gauge Sample Connection}
+    {law : TwoDimensionalSelectedLoopHaarDensityLawData base}
+    (semigroup : TwoDimensionalSelectedLoopConvolutionSemigroupData law) :=
+  TwoDimensionalVillainCommonHeatChainCoreData (E := E) semigroup
+set_option linter.unusedVariables true
 
+namespace TwoDimensionalVillainCommonHeatChainCoreData
+
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
 /-- The invariant pairing is literally induced by the same representation whose exact derivative is
 injective. -/
 theorem inner_pairing_eq_trace
-    (data : TwoDimensionalVillainCommonHeatChainData (gaugeGroup := gaugeGroup) semigroup)
+    (data : TwoDimensionalVillainCommonHeatChainCoreData (E := E) semigroup)
     (first second : GroupLieAlgebra (modelWithCornersSelf ℝ E) G) :
     data.inner.pairing first second =
       twoDimensionalRepresentationTracePairing data.representation first second :=
   data.pairing_coherence.pairing_eq_trace first second
 
-end TwoDimensionalVillainCommonHeatChainData
+end TwoDimensionalVillainCommonHeatChainCoreData
 
 end
 

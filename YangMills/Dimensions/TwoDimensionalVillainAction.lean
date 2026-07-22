@@ -43,7 +43,6 @@ variable
     {Gauge : Type uGauge} [Group Gauge]
     {Sample : Type uSample} [MeasurableSpace Sample]
     {Connection : Type uConnection}
-    {gaugeGroup : Geometry.CompactSimpleGaugeGroupData G E}
     {inner : Geometry.InvariantInnerProductData
       (I := modelWithCornersSelf ℝ E) (G := G)}
     {base : TwoDimensionalGaugeFixedHolonomyMeasureData G Gauge Sample Connection}
@@ -57,16 +56,16 @@ def twoDimensionalVillainTime (spacing : PositiveLatticeSpacing) : ℝ :=
 
 /-- Driver Definition 8.3: the real Villain action is the unchanged heat density `Q_{ε²}`. -/
 def twoDimensionalVillainAction
-    (heat : TwoDimensionalSelectedLoopHeatEquationData
-      gaugeGroup inner law semigroup laplacian)
+    (heat : TwoDimensionalSelectedLoopHeatEquationCoreData
+      inner law semigroup laplacian)
     (_kernel : TwoDimensionalSelectedLoopHeatKernelOperatorData heat)
     (spacing : PositiveLatticeSpacing) : G → ℝ :=
   heat.densityReal (twoDimensionalVillainTime spacing)
 
 /-- The normalized single-plaquette Villain measure relative to canonical Haar probability. -/
 def twoDimensionalVillainPlaquetteMeasure
-    (heat : TwoDimensionalSelectedLoopHeatEquationData
-      gaugeGroup inner law semigroup laplacian)
+    (heat : TwoDimensionalSelectedLoopHeatEquationCoreData
+      inner law semigroup laplacian)
     (_kernel : TwoDimensionalSelectedLoopHeatKernelOperatorData heat)
     (spacing : PositiveLatticeSpacing) : Measure G :=
   (normalizedCompactHaarMeasure G).withDensity
@@ -79,58 +78,64 @@ theorem time_pos (spacing : PositiveLatticeSpacing) :
     0 < twoDimensionalVillainTime spacing := by
   exact sq_pos_of_pos spacing.2
 
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
 /-- The real action and the unchanged semigroup density agree through the exact `ENNReal` bridge. -/
 theorem action_toENNReal
-    (heat : TwoDimensionalSelectedLoopHeatEquationData
-      gaugeGroup inner law semigroup laplacian)
+    (heat : TwoDimensionalSelectedLoopHeatEquationCoreData
+      inner law semigroup laplacian)
     (_kernel : TwoDimensionalSelectedLoopHeatKernelOperatorData heat)
     (spacing : PositiveLatticeSpacing) (g : G) :
     ENNReal.ofReal (twoDimensionalVillainAction heat _kernel spacing g) =
       law.selectedAreaDensity (twoDimensionalVillainTime spacing) g :=
   heat.densityReal_toENNReal _ (time_pos spacing) g
 
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
 /-- Driver's action is smooth, hence continuous. -/
 theorem action_continuous
-    (heat : TwoDimensionalSelectedLoopHeatEquationData
-      gaugeGroup inner law semigroup laplacian)
+    (heat : TwoDimensionalSelectedLoopHeatEquationCoreData
+      inner law semigroup laplacian)
     (_kernel : TwoDimensionalSelectedLoopHeatKernelOperatorData heat)
     (spacing : PositiveLatticeSpacing) :
     Continuous (twoDimensionalVillainAction heat _kernel spacing) :=
   (heat.densityReal_spatialSmooth _ (time_pos spacing)).continuous
 
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
 /-- Driver's action is strictly positive. -/
 theorem action_pos
-    (heat : TwoDimensionalSelectedLoopHeatEquationData
-      gaugeGroup inner law semigroup laplacian)
+    (heat : TwoDimensionalSelectedLoopHeatEquationCoreData
+      inner law semigroup laplacian)
     (_kernel : TwoDimensionalSelectedLoopHeatKernelOperatorData heat)
     (spacing : PositiveLatticeSpacing) (g : G) :
     0 < twoDimensionalVillainAction heat _kernel spacing g :=
   heat.densityReal_pos _ (time_pos spacing) g
 
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
 /-- The Villain action is a conjugation-class function. -/
 theorem action_central
-    (heat : TwoDimensionalSelectedLoopHeatEquationData
-      gaugeGroup inner law semigroup laplacian)
+    (heat : TwoDimensionalSelectedLoopHeatEquationCoreData
+      inner law semigroup laplacian)
     (_kernel : TwoDimensionalSelectedLoopHeatKernelOperatorData heat)
     (spacing : PositiveLatticeSpacing) (h g : G) :
     twoDimensionalVillainAction heat _kernel spacing (h * g * h⁻¹) =
       twoDimensionalVillainAction heat _kernel spacing g :=
   heat.densityReal_central _ (time_pos spacing) h g
 
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
 /-- The Villain action is invariant under orientation reversal. -/
 theorem action_inv
-    (heat : TwoDimensionalSelectedLoopHeatEquationData
-      gaugeGroup inner law semigroup laplacian)
+    (heat : TwoDimensionalSelectedLoopHeatEquationCoreData
+      inner law semigroup laplacian)
     (_kernel : TwoDimensionalSelectedLoopHeatKernelOperatorData heat)
     (spacing : PositiveLatticeSpacing) (g : G) :
     twoDimensionalVillainAction heat _kernel spacing g⁻¹ =
       twoDimensionalVillainAction heat _kernel spacing g :=
   heat.densityReal_inv _ (time_pos spacing) g
 
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
 /-- Continuity on the compact gauge group makes the real action integrable against Haar. -/
 theorem action_integrable
-    (heat : TwoDimensionalSelectedLoopHeatEquationData
-      gaugeGroup inner law semigroup laplacian)
+    (heat : TwoDimensionalSelectedLoopHeatEquationCoreData
+      inner law semigroup laplacian)
     (_kernel : TwoDimensionalSelectedLoopHeatKernelOperatorData heat)
     (spacing : PositiveLatticeSpacing) :
     Integrable (twoDimensionalVillainAction heat _kernel spacing)
@@ -147,10 +152,11 @@ theorem action_integrable
     rw [hdensity, semigroup.density_lintegral_normalized _ (time_pos spacing)]
     exact ENNReal.one_lt_top
 
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
 /-- Semigroup normalization makes every single-plaquette Villain measure a probability measure. -/
 theorem plaquetteMeasure_univ
-    (heat : TwoDimensionalSelectedLoopHeatEquationData
-      gaugeGroup inner law semigroup laplacian)
+    (heat : TwoDimensionalSelectedLoopHeatEquationCoreData
+      inner law semigroup laplacian)
     (_kernel : TwoDimensionalSelectedLoopHeatKernelOperatorData heat)
     (spacing : PositiveLatticeSpacing) :
     twoDimensionalVillainPlaquetteMeasure heat _kernel spacing univ = 1 := by
@@ -166,10 +172,11 @@ theorem plaquetteMeasure_univ
   exact semigroup.densityMeasure_univ_of_pos
     (twoDimensionalVillainTime spacing) (time_pos spacing)
 
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
 /-- Driver Definition 7.1's normalization is stated on the real action itself. -/
 theorem action_integral_normalized
-    (heat : TwoDimensionalSelectedLoopHeatEquationData
-      gaugeGroup inner law semigroup laplacian)
+    (heat : TwoDimensionalSelectedLoopHeatEquationCoreData
+      inner law semigroup laplacian)
     (_kernel : TwoDimensionalSelectedLoopHeatKernelOperatorData heat)
     (spacing : PositiveLatticeSpacing) :
     ∫ g, twoDimensionalVillainAction heat _kernel spacing g
@@ -198,10 +205,11 @@ theorem action_integral_normalized
   have := congrArg ENNReal.toReal hofReal
   simpa [ENNReal.toReal_ofReal hintegral_nonneg] using this
 
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
 /-- Every normalized Villain plaquette measure is nonzero. -/
 theorem plaquetteMeasure_ne_zero
-    (heat : TwoDimensionalSelectedLoopHeatEquationData
-      gaugeGroup inner law semigroup laplacian)
+    (heat : TwoDimensionalSelectedLoopHeatEquationCoreData
+      inner law semigroup laplacian)
     (_kernel : TwoDimensionalSelectedLoopHeatKernelOperatorData heat)
     (spacing : PositiveLatticeSpacing) :
     twoDimensionalVillainPlaquetteMeasure heat _kernel spacing ≠ 0 := by
@@ -210,11 +218,12 @@ theorem plaquetteMeasure_ne_zero
   rw [hzero] at h
   simp at h
 
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
 /-- The action's time derivative is exactly Driver's `1/2 Δ` at every positive time, exposing the
 source-critical Definition 4.7 heat-kernel chain rather than merely a central density. -/
 theorem hasDerivAt_heatDensity
-    (heat : TwoDimensionalSelectedLoopHeatEquationData
-      gaugeGroup inner law semigroup laplacian)
+    (heat : TwoDimensionalSelectedLoopHeatEquationCoreData
+      inner law semigroup laplacian)
     (t : ℝ) (ht : 0 < t) (g : G) :
     HasDerivAt (fun s => heat.densityReal s g)
       ((1 / 2 : ℝ) * laplacian.laplacian (heat.smoothDensityAt t ht) g) t :=

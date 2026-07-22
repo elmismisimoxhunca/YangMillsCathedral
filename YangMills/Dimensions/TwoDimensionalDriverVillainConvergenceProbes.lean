@@ -29,7 +29,7 @@ variable
     [LieGroup (modelWithCornersSelf ℝ E) ∞ G]
     [MeasurableSpace G] [BorelSpace G] [MeasurableMul₂ G] [MeasurableInv G]
     {Gauge : Type uGauge} [Group Gauge] {Sample : Type uSample} [MeasurableSpace Sample]
-    {Connection : Type uConnection} {gaugeGroup : Geometry.CompactSimpleGaugeGroupData G E}
+    {Connection : Type uConnection}
     {base : TwoDimensionalGaugeFixedHolonomyMeasureData G Gauge Sample Connection}
     {law : TwoDimensionalSelectedLoopHaarDensityLawData base}
     {semigroup : TwoDimensionalSelectedLoopConvolutionSemigroupData law}
@@ -37,7 +37,7 @@ variable
     {enlarged : TwoDimensionalEmbeddedPlanarGraphData.{uLargeVertex, uLargeEdge,
       uLargeFace, uLargeXAxisCell} base}
     [DecidableEq coarse.Edge] [DecidableEq enlarged.Edge]
-    {common : TwoDimensionalVillainCommonHeatChainData (gaugeGroup := gaugeGroup) semigroup}
+    {common : TwoDimensionalVillainCommonHeatChainCoreData (E := E) semigroup}
     {axial : TwoDimensionalDriverAxialEnlargementData
       (G := G) (coarse := coarse) (enlarged := enlarged)}
     {continuum : TwoDimensionalDriverAxialEnlargedHeatExpectationData (law := law) axial}
@@ -97,13 +97,14 @@ theorem exact_every_continuous_villain_limit
     common axial continuum coarseApproximation enlargedApproximation faceGeometry
       productIdentity data observable continuous
 
-omit [MeasurableMul₂ G] [MeasurableInv G] in
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
 /-- The heat chain is induced by the exact same representation differential and trace pairing. -/
 theorem exact_common_trace_pairing
     (first second : GroupLieAlgebra (modelWithCornersSelf ℝ E) G) :
     common.inner.pairing first second =
       twoDimensionalRepresentationTracePairing common.representation first second :=
-  TwoDimensionalVillainCommonHeatChainData.inner_pairing_eq_trace
+  TwoDimensionalVillainCommonHeatChainCoreData.inner_pairing_eq_trace
     semigroup common first second
 
 /-- Failure of one eligible continuous Villain limit is hostilely rejected. -/

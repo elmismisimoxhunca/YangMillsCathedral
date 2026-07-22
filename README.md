@@ -820,14 +820,14 @@ Continuity of the lattice action now derives measurability of every normalized-H
 and the entire finite face product, eliminating another independent field. Its normalization and
 nonzeroness are derived by applying the universal identity to the constant-
 one observable and the normalized Theorem 7.2 law, rather than stored independently. The
-The Villain semigroup reduction is now derived: `n+1` exact `Q_{ε²}` factors equal
+Villain semigroup reduction is now derived: `n+1` exact `Q_{ε²}` factors equal
 `Q_{(n+1)ε²}`, so every fine-face power and the full BC product use the unchanged selected density at
 exact fine geometric areas. The exact differential-induced Villain common heat chain now avoids
-Wilson/global-faithfulness overstrength, and an uninhabited compact-simple Theorem 8.5 contract turns
+Wilson/global-faithfulness overstrength. The heat, kernel, action, and convergence chain now has
+Driver's connected compact Lie-group scope, and its uninhabited Theorem 8.5 contract turns
 one explicit varying-finite-graph heat-integral limit into convergence for every continuous coarse
 observable. Compactness now derives each continuous test's measurability and global bound, eliminating
-a separate coverage assumption. The source-general connected compact-group version, analytic inhabitation, and Wilson
-convergence remain open. No weak limit, boundary-
+a separate coverage assumption. Analytic inhabitation and Wilson convergence remain open. No weak limit, boundary-
 independence proof, or lattice-continuum convergence is constructed.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to

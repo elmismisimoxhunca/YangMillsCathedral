@@ -156,19 +156,20 @@ law equals its exact normalized `VB(ε)` integral, with the certified BC boundar
 Measurability of the one-step action density, every normalized-Haar convolution power, and the
 entire finite BC face product is now derived from action continuity and measurable group operations,
 not supplied independently. The fine carrier's normalization and nonzeroness are derived from this universal identity at constant
-one and the normalized Theorem 7.2 law, not supplied as a separate field. Adding the
-The Villain convolution-semigroup reduction is now derived without a new assumption: `n+1` exact
+one and the normalized Theorem 7.2 law, not supplied as a separate field. The
+Villain convolution-semigroup reduction is now derived without a new assumption: `n+1` exact
 Villain factors equal `Q_{(n+1)ε²}`, hence every fine-face power is literally `Q_{|R(ε)|}` and the
 full BC product retains the same selected density family and boundary words. A separate Villain
 common chain now follows Theorem 8.5's exact distinction: `p_*` is injective and induces the pairing,
 Laplacian, heat density, and kernel, but no global representation faithfulness or Wilson normalization
-is required. The compact-simple project specialization of Theorem 8.5 is now an uninhabited contract:
+is required. The heat equation, kernel, Villain action family, common chain, and Theorem 8.5 contract
+now have the source's connected compact Lie-group scope, with no compact-simple index. The
+uninhabited convergence contract states that
 one explicit varying-finite-graph heat-integral limit yields every continuous coarse observable's
 lattice expectation limit; compactness of the finite edge-product carrier now derives the required
 global bound and Borel measurability rather than storing a separate test-coverage field through the exact product identity and equation (6.1). This field attests
 the remaining analytic convergence; it does not prove it. Inhabiting Theorem 7.2/projectivity and
-formalizing the source-general connected compact-group version and Theorem 8.10
-convergence remain explicit debt. A visual
+formalizing Theorem 8.10 convergence remain explicit debt. A visual
 recheck of PDF pp. 27–29 / printed pp. 601–603 found a source-internal Wilson issue that blocks
 canonicalization: Definition 8.4 visibly prints `Aχ^ε(g) = Zε⁻¹ exp Re χ(g)`, with no visible `ε` in
 the exponent, whereas Theorem 8.8 and (8.2) require spacing-dependent eigenvalues

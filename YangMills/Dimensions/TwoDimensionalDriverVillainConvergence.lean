@@ -46,7 +46,6 @@ variable
     [MeasurableSpace G] [BorelSpace G] [MeasurableMul₂ G] [MeasurableInv G]
     {Gauge : Type uGauge} [Group Gauge] {Sample : Type uSample} [MeasurableSpace Sample]
     {Connection : Type uConnection}
-    {gaugeGroup : Geometry.CompactSimpleGaugeGroupData G E}
     {base : TwoDimensionalGaugeFixedHolonomyMeasureData G Gauge Sample Connection}
     {law : TwoDimensionalSelectedLoopHaarDensityLawData base}
     {semigroup : TwoDimensionalSelectedLoopConvolutionSemigroupData law}
@@ -54,8 +53,7 @@ variable
     {enlarged : TwoDimensionalEmbeddedPlanarGraphData.{uLargeVertex, uLargeEdge,
       uLargeFace, uLargeXAxisCell} base}
     [DecidableEq coarse.Edge] [DecidableEq enlarged.Edge]
-    (common : TwoDimensionalVillainCommonHeatChainData
-      (gaugeGroup := gaugeGroup) semigroup)
+    (common : TwoDimensionalVillainCommonHeatChainCoreData (E := E) semigroup)
     (axial : TwoDimensionalDriverAxialEnlargementData
       (G := G) (coarse := coarse) (enlarged := enlarged))
     (continuum : TwoDimensionalDriverAxialEnlargedHeatExpectationData (law := law) axial)
@@ -71,7 +69,7 @@ variable
     (productIdentity : TwoDimensionalDriverAxialLatticeProductIdentityData faceGeometry
       (twoDimensionalVillainActionFamily common.heat common.kernel))
 
-/-- Uninhabited compact-simple project specialization of Driver Theorem 8.5. -/
+/-- Uninhabited connected compact Lie-group contract for Driver Theorem 8.5. -/
 structure TwoDimensionalDriverVillainConvergenceData where
   fineHeatIntegral_tendsto : ∀ test : BoundedContinuousRealFunction (coarse.Edge → G),
     Tendsto

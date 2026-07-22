@@ -18,9 +18,9 @@ Ad-invariant Lie-algebra pairing and the same factor `1/2`.
 
 This module requires a smooth strictly positive real representative of the **unchanged** `ENNReal`
 density family, tied pointwise by `ENNReal.ofReal`, and requires its time derivative to equal one
-half of the already defined right-invariant pairing Laplacian. The gauge group is the exact project
-compact-connected-simple Lie group, not merely the generic compact Borel carrier of the weaker
-marginal.
+half of the already defined right-invariant pairing Laplacian. The analytic core has compact
+Lie-group scope. Connectedness is imposed by Driver's common Theorem 8.5 chain, while compact
+simplicity is absent from the core.
 
 This is still uninhabited acceptance data. It constructs no density, metric, solution, Brownian
 motion, Yang--Mills measure, or theory. Brownian/generator identification remains a separate bridge
@@ -47,9 +47,10 @@ variable
     {Sample : Type uSample} [MeasurableSpace Sample]
     {Connection : Type uConnection}
 
-/-- Exact positive-time heat-equation requirements for the unchanged selected-loop density family. -/
-structure TwoDimensionalSelectedLoopHeatEquationData
-    (gaugeGroup : Geometry.CompactSimpleGaugeGroupData G E)
+/-- Exact positive-time heat-equation requirements for the unchanged selected-loop density family.
+This core uses precisely the compact Lie analytic ambient types needed by Driver; compact simplicity
+is not an index. -/
+structure TwoDimensionalSelectedLoopHeatEquationCoreData
     (inner : Geometry.InvariantInnerProductData
       (I := modelWithCornersSelf ℝ E) (G := G))
     {base : TwoDimensionalGaugeFixedHolonomyMeasureData G Gauge Sample Connection}
@@ -75,10 +76,24 @@ structure TwoDimensionalSelectedLoopHeatEquationData
            contMDiff := densityReal_spatialSmooth t ht } :
           SmoothLieGroupScalarFunction (E := E) (G := G)) g) t
 
-namespace TwoDimensionalSelectedLoopHeatEquationData
+set_option linter.unusedVariables false
+/-- Compatibility name for the former compact-simple-indexed API. The group datum is deliberately
+phantom: all mathematical content is the general heat-equation core. This preserves reducible type
+compatibility only; declarations live in the core namespace. -/
+abbrev TwoDimensionalSelectedLoopHeatEquationData
+    (gaugeGroup : Geometry.CompactSimpleGaugeGroupData G E)
+    (inner : Geometry.InvariantInnerProductData
+      (I := modelWithCornersSelf ℝ E) (G := G))
+    {base : TwoDimensionalGaugeFixedHolonomyMeasureData G Gauge Sample Connection}
+    (law : TwoDimensionalSelectedLoopHaarDensityLawData base)
+    (semigroup : TwoDimensionalSelectedLoopConvolutionSemigroupData law)
+    (laplacian : RightInvariantPairingLaplacianData inner) :=
+  TwoDimensionalSelectedLoopHeatEquationCoreData inner law semigroup laplacian
+set_option linter.unusedVariables true
+
+namespace TwoDimensionalSelectedLoopHeatEquationCoreData
 
 variable
-    {gaugeGroup : Geometry.CompactSimpleGaugeGroupData G E}
     {inner : Geometry.InvariantInnerProductData
       (I := modelWithCornersSelf ℝ E) (G := G)}
     {base : TwoDimensionalGaugeFixedHolonomyMeasureData G Gauge Sample Connection}
@@ -88,40 +103,44 @@ variable
 
 /-- Bundled smooth spatial density at one exact positive time. -/
 noncomputable def smoothDensityAt
-    (data : TwoDimensionalSelectedLoopHeatEquationData
-      gaugeGroup inner law semigroup laplacian)
+    (data : TwoDimensionalSelectedLoopHeatEquationCoreData
+      inner law semigroup laplacian)
     (t : ℝ) (ht : 0 < t) : SmoothLieGroupScalarFunction (E := E) (G := G) where
   toFun := data.densityReal t
   contMDiff := data.densityReal_spatialSmooth t ht
 
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
 @[simp]
 theorem smoothDensityAt_apply
-    (data : TwoDimensionalSelectedLoopHeatEquationData
-      gaugeGroup inner law semigroup laplacian)
+    (data : TwoDimensionalSelectedLoopHeatEquationCoreData
+      inner law semigroup laplacian)
     (t : ℝ) (ht : 0 < t) (g : G) :
     data.smoothDensityAt t ht g = data.densityReal t g :=
   rfl
 
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
 /-- The stored heat equation is exposed through the exact bundled smooth spatial density. -/
 theorem hasDerivAt_densityReal
-    (data : TwoDimensionalSelectedLoopHeatEquationData
-      gaugeGroup inner law semigroup laplacian)
+    (data : TwoDimensionalSelectedLoopHeatEquationCoreData
+      inner law semigroup laplacian)
     (t : ℝ) (ht : 0 < t) (g : G) :
     HasDerivAt (fun s => data.densityReal s g)
       ((1 / 2 : ℝ) * laplacian.laplacian (data.smoothDensityAt t ht) g) t :=
   data.heatEquation t ht g
 
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
 /-- Strict positivity supplies the nonnegative premise needed by the exact `ENNReal` bridge. -/
 theorem densityReal_nonnegative
-    (data : TwoDimensionalSelectedLoopHeatEquationData
-      gaugeGroup inner law semigroup laplacian)
+    (data : TwoDimensionalSelectedLoopHeatEquationCoreData
+      inner law semigroup laplacian)
     (t : ℝ) (ht : 0 < t) (g : G) : 0 ≤ data.densityReal t g :=
   (data.densityReal_pos t ht g).le
 
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
 /-- The smooth real representative inherits conjugation centrality from the unchanged density law. -/
 theorem densityReal_central
-    (data : TwoDimensionalSelectedLoopHeatEquationData
-      gaugeGroup inner law semigroup laplacian)
+    (data : TwoDimensionalSelectedLoopHeatEquationCoreData
+      inner law semigroup laplacian)
     (t : ℝ) (ht : 0 < t) (h g : G) :
     data.densityReal t (h * g * h⁻¹) = data.densityReal t g := by
   apply (ENNReal.ofReal_eq_ofReal_iff
@@ -130,10 +149,11 @@ theorem densityReal_central
   rw [data.densityReal_toENNReal t ht, data.densityReal_toENNReal t ht]
   exact law.selectedAreaDensity_central t ht h g
 
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
 /-- The smooth real representative inherits inversion symmetry from the unchanged density law. -/
 theorem densityReal_inv
-    (data : TwoDimensionalSelectedLoopHeatEquationData
-      gaugeGroup inner law semigroup laplacian)
+    (data : TwoDimensionalSelectedLoopHeatEquationCoreData
+      inner law semigroup laplacian)
     (t : ℝ) (ht : 0 < t) (g : G) :
     data.densityReal t g⁻¹ = data.densityReal t g := by
   apply (ENNReal.ofReal_eq_ofReal_iff
@@ -142,14 +162,15 @@ theorem densityReal_inv
   rw [data.densityReal_toENNReal t ht, data.densityReal_toENNReal t ht]
   exact law.selectedAreaDensity_inv t ht g
 
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
 /-- A positive-time real density value cannot be zero. -/
 theorem densityReal_ne_zero
-    (data : TwoDimensionalSelectedLoopHeatEquationData
-      gaugeGroup inner law semigroup laplacian)
+    (data : TwoDimensionalSelectedLoopHeatEquationCoreData
+      inner law semigroup laplacian)
     (t : ℝ) (ht : 0 < t) (g : G) : data.densityReal t g ≠ 0 :=
   ne_of_gt (data.densityReal_pos t ht g)
 
-end TwoDimensionalSelectedLoopHeatEquationData
+end TwoDimensionalSelectedLoopHeatEquationCoreData
 
 end
 

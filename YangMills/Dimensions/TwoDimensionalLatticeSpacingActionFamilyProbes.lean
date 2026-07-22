@@ -65,15 +65,14 @@ theorem exact_villain_family_formula
     {Gauge : Type uGauge} [Group Gauge]
     {Sample : Type uSample} [MeasurableSpace Sample]
     {Connection : Type uConnection}
-    {gaugeGroup : Geometry.CompactSimpleGaugeGroupData G E}
     {inner : Geometry.InvariantInnerProductData
       (I := modelWithCornersSelf ℝ E) (G := G)}
     {base : TwoDimensionalGaugeFixedHolonomyMeasureData G Gauge Sample Connection}
     {law : TwoDimensionalSelectedLoopHaarDensityLawData base}
     {semigroup : TwoDimensionalSelectedLoopConvolutionSemigroupData law}
     {laplacian : RightInvariantPairingLaplacianData inner}
-    (heat : TwoDimensionalSelectedLoopHeatEquationData
-      gaugeGroup inner law semigroup laplacian)
+    (heat : TwoDimensionalSelectedLoopHeatEquationCoreData
+      inner law semigroup laplacian)
     (kernel : TwoDimensionalSelectedLoopHeatKernelOperatorData heat)
     (spacing : PositiveLatticeSpacing) (g : G) :
     (twoDimensionalVillainActionFamily heat kernel spacing).action g =
