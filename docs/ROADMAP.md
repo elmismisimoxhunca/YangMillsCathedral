@@ -874,8 +874,9 @@ committed before higher layers depend on it.
   - [x] Add the intrinsic compact connected oriented measured surface nucleus with exact manifold
     dimension, nowhere-zero smooth top form, positive smooth chart densities, and compact exact
     boundary-component carrier.
-  - [ ] Build finite circle presentations of exact boundary components, induced boundary orientation,
-    orientation-reversing boundary gluing, and the Lévy-specific conditional-
+  - [x] Add finite smooth embedded unit-circle presentations whose exact disjoint ranges cover every
+    actual boundary component, while retaining closed surfaces.
+  - [ ] Add induced boundary orientation, orientation-reversing boundary gluing, and the Lévy-specific conditional-
     independence sewing record without asserting that the two side fields generate the whole.
   - [ ] Resolve/formalize Theorem 8.10; inhabit/derive box projectivity and Theorem 7.2. Keep
     compact-surface gluing distinct from finite-cutoff, classical, and four-dimensional witnesses.
