@@ -5102,9 +5102,14 @@ range dimension, and equivalence of distinct indexed members. A generic synthesi
 now identifies `∫conj(f_A)f` with the Hilbert–Schmidt pairing of `A` against `f̂(ρ)ᵀ`. Consequently
 the finite full-block family satisfies both exact algebraic Plancherel formulas
 `⟨f_A,f_B⟩=∑ᵢdᵢ⁻¹⟨Aᵢ,Bᵢ⟩ₕₛ=∑ᵢdᵢ⟨f̂_A(ρᵢ),f̂_B(ρᵢ)⟩ₕₛ`; all finite sum/integral
-exchanges are justified by compact-domain continuity. Equivalent-but-differently-presented
-transport, all-irreducible indexing, infinite-series/`L²` Plancherel, Fourier inversion,
-Peter–Weyl density, and heat-kernel spectral expansion remain open.
+exchanges are justified by compact-domain continuity. The coordinate unitary dual is now a genuine
+quotient of all explicitly bundled positive-dimensional continuous irreducible unitary matrix
+representations by exact representation equivalence. Every bundle is equivalent to its selected
+class representative, distinct selected classes are inequivalent, equivalent bundles have equal
+matrix dimension, and injective class labels supply the finite-family inequivalence certificates.
+This quotient is not yet identified with Lévy's smooth compact-Lie-group dual: abstract coordinate
+realization/unitarization, continuity-to-smoothness, countability, infinite-series/`L²` Plancherel,
+Fourier inversion, Peter–Weyl density, and heat-kernel spectral expansion remain open.
 
 The full two-dimensional literature chain is now an explicit validation target: a future final 2D
 acceptance proposition must join the Driver/Lévy/Sengupta finite, continuum, Brownian, compact-surface,
