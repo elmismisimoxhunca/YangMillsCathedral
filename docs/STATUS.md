@@ -5111,8 +5111,11 @@ The dependent algebraic direct sum over every coordinate-dual class now gives a 
 finite-support coefficient carrier. Its synthesis is continuous and injective, Fourier analysis
 recovers `f̂_A(q)=d_q⁻¹A(q)ᵀ`, and `A(q)=d_q f̂_A(q)ᵀ` is proved as exact algebraic inversion on
 that range. Hostile probes reject coefficient collapse, changed inversion, or expansion of this
-result to an unspecified larger carrier. This quotient is not yet identified with Lévy's smooth
-compact-Lie-group dual: abstract coordinate
+result to an unspecified larger carrier. On the same direct sum, additive coefficient and Fourier
+pairings now prove all-coordinate-class algebraic Plancherel:
+`⟨f_A,f_B⟩=∑qd_q⁻¹⟨A(q),B(q)⟩ₕₛ=∑qd_q⟨f̂_A(q),f̂_B(q)⟩ₕₛ`. A scope probe exposes the
+actual finite support and prevents this identity from being read as an infinite-series theorem.
+This quotient is not yet identified with Lévy's smooth compact-Lie-group dual: abstract coordinate
 realization/unitarization, continuity-to-smoothness, countability, infinite-series/`L²` Plancherel,
 Fourier inversion, Peter–Weyl density, and heat-kernel spectral expansion remain open.
 

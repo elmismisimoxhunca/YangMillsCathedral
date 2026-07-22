@@ -757,6 +757,10 @@ committed before higher layers depend on it.
   unitary-dual class; construct finite-support synthesis, prove continuity, exact all-class analysis
   `f̂_A(q)=d_q⁻¹A(q)ᵀ`, synthesis injectivity, and justified algebraic inversion
   `A(q)=d_q f̂_A(q)ᵀ` on precisely that finite-support range.
+- [x] Prove all-coordinate-class algebraic Plancherel on that direct sum: define the finite-support
+  coefficient and Fourier pairings and derive
+  `⟨f_A,f_B⟩=∑qd_q⁻¹⟨A(q),B(q)⟩ₕₛ=∑qd_q⟨f̂_A(q),f̂_B(q)⟩ₕₛ`, with the
+  first-family direct-sum support making every displayed sum finite.
 - [ ] Identify the continuous coordinate quotient with the smooth compact-Lie-group irreducible
   dual used by Lévy (including coordinate realization/unitarization and any countability theorem),
   and only then formulate infinite-series and `L²` Plancherel statements with explicit
