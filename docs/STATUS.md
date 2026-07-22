@@ -4829,7 +4829,11 @@ off-tree and every selected plaquette's non-tree boundary is covered forward or 
 `boxOffAxisRowEquiv` and `boxPlaquetteRowEquiv` explicitly enumerate the actual row subtypes by two
 `Fin radius` chains, with positive coordinate row `i+1` aligned above upper plaquette row `i` and
 negative coordinate/lower-plaquette row `-(i+1)`. These are geometric equivalences with exact signed
-formulas, not arbitrary finite-cardinality relabelings. `twoDimensionalSquareLatticeBoxPresentation` now uses the exact coordinate/plaquette subtypes,
+formulas, not arbitrary finite-cardinality relabelings. Exact site bijections then identify every
+actual right-directed coordinate and every actual plaquette with a unique horizontal/row pair;
+`boxCoordinateChainEquiv` and `boxPlaquetteChainEquiv` compose these into one common
+`horizontal × (upper ⊕ lower)` index while retaining literal bond sources and plaquette lower-left
+sites. `twoDimensionalSquareLatticeBoxPresentation` now uses the exact coordinate/plaquette subtypes,
 constructs a measurable extension taking represented bonds to arbitrary coordinates, reverse bonds
 to inverses, and all other bonds to the identity, and proves exact coordinate recovery, finite
 support, orientation disjointness, and boundary coverage. Horizontal values on arbitrary rows are
