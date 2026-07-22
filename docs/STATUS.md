@@ -5007,10 +5007,12 @@ limit, boundary-independence proof, or continuum convergence witness is construc
 
 Mathlib's concrete `Matrix.SpecialLinearGroup (Fin 2) ℂ` is now exposed as
 `ComplexSpecialLinearTwo`. The literal complex signs embed injectively as determinant-one scalar
-matrices `±I`; the negative image is nonidentity and the full sign image is central. This closes the
-matrix-sign carrier step only. No homogeneous Lorentz projection, identification of an accepted
-cover fiber with this matrix image, topology/Lie structure, inhomogeneous semidirect product, or
-cover inhabitant is constructed.
+matrices `±I`; the negative image is nonidentity and the full sign image is central. Its exact image
+subgroup is multiplicatively equivalent to every accepted abstract two-sheet kernel by composition
+through the literal signs, and the accepted negative kernel element maps to the negative matrix sign.
+This is an abstract subgroup equivalence only: no ambient lift-to-matrix-group identification,
+homogeneous Lorentz projection, topology/Lie structure, inhomogeneous semidirect product, or cover
+inhabitant is constructed.
 
 The preliminary `FourDimensionalCurrentStrengthUniversalAcceptance` declaration is intentionally
 qualified and uninhabited. No final source-complete acceptance declaration, placeholder inhabitance

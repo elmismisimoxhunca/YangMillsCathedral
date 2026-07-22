@@ -73,6 +73,47 @@ theorem complexSignToSL2_injective : Function.Injective complexSignToSL2 := by
   apply Units.ext
   exact diagonalEquality
 
+/-- The concrete two-element scalar-sign subgroup inside matrix `SL(2, ℂ)`. -/
+def complexSignSL2Subgroup : Subgroup ComplexSpecialLinearTwo :=
+  complexSignToSL2.range
+
+/-- Literal complex signs are multiplicatively equivalent to their exact matrix image. -/
+noncomputable def complexSignMulEquivSL2Subgroup :
+    ComplexSign ≃* complexSignSL2Subgroup := by
+  apply MulEquiv.ofBijective complexSignToSL2.rangeRestrict
+  constructor
+  · intro first second equality
+    apply complexSignToSL2_injective
+    exact congrArg Subtype.val equality
+  · exact complexSignToSL2.rangeRestrict_surjective
+
+/-- The accepted abstract two-sheet projection kernel is multiplicatively equivalent to the concrete
+matrix sign subgroup. This composes two proved equivalences; it does not identify the ambient lift
+group with matrix `SL(2, ℂ)`. -/
+noncomputable def projectionKernelMulEquivSL2SignSubgroup
+    (d : EuclideanDimension)
+    {G : Type*} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+    (targetGroup : ProperOrthochronousPoincareTargetGroupData d)
+    (cover : ProperOrthochronousPoincareDoubleCoverData d G) :
+    properOrthochronousPoincareProjectionKernel d targetGroup cover ≃*
+      complexSignSL2Subgroup :=
+  (projectionKernelMulEquivComplexSign d targetGroup cover).trans
+    complexSignMulEquivSL2Subgroup
+
+/-- Under the composed equivalence, the accepted abstract negative kernel element is exactly the
+negative scalar-matrix subgroup element. -/
+@[simp]
+theorem projectionKernelMulEquivSL2SignSubgroup_negative
+    (d : EuclideanDimension)
+    {G : Type*} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+    (targetGroup : ProperOrthochronousPoincareTargetGroupData d)
+    (cover : ProperOrthochronousPoincareDoubleCoverData d G) :
+    projectionKernelMulEquivSL2SignSubgroup d targetGroup cover
+        (negativeProjectionKernelElement d targetGroup cover) =
+      complexSignMulEquivSL2Subgroup negativeComplexSign := by
+  simp [projectionKernelMulEquivSL2SignSubgroup,
+    negativeProjectionKernelElement]
+
 /-- The negative literal sign is exactly the scalar matrix `-I`. -/
 @[simp]
 theorem complexSignToSL2_negative_coe :

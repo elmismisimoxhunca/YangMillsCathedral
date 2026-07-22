@@ -21,6 +21,34 @@ theorem exact_determinant_one (sign : ComplexSign) :
 theorem exact_sign_injection : Function.Injective complexSignToSL2 :=
   complexSignToSL2_injective
 
+/-- The exact matrix-sign subgroup is the image of the injective literal-sign homomorphism. -/
+theorem exact_matrix_sign_subgroup (sign : ComplexSign) :
+    complexSignToSL2 sign ∈ complexSignSL2Subgroup :=
+  ⟨sign, rfl⟩
+
+/-- Every accepted abstract two-sheet kernel is multiplicatively equivalent to the concrete matrix
+sign subgroup, without identifying the two ambient groups. -/
+noncomputable def exact_abstract_kernel_matrix_sign_equiv
+    (d : EuclideanDimension)
+    {G : Type*} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+    (targetGroup : ProperOrthochronousPoincareTargetGroupData d)
+    (cover : ProperOrthochronousPoincareDoubleCoverData d G) :
+    properOrthochronousPoincareProjectionKernel d targetGroup cover ≃*
+      complexSignSL2Subgroup :=
+  projectionKernelMulEquivSL2SignSubgroup d targetGroup cover
+
+/-- The accepted abstract negative kernel element corresponds to the concrete negative matrix-sign
+subgroup element under the composed equivalence. -/
+theorem exact_abstract_negative_matrix_sign
+    (d : EuclideanDimension)
+    {G : Type*} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+    (targetGroup : ProperOrthochronousPoincareTargetGroupData d)
+    (cover : ProperOrthochronousPoincareDoubleCoverData d G) :
+    projectionKernelMulEquivSL2SignSubgroup d targetGroup cover
+        (negativeProjectionKernelElement d targetGroup cover) =
+      complexSignMulEquivSL2Subgroup negativeComplexSign :=
+  projectionKernelMulEquivSL2SignSubgroup_negative d targetGroup cover
+
 /-- The negative sign has the exact diagonal/off-diagonal matrix entries of `-I`. -/
 theorem exact_negative_matrix_entries :
     (complexSignToSL2 negativeComplexSign : Matrix (Fin 2) (Fin 2) ℂ) 0 0 = -1 ∧

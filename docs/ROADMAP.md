@@ -577,11 +577,13 @@ committed before higher layers depend on it.
   descend common-domain field, adjoint, and same-domain local-observable-family covariance with no
   lift exposed, and integrate both the transported Hilbert representation and original uncast
   domain/field/observable-family covariance into the 4D core.
-- [x] Expose Mathlib's concrete homogeneous `SL(2,ℂ)` matrix carrier and embed the literal complex
-  signs injectively as the central determinant-one scalar matrices `±I`.
+- [x] Expose Mathlib's concrete homogeneous `SL(2,ℂ)` matrix carrier, embed the literal complex
+  signs injectively as the central determinant-one scalar matrices `±I`, and derive an abstract
+  multiplicative equivalence from every accepted two-sheet kernel to this exact image subgroup.
 - [ ] Construct the target law from proper-orthochronous future-cone closure, build the concrete
-  inhomogeneous semidirect-product cover, identify its actual projection kernel with that matrix-sign
-  image and the accepted abstract kernel, and upgrade relative sheet labels to this realization.
+  inhomogeneous semidirect-product cover, realize its actual projection kernel as that matrix-sign
+  image inside the same ambient group rather than merely by abstract equivalence, and upgrade
+  relative sheet labels to this realization.
 - [x] Define a normalized Poincaré-invariant vacuum whose full invariant subspace is exactly one
   complex line, tied to the same representation and derived translations.
 - [x] Define one dense common domain containing the same vacuum and invariant under the same
