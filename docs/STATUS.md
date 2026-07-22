@@ -5098,9 +5098,13 @@ members. Finite families of full matrix-coefficient blocks are now packaged with
 dependent representation dimensions. An entire synthesized block transforms to zero at an
 inequivalent family member; analysis at `ρᵢ` recovers exactly `dᵢ⁻¹Aᵢᵀ`, synthesis is injective,
 and its range has exact dimension `∑ᵢdᵢ²`. Hostile probes reject block-family collapse, a wrong
-range dimension, and equivalence of distinct indexed members. Equivalent-but-differently-presented
-transport, the finite-full-block-family Plancherel pairing, Fourier inversion, Peter–Weyl density,
-and heat-kernel spectral expansion remain open.
+range dimension, and equivalence of distinct indexed members. A generic synthesis-analysis lemma
+now identifies `∫conj(f_A)f` with the Hilbert–Schmidt pairing of `A` against `f̂(ρ)ᵀ`. Consequently
+the finite full-block family satisfies both exact algebraic Plancherel formulas
+`⟨f_A,f_B⟩=∑ᵢdᵢ⁻¹⟨Aᵢ,Bᵢ⟩ₕₛ=∑ᵢdᵢ⟨f̂_A(ρᵢ),f̂_B(ρᵢ)⟩ₕₛ`; all finite sum/integral
+exchanges are justified by compact-domain continuity. Equivalent-but-differently-presented
+transport, all-irreducible indexing, infinite-series/`L²` Plancherel, Fourier inversion,
+Peter–Weyl density, and heat-kernel spectral expansion remain open.
 
 The full two-dimensional literature chain is now an explicit validation target: a future final 2D
 acceptance proposition must join the Driver/Lévy/Sengupta finite, continuum, Brownian, compact-surface,

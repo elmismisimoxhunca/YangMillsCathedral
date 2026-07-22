@@ -746,8 +746,11 @@ committed before higher layers depend on it.
 - [x] Package finite dependently dimensioned families of pairwise inequivalent full coefficient
   blocks: prove inequivalent whole-block Fourier vanishing, exact blockwise analysis
   `f̂(ρᵢ)=dᵢ⁻¹Aᵢᵀ`, injectivity, and exact range dimension `∑ᵢdᵢ²`.
-- [ ] Extend the single-block Hilbert–Schmidt/Plancherel pairing identity to those finite sums of
-  pairwise inequivalent full matrix-coefficient blocks.
+- [x] Extend Hilbert–Schmidt/Plancherel to finite pairwise-inequivalent full coefficient families:
+  prove `⟨f_A,f_B⟩=∑ᵢdᵢ⁻¹⟨Aᵢ,Bᵢ⟩ₕₛ=∑ᵢdᵢ⟨f̂_A(ρᵢ),f̂_B(ρᵢ)⟩ₕₛ`, with all
+  finite sum/integral exchanges justified.
+- [ ] Construct an all-irreducible indexing carrier and only then formulate infinite-series and
+  `L²` Plancherel statements with explicit summability/completeness hypotheses.
 - [ ] Prove Stone–Weierstrass separation and Peter–Weyl density/completeness in continuous and `L²`
   carriers with explicit topology and measure hypotheses.
 - [ ] State and prove only convergence-justified Fourier inversion and central character expansions;
