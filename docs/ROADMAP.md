@@ -898,6 +898,9 @@ committed before higher layers depend on it.
   - [x] Derive those exact source-cone memberships for every relative neighborhood of a half-space
     boundary point: boundary tangents occur in both directions and the inward normal occurs
     one-sidedly, yielding automatic tangent preservation and normal nonnegativity.
+  - [x] Instantiate the cone, local-half-space, smoothness, and derivative-surjectivity results on
+    Mathlib's actual extended coordinate change, proving its exact within derivative preserves the
+    boundary tangent hyperplane, has strictly positive normal multiplier, and transports outward rays.
   - [x] Add positive-arity distinct-component boundary identifications by genuine circle
     diffeomorphisms with exact derivative-level orientation reversal and hostile vacuity probes.
   - [x] Construct the minimal equivalence-closure quotient of the disjoint union by exact paired
