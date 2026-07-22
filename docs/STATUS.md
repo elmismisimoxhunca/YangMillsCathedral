@@ -5071,9 +5071,12 @@ cyclicity of matrix trace and probability-Haar mass one prove that conjugation a
 coordinate bridge is now also derived: one-sided `ρ(g)ᴴρ(g)=1`, together with the exact
 homomorphic right inverse `ρ(g⁻¹)`, proves `ρ(g⁻¹)=ρ(g)ᴴ`. Thus inverse entries transpose and
 conjugate, the full inverse character is the complex conjugate character, and Driver's stored
-real-part inversion law is independently rederived. No full Haar orthogonality,
-irreducibility theorem, Fourier inversion, Peter–Weyl density, or heat-kernel spectral expansion is
-claimed.
+real-part inversion law is independently rederived. Applying the normalized Schur averages to exact
+matrix units now proves all-index self orthogonality
+`∫conj(ρ(g)ₐᵣ)ρ(g)ᵦ𝚌dμ_H=n⁻¹δₐᵦδᵣ𝚌` and exact zero mixed coefficients for explicitly
+inequivalent irreducible unitary representations. A hostile probe rejects dropping the inverse
+representation-dimension factor. Equivalent-but-differently-presented transport, Fourier inversion,
+Peter–Weyl density, and heat-kernel spectral expansion remain open.
 
 The full two-dimensional literature chain is now an explicit validation target: a future final 2D
 acceptance proposition must join the Driver/Lévy/Sengupta finite, continuum, Brownian, compact-surface,
