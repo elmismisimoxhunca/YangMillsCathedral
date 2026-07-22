@@ -4732,7 +4732,11 @@ smooth manifold/orientation or sewn area measure is constructed.
 same quotient topology: an exact two-dimensional compact oriented measured surface nucleus,
 differential immersions of both sides (combined with the already derived closed topological
 embeddings to derive genuine smooth embeddings), pullbacks equal to explicit strictly positive multiples of both
-side orientation representatives, null side boundaries, sum-pushforward area measure, and exact retention of only unselected boundary images. Same-side
+side orientation representatives, sum-pushforward area measure, and exact retention of only unselected boundary images. Side-boundary
+nullity is no longer stored: arbitrary eligible charts send intrinsic boundary points into the
+frontier of the convex model range; additive Haar gives that frontier zero measure; the chart-density
+law gives each boundary/chart piece zero surface area; and compactness supplies a finite chart cover,
+deriving both full side boundaries null before any gluing witness exists. Same-side
 injectivity plus the new exact characterization that cross-side quotient equality occurs only at a
 designated pair derive interior placement of every seam point from that boundary equation, removing
 it as an independent descent field. Hostile probes reject an unrelated glued measure and

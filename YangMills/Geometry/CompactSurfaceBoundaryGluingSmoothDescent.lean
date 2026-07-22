@@ -5,6 +5,7 @@ Authors: Sebastian Rodrigo
 -/
 
 import YangMills.Geometry.CompactSurfaceBoundaryGluingQuotient
+import YangMills.Geometry.CompactOrientedMeasuredSurfaceBoundaryNull
 
 /-!
 # Smooth, oriented, measured descent obligations for compact-surface gluing
@@ -105,10 +106,9 @@ structure CompactSurfaceBoundaryGluingSmoothDescentData where
           (CompactSurfaceBoundaryGluingQuotient.rightInclusion identification) point
           (vectors index)) =
       right_orientationScale point * rightSurface.orientationForm.toForm point vectors
-  /-- Boundary seams carry zero side area, and the glued area is exactly the sum of the two
-  pushforwards. -/
-  left_boundary_null : leftSurface.areaMeasure (IL.boundary SL) = 0
-  right_boundary_null : rightSurface.areaMeasure (IR.boundary SR) = 0
+  /-- The glued area is exactly the sum of the two pushforwards. Nullity of both full side
+  boundaries is derived from each surface's chart-density law and compactness, rather than stored
+  as descent data. -/
   areaMeasure_eq_sum_pushforward :
     gluedSurface.areaMeasure =
       Measure.map (CompactSurfaceBoundaryGluingQuotient.leftInclusion identification)
@@ -204,6 +204,15 @@ theorem glued_model_finrank_two
       (identification := identification) (IG := IG)) :
     Module.finrank ℝ EG = 2 :=
   descent.gluedSurface.model_finrank_two
+
+/-- Both full side boundaries are null under their designated surface measures. This is inherited
+from the surface chart-density theorem and is independent of any gluing descent witness. -/
+theorem side_boundaries_null
+    (_descent : CompactSurfaceBoundaryGluingSmoothDescentData
+      (identification := identification) (IG := IG)) :
+    leftSurface.areaMeasure (IL.boundary SL) = 0 ∧
+      rightSurface.areaMeasure (IR.boundary SR) = 0 :=
+  ⟨leftSurface.boundary_null, rightSurface.boundary_null⟩
 
 /-- Both side inclusions are measurable, so the area pushforwards cannot use `Measure.map`'s
 nonmeasurable zero fallback. -/

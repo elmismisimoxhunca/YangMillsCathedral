@@ -116,7 +116,7 @@ theorem exact_area_descent
             leftSurface.areaMeasure +
           Measure.map (CompactSurfaceBoundaryGluingQuotient.rightInclusion identification)
             rightSurface.areaMeasure :=
-  ⟨descent.left_boundary_null, descent.right_boundary_null,
+  ⟨descent.side_boundaries_null.1, descent.side_boundaries_null.2,
     descent.areaMeasure_eq_sum_pushforward⟩
 
 /-- Exactly unselected boundary images remain, while every selected seam is interior. -/

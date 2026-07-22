@@ -918,9 +918,12 @@ committed before higher layers depend on it.
     distinct fixed-base blocks on both sides (including zero), the same sewn whole law/restriction,
     genuine enlarged disintegration, irrelevant-other-side kernel factorization, and exact
     inverse-boundary product law.
+  - [x] Derive every compact surface's intrinsic boundary to be null from arbitrary-chart
+    model-frontier membership, convex-range Haar nullity, exact chart-density transport, and a finite
+    compact-boundary chart cover.
   - [x] Add an uninhabited exact smooth/oriented/measured descent contract on the same quotient
-    topology, including smooth side embeddings, positive-scale orientation-class pullbacks, null seams, sum-pushforward
-    area, exact remaining boundary, and interior seam placement.
+    topology, including smooth side embeddings, positive-scale orientation-class pullbacks, derived
+    null side boundaries, sum-pushforward area, exact remaining boundary, and interior seam placement.
   - [x] Derive exact relation closedness, closed projection/saturations, compact equivalence-class
     separation, Hausdorffness, an explicit countable quotient basis, second countability,
     Polish/standard-Borel structure, compactness, connectedness, and closed side embeddings for the
