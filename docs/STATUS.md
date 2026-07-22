@@ -4828,7 +4828,12 @@ nonzero rows `-n,…,-1,1,…,n`. Both sets are literally nested with radius; al
 off-tree and every selected plaquette's non-tree boundary is covered forward or in reverse. `twoDimensionalSquareLatticeBoxPresentation` now uses the exact coordinate/plaquette subtypes,
 constructs a measurable extension taking represented bonds to arbitrary coordinates, reverse bonds
 to inverses, and all other bonds to the identity, and proves exact coordinate recovery, finite
-support, orientation disjointness, and boundary coverage. A nonidentity multiplicative-integer
+support, orientation disjointness, and boundary coverage. Horizontal values on arbitrary rows are
+named measurable evaluations of the same extension. Both vertical plaquette edges are proved
+axial-tree bonds and the top traversal is exactly the reverse upper-row horizontal bond, deriving
+the source-order-sensitive nonabelian formula `H(x,y)=U(x,y+1)⁻¹U(x,y)` for every box plaquette.
+This is the first triangular-coordinate step toward deriving box projectivity and does not falsely
+identify every plaquette holonomy with one raw coordinate. A nonidentity multiplicative-integer
 coordinate survives the extension. `twoDimensionalSquareLatticeBoxNormalizer` is the exact product-Haar integral of the exact box
 weight. Strict positivity proves nonzeroness, while compactness uniformly bounds the common action
 and proves finiteness. The resulting normalizer certificate constructs normalized nonzero finite-

@@ -58,6 +58,27 @@ theorem exact_unrepresented_identity
   epsilonSquareLatticeBoxAxialExtension.unrepresented
     spacing radius configuration bond notTree forward reverse
 
+/-- Horizontal values are measurable exact evaluations of the same finite extension. -/
+theorem exact_horizontal_value_measurable (site : ℤ × ℤ) :
+    Measurable (fun configuration : EpsilonSquareLatticeBoxCoordinate spacing radius → G =>
+      epsilonSquareLatticeBoxHorizontalValue spacing radius configuration site) :=
+  epsilonSquareLatticeBoxHorizontalValue.measurable spacing radius site
+
+omit [MeasurableSpace G] [MeasurableInv G] in
+/-- Every box plaquette holonomy is exactly upper-row inverse times lower-row value; reversing the
+nonabelian multiplication order is rejected by the displayed equality. -/
+theorem exact_axial_plaquette_horizontal_difference
+    (configuration : EpsilonSquareLatticeBoxCoordinate spacing radius → G)
+    (plaquette : EpsilonSquareLatticeBoxPlaquette spacing radius) :
+    epsilonSquareLatticeAxialPlaquetteHolonomy plaquette.1
+        (epsilonSquareLatticeBoxAxialExtension spacing radius configuration) =
+      (epsilonSquareLatticeBoxHorizontalValue spacing radius configuration
+        (plaquette.1.lowerLeft.1, plaquette.1.lowerLeft.2 + 1))⁻¹ *
+      epsilonSquareLatticeBoxHorizontalValue spacing radius configuration
+        plaquette.1.lowerLeft :=
+  epsilonSquareLatticeBoxAxialPlaquetteHolonomy_eq_horizontalValues_subtype
+    spacing radius configuration plaquette
+
 /-- Every adapted plaquette boundary is connected to a finite coordinate or the exact axial tree. -/
 theorem exact_boundary_coverage
     (label : (twoDimensionalSquareLatticeBoxPresentation (G := G) spacing radius).Plaquette)

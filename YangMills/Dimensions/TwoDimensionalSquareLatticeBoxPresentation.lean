@@ -160,6 +160,98 @@ theorem measurable :
 
 end epsilonSquareLatticeBoxAxialExtension
 
+/-- Horizontal axial value on the right-directed bond at an arbitrary integer site. Values on the
+axis and outside the finite coordinate set are inherited exactly from the box extension. -/
+def epsilonSquareLatticeBoxHorizontalValue
+    (configuration : EpsilonSquareLatticeBoxCoordinate spacing radius → G)
+    (site : ℤ × ℤ) : G :=
+  epsilonSquareLatticeBoxAxialExtension spacing radius configuration
+    (epsilonSquareLatticeRightBond spacing site)
+
+namespace EpsilonSquareLatticePlaquette
+
+omit [MeasurableSpace G] [MeasurableInv G] in
+/-- A plaquette bottom edge is the right-directed horizontal bond at its lower-left site. -/
+@[simp] theorem bottomBond_eq_rightBond
+    (plaquette : EpsilonSquareLatticePlaquette spacing) :
+    plaquette.bottomBond = epsilonSquareLatticeRightBond spacing plaquette.lowerLeft := by
+  ext <;> rfl
+
+omit [MeasurableSpace G] [MeasurableInv G] in
+/-- A plaquette top traversal is the reverse of the right-directed bond on its upper row. -/
+@[simp] theorem topBond_eq_reverse_rightBond
+    (plaquette : EpsilonSquareLatticePlaquette spacing) :
+    plaquette.topBond =
+      (epsilonSquareLatticeRightBond spacing
+        (plaquette.lowerLeft.1, plaquette.lowerLeft.2 + 1)).reverse := by
+  ext <;> rfl
+
+omit [MeasurableSpace G] [MeasurableInv G] in
+/-- Every vertical right edge lies in Driver's axial tree. -/
+theorem rightBond_isAxialTree
+    (plaquette : EpsilonSquareLatticePlaquette spacing) :
+    epsilonSquareLatticeIsAxialTreeBond plaquette.rightBond :=
+  Or.inl rfl
+
+omit [MeasurableSpace G] [MeasurableInv G] in
+/-- Every vertical left edge lies in Driver's axial tree. -/
+theorem leftBond_isAxialTree
+    (plaquette : EpsilonSquareLatticePlaquette spacing) :
+    epsilonSquareLatticeIsAxialTreeBond plaquette.leftBond :=
+  Or.inl rfl
+
+end EpsilonSquareLatticePlaquette
+
+namespace epsilonSquareLatticeBoxHorizontalValue
+
+/-- Horizontal-value evaluation is measurable in the finite coordinate configuration. -/
+theorem measurable (site : ℤ × ℤ) :
+    Measurable (fun configuration : EpsilonSquareLatticeBoxCoordinate spacing radius → G =>
+      epsilonSquareLatticeBoxHorizontalValue spacing radius configuration site) :=
+  (EpsilonSquareLatticeAxialConfiguration.measurable_apply
+    (epsilonSquareLatticeRightBond spacing site)).comp
+      (epsilonSquareLatticeBoxAxialExtension.measurable spacing radius)
+
+end epsilonSquareLatticeBoxHorizontalValue
+
+omit [MeasurableSpace G] [MeasurableInv G] in
+/-- Exact axial plaquette formula under later-traversal-on-the-left path ordering. Vertical edges
+are frozen, while the top edge is traversed in reverse, so the upper horizontal value is inverted
+and multiplies the lower value on the left. -/
+theorem epsilonSquareLatticeBoxAxialPlaquetteHolonomy_eq_horizontalValues
+    (configuration : EpsilonSquareLatticeBoxCoordinate spacing radius → G)
+    (plaquette : EpsilonSquareLatticePlaquette spacing) :
+    epsilonSquareLatticeAxialPlaquetteHolonomy plaquette
+        (epsilonSquareLatticeBoxAxialExtension spacing radius configuration) =
+      (epsilonSquareLatticeBoxHorizontalValue spacing radius configuration
+        (plaquette.lowerLeft.1, plaquette.lowerLeft.2 + 1))⁻¹ *
+      epsilonSquareLatticeBoxHorizontalValue spacing radius configuration
+        plaquette.lowerLeft := by
+  rw [epsilonSquareLatticeAxialPlaquetteHolonomy,
+    epsilonSquareLatticePlaquetteHolonomy]
+  rw [(epsilonSquareLatticeBoxAxialExtension spacing radius configuration).axialTree_fixed
+      plaquette.leftBond plaquette.leftBond_isAxialTree]
+  rw [(epsilonSquareLatticeBoxAxialExtension spacing radius configuration).axialTree_fixed
+      plaquette.rightBond plaquette.rightBond_isAxialTree]
+  rw [plaquette.topBond_eq_reverse_rightBond,
+    (epsilonSquareLatticeBoxAxialExtension spacing radius configuration).configuration.reverse_value]
+  rw [plaquette.bottomBond_eq_rightBond]
+  simp [epsilonSquareLatticeBoxHorizontalValue]
+
+omit [MeasurableSpace G] [MeasurableInv G] in
+/-- The same exact formula on the finite box plaquette subtype. -/
+theorem epsilonSquareLatticeBoxAxialPlaquetteHolonomy_eq_horizontalValues_subtype
+    (configuration : EpsilonSquareLatticeBoxCoordinate spacing radius → G)
+    (plaquette : EpsilonSquareLatticeBoxPlaquette spacing radius) :
+    epsilonSquareLatticeAxialPlaquetteHolonomy plaquette.1
+        (epsilonSquareLatticeBoxAxialExtension spacing radius configuration) =
+      (epsilonSquareLatticeBoxHorizontalValue spacing radius configuration
+        (plaquette.1.lowerLeft.1, plaquette.1.lowerLeft.2 + 1))⁻¹ *
+      epsilonSquareLatticeBoxHorizontalValue spacing radius configuration
+        plaquette.1.lowerLeft :=
+  epsilonSquareLatticeBoxAxialPlaquetteHolonomy_eq_horizontalValues
+    spacing radius configuration plaquette.1
+
 /-- The concrete square box as one generic finite axial presentation. -/
 def twoDimensionalSquareLatticeBoxPresentation :
     TwoDimensionalFiniteAxialPlaquettePresentationData G spacing where
