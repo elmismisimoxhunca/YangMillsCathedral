@@ -701,8 +701,12 @@ committed before higher layers depend on it.
   `InnerProductSpace.Core` without overwriting the coordinate carrier's pre-existing norm.
 - [ ] Prove compatibility/equivalence with a finite-dimensional normed realization and derive an
   explicit unitarizing coordinate equivalence.
-- [ ] Develop the analytic Schur lemma and Haar orthogonality of matrix coefficients for irreducible
-  unitary representations, including exact dimension normalization.
+- [x] Construct the coordinatewise Reynolds/Haar average
+  `P(A)=∫σ(g⁻¹)Aρ(g)dμ_H` for arbitrary rectangular matrices between two continuous finite matrix
+  representations; derive coefficient integrability and the exact intertwining identity
+  `σ(h)P(A)=P(A)ρ(h)` by right-Haar substitution.
+- [ ] Combine this analytic averaging operator with Mathlib's algebraic irreducibility/Schur API and
+  derive Haar orthogonality of matrix coefficients, including exact dimension normalization.
 - [x] Define coordinatewise representation-valued Fourier coefficients with exact inverse
   convention, derive continuous compact-domain integrability, addition/scalar/zero laws, specialize
   to probability-normalized Haar, and identify matrix trace with the scalar inverse-character

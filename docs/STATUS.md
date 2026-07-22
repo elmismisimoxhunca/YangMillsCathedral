@@ -5053,7 +5053,11 @@ Conjugate symmetry, first-argument additivity and conjugate homogeneity, the exa
 identity, nonnegativity, and definiteness now package this same average as a named
 `InnerProductSpace.Core`. It is deliberately not installed globally, because compatibility with the
 coordinate carrier's pre-existing norm and construction of a unitarizing equivalence remain open.
-No Haar orthogonality,
+The next Schur precursor is now concrete: for two continuous finite matrix representations and an
+arbitrary rectangular matrix `A`, the coordinatewise Reynolds average
+`P(A)=∫σ(g⁻¹)Aρ(g)dμ_H` is genuinely integrable and satisfies the exact intertwining identity
+`σ(h)P(A)=P(A)ρ(h)`. The proof transports finite matrix-coordinate sums through integrals and uses
+the exact right-Haar substitution `g ↦ g*h`; no irreducibility conclusion is stored. No Haar orthogonality,
 irreducibility theorem, Fourier inversion, Peter–Weyl density, or heat-kernel spectral expansion is
 claimed.
 
