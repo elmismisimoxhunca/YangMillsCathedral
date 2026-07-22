@@ -17,9 +17,11 @@ carrier underlying Lévy's phrase “the result of the gluing”. The generators
 paired parameterized boundary points; reflexivity, symmetry, and transitivity are supplied only by
 `Relation.EqvGen`.
 
-The quotient receives its genuine quotient topology. A universal lift is provided for functions on
-the two sides that agree on every paired boundary point. No Hausdorffness, manifold-with-corners
-atlas, descended orientation, area measure, probability law, or Yang--Mills model is asserted.
+The quotient receives its genuine quotient topology. Its exact matching relation is characterized
+and proved closed; compact equivalence classes and a closed projection then derive Hausdorffness.
+Compactness, connectedness, and closed side embeddings are also derived. A universal lift is
+provided for compatible sidewise functions. No manifold-with-corners atlas, descended orientation,
+area measure, probability law, or Yang--Mills model is asserted.
 -/
 
 namespace YangMills.Geometry
@@ -434,6 +436,121 @@ theorem projection_isClosedMap : IsClosedMap (projection identification) := by
   change IsClosed (projection identification ⁻¹' (projection identification '' subset))
   rw [projection_preimage_image identification subset]
   exact explicitGluingSaturation_isClosed identification subsetClosed
+
+/-- Exact equivalence class of one representative in the disjoint union. -/
+def gluingEquivalenceClass (point : SL ⊕ SR) : Set (SL ⊕ SR) :=
+  {other | explicitGluingEquivalence identification point other}
+
+/-- Every exact equivalence class is closed. -/
+theorem gluingEquivalenceClass_isClosed (point : SL ⊕ SR) :
+    IsClosed (gluingEquivalenceClass identification point) := by
+  change IsClosed ((fun other : SL ⊕ SR => (point, other)) ⁻¹'
+    {points : (SL ⊕ SR) × (SL ⊕ SR) |
+      explicitGluingEquivalence identification points.1 points.2})
+  exact (explicitGluingEquivalence_set_isClosed identification).preimage
+    (continuous_const.prodMk continuous_id)
+
+/-- Every exact equivalence class is compact. -/
+theorem gluingEquivalenceClass_isCompact (point : SL ⊕ SR) :
+    IsCompact (gluingEquivalenceClass identification point) :=
+  (gluingEquivalenceClass_isClosed identification point).isCompact
+
+/-- Classes of two distinct quotient points have product disjoint from the equivalence relation. -/
+theorem gluingEquivalenceClasses_prod_subset_compl_relation
+    {first second : SL ⊕ SR}
+    (distinct : projection identification first ≠ projection identification second) :
+    gluingEquivalenceClass identification first ×ˢ
+        gluingEquivalenceClass identification second ⊆
+      {points : (SL ⊕ SR) × (SL ⊕ SR) |
+        explicitGluingEquivalence identification points.1 points.2}ᶜ := by
+  rintro ⟨left, right⟩ ⟨firstLeft, secondRight⟩ related
+  have firstRight := (explicitGluingEquivalence_equivalence identification).3 firstLeft related
+  have firstSecond := (explicitGluingEquivalence_equivalence identification).3 firstRight
+    ((explicitGluingEquivalence_equivalence identification).2 secondRight)
+  apply distinct
+  exact Quot.sound
+    ((eqvGen_iff_explicitGluingEquivalence identification first second).mpr firstSecond)
+
+/-- Distinct quotient points have disjoint open neighborhoods. The proof separates their compact
+classes in the complement of the closed relation, then saturates those neighborhoods through the
+closed quotient projection. -/
+theorem exists_disjoint_open_neighborhoods
+    (first second : CompactSurfaceBoundaryGluingQuotient identification)
+    (distinct : first ≠ second) :
+    ∃ firstOpen secondOpen : Set (CompactSurfaceBoundaryGluingQuotient identification),
+      IsOpen firstOpen ∧ IsOpen secondOpen ∧ first ∈ firstOpen ∧ second ∈ secondOpen ∧
+        Disjoint firstOpen secondOpen := by
+  revert distinct
+  refine Quot.inductionOn first ?_
+  intro firstRepresentative
+  refine Quot.inductionOn second ?_
+  intro secondRepresentative distinct
+  let firstClass := gluingEquivalenceClass identification firstRepresentative
+  let secondClass := gluingEquivalenceClass identification secondRepresentative
+  have firstCompact : IsCompact firstClass :=
+    gluingEquivalenceClass_isCompact identification firstRepresentative
+  have secondCompact : IsCompact secondClass :=
+    gluingEquivalenceClass_isCompact identification secondRepresentative
+  let relationSet : Set ((SL ⊕ SR) × (SL ⊕ SR)) :=
+    {points | explicitGluingEquivalence identification points.1 points.2}
+  have relationClosed : IsClosed relationSet :=
+    explicitGluingEquivalence_set_isClosed identification
+  have classesAvoid : firstClass ×ˢ secondClass ⊆ relationSetᶜ :=
+    gluingEquivalenceClasses_prod_subset_compl_relation identification distinct
+  obtain ⟨firstNeighborhood, secondNeighborhood, firstOpen, secondOpen,
+      firstSubset, secondSubset, productSubset⟩ :=
+    generalized_tube_lemma firstCompact secondCompact relationClosed.isOpen_compl classesAvoid
+  let quotientFirst : Set (CompactSurfaceBoundaryGluingQuotient identification) :=
+    (projection identification '' firstNeighborhoodᶜ)ᶜ
+  let quotientSecond : Set (CompactSurfaceBoundaryGluingQuotient identification) :=
+    (projection identification '' secondNeighborhoodᶜ)ᶜ
+  have quotientFirstOpen : IsOpen quotientFirst :=
+    ((projection_isClosedMap identification) firstNeighborhoodᶜ
+      firstOpen.isClosed_compl).isOpen_compl
+  have quotientSecondOpen : IsOpen quotientSecond :=
+    ((projection_isClosedMap identification) secondNeighborhoodᶜ
+      secondOpen.isClosed_compl).isOpen_compl
+  have firstMem : projection identification firstRepresentative ∈ quotientFirst := by
+    show projection identification firstRepresentative ∉
+      projection identification '' firstNeighborhoodᶜ
+    rintro ⟨other, otherOutside, equality⟩
+    have generated := eqvGen_of_projection_eq identification equality
+    have otherFirst :=
+      (eqvGen_iff_explicitGluingEquivalence identification other firstRepresentative).mp generated
+    have firstOther := (explicitGluingEquivalence_equivalence identification).2 otherFirst
+    exact otherOutside (firstSubset firstOther)
+  have secondMem : projection identification secondRepresentative ∈ quotientSecond := by
+    show projection identification secondRepresentative ∉
+      projection identification '' secondNeighborhoodᶜ
+    rintro ⟨other, otherOutside, equality⟩
+    have generated := eqvGen_of_projection_eq identification equality
+    have otherSecond :=
+      (eqvGen_iff_explicitGluingEquivalence identification other secondRepresentative).mp generated
+    have secondOther := (explicitGluingEquivalence_equivalence identification).2 otherSecond
+    exact otherOutside (secondSubset secondOther)
+  have quotientDisjoint : Disjoint quotientFirst quotientSecond := by
+    apply Set.disjoint_left.mpr
+    intro quotientPoint firstMembership secondMembership
+    obtain ⟨representative, rfl⟩ := Quot.mk_surjective quotientPoint
+    have representativeFirst : representative ∈ firstNeighborhood := by
+      by_contra outside
+      exact firstMembership ⟨representative, outside, rfl⟩
+    have representativeSecond : representative ∈ secondNeighborhood := by
+      by_contra outside
+      exact secondMembership ⟨representative, outside, rfl⟩
+    have diagonalMembership :
+        (representative, representative) ∈ firstNeighborhood ×ˢ secondNeighborhood :=
+      ⟨representativeFirst, representativeSecond⟩
+    have outsideRelation := productSubset diagonalMembership
+    exact outsideRelation (Or.inl rfl)
+  exact ⟨quotientFirst, quotientSecond, quotientFirstOpen, quotientSecondOpen,
+    firstMem, secondMem, quotientDisjoint⟩
+
+/-- The exact compact-surface gluing quotient is Hausdorff. -/
+instance compactSurfaceBoundaryGluingQuotientT2Space :
+    T2Space (CompactSurfaceBoundaryGluingQuotient identification) :=
+  T2Space.mk fun first second distinct =>
+    exists_disjoint_open_neighborhoods identification first second distinct
 
 /-- The canonical left-side map is injective; the generated quotient makes no same-side
 identifications. -/

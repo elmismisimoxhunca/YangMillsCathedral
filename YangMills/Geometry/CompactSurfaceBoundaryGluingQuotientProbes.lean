@@ -66,6 +66,22 @@ supplied by later smooth-descent acceptance data. -/
     CompactSpace (CompactSurfaceBoundaryGluingQuotient identification) :=
   inferInstance
 
+/-- Closed-equivalence separation derives Hausdorffness rather than leaving it as a smooth-descent
+assumption. -/
+@[reducible] def exact_quotient_t2Space :
+    T2Space (CompactSurfaceBoundaryGluingQuotient identification) :=
+  inferInstance
+
+/-- Distinct quotient points have explicit disjoint open neighborhoods. -/
+theorem exact_disjoint_open_neighborhoods
+    {first second : CompactSurfaceBoundaryGluingQuotient identification}
+    (distinct : first ≠ second) :
+    ∃ firstOpen secondOpen : Set (CompactSurfaceBoundaryGluingQuotient identification),
+      IsOpen firstOpen ∧ IsOpen secondOpen ∧ first ∈ firstOpen ∧ second ∈ secondOpen ∧
+        Disjoint firstOpen secondOpen :=
+  CompactSurfaceBoundaryGluingQuotient.exists_disjoint_open_neighborhoods
+    identification first second distinct
+
 /-- Positive-arity gluing joins the two connected side images, deriving connectedness rather than
 leaving it to the later smooth-descent record. -/
 @[reducible] def exact_quotient_connectedSpace :

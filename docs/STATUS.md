@@ -4676,12 +4676,15 @@ injectivity upgrade both side maps to genuine closed topological embeddings. Eac
 the primitive relation, and adding the diagonal and reversed relation proves the full generated
 equivalence relation closed. Intersecting that relation with a closed subset and projecting the
 resulting compact set proves every exact saturation closed; the quotient projection consequently
-derives a closed map without assuming a generally invalid product-quotient theorem. Compactness is
-derived from the compact disjoint union and connectedness
+derives a closed map without assuming a generally invalid product-quotient theorem. Compact classes
+of distinct quotient points are then separated by a generalized tube argument and saturated through
+the closed projection, deriving explicit disjoint open neighborhoods and a genuine `T2Space`.
+Compactness is derived from the compact disjoint union and connectedness
 derived from the two connected ranges meeting at a positive seam, exact paired-boundary equality,
 and a universal lift for sidewise
 functions agreeing on every generator. Primitive same-left/right relations, extra generated chains, and side collapse are hostilely
-absent. No Hausdorff theorem, descended smooth manifold/orientation, or sewn area measure is constructed.
+absent. Hausdorffness, compactness, connectedness, and closed side embeddings are now derived; no descended
+smooth manifold/orientation or sewn area measure is constructed.
 `CompactSurfaceBoundaryGluingSmoothDescentData` now exposes the exact uninhabited obligation on the
 same quotient topology: an exact two-dimensional compact oriented measured surface nucleus, genuine
 smooth embeddings of both sides, pullbacks equal to explicit strictly positive multiples of both
@@ -4756,7 +4759,7 @@ base across independent conjugators. The enlarged genuine disintegration conditi
 both full block tuples, reconstructs the exact same whole law through the exact same restriction,
 and factors through side kernels whose index omits the other side's entire tuple. Its inverse-boundary all-value product law
 derives. Inhabiting the smooth/oriented/measured descent contract, proving chart-independence of the outward
-predicate, and deriving its Hausdorff/topological prerequisites remain open.
+predicate, and deriving second countability remain open.
 
 The first Driver Definition 8.1 lattice-approximation component is now exact:
 `EpsilonSquareLatticePathCertificate` fixes `ε > 0`, a continuous literal `ℝ²` curve, and a finite
