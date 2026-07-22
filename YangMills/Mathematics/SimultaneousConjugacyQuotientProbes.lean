@@ -67,6 +67,15 @@ theorem exact_finite_quotient_secondCountable
     SecondCountableTopology (SimultaneousConjugacyQuotient Index G) :=
   inferInstance
 
+/-- Compact Hausdorff second-countable finite quotients are Polish in their genuine quotient
+topology. -/
+theorem exact_finite_quotient_polish
+    {Index : Type uIndex} {G : Type uG} [Fintype Index] [Group G]
+    [TopologicalSpace G] [IsTopologicalGroup G] [CompactSpace G] [T2Space G]
+    [SecondCountableTopology G] :
+    PolishSpace (SimultaneousConjugacyQuotient Index G) :=
+  inferInstance
+
 /-- Under compact-Polish source hypotheses, the exact final measurable quotient equals the Borel
 space of the same genuine quotient topology. -/
 theorem exact_finite_quotient_measurable_eq_borel
@@ -76,6 +85,15 @@ theorem exact_finite_quotient_measurable_eq_borel
     (inferInstance : MeasurableSpace (SimultaneousConjugacyQuotient Index G)) =
       borel (SimultaneousConjugacyQuotient Index G) :=
   simultaneousConjugacyQuotient_measurableSpace_eq_borel
+
+/-- The same quotient is a genuine standard Borel space, so regular conditional-kernel existence
+APIs can use it without an unrelated measurable presentation. -/
+theorem exact_finite_quotient_standardBorel
+    {Index : Type uIndex} {G : Type uG} [Fintype Index] [Group G]
+    [TopologicalSpace G] [IsTopologicalGroup G] [CompactSpace G] [PolishSpace G]
+    [MeasurableSpace G] [BorelSpace G] :
+    StandardBorelSpace (SimultaneousConjugacyQuotient Index G) :=
+  inferInstance
 
 /-- The quotient projection is measurable for its exact final measurable space. -/
 theorem exact_projection_measurable

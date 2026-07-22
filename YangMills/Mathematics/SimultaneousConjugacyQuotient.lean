@@ -10,6 +10,8 @@ import Mathlib.Topology.Constructions
 import Mathlib.Topology.Algebra.ProperAction.Basic
 import Mathlib.Topology.Algebra.ConstMulAction
 import Mathlib.MeasureTheory.Constructions.Polish.Basic
+import Mathlib.Topology.Metrizable.Urysohn
+import Mathlib.Topology.Metrizable.Uniformity
 
 /-!
 # Simultaneous conjugacy quotients
@@ -181,6 +183,16 @@ noncomputable instance simultaneousConjugacyQuotientSecondCountableTopology
     fun_prop⟩
   exact ContinuousConstSMul.secondCountableTopology
 
+/-- Compact Hausdorff second-countable simultaneous quotients are Polish. Urysohn metrization gives
+an exact compatible metric, and compactness makes that metric complete. -/
+noncomputable instance simultaneousConjugacyQuotientPolishSpace
+    [Fintype Index] [IsTopologicalGroup G] [CompactSpace G] [T2Space G]
+    [SecondCountableTopology G] :
+    PolishSpace (SimultaneousConjugacyQuotient Index G) := by
+  letI : MetricSpace (SimultaneousConjugacyQuotient Index G) :=
+    TopologicalSpace.metrizableSpaceMetric (SimultaneousConjugacyQuotient Index G)
+  exact PolishSpace.mk
+
 end Topology
 
 section Measurable
@@ -219,7 +231,8 @@ theorem simultaneousConjugacyQuotient_measurableSpace_eq_borel :
     simultaneousConjugacyClass_surjective
 
 /-- The exact final measurable space is therefore packaged as the Borel space of the quotient
- topology under the same compact-Polish hypotheses. -/
+topology under the same compact-Polish hypotheses. Together with the derived quotient Polish
+instance, this also yields Mathlib's `StandardBorelSpace` automatically. -/
 noncomputable instance simultaneousConjugacyQuotientBorelSpace :
     BorelSpace (SimultaneousConjugacyQuotient Index G) where
   measurable_eq := simultaneousConjugacyQuotient_measurableSpace_eq_borel

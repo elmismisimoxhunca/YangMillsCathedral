@@ -4656,7 +4656,9 @@ literally Mathlib's orbit relation for the genuine left diagonal-conjugation act
 the acting group makes that continuous action proper, deriving Hausdorffness of every finite-family
 quotient; open orbit projection retains second countability. Under compact-Polish group and Borel
 hypotheses, the final measurable quotient is proved exactly equal to the Borel space of the same
-quotient topology. A hostile
+quotient topology. Urysohn metrization of the compact Hausdorff second-countable quotient and compact
+metric completeness derive a compatible `PolishSpace`; the Borel equality then supplies the exact
+`StandardBorelSpace` needed by Mathlib's regular conditional-kernel APIs. A hostile
 parameterized theorem rejects coordinatewise-conjugate families whenever no common conjugator
 exists; the empty-index quotient is explicitly subsingleton, so source-facing observation families
 must retain nonemptiness where needed. Lévy §2.10 is now visually adjudicated at PDF pp. 62–63 /
@@ -4667,9 +4669,9 @@ fixed-base loop carrier. Every resulting finite joint holonomy class is measurab
 that field below any ambient sample field, and exact ambient equality requires the converse coverage
 inclusion. Sample-dependent common conjugation at that fixed base leaves every full family observation
 unchanged; no theorem applies one conjugator across mixed-basepoint groups.
-A quotient `PolishSpace` or otherwise compatible `StandardBorelSpace` instance remains open; the
-current disintegration interface therefore still accepts its exact kernels rather than claiming
-generic conditional-kernel existence on this quotient.
+Generic regular conditional kernels now exist on these finite quotients under the displayed compact-
+Polish hypotheses, but the source-facing all-boundary-value fiber/product version remains stronger
+than an almost-everywhere selected generic kernel and therefore remains explicit acceptance data.
 
 `BoundaryConditionedProductDisintegrationData` now packages reusable genuine conditional semantics:
 Mathlib's `Measure.IsCondKernel` disintegrates the exact joint boundary/whole pushforward; the Markov
@@ -4678,7 +4680,7 @@ singletons); boundary reversal is measurable and involutive;
 and every boundary value has an exact restriction pushforward equal to the left law times the right
 law at the reversed value. Bind reconstruction, whole-law normalization/nonzeroness, and both
 conditional marginals are derived. This deliberately distinguishes generic a.e. regular conditional
-probability from the stronger all-value source-facing version. Compact-surface geometry, quotient Polish/standard-Borel infrastructure, and the Lévy-specific
+probability from the stronger all-value source-facing version. Compact-surface geometry, and the Lévy-specific
 conditional-independence sewing record remain unconstructed.
 
 The first Driver Definition 8.1 lattice-approximation component is now exact:
