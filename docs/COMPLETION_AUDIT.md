@@ -1,7 +1,7 @@
 # Completion audit
 
 **Audit kind:** living prompt-to-artifact checklist  
-**Last fully validated implementation commit:** `46b9b0e` (`cathedral`)
+**Last fully validated implementation commit:** `d5d0b7c` (`cathedral`)
 
 **Working tree immediately after that commit:** clean
 
@@ -75,7 +75,7 @@ Criteria 15–18 are currently decisive failures; several earlier criteria are a
 | Euclidean Schwinger/OS surface | `YangMills/Euclidean/*`, including exact ordered source, finite-stage and locally convex direct-sum topologies, `(E0′)` growth, `(E1)`–`(E4)` | Euclidean hostile probes imported by `YangMills.lean` | Partial | Schwartz/half-line completeness, actual completed projective tensor powers, density/completion comparisons, and OS-I nuclearity remain open |
 | Correcting OS-II priority | Pinned OS-I/OS-II artifacts and `SOURCE.md`; `OSIILinearGrowth.lean`; corrected reconstruction modules | `verify_sources.py`; source-map correction rows; reconstruction probes | Implemented at current carrier-exact requirement level | Full constructive reconstruction theorem is intentionally absent; completed tensor/nuclearity prerequisites remain open |
 | Minkowski/Wightman surface | Poincaré, vacuum, common domain, field, covariance, locality, cyclicity, correlator, tube, and spectrum modules | Corresponding probes and source rows; supplied Hall, Bargmann, Ambrose and Hall–Wightman artifacts now retained | Partial | Source acquisition is no longer the blocker; concrete inhomogeneous `SL(2,ℂ)`, construction of the affine target law, derivation of the extended-tube theorem, and a spinorial graded-locality surface remain open |
-| Exact topological double cover and sign kernel | `PoincareTopologicalCover.lean`, `PoincareTopologicalDoubleCover.lean`, `PoincareComplexSignKernel.lean` | Cover/sign probes; derived two-sheet and central-kernel theorems | Implemented as consequences of uninhabited cover requirements | No matrix `SL(2,ℂ)` realization or matrix-sign identification |
+| Exact topological double cover and sign kernel | `PoincareTopologicalCover.lean`, `PoincareTopologicalDoubleCover.lean`, `PoincareComplexSignKernel.lean`, `PoincareComplexSignSL2.lean` | Cover/sign probes; derived two-sheet and central-kernel theorems; concrete injective central `±I` embedding into homogeneous matrix `SL(2,ℂ)` | Partial concrete realization over uninhabited cover requirements | No homogeneous Lorentz projection, accepted-kernel-to-matrix-image identification, topology/Lie structure, or inhomogeneous cover construction |
 | Physical translation/PVM/mass gap chain | `PoincareCoverRepresentation.lean`, `JointTranslationSpectrum.lean`, `PhysicalMassGapSupremum.lean` | Probes reject unrelated translations, vacuum-only spectra, nonpositive/infinite-gap surrogates | Implemented as uninhabited requirements/derived semantics | No representation, PVM, threshold, theory, or mass-gap inhabitant is constructed |
 | Stress/PVM/Ward coherence | `LocalStressEnergyTensor.lean`, `StressEnergyTrace.lean`, `StressTensorTraceAnomaly*.lean`, `StressEnergyTranslationWard.lean`; 3D/4D core fields | Same-family, same-unitary, same-PVM, nonzero-generator, exact trace-sign, normalization, physical-selection, and anti-collapse probes | Implemented at current physical-reduction strength | The CDJ physical/on-shell/nonzero-momentum reduction is explicit; the unrestricted mixing family is not collapsed to `F²`. A mixing-complete BRST/EOM/contact implementation and construction remain open |
 | Local-observable covariance coverage | `CovariantLocalObservableFamily.lean`, `FiniteCovariantObservableMultiplet.lean`, `FiniteCovariantObservableMultipletAdjoint.lean`, `LocalObservableCovarianceCoverage.lean` | Scalar/stress disjointness; finite representation identity/composition/continuity; residual component exclusions; exhaustive core classification; in-cover adjoint partners with conjugate mixing | Implemented for the bosonic observable family | Spinorial graded locality remains open |
@@ -88,12 +88,12 @@ Criteria 15–18 are currently decisive failures; several earlier criteria are a
 | Dimension 4 contract | `FourDimensionalContinuumCoreAcceptance.lean`; `FourDimensionalCurrentStrengthUniversalAcceptance.lean` | Extensive core probes, exact endpoint/same-chain checks, and preliminary outer quantifier specialization over every caller-supplied exact compact-simple certificate | Partial | Both artifacts are explicitly named `CurrentStrength`; the universal wrapper correctly existentially packages construction-specific carriers but is not the final Clay contract and still carries the open debts listed below |
 | Lower-dimensional separation | `FourDimensionalContractSeparation.lean`; current-strength universal probes | Index and finite-rank separation plus rejection of lower-dimensional carrier substitution into the preliminary witness base | Partial | Final witness-level separation must be repeated against the future source-complete proposition |
 | Final Clay proposition | `FourDimensionalCurrentStrengthUniversalAcceptance.lean` is an explicitly preliminary universal target; no source-complete final declaration exists | Quantifier-order, exact-gauge-index, same-spectrum-gap, physical-nontriviality, conditional headline-projection, and lower-carrier probes | Open | The preliminary target must be upgraded only after the documented OS, Poincare, observable/OPE/mixing, and remaining source-strength debts close; it intentionally has no inhabitance theorem |
-| Hostile probes | 400 `*Probes.lean` files for 807 Lean files at the validated snapshot; all imported major probes are rooted through `YangMills.lean` | Full build and namespace audit | Partial but broad | No verifier proves that every semantic requirement has an adequate mutation probe; some support modules have no same-name probe and require indirect-coverage review |
+| Hostile probes | 401 `*Probes.lean` files for 809 Lean files at the validated snapshot; all imported major probes are rooted through `YangMills.lean` | Full build and namespace audit | Partial but broad | No verifier proves that every semantic requirement has an adequate mutation probe; some support modules have no same-name probe and require indirect-coverage review |
 | Reusable mathematics rather than hidden assumptions | `YangMills/Mathematics/*` packages graded wedges, exterior-calculus, Schwartz, tensor-candidate, basis, and coordinate infrastructure; architecture/source map distinguish definitions, requirements, bridges, and debt | Kernel audit plus manual inspection of Bianchi and completed-tensor interfaces | Partial | Chart naturality, completeness, completed projective tensors, and nuclearity are still explicit hypotheses/debt; final review must ensure none is disguised as an arbitrary disconnected proposition |
-| No `sorry` or project axioms | `scripts/audit_lean.py`; `YangMills/Audit.lean`; root import graph | Source audit passed 807 Lean files; kernel audit passed 11,647 declarations | Implemented at baseline | Must rerun at final commit; result covers imported `YangMills` declarations, not physical adequacy |
+| No `sorry` or project axioms | `scripts/audit_lean.py`; `YangMills/Audit.lean`; root import graph | Source audit passed 809 Lean files; kernel audit passed 11,664 declarations | Implemented at baseline | Must rerun at final commit; result covers imported `YangMills` declarations, not physical adequacy |
 | Declaration-level provenance | `docs/SOURCE_MAP.md`, `docs/PROVENANCE.md`, `docs/SUPPLIED_SOURCE_INGESTION_AUDIT.md`, and 39 manifests | Source verifier, 33/33 supplied-PDF hash coverage, 31/31 reproducible native extractions, Mathpix selftest/adjudication, and manual source-map inspection | Partial | A manifest verifies bytes only; exact load-bearing locators, redistribution rights, completeness and interpretation still require final row-by-row audit |
 | Human-readable paper-grade documentation | README, architecture, provenance, roadmap, status, source map, bibliography, legacy ledger, this audit | Manual inspection | Partial | Documentation contains evolving current-strength prose and must be reconciled at final commit |
-| Small verified commits | Git history through `46b9b0e` | Recent commits have targeted/full builds and audits recorded in status | Implemented locally | Publication requirement remains blocked |
+| Small verified commits | Git history through `d5d0b7c` | Recent commits have targeted/full builds and audits recorded in status | Implemented locally | Publication requirement remains blocked |
 | Push/PR state | Branch `cathedral`; `git remote -v` produced no entries | Direct Git inspection | Blocked / unverified | No designated writable remote exists in this checkout, so no push or PR is evidenced locally; global publication absence is not inferred |
 
 ## 3. Dimension matrix
@@ -127,17 +127,17 @@ not yet prove witness-level noninhabitation of the future source-complete final 
 
 ## 5. Verification gates and their limits
 
-Evidence inspected at validated implementation commit `46b9b0e`:
+Evidence inspected at validated implementation commit `d5d0b7c`:
 
 | Command or gate | Baseline result | What it verifies | What it does not verify |
 |---|---:|---|---|
-| `lake build YangMills` | PASS, 4,070 jobs | Elaboration, compilation, all root imports, and execution of the root audit command | Source fidelity, completeness, consistency/inhabitation, or the final objective |
-| Kernel namespace audit in `YangMills.lean` | PASS, 11,647 declarations | No transitive unexpected axioms/`sorryAx` in imported `YangMills` declarations under the audit policy | Unimported files, semantic adequacy, or literature interpretation |
+| `lake build YangMills` | PASS, 4,072 jobs | Elaboration, compilation, all root imports, and execution of the root audit command | Source fidelity, completeness, consistency/inhabitation, or the final objective |
+| Kernel namespace audit in `YangMills.lean` | PASS, 11,664 declarations | No transitive unexpected axioms/`sorryAx` in imported `YangMills` declarations under the audit policy | Unimported files, semantic adequacy, or literature interpretation |
 | `python3 scripts/audit_lean.py` | PASS, 759 Lean files | Conservative source scan and confirmation that semantic audit is rooted | Mathematical correctness or source completeness |
-| `python3 scripts/verify_sources.py` at `46b9b0e` | PASS, 39 manifests | Retained native artifacts, all 31 reproducible native extractions, and the two recursive Mathpix/adjudication artifact trees match their manifests | This does not establish authority, interpretation, redistribution safety, or declaration sufficiency |
+| `python3 scripts/verify_sources.py` at `d5d0b7c` | PASS, 39 manifests | Retained native artifacts, all 31 reproducible native extractions, and the two recursive Mathpix/adjudication artifact trees match their manifests | This does not establish authority, interpretation, redistribution safety, or declaration sufficiency |
 | `python3 scripts/verify_audit_bibliography.py` | PASS, 36 DOI records | Offline DOI metadata snapshot consistency | Canonical source status or declaration-level use |
 | `git diff --check` | PASS | Whitespace/conflict-marker hygiene in tracked diffs | Build correctness or semantic coverage |
-| `git status --short` | Empty immediately after `46b9b0e` | The inspected documented state through that follow-up commit had no pending changes | Later implementation work or remote publication |
+| `git status --short` | Empty immediately after `d5d0b7c` | The inspected documented state through that follow-up commit had no pending changes | Later implementation work or remote publication |
 | `git remote -v` | Empty | There is no configured remote in this checkout | Whether another checkout or hosting service contains a push/PR |
 
 A final audit must rerun every gate after the final proposition and all documentation changes. The
@@ -153,9 +153,10 @@ numbers above are historical evidence for one inspected baseline only.
    exterior certificate, and intrinsic descended adjoint-bundle Bianchi zero are derived rather than supplied.
 3. **OS functional analysis:** Schwartz and half-line quotient completeness, completed projective
    tensor carriers/powers, completion comparisons, and nuclearity remain open.
-4. **Poincaré construction:** the Hall/Bargmann/Hall–Wightman source chain is now retained, but the
-   affine target group law is still supplied acceptance data; concrete inhomogeneous `SL(2,ℂ)` and
-   matrix-kernel identification are absent.
+4. **Poincaré construction:** the Hall/Bargmann/Hall–Wightman source chain is retained, and the
+   homogeneous matrix `SL(2,ℂ)` carrier now contains the literal signs as injective central `±I`.
+   The homogeneous Lorentz projection, identification with the accepted abstract kernel,
+   inhomogeneous cover, and affine target group law remain absent or supplied acceptance data.
 5. **Observable completeness:** the composite-operator/BRST source chain is now retained, but
    independent and mixed curvature contractions, covariant derivatives, typed BRST/EOM sectors,
    renormalized mixing, and spinorial graded locality are absent.
