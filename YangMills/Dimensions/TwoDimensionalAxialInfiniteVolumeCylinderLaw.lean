@@ -108,7 +108,6 @@ structure TwoDimensionalAxialInfiniteVolumeCylinderLawData
     (action : TwoDimensionalLatticeActionData G)
     (sequence : TwoDimensionalFiniteAxialProjectiveSequenceData (spacing := spacing) action) where
   probabilityMeasure : Measure (EpsilonSquareLatticeAxialConfiguration G spacing)
-  probability_normalized : probabilityMeasure univ = 1
   /-- Exact restriction to every finite represented coordinate family. -/
   finiteCylinderLaw : ∀ stage,
     Measure.map
@@ -122,6 +121,31 @@ namespace TwoDimensionalAxialInfiniteVolumeCylinderLawData
 variable
     {action : TwoDimensionalLatticeActionData G}
     {sequence : TwoDimensionalFiniteAxialProjectiveSequenceData (spacing := spacing) action}
+
+omit [MeasurableMul₂ G] in
+/-- Any one exact finite-cylinder law derives normalization of the infinite axial carrier; it is not
+an independent acceptance field. -/
+theorem probability_normalized
+    (law : TwoDimensionalAxialInfiniteVolumeCylinderLawData (spacing := spacing) action sequence) :
+    law.probabilityMeasure univ = 1 := by
+  letI := (sequence.presentation 0).coordinateFintype
+  let restriction : EpsilonSquareLatticeAxialConfiguration G spacing →
+      ((sequence.presentation 0).Coordinate → G) := fun configuration coordinate =>
+    configuration ((sequence.presentation 0).coordinateBond coordinate)
+  have restriction_measurable : Measurable restriction := by
+    apply measurable_pi_iff.mpr
+    intro coordinate
+    exact EpsilonSquareLatticeAxialConfiguration.measurable_apply
+      ((sequence.presentation 0).coordinateBond coordinate)
+  calc
+    law.probabilityMeasure univ = Measure.map restriction law.probabilityMeasure univ := by
+      rw [Measure.map_apply restriction_measurable MeasurableSet.univ, preimage_univ]
+    _ = twoDimensionalFiniteAxialMeasure action (sequence.presentation 0) univ := by
+      simpa [restriction] using congrArg
+        (fun measure : Measure ((sequence.presentation 0).Coordinate → G) => measure univ)
+        (law.finiteCylinderLaw 0)
+    _ = 1 := twoDimensionalFiniteAxialMeasure.apply_univ action (sequence.presentation 0)
+      (sequence.normalizer 0)
 
 omit [MeasurableMul₂ G] in
 /-- The accepted infinite-volume probability measure cannot be zero. -/

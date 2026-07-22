@@ -755,8 +755,9 @@ partition function. The same measurable extension now pushes each normalized fin
 nonzero measure on the exact infinite axial carrier, with exact represented-bond coordinate
 marginals. An uninhabited projective sequence contract now requires nested coordinate/plaquette inclusions,
 exact finite-measure pushforward, exhaustion of every off-tree bond and elementary plaquette, and a
-probability measure on the infinite axial carrier with every finite-coordinate cylinder equal to the
-corresponding normalized finite law. Exact positive-radius centered square-box geometry is now separate: lower-left plaquette sites run
+measure on the infinite axial carrier with every finite-coordinate cylinder equal to the
+corresponding normalized finite law; any one such exact cylinder derives total mass one and
+nonzeroness. Exact positive-radius centered square-box geometry is now separate: lower-left plaquette sites run
 from `-n` through `n-1`, independent axial coordinates are right-directed horizontal bonds on rows
 `-n,…,-1,1,…,n`, radii give literal nested finite sets, and every non-tree box-plaquette boundary is
 covered in one coordinate orientation. `twoDimensionalSquareLatticeBoxPresentation` now adapts these exact finite sets to the generic
