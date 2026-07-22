@@ -22,6 +22,13 @@ must be visually checked and entered in `docs/SUPPLIED_SOURCE_INGESTION_AUDIT.md
 `docs/SOURCE_MAP.md` before supporting a canonical physical declaration. Hashes verify identity of
 the retained bytes, not interpretation.
 
+PDF p. 15 / printed p. 1 was independently inspected on 2026-07-22 for §1.1. It visibly fixes a
+surface throughout the monograph to mean a real differentiable two-dimensional manifold that is
+compact, connected, orientable, and possibly with boundary. Its designated Lebesguian measure must
+have a positive smooth density relative to Lebesgue measure in every chart. A nonempty boundary is a
+finite disjoint union of circles. Definition 1.1.1 then defines a closure by an embedding into a
+closed surface, with minimality characterized by a disk complement.
+
 PDF pp. 24–27 / printed pp. 10–13 were independently inspected on 2026-07-21 for §1.6,
 Theorem 1.6.1, Lemmas 1.6.2/1.6.3, and the beginning of the proof. The pages visibly define the
 fine-to-coarse configuration map by coarse-edge holonomy along fine paths, state its surjectivity and
