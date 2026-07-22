@@ -878,9 +878,11 @@ committed before higher layers depend on it.
     actual boundary component, while retaining closed surfaces.
   - [x] Add preferred-chart-certified two-sided outward directions and induced boundary orientation
     from the exact surface top form, with smooth/nonzero frame data and zero-vector hostile probes.
-  - [ ] Prove chart-independence of the outward predicate, add orientation-reversing boundary gluing,
-    and add the Lévy-specific conditional-independence sewing record without asserting that the two
-    side fields generate the whole.
+  - [x] Add positive-arity distinct-component boundary identifications by genuine circle
+    diffeomorphisms with exact derivative-level orientation reversal and hostile vacuity probes.
+  - [ ] Prove chart-independence of the outward predicate, construct the glued quotient surface and
+    its descended geometry, and add the Lévy-specific conditional-independence sewing record without
+    asserting that the two side fields generate the whole.
   - [ ] Resolve/formalize Theorem 8.10; inhabit/derive box projectivity and Theorem 7.2. Keep
     compact-surface gluing distinct from finite-cutoff, classical, and four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.

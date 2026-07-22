@@ -4661,7 +4661,13 @@ ambient fields along the exact parameterizations, genuine outward certificates, 
 the selected surface top form on `(outward, pushed tangent)`. Both ambient frame vectors derive
 nonzero, and a hostile theorem rejects the zero vector as outward. Pinned Mathlib still lacks a
 general installed boundary-submanifold instance; chart-independence of the preferred-chart outward
-predicate, closure data, and orientation-reversing boundary diffeomorphisms remain separate.
+predicate and closure data remain separate. `CompactSurfaceOrientationReversingBoundaryIdentificationData`
+now chooses an exact positive number of distinct boundary components on each of two oriented
+surfaces, equips every pair with a genuine smooth circle diffeomorphism, and requires its derivative
+to send the selected positive left tangent to a strictly negative multiple of the selected positive
+right tangent. Exact points on both actual component ranges and nonempty pair indices are derived;
+zero-pair, duplicate-component, and zero-speed surrogates are hostilely blocked. No quotient/glued
+surface, descended smooth structure, or sewn area measure is constructed.
 
 Lévy Chapter 5, Theorem 5.1.1, equation (5.1), and the opening nonabelian sewing discussion are now
 visually adjudicated against PDF pp. 89–94 / printed pp. 75–80. Reusable
@@ -4703,7 +4709,7 @@ singletons); boundary reversal is measurable and involutive;
 and every boundary value has an exact restriction pushforward equal to the left law times the right
 law at the reversed value. Bind reconstruction, whole-law normalization/nonzeroness, and both
 conditional marginals are derived. This deliberately distinguishes generic a.e. regular conditional
-probability from the stronger all-value source-facing version. Orientation-reversing gluing geometry and the Lévy-specific
+probability from the stronger all-value source-facing version. The glued quotient surface and the Lévy-specific
 conditional-independence sewing record remain unconstructed.
 
 The first Driver Definition 8.1 lattice-approximation component is now exact:
