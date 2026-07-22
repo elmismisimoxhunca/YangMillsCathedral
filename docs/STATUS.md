@@ -4696,8 +4696,9 @@ absent. Hausdorffness, second countability, Polish/standard-Borel structure, com
 connectedness, and closed side embeddings are now derived; no descended
 smooth manifold/orientation or sewn area measure is constructed.
 `CompactSurfaceBoundaryGluingSmoothDescentData` now exposes the exact uninhabited obligation on the
-same quotient topology: an exact two-dimensional compact oriented measured surface nucleus, genuine
-smooth embeddings of both sides, pullbacks equal to explicit strictly positive multiples of both
+same quotient topology: an exact two-dimensional compact oriented measured surface nucleus,
+differential immersions of both sides (combined with the already derived closed topological
+embeddings to derive genuine smooth embeddings), pullbacks equal to explicit strictly positive multiples of both
 side orientation representatives, null side boundaries, sum-pushforward area measure, exact retention of only unselected boundary images,
 and interior placement of every seam point. Hostile probes reject an unrelated glued measure and
 pin all these distinctions.

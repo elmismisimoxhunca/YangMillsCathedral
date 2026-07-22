@@ -53,7 +53,18 @@ theorem exact_glued_surface_nucleus
       0 < descent.gluedSurface.areaMeasure Set.univ :=
   ⟨descent.glued_model_finrank_two, descent.gluedSurface.areaMeasure_pos⟩
 
-/-- Both whole-side maps are genuine smooth embeddings into the same descended manifold. -/
+/-- Descent supplies only the differential immersion obligations; exact topological embeddings were
+already derived from the quotient construction. -/
+theorem exact_side_immersion_obligations
+    (descent : CompactSurfaceBoundaryGluingSmoothDescentData
+      (identification := identification) (IG := IG)) :
+    Manifold.IsImmersion IL IG ∞
+        (CompactSurfaceBoundaryGluingQuotient.leftInclusion identification) ∧
+      Manifold.IsImmersion IR IG ∞
+        (CompactSurfaceBoundaryGluingQuotient.rightInclusion identification) :=
+  ⟨descent.left_immersion, descent.right_immersion⟩
+
+/-- Both whole-side maps are derived genuine smooth embeddings into the same descended manifold. -/
 theorem exact_side_smooth_embeddings
     (descent : CompactSurfaceBoundaryGluingSmoothDescentData
       (identification := identification) (IG := IG)) :

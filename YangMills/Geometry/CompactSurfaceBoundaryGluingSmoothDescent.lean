@@ -76,10 +76,11 @@ structure CompactSurfaceBoundaryGluingSmoothDescentData where
   surface nucleus. -/
   gluedSurface : CompactOrientedMeasuredSurfaceData IG
     (GluedSurfaceCarrier (identification := identification))
-  /-- Both canonical full-side maps are genuine smooth embeddings into the same quotient carrier. -/
-  left_smoothEmbedding : Manifold.IsSmoothEmbedding IL IG ∞
+  /-- The only remaining differential obligation for each full-side map is immersion. Their exact
+  topological embedding property has already been derived from the quotient construction. -/
+  left_immersion : Manifold.IsImmersion IL IG ∞
     (CompactSurfaceBoundaryGluingQuotient.leftInclusion identification)
-  right_smoothEmbedding : Manifold.IsSmoothEmbedding IR IG ∞
+  right_immersion : Manifold.IsImmersion IR IG ∞
     (CompactSurfaceBoundaryGluingQuotient.rightInclusion identification)
   /-- Pullback of the glued orientation representative lies in exactly the same orientation class
   as each selected side form. Positive pointwise scales are retained because Lévy specifies
@@ -128,6 +129,27 @@ structure CompactSurfaceBoundaryGluingSmoothDescentData where
       IG.interior (GluedSurfaceCarrier (identification := identification))
 
 namespace CompactSurfaceBoundaryGluingSmoothDescentData
+
+/-- The left side map is a genuine smooth embedding: only immersion comes from descent data, while
+the exact topological embedding is derived from the quotient. -/
+theorem left_smoothEmbedding
+    (descent : CompactSurfaceBoundaryGluingSmoothDescentData
+      (identification := identification) (IG := IG)) :
+    Manifold.IsSmoothEmbedding IL IG ∞
+      (CompactSurfaceBoundaryGluingQuotient.leftInclusion identification) :=
+  ⟨descent.left_immersion,
+    (CompactSurfaceBoundaryGluingQuotient.leftInclusion_isClosedEmbedding
+      identification).isEmbedding⟩
+
+/-- The right side map is a genuine smooth embedding by the same differential/topological split. -/
+theorem right_smoothEmbedding
+    (descent : CompactSurfaceBoundaryGluingSmoothDescentData
+      (identification := identification) (IG := IG)) :
+    Manifold.IsSmoothEmbedding IR IG ∞
+      (CompactSurfaceBoundaryGluingQuotient.rightInclusion identification) :=
+  ⟨descent.right_immersion,
+    (CompactSurfaceBoundaryGluingQuotient.rightInclusion_isClosedEmbedding
+      identification).isEmbedding⟩
 
 /-- Exact dimension two is inherited from the glued compact-surface nucleus. -/
 theorem glued_model_finrank_two
