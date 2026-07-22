@@ -197,6 +197,37 @@ theorem jointlyMeasurableProcess_measurable
 
 omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
     [MeasurableMul₂ G] [MeasurableInv G] in
+/-- The jointly measurable modification still starts at the exact identity almost surely. -/
+theorem jointlyMeasurableProcess_zero
+    (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
+      inner law semigroup laplacian heat Ω) :
+    {samplePoint | brownian.jointlyMeasurableProcess 0 samplePoint = 1} ∈
+      ae brownian.probabilityMeasure := by
+  filter_upwards [brownian.jointlyMeasurableProcess_ae_eq, brownian.process_zero]
+    with samplePoint equality startsAtOne
+  rw [equality 0]
+  exact startsAtOne
+
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Every finite monotone family of consecutive modified right increments retains mutual
+independence. -/
+theorem jointlyMeasurableProcess_independent_increments
+    (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
+      inner law semigroup laplacian heat Ω)
+    (n : ℕ) (t : Fin (n + 1) → NNReal) (ht : Monotone t) :
+    iIndepFun
+      (fun (i : Fin n) samplePoint =>
+        (brownian.jointlyMeasurableProcess (t i.castSucc) samplePoint)⁻¹ *
+          brownian.jointlyMeasurableProcess (t i.succ) samplePoint)
+      brownian.probabilityMeasure := by
+  apply (brownian.independent_increments n t ht).congr
+  intro i
+  filter_upwards [brownian.jointlyMeasurableProcess_ae_eq] with samplePoint equality
+  rw [equality (t i.castSucc), equality (t i.succ)]
+
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Every fixed-time law of the jointly measurable modification equals the original fixed-time law. -/
 theorem jointlyMeasurableProcess_map_eq
     (brownian : TwoDimensionalSelectedLoopBrownianRealizationData

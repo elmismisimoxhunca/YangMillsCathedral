@@ -113,6 +113,23 @@ theorem joint_nonmeasurability_blocked
 
 omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
     [MeasurableMul₂ G] [MeasurableInv G] in
+/-- The modification preserves identity start and every finite monotone increment-independence law. -/
+theorem exact_modified_identity_and_independent_increments
+    (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
+      inner law semigroup laplacian heat Ω)
+    (n : ℕ) (t : Fin (n + 1) → NNReal) (ht : Monotone t) :
+    {samplePoint | brownian.jointlyMeasurableProcess 0 samplePoint = 1} ∈
+        ae brownian.probabilityMeasure ∧
+      iIndepFun
+        (fun (i : Fin n) samplePoint =>
+          (brownian.jointlyMeasurableProcess (t i.castSucc) samplePoint)⁻¹ *
+            brownian.jointlyMeasurableProcess (t i.succ) samplePoint)
+        brownian.probabilityMeasure :=
+  ⟨brownian.jointlyMeasurableProcess_zero,
+    brownian.jointlyMeasurableProcess_independent_increments n t ht⟩
+
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
 /-- The modification preserves every fixed-time law exactly. -/
 theorem exact_modified_fixed_time_law
     (brownian : TwoDimensionalSelectedLoopBrownianRealizationData

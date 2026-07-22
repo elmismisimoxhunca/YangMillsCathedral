@@ -713,8 +713,9 @@ committed before higher layers depend on it.
     independent stationary right increments having the unchanged density laws, derived one-time
     marginals, and exact selected-area equality with the sampled loop-holonomy law.
   - [x] Construct an everywhere-continuous jointly `NNReal × Ω` measurable modification by replacing
-    paths on a measurable null discontinuity hull; prove simultaneous all-time almost-sure equality
-    and preservation of every fixed-time and positive stationary-increment law.
+    paths on a measurable null discontinuity hull; prove simultaneous all-time almost-sure equality,
+    identity start, every finite monotone mutual increment-independence law, and preservation of
+    every fixed-time and positive stationary-increment law.
   - [x] Transport the exact invariant pairing pointwise by left Maurer–Cartan trivialization; prove
     its inverse, symmetry, strict positivity, exact left/right translation formulas, and
     bi-invariance with the required `Ad(h⁻¹)` convention.
