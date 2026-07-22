@@ -4841,7 +4841,17 @@ same raw coordinates, so every transformed plaquette value is proved pointwise e
 plaquette holonomy of the same box extension. Upper/lower chain splitting, rooted Haar preservation,
 finite products across horizontal columns, and literal reindexing then prove that the actual
 coordinate-to-plaquette holonomy transform sends normalized coordinate product Haar exactly to
-normalized plaquette product Haar; its recursive inverse preserves the reverse pair. `twoDimensionalSquareLatticeBoxPresentation` now uses the exact coordinate/plaquette subtypes,
+normalized plaquette product Haar; its recursive inverse preserves the reverse pair. Reusable
+`Mathematics.MeasurableEquiv.map_withDensity_comp` transports composed densities through exact
+measurable equivalences. The normalized Definition 7.1 action now defines a genuine one-plaquette
+probability measure; finite product-density induction factors every plaquette-indexed density law.
+The original box weight is exactly that product density after the same holonomy transform, deriving
+`twoDimensionalSquareLatticeBoxNormalizer_eq_one` and identifying the normalized box-law
+pushforward with the independent finite product of the unchanged one-plaquette action law. Hostile
+probes reject changed source densities, unrelated transported measures, changed normalizers,
+unrelated plaquette product laws, and disconnected replacements for the exact holonomy transform;
+an explicit failed consecutive pushforward still blocks projectivity, so factorization is not used
+as a proxy for the remaining commuting-square proof. `twoDimensionalSquareLatticeBoxPresentation` now uses the exact coordinate/plaquette subtypes,
 constructs a measurable extension taking represented bonds to arbitrary coordinates, reverse bonds
 to inverses, and all other bonds to the identity, and proves exact coordinate recovery, finite
 support, orientation disjointness, and boundary coverage. Horizontal values on arbitrary rows are
