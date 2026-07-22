@@ -5,6 +5,8 @@ Authors: Sebastian Rodrigo
 -/
 
 import Mathlib.MeasureTheory.Constructions.Pi
+import Mathlib.Topology.Compactness.Compact
+import Mathlib.Topology.Constructions
 
 /-!
 # Simultaneous conjugacy quotients
@@ -51,7 +53,7 @@ def simultaneousConjugacySetoid (Index : Type uIndex) (G : Type uG) [Group G] :
       simp [mul_assoc]
 
 /-- Exact quotient of an indexed family by one common diagonal conjugation. -/
-def SimultaneousConjugacyQuotient (Index : Type uIndex) (G : Type uG) [Group G] :
+@[reducible] def SimultaneousConjugacyQuotient (Index : Type uIndex) (G : Type uG) [Group G] :
     Type (max uIndex uG) :=
   Quotient (simultaneousConjugacySetoid Index G)
 
@@ -82,6 +84,30 @@ theorem simultaneousConjugacyClass_conjugate
       simultaneousConjugacyClass family := by
   apply Quotient.sound
   exact ⟨conjugator⁻¹, by simp [mul_assoc]⟩
+
+section Topology
+
+variable {Index : Type uIndex} {G : Type uG} [Group G] [TopologicalSpace G]
+
+/-- The exact simultaneous-conjugacy projection is continuous for the genuine quotient topology. -/
+theorem simultaneousConjugacyClass_continuous :
+    Continuous (simultaneousConjugacyClass :
+      (Index → G) → SimultaneousConjugacyQuotient Index G) := by
+  exact continuous_quotient_mk'
+
+/-- The projection onto the exact simultaneous quotient is a genuine topological quotient map. -/
+theorem simultaneousConjugacyClass_isQuotientMap :
+    Topology.IsQuotientMap (simultaneousConjugacyClass :
+      (Index → G) → SimultaneousConjugacyQuotient Index G) := by
+  exact isQuotientMap_quotient_mk'
+
+/-- A finite-family simultaneous quotient of a compact group is compact. -/
+theorem simultaneousConjugacyQuotient_isCompact_univ
+    [Fintype Index] [CompactSpace G] :
+    IsCompact (Set.univ : Set (SimultaneousConjugacyQuotient Index G)) :=
+  isCompact_univ
+
+end Topology
 
 section Measurable
 

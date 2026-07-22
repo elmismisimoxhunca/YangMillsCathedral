@@ -32,6 +32,27 @@ theorem exact_diagonal_invariance
       simultaneousConjugacyClass family :=
   simultaneousConjugacyClass_conjugate family conjugator
 
+/-- The quotient projection is continuous for the exact quotient topology. -/
+theorem exact_projection_continuous
+    {Index : Type uIndex} {G : Type uG} [Group G] [TopologicalSpace G] :
+    Continuous (simultaneousConjugacyClass :
+      (Index → G) → SimultaneousConjugacyQuotient Index G) :=
+  simultaneousConjugacyClass_continuous
+
+/-- The same projection is a genuine topological quotient map, not only a surjection. -/
+theorem exact_projection_isQuotientMap
+    {Index : Type uIndex} {G : Type uG} [Group G] [TopologicalSpace G] :
+    Topology.IsQuotientMap (simultaneousConjugacyClass :
+      (Index → G) → SimultaneousConjugacyQuotient Index G) :=
+  simultaneousConjugacyClass_isQuotientMap
+
+/-- Finite simultaneous quotients of compact groups retain compactness. -/
+theorem exact_finite_compact_quotient
+    {Index : Type uIndex} {G : Type uG} [Group G] [TopologicalSpace G]
+    [Fintype Index] [CompactSpace G] :
+    IsCompact (Set.univ : Set (SimultaneousConjugacyQuotient Index G)) :=
+  simultaneousConjugacyQuotient_isCompact_univ
+
 /-- The quotient projection is measurable for its exact final measurable space. -/
 theorem exact_projection_measurable
     {Index : Type uIndex} {G : Type uG} [Group G] [MeasurableSpace G] :
