@@ -59,6 +59,24 @@ theorem exact_finite_positive_nonzero :
     compactSurfaceBoundaryGluedAreaMeasure_pos,
     compactSurfaceBoundaryGluedAreaMeasure_ne_zero⟩
 
+/-- The exact glued seam is compact, measurable, and null under the canonical area candidate. -/
+theorem exact_compact_null_seam :
+    IsCompact (compactSurfaceBoundaryGluingSeam (identification := identification)) ∧
+      MeasurableSet (compactSurfaceBoundaryGluingSeam (identification := identification)) ∧
+      compactSurfaceBoundaryGluedAreaMeasure (identification := identification)
+        (compactSurfaceBoundaryGluingSeam (identification := identification)) = 0 :=
+  ⟨compactSurfaceBoundaryGluingSeam_isCompact,
+    compactSurfaceBoundaryGluingSeam_isCompact.isClosed.measurableSet,
+    compactSurfaceBoundaryGluedAreaMeasure_seam_null⟩
+
+/-- A claimed positive seam area contradicts the exact side-boundary preimage calculation. -/
+theorem positive_seam_area_blocked
+    (wrongPositive : 0 < compactSurfaceBoundaryGluedAreaMeasure
+      (identification := identification)
+      (compactSurfaceBoundaryGluingSeam (identification := identification))) : False := by
+  rw [compactSurfaceBoundaryGluedAreaMeasure_seam_null] at wrongPositive
+  exact (lt_irrefl 0 wrongPositive)
+
 /-- A zero candidate is hostilely rejected by the derived positive total area. -/
 theorem zero_glued_measure_blocked
     (claimed : compactSurfaceBoundaryGluedAreaMeasure (identification := identification) = 0) :

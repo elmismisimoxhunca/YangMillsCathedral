@@ -86,6 +86,70 @@ theorem compactSurfaceBoundaryGluedAreaMeasure_ne_zero :
   rw [zero] at positive
   simp at positive
 
+/-- Exact seam subset of the glued quotient, represented from the left selected boundary circles. -/
+def compactSurfaceBoundaryGluingSeam :
+    Set (CompactSurfaceBoundaryGluingQuotient identification) :=
+  ⋃ pair : Fin identification.pairCount,
+    Set.range (fun circlePoint =>
+      CompactSurfaceBoundaryGluingQuotient.leftInclusion identification
+        (identification.leftBoundaryPoint pair circlePoint))
+
+/-- The exact seam is compact and therefore Borel measurable. -/
+theorem compactSurfaceBoundaryGluingSeam_isCompact :
+    IsCompact (compactSurfaceBoundaryGluingSeam (identification := identification)) := by
+  apply isCompact_iUnion
+  intro pair
+  apply isCompact_range
+  exact (CompactSurfaceBoundaryGluingQuotient.leftInclusion_continuous identification).comp
+    (leftPresentation.parameterization_smoothEmbedding
+      (identification.leftComponent pair)).contMDiff.continuous
+
+/-- The exact seam has zero canonical glued area. Both pushforward terms vanish because their
+preimages lie in the already derived null side boundaries. -/
+theorem compactSurfaceBoundaryGluedAreaMeasure_seam_null :
+    compactSurfaceBoundaryGluedAreaMeasure (identification := identification)
+      (compactSurfaceBoundaryGluingSeam (identification := identification)) = 0 := by
+  let seam := compactSurfaceBoundaryGluingSeam (identification := identification)
+  have seamMeasurable : MeasurableSet seam :=
+    (compactSurfaceBoundaryGluingSeam_isCompact
+      (identification := identification)).isClosed.measurableSet
+  have leftPreimage :
+      (CompactSurfaceBoundaryGluingQuotient.leftInclusion identification) ⁻¹' seam ⊆
+        IL.boundary SL := by
+    intro point membership
+    rcases Set.mem_iUnion.mp membership with ⟨pair, pointMembership⟩
+    rcases pointMembership with ⟨circlePoint, equality⟩
+    have pointEquality : point = identification.leftBoundaryPoint pair circlePoint :=
+      (CompactSurfaceBoundaryGluingQuotient.leftInclusion_injective identification)
+        equality.symm
+    subst point
+    exact (leftPresentation.parameterization_mem_boundary_component
+      (identification.leftComponent pair) circlePoint).choose
+  have rightPreimage :
+      (CompactSurfaceBoundaryGluingQuotient.rightInclusion identification) ⁻¹' seam ⊆
+        IR.boundary SR := by
+    intro point membership
+    rcases Set.mem_iUnion.mp membership with ⟨pair, pointMembership⟩
+    rcases pointMembership with ⟨circlePoint, equality⟩
+    have crossing :=
+      (CompactSurfaceBoundaryGluingQuotient.leftInclusion_eq_rightInclusion_iff
+        (identification := identification)
+        (identification.leftBoundaryPoint pair circlePoint) point).mp equality
+    rcases crossing with ⟨otherPair, otherCirclePoint, _leftEquality, rightEquality⟩
+    rw [rightEquality]
+    exact (rightPresentation.parameterization_mem_boundary_component
+      (identification.rightComponent otherPair)
+      (identification.circleDiffeomorphism otherPair otherCirclePoint)).choose
+  rw [compactSurfaceBoundaryGluedAreaMeasure, Measure.add_apply,
+    Measure.map_apply_of_aemeasurable
+      ((CompactSurfaceBoundaryGluingQuotient.sideInclusions_measurable identification).1.aemeasurable)
+      seamMeasurable,
+    Measure.map_apply_of_aemeasurable
+      ((CompactSurfaceBoundaryGluingQuotient.sideInclusions_measurable identification).2.aemeasurable)
+      seamMeasurable]
+  rw [measure_mono_null leftPreimage leftSurface.boundary_null,
+    measure_mono_null rightPreimage rightSurface.boundary_null, add_zero]
+
 end
 
 end YangMills.Geometry
