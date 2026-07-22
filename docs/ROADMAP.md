@@ -728,6 +728,9 @@ committed before higher layers depend on it.
   convention, derive continuous compact-domain integrability, addition/scalar/zero laws, specialize
   to probability-normalized Haar, and identify matrix trace with the scalar inverse-character
   coefficient.
+- [x] Use coefficient orthogonality and the inverse-entry bridge to compute the transform of an
+  irreducible unitary matrix coefficient at itself as the forced transposed matrix unit
+  `n⁻¹Eᵦₐ`, and as zero at an explicitly inequivalent irreducible representation.
 - [x] Define the exact complex Haar convolution `(f⋆g)(z)=∫f(x)g(x⁻¹z)dμ_H` and prove by
   compact-product integrability, Fubini, and left-Haar substitution that the inverse-convention
   matrix Fourier transform satisfies `(f⋆g)̂(ρ)=ĝ(ρ)f̂(ρ)` in the forced reversed order.

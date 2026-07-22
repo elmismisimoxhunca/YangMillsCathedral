@@ -35,6 +35,21 @@ Printed pp. 81–82, Proposition 5.17; extracted text lines 4410–4444:
 - the notes state the result for compact matrix Lie groups and use it to prove complete
   reducibility.
 
+Printed pp. 86–87, §7 and Theorem 5.28; PDF artifact pages 92–93; extracted text lines
+4665–4703:
+
+- a morphism intertwines the two representation actions;
+- between irreducible real or complex representations, a morphism is zero or an isomorphism;
+- an endomorphism of an irreducible complex representation is a complex scalar multiple of the
+  identity;
+- two nonzero morphisms between irreducible complex representations are scalar multiples of one
+  another.
+
+The retained PDF artifact pages 92–93 were visually inspected for this theorem and its hypotheses.
+The later matrix-coefficient, character, and Fourier-extraction formulas are project-derived
+consequences of Haar averaging, this Schur theorem, trace normalization, and exact matrix unitarity;
+they are not quoted as separate Hall theorems.
+
 Printed p. 115, §7; extracted text lines 6087–6099:
 
 - an ideal `I` satisfies `[X,Y] ∈ I` for every `X ∈ g` and `Y ∈ I`;
@@ -56,7 +71,10 @@ connectedness. Hausdorff and second-countable assumptions make the manifold conv
 they are formalization choices rather than quotations from Hall. Likewise,
 `InvariantInnerProductData` asks for the positive adjoint-invariant pairing whose finite-dimensional
 compact-representation construction is exemplified by Hall Proposition 5.17; the project does not
-claim that the pinned notes prove that construction for its full non-matrix manifold API.
+claim that the pinned notes prove that construction for its full non-matrix manifold API. The
+analytic Haar-intertwiner layer uses Theorem 5.28 only after constructing the exact intertwiner;
+trace normalization, coefficient/character orthogonality, and the transposed Fourier-extraction
+formula are then derived in Lean rather than attributed verbatim to Hall.
 
 The Hall notes do not interpret the Clay phrase “compact simple gauge group” or decide connectedness
 and global form. Those decisions use the Clay source plus the separately pinned gauge-global-form

@@ -5078,9 +5078,13 @@ inequivalent irreducible unitary representations. A hostile probe rejects droppi
 representation-dimension factor. Finite diagonal summation through genuinely integrable coefficient
 families then proves every represented positive-dimensional irreducible unitary character has
 normalized Haar `L²` norm one and explicitly inequivalent irreducible characters have zero mixed
-pairing. A hostile probe rejects a nonzero inequivalent character pairing.
-Equivalent-but-differently-presented transport, Fourier inversion, Peter–Weyl density, and
-heat-kernel spectral expansion remain open.
+pairing. A hostile probe rejects a nonzero inequivalent character pairing. Combining these results
+with the exact inverse-entry Fourier convention now computes the representation-valued transform
+of `ρ(g)ₐᵦ` at `ρ` as the forced transposed matrix unit `n⁻¹Eᵦₐ`, and as zero at an explicitly
+inequivalent irreducible representation. A hostile probe shows that replacing `Eᵦₐ` by `Eₐᵦ`
+for distinct indices is contradictory. Equivalent-but-differently-presented transport, arbitrary
+finite coefficient subspaces, Fourier inversion, Peter–Weyl density, and heat-kernel spectral
+expansion remain open.
 
 The full two-dimensional literature chain is now an explicit validation target: a future final 2D
 acceptance proposition must join the Driver/Lévy/Sengupta finite, continuum, Brownian, compact-surface,
