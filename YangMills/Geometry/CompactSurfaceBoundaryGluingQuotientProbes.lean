@@ -72,6 +72,23 @@ leaving it to the later smooth-descent record. -/
     ConnectedSpace (CompactSurfaceBoundaryGluingQuotient identification) :=
   inferInstance
 
+/-- The generated relation is exactly equality or one designated matching edge in either direction;
+no longer chains create additional identifications. -/
+theorem exact_generated_relation (first second : SL ⊕ SR) :
+    Relation.EqvGen (compactSurfaceBoundaryGluingRelation identification) first second ↔
+      first = second ∨
+        compactSurfaceBoundaryGluingRelation identification first second ∨
+        compactSurfaceBoundaryGluingRelation identification second first :=
+  CompactSurfaceBoundaryGluingQuotient.eqvGen_iff_explicitGluingEquivalence
+    identification first second
+
+/-- Neither full side is collapsed by the quotient. -/
+theorem exact_side_injectivity :
+    Function.Injective (CompactSurfaceBoundaryGluingQuotient.leftInclusion identification) ∧
+      Function.Injective (CompactSurfaceBoundaryGluingQuotient.rightInclusion identification) :=
+  ⟨CompactSurfaceBoundaryGluingQuotient.leftInclusion_injective identification,
+    CompactSurfaceBoundaryGluingQuotient.rightInclusion_injective identification⟩
+
 /-- The two full-side ranges cover the exact quotient. -/
 theorem exact_side_range_cover :
     Set.range (CompactSurfaceBoundaryGluingQuotient.leftInclusion identification) ∪
