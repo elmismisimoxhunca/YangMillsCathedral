@@ -237,15 +237,24 @@ adjudication corrections.
    layer constructs the exact finite-word map/composition, requires literal coarse-path/fine-word
    equality and nonempty edge carriers, records weighted-measure pushforward and coherent observable
    pullback on the unchanged Driver density chain, and derives finite word-family equality in law.
-12. Witten's subdivision/sewing formulas are exact representation-theoretic identities, not by
+12. Lévy PDF pp. 89–94 / printed pp. 75–80 were visually adjudicated on 2026-07-22 for Chapter 5,
+   Theorem 5.1.1, equation (5.1), Propositions 5.1.2/5.1.3, and the start of §5.3. The pages visibly
+   require `p > 0` orientation-reversing boundary gluings, identify the two exact conditioned
+   restrictions, state conditional independence given common-boundary holonomy, and quantify the
+   inverse-boundary factorization over every boundary value and measurable pair of functions.
+   Printed pp. 79–80 visibly reject equality of the two side sigma fields with the full sewn field in
+   general nonabelian scope and explain the missing joint-conjugacy information. Canonical Lean
+   sewing declarations must therefore retain genuine conditional/disintegration semantics, the
+   inverse tuple, holonomy-generated fields, and no false sigma-field-generation equality.
+13. Witten's subdivision/sewing formulas are exact representation-theoretic identities, not by
    themselves a countably additive continuum-measure construction.
-12. Atiyah–Bott is classical gauge geometry, not a source for a quantum probability measure.
-13. Sengupta's orientation-reversing covariance changes to the specified pullback bundle class; it
+14. Atiyah–Bott is classical gauge geometry, not a source for a quantum probability measure.
+15. Sengupta's orientation-reversing covariance changes to the specified pullback bundle class; it
    must not be simplified to same-bundle invariance.
-14. Kluberg-Stern–Zuber's broadest operator-renormalization statements carry dimensional/twist or
+16. Kluberg-Stern–Zuber's broadest operator-renormalization statements carry dimensional/twist or
    conjectural qualifications; they are corroboration, not an unrestricted theorem.
-15. Hollands–Kopper's convergence theorem is not a Yang–Mills convergence theorem.
-16. `yang1954.pdf` begins with one page from a preceding article; the Yang–Mills article starts on
+17. Hollands–Kopper's convergence theorem is not a Yang–Mills convergence theorem.
+18. `yang1954.pdf` begins with one page from a preceding article; the Yang–Mills article starts on
    PDF p. 2.
 
 ## 4. Concrete progress unlocked by the bundle

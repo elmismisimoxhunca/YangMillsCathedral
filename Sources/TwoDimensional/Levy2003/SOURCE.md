@@ -28,7 +28,21 @@ fine-to-coarse configuration map by coarse-edge holonomy along fine paths, state
 exact measure pushforward, decompose refinements into vertex insertion and edge addition, and state
 strict composition `f₁₃ = f₁₂ ∘ f₂₃`. The proof visibly attributes composition to group
 associativity and subdivision invariance to Haar invariance and the heat-kernel convolution
-semigroup. The Lean layer constructs the word map and composition algebra, requires nonempty edge
+semigroup.
+
+PDF pp. 89–94 / printed pp. 75–80 were independently inspected on 2026-07-22 for Chapter 5,
+Theorem 5.1.1, equation (5.1), Propositions 5.1.2/5.1.3, the genus-two discussion, and the start of
+§5.3. The pages visibly require two oriented surfaces, `p > 0` selected boundary components, and
+orientation-reversing boundary diffeomorphisms. They state conditional independence of the two
+holonomy-generated sigma fields given the common-boundary holonomies, the all-boundary-value
+factorization with the second side evaluated at the inverse tuple, and persistence under additional
+loop conditioning. The proof identifies the exact conditioned restrictions and derives conditional
+independence from universal measurable-function factorization. Printed pp. 79–80 visibly warn that
+for nonabelian groups the two side sigma fields need not generate the full sewn sigma field; missing
+joint-conjugacy information remains. The natural weighted measures, rather than unweighted
+probability measures, satisfy the unconditioned sewing integral.
+
+The Lean refinement layer constructs the word map and composition algebra, requires nonempty edge
 carriers, endpoint coherence, literal equality of each coarse ambient path with its concatenated fine
 word, and surjectivity; ambient-holonomy coherence is derived. Exact weighted-measure pushforward,
 eligible-observable/ambient-observable coherence, and finite word-family equality in law are packaged
