@@ -4833,7 +4833,12 @@ formulas, not arbitrary finite-cardinality relabelings. Exact site bijections th
 actual right-directed coordinate and every actual plaquette with a unique horizontal/row pair;
 `boxCoordinateChainEquiv` and `boxPlaquetteChainEquiv` compose these into one common
 `horizontal × (upper ⊕ lower)` index while retaining literal bond sources and plaquette lower-left
-sites. `twoDimensionalSquareLatticeBoxPresentation` now uses the exact coordinate/plaquette subtypes,
+sites. `boxPlaquetteDifferenceForward` applies the rooted upper/lower transforms independently in
+each exact horizontal column and `boxPlaquetteDifferenceRecover` applies their recursive inverses;
+both inverse laws are proved on the actual coordinate/plaquette subtypes and packaged as a
+measurable equivalence. Axis horizontal values are exactly one and represented rows recover the
+same raw coordinates, so every transformed plaquette value is proved pointwise equal to the actual
+plaquette holonomy of the same box extension. `twoDimensionalSquareLatticeBoxPresentation` now uses the exact coordinate/plaquette subtypes,
 constructs a measurable extension taking represented bonds to arbitrary coordinates, reverse bonds
 to inverses, and all other bonds to the identity, and proves exact coordinate recovery, finite
 support, orientation disjointness, and boundary coverage. Horizontal values on arbitrary rows are
