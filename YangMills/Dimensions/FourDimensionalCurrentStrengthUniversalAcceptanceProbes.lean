@@ -114,6 +114,50 @@ theorem exact_witness_same_spectrum_gap
   letI : TopologicalSpace.SeparableSpace witness.H := witness.hSeparableSpace
   exact witness.core.physicalMassGap
 
+/-- The wrapper preserves the core's explicit nontrivial field and nonzero physical time-generator
+witnesses; `Nonempty` cannot be discharged by a trivial quantum chain. -/
+theorem exact_witness_physical_nontriviality
+    (witness : FourDimensionalCurrentStrengthTheoryWitness.{
+      uEG, uGauge, uEP, uHP, uP, uLift, uH, uLabel} EG GaugeGroup gauge) :
+    letI : IsTopologicalGroup GaugeGroup := witness.gaugeTopologicalGroup
+    letI : NormedAddCommGroup witness.EP := witness.epNormedAddCommGroup
+    letI : NormedSpace ℝ witness.EP := witness.epNormedSpace
+    letI : TopologicalSpace witness.HP := witness.hpTopologicalSpace
+    letI : TopologicalSpace witness.P := witness.pTopologicalSpace
+    letI : ChartedSpace witness.HP witness.P := witness.pChartedSpace
+    letI : IsManifold witness.IP ∞ witness.P := witness.pIsManifold
+    letI : Group witness.PoincareLiftGroup := witness.liftGroup
+    letI : TopologicalSpace witness.PoincareLiftGroup := witness.liftTopology
+    letI : IsTopologicalGroup witness.PoincareLiftGroup := witness.liftTopologicalGroup
+    letI : NormedAddCommGroup witness.H := witness.hNormedAddCommGroup
+    letI : InnerProductSpace ℂ witness.H := witness.hInnerProductSpace
+    letI : CompleteSpace witness.H := witness.hCompleteSpace
+    letI : TopologicalSpace.SeparableSpace witness.H := witness.hSeparableSpace
+    (∃ vector : witness.D.domain,
+      witness.core.stressTranslationWard.momentumGenerator
+        (Minkowski.stressTensorTimeIndex EuclideanDimension.four) vector ≠ 0) ∧
+    ∃ (test : Minkowski.ScalarMinkowskiSchwartzTestFunction EuclideanDimension.four)
+      (vector : witness.D.domain),
+      witness.fieldData.field test vector ≠ 0 ∧
+      witness.fieldData.field test vector ≠
+        witness.core.observableFamily.operator witness.core.observableFamily.unitLabel test vector := by
+  letI : IsTopologicalGroup GaugeGroup := witness.gaugeTopologicalGroup
+  letI : NormedAddCommGroup witness.EP := witness.epNormedAddCommGroup
+  letI : NormedSpace ℝ witness.EP := witness.epNormedSpace
+  letI : TopologicalSpace witness.HP := witness.hpTopologicalSpace
+  letI : TopologicalSpace witness.P := witness.pTopologicalSpace
+  letI : ChartedSpace witness.HP witness.P := witness.pChartedSpace
+  letI : IsManifold witness.IP ∞ witness.P := witness.pIsManifold
+  letI : Group witness.PoincareLiftGroup := witness.liftGroup
+  letI : TopologicalSpace witness.PoincareLiftGroup := witness.liftTopology
+  letI : IsTopologicalGroup witness.PoincareLiftGroup := witness.liftTopologicalGroup
+  letI : NormedAddCommGroup witness.H := witness.hNormedAddCommGroup
+  letI : InnerProductSpace ℂ witness.H := witness.hInnerProductSpace
+  letI : CompleteSpace witness.H := witness.hCompleteSpace
+  letI : TopologicalSpace.SeparableSpace witness.H := witness.hSeparableSpace
+  exact ⟨witness.core.timeTranslationGenerator_nontrivial,
+    witness.core.wightmanField_nontrivial⟩
+
 /-- Lower-dimensional coordinate carriers still cannot replace the witness's exact four-dimensional
 base. -/
 theorem lower_dimensional_carrier_blocked

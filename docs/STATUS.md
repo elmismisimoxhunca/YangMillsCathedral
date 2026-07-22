@@ -4123,7 +4123,9 @@ Not yet achieved:
 - A preliminary `FourDimensionalCurrentStrengthUniversalAcceptance` now has the correct outer
   quantifier over every caller-supplied exact compact-simple gauge certificate and existentially
   packages all construction-specific classical and quantum carriers into one same-core witness.
-  It is intentionally uninhabited and explicitly not final: the existing source-strength debts must
+  It is intentionally uninhabited and explicitly not final. Wrapper probes preserve the core's
+  nonzero Wightman-field witness and nonzero same-PVM physical time generator, so the packaged
+  `Nonempty` cannot be mistaken for a trivial quantum chain. Existing source-strength debts must
   close before a full Clay acceptance proposition can replace it.
 - No standalone Git remote is configured in this checkout. The tested candidate
   `git@github.com:elmismisimoxhunca/lean-yangmills-adaly.git` does not exist, and the available SSH
