@@ -75,6 +75,20 @@ theorem selectedRightBoundarySet_isCompact :
     (rightPresentation.parameterization_smoothEmbedding
       (identification.rightComponent pair)).contMDiff.continuous
 
+/-- Every selected left component lies in the intrinsic left manifold boundary. -/
+theorem selectedLeftBoundarySet_subset_boundary :
+    selectedLeftBoundarySet (identification := identification) ⊆ IL.boundary SL := by
+  intro point membership
+  rcases Set.mem_iUnion.mp membership with ⟨pair, componentMembership⟩
+  exact componentMembership.1
+
+/-- Every selected right component lies in the intrinsic right manifold boundary. -/
+theorem selectedRightBoundarySet_subset_boundary :
+    selectedRightBoundarySet (identification := identification) ⊆ IR.boundary SR := by
+  intro point membership
+  rcases Set.mem_iUnion.mp membership with ⟨pair, componentMembership⟩
+  exact componentMembership.1
+
 /-- Canonical area candidate on the exact glued quotient. -/
 def compactSurfaceBoundaryGluedAreaMeasure :
     Measure (CompactSurfaceBoundaryGluingQuotient identification) :=
@@ -134,6 +148,30 @@ theorem compactSurfaceBoundaryGluingSeam_isCompact :
   exact (CompactSurfaceBoundaryGluingQuotient.leftInclusion_continuous identification).comp
     (leftPresentation.parameterization_smoothEmbedding
       (identification.leftComponent pair)).contMDiff.continuous
+
+/-- The circle-range presentation of the seam is exactly the quotient image of the selected left
+boundary union. -/
+theorem compactSurfaceBoundaryGluingSeam_eq_left_image_selectedBoundary :
+    compactSurfaceBoundaryGluingSeam (identification := identification) =
+      CompactSurfaceBoundaryGluingQuotient.leftInclusion identification ''
+        selectedLeftBoundarySet (identification := identification) := by
+  ext quotientPoint
+  constructor
+  · intro membership
+    rcases Set.mem_iUnion.mp membership with ⟨pair, rangeMembership⟩
+    rcases rangeMembership with ⟨circlePoint, equality⟩
+    refine ⟨identification.leftBoundaryPoint pair circlePoint, ?_, equality⟩
+    apply Set.mem_iUnion.mpr
+    refine ⟨pair, ?_⟩
+    rw [← leftPresentation.parameterization_range]
+    exact ⟨circlePoint, rfl⟩
+  · rintro ⟨leftPoint, selectedMembership, rfl⟩
+    rcases Set.mem_iUnion.mp selectedMembership with ⟨pair, componentMembership⟩
+    rw [← leftPresentation.parameterization_range] at componentMembership
+    rcases componentMembership with ⟨circlePoint, equality⟩
+    apply Set.mem_iUnion.mpr
+    refine ⟨pair, ⟨circlePoint, ?_⟩⟩
+    exact congrArg (CompactSurfaceBoundaryGluingQuotient.leftInclusion identification) equality
 
 /-- The exact seam has zero canonical glued area. Both pushforward terms vanish because their
 preimages lie in the already derived null side boundaries. -/
@@ -325,6 +363,34 @@ theorem compactSurfaceBoundaryGluedAreaMeasure_remainingBoundary_null :
     exact measure_mono_null Set.sdiff_subset rightSurface.boundary_null
   simpa [compactSurfaceBoundaryGluingRemainingBoundary] using
     MeasureTheory.measure_union_null leftNull rightNull
+
+/-- The selected seam and the exact remaining-boundary candidate are disjoint before any
+manifold descent is supplied. -/
+theorem compactSurfaceBoundaryGluingSeam_disjoint_remainingBoundary :
+    Disjoint (compactSurfaceBoundaryGluingSeam (identification := identification))
+      (compactSurfaceBoundaryGluingRemainingBoundary (identification := identification)) := by
+  rw [compactSurfaceBoundaryGluingSeam_eq_left_image_selectedBoundary]
+  apply Set.disjoint_left.mpr
+  intro quotientPoint seamMembership remainingMembership
+  rcases seamMembership with ⟨selectedPoint, selectedMembership, rfl⟩
+  rw [compactSurfaceBoundaryGluingRemainingBoundary] at remainingMembership
+  rcases remainingMembership with leftRemaining | rightRemaining
+  · rcases leftRemaining with ⟨leftPoint, ⟨_boundaryMembership, unselected⟩, equality⟩
+    have pointEquality : leftPoint = selectedPoint :=
+      (CompactSurfaceBoundaryGluingQuotient.leftInclusion_injective identification) equality
+    apply unselected
+    rw [pointEquality]
+    exact selectedMembership
+  · rcases rightRemaining with ⟨rightPoint, ⟨_boundaryMembership, unselected⟩, equality⟩
+    have crossing :=
+      (CompactSurfaceBoundaryGluingQuotient.leftInclusion_eq_rightInclusion_iff
+        (identification := identification) selectedPoint rightPoint).mp equality.symm
+    rcases crossing with ⟨pair, circlePoint, _leftEquality, rightEquality⟩
+    apply unselected
+    apply Set.mem_iUnion.mpr
+    refine ⟨pair, ?_⟩
+    rw [← rightPresentation.parameterization_range]
+    exact ⟨identification.circleDiffeomorphism pair circlePoint, rightEquality.symm⟩
 
 /-- The entire left-side image has exactly the original left total area. -/
 theorem compactSurfaceBoundaryGluedAreaMeasure_leftImage :

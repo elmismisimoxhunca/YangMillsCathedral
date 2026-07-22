@@ -931,6 +931,8 @@ committed before higher layers depend on it.
   - [x] Construct compact selected-boundary unions and the exact Borel remaining-boundary quotient
     candidate; derive its canonical nullity and make smooth descent identify its manifold boundary
     with this named candidate.
+  - [x] Identify the circle-range seam exactly with the selected-left-boundary quotient image and
+    prove it disjoint from the remaining-boundary candidate before smooth descent.
   - [x] Add an uninhabited exact smooth/oriented/measured descent contract on the same quotient
     topology, including smooth side embeddings, positive-scale orientation-class pullbacks, derived
     null side boundaries, identification with the canonical glued area, exact remaining boundary,

@@ -148,29 +148,21 @@ theorem seam_mem_interior_of_boundary_eq
       IG.interior (GluedSurfaceCarrier (identification := identification)) := by
   rw [← IG.compl_boundary]
   intro boundaryMembership
-  rw [boundaryEq] at boundaryMembership
-  rcases boundaryMembership with leftImage | rightImage
-  · rcases leftImage with ⟨leftPoint, ⟨_leftBoundary, leftUnselected⟩, equality⟩
-    have pointEquality : leftPoint = identification.leftBoundaryPoint pair circlePoint :=
-      (CompactSurfaceBoundaryGluingQuotient.leftInclusion_injective identification) equality
-    apply leftUnselected
-    subst leftPoint
+  have seamMembership :
+      CompactSurfaceBoundaryGluingQuotient.leftInclusion identification
+          (identification.leftBoundaryPoint pair circlePoint) ∈
+        compactSurfaceBoundaryGluingSeam (identification := identification) := by
     apply Set.mem_iUnion.mpr
-    refine ⟨pair, ?_⟩
-    rw [← leftPresentation.parameterization_range]
-    exact ⟨circlePoint, rfl⟩
-  · rcases rightImage with ⟨rightPoint, ⟨_rightBoundary, rightUnselected⟩, equality⟩
-    have crossing :=
-      (CompactSurfaceBoundaryGluingQuotient.leftInclusion_eq_rightInclusion_iff
-        (identification := identification)
-        (identification.leftBoundaryPoint pair circlePoint) rightPoint).mp equality.symm
-    rcases crossing with ⟨otherPair, otherCirclePoint, _leftEquality, rightEquality⟩
-    apply rightUnselected
-    apply Set.mem_iUnion.mpr
-    refine ⟨otherPair, ?_⟩
-    rw [← rightPresentation.parameterization_range]
-    exact ⟨identification.circleDiffeomorphism otherPair otherCirclePoint,
-      rightEquality.symm⟩
+    exact ⟨pair, ⟨circlePoint, rfl⟩⟩
+  have remainingMembership :
+      CompactSurfaceBoundaryGluingQuotient.leftInclusion identification
+          (identification.leftBoundaryPoint pair circlePoint) ∈
+        compactSurfaceBoundaryGluingRemainingBoundary (identification := identification) := by
+    rw [compactSurfaceBoundaryGluingRemainingBoundary, ← boundaryEq]
+    exact boundaryMembership
+  exact Set.disjoint_left.mp
+    (compactSurfaceBoundaryGluingSeam_disjoint_remainingBoundary
+      (identification := identification)) seamMembership remainingMembership
 
 /-- Every selected seam point is interior, derived from the exact remaining-boundary equation rather
 than supplied as an independent descent field. -/

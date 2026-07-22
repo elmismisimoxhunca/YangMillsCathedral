@@ -65,6 +65,27 @@ theorem selected_boundary_unions_compact :
       IsCompact (selectedRightBoundarySet (identification := identification)) :=
   ⟨selectedLeftBoundarySet_isCompact, selectedRightBoundarySet_isCompact⟩
 
+/-- The selected-circle seam is exactly the image of the selected left boundary union and is
+disjoint from the exact remaining-boundary candidate. -/
+theorem exact_seam_selected_image_and_remaining_disjoint :
+    compactSurfaceBoundaryGluingSeam (identification := identification) =
+        CompactSurfaceBoundaryGluingQuotient.leftInclusion identification ''
+          selectedLeftBoundarySet (identification := identification) ∧
+      Disjoint (compactSurfaceBoundaryGluingSeam (identification := identification))
+        (compactSurfaceBoundaryGluingRemainingBoundary (identification := identification)) :=
+  ⟨compactSurfaceBoundaryGluingSeam_eq_left_image_selectedBoundary,
+    compactSurfaceBoundaryGluingSeam_disjoint_remainingBoundary⟩
+
+/-- Any alleged quotient point lying both on the selected seam and remaining boundary is rejected. -/
+theorem seam_remaining_boundary_overlap_blocked
+    {point : CompactSurfaceBoundaryGluingQuotient identification}
+    (seamMembership : point ∈ compactSurfaceBoundaryGluingSeam
+      (identification := identification))
+    (remainingMembership : point ∈ compactSurfaceBoundaryGluingRemainingBoundary
+      (identification := identification)) : False :=
+  Set.disjoint_left.mp compactSurfaceBoundaryGluingSeam_disjoint_remainingBoundary
+    seamMembership remainingMembership
+
 /-- The exact remaining-boundary candidate is measurable and canonically null before descent. -/
 theorem remaining_boundary_candidate_measurable_null :
     MeasurableSet (compactSurfaceBoundaryGluingRemainingBoundary

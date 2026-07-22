@@ -4747,7 +4747,8 @@ subset: its embedded image has precisely its original measure, while the opposit
 boundary-null. Whole-side total-area recovery is a direct specialization. The selected boundary unions are
 constructed independently and proved compact. Their exact unselected-boundary quotient image is a
 named Borel candidate, proved canonically null from measurable restriction and side-boundary
-nullity. Descent now identifies both its nucleus measure and manifold boundary with these named
+nullity. The circle-range seam is proved exactly equal to the quotient image of the selected left
+boundary union and disjoint from this remaining-boundary candidate before descent. Descent now identifies both its nucleus measure and manifold boundary with these named
 constructions; its boundary nullity is rederived through that exact chain rather than merely inherited
 from the generic compact-surface theorem. Same-side
 injectivity plus the new exact characterization that cross-side quotient equality occurs only at a
