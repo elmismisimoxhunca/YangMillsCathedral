@@ -711,8 +711,10 @@ committed before higher layers depend on it.
 - [x] Use algebraic closedness of `ℂ` and Mathlib's endomorphism Schur theorem to prove every
   irreducible self-average is a complex scalar multiple of the identity; name that scalar without
   guessing its value.
-- [ ] Compute the scalar by trace and conclude full Haar orthogonality of matrix coefficients with
-  exact dimension normalization.
+- [x] Prove normalized-Haar conjugation averaging preserves matrix trace; derive
+  `n·c_A=tr(A)` and, for `n>0`, the exact self-case Schur scalar `c_A=tr(A)/n`.
+- [ ] Add the unitary inverse/conjugate-entry bridge and conclude full Haar orthogonality of matrix
+  coefficients with this exact dimension normalization.
 - [x] Define coordinatewise representation-valued Fourier coefficients with exact inverse
   convention, derive continuous compact-domain integrability, addition/scalar/zero laws, specialize
   to probability-normalized Haar, and identify matrix trace with the scalar inverse-character

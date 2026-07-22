@@ -5064,8 +5064,11 @@ rectangular matrix to zero. A hostile probe rejects any claimed nonzero average 
 irreducible self-case is now also closed algebraically: because `ℂ` is algebraically closed,
 Mathlib's endomorphism Schur theorem proves every self-average is a complex scalar multiple of the
 identity. That scalar is named by choice, while hostile probes reject a nonscalar self-average and
-explicitly avoid assigning an unproved value. Computing it from trace and exact dimension
-normalization remains open. No full Haar orthogonality,
+initially avoid assigning an unproved value. The value is now derived in a separate layer:
+cyclicity of matrix trace and probability-Haar mass one prove that conjugation averaging preserves
+`tr(A)`, so the selected scalar obeys `n·c_A=tr(A)` and, when `n>0`, exactly
+`c_A=tr(A)/n`. A hostile probe rejects changing this scalar normalization. The unitary
+inverse/conjugate-entry bridge remains open. No full Haar orthogonality,
 irreducibility theorem, Fourier inversion, Peter–Weyl density, or heat-kernel spectral expansion is
 claimed.
 
