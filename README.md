@@ -735,8 +735,13 @@ measurability are retained; the actual manifold boundary is closed and compact a
 component quotient is named. A separate uninhabited presentation makes that exact component carrier
 finite and realizes every component as the exact range of one smooth embedded Mathlib unit circle;
 all ranges cover precisely the boundary and distinct components are disjoint. Closed surfaces retain
-an empty component carrier. No installed boundary-submanifold structure, induced boundary
-orientation, closure, metric volume, or surface law is constructed. Lévy Chapter 5 sewing has now been visually adjudicated. Reusable simultaneous-conjugacy infrastructure
+an empty component carrier. A further uninhabited orientation layer requires smooth nonzero circle
+tangents and smooth ambient boundary vectors whose preferred extended-chart rays enter the exact
+model interior in the negative direction and exit its range in the positive direction. Positivity of
+the surface top form on `(outward, pushed tangent)` selects the induced boundary orientation and
+derives nonvanishing of both ambient frame vectors. No installed boundary-submanifold structure,
+chart-independence theorem for the outward predicate, closure, metric volume, or surface law is
+constructed. Lévy Chapter 5 sewing has now been visually adjudicated. Reusable simultaneous-conjugacy infrastructure
 uses one common diagonal conjugator for an entire indexed family and equips the exact quotient with
 its genuine quotient topology and final measurable space. The projection is continuous and a
 quotient map. Finite families over compact Hausdorff groups have compact Hausdorff quotient,
@@ -753,8 +758,8 @@ the full field; ambient equality requires a separate converse coverage inclusion
 genuine Mathlib conditional-kernel disintegration, zero mass outside every exact boundary fiber,
 involutive boundary
 reversal, and an all-boundary-value product restriction law; bind reconstruction, normalization, and
-both marginals derive. Induced boundary orientation and gluing geometry, source-
-specific conditional independence/sewing laws, and lattice-limit layers remain explicit debt. As the first Definition 8.1 approximation component,
+both marginals derive. Orientation-reversing gluing geometry, source-specific conditional
+independence/sewing laws, and lattice-limit layers remain explicit debt. As the first Definition 8.1 approximation component,
 `EpsilonSquareLatticePathCertificate` now gives exact positive-spacing paths in the directed
 nearest-neighbor graph on `εℤ²`: finite strictly ordered nodes from parameters `0` to `1`, horizontal
 or vertical integer unit steps, and exact affine realization of every bond. On the project's conservative embedded-arc strengthening (so Driver-permitted one-edge loop

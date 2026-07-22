@@ -4653,9 +4653,15 @@ Boundary components are the actual connected-component quotient of that set.
 presents each component as the exact range of one smooth embedded copy of Mathlib's genuine unit-
 circle manifold. Every actual boundary point is covered by its own component circle; the union is
 literally the manifold boundary, distinct component ranges are disjoint, and every parameterization
-is injective. Closed surfaces remain admissible and derive an empty component carrier. Pinned
-Mathlib still lacks a general installed boundary-submanifold instance, so induced boundary
-orientation, closure data, and orientation-reversing boundary diffeomorphisms remain separate.
+is injective. Closed surfaces remain admissible and derive an empty component carrier.
+`IsPreferredChartOutwardBoundaryVector` now requires a two-sided ray certificate in the exact
+model-with-corners range: negative time enters its interior and positive time exits the range.
+`CompactSurfaceBoundaryOrientationData` adds smooth nonzero componentwise circle tangents, smooth
+ambient fields along the exact parameterizations, genuine outward certificates, and positivity of
+the selected surface top form on `(outward, pushed tangent)`. Both ambient frame vectors derive
+nonzero, and a hostile theorem rejects the zero vector as outward. Pinned Mathlib still lacks a
+general installed boundary-submanifold instance; chart-independence of the preferred-chart outward
+predicate, closure data, and orientation-reversing boundary diffeomorphisms remain separate.
 
 Lévy Chapter 5, Theorem 5.1.1, equation (5.1), and the opening nonabelian sewing discussion are now
 visually adjudicated against PDF pp. 89–94 / printed pp. 75–80. Reusable
@@ -4697,7 +4703,7 @@ singletons); boundary reversal is measurable and involutive;
 and every boundary value has an exact restriction pushforward equal to the left law times the right
 law at the reversed value. Bind reconstruction, whole-law normalization/nonzeroness, and both
 conditional marginals are derived. This deliberately distinguishes generic a.e. regular conditional
-probability from the stronger all-value source-facing version. Induced boundary orientation and gluing geometry, and the Lévy-specific
+probability from the stronger all-value source-facing version. Orientation-reversing gluing geometry and the Lévy-specific
 conditional-independence sewing record remain unconstructed.
 
 The first Driver Definition 8.1 lattice-approximation component is now exact:

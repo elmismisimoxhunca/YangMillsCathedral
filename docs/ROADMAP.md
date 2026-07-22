@@ -876,8 +876,11 @@ committed before higher layers depend on it.
     boundary-component carrier.
   - [x] Add finite smooth embedded unit-circle presentations whose exact disjoint ranges cover every
     actual boundary component, while retaining closed surfaces.
-  - [ ] Add induced boundary orientation, orientation-reversing boundary gluing, and the Lévy-specific conditional-
-    independence sewing record without asserting that the two side fields generate the whole.
+  - [x] Add preferred-chart-certified two-sided outward directions and induced boundary orientation
+    from the exact surface top form, with smooth/nonzero frame data and zero-vector hostile probes.
+  - [ ] Prove chart-independence of the outward predicate, add orientation-reversing boundary gluing,
+    and add the Lévy-specific conditional-independence sewing record without asserting that the two
+    side fields generate the whole.
   - [ ] Resolve/formalize Theorem 8.10; inhabit/derive box projectivity and Theorem 7.2. Keep
     compact-surface gluing distinct from finite-cutoff, classical, and four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.
