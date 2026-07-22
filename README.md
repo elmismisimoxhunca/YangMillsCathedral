@@ -739,9 +739,10 @@ an empty component carrier. A further uninhabited orientation layer requires smo
 tangents and smooth ambient boundary vectors whose preferred extended-chart rays enter the exact
 model interior in the negative direction and exit its range in the positive direction. Positivity of
 the surface top form on `(outward, pushed tangent)` selects the induced boundary orientation and
-derives nonvanishing of both ambient frame vectors. No installed boundary-submanifold structure,
-chart-independence theorem for the outward predicate, closure, metric volume, descended smooth
-structure on the glued topological quotient, or surface law is constructed. Lévy Chapter 5 sewing has now been visually adjudicated. Reusable simultaneous-conjugacy infrastructure
+derives nonvanishing of both ambient frame vectors. For Euclidean-half-space surfaces, exact atlas
+transition derivatives and the direct tangent chain rule now prove that this outward predicate is
+independent of the eligible chart. No installed boundary-submanifold structure, closure, metric
+volume, descended smooth structure on the glued topological quotient, or surface law is constructed. Lévy Chapter 5 sewing has now been visually adjudicated. Reusable simultaneous-conjugacy infrastructure
 uses one common diagonal conjugator for an entire indexed family and equips the exact quotient with
 its genuine quotient topology and final measurable space. The projection is continuous and a
 quotient map. Finite families over compact Hausdorff groups have compact Hausdorff quotient,

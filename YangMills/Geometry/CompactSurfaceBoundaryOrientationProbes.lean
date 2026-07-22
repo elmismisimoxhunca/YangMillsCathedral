@@ -104,6 +104,42 @@ theorem nonnegative_halfSpace_coordinate_blocked
   rw [isPreferredChartOutwardBoundaryVector_euclideanHalfSpace_iff boundary]
   exact not_lt_of_ge nonnegative
 
+/-- Outwardness computed in any two eligible overlapping half-space atlas charts agrees at every
+actual manifold boundary point. -/
+theorem exact_atlas_chart_outward_invariance
+    {n : ℕ} [NeZero n]
+    {BoundarySurface : Type uSurface} [TopologicalSpace BoundarySurface]
+    [ChartedSpace (EuclideanHalfSpace n) BoundarySurface]
+    [IsManifold (𝓡∂ n) 1 BoundarySurface]
+    {e e' : OpenPartialHomeomorph BoundarySurface (EuclideanHalfSpace n)}
+    {point : BoundarySurface}
+    (he : e ∈ atlas (EuclideanHalfSpace n) BoundarySurface)
+    (he' : e' ∈ atlas (EuclideanHalfSpace n) BoundarySurface)
+    (hxe : point ∈ e.source) (hxe' : point ∈ e'.source)
+    (boundary : point ∈ (𝓡∂ n).boundary BoundarySurface)
+    {vector : TangentSpace (𝓡∂ n) point} :
+    IsChartOutwardBoundaryVector e' point vector ↔
+      IsChartOutwardBoundaryVector e point vector :=
+  isChartOutwardBoundaryVector_iff_of_mem_boundary he he' hxe hxe' boundary
+
+/-- No eligible atlas chart may disagree with the preferred-chart outward predicate at an actual
+boundary point. -/
+theorem changed_chart_outward_blocked
+    {n : ℕ} [NeZero n]
+    {BoundarySurface : Type uSurface} [TopologicalSpace BoundarySurface]
+    [ChartedSpace (EuclideanHalfSpace n) BoundarySurface]
+    [IsManifold (𝓡∂ n) 1 BoundarySurface]
+    {e : OpenPartialHomeomorph BoundarySurface (EuclideanHalfSpace n)}
+    {point : BoundarySurface}
+    (he : e ∈ atlas (EuclideanHalfSpace n) BoundarySurface)
+    (hxe : point ∈ e.source)
+    (boundary : point ∈ (𝓡∂ n).boundary BoundarySurface)
+    {vector : TangentSpace (𝓡∂ n) point}
+    (chartOutward : IsChartOutwardBoundaryVector e point vector)
+    (preferredNotOutward : ¬ IsPreferredChartOutwardBoundaryVector (𝓡∂ n) point vector) : False :=
+  preferredNotOutward
+    ((isChartOutwardBoundaryVector_iff_preferred he hxe boundary).mp chartOutward)
+
 /-- The positive circle tangent is a genuine smooth nonvanishing tangent-bundle field, separately
 for each exact component. -/
 theorem exact_positive_circle_tangent

@@ -6,6 +6,7 @@ Authors: Sebastian Rodrigo
 
 import YangMills.Geometry.CompactSurfaceBoundaryCirclePresentation
 import YangMills.Mathematics.EuclideanHalfSpaceOutwardRay
+import YangMills.Mathematics.EuclideanHalfSpaceChartTangentChainRule
 import Mathlib.Geometry.Manifold.ContMDiffMFDeriv
 
 /-!
@@ -20,12 +21,15 @@ model-with-corners range and the corresponding positive ray exits that range.
 A nonzero smooth tangent field orients each presented circle. Its pushed tangent is declared
 positive precisely when the selected surface orientation form evaluates positively on the ordered
 pair `(outward direction, boundary tangent)`. This is the standard boundary-orientation convention.
-No metric normal, collar theorem, gluing, or Yang--Mills law is constructed here. Chart-independence
-of the outward-ray predicate remains a separate mathematical obligation.
+No metric normal, collar theorem, gluing, or Yang--Mills law is constructed here. For the
+Euclidean-half-space model, transition-chart independence is derived below from exact extended
+coordinate changes, within-source derivatives, tangent-cone geometry, and the direct tangent chain
+rule.
 -/
 
 namespace YangMills.Geometry
 
+open YangMills.Mathematics
 open Set
 open scoped Manifold ContDiff
 
@@ -99,6 +103,96 @@ theorem isPreferredChartOutwardBoundaryVector_euclideanHalfSpace_iff_of_mem_boun
           (extChartAt (𝓡∂ n) point) point vector)) 0 < 0 :=
   isPreferredChartOutwardBoundaryVector_euclideanHalfSpace_iff
     (euclideanHalfSpace_extChartAt_zero_of_mem_boundary boundary)
+
+/-- Outwardness expressed in any selected Euclidean-half-space atlas chart using that chart's
+direct tangent coordinate. -/
+def IsChartOutwardBoundaryVector
+    {n : ℕ} [NeZero n]
+    {M : Type*} [TopologicalSpace M] [ChartedSpace (EuclideanHalfSpace n) M]
+    (e : OpenPartialHomeomorph M (EuclideanHalfSpace n))
+    (x : M) (v : TangentSpace (𝓡∂ n) x) : Prop :=
+  IsEuclideanHalfSpaceOutwardRayAt (e.extend (𝓡∂ n) x)
+    (NormedSpace.fromTangentSpace (e.extend (𝓡∂ n) x)
+      (mfderiv (𝓡∂ n) 𝓘(ℝ, EuclideanSpace ℝ (Fin n))
+        (e.extend (𝓡∂ n)) x v))
+
+/-- Every atlas chart around an actual Euclidean-half-space manifold boundary point has zeroth
+extended coordinate exactly zero. -/
+theorem euclideanHalfSpace_chartCoordinate_zero_of_mem_boundary
+    {n : ℕ} [NeZero n]
+    {M : Type*} [TopologicalSpace M]
+    [ChartedSpace (EuclideanHalfSpace n) M] [IsManifold (𝓡∂ n) 1 M]
+    {e : OpenPartialHomeomorph M (EuclideanHalfSpace n)} {x : M}
+    (he : e ∈ atlas (EuclideanHalfSpace n) M) (hxe : x ∈ e.source)
+    (boundary : x ∈ (𝓡∂ n).boundary M) :
+    (e.extend (𝓡∂ n) x) 0 = 0 := by
+  have boundaryChart : e.extend (𝓡∂ n) x ∈ frontier (e.extend (𝓡∂ n)).target :=
+    ((𝓡∂ n).isBoundaryPoint_iff_of_mem_atlas (n := (1 : WithTop ℕ∞))
+      (by norm_num) he hxe).mp boundary
+  have targetMem : e.extend (𝓡∂ n) x ∈ (e.extend (𝓡∂ n)).target := by
+    exact (e.extend (𝓡∂ n)).map_source (by simpa [e.extend_source] using hxe)
+  have rangeMem : e.extend (𝓡∂ n) x ∈ Set.range (𝓡∂ n) :=
+    e.extend_target_subset_range targetMem
+  rw [range_modelWithCornersEuclideanHalfSpace] at rangeMem
+  apply le_antisymm ?_ rangeMem
+  by_contra not_le
+  have positive : 0 < (e.extend (𝓡∂ n) x) 0 := lt_of_not_ge not_le
+  have interiorRange : e.extend (𝓡∂ n) x ∈ interior (Set.range (𝓡∂ n)) := by
+    rw [interior_range_modelWithCornersEuclideanHalfSpace]
+    exact positive
+  have interiorTarget : e.extend (𝓡∂ n) x ∈ interior (e.extend (𝓡∂ n)).target := by
+    apply e.mem_interior_extend_target (e.map_source hxe)
+    simpa [OpenPartialHomeomorph.extend_coe] using interiorRange
+  rw [frontier] at boundaryChart
+  exact boundaryChart.2 interiorTarget
+
+/-- The direct outward-ray predicate is independent of the selected overlapping atlas chart at an
+actual Euclidean-half-space manifold boundary point. -/
+theorem isChartOutwardBoundaryVector_iff_of_mem_boundary
+    {n : ℕ} [NeZero n]
+    {M : Type*} [TopologicalSpace M]
+    [ChartedSpace (EuclideanHalfSpace n) M] [IsManifold (𝓡∂ n) 1 M]
+    {e e' : OpenPartialHomeomorph M (EuclideanHalfSpace n)} {x : M}
+    (he : e ∈ atlas (EuclideanHalfSpace n) M)
+    (he' : e' ∈ atlas (EuclideanHalfSpace n) M)
+    (hxe : x ∈ e.source) (hxe' : x ∈ e'.source)
+    (boundary : x ∈ (𝓡∂ n).boundary M)
+    {v : TangentSpace (𝓡∂ n) x} :
+    IsChartOutwardBoundaryVector e' x v ↔ IsChartOutwardBoundaryVector e x v := by
+  have source_zero := euclideanHalfSpace_chartCoordinate_zero_of_mem_boundary he hxe boundary
+  have target_zero := euclideanHalfSpace_chartCoordinate_zero_of_mem_boundary he' hxe' boundary
+  constructor
+  · intro outward
+    rw [IsChartOutwardBoundaryVector] at outward ⊢
+    rw [extendedCoordChange_tangent_chainRule he' he hxe' hxe v]
+    exact extendedCoordChange_preserves_outwardRay he' he hxe' hxe
+      target_zero source_zero outward
+  · intro outward
+    rw [IsChartOutwardBoundaryVector] at outward ⊢
+    rw [extendedCoordChange_tangent_chainRule he he' hxe hxe' v]
+    exact extendedCoordChange_preserves_outwardRay he he' hxe hxe'
+      source_zero target_zero outward
+
+/-- Every eligible atlas chart gives exactly the preferred extended-chart outwardness predicate at
+an actual boundary point. This closes the transition-chart-independence obligation for the
+Euclidean-half-space model. -/
+theorem isChartOutwardBoundaryVector_iff_preferred
+    {n : ℕ} [NeZero n]
+    {M : Type*} [TopologicalSpace M]
+    [ChartedSpace (EuclideanHalfSpace n) M] [IsManifold (𝓡∂ n) 1 M]
+    {e : OpenPartialHomeomorph M (EuclideanHalfSpace n)} {x : M}
+    (he : e ∈ atlas (EuclideanHalfSpace n) M) (hxe : x ∈ e.source)
+    (boundary : x ∈ (𝓡∂ n).boundary M)
+    {v : TangentSpace (𝓡∂ n) x} :
+    IsChartOutwardBoundaryVector e x v ↔
+      IsPreferredChartOutwardBoundaryVector (𝓡∂ n) x v := by
+  have invariant := isChartOutwardBoundaryVector_iff_of_mem_boundary
+    (e := chartAt (EuclideanHalfSpace n) x) (e' := e)
+    (chart_mem_atlas (EuclideanHalfSpace n) x) he
+    (mem_chart_source (EuclideanHalfSpace n) x) hxe boundary (v := v)
+  change IsChartOutwardBoundaryVector e x v ↔
+    IsChartOutwardBoundaryVector (chartAt (EuclideanHalfSpace n) x) x v
+  exact invariant
 
 omit [FiniteDimensional ℝ E] [MeasurableSpace E] [BorelSpace E]
   [MeasurableSpace Surface] [BorelSpace Surface] [IsManifold I ∞ Surface]

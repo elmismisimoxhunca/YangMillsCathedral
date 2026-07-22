@@ -4804,8 +4804,10 @@ joint family per block; zero blocks omit further conditioning, and injectivity p
 base across independent conjugators. The enlarged genuine disintegration conditions on the seam and
 both full block tuples, reconstructs the exact same whole law through the exact same restriction,
 and factors through side kernels whose index omits the other side's entire tuple. Its inverse-boundary all-value product law
-derives. Inhabiting the smooth/oriented/measured descent contract, proving chart-independence of the outward
-predicate, and constructing the actual smooth/oriented/measured descent witnesses remain open.
+derives. Euclidean-half-space outwardness is now proved independent of every eligible overlapping
+atlas chart at an actual boundary point, and every such chart is proved equivalent to the preferred
+extended-chart predicate. Inhabiting the smooth/oriented/measured descent contract and constructing
+the actual smooth/oriented/measured descent witnesses remain open.
 
 The first Driver Definition 8.1 lattice-approximation component is now exact:
 `EpsilonSquareLatticePathCertificate` fixes `ε > 0`, a continuous literal `ℝ²` curve, and a finite

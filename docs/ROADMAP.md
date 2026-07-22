@@ -925,8 +925,9 @@ committed before higher layers depend on it.
     separation, Hausdorffness, an explicit countable quotient basis, second countability,
     Polish/standard-Borel structure, compactness, connectedness, and closed side embeddings for the
     glued quotient.
-  - [ ] Prove chart-independence of the outward predicate and inhabit/derive the
-    smooth/oriented/measured descent witnesses for the glued quotient.
+  - [x] Prove Euclidean-half-space chart independence of the outward predicate for every eligible
+    overlapping atlas chart at every actual manifold boundary point.
+  - [ ] Inhabit/derive the smooth/oriented/measured descent witnesses for the glued quotient.
   - [x] Derive exact consecutive square-box projectivity from noncommutative rooted plaquette
     coordinates, product-Haar preservation, action-density factorization, and the literal
     restriction commuting square.
