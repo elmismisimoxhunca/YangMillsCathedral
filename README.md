@@ -27,6 +27,12 @@ finite supremal mass, and axiomatic strength at least matching the cited Wightma
 Osterwalder–Schrader sources. This project formalizes the full contract a future construction would
 have to inhabit. The final target will be a proposition, not a falsely inhabited theorem.
 
+`FourDimensionalCurrentStrengthUniversalAcceptance` is a preliminary outer target: it quantifies
+over every caller-supplied exact compact-simple gauge certificate and existentially packages the
+construction-specific carriers needed by the existing broad four-dimensional core. Its
+`CurrentStrength` name is binding—it is uninhabited and is not the final source-complete Clay
+contract while the documented OS, Poincare, observable/OPE/mixing, and related debts remain open.
+
 ## Construction order
 
 1. Euclidean dimensions and signatures;

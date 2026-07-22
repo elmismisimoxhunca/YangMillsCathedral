@@ -4120,8 +4120,11 @@ Not yet achieved:
   residual labels are covered by finite projected-Lorentz multiplets with component-level exclusion
   of scalar/stress labels and exact in-cover adjoint/conjugate-representation partners. Spinorial
   graded locality remains a separate open interface.
-- No final universally quantified Clay acceptance proposition exists; the existing 3D/4D
-  declarations remain explicitly qualified `CurrentStrength` acceptance records.
+- A preliminary `FourDimensionalCurrentStrengthUniversalAcceptance` now has the correct outer
+  quantifier over every caller-supplied exact compact-simple gauge certificate and existentially
+  packages all construction-specific classical and quantum carriers into one same-core witness.
+  It is intentionally uninhabited and explicitly not final: the existing source-strength debts must
+  close before a full Clay acceptance proposition can replace it.
 - No standalone Git remote is configured in this checkout. The tested candidate
   `git@github.com:elmismisimoxhunca/lean-yangmills-adaly.git` does not exist, and the available SSH
   credential was scoped to the retired repository. No push or PR is evidenced locally; remote

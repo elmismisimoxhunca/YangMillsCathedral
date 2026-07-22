@@ -994,12 +994,16 @@ committed before higher layers depend on it.
     connection-level field-rescaling theorem or perturbative calculation.
   - [x] Ingest and audit the supplied Hall/Bargmann/Hall–Wightman, Hodge/volume, composite-operator,
     BRST/EOM mixing, power-counting, and perturbative OPE source chain.
+  - [x] Add a preliminary, explicitly `CurrentStrength` universal target quantifying over every
+    caller-supplied exact compact-simple gauge certificate while existentially packaging all
+    construction-specific bundle, connection, Poincare, Hilbert, field, and unchanged core carriers.
+    No inhabitance theorem is supplied, and this is not the final Clay proposition.
   - [ ] Construct concrete inhomogeneous `SL(2,ℂ)`, identify its matrix-sign kernel with the accepted
     literal-sign projection kernel, and construct the named affine-target group law; add the now
     source-ready curvature/covariant-derivative grammar, BRST/EOM operator mixing, calculated
-    perturbative remainders and scheme dependence, and final universal compact-simple-group
-    quantification. The physical-reduced trace anomaly is present; unrestricted mixing-complete
-    trace semantics remain part of the operator-mixing debt.
+    perturbative remainders and scheme dependence, and upgrade the preliminary universal target to
+    the final source-complete contract. The physical-reduced trace anomaly is present; unrestricted
+    mixing-complete trace semantics remain part of the operator-mixing debt.
 - [x] Define the exact Clay endpoint predicate, reject every lower dimension `1`–`3`, and prove no
   lower-dimensional Euclidean coordinate carrier (especially the 3D core base) is real-linearly
   equivalent to the four-dimensional carrier.
