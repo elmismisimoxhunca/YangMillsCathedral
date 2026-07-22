@@ -743,8 +743,11 @@ committed before higher layers depend on it.
 - [x] Package finite families of pairwise inequivalent positive-dimensional irreducible unitary
   characters: construct continuous central synthesis, exact character analysis, coordinate
   Plancherel, injectivity, and exact span dimension equal to the family cardinality.
-- [ ] Extend algebraic Plancherel from one full coefficient block to explicitly packaged finite sums
-  of pairwise inequivalent full matrix-coefficient blocks.
+- [x] Package finite dependently dimensioned families of pairwise inequivalent full coefficient
+  blocks: prove inequivalent whole-block Fourier vanishing, exact blockwise analysis
+  `f̂(ρᵢ)=dᵢ⁻¹Aᵢᵀ`, injectivity, and exact range dimension `∑ᵢdᵢ²`.
+- [ ] Extend the single-block Hilbert–Schmidt/Plancherel pairing identity to those finite sums of
+  pairwise inequivalent full matrix-coefficient blocks.
 - [ ] Prove Stone–Weierstrass separation and Peter–Weyl density/completeness in continuous and `L²`
   carriers with explicit topology and measure hypotheses.
 - [ ] State and prove only convergence-justified Fourier inversion and central character expansions;

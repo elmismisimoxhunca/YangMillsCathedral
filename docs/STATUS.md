@@ -5094,8 +5094,13 @@ character families are now packaged dependently across varying representation di
 synthesis is continuous and central, analysis recovers each exact coefficient, the Haar pairing is
 the coordinate pairing, synthesis is injective, and the range dimension equals the family
 cardinality. Hostile probes reject coefficient collapse and an equivalence between distinct indexed
-members. Equivalent-but-differently-presented transport, finite sums of full matrix-coefficient
-blocks, Fourier inversion, Peter–Weyl density, and heat-kernel spectral expansion remain open.
+members. Finite families of full matrix-coefficient blocks are now packaged with genuinely
+dependent representation dimensions. An entire synthesized block transforms to zero at an
+inequivalent family member; analysis at `ρᵢ` recovers exactly `dᵢ⁻¹Aᵢᵀ`, synthesis is injective,
+and its range has exact dimension `∑ᵢdᵢ²`. Hostile probes reject block-family collapse, a wrong
+range dimension, and equivalence of distinct indexed members. Equivalent-but-differently-presented
+transport, the finite-full-block-family Plancherel pairing, Fourier inversion, Peter–Weyl density,
+and heat-kernel spectral expansion remain open.
 
 The full two-dimensional literature chain is now an explicit validation target: a future final 2D
 acceptance proposition must join the Driver/Lévy/Sengupta finite, continuum, Brownian, compact-surface,
