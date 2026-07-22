@@ -941,6 +941,8 @@ committed before higher layers depend on it.
     right side's orientation-reversing reparameterization.
   - [x] Prove both included side seam traces lie in the exact seam; use the inverse designated circle
     diffeomorphism for arbitrary right parameters while keeping its mixed-basepoint label separate.
+  - [x] Identify the right included base's represented point exactly as both the selected-right
+    parameter-`1` point and the sewn seam trace at the inverse-diffeomorphism image of `1`.
   - [x] Add an uninhabited exact smooth/oriented/measured descent contract on the same quotient
     topology, including smooth side embeddings, positive-scale orientation-class pullbacks, derived
     null side boundaries, identification with the canonical glued area, exact remaining boundary,

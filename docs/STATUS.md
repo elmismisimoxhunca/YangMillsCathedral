@@ -4757,7 +4757,9 @@ included left seam base label to equal the designated sewn seam base label, and 
 loop trace is derived pointwise equal without an orientation-reversing reparameterization. Both
 included side seam traces are proved to lie entirely in the exact seam; arbitrary right parameters
 are handled using the inverse designated circle diffeomorphism. The right dependent base is shown to
-represent a seam point without falsely equating its mixed-basepoint label to the left-oriented base. Descent now identifies both its nucleus measure and manifold boundary with these named
+represent a seam point without falsely equating its mixed-basepoint label to the left-oriented base.
+Its represented point is identified exactly both as the selected right boundary point at parameter
+`1` and as the sewn seam trace at the inverse-diffeomorphism image of `1`. Descent now identifies both its nucleus measure and manifold boundary with these named
 constructions; its boundary nullity is rederived through that exact chain rather than merely inherited
 from the generic compact-surface theorem. Same-side
 injectivity plus the new exact characterization that cross-side quotient equality occurs only at a

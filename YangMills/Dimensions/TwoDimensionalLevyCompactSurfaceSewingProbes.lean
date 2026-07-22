@@ -240,6 +240,21 @@ theorem exact_included_side_seam_set_incidence
     data.rightSeamLoopInWholeTrace_mem_gluingSeam pair rightCirclePoint,
     data.rightSeamIncludedBasePoint_mem_gluingSeam pair⟩
 
+/-- The right included base has two exact geometric descriptions, while its dependent label remains
+separate from the left-oriented seam base. -/
+theorem exact_right_included_seam_base_geometry
+    (data : SewingData identification G LeftBase RightBase WholeBase
+      LeftLoop RightLoop WholeLoop LeftSample RightSample WholeSample)
+    (pair : Fin identification.pairCount) :
+    data.wholeBasePoint (data.rightBaseInWhole (data.rightSeamBase pair)) =
+        YangMills.Geometry.CompactSurfaceBoundaryGluingQuotient.rightInclusion identification
+          (rightPresentation.parameterization (identification.rightComponent pair) 1) ∧
+      data.wholeBasePoint (data.rightBaseInWhole (data.rightSeamBase pair)) =
+        data.wholeLoopTrace (data.seamBase pair) (data.seamLoop pair)
+          ((identification.circleDiffeomorphism pair).symm 1) :=
+  ⟨data.rightSeamIncludedBasePoint_eq pair,
+    data.rightSeamIncludedBasePoint_eq_reparameterizedSeamTrace pair⟩
+
 /-- A source-false claim that a sewn seam trace point lies on retained boundary is rejected. -/
 theorem sewn_seam_trace_retained_boundary_blocked
     (data : SewingData identification G LeftBase RightBase WholeBase

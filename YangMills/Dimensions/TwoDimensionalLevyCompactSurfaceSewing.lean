@@ -344,6 +344,37 @@ theorem rightSeamLoopInWholeTrace_mem_gluingSeam
   rw [traceEquality]
   exact data.seamLoopTrace_mem_gluingSeam pair leftCirclePoint
 
+/-- The included right seam base label represents exactly the selected right boundary point at its
+own designated base parameter. -/
+theorem rightSeamIncludedBasePoint_eq
+    (data : TwoDimensionalLevyCompactSurfaceSewingData
+      (identification := identification) (G := G) (LeftLoop := LeftLoop)
+      (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+      (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample))
+    (pair : Fin identification.pairCount) :
+    data.wholeBasePoint (data.rightBaseInWhole (data.rightSeamBase pair)) =
+      YangMills.Geometry.CompactSurfaceBoundaryGluingQuotient.rightInclusion identification
+        (rightPresentation.parameterization (identification.rightComponent pair) 1) := by
+  rw [data.rightBaseInWhole_point, data.rightSeamBasePoint_eq]
+
+/-- Equivalently, the right included base point is the sewn seam trace at the inverse image of the
+right base parameter. This exact equation deliberately does not identify the two dependent base
+labels. -/
+theorem rightSeamIncludedBasePoint_eq_reparameterizedSeamTrace
+    (data : TwoDimensionalLevyCompactSurfaceSewingData
+      (identification := identification) (G := G) (LeftLoop := LeftLoop)
+      (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+      (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample))
+    (pair : Fin identification.pairCount) :
+    data.wholeBasePoint (data.rightBaseInWhole (data.rightSeamBase pair)) =
+      data.wholeLoopTrace (data.seamBase pair) (data.seamLoop pair)
+        ((identification.circleDiffeomorphism pair).symm 1) := by
+  rw [← data.wholeLoopTrace_based
+    (data.rightBaseInWhole (data.rightSeamBase pair))
+    (data.rightLoopInWhole (data.rightSeamBase pair) (data.rightSeamLoop pair))]
+  simpa using data.rightSeamLoopInWhole_trace pair
+    ((identification.circleDiffeomorphism pair).symm 1)
+
 /-- The included right seam loop's own dependent base label represents a point on the exact seam,
 without equating that label to the left-oriented designated seam base. -/
 theorem rightSeamIncludedBasePoint_mem_gluingSeam
