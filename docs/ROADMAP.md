@@ -707,9 +707,9 @@ committed before higher layers depend on it.
     package Driver's nonempty invariant-pairing-orthonormal basis sum and require exact independence
     from every other orthonormal basis. Constants are derived to lie in the kernel.
   - [x] Add a strictly positive spatially smooth real representative tied pointwise by
-    `ENNReal.ofReal` to the unchanged density, indexed by the exact compact-connected-simple group,
-    semigroup and pairing Laplacian, and require Driver's exact `∂ₜQ = ½ΔQ` sign/factor convention.
-  - [x] Add an uninhabited continuous-path group process with exact identity start, mutually
+    `ENNReal.ofReal` to the unchanged density, indexed at compact Lie-group scope by the same
+    semigroup and pairing Laplacian without a compact-simple datum, and require Driver's exact `∂ₜQ = ½ΔQ` sign/factor convention.
+  - [x] Add an uninhabited continuous-path group process over that general heat core with exact identity start, mutually
     independent stationary right increments having the unchanged density laws, derived one-time
     marginals, and exact selected-area equality with the sampled loop-holonomy law.
   - [x] Transport the exact invariant pairing pointwise by left Maurer–Cartan trivialization; prove

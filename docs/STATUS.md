@@ -4533,7 +4533,8 @@ representative that is spatially `C∞` at every positive time and is tied point
 bridge. It has compact Lie-group scope; a compatibility alias retains the former phantom
 compact-simple API without imposing it on the core. No density or PDE solution is constructed.
 
-The uninhabited `TwoDimensionalSelectedLoopBrownianRealizationData` adds an exact probability law on
+The uninhabited `TwoDimensionalSelectedLoopBrownianRealizationData` now consumes the general compact
+Lie heat core without a compact-simple index and adds an exact probability law on
 an independent process sample carrier. The same process starts at the group identity almost surely,
 has almost-surely continuous `NNReal`-time paths, and has mutually independent consecutive right
 increments; every positive increment is assigned the unchanged normalized-Haar density law. The

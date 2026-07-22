@@ -46,20 +46,20 @@ variable
     {Sample : Type uSample} [MeasurableSpace Sample]
     {Connection : Type uConnection}
 
-/-- Process realization of the exact same 2D selected-loop density chain.
+/-- Process realization of the exact same 2D selected-loop density chain, indexed by the general
+compact Lie heat core rather than a compact-simple datum.
 
 For monotone times `t₀ ≤ ... ≤ tₙ`, the increment indexed by `i` is
 `B(tᵢ)⁻¹ B(tᵢ₊₁)`, matching the primitive convolution orientation already fixed by the project. -/
 structure TwoDimensionalSelectedLoopBrownianRealizationData
-    (gaugeGroup : Geometry.CompactSimpleGaugeGroupData G E)
     (inner : Geometry.InvariantInnerProductData
       (I := modelWithCornersSelf ℝ E) (G := G))
     {base : TwoDimensionalGaugeFixedHolonomyMeasureData G Gauge Sample Connection}
     (law : TwoDimensionalSelectedLoopHaarDensityLawData base)
     (semigroup : TwoDimensionalSelectedLoopConvolutionSemigroupData law)
     (laplacian : RightInvariantPairingLaplacianData inner)
-    (heat : TwoDimensionalSelectedLoopHeatEquationData
-      gaugeGroup inner law semigroup laplacian)
+    (heat : TwoDimensionalSelectedLoopHeatEquationCoreData
+      inner law semigroup laplacian)
     (Ω : Type uΩ) [MeasurableSpace Ω] where
   /-- Probability law on the exact process sample carrier. -/
   probabilityMeasure : Measure Ω
@@ -89,31 +89,32 @@ namespace TwoDimensionalSelectedLoopBrownianRealizationData
 
 variable
     {Ω : Type uΩ} [MeasurableSpace Ω]
-    {gaugeGroup : Geometry.CompactSimpleGaugeGroupData G E}
     {inner : Geometry.InvariantInnerProductData
       (I := modelWithCornersSelf ℝ E) (G := G)}
     {base : TwoDimensionalGaugeFixedHolonomyMeasureData G Gauge Sample Connection}
     {law : TwoDimensionalSelectedLoopHaarDensityLawData base}
     {semigroup : TwoDimensionalSelectedLoopConvolutionSemigroupData law}
     {laplacian : RightInvariantPairingLaplacianData inner}
-    {heat : TwoDimensionalSelectedLoopHeatEquationData
-      gaugeGroup inner law semigroup laplacian}
+    {heat : TwoDimensionalSelectedLoopHeatEquationCoreData
+      inner law semigroup laplacian}
 
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
 /-- The process probability measure cannot be zero. -/
 theorem probabilityMeasure_ne_zero
     (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
-      gaugeGroup inner law semigroup laplacian heat Ω) :
+      inner law semigroup laplacian heat Ω) :
     brownian.probabilityMeasure ≠ 0 := by
   intro zero_measure
   have normalized := brownian.probability_normalized
   rw [zero_measure] at normalized
   simp at normalized
 
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
 /-- The positive-time marginal is derived from the stationary increment at zero and the exact
 almost-sure identity initial condition. -/
 theorem marginal_law
     (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
-      gaugeGroup inner law semigroup laplacian heat Ω)
+      inner law semigroup laplacian heat Ω)
     (t : NNReal) (ht : 0 < t) :
     Measure.map (brownian.process t) brownian.probabilityMeasure =
       (normalizedCompactHaarMeasure G).withDensity
@@ -146,10 +147,11 @@ omit [T2Space G] [SecondCountableTopology G] in
 theorem selectedAreaTime_pos : 0 < selectedAreaTime (law := law) := by
   exact law.enclosedArea_pos
 
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
 /-- At the exact selected area, Brownian marginal and sampled loop holonomy have the same law. -/
 theorem selectedArea_marginal_eq_sampledLoopLaw
     (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
-      gaugeGroup inner law semigroup laplacian heat Ω) :
+      inner law semigroup laplacian heat Ω) :
     Measure.map (brownian.process (selectedAreaTime (law := law)))
         brownian.probabilityMeasure =
       Measure.map

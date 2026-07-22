@@ -30,57 +30,62 @@ variable
     [LieGroup (modelWithCornersSelf ℝ E) ∞ G]
     [CompactSpace G] [MeasurableSpace G] [BorelSpace G]
     [Group Gauge] [MeasurableSpace Sample] [MeasurableSpace Ω]
-    {gaugeGroup : Geometry.CompactSimpleGaugeGroupData G E}
     {inner : Geometry.InvariantInnerProductData
       (I := modelWithCornersSelf ℝ E) (G := G)}
     {base : TwoDimensionalGaugeFixedHolonomyMeasureData G Gauge Sample Connection}
     {law : TwoDimensionalSelectedLoopHaarDensityLawData base}
     {semigroup : TwoDimensionalSelectedLoopConvolutionSemigroupData law}
     {laplacian : RightInvariantPairingLaplacianData inner}
-    {heat : TwoDimensionalSelectedLoopHeatEquationData
-      gaugeGroup inner law semigroup laplacian}
+    {heat : TwoDimensionalSelectedLoopHeatEquationCoreData
+      inner law semigroup laplacian}
 
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
 /-- The exact process law is probability normalized, not merely nonzero. -/
 theorem exact_process_probability_normalization
     (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
-      gaugeGroup inner law semigroup laplacian heat Ω) :
+      inner law semigroup laplacian heat Ω) :
     brownian.probabilityMeasure Set.univ = 1 :=
   brownian.probability_normalized
 
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
 /-- Probability normalization blocks a zero process law. -/
 theorem zero_process_measure_blocked
     (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
-      gaugeGroup inner law semigroup laplacian heat Ω)
+      inner law semigroup laplacian heat Ω)
     (claimed : brownian.probabilityMeasure = 0) : False :=
   brownian.probabilityMeasure_ne_zero claimed
 
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
 /-- Every fixed-time coordinate is measurable under the exact process carrier. -/
 theorem exact_fixed_time_measurability
     (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
-      gaugeGroup inner law semigroup laplacian heat Ω)
+      inner law semigroup laplacian heat Ω)
     (t : NNReal) : Measurable (brownian.process t) :=
   brownian.process_measurable t
 
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
 /-- The process starts at the exact group identity almost surely. -/
 theorem exact_identity_start
     (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
-      gaugeGroup inner law semigroup laplacian heat Ω) :
+      inner law semigroup laplacian heat Ω) :
     {samplePoint | brownian.process 0 samplePoint = 1} ∈
       ae brownian.probabilityMeasure :=
   brownian.process_zero
 
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
 /-- Path continuity concerns the same process and probability law. -/
 theorem exact_continuous_paths
     (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
-      gaugeGroup inner law semigroup laplacian heat Ω) :
+      inner law semigroup laplacian heat Ω) :
     {samplePoint | Continuous (fun t => brownian.process t samplePoint)} ∈
       ae brownian.probabilityMeasure :=
   brownian.continuous_paths
 
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
 /-- Every positive stationary right increment has the unchanged density law. -/
 theorem exact_stationary_increment_law
     (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
-      gaugeGroup inner law semigroup laplacian heat Ω)
+      inner law semigroup laplacian heat Ω)
     (s t : NNReal) (ht : 0 < t) :
     Measure.map (fun samplePoint =>
       (brownian.process s samplePoint)⁻¹ * brownian.process (s + t) samplePoint)
@@ -89,10 +94,11 @@ theorem exact_stationary_increment_law
         (law.selectedAreaDensity (t : ℝ)) :=
   brownian.stationary_increment_law s t ht
 
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
 /-- Mutual independence retains every finite monotone family and the exact right-increment order. -/
 theorem exact_independent_increments
     (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
-      gaugeGroup inner law semigroup laplacian heat Ω)
+      inner law semigroup laplacian heat Ω)
     (n : ℕ) (t : Fin (n + 1) → NNReal) (ht : Monotone t) :
     iIndepFun
       (fun (i : Fin n) samplePoint =>
@@ -101,20 +107,22 @@ theorem exact_independent_increments
       brownian.probabilityMeasure :=
   brownian.independent_increments n t ht
 
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
 /-- One-time marginals are derived from identity start and stationary increments. -/
 theorem exact_derived_marginal
     (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
-      gaugeGroup inner law semigroup laplacian heat Ω)
+      inner law semigroup laplacian heat Ω)
     (t : NNReal) (ht : 0 < t) :
     Measure.map (brownian.process t) brownian.probabilityMeasure =
       (normalizedCompactHaarMeasure G).withDensity
         (law.selectedAreaDensity (t : ℝ)) :=
   brownian.marginal_law t ht
 
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
 /-- At the selected area, the process and exact sampled loop holonomy have one law. -/
 theorem exact_selected_area_coherence
     (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
-      gaugeGroup inner law semigroup laplacian heat Ω) :
+      inner law semigroup laplacian heat Ω) :
     Measure.map
         (brownian.process
           (TwoDimensionalSelectedLoopBrownianRealizationData.selectedAreaTime (law := law)))
@@ -125,10 +133,11 @@ theorem exact_selected_area_coherence
         base.probabilityMeasure :=
   brownian.selectedArea_marginal_eq_sampledLoopLaw
 
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
 /-- A changed positive-time marginal is rejected. -/
 theorem changed_marginal_blocked
     (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
-      gaugeGroup inner law semigroup laplacian heat Ω)
+      inner law semigroup laplacian heat Ω)
     (t : NNReal) (ht : 0 < t) (wrong : Measure G)
     (different : wrong ≠
       (normalizedCompactHaarMeasure G).withDensity

@@ -658,10 +658,10 @@ continuous complex test, deriving the selected-area two-half split. Reusable man
 constructs scalar first and iterated derivatives along the exact right-invariant group fields and
 Driver's finite orthonormal-basis Laplacian sum; an uninhabited certificate ties the basis to the
 same explicit invariant pairing and requires independence from every other such basis. The next
-uninhabited layer is indexed by the exact compact-connected-simple project group and ties a strictly
+uninhabited heat core has compact Lie-group scope without a compact-simple index and ties a strictly
 positive spatially smooth real family pointwise, via `ENNReal.ofReal`, to the unchanged density; it
 requires Driver's exact `∂ₜQ=½ΔQ` sign and factor against that same Laplacian. A further uninhabited
-process realization starts at the identity almost surely, has almost-surely continuous paths and
+process realization consumes that same general heat core, starts at the identity almost surely, has almost-surely continuous paths and
 mutually independent stationary right increments with those unchanged density laws. Its one-time
 marginals are derived, including exact equality at the selected area with the sampled loop-holonomy
 law. The metric bridge now transports the exact invariant pairing to every group tangent fiber by
