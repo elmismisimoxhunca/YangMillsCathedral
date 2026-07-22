@@ -4677,9 +4677,14 @@ has a genuine local minimum at a boundary image. Mathlib's tangent-cone Fermat t
 every bidirectional source tangent direction into the target boundary hyperplane and makes every
 one-sided inward normal derivative nonnegative. Combined with the linear endpoint, chart
 independence is reduced to exact source tangent-cone membership, derivative invertibility, and the
-strictness argument using the inverse transition. Pinned Mathlib still lacks a general installed
-boundary-submanifold instance; discharging those remaining facts for the actual extended coordinate
-change, and closure data, remain separate. `CompactSurfaceOrientationReversingBoundaryIdentificationData`
+strictness argument using the inverse transition. The source-cone membership is now derived for
+arbitrary relative neighborhoods of the Euclidean half-space: every zero-normal boundary tangent
+appears in both cone directions and the distinguished inward normal appears one-sidedly. Thus a
+locally half-space-valued within derivative on such a source automatically preserves the boundary
+tangent hyperplane and has nonnegative inward-normal multiplier. Pinned Mathlib still lacks a
+general installed boundary-submanifold instance; applying the relative-neighborhood facts to the
+actual extended-coordinate-change source and upgrading nonnegativity to strict positivity through
+forward/inverse derivative invertibility, together with closure data, remain separate. `CompactSurfaceOrientationReversingBoundaryIdentificationData`
 now chooses an exact positive number of distinct boundary components on each of two oriented
 surfaces, equips every pair with a genuine smooth circle diffeomorphism, and requires its derivative
 to send the selected positive left tangent to a strictly negative multiple of the selected positive
