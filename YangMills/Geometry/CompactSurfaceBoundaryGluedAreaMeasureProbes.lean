@@ -59,6 +59,18 @@ theorem exact_finite_positive_nonzero :
     compactSurfaceBoundaryGluedAreaMeasure_pos,
     compactSurfaceBoundaryGluedAreaMeasure_ne_zero⟩
 
+/-- Each whole-side image retains exactly its original total area; the opposite side contributes
+only through a null boundary preimage. -/
+theorem exact_whole_side_image_areas :
+    compactSurfaceBoundaryGluedAreaMeasure (identification := identification)
+        (Set.range (CompactSurfaceBoundaryGluingQuotient.leftInclusion identification)) =
+      leftSurface.areaMeasure Set.univ ∧
+    compactSurfaceBoundaryGluedAreaMeasure (identification := identification)
+        (Set.range (CompactSurfaceBoundaryGluingQuotient.rightInclusion identification)) =
+      rightSurface.areaMeasure Set.univ :=
+  ⟨compactSurfaceBoundaryGluedAreaMeasure_leftImage,
+    compactSurfaceBoundaryGluedAreaMeasure_rightImage⟩
+
 /-- The exact glued seam is compact, measurable, and null under the canonical area candidate. -/
 theorem exact_compact_null_seam :
     IsCompact (compactSurfaceBoundaryGluingSeam (identification := identification)) ∧

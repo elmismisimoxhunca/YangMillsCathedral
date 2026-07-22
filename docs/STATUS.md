@@ -4741,7 +4741,9 @@ area measure is now constructed independently as the sum of the two measurable s
 its total area is the sum of side areas and is proved finite, strictly positive, and nonzero. The
 exact seam, represented by the selected left boundary circles, is compact and measurable. Exact
 same-side injectivity and cross-side matching put both side preimages of the seam inside their null
-manifold boundaries, deriving zero canonical seam area. Descent data now identifies its nucleus
+manifold boundaries, deriving zero canonical seam area. The same exact preimage analysis proves that
+the canonical measure of each entire side image is precisely that side's original total area: the
+same-side preimage is all of the source, while the opposite-side preimage is boundary-null. Descent data now identifies its nucleus
 measure with this named construction instead of supplying an unnamed formula. Same-side
 injectivity plus the new exact characterization that cross-side quotient equality occurs only at a
 designated pair derive interior placement of every seam point from that boundary equation, removing

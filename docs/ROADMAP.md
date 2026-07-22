@@ -925,6 +925,8 @@ committed before higher layers depend on it.
     derive its exact total area, finiteness, strict positivity, and nonzeroness.
   - [x] Construct the exact compact measurable seam and derive its zero canonical area from
     same-side injectivity, exact cross-side matching, and null side-boundary preimages.
+  - [x] Prove each whole-side image has exactly its original total area under the canonical glued
+    measure; the opposite pushforward contributes only through a null boundary preimage.
   - [x] Add an uninhabited exact smooth/oriented/measured descent contract on the same quotient
     topology, including smooth side embeddings, positive-scale orientation-class pullbacks, derived
     null side boundaries, identification with the canonical glued area, exact remaining boundary,

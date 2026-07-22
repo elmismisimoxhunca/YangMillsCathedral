@@ -150,6 +150,79 @@ theorem compactSurfaceBoundaryGluedAreaMeasure_seam_null :
   rw [measure_mono_null leftPreimage leftSurface.boundary_null,
     measure_mono_null rightPreimage rightSurface.boundary_null, add_zero]
 
+/-- The canonical glued measure of the entire left-side image is exactly the original left total
+area. The right pushforward contributes only through a null boundary preimage. -/
+theorem compactSurfaceBoundaryGluedAreaMeasure_leftImage :
+    compactSurfaceBoundaryGluedAreaMeasure (identification := identification)
+        (Set.range (CompactSurfaceBoundaryGluingQuotient.leftInclusion identification)) =
+      leftSurface.areaMeasure Set.univ := by
+  let image := Set.range (CompactSurfaceBoundaryGluingQuotient.leftInclusion identification)
+  have imageMeasurable : MeasurableSet image :=
+    (isCompact_range
+      (CompactSurfaceBoundaryGluingQuotient.leftInclusion_continuous identification)).isClosed.measurableSet
+  have leftPreimageSelf :
+      (CompactSurfaceBoundaryGluingQuotient.leftInclusion identification) ⁻¹' image = Set.univ := by
+    ext point
+    simp [image]
+  have rightPreimage :
+      (CompactSurfaceBoundaryGluingQuotient.rightInclusion identification) ⁻¹' image ⊆
+        IR.boundary SR := by
+    intro point membership
+    rcases membership with ⟨leftPoint, equality⟩
+    have crossing :=
+      (CompactSurfaceBoundaryGluingQuotient.leftInclusion_eq_rightInclusion_iff
+        (identification := identification) leftPoint point).mp equality
+    rcases crossing with ⟨pair, circlePoint, _leftEquality, rightEquality⟩
+    rw [rightEquality]
+    exact (rightPresentation.parameterization_mem_boundary_component
+      (identification.rightComponent pair)
+      (identification.circleDiffeomorphism pair circlePoint)).choose
+  rw [compactSurfaceBoundaryGluedAreaMeasure, Measure.add_apply,
+    Measure.map_apply_of_aemeasurable
+      ((CompactSurfaceBoundaryGluingQuotient.sideInclusions_measurable identification).1.aemeasurable)
+      imageMeasurable,
+    Measure.map_apply_of_aemeasurable
+      ((CompactSurfaceBoundaryGluingQuotient.sideInclusions_measurable identification).2.aemeasurable)
+      imageMeasurable,
+    leftPreimageSelf,
+    measure_mono_null rightPreimage rightSurface.boundary_null, add_zero]
+
+/-- Symmetrically, the canonical glued measure of the entire right-side image is exactly the
+original right total area. -/
+theorem compactSurfaceBoundaryGluedAreaMeasure_rightImage :
+    compactSurfaceBoundaryGluedAreaMeasure (identification := identification)
+        (Set.range (CompactSurfaceBoundaryGluingQuotient.rightInclusion identification)) =
+      rightSurface.areaMeasure Set.univ := by
+  let image := Set.range (CompactSurfaceBoundaryGluingQuotient.rightInclusion identification)
+  have imageMeasurable : MeasurableSet image :=
+    (isCompact_range
+      (CompactSurfaceBoundaryGluingQuotient.rightInclusion_continuous identification)).isClosed.measurableSet
+  have rightPreimageSelf :
+      (CompactSurfaceBoundaryGluingQuotient.rightInclusion identification) ⁻¹' image = Set.univ := by
+    ext point
+    simp [image]
+  have leftPreimage :
+      (CompactSurfaceBoundaryGluingQuotient.leftInclusion identification) ⁻¹' image ⊆
+        IL.boundary SL := by
+    intro point membership
+    rcases membership with ⟨rightPoint, equality⟩
+    have crossing :=
+      (CompactSurfaceBoundaryGluingQuotient.leftInclusion_eq_rightInclusion_iff
+        (identification := identification) point rightPoint).mp equality.symm
+    rcases crossing with ⟨pair, circlePoint, leftEquality, _rightEquality⟩
+    rw [leftEquality]
+    exact (leftPresentation.parameterization_mem_boundary_component
+      (identification.leftComponent pair) circlePoint).choose
+  rw [compactSurfaceBoundaryGluedAreaMeasure, Measure.add_apply,
+    Measure.map_apply_of_aemeasurable
+      ((CompactSurfaceBoundaryGluingQuotient.sideInclusions_measurable identification).1.aemeasurable)
+      imageMeasurable,
+    Measure.map_apply_of_aemeasurable
+      ((CompactSurfaceBoundaryGluingQuotient.sideInclusions_measurable identification).2.aemeasurable)
+      imageMeasurable,
+    measure_mono_null leftPreimage leftSurface.boundary_null, zero_add,
+    rightPreimageSelf]
+
 end
 
 end YangMills.Geometry
