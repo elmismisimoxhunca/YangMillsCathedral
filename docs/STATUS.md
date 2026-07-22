@@ -5049,8 +5049,11 @@ has a genuinely integrable normalized-Haar average and is invariant under simult
 the same representation. Its real averaged norm square is representation-invariant and strictly
 positive away from zero: the proof uses continuity, positivity at the identity, openness of the
 nonzero support, and the Haar measure's positive-open-set property rather than storing positivity.
-Packaging this average as an `InnerProductSpace` and constructing a unitarizing equivalence remain
-open. No Haar orthogonality,
+Conjugate symmetry, first-argument additivity and conjugate homogeneity, the exact real self-norm
+identity, nonnegativity, and definiteness now package this same average as a named
+`InnerProductSpace.Core`. It is deliberately not installed globally, because compatibility with the
+coordinate carrier's pre-existing norm and construction of a unitarizing equivalence remain open.
+No Haar orthogonality,
 irreducibility theorem, Fourier inversion, Peter–Weyl density, or heat-kernel spectral expansion is
 claimed.
 
