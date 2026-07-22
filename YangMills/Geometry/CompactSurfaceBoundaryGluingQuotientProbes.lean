@@ -104,6 +104,13 @@ theorem exact_side_inclusions_measurable :
       Measurable (CompactSurfaceBoundaryGluingQuotient.rightInclusion identification) :=
   CompactSurfaceBoundaryGluingQuotient.sideInclusions_measurable identification
 
+/-- The side inclusions are measurable embeddings, so their exact images preserve and reflect
+Borel measurability rather than being merely measurable maps. -/
+theorem exact_side_inclusions_measurableEmbedding :
+    MeasurableEmbedding (CompactSurfaceBoundaryGluingQuotient.leftInclusion identification) ∧
+      MeasurableEmbedding (CompactSurfaceBoundaryGluingQuotient.rightInclusion identification) :=
+  CompactSurfaceBoundaryGluingQuotient.sideInclusions_measurableEmbedding identification
+
 /-- The explicit countable saturated-core family is a genuine topological basis. -/
 theorem exact_quotient_core_basis :
     TopologicalSpace.IsTopologicalBasis

@@ -59,6 +59,20 @@ theorem exact_finite_positive_nonzero :
     compactSurfaceBoundaryGluedAreaMeasure_pos,
     compactSurfaceBoundaryGluedAreaMeasure_ne_zero⟩
 
+/-- Every measurable subset of either side retains exactly its original measure after embedding
+into the glued quotient; this is stronger than total-area preservation alone. -/
+theorem exact_measurable_side_restrictions
+    {leftSubset : Set SL} (leftMeasurable : MeasurableSet leftSubset)
+    {rightSubset : Set SR} (rightMeasurable : MeasurableSet rightSubset) :
+    compactSurfaceBoundaryGluedAreaMeasure (identification := identification)
+        (CompactSurfaceBoundaryGluingQuotient.leftInclusion identification '' leftSubset) =
+      leftSurface.areaMeasure leftSubset ∧
+    compactSurfaceBoundaryGluedAreaMeasure (identification := identification)
+        (CompactSurfaceBoundaryGluingQuotient.rightInclusion identification '' rightSubset) =
+      rightSurface.areaMeasure rightSubset :=
+  ⟨compactSurfaceBoundaryGluedAreaMeasure_left_image_apply leftMeasurable,
+    compactSurfaceBoundaryGluedAreaMeasure_right_image_apply rightMeasurable⟩
+
 /-- Each whole-side image retains exactly its original total area; the opposite side contributes
 only through a null boundary preimage. -/
 theorem exact_whole_side_image_areas :

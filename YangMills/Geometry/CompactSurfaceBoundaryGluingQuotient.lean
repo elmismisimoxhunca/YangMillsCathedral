@@ -790,6 +790,20 @@ theorem rightInclusion_injective : Function.Injective (rightInclusion identifica
   · simp [compactSurfaceBoundaryGluingRelation] at forward
   · simp [compactSurfaceBoundaryGluingRelation] at reverse
 
+/-- Both continuous injective side maps are measurable embeddings between their canonical Borel
+spaces. Consequently they preserve and reflect measurable subsets onto their exact images. -/
+theorem sideInclusions_measurableEmbedding :
+    MeasurableEmbedding (leftInclusion identification) ∧
+      MeasurableEmbedding (rightInclusion identification) := by
+  letI : MetricSpace SL := TopologicalSpace.metrizableSpaceMetric SL
+  letI : PolishSpace SL := PolishSpace.mk
+  letI : MetricSpace SR := TopologicalSpace.metrizableSpaceMetric SR
+  letI : PolishSpace SR := PolishSpace.mk
+  exact ⟨(leftInclusion_continuous identification).measurableEmbedding
+      (leftInclusion_injective identification),
+    (rightInclusion_continuous identification).measurableEmbedding
+      (rightInclusion_injective identification)⟩
+
 /-- The canonical left-side map is closed as a composite of the closed sum injection and closed
 quotient projection. -/
 theorem leftInclusion_isClosedMap : IsClosedMap (leftInclusion identification) := by

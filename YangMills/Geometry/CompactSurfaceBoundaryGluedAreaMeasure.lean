@@ -150,25 +150,28 @@ theorem compactSurfaceBoundaryGluedAreaMeasure_seam_null :
   rw [measure_mono_null leftPreimage leftSurface.boundary_null,
     measure_mono_null rightPreimage rightSurface.boundary_null, add_zero]
 
-/-- The canonical glued measure of the entire left-side image is exactly the original left total
-area. The right pushforward contributes only through a null boundary preimage. -/
-theorem compactSurfaceBoundaryGluedAreaMeasure_leftImage :
+/-- The canonical glued measure restricts exactly to the original left measure on the image of
+every measurable left-side set. The right pushforward contributes only through a null boundary
+preimage. -/
+theorem compactSurfaceBoundaryGluedAreaMeasure_left_image_apply
+    {subset : Set SL} (subsetMeasurable : MeasurableSet subset) :
     compactSurfaceBoundaryGluedAreaMeasure (identification := identification)
-        (Set.range (CompactSurfaceBoundaryGluingQuotient.leftInclusion identification)) =
-      leftSurface.areaMeasure Set.univ := by
-  let image := Set.range (CompactSurfaceBoundaryGluingQuotient.leftInclusion identification)
+        (CompactSurfaceBoundaryGluingQuotient.leftInclusion identification '' subset) =
+      leftSurface.areaMeasure subset := by
+  let image := CompactSurfaceBoundaryGluingQuotient.leftInclusion identification '' subset
   have imageMeasurable : MeasurableSet image :=
-    (isCompact_range
-      (CompactSurfaceBoundaryGluingQuotient.leftInclusion_continuous identification)).isClosed.measurableSet
+    MeasurableEmbedding.measurableSet_image'
+      (CompactSurfaceBoundaryGluingQuotient.sideInclusions_measurableEmbedding identification).1
+      subsetMeasurable
   have leftPreimageSelf :
-      (CompactSurfaceBoundaryGluingQuotient.leftInclusion identification) ⁻¹' image = Set.univ := by
-    ext point
-    simp [image]
+      (CompactSurfaceBoundaryGluingQuotient.leftInclusion identification) ⁻¹' image = subset :=
+    Set.preimage_image_eq subset
+      (CompactSurfaceBoundaryGluingQuotient.leftInclusion_injective identification)
   have rightPreimage :
       (CompactSurfaceBoundaryGluingQuotient.rightInclusion identification) ⁻¹' image ⊆
         IR.boundary SR := by
     intro point membership
-    rcases membership with ⟨leftPoint, equality⟩
+    rcases membership with ⟨leftPoint, _leftMembership, equality⟩
     have crossing :=
       (CompactSurfaceBoundaryGluingQuotient.leftInclusion_eq_rightInclusion_iff
         (identification := identification) leftPoint point).mp equality
@@ -187,25 +190,27 @@ theorem compactSurfaceBoundaryGluedAreaMeasure_leftImage :
     leftPreimageSelf,
     measure_mono_null rightPreimage rightSurface.boundary_null, add_zero]
 
-/-- Symmetrically, the canonical glued measure of the entire right-side image is exactly the
-original right total area. -/
-theorem compactSurfaceBoundaryGluedAreaMeasure_rightImage :
+/-- Symmetrically, the canonical glued measure restricts exactly to the original right measure on
+every measurable right-side image. -/
+theorem compactSurfaceBoundaryGluedAreaMeasure_right_image_apply
+    {subset : Set SR} (subsetMeasurable : MeasurableSet subset) :
     compactSurfaceBoundaryGluedAreaMeasure (identification := identification)
-        (Set.range (CompactSurfaceBoundaryGluingQuotient.rightInclusion identification)) =
-      rightSurface.areaMeasure Set.univ := by
-  let image := Set.range (CompactSurfaceBoundaryGluingQuotient.rightInclusion identification)
+        (CompactSurfaceBoundaryGluingQuotient.rightInclusion identification '' subset) =
+      rightSurface.areaMeasure subset := by
+  let image := CompactSurfaceBoundaryGluingQuotient.rightInclusion identification '' subset
   have imageMeasurable : MeasurableSet image :=
-    (isCompact_range
-      (CompactSurfaceBoundaryGluingQuotient.rightInclusion_continuous identification)).isClosed.measurableSet
+    MeasurableEmbedding.measurableSet_image'
+      (CompactSurfaceBoundaryGluingQuotient.sideInclusions_measurableEmbedding identification).2
+      subsetMeasurable
   have rightPreimageSelf :
-      (CompactSurfaceBoundaryGluingQuotient.rightInclusion identification) ⁻¹' image = Set.univ := by
-    ext point
-    simp [image]
+      (CompactSurfaceBoundaryGluingQuotient.rightInclusion identification) ⁻¹' image = subset :=
+    Set.preimage_image_eq subset
+      (CompactSurfaceBoundaryGluingQuotient.rightInclusion_injective identification)
   have leftPreimage :
       (CompactSurfaceBoundaryGluingQuotient.leftInclusion identification) ⁻¹' image ⊆
         IL.boundary SL := by
     intro point membership
-    rcases membership with ⟨rightPoint, equality⟩
+    rcases membership with ⟨rightPoint, _rightMembership, equality⟩
     have crossing :=
       (CompactSurfaceBoundaryGluingQuotient.leftInclusion_eq_rightInclusion_iff
         (identification := identification) point rightPoint).mp equality.symm
@@ -222,6 +227,24 @@ theorem compactSurfaceBoundaryGluedAreaMeasure_rightImage :
       imageMeasurable,
     measure_mono_null leftPreimage leftSurface.boundary_null, zero_add,
     rightPreimageSelf]
+
+/-- The entire left-side image has exactly the original left total area. -/
+theorem compactSurfaceBoundaryGluedAreaMeasure_leftImage :
+    compactSurfaceBoundaryGluedAreaMeasure (identification := identification)
+        (Set.range (CompactSurfaceBoundaryGluingQuotient.leftInclusion identification)) =
+      leftSurface.areaMeasure Set.univ := by
+  simpa only [Set.image_univ] using
+    compactSurfaceBoundaryGluedAreaMeasure_left_image_apply
+      (identification := identification) MeasurableSet.univ
+
+/-- The entire right-side image has exactly the original right total area. -/
+theorem compactSurfaceBoundaryGluedAreaMeasure_rightImage :
+    compactSurfaceBoundaryGluedAreaMeasure (identification := identification)
+        (Set.range (CompactSurfaceBoundaryGluingQuotient.rightInclusion identification)) =
+      rightSurface.areaMeasure Set.univ := by
+  simpa only [Set.image_univ] using
+    compactSurfaceBoundaryGluedAreaMeasure_right_image_apply
+      (identification := identification) MeasurableSet.univ
 
 end
 
