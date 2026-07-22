@@ -5038,7 +5038,12 @@ stored fields. The next analytic slice defines representation-valued Fourier coe
 coordinatewise with the exact inverse convention `∫f(g)ρ(g⁻¹)`. Continuity and compactness derive
 actual integrability against every compact-finite measure, with a named probability-normalized Haar
 specialization. Addition, complex scaling, and zero laws are derived, and taking matrix trace is
-proved to recover the scalar coefficient against the inverse trace character. No Haar orthogonality,
+proved to recover the scalar coefficient against the inverse trace character. The exact complex
+convolution `(f⋆g)(z)=∫f(x)g(x⁻¹z)dμ_H` is now defined with the unchanged Driver/Sengupta order.
+Genuine compact-product integrability, Fubini, left-Haar substitution `z=x*y`, and
+`ρ((xy)⁻¹)=ρ(y⁻¹)ρ(x⁻¹)` derive the forced noncommutative Fourier law
+`(f⋆g)̂(ρ)=ĝ(ρ)f̂(ρ)`. A hostile opposite-order probe shows that reversing this result would require
+the two Fourier matrices to commute. No Haar orthogonality,
 irreducibility theorem, Fourier inversion, Peter–Weyl density, or heat-kernel spectral expansion is
 claimed.
 
