@@ -153,6 +153,27 @@ theorem exact_geometric_basepoint_semantics
     data.rightSeamBasePoint_eq pair,
     data.seamBasePoint_eq pair⟩
 
+/-- Exact basepoint injectivity forces the included left seam base to be the designated sewn seam
+base, and the included left loop has the same pointwise trace without reparameterization. -/
+theorem derived_left_seam_inclusion_coherence
+    (data : SewingData identification G LeftBase RightBase WholeBase
+      LeftLoop RightLoop WholeLoop LeftSample RightSample WholeSample)
+    (pair : Fin identification.pairCount) (circlePoint : Circle) :
+    data.leftBaseInWhole (data.leftSeamBase pair) = data.seamBase pair ∧
+      data.wholeLoopTrace (data.leftBaseInWhole (data.leftSeamBase pair))
+          (data.leftLoopInWhole (data.leftSeamBase pair) (data.leftSeamLoop pair)) circlePoint =
+        data.wholeLoopTrace (data.seamBase pair) (data.seamLoop pair) circlePoint :=
+  ⟨data.leftSeamBaseInWhole_eq_seamBase pair,
+    data.leftSeamLoopInWhole_trace pair circlePoint⟩
+
+/-- A duplicate left included-seam base label is rejected by exact geometric base injectivity. -/
+theorem duplicate_left_seam_base_blocked
+    (data : SewingData identification G LeftBase RightBase WholeBase
+      LeftLoop RightLoop WholeLoop LeftSample RightSample WholeSample)
+    (pair : Fin identification.pairCount)
+    (wrong : data.leftBaseInWhole (data.leftSeamBase pair) ≠ data.seamBase pair) : False :=
+  wrong (data.leftSeamBaseInWhole_eq_seamBase pair)
+
 /-- The selected side and sewn seam traces are tied to the exact geometric components and quotient
 identifications, not merely indexed by the same cardinality. -/
 theorem exact_geometric_seam_incidence

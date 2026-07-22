@@ -936,6 +936,9 @@ committed before higher layers depend on it.
     and derive their exact decomposition of both original full-boundary images before descent.
   - [x] Connect Lévy's designated sewn seam-loop traces and dependent seam bases to the exact seam
     set, deriving exclusion from the retained-boundary candidate without smooth descent.
+  - [x] Derive exact left seam-inclusion coherence: geometric basepoint injectivity identifies the
+    included and designated sewn base labels, and their loop traces agree pointwise without the
+    right side's orientation-reversing reparameterization.
   - [x] Add an uninhabited exact smooth/oriented/measured descent contract on the same quotient
     topology, including smooth side embeddings, positive-scale orientation-class pullbacks, derived
     null side boundaries, identification with the canonical glued area, exact remaining boundary,

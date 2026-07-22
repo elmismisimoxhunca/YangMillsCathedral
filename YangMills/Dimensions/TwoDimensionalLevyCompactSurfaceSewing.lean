@@ -263,6 +263,35 @@ theorem seamBasePoint_eq
   rw [← data.wholeLoopTrace_based (data.seamBase pair) (data.seamLoop pair)]
   exact data.seamLoop_trace pair 1
 
+/-- The included left seam base label is literally the designated sewn seam base label. This is
+derived from exact geometric basepoint equations and injectivity, not stored as another coherence
+field. -/
+theorem leftSeamBaseInWhole_eq_seamBase
+    (data : TwoDimensionalLevyCompactSurfaceSewingData
+      (identification := identification) (G := G) (LeftLoop := LeftLoop)
+      (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+      (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample))
+    (pair : Fin identification.pairCount) :
+    data.leftBaseInWhole (data.leftSeamBase pair) = data.seamBase pair := by
+  apply data.wholeBasePoint_injective
+  rw [data.leftBaseInWhole_point, data.leftSeamBasePoint_eq, data.seamBasePoint_eq]
+  rfl
+
+/-- Inclusion of the selected left side seam loop has exactly the designated sewn seam trace.
+Unlike the right side, no orientation-reversing reparameterization is needed. -/
+theorem leftSeamLoopInWhole_trace
+    (data : TwoDimensionalLevyCompactSurfaceSewingData
+      (identification := identification) (G := G) (LeftLoop := LeftLoop)
+      (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+      (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample))
+    (pair : Fin identification.pairCount) (circlePoint : Circle) :
+    data.wholeLoopTrace (data.leftBaseInWhole (data.leftSeamBase pair))
+        (data.leftLoopInWhole (data.leftSeamBase pair) (data.leftSeamLoop pair)) circlePoint =
+      data.wholeLoopTrace (data.seamBase pair) (data.seamLoop pair) circlePoint := by
+  rw [data.leftLoopInWhole_trace, congrFun (data.leftSeamLoop_trace pair) circlePoint,
+    data.seamLoop_trace]
+  rfl
+
 /-- Every point of every designated sewn seam-loop trace lies in the independently constructed
 exact quotient seam. -/
 theorem seamLoopTrace_mem_gluingSeam
