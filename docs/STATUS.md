@@ -4690,10 +4690,13 @@ neighborhood; smoothness supplies the derivative within that exact source; its t
 same half-space; and Mathlib's inverse-derivative theorem supplies surjectivity. Therefore the actual
 transition derivative preserves the boundary tangent hyperplane, has strictly positive inward-normal
 multiplier, and transports the complete two-sided outward-ray predicate between boundary chart
-coordinates. Pinned Mathlib still lacks a general installed boundary-submanifold instance; relating
-this exact coordinate-change derivative to the two direct `mfderiv` tangent-coordinate expressions
-and then exposing the chart-independent geometry-facing theorem, together with closure data, remain
-separate. `CompactSurfaceOrientationReversingBoundaryIdentificationData`
+coordinates. An exact chain-rule theorem now identifies the second chart's direct
+`fromTangentSpace (mfderiv ...)` coordinate with that transition-within derivative applied to the
+first chart's direct coordinate. It uses the literal overlap preimage neighborhood, local equality
+of `extendCoordChange ∘ e.extend` with `e'.extend`, and Mathlib's within-composition theorem; no
+ambient derivative replaces the exact transition-source derivative. Pinned Mathlib still lacks a
+general installed boundary-submanifold instance; exposing the final chart-independent
+geometry-facing theorem and closure data remain separate. `CompactSurfaceOrientationReversingBoundaryIdentificationData`
 now chooses an exact positive number of distinct boundary components on each of two oriented
 surfaces, equips every pair with a genuine smooth circle diffeomorphism, and requires its derivative
 to send the selected positive left tangent to a strictly negative multiple of the selected positive

@@ -901,6 +901,9 @@ committed before higher layers depend on it.
   - [x] Instantiate the cone, local-half-space, smoothness, and derivative-surjectivity results on
     Mathlib's actual extended coordinate change, proving its exact within derivative preserves the
     boundary tangent hyperplane, has strictly positive normal multiplier, and transports outward rays.
+  - [x] Prove the exact chart tangent chain rule: the direct `mfderiv` coordinate in the second
+    overlapping atlas chart equals the transition derivative within its exact source applied to the
+    first chart's direct `mfderiv` coordinate.
   - [x] Add positive-arity distinct-component boundary identifications by genuine circle
     diffeomorphisms with exact derivative-level orientation reversal and hostile vacuity probes.
   - [x] Construct the minimal equivalence-closure quotient of the disjoint union by exact paired
