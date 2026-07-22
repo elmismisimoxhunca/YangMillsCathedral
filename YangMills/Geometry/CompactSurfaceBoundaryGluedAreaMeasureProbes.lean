@@ -67,14 +67,26 @@ theorem selected_boundary_unions_compact :
 
 /-- The selected-circle seam is exactly the image of the selected left boundary union and is
 disjoint from the exact remaining-boundary candidate. -/
-theorem exact_seam_selected_image_and_remaining_disjoint :
+theorem exact_seam_selected_images_and_remaining_disjoint :
     compactSurfaceBoundaryGluingSeam (identification := identification) =
         CompactSurfaceBoundaryGluingQuotient.leftInclusion identification ''
           selectedLeftBoundarySet (identification := identification) ∧
+      compactSurfaceBoundaryGluingSeam (identification := identification) =
+        CompactSurfaceBoundaryGluingQuotient.rightInclusion identification ''
+          selectedRightBoundarySet (identification := identification) ∧
       Disjoint (compactSurfaceBoundaryGluingSeam (identification := identification))
         (compactSurfaceBoundaryGluingRemainingBoundary (identification := identification)) :=
   ⟨compactSurfaceBoundaryGluingSeam_eq_left_image_selectedBoundary,
+    compactSurfaceBoundaryGluingSeam_eq_right_image_selectedBoundary,
     compactSurfaceBoundaryGluingSeam_disjoint_remainingBoundary⟩
+
+/-- Seam plus remaining boundary is exactly the image of both original full boundaries. -/
+theorem exact_full_boundary_image_decomposition :
+    compactSurfaceBoundaryGluingSeam (identification := identification) ∪
+        compactSurfaceBoundaryGluingRemainingBoundary (identification := identification) =
+      CompactSurfaceBoundaryGluingQuotient.leftInclusion identification '' IL.boundary SL ∪
+        CompactSurfaceBoundaryGluingQuotient.rightInclusion identification '' IR.boundary SR :=
+  compactSurfaceBoundaryGluing_boundaryImage_decomposition
 
 /-- Any alleged quotient point lying both on the selected seam and remaining boundary is rejected. -/
 theorem seam_remaining_boundary_overlap_blocked

@@ -128,6 +128,16 @@ theorem descended_boundary_null_via_exact_candidate
       (IG.boundary (GluedSurfaceCarrier (identification := identification))) = 0 :=
   descent.boundary_null_via_remainingBoundary
 
+/-- Exact descent turns the pre-descent decomposition into seam plus actual manifold boundary. -/
+theorem seam_plus_actual_boundary_is_original_boundary_images
+    (descent : CompactSurfaceBoundaryGluingSmoothDescentData
+      (identification := identification) (IG := IG)) :
+    compactSurfaceBoundaryGluingSeam (identification := identification) ∪
+        IG.boundary (GluedSurfaceCarrier (identification := identification)) =
+      CompactSurfaceBoundaryGluingQuotient.leftInclusion identification '' IL.boundary SL ∪
+        CompactSurfaceBoundaryGluingQuotient.rightInclusion identification '' IR.boundary SR :=
+  descent.seam_union_boundary_eq_sideBoundaryImages
+
 /-- Exactly unselected boundary images remain, while every selected seam is interior. -/
 theorem exact_boundary_and_seam
     (descent : CompactSurfaceBoundaryGluingSmoothDescentData

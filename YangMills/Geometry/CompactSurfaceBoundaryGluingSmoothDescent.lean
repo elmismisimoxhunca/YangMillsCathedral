@@ -164,6 +164,18 @@ theorem seam_mem_interior_of_boundary_eq
     (compactSurfaceBoundaryGluingSeam_disjoint_remainingBoundary
       (identification := identification)) seamMembership remainingMembership
 
+/-- Under exact descent, the seam together with the descended manifold boundary is precisely the
+quotient image of both original full boundaries. -/
+theorem seam_union_boundary_eq_sideBoundaryImages
+    (descent : CompactSurfaceBoundaryGluingSmoothDescentData
+      (identification := identification) (IG := IG)) :
+    compactSurfaceBoundaryGluingSeam (identification := identification) ∪
+        IG.boundary (GluedSurfaceCarrier (identification := identification)) =
+      CompactSurfaceBoundaryGluingQuotient.leftInclusion identification '' IL.boundary SL ∪
+        CompactSurfaceBoundaryGluingQuotient.rightInclusion identification '' IR.boundary SR := by
+  rw [descent.boundary_eq_unselected_images]
+  exact compactSurfaceBoundaryGluing_boundaryImage_decomposition
+
 /-- Every selected seam point is interior, derived from the exact remaining-boundary equation rather
 than supplied as an independent descent field. -/
 theorem seam_mem_interior

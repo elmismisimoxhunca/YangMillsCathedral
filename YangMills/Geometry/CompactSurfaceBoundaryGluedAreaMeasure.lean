@@ -173,6 +173,44 @@ theorem compactSurfaceBoundaryGluingSeam_eq_left_image_selectedBoundary :
     refine ⟨pair, ⟨circlePoint, ?_⟩⟩
     exact congrArg (CompactSurfaceBoundaryGluingQuotient.leftInclusion identification) equality
 
+/-- The same seam is exactly the quotient image of the selected right boundary union; one
+common paired-circle parameter is retained through the designated circle diffeomorphism. -/
+theorem compactSurfaceBoundaryGluingSeam_eq_right_image_selectedBoundary :
+    compactSurfaceBoundaryGluingSeam (identification := identification) =
+      CompactSurfaceBoundaryGluingQuotient.rightInclusion identification ''
+        selectedRightBoundarySet (identification := identification) := by
+  ext quotientPoint
+  constructor
+  · intro membership
+    rcases Set.mem_iUnion.mp membership with ⟨pair, rangeMembership⟩
+    rcases rangeMembership with ⟨circlePoint, equality⟩
+    refine ⟨identification.rightBoundaryPoint pair circlePoint, ?_, ?_⟩
+    · apply Set.mem_iUnion.mpr
+      refine ⟨pair, ?_⟩
+      rw [← rightPresentation.parameterization_range]
+      exact ⟨identification.circleDiffeomorphism pair circlePoint, rfl⟩
+    · exact (CompactSurfaceBoundaryGluingQuotient.paired_boundary_points_equal
+        (identification := identification) pair circlePoint).symm.trans equality
+  · rintro ⟨rightPoint, selectedMembership, equality⟩
+    rcases Set.mem_iUnion.mp selectedMembership with ⟨pair, componentMembership⟩
+    rw [← rightPresentation.parameterization_range] at componentMembership
+    rcases componentMembership with ⟨rightCirclePoint, rightPointEquality⟩
+    let leftCirclePoint := (identification.circleDiffeomorphism pair).symm rightCirclePoint
+    apply Set.mem_iUnion.mpr
+    refine ⟨pair, ⟨leftCirclePoint, ?_⟩⟩
+    calc
+      CompactSurfaceBoundaryGluingQuotient.leftInclusion identification
+          (identification.leftBoundaryPoint pair leftCirclePoint) =
+        CompactSurfaceBoundaryGluingQuotient.rightInclusion identification
+          (identification.rightBoundaryPoint pair leftCirclePoint) :=
+        CompactSurfaceBoundaryGluingQuotient.paired_boundary_points_equal
+          (identification := identification) pair leftCirclePoint
+      _ = CompactSurfaceBoundaryGluingQuotient.rightInclusion identification rightPoint := by
+        rw [CompactSurfaceOrientationReversingBoundaryIdentificationData.rightBoundaryPoint,
+          show identification.circleDiffeomorphism pair leftCirclePoint = rightCirclePoint by
+            simp [leftCirclePoint], rightPointEquality]
+      _ = quotientPoint := equality
+
 /-- The exact seam has zero canonical glued area. Both pushforward terms vanish because their
 preimages lie in the already derived null side boundaries. -/
 theorem compactSurfaceBoundaryGluedAreaMeasure_seam_null :
@@ -391,6 +429,48 @@ theorem compactSurfaceBoundaryGluingSeam_disjoint_remainingBoundary :
     refine ⟨pair, ?_⟩
     rw [← rightPresentation.parameterization_range]
     exact ⟨identification.circleDiffeomorphism pair circlePoint, rightEquality.symm⟩
+
+/-- The seam and remaining-boundary candidate give an exact disjoint decomposition of the
+quotient images of both original full boundaries. -/
+theorem compactSurfaceBoundaryGluing_boundaryImage_decomposition :
+    compactSurfaceBoundaryGluingSeam (identification := identification) ∪
+        compactSurfaceBoundaryGluingRemainingBoundary (identification := identification) =
+      CompactSurfaceBoundaryGluingQuotient.leftInclusion identification '' IL.boundary SL ∪
+        CompactSurfaceBoundaryGluingQuotient.rightInclusion identification '' IR.boundary SR := by
+  ext quotientPoint
+  constructor
+  · intro membership
+    rcases membership with seamMembership | remainingMembership
+    · rw [compactSurfaceBoundaryGluingSeam_eq_left_image_selectedBoundary] at seamMembership
+      rcases seamMembership with ⟨leftPoint, selectedMembership, equality⟩
+      exact Or.inl ⟨leftPoint,
+        selectedLeftBoundarySet_subset_boundary selectedMembership, equality⟩
+    · rw [compactSurfaceBoundaryGluingRemainingBoundary] at remainingMembership
+      rcases remainingMembership with leftRemaining | rightRemaining
+      · rcases leftRemaining with ⟨leftPoint, ⟨boundaryMembership, _unselected⟩, equality⟩
+        exact Or.inl ⟨leftPoint, boundaryMembership, equality⟩
+      · rcases rightRemaining with ⟨rightPoint, ⟨boundaryMembership, _unselected⟩, equality⟩
+        exact Or.inr ⟨rightPoint, boundaryMembership, equality⟩
+  · intro membership
+    rcases membership with leftBoundaryImage | rightBoundaryImage
+    · rcases leftBoundaryImage with ⟨leftPoint, boundaryMembership, equality⟩
+      by_cases selectedMembership :
+          leftPoint ∈ selectedLeftBoundarySet (identification := identification)
+      · left
+        rw [compactSurfaceBoundaryGluingSeam_eq_left_image_selectedBoundary]
+        exact ⟨leftPoint, selectedMembership, equality⟩
+      · right
+        rw [compactSurfaceBoundaryGluingRemainingBoundary]
+        exact Or.inl ⟨leftPoint, ⟨boundaryMembership, selectedMembership⟩, equality⟩
+    · rcases rightBoundaryImage with ⟨rightPoint, boundaryMembership, equality⟩
+      by_cases selectedMembership :
+          rightPoint ∈ selectedRightBoundarySet (identification := identification)
+      · left
+        rw [compactSurfaceBoundaryGluingSeam_eq_right_image_selectedBoundary]
+        exact ⟨rightPoint, selectedMembership, equality⟩
+      · right
+        rw [compactSurfaceBoundaryGluingRemainingBoundary]
+        exact Or.inr ⟨rightPoint, ⟨boundaryMembership, selectedMembership⟩, equality⟩
 
 /-- The entire left-side image has exactly the original left total area. -/
 theorem compactSurfaceBoundaryGluedAreaMeasure_leftImage :
