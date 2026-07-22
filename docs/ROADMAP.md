@@ -889,8 +889,9 @@ committed before higher layers depend on it.
     of the zeroth tangent coordinate, derive boundary-coordinate vanishing from Mathlib's frontier
     definition, and apply the sign theorem to every exact presented boundary-circle field.
   - [x] Prove the derivative-level linear transport endpoint: tangent-hyperplane preservation gives
-    an exact normal-coordinate multiplier formula, and positive-normal continuous linear
-    equivalences preserve and reflect the full two-sided outward-ray predicate.
+    an exact normal-coordinate multiplier formula; nonnegative normal transport plus surjectivity
+    forces strict positivity; and positive-normal continuous linear equivalences preserve and
+    reflect the full two-sided outward-ray predicate.
   - [x] Prove the nonlinear tangent-cone step: a locally half-space-valued within derivative at a
     boundary image maps bidirectional tangent-cone vectors into the boundary hyperplane and has
     nonnegative normal coordinate on every one-sided inward cone vector.

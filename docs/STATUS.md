@@ -4681,10 +4681,13 @@ strictness argument using the inverse transition. The source-cone membership is 
 arbitrary relative neighborhoods of the Euclidean half-space: every zero-normal boundary tangent
 appears in both cone directions and the distinguished inward normal appears one-sidedly. Thus a
 locally half-space-valued within derivative on such a source automatically preserves the boundary
-tangent hyperplane and has nonnegative inward-normal multiplier. Pinned Mathlib still lacks a
-general installed boundary-submanifold instance; applying the relative-neighborhood facts to the
-actual extended-coordinate-change source and upgrading nonnegativity to strict positivity through
-forward/inverse derivative invertibility, together with closure data, remain separate. `CompactSurfaceOrientationReversingBoundaryIdentificationData`
+tangent hyperplane and has nonnegative inward-normal multiplier. Surjectivity now upgrades that
+multiplier to strict positivity: a zero multiplier plus tangent preservation would force every
+output normal coordinate to vanish, contradicting an inward-normal preimage. Thus strict outward
+transport follows without separately constructing an inverse linear equivalence. Pinned Mathlib
+still lacks a general installed boundary-submanifold instance; instantiating the relative-
+neighborhood, within-derivative, local half-space, boundary, and surjectivity facts for the actual
+extended coordinate change, together with closure data, remain separate. `CompactSurfaceOrientationReversingBoundaryIdentificationData`
 now chooses an exact positive number of distinct boundary components on each of two oriented
 surfaces, equips every pair with a genuine smooth circle diffeomorphism, and requires its derivative
 to send the selected positive left tangent to a strictly negative multiple of the selected positive

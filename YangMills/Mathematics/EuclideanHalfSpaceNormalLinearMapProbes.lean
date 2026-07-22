@@ -37,6 +37,30 @@ theorem nonnegative_outward_image_blocked
     (ContinuousLinearMap.euclideanHalfSpace_zeroCoordinate_neg
       L mapsTangent normal_pos outward)
 
+/-- A surjective tangent-hyperplane-preserving map with nonnegative normal multiplier cannot have
+zero normal multiplier. -/
+theorem zero_normal_multiplier_blocked
+    {n m : ℕ} [NeZero n] [NeZero m]
+    (L : EuclideanSpace ℝ (Fin n) →L[ℝ] EuclideanSpace ℝ (Fin m))
+    (mapsTangent : ∀ w, w 0 = 0 → (L w) 0 = 0)
+    (normal_nonneg : 0 ≤ (L (EuclideanSpace.single 0 1)) 0)
+    (surjective : Function.Surjective L)
+    (wrongZero : (L (EuclideanSpace.single 0 1)) 0 = 0) : False :=
+  (ne_of_gt (ContinuousLinearMap.euclideanHalfSpace_normal_pos_of_surjective
+    L mapsTangent normal_nonneg surjective)) wrongZero
+
+/-- Nonnegative normal transport plus surjectivity suffices to preserve strict outwardness. -/
+theorem exact_surjective_outward_transport
+    {n m : ℕ} [NeZero n] [NeZero m]
+    (L : EuclideanSpace ℝ (Fin n) →L[ℝ] EuclideanSpace ℝ (Fin m))
+    (mapsTangent : ∀ w, w 0 = 0 → (L w) 0 = 0)
+    (normal_nonneg : 0 ≤ (L (EuclideanSpace.single 0 1)) 0)
+    (surjective : Function.Surjective L)
+    {v : EuclideanSpace ℝ (Fin n)} (outward : v 0 < 0) :
+    (L v) 0 < 0 :=
+  ContinuousLinearMap.euclideanHalfSpace_zeroCoordinate_neg_of_surjective
+    L mapsTangent normal_nonneg surjective outward
+
 /-- Under the corresponding hypotheses in both directions, an exact linear equivalence preserves
 and reflects—not merely preserves—the outward sign. -/
 theorem exact_outward_sign_equivalence
