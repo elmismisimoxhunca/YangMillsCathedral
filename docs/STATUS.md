@@ -5086,9 +5086,12 @@ for distinct indices is contradictory. The finite coefficient block is now expli
 `A ↦ ∑ᵢⱼ Aᵢⱼρᵢⱼ` is a linear synthesis map into `G → ℂ`, its transform is exactly
 `n⁻¹Aᵀ`, and Fourier extraction proves synthesis injective. Its range is therefore linearly
 equivalent to the full matrix space and has exact dimension `n²`; hostile probes reject both
-pointwise coefficient collapse and a wrong block dimension. Equivalent-but-differently-presented
-transport, finite-block Plancherel, Fourier inversion, Peter–Weyl density, and heat-kernel spectral
-expansion remain open.
+pointwise coefficient collapse and a wrong block dimension. On this exact block, the coordinate
+Hilbert–Schmidt pairing now gives the algebraic Plancherel identities
+`⟨f_A,f_B⟩=n⁻¹⟨A,B⟩ₕₛ=n⟨f̂_A(ρ),f̂_B(ρ)⟩ₕₛ`. A hostile diagonal-matrix-unit probe shows that
+omitting the Fourier-side dimension weight forces `n=1`. Equivalent-but-differently-presented
+transport, pairwise-inequivalent finite sums, central-character spans, Fourier inversion,
+Peter–Weyl density, and heat-kernel spectral expansion remain open.
 
 The full two-dimensional literature chain is now an explicit validation target: a future final 2D
 acceptance proposition must join the Driver/Lévy/Sengupta finite, continuum, Brownian, compact-surface,

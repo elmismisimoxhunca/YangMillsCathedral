@@ -737,8 +737,11 @@ committed before higher layers depend on it.
 - [x] Construct the finite coefficient-synthesis map and its range subspace; compute the exact block
   transform `f̂(ρ)=n⁻¹Aᵀ`, prove synthesis injective, identify the range with the full matrix space,
   and derive exact coefficient-subspace dimension `n²`.
-- [ ] Derive finite-block algebraic Plancherel identities and extend character orthogonality to
-  explicitly packaged finite central-character spans.
+- [x] Derive the exact single-block algebraic Plancherel formulas
+  `⟨f_A,f_B⟩=n⁻¹⟨A,B⟩ₕₛ=n⟨f̂_A(ρ),f̂_B(ρ)⟩ₕₛ`, including the forced representation-dimension
+  weight.
+- [ ] Extend character orthogonality and algebraic Plancherel to explicitly packaged finite sums of
+  pairwise inequivalent coefficient blocks and finite central-character spans.
 - [ ] Prove Stone–Weierstrass separation and Peter–Weyl density/completeness in continuous and `L²`
   carriers with explicit topology and measure hypotheses.
 - [ ] State and prove only convergence-justified Fourier inversion and central character expansions;
