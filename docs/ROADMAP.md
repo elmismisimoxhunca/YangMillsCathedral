@@ -897,7 +897,8 @@ committed before higher layers depend on it.
     area, exact remaining boundary, and interior seam placement.
   - [x] Derive exact relation closedness, closed projection/saturations, compact equivalence-class
     separation, Hausdorffness, an explicit countable quotient basis, second countability,
-    compactness, connectedness, and closed side embeddings for the glued quotient.
+    Polish/standard-Borel structure, compactness, connectedness, and closed side embeddings for the
+    glued quotient.
   - [ ] Prove chart-independence of the outward predicate and inhabit/derive the
     smooth/oriented/measured descent witnesses for the glued quotient.
   - [ ] Resolve/formalize Theorem 8.10; inhabit/derive box projectivity and Theorem 7.2. Keep

@@ -78,6 +78,32 @@ smooth-descent assumption. -/
     SecondCountableTopology (CompactSurfaceBoundaryGluingQuotient identification) :=
   inferInstance
 
+/-- Compact metrization upgrades the exact quotient to a Polish space. -/
+@[reducible] noncomputable def exact_quotient_polishSpace :
+    PolishSpace (CompactSurfaceBoundaryGluingQuotient identification) :=
+  inferInstance
+
+/-- The quotient carries its canonical Borel measurable structure. -/
+@[reducible] def exact_quotient_borelSpace :
+    BorelSpace (CompactSurfaceBoundaryGluingQuotient identification) :=
+  inferInstance
+
+/-- The resulting measurable quotient is standard Borel. -/
+@[reducible] noncomputable def exact_quotient_standardBorelSpace :
+    StandardBorelSpace (CompactSurfaceBoundaryGluingQuotient identification) :=
+  inferInstance
+
+/-- The exact projection from the standard measurable sum is Borel measurable. -/
+theorem exact_projection_measurable :
+    Measurable (CompactSurfaceBoundaryGluingQuotient.projection identification) :=
+  CompactSurfaceBoundaryGluingQuotient.projection_measurable identification
+
+/-- Canonical side inclusions are already measurable without smooth-descent data. -/
+theorem exact_side_inclusions_measurable :
+    Measurable (CompactSurfaceBoundaryGluingQuotient.leftInclusion identification) ∧
+      Measurable (CompactSurfaceBoundaryGluingQuotient.rightInclusion identification) :=
+  CompactSurfaceBoundaryGluingQuotient.sideInclusions_measurable identification
+
 /-- The explicit countable saturated-core family is a genuine topological basis. -/
 theorem exact_quotient_core_basis :
     TopologicalSpace.IsTopologicalBasis

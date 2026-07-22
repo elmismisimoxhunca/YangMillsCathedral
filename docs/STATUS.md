@@ -4681,12 +4681,17 @@ of distinct quotient points are then separated by a generalized tube argument an
 the closed projection, deriving explicit disjoint open neighborhoods and a genuine `T2Space`.
 Compact fibers are finitely covered inside prescribed quotient neighborhoods by the canonical source
 basis; saturated cores of those finite unions give an explicit countable quotient basis and derive
-`SecondCountableTopology`. Compactness is derived from the compact disjoint union and connectedness
+`SecondCountableTopology`. Urysohn metrization and compactness then derive `PolishSpace`; the quotient
+is equipped with its canonical Borel measurable structure, derives `StandardBorelSpace`, and has
+measurable projection and side inclusions. The projection theorem uses the separately packaged
+`Mathematics.sumOpensMeasurableSpace`, which proves that the standard measurable disjoint union has
+measurable open sets whenever both summands do. Compactness is derived from the compact disjoint
+union and connectedness
 derived from the two connected ranges meeting at a positive seam, exact paired-boundary equality,
 and a universal lift for sidewise
 functions agreeing on every generator. Primitive same-left/right relations, extra generated chains, and side collapse are hostilely
-absent. Hausdorffness, second countability, compactness, connectedness, and closed side embeddings are now
-derived; no descended
+absent. Hausdorffness, second countability, Polish/standard-Borel structure, compactness,
+connectedness, and closed side embeddings are now derived; no descended
 smooth manifold/orientation or sewn area measure is constructed.
 `CompactSurfaceBoundaryGluingSmoothDescentData` now exposes the exact uninhabited obligation on the
 same quotient topology: an exact two-dimensional compact oriented measured surface nucleus, genuine

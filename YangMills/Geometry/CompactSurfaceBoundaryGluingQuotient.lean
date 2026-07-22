@@ -5,9 +5,11 @@ Authors: Sebastian Rodrigo
 -/
 
 import YangMills.Geometry.CompactSurfaceOrientationReversingBoundaryIdentification
+import YangMills.Mathematics.SumOpensMeasurableSpace
 import Mathlib.Topology.Constructions
 import Mathlib.Topology.Maps.Basic
 import Mathlib.Topology.Compactness.Bases
+import Mathlib.MeasureTheory.Constructions.Polish.Basic
 
 /-!
 # Exact quotient carrier for compact-surface boundary gluing
@@ -21,7 +23,8 @@ paired parameterized boundary points; reflexivity, symmetry, and transitivity ar
 The quotient receives its genuine quotient topology. Its exact matching relation is characterized
 and proved closed; compact equivalence classes and a closed projection then derive Hausdorffness.
 Compact fibers and saturated cores of finite source-basis unions derive second countability.
-Compactness, connectedness, and closed side embeddings are also derived. A universal lift is
+Urysohn metrization and compactness provide a Polish topology with its canonical standard-Borel
+measurable structure. Compactness, connectedness, and closed side embeddings are also derived. A universal lift is
 provided for compatible sidewise functions. No manifold-with-corners atlas, descended orientation,
 area measure, probability law, or Yang--Mills model is asserted.
 -/
@@ -709,6 +712,39 @@ instance compactSurfaceBoundaryGluingQuotientSecondCountableTopology :
     SecondCountableTopology (CompactSurfaceBoundaryGluingQuotient identification) :=
   (quotientCoreBasis_isTopologicalBasis identification).secondCountableTopology
     (quotientCoreBasis_countable identification)
+
+/-- Urysohn metrization and compactness make the exact quotient Polish. -/
+noncomputable instance compactSurfaceBoundaryGluingQuotientPolishSpace :
+    PolishSpace (CompactSurfaceBoundaryGluingQuotient identification) := by
+  letI : MetricSpace (CompactSurfaceBoundaryGluingQuotient identification) :=
+    TopologicalSpace.metrizableSpaceMetric
+      (CompactSurfaceBoundaryGluingQuotient identification)
+  exact PolishSpace.mk
+
+/-- Canonical Borel measurable structure of the exact quotient topology. -/
+instance compactSurfaceBoundaryGluingQuotientMeasurableSpace :
+    MeasurableSpace (CompactSurfaceBoundaryGluingQuotient identification) :=
+  borel (CompactSurfaceBoundaryGluingQuotient identification)
+
+/-- The canonical quotient measurable structure is definitionally Borel. -/
+instance compactSurfaceBoundaryGluingQuotientBorelSpace :
+    BorelSpace (CompactSurfaceBoundaryGluingQuotient identification) :=
+  ⟨rfl⟩
+
+/-- The compact Polish quotient with its canonical Borel structure is standard Borel. -/
+noncomputable instance compactSurfaceBoundaryGluingQuotientStandardBorelSpace :
+    StandardBorelSpace (CompactSurfaceBoundaryGluingQuotient identification) :=
+  inferInstance
+
+/-- The exact quotient projection is measurable for the canonical Borel structures. -/
+theorem projection_measurable : Measurable (projection identification) :=
+  (projection_continuous identification).measurable
+
+/-- Both canonical side inclusions are measurable before any smooth descent is supplied. -/
+theorem sideInclusions_measurable :
+    Measurable (leftInclusion identification) ∧ Measurable (rightInclusion identification) :=
+  ⟨(leftInclusion_continuous identification).measurable,
+    (rightInclusion_continuous identification).measurable⟩
 
 /-- The canonical left-side map is injective; the generated quotient makes no same-side
 identifications. -/

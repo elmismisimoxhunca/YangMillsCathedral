@@ -41,8 +41,6 @@ variable
     {EG : Type uEG} [NormedAddCommGroup EG] [NormedSpace ℝ EG] [FiniteDimensional ℝ EG]
     [MeasurableSpace EG] [BorelSpace EG] {HG : Type uHG} [TopologicalSpace HG]
     {IG : ModelWithCorners ℝ EG HG}
-    [MeasurableSpace (GluedSurfaceCarrier (identification := identification))]
-    [BorelSpace (GluedSurfaceCarrier (identification := identification))]
     [ChartedSpace HG (GluedSurfaceCarrier (identification := identification))]
     [IsManifold IG ∞ (GluedSurfaceCarrier (identification := identification))]
 
