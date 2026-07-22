@@ -4666,8 +4666,13 @@ now chooses an exact positive number of distinct boundary components on each of 
 surfaces, equips every pair with a genuine smooth circle diffeomorphism, and requires its derivative
 to send the selected positive left tangent to a strictly negative multiple of the selected positive
 right tangent. Exact points on both actual component ranges and nonempty pair indices are derived;
-zero-pair, duplicate-component, and zero-speed surrogates are hostilely blocked. No quotient/glued
-surface, descended smooth structure, or sewn area measure is constructed.
+zero-pair, duplicate-component, and zero-speed surrogates are hostilely blocked.
+`CompactSurfaceBoundaryGluingQuotient` is now the minimal `Relation.EqvGen` quotient of the exact
+disjoint union by those paired points. It has the genuine quotient topology, continuous canonical
+maps from both full surfaces, exact paired-boundary equality, and a universal lift for sidewise
+functions agreeing on every generator. Primitive same-left and same-right relations are hostilely
+absent. No Hausdorff theorem, descended smooth manifold/orientation, or sewn area measure is
+constructed.
 
 Lévy Chapter 5, Theorem 5.1.1, equation (5.1), and the opening nonabelian sewing discussion are now
 visually adjudicated against PDF pp. 89–94 / printed pp. 75–80. Reusable
@@ -4709,7 +4714,7 @@ singletons); boundary reversal is measurable and involutive;
 and every boundary value has an exact restriction pushforward equal to the left law times the right
 law at the reversed value. Bind reconstruction, whole-law normalization/nonzeroness, and both
 conditional marginals are derived. This deliberately distinguishes generic a.e. regular conditional
-probability from the stronger all-value source-facing version. The glued quotient surface and the Lévy-specific
+probability from the stronger all-value source-facing version. Smooth/oriented/measured structure on the glued quotient and the Lévy-specific
 conditional-independence sewing record remain unconstructed.
 
 The first Driver Definition 8.1 lattice-approximation component is now exact:

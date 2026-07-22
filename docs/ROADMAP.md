@@ -880,9 +880,12 @@ committed before higher layers depend on it.
     from the exact surface top form, with smooth/nonzero frame data and zero-vector hostile probes.
   - [x] Add positive-arity distinct-component boundary identifications by genuine circle
     diffeomorphisms with exact derivative-level orientation reversal and hostile vacuity probes.
-  - [ ] Prove chart-independence of the outward predicate, construct the glued quotient surface and
-    its descended geometry, and add the Lévy-specific conditional-independence sewing record without
-    asserting that the two side fields generate the whole.
+  - [x] Construct the minimal equivalence-closure quotient of the disjoint union by exact paired
+    boundary points, with genuine quotient topology, side maps, and compatible-function universal
+    lift.
+  - [ ] Prove chart-independence of the outward predicate and Hausdorff/manifold/orientation/measure
+    descent for the glued quotient, and add the Lévy-specific conditional-independence sewing record
+    without asserting that the two side fields generate the whole.
   - [ ] Resolve/formalize Theorem 8.10; inhabit/derive box projectivity and Theorem 7.2. Keep
     compact-surface gluing distinct from finite-cutoff, classical, and four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.
