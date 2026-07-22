@@ -82,12 +82,45 @@ theorem exact_generated_relation (first second : SL ⊕ SR) :
   CompactSurfaceBoundaryGluingQuotient.eqvGen_iff_explicitGluingEquivalence
     identification first second
 
+/-- The primitive relation is a finite union of compact circle graphs, and the exact generated
+equivalence relation is closed in the Hausdorff disjoint-union square. -/
+theorem exact_closed_generated_relation :
+    IsClosed {points : (SL ⊕ SR) × (SL ⊕ SR) |
+      CompactSurfaceBoundaryGluingQuotient.explicitGluingEquivalence
+        identification points.1 points.2} :=
+  CompactSurfaceBoundaryGluingQuotient.explicitGluingEquivalence_set_isClosed identification
+
+/-- Each actual seam graph is continuous with closed range. -/
+theorem exact_seam_graph_closed (pair : Fin identification.pairCount) :
+    Continuous (CompactSurfaceBoundaryGluingQuotient.boundarySeamGraph identification pair) ∧
+      IsClosed (Set.range
+        (CompactSurfaceBoundaryGluingQuotient.boundarySeamGraph identification pair)) :=
+  ⟨CompactSurfaceBoundaryGluingQuotient.boundarySeamGraph_continuous identification pair,
+    CompactSurfaceBoundaryGluingQuotient.boundarySeamGraph_range_isClosed identification pair⟩
+
+/-- Closed subsets have closed exact saturations, making the quotient projection a closed map
+without assuming that its product map is quotient. -/
+theorem exact_closed_saturation_and_projection
+    (subset : Set (SL ⊕ SR)) (subsetClosed : IsClosed subset) :
+    IsClosed (CompactSurfaceBoundaryGluingQuotient.explicitGluingSaturation
+      identification subset) ∧
+      IsClosedMap (CompactSurfaceBoundaryGluingQuotient.projection identification) :=
+  ⟨CompactSurfaceBoundaryGluingQuotient.explicitGluingSaturation_isClosed
+      identification subsetClosed,
+    CompactSurfaceBoundaryGluingQuotient.projection_isClosedMap identification⟩
+
 /-- Neither full side is collapsed by the quotient. -/
 theorem exact_side_injectivity :
     Function.Injective (CompactSurfaceBoundaryGluingQuotient.leftInclusion identification) ∧
-      Function.Injective (CompactSurfaceBoundaryGluingQuotient.rightInclusion identification) :=
+      Function.Injective (CompactSurfaceBoundaryGluingQuotient.rightInclusion identification) ∧
+      Topology.IsClosedEmbedding
+        (CompactSurfaceBoundaryGluingQuotient.leftInclusion identification) ∧
+      Topology.IsClosedEmbedding
+        (CompactSurfaceBoundaryGluingQuotient.rightInclusion identification) :=
   ⟨CompactSurfaceBoundaryGluingQuotient.leftInclusion_injective identification,
-    CompactSurfaceBoundaryGluingQuotient.rightInclusion_injective identification⟩
+    CompactSurfaceBoundaryGluingQuotient.rightInclusion_injective identification,
+    CompactSurfaceBoundaryGluingQuotient.leftInclusion_isClosedEmbedding identification,
+    CompactSurfaceBoundaryGluingQuotient.rightInclusion_isClosedEmbedding identification⟩
 
 /-- The two full-side ranges cover the exact quotient. -/
 theorem exact_side_range_cover :

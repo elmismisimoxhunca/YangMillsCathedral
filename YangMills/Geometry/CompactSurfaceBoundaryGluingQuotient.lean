@@ -6,6 +6,7 @@ Authors: Sebastian Rodrigo
 
 import YangMills.Geometry.CompactSurfaceOrientationReversingBoundaryIdentification
 import Mathlib.Topology.Constructions
+import Mathlib.Topology.Maps.Basic
 
 /-!
 # Exact quotient carrier for compact-surface boundary gluing
@@ -270,6 +271,129 @@ theorem eqvGen_iff_explicitGluingEquivalence (first second : SL ⊕ SR) :
     · exact Relation.EqvGen.rel first second forward
     · exact Relation.EqvGen.symm second first (Relation.EqvGen.rel second first reverse)
 
+/-- Graph of one exact primitive seam pairing in the disjoint-union square. -/
+def boundarySeamGraph (pair : Fin identification.pairCount) :
+    Circle → (SL ⊕ SR) × (SL ⊕ SR) :=
+  fun circlePoint =>
+    (Sum.inl (identification.leftBoundaryPoint pair circlePoint),
+      Sum.inr (identification.rightBoundaryPoint pair circlePoint))
+
+/-- Every exact seam graph is continuous. -/
+theorem boundarySeamGraph_continuous (pair : Fin identification.pairCount) :
+    Continuous (boundarySeamGraph identification pair) := by
+  apply Continuous.prodMk
+  · apply continuous_inl.comp
+    exact (leftPresentation.parameterization_smooth
+      (identification.leftComponent pair)).continuous
+  · apply continuous_inr.comp
+    apply (rightPresentation.parameterization_smooth
+      (identification.rightComponent pair)).continuous.comp
+    exact (identification.circleDiffeomorphism pair).contMDiff.continuous
+
+/-- Every exact seam graph has closed range by compactness of the circle and Hausdorffness of the
+disjoint-union square. -/
+theorem boundarySeamGraph_range_isClosed (pair : Fin identification.pairCount) :
+    IsClosed (Set.range (boundarySeamGraph identification pair)) := by
+  apply IsCompact.isClosed
+  have compactImage := (isCompact_univ : IsCompact (Set.univ : Set Circle)).image
+    (boundarySeamGraph_continuous identification pair)
+  simpa only [Set.image_univ] using compactImage
+
+/-- The primitive relation set is literally the finite union of exact seam-graph ranges. -/
+theorem primitiveRelation_set_eq_iUnion :
+    {points : (SL ⊕ SR) × (SL ⊕ SR) |
+      compactSurfaceBoundaryGluingRelation identification points.1 points.2} =
+      ⋃ pair : Fin identification.pairCount,
+        Set.range (boundarySeamGraph identification pair) := by
+  ext points
+  rcases points with ⟨first, second⟩
+  rcases first with left | right
+  · rcases second with left' | right'
+    · simp [compactSurfaceBoundaryGluingRelation, boundarySeamGraph]
+    · constructor
+      · rintro ⟨pair, circlePoint, leftEquality, rightEquality⟩
+        exact Set.mem_iUnion.mpr
+          ⟨pair, ⟨circlePoint, by
+            simp [boundarySeamGraph, leftEquality, rightEquality]⟩⟩
+      · intro membership
+        rcases Set.mem_iUnion.mp membership with ⟨pair, circlePoint, equality⟩
+        simp only [boundarySeamGraph, Prod.mk.injEq, Sum.inl.injEq, Sum.inr.injEq]
+          at equality
+        exact ⟨pair, circlePoint, equality.1.symm, equality.2.symm⟩
+  · rcases second with left' | right'
+    · simp [compactSurfaceBoundaryGluingRelation, boundarySeamGraph]
+    · simp [compactSurfaceBoundaryGluingRelation, boundarySeamGraph]
+
+/-- The primitive matching relation is closed. -/
+theorem primitiveRelation_set_isClosed :
+    IsClosed {points : (SL ⊕ SR) × (SL ⊕ SR) |
+      compactSurfaceBoundaryGluingRelation identification points.1 points.2} := by
+  rw [primitiveRelation_set_eq_iUnion identification]
+  exact isClosed_iUnion_of_finite fun pair =>
+    boundarySeamGraph_range_isClosed identification pair
+
+/-- The reversed primitive matching relation is closed. -/
+theorem reversePrimitiveRelation_set_isClosed :
+    IsClosed {points : (SL ⊕ SR) × (SL ⊕ SR) |
+      compactSurfaceBoundaryGluingRelation identification points.2 points.1} := by
+  change IsClosed (Prod.swap ⁻¹' {points : (SL ⊕ SR) × (SL ⊕ SR) |
+    compactSurfaceBoundaryGluingRelation identification points.1 points.2})
+  exact (primitiveRelation_set_isClosed identification).preimage continuous_swap
+
+/-- The full generated equivalence relation is closed in the compact Hausdorff disjoint-union
+square. -/
+theorem explicitGluingEquivalence_set_isClosed :
+    IsClosed {points : (SL ⊕ SR) × (SL ⊕ SR) |
+      explicitGluingEquivalence identification points.1 points.2} := by
+  have diagonal : IsClosed {points : (SL ⊕ SR) × (SL ⊕ SR) |
+      points.1 = points.2} :=
+    isClosed_eq continuous_fst continuous_snd
+  have unionClosed := ((diagonal.union (primitiveRelation_set_isClosed identification)).union
+    (reversePrimitiveRelation_set_isClosed identification))
+  have setEquality :
+      {points : (SL ⊕ SR) × (SL ⊕ SR) |
+        explicitGluingEquivalence identification points.1 points.2} =
+      {points | points.1 = points.2} ∪
+        {points | compactSurfaceBoundaryGluingRelation identification points.1 points.2} ∪
+        {points | compactSurfaceBoundaryGluingRelation identification points.2 points.1} := by
+    ext points
+    simp only [Set.mem_setOf_eq, Set.mem_union, explicitGluingEquivalence]
+    tauto
+  rw [setEquality]
+  exact unionClosed
+
+/-- Saturation of a subset by the exact explicit gluing equivalence. -/
+def explicitGluingSaturation (subset : Set (SL ⊕ SR)) : Set (SL ⊕ SR) :=
+  {point | ∃ source ∈ subset, explicitGluingEquivalence identification source point}
+
+/-- Saturation of every closed subset is closed. This is the compact-Hausdorff projection argument:
+the relevant part of the closed equivalence relation is compact, and its second projection is closed. -/
+theorem explicitGluingSaturation_isClosed {subset : Set (SL ⊕ SR)}
+    (subsetClosed : IsClosed subset) :
+    IsClosed (explicitGluingSaturation identification subset) := by
+  let relationOverSubset : Set ((SL ⊕ SR) × (SL ⊕ SR)) :=
+    {points | points.1 ∈ subset ∧
+      explicitGluingEquivalence identification points.1 points.2}
+  have relationOverSubsetClosed : IsClosed relationOverSubset := by
+    exact (subsetClosed.preimage continuous_fst).inter
+      (explicitGluingEquivalence_set_isClosed identification)
+  have relationOverSubsetCompact : IsCompact relationOverSubset :=
+    relationOverSubsetClosed.isCompact
+  have secondImageCompact : IsCompact (Prod.snd '' relationOverSubset) :=
+    relationOverSubsetCompact.image continuous_snd
+  have secondImageClosed : IsClosed (Prod.snd '' relationOverSubset) :=
+    secondImageCompact.isClosed
+  have imageEquality : Prod.snd '' relationOverSubset =
+      explicitGluingSaturation identification subset := by
+    ext point
+    constructor
+    · rintro ⟨points, ⟨sourceMembership, related⟩, equality⟩
+      exact ⟨points.1, sourceMembership, equality ▸ related⟩
+    · rintro ⟨source, sourceMembership, related⟩
+      exact ⟨(source, point), ⟨sourceMembership, related⟩, rfl⟩
+  rw [← imageEquality]
+  exact secondImageClosed
+
 /-- Equality of projected representatives gives the exact, non-nested generated relation. -/
 theorem eqvGen_of_projection_eq {first second : SL ⊕ SR}
     (equality : projection identification first = projection identification second) :
@@ -282,6 +406,34 @@ theorem eqvGen_of_projection_eq {first second : SL ⊕ SR}
     at nested
   rw [Setoid.eqvGen_idem] at nested
   exact nested
+
+/-- The preimage of a projected subset is exactly its explicit equivalence saturation. -/
+theorem projection_preimage_image (subset : Set (SL ⊕ SR)) :
+    projection identification ⁻¹' (projection identification '' subset) =
+      explicitGluingSaturation identification subset := by
+  ext point
+  constructor
+  · rintro ⟨source, sourceMembership, projectedEquality⟩
+    have generated := eqvGen_of_projection_eq identification projectedEquality
+    exact ⟨source, sourceMembership,
+      (eqvGen_iff_explicitGluingEquivalence identification source point).mp generated⟩
+  · rintro ⟨source, sourceMembership, related⟩
+    have generated :=
+      (eqvGen_iff_explicitGluingEquivalence identification source point).mpr related
+    exact ⟨source, sourceMembership, Quot.sound generated⟩
+
+/-- The quotient projection is a closed map. Unlike an invalid appeal to a product quotient map, the
+proof uses the exact saturation characterization and compact-Hausdorff closedness above. -/
+theorem projection_isClosedMap : IsClosedMap (projection identification) := by
+  intro subset subsetClosed
+  change @IsClosed _
+    (TopologicalSpace.coinduced (projection identification)
+      (inferInstance : TopologicalSpace (SL ⊕ SR)))
+    (projection identification '' subset)
+  rw [isClosed_coinduced]
+  change IsClosed (projection identification ⁻¹' (projection identification '' subset))
+  rw [projection_preimage_image identification subset]
+  exact explicitGluingSaturation_isClosed identification subsetClosed
 
 /-- The canonical left-side map is injective; the generated quotient makes no same-side
 identifications. -/
@@ -304,6 +456,33 @@ theorem rightInclusion_injective : Function.Injective (rightInclusion identifica
   · exact Sum.inr_injective representativeEquality
   · simp [compactSurfaceBoundaryGluingRelation] at forward
   · simp [compactSurfaceBoundaryGluingRelation] at reverse
+
+/-- The canonical left-side map is closed as a composite of the closed sum injection and closed
+quotient projection. -/
+theorem leftInclusion_isClosedMap : IsClosedMap (leftInclusion identification) := by
+  change IsClosedMap (fun point : SL => projection identification (Sum.inl point))
+  exact (projection_isClosedMap identification).comp
+    (isClosedMap_inl : IsClosedMap (Sum.inl : SL → SL ⊕ SR))
+
+/-- The canonical right-side map is closed. -/
+theorem rightInclusion_isClosedMap : IsClosedMap (rightInclusion identification) := by
+  change IsClosedMap (fun point : SR => projection identification (Sum.inr point))
+  exact (projection_isClosedMap identification).comp
+    (isClosedMap_inr : IsClosedMap (Sum.inr : SR → SL ⊕ SR))
+
+/-- Each side map is a closed topological embedding, without assuming the quotient Hausdorff. -/
+theorem leftInclusion_isClosedEmbedding :
+    Topology.IsClosedEmbedding (leftInclusion identification) :=
+  Topology.IsClosedEmbedding.of_continuous_injective_isClosedMap
+    (leftInclusion_continuous identification) (leftInclusion_injective identification)
+    (leftInclusion_isClosedMap identification)
+
+/-- The right side is likewise a closed topological embedding. -/
+theorem rightInclusion_isClosedEmbedding :
+    Topology.IsClosedEmbedding (rightInclusion identification) :=
+  Topology.IsClosedEmbedding.of_continuous_injective_isClosedMap
+    (rightInclusion_continuous identification) (rightInclusion_injective identification)
+    (rightInclusion_isClosedMap identification)
 
 /-- The two side ranges cover the whole exact quotient. -/
 theorem range_leftInclusion_union_range_rightInclusion :

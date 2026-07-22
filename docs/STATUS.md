@@ -4671,7 +4671,13 @@ zero-pair, duplicate-component, and zero-speed surrogates are hostilely blocked.
 disjoint union by those paired points. It has the genuine quotient topology, continuous canonical
 maps from both full surfaces. Primitive seam edges are proved functional and injective as a
 matching; the full generated relation is exactly equality or one edge in either direction, deriving
-both side maps injective. Compactness is derived from the compact disjoint union and connectedness
+both side maps injective. Closed saturation makes the projection closed, so continuity and
+injectivity upgrade both side maps to genuine closed topological embeddings. Each seam graph is a compact closed circle image, their finite union is
+the primitive relation, and adding the diagonal and reversed relation proves the full generated
+equivalence relation closed. Intersecting that relation with a closed subset and projecting the
+resulting compact set proves every exact saturation closed; the quotient projection consequently
+derives a closed map without assuming a generally invalid product-quotient theorem. Compactness is
+derived from the compact disjoint union and connectedness
 derived from the two connected ranges meeting at a positive seam, exact paired-boundary equality,
 and a universal lift for sidewise
 functions agreeing on every generator. Primitive same-left/right relations, extra generated chains, and side collapse are hostilely

@@ -766,8 +766,10 @@ both marginals derive. Exact positive-arity selected boundary identifications no
 components, genuine circle diffeomorphisms, and a derivative equation sending each positive left
 tangent to a strictly negative multiple of the paired positive right tangent. The minimal
 `Relation.EqvGen` quotient of the disjoint union now supplies the exact glued topological carrier,
-canonical continuous injective side maps, a genuine quotient projection, an exact characterization
-of every generated identification as equality or one matching edge, derived compactness and
+canonical closed topological side embeddings, a genuine quotient projection, an exact characterization
+of every generated identification as equality or one matching edge, a proof that the full relation
+is closed via a finite union of compact seam-circle graphs, closedness of every equivalence
+saturation and of the quotient projection, derived compactness and
 connectedness, exact paired-point equality, and a universal lift for compatible sidewise functions. A separate uninhabited descent contract requires
 the same quotient topology to carry an exact two-dimensional compact oriented measured surface,
 genuine smooth side embeddings, pullbacks in the same orientation classes through explicit positive
