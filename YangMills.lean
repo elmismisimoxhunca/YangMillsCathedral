@@ -676,6 +676,8 @@ import YangMills.Minkowski.PoincareComplexSignKernel
 import YangMills.Minkowski.PoincareComplexSignKernelProbes
 import YangMills.Minkowski.PoincareComplexSignSL2
 import YangMills.Minkowski.PoincareComplexSignSL2Probes
+import YangMills.Minkowski.PoincareComplexSL2Topology
+import YangMills.Minkowski.PoincareComplexSL2TopologyProbes
 import YangMills.Minkowski.PoincareCoverRepresentation
 import YangMills.Minkowski.PoincareCoverRepresentationProbes
 import YangMills.Minkowski.PoincareTargetTopology

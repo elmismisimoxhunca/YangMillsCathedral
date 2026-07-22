@@ -5010,8 +5010,11 @@ Mathlib's concrete `Matrix.SpecialLinearGroup (Fin 2) ℂ` is now exposed as
 matrices `±I`; the negative image is nonidentity and the full sign image is central. Its exact image
 subgroup is multiplicatively equivalent to every accepted abstract two-sheet kernel by composition
 through the literal signs, and the accepted negative kernel element maps to the negative matrix sign.
-This is an abstract subgroup equivalence only: no ambient lift-to-matrix-group identification,
-homogeneous Lorentz projection, topology/Lie structure, inhomogeneous semidirect product, or cover
+The exact matrix-subspace topology is now installed as separately packaged infrastructure.
+Multiplication and adjugate inversion are continuous, the matrix inclusion is a topological
+embedding, and homogeneous `SL(2,ℂ)` is a Hausdorff topological group. The kernel bridge remains an
+abstract subgroup equivalence only: no ambient lift-to-matrix-group identification, homogeneous
+Lorentz projection, Lie-group/manifold structure, inhomogeneous semidirect product, or cover
 inhabitant is constructed.
 
 The preliminary `FourDimensionalCurrentStrengthUniversalAcceptance` declaration is intentionally

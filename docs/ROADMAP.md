@@ -578,12 +578,13 @@ committed before higher layers depend on it.
   lift exposed, and integrate both the transported Hilbert representation and original uncast
   domain/field/observable-family covariance into the 4D core.
 - [x] Expose Mathlib's concrete homogeneous `SL(2,ℂ)` matrix carrier, embed the literal complex
-  signs injectively as the central determinant-one scalar matrices `±I`, and derive an abstract
-  multiplicative equivalence from every accepted two-sheet kernel to this exact image subgroup.
+  signs injectively as the central determinant-one scalar matrices `±I`, derive an abstract
+  multiplicative equivalence from every accepted two-sheet kernel to this exact image subgroup, and
+  install the exact matrix-subspace topology as a Hausdorff topological group.
 - [ ] Construct the target law from proper-orthochronous future-cone closure, build the concrete
   inhomogeneous semidirect-product cover, realize its actual projection kernel as that matrix-sign
   image inside the same ambient group rather than merely by abstract equivalence, and upgrade
-  relative sheet labels to this realization.
+  relative sheet labels to this realization; then add the required Lie-group/manifold structure.
 - [x] Define a normalized Poincaré-invariant vacuum whose full invariant subspace is exactly one
   complex line, tied to the same representation and derived translations.
 - [x] Define one dense common domain containing the same vacuum and invariant under the same
