@@ -4639,6 +4639,16 @@ compatibility is derived rather than supplied. Integral equality for every eligi
 observable, Corollary 1.6.4 equality in law for every finite coarse-word family and substituted fine
 family, exact embedded-map composition, and direct pushforward from coherent pairwise laws are
 derived. No graph, refinement, or law instance is constructed.
+
+Lévy Chapter 5, Theorem 5.1.1, equation (5.1), and the opening nonabelian sewing discussion are now
+visually adjudicated against PDF pp. 89–94 / printed pp. 75–80. Reusable
+`observationGeneratedMeasurableSpace` accepts dependent observation targets, constructs the exact
+supremum of their comaps, and proves observation measurability, minimality, exact ambient recognition,
+and surjective reindexing. A constant-observation hostile probe yields the trivial sigma field, not
+the full field. This prepares finite simultaneous-holonomy fields without claiming the source-false
+nonabelian equality of the two side fields with the sewn field. Compact-surface geometry,
+simultaneous-conjugacy quotients, and genuine conditional/disintegration sewing remain unconstructed.
+
 The first Driver Definition 8.1 lattice-approximation component is now exact:
 `EpsilonSquareLatticePathCertificate` fixes `ε > 0`, a continuous literal `ℝ²` curve, and a finite
 strictly parameter-ordered node list from `0` to `1`; each integer-coordinate step is exactly one

@@ -860,9 +860,13 @@ committed before higher layers depend on it.
     every fine face and the whole certified BC product.
   - [x] Add the exact differential-induced Villain common heat chain without Wilson/global-faithful
     overstrength, and the uninhabited connected compact Lie-group Theorem 8.5 convergence contract.
-  - [ ] Resolve/formalize Theorem 8.10; inhabit/derive box
-    projectivity and Theorem 7.2; add compact-surface gluing with exact hypotheses, distinct from finite-cutoff, classical, and
-    four-dimensional witnesses.
+  - [x] Visually adjudicate Lévy Chapter 5, Theorem 5.1.1, equation (5.1), and the nonabelian
+    sigma-field warning; add reusable dependent-observation generated-measurable-space mathematics.
+  - [ ] Build exact connected oriented measured compact-surface geometry, simultaneous-conjugacy
+    observation quotients, orientation-reversing boundary gluing, and genuine conditional/
+    disintegration sewing semantics without asserting that the two side fields generate the whole.
+  - [ ] Resolve/formalize Theorem 8.10; inhabit/derive box projectivity and Theorem 7.2. Keep
+    compact-surface gluing distinct from finite-cutoff, classical, and four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.
   - [x] Add a current-strength continuum core hard-wired to coordinate `ℝ³` with coordinate
     Lebesgue action measure, dependently joining compact-simple gauge/classical data, strict
