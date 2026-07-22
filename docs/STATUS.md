@@ -4640,6 +4640,18 @@ observable, Corollary 1.6.4 equality in law for every finite coarse-word family 
 family, exact embedded-map composition, and direct pushforward from coherent pairwise laws are
 derived. No graph, refinement, or law instance is constructed.
 
+Lévy §1.1 is now visually adjudicated at PDF p. 15 / printed p. 1. The reusable
+`CompactOrientedMeasuredSurfaceData` retains a genuine two-dimensional compact Hausdorff second-
+countable smooth manifold-with-corners carrier, exact connectedness, a smooth nowhere-vanishing real
+top form selecting orientation, and a finite positive Borel area measure. Every exact extended chart
+has one globally measurable density that is smooth and strictly positive on the exact target, and
+the restricted surface measure pushes forward to additive Haar/Lebesgue measure weighted by that
+same density; a.e. chart measurability prevents vacuous zero `Measure.map`. Real total-area
+positivity, measure nonzeroness, and compactness of Mathlib's exact closed boundary set are derived.
+Boundary components are the actual connected-component quotient of that set. Pinned Mathlib still
+lacks a general boundary-submanifold instance, so finite circle presentations, induced boundary
+orientation, closure data, and boundary diffeomorphisms remain separate.
+
 Lévy Chapter 5, Theorem 5.1.1, equation (5.1), and the opening nonabelian sewing discussion are now
 visually adjudicated against PDF pp. 89–94 / printed pp. 75–80. Reusable
 `observationGeneratedMeasurableSpace` accepts dependent observation targets, constructs the exact
@@ -4680,7 +4692,7 @@ singletons); boundary reversal is measurable and involutive;
 and every boundary value has an exact restriction pushforward equal to the left law times the right
 law at the reversed value. Bind reconstruction, whole-law normalization/nonzeroness, and both
 conditional marginals are derived. This deliberately distinguishes generic a.e. regular conditional
-probability from the stronger all-value source-facing version. Compact-surface geometry, and the Lévy-specific
+probability from the stronger all-value source-facing version. Boundary-circle/submanifold geometry, and the Lévy-specific
 conditional-independence sewing record remain unconstructed.
 
 The first Driver Definition 8.1 lattice-approximation component is now exact:

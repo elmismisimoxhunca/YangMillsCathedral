@@ -727,7 +727,13 @@ general-boundary laws on the unchanged density semigroup through an eligible fin
 pullback with the same ambient physical observable and exact weighted-measure pushforward. It derives
 all eligible coarse-observable pullback integrals, finite word-family equality in law, and direct
 pushforward from coherent pairwise refinement laws. No refinement instance is constructed. Lévy
-Chapter 5 sewing has now been visually adjudicated. Reusable simultaneous-conjugacy infrastructure
+§1.1 now supplies a reusable intrinsic compact-surface nucleus: a genuine two-dimensional compact
+connected manifold-with-corners carrier, a smooth nowhere-vanishing top form selecting orientation,
+and one finite positive Borel area measure with positive smooth density relative to additive
+Haar/Lebesgue measure in every exact extended chart. Exact chart sources/targets and a.e.
+measurability are retained; the actual manifold boundary is closed and compact and its connected-
+component quotient is named. No boundary-circle presentation, smooth boundary-submanifold, closure,
+metric volume, or surface law is constructed. Lévy Chapter 5 sewing has now been visually adjudicated. Reusable simultaneous-conjugacy infrastructure
 uses one common diagonal conjugator for an entire indexed family and equips the exact quotient with
 its genuine quotient topology and final measurable space. The projection is continuous and a
 quotient map. Finite families over compact Hausdorff groups have compact Hausdorff quotient,
@@ -744,7 +750,7 @@ the full field; ambient equality requires a separate converse coverage inclusion
 genuine Mathlib conditional-kernel disintegration, zero mass outside every exact boundary fiber,
 involutive boundary
 reversal, and an all-boundary-value product restriction law; bind reconstruction, normalization, and
-both marginals derive. Compact-surface geometry, source-
+both marginals derive. Boundary-circle/submanifold geometry, source-
 specific conditional independence/sewing laws, and lattice-limit layers remain explicit debt. As the first Definition 8.1 approximation component,
 `EpsilonSquareLatticePathCertificate` now gives exact positive-spacing paths in the directed
 nearest-neighbor graph on `εℤ²`: finite strictly ordered nodes from parameters `0` to `1`, horizontal
