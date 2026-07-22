@@ -298,6 +298,37 @@ theorem jointlyMeasurableProcess_map_eq
 
 omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
     [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Every finite vector of modified time evaluations is measurable. -/
+theorem jointlyMeasurableProcess_finiteTime_measurable
+    (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
+      inner law semigroup laplacian heat Ω)
+    (n : ℕ) (times : Fin n → NNReal) :
+    Measurable (fun samplePoint i =>
+      brownian.jointlyMeasurableProcess (times i) samplePoint) := by
+  apply measurable_pi_iff.mpr
+  intro i
+  exact brownian.jointlyMeasurableProcess_fixedTime_measurable (times i)
+
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
+/-- The modification preserves every finite-dimensional process distribution, not only individual
+fixed-time marginals. -/
+theorem jointlyMeasurableProcess_finiteDimensionalDistribution_eq
+    (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
+      inner law semigroup laplacian heat Ω)
+    (n : ℕ) (times : Fin n → NNReal) :
+    Measure.map (fun samplePoint i =>
+        brownian.jointlyMeasurableProcess (times i) samplePoint)
+        brownian.probabilityMeasure =
+      Measure.map (fun samplePoint i => brownian.process (times i) samplePoint)
+        brownian.probabilityMeasure := by
+  apply Measure.map_congr
+  filter_upwards [brownian.jointlyMeasurableProcess_ae_eq] with samplePoint equality
+  funext i
+  exact equality (times i)
+
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Every positive stationary right-increment law is unchanged by the jointly measurable
 modification. -/
 theorem jointlyMeasurableProcess_stationary_increment_law
@@ -408,6 +439,23 @@ theorem selectedArea_marginal_eq_sampledLoopLaw
   rw [brownian.marginal_law (selectedAreaTime (law := law)) selectedAreaTime_pos]
   rw [selectedAreaTime_coe]
   exact law.selectedLoop_law.symm
+
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
+/-- The jointly measurable version retains the exact selected-area equality with the sampled loop
+holonomy law. -/
+theorem jointlyMeasurableProcess_selectedArea_marginal_eq_sampledLoopLaw
+    (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
+      inner law semigroup laplacian heat Ω) :
+    Measure.map
+        (brownian.jointlyMeasurableProcess (selectedAreaTime (law := law)))
+        brownian.probabilityMeasure =
+      Measure.map
+        (fun samplePoint =>
+          base.holonomy law.selectedLoop (base.sampleConnection samplePoint))
+        base.probabilityMeasure := by
+  rw [brownian.jointlyMeasurableProcess_map_eq]
+  exact brownian.selectedArea_marginal_eq_sampledLoopLaw
 
 end TwoDimensionalSelectedLoopBrownianRealizationData
 

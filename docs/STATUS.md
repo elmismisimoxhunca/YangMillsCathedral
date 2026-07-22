@@ -4546,8 +4546,10 @@ jointly `NNReal × Ω` measurable modification, simultaneously almost surely equ
 all times. Identity start, every finite monotone mutual right-increment independence law, every
 fixed-time law, and every positive stationary right-increment law are unchanged. These derived laws
 repackage the modification as a new `TwoDimensionalSelectedLoopBrownianRealizationData` on the exact
-same sample carrier and probability measure, with joint measurability exposed as a theorem. At the
-selected positive area, the original marginal is proved exactly equal to the sampled loop-
+same sample carrier and probability measure, with joint measurability exposed as a theorem. Every
+finite time-evaluation vector is measurable and has exactly the original finite-dimensional
+distribution. At the selected positive area, the modified marginal as well as the original marginal
+is proved exactly equal to the sampled loop-
 holonomy pushforward from the original gauge-fixed continuum nucleus. No process or Brownian motion
 is constructed.
 

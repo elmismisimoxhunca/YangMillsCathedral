@@ -153,6 +153,40 @@ theorem exact_modified_fixed_time_law
 
 omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
     [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Every finite evaluation vector is measurable and has the unchanged joint distribution. -/
+theorem exact_modified_finite_dimensional_distributions
+    (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
+      inner law semigroup laplacian heat Ω)
+    (n : ℕ) (times : Fin n → NNReal) :
+    Measurable (fun samplePoint i =>
+        brownian.jointlyMeasurableProcess (times i) samplePoint) ∧
+      Measure.map (fun samplePoint i =>
+          brownian.jointlyMeasurableProcess (times i) samplePoint)
+          brownian.probabilityMeasure =
+        Measure.map (fun samplePoint i => brownian.process (times i) samplePoint)
+          brownian.probabilityMeasure :=
+  ⟨brownian.jointlyMeasurableProcess_finiteTime_measurable n times,
+    brownian.jointlyMeasurableProcess_finiteDimensionalDistribution_eq n times⟩
+
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
+/-- A changed finite-dimensional distribution is hostilely rejected. -/
+theorem changed_modified_finite_dimensional_distribution_blocked
+    (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
+      inner law semigroup laplacian heat Ω)
+    (n : ℕ) (times : Fin n → NNReal) (wrong : Measure (Fin n → G))
+    (claimed : Measure.map (fun samplePoint i =>
+        brownian.jointlyMeasurableProcess (times i) samplePoint)
+        brownian.probabilityMeasure = wrong)
+    (different : wrong ≠ Measure.map
+      (fun samplePoint i => brownian.process (times i) samplePoint)
+      brownian.probabilityMeasure) : False := by
+  apply different
+  rw [← claimed]
+  exact brownian.jointlyMeasurableProcess_finiteDimensionalDistribution_eq n times
+
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
 /-- The modified process retains the exact positive stationary right-increment law. -/
 theorem exact_modified_stationary_increment_law
     (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
@@ -220,6 +254,22 @@ theorem exact_selected_area_coherence
           base.holonomy law.selectedLoop (base.sampleConnection samplePoint))
         base.probabilityMeasure :=
   brownian.selectedArea_marginal_eq_sampledLoopLaw
+
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
+/-- The jointly measurable version has the same exact selected-area sampled-loop law. -/
+theorem exact_modified_selected_area_coherence
+    (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
+      inner law semigroup laplacian heat Ω) :
+    Measure.map
+        (brownian.jointlyMeasurableProcess
+          (TwoDimensionalSelectedLoopBrownianRealizationData.selectedAreaTime (law := law)))
+        brownian.probabilityMeasure =
+      Measure.map
+        (fun samplePoint =>
+          base.holonomy law.selectedLoop (base.sampleConnection samplePoint))
+        base.probabilityMeasure :=
+  brownian.jointlyMeasurableProcess_selectedArea_marginal_eq_sampledLoopLaw
 
 omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
     [MeasurableMul₂ G] [MeasurableInv G] in

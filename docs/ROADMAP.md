@@ -716,7 +716,9 @@ committed before higher layers depend on it.
     paths on a measurable null discontinuity hull; prove simultaneous all-time almost-sure equality,
     identity start, every finite monotone mutual increment-independence law, and preservation of
     every fixed-time and positive stationary-increment law; repackage it as the same Brownian
-    acceptance structure on the unchanged sample carrier and probability measure.
+    acceptance structure on the unchanged sample carrier and probability measure; prove all finite
+    time-evaluation vectors measurable with unchanged joint distributions and retain selected-area
+    sampled-loop coherence.
   - [x] Transport the exact invariant pairing pointwise by left Maurer–Cartan trivialization; prove
     its inverse, symmetry, strict positivity, exact left/right translation formulas, and
     bi-invariance with the required `Ad(h⁻¹)` convention.
