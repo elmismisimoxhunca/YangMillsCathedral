@@ -883,9 +883,13 @@ committed before higher layers depend on it.
   - [x] Construct the minimal equivalence-closure quotient of the disjoint union by exact paired
     boundary points, with genuine quotient topology, side maps, and compatible-function universal
     lift.
+  - [x] Add dependent base-point-partitioned positive finite holonomy observations, so separate bases
+    receive separate common conjugators rather than a source-false mixed-base quotient.
+  - [x] Add the uninhabited Lévy Theorem 5.1.1 core sewing record with exact `(G/Ad)^p` seam
+    conditioning, geometric basepoint-index/trace coherence, exact side/sewn seam traces,
+    restriction holonomy and inverse side-seam conjugacy-class coherence, genuine disintegration, componentwise inverse boundary classes, and all-value product/marginal laws without asserting side-field generation.
   - [ ] Prove chart-independence of the outward predicate and Hausdorff/manifold/orientation/measure
-    descent for the glued quotient, and add the Lévy-specific conditional-independence sewing record
-    without asserting that the two side fields generate the whole.
+    descent for the glued quotient; add Theorem 5.1.1's final further-conditioning clause.
   - [ ] Resolve/formalize Theorem 8.10; inhabit/derive box projectivity and Theorem 7.2. Keep
     compact-surface gluing distinct from finite-cutoff, classical, and four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.

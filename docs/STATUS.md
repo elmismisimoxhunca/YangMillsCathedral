@@ -4701,7 +4701,10 @@ property, while its measurability is proved directly for the final quotient sigm
 literal inverse conjugacy class required on the second side of Lévy equation (5.1), not a freely
 chosen involution. Lévy §2.10 is now visually adjudicated at PDF pp. 62–63 /
 printed pp. 48–49: one common diagonal conjugator applies only to loops at one fixed base point,
-while mixed-basepoint families are tuples of separate joint classes. `NonemptyFiniteFamily` now
+while mixed-basepoint families are partitioned by a dependent base-point index. The new
+`PartitionedFixedBaseFiniteFamily` selects one exact base and one positive finite family in that
+fiber; different bases admit independent conjugators, and no observation applies one conjugator
+across them. `NonemptyFiniteFamily` now
 enforces literal positive arity `n+1`; existence is equivalent to nonemptiness of the caller-supplied
 fixed-base loop carrier. Every resulting finite joint holonomy class is measurable on the exact generated sigma field, measurable one-loop holonomies put
 that field below any ambient sample field, and exact ambient equality requires the converse coverage
@@ -4718,8 +4721,20 @@ singletons); boundary reversal is measurable and involutive;
 and every boundary value has an exact restriction pushforward equal to the left law times the right
 law at the reversed value. Bind reconstruction, whole-law normalization/nonzeroness, and both
 conditional marginals are derived. This deliberately distinguishes generic a.e. regular conditional
-probability from the stronger all-value source-facing version. Smooth/oriented/measured structure on the glued quotient and the Lévy-specific
-conditional-independence sewing record remain unconstructed.
+probability from the stronger all-value source-facing version. The Lévy-specific conditional-
+independence sewing record is now present as uninhabited acceptance data.
+`TwoDimensionalLevyCompactSurfaceSewingData` ties the exact geometric pair count to literal
+`(G/Ad)^p` seam values and three separately partitioned fixed-base holonomy-generated fields. Raw
+`G`-valued coordinates are not required measurable on quotient samples. Every dependent base index
+maps injectively to an actual geometric point and every loop trace passes through that point,
+preventing labels from either merging distinct basepoints or splitting one actual basepoint into
+independently conjugated fibers. Exact trace maps identify side
+seam loops with the selected geometric component parameterizations and the sewn seam with the same
+loop in the topological gluing quotient; the right included trace is related through the exact
+orientation-reversing diffeomorphism. Piece restriction holonomies and left/right seam conjugacy-class/inverse coherence feed `BoundaryConditionedProductDisintegrationData`. Its right factor uses the
+componentwise descended inverse class, and the all-value product law and both marginals derive.
+It does not assert that the side fields generate the whole sewn field. The final further-conditioning
+clause of Theorem 5.1.1 and smooth/oriented/measured descent on the topological quotient remain open.
 
 The first Driver Definition 8.1 lattice-approximation component is now exact:
 `EpsilonSquareLatticePathCertificate` fixes `ε > 0`, a continuous literal `ℝ²` curve, and a finite
