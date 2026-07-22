@@ -705,8 +705,11 @@ committed before higher layers depend on it.
   `P(A)=∫σ(g⁻¹)Aρ(g)dμ_H` for arbitrary rectangular matrices between two continuous finite matrix
   representations; derive coefficient integrability and the exact intertwining identity
   `σ(h)P(A)=P(A)ρ(h)` by right-Haar substitution.
-- [ ] Combine this analytic averaging operator with Mathlib's algebraic irreducibility/Schur API and
-  derive Haar orthogonality of matrix coefficients, including exact dimension normalization.
+- [x] Bundle the analytic average as Mathlib's exact `IntertwiningMap`; derive the irreducible
+  bijective-or-zero dichotomy and prove that every averaged rectangular matrix vanishes for
+  irreducible inequivalent coordinate representations.
+- [ ] Derive the scalar identity coefficient in the irreducible self/equivalent case and conclude
+  full Haar orthogonality of matrix coefficients with exact dimension normalization.
 - [x] Define coordinatewise representation-valued Fourier coefficients with exact inverse
   convention, derive continuous compact-domain integrability, addition/scalar/zero laws, specialize
   to probability-normalized Haar, and identify matrix trace with the scalar inverse-character

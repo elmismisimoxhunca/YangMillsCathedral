@@ -5057,7 +5057,11 @@ The next Schur precursor is now concrete: for two continuous finite matrix repre
 arbitrary rectangular matrix `A`, the coordinatewise Reynolds average
 `P(A)=∫σ(g⁻¹)Aρ(g)dμ_H` is genuinely integrable and satisfies the exact intertwining identity
 `σ(h)P(A)=P(A)ρ(h)`. The proof transports finite matrix-coordinate sums through integrals and uses
-the exact right-Haar substitution `g ↦ g*h`; no irreducibility conclusion is stored. No Haar orthogonality,
+the exact right-Haar substitution `g ↦ g*h`. This analytic average is now bundled as Mathlib's
+exact `IntertwiningMap`. Mathlib's algebraic Schur machinery derives the irreducible
+bijective-or-zero dichotomy, and an explicit inequivalence typeclass forces the entire averaged
+rectangular matrix to zero. A hostile probe rejects any claimed nonzero average in that case. The
+irreducible self-case scalar coefficient and exact dimension normalization remain open. No full Haar orthogonality,
 irreducibility theorem, Fourier inversion, Peter–Weyl density, or heat-kernel spectral expansion is
 claimed.
 
