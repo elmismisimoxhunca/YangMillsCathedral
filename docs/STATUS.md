@@ -4825,7 +4825,11 @@ represented one-coordinate marginals derive. Both remain uninhabited acceptance 
 positive-radius centered boxes with lower-left coordinates `-n,…,n-1`, while
 `epsilonSquareLatticeBoxAxialCoordinates` gives right-directed horizontal coordinates on the
 nonzero rows `-n,…,-1,1,…,n`. Both sets are literally nested with radius; all coordinates are
-off-tree and every selected plaquette's non-tree boundary is covered forward or in reverse. `twoDimensionalSquareLatticeBoxPresentation` now uses the exact coordinate/plaquette subtypes,
+off-tree and every selected plaquette's non-tree boundary is covered forward or in reverse.
+`boxOffAxisRowEquiv` and `boxPlaquetteRowEquiv` explicitly enumerate the actual row subtypes by two
+`Fin radius` chains, with positive coordinate row `i+1` aligned above upper plaquette row `i` and
+negative coordinate/lower-plaquette row `-(i+1)`. These are geometric equivalences with exact signed
+formulas, not arbitrary finite-cardinality relabelings. `twoDimensionalSquareLatticeBoxPresentation` now uses the exact coordinate/plaquette subtypes,
 constructs a measurable extension taking represented bonds to arbitrary coordinates, reverse bonds
 to inverses, and all other bonds to the identity, and proves exact coordinate recovery, finite
 support, orientation disjointness, and boundary coverage. Horizontal values on arbitrary rows are
