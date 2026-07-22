@@ -740,8 +740,11 @@ committed before higher layers depend on it.
 - [x] Derive the exact single-block algebraic Plancherel formulas
   `⟨f_A,f_B⟩=n⁻¹⟨A,B⟩ₕₛ=n⟨f̂_A(ρ),f̂_B(ρ)⟩ₕₛ`, including the forced representation-dimension
   weight.
-- [ ] Extend character orthogonality and algebraic Plancherel to explicitly packaged finite sums of
-  pairwise inequivalent coefficient blocks and finite central-character spans.
+- [x] Package finite families of pairwise inequivalent positive-dimensional irreducible unitary
+  characters: construct continuous central synthesis, exact character analysis, coordinate
+  Plancherel, injectivity, and exact span dimension equal to the family cardinality.
+- [ ] Extend algebraic Plancherel from one full coefficient block to explicitly packaged finite sums
+  of pairwise inequivalent full matrix-coefficient blocks.
 - [ ] Prove Stone–Weierstrass separation and Peter–Weyl density/completeness in continuous and `L²`
   carriers with explicit topology and measure hypotheses.
 - [ ] State and prove only convergence-justified Fourier inversion and central character expansions;

@@ -5089,9 +5089,13 @@ equivalent to the full matrix space and has exact dimension `n²`; hostile probe
 pointwise coefficient collapse and a wrong block dimension. On this exact block, the coordinate
 Hilbert–Schmidt pairing now gives the algebraic Plancherel identities
 `⟨f_A,f_B⟩=n⁻¹⟨A,B⟩ₕₛ=n⟨f̂_A(ρ),f̂_B(ρ)⟩ₕₛ`. A hostile diagonal-matrix-unit probe shows that
-omitting the Fourier-side dimension weight forces `n=1`. Equivalent-but-differently-presented
-transport, pairwise-inequivalent finite sums, central-character spans, Fourier inversion,
-Peter–Weyl density, and heat-kernel spectral expansion remain open.
+omitting the Fourier-side dimension weight forces `n=1`. Finite pairwise-inequivalent irreducible
+character families are now packaged dependently across varying representation dimensions: their
+synthesis is continuous and central, analysis recovers each exact coefficient, the Haar pairing is
+the coordinate pairing, synthesis is injective, and the range dimension equals the family
+cardinality. Hostile probes reject coefficient collapse and an equivalence between distinct indexed
+members. Equivalent-but-differently-presented transport, finite sums of full matrix-coefficient
+blocks, Fourier inversion, Peter–Weyl density, and heat-kernel spectral expansion remain open.
 
 The full two-dimensional literature chain is now an explicit validation target: a future final 2D
 acceptance proposition must join the Driver/Lévy/Sengupta finite, continuum, Brownian, compact-surface,
