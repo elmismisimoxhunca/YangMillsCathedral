@@ -191,6 +191,17 @@ theorem exact_paired_points_equal (pair : Fin identification.pairCount)
         (identification.rightBoundaryPoint pair circlePoint) :=
   CompactSurfaceBoundaryGluingQuotient.paired_boundary_points_equal identification pair circlePoint
 
+/-- Cross-side equality occurs only at an exact designated pair; arbitrary side points cannot meet
+in the quotient. -/
+theorem exact_cross_side_equality (left : SL) (right : SR) :
+    CompactSurfaceBoundaryGluingQuotient.leftInclusion identification left =
+        CompactSurfaceBoundaryGluingQuotient.rightInclusion identification right ↔
+      ∃ (pair : Fin identification.pairCount) (circlePoint : Circle),
+        left = identification.leftBoundaryPoint pair circlePoint ∧
+        right = identification.rightBoundaryPoint pair circlePoint :=
+  CompactSurfaceBoundaryGluingQuotient.leftInclusion_eq_rightInclusion_iff
+    identification left right
+
 /-- The projection carries the genuine quotient topology and quotient-map universal topology. -/
 theorem exact_topological_quotient_projection :
     Continuous (CompactSurfaceBoundaryGluingQuotient.projection identification) ∧

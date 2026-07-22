@@ -414,6 +414,28 @@ theorem eqvGen_of_projection_eq {first second : SL ⊕ SR}
   rw [Setoid.eqvGen_idem] at nested
   exact nested
 
+/-- A left-side point and a right-side point have the same quotient image exactly when they are
+one of the designated paired boundary points. -/
+theorem leftInclusion_eq_rightInclusion_iff (left : SL) (right : SR) :
+    leftInclusion identification left = rightInclusion identification right ↔
+      ∃ (pair : Fin identification.pairCount) (circlePoint : Circle),
+        left = identification.leftBoundaryPoint pair circlePoint ∧
+        right = identification.rightBoundaryPoint pair circlePoint := by
+  constructor
+  · intro equality
+    change projection identification (Sum.inl left) =
+      projection identification (Sum.inr right) at equality
+    have generated := eqvGen_of_projection_eq identification equality
+    have explicit :=
+      (eqvGen_iff_explicitGluingEquivalence identification
+        (Sum.inl left) (Sum.inr right)).mp generated
+    rcases explicit with impossible | forward | reverse
+    · cases impossible
+    · exact forward
+    · simp only [compactSurfaceBoundaryGluingRelation] at reverse
+  · rintro ⟨pair, circlePoint, rfl, rfl⟩
+    exact paired_boundary_points_equal identification pair circlePoint
+
 /-- The preimage of a projected subset is exactly its explicit equivalence saturation. -/
 theorem projection_preimage_image (subset : Set (SL ⊕ SR)) :
     projection identification ⁻¹' (projection identification '' subset) =

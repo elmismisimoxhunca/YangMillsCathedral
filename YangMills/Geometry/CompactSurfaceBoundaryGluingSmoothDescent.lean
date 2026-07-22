@@ -122,12 +122,6 @@ structure CompactSurfaceBoundaryGluingSmoothDescentData where
           (IL.boundary SL \ selectedLeftBoundarySet (identification := identification)) ∪
         CompactSurfaceBoundaryGluingQuotient.rightInclusion identification ''
           (IR.boundary SR \ selectedRightBoundarySet (identification := identification))
-  /-- Every selected seam point becomes an interior point of the glued surface. -/
-  seam_mem_interior : ∀ pair circlePoint,
-    CompactSurfaceBoundaryGluingQuotient.leftInclusion identification
-        (identification.leftBoundaryPoint pair circlePoint) ∈
-      IG.interior (GluedSurfaceCarrier (identification := identification))
-
 namespace CompactSurfaceBoundaryGluingSmoothDescentData
 
 /-- The left side map is a genuine smooth embedding: only immersion comes from descent data, while
@@ -150,6 +144,59 @@ theorem right_smoothEmbedding
   ⟨descent.right_immersion,
     (CompactSurfaceBoundaryGluingQuotient.rightInclusion_isClosedEmbedding
       identification).isEmbedding⟩
+
+omit [FiniteDimensional ℝ EG] [MeasurableSpace EG] [BorelSpace EG]
+  [IsManifold IG ∞ (GluedSurfaceCarrier (identification := identification))] in
+/-- If the glued manifold boundary is exactly the unselected side-boundary images, then every
+selected seam point is interior. Exact same-side injectivity and cross-side matching exclude both
+parts of the displayed boundary. -/
+theorem seam_mem_interior_of_boundary_eq
+    (boundaryEq :
+      IG.boundary (GluedSurfaceCarrier (identification := identification)) =
+        CompactSurfaceBoundaryGluingQuotient.leftInclusion identification ''
+            (IL.boundary SL \ selectedLeftBoundarySet (identification := identification)) ∪
+          CompactSurfaceBoundaryGluingQuotient.rightInclusion identification ''
+            (IR.boundary SR \ selectedRightBoundarySet (identification := identification)))
+    (pair : Fin identification.pairCount) (circlePoint : Circle) :
+    CompactSurfaceBoundaryGluingQuotient.leftInclusion identification
+        (identification.leftBoundaryPoint pair circlePoint) ∈
+      IG.interior (GluedSurfaceCarrier (identification := identification)) := by
+  rw [← IG.compl_boundary]
+  intro boundaryMembership
+  rw [boundaryEq] at boundaryMembership
+  rcases boundaryMembership with leftImage | rightImage
+  · rcases leftImage with ⟨leftPoint, ⟨_leftBoundary, leftUnselected⟩, equality⟩
+    have pointEquality : leftPoint = identification.leftBoundaryPoint pair circlePoint :=
+      (CompactSurfaceBoundaryGluingQuotient.leftInclusion_injective identification) equality
+    apply leftUnselected
+    subst leftPoint
+    apply Set.mem_iUnion.mpr
+    refine ⟨pair, ?_⟩
+    rw [← leftPresentation.parameterization_range]
+    exact ⟨circlePoint, rfl⟩
+  · rcases rightImage with ⟨rightPoint, ⟨_rightBoundary, rightUnselected⟩, equality⟩
+    have crossing :=
+      (CompactSurfaceBoundaryGluingQuotient.leftInclusion_eq_rightInclusion_iff
+        (identification := identification)
+        (identification.leftBoundaryPoint pair circlePoint) rightPoint).mp equality.symm
+    rcases crossing with ⟨otherPair, otherCirclePoint, _leftEquality, rightEquality⟩
+    apply rightUnselected
+    apply Set.mem_iUnion.mpr
+    refine ⟨otherPair, ?_⟩
+    rw [← rightPresentation.parameterization_range]
+    exact ⟨identification.circleDiffeomorphism otherPair otherCirclePoint,
+      rightEquality.symm⟩
+
+/-- Every selected seam point is interior, derived from the exact remaining-boundary equation rather
+than supplied as an independent descent field. -/
+theorem seam_mem_interior
+    (descent : CompactSurfaceBoundaryGluingSmoothDescentData
+      (identification := identification) (IG := IG))
+    (pair : Fin identification.pairCount) (circlePoint : Circle) :
+    CompactSurfaceBoundaryGluingQuotient.leftInclusion identification
+        (identification.leftBoundaryPoint pair circlePoint) ∈
+      IG.interior (GluedSurfaceCarrier (identification := identification)) :=
+  seam_mem_interior_of_boundary_eq descent.boundary_eq_unselected_images pair circlePoint
 
 /-- Exact dimension two is inherited from the glued compact-surface nucleus. -/
 theorem glued_model_finrank_two
