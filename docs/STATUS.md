@@ -4537,7 +4537,8 @@ The uninhabited `TwoDimensionalSelectedLoopBrownianRealizationData` now consumes
 Lie heat core without a compact-simple index and adds an exact probability law on
 an independent process sample carrier. The same process starts at the group identity almost surely,
 has almost-surely continuous `NNReal`-time paths, and has mutually independent consecutive right
-increments; every positive increment is assigned the unchanged normalized-Haar density law. The
+increments; every positive increment is assigned the unchanged normalized-Haar density law. Applying
+that law at one positive time derives process-carrier normalization rather than storing it. The
 one-time marginal is derived from the identity start and stationary increment rather than stored
 again. Each fixed-time coordinate is measurable; joint `NNReal × Ω` measurability is not yet
 claimed. At the selected positive area, that marginal is proved exactly equal to the sampled loop-

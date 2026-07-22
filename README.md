@@ -662,7 +662,8 @@ uninhabited heat core has compact Lie-group scope without a compact-simple index
 positive spatially smooth real family pointwise, via `ENNReal.ofReal`, to the unchanged density; it
 requires Driver's exact `∂ₜQ=½ΔQ` sign and factor against that same Laplacian. A further uninhabited
 process realization consumes that same general heat core, starts at the identity almost surely, has almost-surely continuous paths and
-mutually independent stationary right increments with those unchanged density laws. Its one-time
+mutually independent stationary right increments with those unchanged density laws. One positive
+increment derives normalization of the process carrier, rather than storing it. Its one-time
 marginals are derived, including exact equality at the selected area with the sampled loop-holonomy
 law. The metric bridge now transports the exact invariant pairing to every group tangent fiber by
 left Maurer–Cartan trivialization and proves its inverse, symmetry, strict positivity, and left/right

@@ -29,6 +29,7 @@ variable
     [SecondCountableTopology G] [ChartedSpace E G]
     [LieGroup (modelWithCornersSelf ℝ E) ∞ G]
     [CompactSpace G] [MeasurableSpace G] [BorelSpace G]
+    [MeasurableMul₂ G] [MeasurableInv G]
     [Group Gauge] [MeasurableSpace Sample] [MeasurableSpace Ω]
     {inner : Geometry.InvariantInnerProductData
       (I := modelWithCornersSelf ℝ E) (G := G)}
@@ -55,7 +56,8 @@ theorem zero_process_measure_blocked
     (claimed : brownian.probabilityMeasure = 0) : False :=
   brownian.probabilityMeasure_ne_zero claimed
 
-omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Every fixed-time coordinate is measurable under the exact process carrier. -/
 theorem exact_fixed_time_measurability
     (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
@@ -63,7 +65,8 @@ theorem exact_fixed_time_measurability
     (t : NNReal) : Measurable (brownian.process t) :=
   brownian.process_measurable t
 
-omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
 /-- The process starts at the exact group identity almost surely. -/
 theorem exact_identity_start
     (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
@@ -72,7 +75,8 @@ theorem exact_identity_start
       ae brownian.probabilityMeasure :=
   brownian.process_zero
 
-omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Path continuity concerns the same process and probability law. -/
 theorem exact_continuous_paths
     (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
@@ -81,7 +85,8 @@ theorem exact_continuous_paths
       ae brownian.probabilityMeasure :=
   brownian.continuous_paths
 
-omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Every positive stationary right increment has the unchanged density law. -/
 theorem exact_stationary_increment_law
     (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
@@ -94,7 +99,8 @@ theorem exact_stationary_increment_law
         (law.selectedAreaDensity (t : ℝ)) :=
   brownian.stationary_increment_law s t ht
 
-omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Mutual independence retains every finite monotone family and the exact right-increment order. -/
 theorem exact_independent_increments
     (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
@@ -107,7 +113,8 @@ theorem exact_independent_increments
       brownian.probabilityMeasure :=
   brownian.independent_increments n t ht
 
-omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
 /-- One-time marginals are derived from identity start and stationary increments. -/
 theorem exact_derived_marginal
     (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
@@ -118,7 +125,8 @@ theorem exact_derived_marginal
         (law.selectedAreaDensity (t : ℝ)) :=
   brownian.marginal_law t ht
 
-omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
 /-- At the selected area, the process and exact sampled loop holonomy have one law. -/
 theorem exact_selected_area_coherence
     (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
@@ -133,7 +141,8 @@ theorem exact_selected_area_coherence
         base.probabilityMeasure :=
   brownian.selectedArea_marginal_eq_sampledLoopLaw
 
-omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
 /-- A changed positive-time marginal is rejected. -/
 theorem changed_marginal_blocked
     (brownian : TwoDimensionalSelectedLoopBrownianRealizationData

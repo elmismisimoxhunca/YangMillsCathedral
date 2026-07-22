@@ -42,6 +42,7 @@ variable
     [T2Space G] [SecondCountableTopology G] [ChartedSpace E G]
     [LieGroup (modelWithCornersSelf ℝ E) ∞ G]
     [CompactSpace G] [MeasurableSpace G] [BorelSpace G]
+    [MeasurableMul₂ G] [MeasurableInv G]
     {Gauge : Type uGauge} [Group Gauge]
     {Sample : Type uSample} [MeasurableSpace Sample]
     {Connection : Type uConnection}
@@ -63,7 +64,6 @@ structure TwoDimensionalSelectedLoopBrownianRealizationData
     (Ω : Type uΩ) [MeasurableSpace Ω] where
   /-- Probability law on the exact process sample carrier. -/
   probabilityMeasure : Measure Ω
-  probability_normalized : probabilityMeasure Set.univ = 1
   /-- Group-valued process at nonnegative time. -/
   process : NNReal → Ω → G
   process_measurable : ∀ t, Measurable (process t)
@@ -99,6 +99,27 @@ variable
       inner law semigroup laplacian}
 
 omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
+/-- The stationary increment law at one positive time derives normalization of the process carrier;
+it is not an independent acceptance field. -/
+theorem probability_normalized
+    (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
+      inner law semigroup laplacian heat Ω) :
+    brownian.probabilityMeasure Set.univ = 1 := by
+  let increment : Ω → G := fun samplePoint =>
+    (brownian.process 0 samplePoint)⁻¹ * brownian.process (0 + 1) samplePoint
+  have increment_measurable : Measurable increment :=
+    (brownian.process_measurable 0).inv.mul (brownian.process_measurable (0 + 1))
+  calc
+    brownian.probabilityMeasure Set.univ =
+        Measure.map increment brownian.probabilityMeasure Set.univ := by
+      rw [Measure.map_apply increment_measurable MeasurableSet.univ, Set.preimage_univ]
+    _ = ((normalizedCompactHaarMeasure G).withDensity
+          (law.selectedAreaDensity (1 : ℝ))) Set.univ := by
+      simpa [increment] using congrArg (fun measure : Measure G => measure Set.univ)
+        (brownian.stationary_increment_law 0 1 zero_lt_one)
+    _ = 1 := semigroup.densityMeasure_univ_of_pos 1 zero_lt_one
+
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
 /-- The process probability measure cannot be zero. -/
 theorem probabilityMeasure_ne_zero
     (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
@@ -109,7 +130,8 @@ theorem probabilityMeasure_ne_zero
   rw [zero_measure] at normalized
   simp at normalized
 
-omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
 /-- The positive-time marginal is derived from the stationary increment at zero and the exact
 almost-sure identity initial condition. -/
 theorem marginal_law
@@ -136,18 +158,19 @@ theorem marginal_law
 noncomputable def selectedAreaTime : NNReal :=
   ⟨law.enclosedArea, law.enclosedArea_pos.le⟩
 
-omit [T2Space G] [SecondCountableTopology G] in
+omit [T2Space G] [SecondCountableTopology G] [MeasurableMul₂ G] [MeasurableInv G] in
 @[simp]
 theorem selectedAreaTime_coe :
     ((selectedAreaTime (law := law) : NNReal) : ℝ) = law.enclosedArea :=
   rfl
 
-omit [T2Space G] [SecondCountableTopology G] in
+omit [T2Space G] [SecondCountableTopology G] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- The selected area time is strictly positive. -/
 theorem selectedAreaTime_pos : 0 < selectedAreaTime (law := law) := by
   exact law.enclosedArea_pos
 
-omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
 /-- At the exact selected area, Brownian marginal and sampled loop holonomy have the same law. -/
 theorem selectedArea_marginal_eq_sampledLoopLaw
     (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
