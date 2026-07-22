@@ -798,7 +798,8 @@ holonomy uses the fixed later-on-the-left convention, and exact coarse restricti
 on the mapped fine edge. Driver's standing §2 chain now has an explicit smooth unitary representation, its exact manifold
 derivative `p_*` at the identity, injectivity of that derivative, and coherence requiring the
 continuum invariant inner product to be literally `-Re tr(p_*X p_*Y)`. This blocks an unrelated
-representation/pairing substitution; `TwoDimensionalWilsonCommonHeatChainData` now closes that dependency chain: the same connected-group
+representation/pairing substitution; `TwoDimensionalWilsonCommonHeatChainData` now closes that dependency chain at connected compact
+Lie-group scope without a compact-simple index: the same connected-group
 smooth representation is globally faithful and infinitesimally injective, supplies the Wilson
 normalization/action family and exact invariant pairing, whose Laplacian generates the unchanged
 continuum selected density and kernel. The source-required axial enlargement `B → VB` is now explicit: both graphs are BC, every coarse

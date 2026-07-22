@@ -35,7 +35,6 @@ variable
     {Gauge : Type uGauge} [Group Gauge]
     {Sample : Type uSample} [MeasurableSpace Sample]
     {Connection : Type uConnection}
-    {gaugeGroup : Geometry.CompactSimpleGaugeGroupData G E}
     {base : TwoDimensionalGaugeFixedHolonomyMeasureData G Gauge Sample Connection}
     {law : TwoDimensionalSelectedLoopHaarDensityLawData base}
     (semigroup : TwoDimensionalSelectedLoopConvolutionSemigroupData law)
@@ -52,8 +51,8 @@ structure TwoDimensionalWilsonCommonHeatChainData where
   pairing_coherence :
     TwoDimensionalRepresentationInducedPairingCoherenceData representation inner
   laplacian : RightInvariantPairingLaplacianData inner
-  heat : TwoDimensionalSelectedLoopHeatEquationData
-    gaugeGroup inner law semigroup laplacian
+  heat : TwoDimensionalSelectedLoopHeatEquationCoreData
+    inner law semigroup laplacian
   kernel : TwoDimensionalSelectedLoopHeatKernelOperatorData heat
 
 namespace TwoDimensionalWilsonCommonHeatChainData
@@ -61,26 +60,28 @@ namespace TwoDimensionalWilsonCommonHeatChainData
 /-- The Wilson family uses the exact same representation and normalization stored by the common
 continuum heat chain. -/
 def wilsonFamily
-    (data : TwoDimensionalWilsonCommonHeatChainData (gaugeGroup := gaugeGroup) semigroup) :
+    (data : TwoDimensionalWilsonCommonHeatChainData (E := E) semigroup) :
     FaithfulWilsonActionFamilyData (G := G) where
   representationData :=
     data.representation.toFiniteDimensionalUnitaryRepresentationCharacterData
   normalization := data.normalization
   representation_faithful := data.representation_faithful
 
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
 /-- Every Wilson action has the exact trace formula for the representation whose differential defines
 `data.inner`. -/
 theorem actionAt_formula
-    (data : TwoDimensionalWilsonCommonHeatChainData (gaugeGroup := gaugeGroup) semigroup)
+    (data : TwoDimensionalWilsonCommonHeatChainData (E := E) semigroup)
     (spacing : PositiveLatticeSpacing) (g : G) :
     (data.wilsonFamily semigroup |>.actionAt spacing).action g =
       (data.normalization.normalizer spacing)⁻¹ *
         Real.exp ((Matrix.trace (data.representation.representation g)).re) :=
   rfl
 
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
 /-- The pairing driving the heat Laplacian is literally induced by the same Wilson representation. -/
 theorem inner_pairing_eq_trace
-    (data : TwoDimensionalWilsonCommonHeatChainData (gaugeGroup := gaugeGroup) semigroup)
+    (data : TwoDimensionalWilsonCommonHeatChainData (E := E) semigroup)
     (first second : GroupLieAlgebra (modelWithCornersSelf ℝ E) G) :
     data.inner.pairing first second =
       twoDimensionalRepresentationTracePairing data.representation first second :=
