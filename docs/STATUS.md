@@ -4754,7 +4754,10 @@ boundary images before descent. Lévy sewing now derives that every designated s
 point and its dependent base label lie in this exact seam, while hostile retained-boundary incidence
 is rejected without assuming smooth descent. Exact geometric basepoint injectivity also forces the
 included left seam base label to equal the designated sewn seam base label, and the included left
-loop trace is derived pointwise equal without an orientation-reversing reparameterization. Descent now identifies both its nucleus measure and manifold boundary with these named
+loop trace is derived pointwise equal without an orientation-reversing reparameterization. Both
+included side seam traces are proved to lie entirely in the exact seam; arbitrary right parameters
+are handled using the inverse designated circle diffeomorphism. The right dependent base is shown to
+represent a seam point without falsely equating its mixed-basepoint label to the left-oriented base. Descent now identifies both its nucleus measure and manifold boundary with these named
 constructions; its boundary nullity is rederived through that exact chain rather than merely inherited
 from the generic compact-surface theorem. Same-side
 injectivity plus the new exact characterization that cross-side quotient equality occurs only at a

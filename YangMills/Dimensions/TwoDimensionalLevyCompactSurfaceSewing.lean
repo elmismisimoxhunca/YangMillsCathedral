@@ -307,6 +307,59 @@ theorem seamLoopTrace_mem_gluingSeam
   apply Set.mem_iUnion.mpr
   exact ⟨pair, ⟨circlePoint, rfl⟩⟩
 
+/-- Every point of the included left seam loop also lies in the exact seam. -/
+theorem leftSeamLoopInWholeTrace_mem_gluingSeam
+    (data : TwoDimensionalLevyCompactSurfaceSewingData
+      (identification := identification) (G := G) (LeftLoop := LeftLoop)
+      (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+      (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample))
+    (pair : Fin identification.pairCount) (circlePoint : Circle) :
+    data.wholeLoopTrace (data.leftBaseInWhole (data.leftSeamBase pair))
+        (data.leftLoopInWhole (data.leftSeamBase pair) (data.leftSeamLoop pair)) circlePoint ∈
+      YangMills.Geometry.compactSurfaceBoundaryGluingSeam
+        (identification := identification) := by
+  rw [data.leftSeamLoopInWhole_trace pair circlePoint]
+  exact data.seamLoopTrace_mem_gluingSeam pair circlePoint
+
+/-- Every point of the included right seam loop lies in the same exact seam. The inverse circle
+diffeomorphism is used to express an arbitrary right parameter by the source's paired left
+parameter; no mixed-basepoint label equality is asserted. -/
+theorem rightSeamLoopInWholeTrace_mem_gluingSeam
+    (data : TwoDimensionalLevyCompactSurfaceSewingData
+      (identification := identification) (G := G) (LeftLoop := LeftLoop)
+      (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+      (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample))
+    (pair : Fin identification.pairCount) (rightCirclePoint : Circle) :
+    data.wholeLoopTrace (data.rightBaseInWhole (data.rightSeamBase pair))
+        (data.rightLoopInWhole (data.rightSeamBase pair) (data.rightSeamLoop pair))
+        rightCirclePoint ∈
+      YangMills.Geometry.compactSurfaceBoundaryGluingSeam
+        (identification := identification) := by
+  let leftCirclePoint := (identification.circleDiffeomorphism pair).symm rightCirclePoint
+  have traceEquality := data.rightSeamLoopInWhole_trace pair leftCirclePoint
+  have parameterEquality :
+      identification.circleDiffeomorphism pair leftCirclePoint = rightCirclePoint := by
+    simp [leftCirclePoint]
+  rw [parameterEquality] at traceEquality
+  rw [traceEquality]
+  exact data.seamLoopTrace_mem_gluingSeam pair leftCirclePoint
+
+/-- The included right seam loop's own dependent base label represents a point on the exact seam,
+without equating that label to the left-oriented designated seam base. -/
+theorem rightSeamIncludedBasePoint_mem_gluingSeam
+    (data : TwoDimensionalLevyCompactSurfaceSewingData
+      (identification := identification) (G := G) (LeftLoop := LeftLoop)
+      (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+      (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample))
+    (pair : Fin identification.pairCount) :
+    data.wholeBasePoint (data.rightBaseInWhole (data.rightSeamBase pair)) ∈
+      YangMills.Geometry.compactSurfaceBoundaryGluingSeam
+        (identification := identification) := by
+  rw [← data.wholeLoopTrace_based
+    (data.rightBaseInWhole (data.rightSeamBase pair))
+    (data.rightLoopInWhole (data.rightSeamBase pair) (data.rightSeamLoop pair))]
+  exact data.rightSeamLoopInWholeTrace_mem_gluingSeam pair 1
+
 /-- Consequently no designated sewn seam-loop point lies in the exact remaining-boundary
 candidate, before any smooth manifold descent is supplied. -/
 theorem seamLoopTrace_not_mem_remainingBoundary

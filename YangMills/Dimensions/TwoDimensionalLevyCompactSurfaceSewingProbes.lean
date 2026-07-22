@@ -215,6 +215,31 @@ theorem exact_seam_set_incidence
     data.seamLoopTrace_not_mem_remainingBoundary pair circlePoint,
     data.seamBasePoint_mem_gluingSeam pair⟩
 
+/-- Both included side seam traces lie in the exact seam. The right statement covers an arbitrary
+right parameter through the inverse designated circle diffeomorphism, while retaining its separate
+dependent base label. -/
+theorem exact_included_side_seam_set_incidence
+    (data : SewingData identification G LeftBase RightBase WholeBase
+      LeftLoop RightLoop WholeLoop LeftSample RightSample WholeSample)
+    (pair : Fin identification.pairCount)
+    (leftCirclePoint rightCirclePoint : Circle) :
+    data.wholeLoopTrace (data.leftBaseInWhole (data.leftSeamBase pair))
+          (data.leftLoopInWhole (data.leftSeamBase pair) (data.leftSeamLoop pair))
+          leftCirclePoint ∈
+        YangMills.Geometry.compactSurfaceBoundaryGluingSeam
+          (identification := identification) ∧
+      data.wholeLoopTrace (data.rightBaseInWhole (data.rightSeamBase pair))
+          (data.rightLoopInWhole (data.rightSeamBase pair) (data.rightSeamLoop pair))
+          rightCirclePoint ∈
+        YangMills.Geometry.compactSurfaceBoundaryGluingSeam
+          (identification := identification) ∧
+      data.wholeBasePoint (data.rightBaseInWhole (data.rightSeamBase pair)) ∈
+        YangMills.Geometry.compactSurfaceBoundaryGluingSeam
+          (identification := identification) :=
+  ⟨data.leftSeamLoopInWholeTrace_mem_gluingSeam pair leftCirclePoint,
+    data.rightSeamLoopInWholeTrace_mem_gluingSeam pair rightCirclePoint,
+    data.rightSeamIncludedBasePoint_mem_gluingSeam pair⟩
+
 /-- A source-false claim that a sewn seam trace point lies on retained boundary is rejected. -/
 theorem sewn_seam_trace_retained_boundary_blocked
     (data : SewingData identification G LeftBase RightBase WholeBase

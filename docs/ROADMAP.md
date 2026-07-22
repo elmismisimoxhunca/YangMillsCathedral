@@ -939,6 +939,8 @@ committed before higher layers depend on it.
   - [x] Derive exact left seam-inclusion coherence: geometric basepoint injectivity identifies the
     included and designated sewn base labels, and their loop traces agree pointwise without the
     right side's orientation-reversing reparameterization.
+  - [x] Prove both included side seam traces lie in the exact seam; use the inverse designated circle
+    diffeomorphism for arbitrary right parameters while keeping its mixed-basepoint label separate.
   - [x] Add an uninhabited exact smooth/oriented/measured descent contract on the same quotient
     topology, including smooth side embeddings, positive-scale orientation-class pullbacks, derived
     null side boundaries, identification with the canonical glued area, exact remaining boundary,
