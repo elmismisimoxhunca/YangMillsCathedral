@@ -14,8 +14,10 @@ and plaquette inclusions into the successor radius and records the remaining mea
 projective consistency obligation: restricting the successor box law to the smaller coordinates must
 give the smaller box law.
 
-The consistency datum is uninhabited. It does not construct a compatible family, infinite-volume
-measure, weak boundary limit, or lattice-continuum convergence.
+This file isolates the consistency datum and exact restriction geometry. The datum is constructed
+downstream in `TwoDimensionalSquareLatticeBoxProjectivityDerived` by plaquette factorization and a
+commuting restriction square. Neither file constructs an infinite-volume measure, weak boundary
+limit, or lattice-continuum convergence.
 -/
 
 namespace YangMills.Dimensions

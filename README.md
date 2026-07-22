@@ -826,9 +826,14 @@ inversion and identity elsewhere, every coordinate is recovered, and every selec
 covered. Compactness of the common action and finite box geometry now bounds the exact action weight,
 while strict positivity and product-Haar normalization make its exact partition function nonzero.
 Thus every box has a constructed finite/nonzero normalizer certificate, normalized nonzero finite-
-coordinate measure, and normalized nonzero same-extension pushforward. Successor-radius coordinate and plaquette inclusions are now constructed literally, with exact
-bond/plaquette retention and measurable coordinate restriction. An uninhabited box-projectivity
-datum requires the successor box measure to push forward exactly to the smaller box measure. Driver's distinct finite-volume sets are also represented exactly: `Bₙ` consists of bonds with one
+coordinate measure, and normalized nonzero same-extension pushforward. Successor-radius coordinate and plaquette inclusions are constructed literally, with exact
+bond/plaquette retention and measurable coordinate restriction. Explicit signed row/site
+bijections, rooted noncommutative differences, product-Haar preservation, and finite action-density
+factorization identify every box law with an independent plaquette-action product. Exact agreement
+of small/successor extensions on included plaquette boundaries yields a commuting restriction
+square; finite-product marginals then derive every consecutive box pushforward and construct the
+box-projectivity datum. This remains finite-cutoff projectivity, not Theorem 7.2 or a continuum
+limit. Driver's distinct finite-volume sets are also represented exactly: `Bₙ` consists of bonds with one
 endpoint in `Aₙ₋₁`, `B̄ₙ` consists of bonds with both endpoints in `Aₙ`, and boundary conditions
 freeze `Bₙᶜ`; nearest-neighbor geometry proves `Bₙ ⊆ B̄ₙ`, while a radius-one witness prevents
 collapsing the two sets. The exact finite Haar coordinates for the axial conditioned law are right-directed off-axis

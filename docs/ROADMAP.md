@@ -901,7 +901,10 @@ committed before higher layers depend on it.
     glued quotient.
   - [ ] Prove chart-independence of the outward predicate and inhabit/derive the
     smooth/oriented/measured descent witnesses for the glued quotient.
-  - [ ] Resolve/formalize Theorem 8.10; inhabit/derive box projectivity and Theorem 7.2. Keep
+  - [x] Derive exact consecutive square-box projectivity from noncommutative rooted plaquette
+    coordinates, product-Haar preservation, action-density factorization, and the literal
+    restriction commuting square.
+  - [ ] Resolve/formalize Theorem 8.10 and inhabit/derive Theorem 7.2. Keep
     compact-surface gluing distinct from finite-cutoff, classical, and four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.
   - [x] Add a current-strength continuum core hard-wired to coordinate `ℝ³` with coordinate

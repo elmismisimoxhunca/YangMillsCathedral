@@ -4864,19 +4864,24 @@ Separately packaged `Mathematics.RootedGroupDifference` now constructs the upper
 commutativity, and packages both as measurable equivalences. A final-coordinate splitting and
 measurable skew-product induction proves that both transforms and recursive inverses preserve every
 finite product of a common sigma-finite bi-invariant, inversion-invariant measure, covering the
-normalized compact Haar use without assuming coordinate independence after the fact. Together these
-are the first
-triangular-coordinate steps toward deriving box projectivity and do not falsely identify every
-plaquette holonomy with one raw coordinate. A nonidentity multiplicative-integer
+normalized compact Haar use without assuming coordinate independence after the fact. These
+triangular coordinates do not falsely identify every plaquette holonomy with one raw coordinate and
+feed the now completed box-projectivity proof. A nonidentity multiplicative-integer
 coordinate survives the extension. `twoDimensionalSquareLatticeBoxNormalizer` is the exact product-Haar integral of the exact box
 weight. Strict positivity proves nonzeroness, while compactness uniformly bounds the common action
 and proves finiteness. The resulting normalizer certificate constructs normalized nonzero finite-
 coordinate box measures and normalized nonzero same-extension pushforwards to the infinite axial
 carrier. `epsilonSquareLatticeBoxCoordinateInclusion` and
 `epsilonSquareLatticeBoxPlaquetteInclusion` retain identical bonds/plaquettes at successor radius;
-the induced coordinate restriction is measurable. The uninhabited
-`TwoDimensionalSquareLatticeBoxProjectiveConsistencyData` requires exact pushforward of every
-successor box measure to its predecessor. The boundary geometry now separately defines Driver's `Aₙ`, `Aₙ₋₁`, finite variable bonds `Bₙ`,
+the induced coordinate restriction is measurable. General `Mathematics.finiteProductRestriction`
+proves exact marginals of finite products along injective coordinate selections. Successor and
+smaller axial extensions agree on every exact boundary bond of each included plaquette, hence their
+noncommutative holonomies agree and the coordinate/plaquette restriction square commutes. The
+independent plaquette-action product has the exact smaller marginal; conjugating through the
+holonomy equivalences derives
+`twoDimensionalSquareLatticeBoxMeasure_consecutive_pushforward` and constructs
+`twoDimensionalSquareLatticeBoxProjectiveConsistencyData` for every normalized Definition 7.1
+action. This is finite-box projectivity only, not Theorem 7.2 or an infinite-volume measure. The boundary geometry now separately defines Driver's `Aₙ`, `Aₙ₋₁`, finite variable bonds `Bₙ`,
 outer bonds `B̄ₙ`, and frozen complement `Bₙᶜ`. Nearest-neighbor geometry proves `Bₙ ⊆ B̄ₙ`,
 and explicit radius-one witnesses distinguish the two sets and exhibit a genuinely frozen bond. The exact finite coordinates for Driver's axial conditioned law are the canonical right-directed
 off-axis horizontal `Bₙ` bonds, with rows restricted to `Aₙ₋₁`. The measurable conditioned
