@@ -5,6 +5,7 @@ Authors: Sebastian Rodrigo
 -/
 
 import YangMills.Geometry.CompactSurfaceBoundaryCirclePresentation
+import YangMills.Mathematics.EuclideanHalfSpaceOutwardRay
 import Mathlib.Geometry.Manifold.ContMDiffMFDeriv
 
 /-!
@@ -56,6 +57,48 @@ def IsPreferredChartOutwardBoundaryVector
       coordinate + time • coordinateVector ∈ interior (Set.range I)) ∧
     (∀ time : ℝ, 0 < time → time < radius →
       coordinate + time • coordinateVector ∉ Set.range I)
+
+/-- For the Euclidean half-space model, preferred-chart outwardness at a boundary coordinate is
+exactly strict negativity of the zeroth coordinate of the charted tangent. -/
+theorem isPreferredChartOutwardBoundaryVector_euclideanHalfSpace_iff
+    {n : ℕ} [NeZero n]
+    {Surface : Type uSurface} [TopologicalSpace Surface]
+    [ChartedSpace (EuclideanHalfSpace n) Surface]
+    {point : Surface} {vector : TangentSpace (𝓡∂ n) point}
+    (boundary : (extChartAt (𝓡∂ n) point point) 0 = 0) :
+    IsPreferredChartOutwardBoundaryVector (𝓡∂ n) point vector ↔
+      (NormedSpace.fromTangentSpace (extChartAt (𝓡∂ n) point point)
+        (mfderiv (𝓡∂ n) 𝓘(ℝ, EuclideanSpace ℝ (Fin n))
+          (extChartAt (𝓡∂ n) point) point vector)) 0 < 0 :=
+  Mathematics.isEuclideanHalfSpaceOutwardRayAt_iff boundary
+
+/-- A manifold boundary point in the Euclidean half-space model has zeroth preferred-chart
+coordinate exactly zero. -/
+theorem euclideanHalfSpace_extChartAt_zero_of_mem_boundary
+    {n : ℕ} [NeZero n]
+    {Surface : Type uSurface} [TopologicalSpace Surface]
+    [ChartedSpace (EuclideanHalfSpace n) Surface]
+    {point : Surface} (boundary : point ∈ (𝓡∂ n).boundary Surface) :
+    (extChartAt (𝓡∂ n) point point) 0 = 0 := by
+  change (𝓡∂ n).IsBoundaryPoint point at boundary
+  rw [ModelWithCorners.isBoundaryPoint_iff,
+    frontier_range_modelWithCornersEuclideanHalfSpace] at boundary
+  exact boundary.symm
+
+/-- At an actual manifold boundary point, Euclidean-half-space preferred-chart outwardness is
+therefore equivalent to strict negativity of the charted tangent's zeroth coordinate. -/
+theorem isPreferredChartOutwardBoundaryVector_euclideanHalfSpace_iff_of_mem_boundary
+    {n : ℕ} [NeZero n]
+    {Surface : Type uSurface} [TopologicalSpace Surface]
+    [ChartedSpace (EuclideanHalfSpace n) Surface]
+    {point : Surface} {vector : TangentSpace (𝓡∂ n) point}
+    (boundary : point ∈ (𝓡∂ n).boundary Surface) :
+    IsPreferredChartOutwardBoundaryVector (𝓡∂ n) point vector ↔
+      (NormedSpace.fromTangentSpace (extChartAt (𝓡∂ n) point point)
+        (mfderiv (𝓡∂ n) 𝓘(ℝ, EuclideanSpace ℝ (Fin n))
+          (extChartAt (𝓡∂ n) point) point vector)) 0 < 0 :=
+  isPreferredChartOutwardBoundaryVector_euclideanHalfSpace_iff
+    (euclideanHalfSpace_extChartAt_zero_of_mem_boundary boundary)
 
 omit [FiniteDimensional ℝ E] [MeasurableSpace E] [BorelSpace E]
   [MeasurableSpace Surface] [BorelSpace Surface] [IsManifold I ∞ Surface]
@@ -211,6 +254,34 @@ theorem pushedPositiveBoundaryTangent_ne_zero
       (presentation.parameterization component circlePoint)).map_coord_zero 1 (by simp)
   rw [evaluationZero] at positive
   exact (lt_irrefl 0 positive)
+
+/-- In the Euclidean half-space model, every designated outward field value has strictly negative
+zeroth preferred-chart tangent coordinate. Boundary-coordinate vanishing is derived from the exact
+boundary-circle presentation rather than supplied separately. -/
+theorem outwardBoundaryVector_charted_zeroCoordinate_neg
+    {n : ℕ} [NeZero n]
+    {BoundarySurface : Type uSurface} [TopologicalSpace BoundarySurface]
+    [MeasurableSpace (EuclideanSpace ℝ (Fin n))]
+    [BorelSpace (EuclideanSpace ℝ (Fin n))]
+    [MeasurableSpace BoundarySurface] [BorelSpace BoundarySurface]
+    [ChartedSpace (EuclideanHalfSpace n) BoundarySurface]
+    [IsManifold (𝓡∂ n) ∞ BoundarySurface] [CompactSpace BoundarySurface]
+    [T2Space BoundarySurface] [SecondCountableTopology BoundarySurface]
+    {boundarySurface : CompactOrientedMeasuredSurfaceData (𝓡∂ n) BoundarySurface}
+    {boundaryPresentation : CompactSurfaceBoundaryCirclePresentationData boundarySurface}
+    (orientation : CompactSurfaceBoundaryOrientationData boundarySurface boundaryPresentation)
+    (component : boundarySurface.BoundaryComponent) (circlePoint : Circle) :
+    (NormedSpace.fromTangentSpace
+      (extChartAt (𝓡∂ n) (boundaryPresentation.parameterization component circlePoint)
+        (boundaryPresentation.parameterization component circlePoint))
+      (mfderiv (𝓡∂ n) 𝓘(ℝ, EuclideanSpace ℝ (Fin n))
+        (extChartAt (𝓡∂ n) (boundaryPresentation.parameterization component circlePoint))
+        (boundaryPresentation.parameterization component circlePoint)
+        (orientation.outwardBoundaryVector component circlePoint))) 0 < 0 := by
+  apply (isPreferredChartOutwardBoundaryVector_euclideanHalfSpace_iff_of_mem_boundary ?_).mp
+    (orientation.outwardBoundaryVector_isOutward component circlePoint)
+  exact (boundaryPresentation.parameterization_mem_boundary_component
+    component circlePoint).choose
 
 end CompactSurfaceBoundaryOrientationData
 

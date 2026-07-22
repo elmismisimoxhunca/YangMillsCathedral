@@ -885,6 +885,9 @@ committed before higher layers depend on it.
     actual boundary component, while retaining closed surfaces.
   - [x] Add preferred-chart-certified two-sided outward directions and induced boundary orientation
     from the exact surface top form, with smooth/nonzero frame data and zero-vector hostile probes.
+  - [x] Characterize exact straight outward rays in the Euclidean half-space by strict negativity
+    of the zeroth tangent coordinate, derive boundary-coordinate vanishing from Mathlib's frontier
+    definition, and apply the sign theorem to every exact presented boundary-circle field.
   - [x] Add positive-arity distinct-component boundary identifications by genuine circle
     diffeomorphisms with exact derivative-level orientation reversal and hostile vacuity probes.
   - [x] Construct the minimal equivalence-closure quotient of the disjoint union by exact paired

@@ -4661,9 +4661,14 @@ ambient fields along the exact parameterizations, genuine outward certificates, 
 the selected surface top form on `(outward, pushed tangent)`. Preferred-chart outwardness is now
 proved invariant under every strictly positive vector rescaling, making its dependence on the
 positive tangent ray explicit. Its exit clause directly derives nonvanishing and rejects zero;
-form positivity separately derives nonvanishing of the pushed boundary tangent. Pinned Mathlib still lacks a
-general installed boundary-submanifold instance; chart-independence of the preferred-chart outward
-predicate and closure data remain separate. `CompactSurfaceOrientationReversingBoundaryIdentificationData`
+form positivity separately derives nonvanishing of the pushed boundary tangent. Reusable
+`IsEuclideanHalfSpaceOutwardRayAt` mathematics now proves that at a half-space boundary coordinate
+the exact two-sided ray condition is equivalent to strict negativity of the zeroth direction
+coordinate. For every actual manifold boundary point, zeroth preferred-chart coordinate vanishing
+is derived from Mathlib's exact frontier definition; consequently every stored outward field on an
+exact presented boundary circle has the strict negative charted-tangent coordinate without an
+extra hypothesis. Pinned Mathlib still lacks a general installed boundary-submanifold instance;
+transition-chart independence of this preferred-chart sign/ray and closure data remain separate. `CompactSurfaceOrientationReversingBoundaryIdentificationData`
 now chooses an exact positive number of distinct boundary components on each of two oriented
 surfaces, equips every pair with a genuine smooth circle diffeomorphism, and requires its derivative
 to send the selected positive left tangent to a strictly negative multiple of the selected positive

@@ -74,6 +74,36 @@ theorem positive_rescaling_retains_outward
   ⟨outward.smul_of_pos scale_pos, outward.ne_zero,
     isPreferredChartOutwardBoundaryVector_smul_iff scale_pos⟩
 
+/-- In the concrete Euclidean half-space model, the two-sided ray certificate is exactly the
+strict outward sign of the charted tangent's zeroth coordinate. -/
+theorem exact_halfSpace_outward_sign
+    {n : ℕ} [NeZero n]
+    {BoundarySurface : Type uSurface} [TopologicalSpace BoundarySurface]
+    [ChartedSpace (EuclideanHalfSpace n) BoundarySurface]
+    {point : BoundarySurface} {vector : TangentSpace (𝓡∂ n) point}
+    (boundary : (extChartAt (𝓡∂ n) point point) 0 = 0) :
+    IsPreferredChartOutwardBoundaryVector (𝓡∂ n) point vector ↔
+      (NormedSpace.fromTangentSpace (extChartAt (𝓡∂ n) point point)
+        (mfderiv (𝓡∂ n) 𝓘(ℝ, EuclideanSpace ℝ (Fin n))
+          (extChartAt (𝓡∂ n) point) point vector)) 0 < 0 :=
+  isPreferredChartOutwardBoundaryVector_euclideanHalfSpace_iff boundary
+
+/-- A charted tangent with nonnegative normal coordinate cannot bypass the exact two-sided
+half-space ray predicate. -/
+theorem nonnegative_halfSpace_coordinate_blocked
+    {n : ℕ} [NeZero n]
+    {BoundarySurface : Type uSurface} [TopologicalSpace BoundarySurface]
+    [ChartedSpace (EuclideanHalfSpace n) BoundarySurface]
+    {point : BoundarySurface} {vector : TangentSpace (𝓡∂ n) point}
+    (boundary : (extChartAt (𝓡∂ n) point point) 0 = 0)
+    (nonnegative : 0 ≤
+      (NormedSpace.fromTangentSpace (extChartAt (𝓡∂ n) point point)
+        (mfderiv (𝓡∂ n) 𝓘(ℝ, EuclideanSpace ℝ (Fin n))
+          (extChartAt (𝓡∂ n) point) point vector)) 0) :
+    ¬ IsPreferredChartOutwardBoundaryVector (𝓡∂ n) point vector := by
+  rw [isPreferredChartOutwardBoundaryVector_euclideanHalfSpace_iff boundary]
+  exact not_lt_of_ge nonnegative
+
 /-- The positive circle tangent is a genuine smooth nonvanishing tangent-bundle field, separately
 for each exact component. -/
 theorem exact_positive_circle_tangent
@@ -103,6 +133,30 @@ theorem exact_smooth_outward_field
           (orientation.outwardBoundaryVector component circlePoint) :=
   ⟨orientation.outwardBoundaryVector_smooth component,
     orientation.outwardBoundaryVector_isOutward component⟩
+
+/-- For a Euclidean-half-space surface, the exact boundary presentation itself forces every
+stored outward field value to have the strict outward coordinate sign. -/
+theorem exact_presented_boundary_outward_sign
+    {n : ℕ} [NeZero n]
+    {BoundarySurface : Type uSurface} [TopologicalSpace BoundarySurface]
+    [MeasurableSpace (EuclideanSpace ℝ (Fin n))]
+    [BorelSpace (EuclideanSpace ℝ (Fin n))]
+    [MeasurableSpace BoundarySurface] [BorelSpace BoundarySurface]
+    [ChartedSpace (EuclideanHalfSpace n) BoundarySurface]
+    [IsManifold (𝓡∂ n) ∞ BoundarySurface] [CompactSpace BoundarySurface]
+    [T2Space BoundarySurface] [SecondCountableTopology BoundarySurface]
+    {boundarySurface : CompactOrientedMeasuredSurfaceData (𝓡∂ n) BoundarySurface}
+    {boundaryPresentation : CompactSurfaceBoundaryCirclePresentationData boundarySurface}
+    (orientation : CompactSurfaceBoundaryOrientationData boundarySurface boundaryPresentation)
+    (component : boundarySurface.BoundaryComponent) (circlePoint : Circle) :
+    (NormedSpace.fromTangentSpace
+      (extChartAt (𝓡∂ n) (boundaryPresentation.parameterization component circlePoint)
+        (boundaryPresentation.parameterization component circlePoint))
+      (mfderiv (𝓡∂ n) 𝓘(ℝ, EuclideanSpace ℝ (Fin n))
+        (extChartAt (𝓡∂ n) (boundaryPresentation.parameterization component circlePoint))
+        (boundaryPresentation.parameterization component circlePoint)
+        (orientation.outwardBoundaryVector component circlePoint))) 0 < 0 :=
+  orientation.outwardBoundaryVector_charted_zeroCoordinate_neg component circlePoint
 
 /-- Boundary orientation is induced by the ordered pair `(outward, pushed tangent)` and the exact
 surface orientation form. -/
