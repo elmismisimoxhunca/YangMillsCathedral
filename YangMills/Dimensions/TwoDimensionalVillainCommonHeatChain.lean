@@ -34,7 +34,6 @@ variable
     [MeasurableSpace G] [BorelSpace G]
     {Gauge : Type uGauge} [Group Gauge] {Sample : Type uSample} [MeasurableSpace Sample]
     {Connection : Type uConnection}
-    {gaugeGroup : Geometry.CompactSimpleGaugeGroupData G E}
     {base : TwoDimensionalGaugeFixedHolonomyMeasureData G Gauge Sample Connection}
     {law : TwoDimensionalSelectedLoopHaarDensityLawData base}
     (semigroup : TwoDimensionalSelectedLoopConvolutionSemigroupData law)
@@ -51,18 +50,6 @@ structure TwoDimensionalVillainCommonHeatChainCoreData where
   heat : TwoDimensionalSelectedLoopHeatEquationCoreData
     inner law semigroup laplacian
   kernel : TwoDimensionalSelectedLoopHeatKernelOperatorData heat
-
-set_option linter.unusedVariables false
-/-- Compatibility alias for the former compact-simple-indexed surface. The index is phantom; the
-underlying theorem data has connected compact Lie-group scope. This is type-only compatibility;
-declarations live in the core namespace. -/
-abbrev TwoDimensionalVillainCommonHeatChainData
-    (gaugeGroup : Geometry.CompactSimpleGaugeGroupData G E)
-    {base : TwoDimensionalGaugeFixedHolonomyMeasureData G Gauge Sample Connection}
-    {law : TwoDimensionalSelectedLoopHaarDensityLawData base}
-    (semigroup : TwoDimensionalSelectedLoopConvolutionSemigroupData law) :=
-  TwoDimensionalVillainCommonHeatChainCoreData (E := E) semigroup
-set_option linter.unusedVariables true
 
 namespace TwoDimensionalVillainCommonHeatChainCoreData
 

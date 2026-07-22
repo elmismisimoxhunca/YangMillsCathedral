@@ -76,21 +76,6 @@ structure TwoDimensionalSelectedLoopHeatEquationCoreData
            contMDiff := densityReal_spatialSmooth t ht } :
           SmoothLieGroupScalarFunction (E := E) (G := G)) g) t
 
-set_option linter.unusedVariables false
-/-- Compatibility name for the former compact-simple-indexed API. The group datum is deliberately
-phantom: all mathematical content is the general heat-equation core. This preserves reducible type
-compatibility only; declarations live in the core namespace. -/
-abbrev TwoDimensionalSelectedLoopHeatEquationData
-    (gaugeGroup : Geometry.CompactSimpleGaugeGroupData G E)
-    (inner : Geometry.InvariantInnerProductData
-      (I := modelWithCornersSelf ℝ E) (G := G))
-    {base : TwoDimensionalGaugeFixedHolonomyMeasureData G Gauge Sample Connection}
-    (law : TwoDimensionalSelectedLoopHaarDensityLawData base)
-    (semigroup : TwoDimensionalSelectedLoopConvolutionSemigroupData law)
-    (laplacian : RightInvariantPairingLaplacianData inner) :=
-  TwoDimensionalSelectedLoopHeatEquationCoreData inner law semigroup laplacian
-set_option linter.unusedVariables true
-
 namespace TwoDimensionalSelectedLoopHeatEquationCoreData
 
 variable
