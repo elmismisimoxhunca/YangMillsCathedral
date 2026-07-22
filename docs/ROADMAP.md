@@ -687,6 +687,29 @@ committed before higher layers depend on it.
   the same product-Haar Gibbs datum, with nonzero-domain hostile evidence; keep it definitionally distinct from continuum OS `(E2)`. No positivity datum is
   constructed.
 
+## Phase 6A — compact nonabelian Fourier and Peter–Weyl infrastructure
+
+- [x] Bridge square matrix-valued monoid homomorphisms to Mathlib `Representation` on standard
+  coordinate vectors; identify the abstract character exactly with matrix trace, expose exact matrix
+  coefficients, and derive coefficient/trace continuity and conjugacy invariance.
+- [ ] Construct Haar averaging of finite-dimensional Hermitian forms and derive invariant positive
+  inner products and unitarization for continuous compact-group representations.
+- [ ] Develop the analytic Schur lemma and Haar orthogonality of matrix coefficients for irreducible
+  unitary representations, including exact dimension normalization.
+- [ ] Define representation-valued compact-group Fourier coefficients and prove convolution becomes
+  matrix composition with the project's fixed convolution order.
+- [ ] Construct finite coefficient subspaces, algebraic Plancherel, and character orthogonality for
+  central functions.
+- [ ] Prove Stone–Weierstrass separation and Peter–Weyl density/completeness in continuous and `L²`
+  carriers with explicit topology and measure hypotheses.
+- [ ] State and prove only convergence-justified Fourier inversion and central character expansions;
+  do not treat formal representation sums as convergent by default.
+- [ ] Compare the invariant basis-sum operator with Laplace–Beltrami, derive Casimir eigenvalues on
+  coefficients, and construct normalized compact-group heat-kernel spectral expansions with exact
+  `½Δ` convention.
+- [ ] Feed the derived heat kernel and character expansions into the 2D Driver/Lévy/Sengupta track
+  without making Peter–Weyl conclusions acceptance fields.
+
 ## Phase 7 — dimension contracts and final checker
 
 - [x] Add the kinematic/lattice degenerate-topological `d = 1` boundary: degree-two local forms and
@@ -974,6 +997,12 @@ committed before higher layers depend on it.
     restriction commuting square.
   - [ ] Resolve/formalize Theorem 8.10 and inhabit/derive Theorem 7.2. Keep
     compact-surface gluing distinct from finite-cutoff, classical, and four-dimensional witnesses.
+  - [ ] Assemble a final source-indexed 2D acceptance proposition joining the constructed finite
+    lattice, heat/Brownian, weak-limit continuum, compact-surface, and sewing chains; attempt to
+    inhabit it solely from formalized Driver/Lévy/Sengupta results and record every remaining
+    supplied field as a concrete literature or infrastructure debt.
+  - [ ] Add hostile separation proving that even an inhabited final 2D proposition cannot inhabit,
+    imply, or be coerced into the 4D Clay acceptance proposition.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.
   - [x] Add a current-strength continuum core hard-wired to coordinate `ℝ³` with coordinate
     Lebesgue action measure, dependently joining compact-simple gauge/classical data, strict

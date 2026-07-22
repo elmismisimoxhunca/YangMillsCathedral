@@ -5027,6 +5027,22 @@ equivalence therefore retains positive time orientation and determinant one, yie
 inverse inside the same carrier. Whole-future-sheet preservation, composition closure, the full
 Lorentz/affine group law, and its topological-group proof remain open.
 
+The compact nonabelian Fourier/Peter–Weyl track now begins with an independently reusable algebraic
+bridge. Every square matrix-valued monoid homomorphism acts on standard coordinate vectors as
+Mathlib's exact `Representation`; its abstract linear-trace character is proved literally equal to
+the original matrix trace. Exact coordinate matrix coefficients, their continuity under a
+continuous matrix family, trace continuity, diagonal trace decomposition, and conjugacy invariance
+are derived. Driver's existing Wilson representation now exposes this same Mathlib representation,
+and its character continuity and centrality are independently rederived rather than relying only on
+stored fields. No Haar orthogonality, irreducibility theorem, Fourier inversion, Peter–Weyl density,
+or heat-kernel spectral expansion is claimed.
+
+The full two-dimensional literature chain is now an explicit validation target: a future final 2D
+acceptance proposition must join the Driver/Lévy/Sengupta finite, continuum, Brownian, compact-surface,
+and sewing results and be inhabited only from formalized literature theorems. Such a final 2D
+proposition and inhabitance proof do not yet exist, and any eventual inhabitant must remain strictly
+separate from the four-dimensional Clay endpoint.
+
 The preliminary `FourDimensionalCurrentStrengthUniversalAcceptance` declaration is intentionally
 qualified and uninhabited. No final source-complete acceptance declaration, placeholder inhabitance
 theorem, or arbitrary structure is introduced merely to make the project appear complete.

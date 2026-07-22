@@ -6,6 +6,7 @@ Authors: Sebastian Rodrigo
 
 import YangMills.Dimensions.TwoDimensionalLatticeApproximatingSequence
 import YangMills.Mathematics.NormalizedCompactHaarMeasure
+import YangMills.Mathematics.MatrixRepresentationCharacter
 import Mathlib.LinearAlgebra.Matrix.ConjTranspose
 import Mathlib.LinearAlgebra.Matrix.Trace
 import Mathlib.MeasureTheory.Integral.Bochner.Basic
@@ -53,6 +54,34 @@ structure FiniteDimensionalUnitaryRepresentationCharacterData
 namespace FiniteDimensionalUnitaryRepresentationCharacterData
 
 variable {G : Type uG} [Group G] [TopologicalSpace G]
+
+/-- The exact matrix homomorphism as Mathlib's abstract coordinate representation. -/
+def toRepresentation
+    (data : FiniteDimensionalUnitaryRepresentationCharacterData G) :
+    Representation ℂ G (Fin data.dimension → ℂ) :=
+  matrixRepresentation data.representation
+
+/-- The abstract representation character is exactly the existing matrix trace character. -/
+@[simp]
+theorem toRepresentation_character
+    (data : FiniteDimensionalUnitaryRepresentationCharacterData G) (g : G) :
+    data.toRepresentation.character g = Matrix.trace (data.representation g) :=
+  matrixRepresentation_character data.representation g
+
+/-- Continuity of the actual trace character follows from continuity of the same representation
+matrix; no disconnected character is needed for this consequence. -/
+theorem character_continuous_derived
+    (data : FiniteDimensionalUnitaryRepresentationCharacterData G) :
+    Continuous (fun g => Matrix.trace (data.representation g)) :=
+  continuous_matrixRepresentation_trace data.representation data.representation_continuous
+
+/-- Conjugacy invariance of the actual trace character follows from the same representation
+homomorphism. -/
+theorem character_central_derived
+    (data : FiniteDimensionalUnitaryRepresentationCharacterData G) (h g : G) :
+    Matrix.trace (data.representation (h * g * h⁻¹)) =
+      Matrix.trace (data.representation g) :=
+  matrixRepresentation_trace_conj data.representation g h
 
 /-- The character is definitionally the trace of the same representation. -/
 def character (data : FiniteDimensionalUnitaryRepresentationCharacterData G) : G → ℂ :=

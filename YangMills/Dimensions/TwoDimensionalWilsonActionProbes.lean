@@ -34,6 +34,24 @@ theorem exact_representation_character (g : G) :
   ⟨rfl, representation.dimension_pos⟩
 
 omit [IsTopologicalGroup G] [CompactSpace G] [MeasurableSpace G] [BorelSpace G] in
+/-- The same matrix homomorphism is exposed through Mathlib's representation-theory carrier. -/
+theorem exact_mathlib_character_bridge (g : G) :
+    representation.toRepresentation.character g =
+      Matrix.trace (representation.representation g) :=
+  representation.toRepresentation_character g
+
+omit [IsTopologicalGroup G] [CompactSpace G] [MeasurableSpace G] [BorelSpace G] in
+/-- Character continuity and conjugacy invariance are now independently derived from the matrix
+representation rather than relying only on stored fields. -/
+theorem exact_derived_character_laws :
+    Continuous (fun g => Matrix.trace (representation.representation g)) ∧
+      ∀ h g,
+        Matrix.trace (representation.representation (h * g * h⁻¹)) =
+          Matrix.trace (representation.representation g) :=
+  ⟨representation.character_continuous_derived,
+    representation.character_central_derived⟩
+
+omit [IsTopologicalGroup G] [CompactSpace G] [MeasurableSpace G] [BorelSpace G] in
 /-- The supplied representation is genuinely unitary. -/
 theorem exact_unitarity (g : G) :
     star (representation.representation g) * representation.representation g = 1 :=
