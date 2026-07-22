@@ -191,6 +191,53 @@ theorem representationDifferential_trace_matrixMul_eq_neg_pairing
   · simp [twoDimensionalRepresentationTracePairing]
   · simp [representationDifferential_trace_matrixMul_im data X Y]
 
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- On one direction, Driver's negative trace pairing is the sum of the squared complex norms of all
+matrix entries of the exact representation derivative. -/
+theorem twoDimensionalRepresentationTracePairing_self_eq_sum_normSq
+    (data : SmoothUnitaryRepresentationDifferentialData (E := E) (G := G))
+    (X : GroupLieAlgebra (modelWithCornersSelf ℝ E) G) :
+    twoDimensionalRepresentationTracePairing data X X =
+      ∑ i, ∑ k, Complex.normSq (data.differential X k i) := by
+  let A : Matrix (Fin data.dimension) (Fin data.dimension) ℂ := data.differential X
+  have skew : A.conjTranspose = -A :=
+    data.representationDifferential_conjTranspose_eq_neg X
+  change -(Matrix.trace (A * A)).re = ∑ i, ∑ k, Complex.normSq (A k i)
+  have complexEquality : -(Matrix.trace (A * A)) =
+      Matrix.trace (A.conjTranspose * A) := by
+    rw [skew]
+    simp
+  have realEquality := congrArg Complex.re complexEquality
+  simpa [Matrix.trace, Matrix.mul_apply, Complex.normSq] using realEquality
+
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- Injectivity of Driver's exact `p_*` makes the genuine negative trace pairing strictly positive
+on every nonzero Lie-algebra direction. -/
+theorem twoDimensionalRepresentationTracePairing_self_pos
+    (data : SmoothUnitaryRepresentationDifferentialData (E := E) (G := G))
+    (X : GroupLieAlgebra (modelWithCornersSelf ℝ E) G) (nonzero : X ≠ 0) :
+    0 < twoDimensionalRepresentationTracePairing data X X := by
+  rw [twoDimensionalRepresentationTracePairing_self_eq_sum_normSq data X]
+  have differential_nonzero : data.differential X ≠ 0 := by
+    intro zero
+    apply nonzero
+    apply data.differential_injective_exact
+    simpa using zero
+  rw [Function.ne_iff] at differential_nonzero
+  obtain ⟨row, row_nonzero⟩ := differential_nonzero
+  rw [Function.ne_iff] at row_nonzero
+  obtain ⟨column, entry_nonzero⟩ := row_nonzero
+  apply Finset.sum_pos'
+  · intro index _
+    exact Finset.sum_nonneg fun innerIndex _ => Complex.normSq_nonneg _
+  · exact ⟨column, Finset.mem_univ _, by
+      apply Finset.sum_pos'
+      · intro index _
+        exact Complex.normSq_nonneg _
+      · exact ⟨row, Finset.mem_univ _, Complex.normSq_pos.mpr entry_nonzero⟩⟩
+
 /-- The continuum invariant inner product is exactly Driver's representation-induced trace pairing,
 not an independently chosen normalization. -/
 structure TwoDimensionalRepresentationInducedPairingCoherenceData

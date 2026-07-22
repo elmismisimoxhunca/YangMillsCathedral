@@ -134,7 +134,9 @@ carrier as `-Re trace` of the genuine contracted matrix product. A separately pa
 real-bilinear matrix multiplication prevents accidental pointwise function multiplication.
 Differentiating the unchanged unitarity equation now proves `p_*X` conjugate-transpose skew, and
 trace cyclicity derives the vanishing imaginary part and pairing symmetry, so the real carrier
-recovers Driver's displayed negative complex trace exactly. Driver's standing §2 representation chain now defines `p_*` as the exact identity `mfderiv` of one
+recovers Driver's displayed negative complex trace exactly. On a repeated direction it is the sum of
+all squared matrix-entry norms; exact `p_*` injectivity therefore derives strict positivity away from
+zero. Driver's standing §2 representation chain now defines `p_*` as the exact identity `mfderiv` of one
 smooth unitary matrix representation, requires its injectivity, and identifies the continuum
 invariant pairing literally with `-Re tr(p_*X p_*Y)`. A dependent common-chain record now ties the same connected-group representation (globally faithful
 and infinitesimally injective), Wilson normalization/actions, exact trace pairing, pairing Laplacian,

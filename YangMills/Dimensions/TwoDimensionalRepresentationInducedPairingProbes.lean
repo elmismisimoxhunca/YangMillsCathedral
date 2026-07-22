@@ -102,6 +102,26 @@ theorem exact_complex_trace_formula
 
 omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
     [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- On one direction, the exact pairing is the full matrix-entry squared-norm sum. -/
+theorem exact_trace_pairing_self_normSq
+    (representation : SmoothUnitaryRepresentationDifferentialData (E := E) (G := G))
+    (direction : GroupLieAlgebra (modelWithCornersSelf ℝ E) G) :
+    twoDimensionalRepresentationTracePairing representation direction direction =
+      ∑ i, ∑ k, Complex.normSq (representation.differential direction k i) :=
+  twoDimensionalRepresentationTracePairing_self_eq_sum_normSq representation direction
+
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- Exact differential injectivity makes the trace pairing strictly positive away from zero. -/
+theorem exact_trace_pairing_positive
+    (representation : SmoothUnitaryRepresentationDifferentialData (E := E) (G := G))
+    (direction : GroupLieAlgebra (modelWithCornersSelf ℝ E) G)
+    (nonzero : direction ≠ 0) :
+    0 < twoDimensionalRepresentationTracePairing representation direction direction :=
+  twoDimensionalRepresentationTracePairing_self_pos representation direction nonzero
+
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
 /-- A nonzero Lie-algebra direction cannot collapse under `p_*`. -/
 theorem collapsed_nonzero_direction_blocked
     (representation : SmoothUnitaryRepresentationDifferentialData (E := E) (G := G))
