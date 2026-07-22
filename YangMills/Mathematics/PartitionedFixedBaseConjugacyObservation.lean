@@ -24,6 +24,15 @@ def PartitionedFixedBaseFiniteFamily
     {Base : Type uBase} (LoopAt : Base → Type uLoop) : Type (max uBase uLoop) :=
   Σ base : Base, NonemptyFiniteFamily (LoopAt base)
 
+/-- A finite collection of positive fixed-base blocks. Distinct blocks must have distinct bases, so
+one geometric basepoint cannot be split into independently conjugated subfamilies. `blockCount = 0`
+represents no selected observation. -/
+structure FiniteFixedBaseBlockCollection
+    {Base : Type uBase} (LoopAt : Base → Type uLoop) where
+  blockCount : ℕ
+  block : Fin blockCount → PartitionedFixedBaseFiniteFamily LoopAt
+  base_injective : Function.Injective (fun index => (block index).1)
+
 section Observation
 
 variable {Base : Type uBase} {LoopAt : Base → Type uLoop}
@@ -110,6 +119,36 @@ theorem partitionedFixedBaseConjugacyObservation_common_conjugation
       partitionedFixedBaseConjugacyObservation holonomy family sample :=
   finiteSimultaneousConjugacyObservation_common_conjugation
     (holonomy family.1) (conjugator family.1) family.2 sample
+
+/-- Target of a finite collection of distinct fixed-base blocks. -/
+@[reducible] def finiteFixedBaseBlockObservationValue
+    (blocks : FiniteFixedBaseBlockCollection LoopAt) : Type _ :=
+  ∀ index : Fin blocks.blockCount,
+    partitionedFixedBaseConjugacyObservationValue (G := G) (blocks.block index)
+
+/-- Joint observation of every distinct fixed-base block, retaining one separate simultaneous class
+per base. -/
+def finiteFixedBaseBlockObservation
+    (holonomy : ∀ base, LoopAt base → Ω → G)
+    (blocks : FiniteFixedBaseBlockCollection LoopAt) :
+    Ω → finiteFixedBaseBlockObservationValue (G := G) blocks :=
+  fun sample index =>
+    partitionedFixedBaseConjugacyObservation holonomy (blocks.block index) sample
+
+omit [MeasurableSpace G] in
+/-- Independent conjugators at distinct block bases leave the full block collection unchanged. -/
+theorem finiteFixedBaseBlockObservation_common_conjugation
+    (holonomy : ∀ base, LoopAt base → Ω → G) (conjugator : Base → Ω → G)
+    (blocks : FiniteFixedBaseBlockCollection LoopAt) (sample : Ω) :
+    finiteFixedBaseBlockObservation
+        (fun base loop samplePoint =>
+          (conjugator base samplePoint)⁻¹ * holonomy base loop samplePoint *
+            conjugator base samplePoint)
+        blocks sample =
+      finiteFixedBaseBlockObservation holonomy blocks sample := by
+  funext index
+  exact partitionedFixedBaseConjugacyObservation_common_conjugation
+    holonomy conjugator (blocks.block index) sample
 
 end Observation
 

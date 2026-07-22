@@ -4733,8 +4733,14 @@ seam loops with the selected geometric component parameterizations and the sewn 
 loop in the topological gluing quotient; the right included trace is related through the exact
 orientation-reversing diffeomorphism. Piece restriction holonomies and left/right seam conjugacy-class/inverse coherence feed `BoundaryConditionedProductDisintegrationData`. Its right factor uses the
 componentwise descended inverse class, and the all-value product law and both marginals derive.
-It does not assert that the side fields generate the whole sewn field. The final further-conditioning
-clause of Theorem 5.1.1 and smooth/oriented/measured descent on the topological quotient remain open.
+It does not assert that the side fields generate the whole sewn field.
+`TwoDimensionalLevyFurtherConditioningData` now covers Theorem 5.1.1's final clause. Each side
+supplies an arbitrary finite collection of distinct geometric basepoint blocks, with one positive
+joint family per block; zero blocks omit further conditioning, and injectivity prevents splitting one
+base across independent conjugators. The enlarged genuine disintegration conditions on the seam and
+both full block tuples, reconstructs the exact same whole law through the exact same restriction,
+and factors through side kernels whose index omits the other side's entire tuple. Its inverse-boundary all-value product law
+derives. Smooth/oriented/measured descent on the topological quotient remains open.
 
 The first Driver Definition 8.1 lattice-approximation component is now exact:
 `EpsilonSquareLatticePathCertificate` fixes `ε > 0`, a continuous literal `ℝ²` curve, and a finite

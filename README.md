@@ -774,7 +774,11 @@ represent actual trace basepoints, exact loop traces into the two pieces and glu
 selected boundary parameterizations, exact restriction holonomies and inverse side-seam conjugacy
 classes, seam-loop `(G/Ad)^p` conditioning, genuine disintegration, and the all-value product law
 with literal componentwise inverse classes on the right. It deliberately does not claim the two side
-fields generate the sewn field. The theorem's further-conditioning clause and lattice-limit layers
+fields generate the sewn field. The theorem's final clause is now represented by a second
+uninhabited contract: each side supplies an arbitrary finite collection of distinct-base blocks,
+each containing one positive fixed-base joint-holonomy family; zero blocks omit conditioning. The
+enlarged genuine disintegration must reconstruct the exact same sewn law using the same restriction,
+and each factor kernel is indexed only by its own complete block tuple. Lattice-limit layers
 remain explicit debt. As the first Definition 8.1 approximation component,
 `EpsilonSquareLatticePathCertificate` now gives exact positive-spacing paths in the directed
 nearest-neighbor graph on `εℤ²`: finite strictly ordered nodes from parameters `0` to `1`, horizontal

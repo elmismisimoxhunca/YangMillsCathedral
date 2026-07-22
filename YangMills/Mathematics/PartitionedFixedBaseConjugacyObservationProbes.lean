@@ -58,7 +58,20 @@ theorem exact_ambient_recognition [MeasurableSpace Ω]
   ambient_eq_partitionedFixedBaseConjugacyGeneratedMeasurableSpace
     holonomy holonomy_measurable generated_covers
 
-/-- If there is no base point, no empty-family observation can be fabricated. -/
+omit [MeasurableSpace G] in
+/-- A finite block collection keeps one exact class per distinct base and forbids splitting one base
+across two independently conjugated blocks. -/
+theorem exact_finite_distinct_base_blocks
+    (holonomy : ∀ base, LoopAt base → Ω → G)
+    (blocks : FiniteFixedBaseBlockCollection LoopAt) (sample : Ω)
+    {first second : Fin blocks.blockCount}
+    (sameBase : (blocks.block first).1 = (blocks.block second).1) :
+    first = second ∧
+      finiteFixedBaseBlockObservation holonomy blocks sample first =
+        partitionedFixedBaseConjugacyObservation holonomy (blocks.block first) sample :=
+  ⟨blocks.base_injective sameBase, rfl⟩
+
+/-- If there is no base point, no positive block can be fabricated. -/
 theorem empty_base_blocks_observation [IsEmpty Base] :
     IsEmpty (PartitionedFixedBaseFiniteFamily LoopAt) := by
   constructor

@@ -888,8 +888,12 @@ committed before higher layers depend on it.
   - [x] Add the uninhabited Lévy Theorem 5.1.1 core sewing record with exact `(G/Ad)^p` seam
     conditioning, geometric basepoint-index/trace coherence, exact side/sewn seam traces,
     restriction holonomy and inverse side-seam conjugacy-class coherence, genuine disintegration, componentwise inverse boundary classes, and all-value product/marginal laws without asserting side-field generation.
+  - [x] Add Theorem 5.1.1's final further-conditioning clause with arbitrary finite collections of
+    distinct fixed-base blocks on both sides (including zero), the same sewn whole law/restriction,
+    genuine enlarged disintegration, irrelevant-other-side kernel factorization, and exact
+    inverse-boundary product law.
   - [ ] Prove chart-independence of the outward predicate and Hausdorff/manifold/orientation/measure
-    descent for the glued quotient; add Theorem 5.1.1's final further-conditioning clause.
+    descent for the glued quotient.
   - [ ] Resolve/formalize Theorem 8.10; inhabit/derive box projectivity and Theorem 7.2. Keep
     compact-surface gluing distinct from finite-cutoff, classical, and four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.
