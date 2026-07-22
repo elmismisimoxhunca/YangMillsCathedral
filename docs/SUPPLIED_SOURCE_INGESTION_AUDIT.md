@@ -237,7 +237,14 @@ adjudication corrections.
    layer constructs the exact finite-word map/composition, requires literal coarse-path/fine-word
    equality and nonempty edge carriers, records weighted-measure pushforward and coherent observable
    pullback on the unchanged Driver density chain, and derives finite word-family equality in law.
-12. Lévy PDF pp. 89–94 / printed pp. 75–80 were visually adjudicated on 2026-07-22 for Chapter 5,
+12. Lévy PDF pp. 62–63 / printed pp. 48–49 were visually adjudicated on 2026-07-22 for §2.10 and
+   Propositions 2.10.1–2.10.5. Printed p. 48 visibly restricts each common diagonal joint conjugacy
+   class to finite loop families based at one common point; mixed-basepoint families are partitioned
+   by base point and represented as tuples of separate joint classes. The generated sigma field must
+   therefore range over fixed-base finite families, never one common conjugator across arbitrary
+   loops. Printed p. 49 retains distinct classes for differently based conditioning loops and states
+   the associated disintegration.
+13. Lévy PDF pp. 89–94 / printed pp. 75–80 were visually adjudicated on 2026-07-22 for Chapter 5,
    Theorem 5.1.1, equation (5.1), Propositions 5.1.2/5.1.3, and the start of §5.3. The pages visibly
    require `p > 0` orientation-reversing boundary gluings, identify the two exact conditioned
    restrictions, state conditional independence given common-boundary holonomy, and quantify the
@@ -246,15 +253,15 @@ adjudication corrections.
    general nonabelian scope and explain the missing joint-conjugacy information. Canonical Lean
    sewing declarations must therefore retain genuine conditional/disintegration semantics, the
    inverse tuple, holonomy-generated fields, and no false sigma-field-generation equality.
-13. Witten's subdivision/sewing formulas are exact representation-theoretic identities, not by
+14. Witten's subdivision/sewing formulas are exact representation-theoretic identities, not by
    themselves a countably additive continuum-measure construction.
-14. Atiyah–Bott is classical gauge geometry, not a source for a quantum probability measure.
-15. Sengupta's orientation-reversing covariance changes to the specified pullback bundle class; it
+15. Atiyah–Bott is classical gauge geometry, not a source for a quantum probability measure.
+16. Sengupta's orientation-reversing covariance changes to the specified pullback bundle class; it
    must not be simplified to same-bundle invariance.
-16. Kluberg-Stern–Zuber's broadest operator-renormalization statements carry dimensional/twist or
+17. Kluberg-Stern–Zuber's broadest operator-renormalization statements carry dimensional/twist or
    conjectural qualifications; they are corroboration, not an unrestricted theorem.
-17. Hollands–Kopper's convergence theorem is not a Yang–Mills convergence theorem.
-18. `yang1954.pdf` begins with one page from a preceding article; the Yang–Mills article starts on
+18. Hollands–Kopper's convergence theorem is not a Yang–Mills convergence theorem.
+19. `yang1954.pdf` begins with one page from a preceding article; the Yang–Mills article starts on
    PDF p. 2.
 
 ## 4. Concrete progress unlocked by the bundle
