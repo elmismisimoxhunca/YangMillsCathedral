@@ -44,6 +44,37 @@ variable
     {identification : CompactSurfaceBoundaryIdentification
       leftSurface leftPresentation leftOrientation rightSurface rightPresentation rightOrientation}
 
+/-- Exact union of the selected left boundary components, defined independently of smooth
+descent. -/
+def selectedLeftBoundarySet : Set SL :=
+  ⋃ pair : Fin identification.pairCount,
+    compactSurfaceBoundaryComponentSet leftSurface (identification.leftComponent pair)
+
+/-- Exact union of the selected right boundary components. -/
+def selectedRightBoundarySet : Set SR :=
+  ⋃ pair : Fin identification.pairCount,
+    compactSurfaceBoundaryComponentSet rightSurface (identification.rightComponent pair)
+
+/-- The selected left boundary union is compact. -/
+theorem selectedLeftBoundarySet_isCompact :
+    IsCompact (selectedLeftBoundarySet (identification := identification)) := by
+  apply isCompact_iUnion
+  intro pair
+  rw [← leftPresentation.parameterization_range]
+  exact isCompact_range
+    (leftPresentation.parameterization_smoothEmbedding
+      (identification.leftComponent pair)).contMDiff.continuous
+
+/-- The selected right boundary union is compact. -/
+theorem selectedRightBoundarySet_isCompact :
+    IsCompact (selectedRightBoundarySet (identification := identification)) := by
+  apply isCompact_iUnion
+  intro pair
+  rw [← rightPresentation.parameterization_range]
+  exact isCompact_range
+    (rightPresentation.parameterization_smoothEmbedding
+      (identification.rightComponent pair)).contMDiff.continuous
+
 /-- Canonical area candidate on the exact glued quotient. -/
 def compactSurfaceBoundaryGluedAreaMeasure :
     Measure (CompactSurfaceBoundaryGluingQuotient identification) :=
@@ -227,6 +258,73 @@ theorem compactSurfaceBoundaryGluedAreaMeasure_right_image_apply
       imageMeasurable,
     measure_mono_null leftPreimage leftSurface.boundary_null, zero_add,
     rightPreimageSelf]
+
+/-- Canonical measurable candidate for the boundary remaining after the selected components are
+glued. This is defined on the exact quotient before any manifold descent is supplied. -/
+def compactSurfaceBoundaryGluingRemainingBoundary :
+    Set (CompactSurfaceBoundaryGluingQuotient identification) :=
+  CompactSurfaceBoundaryGluingQuotient.leftInclusion identification ''
+      (IL.boundary SL \ selectedLeftBoundarySet (identification := identification)) ∪
+    CompactSurfaceBoundaryGluingQuotient.rightInclusion identification ''
+      (IR.boundary SR \ selectedRightBoundarySet (identification := identification))
+
+/-- The exact remaining-boundary candidate is Borel measurable independently of smooth descent. -/
+theorem compactSurfaceBoundaryGluingRemainingBoundary_measurable :
+    MeasurableSet (compactSurfaceBoundaryGluingRemainingBoundary
+      (identification := identification)) := by
+  have leftBoundaryMeasurable : MeasurableSet (IL.boundary SL) :=
+    (IL.isClosed_boundary (n := ∞) (by simp)).measurableSet
+  have rightBoundaryMeasurable : MeasurableSet (IR.boundary SR) :=
+    (IR.isClosed_boundary (n := ∞) (by simp)).measurableSet
+  have leftSelectedMeasurable :
+      MeasurableSet (selectedLeftBoundarySet (identification := identification)) :=
+    (selectedLeftBoundarySet_isCompact
+      (identification := identification)).isClosed.measurableSet
+  have rightSelectedMeasurable :
+      MeasurableSet (selectedRightBoundarySet (identification := identification)) :=
+    (selectedRightBoundarySet_isCompact
+      (identification := identification)).isClosed.measurableSet
+  simpa [compactSurfaceBoundaryGluingRemainingBoundary] using
+    (MeasurableEmbedding.measurableSet_image'
+      (CompactSurfaceBoundaryGluingQuotient.sideInclusions_measurableEmbedding identification).1
+      (leftBoundaryMeasurable.diff leftSelectedMeasurable)).union
+    (MeasurableEmbedding.measurableSet_image'
+      (CompactSurfaceBoundaryGluingQuotient.sideInclusions_measurableEmbedding identification).2
+      (rightBoundaryMeasurable.diff rightSelectedMeasurable))
+
+/-- The exact remaining-boundary candidate is null under the canonical glued area. This is derived
+from measurable side restriction and the already proved nullity of both full side boundaries. -/
+theorem compactSurfaceBoundaryGluedAreaMeasure_remainingBoundary_null :
+    compactSurfaceBoundaryGluedAreaMeasure (identification := identification)
+      (compactSurfaceBoundaryGluingRemainingBoundary (identification := identification)) = 0 := by
+  have leftBoundaryMeasurable : MeasurableSet (IL.boundary SL) :=
+    (IL.isClosed_boundary (n := ∞) (by simp)).measurableSet
+  have rightBoundaryMeasurable : MeasurableSet (IR.boundary SR) :=
+    (IR.isClosed_boundary (n := ∞) (by simp)).measurableSet
+  have leftSelectedMeasurable :
+      MeasurableSet (selectedLeftBoundarySet (identification := identification)) :=
+    (selectedLeftBoundarySet_isCompact
+      (identification := identification)).isClosed.measurableSet
+  have rightSelectedMeasurable :
+      MeasurableSet (selectedRightBoundarySet (identification := identification)) :=
+    (selectedRightBoundarySet_isCompact
+      (identification := identification)).isClosed.measurableSet
+  have leftNull :
+      compactSurfaceBoundaryGluedAreaMeasure (identification := identification)
+          (CompactSurfaceBoundaryGluingQuotient.leftInclusion identification ''
+            (IL.boundary SL \ selectedLeftBoundarySet (identification := identification))) = 0 := by
+    rw [compactSurfaceBoundaryGluedAreaMeasure_left_image_apply
+      (leftBoundaryMeasurable.diff leftSelectedMeasurable)]
+    exact measure_mono_null Set.sdiff_subset leftSurface.boundary_null
+  have rightNull :
+      compactSurfaceBoundaryGluedAreaMeasure (identification := identification)
+          (CompactSurfaceBoundaryGluingQuotient.rightInclusion identification ''
+            (IR.boundary SR \ selectedRightBoundarySet (identification := identification))) = 0 := by
+    rw [compactSurfaceBoundaryGluedAreaMeasure_right_image_apply
+      (rightBoundaryMeasurable.diff rightSelectedMeasurable)]
+    exact measure_mono_null Set.sdiff_subset rightSurface.boundary_null
+  simpa [compactSurfaceBoundaryGluingRemainingBoundary] using
+    MeasureTheory.measure_union_null leftNull rightNull
 
 /-- The entire left-side image has exactly the original left total area. -/
 theorem compactSurfaceBoundaryGluedAreaMeasure_leftImage :

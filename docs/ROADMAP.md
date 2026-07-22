@@ -928,6 +928,9 @@ committed before higher layers depend on it.
   - [x] Prove both side inclusions are measurable embeddings and that every measurable side subset
     retains exactly its original measure on its embedded quotient image; the opposite pushforward
     contributes only through a null boundary preimage. Derive whole-side total-area recovery.
+  - [x] Construct compact selected-boundary unions and the exact Borel remaining-boundary quotient
+    candidate; derive its canonical nullity and make smooth descent identify its manifold boundary
+    with this named candidate.
   - [x] Add an uninhabited exact smooth/oriented/measured descent contract on the same quotient
     topology, including smooth side embeddings, positive-scale orientation-class pullbacks, derived
     null side boundaries, identification with the canonical glued area, exact remaining boundary,

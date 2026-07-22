@@ -119,6 +119,15 @@ theorem exact_area_descent
   ⟨descent.side_boundaries_null.1, descent.side_boundaries_null.2,
     descent.areaMeasure_eq_sum_pushforward⟩
 
+/-- The descended boundary-null theorem factors through the exact named remaining-boundary
+candidate rather than relying only on the generic compact-surface boundary-null result. -/
+theorem descended_boundary_null_via_exact_candidate
+    (descent : CompactSurfaceBoundaryGluingSmoothDescentData
+      (identification := identification) (IG := IG)) :
+    descent.gluedSurface.areaMeasure
+      (IG.boundary (GluedSurfaceCarrier (identification := identification))) = 0 :=
+  descent.boundary_null_via_remainingBoundary
+
 /-- Exactly unselected boundary images remain, while every selected seam is interior. -/
 theorem exact_boundary_and_seam
     (descent : CompactSurfaceBoundaryGluingSmoothDescentData

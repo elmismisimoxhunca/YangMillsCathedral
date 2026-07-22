@@ -4744,8 +4744,12 @@ same-side injectivity and cross-side matching put both side preimages of the sea
 manifold boundaries, deriving zero canonical seam area. The continuous injective side maps are now proved to be measurable embeddings. The same exact
 preimage analysis consequently proves the stronger restriction theorem for every measurable side
 subset: its embedded image has precisely its original measure, while the opposite-side preimage is
-boundary-null. Whole-side total-area recovery is a direct specialization. Descent data now identifies its nucleus
-measure with this named construction instead of supplying an unnamed formula. Same-side
+boundary-null. Whole-side total-area recovery is a direct specialization. The selected boundary unions are
+constructed independently and proved compact. Their exact unselected-boundary quotient image is a
+named Borel candidate, proved canonically null from measurable restriction and side-boundary
+nullity. Descent now identifies both its nucleus measure and manifold boundary with these named
+constructions; its boundary nullity is rederived through that exact chain rather than merely inherited
+from the generic compact-surface theorem. Same-side
 injectivity plus the new exact characterization that cross-side quotient equality occurs only at a
 designated pair derive interior placement of every seam point from that boundary equation, removing
 it as an independent descent field. Hostile probes reject an unrelated glued measure and

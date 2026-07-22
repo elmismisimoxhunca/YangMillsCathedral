@@ -59,6 +59,29 @@ theorem exact_finite_positive_nonzero :
     compactSurfaceBoundaryGluedAreaMeasure_pos,
     compactSurfaceBoundaryGluedAreaMeasure_ne_zero⟩
 
+/-- Selected boundary unions are genuine compact subsets before any smooth descent. -/
+theorem selected_boundary_unions_compact :
+    IsCompact (selectedLeftBoundarySet (identification := identification)) ∧
+      IsCompact (selectedRightBoundarySet (identification := identification)) :=
+  ⟨selectedLeftBoundarySet_isCompact, selectedRightBoundarySet_isCompact⟩
+
+/-- The exact remaining-boundary candidate is measurable and canonically null before descent. -/
+theorem remaining_boundary_candidate_measurable_null :
+    MeasurableSet (compactSurfaceBoundaryGluingRemainingBoundary
+      (identification := identification)) ∧
+      compactSurfaceBoundaryGluedAreaMeasure (identification := identification)
+        (compactSurfaceBoundaryGluingRemainingBoundary (identification := identification)) = 0 :=
+  ⟨compactSurfaceBoundaryGluingRemainingBoundary_measurable,
+    compactSurfaceBoundaryGluedAreaMeasure_remainingBoundary_null⟩
+
+/-- A claimed positive area for the exact remaining-boundary candidate is hostilely rejected. -/
+theorem positive_remaining_boundary_area_blocked
+    (wrongPositive : 0 < compactSurfaceBoundaryGluedAreaMeasure
+      (identification := identification)
+      (compactSurfaceBoundaryGluingRemainingBoundary (identification := identification))) : False := by
+  rw [compactSurfaceBoundaryGluedAreaMeasure_remainingBoundary_null] at wrongPositive
+  exact (lt_irrefl 0 wrongPositive)
+
 /-- Every measurable subset of either side retains exactly its original measure after embedding
 into the glued quotient; this is stronger than total-area preservation alone. -/
 theorem exact_measurable_side_restrictions

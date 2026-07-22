@@ -52,16 +52,6 @@ variable
     {identification : CompactSurfaceBoundaryIdentification
       leftSurface leftPresentation leftOrientation rightSurface rightPresentation rightOrientation}
 
-/-- Exact union of the selected left boundary components. -/
-def selectedLeftBoundarySet : Set SL :=
-  ⋃ pair : Fin identification.pairCount,
-    compactSurfaceBoundaryComponentSet leftSurface (identification.leftComponent pair)
-
-/-- Exact union of the selected right boundary components. -/
-def selectedRightBoundarySet : Set SR :=
-  ⋃ pair : Fin identification.pairCount,
-    compactSurfaceBoundaryComponentSet rightSurface (identification.rightComponent pair)
-
 abbrev GluedSurfaceCarrier := CompactSurfaceBoundaryGluingQuotient identification
 
 variable
@@ -116,10 +106,7 @@ structure CompactSurfaceBoundaryGluingSmoothDescentData where
   /-- Exactly the unselected side boundaries remain boundary after gluing. -/
   boundary_eq_unselected_images :
     IG.boundary (GluedSurfaceCarrier (identification := identification)) =
-      CompactSurfaceBoundaryGluingQuotient.leftInclusion identification ''
-          (IL.boundary SL \ selectedLeftBoundarySet (identification := identification)) ∪
-        CompactSurfaceBoundaryGluingQuotient.rightInclusion identification ''
-          (IR.boundary SR \ selectedRightBoundarySet (identification := identification))
+      compactSurfaceBoundaryGluingRemainingBoundary (identification := identification)
 namespace CompactSurfaceBoundaryGluingSmoothDescentData
 
 /-- The left side map is a genuine smooth embedding: only immersion comes from descent data, while
@@ -213,6 +200,16 @@ theorem areaMeasure_eq_sum_pushforward
         Measure.map (CompactSurfaceBoundaryGluingQuotient.rightInclusion identification)
           rightSurface.areaMeasure := by
   simpa [compactSurfaceBoundaryGluedAreaMeasure] using descent.areaMeasure_eq_gluedAreaMeasure
+
+/-- The descended manifold boundary is null by the exact gluing chain: it is the named
+remaining-boundary candidate and the descended area is the named canonical quotient measure. -/
+theorem boundary_null_via_remainingBoundary
+    (descent : CompactSurfaceBoundaryGluingSmoothDescentData
+      (identification := identification) (IG := IG)) :
+    descent.gluedSurface.areaMeasure
+      (IG.boundary (GluedSurfaceCarrier (identification := identification))) = 0 := by
+  rw [descent.areaMeasure_eq_gluedAreaMeasure, descent.boundary_eq_unselected_images]
+  exact compactSurfaceBoundaryGluedAreaMeasure_remainingBoundary_null
 
 /-- Both full side boundaries are null under their designated surface measures. This is inherited
 from the surface chart-density theorem and is independent of any gluing descent witness. -/
