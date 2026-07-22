@@ -111,6 +111,19 @@ theorem joint_nonmeasurability_blocked
     (wrong : ¬Measurable (Function.uncurry brownian.jointlyMeasurableProcess)) : False :=
   wrong brownian.jointlyMeasurableProcess_measurable
 
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- The modification is repackaged as the same Brownian acceptance structure on the unchanged
+sample carrier and probability measure, while exposing joint measurability. -/
+theorem exact_jointly_measurable_version
+    (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
+      inner law semigroup laplacian heat Ω) :
+    brownian.jointlyMeasurableVersion.probabilityMeasure = brownian.probabilityMeasure ∧
+      brownian.jointlyMeasurableVersion.process = brownian.jointlyMeasurableProcess ∧
+      Measurable (Function.uncurry brownian.jointlyMeasurableVersion.process) :=
+  ⟨brownian.jointlyMeasurableVersion_probabilityMeasure,
+    brownian.jointlyMeasurableVersion_process,
+    brownian.jointlyMeasurableVersion_process_measurable⟩
+
 omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
     [MeasurableMul₂ G] [MeasurableInv G] in
 /-- The modification preserves identity start and every finite monotone increment-independence law. -/

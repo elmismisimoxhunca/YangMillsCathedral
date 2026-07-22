@@ -4544,7 +4544,9 @@ again. From the almost-sure continuous-path event, a measurable null hull of all
 points is constructed. Replacing paths by the identity on that hull gives an everywhere-continuous
 jointly `NNReal × Ω` measurable modification, simultaneously almost surely equal to the original at
 all times. Identity start, every finite monotone mutual right-increment independence law, every
-fixed-time law, and every positive stationary right-increment law are unchanged. At the
+fixed-time law, and every positive stationary right-increment law are unchanged. These derived laws
+repackage the modification as a new `TwoDimensionalSelectedLoopBrownianRealizationData` on the exact
+same sample carrier and probability measure, with joint measurability exposed as a theorem. At the
 selected positive area, the original marginal is proved exactly equal to the sampled loop-
 holonomy pushforward from the original gauge-fixed continuum nucleus. No process or Brownian motion
 is constructed.

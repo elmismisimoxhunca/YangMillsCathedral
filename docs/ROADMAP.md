@@ -715,7 +715,8 @@ committed before higher layers depend on it.
   - [x] Construct an everywhere-continuous jointly `NNReal × Ω` measurable modification by replacing
     paths on a measurable null discontinuity hull; prove simultaneous all-time almost-sure equality,
     identity start, every finite monotone mutual increment-independence law, and preservation of
-    every fixed-time and positive stationary-increment law.
+    every fixed-time and positive stationary-increment law; repackage it as the same Brownian
+    acceptance structure on the unchanged sample carrier and probability measure.
   - [x] Transport the exact invariant pairing pointwise by left Maurer–Cartan trivialization; prove
     its inverse, symmetry, strict positivity, exact left/right translation formulas, and
     bi-invariance with the required `Ad(h⁻¹)` convention.

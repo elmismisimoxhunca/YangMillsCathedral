@@ -226,6 +226,64 @@ theorem jointlyMeasurableProcess_independent_increments
   filter_upwards [brownian.jointlyMeasurableProcess_ae_eq] with samplePoint equality
   rw [equality (t i.castSucc), equality (t i.succ)]
 
+/-- Repackage the null-hull modification as a Brownian-realization datum on the exact same sample
+carrier and probability measure. All required laws are derived rather than resupplied. -/
+noncomputable def jointlyMeasurableVersion
+    (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
+      inner law semigroup laplacian heat Ω) :
+    TwoDimensionalSelectedLoopBrownianRealizationData
+      inner law semigroup laplacian heat Ω where
+  probabilityMeasure := brownian.probabilityMeasure
+  process := brownian.jointlyMeasurableProcess
+  process_measurable := brownian.jointlyMeasurableProcess_fixedTime_measurable
+  process_zero := brownian.jointlyMeasurableProcess_zero
+  continuous_paths := Filter.Eventually.of_forall
+    brownian.jointlyMeasurableProcess_continuous
+  stationary_increment_law := by
+    intro s t ht
+    calc
+      Measure.map (fun samplePoint =>
+          (brownian.jointlyMeasurableProcess s samplePoint)⁻¹ *
+            brownian.jointlyMeasurableProcess (s + t) samplePoint)
+          brownian.probabilityMeasure =
+        Measure.map (fun samplePoint =>
+          (brownian.process s samplePoint)⁻¹ * brownian.process (s + t) samplePoint)
+          brownian.probabilityMeasure := by
+        apply Measure.map_congr
+        filter_upwards [brownian.jointlyMeasurableProcess_ae_eq] with samplePoint equality
+        rw [equality s, equality (s + t)]
+      _ = (normalizedCompactHaarMeasure G).withDensity
+          (law.selectedAreaDensity (t : ℝ)) := brownian.stationary_increment_law s t ht
+  independent_increments := brownian.jointlyMeasurableProcess_independent_increments
+
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
+@[simp]
+theorem jointlyMeasurableVersion_probabilityMeasure
+    (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
+      inner law semigroup laplacian heat Ω) :
+    brownian.jointlyMeasurableVersion.probabilityMeasure = brownian.probabilityMeasure :=
+  rfl
+
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
+@[simp]
+theorem jointlyMeasurableVersion_process
+    (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
+      inner law semigroup laplacian heat Ω) :
+    brownian.jointlyMeasurableVersion.process = brownian.jointlyMeasurableProcess :=
+  rfl
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- The repackaged version exposes the jointly measurable process without changing its carrier or
+probability law. -/
+theorem jointlyMeasurableVersion_process_measurable
+    (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
+      inner law semigroup laplacian heat Ω) :
+    Measurable (Function.uncurry brownian.jointlyMeasurableVersion.process) := by
+  rw [jointlyMeasurableVersion_process]
+  exact brownian.jointlyMeasurableProcess_measurable
+
 omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
     [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Every fixed-time law of the jointly measurable modification equals the original fixed-time law. -/
