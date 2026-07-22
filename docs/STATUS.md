@@ -4838,7 +4838,10 @@ each exact horizontal column and `boxPlaquetteDifferenceRecover` applies their r
 both inverse laws are proved on the actual coordinate/plaquette subtypes and packaged as a
 measurable equivalence. Axis horizontal values are exactly one and represented rows recover the
 same raw coordinates, so every transformed plaquette value is proved pointwise equal to the actual
-plaquette holonomy of the same box extension. `twoDimensionalSquareLatticeBoxPresentation` now uses the exact coordinate/plaquette subtypes,
+plaquette holonomy of the same box extension. Upper/lower chain splitting, rooted Haar preservation,
+finite products across horizontal columns, and literal reindexing then prove that the actual
+coordinate-to-plaquette holonomy transform sends normalized coordinate product Haar exactly to
+normalized plaquette product Haar; its recursive inverse preserves the reverse pair. `twoDimensionalSquareLatticeBoxPresentation` now uses the exact coordinate/plaquette subtypes,
 constructs a measurable extension taking represented bonds to arbitrary coordinates, reverse bonds
 to inverses, and all other bonds to the identity, and proves exact coordinate recovery, finite
 support, orientation disjointness, and boundary coverage. Horizontal values on arbitrary rows are
