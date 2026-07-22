@@ -45,7 +45,6 @@ variable
     [BorelSpace (GluedSurfaceCarrier (identification := identification))]
     [ChartedSpace HG (GluedSurfaceCarrier (identification := identification))]
     [IsManifold IG ∞ (GluedSurfaceCarrier (identification := identification))]
-    [SecondCountableTopology (GluedSurfaceCarrier (identification := identification))]
 
 /-- The descended carrier is genuinely another exact two-dimensional compact oriented measured
 surface, not merely the pre-existing quotient type. -/

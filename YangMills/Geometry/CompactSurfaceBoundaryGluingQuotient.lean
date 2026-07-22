@@ -7,6 +7,7 @@ Authors: Sebastian Rodrigo
 import YangMills.Geometry.CompactSurfaceOrientationReversingBoundaryIdentification
 import Mathlib.Topology.Constructions
 import Mathlib.Topology.Maps.Basic
+import Mathlib.Topology.Compactness.Bases
 
 /-!
 # Exact quotient carrier for compact-surface boundary gluing
@@ -19,6 +20,7 @@ paired parameterized boundary points; reflexivity, symmetry, and transitivity ar
 
 The quotient receives its genuine quotient topology. Its exact matching relation is characterized
 and proved closed; compact equivalence classes and a closed projection then derive Hausdorffness.
+Compact fibers and saturated cores of finite source-basis unions derive second countability.
 Compactness, connectedness, and closed side embeddings are also derived. A universal lift is
 provided for compatible sidewise functions. No manifold-with-corners atlas, descended orientation,
 area measure, probability law, or Yang--Mills model is asserted.
@@ -551,6 +553,162 @@ instance compactSurfaceBoundaryGluingQuotientT2Space :
     T2Space (CompactSurfaceBoundaryGluingQuotient identification) :=
   T2Space.mk fun first second distinct =>
     exists_disjoint_open_neighborhoods identification first second distinct
+
+/-- Finite union of members of the canonical countable basis on the disjoint union. -/
+def finiteSourceBasisUnion
+    (basisSets : Finset (TopologicalSpace.countableBasis (SL ⊕ SR))) : Set (SL ⊕ SR) :=
+  ⋃ basisSet ∈ basisSets, (basisSet : Set (SL ⊕ SR))
+
+/-- Largest quotient-open core whose full representative fiber lies in a source set. -/
+def quotientSaturatedCore (sourceSet : Set (SL ⊕ SR)) :
+    Set (CompactSurfaceBoundaryGluingQuotient identification) :=
+  (projection identification '' sourceSetᶜ)ᶜ
+
+/-- Countable candidate basis formed from saturated cores of finite source-basis unions. -/
+def quotientCoreBasis : Set (Set (CompactSurfaceBoundaryGluingQuotient identification)) :=
+  Set.range fun basisSets : Finset (TopologicalSpace.countableBasis (SL ⊕ SR)) =>
+    quotientSaturatedCore identification (finiteSourceBasisUnion basisSets)
+
+set_option linter.unusedSectionVars false in
+/-- Every finite source-basis union is open. -/
+theorem finiteSourceBasisUnion_isOpen
+    (basisSets : Finset (TopologicalSpace.countableBasis (SL ⊕ SR))) :
+    IsOpen (finiteSourceBasisUnion basisSets) := by
+  apply isOpen_iUnion
+  intro basisSet
+  apply isOpen_iUnion
+  intro _
+  exact (TopologicalSpace.isBasis_countableBasis (SL ⊕ SR)).isOpen basisSet.property
+
+/-- Saturated cores of open source sets are open because the quotient projection is closed. -/
+theorem quotientSaturatedCore_isOpen {sourceSet : Set (SL ⊕ SR)}
+    (sourceOpen : IsOpen sourceSet) :
+    IsOpen (quotientSaturatedCore identification sourceSet) :=
+  ((projection_isClosedMap identification) sourceSetᶜ sourceOpen.isClosed_compl).isOpen_compl
+
+/-- The candidate quotient basis is countable. -/
+theorem quotientCoreBasis_countable : (quotientCoreBasis identification).Countable :=
+  Set.countable_range _
+
+/-- The fiber over a projected representative is exactly its explicit gluing equivalence class. -/
+theorem projection_fiber_eq_gluingEquivalenceClass (representative : SL ⊕ SR) :
+    projection identification ⁻¹'
+        ({projection identification representative} :
+          Set (CompactSurfaceBoundaryGluingQuotient identification)) =
+      gluingEquivalenceClass identification representative := by
+  ext other
+  constructor
+  · intro fiberMembership
+    have projectionEquality : projection identification other =
+        projection identification representative := fiberMembership
+    exact (explicitGluingEquivalence_equivalence identification).2
+      ((eqvGen_iff_explicitGluingEquivalence identification other representative).mp
+        (eqvGen_of_projection_eq identification projectionEquality))
+  · intro related
+    change projection identification other = projection identification representative
+    have reverseRelated := (explicitGluingEquivalence_equivalence identification).2 related
+    exact Quot.sound
+      ((eqvGen_iff_explicitGluingEquivalence identification other representative).mpr
+        reverseRelated)
+
+/-- Every quotient fiber is compact. -/
+theorem projection_fiber_isCompact
+    (point : CompactSurfaceBoundaryGluingQuotient identification) :
+    IsCompact (projection identification ⁻¹'
+      ({point} : Set (CompactSurfaceBoundaryGluingQuotient identification))) := by
+  refine Quot.inductionOn point ?_
+  intro representative
+  change IsCompact (projection identification ⁻¹'
+    ({projection identification representative} :
+      Set (CompactSurfaceBoundaryGluingQuotient identification)))
+  rw [projection_fiber_eq_gluingEquivalenceClass identification representative]
+  exact gluingEquivalenceClass_isCompact identification representative
+
+/-- The saturated-core family is a genuine topological basis on the quotient. Compact fibers allow
+one finite source-basis union to cover the whole fiber inside any prescribed quotient neighborhood. -/
+theorem quotientCoreBasis_isTopologicalBasis :
+    TopologicalSpace.IsTopologicalBasis (quotientCoreBasis identification) := by
+  apply TopologicalSpace.isTopologicalBasis_of_isOpen_of_nhds
+  · intro core coreMembership
+    obtain ⟨basisSets, rfl⟩ := coreMembership
+    exact quotientSaturatedCore_isOpen identification
+      (finiteSourceBasisUnion_isOpen basisSets)
+  · intro point targetOpen pointMembership targetOpenIsOpen
+    let sourceOpen := projection identification ⁻¹' targetOpen
+    have sourceOpenIsOpen : IsOpen sourceOpen :=
+      targetOpenIsOpen.preimage (projection_continuous identification)
+    let CoverIndex := {basisSet : TopologicalSpace.countableBasis (SL ⊕ SR) //
+      (basisSet : Set (SL ⊕ SR)) ⊆ sourceOpen}
+    let cover : CoverIndex → Set (SL ⊕ SR) := fun basisSet => basisSet.1
+    have coverOpen : ∀ index, IsOpen (cover index) := by
+      intro index
+      exact (TopologicalSpace.isBasis_countableBasis (SL ⊕ SR)).isOpen index.1.property
+    have fiberCovered : projection identification ⁻¹'
+        ({point} : Set (CompactSurfaceBoundaryGluingQuotient identification)) ⊆
+        ⋃ index, cover index := by
+      intro representative representativeMembership
+      have representativeSourceOpen : representative ∈ sourceOpen := by
+        have projectsToPoint : projection identification representative = point :=
+          representativeMembership
+        change projection identification representative ∈ targetOpen
+        rw [projectsToPoint]
+        exact pointMembership
+      obtain ⟨basisSet, basisSetBasis, representativeBasisSet, basisSetSubset⟩ :=
+        (TopologicalSpace.isBasis_countableBasis (SL ⊕ SR)).exists_subset_of_mem_open
+          representativeSourceOpen sourceOpenIsOpen
+      let basisSubtype : TopologicalSpace.countableBasis (SL ⊕ SR) :=
+        ⟨basisSet, basisSetBasis⟩
+      let coverIndex : CoverIndex := ⟨basisSubtype, basisSetSubset⟩
+      exact Set.mem_iUnion.mpr ⟨coverIndex, representativeBasisSet⟩
+    obtain ⟨finiteCover, finiteCoverCovers⟩ :=
+      (projection_fiber_isCompact identification point).elim_finite_subcover
+        cover coverOpen fiberCovered
+    let selectedBasis : Finset (TopologicalSpace.countableBasis (SL ⊕ SR)) :=
+      finiteCover.image fun index => index.1
+    let sourceNeighborhood := finiteSourceBasisUnion selectedBasis
+    have fiberSubsetNeighborhood : projection identification ⁻¹'
+        ({point} : Set (CompactSurfaceBoundaryGluingQuotient identification)) ⊆
+        sourceNeighborhood := by
+      intro representative representativeMembership
+      have representativeUnion := finiteCoverCovers representativeMembership
+      simp only [Set.mem_iUnion] at representativeUnion
+      obtain ⟨index, indexMembership, representativeIndex⟩ := representativeUnion
+      show representative ∈ ⋃ basisSet ∈ selectedBasis, (basisSet : Set (SL ⊕ SR))
+      exact Set.mem_iUnion.mpr ⟨index.1, Set.mem_iUnion.mpr
+        ⟨Finset.mem_image.mpr ⟨index, indexMembership, rfl⟩, representativeIndex⟩⟩
+    have neighborhoodSubsetSourceOpen : sourceNeighborhood ⊆ sourceOpen := by
+      intro representative representativeMembership
+      change representative ∈ finiteSourceBasisUnion selectedBasis at representativeMembership
+      simp only [finiteSourceBasisUnion, Set.mem_iUnion] at representativeMembership
+      obtain ⟨basisSet, basisSetMembership, representativeBasisSet⟩ := representativeMembership
+      obtain ⟨index, _, indexEquality⟩ := Finset.mem_image.mp basisSetMembership
+      subst basisSet
+      exact index.2 representativeBasisSet
+    let quotientNeighborhood := quotientSaturatedCore identification sourceNeighborhood
+    have quotientNeighborhoodBasis : quotientNeighborhood ∈ quotientCoreBasis identification :=
+      ⟨selectedBasis, rfl⟩
+    have pointNeighborhood : point ∈ quotientNeighborhood := by
+      show point ∉ projection identification '' sourceNeighborhoodᶜ
+      rintro ⟨representative, representativeOutside, representativeProjects⟩
+      have representativeFiber : representative ∈ projection identification ⁻¹'
+          ({point} : Set (CompactSurfaceBoundaryGluingQuotient identification)) :=
+        representativeProjects
+      exact representativeOutside (fiberSubsetNeighborhood representativeFiber)
+    have neighborhoodSubsetTarget : quotientNeighborhood ⊆ targetOpen := by
+      intro quotientPoint quotientPointMembership
+      obtain ⟨representative, rfl⟩ := Quot.mk_surjective quotientPoint
+      have representativeNeighborhood : representative ∈ sourceNeighborhood := by
+        by_contra representativeOutside
+        exact quotientPointMembership ⟨representative, representativeOutside, rfl⟩
+      exact neighborhoodSubsetSourceOpen representativeNeighborhood
+    exact ⟨quotientNeighborhood, quotientNeighborhoodBasis, pointNeighborhood,
+      neighborhoodSubsetTarget⟩
+
+/-- The exact compact-surface gluing quotient is second countable. -/
+instance compactSurfaceBoundaryGluingQuotientSecondCountableTopology :
+    SecondCountableTopology (CompactSurfaceBoundaryGluingQuotient identification) :=
+  (quotientCoreBasis_isTopologicalBasis identification).secondCountableTopology
+    (quotientCoreBasis_countable identification)
 
 /-- The canonical left-side map is injective; the generated quotient makes no same-side
 identifications. -/

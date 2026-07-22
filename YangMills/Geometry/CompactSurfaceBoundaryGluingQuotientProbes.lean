@@ -72,6 +72,18 @@ assumption. -/
     T2Space (CompactSurfaceBoundaryGluingQuotient identification) :=
   inferInstance
 
+/-- Compact-fiber saturated cores derive second countability rather than leaving it as a
+smooth-descent assumption. -/
+@[reducible] def exact_quotient_secondCountableTopology :
+    SecondCountableTopology (CompactSurfaceBoundaryGluingQuotient identification) :=
+  inferInstance
+
+/-- The explicit countable saturated-core family is a genuine topological basis. -/
+theorem exact_quotient_core_basis :
+    TopologicalSpace.IsTopologicalBasis
+      (CompactSurfaceBoundaryGluingQuotient.quotientCoreBasis identification) :=
+  CompactSurfaceBoundaryGluingQuotient.quotientCoreBasis_isTopologicalBasis identification
+
 /-- Distinct quotient points have explicit disjoint open neighborhoods. -/
 theorem exact_disjoint_open_neighborhoods
     {first second : CompactSurfaceBoundaryGluingQuotient identification}

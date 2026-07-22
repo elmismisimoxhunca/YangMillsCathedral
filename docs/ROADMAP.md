@@ -896,10 +896,10 @@ committed before higher layers depend on it.
     topology, including smooth side embeddings, positive-scale orientation-class pullbacks, null seams, sum-pushforward
     area, exact remaining boundary, and interior seam placement.
   - [x] Derive exact relation closedness, closed projection/saturations, compact equivalence-class
-    separation, Hausdorffness, compactness, connectedness, and closed side embeddings for the glued
-    quotient.
-  - [ ] Prove chart-independence of the outward predicate, derive second countability, and
-    inhabit/derive the smooth/oriented/measured descent witnesses for the glued quotient.
+    separation, Hausdorffness, an explicit countable quotient basis, second countability,
+    compactness, connectedness, and closed side embeddings for the glued quotient.
+  - [ ] Prove chart-independence of the outward predicate and inhabit/derive the
+    smooth/oriented/measured descent witnesses for the glued quotient.
   - [ ] Resolve/formalize Theorem 8.10; inhabit/derive box projectivity and Theorem 7.2. Keep
     compact-surface gluing distinct from finite-cutoff, classical, and four-dimensional witnesses.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.
