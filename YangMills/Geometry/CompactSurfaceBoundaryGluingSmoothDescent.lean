@@ -6,6 +6,7 @@ Authors: Sebastian Rodrigo
 
 import YangMills.Geometry.CompactSurfaceBoundaryGluingQuotient
 import YangMills.Geometry.CompactOrientedMeasuredSurfaceBoundaryNull
+import YangMills.Geometry.CompactSurfaceBoundaryGluedAreaMeasure
 
 /-!
 # Smooth, oriented, measured descent obligations for compact-surface gluing
@@ -109,12 +110,9 @@ structure CompactSurfaceBoundaryGluingSmoothDescentData where
   /-- The glued area is exactly the sum of the two pushforwards. Nullity of both full side
   boundaries is derived from each surface's chart-density law and compactness, rather than stored
   as descent data. -/
-  areaMeasure_eq_sum_pushforward :
+  areaMeasure_eq_gluedAreaMeasure :
     gluedSurface.areaMeasure =
-      Measure.map (CompactSurfaceBoundaryGluingQuotient.leftInclusion identification)
-          leftSurface.areaMeasure +
-        Measure.map (CompactSurfaceBoundaryGluingQuotient.rightInclusion identification)
-          rightSurface.areaMeasure
+      compactSurfaceBoundaryGluedAreaMeasure (identification := identification)
   /-- Exactly the unselected side boundaries remain boundary after gluing. -/
   boundary_eq_unselected_images :
     IG.boundary (GluedSurfaceCarrier (identification := identification)) =
@@ -204,6 +202,17 @@ theorem glued_model_finrank_two
       (identification := identification) (IG := IG)) :
     Module.finrank ℝ EG = 2 :=
   descent.gluedSurface.model_finrank_two
+
+/-- The descended surface measure is the explicit sum of the two side pushforwards. -/
+theorem areaMeasure_eq_sum_pushforward
+    (descent : CompactSurfaceBoundaryGluingSmoothDescentData
+      (identification := identification) (IG := IG)) :
+    descent.gluedSurface.areaMeasure =
+      Measure.map (CompactSurfaceBoundaryGluingQuotient.leftInclusion identification)
+          leftSurface.areaMeasure +
+        Measure.map (CompactSurfaceBoundaryGluingQuotient.rightInclusion identification)
+          rightSurface.areaMeasure := by
+  simpa [compactSurfaceBoundaryGluedAreaMeasure] using descent.areaMeasure_eq_gluedAreaMeasure
 
 /-- Both full side boundaries are null under their designated surface measures. This is inherited
 from the surface chart-density theorem and is independent of any gluing descent witness. -/

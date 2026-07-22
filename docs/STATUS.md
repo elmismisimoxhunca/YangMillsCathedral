@@ -4736,7 +4736,11 @@ side orientation representatives, sum-pushforward area measure, and exact retent
 nullity is no longer stored: arbitrary eligible charts send intrinsic boundary points into the
 frontier of the convex model range; additive Haar gives that frontier zero measure; the chart-density
 law gives each boundary/chart piece zero surface area; and compactness supplies a finite chart cover,
-deriving both full side boundaries null before any gluing witness exists. Same-side
+deriving both full side boundaries null before any gluing witness exists. The exact canonical glued
+area measure is now constructed independently as the sum of the two measurable side pushforwards;
+its total area is the sum of side areas and is proved finite, strictly positive, and nonzero. Descent
+data now identifies its nucleus measure with this named construction instead of supplying an
+unnamed formula. Same-side
 injectivity plus the new exact characterization that cross-side quotient equality occurs only at a
 designated pair derive interior placement of every seam point from that boundary equation, removing
 it as an independent descent field. Hostile probes reject an unrelated glued measure and

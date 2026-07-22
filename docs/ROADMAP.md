@@ -921,9 +921,12 @@ committed before higher layers depend on it.
   - [x] Derive every compact surface's intrinsic boundary to be null from arbitrary-chart
     model-frontier membership, convex-range Haar nullity, exact chart-density transport, and a finite
     compact-boundary chart cover.
+  - [x] Construct the canonical glued area measure as the exact sum of both side pushforwards and
+    derive its exact total area, finiteness, strict positivity, and nonzeroness.
   - [x] Add an uninhabited exact smooth/oriented/measured descent contract on the same quotient
     topology, including smooth side embeddings, positive-scale orientation-class pullbacks, derived
-    null side boundaries, sum-pushforward area, exact remaining boundary, and interior seam placement.
+    null side boundaries, identification with the canonical glued area, exact remaining boundary,
+    and interior seam placement.
   - [x] Derive exact relation closedness, closed projection/saturations, compact equivalence-class
     separation, Hausdorffness, an explicit countable quotient basis, second countability,
     Polish/standard-Borel structure, compactness, connectedness, and closed side embeddings for the
