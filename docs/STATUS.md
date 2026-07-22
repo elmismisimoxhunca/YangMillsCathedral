@@ -4658,8 +4658,10 @@ is injective. Closed surfaces remain admissible and derive an empty component ca
 model-with-corners range: negative time enters its interior and positive time exits the range.
 `CompactSurfaceBoundaryOrientationData` adds smooth nonzero componentwise circle tangents, smooth
 ambient fields along the exact parameterizations, genuine outward certificates, and positivity of
-the selected surface top form on `(outward, pushed tangent)`. Both ambient frame vectors derive
-nonzero, and a hostile theorem rejects the zero vector as outward. Pinned Mathlib still lacks a
+the selected surface top form on `(outward, pushed tangent)`. Preferred-chart outwardness is now
+proved invariant under every strictly positive vector rescaling, making its dependence on the
+positive tangent ray explicit. Its exit clause directly derives nonvanishing and rejects zero;
+form positivity separately derives nonvanishing of the pushed boundary tangent. Pinned Mathlib still lacks a
 general installed boundary-submanifold instance; chart-independence of the preferred-chart outward
 predicate and closure data remain separate. `CompactSurfaceOrientationReversingBoundaryIdentificationData`
 now chooses an exact positive number of distinct boundary components on each of two oriented

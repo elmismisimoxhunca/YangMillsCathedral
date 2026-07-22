@@ -57,6 +57,75 @@ def IsPreferredChartOutwardBoundaryVector
     (∀ time : ℝ, 0 < time → time < radius →
       coordinate + time • coordinateVector ∉ Set.range I)
 
+omit [FiniteDimensional ℝ E] [MeasurableSpace E] [BorelSpace E]
+  [MeasurableSpace Surface] [BorelSpace Surface] [IsManifold I ∞ Surface]
+  [CompactSpace Surface] [T2Space Surface] [SecondCountableTopology Surface] in
+/-- Positive rescaling preserves the exact preferred-chart outward-ray certificate. -/
+theorem IsPreferredChartOutwardBoundaryVector.smul_of_pos
+    {point : Surface} {vector : TangentSpace I point} {scale : ℝ}
+    (outward : IsPreferredChartOutwardBoundaryVector I point vector)
+    (scale_pos : 0 < scale) :
+    IsPreferredChartOutwardBoundaryVector I point (scale • vector) := by
+  rw [IsPreferredChartOutwardBoundaryVector] at outward ⊢
+  rcases outward with ⟨radius, radius_pos, entersInterior, exitsRange⟩
+  refine ⟨radius / scale, div_pos radius_pos scale_pos, ?_, ?_⟩
+  · intro time lower upper
+    have lower' : -radius / scale < time := by
+      simpa only [neg_div] using lower
+    have rescaled_lower : -radius < time * scale :=
+      (div_lt_iff₀ scale_pos).mp lower'
+    have rescaled_upper : time * scale < 0 :=
+      mul_neg_of_neg_of_pos upper scale_pos
+    simpa only [map_smul, smul_smul] using
+      entersInterior (time * scale) rescaled_lower rescaled_upper
+  · intro time lower upper
+    have rescaled_lower : 0 < time * scale := mul_pos lower scale_pos
+    have rescaled_upper : time * scale < radius :=
+      (lt_div_iff₀ scale_pos).mp upper
+    simpa only [map_smul, smul_smul] using
+      exitsRange (time * scale) rescaled_lower rescaled_upper
+
+omit [FiniteDimensional ℝ E] [MeasurableSpace E] [BorelSpace E]
+  [MeasurableSpace Surface] [BorelSpace Surface] [IsManifold I ∞ Surface]
+  [CompactSpace Surface] [T2Space Surface] [SecondCountableTopology Surface] in
+/-- Preferred-chart outwardness depends only on the positively oriented tangent ray. -/
+theorem isPreferredChartOutwardBoundaryVector_smul_iff
+    {point : Surface} {vector : TangentSpace I point} {scale : ℝ}
+    (scale_pos : 0 < scale) :
+    IsPreferredChartOutwardBoundaryVector I point (scale • vector) ↔
+      IsPreferredChartOutwardBoundaryVector I point vector := by
+  constructor
+  · intro outward
+    have rescaled := outward.smul_of_pos (inv_pos.mpr scale_pos)
+    simpa [smul_smul, ne_of_gt scale_pos] using rescaled
+  · intro outward
+    exact outward.smul_of_pos scale_pos
+
+omit [FiniteDimensional ℝ E] [MeasurableSpace E] [BorelSpace E]
+  [MeasurableSpace Surface] [BorelSpace Surface] [IsManifold I ∞ Surface]
+  [CompactSpace Surface] [T2Space Surface] [SecondCountableTopology Surface] in
+/-- The zero tangent vector cannot satisfy the positive-ray exit clause. -/
+theorem not_isPreferredChartOutwardBoundaryVector_zero (point : Surface) :
+    ¬ IsPreferredChartOutwardBoundaryVector I point (0 : TangentSpace I point) := by
+  rw [IsPreferredChartOutwardBoundaryVector]
+  rintro ⟨radius, radius_pos, _entersInterior, exitsRange⟩
+  have exitsAtHalf :=
+    exitsRange (radius / 2) (half_pos radius_pos) (half_lt_self radius_pos)
+  simp only [map_zero, smul_zero, add_zero] at exitsAtHalf
+  exact exitsAtHalf
+    (extChartAt_target_subset_range point (mem_extChartAt_target point))
+
+omit [FiniteDimensional ℝ E] [MeasurableSpace E] [BorelSpace E]
+  [MeasurableSpace Surface] [BorelSpace Surface] [IsManifold I ∞ Surface]
+  [CompactSpace Surface] [T2Space Surface] [SecondCountableTopology Surface] in
+/-- Every preferred-chart outward vector is nonzero. -/
+theorem IsPreferredChartOutwardBoundaryVector.ne_zero
+    {point : Surface} {vector : TangentSpace I point}
+    (outward : IsPreferredChartOutwardBoundaryVector I point vector) : vector ≠ 0 := by
+  intro vector_zero
+  subst vector
+  exact not_isPreferredChartOutwardBoundaryVector_zero (I := I) point outward
+
 /-- Source-facing induced orientation data for every exact boundary circle. Smooth tangent and
 outward fields are retained as actual tangent-bundle maps. -/
 structure CompactSurfaceBoundaryOrientationData
@@ -118,23 +187,13 @@ theorem orientationForm_outward_pushedPositive_pos
         orientation.pushedPositiveBoundaryTangent component circlePoint] :=
   orientation.inducedOrientation_positive component circlePoint
 
-/-- The outward vector cannot collapse to zero: positivity of the alternating orientation form
-already forbids that collapse. -/
+/-- The outward vector cannot collapse to zero; this follows already from its exact positive-ray
+exit certificate, independently of the selected orientation form. -/
 theorem outwardBoundaryVector_ne_zero
     (orientation : CompactSurfaceBoundaryOrientationData surface presentation)
     (component : surface.BoundaryComponent) (circlePoint : Circle) :
-    orientation.outwardBoundaryVector component circlePoint ≠ 0 := by
-  intro zero
-  have positive := orientation.orientationForm_outward_pushedPositive_pos component circlePoint
-  rw [zero] at positive
-  have evaluationZero :
-      surface.orientationForm.toForm
-        (presentation.parameterization component circlePoint)
-        ![0, orientation.pushedPositiveBoundaryTangent component circlePoint] = 0 :=
-    (surface.orientationForm.toForm
-      (presentation.parameterization component circlePoint)).map_coord_zero 0 (by simp)
-  rw [evaluationZero] at positive
-  exact (lt_irrefl 0 positive)
+    orientation.outwardBoundaryVector component circlePoint ≠ 0 :=
+  (orientation.outwardBoundaryVector_isOutward component circlePoint).ne_zero
 
 /-- The pushed positive boundary tangent cannot collapse to zero. -/
 theorem pushedPositiveBoundaryTangent_ne_zero
