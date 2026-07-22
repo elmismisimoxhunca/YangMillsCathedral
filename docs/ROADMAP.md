@@ -577,9 +577,11 @@ committed before higher layers depend on it.
   descend common-domain field, adjoint, and same-domain local-observable-family covariance with no
   lift exposed, and integrate both the transported Hilbert representation and original uncast
   domain/field/observable-family covariance into the 4D core.
+- [x] Expose Mathlib's concrete homogeneous `SL(2,ℂ)` matrix carrier and embed the literal complex
+  signs injectively as the central determinant-one scalar matrices `±I`.
 - [ ] Construct the target law from proper-orthochronous future-cone closure, build the concrete
-  inhomogeneous `SL(2,ℂ)` carrier, and identify its matrix-sign kernel with the accepted literal-sign
-  kernel and upgrade the derived relative sheet labels to the concrete matrix realization.
+  inhomogeneous semidirect-product cover, identify its actual projection kernel with that matrix-sign
+  image and the accepted abstract kernel, and upgrade relative sheet labels to this realization.
 - [x] Define a normalized Poincaré-invariant vacuum whose full invariant subspace is exactly one
   complex line, tied to the same representation and derived translations.
 - [x] Define one dense common domain containing the same vacuum and invariant under the same
@@ -1000,8 +1002,9 @@ committed before higher layers depend on it.
     Derive conditionally that any inhabitant would provide every exact input a witness with positive
     finite same-spectrum gap and an explicit nonzero/non-unit field. No inhabitance theorem is
     supplied, and this is not the final Clay proposition.
-  - [ ] Construct concrete inhomogeneous `SL(2,ℂ)`, identify its matrix-sign kernel with the accepted
-    literal-sign projection kernel, and construct the named affine-target group law; add the now
+  - [ ] Extend the constructed homogeneous `SL(2,ℂ)` carrier and central scalar-sign embedding to the
+    concrete inhomogeneous cover, identify its projection kernel with the accepted literal signs,
+    and construct the named affine-target group law; add the now
     source-ready curvature/covariant-derivative grammar, BRST/EOM operator mixing, calculated
     perturbative remainders and scheme dependence, and upgrade the preliminary universal target to
     the final source-complete contract. The physical-reduced trace anomaly is present; unrestricted

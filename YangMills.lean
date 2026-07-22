@@ -674,6 +674,8 @@ import YangMills.Minkowski.PoincareKinematicsProbes
 import YangMills.Minkowski.QuadraticTopology
 import YangMills.Minkowski.PoincareComplexSignKernel
 import YangMills.Minkowski.PoincareComplexSignKernelProbes
+import YangMills.Minkowski.PoincareComplexSignSL2
+import YangMills.Minkowski.PoincareComplexSignSL2Probes
 import YangMills.Minkowski.PoincareCoverRepresentation
 import YangMills.Minkowski.PoincareCoverRepresentationProbes
 import YangMills.Minkowski.PoincareTargetTopology
