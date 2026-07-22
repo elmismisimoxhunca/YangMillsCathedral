@@ -5107,7 +5107,12 @@ quotient of all explicitly bundled positive-dimensional continuous irreducible u
 representations by exact representation equivalence. Every bundle is equivalent to its selected
 class representative, distinct selected classes are inequivalent, equivalent bundles have equal
 matrix dimension, and injective class labels supply the finite-family inequivalence certificates.
-This quotient is not yet identified with Lévy's smooth compact-Lie-group dual: abstract coordinate
+The dependent algebraic direct sum over every coordinate-dual class now gives a genuine
+finite-support coefficient carrier. Its synthesis is continuous and injective, Fourier analysis
+recovers `f̂_A(q)=d_q⁻¹A(q)ᵀ`, and `A(q)=d_q f̂_A(q)ᵀ` is proved as exact algebraic inversion on
+that range. Hostile probes reject coefficient collapse, changed inversion, or expansion of this
+result to an unspecified larger carrier. This quotient is not yet identified with Lévy's smooth
+compact-Lie-group dual: abstract coordinate
 realization/unitarization, continuity-to-smoothness, countability, infinite-series/`L²` Plancherel,
 Fourier inversion, Peter–Weyl density, and heat-kernel spectral expansion remain open.
 

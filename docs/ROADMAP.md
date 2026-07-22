@@ -753,7 +753,11 @@ committed before higher layers depend on it.
   positive-dimensional continuous irreducible unitary matrix representations by exact
   representation equivalence; select representatives, prove every bundle covered, distinct classes
   inequivalent, dimensions invariant under equivalence, and injective labels pairwise inequivalent.
-- [ ] Identify that continuous coordinate quotient with the smooth compact-Lie-group irreducible
+- [x] Form the dependent algebraic direct sum of full coefficient matrices over every coordinate
+  unitary-dual class; construct finite-support synthesis, prove continuity, exact all-class analysis
+  `f̂_A(q)=d_q⁻¹A(q)ᵀ`, synthesis injectivity, and justified algebraic inversion
+  `A(q)=d_q f̂_A(q)ᵀ` on precisely that finite-support range.
+- [ ] Identify the continuous coordinate quotient with the smooth compact-Lie-group irreducible
   dual used by Lévy (including coordinate realization/unitarization and any countability theorem),
   and only then formulate infinite-series and `L²` Plancherel statements with explicit
   summability/completeness hypotheses.
