@@ -4,7 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Sebastian Rodrigo
 -/
 
-import YangMills.Geometry.CompactSurfaceBoundaryGluingQuotient
+import YangMills.Geometry.CompactSurfaceBoundaryGluedAreaMeasure
 import YangMills.Mathematics.BoundaryConditionedProductDisintegration
 import YangMills.Mathematics.PartitionedFixedBaseConjugacyObservation
 import YangMills.Mathematics.SimultaneousConjugacyQuotientInversion
@@ -262,6 +262,52 @@ theorem seamBasePoint_eq
         (identification.leftBoundaryPoint pair 1) := by
   rw [← data.wholeLoopTrace_based (data.seamBase pair) (data.seamLoop pair)]
   exact data.seamLoop_trace pair 1
+
+/-- Every point of every designated sewn seam-loop trace lies in the independently constructed
+exact quotient seam. -/
+theorem seamLoopTrace_mem_gluingSeam
+    (data : TwoDimensionalLevyCompactSurfaceSewingData
+      (identification := identification) (G := G) (LeftLoop := LeftLoop)
+      (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+      (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample))
+    (pair : Fin identification.pairCount) (circlePoint : Circle) :
+    data.wholeLoopTrace (data.seamBase pair) (data.seamLoop pair) circlePoint ∈
+      YangMills.Geometry.compactSurfaceBoundaryGluingSeam
+        (identification := identification) := by
+  rw [data.seamLoop_trace pair circlePoint]
+  apply Set.mem_iUnion.mpr
+  exact ⟨pair, ⟨circlePoint, rfl⟩⟩
+
+/-- Consequently no designated sewn seam-loop point lies in the exact remaining-boundary
+candidate, before any smooth manifold descent is supplied. -/
+theorem seamLoopTrace_not_mem_remainingBoundary
+    (data : TwoDimensionalLevyCompactSurfaceSewingData
+      (identification := identification) (G := G) (LeftLoop := LeftLoop)
+      (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+      (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample))
+    (pair : Fin identification.pairCount) (circlePoint : Circle) :
+    data.wholeLoopTrace (data.seamBase pair) (data.seamLoop pair) circlePoint ∉
+      YangMills.Geometry.compactSurfaceBoundaryGluingRemainingBoundary
+        (identification := identification) := by
+  intro remainingMembership
+  exact Set.disjoint_left.mp
+    (YangMills.Geometry.compactSurfaceBoundaryGluingSeam_disjoint_remainingBoundary
+      (identification := identification))
+    (data.seamLoopTrace_mem_gluingSeam pair circlePoint) remainingMembership
+
+/-- The sewn seam base point itself lies on the exact quotient seam. -/
+theorem seamBasePoint_mem_gluingSeam
+    (data : TwoDimensionalLevyCompactSurfaceSewingData
+      (identification := identification) (G := G) (LeftLoop := LeftLoop)
+      (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+      (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample))
+    (pair : Fin identification.pairCount) :
+    data.wholeBasePoint (data.seamBase pair) ∈
+      YangMills.Geometry.compactSurfaceBoundaryGluingSeam
+        (identification := identification) := by
+  rw [data.seamBasePoint_eq pair]
+  apply Set.mem_iUnion.mpr
+  exact ⟨pair, ⟨1, rfl⟩⟩
 
 /-- The reusable product law specializes to literal inverse conjugacy classes on the right. -/
 theorem conditioned_restriction_product_inverse

@@ -4750,7 +4750,9 @@ named Borel candidate, proved canonically null from measurable restriction and s
 nullity. The circle-range seam is proved exactly equal to both the selected-left and selected-right quotient
 images, with the right equality retaining the designated circle diffeomorphism. It is disjoint from
 the remaining-boundary candidate, and their union is exactly the union of both full original
-boundary images before descent. Descent now identifies both its nucleus measure and manifold boundary with these named
+boundary images before descent. Lévy sewing now derives that every designated sewn seam-loop trace
+point and its dependent base label lie in this exact seam, while hostile retained-boundary incidence
+is rejected without assuming smooth descent. Descent now identifies both its nucleus measure and manifold boundary with these named
 constructions; its boundary nullity is rederived through that exact chain rather than merely inherited
 from the generic compact-surface theorem. Same-side
 injectivity plus the new exact characterization that cross-side quotient equality occurs only at a

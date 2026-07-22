@@ -175,6 +175,35 @@ theorem exact_geometric_seam_incidence
     data.seamLoop_trace pair circlePoint,
     data.rightSeamLoopInWhole_trace pair circlePoint⟩
 
+/-- The sewn seam trace lands in the exact pre-descent seam set, not in the retained boundary
+candidate; its dependent base label has the same exact incidence. -/
+theorem exact_seam_set_incidence
+    (data : SewingData identification G LeftBase RightBase WholeBase
+      LeftLoop RightLoop WholeLoop LeftSample RightSample WholeSample)
+    (pair : Fin identification.pairCount) (circlePoint : Circle) :
+    data.wholeLoopTrace (data.seamBase pair) (data.seamLoop pair) circlePoint ∈
+        YangMills.Geometry.compactSurfaceBoundaryGluingSeam
+          (identification := identification) ∧
+      data.wholeLoopTrace (data.seamBase pair) (data.seamLoop pair) circlePoint ∉
+        YangMills.Geometry.compactSurfaceBoundaryGluingRemainingBoundary
+          (identification := identification) ∧
+      data.wholeBasePoint (data.seamBase pair) ∈
+        YangMills.Geometry.compactSurfaceBoundaryGluingSeam
+          (identification := identification) :=
+  ⟨data.seamLoopTrace_mem_gluingSeam pair circlePoint,
+    data.seamLoopTrace_not_mem_remainingBoundary pair circlePoint,
+    data.seamBasePoint_mem_gluingSeam pair⟩
+
+/-- A source-false claim that a sewn seam trace point lies on retained boundary is rejected. -/
+theorem sewn_seam_trace_retained_boundary_blocked
+    (data : SewingData identification G LeftBase RightBase WholeBase
+      LeftLoop RightLoop WholeLoop LeftSample RightSample WholeSample)
+    (pair : Fin identification.pairCount) (circlePoint : Circle)
+    (wrong : data.wholeLoopTrace (data.seamBase pair) (data.seamLoop pair) circlePoint ∈
+      YangMills.Geometry.compactSurfaceBoundaryGluingRemainingBoundary
+        (identification := identification)) : False :=
+  data.seamLoopTrace_not_mem_remainingBoundary pair circlePoint wrong
+
 /-- Side restrictions see the geometrically selected seam as the left-oriented conjugacy class and
 its right-side inverse class; false raw equality across different base points is not required. -/
 theorem exact_side_seam_holonomy_inverse

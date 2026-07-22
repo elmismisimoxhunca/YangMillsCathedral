@@ -934,6 +934,8 @@ committed before higher layers depend on it.
   - [x] Identify the circle-range seam exactly with both selected-boundary quotient images, retain
     the right-side circle diffeomorphism, prove disjointness from the remaining-boundary candidate,
     and derive their exact decomposition of both original full-boundary images before descent.
+  - [x] Connect Lévy's designated sewn seam-loop traces and dependent seam bases to the exact seam
+    set, deriving exclusion from the retained-boundary candidate without smooth descent.
   - [x] Add an uninhabited exact smooth/oriented/measured descent contract on the same quotient
     topology, including smooth side embeddings, positive-scale orientation-class pullbacks, derived
     null side boundaries, identification with the canonical glued area, exact remaining boundary,
