@@ -4671,8 +4671,13 @@ zero-pair, duplicate-component, and zero-speed surrogates are hostilely blocked.
 disjoint union by those paired points. It has the genuine quotient topology, continuous canonical
 maps from both full surfaces, exact paired-boundary equality, and a universal lift for sidewise
 functions agreeing on every generator. Primitive same-left and same-right relations are hostilely
-absent. No Hausdorff theorem, descended smooth manifold/orientation, or sewn area measure is
-constructed.
+absent. No Hausdorff theorem, descended smooth manifold/orientation, or sewn area measure is constructed.
+`CompactSurfaceBoundaryGluingSmoothDescentData` now exposes the exact uninhabited obligation on the
+same quotient topology: an exact two-dimensional compact oriented measured surface nucleus, genuine
+smooth embeddings of both sides, pullbacks equal to explicit strictly positive multiples of both
+side orientation representatives, null side boundaries, sum-pushforward area measure, exact retention of only unselected boundary images,
+and interior placement of every seam point. Hostile probes reject an unrelated glued measure and
+pin all these distinctions.
 
 Lévy Chapter 5, Theorem 5.1.1, equation (5.1), and the opening nonabelian sewing discussion are now
 visually adjudicated against PDF pp. 89–94 / printed pp. 75–80. Reusable
@@ -4740,7 +4745,8 @@ joint family per block; zero blocks omit further conditioning, and injectivity p
 base across independent conjugators. The enlarged genuine disintegration conditions on the seam and
 both full block tuples, reconstructs the exact same whole law through the exact same restriction,
 and factors through side kernels whose index omits the other side's entire tuple. Its inverse-boundary all-value product law
-derives. Smooth/oriented/measured descent on the topological quotient remains open.
+derives. Inhabiting the smooth/oriented/measured descent contract, proving chart-independence of the outward
+predicate, and deriving its Hausdorff/topological prerequisites remain open.
 
 The first Driver Definition 8.1 lattice-approximation component is now exact:
 `EpsilonSquareLatticePathCertificate` fixes `ε > 0`, a continuous literal `ℝ²` curve, and a finite

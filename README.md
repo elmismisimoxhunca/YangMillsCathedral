@@ -767,8 +767,12 @@ components, genuine circle diffeomorphisms, and a derivative equation sending ea
 tangent to a strictly negative multiple of the paired positive right tangent. The minimal
 `Relation.EqvGen` quotient of the disjoint union now supplies the exact glued topological carrier,
 canonical continuous side maps, a genuine quotient projection, exact paired-point equality, and a
-universal lift for compatible sidewise functions. Construction of a descended smooth oriented
-measured surface remains debt. An uninhabited Lévy Theorem 5.1.1 contract now ties the same positive
+universal lift for compatible sidewise functions. A separate uninhabited descent contract requires
+the same quotient topology to carry an exact two-dimensional compact oriented measured surface,
+genuine smooth side embeddings, pullbacks in the same orientation classes through explicit positive
+scales, null side boundaries, sum-pushforward
+area, precisely the unselected remaining boundary, and interior seams. It constructs none of these
+analytic/geometric witnesses. An uninhabited Lévy Theorem 5.1.1 contract now ties the same positive
 geometric pair family to dependent fixed-base holonomy-generated fields whose indices injectively
 represent actual trace basepoints, exact loop traces into the two pieces and glued quotient, side seams equal to the
 selected boundary parameterizations, exact restriction holonomies and inverse side-seam conjugacy
