@@ -866,8 +866,8 @@ committed before higher layers depend on it.
     quotient topology/final measurable space, finite-family compactness/Hausdorffness/second
     countability, compatible Polish/standard-Borel structure, and exact positive-arity
     finite holonomy observations/generated sigma field over
-    one fixed-base loop carrier, mixed-basepoint separation, and hostile coordinatewise/empty-family
-    probes.
+    one fixed-base loop carrier, mixed-basepoint separation, exact continuous/measurable involutive
+    class inversion for boundary reversal, and hostile coordinatewise/empty-family probes.
   - [x] Add reusable genuine joint conditional-kernel disintegration with zero mass outside every
     exact boundary fiber, involutive reversal, all-value product restrictions, and derived bind/
     marginal laws.

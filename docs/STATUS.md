@@ -4695,7 +4695,11 @@ metric completeness derive a compatible `PolishSpace`; the Borel equality then s
 `StandardBorelSpace` needed by Mathlib's regular conditional-kernel APIs. A hostile
 parameterized theorem rejects coordinatewise-conjugate families whenever no common conjugator
 exists; the empty-index quotient is explicitly subsingleton, so source-facing observation families
-must retain nonemptiness where needed. Lévy §2.10 is now visually adjudicated at PDF pp. 62–63 /
+must retain nonemptiness where needed. Pointwise group inversion now descends to an involutive
+bijection on the exact simultaneous quotient. Its continuity follows from the quotient-map universal
+property, while its measurability is proved directly for the final quotient sigma field. This is the
+literal inverse conjugacy class required on the second side of Lévy equation (5.1), not a freely
+chosen involution. Lévy §2.10 is now visually adjudicated at PDF pp. 62–63 /
 printed pp. 48–49: one common diagonal conjugator applies only to loops at one fixed base point,
 while mixed-basepoint families are tuples of separate joint classes. `NonemptyFiniteFamily` now
 enforces literal positive arity `n+1`; existence is equivalent to nonemptiness of the caller-supplied

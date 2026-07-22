@@ -747,7 +747,10 @@ its genuine quotient topology and final measurable space. The projection is cont
 quotient map. Finite families over compact Hausdorff groups have compact Hausdorff quotient,
 second countability descends, Urysohn metrization plus compactness derives a compatible Polish
 quotient topology, and compact-Polish group hypotheses identify the final measurable quotient
-exactly with its quotient-topology Borel space and derive a standard-Borel instance; coordinatewise substitution is hostilely rejected. Exact nonempty
+exactly with its quotient-topology Borel space and derive a standard-Borel instance. Pointwise group
+inversion descends to an involutive bijection on the exact quotient and is independently proved
+continuous and measurable for the final quotient sigma field, supplying the literal inverse boundary
+class in Lévy's sewing formula; coordinatewise substitution is hostilely rejected. Exact nonempty
 finite families use `Fin (n+1)` coordinates over one caller-supplied fixed-base loop carrier, so an
 empty such carrier cannot supply an empty-tuple surrogate. Their simultaneous holonomy classes are
 invariant under sample-dependent common conjugation at that base point. Lévy §2.10's mixed-basepoint
