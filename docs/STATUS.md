@@ -5043,7 +5043,14 @@ convolution `(f⋆g)(z)=∫f(x)g(x⁻¹z)dμ_H` is now defined with the unchange
 Genuine compact-product integrability, Fubini, left-Haar substitution `z=x*y`, and
 `ρ((xy)⁻¹)=ρ(y⁻¹)ρ(x⁻¹)` derive the forced noncommutative Fourier law
 `(f⋆g)̂(ρ)=ĝ(ρ)f̂(ρ)`. A hostile opposite-order probe shows that reversing this result would require
-the two Fourier matrices to commute. No Haar orthogonality,
+the two Fourier matrices to commute. Hall Proposition 5.17's Haar-averaging core is now constructed
+for every continuous finite complex matrix representation. The exact coordinate Hermitian pairing
+has a genuinely integrable normalized-Haar average and is invariant under simultaneous action by
+the same representation. Its real averaged norm square is representation-invariant and strictly
+positive away from zero: the proof uses continuity, positivity at the identity, openness of the
+nonzero support, and the Haar measure's positive-open-set property rather than storing positivity.
+Packaging this average as an `InnerProductSpace` and constructing a unitarizing equivalence remain
+open. No Haar orthogonality,
 irreducibility theorem, Fourier inversion, Peter–Weyl density, or heat-kernel spectral expansion is
 claimed.
 

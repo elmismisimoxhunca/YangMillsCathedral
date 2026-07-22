@@ -692,8 +692,12 @@ committed before higher layers depend on it.
 - [x] Bridge square matrix-valued monoid homomorphisms to Mathlib `Representation` on standard
   coordinate vectors; identify the abstract character exactly with matrix trace, expose exact matrix
   coefficients, and derive coefficient/trace continuity and conjugacy invariance.
-- [ ] Construct Haar averaging of finite-dimensional Hermitian forms and derive invariant positive
-  inner products and unitarization for continuous compact-group representations.
+- [x] Construct the normalized-Haar average of the standard coordinate Hermitian pairing for every
+  continuous finite matrix representation; derive compact-domain integrability, exact simultaneous
+  representation invariance, and strict positivity of the averaged norm square from open-support
+  positivity of Haar measure.
+- [ ] Package the averaged pairing as a compatible positive Hermitian/inner-product structure and
+  derive an explicit unitarizing coordinate equivalence.
 - [ ] Develop the analytic Schur lemma and Haar orthogonality of matrix coefficients for irreducible
   unitary representations, including exact dimension normalization.
 - [x] Define coordinatewise representation-valued Fourier coefficients with exact inverse
