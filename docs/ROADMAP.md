@@ -862,11 +862,13 @@ committed before higher layers depend on it.
     overstrength, and the uninhabited connected compact Lie-group Theorem 8.5 convergence contract.
   - [x] Visually adjudicate Lévy Chapter 5, Theorem 5.1.1, equation (5.1), and the nonabelian
     sigma-field warning; add reusable dependent-observation generated-measurable-space mathematics.
+  - [x] Add the exact simultaneous-conjugacy quotient for indexed holonomy families, its final
+    measurable space, and hostile coordinatewise/empty-family probes.
   - [x] Add reusable genuine joint conditional-kernel disintegration with zero mass outside every
     exact boundary fiber, involutive reversal, all-value product restrictions, and derived bind/
     marginal laws.
   - [ ] Build exact connected oriented measured compact-surface geometry, simultaneous-conjugacy
-    observation quotients, orientation-reversing boundary gluing, and the Lévy-specific conditional-
+    quotient topology/standard-Borel infrastructure, orientation-reversing boundary gluing, and the Lévy-specific conditional-
     independence sewing record without asserting that the two side fields generate the whole.
   - [ ] Resolve/formalize Theorem 8.10; inhabit/derive box projectivity and Theorem 7.2. Keep
     compact-surface gluing distinct from finite-cutoff, classical, and four-dimensional witnesses.

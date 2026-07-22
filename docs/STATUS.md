@@ -4648,6 +4648,13 @@ and surjective reindexing. A constant-observation hostile probe yields the trivi
 the full field. This prepares finite simultaneous-holonomy fields without claiming the source-false
 nonabelian equality of the two side fields with the sewn field.
 
+`SimultaneousConjugacyQuotient` now quotients an indexed `G`-family by one common diagonal
+conjugator, not by independently chosen coordinate conjugators. Equality and diagonal invariance are
+exact, and the quotient carries the final measurable space induced by its projection. A hostile
+parameterized theorem rejects coordinatewise-conjugate families whenever no common conjugator
+exists; the empty-index quotient is explicitly subsingleton, so source-facing observation families
+must retain nonemptiness where needed. Quotient topology and standard-Borel results remain open.
+
 `BoundaryConditionedProductDisintegrationData` now packages reusable genuine conditional semantics:
 Mathlib's `Measure.IsCondKernel` disintegrates the exact joint boundary/whole pushforward; the Markov
 kernel gives zero mass to the complement of each exact boundary fiber (without assuming measurable
@@ -4655,9 +4662,8 @@ singletons); boundary reversal is measurable and involutive;
 and every boundary value has an exact restriction pushforward equal to the left law times the right
 law at the reversed value. Bind reconstruction, whole-law normalization/nonzeroness, and both
 conditional marginals are derived. This deliberately distinguishes generic a.e. regular conditional
-probability from the stronger all-value source-facing version. Compact-surface geometry,
-simultaneous-conjugacy quotients, and the Lévy-specific conditional-independence sewing record remain
-unconstructed.
+probability from the stronger all-value source-facing version. Compact-surface geometry, quotient topology/standard-Borel infrastructure, and the Lévy-specific
+conditional-independence sewing record remain unconstructed.
 
 The first Driver Definition 8.1 lattice-approximation component is now exact:
 `EpsilonSquareLatticePathCertificate` fixes `ε > 0`, a continuous literal `ℝ²` curve, and a finite
