@@ -730,7 +730,9 @@ pushforward from coherent pairwise refinement laws. No refinement instance is co
 Chapter 5 sewing has now been visually adjudicated. Reusable simultaneous-conjugacy infrastructure
 uses one common diagonal conjugator for an entire indexed family and equips the exact quotient with
 its genuine quotient topology and final measurable space. The projection is continuous and a
-quotient map, and finite families over compact groups have compact quotient; coordinatewise substitution is hostilely rejected. Exact nonempty
+quotient map. Finite families over compact Hausdorff groups have compact Hausdorff quotient,
+second countability descends, and compact-Polish group hypotheses identify the final measurable
+quotient exactly with its quotient-topology Borel space; coordinatewise substitution is hostilely rejected. Exact nonempty
 finite families use `Fin (n+1)` coordinates over one caller-supplied fixed-base loop carrier, so an
 empty such carrier cannot supply an empty-tuple surrogate. Their simultaneous holonomy classes are
 invariant under sample-dependent common conjugation at that base point. Lévy §2.10's mixed-basepoint
@@ -741,7 +743,7 @@ the full field; ambient equality requires a separate converse coverage inclusion
 genuine Mathlib conditional-kernel disintegration, zero mass outside every exact boundary fiber,
 involutive boundary
 reversal, and an all-boundary-value product restriction law; bind reconstruction, normalization, and
-both marginals derive. Compact-surface geometry, quotient Hausdorff/second-countability and Borel-compatibility results, source-
+both marginals derive. Compact-surface geometry, quotient Polish/standard-Borel results, source-
 specific conditional independence/sewing laws, and lattice-limit layers remain explicit debt. As the first Definition 8.1 approximation component,
 `EpsilonSquareLatticePathCertificate` now gives exact positive-spacing paths in the directed
 nearest-neighbor graph on `εℤ²`: finite strictly ordered nodes from parameters `0` to `1`, horizontal

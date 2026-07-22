@@ -53,6 +53,30 @@ theorem exact_finite_compact_quotient
     IsCompact (Set.univ : Set (SimultaneousConjugacyQuotient Index G)) :=
   simultaneousConjugacyQuotient_isCompact_univ
 
+/-- Proper diagonal conjugation makes every finite compact-Hausdorff quotient Hausdorff. -/
+theorem exact_finite_quotient_hausdorff
+    {Index : Type uIndex} {G : Type uG} [Fintype Index] [Group G]
+    [TopologicalSpace G] [IsTopologicalGroup G] [CompactSpace G] [T2Space G] :
+    T2Space (SimultaneousConjugacyQuotient Index G) :=
+  inferInstance
+
+/-- Open orbit projection retains second countability for finite families. -/
+theorem exact_finite_quotient_secondCountable
+    {Index : Type uIndex} {G : Type uG} [Fintype Index] [Group G]
+    [TopologicalSpace G] [IsTopologicalGroup G] [SecondCountableTopology G] :
+    SecondCountableTopology (SimultaneousConjugacyQuotient Index G) :=
+  inferInstance
+
+/-- Under compact-Polish source hypotheses, the exact final measurable quotient equals the Borel
+space of the same genuine quotient topology. -/
+theorem exact_finite_quotient_measurable_eq_borel
+    {Index : Type uIndex} {G : Type uG} [Fintype Index] [Group G]
+    [TopologicalSpace G] [IsTopologicalGroup G] [CompactSpace G] [PolishSpace G]
+    [MeasurableSpace G] [BorelSpace G] :
+    (inferInstance : MeasurableSpace (SimultaneousConjugacyQuotient Index G)) =
+      borel (SimultaneousConjugacyQuotient Index G) :=
+  simultaneousConjugacyQuotient_measurableSpace_eq_borel
+
 /-- The quotient projection is measurable for its exact final measurable space. -/
 theorem exact_projection_measurable
     {Index : Type uIndex} {G : Type uG} [Group G] [MeasurableSpace G] :
@@ -79,7 +103,7 @@ theorem coordinatewise_substitution_blocked
     exact noCommon ((simultaneousConjugacyClass_eq_iff family₁ family₂).mp equality)
   · intro index
     obtain ⟨conjugator, equality⟩ := coordinatewise index
-    apply Quotient.sound
+    apply (simultaneousConjugacyClass_eq_iff _ _).mpr
     exact ⟨conjugator, fun _ => equality⟩
 
 /-- An empty family has no holonomy information and its simultaneous quotient is subsingleton. A
@@ -92,7 +116,7 @@ theorem empty_index_quotient_subsingleton
   intro first second
   refine Quotient.inductionOn₂ first second ?_
   intro family₁ family₂
-  apply Quotient.sound
+  apply (simultaneousConjugacyClass_eq_iff _ _).mpr
   refine ⟨1, ?_⟩
   intro index
   exact index.elim
