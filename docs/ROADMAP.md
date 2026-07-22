@@ -708,8 +708,11 @@ committed before higher layers depend on it.
 - [x] Bundle the analytic average as Mathlib's exact `IntertwiningMap`; derive the irreducible
   bijective-or-zero dichotomy and prove that every averaged rectangular matrix vanishes for
   irreducible inequivalent coordinate representations.
-- [ ] Derive the scalar identity coefficient in the irreducible self/equivalent case and conclude
-  full Haar orthogonality of matrix coefficients with exact dimension normalization.
+- [x] Use algebraic closedness of `ℂ` and Mathlib's endomorphism Schur theorem to prove every
+  irreducible self-average is a complex scalar multiple of the identity; name that scalar without
+  guessing its value.
+- [ ] Compute the scalar by trace and conclude full Haar orthogonality of matrix coefficients with
+  exact dimension normalization.
 - [x] Define coordinatewise representation-valued Fourier coefficients with exact inverse
   convention, derive continuous compact-domain integrability, addition/scalar/zero laws, specialize
   to probability-normalized Haar, and identify matrix trace with the scalar inverse-character

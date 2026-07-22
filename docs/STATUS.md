@@ -5061,7 +5061,11 @@ the exact right-Haar substitution `g ↦ g*h`. This analytic average is now bund
 exact `IntertwiningMap`. Mathlib's algebraic Schur machinery derives the irreducible
 bijective-or-zero dichotomy, and an explicit inequivalence typeclass forces the entire averaged
 rectangular matrix to zero. A hostile probe rejects any claimed nonzero average in that case. The
-irreducible self-case scalar coefficient and exact dimension normalization remain open. No full Haar orthogonality,
+irreducible self-case is now also closed algebraically: because `ℂ` is algebraically closed,
+Mathlib's endomorphism Schur theorem proves every self-average is a complex scalar multiple of the
+identity. That scalar is named by choice, while hostile probes reject a nonscalar self-average and
+explicitly avoid assigning an unproved value. Computing it from trace and exact dimension
+normalization remains open. No full Haar orthogonality,
 irreducibility theorem, Fourier inversion, Peter–Weyl density, or heat-kernel spectral expansion is
 claimed.
 
