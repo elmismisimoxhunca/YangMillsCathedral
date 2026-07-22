@@ -719,8 +719,11 @@ committed before higher layers depend on it.
 - [x] Apply the averaged Schur formulas to exact matrix units and derive all-index self
   orthogonality `∫conj(ρₐᵣ)ρᵦ𝚌=n⁻¹δₐᵦδᵣ𝚌` and exact zero mixed coefficients for explicitly
   inequivalent irreducible unitary representations.
-- [ ] Add transport of the orthogonality formulas across explicitly supplied equivalences between
-  differently presented but equivalent irreducible representations.
+- [x] Sum the diagonal coefficient formulas through the Haar integral to prove every represented
+  positive-dimensional irreducible unitary character has normalized `L²` norm one and explicitly
+  inequivalent irreducible characters have zero mixed pairing.
+- [ ] Add transport of the coefficient and character orthogonality formulas across explicitly
+  supplied equivalences between differently presented but equivalent irreducible representations.
 - [x] Define coordinatewise representation-valued Fourier coefficients with exact inverse
   convention, derive continuous compact-domain integrability, addition/scalar/zero laws, specialize
   to probability-normalized Haar, and identify matrix trace with the scalar inverse-character

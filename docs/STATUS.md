@@ -5075,8 +5075,12 @@ real-part inversion law is independently rederived. Applying the normalized Schu
 matrix units now proves all-index self orthogonality
 `∫conj(ρ(g)ₐᵣ)ρ(g)ᵦ𝚌dμ_H=n⁻¹δₐᵦδᵣ𝚌` and exact zero mixed coefficients for explicitly
 inequivalent irreducible unitary representations. A hostile probe rejects dropping the inverse
-representation-dimension factor. Equivalent-but-differently-presented transport, Fourier inversion,
-Peter–Weyl density, and heat-kernel spectral expansion remain open.
+representation-dimension factor. Finite diagonal summation through genuinely integrable coefficient
+families then proves every represented positive-dimensional irreducible unitary character has
+normalized Haar `L²` norm one and explicitly inequivalent irreducible characters have zero mixed
+pairing. A hostile probe rejects a nonzero inequivalent character pairing.
+Equivalent-but-differently-presented transport, Fourier inversion, Peter–Weyl density, and
+heat-kernel spectral expansion remain open.
 
 The full two-dimensional literature chain is now an explicit validation target: a future final 2D
 acceptance proposition must join the Driver/Lévy/Sengupta finite, continuum, Brownian, compact-surface,
