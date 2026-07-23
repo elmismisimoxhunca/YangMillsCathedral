@@ -5437,7 +5437,12 @@ building block: one coarse/fine candidate pair is tied to one normalized nonzero
 semigroup and central twist and has a surjective region-preserving face map, exact coarse-area
 decomposition, distinguished-face compatibility, and equality of all ordinary and fixed-twist
 factors. Embedded boundary-word subdivision and universal quantification over all valid
-subdivisions remain open, as does Fact 3 topological invariance.
+subdivisions remain open. `TwoDimensionalSenguptaHomeomorphismFactorInvarianceData` similarly gives a
+one-pair factor-level Fact 3 candidate on one normalized semigroup and central twist: explicit
+external/internal edge, face, and region equivalences preserve regions, areas, and twist faces;
+external fields transport contravariantly; positive orientation preserves boundary words and retains
+`h`, while negative orientation reverses/flips boundary words and uses `h⁻¹`; and ordinary/twisted factors agree. Actual area-preserving surface
+homeomorphisms, curve reparameterizations, and universal source quantification remain open.
 
 `TwoDimensionalSenguptaLevyFiniteHolonomyBridgeData` now states the first exact same-theory bridge
 between the distinct Sengupta and Lévy compact-surface sample carriers. A finite nonempty curve family

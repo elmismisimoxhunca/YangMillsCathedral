@@ -45,6 +45,15 @@ while leaving the planar-to-arbitrary-compact-surface heat-law construction expl
 not construct
 the process or infer a Markov conditional-expectation/stochastic-generator theorem.
 
+Definition 7.6, Facts 2–3 (printed pp. 46–47; PDF pp. 55–56; native extraction lines 2584–2660)
+support the uninhabited one-pair subdivision and homeomorphism factor certificates. The retained scan
+was visually adjudicated on 2026-07-23: Fact 3 transports the bundle class by the printed `±` sign,
+where positive means oriented source plus orientation-preserving homeomorphism and negative means
+otherwise; its proof sends positive simplex orientation to negative orientation, compares inverse
+boundary holonomy, and invokes inversion symmetry of the heat density. Accordingly, the candidate
+uses `h` versus `h⁻¹` and preserves versus reverses/flips the oriented boundary word under one shared
+orientation sign. No actual subdivision or surface homeomorphism is thereby constructed.
+
 ## Artifact chain
 
 - `FETCH_TIMESTAMP.txt` records repository ingestion time.

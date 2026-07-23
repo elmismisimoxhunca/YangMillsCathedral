@@ -1340,6 +1340,12 @@ committed before higher layers depend on it.
     face refinement, exact coarse-area splitting, distinguished-face
     coherence, and ordinary/fixed-twist factor equality. Retain embedded boundary-word subdivision
     and quantification over every valid source subdivision as debt.
+  - [x] Add a one-pair factor-level Fact 3 building block on one normalized semigroup and central
+    twist, with external/internal edge, face, and region equivalences preserving areas,
+    contravariant external-field transport, exact sign-dependent word/reverse-word and `h`/`h⁻¹`
+    orientation semantics, and ordinary and
+    twisted factor equality. Retain actual area-preserving homeomorphisms, curve reparameterization,
+    and universal source quantification as debt.
   - [x] Add an uninhabited same-theory Sengupta--Lévy finite-law bridge across their distinct sample
     carriers, selecting a finite nonempty family in one Lévy whole-surface base fiber and equating
     only the simultaneous-conjugacy-class pushforward laws. Do not identify carriers or raw based

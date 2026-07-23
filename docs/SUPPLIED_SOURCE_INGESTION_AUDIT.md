@@ -264,15 +264,23 @@ adjudication corrections.
    general nonabelian scope and explain the missing joint-conjugacy information. Canonical Lean
    sewing declarations must therefore retain genuine conditional/disintegration semantics, the
    inverse tuple, holonomy-generated fields, and no false sigma-field-generation equality.
-15. Witten's subdivision/sewing formulas are exact representation-theoretic identities, not by
+15. Sengupta PDF pp. 55–56 / printed pp. 46–47 were visually adjudicated on 2026-07-23 for
+   Definition 7.6, Facts 2–3, and the orientation-reversing clause in the proof of Fact 3. The scan
+   visibly states `Z^h_{S,T} = Z^{h^{±1}}_{S',T'}`, with the sign equal to `+` for an oriented source and
+   orientation-preserving homeomorphism and `−` otherwise. The following proof visibly says that an
+   orientation-reversing map sends a positively oriented simplex to a negatively oriented one,
+   compares inverse boundary holonomy, and uses `Q_t(g⁻¹) = Q_t(g)`. The canonical finite-face
+   candidate therefore transports `h` to `h` or `h⁻¹` and preserves or reverses/flips the oriented
+   boundary word according to the same sign. This check does not construct the source homeomorphism.
+16. Witten's subdivision/sewing formulas are exact representation-theoretic identities, not by
    themselves a countably additive continuum-measure construction.
-16. Atiyah–Bott is classical gauge geometry, not a source for a quantum probability measure.
-17. Sengupta's orientation-reversing covariance changes to the specified pullback bundle class; it
+17. Atiyah–Bott is classical gauge geometry, not a source for a quantum probability measure.
+18. Sengupta's orientation-reversing covariance changes to the specified pullback bundle class; it
    must not be simplified to same-bundle invariance.
-18. Kluberg-Stern–Zuber's broadest operator-renormalization statements carry dimensional/twist or
+19. Kluberg-Stern–Zuber's broadest operator-renormalization statements carry dimensional/twist or
    conjectural qualifications; they are corroboration, not an unrestricted theorem.
-19. Hollands–Kopper's convergence theorem is not a Yang–Mills convergence theorem.
-20. `yang1954.pdf` begins with one page from a preceding article; the Yang–Mills article starts on
+20. Hollands–Kopper's convergence theorem is not a Yang–Mills convergence theorem.
+21. `yang1954.pdf` begins with one page from a preceding article; the Yang–Mills article starts on
    PDF p. 2.
 
 ## 4. Concrete progress unlocked by the bundle

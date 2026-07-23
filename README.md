@@ -948,7 +948,11 @@ surface admissibility, and stochastic-law construction open. Facts 0–1 are now
 fields requiring distinguished-face and positive same-total area-splitting invariance. A separate
 one-step Fact 2 building block compares one coarse/fine candidate pair on one normalized nonzero
 covering-density semigroup and central twist through a surjective region-preserving face map, exact
-area decomposition, compatible twist face, and ordinary/twisted factor equality; embedded word-level subdivision and universal source quantification remain open. A separate uninhabited Sengupta--Lévy bridge now compares the two
+area decomposition, compatible twist face, and ordinary/twisted factor equality; embedded word-level subdivision and universal source quantification remain open. A
+parallel one-pair Fact 3 building block uses explicit external/internal edge, face, and region
+equivalences preserving areas; according to one orientation sign it preserves or reverses/flips
+boundary words and transports `h` to `h` or `h⁻¹` and requires both factor laws to agree. Actual area-preserving homeomorphisms,
+curve reparameterizations, and universal quantification remain open. A separate uninhabited Sengupta--Lévy bridge now compares the two
 distinct compact-surface sample carriers only through the pushforward law of one finite nonempty
 common-base simultaneous-conjugacy observation. It neither identifies carriers nor asserts false raw
 holonomy equality. `TwoDimensionalSenguptaAugmentedCurrentStrengthAcceptanceData` now dependently
