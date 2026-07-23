@@ -750,6 +750,10 @@ committed before higher layers depend on it.
   derive conditional selected-dual density in `C(G, ℂ)`. Combine normalized-Haar regularity with
   Mathlib continuous-function density to inhabit normalized-Haar `L²` Peter–Weyl completeness for
   the same faithful compact matrix-group setting.
+- [x] Expose its direct Hilbert-space consequences without inventing an infinite series: the
+  finite-support selected-dual synthesis map has dense `L²` range, every vector has a
+  finite-support approximant at every positive tolerance, and all finite-support coefficient
+  inner-product tests determine an `L²` vector uniquely.
 - [ ] Prove the general compact-Hausdorff-group Peter–Weyl point-separation/density theorem without
   assuming one faithful finite-dimensional representation; do not conflate this with the completed
   conditional compact matrix-group theorem.
