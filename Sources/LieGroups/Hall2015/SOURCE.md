@@ -42,7 +42,14 @@ PDF artifact pp. 362–363 were visually inspected against the extracted text. T
 the matrix-group hypothesis at this step and later notes that Appendix D sketches a route not
 assuming it in advance. The present formalization therefore keeps a continuous faithful finite
 complex matrix representation as explicit data and does not generalize this argument silently to
-all compact Hausdorff groups.
+all compact Hausdorff groups. Exact representation-equivalence transport further places every
+bundled irreducible-unitary coefficient into the finite synthesis range of the selected representative
+of its quotient-dual class; an explicit one-dimensional trivial class supplies constants. Thus the
+same conditional uniform-density result holds for the selected coordinate-dual synthesis itself.
+Regularity of normalized compact Haar measure and Mathlib's density of continuous functions in
+finite-measure `L²` derive conditional normalized-Haar `L²` coefficient completeness.
+That last bridge is a formal consequence, not a separate quotation from Hall, and does not assert
+countability or infinite Fourier inversion.
 
 ## Artifact chain
 

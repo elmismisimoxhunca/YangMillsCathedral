@@ -5107,8 +5107,14 @@ continuous faithful finite complex matrix representation supplies a separating c
 Under that explicit data, the coefficient star subalgebra separates points and Mathlib's complex
 Stone–Weierstrass theorem proves its topological closure is `⊤`. The general compact-Hausdorff-group
 Peter–Weyl point-separation/density theorem remains open because one faithful finite representation
-is not assumed there. An equivalence with Mathlib's abstract `TensorProduct` carrier is also not
-inferred.
+is not assumed there. For the conditional compact matrix-group setting, exact basis-aware
+representation-equivalence transport now sends every bundled irreducible-unitary coefficient into
+a finite synthesis of the selected representative of its quotient-dual class. An explicit
+one-dimensional trivial class supplies constants, so the selected-dual continuous synthesis range
+is itself dense. Regularity of normalized compact Haar measure and Mathlib's continuous-to-`L²`
+density theorem then inhabit the existing normalized-Haar coordinate-dual `L²` Peter–Weyl completeness target.
+This does not prove dual countability, infinite Fourier inversion, or the general compact-group
+case. An equivalence with Mathlib's abstract `TensorProduct` carrier is also not inferred.
 The next Schur precursor is now concrete: for two continuous finite matrix representations and an
 arbitrary rectangular matrix `A`, the coordinatewise Reynolds average
 `P(A)=∫σ(g⁻¹)Aρ(g)dμ_H` is genuinely integrable and satisfies the exact intertwining identity
@@ -5179,7 +5185,9 @@ surjectivity, so no silent dual equivalence is possible. Algebraic synthesis now
 Mathlib's actual normalized-Haar `Lp ℂ 2`, where its inner product is proved equal to the exact
 algebraic Fourier pairing. The algebraic `L²` range and closed coefficient span are concrete, and
 `HasL2PeterWeylCompleteness` is exactly closed-span equality to top, equivalently density. Hostile
-probes show a vector outside the span or nondensity blocks completeness; no inhabitant is supplied.
+probes show a vector outside the span or nondensity blocks completeness. The faithful compact
+matrix-group theorem above now supplies a conditional inhabitant by selected-representative
+transport and normalized-Haar regularity; no general compact-group inhabitant is supplied.
 The all-coordinate-class character specialization now uses finitely supported scalar coefficients:
 synthesis is continuous and central, Haar analysis recovers every exact coefficient, synthesis is
 injective, and the Haar pairing is the orthonormal coordinate pairing. Explicit support probes block

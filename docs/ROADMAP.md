@@ -745,6 +745,11 @@ committed before higher layers depend on it.
   faithful finite complex matrix representation supplies a separating entry for every distinct
   pair, so the coefficient star subalgebra separates points and complex Stone–Weierstrass makes its
   topological closure all of `C(G, ℂ)`.
+- [x] Transport every bundled irreducible-unitary coefficient to a finite synthesis of its selected
+  quotient-dual representative, construct the one-dimensional trivial dual class explicitly, and
+  derive conditional selected-dual density in `C(G, ℂ)`. Combine normalized-Haar regularity with
+  Mathlib continuous-function density to inhabit normalized-Haar `L²` Peter–Weyl completeness for
+  the same faithful compact matrix-group setting.
 - [ ] Prove the general compact-Hausdorff-group Peter–Weyl point-separation/density theorem without
   assuming one faithful finite-dimensional representation; do not conflate this with the completed
   conditional compact matrix-group theorem.
@@ -822,13 +827,15 @@ committed before higher layers depend on it.
 - [x] Map algebraic coefficient synthesis into Mathlib's actual normalized-Haar `Lp ℂ 2` carrier,
   prove its `L²` inner product equals the dimension-weighted algebraic Fourier pairing, define the
   algebraic image and closed coefficient span, and state `HasL2PeterWeylCompleteness` exactly as
-  closed-span equality to `⊤` (equivalently density), without constructing an inhabitant.
+  closed-span equality to `⊤` (equivalently density). The later faithful compact-matrix-group track
+  now constructs a conditional inhabitant; no general compact-group inhabitant is claimed.
 - [x] Construct the all-coordinate-class algebraic character layer: finitely supported scalar
   coefficients, continuous central synthesis, exact Haar coefficient analysis, injectivity, and
   orthonormal coordinate pairing, while retaining explicit finite support.
 - [ ] Prove that comparison map surjective for the intended compact Lie groups (or replace the
   continuous quotient by a source-justified smooth realization theorem), extend realization beyond
-  explicit matrix-coordinate representations if required, establish any required countability theorem, and prove the `HasL2PeterWeylCompleteness` density obligation before
+  explicit matrix-coordinate representations if required, establish any required countability
+  theorem, and prove unconditional/general-compact-group `HasL2PeterWeylCompleteness` before
   formulating genuinely infinite-series inversion with explicit summability hypotheses.
 - [ ] Prove Stone–Weierstrass separation and Peter–Weyl density/completeness in continuous and `L²`
   carriers with explicit topology and measure hypotheses.
