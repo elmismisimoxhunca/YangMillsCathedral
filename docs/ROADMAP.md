@@ -821,6 +821,9 @@ committed before higher layers depend on it.
   Weierstrass bound, coefficient time-addition law, Haar coefficient recovery, and derived dual
   countability. Do not call it a heat kernel before Laplacian action, heat equation, semigroup,
   pointwise positivity of the summed function, and normalization are connected.
+- [x] Package normalized-Haar convolution on `C(G,ℂ)` under the explicit second-countability
+  required by parametric integration; prove continuity, `‖f⋆g‖∞≤‖f‖∞‖g‖∞`, bounded linearity in
+  each fixed ordered input, and hostile preservation of genuinely noncommutative input order.
 - [x] Derive the exact normalized-Haar selected-character convolution law directly from matrix-
   coefficient orthogonality:
   `χ_q ⋆ χ_r = if q=r then dim(q)⁻¹χ_q else 0`, with the unchanged

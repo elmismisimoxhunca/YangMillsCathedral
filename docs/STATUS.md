@@ -5182,7 +5182,11 @@ requires `Summable (dim(q)^2 exp(-(t/2)c_q))` at every positive time. It conditi
 globally uniformly convergent continuous-central spectral character series, proves exact pointwise
 and identity heat-trace formulas, uniform bound, coefficient time-addition law, and Haar coefficient
 recovery, and derives selected-dual countability from strict positivity of every heat-trace summand.
-The exact normalized-Haar selected-character convolution law is now proved directly:
+Normalized-Haar convolution is now packaged on `C(G,ℂ)` under the explicit second-countability
+required by Mathlib's parametric-integral theorem, with continuity, the sharp probability-Haar
+bound `‖f⋆g‖∞≤‖f‖∞‖g‖∞`, and bounded linear maps after fixing either ordered input. Hostile probes
+ensure this packaging does not introduce ambient commutativity. The exact normalized-Haar
+selected-character convolution law is now proved directly:
 `χ_q⋆χ_r = if q=r then dim(q)⁻¹χ_q else 0`, retaining the project's fixed
 `(f⋆g)(z)=∫f(x)g(x⁻¹z)` order. Distinct classes vanish and central characters commute under this
 otherwise nonabelian convention. No Casimir/Laplacian identification, heat equation, infinite-series
