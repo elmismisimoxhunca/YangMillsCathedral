@@ -5516,6 +5516,13 @@ and all underlying analytic/stochastic witnesses remain open. The augmented reco
 intended `CompactSimpleGaugeGroupData`; its simple tangent Lie algebra derives Mathlib semisimplicity,
 so Sengupta Theorem 8.4's first source alternative is genuinely discharged.
 
+`TwoDimensionalSenguptaEmbeddedUniversalAugmentedCurrentStrengthAcceptanceData` now dependently joins
+that exact augmented planar/Driver/Lévy/Sengupta record to the strongest current embedded-universal
+compact finite-law record. The latter is indexed by the former's exact finite law, heat factors,
+planar spectral semigroup, covering density, and fixed bundle class. Its `Nonempty` equivalence
+exposes both dependent witnesses without synthesis. This is the strongest current cross-source 2D
+join, but full Facts 2–3, construction, and all component inhabitance remain open.
+
 The preliminary `FourDimensionalCurrentStrengthUniversalAcceptance` declaration is intentionally
 qualified and uninhabited. No final source-complete acceptance declaration, placeholder inhabitance
 theorem, or arbitrary structure is introduced merely to make the project appear complete.
