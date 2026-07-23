@@ -79,14 +79,14 @@ abbrev spectralVillainActionAt
     family.spectralWilson.spectralHeatKernel.heatEquationCore
     family.spectralWilson.spectralHeatKernel.kernelOperator spacing
 
-/-- Exact missing enlarged-product identity, with all-spacing weak limits already supplied by the
-spectral Villain family. -/
-structure TwoDimensionalSpectralVillainProductIdentityBridgeData where
-  weakLimitFamily : TwoDimensionalSpectralVillainWeakLimitFamilyBridgeData
-    (law := law) (inner := inner) (realLaplacian := realLaplacian)
-    (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
-  expectation_eq_fineEnlargedIntegral : ∀ spacing
-      (observable : (coarse.Edge → G) → ℝ),
+/-- The unresolved source-facing part of Driver's enlarged-product step for an already supplied
+all-spacing spectral Villain weak-limit family. Naming this proposition prevents the inhabitance
+audit from hiding the remaining theorem inside a record projection. -/
+def TwoDimensionalSpectralVillainProductIdentityObligation
+    (weakLimitFamily : TwoDimensionalSpectralVillainWeakLimitFamilyBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)) : Prop :=
+  ∀ spacing (observable : (coarse.Edge → G) → ℝ),
     Measurable observable →
     (∃ bound : ℝ, ∀ configuration, |observable configuration| ≤ bound) →
     (∫ configuration,
@@ -97,7 +97,35 @@ structure TwoDimensionalSpectralVillainProductIdentityBridgeData where
           ∂twoDimensionalFineEnlargedActionMeasure faceGeometry
             (spectralVillainActionAt weakLimitFamily) spacing
 
+/-- Exact missing enlarged-product identity, with all-spacing weak limits already supplied by the
+spectral Villain family. -/
+structure TwoDimensionalSpectralVillainProductIdentityBridgeData where
+  weakLimitFamily : TwoDimensionalSpectralVillainWeakLimitFamilyBridgeData
+    (law := law) (inner := inner) (realLaplacian := realLaplacian)
+    (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+  expectation_eq_fineEnlargedIntegral :
+    TwoDimensionalSpectralVillainProductIdentityObligation
+      (faceGeometry := faceGeometry) weakLimitFamily
+
 namespace TwoDimensionalSpectralVillainProductIdentityBridgeData
+
+/-- Exact enlarged-product inhabitation debt: an all-spacing spectral weak-limit family together with
+Driver's remaining source-facing expectation identity for that same family. -/
+theorem nonempty_iff_weakLimitFamily_productIdentity :
+    Nonempty (TwoDimensionalSpectralVillainProductIdentityBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+      (faceGeometry := faceGeometry)) ↔
+      ∃ weakLimitFamily : TwoDimensionalSpectralVillainWeakLimitFamilyBridgeData
+        (law := law) (inner := inner) (realLaplacian := realLaplacian)
+        (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData),
+      TwoDimensionalSpectralVillainProductIdentityObligation
+        (faceGeometry := faceGeometry) weakLimitFamily := by
+  constructor
+  · rintro ⟨bridge⟩
+    exact ⟨bridge.weakLimitFamily, bridge.expectation_eq_fineEnlargedIntegral⟩
+  · rintro ⟨weakLimitFamily, productIdentity⟩
+    exact ⟨⟨weakLimitFamily, productIdentity⟩⟩
 
 /-- Construct Driver's existing product-identity certificate for the exact spectral Villain family. -/
 noncomputable def toDriverAxialLatticeProductIdentityData

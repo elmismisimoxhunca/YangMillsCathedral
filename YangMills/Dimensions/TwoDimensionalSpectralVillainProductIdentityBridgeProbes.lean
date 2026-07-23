@@ -61,6 +61,20 @@ variable
       (axial := axial) (coarseApproximation := coarseApproximation)
       (enlargedApproximation := enlargedApproximation)}
 
+/-- The inhabitance audit exposes the exact all-spacing family and Driver's remaining expectation
+identity as separate supplied witnesses. -/
+theorem exact_product_inhabitation_audit :
+    Nonempty (TwoDimensionalSpectralVillainProductIdentityBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+      (faceGeometry := faceGeometry)) ↔
+      ∃ weakLimitFamily : TwoDimensionalSpectralVillainWeakLimitFamilyBridgeData
+        (law := law) (inner := inner) (realLaplacian := realLaplacian)
+        (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData),
+      TwoDimensionalSpectralVillainProductIdentityObligation
+        (faceGeometry := faceGeometry) weakLimitFamily :=
+  TwoDimensionalSpectralVillainProductIdentityBridgeData.nonempty_iff_weakLimitFamily_productIdentity
+
 /-- The constructed Driver certificate retains the exact all-spacing spectral weak-limit family. -/
 theorem exact_lattice_limit_family
     (bridge : TwoDimensionalSpectralVillainProductIdentityBridgeData
