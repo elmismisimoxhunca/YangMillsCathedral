@@ -84,8 +84,11 @@ proved to converge uniformly and in normalized-Haar `L²`, matching Hall's state
 conclusion. The finite character pairing is also transported to the actual `L²` carrier: every
 selected character vector and analysis functional has norm one, analysis recovers finite synthesis
 coordinates, and continuity proves that each approximant coordinate converges to the exact integral
-`∫ conj(χ_q)f`. This remains conditional and is not a Fourier partial-sum construction: it does not
-prove the general compact-group Peter–Weyl theorem, dual countability, an infinite synthesis/inversion
+`∫ conj(χ_q)f`. The whole selected character family is proved orthonormal in the actual `L²`
+carrier; finite and unconditional Bessel bounds, square summability, vectorwise countable coefficient
+support, and exact finite-range Parseval identities follow. This remains conditional only where
+density/approximation is invoked and is not a Fourier partial-sum construction: it does not prove the
+general compact-group Peter–Weyl theorem, global dual countability, an infinite synthesis/inversion
 identity, or convergence of a canonically ordered Fourier series.
 
 ## Artifact chain

@@ -789,6 +789,11 @@ committed before higher layers depend on it.
   coordinate; identify continuous-central analysis with `∫ conj(χ_q)f`; and prove every coordinate
   of the chosen finite approximation sequence converges to that exact integral. This is
   coefficientwise convergence of arbitrary approximants, not a countable Fourier-series inversion.
+- [x] Prove that all selected irreducible character vectors form an orthonormal family in actual
+  normalized-Haar `L²`; derive finite and unconditional Bessel inequalities, coefficient-square
+  summability, vectorwise countable nonzero support without global dual countability, source-facing
+  summability/Bessel/countable-support theorems for `∫conj(χ_q)f`, and exact finite-synthesis
+  norm-square/`tsum` Parseval identities. Do not infer completeness or infinite synthesis.
 - [ ] Prove the general compact-Hausdorff-group Peter–Weyl point-separation/density theorem without
   assuming one faithful finite-dimensional representation; do not conflate this with the completed
   conditional compact matrix-group theorem.

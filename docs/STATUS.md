@@ -5151,9 +5151,15 @@ vector and analysis functional has norm one, analysis recovers finite synthesis 
 its value on a continuous central function is exactly `∫ conj(χ_q)f`. Applying these continuous
 functionals to the chosen sequence proves every approximant coordinate converges to that integral,
 with one faithful conditional theorem retaining the same sequence across uniform, `L²`, and all
-coordinate limits. These remain arbitrary finite approximants, not Fourier partial sums; general
-compact-group density, dual countability, infinite synthesis/inversion identities, and convergence
-of a canonically ordered Fourier series remain open. This does not prove dual countability, infinite Fourier inversion, or the
+coordinate limits. Independently of density, the entire selected character-vector family is now
+orthonormal in normalized-Haar `L²`. Finite and unconditional Bessel inequalities prove square
+summability and at most countable nonzero selected-character support for each individual `L²`
+vector—without asserting that the whole dual is countable. The exact integrals `∫conj(χ_q)f` for
+continuous central `f` inherit summability, Bessel, and countable-support results, while finite
+character syntheses satisfy exact norm-square and unconditional-`tsum` Parseval identities. These
+remain arbitrary finite approximants, not Fourier partial sums; general compact-group density,
+global dual countability, infinite synthesis/inversion identities, and convergence of a canonically
+ordered Fourier series remain open. This does not prove dual countability, infinite Fourier inversion, or the
 general compact-group case. An equivalence with Mathlib's abstract `TensorProduct` carrier is also not inferred.
 The next Schur precursor is now concrete: for two continuous finite matrix representations and an
 arbitrary rectangular matrix `A`, the coordinatewise Reynolds average

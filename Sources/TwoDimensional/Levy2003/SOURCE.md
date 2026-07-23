@@ -101,11 +101,14 @@ faithful second-countable matrix-group hypotheses, finite character coefficients
 uniform tolerance `1/(n+1)`, producing explicit sequence-level uniform and normalized-Haar `L²`
 convergence. The exact finite character pairing is transported to Mathlib `L²`; selected character
 vectors and their analysis maps have norm one, finite synthesis coordinates are recovered exactly,
-and every coordinate of the chosen approximation sequence converges to `∫ conj(χ_q)f`. This is a
-noncanonical approximation sequence, not a Fourier partial-sum expansion or infinite inversion
-identity, and the conditional result does not establish Lévy's theorem at unrestricted generality. Countability/summability consequences, genuinely
-infinite-series inversion, Casimir action, and the heat-kernel expansion remain source-backed
-targets.
+and every coordinate of the chosen approximation sequence converges to `∫ conj(χ_q)f`. The selected
+characters themselves now form an orthonormal family in actual `L²`, giving finite/unconditional
+Bessel inequalities, square summability, vectorwise countable coefficient support without global
+dual countability, and exact finite-range Parseval identities. This is a noncanonical approximation
+sequence, not a Fourier partial-sum expansion or infinite inversion identity, and the conditional
+density result does not establish Lévy's theorem at unrestricted generality. Global dual
+countability, summability and convergence of Lévy's genuinely infinite heat-kernel expansion,
+infinite-series inversion, and Casimir action remain source-backed targets.
 
 PDF pp. 89–94 / printed pp. 75–80 were independently inspected on 2026-07-22 for Chapter 5,
 Theorem 5.1.1, equation (5.1), Propositions 5.1.2/5.1.3, the genus-two discussion, and the start of
