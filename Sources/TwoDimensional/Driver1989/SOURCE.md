@@ -140,7 +140,10 @@ zero. Driver's standing §2 representation chain now defines `p_*` as the exact 
 smooth unitary matrix representation, requires its injectivity, and identifies the continuum
 invariant pairing literally with `-Re tr(p_*X p_*Y)`. A dependent common-chain record now ties the same connected-group representation (globally faithful
 and infinitesimally injective), Wilson normalization/actions, exact trace pairing, pairing Laplacian,
-and unchanged selected continuum density/heat equation/kernel. The proof-required `B → VB` enlargement now has BC certificates on both graphs, literal coarse-edge
+and unchanged selected continuum density/heat equation/kernel. The reusable Laplacian layer now
+also has a complex-valued scalar carrier using the identical right-invariant fields and
+same-pairing orthonormal-basis independence contract, so later character/Casimir obligations need
+not misuse the real carrier; no character eigenvalue is asserted by that extension. The proof-required `B → VB` enlargement now has BC certificates on both graphs, literal coarse-edge
 subdivision paths, the exact vertical/x-axis tree, total coverage excluding unrelated enlarged edges,
 and measurable ambient-compatible coarse restriction. Equation (6.1) is now an uninhabited universal interface: every bounded measurable coarse function
 factors through exact enlarged restriction and its base expectation equals the normalized vertical/x-

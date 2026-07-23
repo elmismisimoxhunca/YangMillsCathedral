@@ -5192,7 +5192,10 @@ selected-character convolution law is now proved directly:
 otherwise nonabelian convention. Bounded linear convolution now extends that law through both
 explicitly weighted unconditional uniform sums, giving
 `series(a)⋆series(b)=series(a_qb_qdim(q)⁻¹)` without completeness or an unjustified sum/integral
-exchange. Combining this formula with the exact candidate coefficient time-addition law now proves
+exchange. Driver's pairing-normalized right-invariant Laplacian now also has a smooth complex-valued scalar
+carrier using the identical manifold derivative, right-invariant fields, and same-pairing
+orthonormal-basis independence contract; constants vanish, but no character eigenvalue is inferred.
+Combining the convolution formula with the exact candidate coefficient time-addition law now proves
 the conditional positive-time spectral-family convolution law `K_s⋆K_t=K_{s+t}` in `C(G,ℂ)` and
 pointwise in the fixed integral order. No inhabitant of the heat-trace data, time-zero identity,
 Casimir/geometric-Laplacian identification, heat equation, pointwise positivity of the summed

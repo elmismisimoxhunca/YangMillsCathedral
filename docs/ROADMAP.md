@@ -833,6 +833,10 @@ committed before higher layers depend on it.
   bounded linear convolution operators: `series(a)⋆series(b)=series(a_qb_qdim(q)⁻¹)`. Expose
   one-sided coefficient extraction and central-series commutativity, with changed-output hostile
   probes; do not use completeness or an unjustified infinite sum/integral exchange.
+- [x] Extend Driver's pairing-normalized right-invariant scalar Laplacian to smooth complex-valued
+  functions using the identical manifold derivative, right-invariant fields, and same-pairing
+  orthonormal-basis independence contract. Prove constants vanish and probe changed-basis values;
+  do not infer a character eigenvalue or heat equation.
 - [x] Combine the exact candidate coefficient time-addition law with weighted uniform-series
   convolution to prove the conditional positive-time spectral-family law `K_s⋆K_t=K_{s+t}` in
   `C(G,ℂ)` and pointwise in the fixed integral convention. Retain caller-supplied heat-trace
