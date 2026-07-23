@@ -1341,6 +1341,9 @@ committed before higher layers depend on it.
     of every external edge. Impose no global orientation coherence, retaining the nonorientable
     source case. This standalone layer is not yet required by the augmented record; retain an
     embedded simplicial-complex realization homeomorphic to the compact surface as debt.
+  - [x] Dependently require closed triangular incidence for the exact finite-law heat-factor base and
+    the exact fine/transported candidates used by one Facts 2–3 bridge. Keep this combined bridge
+    separate from the augmented record until embedded and universal source semantics are available.
   - [x] Add a one-step factor-level Fact 2 building block for one coarse/fine candidate pair on one
     normalized nonzero covering-density semigroup and central twist: surjective region-preserving
     face refinement, exact coarse-area splitting, distinguished-face

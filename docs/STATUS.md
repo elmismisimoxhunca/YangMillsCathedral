@@ -5437,7 +5437,10 @@ distinct sides, orientation-independent two-face incidence for every internal ed
 external edge are required. No global orientation coherence is imposed, retaining Sengupta's
 nonorientable case. This standalone layer is not yet required by the augmented acceptance record; it
 remains uninhabited and still supplies no embedded simplicial realization homeomorphic to the
-compact surface. Fact 0 distinguished-face invariance and Fact 1 positive same-total
+compact surface. `TwoDimensionalSenguptaClosedPresentationInvarianceBridgeData` now dependently ties
+closed incidence for the exact finite-law heat-factor base and the exact fine/transported candidates
+to one unchanged Facts 2–3 bridge, preventing unrelated presentation witnesses. This combined bridge
+also remains outside the augmented record pending embedded and universal source semantics. Fact 0 distinguished-face invariance and Fact 1 positive same-total
 area-splitting invariance for both ordinary and fixed-twist factors are now exact uninhabited fields;
 A separate `TwoDimensionalSenguptaSubdivisionFactorInvarianceData` now gives one factor-level Fact 2
 building block: one coarse/fine candidate pair is tied to one normalized nonzero covering-density

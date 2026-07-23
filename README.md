@@ -948,8 +948,10 @@ surface admissibility, and stochastic-law construction open. A stronger uninhabi
 incidence layer now requires nonloop endpoints, cyclically composable closed triangle boundaries,
 three distinct sides, a nonempty face carrier, orientation-independent two-face incidence for every
 internal edge, and use of every external edge; no global orientation coherence is imposed, so the
-nonorientable source case is retained. This standalone strengthening is not yet required by the
-augmented acceptance record; an embedded compact-surface realization remains open. Facts 0–1 are now explicit uninhabited
+nonorientable source case is retained. A separate dependent bridge now requires this closed incidence
+for the exact heat-factor base and the exact fine/transported candidates selected by the Facts 2–3
+bridge. It is still not required by the augmented acceptance record, and an embedded compact-surface
+realization remains open. Facts 0–1 are now explicit uninhabited
 fields requiring distinguished-face and positive same-total area-splitting invariance. A separate
 one-step Fact 2 building block compares one coarse/fine candidate pair on one normalized nonzero
 covering-density semigroup and central twist through a surjective region-preserving face map, exact
