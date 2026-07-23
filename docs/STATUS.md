@@ -5441,8 +5441,10 @@ quotient models, construct the curve embedding, or prove the law equality; it re
 current-strength planar/Lévy record, one Sengupta finite law, its covering heat bridge, its
 boundary-conditioned finite-face factors, and its finite simultaneous-conjugacy law coherence with
 the exact Lévy sewing field already stored by that record. The covering heat target is definitionally
-the same planar spectral semigroup selected by the Driver/Brownian chain. This join is still not the
-final 2D proposition: embedded presentation, Facts 0–3, source-hypothesis discharge, literature-only
+the same planar spectral semigroup selected by the Driver/Brownian chain. Its exact `Nonempty`
+decomposition requires the prior current-strength witness, one finite Sengupta law, and the two
+bridges dependently indexed by that current record and law; it synthesizes none of them. This join is
+still not the final 2D proposition: embedded presentation, Facts 0–3, source-hypothesis discharge, literature-only
 inhabitation, and all underlying analytic/stochastic witnesses remain open.
 
 The preliminary `FourDimensionalCurrentStrengthUniversalAcceptance` declaration is intentionally

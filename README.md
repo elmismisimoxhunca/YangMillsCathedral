@@ -948,7 +948,10 @@ distinct compact-surface sample carriers only through the pushforward law of one
 common-base simultaneous-conjugacy observation. It neither identifies carriers nor asserts false raw
 holonomy equality. `TwoDimensionalSenguptaAugmentedCurrentStrengthAcceptanceData` now dependently
 joins all of those Sengupta interfaces to the exact planar spectral semigroup and exact Lévy sewing
-field already stored by the current-strength record. It is still not final: embedded compact-surface
+field already stored by the current-strength record. An exact `Nonempty` equivalence exposes the
+literature-only inhabitance attempt as the conjunction of the prior current-strength witness, one
+finite Sengupta law, its dependent heat-factor witness, and its dependent Lévy-law witness. It is
+still not final: embedded compact-surface
 presentation, Facts 0–3, source-hypothesis discharge, and all component inhabitants remain open.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to

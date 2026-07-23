@@ -1339,7 +1339,9 @@ committed before higher layers depend on it.
     the current planar/Lévy record, one finite Sengupta law, its covering heat and fixed-boundary
     factor bridges, and its finite conjugacy-law coherence with the exact sewing field. Keep it
     explicitly non-final pending embedded presentation, Facts 0–3, source-hypothesis discharge, and
-    component inhabitation.
+    component inhabitation. Expose its literature-only inhabitance attempt by an exact `Nonempty`
+    equivalence requiring the prior current-strength witness, one finite law, its dependent heat
+    factors, and its dependent Lévy-law coherence.
   - [ ] Assemble a final source-indexed 2D acceptance proposition joining the constructed finite
     lattice, heat/Brownian, weak-limit continuum, compact-surface, and sewing chains; attempt to
     inhabit it solely from formalized Driver/Lévy/Sengupta results and record every remaining

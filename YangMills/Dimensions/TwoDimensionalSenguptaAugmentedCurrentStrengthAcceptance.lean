@@ -133,6 +133,44 @@ structure TwoDimensionalSenguptaAugmentedCurrentStrengthAcceptanceData where
 namespace TwoDimensionalSenguptaAugmentedCurrentStrengthAcceptanceData
 
 omit [T2Space CoverGroup] [Fintype CurveS] [Nonempty CurveS] [DecidableEq EdgeS] in
+/-- Exact literature-only inhabitance audit for the augmented record. It requires an inhabitant of
+the prior current-strength join, one finite Sengupta law, its dependently indexed heat-factor bridge,
+and its dependently indexed coherence with the exact Lévy sewing field. -/
+theorem nonempty_iff_components :
+    Nonempty (TwoDimensionalSenguptaAugmentedCurrentStrengthAcceptanceData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+      (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)
+      (identification := identification) (IG := IG)
+      (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+      (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)
+      (CoverGroup := CoverGroup) (CurveS := CurveS) (EdgeS := EdgeS)
+      (InternalEdge := InternalEdge) (FaceS := FaceS) (RegionS := RegionS)
+      (SenguptaSample := SenguptaSample) (coverDensity := coverDensity)) ↔
+    ∃ current : TwoDimensionalCurrentStrengthLiteratureAcceptanceData
+        (law := law) (inner := inner) (realLaplacian := realLaplacian)
+        (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+        (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)
+        (identification := identification) (IG := IG)
+        (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+        (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample),
+      ∃ finiteLaw : TwoDimensionalSenguptaCompactSurfaceFiniteHolonomyLawData
+          (G := G) (CoverGroup := CoverGroup) (Curve := CurveS) (Edge := EdgeS)
+          (Region := RegionS) (Sample := SenguptaSample),
+        Nonempty (TwoDimensionalSenguptaTriangulatedHeatFactorBridgeData
+          (planarSemigroup := current.planar.convergence.productBridge.weakLimitFamily.spectralWilson
+            |>.spectralHeatKernel.convolutionSemigroup)
+          (finiteLaw := finiteLaw) (coverDensity := coverDensity)
+          (InternalEdge := InternalEdge) (Face := FaceS)) ∧
+        Nonempty (TwoDimensionalSenguptaLevyFiniteHolonomyBridgeData
+          finiteLaw current.compactSurface.sewing) := by
+  constructor
+  · rintro ⟨data⟩
+    exact ⟨data.current, data.finiteLaw, ⟨data.heatFactors⟩, ⟨data.finiteLawSewing⟩⟩
+  · rintro ⟨current, finiteLaw, ⟨heatFactors⟩, ⟨finiteLawSewing⟩⟩
+    exact ⟨⟨current, finiteLaw, heatFactors, finiteLawSewing⟩⟩
+
+omit [T2Space CoverGroup] [Fintype CurveS] [Nonempty CurveS] [DecidableEq EdgeS] in
 /-- Hostile dependency surface: the stored heat-factor bridge is indexed by this record's exact
 finite law and exact nested planar spectral semigroup. -/
 noncomputable def exact_heatFactors
