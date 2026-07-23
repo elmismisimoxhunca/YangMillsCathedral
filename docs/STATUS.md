@@ -5250,7 +5250,12 @@ law hostility. The operator is also identified directly as deterministic right-t
 integration against the spectral probability measure. Product Fubini then derives the exact
 continuous-test weak current-state identity
 `E[φ(B_s)f(B_{s+t})]=E[φ(B_s)P_t f(B_s)]`, with changed-identity hostility. Conditioning on the full
-past sigma-algebra and stochastic-generator identification remain explicit future proof debt.
+past sigma-algebra and stochastic-generator identification remain explicit future proof debt. The
+common Wilson chain now forgets only its genuinely stronger global-faithfulness and normalization
+fields to construct Driver's exact Villain common heat chain. Uninhabited
+`TwoDimensionalSpectralVillainWeakLimitBridgeData` ties the unchanged Theorem 7.2 contract to the
+literal spectral `Q_{ε²}` lattice action at one positive spacing and derives normalization and
+boundary-independent weak convergence, while explicit dimension probes reject the 4D endpoint.
 Combining the convolution formula with the exact candidate coefficient time-addition law now proves
 the conditional positive-time spectral-family convolution law `K_s⋆K_t=K_{s+t}` in `C(G,ℂ)` and
 pointwise in the fixed integral order. No inhabitant of either the heat-trace data or the geometric

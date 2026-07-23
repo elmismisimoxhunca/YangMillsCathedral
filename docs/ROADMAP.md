@@ -893,6 +893,10 @@ committed before higher layers depend on it.
   identity `E[φ(B_s)f(B_{s+t})]=E[φ(B_s)P_t f(B_s)]`. Keep conditioning on the full past
   sigma-algebra and stochastic-generator identification as explicit future proof debt, and reject
   changed spectral increment, joint, and weak-Markov laws.
+- [x] Prove that the common Wilson chain forgets only global faithfulness and Wilson normalization to
+  construct Driver's exact Villain common heat chain. Attach the still-uninhabited Theorem 7.2
+  weak-limit contract to the literal spectral `Q_{ε²}` action at one positive spacing, deriving
+  normalized boundary-independent weak convergence and explicit two-versus-four separation.
 - [x] Combine the exact candidate coefficient time-addition law with weighted uniform-series
   convolution to prove the conditional positive-time spectral-family law `K_s⋆K_t=K_{s+t}` in
   `C(G,ℂ)` and pointwise in the fixed integral convention. Retain caller-supplied heat-trace

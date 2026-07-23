@@ -40,6 +40,23 @@ theorem exact_connected_group
     IsConnected (Set.univ : Set G) :=
   data.group_connected
 
+/-- The exact same common chain can be used by Driver's Villain theorem after forgetting only
+Wilson-specific global faithfulness and normalization. -/
+noncomputable def exact_villain_common_chain
+    (data : TwoDimensionalWilsonCommonHeatChainData (E := E) semigroup) :
+    TwoDimensionalVillainCommonHeatChainCoreData (E := E) semigroup :=
+  data.toVillainCommonHeatChainCoreData semigroup
+
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
+/-- Forgetting Wilson-specific data preserves the literal representation, pairing, heat core, and
+kernel. -/
+theorem exact_villain_common_chain_fields
+    (data : TwoDimensionalWilsonCommonHeatChainData (E := E) semigroup) :
+    let villain := data.toVillainCommonHeatChainCoreData semigroup
+    villain.representation = data.representation ∧
+      villain.inner = data.inner ∧ villain.heat = data.heat ∧ villain.kernel = data.kernel :=
+  ⟨rfl, rfl, rfl, rfl⟩
+
 omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
 /-- Every Wilson action uses the same smooth representation whose derivative drives the heat chain. -/
 theorem exact_wilson_representation

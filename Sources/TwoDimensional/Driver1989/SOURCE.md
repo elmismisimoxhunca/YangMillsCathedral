@@ -181,8 +181,12 @@ following-increment independence, the exact product spectral law, and its right-
 pushforward two-time law. Product Fubini and the exact spectral transition operator then derive the
 weak two-time current-state identity
 `E[φ(B_s)f(B_{s+t})]=E[φ(B_s)P_t f(B_s)]` for continuous tests, while leaving conditioning on the
-full past sigma-algebra and the stochastic-generator theorem explicit future debt. Neither
-coherence nor interchange is inhabited. The proof-required `B → VB` enlargement now has BC certificates on both graphs, literal coarse-edge
+full past sigma-algebra and the stochastic-generator theorem explicit future debt. The common
+Wilson chain now forgets only its stronger global-faithfulness/normalization fields to construct the
+exact Villain Theorem 8.5 common chain. An uninhabited spectral-Villain weak-limit bridge then ties
+Driver Theorem 7.2 to the literal `Q_{ε²}` action from that same spectral heat core at a positive
+spacing and derives normalized boundary-independent convergence from the unchanged weak-limit
+contract. Neither coherence nor interchange is inhabited. The proof-required `B → VB` enlargement now has BC certificates on both graphs, literal coarse-edge
 subdivision paths, the exact vertical/x-axis tree, total coverage excluding unrelated enlarged edges,
 and measurable ambient-compatible coarse restriction. Equation (6.1) is now an uninhabited universal interface: every bounded measurable coarse function
 factors through exact enlarged restriction and its base expectation equals the normalized vertical/x-

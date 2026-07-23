@@ -83,6 +83,17 @@ noncomputable def toWilsonCommonHeatChainData
   heat := bridge.spectralHeatKernel.heatEquationCore
   kernel := bridge.spectralHeatKernel.kernelOperator
 
+/-- Forget the Wilson-only fields after constructing the exact spectral common chain, yielding the
+unchanged Villain common heat chain required by Driver Theorem 8.5. -/
+noncomputable def toVillainCommonHeatChainCoreData
+    (bridge : TwoDimensionalWilsonSpectralHeatChainBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)) :
+    TwoDimensionalVillainCommonHeatChainCoreData (E := E)
+      bridge.spectralHeatKernel.convolutionSemigroup :=
+  bridge.toWilsonCommonHeatChainData.toVillainCommonHeatChainCoreData
+    bridge.spectralHeatKernel.convolutionSemigroup
+
 end TwoDimensionalWilsonSpectralHeatChainBridgeData
 
 end

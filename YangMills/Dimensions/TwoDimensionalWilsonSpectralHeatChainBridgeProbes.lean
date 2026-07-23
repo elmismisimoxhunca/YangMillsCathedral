@@ -49,6 +49,28 @@ noncomputable def exact_common_chain
       bridge.spectralHeatKernel.convolutionSemigroup :=
   bridge.toWilsonCommonHeatChainData
 
+/-- The spectral Wilson bridge yields the exact Villain common heat chain used by Driver 8.5. -/
+noncomputable def exact_spectral_villain_common_chain
+    (bridge : TwoDimensionalWilsonSpectralHeatChainBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)) :
+    TwoDimensionalVillainCommonHeatChainCoreData (E := E)
+      bridge.spectralHeatKernel.convolutionSemigroup :=
+  bridge.toVillainCommonHeatChainCoreData
+
+omit [FiniteDimensional ℝ E] in
+/-- Passing through the Wilson chain into the Villain chain preserves the spectral heat core and
+kernel literally. -/
+theorem exact_spectral_villain_heat_kernel
+    (bridge : TwoDimensionalWilsonSpectralHeatChainBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)) :
+    bridge.toVillainCommonHeatChainCoreData.heat =
+        bridge.spectralHeatKernel.heatEquationCore ∧
+      bridge.toVillainCommonHeatChainCoreData.kernel =
+        bridge.spectralHeatKernel.kernelOperator :=
+  ⟨rfl, rfl⟩
+
 omit [FiniteDimensional ℝ E] in
 /-- The common chain retains the exact smooth unitary representation supplied by the bridge. -/
 theorem exact_common_representation

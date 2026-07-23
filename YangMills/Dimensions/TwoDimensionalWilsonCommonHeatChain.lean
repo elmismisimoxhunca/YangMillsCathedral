@@ -6,6 +6,7 @@ Authors: Sebastian Rodrigo
 
 import YangMills.Dimensions.TwoDimensionalRepresentationInducedPairing
 import YangMills.Dimensions.TwoDimensionalSelectedLoopHeatKernelOperator
+import YangMills.Dimensions.TwoDimensionalVillainCommonHeatChain
 
 /-!
 # Common representation, Wilson action, pairing, Laplacian, and heat chain
@@ -56,6 +57,20 @@ structure TwoDimensionalWilsonCommonHeatChainData where
   kernel : TwoDimensionalSelectedLoopHeatKernelOperatorData heat
 
 namespace TwoDimensionalWilsonCommonHeatChainData
+
+/-- Forget only the genuinely stronger global representation faithfulness and Wilson normalization,
+retaining the exact connected representation/differential-induced-pairing/Laplacian/heat/kernel
+chain required by Driver's Villain Theorem 8.5. -/
+noncomputable def toVillainCommonHeatChainCoreData
+    (data : TwoDimensionalWilsonCommonHeatChainData (E := E) semigroup) :
+    TwoDimensionalVillainCommonHeatChainCoreData (E := E) semigroup where
+  group_connected := data.group_connected
+  representation := data.representation
+  inner := data.inner
+  pairing_coherence := data.pairing_coherence
+  laplacian := data.laplacian
+  heat := data.heat
+  kernel := data.kernel
 
 /-- The Wilson family uses the exact same representation and normalization stored by the common
 continuum heat chain. -/
