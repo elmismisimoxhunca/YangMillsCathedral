@@ -178,8 +178,9 @@ independent-increment process and that generated operator to share the spectral 
 the spectral increment and marginal laws together with the unconditional continuous-test increment
 expectation formula for the operator at every deterministic base point, together with the exact
 spectral product law for a positive process value and its following right increment and the induced
-two-time pushforward law; it does not claim a
-conditional-expectation/Markov transition theorem. Those new premises remain uninhabited. The conditional density result does not establish Lévy's
+two-time pushforward law. The continuous-test weak current-state identity
+`E[φ(B_s)f(B_{s+t})]=E[φ(B_s)P_t f(B_s)]` is derived by product Fubini, but no conditioning on the
+full past sigma-algebra is claimed. Those new premises remain uninhabited. The conditional density result does not establish Lévy's
 theorem at unrestricted generality. Global dual
 countability, summability and convergence of Lévy's genuinely infinite heat-kernel expansion,
 infinite-series inversion, and Casimir action remain source-backed targets.

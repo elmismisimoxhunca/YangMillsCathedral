@@ -34,7 +34,9 @@ increment and marginal laws and the unconditional equality at every deterministi
 continuous-test expectation after right multiplication by a positive stationary increment. The
 existing finite independent-increment law further derives process-value/following-increment
 independence, its exact spectral product law, and the corresponding right-multiplication pushforward
-two-time law. It does not construct
+two-time law. Product Fubini derives the continuous-test weak current-state identity
+`E[φ(B_s)f(B_{s+t})]=E[φ(B_s)P_t f(B_s)]`; conditioning on the full past sigma-algebra remains
+separate debt. It does not construct
 the process or infer a Markov conditional-expectation/stochastic-generator theorem.
 
 ## Artifact chain

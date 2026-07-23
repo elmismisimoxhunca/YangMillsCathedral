@@ -178,8 +178,10 @@ proving at every deterministic base point that its action on every continuous te
 unconditional expectation of that test after right multiplication by any positive stationary
 increment. Finite consecutive-increment independence and identity start also derive process-value/
 following-increment independence, the exact product spectral law, and its right-multiplication
-pushforward two-time law, while leaving the stronger
-conditional-expectation/Markov generator theorem explicit future debt. Neither
+pushforward two-time law. Product Fubini and the exact spectral transition operator then derive the
+weak two-time current-state identity
+`E[φ(B_s)f(B_{s+t})]=E[φ(B_s)P_t f(B_s)]` for continuous tests, while leaving conditioning on the
+full past sigma-algebra and the stochastic-generator theorem explicit future debt. Neither
 coherence nor interchange is inhabited. The proof-required `B → VB` enlargement now has BC certificates on both graphs, literal coarse-edge
 subdivision paths, the exact vertical/x-axis tree, total coverage excluding unrelated enlarged edges,
 and measurable ambient-compatible coarse restriction. Equation (6.1) is now an uninhabited universal interface: every bounded measurable coarse function

@@ -888,9 +888,11 @@ committed before higher layers depend on it.
   between the operator and each continuous-test expectation after right multiplication by a
   positive stationary increment. Derive process-value/following-right-increment independence from
   finite consecutive-increment independence and identity start, then derive its exact two-factor
-  spectral product law and the right-multiplication pushforward two-time process law. Keep
-  conditional-expectation/Markov transition identification as explicit future proof debt and reject
-  changed spectral increment and joint laws.
+  spectral product law and the right-multiplication pushforward two-time process law. Use product
+  Fubini and the exact spectral transition operator to derive the continuous-test weak current-state
+  identity `E[φ(B_s)f(B_{s+t})]=E[φ(B_s)P_t f(B_s)]`. Keep conditioning on the full past
+  sigma-algebra and stochastic-generator identification as explicit future proof debt, and reject
+  changed spectral increment, joint, and weak-Markov laws.
 - [x] Combine the exact candidate coefficient time-addition law with weighted uniform-series
   convolution to prove the conditional positive-time spectral-family law `K_s⋆K_t=K_{s+t}` in
   `C(G,ℂ)` and pointwise in the fixed integral convention. Retain caller-supplied heat-trace

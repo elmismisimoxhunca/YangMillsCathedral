@@ -233,6 +233,29 @@ theorem generated_operator_eq_rightIncrementIntegral
       rw [show (g * x)⁻¹ * g = x⁻¹ by group,
         unitaryMatrixDualCasimirHeatDensityReal_inv heatTraceData ht]
 
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Driver's generated operator is integration after deterministic right multiplication against the
+exact spectral probability measure. -/
+theorem generated_operator_eq_spectralMeasureIntegral
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (t : ℝ) (ht : 0 < t) (f : C(G, ℝ)) (g : G) :
+    bridge.spectralHeatKernel.kernelOperator.heatOperator t f g =
+      ∫ x, f (g * x) ∂unitaryMatrixDualCasimirHeatProbabilityMeasure heatTraceData t := by
+  let translated : C(G, ℝ) :=
+    ⟨fun x => f (g * x), f.continuous.comp (continuous_const_mul g)⟩
+  calc
+    bridge.spectralHeatKernel.kernelOperator.heatOperator t f g =
+        ∫ x, unitaryMatrixDualCasimirHeatDensityReal heatTraceData t x * f (g * x)
+          ∂normalizedCompactHaarMeasure G :=
+      bridge.generated_operator_eq_rightIncrementIntegral t ht f g
+    _ = ∫ x, translated x ∂(normalizedCompactHaarMeasure G).withDensity
+          (unitaryMatrixDualCasimirHeatDensityENNReal heatTraceData t) :=
+      (bridge.integral_spectralDensity_eq_integral_densityReal_mul t ht translated).symm
+    _ = ∫ x, f (g * x)
+          ∂unitaryMatrixDualCasimirHeatProbabilityMeasure heatTraceData t := rfl
+
 omit [FiniteDimensional ℝ E] in
 /-- At every deterministic base point, Driver's generated heat operator is exactly expectation of a
 continuous test after right multiplication by any positive Brownian increment. This remains an
@@ -270,6 +293,105 @@ theorem generated_operator_eq_rightIncrementExpectation
       rw [hmap]
     _ = ∫ samplePoint, translated (increment samplePoint) ∂bridge.brownian.probabilityMeasure :=
       hintegralMap
+
+omit [FiniteDimensional ℝ E] in
+/-- Two-time continuous tests satisfy the weak state-Markov identity with the exact generated
+operator. This is derived from the spectral two-time law and product Fubini. It quantifies only over
+the current-state observable `φ(B_s)` and therefore does not assert conditioning on the full past
+sigma-algebra. -/
+theorem twoTime_weakMarkov_identity
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (s t : NNReal) (hs : 0 < s) (ht : 0 < t) (φ f : C(G, ℝ)) :
+    (∫ samplePoint, φ (bridge.brownian.process s samplePoint) *
+      f (bridge.brownian.process (s + t) samplePoint)
+        ∂bridge.brownian.probabilityMeasure) =
+      ∫ samplePoint, φ (bridge.brownian.process s samplePoint) *
+        bridge.spectralHeatKernel.kernelOperator.heatOperator (t : ℝ) f
+          (bridge.brownian.process s samplePoint)
+        ∂bridge.brownian.probabilityMeasure := by
+  let μs := unitaryMatrixDualCasimirHeatProbabilityMeasure heatTraceData (s : ℝ)
+  let μt := unitaryMatrixDualCasimirHeatProbabilityMeasure heatTraceData (t : ℝ)
+  let processPair : Ω → G × G := fun samplePoint =>
+    (bridge.brownian.process s samplePoint, bridge.brownian.process (s + t) samplePoint)
+  let multiplyIncrement : G × G → G × G := fun pair => (pair.1, pair.1 * pair.2)
+  let pairTest : C(G × G, ℝ) :=
+    ⟨fun pair => φ pair.1 * f pair.2,
+      (φ.continuous.comp continuous_fst).mul (f.continuous.comp continuous_snd)⟩
+  let stateTest : C(G, ℝ) :=
+    ⟨fun x => φ x * bridge.spectralHeatKernel.kernelOperator.heatOperator (t : ℝ) f x,
+      φ.continuous.mul
+        (bridge.spectralHeatKernel.kernelOperator.heatOperator (t : ℝ) f).continuous⟩
+  have processPair_measurable : Measurable processPair :=
+    (bridge.brownian.process_measurable s).prodMk
+      (bridge.brownian.process_measurable (s + t))
+  have multiplyIncrement_measurable : Measurable multiplyIncrement :=
+    measurable_fst.prodMk (measurable_fst.mul measurable_snd)
+  letI : IsFiniteMeasure μs :=
+    ⟨by
+      rw [unitaryMatrixDualCasimirHeatProbabilityMeasure_univ
+        bridge.spectralHeatKernel.heatEquationBridge.spectralDensityBridge.casimirBridge
+        bridge.spectralHeatKernel.heatEquationBridge.spectralDensityBridge.positivity
+        (by exact_mod_cast hs)]
+      exact ENNReal.one_lt_top⟩
+  letI : IsFiniteMeasure μt :=
+    ⟨by
+      rw [unitaryMatrixDualCasimirHeatProbabilityMeasure_univ
+        bridge.spectralHeatKernel.heatEquationBridge.spectralDensityBridge.casimirBridge
+        bridge.spectralHeatKernel.heatEquationBridge.spectralDensityBridge.positivity
+        (by exact_mod_cast ht)]
+      exact ENNReal.one_lt_top⟩
+  have pairIntegrable : Integrable
+      (fun pair : G × G => φ pair.1 * f (pair.1 * pair.2)) (μs.prod μt) := by
+    have hc : Continuous (fun pair : G × G => φ pair.1 * f (pair.1 * pair.2)) := by
+      exact (φ.continuous.comp continuous_fst).mul
+        (f.continuous.comp (continuous_fst.mul continuous_snd))
+    simpa only [integrableOn_univ] using
+      hc.continuousOn.integrableOn_compact (μ := μs.prod μt) isCompact_univ
+  have processPairIntegral :
+      (∫ pair, pairTest pair ∂Measure.map processPair bridge.brownian.probabilityMeasure) =
+        ∫ samplePoint, pairTest (processPair samplePoint)
+          ∂bridge.brownian.probabilityMeasure :=
+    integral_map processPair_measurable.aemeasurable pairTest.continuous.aestronglyMeasurable
+  have stateIntegral :
+      (∫ x, stateTest x ∂Measure.map (bridge.brownian.process s)
+        bridge.brownian.probabilityMeasure) =
+        ∫ samplePoint, stateTest (bridge.brownian.process s samplePoint)
+          ∂bridge.brownian.probabilityMeasure :=
+    integral_map (bridge.brownian.process_measurable s).aemeasurable
+      stateTest.continuous.aestronglyMeasurable
+  calc
+    (∫ samplePoint, φ (bridge.brownian.process s samplePoint) *
+        f (bridge.brownian.process (s + t) samplePoint)
+          ∂bridge.brownian.probabilityMeasure) =
+      ∫ pair, pairTest pair ∂Measure.map processPair bridge.brownian.probabilityMeasure := by
+        exact processPairIntegral.symm
+    _ = ∫ pair, pairTest pair ∂Measure.map multiplyIncrement (μs.prod μt) := by
+      rw [bridge.process_twoTime_law_spectral s t hs ht]
+      rfl
+    _ = ∫ pair, pairTest (multiplyIncrement pair) ∂μs.prod μt :=
+      integral_map multiplyIncrement_measurable.aemeasurable
+        pairTest.continuous.aestronglyMeasurable
+    _ = ∫ x, ∫ y, φ x * f (x * y) ∂μt ∂μs := by
+      exact integral_prod _ pairIntegrable
+    _ = ∫ x, stateTest x ∂μs := by
+      apply integral_congr_ae
+      filter_upwards [] with x
+      change (∫ y, φ x * f (x * y) ∂μt) =
+        φ x * bridge.spectralHeatKernel.kernelOperator.heatOperator (t : ℝ) f x
+      rw [bridge.generated_operator_eq_spectralMeasureIntegral
+        (t : ℝ) (by exact_mod_cast ht) f x]
+      rw [integral_const_mul]
+    _ = ∫ x, stateTest x ∂Measure.map (bridge.brownian.process s)
+          bridge.brownian.probabilityMeasure := by
+      rw [bridge.marginal_law_spectral s hs]
+      rfl
+    _ = ∫ samplePoint, φ (bridge.brownian.process s samplePoint) *
+        bridge.spectralHeatKernel.kernelOperator.heatOperator (t : ℝ) f
+          (bridge.brownian.process s samplePoint)
+          ∂bridge.brownian.probabilityMeasure := by
+      exact stateIntegral
 
 omit [FiniteDimensional ℝ E] in
 /-- At the identity, Driver's generated heat operator is exactly expectation of a continuous test

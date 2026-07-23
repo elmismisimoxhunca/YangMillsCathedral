@@ -154,6 +154,42 @@ theorem changed_operator_right_increment_expectation_blocked
   exact bridge.generated_operator_eq_rightIncrementExpectation g s t ht f
 
 omit [FiniteDimensional ℝ E] in
+/-- Continuous two-time state tests satisfy the exact weak Markov identity. -/
+theorem exact_twoTime_weakMarkov_identity
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (s t : NNReal) (hs : 0 < s) (ht : 0 < t) (φ f : C(G, ℝ)) :
+    (∫ samplePoint, φ (bridge.brownian.process s samplePoint) *
+      f (bridge.brownian.process (s + t) samplePoint)
+        ∂bridge.brownian.probabilityMeasure) =
+      ∫ samplePoint, φ (bridge.brownian.process s samplePoint) *
+        bridge.spectralHeatKernel.kernelOperator.heatOperator (t : ℝ) f
+          (bridge.brownian.process s samplePoint)
+        ∂bridge.brownian.probabilityMeasure :=
+  bridge.twoTime_weakMarkov_identity s t hs ht φ f
+
+omit [FiniteDimensional ℝ E] in
+/-- Hostile weak-Markov probe: a changed two-time operator integral is contradictory. -/
+theorem changed_twoTime_weakMarkov_identity_blocked
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (s t : NNReal) (hs : 0 < s) (ht : 0 < t) (φ f : C(G, ℝ)) (changed : ℝ)
+    (hchanged : changed ≠
+      ∫ samplePoint, φ (bridge.brownian.process s samplePoint) *
+        bridge.spectralHeatKernel.kernelOperator.heatOperator (t : ℝ) f
+          (bridge.brownian.process s samplePoint)
+        ∂bridge.brownian.probabilityMeasure)
+    (changedIdentity :
+      (∫ samplePoint, φ (bridge.brownian.process s samplePoint) *
+        f (bridge.brownian.process (s + t) samplePoint)
+          ∂bridge.brownian.probabilityMeasure) = changed) : False := by
+  apply hchanged
+  rw [← changedIdentity]
+  exact bridge.twoTime_weakMarkov_identity s t hs ht φ f
+
+omit [FiniteDimensional ℝ E] in
 /-- At the identity, the generated operator is exactly the unconditional expectation of every
 continuous test of a positive Brownian right increment. -/
 theorem exact_operator_increment_expectation

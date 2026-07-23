@@ -5246,8 +5246,11 @@ base-point-sensitive changed-expectation hostility. The existing finite consecut
 and almost-sure identity start further derive independence of every process value from its following
 right increment. At positive times this yields the exact product of two spectral density measures
 and, by the noncommutative map `(x,y) ↦ (x,x*y)`, the exact two-time process law, with changed-joint-
-law hostility. The stronger conditional-expectation/Markov transition identification remains
-explicit future proof debt.
+law hostility. The operator is also identified directly as deterministic right-translation
+integration against the spectral probability measure. Product Fubini then derives the exact
+continuous-test weak current-state identity
+`E[φ(B_s)f(B_{s+t})]=E[φ(B_s)P_t f(B_s)]`, with changed-identity hostility. Conditioning on the full
+past sigma-algebra and stochastic-generator identification remain explicit future proof debt.
 Combining the convolution formula with the exact candidate coefficient time-addition law now proves
 the conditional positive-time spectral-family convolution law `K_s⋆K_t=K_{s+t}` in `C(G,ℂ)` and
 pointwise in the fixed integral order. No inhabitant of either the heat-trace data or the geometric
