@@ -117,7 +117,9 @@ explicit weighted condition `Summable (‖a_q‖dim(q))` have an unconditional f
 net converging uniformly to a continuous central function, with exact pointwise `tsum`, identity
 value, and Weierstrass bound. Exact normalized-Haar analysis recovers every weighted-series
 coefficient, `∫conj(χ_q)(∑a_rχ_r)=a_q`; each weighted coefficient family has countable nonzero
-support and weighted uniform synthesis is injective. This is a conditional weighted-series inversion
+support and weighted uniform synthesis is injective. The exact normalized-Haar character convolution formula
+`χ_q⋆χ_r = δ_{qr}dim(q)⁻¹χ_q` is now derived directly from selected matrix-coefficient orthogonality,
+with the unchanged `f(x)g(x⁻¹z)` convention. This is a conditional weighted-series inversion
 theorem on its own explicitly summable domain, not a general Fourier inversion statement; no
 countably ordered Fourier expansion, pointwise/uniform inversion of an
 arbitrary input, or unrestricted infinite synthesis identity is claimed. An explicit uninhabited

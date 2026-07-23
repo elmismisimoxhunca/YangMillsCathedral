@@ -821,6 +821,11 @@ committed before higher layers depend on it.
   Weierstrass bound, coefficient time-addition law, Haar coefficient recovery, and derived dual
   countability. Do not call it a heat kernel before Laplacian action, heat equation, semigroup,
   pointwise positivity of the summed function, and normalization are connected.
+- [x] Derive the exact normalized-Haar selected-character convolution law directly from matrix-
+  coefficient orthogonality:
+  `χ_q ⋆ χ_r = if q=r then dim(q)⁻¹χ_q else 0`, with the unchanged
+  `(f⋆g)(z)=∫f(x)g(x⁻¹z)` convention. Probe inverse-dimension normalization, mixed-class zero, and
+  central-character commutativity without weakening the ambient nonabelian convolution order.
 - [ ] Prove the general compact-Hausdorff-group Peter–Weyl point-separation/density theorem without
   assuming one faithful finite-dimensional representation; do not conflate this with the completed
   conditional compact matrix-group theorem.
