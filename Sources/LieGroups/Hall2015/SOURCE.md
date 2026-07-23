@@ -101,7 +101,9 @@ weighted series now recovers every original coefficient exactly, equivalently
 `∫conj(χ_q)(∑a_rχ_r)=a_q`; weighted coefficient support is countable and weighted uniform synthesis
 is injective. Independently, the exact normalized-Haar convolution calculation now gives
 `χ_q⋆χ_r = δ_{qr} dim(q)⁻¹χ_q` directly from matrix-coefficient orthogonality, retaining the
-project's `f(x)g(x⁻¹z)` order. This remains conditional only where density/completeness or weighted summability is
+project's `f(x)g(x⁻¹z)` order. Bounded linearity of continuous convolution then extends this
+coefficientwise to both explicitly weighted unconditional uniform character sums, without assuming
+Peter–Weyl completeness or exchanging an unjustified infinite sum with an integral. This remains conditional only where density/completeness or weighted summability is
 invoked and is not a countably ordered Fourier
 partial-sum construction: it does not prove the
 general compact-group Peter–Weyl theorem, global dual countability, an unrestricted infinite

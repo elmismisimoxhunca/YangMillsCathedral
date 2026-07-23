@@ -121,7 +121,10 @@ support and weighted uniform synthesis is injective. The exact normalized-Haar c
 under the explicit second-countability required by Mathlib's parametric-integral theorem, with
 `‖f⋆g‖∞≤‖f‖∞‖g‖∞` and bounded linear operators after fixing either ordered input. The exact
 character formula `χ_q⋆χ_r = δ_{qr}dim(q)⁻¹χ_q` is derived directly from selected
-matrix-coefficient orthogonality, with the unchanged `f(x)g(x⁻¹z)` convention. This is a conditional weighted-series inversion
+matrix-coefficient orthogonality, with the unchanged `f(x)g(x⁻¹z)` convention. Bounded linearity
+then extends it to both explicitly weighted unconditional uniform character sums as
+`series(a)⋆series(b)=series(a_qb_qdim(q)⁻¹)`, without an unjustified infinite sum/integral
+exchange. This is a conditional weighted-series inversion
 theorem on its own explicitly summable domain, not a general Fourier inversion statement; no
 countably ordered Fourier expansion, pointwise/uniform inversion of an
 arbitrary input, or unrestricted infinite synthesis identity is claimed. An explicit uninhabited

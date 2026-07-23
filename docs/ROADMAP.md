@@ -829,6 +829,10 @@ committed before higher layers depend on it.
   `χ_q ⋆ χ_r = if q=r then dim(q)⁻¹χ_q else 0`, with the unchanged
   `(f⋆g)(z)=∫f(x)g(x⁻¹z)` convention. Probe inverse-dimension normalization, mixed-class zero, and
   central-character commutativity without weakening the ambient nonabelian convolution order.
+- [x] Extend character convolution through two explicitly weighted unconditional uniform sums using
+  bounded linear convolution operators: `series(a)⋆series(b)=series(a_qb_qdim(q)⁻¹)`. Expose
+  one-sided coefficient extraction and central-series commutativity, with changed-output hostile
+  probes; do not use completeness or an unjustified infinite sum/integral exchange.
 - [ ] Prove the general compact-Hausdorff-group Peter–Weyl point-separation/density theorem without
   assuming one faithful finite-dimensional representation; do not conflate this with the completed
   conditional compact matrix-group theorem.

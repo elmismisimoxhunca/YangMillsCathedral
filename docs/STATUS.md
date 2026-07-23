@@ -5189,8 +5189,11 @@ ensure this packaging does not introduce ambient commutativity. The exact normal
 selected-character convolution law is now proved directly:
 `χ_q⋆χ_r = if q=r then dim(q)⁻¹χ_q else 0`, retaining the project's fixed
 `(f⋆g)(z)=∫f(x)g(x⁻¹z)` order. Distinct classes vanish and central characters commute under this
-otherwise nonabelian convention. No Casimir/Laplacian identification, heat equation, infinite-series
-convolution semigroup, pointwise positivity of the summed function, Haar normalization, or
+otherwise nonabelian convention. Bounded linear convolution now extends that law through both
+explicitly weighted unconditional uniform sums, giving
+`series(a)⋆series(b)=series(a_qb_qdim(q)⁻¹)` without completeness or an unjustified sum/integral
+exchange. No Casimir/Laplacian identification, heat equation, candidate spectral-series convolution
+semigroup, pointwise positivity of the summed function, Haar normalization, or
 heat-kernel claim is made. The earlier approximation choices remain arbitrary
 finite approximants, not Fourier partial sums; general compact-group density,
 global dual countability, unrestricted infinite synthesis/inversion identities, and convergence of a canonically
