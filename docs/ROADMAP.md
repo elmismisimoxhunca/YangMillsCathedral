@@ -847,6 +847,11 @@ committed before higher layers depend on it.
   summability from the heat trace at `t/2`, the individual coefficient derivative, unconditional
   finite-subset convergence, pointwise `tsum`, and a Weierstrass norm bound. Keep identification
   with the derivative of the original infinite series as an explicit future interchange obligation.
+- [x] Construct the uniformly convergent formal Laplacian series with coefficients
+  `-c_q dim(q)e^{-tc_q/2}` and prove it equals twice the derivative-candidate series. Isolate the
+  remaining spatial smoothness/Laplacian and time-derivative passages in uninhabited
+  `UnitaryMatrixDualCasimirHeatEquationInterchangeData`; derive `∂ₜK_t=½ΔK_t` only conditionally on
+  those exact fields, with changed-derivative hostility. Do not claim an unconditional heat equation.
 - [x] Combine the exact candidate coefficient time-addition law with weighted uniform-series
   convolution to prove the conditional positive-time spectral-family law `K_s⋆K_t=K_{s+t}` in
   `C(G,ℂ)` and pointwise in the fixed integral convention. Retain caller-supplied heat-trace

@@ -5203,10 +5203,15 @@ Heat-trace summability at `t/2` now also controls the exact coefficient-derivati
 the proved estimate `(c/2)e^{-tc/2}≤(2/t)e^{-tc/4}` yields weighted summability, unconditional
 uniform finite-subset convergence, a pointwise derivative-candidate `tsum`, and a Weierstrass norm
 bound. This candidate is not yet identified with the time derivative of the original infinite
-series. Combining the convolution formula with the exact candidate coefficient time-addition law now proves
+series. The formal Laplacian coefficient series is now also uniformly convergent and exactly twice
+the derivative candidate. Uninhabited `UnitaryMatrixDualCasimirHeatEquationInterchangeData`
+isolates spatial smoothness/Laplacian passage and pointwise time differentiation; the pointwise
+`∂ₜK_t=½ΔK_t` equation is derived only from those fields, not unconditionally. Combining the
+convolution formula with the exact candidate coefficient time-addition law now proves
 the conditional positive-time spectral-family convolution law `K_s⋆K_t=K_{s+t}` in `C(G,ℂ)` and
 pointwise in the fixed integral order. No inhabitant of either the heat-trace data or the geometric
-bridge is constructed; no time-zero identity, infinite-series heat equation, pointwise positivity of
+bridge or interchange data is constructed; no time-zero identity, unconditional infinite-series
+heat equation, pointwise positivity of
 the summed function, Haar normalization, or heat-kernel claim is made. The earlier approximation choices remain arbitrary
 finite approximants, not Fourier partial sums; general compact-group density,
 global dual countability, unrestricted infinite synthesis/inversion identities, and convergence of a canonically

@@ -150,7 +150,11 @@ Laplacian and candidate spectral weights. It proves eigenvalue uniqueness, the e
 bridge or differentiate the infinite series. Independently, heat-trace summability at time `t/2`
 now proves weighted uniform convergence of the exact coefficient-derivative series at time `t`,
 using `(c/2)e^{-tc/2}≤(2/t)e^{-tc/4}`; this constructs the candidate derivative function but still
-does not justify differentiating the original series. The proof-required `B → VB` enlargement now has BC certificates on both graphs, literal coarse-edge
+does not justify differentiating the original series. The corresponding formal Laplacian series is
+proved uniformly convergent and exactly twice the derivative-candidate series. An explicit
+uninhabited interchange record now isolates spatial smoothness/Laplacian passage and pointwise time
+differentiation; only from those fields is Driver's pointwise `∂ₜK_t=½ΔK_t` equation derived. No
+interchange inhabitant is constructed. The proof-required `B → VB` enlargement now has BC certificates on both graphs, literal coarse-edge
 subdivision paths, the exact vertical/x-axis tree, total coverage excluding unrelated enlarged edges,
 and measurable ambient-compatible coarse restriction. Equation (6.1) is now an uninhabited universal interface: every bounded measurable coarse function
 factors through exact enlarged restriction and its base expectation equals the normalized vertical/x-

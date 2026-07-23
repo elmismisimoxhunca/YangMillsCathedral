@@ -144,7 +144,10 @@ infinite-series differentiation/heat equation, pointwise positivity of the summe
 normalization, or heat-kernel status. Heat-trace summability at time `t/2` does now prove weighted
 uniform convergence of the exact coefficient-derivative series at time `t`, via
 `(c/2)e^{-tc/2}≤(2/t)e^{-tc/4}`; this constructs the derivative candidate without asserting that it
-is the derivative of the original infinite series. The conditional density result does not establish Lévy's
+is the derivative of the original infinite series. The formal Laplacian coefficient series is also
+uniformly convergent and exactly twice this derivative candidate. A separate uninhabited
+interchange record requires spatial smoothness/Laplacian passage and pointwise time differentiation;
+only conditionally on those explicit fields does the pointwise equation `∂ₜK_t=½ΔK_t` follow. The conditional density result does not establish Lévy's
 theorem at unrestricted generality. Global dual
 countability, summability and convergence of Lévy's genuinely infinite heat-kernel expansion,
 infinite-series inversion, and Casimir action remain source-backed targets.
