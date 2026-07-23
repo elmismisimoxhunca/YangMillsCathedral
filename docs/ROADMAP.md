@@ -1356,13 +1356,20 @@ committed before higher layers depend on it.
     realization without repeated bonds, coarse-face substitution equals the signed fine-face
     boundary after internal cancellation, and parametrized external paths/vertices/regions persist. An explicit homeomorphism uses
     endpoint-preserving edge and marked-disk reparametrizations to transport the Fact 3 target; its
-    boundary action realizes the stored sign, with positive exactly the orientable
-    orientation-preserving case.
+    marked-boundary action realizes independent simplex orientations, with positive exactly the
+    orientable orientation-preserving case, orientable negative reversing, and nonorientable
+    negative permitting arbitrary local choices.
   - [x] State universal acceptance for the curve-fixed embedded Fact 2 subclass at fixed universe
     levels by quantifying over a concrete bundled candidate type—not an arbitrary relation predicate—
     and requiring an exact matching factor certificate for every candidate, candidate nonemptiness,
     and the nonorientable fixed-twist condition. Retain subdivisions that split curve bonds, full
-    universal Fact 2, inhabitation, and universal Fact 3 as debt.
+    universal Fact 2 and inhabitation as debt.
+  - [x] State universal acceptance for the directly cellwise-compatible embedded Fact 3 subclass at
+    fixed universe levels using a concrete bundled target/homeomorphism candidate type, exact
+    total-area, independent face-orientation, and global-sign semantics, a matching factor
+    certificate for every candidate, candidate nonemptiness, and the nonorientable fixed twist.
+    Retain homeomorphisms requiring preliminary source/target subdivision, full universal Fact 3,
+    and inhabitation as debt.
   - [x] Dependently require closed triangular incidence for the exact finite-law heat-factor base and
     the exact fine/transported candidates used by one Facts 2–3 bridge. Keep this combined bridge
     separate from the augmented record until embedded and universal source semantics are available.
@@ -1372,9 +1379,10 @@ committed before higher layers depend on it.
     faces, and ordinary/fixed-twist factor equality. Retain embedded boundary-word subdivision
     and quantification over every valid source subdivision as debt.
   - [x] Add a one-pair factor-level Fact 3 building block on one normalized semigroup and central
-    twist, with external/internal edge, face, and region equivalences preserving areas,
-    contravariant external-field transport, exact sign-dependent word/reverse-word and `h`/`h⁻¹`
-    orientation semantics, and ordinary and
+    twist, with external/internal edge, face, and region equivalences preserving mapped region-total
+    area without fixing simplex allocations or twist faces,
+    contravariant external-field transport, independent per-face word/reverse-word choices and exact
+    global `h`/`h⁻¹` sign semantics, and ordinary and
     twisted factor equality. Retain actual area-preserving homeomorphisms, curve reparameterization,
     and universal source quantification as debt.
   - [x] Dependently tie both one-pair Facts 2–3 certificates to the exact triangulation, covering

@@ -38,7 +38,7 @@ variable
 sign, including reversal in the negative case. -/
 theorem exact_boundary_word_transport (face : SourceFace) :
     target.boundaryWord (data.faceEquiv face) =
-      senguptaTransportedBoundaryWord data.orientationSign
+      senguptaTransportedBoundaryWordByReversal (data.faceOrientationReversed face)
         (Sum.map data.externalEdgeEquiv data.internalEdgeEquiv) (source.boundaryWord face) :=
   data.boundaryWord_coherence face
 
@@ -55,18 +55,17 @@ theorem exact_central_twist (element : CoverGroup) :
     bundleClass * element = element * bundleClass :=
   data.bundleClass_central element
 
-/-- Region, area, and distinguished-face transport are exact. -/
-theorem exact_face_transport (face : SourceFace) :
+/-- Face-region transport and source-required mapped region-total area are exact. -/
+theorem exact_face_region_and_total_area (face : SourceFace) (region : SourceRegion) :
     target.faceRegion (data.faceEquiv face) = data.regionEquiv (source.faceRegion face) ∧
-    target.faceArea (data.faceEquiv face) = source.faceArea face :=
-  ⟨data.faceRegion_coherence face, data.faceArea_coherence face⟩
+    target.regionArea (data.regionEquiv region) = source.regionArea region :=
+  ⟨data.faceRegion_coherence face, data.regionArea_coherence region⟩
 
-/-- Hostile twist-face transport probe. -/
-theorem changed_distinguished_face_blocked
-    (region : SourceRegion)
-    (changed : data.faceEquiv (source.distinguishedFace region) ≠
-      target.distinguishedFace (data.regionEquiv region)) : False :=
-  changed (data.distinguishedFace_coherence region)
+include data in
+/-- Hostile total-area probe: simplex allocations and twist faces may vary, but total area may not. -/
+theorem changed_mapped_region_total_blocked (region : SourceRegion)
+    (changed : target.regionArea (data.regionEquiv region) ≠ source.regionArea region) : False :=
+  changed (data.regionArea_coherence region)
 
 /-- Hostile ordinary Fact 3 probe. -/
 theorem changed_ordinary_homeomorphism_factor_blocked
@@ -89,7 +88,8 @@ theorem changed_twisted_homeomorphism_factor_blocked
 
 omit [TopologicalSpace CoverGroup] [IsTopologicalGroup CoverGroup] [CompactSpace CoverGroup]
     [MeasurableSpace CoverGroup] [BorelSpace CoverGroup] in
-/-- The two source signs have exact `h`/`h⁻¹` and boundary-word/inverse-word semantics. -/
+/-- The two global source signs have exact `h`/`h⁻¹` semantics. The displayed word formulas remain
+helper specializations; actual nonorientable face reversal choices are stored independently. -/
 theorem exact_orientation_sign_transport (word : List (OrientedEdge SourceEdge))
     (edgeMap : SourceEdge → TargetEdge) :
     senguptaTransportedBundleClass .positive bundleClass = bundleClass ∧

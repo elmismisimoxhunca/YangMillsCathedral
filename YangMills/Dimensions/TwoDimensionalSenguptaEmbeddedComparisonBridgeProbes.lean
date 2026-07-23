@@ -161,24 +161,26 @@ theorem exact_homeomorphism_edge_path (edge : Sum Edge InternalEdge)
   ⟨data.homeomorphism_edgePath edge point, data.targetEdgeReparam_initial edge,
     data.targetEdgeReparam_terminal edge⟩
 
-/-- The stored Fact 3 sign is exactly realized by the boundary action of the actual disk
-homeomorphisms. -/
-theorem exact_homeomorphism_orientation_sign :
-    match embeddedFiniteLaw.closedInvariance.invariance.homeomorphism.orientationSign with
-    | .positive => ∀ face side point,
-        data.faceReparam face (senguptaCircleToClosedDisk
-          (embeddedFiniteLaw.embeddedBase.faceSideParam face side point)) =
-        senguptaCircleToClosedDisk
-          (data.embeddedTarget.faceSideParam
-            (embeddedFiniteLaw.closedInvariance.invariance.homeomorphism.faceEquiv face) side point)
-    | .negative => ∀ face side point,
+/-- The actual disk-boundary action realizes each independently selected simplex orientation;
+the nonorientable global negative sign does not force local reversal. -/
+theorem exact_homeomorphism_face_orientation (face : Face) :
+    if embeddedFiniteLaw.closedInvariance.invariance.homeomorphism.faceOrientationReversed face then
+      ∀ side point,
         data.faceReparam face (senguptaCircleToClosedDisk
           (embeddedFiniteLaw.embeddedBase.faceSideParam face side point)) =
         senguptaCircleToClosedDisk
           (data.embeddedTarget.faceSideParam
             (embeddedFiniteLaw.closedInvariance.invariance.homeomorphism.faceEquiv face)
-            (Fin.rev side) (senguptaReverseClosedUnitInterval point)) :=
-  data.faceReparam_realizes_orientationSign
+            (Fin.rev side) (senguptaReverseClosedUnitInterval point))
+    else
+      ∀ side point,
+        data.faceReparam face (senguptaCircleToClosedDisk
+          (embeddedFiniteLaw.embeddedBase.faceSideParam face side point)) =
+        senguptaCircleToClosedDisk
+          (data.embeddedTarget.faceSideParam
+            (embeddedFiniteLaw.closedInvariance.invariance.homeomorphism.faceEquiv face)
+            side point) :=
+  data.faceReparam_realizes_faceOrientation face
 
 /-- Positive is equivalent to an orientable source plus actual marked-boundary orientation
 preservation. -/

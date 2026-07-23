@@ -10,9 +10,11 @@ import YangMills.Dimensions.TwoDimensionalSenguptaTriangulatedHeatFactors
 
 This file isolates a finite-face candidate comparison toward Sengupta Definition 7.6, Fact 3. Source
 and target presentations are related by explicit external/internal edge, face, and region
-equivalences; face regions and areas commute. Under one shared orientation sign, oriented boundary
-words are preserved or reversed/flipped, and the source twist `h` is transported as `h` for positive
-orientation and `h⁻¹` for negative orientation, and ordinary/twisted
+equivalences; face regions and oriented words commute, while only mapped region-total areas are fixed
+as required by the source. Fact 1 permits simplex-area redistribution and Fact 0 removes the twist
+face choice. Each face records whether its independently chosen simplex orientation is reversed, while the global
+source sign transports the twist `h` as `h` for positive orientation and `h⁻¹` for negative
+orientation. Keeping these separate is essential for nonorientable surfaces, and ordinary/twisted
 fixed-boundary factors are required to agree after transporting the external field.
 
 This remains an uninhabited combinatorial comparison. It does not construct an area-preserving
@@ -58,6 +60,14 @@ def senguptaTransportedBoundaryWord {Edge TargetEdge : Type*}
   | .positive => word.map (senguptaMapOrientedEdge edgeMap)
   | .negative => reverseFiniteOrientedWord (word.map (senguptaMapOrientedEdge edgeMap))
 
+/-- Transport a boundary word using its independently chosen source/target simplex orientation. -/
+def senguptaTransportedBoundaryWordByReversal {Edge TargetEdge : Type*}
+    (reverseOrientation : Bool) (edgeMap : Edge → TargetEdge)
+    (word : List (OrientedEdge Edge)) : List (OrientedEdge TargetEdge) :=
+  if reverseOrientation then
+    reverseFiniteOrientedWord (word.map (senguptaMapOrientedEdge edgeMap))
+  else word.map (senguptaMapOrientedEdge edgeMap)
+
 /-- Transport an external field through an edge equivalence. -/
 def senguptaTransportExternalField
     {SourceEdge : Type uSourceEdge} {TargetEdge : Type uTargetEdge}
@@ -88,20 +98,22 @@ structure TwoDimensionalSenguptaHomeomorphismFactorInvarianceData where
   coverSemigroup : NormalizedCompactHaarDensitySemigroupData coverDensity
   bundleClass_central : ∀ element, bundleClass * element = element * bundleClass
   orientationSign : SenguptaHomeomorphismOrientationSign
+  /-- Simplex boundary orientations are independent of the global `h`/`h⁻¹` sign in the
+  nonorientable case. -/
+  faceOrientationReversed : SourceFace → Bool
   externalEdgeEquiv : SourceEdge ≃ TargetEdge
   internalEdgeEquiv : SourceInternal ≃ TargetInternal
   faceEquiv : SourceFace ≃ TargetFace
   regionEquiv : SourceRegion ≃ TargetRegion
   faceRegion_coherence : ∀ face,
     target.faceRegion (faceEquiv face) = regionEquiv (source.faceRegion face)
-  faceArea_coherence : ∀ face, target.faceArea (faceEquiv face) = source.faceArea face
+  /-- Fact 3 assumes equality only of total area. Fact 1 removes dependence on simplex allocations. -/
+  regionArea_coherence : ∀ region,
+    target.regionArea (regionEquiv region) = source.regionArea region
   boundaryWord_coherence : ∀ face,
     target.boundaryWord (faceEquiv face) =
-      senguptaTransportedBoundaryWord orientationSign
+      senguptaTransportedBoundaryWordByReversal (faceOrientationReversed face)
         (Sum.map externalEdgeEquiv internalEdgeEquiv) (source.boundaryWord face)
-  distinguishedFace_coherence : ∀ region,
-    faceEquiv (source.distinguishedFace region) =
-      target.distinguishedFace (regionEquiv region)
   ordinaryFactor_eq : ∀ region external,
     senguptaTriangulatedRegionFactor source coverDensity region external =
       senguptaTriangulatedRegionFactor target coverDensity (regionEquiv region)

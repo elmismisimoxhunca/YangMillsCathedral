@@ -5455,14 +5455,23 @@ and parametrized external paths,
 coarse vertices, and regions persist on the same surface. An explicit homeomorphism transports
 parametrized edges through endpoint-fixing reparametrizations and transports face disks through
 marked-boundary reparametrizations, alongside exact vertices, regions, and curve words. Its boundary
-action realizes the stored Fact 3 sign, with positive equivalent to an orientable source plus
-orientation preservation. It is uninhabited and not itself a universal invariance theorem.
+action realizes independent simplex orientations: positive is equivalent to an orientable source
+plus orientation preservation, orientable negative reverses, and nonorientable negative permits
+arbitrary local choices. It is uninhabited and not itself a universal invariance theorem.
 `TwoDimensionalSenguptaUniversalCurveFixedEmbeddedSubdivisionData` now states universal acceptance
 for the curve-fixed embedded Fact 2 subclass at fixed universe levels. It quantifies over a concrete
 bundled candidate type rather than a supplied relation predicate, requires a factor certificate with
 the same face map for every candidate, requires candidate nonemptiness, and carries the
 nonorientable fixed-twist condition. Candidates keep external curve bonds and parametrized paths
-fixed. Subdivisions splitting curve bonds, full universal Fact 2, and universal Fact 3 remain open.
+fixed. Subdivisions splitting curve bonds and full universal Fact 2 remain open.
+`TwoDimensionalSenguptaUniversalCellwiseEmbeddedHomeomorphismData` now states universal acceptance
+for the directly cellwise-compatible embedded Fact 3 subclass at fixed universe levels. Its concrete
+bundled candidates contain targets and homeomorphisms with direct cell equivalences, exact mapped
+total area, curve words, endpoint-preserving edge transport, independent per-face simplex
+orientations, global sign, face disks, and complement regions. Every candidate must receive a
+matching factor certificate; candidate nonemptiness and the nonorientable fixed twist are explicit.
+Negative global sign does not force local face reversal on a nonorientable source. Homeomorphisms
+requiring preliminary subdivisions, full universal Fact 3, and inhabitation remain open.
 `TwoDimensionalSenguptaClosedPresentationInvarianceBridgeData` now dependently ties
 closed incidence for the exact finite-law heat-factor base and the exact fine/transported candidates
 to one unchanged Facts 2–3 bridge, preventing unrelated presentation witnesses. This combined bridge
@@ -5475,9 +5484,10 @@ equality without fixed simplex allocations or twist-face matching, and equality 
 fixed-twist factors. Embedded boundary-word subdivision and universal quantification over all valid
 subdivisions remain open. `TwoDimensionalSenguptaHomeomorphismFactorInvarianceData` similarly gives a
 one-pair factor-level Fact 3 candidate on one normalized semigroup and central twist: explicit
-external/internal edge, face, and region equivalences preserve regions, areas, and twist faces;
-external fields transport contravariantly; positive orientation preserves boundary words and retains
-`h`, while negative orientation reverses/flips boundary words and uses `h⁻¹`; and ordinary/twisted factors agree. Actual area-preserving surface
+external/internal edge, face, and region equivalences preserve regions and mapped region-total area
+without fixing simplex allocations or twist faces;
+external fields transport contravariantly; independent per-face simplex-orientation choices control
+word reversal, while the global sign controls `h` versus `h⁻¹`; and ordinary/twisted factors agree. Actual area-preserving surface
 homeomorphisms, curve reparameterizations, and universal source quantification remain open. The
 new `TwoDimensionalSenguptaFactsTwoThreeBridgeData` prevents disconnected witnesses: both one-pair
 certificates start at the exact triangulation stored by one finite-law heat-factor bridge and reuse

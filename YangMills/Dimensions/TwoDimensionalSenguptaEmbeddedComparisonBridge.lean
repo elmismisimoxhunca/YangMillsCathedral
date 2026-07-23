@@ -217,24 +217,34 @@ structure TwoDimensionalSenguptaEmbeddedComparisonBridgeData where
           (embeddedTarget.faceSideParam
             (embeddedFiniteLaw.closedInvariance.invariance.homeomorphism.faceEquiv face)
             side point)
-  /-- The actual boundary behavior of the disk reparametrization realizes the exact stored Fact 3
-  sign: positive preserves marked cyclic sides and direction; negative reverses both. -/
-  faceReparam_realizes_orientationSign :
-    match embeddedFiniteLaw.closedInvariance.invariance.homeomorphism.orientationSign with
-    | .positive => ∀ face side point,
-        faceReparam face (senguptaCircleToClosedDisk
-          (embeddedFiniteLaw.embeddedBase.faceSideParam face side point)) =
-        senguptaCircleToClosedDisk
-          (embeddedTarget.faceSideParam
-            (embeddedFiniteLaw.closedInvariance.invariance.homeomorphism.faceEquiv face)
-            side point)
-    | .negative => ∀ face side point,
+  faceOrientationReversed_false_of_positive :
+    embeddedFiniteLaw.closedInvariance.invariance.homeomorphism.orientationSign = .positive →
+      ∀ face, ¬ embeddedFiniteLaw.closedInvariance.invariance.homeomorphism.faceOrientationReversed
+        face
+  faceOrientationReversed_true_of_orientable_negative :
+    IsSenguptaCombinatoriallyOrientable heatFactors.triangulation →
+    embeddedFiniteLaw.closedInvariance.invariance.homeomorphism.orientationSign = .negative →
+      ∀ face, embeddedFiniteLaw.closedInvariance.invariance.homeomorphism.faceOrientationReversed
+        face
+  /-- Actual disk-boundary behavior follows the independently selected simplex orientation. On a
+  nonorientable source this need not reverse merely because the global `h` sign is negative. -/
+  faceReparam_realizes_faceOrientation : ∀ face,
+    if embeddedFiniteLaw.closedInvariance.invariance.homeomorphism.faceOrientationReversed face then
+      ∀ side point,
         faceReparam face (senguptaCircleToClosedDisk
           (embeddedFiniteLaw.embeddedBase.faceSideParam face side point)) =
         senguptaCircleToClosedDisk
           (embeddedTarget.faceSideParam
             (embeddedFiniteLaw.closedInvariance.invariance.homeomorphism.faceEquiv face)
             (Fin.rev side) (senguptaReverseClosedUnitInterval point))
+    else
+      ∀ side point,
+        faceReparam face (senguptaCircleToClosedDisk
+          (embeddedFiniteLaw.embeddedBase.faceSideParam face side point)) =
+        senguptaCircleToClosedDisk
+          (embeddedTarget.faceSideParam
+            (embeddedFiniteLaw.closedInvariance.invariance.homeomorphism.faceEquiv face)
+            side point)
   homeomorphism_faceImage : ∀ face : Face,
     surfaceHomeomorphism ''
       Set.range (embeddedFiniteLaw.embeddedBase.faceDisk face) =

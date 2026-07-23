@@ -963,21 +963,30 @@ embeds the exact fine subdivision on the same surface, partitions every base fac
 every coarse bond by a nonempty directed fine-edge word without repeated underlying bonds, requires
 coarse-face boundary substitution to equal the signed fine-face boundary after internal cancellation, preserves parametrized external paths, vertices, and
 regions, and uses an explicit homeomorphism with endpoint-preserving edge and marked-disk
-reparametrizations to transport the exact Fact 3 target. Its boundary action realizes the stored
-sign, with positive exactly the orientable orientation-preserving case. The selected bridge remains one-pair. A separate uninhabited curve-fixed Fact 2 subclass now quantifies over a concrete bundled type of
+reparametrizations to transport the exact Fact 3 target. Its boundary action realizes independent
+simplex orientations: positive is exactly the orientable orientation-preserving case, orientable
+negative reverses, and nonorientable negative permits arbitrary local choices. The selected bridge remains one-pair. A separate uninhabited curve-fixed Fact 2 subclass now quantifies over a concrete bundled type of
 every embedded refinement at fixed universe levels that leaves external curve bonds and parametrized
 paths unchanged. It requires a matching exact factor certificate for each candidate, candidate
 nonemptiness, source total-region-area equality without fixed simplex allocations, and the
 nonorientable fixed-twist condition. Subdivisions that split curve bonds—and hence full universal
-Fact 2—remain open. Facts 0–1 are now explicit uninhabited
+Fact 2—remain open. Universal acceptance for the directly cellwise-compatible embedded Fact 3 subclass is now separately
+specified at fixed universe levels: a concrete bundled candidate covers targets and homeomorphisms
+with direct edge/face equivalences, and every candidate must receive a factor certificate with the
+same global sign, per-face simplex-orientation choices, and equivalences. Candidate nonemptiness and
+the nonorientable fixed twist are explicit. Negative sign does not force local face reversal on a
+nonorientable source. Homeomorphisms requiring preliminary source/target subdivisions—and hence full
+universal Fact 3—remain open; the subclass record is uninhabited.
+Facts 0–1 are now explicit uninhabited
 fields requiring distinguished-face and positive same-total area-splitting invariance. A separate
 one-step Fact 2 building block compares one coarse/fine candidate pair on one normalized nonzero
 covering-density semigroup and central twist through a surjective region-preserving face map, exact
 region-total area equality, and ordinary/twisted factor equality; simplex-area allocations and twist
 faces may vary by Facts 1 and 0 respectively; embedded word-level subdivision and universal source quantification remain open. A
 parallel one-pair Fact 3 building block uses explicit external/internal edge, face, and region
-equivalences preserving areas; according to one orientation sign it preserves or reverses/flips
-boundary words and transports `h` to `h` or `h⁻¹` and requires both factor laws to agree. Actual area-preserving homeomorphisms,
+equivalences preserving mapped region-total area without fixing simplex allocations or twist faces;
+independent per-face simplex-orientation choices preserve or reverse/flip boundary words, while the
+global sign transports `h` to `h` or `h⁻¹` and requires both factor laws to agree. Actual area-preserving homeomorphisms,
 curve reparameterizations, and universal quantification remain open. A dependent Facts 2–3 bridge
 forces both one-pair certificates to start at the exact triangulation realizing the finite-law
 heat factors and reuse its unchanged density and fixed central bundle class; disconnected
