@@ -5463,7 +5463,11 @@ for the curve-fixed embedded Fact 2 subclass at fixed universe levels. It quanti
 bundled candidate type rather than a supplied relation predicate, requires a factor certificate with
 the same face map for every candidate, requires candidate nonemptiness, and carries the
 nonorientable fixed-twist condition. Candidates keep external curve bonds and parametrized paths
-fixed. Subdivisions splitting curve bonds and full universal Fact 2 remain open.
+fixed. `TwoDimensionalSenguptaCurveBondRefinementData` now supplies the exact missing combinatorics:
+fine indexed curve words are literal finite-graph substitutions, covering and projected simultaneous
+curve holonomies commute, and any supplied graph-measure pushforward transports the whole finite
+curve law. Construction of the fine heat-factor measure, full source-valid subdivisions, and full
+universal Fact 2 remain open.
 `TwoDimensionalSenguptaUniversalCellwiseEmbeddedHomeomorphismData` now states universal acceptance
 for the directly cellwise-compatible embedded Fact 3 subclass at fixed universe levels. Its concrete
 bundled candidates contain targets and homeomorphisms with direct cell equivalences, exact mapped

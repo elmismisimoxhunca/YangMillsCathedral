@@ -969,8 +969,10 @@ negative reverses, and nonorientable negative permits arbitrary local choices. T
 every embedded refinement at fixed universe levels that leaves external curve bonds and parametrized
 paths unchanged. It requires a matching exact factor certificate for each candidate, candidate
 nonemptiness, source total-region-area equality without fixed simplex allocations, and the
-nonorientable fixed-twist condition. Subdivisions that split curve bonds—and hence full universal
-Fact 2—remain open. Universal acceptance for the directly cellwise-compatible embedded Fact 3 subclass is now separately
+nonorientable fixed-twist condition. The exact curve-bond combinatorics are now available separately: fine indexed curve words are
+literal finite-graph substitutions, covering and projected curve holonomies commute, and any supplied
+graph-measure pushforward transports the complete finite curve law. Constructing the corresponding
+fine heat-factor measure and full universal Fact 2 remain open. Universal acceptance for the directly cellwise-compatible embedded Fact 3 subclass is now separately
 specified at fixed universe levels: a concrete bundled candidate covers targets and homeomorphisms
 with direct edge/face equivalences, and every candidate must receive a factor certificate with the
 same global sign, per-face simplex-orientation choices, and equivalences. Candidate nonemptiness and

@@ -1362,8 +1362,12 @@ committed before higher layers depend on it.
   - [x] State universal acceptance for the curve-fixed embedded Fact 2 subclass at fixed universe
     levels by quantifying over a concrete bundled candidate type—not an arbitrary relation predicate—
     and requiring an exact matching factor certificate for every candidate, candidate nonemptiness,
-    and the nonorientable fixed-twist condition. Retain subdivisions that split curve bonds, full
-    universal Fact 2 and inhabitation as debt.
+    and the nonorientable fixed-twist condition. Retain full universal Fact 2 and inhabitation as
+    debt.
+  - [x] Add the exact curve-bond refinement layer: fine indexed curve words are literal finite-graph
+    substitutions; covering and projected simultaneous curve holonomies commute; and any supplied
+    graph-measure pushforward transports the complete finite curve law. Retain construction of the
+    fine heat-factor measure and full source-valid subdivision as debt.
   - [x] State universal acceptance for the directly cellwise-compatible embedded Fact 3 subclass at
     fixed universe levels using a concrete bundled target/homeomorphism candidate type, exact
     total-area, independent face-orientation, and global-sign semantics, a matching factor
