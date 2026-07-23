@@ -5124,7 +5124,11 @@ Mathlib's actual normalized-Haar `Lp ℂ 2`, where its inner product is proved e
 algebraic Fourier pairing. The algebraic `L²` range and closed coefficient span are concrete, and
 `HasL2PeterWeylCompleteness` is exactly closed-span equality to top, equivalently density. Hostile
 probes show a vector outside the span or nondensity blocks completeness; no inhabitant is supplied.
-Surjectivity/automatic continuity-to-smoothness, remaining abstract coordinate
+The all-coordinate-class character specialization now uses finitely supported scalar coefficients:
+synthesis is continuous and central, Haar analysis recovers every exact coefficient, synthesis is
+injective, and the Haar pairing is the orthonormal coordinate pairing. Explicit support probes block
+reading this as a central infinite-series or density theorem. Surjectivity/automatic
+continuity-to-smoothness, remaining abstract coordinate
 realization/unitarization, countability, the `L²` density proof, infinite-series Fourier inversion,
 and heat-kernel spectral expansion remain open.
 

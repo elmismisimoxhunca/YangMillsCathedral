@@ -67,8 +67,12 @@ verified Peter–Weyl basis and density now have an exact formal target:
 `UnitaryMatrixDual.HasL2PeterWeylCompleteness` says that the algebraic coefficient image is dense in
 Mathlib's normalized-Haar `Lp ℂ 2`, equivalently that its closed span is top. The `L²` carrier,
 algebraic image, closed span, and finite-support inner-product/Plancherel bridge are constructed, but
-no density inhabitant is supplied. Countability/summability consequences, genuinely infinite-series
-inversion, Casimir action, and the heat-kernel expansion remain source-backed targets.
+no density inhabitant is supplied. The character specialization over every coordinate-dual class
+now constructs finitely supported scalar synthesis, proves centrality, exact Haar coefficient
+analysis, injectivity, and the orthonormal coordinate pairing. It still does not turn Lévy's central
+Peter–Weyl basis statement into a density theorem. Countability/summability consequences, genuinely
+infinite-series inversion, Casimir action, and the heat-kernel expansion remain source-backed
+targets.
 
 PDF pp. 89–94 / printed pp. 75–80 were independently inspected on 2026-07-22 for Chapter 5,
 Theorem 5.1.1, equation (5.1), Propositions 5.1.2/5.1.3, the genus-two discussion, and the start of

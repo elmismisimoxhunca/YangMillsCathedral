@@ -769,6 +769,9 @@ committed before higher layers depend on it.
   prove its `L²` inner product equals the dimension-weighted algebraic Fourier pairing, define the
   algebraic image and closed coefficient span, and state `HasL2PeterWeylCompleteness` exactly as
   closed-span equality to `⊤` (equivalently density), without constructing an inhabitant.
+- [x] Construct the all-coordinate-class algebraic character layer: finitely supported scalar
+  coefficients, continuous central synthesis, exact Haar coefficient analysis, injectivity, and
+  orthonormal coordinate pairing, while retaining explicit finite support.
 - [ ] Prove that comparison map surjective for the intended compact Lie groups (or replace the
   continuous quotient by a source-justified smooth realization theorem), establish any required
   countability theorem, and prove the `HasL2PeterWeylCompleteness` density obligation before
