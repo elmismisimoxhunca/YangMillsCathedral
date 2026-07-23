@@ -5171,10 +5171,14 @@ infinite synthesis identity. Independently, every selected character satisfies t
 `‖χ_q(g)‖ ≤ dim(q)` bound and exact global norm `‖χ_q‖∞ = dim(q)`. Any coefficient family with
 explicit `Summable (‖a_q‖dim(q))` therefore has an unconditional finite-subset net converging in the
 global uniform norm to a continuous central function, with exact pointwise/identity `tsum` formulas
-and Weierstrass norm control. No Casimir spectrum or heat-kernel coefficient family is shown to
-satisfy that weighted premise. The earlier approximation choices remain arbitrary
+and Weierstrass norm control. On this exact weighted domain, normalized-Haar `L²` analysis and the
+source-facing integral recover every original coefficient:
+`∫conj(χ_q)(∑a_rχ_r)=a_q`. Every such coefficient family has countable nonzero support without
+global dual countability, and weighted uniform synthesis is injective. This is justified restricted
+inversion, not inversion of arbitrary continuous or `L²` inputs. No Casimir spectrum or heat-kernel
+coefficient family is shown to satisfy the weighted premise. The earlier approximation choices remain arbitrary
 finite approximants, not Fourier partial sums; general compact-group density,
-global dual countability, infinite synthesis/inversion identities, and convergence of a canonically
+global dual countability, unrestricted infinite synthesis/inversion identities, and convergence of a canonically
 ordered Fourier series remain open. This does not prove dual countability, infinite Fourier inversion, or the
 general compact-group case. An equivalence with Mathlib's abstract `TensorProduct` carrier is also not inferred.
 The next Schur precursor is now concrete: for two continuous finite matrix representations and an

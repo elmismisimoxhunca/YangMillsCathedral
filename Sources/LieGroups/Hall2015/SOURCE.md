@@ -96,11 +96,14 @@ matrix coordinates—it converges to every continuous central function in `L²`,
 integrals satisfy Parseval. Independently, unitarity gives the sharp global bound
 `‖χ_q‖∞ = dim(q)`; any coefficient family with summable `‖a_q‖dim(q)` now has an unconditional
 finite-subset character net converging uniformly to an exact continuous central function, with
-pointwise `tsum`, identity value, and Weierstrass norm bound. This remains conditional only where
-density/completeness or weighted summability is invoked and is not a countably ordered Fourier
+pointwise `tsum`, identity value, and Weierstrass norm bound. Normalized-Haar analysis of this
+weighted series now recovers every original coefficient exactly, equivalently
+`∫conj(χ_q)(∑a_rχ_r)=a_q`; weighted coefficient support is countable and weighted uniform synthesis
+is injective. This remains conditional only where density/completeness or weighted summability is
+invoked and is not a countably ordered Fourier
 partial-sum construction: it does not prove the
-general compact-group Peter–Weyl theorem, global dual countability, an infinite synthesis/inversion
-identity, or convergence of a canonically ordered Fourier series.
+general compact-group Peter–Weyl theorem, global dual countability, an unrestricted infinite
+synthesis/inversion identity, or convergence of a canonically ordered Fourier series.
 
 ## Artifact chain
 

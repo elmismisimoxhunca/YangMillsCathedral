@@ -810,6 +810,10 @@ committed before higher layers depend on it.
   `Summable (‖a_q‖dim(q))` gives unconditional finite-subset convergence in `C(G,ℂ)`, exact
   pointwise and identity `tsum` formulas, a global norm bound, and a continuous-central result.
   Retain weighted summability explicitly; do not infer heat-kernel/Casimir summability.
+- [x] Prove exact Fourier analysis on the weighted uniformly convergent series domain:
+  normalized-Haar `L²` analysis and `∫conj(χ_q)(∑a_rχ_r)` both recover `a_q`; derive countable
+  nonzero support for each weighted coefficient family and injectivity of weighted uniform
+  synthesis. Keep this justified restricted inversion distinct from inversion of arbitrary inputs.
 - [ ] Prove the general compact-Hausdorff-group Peter–Weyl point-separation/density theorem without
   assuming one faithful finite-dimensional representation; do not conflate this with the completed
   conditional compact matrix-group theorem.

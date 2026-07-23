@@ -115,8 +115,11 @@ converges to every continuous central function in normalized-Haar `L²`, and the
 `‖χ_q‖∞ = dim(q)` is proved directly from matrix unitarity. Thus any coefficients satisfying the
 explicit weighted condition `Summable (‖a_q‖dim(q))` have an unconditional finite-subset character
 net converging uniformly to a continuous central function, with exact pointwise `tsum`, identity
-value, and Weierstrass bound. This is a conditional weighted-series theorem, not a general Fourier
-inversion statement; no countably ordered Fourier expansion, pointwise/uniform inversion of an
+value, and Weierstrass bound. Exact normalized-Haar analysis recovers every weighted-series
+coefficient, `∫conj(χ_q)(∑a_rχ_r)=a_q`; each weighted coefficient family has countable nonzero
+support and weighted uniform synthesis is injective. This is a conditional weighted-series inversion
+theorem on its own explicitly summable domain, not a general Fourier inversion statement; no
+countably ordered Fourier expansion, pointwise/uniform inversion of an
 arbitrary input, or unrestricted infinite synthesis identity is claimed, and the conditional
 density result does not establish Lévy's theorem at unrestricted generality. Global dual
 countability, summability and convergence of Lévy's genuinely infinite heat-kernel expansion,
