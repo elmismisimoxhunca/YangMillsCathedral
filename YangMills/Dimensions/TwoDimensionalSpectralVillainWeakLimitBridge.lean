@@ -121,6 +121,26 @@ end TwoDimensionalSpectralVillainWeakLimitBridgeData
 
 namespace TwoDimensionalSpectralVillainWeakLimitFamilyBridgeData
 
+/-- Exact all-spacing inhabitation debt: one spectral Wilson chain and a Driver Theorem 7.2 weak
+limit for its literal Villain action at every positive spacing. -/
+theorem nonempty_iff_spectralWilson_weakLimits :
+    Nonempty (TwoDimensionalSpectralVillainWeakLimitFamilyBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)) ↔
+      ∃ spectralWilson : TwoDimensionalWilsonSpectralHeatChainBridgeData
+        (law := law) (inner := inner) (realLaplacian := realLaplacian)
+        (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData),
+      ∀ spacing : PositiveLatticeSpacing,
+        Nonempty (TwoDimensionalDriverAxialWeakLimitData spacing
+          (TwoDimensionalLatticeActionData.villain
+            spectralWilson.spectralHeatKernel.heatEquationCore
+            spectralWilson.spectralHeatKernel.kernelOperator spacing)) := by
+  constructor
+  · rintro ⟨family⟩
+    exact ⟨family.spectralWilson, fun spacing => ⟨family.weakLimit spacing⟩⟩
+  · rintro ⟨spectralWilson, weakLimits⟩
+    exact ⟨⟨spectralWilson, fun spacing => Classical.choice (weakLimits spacing)⟩⟩
+
 /-- Restrict the all-spacing family to the exact fixed-spacing bridge. -/
 noncomputable def atSpacing
     (family : TwoDimensionalSpectralVillainWeakLimitFamilyBridgeData

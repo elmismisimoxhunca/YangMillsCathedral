@@ -86,6 +86,26 @@ structure TwoDimensionalSpectralVillainConvergenceBridgeData where
 
 namespace TwoDimensionalSpectralVillainConvergenceBridgeData
 
+/-- Exact Driver-convergence inhabitation debt: an exact spectral product bridge together with the
+remaining varying-finite-graph convergence theorem on its unchanged common heat chain. -/
+theorem nonempty_iff_productBridge_convergence :
+    Nonempty (TwoDimensionalSpectralVillainConvergenceBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+      (continuum := continuum) (faceGeometry := faceGeometry)) ↔
+      ∃ productBridge : TwoDimensionalSpectralVillainProductIdentityBridgeData
+        (law := law) (inner := inner) (realLaplacian := realLaplacian)
+        (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+        (faceGeometry := faceGeometry),
+      Nonempty (TwoDimensionalDriverVillainConvergenceData
+        productBridge.weakLimitFamily.spectralWilson.toVillainCommonHeatChainCoreData
+        axial continuum coarseApproximation enlargedApproximation faceGeometry) := by
+  constructor
+  · rintro ⟨bridge⟩
+    exact ⟨bridge.productBridge, ⟨bridge.convergence⟩⟩
+  · rintro ⟨productBridge, ⟨convergence⟩⟩
+    exact ⟨⟨productBridge, convergence⟩⟩
+
 /-- Driver's existing convergence certificate with the exact spectral Villain common heat chain. -/
 abbrev driverConvergence
     (bridge : TwoDimensionalSpectralVillainConvergenceBridgeData

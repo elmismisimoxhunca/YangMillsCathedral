@@ -920,7 +920,10 @@ component inhabitant, or literature-only inhabitance proof exists, so this is no
 acceptance proposition. The inhabitance attempt is nevertheless exact: proved `Nonempty`
 equivalences reduce it to both joined bridges, then to the Driver convergence chain plus its
 dependently indexed Brownian realization and, separately, smooth quotient descent plus Lévy sewing
-on one identification. No missing witness is hidden or synthesized.
+on one identification. The cascade continues: convergence requires the exact enlarged-product
+bridge plus Driver's remaining analytic theorem, while the all-spacing family requires one spectral
+Wilson chain and a Theorem 7.2 weak limit at every spacing. No missing witness is hidden or
+synthesized.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly

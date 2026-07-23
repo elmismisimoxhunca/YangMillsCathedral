@@ -5387,9 +5387,11 @@ identification of the actual descended model with 4D Euclidean spacetime. It is 
 the planar-to-arbitrary-compact-surface heat-law construction and the uninhabited component theorems
 remain open. The literature-only inhabitance attempt is now formalized as exact `Nonempty`
 decompositions: the joined record requires both major bridges; the planar side requires the exact
-Driver convergence chain and Brownian realization indexed by its heat core; the compact side
-requires both smooth quotient descent and Lévy sewing on the same identification. No one of those
-missing witnesses is synthesized. Any eventual final inhabitant must remain
+Driver convergence chain and Brownian realization indexed by its heat core; the convergence chain
+requires the exact enlarged-product bridge and remaining Driver analytic theorem; the all-spacing
+family requires one spectral Wilson chain and a Theorem 7.2 weak limit at every spacing; and the
+compact side requires both smooth quotient descent and Lévy sewing on the same identification. No
+one of those missing witnesses is synthesized. Any eventual final inhabitant must remain
 strictly separate from the four-dimensional Clay endpoint.
 
 The preliminary `FourDimensionalCurrentStrengthUniversalAcceptance` declaration is intentionally

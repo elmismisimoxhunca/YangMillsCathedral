@@ -84,6 +84,22 @@ theorem zero_limit_blocked
   rw [zeroLimit] at normalized
   simp at normalized
 
+/-- The all-spacing inhabitance audit exposes one exact spectral Wilson chain and a Driver 7.2
+weak limit for its Villain action at every spacing. -/
+theorem exact_family_inhabitation_audit :
+    Nonempty (TwoDimensionalSpectralVillainWeakLimitFamilyBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)) ↔
+      ∃ spectralWilson : TwoDimensionalWilsonSpectralHeatChainBridgeData
+        (law := law) (inner := inner) (realLaplacian := realLaplacian)
+        (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData),
+      ∀ spacing : PositiveLatticeSpacing,
+        Nonempty (TwoDimensionalDriverAxialWeakLimitData spacing
+          (TwoDimensionalLatticeActionData.villain
+            spectralWilson.spectralHeatKernel.heatEquationCore
+            spectralWilson.spectralHeatKernel.kernelOperator spacing)) :=
+  TwoDimensionalSpectralVillainWeakLimitFamilyBridgeData.nonempty_iff_spectralWilson_weakLimits
+
 /-- The all-spacing family restricts to the exact fixed-spacing bridge without changing its weak
 limit or spectral action. -/
 theorem exact_family_at_spacing

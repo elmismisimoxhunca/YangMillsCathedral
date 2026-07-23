@@ -1306,7 +1306,10 @@ committed before higher layers depend on it.
     leave planar-to-arbitrary-compact-surface heat-law construction open. Formalize the inhabitance
     attempt as exact `Nonempty` equivalences: current acceptance requires both joined bridges; the
     planar bridge requires the exact Driver convergence chain plus its dependently indexed Brownian
-    realization; the surface bridge requires both smooth descent and Lévy sewing on one quotient.
+    realization; the convergence chain requires the exact enlarged-product bridge plus the remaining
+    Driver analytic theorem; and the all-spacing family requires one spectral Wilson chain plus a
+    Theorem 7.2 weak limit at every spacing. The surface bridge requires both smooth descent and Lévy
+    sewing on one quotient.
   - [ ] Assemble a final source-indexed 2D acceptance proposition joining the constructed finite
     lattice, heat/Brownian, weak-limit continuum, compact-surface, and sewing chains; attempt to
     inhabit it solely from formalized Driver/Lévy/Sengupta results and record every remaining

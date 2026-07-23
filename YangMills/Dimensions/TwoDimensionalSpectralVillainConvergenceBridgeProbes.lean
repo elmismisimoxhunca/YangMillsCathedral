@@ -63,6 +63,22 @@ variable
       (axial := axial) (coarseApproximation := coarseApproximation)
       (enlargedApproximation := enlargedApproximation)}
 
+/-- The inhabitation audit exposes the exact product bridge and remaining Driver analytic
+convergence theorem. -/
+theorem exact_convergence_inhabitation_audit :
+    Nonempty (TwoDimensionalSpectralVillainConvergenceBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+      (continuum := continuum) (faceGeometry := faceGeometry)) ↔
+      ∃ productBridge : TwoDimensionalSpectralVillainProductIdentityBridgeData
+        (law := law) (inner := inner) (realLaplacian := realLaplacian)
+        (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+        (faceGeometry := faceGeometry),
+      Nonempty (TwoDimensionalDriverVillainConvergenceData
+        productBridge.weakLimitFamily.spectralWilson.toVillainCommonHeatChainCoreData
+        axial continuum coarseApproximation enlargedApproximation faceGeometry) :=
+  TwoDimensionalSpectralVillainConvergenceBridgeData.nonempty_iff_productBridge_convergence
+
 /-- The convergence contract uses the exact spectral Villain common heat chain. -/
 theorem exact_spectral_common_heat_chain
     (bridge : TwoDimensionalSpectralVillainConvergenceBridgeData
