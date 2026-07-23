@@ -171,8 +171,11 @@ unchanged real selected-loop density and construct its existing positive smooth
 `∂ₜQ=½ΔQ` heat-equation core. A further exact bridge retains Driver's stronger uninhabited
 operator/kernel formula for that constructed core, and a Wilson/spectral-chain bridge constructs the
 existing common faithful-representation/induced-pairing/Laplacian/heat/kernel certificate without
-removing any representation, normalization, pairing, or operator obligation. Neither coherence nor
-interchange is inhabited. The proof-required `B → VB` enlargement now has BC certificates on both graphs, literal coarse-edge
+removing any representation, normalization, pairing, or operator obligation. A further exact
+uninhabited bridge forces a supplied continuous independent-increment Brownian realization and the
+generated operator to share that spectral heat core, deriving spectral increment/marginal laws while
+leaving the stronger conditional-expectation/Markov generator theorem explicit future debt. Neither
+coherence nor interchange is inhabited. The proof-required `B → VB` enlargement now has BC certificates on both graphs, literal coarse-edge
 subdivision paths, the exact vertical/x-axis tree, total coverage excluding unrelated enlarged edges,
 and measurable ambient-compatible coarse restriction. Equation (6.1) is now an uninhabited universal interface: every bounded measurable coarse function
 factors through exact enlarged restriction and its base expectation equals the normalized vertical/x-

@@ -22,6 +22,17 @@ must be visually checked and entered in `docs/SUPPLIED_SOURCE_INGESTION_AUDIT.md
 `docs/SOURCE_MAP.md` before supporting a canonical physical declaration. Hashes verify identity of
 the retained bytes, not interpretation.
 
+## Canonical declaration mapping
+
+Definition 4.4, Remark 4.5, Notation 4.7, and Theorem 4.8 (printed pp. 22–24; native
+extraction lines 1361–1386 and 1403–1418) support the uninhabited continuous group-Brownian
+realization and its area-indexed heat-density law recorded in
+`TwoDimensionalSelectedLoopBrownianRealizationData`. The exact uninhabited
+`TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData` forces that supplied process and
+Driver's generated operator to share the same conditional spectral heat core, deriving spectral
+increment and marginal laws. It does not construct the process or infer a Markov
+conditional-expectation/stochastic-generator theorem.
+
 ## Artifact chain
 
 - `FETCH_TIMESTAMP.txt` records repository ingestion time.

@@ -881,6 +881,11 @@ committed before higher layers depend on it.
   normalization, and induced-pairing coherence to construct the existing
   `TwoDimensionalWilsonCommonHeatChainData` on the spectral semigroup; reject changed kernel values
   and changed representation-induced pairings.
+- [x] Force the supplied continuous independent-right-increment Brownian realization and Driver's
+  generated operator to use the same spectral heat core, deriving exact spectral `ENNReal`
+  stationary-increment and marginal laws, the unchanged selected-area loop law, and the `Δ/2`
+  generator/kernel formulas. Keep conditional-expectation/Markov transition identification as
+  explicit future proof debt and reject changed spectral increment laws.
 - [x] Combine the exact candidate coefficient time-addition law with weighted uniform-series
   convolution to prove the conditional positive-time spectral-family law `K_s⋆K_t=K_{s+t}` in
   `C(G,ℂ)` and pointwise in the fixed integral convention. Retain caller-supplied heat-trace

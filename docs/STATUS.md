@@ -5234,7 +5234,13 @@ arbitrary-continuous-test generated-operator/kernel theorem for that exact core.
 `TwoDimensionalWilsonSpectralHeatChainBridgeData` then retains connectedness, faithful smooth
 representation, Wilson normalization, and induced-pairing coherence and constructs the existing
 common Wilson/heat chain on the spectral semigroup, with exact probes for the representation,
-Wilson trace action, pairing, and spectral kernel. Combining the convolution formula with the exact candidate coefficient time-addition law now proves
+Wilson trace action, pairing, and spectral kernel. Uninhabited
+`TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData` also forces a supplied continuous
+independent-right-increment Brownian realization and Driver's generated operator to share that exact
+spectral heat core; spectral `ENNReal` increment and marginal laws, the selected-area loop law, and
+the unchanged `Δ/2` generator/kernel formulas are exposed with changed-law hostility. The stronger
+conditional-expectation/Markov transition identification remains explicit future proof debt.
+Combining the convolution formula with the exact candidate coefficient time-addition law now proves
 the conditional positive-time spectral-family convolution law `K_s⋆K_t=K_{s+t}` in `C(G,ℂ)` and
 pointwise in the fixed integral order. No inhabitant of either the heat-trace data or the geometric
 bridge, interchange, positivity, or initial-identity data is constructed; no time-zero density,
