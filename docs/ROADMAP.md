@@ -780,6 +780,10 @@ committed before higher layers depend on it.
   Extend by direct-sum induction, construct the full centralization datum, and derive conditional
   central uniform and central `L²` completeness from full density—and hence from faithful finite
   matrix coordinates—under second countability.
+- [x] Turn conditional central density into Hall's sequence-level approximation statement: choose
+  one finitely supported selected-character combination at tolerance `1/(n+1)`, prove uniform
+  convergence in the continuous and exact central carriers, and prove normalized-Haar `L²`
+  convergence. Keep this noncanonical sequence distinct from Fourier partial sums or inversion.
 - [ ] Prove the general compact-Hausdorff-group Peter–Weyl point-separation/density theorem without
   assuming one faithful finite-dimensional representation; do not conflate this with the completed
   conditional compact matrix-group theorem.

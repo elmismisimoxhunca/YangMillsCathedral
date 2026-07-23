@@ -78,8 +78,12 @@ existing Schur average of `Aᵀ`; normalized Schur trace evaluates it as
 `dim(ρ)⁻¹ tr(A) I`. Direct-sum induction converts every finite selected coefficient synthesis to a
 finite selected-character synthesis, constructing the full bridge datum. Therefore, under explicit
 second countability, full continuous density implies central uniform and central `L²` completeness;
-faithful finite matrix coordinates supply full density. This remains conditional and does not prove
-the general compact-group Peter–Weyl theorem or an infinite character expansion.
+faithful finite matrix coordinates supply full density. From central density, a noncanonical
+finite-support character approximant is selected at tolerance `1/(n+1)`; these approximants are
+proved to converge uniformly and in normalized-Haar `L²`, matching Hall's stated sequence-level
+conclusion. This remains conditional and is not a Fourier partial-sum construction: it does not
+prove the general compact-group Peter–Weyl theorem, dual countability, coefficientwise inversion, or
+an infinite character sum identity.
 
 ## Artifact chain
 

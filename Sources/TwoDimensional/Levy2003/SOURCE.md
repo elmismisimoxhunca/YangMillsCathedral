@@ -96,8 +96,11 @@ topological groups. Moreover, the closed span of images of continuous
 central functions is a project-level surrogate for Lévy's literal carrier of central square-integrable
 functions. This avoids imposing pointwise conjugation equations on almost-everywhere classes, but no
 equality with a separately defined AE-central `L²` carrier is claimed. Uniform central density implies that `L²` target, and the target itself yields finite character
-approximants for every vector in the closed continuous-central subspace. The conditional faithful
-matrix-group results do not assume or establish Lévy's theorem at unrestricted generality. Countability/summability consequences, genuinely
+approximants for every vector in the closed continuous-central subspace. Under the conditional
+faithful second-countable matrix-group hypotheses, finite character coefficients are now selected at
+uniform tolerance `1/(n+1)`, producing explicit sequence-level uniform and normalized-Haar `L²`
+convergence. This is a noncanonical approximation sequence, not a Fourier partial-sum expansion, and
+the conditional result does not establish Lévy's theorem at unrestricted generality. Countability/summability consequences, genuinely
 infinite-series inversion, Casimir action, and the heat-kernel expansion remain source-backed
 targets.
 
