@@ -5156,8 +5156,13 @@ orthonormal in normalized-Haar `L²`. Finite and unconditional Bessel inequaliti
 summability and at most countable nonzero selected-character support for each individual `L²`
 vector—without asserting that the whole dual is countable. The exact integrals `∫conj(χ_q)f` for
 continuous central `f` inherit summability, Bessel, and countable-support results, while finite
-character syntheses satisfy exact norm-square and unconditional-`tsum` Parseval identities. These
-remain arbitrary finite approximants, not Fourier partial sums; general compact-group density,
+character syntheses satisfy exact norm-square and unconditional-`tsum` Parseval identities. Every
+finite selected-character set now determines an actual bounded orthogonal Fourier projection with
+exact coordinate truncation, idempotence, finite-support inversion, residual-coordinate vanishing
+and orthogonality, finite Parseval/Pythagorean remainder identities, norm contraction, and operator
+norm exactly one when nonempty. This is finite projection-net infrastructure, not a selected
+countable ordering or proved projection limit. The earlier approximation choices remain arbitrary
+finite approximants, not Fourier partial sums; general compact-group density,
 global dual countability, infinite synthesis/inversion identities, and convergence of a canonically
 ordered Fourier series remain open. This does not prove dual countability, infinite Fourier inversion, or the
 general compact-group case. An equivalence with Mathlib's abstract `TensorProduct` carrier is also not inferred.

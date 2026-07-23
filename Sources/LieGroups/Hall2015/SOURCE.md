@@ -86,7 +86,10 @@ selected character vector and analysis functional has norm one, analysis recover
 coordinates, and continuity proves that each approximant coordinate converges to the exact integral
 `∫ conj(χ_q)f`. The whole selected character family is proved orthonormal in the actual `L²`
 carrier; finite and unconditional Bessel bounds, square summability, vectorwise countable coefficient
-support, and exact finite-range Parseval identities follow. This remains conditional only where
+support, and exact finite-range Parseval identities follow. Every finite selected-class set now also
+has its genuine bounded orthogonal Fourier projection, with exact coordinate truncation,
+idempotence, finite-support inversion, residual orthogonality, Pythagorean remainder, norm
+contraction, and exact operator norm one when nonempty. This remains conditional only where
 density/approximation is invoked and is not a Fourier partial-sum construction: it does not prove the
 general compact-group Peter–Weyl theorem, global dual countability, an infinite synthesis/inversion
 identity, or convergence of a canonically ordered Fourier series.

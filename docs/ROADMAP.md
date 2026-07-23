@@ -794,6 +794,11 @@ committed before higher layers depend on it.
   summability, vectorwise countable nonzero support without global dual countability, source-facing
   summability/Bessel/countable-support theorems for `∫conj(χ_q)f`, and exact finite-synthesis
   norm-square/`tsum` Parseval identities. Do not infer completeness or infinite synthesis.
+- [x] Construct the bounded orthogonal Fourier projection for every finite selected-character set;
+  prove exact finite coefficient truncation, idempotence, inversion on syntheses whose support is
+  contained in the set, residual-coordinate vanishing and orthogonality, finite Parseval and
+  Pythagorean remainder identities, norm contraction, and operator norm exactly one for nonempty
+  sets. Keep this finite net infrastructure distinct from any countable partial-sum limit.
 - [ ] Prove the general compact-Hausdorff-group Peter–Weyl point-separation/density theorem without
   assuming one faithful finite-dimensional representation; do not conflate this with the completed
   conditional compact matrix-group theorem.

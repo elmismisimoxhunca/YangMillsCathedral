@@ -104,8 +104,11 @@ vectors and their analysis maps have norm one, finite synthesis coordinates are 
 and every coordinate of the chosen approximation sequence converges to `∫ conj(χ_q)f`. The selected
 characters themselves now form an orthonormal family in actual `L²`, giving finite/unconditional
 Bessel inequalities, square summability, vectorwise countable coefficient support without global
-dual countability, and exact finite-range Parseval identities. This is a noncanonical approximation
-sequence, not a Fourier partial-sum expansion or infinite inversion identity, and the conditional
+dual countability, and exact finite-range Parseval identities. For every finite selected-class set,
+a bounded orthogonal Fourier projection now has exact coordinate truncation, idempotence,
+finite-support inversion, residual orthogonality, Pythagorean remainder, norm contraction, and
+operator norm one when nonempty. This is a noncanonical approximation sequence, not a countably
+ordered Fourier partial-sum expansion or infinite inversion identity, and the conditional
 density result does not establish Lévy's theorem at unrestricted generality. Global dual
 countability, summability and convergence of Lévy's genuinely infinite heat-kernel expansion,
 infinite-series inversion, and Casimir action remain source-backed targets.
