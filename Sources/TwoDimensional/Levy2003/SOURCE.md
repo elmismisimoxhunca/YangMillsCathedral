@@ -107,8 +107,12 @@ Bessel inequalities, square summability, vectorwise countable coefficient suppor
 dual countability, and exact finite-range Parseval identities. For every finite selected-class set,
 a bounded orthogonal Fourier projection now has exact coordinate truncation, idempotence,
 finite-support inversion, residual orthogonality, Pythagorean remainder, norm contraction, and
-operator norm one when nonempty. This is a noncanonical approximation sequence, not a countably
-ordered Fourier partial-sum expansion or infinite inversion identity, and the conditional
+operator norm one when nonempty. The unconditional net over all finite selected-class sets converges
+exactly on the closed character span, with Parseval there. Under the explicit central `L²`
+completeness target—and conditionally for faithful second-countable compact matrix groups—it
+converges to every continuous central function in normalized-Haar `L²`, and the exact integrals
+`∫conj(χ_q)f` satisfy Parseval. This is not a countably ordered Fourier partial-sum expansion,
+pointwise/uniform inversion, or infinite synthesis identity, and the conditional
 density result does not establish Lévy's theorem at unrestricted generality. Global dual
 countability, summability and convergence of Lévy's genuinely infinite heat-kernel expansion,
 infinite-series inversion, and Casimir action remain source-backed targets.

@@ -799,6 +799,12 @@ committed before higher layers depend on it.
   contained in the set, residual-coordinate vanishing and orthogonality, finite Parseval and
   Pythagorean remainder identities, norm contraction, and operator norm exactly one for nonempty
   sets. Keep this finite net infrastructure distinct from any countable partial-sum limit.
+- [x] Prove that the unconditional net over all finite selected-character sets converges in
+  normalized-Haar `L²` exactly on the closed finite-character span, and prove exact `tsum` Parseval
+  there. Characterize the explicit central `L²` completeness target by convergence on the closed
+  continuous-central surrogate; derive net convergence and integral Parseval for continuous central
+  functions under that target and conditionally from faithful second-countable matrix coordinates.
+  Do not repackage this finite-subset net as a countably ordered or pointwise/uniform series.
 - [ ] Prove the general compact-Hausdorff-group Peter–Weyl point-separation/density theorem without
   assuming one faithful finite-dimensional representation; do not conflate this with the completed
   conditional compact matrix-group theorem.

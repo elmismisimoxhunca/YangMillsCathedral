@@ -5160,8 +5160,14 @@ character syntheses satisfy exact norm-square and unconditional-`tsum` Parseval 
 finite selected-character set now determines an actual bounded orthogonal Fourier projection with
 exact coordinate truncation, idempotence, finite-support inversion, residual-coordinate vanishing
 and orthogonality, finite Parseval/Pythagorean remainder identities, norm contraction, and operator
-norm exactly one when nonempty. This is finite projection-net infrastructure, not a selected
-countable ordering or proved projection limit. The earlier approximation choices remain arbitrary
+norm exactly one when nonempty. The unconditional net indexed by all finite selected-class sets is
+now proved to converge exactly on the closed finite-character span, where exact character `tsum`
+Parseval holds. Convergence on the whole closed continuous-central surrogate is equivalent to the
+explicit central `L²` completeness target. Under that target—and conditionally for faithful
+second-countable compact matrix groups—the net converges to every continuous central function in
+normalized-Haar `L²`, and the exact integrals `∫conj(χ_q)f` satisfy Parseval. This remains a
+finite-subset net, not a selected countable ordering, pointwise/uniform inversion, or infinite
+synthesis identity. The earlier approximation choices remain arbitrary
 finite approximants, not Fourier partial sums; general compact-group density,
 global dual countability, infinite synthesis/inversion identities, and convergence of a canonically
 ordered Fourier series remain open. This does not prove dual countability, infinite Fourier inversion, or the

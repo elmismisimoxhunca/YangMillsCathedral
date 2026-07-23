@@ -89,8 +89,12 @@ carrier; finite and unconditional Bessel bounds, square summability, vectorwise 
 support, and exact finite-range Parseval identities follow. Every finite selected-class set now also
 has its genuine bounded orthogonal Fourier projection, with exact coordinate truncation,
 idempotence, finite-support inversion, residual orthogonality, Pythagorean remainder, norm
-contraction, and exact operator norm one when nonempty. This remains conditional only where
-density/approximation is invoked and is not a Fourier partial-sum construction: it does not prove the
+contraction, and exact operator norm one when nonempty. The net over all finite selected-class sets
+is proved to converge exactly on the closed finite-character span, and unconditional Parseval holds
+there. Under central `L²` completeness—and hence conditionally under faithful second-countable
+matrix coordinates—it converges to every continuous central function in `L²`, whose exact character
+integrals satisfy Parseval. This remains conditional only where density/completeness is invoked and
+is not a countably ordered Fourier partial-sum construction: it does not prove the
 general compact-group Peter–Weyl theorem, global dual countability, an infinite synthesis/inversion
 identity, or convergence of a canonically ordered Fourier series.
 
