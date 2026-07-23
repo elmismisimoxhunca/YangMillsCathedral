@@ -770,8 +770,13 @@ committed before higher layers depend on it.
 - [x] Isolate Hall's remaining conjugation-average argument as
   `CompactGroupCharacterCentralizationData`: a continuous linear map fixing every central function
   and sending each finite selected coefficient synthesis to a finite selected-character synthesis.
-  Prove this data bridges full continuous density to central uniform and central `L²` density, while
-  leaving construction of the Haar centralization map explicit and open.
+  Prove this data bridges full continuous density to central uniform and central `L²` density.
+- [x] Construct Hall's actual normalized-Haar conjugation average under explicit second countability,
+  prove parameter continuity, exact centrality, identity on central functions, norm contraction,
+  surjectivity, and idempotence, and package it as the continuous linear centralization operator.
+- [ ] Prove the sole remaining bridge field: this actual average sends every finite selected-dual
+  coefficient synthesis to an exact finite selected-character synthesis via the normalized Schur
+  calculation.
 - [ ] Prove the general compact-Hausdorff-group Peter–Weyl point-separation/density theorem without
   assuming one faithful finite-dimensional representation; do not conflate this with the completed
   conditional compact matrix-group theorem.

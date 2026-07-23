@@ -5133,9 +5133,13 @@ remains uninhabited. Hall's conjugation-average step is now isolated as
 `CompactGroupCharacterCentralizationData`: a continuous linear map onto the exact central carrier,
 identity on central functions, which sends every finite selected coefficient synthesis to a finite
 selected-character synthesis. Full continuous density plus this datum implies both central targets;
-faithful matrix coordinates supply the full-density premise. No centralization datum is built, so
-function-valued Haar-average continuity and its exact Schur-to-character formula remain visible
-debt. This does not prove dual countability, infinite Fourier inversion, or the
+faithful matrix coordinates supply the full-density premise. Hall's actual normalized-Haar
+conjugation average is now a constructed continuous linear map under explicit second countability.
+Parametric integration gives continuity; right-Haar invariance gives centrality; probability
+normalization gives identity on central functions; the operator is norm-nonincreasing, surjective,
+and idempotent. A constructor shows that only the exact finite Schur-to-character image formula on
+selected coefficient syntheses remains before the full bridge datum—and hence conditional central
+density—is obtained. This does not prove dual countability, infinite Fourier inversion, or the
 general compact-group case. An equivalence with Mathlib's abstract `TensorProduct` carrier is also not inferred.
 The next Schur precursor is now concrete: for two continuous finite matrix representations and an
 arbitrary rectangular matrix `A`, the coordinatewise Reynolds average

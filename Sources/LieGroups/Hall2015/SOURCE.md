@@ -23,7 +23,13 @@ must be visually checked and entered in `docs/SUPPLIED_SOURCE_INGESTION_AUDIT.md
 `docs/SOURCE_MAP.md` before supporting a canonical physical declaration. Hashes verify identity of
 the retained bytes, not interpretation.
 
-## Load-bearing compact matrix-group density locator
+## Load-bearing compact-group normalization and density locators
+
+Printed p. 352, Theorem 12.15; PDF artifact p. 359; extracted text lines 16159–16169:
+
+- `dx` is explicitly the normalized left-invariant volume form on the compact group `K`.
+
+PDF artifact p. 359 was visually inspected against the extracted normalization statement.
 
 Printed pp. 355–356, proof of Theorem 12.18; PDF artifact pp. 362–363; extracted text lines
 16345–16394:
@@ -63,8 +69,12 @@ matrices scalar, hence turns `h` into a finite character combination. The Lean s
 `CompactGroupCharacterCentralizationData` isolates the exact reusable content still needed from
 this step: a continuous linear centralization map, identity on central functions, and an exact map
 from every finite selected-dual coefficient synthesis to some finite selected-character synthesis.
-No inhabitant is constructed yet, so continuity of the function-valued Haar average and the exact
-Schur-to-character calculation remain explicit formalization debt rather than assumed facts.
+The actual probability-Haar conjugation average is now constructed under explicit second
+countability, proved continuous by Mathlib's compact parametric-integral theorem, central by right
+Haar invariance, identity on central functions, norm-nonincreasing, surjective, and idempotent. This
+constructs the first two fields of the bridge datum. The exact finite Schur-to-character calculation
+on arbitrary selected coefficient syntheses remains the sole explicit field needed to construct the
+full datum; no density conclusion is inferred without it.
 
 ## Artifact chain
 
