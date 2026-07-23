@@ -176,7 +176,9 @@ uninhabited bridge forces a supplied continuous independent-increment Brownian r
 generated operator to share that spectral heat core, deriving spectral increment/marginal laws and
 proving at every deterministic base point that its action on every continuous test is the
 unconditional expectation of that test after right multiplication by any positive stationary
-increment, while leaving the stronger
+increment. Finite consecutive-increment independence and identity start also derive process-value/
+following-increment independence, the exact product spectral law, and its right-multiplication
+pushforward two-time law, while leaving the stronger
 conditional-expectation/Markov generator theorem explicit future debt. Neither
 coherence nor interchange is inhabited. The proof-required `B → VB` enlargement now has BC certificates on both graphs, literal coarse-edge
 subdivision paths, the exact vertical/x-axis tree, total coverage excluding unrelated enlarged edges,

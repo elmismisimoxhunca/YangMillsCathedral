@@ -353,6 +353,30 @@ theorem jointlyMeasurableProcess_stationary_increment_law
     _ = (normalizedCompactHaarMeasure G).withDensity
           (law.selectedAreaDensity (t : ℝ)) := brownian.stationary_increment_law s t ht
 
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
+/-- At every nonnegative time, the process value is independent of its following right increment.
+This is derived from mutual independence of the two consecutive increments at times `0,s,s+t` and
+the almost-sure identity start; it is not an additional Markov assumption. -/
+theorem process_indep_rightIncrement
+    (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
+      inner law semigroup laplacian heat Ω)
+    (s t : NNReal) :
+    brownian.process s ⟂ᵢ[brownian.probabilityMeasure]
+      (fun samplePoint =>
+        (brownian.process s samplePoint)⁻¹ * brownian.process (s + t) samplePoint) := by
+  let times : Fin 3 → NNReal := ![0, s, s + t]
+  have times_monotone : Monotone times := by
+    intro i j hij
+    fin_cases i <;> fin_cases j <;> simp_all [times]
+  have increments_independent :=
+    (brownian.independent_increments 2 times times_monotone).indepFun
+      (show (0 : Fin 2) ≠ 1 by decide)
+  apply increments_independent.congr
+  · filter_upwards [brownian.process_zero] with samplePoint startsAtOne
+    simp [times, startsAtOne]
+  · exact Filter.EventuallyEq.rfl
+
 omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
 /-- The stationary increment law at one positive time derives normalization of the process carrier;
 it is not an independent acceptance field. -/

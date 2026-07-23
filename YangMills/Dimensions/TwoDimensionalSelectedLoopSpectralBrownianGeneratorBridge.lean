@@ -5,6 +5,7 @@ Authors: YangMillsDefinition contributors
 -/
 import YangMills.Dimensions.TwoDimensionalSelectedLoopBrownianRealization
 import YangMills.Dimensions.TwoDimensionalSelectedLoopSpectralHeatKernelBridge
+import Mathlib.Probability.Independence.Integration
 
 /-!
 # Spectral Brownian and generated-operator coherence
@@ -99,6 +100,81 @@ theorem marginal_law_spectral
   funext g
   exact bridge.spectralHeatKernel.heatEquationBridge.spectralDensityBridge.selectedAreaDensity_eq
     (t : ℝ) (by exact_mod_cast ht) g
+
+omit [FiniteDimensional ℝ E] in
+/-- At two successive positive times, the process value and following right increment have the exact
+product of the two spectral density measures. This is derived from finite increment independence,
+identity start, and the spectral marginal laws rather than supplied as a Markov field. -/
+theorem process_rightIncrement_joint_law_spectral
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (s t : NNReal) (hs : 0 < s) (ht : 0 < t) :
+    Measure.map (fun samplePoint =>
+      (bridge.brownian.process s samplePoint,
+        (bridge.brownian.process s samplePoint)⁻¹ *
+          bridge.brownian.process (s + t) samplePoint)) bridge.brownian.probabilityMeasure =
+      ((normalizedCompactHaarMeasure G).withDensity
+        (unitaryMatrixDualCasimirHeatDensityENNReal heatTraceData (s : ℝ))).prod
+      ((normalizedCompactHaarMeasure G).withDensity
+        (unitaryMatrixDualCasimirHeatDensityENNReal heatTraceData (t : ℝ))) := by
+  let increment : Ω → G := fun samplePoint =>
+    (bridge.brownian.process s samplePoint)⁻¹ * bridge.brownian.process (s + t) samplePoint
+  have increment_measurable : Measurable increment :=
+    (bridge.brownian.process_measurable s).inv.mul
+      (bridge.brownian.process_measurable (s + t))
+  letI : IsFiniteMeasure bridge.brownian.probabilityMeasure :=
+    ⟨by rw [bridge.brownian.probability_normalized]; exact ENNReal.one_lt_top⟩
+  have joint := (bridge.brownian.process_indep_rightIncrement s t).map_prod_eq_prod_map_map
+    (bridge.brownian.process_measurable s).aemeasurable increment_measurable.aemeasurable
+  rw [bridge.marginal_law_spectral s hs,
+    bridge.stationary_increment_law_spectral s t ht] at joint
+  exact joint
+
+omit [FiniteDimensional ℝ E] in
+/-- The exact two-time process law is the pushforward of the two spectral factors by
+`(x,y) ↦ (x,x*y)`, displaying the right-increment transition orientation without introducing a
+conditional expectation. -/
+theorem process_twoTime_law_spectral
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (s t : NNReal) (hs : 0 < s) (ht : 0 < t) :
+    Measure.map (fun samplePoint =>
+      (bridge.brownian.process s samplePoint,
+        bridge.brownian.process (s + t) samplePoint)) bridge.brownian.probabilityMeasure =
+      Measure.map (fun pair : G × G => (pair.1, pair.1 * pair.2))
+        (((normalizedCompactHaarMeasure G).withDensity
+          (unitaryMatrixDualCasimirHeatDensityENNReal heatTraceData (s : ℝ))).prod
+        ((normalizedCompactHaarMeasure G).withDensity
+          (unitaryMatrixDualCasimirHeatDensityENNReal heatTraceData (t : ℝ)))) := by
+  let processIncrement : Ω → G × G := fun samplePoint =>
+    (bridge.brownian.process s samplePoint,
+      (bridge.brownian.process s samplePoint)⁻¹ *
+        bridge.brownian.process (s + t) samplePoint)
+  let multiplyIncrement : G × G → G × G := fun pair => (pair.1, pair.1 * pair.2)
+  have processIncrement_measurable : Measurable processIncrement :=
+    (bridge.brownian.process_measurable s).prodMk
+      ((bridge.brownian.process_measurable s).inv.mul
+        (bridge.brownian.process_measurable (s + t)))
+  have multiplyIncrement_measurable : Measurable multiplyIncrement :=
+    measurable_fst.prodMk (measurable_fst.mul measurable_snd)
+  calc
+    Measure.map (fun samplePoint =>
+        (bridge.brownian.process s samplePoint,
+          bridge.brownian.process (s + t) samplePoint)) bridge.brownian.probabilityMeasure =
+      Measure.map multiplyIncrement
+        (Measure.map processIncrement bridge.brownian.probabilityMeasure) := by
+          rw [Measure.map_map multiplyIncrement_measurable processIncrement_measurable]
+          apply Measure.map_congr
+          filter_upwards [] with samplePoint
+          simp [processIncrement, multiplyIncrement]
+    _ = Measure.map multiplyIncrement
+        (((normalizedCompactHaarMeasure G).withDensity
+          (unitaryMatrixDualCasimirHeatDensityENNReal heatTraceData (s : ℝ))).prod
+        ((normalizedCompactHaarMeasure G).withDensity
+          (unitaryMatrixDualCasimirHeatDensityENNReal heatTraceData (t : ℝ)))) := by
+      rw [bridge.process_rightIncrement_joint_law_spectral s t hs ht]
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Integrating a continuous real test function against the spectral `ENNReal` density measure is

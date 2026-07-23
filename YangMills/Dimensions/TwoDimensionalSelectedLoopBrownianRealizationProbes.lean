@@ -229,6 +229,19 @@ theorem exact_independent_increments
 
 omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
     [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Identity start and consecutive-increment independence derive independence of the process value
+from its following right increment. -/
+theorem exact_process_indep_rightIncrement
+    (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
+      inner law semigroup laplacian heat Ω)
+    (s t : NNReal) :
+    brownian.process s ⟂ᵢ[brownian.probabilityMeasure]
+      (fun samplePoint =>
+        (brownian.process s samplePoint)⁻¹ * brownian.process (s + t) samplePoint) :=
+  brownian.process_indep_rightIncrement s t
+
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
 /-- One-time marginals are derived from identity start and stationary increments. -/
 theorem exact_derived_marginal
     (brownian : TwoDimensionalSelectedLoopBrownianRealizationData

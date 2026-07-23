@@ -5242,8 +5242,12 @@ the unchanged `Δ/2` generator/kernel formulas are exposed with changed-law host
 with-density Bochner integration and inversion symmetry further prove that the operator at every
 deterministic base point equals the unconditional expectation of every
 continuous test after right multiplication by any positive stationary increment, with
-base-point-sensitive changed-expectation hostility. The stronger conditional-expectation/Markov
-transition identification remains explicit future proof debt.
+base-point-sensitive changed-expectation hostility. The existing finite consecutive-increment law
+and almost-sure identity start further derive independence of every process value from its following
+right increment. At positive times this yields the exact product of two spectral density measures
+and, by the noncommutative map `(x,y) ↦ (x,x*y)`, the exact two-time process law, with changed-joint-
+law hostility. The stronger conditional-expectation/Markov transition identification remains
+explicit future proof debt.
 Combining the convolution formula with the exact candidate coefficient time-addition law now proves
 the conditional positive-time spectral-family convolution law `K_s⋆K_t=K_{s+t}` in `C(G,ℂ)` and
 pointwise in the fixed integral order. No inhabitant of either the heat-trace data or the geometric

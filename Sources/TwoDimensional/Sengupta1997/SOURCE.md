@@ -31,7 +31,10 @@ realization and its area-indexed heat-density law recorded in
 `TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData` forces that supplied process and
 Driver's generated operator to share the same conditional spectral heat core, deriving spectral
 increment and marginal laws and the unconditional equality at every deterministic base point between the operator and every
-continuous-test expectation after right multiplication by a positive stationary increment. It does not construct
+continuous-test expectation after right multiplication by a positive stationary increment. The
+existing finite independent-increment law further derives process-value/following-increment
+independence, its exact spectral product law, and the corresponding right-multiplication pushforward
+two-time law. It does not construct
 the process or infer a Markov conditional-expectation/stochastic-generator theorem.
 
 ## Artifact chain

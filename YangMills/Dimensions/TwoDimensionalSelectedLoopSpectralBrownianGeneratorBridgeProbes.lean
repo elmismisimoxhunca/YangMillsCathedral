@@ -66,6 +66,64 @@ theorem exact_stationary_increment_spectral_law
   bridge.stationary_increment_law_spectral s t ht
 
 omit [FiniteDimensional ℝ E] in
+/-- Successive positive process value/right-increment coordinates have the exact product of spectral
+measures. -/
+theorem exact_process_rightIncrement_joint_spectral_law
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (s t : NNReal) (hs : 0 < s) (ht : 0 < t) :
+    Measure.map (fun samplePoint =>
+      (bridge.brownian.process s samplePoint,
+        (bridge.brownian.process s samplePoint)⁻¹ *
+          bridge.brownian.process (s + t) samplePoint)) bridge.brownian.probabilityMeasure =
+      ((normalizedCompactHaarMeasure G).withDensity
+        (unitaryMatrixDualCasimirHeatDensityENNReal heatTraceData (s : ℝ))).prod
+      ((normalizedCompactHaarMeasure G).withDensity
+        (unitaryMatrixDualCasimirHeatDensityENNReal heatTraceData (t : ℝ))) :=
+  bridge.process_rightIncrement_joint_law_spectral s t hs ht
+
+omit [FiniteDimensional ℝ E] in
+/-- The exact two-time process law is the right-multiplication pushforward of the two spectral
+factors. -/
+theorem exact_process_twoTime_spectral_law
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (s t : NNReal) (hs : 0 < s) (ht : 0 < t) :
+    Measure.map (fun samplePoint =>
+      (bridge.brownian.process s samplePoint,
+        bridge.brownian.process (s + t) samplePoint)) bridge.brownian.probabilityMeasure =
+      Measure.map (fun pair : G × G => (pair.1, pair.1 * pair.2))
+        (((normalizedCompactHaarMeasure G).withDensity
+          (unitaryMatrixDualCasimirHeatDensityENNReal heatTraceData (s : ℝ))).prod
+        ((normalizedCompactHaarMeasure G).withDensity
+          (unitaryMatrixDualCasimirHeatDensityENNReal heatTraceData (t : ℝ)))) :=
+  bridge.process_twoTime_law_spectral s t hs ht
+
+omit [FiniteDimensional ℝ E] in
+/-- Hostile joint-law probe: an unrelated product measure cannot replace the exact two spectral
+factors. -/
+theorem changed_process_rightIncrement_joint_law_blocked
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (s t : NNReal) (hs : 0 < s) (ht : 0 < t) (changed : Measure (G × G))
+    (hchanged : changed ≠
+      ((normalizedCompactHaarMeasure G).withDensity
+        (unitaryMatrixDualCasimirHeatDensityENNReal heatTraceData (s : ℝ))).prod
+      ((normalizedCompactHaarMeasure G).withDensity
+        (unitaryMatrixDualCasimirHeatDensityENNReal heatTraceData (t : ℝ))))
+    (changedLaw : Measure.map (fun samplePoint =>
+      (bridge.brownian.process s samplePoint,
+        (bridge.brownian.process s samplePoint)⁻¹ *
+          bridge.brownian.process (s + t) samplePoint))
+      bridge.brownian.probabilityMeasure = changed) : False := by
+  apply hchanged
+  rw [← changedLaw]
+  exact bridge.process_rightIncrement_joint_law_spectral s t hs ht
+
+omit [FiniteDimensional ℝ E] in
 /-- At every deterministic base point, the generated operator is exactly the unconditional
 expectation after right multiplication by a positive Brownian increment. -/
 theorem exact_operator_right_increment_expectation

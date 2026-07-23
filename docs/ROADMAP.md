@@ -886,8 +886,11 @@ committed before higher layers depend on it.
   stationary-increment and marginal laws, the unchanged selected-area loop law, the `Δ/2`
   generator/kernel formulas, and the exact unconditional equality at every deterministic base point
   between the operator and each continuous-test expectation after right multiplication by a
-  positive stationary increment. Keep conditional-expectation/Markov transition identification as
-  explicit future proof debt and reject changed spectral increment laws.
+  positive stationary increment. Derive process-value/following-right-increment independence from
+  finite consecutive-increment independence and identity start, then derive its exact two-factor
+  spectral product law and the right-multiplication pushforward two-time process law. Keep
+  conditional-expectation/Markov transition identification as explicit future proof debt and reject
+  changed spectral increment and joint laws.
 - [x] Combine the exact candidate coefficient time-addition law with weighted uniform-series
   convolution to prove the conditional positive-time spectral-family law `K_s⋆K_t=K_{s+t}` in
   `C(G,ℂ)` and pointwise in the fixed integral convention. Retain caller-supplied heat-trace
