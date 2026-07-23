@@ -4,7 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: YangMillsDefinition contributors
 -/
 import YangMills.Mathematics.LieGroupRightInvariantComplexLaplacian
-import YangMills.Mathematics.UnitaryMatrixDualCasimirHeatCharacterSeries
+import YangMills.Mathematics.UnitaryMatrixDualCasimirHeatDerivativeSeries
 
 /-!
 # Bridge from candidate Casimir weights to the pairing-normalized geometric Laplacian
@@ -122,37 +122,9 @@ theorem casimirWeight_eq_of_character_laplacian
 
 end UnitaryMatrixDualCasimirLaplacianBridgeData
 
-/-- Exact real derivative of the candidate Casimir heat coefficient. This is coefficient calculus,
-not differentiation of the summed character series. -/
-theorem hasDerivAt_unitaryMatrixDualCasimirHeatCoefficientReal
-    (data : UnitaryMatrixDualHeatTraceSummabilityData (G := G))
-    (t : ℝ) (q : UnitaryMatrixDual G) :
-    HasDerivAt (fun s => unitaryMatrixDualCasimirHeatCoefficientReal data s q)
-      (-(data.casimirWeight q / 2) *
-        unitaryMatrixDualCasimirHeatCoefficientReal data t q) t := by
-  let w := data.casimirWeight q
-  let d : ℝ := unitaryMatrixDualDimension q
-  have hlin0 := (((hasDerivAt_id t).neg.div_const 2).mul_const w)
-  have hlin : HasDerivAt (fun s : ℝ => -(s / 2) * w) (-(w / 2)) t :=
-    (hlin0.congr_of_eventuallyEq (Filter.Eventually.of_forall (by
-      intro s
-      change -(s / 2) * w = (-s) / 2 * w
-      ring))).congr_deriv (by ring)
-  have h0 := ((Real.hasDerivAt_exp (-(t / 2) * w)).comp t hlin).const_mul d
-  have hevent :
-      (fun s => unitaryMatrixDualCasimirHeatCoefficientReal data s q) =ᶠ[nhds t]
-        (fun s => d * Real.exp (-(s / 2) * w)) := Filter.Eventually.of_forall (by
-    intro s
-    unfold unitaryMatrixDualCasimirHeatCoefficientReal
-    rfl)
-  have h1 := h0.congr_of_eventuallyEq hevent
-  apply h1.congr_deriv
-  unfold unitaryMatrixDualCasimirHeatCoefficientReal
-  dsimp only [w, d]
-  ring
-
 /-- Exact single-character spectral identity behind Driver's `∂ₜ = 1/2 Δ` convention. The left
-factor is the derivative of the real coefficient proved immediately above; this theorem does not
+factor is the derivative of the real coefficient proved in the imported derivative-series module;
+this theorem does not
 exchange the Laplacian or time derivative with an infinite sum. -/
 theorem unitaryMatrixDualCasimirHeatTerm_derivative_eq_half_laplacian
     {inner : Geometry.InvariantInnerProductData
@@ -162,13 +134,13 @@ theorem unitaryMatrixDualCasimirHeatTerm_derivative_eq_half_laplacian
     (bridge : UnitaryMatrixDualCasimirLaplacianBridgeData
       inner laplacianData heatTraceData)
     (t : ℝ) (q : UnitaryMatrixDual G) (g : G) :
-    ((-(heatTraceData.casimirWeight q / 2) *
-        unitaryMatrixDualCasimirHeatCoefficientReal heatTraceData t q : ℝ) : ℂ) *
+    (unitaryMatrixDualCasimirHeatDerivativeCoefficientReal heatTraceData t q : ℂ) *
         unitaryMatrixDualCharacter q g =
       (1 / 2 : ℂ) *
         (unitaryMatrixDualCasimirHeatCoefficientReal heatTraceData t q : ℂ) *
         laplacianData.laplacian (bridge.smoothCharacter q) g := by
   rw [bridge.laplacian_smoothCharacter]
+  unfold unitaryMatrixDualCasimirHeatDerivativeCoefficientReal
   push_cast
   ring
 

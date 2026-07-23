@@ -842,6 +842,11 @@ committed before higher layers depend on it.
   `Δχ_q=-c_qχ_q` for the unchanged pairing Laplacian. Prove eigenvalue uniqueness from
   `χ_q(1)=dim(q)>0`, the exact `-(c_q/2)` coefficient derivative, and the single-character
   `∂ₜ=½Δ` identity. Do not differentiate the infinite series or claim a heat equation.
+- [x] Prove heat-trace summability controls the exact coefficient-derivative series uniformly at
+  positive time: derive `(c/2)e^{-tc/2}≤(2/t)e^{-tc/4}`, weighted derivative-coefficient
+  summability from the heat trace at `t/2`, the individual coefficient derivative, unconditional
+  finite-subset convergence, pointwise `tsum`, and a Weierstrass norm bound. Keep identification
+  with the derivative of the original infinite series as an explicit future interchange obligation.
 - [x] Combine the exact candidate coefficient time-addition law with weighted uniform-series
   convolution to prove the conditional positive-time spectral-family law `K_s⋆K_t=K_{s+t}` in
   `C(G,ℂ)` and pointwise in the fixed integral convention. Retain caller-supplied heat-trace

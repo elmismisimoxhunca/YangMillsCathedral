@@ -5199,7 +5199,11 @@ character eigenvalue. A separate uninhabited `UnitaryMatrixDualCasimirLaplacianB
 requires every selected character smooth and `Δχ_q=-c_qχ_q` for the unchanged pairing Laplacian.
 It proves each weight unique from `χ_q(1)=dim(q)>0`, the exact `-(c_q/2)` coefficient derivative,
 and the single-character `∂ₜ=½Δ` identity without passing either operator through an infinite sum.
-Combining the convolution formula with the exact candidate coefficient time-addition law now proves
+Heat-trace summability at `t/2` now also controls the exact coefficient-derivative series at `t`:
+the proved estimate `(c/2)e^{-tc/2}≤(2/t)e^{-tc/4}` yields weighted summability, unconditional
+uniform finite-subset convergence, a pointwise derivative-candidate `tsum`, and a Weierstrass norm
+bound. This candidate is not yet identified with the time derivative of the original infinite
+series. Combining the convolution formula with the exact candidate coefficient time-addition law now proves
 the conditional positive-time spectral-family convolution law `K_s⋆K_t=K_{s+t}` in `C(G,ℂ)` and
 pointwise in the fixed integral order. No inhabitant of either the heat-trace data or the geometric
 bridge is constructed; no time-zero identity, infinite-series heat equation, pointwise positivity of

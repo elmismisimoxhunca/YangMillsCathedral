@@ -141,7 +141,10 @@ Laplacian. A separate uninhabited bridge now states that missing identification 
 `Δχ_q=-c_qχ_q`, proves uniqueness of each weight, the `-(c_q/2)` coefficient derivative, and the
 single-character `∂ₜ=½Δ` identity. It still provides no bridge inhabitant, time-zero identity,
 infinite-series differentiation/heat equation, pointwise positivity of the summed function, Haar
-normalization, or heat-kernel status. The conditional density result does not establish Lévy's
+normalization, or heat-kernel status. Heat-trace summability at time `t/2` does now prove weighted
+uniform convergence of the exact coefficient-derivative series at time `t`, via
+`(c/2)e^{-tc/2}≤(2/t)e^{-tc/4}`; this constructs the derivative candidate without asserting that it
+is the derivative of the original infinite series. The conditional density result does not establish Lévy's
 theorem at unrestricted generality. Global dual
 countability, summability and convergence of Lévy's genuinely infinite heat-kernel expansion,
 infinite-series inversion, and Casimir action remain source-backed targets.

@@ -147,7 +147,10 @@ not misuse the real carrier. A separate uninhabited bridge now requires every se
 be smooth and satisfy the exact signed equation `Δχ_q=-c_qχ_q` for the unchanged pairing
 Laplacian and candidate spectral weights. It proves eigenvalue uniqueness, the exact
 `-(c_q/2)` coefficient derivative, and the single-term `∂ₜ=½Δ` identity, but does not construct the
-bridge or differentiate the infinite series. The proof-required `B → VB` enlargement now has BC certificates on both graphs, literal coarse-edge
+bridge or differentiate the infinite series. Independently, heat-trace summability at time `t/2`
+now proves weighted uniform convergence of the exact coefficient-derivative series at time `t`,
+using `(c/2)e^{-tc/2}≤(2/t)e^{-tc/4}`; this constructs the candidate derivative function but still
+does not justify differentiating the original series. The proof-required `B → VB` enlargement now has BC certificates on both graphs, literal coarse-edge
 subdivision paths, the exact vertical/x-axis tree, total coverage excluding unrelated enlarged edges,
 and measurable ambient-compatible coarse restriction. Equation (6.1) is now an uninhabited universal interface: every bounded measurable coarse function
 factors through exact enlarged restriction and its base expectation equals the normalized vertical/x-
