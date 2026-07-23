@@ -819,8 +819,8 @@ committed before higher layers depend on it.
   `Summable (dim(q)^2 exp(-(t/2)c_q))` for every `t>0`. Conditionally construct the globally uniform
   central character series, finite-subset convergence, pointwise/identity heat-trace formulas,
   Weierstrass bound, coefficient time-addition law, Haar coefficient recovery, and derived dual
-  countability. Do not call it a heat kernel before Laplacian action, heat equation, semigroup,
-  pointwise positivity of the summed function, and normalization are connected.
+  countability. Do not call it a heat kernel before Laplacian action, heat equation, pointwise
+  positivity of the summed function, and normalization are connected.
 - [x] Package normalized-Haar convolution on `C(G,ℂ)` under the explicit second-countability
   required by parametric integration; prove continuity, `‖f⋆g‖∞≤‖f‖∞‖g‖∞`, bounded linearity in
   each fixed ordered input, and hostile preservation of genuinely noncommutative input order.
@@ -833,6 +833,11 @@ committed before higher layers depend on it.
   bounded linear convolution operators: `series(a)⋆series(b)=series(a_qb_qdim(q)⁻¹)`. Expose
   one-sided coefficient extraction and central-series commutativity, with changed-output hostile
   probes; do not use completeness or an unjustified infinite sum/integral exchange.
+- [x] Combine the exact candidate coefficient time-addition law with weighted uniform-series
+  convolution to prove the conditional positive-time spectral-family law `K_s⋆K_t=K_{s+t}` in
+  `C(G,ℂ)` and pointwise in the fixed integral convention. Retain caller-supplied heat-trace
+  summability and do not infer a time-zero identity, Laplacian action, heat equation, positivity,
+  Haar normalization, or heat-kernel status.
 - [ ] Prove the general compact-Hausdorff-group Peter–Weyl point-separation/density theorem without
   assuming one faithful finite-dimensional representation; do not conflate this with the completed
   conditional compact matrix-group theorem.

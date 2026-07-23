@@ -103,7 +103,9 @@ is injective. Independently, the exact normalized-Haar convolution calculation n
 `χ_q⋆χ_r = δ_{qr} dim(q)⁻¹χ_q` directly from matrix-coefficient orthogonality, retaining the
 project's `f(x)g(x⁻¹z)` order. Bounded linearity of continuous convolution then extends this
 coefficientwise to both explicitly weighted unconditional uniform character sums, without assuming
-Peter–Weyl completeness or exchanging an unjustified infinite sum with an integral. This remains conditional only where density/completeness or weighted summability is
+Peter–Weyl completeness or exchanging an unjustified infinite sum with an integral. For the
+caller-supplied Casimir-weighted spectral coefficients, this yields the exact conditional
+positive-time law `K_s⋆K_t=K_{s+t}`; it supplies no time-zero identity or heat-kernel status. This remains conditional only where density/completeness or weighted summability is
 invoked and is not a countably ordered Fourier
 partial-sum construction: it does not prove the
 general compact-group Peter–Weyl theorem, global dual countability, an unrestricted infinite

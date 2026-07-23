@@ -133,9 +133,12 @@ requires Lévy's exact positive-time heat-trace summability
 `Summable (dim(q)^2 exp(-(t/2)c_q))`. It conditionally constructs the globally uniform continuous-
 central series `∑dim(q)exp(-(t/2)c_q)χ_q`, proves its finite-subset convergence, pointwise and identity
 trace formulas, norm bound, time-addition coefficient law, and Haar coefficient recovery, and shows
-that this strong premise itself forces selected-dual countability. It does not identify the weights
-with Driver's geometric Laplacian, prove a heat equation/convolution semigroup, pointwise positivity of the summed function, Haar
-normalization, or heat-kernel status. The conditional density result does not establish Lévy's
+that this strong premise itself forces selected-dual countability. Combining the exact coefficient
+time-addition law with bounded-linear weighted-series convolution now proves the conditional
+positive-time spectral-family law `K_s⋆K_t=K_{s+t}` in `C(G,ℂ)` and pointwise in the fixed
+convolution order. It does not construct the premise, identify the weights with Driver's geometric
+Laplacian, provide a time-zero identity, prove a heat equation, pointwise positivity of the summed
+function, Haar normalization, or heat-kernel status. The conditional density result does not establish Lévy's
 theorem at unrestricted generality. Global dual
 countability, summability and convergence of Lévy's genuinely infinite heat-kernel expansion,
 infinite-series inversion, and Casimir action remain source-backed targets.

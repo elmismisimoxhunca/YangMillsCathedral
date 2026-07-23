@@ -5192,9 +5192,11 @@ selected-character convolution law is now proved directly:
 otherwise nonabelian convention. Bounded linear convolution now extends that law through both
 explicitly weighted unconditional uniform sums, giving
 `series(a)⋆series(b)=series(a_qb_qdim(q)⁻¹)` without completeness or an unjustified sum/integral
-exchange. No Casimir/Laplacian identification, heat equation, candidate spectral-series convolution
-semigroup, pointwise positivity of the summed function, Haar normalization, or
-heat-kernel claim is made. The earlier approximation choices remain arbitrary
+exchange. Combining this formula with the exact candidate coefficient time-addition law now proves
+the conditional positive-time spectral-family convolution law `K_s⋆K_t=K_{s+t}` in `C(G,ℂ)` and
+pointwise in the fixed integral order. No inhabitant of the heat-trace data, time-zero identity,
+Casimir/geometric-Laplacian identification, heat equation, pointwise positivity of the summed
+function, Haar normalization, or heat-kernel claim is made. The earlier approximation choices remain arbitrary
 finite approximants, not Fourier partial sums; general compact-group density,
 global dual countability, unrestricted infinite synthesis/inversion identities, and convergence of a canonically
 ordered Fourier series remain open. This does not prove dual countability, infinite Fourier inversion, or the
