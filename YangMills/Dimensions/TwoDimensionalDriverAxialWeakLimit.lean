@@ -197,6 +197,50 @@ def TwoDimensionalAxialObservableDependsOnFiniteVolume
       first bond = second bond) →
     observable first = observable second
 
+/-- Driver Theorem 7.2's boundary-independent bounded-continuous weak convergence for one
+candidate infinite-volume measure. -/
+def TwoDimensionalDriverAxialBoundaryIndependentConvergenceObligation
+    {G : Type uG} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+    [CompactSpace G] [T2Space G] [SecondCountableTopology G]
+    [MeasurableSpace G] [BorelSpace G] [MeasurableMul₂ G] [MeasurableInv G]
+    (spacing : PositiveLatticeSpacing) (action : TwoDimensionalLatticeActionData G)
+    (limitMeasure : Measure (EpsilonSquareLatticeAxialConfiguration G spacing)) : Prop :=
+  ∀ (boundary : EpsilonSquareLatticeAxialConfiguration G spacing)
+    (observable : BoundedContinuousRealFunction
+      (EpsilonSquareLatticeAxialConfiguration G spacing)),
+    Tendsto (fun stage => ∫ configuration, observable configuration
+      ∂twoDimensionalSquareLatticeConditionedAxialMeasure
+        spacing (driverFiniteVolumeRadius stage) action boundary) atTop
+      (nhds (∫ configuration, observable configuration ∂limitMeasure))
+
+/-- Driver Theorem 7.2's identification of the same candidate limit with every eligible free finite
+volume law. -/
+def TwoDimensionalDriverAxialFreeFiniteVolumeIdentificationObligation
+    {G : Type uG} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+    [CompactSpace G] [T2Space G] [SecondCountableTopology G]
+    [MeasurableSpace G] [BorelSpace G] [MeasurableMul₂ G] [MeasurableInv G]
+    (spacing : PositiveLatticeSpacing) (action : TwoDimensionalLatticeActionData G)
+    (limitMeasure : Measure (EpsilonSquareLatticeAxialConfiguration G spacing)) : Prop :=
+  ∀ (radius : PositiveSquareLatticeBoxRadius)
+    (observable : BoundedContinuousRealFunction
+      (EpsilonSquareLatticeAxialConfiguration G spacing)),
+    TwoDimensionalAxialObservableDependsOnFiniteVolume spacing radius observable →
+    (∫ configuration, observable configuration ∂limitMeasure) =
+      ∫ configuration, observable configuration
+        ∂twoDimensionalSquareLatticeBoxPushforwardMeasure spacing radius action
+
+/-- Exact unresolved Theorem 7.2 witness: one measure satisfying both source-facing obligations. -/
+def TwoDimensionalDriverAxialWeakLimitObligation
+    {G : Type uG} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+    [CompactSpace G] [T2Space G] [SecondCountableTopology G]
+    [MeasurableSpace G] [BorelSpace G] [MeasurableMul₂ G] [MeasurableInv G]
+    (spacing : PositiveLatticeSpacing) (action : TwoDimensionalLatticeActionData G) : Prop :=
+  ∃ limitMeasure : Measure (EpsilonSquareLatticeAxialConfiguration G spacing),
+    TwoDimensionalDriverAxialBoundaryIndependentConvergenceObligation
+      spacing action limitMeasure ∧
+    TwoDimensionalDriverAxialFreeFiniteVolumeIdentificationObligation
+      spacing action limitMeasure
+
 /-- Source-facing acceptance surface for the gauge-fixed assertions of Driver Theorem 7.2. -/
 structure TwoDimensionalDriverAxialWeakLimitData
     {G : Type uG} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
@@ -206,24 +250,29 @@ structure TwoDimensionalDriverAxialWeakLimitData
     (action : TwoDimensionalLatticeActionData G) : Type uG where
   limitMeasure : Measure (EpsilonSquareLatticeAxialConfiguration G spacing)
   bounded_continuous_convergence :
-    ∀ (boundary : EpsilonSquareLatticeAxialConfiguration G spacing)
-      (observable : BoundedContinuousRealFunction
-        (EpsilonSquareLatticeAxialConfiguration G spacing)),
-      Tendsto (fun stage => ∫ configuration, observable configuration
-        ∂twoDimensionalSquareLatticeConditionedAxialMeasure
-          spacing (driverFiniteVolumeRadius stage) action boundary) atTop
-        (nhds (∫ configuration, observable configuration ∂limitMeasure))
+    TwoDimensionalDriverAxialBoundaryIndependentConvergenceObligation
+      spacing action limitMeasure
   free_finite_volume_identification :
-    ∀ (radius : PositiveSquareLatticeBoxRadius)
-      (observable : BoundedContinuousRealFunction
-        (EpsilonSquareLatticeAxialConfiguration G spacing)),
-      TwoDimensionalAxialObservableDependsOnFiniteVolume
-        spacing radius observable →
-      (∫ configuration, observable configuration ∂limitMeasure) =
-        ∫ configuration, observable configuration
-          ∂twoDimensionalSquareLatticeBoxPushforwardMeasure spacing radius action
+    TwoDimensionalDriverAxialFreeFiniteVolumeIdentificationObligation
+      spacing action limitMeasure
 
 namespace TwoDimensionalDriverAxialWeakLimitData
+
+/-- Exact inhabitation audit for Driver Theorem 7.2: one candidate measure must satisfy both named
+source-facing obligations. -/
+theorem nonempty_iff_weakLimitObligation
+    {G : Type uG} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+    [CompactSpace G] [T2Space G] [SecondCountableTopology G]
+    [MeasurableSpace G] [BorelSpace G] [MeasurableMul₂ G] [MeasurableInv G]
+    (spacing : PositiveLatticeSpacing) (action : TwoDimensionalLatticeActionData G) :
+    Nonempty (TwoDimensionalDriverAxialWeakLimitData spacing action) ↔
+      TwoDimensionalDriverAxialWeakLimitObligation spacing action := by
+  constructor
+  · rintro ⟨data⟩
+    exact ⟨data.limitMeasure, data.bounded_continuous_convergence,
+      data.free_finite_volume_identification⟩
+  · rintro ⟨limitMeasure, convergence, freeIdentification⟩
+    exact ⟨⟨limitMeasure, convergence, freeIdentification⟩⟩
 
 /-- Countable-product Borel identification and compactness of the exact closed axial carrier derive
 all structured continuous-test coverage. -/

@@ -131,15 +131,21 @@ theorem nonempty_iff_spectralWilson_weakLimits :
         (law := law) (inner := inner) (realLaplacian := realLaplacian)
         (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData),
       ∀ spacing : PositiveLatticeSpacing,
-        Nonempty (TwoDimensionalDriverAxialWeakLimitData spacing
+        TwoDimensionalDriverAxialWeakLimitObligation spacing
           (TwoDimensionalLatticeActionData.villain
             spectralWilson.spectralHeatKernel.heatEquationCore
-            spectralWilson.spectralHeatKernel.kernelOperator spacing)) := by
+            spectralWilson.spectralHeatKernel.kernelOperator spacing) := by
   constructor
   · rintro ⟨family⟩
-    exact ⟨family.spectralWilson, fun spacing => ⟨family.weakLimit spacing⟩⟩
+    refine ⟨family.spectralWilson, fun spacing => ?_⟩
+    exact ⟨(family.weakLimit spacing).limitMeasure,
+      (family.weakLimit spacing).bounded_continuous_convergence,
+      (family.weakLimit spacing).free_finite_volume_identification⟩
   · rintro ⟨spectralWilson, weakLimits⟩
-    exact ⟨⟨spectralWilson, fun spacing => Classical.choice (weakLimits spacing)⟩⟩
+    exact ⟨⟨spectralWilson, fun spacing =>
+      let witness := Classical.choose (weakLimits spacing)
+      ⟨witness, (Classical.choose_spec (weakLimits spacing)).1,
+        (Classical.choose_spec (weakLimits spacing)).2⟩⟩⟩
 
 /-- Restrict the all-spacing family to the exact fixed-spacing bridge. -/
 noncomputable def atSpacing

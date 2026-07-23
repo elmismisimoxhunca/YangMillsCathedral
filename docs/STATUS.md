@@ -5391,8 +5391,10 @@ Driver convergence chain and Brownian realization indexed by its heat core; the 
 requires the exact enlarged-product bridge and separately named Driver varying-finite-graph
 heat-integral convergence obligation; the product
 bridge requires the all-spacing family plus the separately named source-facing expectation identity;
-that family requires one spectral Wilson chain and a Theorem 7.2 weak limit at every spacing; and the
-compact side requires both smooth quotient descent and Lévy sewing on the same identification. No
+that family requires one spectral Wilson chain and a Theorem 7.2 weak limit at every spacing; every
+such weak limit requires one candidate measure satisfying separately named boundary-independent
+convergence and free finite-volume identification obligations; and the compact side requires both
+smooth quotient descent and Lévy sewing on the same identification. No
 one of those missing witnesses is synthesized. Any eventual final inhabitant must remain
 strictly separate from the four-dimensional Clay endpoint.
 

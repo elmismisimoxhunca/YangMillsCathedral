@@ -923,8 +923,9 @@ dependently indexed Brownian realization and, separately, smooth quotient descen
 on one identification. The cascade continues: convergence requires the exact enlarged-product
 bridge plus the separately named varying-finite-graph heat-integral convergence obligation; the product bridge requires the exact all-spacing
 family plus the separately named source-facing expectation identity; and that family requires one
-spectral Wilson chain and a Theorem 7.2 weak limit at every spacing. No missing witness is hidden or
-synthesized.
+spectral Wilson chain and a Theorem 7.2 weak limit at every spacing. Each such weak limit is itself
+exactly one candidate measure satisfying separately named boundary-independent convergence and free
+finite-volume identification obligations. No missing witness is hidden or synthesized.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly

@@ -94,10 +94,10 @@ theorem exact_family_inhabitation_audit :
         (law := law) (inner := inner) (realLaplacian := realLaplacian)
         (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData),
       ∀ spacing : PositiveLatticeSpacing,
-        Nonempty (TwoDimensionalDriverAxialWeakLimitData spacing
+        TwoDimensionalDriverAxialWeakLimitObligation spacing
           (TwoDimensionalLatticeActionData.villain
             spectralWilson.spectralHeatKernel.heatEquationCore
-            spectralWilson.spectralHeatKernel.kernelOperator spacing)) :=
+            spectralWilson.spectralHeatKernel.kernelOperator spacing) :=
   TwoDimensionalSpectralVillainWeakLimitFamilyBridgeData.nonempty_iff_spectralWilson_weakLimits
 
 /-- The all-spacing family restricts to the exact fixed-spacing bridge without changing its weak

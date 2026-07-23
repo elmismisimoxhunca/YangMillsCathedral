@@ -64,6 +64,13 @@ theorem constant_one_depends_on_every_finite_volume
   intro first second agreement
   rfl
 
+/-- Driver Theorem 7.2 inhabitance is exactly one candidate limit measure satisfying the separately
+named boundary-independent convergence and free finite-volume identification obligations. -/
+theorem exact_weak_limit_inhabitation_audit :
+    Nonempty (TwoDimensionalDriverAxialWeakLimitData spacing action) ↔
+      TwoDimensionalDriverAxialWeakLimitObligation spacing action :=
+  TwoDimensionalDriverAxialWeakLimitData.nonempty_iff_weakLimitObligation spacing action
+
 /-- Every continuous real observable is explicitly covered by a measurable bounded test, closing
 the topology/measurability and compact-boundedness bridge required by Driver's quantifier. -/
 theorem every_continuous_observable_covered

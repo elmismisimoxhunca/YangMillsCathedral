@@ -1309,8 +1309,9 @@ committed before higher layers depend on it.
     realization; the convergence chain requires the exact enlarged-product bridge plus the remaining
     separately named Driver varying-finite-graph heat-integral convergence obligation; the product bridge requires the exact all-spacing family plus the named
     source-facing expectation identity; and that family requires one spectral Wilson chain plus a
-    Theorem 7.2 weak limit at every spacing. The surface bridge requires both smooth descent and Lévy
-    sewing on one quotient.
+    Theorem 7.2 weak limit at every spacing. Each weak limit requires one candidate measure satisfying
+    separately named boundary-independent convergence and free finite-volume identification
+    obligations. The surface bridge requires both smooth descent and Lévy sewing on one quotient.
   - [ ] Assemble a final source-indexed 2D acceptance proposition joining the constructed finite
     lattice, heat/Brownian, weak-limit continuum, compact-surface, and sewing chains; attempt to
     inhabit it solely from formalized Driver/Lévy/Sengupta results and record every remaining
