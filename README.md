@@ -952,11 +952,15 @@ area decomposition, compatible twist face, and ordinary/twisted factor equality;
 parallel one-pair Fact 3 building block uses explicit external/internal edge, face, and region
 equivalences preserving areas; according to one orientation sign it preserves or reverses/flips
 boundary words and transports `h` to `h` or `h⁻¹` and requires both factor laws to agree. Actual area-preserving homeomorphisms,
-curve reparameterizations, and universal quantification remain open. A separate uninhabited Sengupta--Lévy bridge now compares the two
+curve reparameterizations, and universal quantification remain open. A dependent Facts 2–3 bridge
+forces both one-pair certificates to start at the exact triangulation realizing the finite-law
+heat factors and reuse its unchanged density and fixed central bundle class; disconnected
+invariance witnesses are not accepted. A separate uninhabited Sengupta--Lévy bridge now compares the two
 distinct compact-surface sample carriers only through the pushforward law of one finite nonempty
 common-base simultaneous-conjugacy observation. It neither identifies carriers nor asserts false raw
 holonomy equality. `TwoDimensionalSenguptaAugmentedCurrentStrengthAcceptanceData` now dependently
-joins all of those Sengupta interfaces to the exact planar spectral semigroup and exact Lévy sewing
+joins the finite-law, heat-factor, and Sengupta–Lévy interfaces—but not the separate Facts 2–3
+bridge—to the exact planar spectral semigroup and exact Lévy sewing
 field already stored by the current-strength record. An exact `Nonempty` equivalence exposes the
 literature-only inhabitance attempt as the conjunction of compact-simple gauge geometry, the prior
 current-strength witness, one finite Sengupta law, its dependent heat-factor witness, and its

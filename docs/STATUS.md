@@ -5442,7 +5442,10 @@ one-pair factor-level Fact 3 candidate on one normalized semigroup and central t
 external/internal edge, face, and region equivalences preserve regions, areas, and twist faces;
 external fields transport contravariantly; positive orientation preserves boundary words and retains
 `h`, while negative orientation reverses/flips boundary words and uses `h⁻¹`; and ordinary/twisted factors agree. Actual area-preserving surface
-homeomorphisms, curve reparameterizations, and universal source quantification remain open.
+homeomorphisms, curve reparameterizations, and universal source quantification remain open. The
+new `TwoDimensionalSenguptaFactsTwoThreeBridgeData` prevents disconnected witnesses: both one-pair
+certificates start at the exact triangulation stored by one finite-law heat-factor bridge and reuse
+its unchanged covering density and fixed central bundle class.
 
 `TwoDimensionalSenguptaLevyFiniteHolonomyBridgeData` now states the first exact same-theory bridge
 between the distinct Sengupta and Lévy compact-surface sample carriers. A finite nonempty curve family

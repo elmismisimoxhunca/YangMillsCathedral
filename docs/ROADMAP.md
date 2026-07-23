@@ -1346,6 +1346,9 @@ committed before higher layers depend on it.
     orientation semantics, and ordinary and
     twisted factor equality. Retain actual area-preserving homeomorphisms, curve reparameterization,
     and universal source quantification as debt.
+  - [x] Dependently tie both one-pair Facts 2–3 certificates to the exact triangulation, covering
+    density, and fixed central bundle class stored by one finite-law heat-factor bridge; reject
+    disconnected substitute invariance witnesses.
   - [x] Add an uninhabited same-theory Sengupta--Lévy finite-law bridge across their distinct sample
     carriers, selecting a finite nonempty family in one Lévy whole-surface base fiber and equating
     only the simultaneous-conjugacy-class pushforward laws. Do not identify carriers or raw based
