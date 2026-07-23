@@ -876,6 +876,11 @@ committed before higher layers depend on it.
   coherence. Combine it with the spectral-density bridge and interchange datum in
   `TwoDimensionalSelectedLoopSpectralHeatEquationBridgeData`, deriving the existing unchanged real
   selected-loop positive smooth `∂ₜQ=½ΔQ` heat core and rejecting changed derivatives.
+- [x] Attach Driver's stronger uninhabited generated-operator/kernel formula to that exact spectral
+  heat core, then combine it with unchanged connectedness, faithful smooth representation, Wilson
+  normalization, and induced-pairing coherence to construct the existing
+  `TwoDimensionalWilsonCommonHeatChainData` on the spectral semigroup; reject changed kernel values
+  and changed representation-induced pairings.
 - [x] Combine the exact candidate coefficient time-addition law with weighted uniform-series
   convolution to prove the conditional positive-time spectral-family law `K_s⋆K_t=K_{s+t}` in
   `C(G,ℂ)` and pointwise in the fixed integral convention. Retain caller-supplied heat-trace

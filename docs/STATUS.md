@@ -5228,7 +5228,13 @@ uninhabited `RightInvariantPairingRealComplexLaplacianCoherenceData` ties real a
 Laplacians normalized by the same invariant pairing. Together with the spectral density bridge and
 series interchange, uninhabited `TwoDimensionalSelectedLoopSpectralHeatEquationBridgeData`
 constructs the existing positive smooth real selected-loop `∂ₜQ=½ΔQ` heat core on the unchanged
-law, derived semigroup, and real pairing Laplacian. Combining the convolution formula with the exact candidate coefficient time-addition law now proves
+law, derived semigroup, and real pairing Laplacian. Uninhabited
+`TwoDimensionalSelectedLoopSpectralHeatKernelBridgeData` explicitly retains Driver's stronger
+arbitrary-continuous-test generated-operator/kernel theorem for that exact core. Uninhabited
+`TwoDimensionalWilsonSpectralHeatChainBridgeData` then retains connectedness, faithful smooth
+representation, Wilson normalization, and induced-pairing coherence and constructs the existing
+common Wilson/heat chain on the spectral semigroup, with exact probes for the representation,
+Wilson trace action, pairing, and spectral kernel. Combining the convolution formula with the exact candidate coefficient time-addition law now proves
 the conditional positive-time spectral-family convolution law `K_s⋆K_t=K_{s+t}` in `C(G,ℂ)` and
 pointwise in the fixed integral order. No inhabitant of either the heat-trace data or the geometric
 bridge, interchange, positivity, or initial-identity data is constructed; no time-zero density,
