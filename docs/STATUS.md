@@ -5213,10 +5213,15 @@ the separate conditional normalization `∫K_t dμ_H=1`. Pointwise real-valuedne
 positivity are now isolated as uninhabited `UnitaryMatrixDualCasimirHeatPositivityData`; together
 with the geometric bridge these fields produce a continuous positive real density, a measurable
 positive `ENNReal` density of Haar lintegral one, and a normalized with-density probability measure.
-No positivity inhabitant is constructed. Combining the convolution formula with the exact candidate coefficient time-addition law now proves
+No positivity inhabitant is constructed. Lévy's exact weak identity limit is now also isolated as
+uninhabited `UnitaryMatrixDualCasimirHeatInitialIdentityData` with filter `𝓝[Set.Ioi 0] 0` and every
+continuous complex test. Under positivity, exact with-density integration transports this limit to
+the positive measures; no initial-limit inhabitant or time-zero density is constructed. Combining
+the convolution formula with the exact candidate coefficient time-addition law now proves
 the conditional positive-time spectral-family convolution law `K_s⋆K_t=K_{s+t}` in `C(G,ℂ)` and
 pointwise in the fixed integral order. No inhabitant of either the heat-trace data or the geometric
-bridge or interchange data is constructed; no time-zero identity, unconditional infinite-series
+bridge, interchange, positivity, or initial-identity data is constructed; no time-zero density,
+unconditional infinite-series
 heat equation, unconditional pointwise positivity of the summed function, unconditional Haar
 normalization, or heat-kernel claim is made. The earlier approximation choices remain arbitrary
 finite approximants, not Fourier partial sums; general compact-group density,

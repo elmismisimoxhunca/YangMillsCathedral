@@ -860,6 +860,11 @@ committed before higher layers depend on it.
   `UnitaryMatrixDualCasimirHeatPositivityData`. Conditionally construct the continuous positive real
   density, measurable positive `ENNReal` density, Haar lintegral one, and normalized with-density
   probability measure. Do not infer a positivity inhabitant or heat-kernel status.
+- [x] Isolate Lévy's exact weak identity limit as uninhabited
+  `UnitaryMatrixDualCasimirHeatInitialIdentityData`, using `𝓝[Set.Ioi 0] 0` and every continuous
+  complex test. Under positivity, identify source spectral integrals with expectations under the
+  with-density measures and transport the weak limit, with changed-limit hostility. Do not construct
+  a time-zero density or weak-limit inhabitant.
 - [x] Combine the exact candidate coefficient time-addition law with weighted uniform-series
   convolution to prove the conditional positive-time spectral-family law `K_s⋆K_t=K_{s+t}` in
   `C(G,ℂ)` and pointwise in the fixed integral convention. Retain caller-supplied heat-trace

@@ -161,7 +161,11 @@ weight to zero; exact Haar coefficient recovery then proves the separate conditi
 `∫K_t dμ_H=1`. Pointwise real-valuedness and strict positivity are now isolated separately as
 uninhabited data; together with the geometric bridge they yield a continuous positive real density,
 a positive `ENNReal` density of Haar lintegral one, and a normalized with-density probability
-measure. No positivity inhabitant is constructed. The conditional density result does not establish Lévy's
+measure. No positivity inhabitant is constructed. The same §1.4 positive-side weak limit is now
+stored separately as uninhabited `UnitaryMatrixDualCasimirHeatInitialIdentityData` with exact filter
+`𝓝[Set.Ioi 0] 0`; under positivity, the source integral is proved equal to expectation under the
+with-density measure and the weak identity transports there. No initial-limit inhabitant is
+constructed. The conditional density result does not establish Lévy's
 theorem at unrestricted generality. Global dual
 countability, summability and convergence of Lévy's genuinely infinite heat-kernel expansion,
 infinite-series inversion, and Casimir action remain source-backed targets.

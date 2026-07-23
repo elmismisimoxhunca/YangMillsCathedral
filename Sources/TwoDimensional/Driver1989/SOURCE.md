@@ -159,7 +159,9 @@ character and dimension one; any geometric bridge forces its candidate weight to
 pairing Laplacian annihilates constants. Exact character analysis therefore gives conditional
 normalized-Haar mass `∫K_t dμ_H=1`. Pointwise real-valuedness and strict positivity are now
 isolated as separate uninhabited data; with the bridge they produce a positive real/`ENNReal`
-density and normalized with-density probability measure, but no positivity inhabitant. The proof-required `B → VB` enlargement now has BC certificates on both graphs, literal coarse-edge
+density and normalized with-density probability measure, but no positivity inhabitant. The weak
+`t→0+` identity against every continuous complex test is likewise isolated as uninhabited data and
+transported to the positive with-density measures; no weak-limit inhabitant is constructed. The proof-required `B → VB` enlargement now has BC certificates on both graphs, literal coarse-edge
 subdivision paths, the exact vertical/x-axis tree, total coverage excluding unrelated enlarged edges,
 and measurable ambient-compatible coarse restriction. Equation (6.1) is now an uninhabited universal interface: every bounded measurable coarse function
 factors through exact enlarged restriction and its base expectation equals the normalized vertical/x-
