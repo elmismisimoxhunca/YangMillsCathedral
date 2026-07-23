@@ -5447,7 +5447,17 @@ the finite-law heat-factor and closed one-pair Facts 2–3 chain, requires every
 be literally the finite law's holonomy word, and requires the same finite law's fixed central bundle
 class to satisfy `h = h⁻¹` whenever the exact complex is combinatorially
 nonorientable. It remains uninhabited, outside the augmented record, and unidentified with the
-separate Lévy surface carrier. `TwoDimensionalSenguptaClosedPresentationInvarianceBridgeData` now dependently ties
+separate Lévy surface carrier. `TwoDimensionalSenguptaEmbeddedComparisonBridgeData` now upgrades the
+selected one-pair comparisons geometrically: embedded fine faces partition exact base face images,
+every coarse bond has a nonempty directed fine-word realization without repeated underlying bonds,
+coarse-face substitution equals the signed sum of fine-face boundaries after internal cancellation,
+and parametrized external paths,
+coarse vertices, and regions persist on the same surface. An explicit homeomorphism transports
+parametrized edges through endpoint-fixing reparametrizations and transports face disks through
+marked-boundary reparametrizations, alongside exact vertices, regions, and curve words. Its boundary
+action realizes the stored Fact 3 sign, with positive equivalent to an orientable source plus
+orientation preservation. It is uninhabited and not a universal invariance theorem.
+`TwoDimensionalSenguptaClosedPresentationInvarianceBridgeData` now dependently ties
 closed incidence for the exact finite-law heat-factor base and the exact fine/transported candidates
 to one unchanged Facts 2–3 bridge, preventing unrelated presentation witnesses. This combined bridge
 also remains outside the augmented record pending embedded and universal source semantics. Fact 0 distinguished-face invariance and Fact 1 positive same-total

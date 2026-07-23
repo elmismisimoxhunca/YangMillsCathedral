@@ -958,7 +958,14 @@ A dependent embedded finite-law bridge now ties this realization to the exact he
 closed Facts 2–3 chain, equates every embedded curve word with the finite law's holonomy word, and
 enforces `h = h⁻¹` for the exact fixed bundle class in the combinatorially
 nonorientable case. Constructing its inhabitant remains open, and this stronger bridge is not yet
-required by the augmented acceptance record. Facts 0–1 are now explicit uninhabited
+required by the augmented acceptance record. A further uninhabited geometric comparison bridge now
+embeds the exact fine subdivision on the same surface, partitions every base face image, realizes
+every coarse bond by a nonempty directed fine-edge word without repeated underlying bonds, requires
+coarse-face boundary substitution to equal the signed fine-face boundary after internal cancellation, preserves parametrized external paths, vertices, and
+regions, and uses an explicit homeomorphism with endpoint-preserving edge and marked-disk
+reparametrizations to transport the exact Fact 3 target. Its boundary action realizes the stored
+sign, with positive exactly the orientable orientation-preserving case. This remains one-pair rather than
+universal. Facts 0–1 are now explicit uninhabited
 fields requiring distinguished-face and positive same-total area-splitting invariance. A separate
 one-step Fact 2 building block compares one coarse/fine candidate pair on one normalized nonzero
 covering-density semigroup and central twist through a surjective region-preserving face map, exact
