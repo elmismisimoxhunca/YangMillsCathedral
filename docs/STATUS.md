@@ -5194,12 +5194,16 @@ explicitly weighted unconditional uniform sums, giving
 `series(a)⋆series(b)=series(a_qb_qdim(q)⁻¹)` without completeness or an unjustified sum/integral
 exchange. Driver's pairing-normalized right-invariant Laplacian now also has a smooth complex-valued scalar
 carrier using the identical manifold derivative, right-invariant fields, and same-pairing
-orthonormal-basis independence contract; constants vanish, but no character eigenvalue is inferred.
+orthonormal-basis independence contract; constants vanish, but that carrier alone infers no
+character eigenvalue. A separate uninhabited `UnitaryMatrixDualCasimirLaplacianBridgeData` now
+requires every selected character smooth and `Δχ_q=-c_qχ_q` for the unchanged pairing Laplacian.
+It proves each weight unique from `χ_q(1)=dim(q)>0`, the exact `-(c_q/2)` coefficient derivative,
+and the single-character `∂ₜ=½Δ` identity without passing either operator through an infinite sum.
 Combining the convolution formula with the exact candidate coefficient time-addition law now proves
 the conditional positive-time spectral-family convolution law `K_s⋆K_t=K_{s+t}` in `C(G,ℂ)` and
-pointwise in the fixed integral order. No inhabitant of the heat-trace data, time-zero identity,
-Casimir/geometric-Laplacian identification, heat equation, pointwise positivity of the summed
-function, Haar normalization, or heat-kernel claim is made. The earlier approximation choices remain arbitrary
+pointwise in the fixed integral order. No inhabitant of either the heat-trace data or the geometric
+bridge is constructed; no time-zero identity, infinite-series heat equation, pointwise positivity of
+the summed function, Haar normalization, or heat-kernel claim is made. The earlier approximation choices remain arbitrary
 finite approximants, not Fourier partial sums; general compact-group density,
 global dual countability, unrestricted infinite synthesis/inversion identities, and convergence of a canonically
 ordered Fourier series remain open. This does not prove dual countability, infinite Fourier inversion, or the

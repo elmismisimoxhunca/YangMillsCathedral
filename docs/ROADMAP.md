@@ -837,6 +837,11 @@ committed before higher layers depend on it.
   functions using the identical manifold derivative, right-invariant fields, and same-pairing
   orthonormal-basis independence contract. Prove constants vanish and probe changed-basis values;
   do not infer a character eigenvalue or heat equation.
+- [x] Expose the missing geometric Casimir identification as uninhabited
+  `UnitaryMatrixDualCasimirLaplacianBridgeData`: require every selected character smooth and
+  `Δχ_q=-c_qχ_q` for the unchanged pairing Laplacian. Prove eigenvalue uniqueness from
+  `χ_q(1)=dim(q)>0`, the exact `-(c_q/2)` coefficient derivative, and the single-character
+  `∂ₜ=½Δ` identity. Do not differentiate the infinite series or claim a heat equation.
 - [x] Combine the exact candidate coefficient time-addition law with weighted uniform-series
   convolution to prove the conditional positive-time spectral-family law `K_s⋆K_t=K_{s+t}` in
   `C(G,ℂ)` and pointwise in the fixed integral convention. Retain caller-supplied heat-trace

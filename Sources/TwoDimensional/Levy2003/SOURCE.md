@@ -137,8 +137,11 @@ that this strong premise itself forces selected-dual countability. Combining the
 time-addition law with bounded-linear weighted-series convolution now proves the conditional
 positive-time spectral-family law `K_s⋆K_t=K_{s+t}` in `C(G,ℂ)` and pointwise in the fixed
 convolution order. It does not construct the premise, identify the weights with Driver's geometric
-Laplacian, provide a time-zero identity, prove a heat equation, pointwise positivity of the summed
-function, Haar normalization, or heat-kernel status. The conditional density result does not establish Lévy's
+Laplacian. A separate uninhabited bridge now states that missing identification exactly as
+`Δχ_q=-c_qχ_q`, proves uniqueness of each weight, the `-(c_q/2)` coefficient derivative, and the
+single-character `∂ₜ=½Δ` identity. It still provides no bridge inhabitant, time-zero identity,
+infinite-series differentiation/heat equation, pointwise positivity of the summed function, Haar
+normalization, or heat-kernel status. The conditional density result does not establish Lévy's
 theorem at unrestricted generality. Global dual
 countability, summability and convergence of Lévy's genuinely infinite heat-kernel expansion,
 infinite-series inversion, and Casimir action remain source-backed targets.

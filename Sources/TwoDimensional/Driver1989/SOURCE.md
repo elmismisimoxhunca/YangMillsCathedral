@@ -143,7 +143,11 @@ and infinitesimally injective), Wilson normalization/actions, exact trace pairin
 and unchanged selected continuum density/heat equation/kernel. The reusable Laplacian layer now
 also has a complex-valued scalar carrier using the identical right-invariant fields and
 same-pairing orthonormal-basis independence contract, so later character/Casimir obligations need
-not misuse the real carrier; no character eigenvalue is asserted by that extension. The proof-required `B → VB` enlargement now has BC certificates on both graphs, literal coarse-edge
+not misuse the real carrier. A separate uninhabited bridge now requires every selected character to
+be smooth and satisfy the exact signed equation `Δχ_q=-c_qχ_q` for the unchanged pairing
+Laplacian and candidate spectral weights. It proves eigenvalue uniqueness, the exact
+`-(c_q/2)` coefficient derivative, and the single-term `∂ₜ=½Δ` identity, but does not construct the
+bridge or differentiate the infinite series. The proof-required `B → VB` enlargement now has BC certificates on both graphs, literal coarse-edge
 subdivision paths, the exact vertical/x-axis tree, total coverage excluding unrelated enlarged edges,
 and measurable ambient-compatible coarse restriction. Equation (6.1) is now an uninhabited universal interface: every bounded measurable coarse function
 factors through exact enlarged restriction and its base expectation equals the normalized vertical/x-
