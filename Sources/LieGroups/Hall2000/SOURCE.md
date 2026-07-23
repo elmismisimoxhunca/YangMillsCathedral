@@ -88,7 +88,12 @@ to the standard coordinate Hermitian pairing. Conjugating through that exact equ
 constructs a continuous matrix representation with the fixed `Uρ(g)U⁻¹` order and an exact Mathlib
 representation equivalence. Transported pairing invariance and a derived column/Kronecker argument
 prove the literal equation `star σ(g) * σ(g) = 1`. This completes the finite-coordinate
-unitarization consequence of Proposition 5.17 without asserting Peter–Weyl completeness.
+unitarization consequence of Proposition 5.17 without asserting Peter–Weyl completeness. A separate
+group-algebra argument proves that exact representation equivalence preserves irreducibility. Thus
+every explicit positive-dimensional continuous irreducible matrix representation, even without a
+supplied unitary law, now yields an equivalent bundled unitary representative and coordinate-dual
+class. This does not yet realize arbitrary non-coordinate abstract representations or prove smooth
+representability/countability.
 
 The Hall notes do not interpret the Clay phrase “compact simple gauge group” or decide connectedness
 and global form. Those decisions use the Clay source plus the separately pinned gauge-global-form

@@ -5068,8 +5068,13 @@ now constructs a genuine continuous matrix representation with formula `σ(g)=U�
 exact `Representation.Equiv` back to the original coordinates. Standard-pairing preservation is
 derived from averaged-pairing invariance. A reusable column/Kronecker theorem then proves the
 literal unitary equation `star σ(g) * σ(g) = 1`, including dimension zero. Character invariance is
-recovered from the same representation equivalence. No dual completeness or Fourier convergence is
-inferred.
+recovered from the same representation equivalence. A reusable group-algebra module equivalence now
+proves irreducibility invariant under every exact representation equivalence. Consequently every
+explicit positive-dimensional continuous irreducible matrix representation, without any supplied
+unitary law, constructs an equivalent bundled unitary representative and a coordinate-unitary-dual
+class. Re-unitarizing an already unitary bundle is proved to retain its exact dual class. Arbitrary
+non-coordinate representation realization, smooth comparison surjectivity, dual countability,
+dual completeness, and Fourier convergence remain open.
 The next Schur precursor is now concrete: for two continuous finite matrix representations and an
 arbitrary rectangular matrix `A`, the coordinatewise Reynolds average
 `P(A)=∫σ(g⁻¹)Aρ(g)dμ_H` is genuinely integrable and satisfies the exact intertwining identity

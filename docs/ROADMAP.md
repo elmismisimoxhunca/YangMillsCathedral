@@ -711,6 +711,10 @@ committed before higher layers depend on it.
 - [x] Conjugate the original representation through that exact coordinate equivalence, package the
   result as a continuous matrix representation and an exact `Representation.Equiv`, transport
   standard-pairing invariance, and prove `star σ(g) * σ(g) = 1` with the correct `Uρ(g)U⁻¹` order.
+- [x] Prove irreducibility invariant under exact representation equivalence through the associated
+  group-algebra modules; use explicit unitarization to map every positive-dimensional continuous
+  irreducible matrix representation into an equivalent coordinate-unitary-dual class, with
+  already-unitary class coherence.
 - [x] Construct the coordinatewise Reynolds/Haar average
   `P(A)=∫σ(g⁻¹)Aρ(g)dμ_H` for arbitrary rectangular matrices between two continuous finite matrix
   representations; derive coefficient integrability and the exact intertwining identity
@@ -790,8 +794,8 @@ committed before higher layers depend on it.
   coefficients, continuous central synthesis, exact Haar coefficient analysis, injectivity, and
   orthonormal coordinate pairing, while retaining explicit finite support.
 - [ ] Prove that comparison map surjective for the intended compact Lie groups (or replace the
-  continuous quotient by a source-justified smooth realization theorem), establish any required
-  countability theorem, and prove the `HasL2PeterWeylCompleteness` density obligation before
+  continuous quotient by a source-justified smooth realization theorem), extend realization beyond
+  explicit matrix-coordinate representations if required, establish any required countability theorem, and prove the `HasL2PeterWeylCompleteness` density obligation before
   formulating genuinely infinite-series inversion with explicit summability hypotheses.
 - [ ] Prove Stone–Weierstrass separation and Peter–Weyl density/completeness in continuous and `L²`
   carriers with explicit topology and measure hypotheses.
