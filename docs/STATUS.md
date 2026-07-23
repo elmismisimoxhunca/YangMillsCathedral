@@ -5442,10 +5442,12 @@ current-strength planar/Lévy record, one Sengupta finite law, its covering heat
 boundary-conditioned finite-face factors, and its finite simultaneous-conjugacy law coherence with
 the exact Lévy sewing field already stored by that record. The covering heat target is definitionally
 the same planar spectral semigroup selected by the Driver/Brownian chain. Its exact `Nonempty`
-decomposition requires the prior current-strength witness, one finite Sengupta law, and the two
-bridges dependently indexed by that current record and law; it synthesizes none of them. This join is
-still not the final 2D proposition: embedded presentation, Facts 0–3, source-hypothesis discharge, literature-only
-inhabitation, and all underlying analytic/stochastic witnesses remain open.
+decomposition requires compact-simple gauge geometry, the prior current-strength witness, one finite
+Sengupta law, and the two bridges dependently indexed by that current record and law; it synthesizes none of them. This join is
+still not the final 2D proposition: embedded presentation, Facts 0–3, literature-only inhabitation,
+and all underlying analytic/stochastic witnesses remain open. The augmented record now requires the
+intended `CompactSimpleGaugeGroupData`; its simple tangent Lie algebra derives Mathlib semisimplicity,
+so Sengupta Theorem 8.4's first source alternative is genuinely discharged.
 
 The preliminary `FourDimensionalCurrentStrengthUniversalAcceptance` declaration is intentionally
 qualified and uninhabited. No final source-complete acceptance declaration, placeholder inhabitance

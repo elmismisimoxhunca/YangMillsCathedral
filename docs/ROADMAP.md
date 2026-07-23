@@ -1338,10 +1338,11 @@ committed before higher layers depend on it.
   - [x] Assemble `TwoDimensionalSenguptaAugmentedCurrentStrengthAcceptanceData`, dependently joining
     the current planar/Lévy record, one finite Sengupta law, its covering heat and fixed-boundary
     factor bridges, and its finite conjugacy-law coherence with the exact sewing field. Keep it
-    explicitly non-final pending embedded presentation, Facts 0–3, source-hypothesis discharge, and
-    component inhabitation. Expose its literature-only inhabitance attempt by an exact `Nonempty`
-    equivalence requiring the prior current-strength witness, one finite law, its dependent heat
-    factors, and its dependent Lévy-law coherence.
+    explicitly non-final pending embedded presentation, Facts 0–3, and component inhabitation. Add
+    the intended compact-simple gauge certificate and derive Mathlib semisimplicity, discharging
+    Sengupta Theorem 8.4's first source alternative without a content-free case tag. Expose its literature-only inhabitance attempt by an exact `Nonempty`
+    equivalence requiring compact-simple gauge geometry, the prior current-strength witness, one
+    finite law, its dependent heat factors, and its dependent Lévy-law coherence.
   - [ ] Assemble a final source-indexed 2D acceptance proposition joining the constructed finite
     lattice, heat/Brownian, weak-limit continuum, compact-surface, and sewing chains; attempt to
     inhabit it solely from formalized Driver/Lévy/Sengupta results and record every remaining

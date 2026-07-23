@@ -15,8 +15,9 @@ its covering heat and boundary-conditioned finite-face factor bridges, and its g
 finite-law coherence with the exact Lévy sewing component already stored by that record.
 
 It is still explicitly current-strength, not the final 2D acceptance proposition. Construction of an
-embedded compact-surface presentation, Sengupta Facts 0--3, source-hypothesis discharge, and all
-component inhabitants remain open.
+embedded compact-surface presentation, Sengupta Facts 0--3, and all component inhabitants remain
+open. The required compact-simple gauge geometry derives semisimplicity and discharges Theorem 8.4's
+first source alternative.
 -/
 
 namespace YangMills.Dimensions
@@ -112,6 +113,7 @@ variable
 
 /-- Current-strength joined record augmented by the exact Sengupta interfaces constructed so far. -/
 structure TwoDimensionalSenguptaAugmentedCurrentStrengthAcceptanceData where
+  gaugeGeometry : Geometry.CompactSimpleGaugeGroupData G E
   current : TwoDimensionalCurrentStrengthLiteratureAcceptanceData
     (law := law) (inner := inner) (realLaplacian := realLaplacian)
     (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
@@ -147,6 +149,7 @@ theorem nonempty_iff_components :
       (CoverGroup := CoverGroup) (CurveS := CurveS) (EdgeS := EdgeS)
       (InternalEdge := InternalEdge) (FaceS := FaceS) (RegionS := RegionS)
       (SenguptaSample := SenguptaSample) (coverDensity := coverDensity)) ↔
+    ∃ _ : Geometry.CompactSimpleGaugeGroupData G E,
     ∃ current : TwoDimensionalCurrentStrengthLiteratureAcceptanceData
         (law := law) (inner := inner) (realLaplacian := realLaplacian)
         (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
@@ -166,9 +169,27 @@ theorem nonempty_iff_components :
           finiteLaw current.compactSurface.sewing) := by
   constructor
   · rintro ⟨data⟩
-    exact ⟨data.current, data.finiteLaw, ⟨data.heatFactors⟩, ⟨data.finiteLawSewing⟩⟩
-  · rintro ⟨current, finiteLaw, ⟨heatFactors⟩, ⟨finiteLawSewing⟩⟩
-    exact ⟨⟨current, finiteLaw, heatFactors, finiteLawSewing⟩⟩
+    exact ⟨data.gaugeGeometry, data.current, data.finiteLaw,
+      ⟨data.heatFactors⟩, ⟨data.finiteLawSewing⟩⟩
+  · rintro ⟨gaugeGeometry, current, finiteLaw, ⟨heatFactors⟩, ⟨finiteLawSewing⟩⟩
+    exact ⟨⟨gaugeGeometry, current, finiteLaw, heatFactors, finiteLawSewing⟩⟩
+
+omit [T2Space CoverGroup] [Fintype CurveS] [Nonempty CurveS] [DecidableEq EdgeS] in
+/-- The stronger compact-simple gauge geometry discharges Sengupta Theorem 8.4's semisimple case by
+Mathlib's simple-to-semisimple Lie-algebra theorem. -/
+theorem sengupta_semisimple_source_hypothesis
+    (data : TwoDimensionalSenguptaAugmentedCurrentStrengthAcceptanceData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+      (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)
+      (identification := identification) (IG := IG)
+      (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+      (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)
+      (CoverGroup := CoverGroup) (CurveS := CurveS) (EdgeS := EdgeS)
+      (InternalEdge := InternalEdge) (FaceS := FaceS) (RegionS := RegionS)
+      (SenguptaSample := SenguptaSample) (coverDensity := coverDensity)) :
+    Geometry.HasSemisimpleGroupLieAlgebra G E :=
+  Geometry.hasSemisimpleGroupLieAlgebra_of_hasSimple data.gaugeGeometry.simple_lieAlgebra
 
 omit [T2Space CoverGroup] [Fintype CurveS] [Nonempty CurveS] [DecidableEq EdgeS] in
 /-- Hostile dependency surface: the stored heat-factor bridge is indexed by this record's exact

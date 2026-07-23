@@ -949,10 +949,12 @@ common-base simultaneous-conjugacy observation. It neither identifies carriers n
 holonomy equality. `TwoDimensionalSenguptaAugmentedCurrentStrengthAcceptanceData` now dependently
 joins all of those Sengupta interfaces to the exact planar spectral semigroup and exact Lévy sewing
 field already stored by the current-strength record. An exact `Nonempty` equivalence exposes the
-literature-only inhabitance attempt as the conjunction of the prior current-strength witness, one
-finite Sengupta law, its dependent heat-factor witness, and its dependent Lévy-law witness. It is
-still not final: embedded compact-surface
-presentation, Facts 0–3, source-hypothesis discharge, and all component inhabitants remain open.
+literature-only inhabitance attempt as the conjunction of compact-simple gauge geometry, the prior
+current-strength witness, one finite Sengupta law, its dependent heat-factor witness, and its
+dependent Lévy-law witness. It is
+still not final: embedded compact-surface presentation, Facts 0–3, and all component inhabitants
+remain open. Its explicit compact-simple gauge geometry now derives Mathlib semisimplicity and thus
+discharges Sengupta Theorem 8.4's first source alternative without a vacuous case tag.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly

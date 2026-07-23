@@ -46,6 +46,19 @@ def HasSimpleGroupLieAlgebra
     infer_instance
   LieAlgebra.IsSimple ℝ (GroupLieAlgebra (modelWithCornersSelf ℝ E) G)
 
+/-- The tangent Lie algebra of a smooth finite-dimensional real Lie group is semisimple in
+Mathlib's exact Lie-algebra sense. -/
+def HasSemisimpleGroupLieAlgebra
+    (G : Type v) (E : Type u)
+    [NormedAddCommGroup E] [NormedSpace ℝ E] [FiniteDimensional ℝ E]
+    [Group G] [TopologicalSpace G] [ChartedSpace E G]
+    [LieGroup (modelWithCornersSelf ℝ E) ∞ G] : Prop :=
+  letI : CompleteSpace E := FiniteDimensional.complete ℝ E
+  letI : ENat.LEInfty (minSmoothness ℝ 3) := by
+    rw [minSmoothness_of_isRCLikeNormedField]
+    infer_instance
+  LieAlgebra.IsSemisimple ℝ (GroupLieAlgebra (modelWithCornersSelf ℝ E) G)
+
 /-- The tangent Lie algebra of a smooth finite-dimensional real Lie group is abelian.
 
 This companion predicate exists so hostile probes can mention the same Mathlib tangent bracket
@@ -98,6 +111,20 @@ variable
     [NormedAddCommGroup E] [NormedSpace ℝ E] [FiniteDimensional ℝ E]
     [Group G] [TopologicalSpace G] [ChartedSpace E G]
     [LieGroup (modelWithCornersSelf ℝ E) ∞ G]
+
+/-- Mathlib's simple-to-semisimple instance discharges Sengupta's semisimple source hypothesis
+from the project's stronger compact-simple gauge convention. -/
+theorem hasSemisimpleGroupLieAlgebra_of_hasSimple
+    (simple : HasSimpleGroupLieAlgebra G E) : HasSemisimpleGroupLieAlgebra G E := by
+  letI : CompleteSpace E := FiniteDimensional.complete ℝ E
+  letI : ENat.LEInfty (minSmoothness ℝ 3) := by
+    rw [minSmoothness_of_isRCLikeNormedField]
+    infer_instance
+  letI : LieAlgebra.IsSimple ℝ
+      (GroupLieAlgebra (modelWithCornersSelf ℝ E) G) := simple
+  change LieAlgebra.IsSemisimple ℝ
+    (GroupLieAlgebra (modelWithCornersSelf ℝ E) G)
+  exact inferInstance
 
 /-- A simple tangent Lie algebra cannot simultaneously be abelian. -/
 theorem hasSimpleGroupLieAlgebra_not_abelian

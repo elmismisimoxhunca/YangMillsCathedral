@@ -44,6 +44,11 @@ theorem subsingleton_gaugeGroup_blocked [Subsingleton G]
     (data : CompactSimpleGaugeGroupData G E) : False :=
   not_nontrivial G data.nontrivial
 
+/-- The compact-simple certificate discharges the stronger source-facing semisimple hypothesis. -/
+theorem compactSimple_hasSemisimpleGroupLieAlgebra
+    (data : CompactSimpleGaugeGroupData G E) : HasSemisimpleGroupLieAlgebra G E :=
+  hasSemisimpleGroupLieAlgebra_of_hasSimple data.simple_lieAlgebra
+
 /-- An abelian tangent bracket cannot be hidden behind the word “simple.” -/
 theorem abelian_groupLieAlgebra_blocked
     (data : CompactSimpleGaugeGroupData G E)
