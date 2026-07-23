@@ -4851,7 +4851,12 @@ both full block tuples, reconstructs the exact same whole law through the exact 
 and factors through side kernels whose index omits the other side's entire tuple. Its inverse-boundary all-value product law
 derives. Euclidean-half-space outwardness is now proved independent of every eligible overlapping
 atlas chart at an actual boundary point, and every such chart is proved equivalent to the preferred
-extended-chart predicate. Inhabiting the smooth/oriented/measured descent contract and constructing
+extended-chart predicate. Uninhabited `TwoDimensionalLevySmoothSewingBridgeData` now forces this
+smooth descent and the probabilistic sewing law to share the exact boundary identification and
+quotient carrier. It derives smooth-interior placement of every designated probabilistic seam-loop
+point, the canonical sum-of-pushforwards area, and the inverse-boundary conditioned product law; the
+glued model's exact rank two proves witness-level non-equivalence to 4D Euclidean spacetime.
+Inhabiting the smooth/oriented/measured descent contract and constructing
 the actual smooth/oriented/measured descent witnesses remain open.
 
 The first Driver Definition 8.1 lattice-approximation component is now exact:

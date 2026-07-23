@@ -195,7 +195,13 @@ loop conditioning. The proof identifies the exact conditioned restrictions and d
 independence from universal measurable-function factorization. Printed pp. 79–80 visibly warn that
 for nonabelian groups the two side sigma fields need not generate the full sewn sigma field; missing
 joint-conjugacy information remains. The natural weighted measures, rather than unweighted
-probability measures, satisfy the unconditioned sewing integral.
+probability measures, satisfy the unconditioned sewing integral. Uninhabited
+`TwoDimensionalLevySmoothSewingBridgeData` now forces the separately uninhabited smooth/oriented/
+measured quotient descent and probabilistic sewing records to use the same boundary identification
+and quotient carrier. It derives that every designated probabilistic seam-loop point lies in the
+smooth glued interior, while retaining the canonical sum-of-pushforwards area and exact inverse-class
+conditioned product law. The descended model's proved real dimension two gives a witness-level
+obstruction to linear identification with four-dimensional Euclidean spacetime.
 
 The Lean refinement layer constructs the word map and composition algebra, requires nonempty edge
 carriers, endpoint coherence, literal equality of each coarse ambient path with its concatenated fine

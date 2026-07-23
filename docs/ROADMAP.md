@@ -1286,6 +1286,10 @@ committed before higher layers depend on it.
   - [x] Prove Euclidean-half-space chart independence of the outward predicate for every eligible
     overlapping atlas chart at every actual manifold boundary point.
   - [ ] Inhabit/derive the smooth/oriented/measured descent witnesses for the glued quotient.
+  - [x] Force the uninhabited smooth/oriented/measured descent and Lévy probabilistic sewing records
+    to share the exact boundary identification and quotient carrier. Derive smooth-interior placement
+    of every designated probabilistic seam-loop point, canonical glued area, inverse-boundary
+    conditioned product law, and witness-level rank-two separation from 4D spacetime.
   - [x] Derive exact consecutive square-box projectivity from noncommutative rooted plaquette
     coordinates, product-Haar preservation, action-density factorization, and the literal
     restriction commuting square.
