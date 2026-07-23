@@ -852,6 +852,10 @@ committed before higher layers depend on it.
   remaining spatial smoothness/Laplacian and time-derivative passages in uninhabited
   `UnitaryMatrixDualCasimirHeatEquationInterchangeData`; derive `∂ₜK_t=½ΔK_t` only conditionally on
   those exact fields, with changed-derivative hostility. Do not claim an unconditional heat equation.
+- [x] Name the selected class of the explicit one-dimensional trivial representation; prove its
+  character and dimension are one. Use `Δ1=0` and the geometric bridge to force `c_triv=0`, then
+  exact Haar coefficient recovery to derive conditional positive-time normalization
+  `∫K_t dμ_H=1`. Keep this distinct from pointwise positivity and heat-kernel status.
 - [x] Combine the exact candidate coefficient time-addition law with weighted uniform-series
   convolution to prove the conditional positive-time spectral-family law `K_s⋆K_t=K_{s+t}` in
   `C(G,ℂ)` and pointwise in the fixed integral convention. Retain caller-supplied heat-trace

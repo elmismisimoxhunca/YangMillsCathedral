@@ -105,7 +105,10 @@ project's `f(x)g(x⁻¹z)` order. Bounded linearity of continuous convolution th
 coefficientwise to both explicitly weighted unconditional uniform character sums, without assuming
 Peter–Weyl completeness or exchanging an unjustified infinite sum with an integral. For the
 caller-supplied Casimir-weighted spectral coefficients, this yields the exact conditional
-positive-time law `K_s⋆K_t=K_{s+t}`; it supplies no time-zero identity or heat-kernel status. This remains conditional only where density/completeness or weighted summability is
+positive-time law `K_s⋆K_t=K_{s+t}`. The explicit selected trivial class has character and
+dimension one; once the geometric bridge forces its weight to zero, exact character analysis gives
+conditional normalized-Haar mass one. This supplies no pointwise positivity, time-zero identity, or
+heat-kernel status. This remains conditional only where density/completeness or weighted summability is
 invoked and is not a countably ordered Fourier
 partial-sum construction: it does not prove the
 general compact-group Peter–Weyl theorem, global dual countability, an unrestricted infinite

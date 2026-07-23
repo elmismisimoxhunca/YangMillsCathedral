@@ -5206,13 +5206,16 @@ bound. This candidate is not yet identified with the time derivative of the orig
 series. The formal Laplacian coefficient series is now also uniformly convergent and exactly twice
 the derivative candidate. Uninhabited `UnitaryMatrixDualCasimirHeatEquationInterchangeData`
 isolates spatial smoothness/Laplacian passage and pointwise time differentiation; the pointwise
-`∂ₜK_t=½ΔK_t` equation is derived only from those fields, not unconditionally. Combining the
+`∂ₜK_t=½ΔK_t` equation is derived only from those fields, not unconditionally. The selected class
+of the explicit one-dimensional trivial representation now has character and dimension one; any
+geometric bridge forces `c_triv=0` from `Δ1=0`. Exact Haar coefficient recovery consequently gives
+the separate conditional normalization `∫K_t dμ_H=1`, without pointwise positivity. Combining the
 convolution formula with the exact candidate coefficient time-addition law now proves
 the conditional positive-time spectral-family convolution law `K_s⋆K_t=K_{s+t}` in `C(G,ℂ)` and
 pointwise in the fixed integral order. No inhabitant of either the heat-trace data or the geometric
 bridge or interchange data is constructed; no time-zero identity, unconditional infinite-series
-heat equation, pointwise positivity of
-the summed function, Haar normalization, or heat-kernel claim is made. The earlier approximation choices remain arbitrary
+heat equation, pointwise positivity of the summed function, unconditional Haar normalization, or
+heat-kernel claim is made. The earlier approximation choices remain arbitrary
 finite approximants, not Fourier partial sums; general compact-group density,
 global dual countability, unrestricted infinite synthesis/inversion identities, and convergence of a canonically
 ordered Fourier series remain open. This does not prove dual countability, infinite Fourier inversion, or the

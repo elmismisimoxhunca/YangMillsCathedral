@@ -43,6 +43,16 @@ instance : CoeFun (SmoothLieGroupComplexFunction (E := E) (G := G)) (fun _ => G 
 
 namespace SmoothLieGroupComplexFunction
 
+omit [Group G] [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- Smooth complex scalar functions are equal when their underlying functions are equal. -/
+@[ext]
+theorem ext {f h : SmoothLieGroupComplexFunction (E := E) (G := G)}
+    (toFun_eq : f.toFun = h.toFun) : f = h := by
+  cases f
+  cases h
+  cases toFun_eq
+  rfl
+
 /-- Constant smooth complex scalar function. -/
 def const (c : ℂ) : SmoothLieGroupComplexFunction (E := E) (G := G) where
   toFun := fun _ => c
