@@ -1329,8 +1329,9 @@ committed before higher layers depend on it.
     Haar-integrated internal edges, positive candidate-face/region areas, three-traversal face words,
     and exact left twist by the fixed central kernel bundle class; require the stored compact-surface
     weights to equal those factors.
-    Retain construction of an embedded topological triangulation and Facts 0–3
-    triangulation/area/topology independence as debt.
+    Add explicit uninhabited Fact 0 distinguished-face invariance and Fact 1 positive same-total
+    area-splitting invariance for ordinary and fixed-twist factors. Retain construction of an
+    embedded topological triangulation and Facts 2–3 subdivision/topology invariance as debt.
   - [x] Add an uninhabited same-theory Sengupta--Lévy finite-law bridge across their distinct sample
     carriers, selecting a finite nonempty family in one Lévy whole-surface base fiber and equating
     only the simultaneous-conjugacy-class pushforward laws. Do not identify carriers or raw based
@@ -1338,7 +1339,7 @@ committed before higher layers depend on it.
   - [x] Assemble `TwoDimensionalSenguptaAugmentedCurrentStrengthAcceptanceData`, dependently joining
     the current planar/Lévy record, one finite Sengupta law, its covering heat and fixed-boundary
     factor bridges, and its finite conjugacy-law coherence with the exact sewing field. Keep it
-    explicitly non-final pending embedded presentation, Facts 0–3, and component inhabitation. Add
+    explicitly non-final pending embedded presentation, Facts 2–3, and component inhabitation. Add
     the intended compact-simple gauge certificate and derive Mathlib semisimplicity, discharging
     Sengupta Theorem 8.4's first source alternative without a content-free case tag. Expose its literature-only inhabitance attempt by an exact `Nonempty`
     equivalence requiring compact-simple gauge geometry, the prior current-strength witness, one

@@ -942,8 +942,9 @@ proof of Theorem 8.4: Definition 7.6's delta constraints are discharged by fixed
 values, internal edges are Haar-integrated, positive candidate-face areas sum to region area, each
 face has three traversals, and the fixed central kernel bundle class left-twists one distinguished
 face. It deliberately leaves the
-covering density, embedded topological triangulation, Facts 0–3 presentation/area/topology
-independence, surface admissibility, and stochastic-law construction open. A separate uninhabited Sengupta--Lévy bridge now compares the two
+covering density, embedded topological triangulation, Facts 2–3 subdivision/topology invariance,
+surface admissibility, and stochastic-law construction open. Facts 0–1 are now explicit uninhabited
+fields requiring distinguished-face and positive same-total area-splitting invariance. A separate uninhabited Sengupta--Lévy bridge now compares the two
 distinct compact-surface sample carriers only through the pushforward law of one finite nonempty
 common-base simultaneous-conjugacy observation. It neither identifies carriers nor asserts false raw
 holonomy equality. `TwoDimensionalSenguptaAugmentedCurrentStrengthAcceptanceData` now dependently
@@ -952,7 +953,7 @@ field already stored by the current-strength record. An exact `Nonempty` equival
 literature-only inhabitance attempt as the conjunction of compact-simple gauge geometry, the prior
 current-strength witness, one finite Sengupta law, its dependent heat-factor witness, and its
 dependent Lévy-law witness. It is
-still not final: embedded compact-surface presentation, Facts 0–3, and all component inhabitants
+still not final: embedded compact-surface presentation, Facts 2–3, and all component inhabitants
 remain open. Its explicit compact-simple gauge geometry now derives Mathlib semisimplicity and thus
 discharges Sengupta Theorem 8.4's first source alternative without a vacuous case tag.
 

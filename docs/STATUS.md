@@ -5428,8 +5428,9 @@ Haar, positive candidate-face areas sum to each positive region area, face words
 traversals, and the finite law's fixed central kernel bundle class left-multiplies exactly one
 distinguished-face holonomy. The bridge requires the finite compact-surface law's ordinary and
 twisted weights to equal these integrals using the same covering density. It does not construct an
-embedded surface triangulation or prove Facts 0–3 presentation, subdivision, area-splitting, or
-topological invariance.
+embedded surface triangulation. Fact 0 distinguished-face invariance and Fact 1 positive same-total
+area-splitting invariance for both ordinary and fixed-twist factors are now exact uninhabited fields;
+Facts 2–3 subdivision and topological invariance remain unformalized debt.
 
 `TwoDimensionalSenguptaLevyFiniteHolonomyBridgeData` now states the first exact same-theory bridge
 between the distinct Sengupta and Lévy compact-surface sample carriers. A finite nonempty curve family
@@ -5444,7 +5445,7 @@ the exact Lévy sewing field already stored by that record. The covering heat ta
 the same planar spectral semigroup selected by the Driver/Brownian chain. Its exact `Nonempty`
 decomposition requires compact-simple gauge geometry, the prior current-strength witness, one finite
 Sengupta law, and the two bridges dependently indexed by that current record and law; it synthesizes none of them. This join is
-still not the final 2D proposition: embedded presentation, Facts 0–3, literature-only inhabitation,
+still not the final 2D proposition: embedded presentation, Facts 2–3, literature-only inhabitation,
 and all underlying analytic/stochastic witnesses remain open. The augmented record now requires the
 intended `CompactSimpleGaugeGroupData`; its simple tangent Lie algebra derives Mathlib semisimplicity,
 so Sengupta Theorem 8.4's first source alternative is genuinely discharged.

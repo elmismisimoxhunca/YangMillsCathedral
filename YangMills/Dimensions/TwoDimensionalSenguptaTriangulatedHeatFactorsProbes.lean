@@ -105,6 +105,54 @@ theorem changed_twisted_factor_blocked
   changed (bridge.twistedRegionWeight_eq region external)
 
 omit [T2Space CoverGroup] [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
+/-- Fact 0 is locked to the actual fixed-boundary integral for every alternative face in the region. -/
+theorem exact_distinguished_face_independence
+    (region : Region) (alternativeFace : Face)
+    (sameRegion : bridge.triangulation.faceRegion alternativeFace = region)
+    (external : Edge → CoverGroup) :
+    (∫⁻ internal,
+      senguptaTriangulatedTwistedRegionDensityProductWithAreasAtFace
+        bridge.triangulation coverDensity bridge.triangulation.faceArea finiteLaw.bundleClass
+        region alternativeFace external internal
+      ∂normalizedCompactHaarFiniteProductMeasure (Edge := InternalEdge) (G := CoverGroup)) =
+      senguptaTriangulatedTwistedRegionFactor bridge.triangulation coverDensity
+        finiteLaw.bundleClass region external :=
+  bridge.distinguishedFace_independent region alternativeFace sameRegion external
+
+omit [T2Space CoverGroup] [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
+/-- Hostile Fact 1 probe: a changed ordinary factor under a positive same-total area split is
+rejected. -/
+theorem changed_area_split_blocked
+    (alternativeArea : Face → ℝ) (positive : ∀ face, 0 < alternativeArea face)
+    (sameTotal : ∀ region, ∑ face ∈ Finset.univ.filter
+      (fun face => bridge.triangulation.faceRegion face = region), alternativeArea face =
+        bridge.triangulation.regionArea region)
+    (region : Region) (external : Edge → CoverGroup)
+    (changed : (∫⁻ internal, senguptaTriangulatedRegionDensityProductWithAreas
+      bridge.triangulation coverDensity alternativeArea region external internal
+      ∂normalizedCompactHaarFiniteProductMeasure (Edge := InternalEdge) (G := CoverGroup)) ≠
+      senguptaTriangulatedRegionFactor bridge.triangulation coverDensity region external) : False :=
+  changed (bridge.ordinaryAreaSplit_independent alternativeArea positive sameTotal region external)
+
+omit [T2Space CoverGroup] [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
+/-- Hostile twisted Fact 1 probe: the fixed central-kernel twist must also remain invariant under a
+positive same-total area split. -/
+theorem changed_twisted_area_split_blocked
+    (alternativeArea : Face → ℝ) (positive : ∀ face, 0 < alternativeArea face)
+    (sameTotal : ∀ region, ∑ face ∈ Finset.univ.filter
+      (fun face => bridge.triangulation.faceRegion face = region), alternativeArea face =
+        bridge.triangulation.regionArea region)
+    (region : Region) (external : Edge → CoverGroup)
+    (changed : (∫⁻ internal,
+      senguptaTriangulatedTwistedRegionDensityProductWithAreasAtFace
+        bridge.triangulation coverDensity alternativeArea finiteLaw.bundleClass region
+        (bridge.triangulation.distinguishedFace region) external internal
+      ∂normalizedCompactHaarFiniteProductMeasure (Edge := InternalEdge) (G := CoverGroup)) ≠
+      senguptaTriangulatedTwistedRegionFactor bridge.triangulation coverDensity
+        finiteLaw.bundleClass region external) : False :=
+  changed (bridge.twistedAreaSplit_independent alternativeArea positive sameTotal region external)
+
+omit [T2Space CoverGroup] [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
 /-- Internal edges occurring in a face word are certified to belong to that face's region. -/
 theorem exact_internal_edge_region
     (face : Face) (orientedEdge : OrientedEdge (Sum Edge InternalEdge))

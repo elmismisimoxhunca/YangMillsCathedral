@@ -15,7 +15,7 @@ its covering heat and boundary-conditioned finite-face factor bridges, and its g
 finite-law coherence with the exact Lévy sewing component already stored by that record.
 
 It is still explicitly current-strength, not the final 2D acceptance proposition. Construction of an
-embedded compact-surface presentation, Sengupta Facts 0--3, and all component inhabitants remain
+embedded compact-surface presentation, Sengupta Facts 2--3, and all component inhabitants remain
 open. The required compact-simple gauge geometry derives semisimplicity and discharges Theorem 8.4's
 first source alternative.
 -/

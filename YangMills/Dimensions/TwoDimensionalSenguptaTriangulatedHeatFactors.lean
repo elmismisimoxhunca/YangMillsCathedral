@@ -17,9 +17,10 @@ For the twisted factor, the finite law's fixed central kernel bundle class multi
 distinguished face holonomy on the left, matching `Q_a(h x(∂A_*))` in Definition 7.6.
 
 The three-traversal face words are not asserted closed, composable, or underlying-edge-distinct. The
-resulting bridge is intentionally uninhabited. It does not prove triangulation/area-splitting
-independence, topological invariance, admissibility, or the existence of the required finite
-presentation.
+resulting bridge is intentionally uninhabited. It requires Fact 0 distinguished-face invariance and
+Fact 1 positive same-total area-splitting invariance as explicit fields; it does not construct those
+proofs, establish Facts 2–3 subdivision/topological invariance, prove admissibility, or construct the
+required finite presentation.
 -/
 
 namespace YangMills.Dimensions
@@ -65,8 +66,43 @@ def senguptaCombinedEdgeField
     (external : Edge → G) (internal : InternalEdge → G) : Sum Edge InternalEdge → G :=
   Sum.elim external internal
 
-/-- Product of covering heat-density factors over exactly the candidate faces assigned to one
-region. -/
+/-- Product over one region with an explicit positive face-area allocation. -/
+def senguptaTriangulatedRegionDensityProductWithAreas
+    {CoverGroup : Type uCover} [Group CoverGroup]
+    {Edge : Type uEdge} {InternalEdge : Type uInternalEdge}
+    {Face : Type uFace} [Fintype Face] [DecidableEq Face]
+    {Region : Type uRegion} [DecidableEq Region]
+    (triangulation : TwoDimensionalSenguptaTriangulatedRegionData
+      Edge InternalEdge Face Region)
+    (coverDensity : ℝ → CoverGroup → ℝ≥0∞) (faceArea : Face → ℝ)
+    (region : Region) (external : Edge → CoverGroup)
+    (internal : InternalEdge → CoverGroup) : ℝ≥0∞ :=
+  ∏ face ∈ Finset.univ.filter (fun face => triangulation.faceRegion face = region),
+    coverDensity (faceArea face)
+      (finiteOrientedWordHolonomy (senguptaCombinedEdgeField external internal)
+        (triangulation.boundaryWord face))
+
+/-- Product over one region with explicit areas and an explicit distinguished twist face. -/
+def senguptaTriangulatedTwistedRegionDensityProductWithAreasAtFace
+    {CoverGroup : Type uCover} [Group CoverGroup]
+    {Edge : Type uEdge} {InternalEdge : Type uInternalEdge}
+    {Face : Type uFace} [Fintype Face] [DecidableEq Face]
+    {Region : Type uRegion} [DecidableEq Region]
+    (triangulation : TwoDimensionalSenguptaTriangulatedRegionData
+      Edge InternalEdge Face Region)
+    (coverDensity : ℝ → CoverGroup → ℝ≥0∞) (faceArea : Face → ℝ)
+    (bundleClass : CoverGroup) (region : Region) (distinguishedFace : Face)
+    (external : Edge → CoverGroup) (internal : InternalEdge → CoverGroup) : ℝ≥0∞ :=
+  ∏ face ∈ Finset.univ.filter (fun face => triangulation.faceRegion face = region),
+    coverDensity (faceArea face)
+      (if face = distinguishedFace then
+        bundleClass * finiteOrientedWordHolonomy
+          (senguptaCombinedEdgeField external internal) (triangulation.boundaryWord face)
+      else
+        finiteOrientedWordHolonomy
+          (senguptaCombinedEdgeField external internal) (triangulation.boundaryWord face))
+
+/-- Product of covering heat-density factors with the chosen presentation's areas. -/
 def senguptaTriangulatedRegionDensityProduct
     {CoverGroup : Type uCover} [Group CoverGroup]
     {Edge : Type uEdge} {InternalEdge : Type uInternalEdge}
@@ -77,12 +113,10 @@ def senguptaTriangulatedRegionDensityProduct
     (coverDensity : ℝ → CoverGroup → ℝ≥0∞)
     (region : Region) (external : Edge → CoverGroup)
     (internal : InternalEdge → CoverGroup) : ℝ≥0∞ :=
-  ∏ face ∈ Finset.univ.filter (fun face => triangulation.faceRegion face = region),
-    coverDensity (triangulation.faceArea face)
-      (finiteOrientedWordHolonomy (senguptaCombinedEdgeField external internal)
-        (triangulation.boundaryWord face))
+  senguptaTriangulatedRegionDensityProductWithAreas triangulation coverDensity
+    triangulation.faceArea region external internal
 
-/-- The Definition 7.6 twist: only the chosen face receives left multiplication by `h`. -/
+/-- The Definition 7.6 twist at the chosen presentation's distinguished face. -/
 def senguptaTriangulatedTwistedRegionDensityProduct
     {CoverGroup : Type uCover} [Group CoverGroup]
     {Edge : Type uEdge} {InternalEdge : Type uInternalEdge}
@@ -93,14 +127,9 @@ def senguptaTriangulatedTwistedRegionDensityProduct
     (coverDensity : ℝ → CoverGroup → ℝ≥0∞)
     (bundleClass : CoverGroup) (region : Region)
     (external : Edge → CoverGroup) (internal : InternalEdge → CoverGroup) : ℝ≥0∞ :=
-  ∏ face ∈ Finset.univ.filter (fun face => triangulation.faceRegion face = region),
-    coverDensity (triangulation.faceArea face)
-      (if face = triangulation.distinguishedFace region then
-        bundleClass * finiteOrientedWordHolonomy
-          (senguptaCombinedEdgeField external internal) (triangulation.boundaryWord face)
-      else
-        finiteOrientedWordHolonomy
-          (senguptaCombinedEdgeField external internal) (triangulation.boundaryWord face))
+  senguptaTriangulatedTwistedRegionDensityProductWithAreasAtFace triangulation coverDensity
+    triangulation.faceArea bundleClass region (triangulation.distinguishedFace region)
+    external internal
 
 /-- Ordinary boundary-conditioned factor from one finite-face candidate presentation. -/
 def senguptaTriangulatedRegionFactor
@@ -171,6 +200,41 @@ structure TwoDimensionalSenguptaTriangulatedHeatFactorBridgeData where
       senguptaTriangulatedRegionFactor triangulation coverDensity region external
   twistedRegionWeight_eq : ∀ region external,
     finiteLaw.twistedRegionWeight finiteLaw.bundleClass region external =
+      senguptaTriangulatedTwistedRegionFactor triangulation coverDensity
+        finiteLaw.bundleClass region external
+  /-- Definition 7.6 Fact 0 at fixed-boundary scope: changing the distinguished face within one
+  region does not change the twisted factor. -/
+  distinguishedFace_independent : ∀ region alternativeFace,
+    triangulation.faceRegion alternativeFace = region → ∀ external,
+    (∫⁻ internal,
+      senguptaTriangulatedTwistedRegionDensityProductWithAreasAtFace
+        triangulation coverDensity triangulation.faceArea finiteLaw.bundleClass
+        region alternativeFace external internal
+      ∂normalizedCompactHaarFiniteProductMeasure (Edge := InternalEdge) (G := CoverGroup)) =
+      senguptaTriangulatedTwistedRegionFactor triangulation coverDensity
+        finiteLaw.bundleClass region external
+  /-- Definition 7.6 Fact 1 for ordinary factors: positive reallocations with the same region totals
+  leave every fixed-boundary factor unchanged. -/
+  ordinaryAreaSplit_independent : ∀ alternativeArea : Face → ℝ,
+    (∀ face, 0 < alternativeArea face) →
+    (∀ region, ∑ face ∈ Finset.univ.filter
+      (fun face => triangulation.faceRegion face = region), alternativeArea face =
+        triangulation.regionArea region) → ∀ region external,
+    (∫⁻ internal, senguptaTriangulatedRegionDensityProductWithAreas
+      triangulation coverDensity alternativeArea region external internal
+      ∂normalizedCompactHaarFiniteProductMeasure (Edge := InternalEdge) (G := CoverGroup)) =
+      senguptaTriangulatedRegionFactor triangulation coverDensity region external
+  /-- The same area-splitting invariance for the fixed central-kernel twist. -/
+  twistedAreaSplit_independent : ∀ alternativeArea : Face → ℝ,
+    (∀ face, 0 < alternativeArea face) →
+    (∀ region, ∑ face ∈ Finset.univ.filter
+      (fun face => triangulation.faceRegion face = region), alternativeArea face =
+        triangulation.regionArea region) → ∀ region external,
+    (∫⁻ internal,
+      senguptaTriangulatedTwistedRegionDensityProductWithAreasAtFace
+        triangulation coverDensity alternativeArea finiteLaw.bundleClass region
+        (triangulation.distinguishedFace region) external internal
+      ∂normalizedCompactHaarFiniteProductMeasure (Edge := InternalEdge) (G := CoverGroup)) =
       senguptaTriangulatedTwistedRegionFactor triangulation coverDensity
         finiteLaw.bundleClass region external
 
