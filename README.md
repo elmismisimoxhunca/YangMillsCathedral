@@ -976,7 +976,11 @@ with direct edge/face equivalences, and every candidate must receive a factor ce
 same global sign, per-face simplex-orientation choices, and equivalences. Candidate nonemptiness and
 the nonorientable fixed twist are explicit. Negative sign does not force local face reversal on a
 nonorientable source. Homeomorphisms requiring preliminary source/target subdivisions—and hence full
-universal Fact 3—remain open; the subclass record is uninhabited.
+universal Fact 3—remain open; the subclass record is uninhabited. The new
+`TwoDimensionalSenguptaEmbeddedUniversalFiniteLawAcceptanceData` dependently joins the exact embedded
+finite law, selected geometric comparison, curve-fixed Fact 2 subclass, and cellwise-compatible Fact
+3 subclass on the same base, density, and fixed twist. It is the strongest current compact finite-law
+record but remains explicitly nonfinal.
 Facts 0–1 are now explicit uninhabited
 fields requiring distinguished-face and positive same-total area-splitting invariance. A separate
 one-step Fact 2 building block compares one coarse/fine candidate pair on one normalized nonzero

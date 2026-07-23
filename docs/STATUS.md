@@ -5472,6 +5472,11 @@ orientations, global sign, face disks, and complement regions. Every candidate m
 matching factor certificate; candidate nonemptiness and the nonorientable fixed twist are explicit.
 Negative global sign does not force local face reversal on a nonorientable source. Homeomorphisms
 requiring preliminary subdivisions, full universal Fact 3, and inhabitation remain open.
+`TwoDimensionalSenguptaEmbeddedUniversalFiniteLawAcceptanceData` now dependently joins the exact
+embedded finite-law base, selected geometric comparison, curve-fixed universal Fact 2 subclass, and
+cellwise-compatible universal Fact 3 subclass on the same covering density and fixed bundle class.
+Its exact `Nonempty` audit exposes all four dependent witnesses. This is the strongest current
+compact finite-law record but remains explicitly nonfinal.
 `TwoDimensionalSenguptaClosedPresentationInvarianceBridgeData` now dependently ties
 closed incidence for the exact finite-law heat-factor base and the exact fine/transported candidates
 to one unchanged Facts 2–3 bridge, preventing unrelated presentation witnesses. This combined bridge
