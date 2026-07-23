@@ -708,8 +708,9 @@ committed before higher layers depend on it.
 - [x] Choose an exact averaged orthonormal basis reindexed by `Fin n`, construct its ordinary
   complex-linear coordinate equivalence, prove exact basis/Kronecker round trips, and identify the
   averaged pairing with the standard coordinate Hermitian pairing.
-- [ ] Conjugate the original representation through that exact coordinate equivalence and prove the
-  resulting matrix representation satisfies the exact unitary equation with correct orientation.
+- [x] Conjugate the original representation through that exact coordinate equivalence, package the
+  result as a continuous matrix representation and an exact `Representation.Equiv`, transport
+  standard-pairing invariance, and prove `star σ(g) * σ(g) = 1` with the correct `Uρ(g)U⁻¹` order.
 - [x] Construct the coordinatewise Reynolds/Haar average
   `P(A)=∫σ(g⁻¹)Aρ(g)dμ_H` for arbitrary rectangular matrices between two continuous finite matrix
   representations; derive coefficient integrability and the exact intertwining identity

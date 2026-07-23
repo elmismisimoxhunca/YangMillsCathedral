@@ -84,8 +84,11 @@ equivalence with inverse at `g⁻¹` and preserves that named averaged norm. The
 compatibility and intrinsic-unitarity results. Mathlib's finite-dimensional orthonormal-basis
 selection is now reindexed by the original `Fin n` matrix coordinates; the resulting exact linear
 equivalence sends selected basis vectors to Kronecker coordinates and carries the averaged pairing
-to the standard coordinate Hermitian pairing. Conjugation of the original representation and the
-resulting explicit unitary-matrix equation remain separate derived work.
+to the standard coordinate Hermitian pairing. Conjugating through that exact equivalence now
+constructs a continuous matrix representation with the fixed `Uρ(g)U⁻¹` order and an exact Mathlib
+representation equivalence. Transported pairing invariance and a derived column/Kronecker argument
+prove the literal equation `star σ(g) * σ(g) = 1`. This completes the finite-coordinate
+unitarization consequence of Proposition 5.17 without asserting Peter–Weyl completeness.
 
 The Hall notes do not interpret the Clay phrase “compact simple gauge group” or decide connectedness
 and global form. Those decisions use the Clay source plus the separately pinned gauge-global-form

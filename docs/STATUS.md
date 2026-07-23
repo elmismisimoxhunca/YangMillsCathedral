@@ -5063,8 +5063,13 @@ matrix action at `g⁻¹`; the action preserves the exact named averaged norm. A
 orthonormal basis of this exact realization is now reindexed by the original `Fin n` matrix size.
 Its ordinary complex-linear coordinate equivalence sends each selected basis vector to the exact
 Kronecker coordinate, has the exact inverse round trip, and transports the averaged pairing to the
-standard coordinate Hermitian pairing. Conjugating the representation through this equivalence and
-proving the resulting matrices satisfy the exact unitary equation remain open.
+standard coordinate Hermitian pairing. Conjugating the original action through this same exact map
+now constructs a genuine continuous matrix representation with formula `σ(g)=Uρ(g)U⁻¹` and an
+exact `Representation.Equiv` back to the original coordinates. Standard-pairing preservation is
+derived from averaged-pairing invariance. A reusable column/Kronecker theorem then proves the
+literal unitary equation `star σ(g) * σ(g) = 1`, including dimension zero. Character invariance is
+recovered from the same representation equivalence. No dual completeness or Fourier convergence is
+inferred.
 The next Schur precursor is now concrete: for two continuous finite matrix representations and an
 arbitrary rectangular matrix `A`, the coordinatewise Reynolds average
 `P(A)=∫σ(g⁻¹)Aρ(g)dμ_H` is genuinely integrable and satisfies the exact intertwining identity
