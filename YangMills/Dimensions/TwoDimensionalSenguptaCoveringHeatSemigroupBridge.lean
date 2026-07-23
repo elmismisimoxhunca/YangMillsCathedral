@@ -61,6 +61,22 @@ structure TwoDimensionalSenguptaCoveringHeatSemigroupBridgeData where
 namespace TwoDimensionalSenguptaCoveringHeatSemigroupBridgeData
 
 omit [T2Space CoverGroup] [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
+/-- Exact inhabitance audit: one covering-group density semigroup and a measure-level homomorphism
+to the unchanged planar semigroup through the finite law's exact projection. -/
+theorem nonempty_iff_coverSemigroup_projectionHeat :
+    Nonempty (TwoDimensionalSenguptaCoveringHeatSemigroupBridgeData
+      (planarSemigroup := planarSemigroup) (finiteLaw := finiteLaw)
+      (coverDensity := coverDensity)) ↔
+    ∃ coverSemigroup : NormalizedCompactHaarDensitySemigroupData coverDensity,
+      Nonempty (NormalizedCompactHaarDensitySemigroupHomData coverSemigroup
+        planarSemigroup.toNormalizedCompactHaarDensitySemigroupData finiteLaw.projection) := by
+  constructor
+  · rintro ⟨bridge⟩
+    exact ⟨bridge.coverSemigroup, ⟨bridge.projectionHeat⟩⟩
+  · rintro ⟨coverSemigroup, ⟨projectionHeat⟩⟩
+    exact ⟨⟨coverSemigroup, projectionHeat⟩⟩
+
+omit [T2Space CoverGroup] [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
 /-- The same projection used by the finite compact-surface law transports every positive-time heat
 measure to the unchanged planar selected-loop measure. -/
 theorem map_coverMeasure

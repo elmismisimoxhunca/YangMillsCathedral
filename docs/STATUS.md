@@ -5419,7 +5419,9 @@ the 2D heat chain; the selected-loop semigroup forgets exactly to it. Its measur
 interface transports every positive-time measure and continuous-test integral. The uninhabited
 `TwoDimensionalSenguptaCoveringHeatSemigroupBridgeData` applies that interface to the same covering
 projection stored by the finite compact-surface law, requiring a covering-group semigroup to push
-forward to the unchanged planar density semigroup. No cover density is supplied.
+forward to the unchanged planar density semigroup. An exact `Nonempty` equivalence splits this into
+the missing cover-semigroup witness and its dependent measure-homomorphism witness. No cover density
+is supplied.
 
 `TwoDimensionalSenguptaTriangulatedHeatFactorBridgeData` now supplies the boundary-conditioned
 finite-face formula used in the proof of Theorem 8.4: Definition 7.6's delta constraints are discharged

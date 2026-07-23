@@ -42,6 +42,17 @@ variable
       (planarSemigroup := planarSemigroup) (finiteLaw := finiteLaw)
       (coverDensity := coverDensity))
 
+omit [T2Space CoverGroup] [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
+/-- The covering bridge inhabitance audit exposes both exact dependent witnesses. -/
+theorem exact_covering_inhabitation_audit :
+    Nonempty (TwoDimensionalSenguptaCoveringHeatSemigroupBridgeData
+      (planarSemigroup := planarSemigroup) (finiteLaw := finiteLaw)
+      (coverDensity := coverDensity)) ↔
+    ∃ coverSemigroup : NormalizedCompactHaarDensitySemigroupData coverDensity,
+      Nonempty (NormalizedCompactHaarDensitySemigroupHomData coverSemigroup
+        planarSemigroup.toNormalizedCompactHaarDensitySemigroupData finiteLaw.projection) :=
+  TwoDimensionalSenguptaCoveringHeatSemigroupBridgeData.nonempty_iff_coverSemigroup_projectionHeat
+
 include bridge in
 omit [T2Space CoverGroup] [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
 /-- The exact finite-law projection transports the cover density measure at every positive time. -/

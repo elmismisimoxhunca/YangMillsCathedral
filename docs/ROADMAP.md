@@ -1323,7 +1323,9 @@ committed before higher layers depend on it.
   - [x] Package a reusable normalized compact-Haar density semigroup and measurable-surjective
     semigroup homomorphism interface; forget the exact planar selected-loop semigroup into it. Add an
     uninhabited Sengupta covering bridge requiring a cover-group semigroup to push forward through
-    the finite law's same covering projection at every positive time. Retain cover-density debt.
+    the finite law's same covering projection at every positive time. Decompose its inhabitance
+    exactly into the cover semigroup and dependent measure-homomorphism witnesses. Retain
+    cover-density debt.
   - [x] Define the boundary-conditioned finite-face factor reduction used in the proof of Theorem
     8.4, with Definition 7.6's delta constraints discharged by fixed external values,
     Haar-integrated internal edges, positive candidate-face/region areas, three-traversal face words,
