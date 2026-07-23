@@ -5118,8 +5118,12 @@ density theorem then inhabit the existing normalized-Haar coordinate-dual `L²` 
 The corresponding finite-support synthesis map is now explicitly dense: every `L²` vector has one
 finite-support coefficient approximant within every positive tolerance, and inner products against
 all such syntheses determine the vector uniquely. No approximating sequence, series enumeration, or
-pointwise inversion is inferred. This does not prove dual countability, infinite Fourier inversion,
-or the general compact-group case. An equivalence with Mathlib's abstract `TensorProduct` carrier is also not inferred.
+pointwise inversion is inferred. Continuous conjugation-invariant functions are separately bundled as
+an exact `StarSubalgebra ℂ C(G, ℂ)`, and finite selected-character synthesis is an injective linear
+map into it. On compact groups, `UnitaryMatrixDual.HasCentralContinuousPeterWeylDensity` now names
+uniform density in this exact central carrier and yields finite character approximants at every positive tolerance,
+but has no inhabitant yet. This does not prove dual countability, infinite Fourier inversion, or the
+general compact-group case. An equivalence with Mathlib's abstract `TensorProduct` carrier is also not inferred.
 The next Schur precursor is now concrete: for two continuous finite matrix representations and an
 arbitrary rectangular matrix `A`, the coordinatewise Reynolds average
 `P(A)=∫σ(g⁻¹)Aρ(g)dμ_H` is genuinely integrable and satisfies the exact intertwining identity

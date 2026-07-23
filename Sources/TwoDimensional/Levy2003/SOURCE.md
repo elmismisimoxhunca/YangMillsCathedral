@@ -66,8 +66,9 @@ also requires any remaining abstract coordinate-realization/unitarization bridge
 verified Peter–Weyl basis and density now have an exact formal target:
 `UnitaryMatrixDual.HasL2PeterWeylCompleteness` says that the algebraic coefficient image is dense in
 Mathlib's normalized-Haar `Lp ℂ 2`, equivalently that its closed span is top. The `L²` carrier,
-algebraic image, closed span, and finite-support inner-product/Plancherel bridge are constructed, but
-no density inhabitant is supplied. The character specialization over every coordinate-dual class
+algebraic image, closed span, and finite-support inner-product/Plancherel bridge are constructed.
+A separately sourced faithful compact matrix-group hypothesis now supplies conditional continuous
+and `L²` coefficient-density inhabitants; no general compact-group inhabitant is supplied. The character specialization over every coordinate-dual class
 now constructs finitely supported scalar synthesis, proves centrality, exact Haar coefficient
 analysis, injectivity, and the orthonormal coordinate pairing. Mathlib's linear-trace conjugation
 theorem also proves that the trace character is invariant under every explicitly supplied
@@ -77,8 +78,12 @@ of the supplied equivalence and its inverse are constructed and proved mutually 
 matrix conjugation and double-sum coefficient transport formulas retain both change-of-basis
 factors. Finite sum/integral exchange and the proved self-orthogonality formula now derive the exact
 mixed normalized-Haar coefficient pairing for explicitly equivalent presentations, with both
-conjugated coordinate-change factors; identity equivalence recovers the original self formula. This
-still does not turn Lévy's central Peter–Weyl basis statement into a density theorem. Countability/summability consequences, genuinely
+conjugated coordinate-change factors; identity equivalence recovers the original self formula.
+Continuous conjugation-invariant functions are now an exact `StarSubalgebra ℂ C(G, ℂ)`, and finite
+selected-character synthesis is bundled injectively into that carrier. The proposition
+`UnitaryMatrixDual.HasCentralContinuousPeterWeylDensity` names exactly compact-group uniform
+density of this finite character range and exposes finite character approximation as its consequence. No inhabitant
+is supplied yet, so this does not assume Lévy's central Peter–Weyl basis statement. Countability/summability consequences, genuinely
 infinite-series inversion, Casimir action, and the heat-kernel expansion remain source-backed
 targets.
 

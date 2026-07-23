@@ -759,6 +759,10 @@ committed before higher layers depend on it.
   finite-support selected-dual synthesis map has dense `L²` range, every vector has a
   finite-support approximant at every positive tolerance, and all finite-support coefficient
   inner-product tests determine an `L²` vector uniquely.
+- [x] Package continuous conjugation-invariant functions as an exact `StarSubalgebra ℂ C(G, ℂ)`,
+  bundle finite selected-character synthesis injectively into that carrier, and name
+  `UnitaryMatrixDual.HasCentralContinuousPeterWeylDensity` as the still-open compact-group uniform
+  character-density target with exact finite-approximant semantics.
 - [ ] Prove the general compact-Hausdorff-group Peter–Weyl point-separation/density theorem without
   assuming one faithful finite-dimensional representation; do not conflate this with the completed
   conditional compact matrix-group theorem.
