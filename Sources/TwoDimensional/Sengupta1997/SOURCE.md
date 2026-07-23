@@ -30,8 +30,9 @@ realization and its area-indexed heat-density law recorded in
 `TwoDimensionalSelectedLoopBrownianRealizationData`. The exact uninhabited
 `TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData` forces that supplied process and
 Driver's generated operator to share the same conditional spectral heat core, deriving spectral
-increment and marginal laws. It does not construct the process or infer a Markov
-conditional-expectation/stochastic-generator theorem.
+increment and marginal laws and the unconditional equality between the operator at the identity and
+every continuous test expectation of a positive stationary right increment. It does not construct
+the process or infer a Markov conditional-expectation/stochastic-generator theorem.
 
 ## Artifact chain
 

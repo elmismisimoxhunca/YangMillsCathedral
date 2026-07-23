@@ -65,6 +65,35 @@ theorem exact_stationary_increment_spectral_law
         (unitaryMatrixDualCasimirHeatDensityENNReal heatTraceData (t : ℝ)) :=
   bridge.stationary_increment_law_spectral s t ht
 
+omit [FiniteDimensional ℝ E] in
+/-- At the identity, the generated operator is exactly the unconditional expectation of every
+continuous test of a positive Brownian right increment. -/
+theorem exact_operator_increment_expectation
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (s t : NNReal) (ht : 0 < t) (f : C(G, ℝ)) :
+    bridge.spectralHeatKernel.kernelOperator.heatOperator (t : ℝ) f 1 =
+      ∫ samplePoint, f ((bridge.brownian.process s samplePoint)⁻¹ *
+        bridge.brownian.process (s + t) samplePoint) ∂bridge.brownian.probabilityMeasure :=
+  bridge.generated_operator_one_eq_increment_expectation s t ht f
+
+omit [FiniteDimensional ℝ E] in
+/-- Hostile operator/process probe: changing the positive-increment expectation is contradictory. -/
+theorem changed_operator_increment_expectation_blocked
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (s t : NNReal) (ht : 0 < t) (f : C(G, ℝ)) (changed : ℝ)
+    (hchanged : changed ≠
+      ∫ samplePoint, f ((bridge.brownian.process s samplePoint)⁻¹ *
+        bridge.brownian.process (s + t) samplePoint) ∂bridge.brownian.probabilityMeasure)
+    (changedOperator :
+      bridge.spectralHeatKernel.kernelOperator.heatOperator (t : ℝ) f 1 = changed) : False := by
+  apply hchanged
+  rw [← changedOperator]
+  exact bridge.generated_operator_one_eq_increment_expectation s t ht f
+
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- The same bridge exposes Driver's exact generated-operator derivative. -/
 theorem exact_generated_operator
