@@ -726,6 +726,9 @@ committed before higher layers depend on it.
   product indices by the explicit standard row-major equivalence to `Fin (n*m)`, prove the literal coefficient-product formula, continuity and
   coordinate unitarity, and connect the tensor representation to the selected finite simple
   unitary-coordinate decomposition.
+- [x] Package exact finite summand analysis/synthesis for every group-algebra decomposition, prove
+  equivariant action and coefficient reconstruction, and express every tensor-coefficient product
+  as a finite sum through the selected simple summand actions, with empty-decomposition hostility.
 - [x] Construct the coordinatewise Reynolds/Haar average
   `P(A)=∫σ(g⁻¹)Aρ(g)dμ_H` for arbitrary rectangular matrices between two continuous finite matrix
   representations; derive coefficient integrability and the exact intertwining identity

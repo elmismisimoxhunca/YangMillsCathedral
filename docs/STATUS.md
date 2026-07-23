@@ -5086,10 +5086,13 @@ as exact Kronecker representations and flattened by the explicit standard row-ma
 `finProdFinEquiv`, `(i,k) ↦ k + m*i`, to `Fin (n*m)`. Every flattened entry
 is proved to be the corresponding product of input coefficients; continuity and the literal
 coordinate-unitary equation are preserved. Compact complete reducibility and the simple-summand
-coordinate theorem therefore apply directly to each tensor representation. Expressing its original
-coefficient entries explicitly as finite sums of the selected irreducible-summand coefficients is
-the next open algebraic bridge; an equivalence with Mathlib's abstract `TensorProduct` carrier,
-point separation, and density are not inferred.
+coordinate theorem therefore apply directly to each tensor representation. Exact finite summand
+analysis and synthesis now reconstruct every vector, represented action, and matrix coefficient.
+Consequently every product of two input coefficients is an exact finite sum through the selected
+simple group-algebra summand actions. Expanding each such term into matrix coefficients of the
+summand's selected unitary-coordinate representative remains the next algebraic bridge; an
+equivalence with Mathlib's abstract `TensorProduct` carrier, point separation, and density are not
+inferred.
 The next Schur precursor is now concrete: for two continuous finite matrix representations and an
 arbitrary rectangular matrix `A`, the coordinatewise Reynolds average
 `P(A)=∫σ(g⁻¹)Aρ(g)dμ_H` is genuinely integrable and satisfies the exact intertwining identity
