@@ -767,6 +767,11 @@ committed before higher layers depend on it.
   `L²`, define `UnitaryMatrixDual.HasCentralL2PeterWeylCompleteness` as equality of their exact
   closed spans, prove uniform central density implies this target, and expose finite character
   approximation for every vector in the named closed continuous-central subspace.
+- [x] Isolate Hall's remaining conjugation-average argument as
+  `CompactGroupCharacterCentralizationData`: a continuous linear map fixing every central function
+  and sending each finite selected coefficient synthesis to a finite selected-character synthesis.
+  Prove this data bridges full continuous density to central uniform and central `L²` density, while
+  leaving construction of the Haar centralization map explicit and open.
 - [ ] Prove the general compact-Hausdorff-group Peter–Weyl point-separation/density theorem without
   assuming one faithful finite-dimensional representation; do not conflate this with the completed
   conditional compact matrix-group theorem.

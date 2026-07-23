@@ -26,7 +26,7 @@ the retained bytes, not interpretation.
 ## Load-bearing compact matrix-group density locator
 
 Printed pp. 355–356, proof of Theorem 12.18; PDF artifact pp. 362–363; extracted text lines
-16345–16367:
+16345–16394:
 
 - `A` is the space of continuous functions expressible as finite linear combinations of matrix
   entries of finite-dimensional representations of the compact matrix group `K`;
@@ -55,6 +55,16 @@ bridges are formal consequences, not separate quotations from Hall. Dense-range
 Hilbert-space arguments further give arbitrarily accurate finite-support `L²` coefficient
 approximants and uniqueness from all finite-support coefficient inner-product tests. These results
 do not assert countability, a selected approximating sequence, or infinite Fourier inversion.
+
+The second half of printed p. 356 centralizes an approximant by
+`h(x)=∫_K g(yxy⁻¹)dy`; because the target `f` is central, averaging preserves the uniform error.
+Writing `g` as finite matrix blocks and applying Lemma 12.20 makes the averaged coefficient
+matrices scalar, hence turns `h` into a finite character combination. The Lean structure
+`CompactGroupCharacterCentralizationData` isolates the exact reusable content still needed from
+this step: a continuous linear centralization map, identity on central functions, and an exact map
+from every finite selected-dual coefficient synthesis to some finite selected-character synthesis.
+No inhabitant is constructed yet, so continuity of the function-valued Haar average and the exact
+Schur-to-character calculation remain explicit formalization debt rather than assumed facts.
 
 ## Artifact chain
 

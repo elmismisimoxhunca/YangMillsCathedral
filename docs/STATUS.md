@@ -5129,7 +5129,13 @@ a literal AE-central `L²` carrier, not a proved identification with one. The ta
 arbitrary compact topological groups, beyond Lévy's compact connected and section-specific
 semisimple Lie-group scope, but has no inhabitant at that generality. Uniform central density implies
 this `L²` target, while the target gives finite character approximants to every vector in the closed continuous-central subspace. It too
-remains uninhabited. This does not prove dual countability, infinite Fourier inversion, or the
+remains uninhabited. Hall's conjugation-average step is now isolated as
+`CompactGroupCharacterCentralizationData`: a continuous linear map onto the exact central carrier,
+identity on central functions, which sends every finite selected coefficient synthesis to a finite
+selected-character synthesis. Full continuous density plus this datum implies both central targets;
+faithful matrix coordinates supply the full-density premise. No centralization datum is built, so
+function-valued Haar-average continuity and its exact Schur-to-character formula remain visible
+debt. This does not prove dual countability, infinite Fourier inversion, or the
 general compact-group case. An equivalence with Mathlib's abstract `TensorProduct` carrier is also not inferred.
 The next Schur precursor is now concrete: for two continuous finite matrix representations and an
 arbitrary rectangular matrix `A`, the coordinatewise Reynolds average
