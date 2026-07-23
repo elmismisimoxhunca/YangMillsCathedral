@@ -718,6 +718,10 @@ committed before higher layers depend on it.
 - [x] Construct the invariant Haar-orthogonal complement of every subrepresentation, prove exact
   algebraic complementarity in finite dimension, derive semisimplicity of every continuous compact
   matrix representation, and expose a finite simple group-algebra decomposition.
+- [x] Reconcile each simple group-algebra summand's scalar-restricted carrier with the original
+  submodule, choose exact finite coordinates, prove coordinate continuity and irreducibility, and
+  construct an explicitly equivalent continuous irreducible unitary matrix representative for
+  every summand in the finite decomposition.
 - [x] Construct the coordinatewise Reynolds/Haar average
   `P(A)=∫σ(g⁻¹)Aρ(g)dμ_H` for arbitrary rectangular matrices between two continuous finite matrix
   representations; derive coefficient integrability and the exact intertwining identity

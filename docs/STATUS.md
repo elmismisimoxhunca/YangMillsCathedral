@@ -5076,10 +5076,12 @@ class. Re-unitarizing an already unitary bundle is proved to retain its exact du
 Haar-averaged inner product now constructs an invariant orthogonal complement to every
 subrepresentation. Finite-dimensional dimension arithmetic proves exact complementarity, hence
 semisimplicity of every continuous compact matrix representation and a finite direct-sum
-decomposition of its group-algebra module into simple submodules. Packaging each selected simple
-summand as an explicit continuous irreducible unitary matrix bundle, arbitrary non-coordinate
-representation realization, smooth comparison surjectivity, dual countability, dual completeness,
-and Fourier convergence remain open.
+decomposition of its group-algebra module into simple submodules. Every selected simple summand now
+has a scalar-restriction reconciliation, exact `Fin (finrank ℂ S)` basis, continuous matrix
+coordinate representation, irreducibility proof from the unchanged simple module, and an explicitly
+equivalent Haar-unitarized continuous irreducible unitary matrix representative. Arbitrary
+non-coordinate representation realization, smooth comparison surjectivity, dual countability, dual
+completeness, and Fourier convergence remain open.
 The next Schur precursor is now concrete: for two continuous finite matrix representations and an
 arbitrary rectangular matrix `A`, the coordinatewise Reynolds average
 `P(A)=∫σ(g⁻¹)Aρ(g)dμ_H` is genuinely integrable and satisfies the exact intertwining identity
