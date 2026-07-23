@@ -78,8 +78,11 @@ formula are then derived in Lean rather than attributed verbatim to Hall. For Pr
 real part of the exact averaged form is now packaged as a continuous bilinear map in the original
 finite coordinate norm. Finite-dimensional positive-ellipsoid coercivity and Mathlib's inner-core
 comparison theorem prove that its induced norm topology is exactly the original coordinate topology.
-This is a derived compatibility result, not yet an explicit orthonormal-coordinate or unitarizing
-matrix construction.
+The resulting topology-compatible normed-additive, complex-normed, and inner-product structures are
+exposed as named values without global installation. Every representation matrix is an exact linear
+equivalence with inverse at `g⁻¹` and preserves that named averaged norm. These are derived
+compatibility and intrinsic-unitarity results, not yet an explicit orthonormal-coordinate or
+unitarizing matrix construction.
 
 The Hall notes do not interpret the Clay phrase “compact simple gauge group” or decide connectedness
 and global form. Those decisions use the Clay source plus the separately pinned gauge-global-form

@@ -702,8 +702,12 @@ committed before higher layers depend on it.
 - [x] Package the real part of the averaged pairing as a continuous bilinear map in the original
   finite coordinate norm, prove its exact complex unit ellipsoid von Neumann bounded, and derive
   equality of the original topology with the averaged-core norm topology, including dimension zero.
-- [ ] Derive an explicit unitarizing coordinate equivalence (or positive Gram square root), with
-  exact orientation and proof that the conjugated representation matrices are unitary.
+- [x] Expose the topology-compatible averaged normed-additive, complex-normed, and inner-product
+  structures as named locally installable values; package every group matrix as a linear equivalence
+  with inverse at `g⁻¹` and prove exact preservation of the named averaged norm.
+- [ ] Choose an orthonormal coordinate basis and derive an explicit unitarizing coordinate
+  equivalence (or positive Gram square root), with exact orientation and proof that the conjugated
+  representation matrices are unitary.
 - [x] Construct the coordinatewise Reynolds/Haar average
   `P(A)=∫σ(g⁻¹)Aρ(g)dμ_H` for arbitrary rectangular matrices between two continuous finite matrix
   representations; derive coefficient integrability and the exact intertwining identity

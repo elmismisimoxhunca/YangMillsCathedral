@@ -5055,8 +5055,13 @@ identity, nonnegativity, and definiteness now package this same average as a nam
 as a continuous real bilinear map in the original finite coordinate norm. Strict positivity and the
 reusable positive-ellipsoid theorem give exact von Neumann boundedness over `ℂ`; the core diagonal is
 continuous, and Mathlib's comparison theorem proves that the induced averaged norm topology is
-exactly the original coordinate topology, including dimension zero. Construction of an explicit
-orthonormal-coordinate or unitarizing equivalence remains open.
+exactly the original coordinate topology, including dimension zero. The compatible
+normed-additive, complex-normed, and inner-product structures are now exposed as named, locally
+installable values, with exact averaged-pairing evaluation and no global instance replacement.
+Every group matrix is packaged as a complex-linear equivalence whose inverse is the unchanged
+matrix action at `g⁻¹`; the action preserves the exact named averaged norm. Choosing an
+orthonormal coordinate basis and constructing the resulting explicit unitarizing matrix equivalence
+remain open.
 The next Schur precursor is now concrete: for two continuous finite matrix representations and an
 arbitrary rectangular matrix `A`, the coordinatewise Reynolds average
 `P(A)=∫σ(g⁻¹)Aρ(g)dμ_H` is genuinely integrable and satisfies the exact intertwining identity
