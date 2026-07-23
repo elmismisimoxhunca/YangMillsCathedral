@@ -5131,8 +5131,13 @@ reading this as a central infinite-series or density theorem. Linear-trace conju
 that explicitly equivalent finite coordinate representations have identical trace characters even
 across differently presented dimensions. The quotient-selected dual character is therefore proved
 pointwise equal to the character of every bundled presentation of its class. Hostile probes reject
-changed equivalent or selected-representative character values; raw coordinate coefficients are not
-identified. Surjectivity/automatic
+changed equivalent or selected-representative character values. For raw coordinate coefficients,
+the exact rectangular matrices of each supplied equivalence and inverse are now constructed and
+proved to satisfy both inverse laws. Exact intertwining becomes
+`σ(g)=E ρ(g) E⁻¹`, and every target coefficient is derived as the full two-index source sum with
+both change-of-basis factors. Hostile probes reject changed conjugation/coefficients and a zero
+change matrix in positive dimension. Raw entries are not identified, and Haar-integral
+orthogonality transport remains open. Surjectivity/automatic
 continuity-to-smoothness, remaining abstract coordinate
 realization/unitarization, countability, the `L²` density proof, infinite-series Fourier inversion,
 and heat-kernel spectral expansion remain open.

@@ -72,8 +72,11 @@ now constructs finitely supported scalar synthesis, proves centrality, exact Haa
 analysis, injectivity, and the orthonormal coordinate pairing. Mathlib's linear-trace conjugation
 theorem also proves that the trace character is invariant under every explicitly supplied
 representation equivalence and that each quotient-selected character agrees with every bundled
-presentation of its class. This does not identify basis-dependent matrix coefficients. It still does
-not turn Lévy's central Peter–Weyl basis statement into a density theorem. Countability/summability consequences, genuinely
+presentation of its class. For basis-dependent matrix coefficients, the exact rectangular matrices
+of the supplied equivalence and its inverse are constructed and proved mutually inverse; the full
+matrix conjugation and double-sum coefficient transport formulas retain both change-of-basis
+factors. Haar orthogonality has not yet been transported through those sums. This still does not turn
+Lévy's central Peter–Weyl basis statement into a density theorem. Countability/summability consequences, genuinely
 infinite-series inversion, Casimir action, and the heat-kernel expansion remain source-backed
 targets.
 

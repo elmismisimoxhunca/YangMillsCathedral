@@ -725,9 +725,11 @@ committed before higher layers depend on it.
 - [x] Prove trace-character invariance across explicitly supplied equivalences between differently
   presented finite-dimensional representations, and identify every quotient-selected dual character
   with the character of each bundled representative of its class.
-- [ ] Transport coordinate matrix-coefficient orthogonality across explicitly supplied equivalences,
-  retaining the required change-of-basis operators rather than falsely identifying basis-dependent
-  entries.
+- [x] Construct the exact rectangular coordinate matrices of an explicitly supplied representation
+  equivalence and its inverse; prove both inverse laws, the matrix conjugation formula, and the
+  basis-aware double-sum transport of every raw coefficient without identifying entries.
+- [ ] Transport the normalized-Haar matrix-coefficient orthogonality formulas through those exact
+  change-of-basis sums, with all finite sum/integral exchanges justified.
 - [x] Define coordinatewise representation-valued Fourier coefficients with exact inverse
   convention, derive continuous compact-domain integrability, addition/scalar/zero laws, specialize
   to probability-normalized Haar, and identify matrix trace with the scalar inverse-character
