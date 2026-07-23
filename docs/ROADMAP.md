@@ -1320,6 +1320,11 @@ committed before higher layers depend on it.
     compactness directly rather than encoding the source's hypothesis disjunction as a tag. Retain admissibility,
     Definition 7.6 `Z` construction, spectral-heat coherence, and stochastic-law construction as
     explicit next debts.
+  - [x] Package a reusable normalized compact-Haar density semigroup and measurable-surjective
+    semigroup homomorphism interface; forget the exact planar selected-loop semigroup into it. Add an
+    uninhabited Sengupta covering bridge requiring a cover-group semigroup to push forward through
+    the finite law's same covering projection at every positive time. Retain cover-density and
+    Definition 7.6 factor construction as debt.
   - [x] Add an uninhabited same-theory Sengupta--Lévy finite-law bridge across their distinct sample
     carriers, selecting a finite nonempty family in one Lévy whole-surface base fiber and equating
     only the simultaneous-conjugacy-class pushforward laws. Do not identify carriers or raw based

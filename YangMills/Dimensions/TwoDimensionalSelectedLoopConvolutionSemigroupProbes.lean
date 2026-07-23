@@ -28,6 +28,12 @@ variable {G Gauge Sample Connection : Type*}
   {base : TwoDimensionalGaugeFixedHolonomyMeasureData G Gauge Sample Connection}
   {law : TwoDimensionalSelectedLoopHaarDensityLawData base}
 
+/-- The selected-loop certificate forgets exactly to the reusable source-neutral semigroup. -/
+theorem exact_sourceNeutral_semigroup
+    (semigroup : TwoDimensionalSelectedLoopConvolutionSemigroupData law) :
+    NormalizedCompactHaarDensitySemigroupData law.selectedAreaDensity :=
+  semigroup.toNormalizedCompactHaarDensitySemigroupData
+
 /-- Every positive-time density is normalized against the exact canonical Haar probability. -/
 theorem exact_positive_time_normalization
     (semigroup : TwoDimensionalSelectedLoopConvolutionSemigroupData law)

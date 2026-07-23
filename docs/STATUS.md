@@ -5413,6 +5413,15 @@ represented by a content-free tag and remains for a future geometric theorem. Th
 area/topology-dependent `Z` factors, their identification with the planar spectral heat kernel, or
 the stochastic Yang–Mills measure; those are the next compact-surface coherence debts.
 
+Reusable `NormalizedCompactHaarDensitySemigroupData` now packages the exact positive-time
+measurability, class/inversion symmetry, normalization, convolution law, and weak identity used by
+the 2D heat chain; the selected-loop semigroup forgets exactly to it. Its measurable-surjective hom
+interface transports every positive-time measure and continuous-test integral. The uninhabited
+`TwoDimensionalSenguptaCoveringHeatSemigroupBridgeData` applies that interface to the same covering
+projection stored by the finite compact-surface law, requiring a covering-group semigroup to push
+forward to the unchanged planar density semigroup. No cover density or Definition 7.6 factor
+construction is supplied.
+
 `TwoDimensionalSenguptaLevyFiniteHolonomyBridgeData` now states the first exact same-theory bridge
 between the distinct Sengupta and Lévy compact-surface sample carriers. A finite nonempty curve family
 is placed in one exact Lévy whole-surface base fiber, and only the simultaneous-conjugacy-class

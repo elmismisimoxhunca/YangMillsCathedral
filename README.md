@@ -933,8 +933,11 @@ physical holonomy law—not the raw edge-field measure—from that choice. The l
 nonnegative measurable-test forms of equation (8.3), its validity for every distinguished region,
 and normalization/nonzeroness of every corresponding graph measure are derived from this pushforward
 identity rather than duplicated as assumptions. It requires
-cover-group compactness directly rather than retaining the source's disjunction as a vacuous tag, and deliberately leaves
-surface admissibility, Definition 7.6 region-factor construction, spectral-heat identification, and
+cover-group compactness directly rather than retaining the source's disjunction as a vacuous tag. A
+reusable normalized compact-Haar density-semigroup interface now receives the unchanged planar
+selected-loop semigroup, and an uninhabited covering bridge requires a covering-group semigroup to
+push forward through Sengupta's same projection at every positive time. It deliberately leaves the
+covering density, surface admissibility, Definition 7.6 region-factor construction, and
 stochastic-law construction open. A separate uninhabited Sengupta--Lévy bridge now compares the two
 distinct compact-surface sample carriers only through the pushforward law of one finite nonempty
 common-base simultaneous-conjugacy observation. It neither identifies carriers nor asserts false raw

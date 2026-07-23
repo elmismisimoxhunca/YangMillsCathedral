@@ -5,6 +5,7 @@ Authors: Sebastian Rodrigo
 -/
 
 import YangMills.Dimensions.TwoDimensionalSelectedLoopHaarDensityLaw
+import YangMills.Mathematics.NormalizedCompactHaarDensitySemigroup
 import YangMills.Mathematics.NormalizedCompactHaarConvolution
 
 /-!
@@ -66,6 +67,18 @@ variable {G Gauge Sample Connection : Type*}
   [Group Gauge] [MeasurableSpace Sample]
   {base : TwoDimensionalGaugeFixedHolonomyMeasureData G Gauge Sample Connection}
   {law : TwoDimensionalSelectedLoopHaarDensityLawData base}
+
+/-- Forget the selected-loop origin while retaining the exact density family as a reusable normalized
+compact-Haar convolution semigroup. -/
+noncomputable def toNormalizedCompactHaarDensitySemigroupData
+    (semigroup : TwoDimensionalSelectedLoopConvolutionSemigroupData law) :
+    NormalizedCompactHaarDensitySemigroupData law.selectedAreaDensity where
+  density_measurable := law.selectedAreaDensity_measurable
+  density_central := law.selectedAreaDensity_central
+  density_inv := law.selectedAreaDensity_inv
+  density_lintegral_normalized := semigroup.density_lintegral_normalized
+  density_add := semigroup.density_add
+  weak_tendsto_identity := semigroup.weak_tendsto_identity
 
 /-- Half of the exact selected positive area. -/
 noncomputable def selectedHalfArea : ℝ :=
