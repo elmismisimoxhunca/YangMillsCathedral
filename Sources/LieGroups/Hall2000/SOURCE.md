@@ -74,7 +74,12 @@ compact-representation construction is exemplified by Hall Proposition 5.17; the
 claim that the pinned notes prove that construction for its full non-matrix manifold API. The
 analytic Haar-intertwiner layer uses Theorem 5.28 only after constructing the exact intertwiner;
 trace normalization, coefficient/character orthogonality, and the transposed Fourier-extraction
-formula are then derived in Lean rather than attributed verbatim to Hall.
+formula are then derived in Lean rather than attributed verbatim to Hall. For Proposition 5.17, the
+real part of the exact averaged form is now packaged as a continuous bilinear map in the original
+finite coordinate norm. Finite-dimensional positive-ellipsoid coercivity and Mathlib's inner-core
+comparison theorem prove that its induced norm topology is exactly the original coordinate topology.
+This is a derived compatibility result, not yet an explicit orthonormal-coordinate or unitarizing
+matrix construction.
 
 The Hall notes do not interpret the Clay phrase “compact simple gauge group” or decide connectedness
 and global form. Those decisions use the Clay source plus the separately pinned gauge-global-form

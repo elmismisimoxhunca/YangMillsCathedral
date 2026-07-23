@@ -5051,8 +5051,12 @@ positive away from zero: the proof uses continuity, positivity at the identity, 
 nonzero support, and the Haar measure's positive-open-set property rather than storing positivity.
 Conjugate symmetry, first-argument additivity and conjugate homogeneity, the exact real self-norm
 identity, nonnegativity, and definiteness now package this same average as a named
-`InnerProductSpace.Core`. It is deliberately not installed globally, because compatibility with the
-coordinate carrier's pre-existing norm and construction of a unitarizing equivalence remain open.
+`InnerProductSpace.Core`. It is deliberately not installed globally. Its real part is now packaged
+as a continuous real bilinear map in the original finite coordinate norm. Strict positivity and the
+reusable positive-ellipsoid theorem give exact von Neumann boundedness over `ℂ`; the core diagonal is
+continuous, and Mathlib's comparison theorem proves that the induced averaged norm topology is
+exactly the original coordinate topology, including dimension zero. Construction of an explicit
+orthonormal-coordinate or unitarizing equivalence remains open.
 The next Schur precursor is now concrete: for two continuous finite matrix representations and an
 arbitrary rectangular matrix `A`, the coordinatewise Reynolds average
 `P(A)=∫σ(g⁻¹)Aρ(g)dμ_H` is genuinely integrable and satisfies the exact intertwining identity
