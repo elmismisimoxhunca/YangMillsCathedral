@@ -116,8 +116,10 @@ an equivalence with Mathlib's abstract `TensorProduct` carrier. The selected com
 module equivalence now also supplies exact finite analysis/synthesis: vectors, group actions, and
 matrix coefficients reconstruct from the simple summands. Applied to the Kronecker representation,
 this expresses each coefficient product as a finite sum through unchanged simple group-algebra
-actions. Expansion into the selected unitary summand coordinates remains separate. These results
-remain finite algebra and do not assert point separation or density.
+actions. Exact representation-equivalence coordinate expansion now converts every such action term
+into a finite weighted double sum of matrix coefficients of a selected positive-dimensional
+continuous irreducible unitary representative. These results establish finite multiplicative
+coefficient-span closure data, but not yet conjugation/star closure, point separation, or density.
 
 The Hall notes do not interpret the Clay phrase “compact simple gauge group” or decide connectedness
 and global form. Those decisions use the Clay source plus the separately pinned gauge-global-form

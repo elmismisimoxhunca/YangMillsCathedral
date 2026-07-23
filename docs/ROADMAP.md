@@ -729,6 +729,10 @@ committed before higher layers depend on it.
 - [x] Package exact finite summand analysis/synthesis for every group-algebra decomposition, prove
   equivariant action and coefficient reconstruction, and express every tensor-coefficient product
   as a finite sum through the selected simple summand actions, with empty-decomposition hostility.
+- [x] Expand abstract matrix elements across exact representation equivalences, transport every
+  simple-summand action term into its selected positive-dimensional continuous irreducible unitary
+  matrix coordinates, and prove that every product of two continuous compact-representation
+  coefficients is a finite weighted sum of those selected unitary coefficients.
 - [x] Construct the coordinatewise Reynolds/Haar average
   `P(A)=∫σ(g⁻¹)Aρ(g)dμ_H` for arbitrary rectangular matrices between two continuous finite matrix
   representations; derive coefficient integrability and the exact intertwining identity

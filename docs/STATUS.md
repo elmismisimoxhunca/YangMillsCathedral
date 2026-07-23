@@ -5088,11 +5088,14 @@ is proved to be the corresponding product of input coefficients; continuity and 
 coordinate-unitary equation are preserved. Compact complete reducibility and the simple-summand
 coordinate theorem therefore apply directly to each tensor representation. Exact finite summand
 analysis and synthesis now reconstruct every vector, represented action, and matrix coefficient.
-Consequently every product of two input coefficients is an exact finite sum through the selected
-simple group-algebra summand actions. Expanding each such term into matrix coefficients of the
-summand's selected unitary-coordinate representative remains the next algebraic bridge; an
-equivalence with Mathlib's abstract `TensorProduct` carrier, point separation, and density are not
-inferred.
+Consequently every product of two input coefficients is first an exact finite sum through the
+selected simple group-algebra summand actions. Exact representation-equivalence coordinates now
+expand each such action term as a finite double sum of matrix coefficients of a selected
+positive-dimensional continuous irreducible unitary representative, with explicit output and input
+weights. Thus coefficient products are proved to lie in finite weighted spans of selected unitary
+coefficients. Closure under pointwise conjugation/star and a bundled coefficient `StarSubalgebra`
+remain open before Stone–Weierstrass; an equivalence with Mathlib's abstract `TensorProduct`
+carrier, point separation, and density are not inferred.
 The next Schur precursor is now concrete: for two continuous finite matrix representations and an
 arbitrary rectangular matrix `A`, the coordinatewise Reynolds average
 `P(A)=∫σ(g⁻¹)Aρ(g)dμ_H` is genuinely integrable and satisfies the exact intertwining identity
