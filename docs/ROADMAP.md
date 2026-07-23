@@ -1346,7 +1346,11 @@ committed before higher layers depend on it.
     simplices, with marked oriented side restrictions, embedded interval edges, a nonempty finite
     composable distinct-bond curve family, exact maximal connected complement regions, both source
     face-chain conditions, and coherent stored words whenever combinatorially orientable. Retain
-    construction, nonorientable twist attachment, and attachment to the finite-law chain as debt.
+    construction as debt.
+  - [x] Tie the embedded realization to the exact finite-law heat-factor base and closed Facts 2–3
+    chain; require its embedded curve words to be literally the finite law's holonomy words; in the
+    combinatorially nonorientable case require the same finite law's fixed central
+    bundle class to satisfy `h = h⁻¹`. Keep the uninhabited bridge outside the augmented record.
   - [x] Dependently require closed triangular incidence for the exact finite-law heat-factor base and
     the exact fine/transported candidates used by one Facts 2–3 bridge. Keep this combined bridge
     separate from the augmented record until embedded and universal source semantics are available.

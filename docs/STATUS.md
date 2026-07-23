@@ -5442,8 +5442,12 @@ embedded closed-disk faces meeting only in common simplices; marked circle sides
 oriented word edges; a nonempty finite composable path family uses every external bond exactly once;
 regions form the finite maximal connected partition of its complement; both Definition 7.2
 face-chain conditions hold; and stored words are coherent whenever the complex is combinatorially
-orientable. It is uninhabited, does not yet attach the nonorientable `h = h⁻¹` condition, and is not
-yet tied to the finite-law chain or the separate Lévy surface carrier. `TwoDimensionalSenguptaClosedPresentationInvarianceBridgeData` now dependently ties
+orientable. `TwoDimensionalSenguptaEmbeddedFiniteLawBridgeData` now ties this exact embedded base to
+the finite-law heat-factor and closed one-pair Facts 2–3 chain, requires every embedded curve word to
+be literally the finite law's holonomy word, and requires the same finite law's fixed central bundle
+class to satisfy `h = h⁻¹` whenever the exact complex is combinatorially
+nonorientable. It remains uninhabited, outside the augmented record, and unidentified with the
+separate Lévy surface carrier. `TwoDimensionalSenguptaClosedPresentationInvarianceBridgeData` now dependently ties
 closed incidence for the exact finite-law heat-factor base and the exact fine/transported candidates
 to one unchanged Facts 2–3 bridge, preventing unrelated presentation witnesses. This combined bridge
 also remains outside the augmented record pending embedded and universal source semantics. Fact 0 distinguished-face invariance and Fact 1 positive same-total

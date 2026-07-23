@@ -954,8 +954,11 @@ bridge. An uninhabited embedded-realization interface now requires a compact con
 boundaryless two-manifold covered by embedded closed-disk faces meeting only in common simplices,
 with marked oriented sides, a nonempty finite distinct-bond curve family, exact maximal connected
 complement regions, both source face-chain conditions, and conditional coherent orientation.
-Constructing such a realization and tying it to the finite-law chain remain open; neither
-interface is yet required by the augmented acceptance record. Facts 0–1 are now explicit uninhabited
+A dependent embedded finite-law bridge now ties this realization to the exact heat-factor base and
+closed Facts 2–3 chain, equates every embedded curve word with the finite law's holonomy word, and
+enforces `h = h⁻¹` for the exact fixed bundle class in the combinatorially
+nonorientable case. Constructing its inhabitant remains open, and this stronger bridge is not yet
+required by the augmented acceptance record. Facts 0–1 are now explicit uninhabited
 fields requiring distinguished-face and positive same-total area-splitting invariance. A separate
 one-step Fact 2 building block compares one coarse/fine candidate pair on one normalized nonzero
 covering-density semigroup and central twist through a surjective region-preserving face map, exact
