@@ -5413,6 +5413,12 @@ represented by a content-free tag and remains for a future geometric theorem. Th
 area/topology-dependent `Z` factors, their identification with the planar spectral heat kernel, or
 the stochastic Yang–Mills measure; those are the next compact-surface coherence debts.
 
+`TwoDimensionalSenguptaLevyFiniteHolonomyBridgeData` now states the first exact same-theory bridge
+between the distinct Sengupta and Lévy compact-surface sample carriers. A finite nonempty curve family
+is placed in one exact Lévy whole-surface base fiber, and only the simultaneous-conjugacy-class
+pushforward laws are equated. The bridge does not identify carriers, compare raw holonomies across
+quotient models, construct the curve embedding, or prove the law equality; it remains uninhabited.
+
 The preliminary `FourDimensionalCurrentStrengthUniversalAcceptance` declaration is intentionally
 qualified and uninhabited. No final source-complete acceptance declaration, placeholder inhabitance
 theorem, or arbitrary structure is introduced merely to make the project appear complete.

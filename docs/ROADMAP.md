@@ -1320,6 +1320,10 @@ committed before higher layers depend on it.
     compactness directly rather than encoding the source's hypothesis disjunction as a tag. Retain admissibility,
     Definition 7.6 `Z` construction, spectral-heat coherence, and stochastic-law construction as
     explicit next debts.
+  - [x] Add an uninhabited same-theory Sengupta--Lévy finite-law bridge across their distinct sample
+    carriers, selecting a finite nonempty family in one Lévy whole-surface base fiber and equating
+    only the simultaneous-conjugacy-class pushforward laws. Do not identify carriers or raw based
+    holonomies.
   - [ ] Assemble a final source-indexed 2D acceptance proposition joining the constructed finite
     lattice, heat/Brownian, weak-limit continuum, compact-surface, and sewing chains; attempt to
     inhabit it solely from formalized Driver/Lévy/Sengupta results and record every remaining

@@ -935,7 +935,10 @@ and normalization/nonzeroness of every corresponding graph measure are derived f
 identity rather than duplicated as assumptions. It requires
 cover-group compactness directly rather than retaining the source's disjunction as a vacuous tag, and deliberately leaves
 surface admissibility, Definition 7.6 region-factor construction, spectral-heat identification, and
-stochastic-law construction open.
+stochastic-law construction open. A separate uninhabited Sengupta--Lévy bridge now compares the two
+distinct compact-surface sample carriers only through the pushforward law of one finite nonempty
+common-base simultaneous-conjugacy observation. It neither identifies carriers nor asserts false raw
+holonomy equality.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly
