@@ -733,6 +733,10 @@ committed before higher layers depend on it.
   simple-summand action term into its selected positive-dimensional continuous irreducible unitary
   matrix coordinates, and prove that every product of two continuous compact-representation
   coefficients is a finite weighted sum of those selected unitary coefficients.
+- [x] Construct the finite contragredient representation `g ↦ (ρ(g⁻¹))ᵀ`, prove its exact swapped
+  coefficient and continuity laws, identify its coefficients with pointwise scalar star under
+  coordinate unitarity, and expand every starred coefficient as a finite weighted sum of selected
+  positive-dimensional continuous irreducible unitary coefficients.
 - [x] Construct the coordinatewise Reynolds/Haar average
   `P(A)=∫σ(g⁻¹)Aρ(g)dμ_H` for arbitrary rectangular matrices between two continuous finite matrix
   representations; derive coefficient integrability and the exact intertwining identity

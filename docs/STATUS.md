@@ -5093,9 +5093,13 @@ selected simple group-algebra summand actions. Exact representation-equivalence 
 expand each such action term as a finite double sum of matrix coefficients of a selected
 positive-dimensional continuous irreducible unitary representative, with explicit output and input
 weights. Thus coefficient products are proved to lie in finite weighted spans of selected unitary
-coefficients. Closure under pointwise conjugation/star and a bundled coefficient `StarSubalgebra`
-remain open before Stone–Weierstrass; an equivalence with Mathlib's abstract `TensorProduct`
-carrier, point separation, and density are not inferred.
+coefficients. The contragredient `g ↦ (ρ(g⁻¹))ᵀ` is now an exact continuous representation; for
+unitary input its coefficients are the pointwise scalar stars of the original coefficients. A
+classically selected finite unitary decomposition of that contragredient therefore expands every
+starred coefficient as a finite weighted sum of positive-dimensional continuous irreducible unitary
+coefficients. Bundling these multiplication/star results into a coefficient `StarSubalgebra` remains
+open before Stone–Weierstrass; an equivalence with Mathlib's abstract `TensorProduct` carrier, point
+separation, and density are not inferred.
 The next Schur precursor is now concrete: for two continuous finite matrix representations and an
 arbitrary rectangular matrix `A`, the coordinatewise Reynolds average
 `P(A)=∫σ(g⁻¹)Aρ(g)dμ_H` is genuinely integrable and satisfies the exact intertwining identity

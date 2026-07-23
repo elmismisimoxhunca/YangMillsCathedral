@@ -119,7 +119,11 @@ this expresses each coefficient product as a finite sum through unchanged simple
 actions. Exact representation-equivalence coordinate expansion now converts every such action term
 into a finite weighted double sum of matrix coefficients of a selected positive-dimensional
 continuous irreducible unitary representative. These results establish finite multiplicative
-coefficient-span closure data, but not yet conjugation/star closure, point separation, or density.
+coefficient-span closure data. Separately derived finite algebra now constructs the contragredient
+`g ↦ (ρ(g⁻¹))ᵀ`; coordinate unitarity identifies each contragredient coefficient with the
+pointwise scalar star of the original coefficient. Applying the same selected finite unitary
+summand expansion gives finite star-closure data. A bundled star algebra, point separation, and
+density remain open.
 
 The Hall notes do not interpret the Clay phrase “compact simple gauge group” or decide connectedness
 and global form. Those decisions use the Clay source plus the separately pinned gauge-global-form
