@@ -97,6 +97,45 @@ variable
     {RightSample : Type uRightSample} [MeasurableSpace RightSample]
     {WholeSample : Type uWholeSample} [MeasurableSpace WholeSample]
 
+/-- The inhabitance attempt is exactly the conjunction of the planar and compact-surface bridge
+obligations; no witness is synthesized. -/
+theorem exact_inhabitation_audit :
+    Nonempty (TwoDimensionalCurrentStrengthLiteratureAcceptanceData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+      (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)
+      (identification := identification) (IG := IG)
+      (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+      (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)) ↔
+      Nonempty (TwoDimensionalSpectralPlanarLiteratureBridgeData
+        (law := law) (inner := inner) (realLaplacian := realLaplacian)
+        (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+        (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)) ∧
+      Nonempty (TwoDimensionalLevySmoothSewingBridgeData
+        (identification := identification) (IG := IG) (G := G)
+        (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+        (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)) :=
+  TwoDimensionalCurrentStrengthLiteratureAcceptanceData.nonempty_iff_bridges
+
+/-- Hostile inhabitance probe: without smooth quotient descent, the joined acceptance record cannot
+be packaged. -/
+theorem missing_descent_blocks_acceptance
+    (missing : ¬ Nonempty (Geometry.CompactSurfaceBoundaryGluingSmoothDescentData
+      (identification := identification) (IG := IG))) :
+    ¬ Nonempty (TwoDimensionalCurrentStrengthLiteratureAcceptanceData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+      (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)
+      (identification := identification) (IG := IG)
+      (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+      (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)) := by
+  intro current
+  have bridges := exact_inhabitation_audit.mp current
+  have surfaceDebts :=
+    TwoDimensionalCurrentStrengthLiteratureAcceptanceData.nonempty_compactSurface_iff_descent_sewing.mp
+      bridges.2
+  exact missing surfaceDebts.1
+
 variable (data : TwoDimensionalCurrentStrengthLiteratureAcceptanceData
   (law := law) (inner := inner) (realLaplacian := realLaplacian)
   (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)

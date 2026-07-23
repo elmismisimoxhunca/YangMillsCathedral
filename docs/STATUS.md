@@ -5384,8 +5384,12 @@ Driver/Sengupta spectral planar Brownian/weak-limit/product/convergence chain an
 compact-surface sewing bridge in one acceptance record. It derives the major planar and sewing
 consequences, retains exact rank-two geometry, rejects zero laws, and hostilely blocks linear
 identification of the actual descended model with 4D Euclidean spacetime. It is not called final:
-the planar-to-arbitrary-compact-surface heat-law construction, the uninhabited component theorems,
-and a literature-only inhabitance attempt remain open. Any eventual final inhabitant must remain
+the planar-to-arbitrary-compact-surface heat-law construction and the uninhabited component theorems
+remain open. The literature-only inhabitance attempt is now formalized as exact `Nonempty`
+decompositions: the joined record requires both major bridges; the planar side requires the exact
+Driver convergence chain and Brownian realization indexed by its heat core; the compact side
+requires both smooth quotient descent and Lévy sewing on the same identification. No one of those
+missing witnesses is synthesized. Any eventual final inhabitant must remain
 strictly separate from the four-dimensional Clay endpoint.
 
 The preliminary `FourDimensionalCurrentStrengthUniversalAcceptance` declaration is intentionally

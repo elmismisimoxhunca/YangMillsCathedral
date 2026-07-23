@@ -128,6 +128,94 @@ structure TwoDimensionalCurrentStrengthLiteratureAcceptanceData where
 
 namespace TwoDimensionalCurrentStrengthLiteratureAcceptanceData
 
+/-- Construct the current-strength acceptance record from the two exact joined bridges. This is an
+interface constructor, not an inhabitant of either uninhabited input. -/
+noncomputable def ofBridges
+    (planar : TwoDimensionalSpectralPlanarLiteratureBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+      (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω))
+    (compactSurface : TwoDimensionalLevySmoothSewingBridgeData
+      (identification := identification) (IG := IG) (G := G)
+      (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+      (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)) :
+    TwoDimensionalCurrentStrengthLiteratureAcceptanceData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+      (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)
+      (identification := identification) (IG := IG)
+      (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+      (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample) where
+  planar := planar
+  compactSurface := compactSurface
+
+/-- Exact inhabitation audit: the current-strength record is inhabited precisely when both joined
+literature bridges are inhabited. -/
+theorem nonempty_iff_bridges :
+    Nonempty (TwoDimensionalCurrentStrengthLiteratureAcceptanceData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+      (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)
+      (identification := identification) (IG := IG)
+      (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+      (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)) ↔
+      Nonempty (TwoDimensionalSpectralPlanarLiteratureBridgeData
+        (law := law) (inner := inner) (realLaplacian := realLaplacian)
+        (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+        (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)) ∧
+      Nonempty (TwoDimensionalLevySmoothSewingBridgeData
+        (identification := identification) (IG := IG) (G := G)
+        (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+        (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)) := by
+  constructor
+  · rintro ⟨data⟩
+    exact ⟨⟨data.planar⟩, ⟨data.compactSurface⟩⟩
+  · rintro ⟨⟨planar⟩, ⟨compactSurface⟩⟩
+    exact ⟨ofBridges planar compactSurface⟩
+
+/-- Exact planar inhabitation debt: a planar bridge is equivalent to a Driver convergence chain plus
+a Brownian realization indexed by that chain's unchanged spectral semigroup and heat core. -/
+theorem nonempty_planar_iff_convergence_brownian :
+    Nonempty (TwoDimensionalSpectralPlanarLiteratureBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+      (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)) ↔
+      ∃ convergence : TwoDimensionalSpectralVillainConvergenceBridgeData
+        (law := law) (inner := inner) (realLaplacian := realLaplacian)
+        (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+        (continuum := continuum) (faceGeometry := faceGeometry),
+      Nonempty (TwoDimensionalSelectedLoopBrownianRealizationData
+        inner law
+          convergence.productBridge.weakLimitFamily.spectralWilson.spectralHeatKernel.convolutionSemigroup
+          realLaplacian
+          convergence.productBridge.weakLimitFamily.spectralWilson.spectralHeatKernel.heatEquationCore Ω) := by
+  constructor
+  · rintro ⟨planar⟩
+    exact ⟨planar.convergence, ⟨planar.brownian⟩⟩
+  · rintro ⟨convergence, ⟨brownian⟩⟩
+    exact ⟨⟨convergence, brownian⟩⟩
+
+omit [TopologicalSpace G] [IsTopologicalGroup G] [CompactSpace G] [T2Space G]
+    [SecondCountableTopology G] [BorelSpace G] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Exact compact-surface inhabitation debt: smooth descent and probabilistic sewing must both be
+supplied on the same quotient identification. -/
+theorem nonempty_compactSurface_iff_descent_sewing :
+    Nonempty (TwoDimensionalLevySmoothSewingBridgeData
+      (identification := identification) (IG := IG) (G := G)
+      (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+      (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)) ↔
+      Nonempty (Geometry.CompactSurfaceBoundaryGluingSmoothDescentData
+        (identification := identification) (IG := IG)) ∧
+      Nonempty (TwoDimensionalLevyCompactSurfaceSewingData
+        (identification := identification) (G := G)
+        (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+        (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)) := by
+  constructor
+  · rintro ⟨bridge⟩
+    exact ⟨⟨bridge.descent⟩, ⟨bridge.sewing⟩⟩
+  · rintro ⟨⟨descent⟩, ⟨sewing⟩⟩
+    exact ⟨⟨descent, sewing⟩⟩
+
 /-- The planar component retains every-continuous Driver lattice convergence. -/
 theorem everyContinuous_latticeExpectation_tendsto_continuum
     (data : TwoDimensionalCurrentStrengthLiteratureAcceptanceData

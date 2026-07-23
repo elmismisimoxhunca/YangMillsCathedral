@@ -917,7 +917,10 @@ major planar and sewing consequences, exact descended rank two, nonzero laws, an
 non-equivalence of the actual surface model with four-dimensional Euclidean spacetime. The
 `CurrentStrength` qualifier is binding: no planar-to-arbitrary-compact-surface heat-law construction,
 component inhabitant, or literature-only inhabitance proof exists, so this is not the final 2D
-acceptance proposition.
+acceptance proposition. The inhabitance attempt is nevertheless exact: proved `Nonempty`
+equivalences reduce it to both joined bridges, then to the Driver convergence chain plus its
+dependently indexed Brownian realization and, separately, smooth quotient descent plus Lévy sewing
+on one identification. No missing witness is hidden or synthesized.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly

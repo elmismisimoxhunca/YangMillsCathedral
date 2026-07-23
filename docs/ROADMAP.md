@@ -1303,7 +1303,10 @@ committed before higher layers depend on it.
     planar spectral Brownian/weak-limit/product/Driver-convergence chain and smooth Lévy
     compact-surface sewing bridge. Derive planar convergence, smooth-interior seam placement, actual
     rank-two geometry, nonzero laws, and witness-level exclusion of a 4D linear carrier; explicitly
-    leave planar-to-arbitrary-compact-surface heat-law construction open.
+    leave planar-to-arbitrary-compact-surface heat-law construction open. Formalize the inhabitance
+    attempt as exact `Nonempty` equivalences: current acceptance requires both joined bridges; the
+    planar bridge requires the exact Driver convergence chain plus its dependently indexed Brownian
+    realization; the surface bridge requires both smooth descent and Lévy sewing on one quotient.
   - [ ] Assemble a final source-indexed 2D acceptance proposition joining the constructed finite
     lattice, heat/Brownian, weak-limit continuum, compact-surface, and sewing chains; attempt to
     inhabit it solely from formalized Driver/Lévy/Sengupta results and record every remaining
