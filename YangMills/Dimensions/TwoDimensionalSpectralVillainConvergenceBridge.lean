@@ -97,14 +97,14 @@ theorem nonempty_iff_productBridge_convergence :
         (law := law) (inner := inner) (realLaplacian := realLaplacian)
         (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
         (faceGeometry := faceGeometry),
-      Nonempty (TwoDimensionalDriverVillainConvergenceData
+      TwoDimensionalDriverVillainFineHeatIntegralConvergenceObligation
         productBridge.weakLimitFamily.spectralWilson.toVillainCommonHeatChainCoreData
-        axial continuum coarseApproximation enlargedApproximation faceGeometry) := by
+        axial continuum coarseApproximation enlargedApproximation faceGeometry := by
   constructor
   · rintro ⟨bridge⟩
-    exact ⟨bridge.productBridge, ⟨bridge.convergence⟩⟩
-  · rintro ⟨productBridge, ⟨convergence⟩⟩
-    exact ⟨⟨productBridge, convergence⟩⟩
+    exact ⟨bridge.productBridge, bridge.convergence.fineHeatIntegral_tendsto⟩
+  · rintro ⟨productBridge, convergence⟩
+    exact ⟨⟨productBridge, ⟨convergence⟩⟩⟩
 
 /-- Driver's existing convergence certificate with the exact spectral Villain common heat chain. -/
 abbrev driverConvergence

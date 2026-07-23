@@ -921,7 +921,7 @@ acceptance proposition. The inhabitance attempt is nevertheless exact: proved `N
 equivalences reduce it to both joined bridges, then to the Driver convergence chain plus its
 dependently indexed Brownian realization and, separately, smooth quotient descent plus Lévy sewing
 on one identification. The cascade continues: convergence requires the exact enlarged-product
-bridge plus Driver's remaining analytic theorem; the product bridge requires the exact all-spacing
+bridge plus the separately named varying-finite-graph heat-integral convergence obligation; the product bridge requires the exact all-spacing
 family plus the separately named source-facing expectation identity; and that family requires one
 spectral Wilson chain and a Theorem 7.2 weak limit at every spacing. No missing witness is hidden or
 synthesized.

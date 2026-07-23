@@ -5388,7 +5388,8 @@ the planar-to-arbitrary-compact-surface heat-law construction and the uninhabite
 remain open. The literature-only inhabitance attempt is now formalized as exact `Nonempty`
 decompositions: the joined record requires both major bridges; the planar side requires the exact
 Driver convergence chain and Brownian realization indexed by its heat core; the convergence chain
-requires the exact enlarged-product bridge and remaining Driver analytic theorem; the product
+requires the exact enlarged-product bridge and separately named Driver varying-finite-graph
+heat-integral convergence obligation; the product
 bridge requires the all-spacing family plus the separately named source-facing expectation identity;
 that family requires one spectral Wilson chain and a Theorem 7.2 weak limit at every spacing; and the
 compact side requires both smooth quotient descent and Lévy sewing on the same identification. No

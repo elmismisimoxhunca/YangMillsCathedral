@@ -69,9 +69,10 @@ variable
     (productIdentity : TwoDimensionalDriverAxialLatticeProductIdentityData faceGeometry
       (twoDimensionalVillainActionFamily common.heat common.kernel))
 
-/-- Uninhabited connected compact Lie-group contract for Driver Theorem 8.5. -/
-structure TwoDimensionalDriverVillainConvergenceData where
-  fineHeatIntegral_tendsto : ∀ test : BoundedContinuousRealFunction (coarse.Edge → G),
+/-- Driver's unresolved varying-finite-graph heat-integral limit, separated from the record that
+uses it to derive Theorem 8.5. -/
+def TwoDimensionalDriverVillainFineHeatIntegralConvergenceObligation : Prop :=
+  ∀ test : BoundedContinuousRealFunction (coarse.Edge → G),
     Tendsto
       (fun spacing => ∫ configuration,
         test (twoDimensionalFineEnlargedCoarseRestriction faceGeometry spacing configuration)
@@ -82,7 +83,26 @@ structure TwoDimensionalDriverVillainConvergenceData where
         ∂generalBoundaryTreeFrozenFaceWeightMeasure
           (law := law) continuum.choice axial.tree))
 
+/-- Uninhabited connected compact Lie-group contract for Driver Theorem 8.5. -/
+structure TwoDimensionalDriverVillainConvergenceData where
+  fineHeatIntegral_tendsto :
+    TwoDimensionalDriverVillainFineHeatIntegralConvergenceObligation
+      common axial continuum coarseApproximation enlargedApproximation faceGeometry
+
 namespace TwoDimensionalDriverVillainConvergenceData
+
+omit [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Exact inhabitation audit for the one-field Driver Theorem 8.5 convergence contract. -/
+theorem nonempty_iff_fineHeatIntegralConvergence :
+    Nonempty (TwoDimensionalDriverVillainConvergenceData
+      common axial continuum coarseApproximation enlargedApproximation faceGeometry) ↔
+    TwoDimensionalDriverVillainFineHeatIntegralConvergenceObligation
+      common axial continuum coarseApproximation enlargedApproximation faceGeometry := by
+  constructor
+  · rintro ⟨data⟩
+    exact data.fineHeatIntegral_tendsto
+  · intro convergence
+    exact ⟨⟨convergence⟩⟩
 
 /-- Theorem 8.5 first follows for every explicitly bounded continuous test by the exact finite
 product identity. -/

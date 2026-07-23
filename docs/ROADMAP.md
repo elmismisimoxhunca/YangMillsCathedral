@@ -1307,7 +1307,7 @@ committed before higher layers depend on it.
     attempt as exact `Nonempty` equivalences: current acceptance requires both joined bridges; the
     planar bridge requires the exact Driver convergence chain plus its dependently indexed Brownian
     realization; the convergence chain requires the exact enlarged-product bridge plus the remaining
-    Driver analytic theorem; the product bridge requires the exact all-spacing family plus the named
+    separately named Driver varying-finite-graph heat-integral convergence obligation; the product bridge requires the exact all-spacing family plus the named
     source-facing expectation identity; and that family requires one spectral Wilson chain plus a
     Theorem 7.2 weak limit at every spacing. The surface bridge requires both smooth descent and Lévy
     sewing on one quotient.

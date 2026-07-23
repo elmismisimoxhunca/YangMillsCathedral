@@ -74,9 +74,9 @@ theorem exact_convergence_inhabitation_audit :
         (law := law) (inner := inner) (realLaplacian := realLaplacian)
         (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
         (faceGeometry := faceGeometry),
-      Nonempty (TwoDimensionalDriverVillainConvergenceData
+      TwoDimensionalDriverVillainFineHeatIntegralConvergenceObligation
         productBridge.weakLimitFamily.spectralWilson.toVillainCommonHeatChainCoreData
-        axial continuum coarseApproximation enlargedApproximation faceGeometry) :=
+        axial continuum coarseApproximation enlargedApproximation faceGeometry :=
   TwoDimensionalSpectralVillainConvergenceBridgeData.nonempty_iff_productBridge_convergence
 
 /-- The convergence contract uses the exact spectral Villain common heat chain. -/

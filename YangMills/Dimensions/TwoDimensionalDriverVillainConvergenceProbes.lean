@@ -64,6 +64,17 @@ theorem exact_continuous_coverage
   ⟨BoundedContinuousRealFunction.ofContinuous observable continuous, rfl⟩
 
 omit [MeasurableMul₂ G] [MeasurableInv G] in
+/-- The one-field Driver convergence record is inhabited exactly by the named varying-finite-graph
+heat-integral limit. -/
+theorem exact_driver_inhabitation_audit :
+    Nonempty (TwoDimensionalDriverVillainConvergenceData common axial continuum
+      coarseApproximation enlargedApproximation faceGeometry) ↔
+    TwoDimensionalDriverVillainFineHeatIntegralConvergenceObligation common axial continuum
+      coarseApproximation enlargedApproximation faceGeometry :=
+  TwoDimensionalDriverVillainConvergenceData.nonempty_iff_fineHeatIntegralConvergence
+    common axial continuum coarseApproximation enlargedApproximation faceGeometry
+
+omit [MeasurableMul₂ G] [MeasurableInv G] in
 /-- The only new analytic obligation is convergence of the exact finite selected-density integrals. -/
 theorem exact_fine_heat_integral_limit
     (data : TwoDimensionalDriverVillainConvergenceData common axial continuum
