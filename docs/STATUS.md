@@ -5145,9 +5145,15 @@ continuous density implies both central targets; faithful finite matrix coordina
 conditional inhabitants. From any central-density inhabitant, a finite-support character family is
 noncanonically selected at each tolerance `1/(n+1)` and proved to converge uniformly in `C(G, ℂ)`,
 in the exact central subtype, and after mapping to normalized-Haar `L²`. Faithful second-countable
-matrix groups therefore satisfy Hall's sequence-level approximation conclusion. These are arbitrary
-finite approximants, not Fourier partial sums; general compact-group density, dual countability,
-coefficientwise inversion, and infinite character sum identities remain open. This does not prove dual countability, infinite Fourier inversion, or the
+matrix groups therefore satisfy Hall's sequence-level approximation conclusion. The exact finite
+character pairing now lives in the actual normalized-Haar `L²` carrier; each selected character
+vector and analysis functional has norm one, analysis recovers finite synthesis coordinates, and
+its value on a continuous central function is exactly `∫ conj(χ_q)f`. Applying these continuous
+functionals to the chosen sequence proves every approximant coordinate converges to that integral,
+with one faithful conditional theorem retaining the same sequence across uniform, `L²`, and all
+coordinate limits. These remain arbitrary finite approximants, not Fourier partial sums; general
+compact-group density, dual countability, infinite synthesis/inversion identities, and convergence
+of a canonically ordered Fourier series remain open. This does not prove dual countability, infinite Fourier inversion, or the
 general compact-group case. An equivalence with Mathlib's abstract `TensorProduct` carrier is also not inferred.
 The next Schur precursor is now concrete: for two continuous finite matrix representations and an
 arbitrary rectangular matrix `A`, the coordinatewise Reynolds average

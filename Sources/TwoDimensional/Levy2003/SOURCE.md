@@ -99,8 +99,11 @@ equality with a separately defined AE-central `L²` carrier is claimed. Uniform 
 approximants for every vector in the closed continuous-central subspace. Under the conditional
 faithful second-countable matrix-group hypotheses, finite character coefficients are now selected at
 uniform tolerance `1/(n+1)`, producing explicit sequence-level uniform and normalized-Haar `L²`
-convergence. This is a noncanonical approximation sequence, not a Fourier partial-sum expansion, and
-the conditional result does not establish Lévy's theorem at unrestricted generality. Countability/summability consequences, genuinely
+convergence. The exact finite character pairing is transported to Mathlib `L²`; selected character
+vectors and their analysis maps have norm one, finite synthesis coordinates are recovered exactly,
+and every coordinate of the chosen approximation sequence converges to `∫ conj(χ_q)f`. This is a
+noncanonical approximation sequence, not a Fourier partial-sum expansion or infinite inversion
+identity, and the conditional result does not establish Lévy's theorem at unrestricted generality. Countability/summability consequences, genuinely
 infinite-series inversion, Casimir action, and the heat-kernel expansion remain source-backed
 targets.
 

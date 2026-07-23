@@ -81,9 +81,12 @@ second countability, full continuous density implies central uniform and central
 faithful finite matrix coordinates supply full density. From central density, a noncanonical
 finite-support character approximant is selected at tolerance `1/(n+1)`; these approximants are
 proved to converge uniformly and in normalized-Haar `L²`, matching Hall's stated sequence-level
-conclusion. This remains conditional and is not a Fourier partial-sum construction: it does not
-prove the general compact-group Peter–Weyl theorem, dual countability, coefficientwise inversion, or
-an infinite character sum identity.
+conclusion. The finite character pairing is also transported to the actual `L²` carrier: every
+selected character vector and analysis functional has norm one, analysis recovers finite synthesis
+coordinates, and continuity proves that each approximant coordinate converges to the exact integral
+`∫ conj(χ_q)f`. This remains conditional and is not a Fourier partial-sum construction: it does not
+prove the general compact-group Peter–Weyl theorem, dual countability, an infinite synthesis/inversion
+identity, or convergence of a canonically ordered Fourier series.
 
 ## Artifact chain
 

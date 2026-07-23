@@ -784,6 +784,11 @@ committed before higher layers depend on it.
   one finitely supported selected-character combination at tolerance `1/(n+1)`, prove uniform
   convergence in the continuous and exact central carriers, and prove normalized-Haar `L²`
   convergence. Keep this noncanonical sequence distinct from Fourier partial sums or inversion.
+- [x] Transport the exact finite character pairing into normalized-Haar `L²`; construct unit-norm
+  selected-character vectors and norm-one analysis functionals; recover every finite synthesis
+  coordinate; identify continuous-central analysis with `∫ conj(χ_q)f`; and prove every coordinate
+  of the chosen finite approximation sequence converges to that exact integral. This is
+  coefficientwise convergence of arbitrary approximants, not a countable Fourier-series inversion.
 - [ ] Prove the general compact-Hausdorff-group Peter–Weyl point-separation/density theorem without
   assuming one faithful finite-dimensional representation; do not conflate this with the completed
   conditional compact matrix-group theorem.
