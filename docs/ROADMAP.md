@@ -899,7 +899,9 @@ committed before higher layers depend on it.
   normalized boundary-independent weak convergence and explicit two-versus-four separation. Package
   the required all-spacing family and combine it with only the remaining enlarged `VB(ε)`
   product-expectation identity to construct Driver's existing action-indexed product certificate and
-  normalized fine measures.
+  normalized fine measures. Attach the remaining uninhabited varying-finite-graph heat-integral
+  convergence field to this exact spectral/weak-limit/product/continuum chain and derive Theorem 8.5
+  convergence for every continuous coarse observable, with changed-limit and 4D hostility.
 - [x] Combine the exact candidate coefficient time-addition law with weighted uniform-series
   convolution to prove the conditional positive-time spectral-family law `K_s⋆K_t=K_{s+t}` in
   `C(G,ℂ)` and pointwise in the fixed integral convention. Retain caller-supplied heat-trace

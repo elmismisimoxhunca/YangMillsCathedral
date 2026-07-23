@@ -188,8 +188,10 @@ Driver Theorem 7.2 to the literal `Q_{ε²}` action from that same spectral heat
 spacing and derives normalized boundary-independent convergence from the unchanged weak-limit
 contract. An all-spacing version supplies exactly the family needed by Theorem 8.5; a further
 uninhabited bridge retains only Driver's enlarged `VB(ε)` product-expectation identity and constructs
-the existing action-indexed product-identity certificate with normalized fine measures. Neither
-coherence nor interchange is inhabited. The proof-required `B → VB` enlargement now has BC certificates on both graphs, literal coarse-edge
+the existing action-indexed product-identity certificate with normalized fine measures. A final
+uninhabited spectral convergence bridge retains Driver's remaining varying-finite-graph heat-integral
+limit field on that exact chain and derives Theorem 8.5 convergence for every continuous coarse
+observable to the unchanged continuum holonomy expectation. Neither coherence nor interchange is inhabited. The proof-required `B → VB` enlargement now has BC certificates on both graphs, literal coarse-edge
 subdivision paths, the exact vertical/x-axis tree, total coverage excluding unrelated enlarged edges,
 and measurable ambient-compatible coarse restriction. Equation (6.1) is now an uninhabited universal interface: every bounded measurable coarse function
 factors through exact enlarged restriction and its base expectation equals the normalized vertical/x-
