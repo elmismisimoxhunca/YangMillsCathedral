@@ -107,8 +107,10 @@ Peter–Weyl completeness or exchanging an unjustified infinite sum with an inte
 caller-supplied Casimir-weighted spectral coefficients, this yields the exact conditional
 positive-time law `K_s⋆K_t=K_{s+t}`. The explicit selected trivial class has character and
 dimension one; once the geometric bridge forces its weight to zero, exact character analysis gives
-conditional normalized-Haar mass one. This supplies no pointwise positivity, time-zero identity, or
-heat-kernel status. This remains conditional only where density/completeness or weighted summability is
+conditional normalized-Haar mass one. Pointwise real-valuedness and strict positivity are now
+explicit uninhabited data which, if supplied, turn that mass identity into a positive normalized
+with-density probability measure. No positivity inhabitant, time-zero identity, or heat-kernel
+status is supplied. This remains conditional only where density/completeness or weighted summability is
 invoked and is not a countably ordered Fourier
 partial-sum construction: it does not prove the
 general compact-group Peter–Weyl theorem, global dual countability, an unrestricted infinite

@@ -157,7 +157,9 @@ differentiation; only from those fields is Driver's pointwise `∂ₜK_t=½ΔK_t
 interchange inhabitant is constructed. The explicit selected one-dimensional trivial class has
 character and dimension one; any geometric bridge forces its candidate weight to zero because the
 pairing Laplacian annihilates constants. Exact character analysis therefore gives conditional
-normalized-Haar mass `∫K_t dμ_H=1`, without proving pointwise positivity. The proof-required `B → VB` enlargement now has BC certificates on both graphs, literal coarse-edge
+normalized-Haar mass `∫K_t dμ_H=1`. Pointwise real-valuedness and strict positivity are now
+isolated as separate uninhabited data; with the bridge they produce a positive real/`ENNReal`
+density and normalized with-density probability measure, but no positivity inhabitant. The proof-required `B → VB` enlargement now has BC certificates on both graphs, literal coarse-edge
 subdivision paths, the exact vertical/x-axis tree, total coverage excluding unrelated enlarged edges,
 and measurable ambient-compatible coarse restriction. Equation (6.1) is now an uninhabited universal interface: every bounded measurable coarse function
 factors through exact enlarged restriction and its base expectation equals the normalized vertical/x-

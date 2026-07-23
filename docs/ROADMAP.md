@@ -856,6 +856,10 @@ committed before higher layers depend on it.
   character and dimension are one. Use `Δ1=0` and the geometric bridge to force `c_triv=0`, then
   exact Haar coefficient recovery to derive conditional positive-time normalization
   `∫K_t dμ_H=1`. Keep this distinct from pointwise positivity and heat-kernel status.
+- [x] Isolate positive-time real-valuedness and strict pointwise positivity as uninhabited
+  `UnitaryMatrixDualCasimirHeatPositivityData`. Conditionally construct the continuous positive real
+  density, measurable positive `ENNReal` density, Haar lintegral one, and normalized with-density
+  probability measure. Do not infer a positivity inhabitant or heat-kernel status.
 - [x] Combine the exact candidate coefficient time-addition law with weighted uniform-series
   convolution to prove the conditional positive-time spectral-family law `K_s⋆K_t=K_{s+t}` in
   `C(G,ℂ)` and pointwise in the fixed integral convention. Retain caller-supplied heat-trace

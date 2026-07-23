@@ -29,6 +29,14 @@ have a positive smooth density relative to Lebesgue measure in every chart. A no
 finite disjoint union of circles. Definition 1.1.1 then defines a closure by an embedding into a
 closed surface, with minimality characterized by a disk complement.
 
+PDF p. 20 / printed p. 6 was independently inspected on 2026-07-23 for §1.4. It visibly states
+that the fundamental solution `p_t` is defined for `t>0` on the compact group with its bi-invariant
+Riemannian metric and normalized total volume one, satisfies `(∂ₜ - ½Δ)p_t=0` and convergence to
+the identity against every continuous test function, and for every positive time is a positive
+central function, inversion invariant, with `∫_G p_t(g) dg = 1`. This is the exact locator for the
+project's uninhabited strict-positivity requirement and its conditional positive normalized-density
+consequences; it does not inhabit them.
+
 PDF pp. 24–27 / printed pp. 10–13 were independently inspected on 2026-07-21 for §1.6,
 Theorem 1.6.1, Lemmas 1.6.2/1.6.3, and the beginning of the proof. The pages visibly define the
 fine-to-coarse configuration map by coarse-edge holonomy along fine paths, state its surjectivity and
@@ -150,7 +158,10 @@ interchange record requires spatial smoothness/Laplacian passage and pointwise t
 only conditionally on those explicit fields does the pointwise equation `∂ₜK_t=½ΔK_t` follow.
 The explicit selected trivial class has character/dimension one, and any geometric bridge forces its
 weight to zero; exact Haar coefficient recovery then proves the separate conditional normalization
-`∫K_t dμ_H=1`. This is not a pointwise-positivity proof. The conditional density result does not establish Lévy's
+`∫K_t dμ_H=1`. Pointwise real-valuedness and strict positivity are now isolated separately as
+uninhabited data; together with the geometric bridge they yield a continuous positive real density,
+a positive `ENNReal` density of Haar lintegral one, and a normalized with-density probability
+measure. No positivity inhabitant is constructed. The conditional density result does not establish Lévy's
 theorem at unrestricted generality. Global dual
 countability, summability and convergence of Lévy's genuinely infinite heat-kernel expansion,
 infinite-series inversion, and Casimir action remain source-backed targets.
