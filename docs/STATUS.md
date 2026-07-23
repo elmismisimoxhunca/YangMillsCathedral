@@ -5432,7 +5432,12 @@ distinguished-face holonomy. The bridge requires the finite compact-surface law'
 twisted weights to equal these integrals using the same covering density. It does not construct an
 embedded surface triangulation. Fact 0 distinguished-face invariance and Fact 1 positive same-total
 area-splitting invariance for both ordinary and fixed-twist factors are now exact uninhabited fields;
-Facts 2–3 subdivision and topological invariance remain unformalized debt.
+A separate `TwoDimensionalSenguptaSubdivisionFactorInvarianceData` now gives one factor-level Fact 2
+building block: one coarse/fine candidate pair is tied to one normalized nonzero covering-density
+semigroup and central twist and has a surjective region-preserving face map, exact coarse-area
+decomposition, distinguished-face compatibility, and equality of all ordinary and fixed-twist
+factors. Embedded boundary-word subdivision and universal quantification over all valid
+subdivisions remain open, as does Fact 3 topological invariance.
 
 `TwoDimensionalSenguptaLevyFiniteHolonomyBridgeData` now states the first exact same-theory bridge
 between the distinct Sengupta and Lévy compact-surface sample carriers. A finite nonempty curve family

@@ -1333,7 +1333,13 @@ committed before higher layers depend on it.
     weights to equal those factors.
     Add explicit uninhabited Fact 0 distinguished-face invariance and Fact 1 positive same-total
     area-splitting invariance for ordinary and fixed-twist factors. Retain construction of an
-    embedded topological triangulation and Facts 2–3 subdivision/topology invariance as debt.
+    embedded topological triangulation and universal Facts 2–3 subdivision/topology invariance as
+    debt.
+  - [x] Add a one-step factor-level Fact 2 building block for one coarse/fine candidate pair on one
+    normalized nonzero covering-density semigroup and central twist: surjective region-preserving
+    face refinement, exact coarse-area splitting, distinguished-face
+    coherence, and ordinary/fixed-twist factor equality. Retain embedded boundary-word subdivision
+    and quantification over every valid source subdivision as debt.
   - [x] Add an uninhabited same-theory Sengupta--Lévy finite-law bridge across their distinct sample
     carriers, selecting a finite nonempty family in one Lévy whole-surface base fiber and equating
     only the simultaneous-conjugacy-class pushforward laws. Do not identify carriers or raw based
