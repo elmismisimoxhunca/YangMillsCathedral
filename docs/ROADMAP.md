@@ -1312,6 +1312,14 @@ committed before higher layers depend on it.
     Theorem 7.2 weak limit at every spacing. Each weak limit requires one candidate measure satisfying
     separately named boundary-independent convergence and free finite-volume identification
     obligations. The surface bridge requires both smooth descent and Lévy sewing on one quotient.
+  - [x] Add Sengupta Theorem 8.4's exact finite-dimensional compact-surface pushforward law as a
+    separate uninhabited interface with a finite nonempty curve family, surjective topological covering projection,
+    central kernel bundle class, explicit inverse global partition function, one twisted region,
+    all remaining untwisted factors, and distinguished-region independence only after pushforward to
+    the projected physical holonomy law. Require cover-group
+    compactness directly rather than encoding the source's hypothesis disjunction as a tag. Retain admissibility,
+    Definition 7.6 `Z` construction, spectral-heat coherence, and stochastic-law construction as
+    explicit next debts.
   - [ ] Assemble a final source-indexed 2D acceptance proposition joining the constructed finite
     lattice, heat/Brownian, weak-limit continuum, compact-surface, and sewing chains; attempt to
     inhabit it solely from formalized Driver/Lévy/Sengupta results and record every remaining

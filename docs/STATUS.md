@@ -5394,9 +5394,20 @@ bridge requires the all-spacing family plus the separately named source-facing e
 that family requires one spectral Wilson chain and a Theorem 7.2 weak limit at every spacing; every
 such weak limit requires one candidate measure satisfying separately named boundary-independent
 convergence and free finite-volume identification obligations; and the compact side requires both
-smooth quotient descent and Lévy sewing on the same identification. No
-one of those missing witnesses is synthesized. Any eventual final inhabitant must remain
-strictly separate from the four-dimensional Clay endpoint.
+smooth quotient descent and Lévy sewing on the same identification. None of those missing witnesses
+is synthesized. Any eventual final inhabitant must remain strictly separate from the
+four-dimensional Clay endpoint.
+
+`TwoDimensionalSenguptaCompactSurfaceFiniteHolonomyLawData` now isolates Theorem 8.4/equation (8.3)
+as a finite-dimensional pushforward law: normalized Haar fields on an etched finite graph in the
+compact covering group, a finite nonempty curve family, a surjective topological covering projection,
+a central kernel bundle class, the explicit inverse global partition function, one
+bundle-class-twisted region, every remaining untwisted region factor, and distinguished-region
+independence of the projected physical holonomy law rather than the raw edge-field measure. Cover-group
+compactness is required directly; the source's semisimple/boundary/nonorientable disjunction is not
+represented by a content-free tag and remains for a future geometric theorem. The interface does not construct admissible surface curves, Definition 7.6's
+area/topology-dependent `Z` factors, their identification with the planar spectral heat kernel, or
+the stochastic Yang–Mills measure; those are the next compact-surface coherence debts.
 
 The preliminary `FourDimensionalCurrentStrengthUniversalAcceptance` declaration is intentionally
 qualified and uninhabited. No final source-complete acceptance declaration, placeholder inhabitance

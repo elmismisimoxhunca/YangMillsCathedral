@@ -925,7 +925,14 @@ bridge plus the separately named varying-finite-graph heat-integral convergence 
 family plus the separately named source-facing expectation identity; and that family requires one
 spectral Wilson chain and a Theorem 7.2 weak limit at every spacing. Each such weak limit is itself
 exactly one candidate measure satisfying separately named boundary-independent convergence and free
-finite-volume identification obligations. No missing witness is hidden or synthesized.
+finite-volume identification obligations. No missing witness is hidden or synthesized. A new Sengupta Theorem 8.4 interface separately records
+the compact-surface finite-dimensional pushforward law on a finite nonempty curve family, with a
+surjective topological covering projection, central kernel bundle class, explicit inverse partition
+function, bundle-class-twisted distinguished-region factor, and independence of the projected
+physical holonomy law—not the raw edge-field measure—from that choice. It requires
+cover-group compactness directly rather than retaining the source's disjunction as a vacuous tag, and deliberately leaves
+surface admissibility, Definition 7.6 region-factor construction, spectral-heat identification, and
+stochastic-law construction open.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly
