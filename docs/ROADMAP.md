@@ -774,9 +774,12 @@ committed before higher layers depend on it.
 - [x] Construct Hall's actual normalized-Haar conjugation average under explicit second countability,
   prove parameter continuity, exact centrality, identity on central functions, norm contraction,
   surjectivity, and idempotence, and package it as the continuous linear centralization operator.
-- [ ] Prove the sole remaining bridge field: this actual average sends every finite selected-dual
-  coefficient synthesis to an exact finite selected-character synthesis via the normalized Schur
-  calculation.
+- [x] Prove the sole remaining bridge field: `matrixCoefficientSynthesis ρ A` is the forced
+  `tr(ρAᵀ)` expression, conjugation averaging leaves the normalized Schur average of `Aᵀ`, and the
+  exact inverse-dimension trace formula turns each selected block into one selected character.
+  Extend by direct-sum induction, construct the full centralization datum, and derive conditional
+  central uniform and central `L²` completeness from full density—and hence from faithful finite
+  matrix coordinates—under second countability.
 - [ ] Prove the general compact-Hausdorff-group Peter–Weyl point-separation/density theorem without
   assuming one faithful finite-dimensional representation; do not conflate this with the completed
   conditional compact matrix-group theorem.

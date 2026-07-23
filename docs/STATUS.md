@@ -5122,14 +5122,14 @@ pointwise inversion is inferred. Continuous conjugation-invariant functions are 
 an exact `StarSubalgebra ℂ C(G, ℂ)`, and finite selected-character synthesis is an injective linear
 map into it. On compact groups, `UnitaryMatrixDual.HasCentralContinuousPeterWeylDensity` now names
 uniform density in this exact central carrier and yields finite character approximants at every positive tolerance,
-but has no inhabitant yet. Finite character syntheses and all continuous central functions now map
+but has no inhabitant at arbitrary compact-group generality. Finite character syntheses and all continuous central functions now map
 into normalized-Haar `L²`; `UnitaryMatrixDual.HasCentralL2PeterWeylCompleteness` is exact equality
 of their named closed spans. The closed continuous-central image span is a deliberate surrogate for
 a literal AE-central `L²` carrier, not a proved identification with one. The target is reusable for
 arbitrary compact topological groups, beyond Lévy's compact connected and section-specific
 semisimple Lie-group scope, but has no inhabitant at that generality. Uniform central density implies
 this `L²` target, while the target gives finite character approximants to every vector in the closed continuous-central subspace. It too
-remains uninhabited. Hall's conjugation-average step is now isolated as
+remains uninhabited at arbitrary compact-group generality. Hall's conjugation-average step is now isolated as
 `CompactGroupCharacterCentralizationData`: a continuous linear map onto the exact central carrier,
 identity on central functions, which sends every finite selected coefficient synthesis to a finite
 selected-character synthesis. Full continuous density plus this datum implies both central targets;
@@ -5137,9 +5137,13 @@ faithful matrix coordinates supply the full-density premise. Hall's actual norma
 conjugation average is now a constructed continuous linear map under explicit second countability.
 Parametric integration gives continuity; right-Haar invariance gives centrality; probability
 normalization gives identity on central functions; the operator is norm-nonincreasing, surjective,
-and idempotent. A constructor shows that only the exact finite Schur-to-character image formula on
-selected coefficient syntheses remains before the full bridge datum—and hence conditional central
-density—is obtained. This does not prove dual countability, infinite Fourier inversion, or the
+and idempotent. The exact remaining formula is now proved: coefficient synthesis equals
+`tr(ρAᵀ)`, the Haar conjugation average leaves the existing Schur average of `Aᵀ`, and normalized
+Schur trace supplies the exact `dim(ρ)⁻¹ tr(A)` character weight. Direct-sum induction constructs the
+full bridge datum for every finite-support selected synthesis. Thus, under second countability, full
+continuous density implies both central targets; faithful finite matrix coordinates now provide
+conditional inhabitants. General compact-group density, dual countability, and infinite character
+expansions remain open. This does not prove dual countability, infinite Fourier inversion, or the
 general compact-group case. An equivalence with Mathlib's abstract `TensorProduct` carrier is also not inferred.
 The next Schur precursor is now concrete: for two continuous finite matrix representations and an
 arbitrary rectangular matrix `A`, the coordinatewise Reynolds average

@@ -72,9 +72,14 @@ from every finite selected-dual coefficient synthesis to some finite selected-ch
 The actual probability-Haar conjugation average is now constructed under explicit second
 countability, proved continuous by Mathlib's compact parametric-integral theorem, central by right
 Haar invariance, identity on central functions, norm-nonincreasing, surjective, and idempotent. This
-constructs the first two fields of the bridge datum. The exact finite Schur-to-character calculation
-on arbitrary selected coefficient syntheses remains the sole explicit field needed to construct the
-full datum; no density conclusion is inferred without it.
+constructs the first two fields of the bridge datum. The remaining calculation is now also proved:
+`matrixCoefficientSynthesis ρ A = tr(ρ Aᵀ)` forces a transpose; conjugation averaging leaves the
+existing Schur average of `Aᵀ`; normalized Schur trace evaluates it as
+`dim(ρ)⁻¹ tr(A) I`. Direct-sum induction converts every finite selected coefficient synthesis to a
+finite selected-character synthesis, constructing the full bridge datum. Therefore, under explicit
+second countability, full continuous density implies central uniform and central `L²` completeness;
+faithful finite matrix coordinates supply full density. This remains conditional and does not prove
+the general compact-group Peter–Weyl theorem or an infinite character expansion.
 
 ## Artifact chain
 

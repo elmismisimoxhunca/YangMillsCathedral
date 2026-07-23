@@ -88,13 +88,16 @@ density of this finite character range and exposes finite character approximatio
 character synthesis and all continuous central functions are also mapped into normalized-Haar
 `L²`; `UnitaryMatrixDual.HasCentralL2PeterWeylCompleteness` states equality of their exact closed
 spans. The Lean predicates are deliberately reusable over arbitrary compact topological groups,
-which generalizes Lévy's compact connected (and section-specific semisimple) Lie-group scope; no
-inhabitant is inferred at that broader generality. Moreover, the closed span of images of continuous
+which generalizes Lévy's compact connected (and section-specific semisimple) Lie-group scope.
+Hall's constructed conjugation average and exact Schur-to-character formula now give conditional
+inhabitants under explicit second countability plus full continuous coefficient density; faithful
+finite matrix coordinates supply that density. No inhabitant is inferred for arbitrary compact
+topological groups. Moreover, the closed span of images of continuous
 central functions is a project-level surrogate for Lévy's literal carrier of central square-integrable
 functions. This avoids imposing pointwise conjugation equations on almost-everywhere classes, but no
 equality with a separately defined AE-central `L²` carrier is claimed. Uniform central density implies that `L²` target, and the target itself yields finite character
-approximants for every vector in the closed continuous-central subspace. No inhabitant is supplied
-yet, so this does not assume Lévy's central Peter–Weyl basis statement. Countability/summability consequences, genuinely
+approximants for every vector in the closed continuous-central subspace. The conditional faithful
+matrix-group results do not assume or establish Lévy's theorem at unrestricted generality. Countability/summability consequences, genuinely
 infinite-series inversion, Casimir action, and the heat-kernel expansion remain source-backed
 targets.
 
