@@ -5430,7 +5430,14 @@ Haar, positive candidate-face areas sum to each positive region area, face words
 traversals, and the finite law's fixed central kernel bundle class left-multiplies exactly one
 distinguished-face holonomy. The bridge requires the finite compact-surface law's ordinary and
 twisted weights to equal these integrals using the same covering density. It does not construct an
-embedded surface triangulation. Fact 0 distinguished-face invariance and Fact 1 positive same-total
+embedded surface triangulation. The separate
+`TwoDimensionalSenguptaClosedTriangularPresentationData` now closes the immediate finite-incidence
+gap: a nonempty face carrier, nonloop endpoints, cyclically composable closed faces with three
+distinct sides, orientation-independent two-face incidence for every internal edge, and use of every
+external edge are required. No global orientation coherence is imposed, retaining Sengupta's
+nonorientable case. This standalone layer is not yet required by the augmented acceptance record; it
+remains uninhabited and still supplies no embedded simplicial realization homeomorphic to the
+compact surface. Fact 0 distinguished-face invariance and Fact 1 positive same-total
 area-splitting invariance for both ordinary and fixed-twist factors are now exact uninhabited fields;
 A separate `TwoDimensionalSenguptaSubdivisionFactorInvarianceData` now gives one factor-level Fact 2
 building block: one coarse/fine candidate pair is tied to one normalized nonzero covering-density

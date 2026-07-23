@@ -1335,6 +1335,12 @@ committed before higher layers depend on it.
     area-splitting invariance for ordinary and fixed-twist factors. Retain construction of an
     embedded topological triangulation and universal Facts 2–3 subdivision/topology invariance as
     debt.
+  - [x] Strengthen one candidate to an uninhabited closed triangular incidence presentation:
+    a nonempty face carrier, nonloop endpoints, cyclic composability and closure, three distinct
+    underlying sides, orientation-independent two-face incidence for every internal edge, and use
+    of every external edge. Impose no global orientation coherence, retaining the nonorientable
+    source case. This standalone layer is not yet required by the augmented record; retain an
+    embedded simplicial-complex realization homeomorphic to the compact surface as debt.
   - [x] Add a one-step factor-level Fact 2 building block for one coarse/fine candidate pair on one
     normalized nonzero covering-density semigroup and central twist: surjective region-preserving
     face refinement, exact coarse-area splitting, distinguished-face
