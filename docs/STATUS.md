@@ -5472,6 +5472,11 @@ orientations, global sign, face disks, and complement regions. Every candidate m
 matching factor certificate; candidate nonemptiness and the nonorientable fixed twist are explicit.
 Negative global sign does not force local face reversal on a nonorientable source. Homeomorphisms
 requiring preliminary subdivisions, full universal Fact 3, and inhabitation remain open.
+`TwoDimensionalSenguptaPreliminarySubdivisionHomeomorphismFactorData` now derives the exact algebraic
+proof pattern after such subdivisions are supplied: source coarse-to-fine equality, signed cellwise
+homeomorphism equality, and reverse target coarse-to-fine equality compose to the coarse ordinary
+and transported-twist laws. The target subdivision uses exactly the resulting `h` or `h⁻¹`.
+Subdivision construction and curve-bond refinement remain open.
 `TwoDimensionalSenguptaEmbeddedUniversalFiniteLawAcceptanceData` now dependently joins the exact
 embedded finite-law base, selected geometric comparison, curve-fixed universal Fact 2 subclass, and
 cellwise-compatible universal Fact 3 subclass on the same covering density and fixed bundle class.

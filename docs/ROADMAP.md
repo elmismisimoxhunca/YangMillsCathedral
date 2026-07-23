@@ -1370,6 +1370,10 @@ committed before higher layers depend on it.
     certificate for every candidate, candidate nonemptiness, and the nonorientable fixed twist.
     Retain homeomorphisms requiring preliminary source/target subdivision, full universal Fact 3,
     and inhabitation as debt.
+  - [x] Derive the exact algebraic Fact 3 proof pattern once preliminary source/target subdivision
+    certificates and one cellwise homeomorphism certificate are supplied: ordinary and signed-twist
+    factor equalities compose transitively, with the target subdivision using exactly transported
+    `h` or `h⁻¹`. Retain construction of those subdivisions as debt.
   - [x] Dependently join the exact embedded finite law, selected geometric comparison, curve-fixed
     universal Fact 2 subclass, and cellwise-compatible universal Fact 3 subclass on one exact base,
     covering density, and fixed bundle class. Keep this strongest current compact finite-law record
