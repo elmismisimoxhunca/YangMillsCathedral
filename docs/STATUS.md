@@ -5436,8 +5436,14 @@ gap: a nonempty face carrier, nonloop endpoints, cyclically composable closed fa
 distinct sides, orientation-independent two-face incidence for every internal edge, and use of every
 external edge are required. No global orientation coherence is imposed, retaining Sengupta's
 nonorientable case. This standalone layer is not yet required by the augmented acceptance record; it
-remains uninhabited and still supplies no embedded simplicial realization homeomorphic to the
-compact surface. `TwoDimensionalSenguptaClosedPresentationInvarianceBridgeData` now dependently ties
+remains uninhabited. `TwoDimensionalSenguptaEmbeddedTriangularPresentationData` now states the next
+actual-realization obligation: a compact connected Hausdorff boundaryless two-manifold is covered by
+embedded closed-disk faces meeting only in common simplices; marked circle sides follow exact
+oriented word edges; a nonempty finite composable path family uses every external bond exactly once;
+regions form the finite maximal connected partition of its complement; both Definition 7.2
+face-chain conditions hold; and stored words are coherent whenever the complex is combinatorially
+orientable. It is uninhabited, does not yet attach the nonorientable `h = h⁻¹` condition, and is not
+yet tied to the finite-law chain or the separate Lévy surface carrier. `TwoDimensionalSenguptaClosedPresentationInvarianceBridgeData` now dependently ties
 closed incidence for the exact finite-law heat-factor base and the exact fine/transported candidates
 to one unchanged Facts 2–3 bridge, preventing unrelated presentation witnesses. This combined bridge
 also remains outside the augmented record pending embedded and universal source semantics. Fact 0 distinguished-face invariance and Fact 1 positive same-total

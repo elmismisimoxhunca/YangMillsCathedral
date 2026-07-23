@@ -1341,6 +1341,12 @@ committed before higher layers depend on it.
     of every external edge. Impose no global orientation coherence, retaining the nonorientable
     source case. This standalone layer is not yet required by the augmented record; retain an
     embedded simplicial-complex realization homeomorphic to the compact surface as debt.
+  - [x] State an uninhabited actual embedded-realization obligation: one compact connected Hausdorff
+    boundaryless two-manifold is covered by embedded closed-disk faces meeting only in common
+    simplices, with marked oriented side restrictions, embedded interval edges, a nonempty finite
+    composable distinct-bond curve family, exact maximal connected complement regions, both source
+    face-chain conditions, and coherent stored words whenever combinatorially orientable. Retain
+    construction, nonorientable twist attachment, and attachment to the finite-law chain as debt.
   - [x] Dependently require closed triangular incidence for the exact finite-law heat-factor base and
     the exact fine/transported candidates used by one Facts 2–3 bridge. Keep this combined bridge
     separate from the augmented record until embedded and universal source semantics are available.
