@@ -82,8 +82,13 @@ adjudication corrections.
   right-equivariance, curvature, and Bianchi. Jost independently confirms local
   `F=dA+A∧A`, `DF=0`, invariant pairing, the Yang–Mills functional, curvature covariance, and action
   invariance. Husemoller corroborates the topological bundle/trivialization/transition layer.
-- **Gauge-group identity:** Hall 2015 corroborates compact/matrix Lie-group and semisimple-algebra
-  conventions but does not silently extend matrix results to every project manifold carrier.
+- **Gauge-group identity and matrix-group coefficient density:** Hall 2015 corroborates
+  compact/matrix Lie-group and semisimple-algebra conventions but does not silently extend matrix
+  results to every project manifold carrier. Printed pp. 355–356 (PDF artifact pp. 362–363),
+  visually checked,
+  explicitly derives coefficient-algebra point separation from a faithful finite-dimensional
+  representation before applying complex Stone–Weierstrass; the Lean density theorem retains that
+  matrix-representation hypothesis.
   Aharony–Seiberg–Tachikawa confirms that the exact global group `G` cannot be replaced by its Lie
   algebra or universal cover.
 - **Trace anomaly:** the supplied published Collins–Duncan–Joglekar article agrees with the retained

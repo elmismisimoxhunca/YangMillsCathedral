@@ -5101,8 +5101,14 @@ coefficients. Constants and the finite complex span of all such positive-dimensi
 irreducible-unitary coefficients are now bundled as an exact `StarSubalgebra ℂ C(G, ℂ)`. Its
 multiplication closure is derived through the concrete tensor representation, and its pointwise-star
 closure through the contragredient; the carrier is defined directly as the algebraic span rather than
-by a closure or top construction (without asserting that this span is extensionally proper). An equivalence with Mathlib's abstract `TensorProduct` carrier, point
-separation, and Stone–Weierstrass/Peter–Weyl density are not inferred.
+by a closure or top construction (without asserting that this span is extensionally proper). Hall's
+compact matrix-group point-separation step is now formalized with its source-visible hypothesis: a
+continuous faithful finite complex matrix representation supplies a separating coordinate entry.
+Under that explicit data, the coefficient star subalgebra separates points and Mathlib's complex
+Stone–Weierstrass theorem proves its topological closure is `⊤`. The general compact-Hausdorff-group
+Peter–Weyl point-separation/density theorem remains open because one faithful finite representation
+is not assumed there. An equivalence with Mathlib's abstract `TensorProduct` carrier is also not
+inferred.
 The next Schur precursor is now concrete: for two continuous finite matrix representations and an
 arbitrary rectangular matrix `A`, the coordinatewise Reynolds average
 `P(A)=∫σ(g⁻¹)Aρ(g)dμ_H` is genuinely integrable and satisfies the exact intertwining identity

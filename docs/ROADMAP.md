@@ -740,7 +740,14 @@ committed before higher layers depend on it.
 - [x] Bundle constants and the finite complex span of all positive-dimensional continuous
   irreducible-unitary coefficients as an exact `StarSubalgebra ℂ C(G, ℂ)`: tensor-product
   reconstruction proves multiplication closure and contragredient reconstruction proves pointwise
-  star closure. This is not yet point separation or density.
+  star closure.
+- [x] Formalize Hall's compact matrix-group closure step conditionally: an explicit continuous
+  faithful finite complex matrix representation supplies a separating entry for every distinct
+  pair, so the coefficient star subalgebra separates points and complex Stone–Weierstrass makes its
+  topological closure all of `C(G, ℂ)`.
+- [ ] Prove the general compact-Hausdorff-group Peter–Weyl point-separation/density theorem without
+  assuming one faithful finite-dimensional representation; do not conflate this with the completed
+  conditional compact matrix-group theorem.
 - [x] Construct the coordinatewise Reynolds/Haar average
   `P(A)=∫σ(g⁻¹)Aρ(g)dμ_H` for arbitrary rectangular matrices between two continuous finite matrix
   representations; derive coefficient integrability and the exact intertwining identity

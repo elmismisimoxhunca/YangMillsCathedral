@@ -11,7 +11,8 @@
 
 ## Audit role
 
-Modern Lie-group source for compact groups, matrix groups, and the SL(2,C)/proper-Lorentz relationship.
+Modern Lie-group source for compact groups, matrix groups, the compact matrix-group coefficient
+Stone–Weierstrass argument, and the SL(2,C)/proper-Lorentz relationship.
 
 ## Ingestion and locator status
 
@@ -21,6 +22,27 @@ statement load-bearing: exact printed-page/equation/theorem locators and any OCR
 must be visually checked and entered in `docs/SUPPLIED_SOURCE_INGESTION_AUDIT.md` and
 `docs/SOURCE_MAP.md` before supporting a canonical physical declaration. Hashes verify identity of
 the retained bytes, not interpretation.
+
+## Load-bearing compact matrix-group density locator
+
+Printed pp. 355–356, proof of Theorem 12.18; PDF artifact pp. 362–363; extracted text lines
+16345–16367:
+
+- `A` is the space of continuous functions expressible as finite linear combinations of matrix
+  entries of finite-dimensional representations of the compact matrix group `K`;
+- products of entries are entries of tensor-product representations, which decompose into
+  irreducibles;
+- the trivial representation supplies nonzero constants;
+- complex conjugates of entries are entries of dual representations;
+- because `K` is a matrix Lie group, a faithful finite-dimensional representation exists by the
+  convention used there, and its entries separate points;
+- the complex Stone–Weierstrass theorem then makes `A` uniformly dense in the continuous functions.
+
+PDF artifact pp. 362–363 were visually inspected against the extracted text. The source explicitly uses
+the matrix-group hypothesis at this step and later notes that Appendix D sketches a route not
+assuming it in advance. The present formalization therefore keeps a continuous faithful finite
+complex matrix representation as explicit data and does not generalize this argument silently to
+all compact Hausdorff groups.
 
 ## Artifact chain
 
