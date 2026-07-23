@@ -1335,6 +1335,11 @@ committed before higher layers depend on it.
     carriers, selecting a finite nonempty family in one Lévy whole-surface base fiber and equating
     only the simultaneous-conjugacy-class pushforward laws. Do not identify carriers or raw based
     holonomies.
+  - [x] Assemble `TwoDimensionalSenguptaAugmentedCurrentStrengthAcceptanceData`, dependently joining
+    the current planar/Lévy record, one finite Sengupta law, its covering heat and fixed-boundary
+    factor bridges, and its finite conjugacy-law coherence with the exact sewing field. Keep it
+    explicitly non-final pending embedded presentation, Facts 0–3, source-hypothesis discharge, and
+    component inhabitation.
   - [ ] Assemble a final source-indexed 2D acceptance proposition joining the constructed finite
     lattice, heat/Brownian, weak-limit continuum, compact-surface, and sewing chains; attempt to
     inhabit it solely from formalized Driver/Lévy/Sengupta results and record every remaining

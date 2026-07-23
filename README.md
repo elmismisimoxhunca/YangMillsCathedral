@@ -946,7 +946,10 @@ covering density, embedded topological triangulation, Facts 0–3 presentation/a
 independence, surface admissibility, and stochastic-law construction open. A separate uninhabited Sengupta--Lévy bridge now compares the two
 distinct compact-surface sample carriers only through the pushforward law of one finite nonempty
 common-base simultaneous-conjugacy observation. It neither identifies carriers nor asserts false raw
-holonomy equality.
+holonomy equality. `TwoDimensionalSenguptaAugmentedCurrentStrengthAcceptanceData` now dependently
+joins all of those Sengupta interfaces to the exact planar spectral semigroup and exact Lévy sewing
+field already stored by the current-strength record. It is still not final: embedded compact-surface
+presentation, Facts 0–3, source-hypothesis discharge, and all component inhabitants remain open.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly

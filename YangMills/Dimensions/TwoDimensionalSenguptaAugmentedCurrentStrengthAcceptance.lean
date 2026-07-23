@@ -1,0 +1,198 @@
+/-
+Copyright (c) 2026 YangMillsDefinition contributors. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: YangMillsDefinition contributors
+-/
+import YangMills.Dimensions.TwoDimensionalCurrentStrengthLiteratureAcceptance
+import YangMills.Dimensions.TwoDimensionalSenguptaLevyFiniteHolonomyBridge
+import YangMills.Dimensions.TwoDimensionalSenguptaTriangulatedHeatFactors
+
+/-!
+# Sengupta-augmented current-strength two-dimensional acceptance
+
+This dependently joins the existing planar/Lévy current-strength record with one Sengupta finite law,
+its covering heat and boundary-conditioned finite-face factor bridges, and its gauge-invariant
+finite-law coherence with the exact Lévy sewing component already stored by that record.
+
+It is still explicitly current-strength, not the final 2D acceptance proposition. Construction of an
+embedded compact-surface presentation, Sengupta Facts 0--3, source-hypothesis discharge, and all
+component inhabitants remain open.
+-/
+
+namespace YangMills.Dimensions
+
+open MeasureTheory
+open YangMills.Mathematics
+open scoped Manifold ContDiff ENNReal
+
+noncomputable section
+
+universe uE uG uGauge uSample uConnection uΩ
+  uVertex uEdge uFace uXAxisCell uLargeVertex uLargeEdge uLargeFace uLargeXAxisCell
+  uFineVertex uFineEdge uFineFace uFineXAxisCell
+  uFineLargeVertex uFineLargeEdge uFineLargeFace uFineLargeXAxisCell
+  uEL uHL uSL uER uHR uSR uEG uHG
+  uLeftBase uRightBase uWholeBase uLeftLoop uRightLoop uWholeLoop
+  uLeftSample uRightSample uWholeSample
+  uCover uCurveS uEdgeS uInternalEdge uFaceS uRegionS uSenguptaSample
+
+attribute [local instance]
+  TwoDimensionalLatticeApproximatingSequenceData.fineEdgeDecidableEq
+
+variable
+    {E : Type uE} [NormedAddCommGroup E] [NormedSpace ℝ E] [FiniteDimensional ℝ E]
+    {G : Type uG} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+    [CompactSpace G] [T2Space G] [SecondCountableTopology G]
+    [MeasurableSpace G] [BorelSpace G] [MeasurableMul₂ G] [MeasurableInv G]
+    [ChartedSpace E G] [LieGroup (modelWithCornersSelf ℝ E) ∞ G]
+    {Gauge : Type uGauge} [Group Gauge]
+    {Sample : Type uSample} [MeasurableSpace Sample]
+    {Connection : Type uConnection} {Ω : Type uΩ} [MeasurableSpace Ω]
+    {base : TwoDimensionalGaugeFixedHolonomyMeasureData G Gauge Sample Connection}
+    {law : TwoDimensionalSelectedLoopHaarDensityLawData base}
+    {inner : Geometry.InvariantInnerProductData (I := modelWithCornersSelf ℝ E) (G := G)}
+    {realLaplacian : RightInvariantPairingLaplacianData inner}
+    {complexLaplacian : RightInvariantPairingComplexLaplacianData inner}
+    {heatTraceData : UnitaryMatrixDualHeatTraceSummabilityData (G := G)}
+    {coarse : TwoDimensionalEmbeddedPlanarGraphData.{uVertex, uEdge, uFace, uXAxisCell} base}
+    {enlarged : TwoDimensionalEmbeddedPlanarGraphData.{uLargeVertex, uLargeEdge,
+      uLargeFace, uLargeXAxisCell} base}
+    [DecidableEq coarse.Edge] [DecidableEq enlarged.Edge]
+    {axial : TwoDimensionalDriverAxialEnlargementData
+      (G := G) (coarse := coarse) (enlarged := enlarged)}
+    {continuum : TwoDimensionalDriverAxialEnlargedHeatExpectationData (law := law) axial}
+    {coarseApproximation : TwoDimensionalLatticeApproximatingHolonomyData.{uVertex, uEdge,
+      uFace, uXAxisCell, uFineVertex, uFineEdge, uFineFace, uFineXAxisCell}
+      (base := base) (coarse := coarse)}
+    {enlargedApproximation : TwoDimensionalLatticeApproximatingHolonomyData.{uLargeVertex,
+      uLargeEdge, uLargeFace, uLargeXAxisCell, uFineLargeVertex, uFineLargeEdge,
+      uFineLargeFace, uFineLargeXAxisCell} (base := base) (coarse := enlarged)}
+    {faceGeometry : TwoDimensionalDriverAxialLatticeFaceGeometryData
+      (axial := axial) (coarseApproximation := coarseApproximation)
+      (enlargedApproximation := enlargedApproximation)}
+    {EL : Type uEL} [NormedAddCommGroup EL] [NormedSpace ℝ EL] [FiniteDimensional ℝ EL]
+    [MeasurableSpace EL] [BorelSpace EL] {HL : Type uHL} [TopologicalSpace HL]
+    {SL : Type uSL} [TopologicalSpace SL] [MeasurableSpace SL] [BorelSpace SL]
+    {IL : ModelWithCorners ℝ EL HL} [ChartedSpace HL SL] [IsManifold IL ∞ SL]
+    [CompactSpace SL] [T2Space SL] [SecondCountableTopology SL]
+    {ER : Type uER} [NormedAddCommGroup ER] [NormedSpace ℝ ER] [FiniteDimensional ℝ ER]
+    [MeasurableSpace ER] [BorelSpace ER] {HR : Type uHR} [TopologicalSpace HR]
+    {SR : Type uSR} [TopologicalSpace SR] [MeasurableSpace SR] [BorelSpace SR]
+    {IR : ModelWithCorners ℝ ER HR} [ChartedSpace HR SR] [IsManifold IR ∞ SR]
+    [CompactSpace SR] [T2Space SR] [SecondCountableTopology SR]
+    {leftSurface : Geometry.CompactOrientedMeasuredSurfaceData IL SL}
+    {leftPresentation : Geometry.CompactSurfaceBoundaryCirclePresentationData leftSurface}
+    {leftOrientation : Geometry.CompactSurfaceBoundaryOrientationData leftSurface leftPresentation}
+    {rightSurface : Geometry.CompactOrientedMeasuredSurfaceData IR SR}
+    {rightPresentation : Geometry.CompactSurfaceBoundaryCirclePresentationData rightSurface}
+    {rightOrientation : Geometry.CompactSurfaceBoundaryOrientationData rightSurface rightPresentation}
+    {identification : Geometry.CompactSurfaceBoundaryIdentification
+      leftSurface leftPresentation leftOrientation rightSurface rightPresentation rightOrientation}
+    {EG : Type uEG} [NormedAddCommGroup EG] [NormedSpace ℝ EG] [FiniteDimensional ℝ EG]
+    [MeasurableSpace EG] [BorelSpace EG] {HG : Type uHG} [TopologicalSpace HG]
+    {IG : ModelWithCorners ℝ EG HG}
+    [ChartedSpace HG (Geometry.CompactSurfaceBoundaryGluingQuotient identification)]
+    [IsManifold IG ∞ (Geometry.CompactSurfaceBoundaryGluingQuotient identification)]
+    {LeftBase : Type uLeftBase} {RightBase : Type uRightBase} {WholeBase : Type uWholeBase}
+    {LeftLoop : LeftBase → Type uLeftLoop} {RightLoop : RightBase → Type uRightLoop}
+    {WholeLoop : WholeBase → Type uWholeLoop}
+    {LeftSample : Type uLeftSample} [MeasurableSpace LeftSample]
+    {RightSample : Type uRightSample} [MeasurableSpace RightSample]
+    {WholeSample : Type uWholeSample} [MeasurableSpace WholeSample]
+    {CoverGroup : Type uCover} [Group CoverGroup] [TopologicalSpace CoverGroup]
+    [IsTopologicalGroup CoverGroup] [CompactSpace CoverGroup] [T2Space CoverGroup]
+    [MeasurableSpace CoverGroup] [BorelSpace CoverGroup]
+    {CurveS : Type uCurveS} [Fintype CurveS] [Nonempty CurveS]
+    {EdgeS : Type uEdgeS} [Fintype EdgeS] [DecidableEq EdgeS]
+    {InternalEdge : Type uInternalEdge} [Fintype InternalEdge]
+    {FaceS : Type uFaceS} [Fintype FaceS] [DecidableEq FaceS]
+    {RegionS : Type uRegionS} [Fintype RegionS] [DecidableEq RegionS]
+    {SenguptaSample : Type uSenguptaSample} [MeasurableSpace SenguptaSample]
+    {coverDensity : ℝ → CoverGroup → ℝ≥0∞}
+
+/-- Current-strength joined record augmented by the exact Sengupta interfaces constructed so far. -/
+structure TwoDimensionalSenguptaAugmentedCurrentStrengthAcceptanceData where
+  current : TwoDimensionalCurrentStrengthLiteratureAcceptanceData
+    (law := law) (inner := inner) (realLaplacian := realLaplacian)
+    (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+    (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)
+    (identification := identification) (IG := IG)
+    (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+    (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)
+  finiteLaw : TwoDimensionalSenguptaCompactSurfaceFiniteHolonomyLawData
+    (G := G) (CoverGroup := CoverGroup) (Curve := CurveS) (Edge := EdgeS)
+    (Region := RegionS) (Sample := SenguptaSample)
+  heatFactors : TwoDimensionalSenguptaTriangulatedHeatFactorBridgeData
+    (planarSemigroup := current.planar.convergence.productBridge.weakLimitFamily.spectralWilson
+      |>.spectralHeatKernel.convolutionSemigroup)
+    (finiteLaw := finiteLaw) (coverDensity := coverDensity)
+    (InternalEdge := InternalEdge) (Face := FaceS)
+  finiteLawSewing : TwoDimensionalSenguptaLevyFiniteHolonomyBridgeData
+    finiteLaw current.compactSurface.sewing
+
+namespace TwoDimensionalSenguptaAugmentedCurrentStrengthAcceptanceData
+
+omit [T2Space CoverGroup] [Fintype CurveS] [Nonempty CurveS] [DecidableEq EdgeS] in
+/-- Hostile dependency surface: the stored heat-factor bridge is indexed by this record's exact
+finite law and exact nested planar spectral semigroup. -/
+noncomputable def exact_heatFactors
+    (data : TwoDimensionalSenguptaAugmentedCurrentStrengthAcceptanceData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+      (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)
+      (identification := identification) (IG := IG)
+      (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+      (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)
+      (CoverGroup := CoverGroup) (CurveS := CurveS) (EdgeS := EdgeS)
+      (InternalEdge := InternalEdge) (FaceS := FaceS) (RegionS := RegionS)
+      (SenguptaSample := SenguptaSample) (coverDensity := coverDensity)) :
+    TwoDimensionalSenguptaTriangulatedHeatFactorBridgeData
+      (planarSemigroup := data.current.planar.convergence.productBridge.weakLimitFamily.spectralWilson
+        |>.spectralHeatKernel.convolutionSemigroup)
+      (finiteLaw := data.finiteLaw) (coverDensity := coverDensity)
+      (InternalEdge := InternalEdge) (Face := FaceS) :=
+  data.heatFactors
+
+omit [T2Space CoverGroup] [Fintype CurveS] [Nonempty CurveS] [DecidableEq EdgeS] in
+/-- Hostile dependency surface: the finite-law sewing bridge uses this record's exact finite law and
+the exact Lévy sewing field already selected inside `current`. -/
+noncomputable def exact_finiteLawSewing
+    (data : TwoDimensionalSenguptaAugmentedCurrentStrengthAcceptanceData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+      (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)
+      (identification := identification) (IG := IG)
+      (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+      (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)
+      (CoverGroup := CoverGroup) (CurveS := CurveS) (EdgeS := EdgeS)
+      (InternalEdge := InternalEdge) (FaceS := FaceS) (RegionS := RegionS)
+      (SenguptaSample := SenguptaSample) (coverDensity := coverDensity)) :
+    TwoDimensionalSenguptaLevyFiniteHolonomyBridgeData
+      data.finiteLaw data.current.compactSurface.sewing :=
+  data.finiteLawSewing
+
+omit [T2Space CoverGroup] [Fintype CurveS] [Nonempty CurveS] [DecidableEq EdgeS] in
+/-- The covering heat bridge uses the exact planar spectral semigroup already selected by the current
+Driver/Brownian chain. -/
+theorem exact_planarSemigroup
+    (data : TwoDimensionalSenguptaAugmentedCurrentStrengthAcceptanceData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+      (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)
+      (identification := identification) (IG := IG)
+      (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+      (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)
+      (CoverGroup := CoverGroup) (CurveS := CurveS) (EdgeS := EdgeS)
+      (InternalEdge := InternalEdge) (FaceS := FaceS) (RegionS := RegionS)
+      (SenguptaSample := SenguptaSample) (coverDensity := coverDensity))
+    {t : ℝ} (ht : 0 < t) :
+    Measure.map data.finiteLaw.projection
+        (normalizedCompactHaarDensitySemigroupMeasure coverDensity t) =
+      normalizedCompactHaarDensitySemigroupMeasure law.selectedAreaDensity t :=
+  data.heatFactors.coveringHeat.map_coverMeasure ht
+
+end TwoDimensionalSenguptaAugmentedCurrentStrengthAcceptanceData
+
+end
+
+end YangMills.Dimensions

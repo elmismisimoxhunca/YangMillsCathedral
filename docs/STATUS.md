@@ -5437,6 +5437,14 @@ is placed in one exact Lévy whole-surface base fiber, and only the simultaneous
 pushforward laws are equated. The bridge does not identify carriers, compare raw holonomies across
 quotient models, construct the curve embedding, or prove the law equality; it remains uninhabited.
 
+`TwoDimensionalSenguptaAugmentedCurrentStrengthAcceptanceData` now dependently joins the exact
+current-strength planar/Lévy record, one Sengupta finite law, its covering heat bridge, its
+boundary-conditioned finite-face factors, and its finite simultaneous-conjugacy law coherence with
+the exact Lévy sewing field already stored by that record. The covering heat target is definitionally
+the same planar spectral semigroup selected by the Driver/Brownian chain. This join is still not the
+final 2D proposition: embedded presentation, Facts 0–3, source-hypothesis discharge, literature-only
+inhabitation, and all underlying analytic/stochastic witnesses remain open.
+
 The preliminary `FourDimensionalCurrentStrengthUniversalAcceptance` declaration is intentionally
 qualified and uninhabited. No final source-complete acceptance declaration, placeholder inhabitance
 theorem, or arbitrary structure is introduced merely to make the project appear complete.
