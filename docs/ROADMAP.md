@@ -1299,6 +1299,11 @@ committed before higher layers depend on it.
     restriction commuting square.
   - [ ] Resolve/formalize Theorem 8.10 and inhabit/derive Theorem 7.2. Keep
     compact-surface gluing distinct from finite-cutoff, classical, and four-dimensional witnesses.
+  - [x] Assemble `TwoDimensionalCurrentStrengthLiteratureAcceptanceData`, joining the exact same-`G`
+    planar spectral Brownian/weak-limit/product/Driver-convergence chain and smooth Lévy
+    compact-surface sewing bridge. Derive planar convergence, smooth-interior seam placement, actual
+    rank-two geometry, nonzero laws, and witness-level exclusion of a 4D linear carrier; explicitly
+    leave planar-to-arbitrary-compact-surface heat-law construction open.
   - [ ] Assemble a final source-indexed 2D acceptance proposition joining the constructed finite
     lattice, heat/Brownian, weak-limit continuum, compact-surface, and sewing chains; attempt to
     inhabit it solely from formalized Driver/Lévy/Sengupta results and record every remaining

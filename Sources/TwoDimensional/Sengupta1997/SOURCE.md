@@ -39,7 +39,10 @@ two-time law. Product Fubini derives the continuous-test weak current-state iden
 separate debt. Uninhabited `TwoDimensionalSpectralPlanarLiteratureBridgeData` dependently makes this
 supplied Brownian process use the exact same spectral semigroup and heat core as the Driver
 all-spacing Villain weak-limit/product/convergence chain, rather than joining them by an unrelated
-equality claim. It does not construct
+equality claim. Current-strength `TwoDimensionalCurrentStrengthLiteratureAcceptanceData` further
+places that planar chain and the same-`G` smooth Lévy compact-surface sewing bridge in one record,
+while leaving the planar-to-arbitrary-compact-surface heat-law construction explicit debt. It does
+not construct
 the process or infer a Markov conditional-expectation/stochastic-generator theorem.
 
 ## Artifact chain

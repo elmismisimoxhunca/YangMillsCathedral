@@ -910,6 +910,15 @@ observable. Compactness now derives each continuous test's measurability and glo
 a separate coverage assumption. Analytic inhabitation and Wilson convergence remain open. No weak limit, boundary-
 independence proof, or lattice-continuum convergence is constructed.
 
+`TwoDimensionalCurrentStrengthLiteratureAcceptanceData` now places the full same-`G` spectral planar
+Brownian/weak-limit/product/Driver-convergence chain and the smooth Lévy compact-surface sewing
+bridge in one uninhabited record with distinct source-appropriate sample carriers. It derives the
+major planar and sewing consequences, exact descended rank two, nonzero laws, and witness-level
+non-equivalence of the actual surface model with four-dimensional Euclidean spacetime. The
+`CurrentStrength` qualifier is binding: no planar-to-arbitrary-compact-surface heat-law construction,
+component inhabitant, or literature-only inhabitance proof exists, so this is not the final 2D
+acceptance proposition.
+
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly
 coordinate `ℝ³`, its metric is Mathlib's canonical flat inner-product metric, and its designated

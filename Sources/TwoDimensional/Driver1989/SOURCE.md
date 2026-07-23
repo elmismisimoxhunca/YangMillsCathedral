@@ -195,7 +195,10 @@ observable to the unchanged continuum holonomy expectation. Uninhabited
 `TwoDimensionalSpectralPlanarLiteratureBridgeData` finally makes a supplied Brownian realization
 dependently use this exact convergence chain's spectral semigroup and heat core, deriving both the
 weak current-state Markov identity and every-continuous lattice-to-planar-continuum convergence from
-one unchanged planar chain. Neither coherence nor interchange is inhabited. The proof-required `B → VB` enlargement now has BC certificates on both graphs, literal coarse-edge
+one unchanged planar chain. Current-strength
+`TwoDimensionalCurrentStrengthLiteratureAcceptanceData` packages that planar chain together with the
+same-`G` smooth Lévy compact-surface sewing bridge, while explicitly recording that a final
+planar-to-arbitrary-compact-surface heat-law construction is still absent. Neither coherence nor interchange is inhabited. The proof-required `B → VB` enlargement now has BC certificates on both graphs, literal coarse-edge
 subdivision paths, the exact vertical/x-axis tree, total coverage excluding unrelated enlarged edges,
 and measurable ambient-compatible coarse restriction. Equation (6.1) is now an uninhabited universal interface: every bounded measurable coarse function
 factors through exact enlarged restriction and its base expectation equals the normalized vertical/x-

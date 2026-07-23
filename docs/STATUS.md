@@ -5379,11 +5379,14 @@ continuity-to-smoothness, remaining abstract coordinate
 realization/unitarization, countability, the `L²` density proof, infinite-series Fourier inversion,
 and heat-kernel spectral expansion remain open.
 
-The full two-dimensional literature chain is now an explicit validation target: a future final 2D
-acceptance proposition must join the Driver/Lévy/Sengupta finite, continuum, Brownian, compact-surface,
-and sewing results and be inhabited only from formalized literature theorems. Such a final 2D
-proposition and inhabitance proof do not yet exist, and any eventual inhabitant must remain strictly
-separate from the four-dimensional Clay endpoint.
+Current-strength `TwoDimensionalCurrentStrengthLiteratureAcceptanceData` now places the full same-`G`
+Driver/Sengupta spectral planar Brownian/weak-limit/product/convergence chain and smooth Lévy
+compact-surface sewing bridge in one acceptance record. It derives the major planar and sewing
+consequences, retains exact rank-two geometry, rejects zero laws, and hostilely blocks linear
+identification of the actual descended model with 4D Euclidean spacetime. It is not called final:
+the planar-to-arbitrary-compact-surface heat-law construction, the uninhabited component theorems,
+and a literature-only inhabitance attempt remain open. Any eventual final inhabitant must remain
+strictly separate from the four-dimensional Clay endpoint.
 
 The preliminary `FourDimensionalCurrentStrengthUniversalAcceptance` declaration is intentionally
 qualified and uninhabited. No final source-complete acceptance declaration, placeholder inhabitance

@@ -201,7 +201,11 @@ measured quotient descent and probabilistic sewing records to use the same bound
 and quotient carrier. It derives that every designated probabilistic seam-loop point lies in the
 smooth glued interior, while retaining the canonical sum-of-pushforwards area and exact inverse-class
 conditioned product law. The descended model's proved real dimension two gives a witness-level
-obstruction to linear identification with four-dimensional Euclidean spacetime.
+obstruction to linear identification with four-dimensional Euclidean spacetime. Current-strength
+`TwoDimensionalCurrentStrengthLiteratureAcceptanceData` places this compact-surface sewing bridge
+and the full same-`G` spectral planar Brownian/lattice-convergence chain in one acceptance record,
+without pretending that the missing planar-to-arbitrary-compact-surface heat-law construction has
+been proved.
 
 The Lean refinement layer constructs the word map and composition algebra, requires nonempty edge
 carriers, endpoint coherence, literal equality of each coarse ambient path with its concatenated fine
