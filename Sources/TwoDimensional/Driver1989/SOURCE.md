@@ -165,7 +165,10 @@ transported to the positive with-density measures; no weak-limit inhabitant is c
 Unitarity gives inversion symmetry, positivity transports the spectral convolution law to the exact
 real/`ENNReal` density semigroups, and an uninhabited two-dimensional coherence record identifies
 this density with the unchanged selected-loop law and derives its existing normalization,
-convolution, and weak-identity certificate. The proof-required `B → VB` enlargement now has BC certificates on both graphs, literal coarse-edge
+convolution, and weak-identity certificate. A separate same-pairing real/complex Laplacian coherence
+record and the existing series-interchange data now transport the complex spectral equation to the
+unchanged real selected-loop density and construct its existing positive smooth
+`∂ₜQ=½ΔQ` heat-equation core. Neither coherence nor interchange is inhabited. The proof-required `B → VB` enlargement now has BC certificates on both graphs, literal coarse-edge
 subdivision paths, the exact vertical/x-axis tree, total coverage excluding unrelated enlarged edges,
 and measurable ambient-compatible coarse restriction. Equation (6.1) is now an uninhabited universal interface: every bounded measurable coarse function
 factors through exact enlarged restriction and its base expectation equals the normalized vertical/x-

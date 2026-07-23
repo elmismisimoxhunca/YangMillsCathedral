@@ -169,7 +169,10 @@ constructed. Unitarity and unconditional summation additionally derive inversion
 positivity transports the complex spectral convolution law to exact real and `ENNReal` `x⁻¹z`
 density semigroups. An uninhabited two-dimensional bridge requires the unchanged selected-loop
 density to equal this spectral density and then constructs its existing normalization/convolution/
-weak-identity certificate without duplicating those conclusions as fields. The conditional density result does not establish Lévy's
+weak-identity certificate without duplicating those conclusions as fields. Explicit same-pairing
+real/complex Laplacian coherence and the existing interchange datum further transport the complex
+spectral equation to the unchanged strictly positive real loop density, constructing its existing
+real `∂ₜQ=½ΔQ` heat core; those new premises remain uninhabited. The conditional density result does not establish Lévy's
 theorem at unrestricted generality. Global dual
 countability, summability and convergence of Lévy's genuinely infinite heat-kernel expansion,
 infinite-series inversion, and Casimir action remain source-backed targets.

@@ -5223,7 +5223,12 @@ exact real and source-facing `ENNReal` `x⁻¹z` density semigroup laws. Uninhab
 `TwoDimensionalSelectedLoopSpectralDensityBridgeData` identifies the unchanged selected-loop
 density with this spectral density and constructs its existing normalization, convolution, and weak
 identity certificate from the geometric bridge, positivity, and initial identity rather than storing
-those conclusions again. Combining the convolution formula with the exact candidate coefficient time-addition law now proves
+those conclusions again. Smooth complex functions now have exact smooth real-part packaging, and
+uninhabited `RightInvariantPairingRealComplexLaplacianCoherenceData` ties real and complex
+Laplacians normalized by the same invariant pairing. Together with the spectral density bridge and
+series interchange, uninhabited `TwoDimensionalSelectedLoopSpectralHeatEquationBridgeData`
+constructs the existing positive smooth real selected-loop `∂ₜQ=½ΔQ` heat core on the unchanged
+law, derived semigroup, and real pairing Laplacian. Combining the convolution formula with the exact candidate coefficient time-addition law now proves
 the conditional positive-time spectral-family convolution law `K_s⋆K_t=K_{s+t}` in `C(G,ℂ)` and
 pointwise in the fixed integral order. No inhabitant of either the heat-trace data or the geometric
 bridge, interchange, positivity, or initial-identity data is constructed; no time-zero density,
