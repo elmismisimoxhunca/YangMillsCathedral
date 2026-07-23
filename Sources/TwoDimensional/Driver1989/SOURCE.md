@@ -186,7 +186,10 @@ Wilson chain now forgets only its stronger global-faithfulness/normalization fie
 exact Villain Theorem 8.5 common chain. An uninhabited spectral-Villain weak-limit bridge then ties
 Driver Theorem 7.2 to the literal `Q_{ε²}` action from that same spectral heat core at a positive
 spacing and derives normalized boundary-independent convergence from the unchanged weak-limit
-contract. Neither coherence nor interchange is inhabited. The proof-required `B → VB` enlargement now has BC certificates on both graphs, literal coarse-edge
+contract. An all-spacing version supplies exactly the family needed by Theorem 8.5; a further
+uninhabited bridge retains only Driver's enlarged `VB(ε)` product-expectation identity and constructs
+the existing action-indexed product-identity certificate with normalized fine measures. Neither
+coherence nor interchange is inhabited. The proof-required `B → VB` enlargement now has BC certificates on both graphs, literal coarse-edge
 subdivision paths, the exact vertical/x-axis tree, total coverage excluding unrelated enlarged edges,
 and measurable ambient-compatible coarse restriction. Equation (6.1) is now an uninhabited universal interface: every bounded measurable coarse function
 factors through exact enlarged restriction and its base expectation equals the normalized vertical/x-

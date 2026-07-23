@@ -61,6 +61,18 @@ structure TwoDimensionalSpectralVillainWeakLimitBridgeData where
       spectralWilson.spectralHeatKernel.heatEquationCore
       spectralWilson.spectralHeatKernel.kernelOperator spacing)
 
+/-- Exact all-spacing family required before Driver's `ε → 0` Theorem 8.5 comparison can consume
+the Theorem 7.2 weak limits. Each spacing remains an explicit supplied weak-limit theorem. -/
+structure TwoDimensionalSpectralVillainWeakLimitFamilyBridgeData where
+  spectralWilson : TwoDimensionalWilsonSpectralHeatChainBridgeData
+    (law := law) (inner := inner) (realLaplacian := realLaplacian)
+    (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+  weakLimit : ∀ spacing : PositiveLatticeSpacing,
+    TwoDimensionalDriverAxialWeakLimitData spacing
+      (TwoDimensionalLatticeActionData.villain
+        spectralWilson.spectralHeatKernel.heatEquationCore
+        spectralWilson.spectralHeatKernel.kernelOperator spacing)
+
 namespace TwoDimensionalSpectralVillainWeakLimitBridgeData
 
 /-- The exact spectral Villain lattice action used by the weak-limit contract. -/
@@ -106,6 +118,32 @@ theorem weak_limit_independent_of_boundary
   bridge.weakLimit.weak_limit_independent_of_boundary boundary
 
 end TwoDimensionalSpectralVillainWeakLimitBridgeData
+
+namespace TwoDimensionalSpectralVillainWeakLimitFamilyBridgeData
+
+/-- Restrict the all-spacing family to the exact fixed-spacing bridge. -/
+noncomputable def atSpacing
+    (family : TwoDimensionalSpectralVillainWeakLimitFamilyBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData))
+    (spacing : PositiveLatticeSpacing) :
+    TwoDimensionalSpectralVillainWeakLimitBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+      (spacing := spacing) where
+  spectralWilson := family.spectralWilson
+  weakLimit := family.weakLimit spacing
+
+/-- Every member of the all-spacing family has a normalized common limit. -/
+theorem limitMeasure_normalized
+    (family : TwoDimensionalSpectralVillainWeakLimitFamilyBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData))
+    (spacing : PositiveLatticeSpacing) :
+    (family.weakLimit spacing).limitMeasure Set.univ = 1 :=
+  (family.atSpacing spacing).limitMeasure_normalized
+
+end TwoDimensionalSpectralVillainWeakLimitFamilyBridgeData
 
 end
 

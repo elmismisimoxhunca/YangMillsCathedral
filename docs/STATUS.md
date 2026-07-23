@@ -5255,7 +5255,11 @@ common Wilson chain now forgets only its genuinely stronger global-faithfulness 
 fields to construct Driver's exact Villain common heat chain. Uninhabited
 `TwoDimensionalSpectralVillainWeakLimitBridgeData` ties the unchanged Theorem 7.2 contract to the
 literal spectral `Q_{ε²}` lattice action at one positive spacing and derives normalization and
-boundary-independent weak convergence, while explicit dimension probes reject the 4D endpoint.
+boundary-independent weak convergence, while explicit dimension probes reject the 4D endpoint. The
+all-spacing `TwoDimensionalSpectralVillainWeakLimitFamilyBridgeData` supplies the exact family needed
+by Theorem 8.5. Uninhabited `TwoDimensionalSpectralVillainProductIdentityBridgeData` then retains
+only Driver's enlarged `VB(ε)` expectation identity and constructs the existing product certificate
+with the exact spectral action/weak limits and derived normalized fine measures.
 Combining the convolution formula with the exact candidate coefficient time-addition law now proves
 the conditional positive-time spectral-family convolution law `K_s⋆K_t=K_{s+t}` in `C(G,ℂ)` and
 pointwise in the fixed integral order. No inhabitant of either the heat-trace data or the geometric

@@ -84,6 +84,29 @@ theorem zero_limit_blocked
   rw [zeroLimit] at normalized
   simp at normalized
 
+/-- The all-spacing family restricts to the exact fixed-spacing bridge without changing its weak
+limit or spectral action. -/
+theorem exact_family_at_spacing
+    (family : TwoDimensionalSpectralVillainWeakLimitFamilyBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData))
+    (spacing : PositiveLatticeSpacing) :
+    (family.atSpacing spacing).weakLimit = family.weakLimit spacing ∧
+      (family.atSpacing spacing).villainAction =
+        TwoDimensionalLatticeActionData.villain
+          family.spectralWilson.spectralHeatKernel.heatEquationCore
+          family.spectralWilson.spectralHeatKernel.kernelOperator spacing :=
+  ⟨rfl, rfl⟩
+
+/-- Every supplied member of the all-spacing family has a derived normalized limit. -/
+theorem exact_family_normalized
+    (family : TwoDimensionalSpectralVillainWeakLimitFamilyBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData))
+    (spacing : PositiveLatticeSpacing) :
+    (family.weakLimit spacing).limitMeasure Set.univ = 1 :=
+  family.limitMeasure_normalized spacing
+
 /-- This spectral Villain weak-limit bridge is intrinsically two-dimensional and cannot satisfy the
 four-dimensional endpoint index. -/
 theorem not_four_dimensional :
