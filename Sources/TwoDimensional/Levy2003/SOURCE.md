@@ -69,8 +69,11 @@ Mathlib's normalized-Haar `Lp ℂ 2`, equivalently that its closed span is top. 
 algebraic image, closed span, and finite-support inner-product/Plancherel bridge are constructed, but
 no density inhabitant is supplied. The character specialization over every coordinate-dual class
 now constructs finitely supported scalar synthesis, proves centrality, exact Haar coefficient
-analysis, injectivity, and the orthonormal coordinate pairing. It still does not turn Lévy's central
-Peter–Weyl basis statement into a density theorem. Countability/summability consequences, genuinely
+analysis, injectivity, and the orthonormal coordinate pairing. Mathlib's linear-trace conjugation
+theorem also proves that the trace character is invariant under every explicitly supplied
+representation equivalence and that each quotient-selected character agrees with every bundled
+presentation of its class. This does not identify basis-dependent matrix coefficients. It still does
+not turn Lévy's central Peter–Weyl basis statement into a density theorem. Countability/summability consequences, genuinely
 infinite-series inversion, Casimir action, and the heat-kernel expansion remain source-backed
 targets.
 

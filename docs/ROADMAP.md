@@ -722,8 +722,12 @@ committed before higher layers depend on it.
 - [x] Sum the diagonal coefficient formulas through the Haar integral to prove every represented
   positive-dimensional irreducible unitary character has normalized `L²` norm one and explicitly
   inequivalent irreducible characters have zero mixed pairing.
-- [ ] Add transport of the coefficient and character orthogonality formulas across explicitly
-  supplied equivalences between differently presented but equivalent irreducible representations.
+- [x] Prove trace-character invariance across explicitly supplied equivalences between differently
+  presented finite-dimensional representations, and identify every quotient-selected dual character
+  with the character of each bundled representative of its class.
+- [ ] Transport coordinate matrix-coefficient orthogonality across explicitly supplied equivalences,
+  retaining the required change-of-basis operators rather than falsely identifying basis-dependent
+  entries.
 - [x] Define coordinatewise representation-valued Fourier coefficients with exact inverse
   convention, derive continuous compact-domain integrability, addition/scalar/zero laws, specialize
   to probability-normalized Haar, and identify matrix trace with the scalar inverse-character

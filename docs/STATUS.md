@@ -5127,7 +5127,12 @@ probes show a vector outside the span or nondensity blocks completeness; no inha
 The all-coordinate-class character specialization now uses finitely supported scalar coefficients:
 synthesis is continuous and central, Haar analysis recovers every exact coefficient, synthesis is
 injective, and the Haar pairing is the orthonormal coordinate pairing. Explicit support probes block
-reading this as a central infinite-series or density theorem. Surjectivity/automatic
+reading this as a central infinite-series or density theorem. Linear-trace conjugation now proves
+that explicitly equivalent finite coordinate representations have identical trace characters even
+across differently presented dimensions. The quotient-selected dual character is therefore proved
+pointwise equal to the character of every bundled presentation of its class. Hostile probes reject
+changed equivalent or selected-representative character values; raw coordinate coefficients are not
+identified. Surjectivity/automatic
 continuity-to-smoothness, remaining abstract coordinate
 realization/unitarization, countability, the `L²` density proof, infinite-series Fourier inversion,
 and heat-kernel spectral expansion remain open.
