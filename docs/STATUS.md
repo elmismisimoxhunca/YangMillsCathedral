@@ -5403,7 +5403,9 @@ as a finite-dimensional pushforward law: normalized Haar fields on an etched fin
 compact covering group, a finite nonempty curve family, a surjective topological covering projection,
 a central kernel bundle class, the explicit inverse global partition function, one
 bundle-class-twisted region, every remaining untwisted region factor, and distinguished-region
-independence of the projected physical holonomy law rather than the raw edge-field measure. Cover-group
+independence of the projected physical holonomy law rather than the raw edge-field measure. The
+bounded and nonnegative measurable-test forms of equation (8.3) are derived from that equality in law.
+Cover-group
 compactness is required directly; the source's semisimple/boundary/nonorientable disjunction is not
 represented by a content-free tag and remains for a future geometric theorem. The interface does not construct admissible surface curves, Definition 7.6's
 area/topology-dependent `Z` factors, their identification with the planar spectral heat kernel, or

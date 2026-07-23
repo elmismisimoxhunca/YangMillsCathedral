@@ -125,6 +125,46 @@ structure TwoDimensionalSenguptaCompactSurfaceFiniteHolonomyLawData where
 namespace TwoDimensionalSenguptaCompactSurfaceFiniteHolonomyLawData
 
 omit [T2Space CoverGroup] [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
+/-- Bounded measurable real-test form of Sengupta equation (8.3), derived from the exact equality in
+law rather than stored as a duplicate field. -/
+theorem integral_eq_graphIntegral
+    (data : TwoDimensionalSenguptaCompactSurfaceFiniteHolonomyLawData
+      (G := G) (CoverGroup := CoverGroup) (Curve := Curve) (Edge := Edge)
+      (Region := Region) (Sample := Sample))
+    (test : (Curve → G) → ℝ) (test_measurable : Measurable test)
+    (_bounded : ∃ bound : ℝ, ∀ holonomies, |test holonomies| ≤ bound) :
+    (∫ sample, test (data.sampleHolonomy sample) ∂data.sampleMeasure) =
+      ∫ field, test (senguptaFiniteGraphHolonomy data.projection data.curveWord field)
+        ∂senguptaCompactSurfaceGraphMeasure data.partitionFunction data.bundleClass
+          data.distinguishedRegion data.ordinaryRegionWeight data.twistedRegionWeight := by
+  rw [← integral_map data.sampleHolonomy_measurable.aemeasurable
+    test_measurable.aestronglyMeasurable, data.finiteDimensionalLaw]
+  exact integral_map data.graphHolonomy_measurable.aemeasurable
+    test_measurable.aestronglyMeasurable
+
+omit [T2Space CoverGroup] [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
+/-- Nonnegative measurable-test form of the same equation (8.3). -/
+theorem lintegral_eq_graphLIntegral
+    (data : TwoDimensionalSenguptaCompactSurfaceFiniteHolonomyLawData
+      (G := G) (CoverGroup := CoverGroup) (Curve := Curve) (Edge := Edge)
+      (Region := Region) (Sample := Sample))
+    (test : (Curve → G) → ℝ≥0∞) (test_measurable : Measurable test) :
+    (∫⁻ sample, test (data.sampleHolonomy sample) ∂data.sampleMeasure) =
+      ∫⁻ field, test (senguptaFiniteGraphHolonomy data.projection data.curveWord field)
+        ∂senguptaCompactSurfaceGraphMeasure data.partitionFunction data.bundleClass
+          data.distinguishedRegion data.ordinaryRegionWeight data.twistedRegionWeight := by
+  calc
+    _ = ∫⁻ holonomies, test holonomies
+        ∂Measure.map data.sampleHolonomy data.sampleMeasure :=
+      (lintegral_map test_measurable data.sampleHolonomy_measurable).symm
+    _ = ∫⁻ holonomies, test holonomies
+        ∂Measure.map (senguptaFiniteGraphHolonomy data.projection data.curveWord)
+          (senguptaCompactSurfaceGraphMeasure data.partitionFunction data.bundleClass
+            data.distinguishedRegion data.ordinaryRegionWeight data.twistedRegionWeight) := by
+      rw [data.finiteDimensionalLaw]
+    _ = _ := lintegral_map test_measurable data.graphHolonomy_measurable
+
+omit [T2Space CoverGroup] [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
 /-- The finite-dimensional law retains the exact bundle class rather than silently replacing it by
 the trivial bundle. -/
 theorem exact_bundle_class

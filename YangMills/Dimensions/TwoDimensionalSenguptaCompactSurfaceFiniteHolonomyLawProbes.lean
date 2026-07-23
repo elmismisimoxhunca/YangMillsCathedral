@@ -44,6 +44,28 @@ theorem exact_reverse_edge_holonomy
   simp [senguptaFiniteGraphHolonomy, finiteOrientedWordHolonomy]
 
 omit [T2Space CoverGroup] [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
+/-- The bounded measurable-test equation (8.3) is derived from the pushforward law. -/
+theorem exact_bounded_test_equation
+    (test : (Curve → G) → ℝ) (test_measurable : Measurable test)
+    (bounded : ∃ bound : ℝ, ∀ holonomies, |test holonomies| ≤ bound) :
+    (∫ sample, test (data.sampleHolonomy sample) ∂data.sampleMeasure) =
+      ∫ field, test (senguptaFiniteGraphHolonomy data.projection data.curveWord field)
+        ∂senguptaCompactSurfaceGraphMeasure data.partitionFunction data.bundleClass
+          data.distinguishedRegion data.ordinaryRegionWeight data.twistedRegionWeight :=
+  data.integral_eq_graphIntegral test test_measurable bounded
+
+omit [T2Space CoverGroup] [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
+/-- Hostile equation probe: a changed bounded-test expectation is rejected. -/
+theorem changed_bounded_test_equation_blocked
+    (test : (Curve → G) → ℝ) (test_measurable : Measurable test)
+    (bounded : ∃ bound : ℝ, ∀ holonomies, |test holonomies| ≤ bound)
+    (changed : (∫ sample, test (data.sampleHolonomy sample) ∂data.sampleMeasure) ≠
+      ∫ field, test (senguptaFiniteGraphHolonomy data.projection data.curveWord field)
+        ∂senguptaCompactSurfaceGraphMeasure data.partitionFunction data.bundleClass
+          data.distinguishedRegion data.ordinaryRegionWeight data.twistedRegionWeight) : False :=
+  changed (data.integral_eq_graphIntegral test test_measurable bounded)
+
+omit [T2Space CoverGroup] [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
 /-- Equation (8.3) is retained as an exact pushforward identity on the named graph weight. -/
 theorem exact_finite_dimensional_law :
     Measure.map data.sampleHolonomy data.sampleMeasure =
