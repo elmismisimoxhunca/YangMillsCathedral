@@ -122,8 +122,10 @@ continuous irreducible unitary representative. These results establish finite mu
 coefficient-span closure data. Separately derived finite algebra now constructs the contragredient
 `g ↦ (ρ(g⁻¹))ᵀ`; coordinate unitarity identifies each contragredient coefficient with the
 pointwise scalar star of the original coefficient. Applying the same selected finite unitary
-summand expansion gives finite star-closure data. A bundled star algebra, point separation, and
-density remain open.
+summand expansion gives finite star-closure data. Constants and the finite complex span of all
+positive-dimensional continuous irreducible-unitary coefficients are consequently bundled as a
+`StarSubalgebra ℂ C(G, ℂ)` with exact algebraic-span carrier. Point separation and density remain
+open and are not attributed to, or inferred from, this finite closure result.
 
 The Hall notes do not interpret the Clay phrase “compact simple gauge group” or decide connectedness
 and global form. Those decisions use the Clay source plus the separately pinned gauge-global-form

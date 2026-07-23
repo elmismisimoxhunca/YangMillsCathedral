@@ -5097,9 +5097,12 @@ coefficients. The contragredient `g ↦ (ρ(g⁻¹))ᵀ` is now an exact continu
 unitary input its coefficients are the pointwise scalar stars of the original coefficients. A
 classically selected finite unitary decomposition of that contragredient therefore expands every
 starred coefficient as a finite weighted sum of positive-dimensional continuous irreducible unitary
-coefficients. Bundling these multiplication/star results into a coefficient `StarSubalgebra` remains
-open before Stone–Weierstrass; an equivalence with Mathlib's abstract `TensorProduct` carrier, point
-separation, and density are not inferred.
+coefficients. Constants and the finite complex span of all such positive-dimensional continuous
+irreducible-unitary coefficients are now bundled as an exact `StarSubalgebra ℂ C(G, ℂ)`. Its
+multiplication closure is derived through the concrete tensor representation, and its pointwise-star
+closure through the contragredient; the carrier is defined directly as the algebraic span rather than
+by a closure or top construction (without asserting that this span is extensionally proper). An equivalence with Mathlib's abstract `TensorProduct` carrier, point
+separation, and Stone–Weierstrass/Peter–Weyl density are not inferred.
 The next Schur precursor is now concrete: for two continuous finite matrix representations and an
 arbitrary rectangular matrix `A`, the coordinatewise Reynolds average
 `P(A)=∫σ(g⁻¹)Aρ(g)dμ_H` is genuinely integrable and satisfies the exact intertwining identity
