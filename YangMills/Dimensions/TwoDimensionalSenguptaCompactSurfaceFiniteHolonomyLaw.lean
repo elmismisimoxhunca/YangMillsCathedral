@@ -125,6 +125,51 @@ structure TwoDimensionalSenguptaCompactSurfaceFiniteHolonomyLawData where
 namespace TwoDimensionalSenguptaCompactSurfaceFiniteHolonomyLawData
 
 omit [T2Space CoverGroup] [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
+/-- Equation (8.3) holds with any complementary region chosen as distinguished, at the exact
+projected physical-holonomy-law scope proved by Sengupta. -/
+theorem finiteDimensionalLaw_atRegion
+    (data : TwoDimensionalSenguptaCompactSurfaceFiniteHolonomyLawData
+      (G := G) (CoverGroup := CoverGroup) (Curve := Curve) (Edge := Edge)
+      (Region := Region) (Sample := Sample))
+    (region : Region) :
+    Measure.map data.sampleHolonomy data.sampleMeasure =
+      Measure.map (senguptaFiniteGraphHolonomy data.projection data.curveWord)
+        (senguptaCompactSurfaceGraphMeasure data.partitionFunction data.bundleClass region
+          data.ordinaryRegionWeight data.twistedRegionWeight) := by
+  rw [data.holonomyLaw_independent_distinguishedRegion region]
+  exact data.finiteDimensionalLaw
+
+omit [T2Space CoverGroup] [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
+/-- The explicit inverse partition function normalizes every distinguished-region graph measure,
+derived from the stochastic law and projected-law identity. -/
+theorem graphMeasure_univ
+    (data : TwoDimensionalSenguptaCompactSurfaceFiniteHolonomyLawData
+      (G := G) (CoverGroup := CoverGroup) (Curve := Curve) (Edge := Edge)
+      (Region := Region) (Sample := Sample))
+    (region : Region) :
+    senguptaCompactSurfaceGraphMeasure data.partitionFunction data.bundleClass region
+      data.ordinaryRegionWeight data.twistedRegionWeight Set.univ = 1 := by
+  have lawAtRegion := congrArg (fun measure : Measure (Curve → G) => measure Set.univ)
+    (data.finiteDimensionalLaw_atRegion region)
+  rw [Measure.map_apply data.sampleHolonomy_measurable MeasurableSet.univ,
+    Measure.map_apply data.graphHolonomy_measurable MeasurableSet.univ] at lawAtRegion
+  simpa [data.sampleMeasure_univ] using lawAtRegion.symm
+
+omit [T2Space CoverGroup] [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
+/-- Consequently no normalized distinguished-region graph measure is zero. -/
+theorem graphMeasure_ne_zero
+    (data : TwoDimensionalSenguptaCompactSurfaceFiniteHolonomyLawData
+      (G := G) (CoverGroup := CoverGroup) (Curve := Curve) (Edge := Edge)
+      (Region := Region) (Sample := Sample))
+    (region : Region) :
+    senguptaCompactSurfaceGraphMeasure data.partitionFunction data.bundleClass region
+      data.ordinaryRegionWeight data.twistedRegionWeight ≠ 0 := by
+  intro zeroMeasure
+  have normalized := data.graphMeasure_univ region
+  rw [zeroMeasure] at normalized
+  simp at normalized
+
+omit [T2Space CoverGroup] [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
 /-- Bounded measurable real-test form of Sengupta equation (8.3), derived from the exact equality in
 law rather than stored as a duplicate field. -/
 theorem integral_eq_graphIntegral

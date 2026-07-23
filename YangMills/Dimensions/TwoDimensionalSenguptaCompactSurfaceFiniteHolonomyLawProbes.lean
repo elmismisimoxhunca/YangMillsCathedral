@@ -93,8 +93,8 @@ theorem exact_partition_function : data.partitionFunction =
   data.partitionFunction_eq_lintegral
 
 omit [T2Space CoverGroup] [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
-/-- The source permits any distinguished complementary region; the normalized graph law is
-independent of that choice. -/
+/-- The source permits any distinguished complementary region; the projected physical holonomy law
+is independent of that choice. -/
 theorem exact_distinguished_region_independence (otherRegion : Region) :
     Measure.map (senguptaFiniteGraphHolonomy data.projection data.curveWord)
       (senguptaCompactSurfaceGraphMeasure data.partitionFunction data.bundleClass otherRegion
@@ -103,6 +103,23 @@ theorem exact_distinguished_region_independence (otherRegion : Region) :
       (senguptaCompactSurfaceGraphMeasure data.partitionFunction data.bundleClass
         data.distinguishedRegion data.ordinaryRegionWeight data.twistedRegionWeight) :=
   data.holonomyLaw_independent_distinguishedRegion otherRegion
+
+omit [T2Space CoverGroup] [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
+/-- Every choice of distinguished region gives a normalized nonzero graph measure. -/
+theorem exact_every_region_normalized_nonzero (region : Region) :
+    senguptaCompactSurfaceGraphMeasure data.partitionFunction data.bundleClass region
+      data.ordinaryRegionWeight data.twistedRegionWeight Set.univ = 1 ∧
+    senguptaCompactSurfaceGraphMeasure data.partitionFunction data.bundleClass region
+      data.ordinaryRegionWeight data.twistedRegionWeight ≠ 0 :=
+  ⟨data.graphMeasure_univ region, data.graphMeasure_ne_zero region⟩
+
+omit [T2Space CoverGroup] [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
+/-- Hostile raw-measure probe: no distinguished-region graph law may collapse to zero. -/
+theorem zero_graph_measure_blocked
+    (region : Region)
+    (zeroMeasure : senguptaCompactSurfaceGraphMeasure data.partitionFunction data.bundleClass region
+      data.ordinaryRegionWeight data.twistedRegionWeight = 0) : False :=
+  data.graphMeasure_ne_zero region zeroMeasure
 
 omit [T2Space CoverGroup] [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
 /-- Hostile bundle-topology probe: a proposed class outside the projection kernel is rejected. -/

@@ -930,8 +930,9 @@ the compact-surface finite-dimensional pushforward law on a finite nonempty curv
 surjective topological covering projection, central kernel bundle class, explicit inverse partition
 function, bundle-class-twisted distinguished-region factor, and independence of the projected
 physical holonomy law—not the raw edge-field measure—from that choice. The literal bounded and
-nonnegative measurable-test forms of equation (8.3) are derived from this pushforward identity rather
-than duplicated as assumptions. It requires
+nonnegative measurable-test forms of equation (8.3), its validity for every distinguished region,
+and normalization/nonzeroness of every corresponding graph measure are derived from this pushforward
+identity rather than duplicated as assumptions. It requires
 cover-group compactness directly rather than retaining the source's disjunction as a vacuous tag, and deliberately leaves
 surface admissibility, Definition 7.6 region-factor construction, spectral-heat identification, and
 stochastic-law construction open.
