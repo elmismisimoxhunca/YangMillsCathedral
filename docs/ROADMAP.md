@@ -715,6 +715,9 @@ committed before higher layers depend on it.
   group-algebra modules; use explicit unitarization to map every positive-dimensional continuous
   irreducible matrix representation into an equivalent coordinate-unitary-dual class, with
   already-unitary class coherence.
+- [x] Construct the invariant Haar-orthogonal complement of every subrepresentation, prove exact
+  algebraic complementarity in finite dimension, derive semisimplicity of every continuous compact
+  matrix representation, and expose a finite simple group-algebra decomposition.
 - [x] Construct the coordinatewise Reynolds/Haar average
   `P(A)=∫σ(g⁻¹)Aρ(g)dμ_H` for arbitrary rectangular matrices between two continuous finite matrix
   representations; derive coefficient integrability and the exact intertwining identity

@@ -5072,9 +5072,14 @@ recovered from the same representation equivalence. A reusable group-algebra mod
 proves irreducibility invariant under every exact representation equivalence. Consequently every
 explicit positive-dimensional continuous irreducible matrix representation, without any supplied
 unitary law, constructs an equivalent bundled unitary representative and a coordinate-unitary-dual
-class. Re-unitarizing an already unitary bundle is proved to retain its exact dual class. Arbitrary
-non-coordinate representation realization, smooth comparison surjectivity, dual countability,
-dual completeness, and Fourier convergence remain open.
+class. Re-unitarizing an already unitary bundle is proved to retain its exact dual class. The same
+Haar-averaged inner product now constructs an invariant orthogonal complement to every
+subrepresentation. Finite-dimensional dimension arithmetic proves exact complementarity, hence
+semisimplicity of every continuous compact matrix representation and a finite direct-sum
+decomposition of its group-algebra module into simple submodules. Packaging each selected simple
+summand as an explicit continuous irreducible unitary matrix bundle, arbitrary non-coordinate
+representation realization, smooth comparison surjectivity, dual countability, dual completeness,
+and Fourier convergence remain open.
 The next Schur precursor is now concrete: for two continuous finite matrix representations and an
 arbitrary rectangular matrix `A`, the coordinatewise Reynolds average
 `P(A)=∫σ(g⁻¹)Aρ(g)dμ_H` is genuinely integrable and satisfies the exact intertwining identity
