@@ -765,10 +765,14 @@ committed before higher layers depend on it.
   construct its canonical injective map into the continuous coordinate dual; characterize the image
   by `HasSmoothRepresentative` and prove surjectivity equivalent to smooth representability of every
   continuous class.
+- [x] Map algebraic coefficient synthesis into Mathlib's actual normalized-Haar `Lp ℂ 2` carrier,
+  prove its `L²` inner product equals the dimension-weighted algebraic Fourier pairing, define the
+  algebraic image and closed coefficient span, and state `HasL2PeterWeylCompleteness` exactly as
+  closed-span equality to `⊤` (equivalently density), without constructing an inhabitant.
 - [ ] Prove that comparison map surjective for the intended compact Lie groups (or replace the
   continuous quotient by a source-justified smooth realization theorem), establish any required
-  countability theorem, and only then formulate infinite-series and `L²` Plancherel statements with
-  explicit summability/completeness hypotheses.
+  countability theorem, and prove the `HasL2PeterWeylCompleteness` density obligation before
+  formulating genuinely infinite-series inversion with explicit summability hypotheses.
 - [ ] Prove Stone–Weierstrass separation and Peter–Weyl density/completeness in continuous and `L²`
   carriers with explicit topology and measure hypotheses.
 - [ ] State and prove only convergence-justified Fourier inversion and central character expansions;

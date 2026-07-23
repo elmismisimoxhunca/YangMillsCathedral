@@ -5119,10 +5119,14 @@ A separate smooth coordinate dual now stores exact `ContMDiff` matrix coordinate
 injectively into the continuous dual. Its image is exactly the classes satisfying
 `HasSmoothRepresentative`; comparison surjectivity is proved equivalent to every continuous class
 having such a representative. A hostile probe shows one missing smooth representative blocks
-surjectivity, so no silent dual equivalence is possible. Surjectivity/automatic
-continuity-to-smoothness, remaining abstract coordinate realization/unitarization, countability,
-infinite-series/`L²` Plancherel, Fourier inversion, Peter–Weyl density, and heat-kernel spectral
-expansion remain open.
+surjectivity, so no silent dual equivalence is possible. Algebraic synthesis now also lands in
+Mathlib's actual normalized-Haar `Lp ℂ 2`, where its inner product is proved equal to the exact
+algebraic Fourier pairing. The algebraic `L²` range and closed coefficient span are concrete, and
+`HasL2PeterWeylCompleteness` is exactly closed-span equality to top, equivalently density. Hostile
+probes show a vector outside the span or nondensity blocks completeness; no inhabitant is supplied.
+Surjectivity/automatic continuity-to-smoothness, remaining abstract coordinate
+realization/unitarization, countability, the `L²` density proof, infinite-series Fourier inversion,
+and heat-kernel spectral expansion remain open.
 
 The full two-dimensional literature chain is now an explicit validation target: a future final 2D
 acceptance proposition must join the Driver/Lévy/Sengupta finite, continuum, Brownian, compact-surface,

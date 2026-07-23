@@ -63,9 +63,12 @@ surjectivity is equivalent to every continuous class having such a smooth repres
 continuity-to-smoothness theorem or surjectivity proof is supplied, so the continuous coordinate
 bundle is still not identified with Lévy's smooth compact-Lie-group dual. Such an identification
 also requires any remaining abstract coordinate-realization/unitarization bridge. The visually
-verified Peter–Weyl basis, density, countability/summability consequences,
-Casimir action, and heat-kernel expansion remain source-backed targets rather than consequences of
-the quotient definition.
+verified Peter–Weyl basis and density now have an exact formal target:
+`UnitaryMatrixDual.HasL2PeterWeylCompleteness` says that the algebraic coefficient image is dense in
+Mathlib's normalized-Haar `Lp ℂ 2`, equivalently that its closed span is top. The `L²` carrier,
+algebraic image, closed span, and finite-support inner-product/Plancherel bridge are constructed, but
+no density inhabitant is supplied. Countability/summability consequences, genuinely infinite-series
+inversion, Casimir action, and the heat-kernel expansion remain source-backed targets.
 
 PDF pp. 89–94 / printed pp. 75–80 were independently inspected on 2026-07-22 for Chapter 5,
 Theorem 5.1.1, equation (5.1), Propositions 5.1.2/5.1.3, the genus-two discussion, and the start of
