@@ -728,8 +728,9 @@ committed before higher layers depend on it.
 - [x] Construct the exact rectangular coordinate matrices of an explicitly supplied representation
   equivalence and its inverse; prove both inverse laws, the matrix conjugation formula, and the
   basis-aware double-sum transport of every raw coefficient without identifying entries.
-- [ ] Transport the normalized-Haar matrix-coefficient orthogonality formulas through those exact
-  change-of-basis sums, with all finite sum/integral exchanges justified.
+- [x] Transport the normalized-Haar matrix-coefficient orthogonality formula through those exact
+  change-of-basis sums, justify all finite sum/integral exchanges, retain both conjugated coordinate
+  factors, and prove identity-equivalence recovery of the original self formula.
 - [x] Define coordinatewise representation-valued Fourier coefficients with exact inverse
   convention, derive continuous compact-domain integrability, addition/scalar/zero laws, specialize
   to probability-normalized Haar, and identify matrix trace with the scalar inverse-character

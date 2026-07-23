@@ -75,8 +75,10 @@ representation equivalence and that each quotient-selected character agrees with
 presentation of its class. For basis-dependent matrix coefficients, the exact rectangular matrices
 of the supplied equivalence and its inverse are constructed and proved mutually inverse; the full
 matrix conjugation and double-sum coefficient transport formulas retain both change-of-basis
-factors. Haar orthogonality has not yet been transported through those sums. This still does not turn
-Lévy's central Peter–Weyl basis statement into a density theorem. Countability/summability consequences, genuinely
+factors. Finite sum/integral exchange and the proved self-orthogonality formula now derive the exact
+mixed normalized-Haar coefficient pairing for explicitly equivalent presentations, with both
+conjugated coordinate-change factors; identity equivalence recovers the original self formula. This
+still does not turn Lévy's central Peter–Weyl basis statement into a density theorem. Countability/summability consequences, genuinely
 infinite-series inversion, Casimir action, and the heat-kernel expansion remain source-backed
 targets.
 

@@ -5136,8 +5136,12 @@ the exact rectangular matrices of each supplied equivalence and inverse are now 
 proved to satisfy both inverse laws. Exact intertwining becomes
 `σ(g)=E ρ(g) E⁻¹`, and every target coefficient is derived as the full two-index source sum with
 both change-of-basis factors. Hostile probes reject changed conjugation/coefficients and a zero
-change matrix in positive dimension. Raw entries are not identified, and Haar-integral
-orthogonality transport remains open. Surjectivity/automatic
+change matrix in positive dimension. Raw entries are not identified. The normalized-Haar mixed
+pairing of coefficients from explicitly equivalent presentations is now derived by expanding those
+exact sums, justifying every finite sum/integral exchange, and applying the existing self formula.
+Its right side retains `dim(ρ)⁻¹`, the conjugated forward coordinate factor, and the conjugated
+inverse coordinate factor; identity equivalence is proved to recover the original Kronecker-delta
+self formula. Changed-factor probes reject a presentation-independent surrogate. Surjectivity/automatic
 continuity-to-smoothness, remaining abstract coordinate
 realization/unitarization, countability, the `L²` density proof, infinite-series Fourier inversion,
 and heat-kernel spectral expansion remain open.
