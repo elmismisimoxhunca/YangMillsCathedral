@@ -705,9 +705,11 @@ committed before higher layers depend on it.
 - [x] Expose the topology-compatible averaged normed-additive, complex-normed, and inner-product
   structures as named locally installable values; package every group matrix as a linear equivalence
   with inverse at `g⁻¹` and prove exact preservation of the named averaged norm.
-- [ ] Choose an orthonormal coordinate basis and derive an explicit unitarizing coordinate
-  equivalence (or positive Gram square root), with exact orientation and proof that the conjugated
-  representation matrices are unitary.
+- [x] Choose an exact averaged orthonormal basis reindexed by `Fin n`, construct its ordinary
+  complex-linear coordinate equivalence, prove exact basis/Kronecker round trips, and identify the
+  averaged pairing with the standard coordinate Hermitian pairing.
+- [ ] Conjugate the original representation through that exact coordinate equivalence and prove the
+  resulting matrix representation satisfies the exact unitary equation with correct orientation.
 - [x] Construct the coordinatewise Reynolds/Haar average
   `P(A)=∫σ(g⁻¹)Aρ(g)dμ_H` for arbitrary rectangular matrices between two continuous finite matrix
   representations; derive coefficient integrability and the exact intertwining identity

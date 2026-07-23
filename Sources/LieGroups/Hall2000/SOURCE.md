@@ -81,8 +81,11 @@ comparison theorem prove that its induced norm topology is exactly the original 
 The resulting topology-compatible normed-additive, complex-normed, and inner-product structures are
 exposed as named values without global installation. Every representation matrix is an exact linear
 equivalence with inverse at `g⁻¹` and preserves that named averaged norm. These are derived
-compatibility and intrinsic-unitarity results, not yet an explicit orthonormal-coordinate or
-unitarizing matrix construction.
+compatibility and intrinsic-unitarity results. Mathlib's finite-dimensional orthonormal-basis
+selection is now reindexed by the original `Fin n` matrix coordinates; the resulting exact linear
+equivalence sends selected basis vectors to Kronecker coordinates and carries the averaged pairing
+to the standard coordinate Hermitian pairing. Conjugation of the original representation and the
+resulting explicit unitary-matrix equation remain separate derived work.
 
 The Hall notes do not interpret the Clay phrase “compact simple gauge group” or decide connectedness
 and global form. Those decisions use the Clay source plus the separately pinned gauge-global-form

@@ -5059,9 +5059,12 @@ exactly the original coordinate topology, including dimension zero. The compatib
 normed-additive, complex-normed, and inner-product structures are now exposed as named, locally
 installable values, with exact averaged-pairing evaluation and no global instance replacement.
 Every group matrix is packaged as a complex-linear equivalence whose inverse is the unchanged
-matrix action at `g⁻¹`; the action preserves the exact named averaged norm. Choosing an
-orthonormal coordinate basis and constructing the resulting explicit unitarizing matrix equivalence
-remain open.
+matrix action at `g⁻¹`; the action preserves the exact named averaged norm. A noncomputably selected
+orthonormal basis of this exact realization is now reindexed by the original `Fin n` matrix size.
+Its ordinary complex-linear coordinate equivalence sends each selected basis vector to the exact
+Kronecker coordinate, has the exact inverse round trip, and transports the averaged pairing to the
+standard coordinate Hermitian pairing. Conjugating the representation through this equivalence and
+proving the resulting matrices satisfy the exact unitary equation remain open.
 The next Schur precursor is now concrete: for two continuous finite matrix representations and an
 arbitrary rectangular matrix `A`, the coordinatewise Reynolds average
 `P(A)=∫σ(g⁻¹)Aρ(g)dμ_H` is genuinely integrable and satisfies the exact intertwining identity
