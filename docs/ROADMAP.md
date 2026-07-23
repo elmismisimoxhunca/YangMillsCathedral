@@ -902,6 +902,10 @@ committed before higher layers depend on it.
   normalized fine measures. Attach the remaining uninhabited varying-finite-graph heat-integral
   convergence field to this exact spectral/weak-limit/product/continuum chain and derive Theorem 8.5
   convergence for every continuous coarse observable, with changed-limit and 4D hostility.
+- [x] Join the supplied Brownian realization and full spectral Villain convergence chain by dependent
+  indexing on one exact semigroup and real heat core, constructing the existing spectral
+  Brownian/generated-operator bridge and retaining both the weak current-state Markov identity and
+  every-continuous lattice-to-planar-continuum limit without an unrelated equality premise.
 - [x] Combine the exact candidate coefficient time-addition law with weighted uniform-series
   convolution to prove the conditional positive-time spectral-family law `K_s⋆K_t=K_{s+t}` in
   `C(G,ℂ)` and pointwise in the fixed integral convention. Retain caller-supplied heat-trace

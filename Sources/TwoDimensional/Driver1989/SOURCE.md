@@ -191,7 +191,11 @@ uninhabited bridge retains only Driver's enlarged `VB(ε)` product-expectation i
 the existing action-indexed product-identity certificate with normalized fine measures. A final
 uninhabited spectral convergence bridge retains Driver's remaining varying-finite-graph heat-integral
 limit field on that exact chain and derives Theorem 8.5 convergence for every continuous coarse
-observable to the unchanged continuum holonomy expectation. Neither coherence nor interchange is inhabited. The proof-required `B → VB` enlargement now has BC certificates on both graphs, literal coarse-edge
+observable to the unchanged continuum holonomy expectation. Uninhabited
+`TwoDimensionalSpectralPlanarLiteratureBridgeData` finally makes a supplied Brownian realization
+dependently use this exact convergence chain's spectral semigroup and heat core, deriving both the
+weak current-state Markov identity and every-continuous lattice-to-planar-continuum convergence from
+one unchanged planar chain. Neither coherence nor interchange is inhabited. The proof-required `B → VB` enlargement now has BC certificates on both graphs, literal coarse-edge
 subdivision paths, the exact vertical/x-axis tree, total coverage excluding unrelated enlarged edges,
 and measurable ambient-compatible coarse restriction. Equation (6.1) is now an uninhabited universal interface: every bounded measurable coarse function
 factors through exact enlarged restriction and its base expectation equals the normalized vertical/x-

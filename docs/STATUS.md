@@ -5268,7 +5268,11 @@ with the exact spectral action/weak limits and derived normalized fine measures.
 `TwoDimensionalSpectralVillainConvergenceBridgeData` adds only Driver's remaining
 varying-finite-graph heat-integral convergence field on that unchanged chain; the existing theorem
 then derives Theorem 8.5 convergence for every continuous coarse observable to its exact continuum
-holonomy expectation, with changed-limit and four-dimensional hostility.
+holonomy expectation, with changed-limit and four-dimensional hostility. Uninhabited
+`TwoDimensionalSpectralPlanarLiteratureBridgeData` then dependently indexes a supplied Brownian
+realization by this exact convergence chain's spectral semigroup and heat core. It constructs the
+existing Brownian/generated-operator bridge and retains both the weak current-state Markov identity
+and every-continuous lattice-to-planar-continuum convergence on one unchanged planar chain.
 Combining the convolution formula with the exact candidate coefficient time-addition law now proves
 the conditional positive-time spectral-family convolution law `K_s⋆K_t=K_{s+t}` in `C(G,ℂ)` and
 pointwise in the fixed integral order. No inhabitant of either the heat-trace data or the geometric

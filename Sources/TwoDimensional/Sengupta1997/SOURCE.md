@@ -36,7 +36,10 @@ existing finite independent-increment law further derives process-value/followin
 independence, its exact spectral product law, and the corresponding right-multiplication pushforward
 two-time law. Product Fubini derives the continuous-test weak current-state identity
 `E[φ(B_s)f(B_{s+t})]=E[φ(B_s)P_t f(B_s)]`; conditioning on the full past sigma-algebra remains
-separate debt. It does not construct
+separate debt. Uninhabited `TwoDimensionalSpectralPlanarLiteratureBridgeData` dependently makes this
+supplied Brownian process use the exact same spectral semigroup and heat core as the Driver
+all-spacing Villain weak-limit/product/convergence chain, rather than joining them by an unrelated
+equality claim. It does not construct
 the process or infer a Markov conditional-expectation/stochastic-generator theorem.
 
 ## Artifact chain
