@@ -48,7 +48,10 @@ of its quotient-dual class; an explicit one-dimensional trivial class supplies c
 same conditional uniform-density result holds for the selected coordinate-dual synthesis itself.
 Regularity of normalized compact Haar measure and Mathlib's density of continuous functions in
 finite-measure `L²` derive conditional normalized-Haar `L²` coefficient completeness.
-That last bridge is a formal consequence, not a separate quotation from Hall. Dense-range
+The selected synthesis range is also proved exactly equal to the earlier all-presentation finite
+coefficient span, and its density is named as the reusable general continuous Peter–Weyl target.
+Normalized-Haar regularity gives a general implication from that target to `L²` completeness. These
+bridges are formal consequences, not separate quotations from Hall. Dense-range
 Hilbert-space arguments further give arbitrarily accurate finite-support `L²` coefficient
 approximants and uniqueness from all finite-support coefficient inner-product tests. These results
 do not assert countability, a selected approximating sequence, or infinite Fourier inversion.

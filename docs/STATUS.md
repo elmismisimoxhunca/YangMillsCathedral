@@ -5110,8 +5110,10 @@ Peter–Weyl point-separation/density theorem remains open because one faithful 
 is not assumed there. For the conditional compact matrix-group setting, exact basis-aware
 representation-equivalence transport now sends every bundled irreducible-unitary coefficient into
 a finite synthesis of the selected representative of its quotient-dual class. An explicit
-one-dimensional trivial class supplies constants, so the selected-dual continuous synthesis range
-is itself dense. Regularity of normalized compact Haar measure and Mathlib's continuous-to-`L²`
+one-dimensional trivial class supplies constants. Conversely, every selected-representative
+synthesis lies in the earlier coefficient span, so the two submodules are exactly equal. Their
+common density is now named `UnitaryMatrixDual.HasContinuousPeterWeylDensity`; faithful compact
+matrix groups satisfy it, while the general compact-group target remains open. Regularity of normalized compact Haar measure and Mathlib's continuous-to-`L²`
 density theorem then inhabit the existing normalized-Haar coordinate-dual `L²` Peter–Weyl completeness target.
 The corresponding finite-support synthesis map is now explicitly dense: every `L²` vector has one
 finite-support coefficient approximant within every positive tolerance, and inner products against

@@ -750,6 +750,11 @@ committed before higher layers depend on it.
   derive conditional selected-dual density in `C(G, ℂ)`. Combine normalized-Haar regularity with
   Mathlib continuous-function density to inhabit normalized-Haar `L²` Peter–Weyl completeness for
   the same faithful compact matrix-group setting.
+- [x] Prove that finite-support synthesis over quotient-selected unitary-dual representatives has
+  range exactly equal to the earlier all-presentation finite coefficient span. Name
+  `UnitaryMatrixDual.HasContinuousPeterWeylDensity` as exact density of this selected range, prove
+  faithful compact matrix groups satisfy it, and prove the general bridge from this target to the
+  normalized-Haar `L²` completeness target.
 - [x] Expose its direct Hilbert-space consequences without inventing an infinite series: the
   finite-support selected-dual synthesis map has dense `L²` range, every vector has a
   finite-support approximant at every positive tolerance, and all finite-support coefficient
