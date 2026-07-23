@@ -5456,7 +5456,13 @@ coarse vertices, and regions persist on the same surface. An explicit homeomorph
 parametrized edges through endpoint-fixing reparametrizations and transports face disks through
 marked-boundary reparametrizations, alongside exact vertices, regions, and curve words. Its boundary
 action realizes the stored Fact 3 sign, with positive equivalent to an orientable source plus
-orientation preservation. It is uninhabited and not a universal invariance theorem.
+orientation preservation. It is uninhabited and not itself a universal invariance theorem.
+`TwoDimensionalSenguptaUniversalCurveFixedEmbeddedSubdivisionData` now states universal acceptance
+for the curve-fixed embedded Fact 2 subclass at fixed universe levels. It quantifies over a concrete
+bundled candidate type rather than a supplied relation predicate, requires a factor certificate with
+the same face map for every candidate, requires candidate nonemptiness, and carries the
+nonorientable fixed-twist condition. Candidates keep external curve bonds and parametrized paths
+fixed. Subdivisions splitting curve bonds, full universal Fact 2, and universal Fact 3 remain open.
 `TwoDimensionalSenguptaClosedPresentationInvarianceBridgeData` now dependently ties
 closed incidence for the exact finite-law heat-factor base and the exact fine/transported candidates
 to one unchanged Facts 2–3 bridge, preventing unrelated presentation witnesses. This combined bridge
@@ -5464,9 +5470,9 @@ also remains outside the augmented record pending embedded and universal source 
 area-splitting invariance for both ordinary and fixed-twist factors are now exact uninhabited fields;
 A separate `TwoDimensionalSenguptaSubdivisionFactorInvarianceData` now gives one factor-level Fact 2
 building block: one coarse/fine candidate pair is tied to one normalized nonzero covering-density
-semigroup and central twist and has a surjective region-preserving face map, exact coarse-area
-decomposition, distinguished-face compatibility, and equality of all ordinary and fixed-twist
-factors. Embedded boundary-word subdivision and universal quantification over all valid
+semigroup and central twist and has a surjective region-preserving face map, exact region-total area
+equality without fixed simplex allocations or twist-face matching, and equality of all ordinary and
+fixed-twist factors. Embedded boundary-word subdivision and universal quantification over all valid
 subdivisions remain open. `TwoDimensionalSenguptaHomeomorphismFactorInvarianceData` similarly gives a
 one-pair factor-level Fact 3 candidate on one normalized semigroup and central twist: explicit
 external/internal edge, face, and region equivalences preserve regions, areas, and twist faces;

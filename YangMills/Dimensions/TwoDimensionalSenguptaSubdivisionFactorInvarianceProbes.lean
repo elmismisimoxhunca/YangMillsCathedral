@@ -33,15 +33,11 @@ variable
       (coverDensity := coverDensity) (coarse := coarse) (fine := fine)
       (bundleClass := bundleClass))
 
-/-- Exact face-region and area refinement semantics. -/
-theorem exact_face_refinement (fineFace : FineFace) :
+/-- Exact face-region and source-required total-region-area semantics. -/
+theorem exact_face_region_and_total_area (fineFace : FineFace) (region : Region) :
     coarse.faceRegion (data.fineFaceToCoarse fineFace) = fine.faceRegion fineFace ∧
-    coarse.faceArea (data.fineFaceToCoarse fineFace) =
-      ∑ other ∈ Finset.univ.filter
-        (fun other => data.fineFaceToCoarse other = data.fineFaceToCoarse fineFace),
-        fine.faceArea other :=
-  ⟨data.faceRegion_coherence fineFace,
-    data.coarseFaceArea_eq_fine_sum (data.fineFaceToCoarse fineFace)⟩
+      coarse.regionArea region = fine.regionArea region :=
+  ⟨data.faceRegion_coherence fineFace, data.regionArea_coherence region⟩
 
 include data in
 /-- The candidate is tied to a normalized nonzero density semigroup, blocking the zero-density
@@ -57,10 +53,11 @@ theorem exact_central_twist (element : CoverGroup) :
     bundleClass * element = element * bundleClass :=
   data.bundleClass_central element
 
-/-- Distinguished twist faces refine coherently. -/
-theorem exact_distinguished_face_refinement (region : Region) :
-    data.fineFaceToCoarse (fine.distinguishedFace region) = coarse.distinguishedFace region :=
-  data.distinguishedFace_coherence region
+include data in
+/-- Hostile total-area probe: per-simplex allocations may change, but the source total may not. -/
+theorem changed_region_total_area_blocked (region : Region)
+    (changed : coarse.regionArea region ≠ fine.regionArea region) : False :=
+  changed (data.regionArea_coherence region)
 
 /-- Hostile surjectivity probe: no coarse face may be dropped by the candidate refinement. -/
 theorem dropped_coarse_face_blocked

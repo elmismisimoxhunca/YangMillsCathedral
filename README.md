@@ -964,12 +964,17 @@ every coarse bond by a nonempty directed fine-edge word without repeated underly
 coarse-face boundary substitution to equal the signed fine-face boundary after internal cancellation, preserves parametrized external paths, vertices, and
 regions, and uses an explicit homeomorphism with endpoint-preserving edge and marked-disk
 reparametrizations to transport the exact Fact 3 target. Its boundary action realizes the stored
-sign, with positive exactly the orientable orientation-preserving case. This remains one-pair rather than
-universal. Facts 0–1 are now explicit uninhabited
+sign, with positive exactly the orientable orientation-preserving case. The selected bridge remains one-pair. A separate uninhabited curve-fixed Fact 2 subclass now quantifies over a concrete bundled type of
+every embedded refinement at fixed universe levels that leaves external curve bonds and parametrized
+paths unchanged. It requires a matching exact factor certificate for each candidate, candidate
+nonemptiness, source total-region-area equality without fixed simplex allocations, and the
+nonorientable fixed-twist condition. Subdivisions that split curve bonds—and hence full universal
+Fact 2—remain open. Facts 0–1 are now explicit uninhabited
 fields requiring distinguished-face and positive same-total area-splitting invariance. A separate
 one-step Fact 2 building block compares one coarse/fine candidate pair on one normalized nonzero
 covering-density semigroup and central twist through a surjective region-preserving face map, exact
-area decomposition, compatible twist face, and ordinary/twisted factor equality; embedded word-level subdivision and universal source quantification remain open. A
+region-total area equality, and ordinary/twisted factor equality; simplex-area allocations and twist
+faces may vary by Facts 1 and 0 respectively; embedded word-level subdivision and universal source quantification remain open. A
 parallel one-pair Fact 3 building block uses explicit external/internal edge, face, and region
 equivalences preserving areas; according to one orientation sign it preserves or reverses/flips
 boundary words and transports `h` to `h` or `h⁻¹` and requires both factor laws to agree. Actual area-preserving homeomorphisms,

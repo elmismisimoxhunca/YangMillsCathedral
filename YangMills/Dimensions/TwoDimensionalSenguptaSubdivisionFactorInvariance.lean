@@ -10,9 +10,9 @@ import YangMills.Dimensions.TwoDimensionalSenguptaTriangulatedHeatFactors
 
 This file isolates the factor-level content needed for Sengupta Definition 7.6, Fact 2, for one
 coarse/fine finite-face candidate pair on one exact normalized compact-Haar density semigroup and one
-central twist element. Fine faces map surjectively to coarse faces, stay in the same
-region, refine each coarse area exactly, and preserve the selected twist face. The ordinary and
-fixed-twist boundary-conditioned factors are then required to agree for every external field.
+central twist element. Fine faces map surjectively to coarse faces and stay in the same region, while
+only the source-required total area of each region is fixed. Fact 1 permits simplex-area
+redistribution and Fact 0 removes distinguished-face dependence. The ordinary and fixed-twist boundary-conditioned factors are then required to agree for every external field.
 
 This is an uninhabited comparison interface. It does not prove that the candidate words form an
 embedded simplicial subdivision or claim the universal quantification over every source-valid
@@ -54,12 +54,9 @@ structure TwoDimensionalSenguptaSubdivisionFactorInvarianceData where
   fineFaceToCoarse_surjective : Function.Surjective fineFaceToCoarse
   faceRegion_coherence : ∀ fineFace,
     coarse.faceRegion (fineFaceToCoarse fineFace) = fine.faceRegion fineFace
-  coarseFaceArea_eq_fine_sum : ∀ coarseFace,
-    coarse.faceArea coarseFace =
-      ∑ fineFace ∈ Finset.univ.filter
-        (fun fineFace => fineFaceToCoarse fineFace = coarseFace), fine.faceArea fineFace
-  distinguishedFace_coherence : ∀ region,
-    fineFaceToCoarse (fine.distinguishedFace region) = coarse.distinguishedFace region
+  /-- Fact 2 assumes equality of total area, not a fixed per-coarse-face allocation. Fact 1 handles
+  redistribution among simplices. -/
+  regionArea_coherence : ∀ region, coarse.regionArea region = fine.regionArea region
   ordinaryFactor_eq : ∀ region external,
     senguptaTriangulatedRegionFactor coarse coverDensity region external =
       senguptaTriangulatedRegionFactor fine coverDensity region external

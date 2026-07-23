@@ -1357,14 +1357,19 @@ committed before higher layers depend on it.
     boundary after internal cancellation, and parametrized external paths/vertices/regions persist. An explicit homeomorphism uses
     endpoint-preserving edge and marked-disk reparametrizations to transport the Fact 3 target; its
     boundary action realizes the stored sign, with positive exactly the orientable
-    orientation-preserving case. Retain universal Facts 2–3 as debt.
+    orientation-preserving case.
+  - [x] State universal acceptance for the curve-fixed embedded Fact 2 subclass at fixed universe
+    levels by quantifying over a concrete bundled candidate type—not an arbitrary relation predicate—
+    and requiring an exact matching factor certificate for every candidate, candidate nonemptiness,
+    and the nonorientable fixed-twist condition. Retain subdivisions that split curve bonds, full
+    universal Fact 2, inhabitation, and universal Fact 3 as debt.
   - [x] Dependently require closed triangular incidence for the exact finite-law heat-factor base and
     the exact fine/transported candidates used by one Facts 2–3 bridge. Keep this combined bridge
     separate from the augmented record until embedded and universal source semantics are available.
   - [x] Add a one-step factor-level Fact 2 building block for one coarse/fine candidate pair on one
     normalized nonzero covering-density semigroup and central twist: surjective region-preserving
-    face refinement, exact coarse-area splitting, distinguished-face
-    coherence, and ordinary/fixed-twist factor equality. Retain embedded boundary-word subdivision
+    face refinement, exact region-total area equality without fixing simplex allocations or twist
+    faces, and ordinary/fixed-twist factor equality. Retain embedded boundary-word subdivision
     and quantification over every valid source subdivision as debt.
   - [x] Add a one-pair factor-level Fact 3 building block on one normalized semigroup and central
     twist, with external/internal edge, face, and region equivalences preserving areas,
