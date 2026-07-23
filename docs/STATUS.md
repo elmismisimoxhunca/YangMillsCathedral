@@ -5122,7 +5122,14 @@ pointwise inversion is inferred. Continuous conjugation-invariant functions are 
 an exact `StarSubalgebra ℂ C(G, ℂ)`, and finite selected-character synthesis is an injective linear
 map into it. On compact groups, `UnitaryMatrixDual.HasCentralContinuousPeterWeylDensity` now names
 uniform density in this exact central carrier and yields finite character approximants at every positive tolerance,
-but has no inhabitant yet. This does not prove dual countability, infinite Fourier inversion, or the
+but has no inhabitant yet. Finite character syntheses and all continuous central functions now map
+into normalized-Haar `L²`; `UnitaryMatrixDual.HasCentralL2PeterWeylCompleteness` is exact equality
+of their named closed spans. The closed continuous-central image span is a deliberate surrogate for
+a literal AE-central `L²` carrier, not a proved identification with one. The target is reusable for
+arbitrary compact topological groups, beyond Lévy's compact connected and section-specific
+semisimple Lie-group scope, but has no inhabitant at that generality. Uniform central density implies
+this `L²` target, while the target gives finite character approximants to every vector in the closed continuous-central subspace. It too
+remains uninhabited. This does not prove dual countability, infinite Fourier inversion, or the
 general compact-group case. An equivalence with Mathlib's abstract `TensorProduct` carrier is also not inferred.
 The next Schur precursor is now concrete: for two continuous finite matrix representations and an
 arbitrary rectangular matrix `A`, the coordinatewise Reynolds average

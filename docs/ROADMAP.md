@@ -763,6 +763,10 @@ committed before higher layers depend on it.
   bundle finite selected-character synthesis injectively into that carrier, and name
   `UnitaryMatrixDual.HasCentralContinuousPeterWeylDensity` as the still-open compact-group uniform
   character-density target with exact finite-approximant semantics.
+- [x] Map finite selected-character synthesis and continuous central functions into normalized-Haar
+  `L²`, define `UnitaryMatrixDual.HasCentralL2PeterWeylCompleteness` as equality of their exact
+  closed spans, prove uniform central density implies this target, and expose finite character
+  approximation for every vector in the named closed continuous-central subspace.
 - [ ] Prove the general compact-Hausdorff-group Peter–Weyl point-separation/density theorem without
   assuming one faithful finite-dimensional representation; do not conflate this with the completed
   conditional compact matrix-group theorem.

@@ -46,7 +46,9 @@ conjugacy classes for disjoint boundary/interior loops with different base point
 corresponding disintegration.
 
 PDF pp. 81–82 / printed pp. 67–68 were independently inspected on 2026-07-22 for §4.2.2,
-Theorem 4.2.2, Propositions 4.2.3/4.2.4, and the notation `Ĝ`. Printed p. 67 visibly defines a
+Theorem 4.2.2, Propositions 4.2.3/4.2.4, and the notation `Ĝ`. Lévy's standing convention fixes `G`
+as a compact connected Lie group, while §4.2.2 is specifically titled “Characters of a semi-simple
+Lie group.” Printed p. 67 visibly defines a
 representation as a smooth homomorphism into `GL(n,ℂ)`, notes that compactness permits unitary
 coordinates, defines irreducibility and intertwining equivalence, and defines the trace character.
 Printed p. 68 visibly states character centrality and inverse conjugation, identifies `Ĝ` as the set
@@ -82,8 +84,17 @@ conjugated coordinate-change factors; identity equivalence recovers the original
 Continuous conjugation-invariant functions are now an exact `StarSubalgebra ℂ C(G, ℂ)`, and finite
 selected-character synthesis is bundled injectively into that carrier. The proposition
 `UnitaryMatrixDual.HasCentralContinuousPeterWeylDensity` names exactly compact-group uniform
-density of this finite character range and exposes finite character approximation as its consequence. No inhabitant
-is supplied yet, so this does not assume Lévy's central Peter–Weyl basis statement. Countability/summability consequences, genuinely
+density of this finite character range and exposes finite character approximation as its consequence. The finite
+character synthesis and all continuous central functions are also mapped into normalized-Haar
+`L²`; `UnitaryMatrixDual.HasCentralL2PeterWeylCompleteness` states equality of their exact closed
+spans. The Lean predicates are deliberately reusable over arbitrary compact topological groups,
+which generalizes Lévy's compact connected (and section-specific semisimple) Lie-group scope; no
+inhabitant is inferred at that broader generality. Moreover, the closed span of images of continuous
+central functions is a project-level surrogate for Lévy's literal carrier of central square-integrable
+functions. This avoids imposing pointwise conjugation equations on almost-everywhere classes, but no
+equality with a separately defined AE-central `L²` carrier is claimed. Uniform central density implies that `L²` target, and the target itself yields finite character
+approximants for every vector in the closed continuous-central subspace. No inhabitant is supplied
+yet, so this does not assume Lévy's central Peter–Weyl basis statement. Countability/summability consequences, genuinely
 infinite-series inversion, Casimir action, and the heat-kernel expansion remain source-backed
 targets.
 
