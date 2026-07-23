@@ -722,6 +722,10 @@ committed before higher layers depend on it.
   submodule, choose exact finite coordinates, prove coordinate continuity and irreducibility, and
   construct an explicitly equivalent continuous irreducible unitary matrix representative for
   every summand in the finite decomposition.
+- [x] Construct the exact Kronecker tensor product of finite matrix representations, flatten
+  product indices by the explicit standard row-major equivalence to `Fin (n*m)`, prove the literal coefficient-product formula, continuity and
+  coordinate unitarity, and connect the tensor representation to the selected finite simple
+  unitary-coordinate decomposition.
 - [x] Construct the coordinatewise Reynolds/Haar average
   `P(A)=∫σ(g⁻¹)Aρ(g)dμ_H` for arbitrary rectangular matrices between two continuous finite matrix
   representations; derive coefficient integrability and the exact intertwining identity

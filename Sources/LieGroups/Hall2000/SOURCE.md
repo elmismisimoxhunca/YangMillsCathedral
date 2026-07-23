@@ -35,6 +35,12 @@ Printed pp. 81–82, Proposition 5.17; extracted text lines 4410–4444:
 - the notes state the result for compact matrix Lie groups and use it to prove complete
   reducibility.
 
+Printed p. 86, §6, Definition 5.25; extracted text lines 4628–4636:
+
+- two representations of the same group have a tensor-product representation on the tensor-product
+  space;
+- the group element acts as `Π₁(A) ⊗ Π₂(A)`.
+
 Printed pp. 86–87, §7 and Theorem 5.28; PDF artifact pages 92–93; extracted text lines
 4665–4703:
 
@@ -101,7 +107,13 @@ reconciled with Mathlib's scalar-restricted `ofModule` carrier, supplied an exac
 continuous matrix-coordinate representation, proved irreducible from module simplicity, and Haar-
 unitarized to an explicitly equivalent continuous irreducible unitary matrix representative. This
 does not yet realize arbitrary non-coordinate abstract representations or prove smooth
-representability/countability.
+representability/countability. Definition 5.25 is now realized in finite matrix bases by the exact
+Kronecker representation, then flattened by Mathlib's explicit standard row-major
+`finProdFinEquiv`, `(i,k) ↦ k + m*i`, to `Fin (n*m)` coordinates. Lean proves the literal
+coefficient-product formula, continuity, coordinate unitarity, and applicability of the existing
+finite simple unitary-coordinate decomposition. This concrete matrix model is not yet identified by
+an equivalence with Mathlib's abstract `TensorProduct` carrier. It remains finite algebra and does
+not assert point separation or density.
 
 The Hall notes do not interpret the Clay phrase “compact simple gauge group” or decide connectedness
 and global form. Those decisions use the Clay source plus the separately pinned gauge-global-form

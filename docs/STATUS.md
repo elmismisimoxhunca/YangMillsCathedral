@@ -5081,7 +5081,15 @@ has a scalar-restriction reconciliation, exact `Fin (finrank ℂ S)` basis, cont
 coordinate representation, irreducibility proof from the unchanged simple module, and an explicitly
 equivalent Haar-unitarized continuous irreducible unitary matrix representative. Arbitrary
 non-coordinate representation realization, smooth comparison surjectivity, dual countability, dual
-completeness, and Fourier convergence remain open.
+completeness, and Fourier convergence remain open. Finite matrix tensor products are now constructed
+as exact Kronecker representations and flattened by the explicit standard row-major
+`finProdFinEquiv`, `(i,k) ↦ k + m*i`, to `Fin (n*m)`. Every flattened entry
+is proved to be the corresponding product of input coefficients; continuity and the literal
+coordinate-unitary equation are preserved. Compact complete reducibility and the simple-summand
+coordinate theorem therefore apply directly to each tensor representation. Expressing its original
+coefficient entries explicitly as finite sums of the selected irreducible-summand coefficients is
+the next open algebraic bridge; an equivalence with Mathlib's abstract `TensorProduct` carrier,
+point separation, and density are not inferred.
 The next Schur precursor is now concrete: for two continuous finite matrix representations and an
 arbitrary rectangular matrix `A`, the coordinatewise Reynolds average
 `P(A)=∫σ(g⁻¹)Aρ(g)dμ_H` is genuinely integrable and satisfies the exact intertwining identity
