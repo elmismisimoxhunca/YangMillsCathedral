@@ -165,7 +165,11 @@ measure. No positivity inhabitant is constructed. The same §1.4 positive-side w
 stored separately as uninhabited `UnitaryMatrixDualCasimirHeatInitialIdentityData` with exact filter
 `𝓝[Set.Ioi 0] 0`; under positivity, the source integral is proved equal to expectation under the
 with-density measure and the weak identity transports there. No initial-limit inhabitant is
-constructed. The conditional density result does not establish Lévy's
+constructed. Unitarity and unconditional summation additionally derive inversion symmetry, while
+positivity transports the complex spectral convolution law to exact real and `ENNReal` `x⁻¹z`
+density semigroups. An uninhabited two-dimensional bridge requires the unchanged selected-loop
+density to equal this spectral density and then constructs its existing normalization/convolution/
+weak-identity certificate without duplicating those conclusions as fields. The conditional density result does not establish Lévy's
 theorem at unrestricted generality. Global dual
 countability, summability and convergence of Lévy's genuinely infinite heat-kernel expansion,
 infinite-series inversion, and Casimir action remain source-backed targets.

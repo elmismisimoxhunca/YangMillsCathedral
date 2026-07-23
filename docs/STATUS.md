@@ -5216,8 +5216,14 @@ positive `ENNReal` density of Haar lintegral one, and a normalized with-density 
 No positivity inhabitant is constructed. Lévy's exact weak identity limit is now also isolated as
 uninhabited `UnitaryMatrixDualCasimirHeatInitialIdentityData` with filter `𝓝[Set.Ioi 0] 0` and every
 continuous complex test. Under positivity, exact with-density integration transports this limit to
-the positive measures; no initial-limit inhabitant or time-zero density is constructed. Combining
-the convolution formula with the exact candidate coefficient time-addition law now proves
+the positive measures; no initial-limit inhabitant or time-zero density is constructed. Unitarity and
+unconditional summation derive `χ_q(g⁻¹)=conj(χ_q(g))`, spectral inversion/conjugation, and literal
+real/`ENNReal` inversion symmetry. Under positivity, the complex convolution theorem now yields
+exact real and source-facing `ENNReal` `x⁻¹z` density semigroup laws. Uninhabited
+`TwoDimensionalSelectedLoopSpectralDensityBridgeData` identifies the unchanged selected-loop
+density with this spectral density and constructs its existing normalization, convolution, and weak
+identity certificate from the geometric bridge, positivity, and initial identity rather than storing
+those conclusions again. Combining the convolution formula with the exact candidate coefficient time-addition law now proves
 the conditional positive-time spectral-family convolution law `K_s⋆K_t=K_{s+t}` in `C(G,ℂ)` and
 pointwise in the fixed integral order. No inhabitant of either the heat-trace data or the geometric
 bridge, interchange, positivity, or initial-identity data is constructed; no time-zero density,

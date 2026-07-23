@@ -865,6 +865,13 @@ committed before higher layers depend on it.
   complex test. Under positivity, identify source spectral integrals with expectations under the
   with-density measures and transport the weak limit, with changed-limit hostility. Do not construct
   a time-zero density or weak-limit inhabitant.
+- [x] Derive `χ_q(g⁻¹)=conj(χ_q(g))`, complex spectral inversion/conjugation, and literal real/
+  `ENNReal` inversion symmetry. Under positivity, transport the complex convolution law to exact
+  real and source-facing `ENNReal` density semigroup laws with `x⁻¹z` orientation.
+- [x] Add uninhabited `TwoDimensionalSelectedLoopSpectralDensityBridgeData` identifying the
+  unchanged selected-loop `ENNReal` density with the spectral density. From its geometric bridge,
+  positivity, and weak identity, construct the existing selected-loop normalization/convolution/
+  weak-identity certificate rather than duplicating those results as assumptions.
 - [x] Combine the exact candidate coefficient time-addition law with weighted uniform-series
   convolution to prove the conditional positive-time spectral-family law `K_s⋆K_t=K_{s+t}` in
   `C(G,ℂ)` and pointwise in the fixed integral convention. Retain caller-supplied heat-trace
