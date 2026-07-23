@@ -5419,8 +5419,17 @@ the 2D heat chain; the selected-loop semigroup forgets exactly to it. Its measur
 interface transports every positive-time measure and continuous-test integral. The uninhabited
 `TwoDimensionalSenguptaCoveringHeatSemigroupBridgeData` applies that interface to the same covering
 projection stored by the finite compact-surface law, requiring a covering-group semigroup to push
-forward to the unchanged planar density semigroup. No cover density or Definition 7.6 factor
-construction is supplied.
+forward to the unchanged planar density semigroup. No cover density is supplied.
+
+`TwoDimensionalSenguptaTriangulatedHeatFactorBridgeData` now supplies the boundary-conditioned
+finite-face formula used in the proof of Theorem 8.4: Definition 7.6's delta constraints are discharged
+by fixing external boundary fields, internal edge fields are integrated against normalized product
+Haar, positive candidate-face areas sum to each positive region area, face words have three oriented
+traversals, and the finite law's fixed central kernel bundle class left-multiplies exactly one
+distinguished-face holonomy. The bridge requires the finite compact-surface law's ordinary and
+twisted weights to equal these integrals using the same covering density. It does not construct an
+embedded surface triangulation or prove Facts 0–3 presentation, subdivision, area-splitting, or
+topological invariance.
 
 `TwoDimensionalSenguptaLevyFiniteHolonomyBridgeData` now states the first exact same-theory bridge
 between the distinct Sengupta and Lévy compact-surface sample carriers. A finite nonempty curve family

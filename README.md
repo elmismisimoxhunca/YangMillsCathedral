@@ -936,9 +936,14 @@ identity rather than duplicated as assumptions. It requires
 cover-group compactness directly rather than retaining the source's disjunction as a vacuous tag. A
 reusable normalized compact-Haar density-semigroup interface now receives the unchanged planar
 selected-loop semigroup, and an uninhabited covering bridge requires a covering-group semigroup to
-push forward through Sengupta's same projection at every positive time. It deliberately leaves the
-covering density, surface admissibility, Definition 7.6 region-factor construction, and
-stochastic-law construction open. A separate uninhabited Sengupta--Lévy bridge now compares the two
+push forward through Sengupta's same projection at every positive time. A further uninhabited bridge
+now writes the stored region weights as the boundary-conditioned finite-face integrals used in the
+proof of Theorem 8.4: Definition 7.6's delta constraints are discharged by fixed external boundary
+values, internal edges are Haar-integrated, positive candidate-face areas sum to region area, each
+face has three traversals, and the fixed central kernel bundle class left-twists one distinguished
+face. It deliberately leaves the
+covering density, embedded topological triangulation, Facts 0–3 presentation/area/topology
+independence, surface admissibility, and stochastic-law construction open. A separate uninhabited Sengupta--Lévy bridge now compares the two
 distinct compact-surface sample carriers only through the pushforward law of one finite nonempty
 common-base simultaneous-conjugacy observation. It neither identifies carriers nor asserts false raw
 holonomy equality.
