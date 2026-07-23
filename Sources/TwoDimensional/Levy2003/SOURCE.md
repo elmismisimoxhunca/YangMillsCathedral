@@ -111,8 +111,13 @@ operator norm one when nonempty. The unconditional net over all finite selected-
 exactly on the closed character span, with Parseval there. Under the explicit central `L²`
 completeness target—and conditionally for faithful second-countable compact matrix groups—it
 converges to every continuous central function in normalized-Haar `L²`, and the exact integrals
-`∫conj(χ_q)f` satisfy Parseval. This is not a countably ordered Fourier partial-sum expansion,
-pointwise/uniform inversion, or infinite synthesis identity, and the conditional
+`∫conj(χ_q)f` satisfy Parseval. Separately, the sharp uniform character bound
+`‖χ_q‖∞ = dim(q)` is proved directly from matrix unitarity. Thus any coefficients satisfying the
+explicit weighted condition `Summable (‖a_q‖dim(q))` have an unconditional finite-subset character
+net converging uniformly to a continuous central function, with exact pointwise `tsum`, identity
+value, and Weierstrass bound. This is a conditional weighted-series theorem, not a general Fourier
+inversion statement; no countably ordered Fourier expansion, pointwise/uniform inversion of an
+arbitrary input, or unrestricted infinite synthesis identity is claimed, and the conditional
 density result does not establish Lévy's theorem at unrestricted generality. Global dual
 countability, summability and convergence of Lévy's genuinely infinite heat-kernel expansion,
 infinite-series inversion, and Casimir action remain source-backed targets.

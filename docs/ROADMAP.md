@@ -805,6 +805,11 @@ committed before higher layers depend on it.
   continuous-central surrogate; derive net convergence and integral Parseval for continuous central
   functions under that target and conditionally from faithful second-countable matrix coordinates.
   Do not repackage this finite-subset net as a countably ordered or pointwise/uniform series.
+- [x] Derive the sharp selected-character bound `‖χ_q(g)‖ ≤ dim(q)`, equality at the identity, and
+  exact global uniform norm `‖χ_q‖∞ = dim(q)`. Prove a weighted character-series Weierstrass theorem:
+  `Summable (‖a_q‖dim(q))` gives unconditional finite-subset convergence in `C(G,ℂ)`, exact
+  pointwise and identity `tsum` formulas, a global norm bound, and a continuous-central result.
+  Retain weighted summability explicitly; do not infer heat-kernel/Casimir summability.
 - [ ] Prove the general compact-Hausdorff-group Peter–Weyl point-separation/density theorem without
   assuming one faithful finite-dimensional representation; do not conflate this with the completed
   conditional compact matrix-group theorem.

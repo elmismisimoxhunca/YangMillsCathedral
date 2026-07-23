@@ -93,8 +93,12 @@ contraction, and exact operator norm one when nonempty. The net over all finite 
 is proved to converge exactly on the closed finite-character span, and unconditional Parseval holds
 there. Under central `L²` completeness—and hence conditionally under faithful second-countable
 matrix coordinates—it converges to every continuous central function in `L²`, whose exact character
-integrals satisfy Parseval. This remains conditional only where density/completeness is invoked and
-is not a countably ordered Fourier partial-sum construction: it does not prove the
+integrals satisfy Parseval. Independently, unitarity gives the sharp global bound
+`‖χ_q‖∞ = dim(q)`; any coefficient family with summable `‖a_q‖dim(q)` now has an unconditional
+finite-subset character net converging uniformly to an exact continuous central function, with
+pointwise `tsum`, identity value, and Weierstrass norm bound. This remains conditional only where
+density/completeness or weighted summability is invoked and is not a countably ordered Fourier
+partial-sum construction: it does not prove the
 general compact-group Peter–Weyl theorem, global dual countability, an infinite synthesis/inversion
 identity, or convergence of a canonically ordered Fourier series.
 

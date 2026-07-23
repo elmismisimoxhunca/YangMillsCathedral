@@ -5166,8 +5166,13 @@ Parseval holds. Convergence on the whole closed continuous-central surrogate is 
 explicit central `L²` completeness target. Under that target—and conditionally for faithful
 second-countable compact matrix groups—the net converges to every continuous central function in
 normalized-Haar `L²`, and the exact integrals `∫conj(χ_q)f` satisfy Parseval. This remains a
-finite-subset net, not a selected countable ordering, pointwise/uniform inversion, or infinite
-synthesis identity. The earlier approximation choices remain arbitrary
+finite-subset net, not a selected countable ordering, pointwise/uniform inversion, or unrestricted
+infinite synthesis identity. Independently, every selected character satisfies the sharp
+`‖χ_q(g)‖ ≤ dim(q)` bound and exact global norm `‖χ_q‖∞ = dim(q)`. Any coefficient family with
+explicit `Summable (‖a_q‖dim(q))` therefore has an unconditional finite-subset net converging in the
+global uniform norm to a continuous central function, with exact pointwise/identity `tsum` formulas
+and Weierstrass norm control. No Casimir spectrum or heat-kernel coefficient family is shown to
+satisfy that weighted premise. The earlier approximation choices remain arbitrary
 finite approximants, not Fourier partial sums; general compact-group density,
 global dual countability, infinite synthesis/inversion identities, and convergence of a canonically
 ordered Fourier series remain open. This does not prove dual countability, infinite Fourier inversion, or the
