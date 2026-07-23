@@ -814,6 +814,13 @@ committed before higher layers depend on it.
   normalized-Haar `L²` analysis and `∫conj(χ_q)(∑a_rχ_r)` both recover `a_q`; derive countable
   nonzero support for each weighted coefficient family and injectivity of weighted uniform
   synthesis. Keep this justified restricted inversion distinct from inversion of arbitrary inputs.
+- [x] Isolate Lévy's exact spectral summability premise as uninhabited
+  `UnitaryMatrixDualHeatTraceSummabilityData`: nonnegative candidate Casimir weights and
+  `Summable (dim(q)^2 exp(-(t/2)c_q))` for every `t>0`. Conditionally construct the globally uniform
+  central character series, finite-subset convergence, pointwise/identity heat-trace formulas,
+  Weierstrass bound, coefficient time-addition law, Haar coefficient recovery, and derived dual
+  countability. Do not call it a heat kernel before Laplacian action, heat equation, semigroup,
+  pointwise positivity of the summed function, and normalization are connected.
 - [ ] Prove the general compact-Hausdorff-group Peter–Weyl point-separation/density theorem without
   assuming one faithful finite-dimensional representation; do not conflate this with the completed
   conditional compact matrix-group theorem.

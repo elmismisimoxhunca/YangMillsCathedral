@@ -5176,7 +5176,14 @@ source-facing integral recover every original coefficient:
 `∫conj(χ_q)(∑a_rχ_r)=a_q`. Every such coefficient family has countable nonzero support without
 global dual countability, and weighted uniform synthesis is injective. This is justified restricted
 inversion, not inversion of arbitrary continuous or `L²` inputs. No Casimir spectrum or heat-kernel
-coefficient family is shown to satisfy the weighted premise. The earlier approximation choices remain arbitrary
+coefficient family is derived to satisfy that weighted premise. Separately, an explicit uninhabited
+`UnitaryMatrixDualHeatTraceSummabilityData` now stores nonnegative candidate Casimir weights and
+requires `Summable (dim(q)^2 exp(-(t/2)c_q))` at every positive time. It conditionally constructs the
+globally uniformly convergent continuous-central spectral character series, proves exact pointwise
+and identity heat-trace formulas, uniform bound, coefficient time-addition law, and Haar coefficient
+recovery, and derives selected-dual countability from strict positivity of every heat-trace summand.
+No Casimir/Laplacian identification, heat equation, convolution semigroup, pointwise positivity of
+the summed function, Haar normalization, or heat-kernel claim is made. The earlier approximation choices remain arbitrary
 finite approximants, not Fourier partial sums; general compact-group density,
 global dual countability, unrestricted infinite synthesis/inversion identities, and convergence of a canonically
 ordered Fourier series remain open. This does not prove dual countability, infinite Fourier inversion, or the

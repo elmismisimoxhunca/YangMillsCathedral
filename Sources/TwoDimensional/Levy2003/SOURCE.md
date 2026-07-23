@@ -120,8 +120,16 @@ coefficient, `∫conj(χ_q)(∑a_rχ_r)=a_q`; each weighted coefficient family h
 support and weighted uniform synthesis is injective. This is a conditional weighted-series inversion
 theorem on its own explicitly summable domain, not a general Fourier inversion statement; no
 countably ordered Fourier expansion, pointwise/uniform inversion of an
-arbitrary input, or unrestricted infinite synthesis identity is claimed, and the conditional
-density result does not establish Lévy's theorem at unrestricted generality. Global dual
+arbitrary input, or unrestricted infinite synthesis identity is claimed. An explicit uninhabited
+`UnitaryMatrixDualHeatTraceSummabilityData` now records nonnegative candidate Casimir weights and
+requires Lévy's exact positive-time heat-trace summability
+`Summable (dim(q)^2 exp(-(t/2)c_q))`. It conditionally constructs the globally uniform continuous-
+central series `∑dim(q)exp(-(t/2)c_q)χ_q`, proves its finite-subset convergence, pointwise and identity
+trace formulas, norm bound, time-addition coefficient law, and Haar coefficient recovery, and shows
+that this strong premise itself forces selected-dual countability. It does not identify the weights
+with Driver's geometric Laplacian, prove a heat equation/convolution semigroup, pointwise positivity of the summed function, Haar
+normalization, or heat-kernel status. The conditional density result does not establish Lévy's
+theorem at unrestricted generality. Global dual
 countability, summability and convergence of Lévy's genuinely infinite heat-kernel expansion,
 infinite-series inversion, and Casimir action remain source-backed targets.
 
