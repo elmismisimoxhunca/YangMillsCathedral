@@ -5239,9 +5239,10 @@ Wilson trace action, pairing, and spectral kernel. Uninhabited
 independent-right-increment Brownian realization and Driver's generated operator to share that exact
 spectral heat core; spectral `ENNReal` increment and marginal laws, the selected-area loop law, and
 the unchanged `Δ/2` generator/kernel formulas are exposed with changed-law hostility. Exact
-with-density Bochner integration and inversion symmetry further prove that at the identity this
-operator equals the unconditional expectation of every continuous test on any positive stationary
-right increment, with changed-expectation hostility. The stronger conditional-expectation/Markov
+with-density Bochner integration and inversion symmetry further prove that the operator at every
+deterministic base point equals the unconditional expectation of every
+continuous test after right multiplication by any positive stationary increment, with
+base-point-sensitive changed-expectation hostility. The stronger conditional-expectation/Markov
 transition identification remains explicit future proof debt.
 Combining the convolution formula with the exact candidate coefficient time-addition law now proves
 the conditional positive-time spectral-family convolution law `K_s⋆K_t=K_{s+t}` in `C(G,ℂ)` and

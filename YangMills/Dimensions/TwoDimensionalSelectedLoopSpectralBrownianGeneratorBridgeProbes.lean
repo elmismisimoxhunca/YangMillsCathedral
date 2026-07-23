@@ -66,6 +66,36 @@ theorem exact_stationary_increment_spectral_law
   bridge.stationary_increment_law_spectral s t ht
 
 omit [FiniteDimensional ℝ E] in
+/-- At every deterministic base point, the generated operator is exactly the unconditional
+expectation after right multiplication by a positive Brownian increment. -/
+theorem exact_operator_right_increment_expectation
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (g : G) (s t : NNReal) (ht : 0 < t) (f : C(G, ℝ)) :
+    bridge.spectralHeatKernel.kernelOperator.heatOperator (t : ℝ) f g =
+      ∫ samplePoint, f (g * ((bridge.brownian.process s samplePoint)⁻¹ *
+        bridge.brownian.process (s + t) samplePoint)) ∂bridge.brownian.probabilityMeasure :=
+  bridge.generated_operator_eq_rightIncrementExpectation g s t ht f
+
+omit [FiniteDimensional ℝ E] in
+/-- Hostile base-point probe: changing the deterministic right-increment expectation is
+contradictory. -/
+theorem changed_operator_right_increment_expectation_blocked
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (g : G) (s t : NNReal) (ht : 0 < t) (f : C(G, ℝ)) (changed : ℝ)
+    (hchanged : changed ≠
+      ∫ samplePoint, f (g * ((bridge.brownian.process s samplePoint)⁻¹ *
+        bridge.brownian.process (s + t) samplePoint)) ∂bridge.brownian.probabilityMeasure)
+    (changedOperator :
+      bridge.spectralHeatKernel.kernelOperator.heatOperator (t : ℝ) f g = changed) : False := by
+  apply hchanged
+  rw [← changedOperator]
+  exact bridge.generated_operator_eq_rightIncrementExpectation g s t ht f
+
+omit [FiniteDimensional ℝ E] in
 /-- At the identity, the generated operator is exactly the unconditional expectation of every
 continuous test of a positive Brownian right increment. -/
 theorem exact_operator_increment_expectation

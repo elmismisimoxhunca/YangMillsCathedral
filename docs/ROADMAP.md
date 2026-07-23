@@ -884,9 +884,9 @@ committed before higher layers depend on it.
 - [x] Force the supplied continuous independent-right-increment Brownian realization and Driver's
   generated operator to use the same spectral heat core, deriving exact spectral `ENNReal`
   stationary-increment and marginal laws, the unchanged selected-area loop law, the `Δ/2`
-  generator/kernel formulas, and the exact unconditional equality between the operator at the
-  identity and every continuous-test expectation of a positive stationary right increment. Keep
-  conditional-expectation/Markov transition identification as
+  generator/kernel formulas, and the exact unconditional equality at every deterministic base point
+  between the operator and each continuous-test expectation after right multiplication by a
+  positive stationary increment. Keep conditional-expectation/Markov transition identification as
   explicit future proof debt and reject changed spectral increment laws.
 - [x] Combine the exact candidate coefficient time-addition law with weighted uniform-series
   convolution to prove the conditional positive-time spectral-family law `K_s⋆K_t=K_{s+t}` in

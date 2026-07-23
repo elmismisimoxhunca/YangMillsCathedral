@@ -176,7 +176,7 @@ real `∂ₜQ=½ΔQ` heat core; a further exact bridge attaches the unchanged st
 operator/kernel premise to that core. Another exact uninhabited bridge forces a supplied continuous
 independent-increment process and that generated operator to share the spectral heat core and derives
 the spectral increment and marginal laws together with the unconditional continuous-test increment
-expectation formula for the operator at the identity; it does not claim a
+expectation formula for the operator at every deterministic base point; it does not claim a
 conditional-expectation/Markov transition theorem. Those new premises remain uninhabited. The conditional density result does not establish Lévy's
 theorem at unrestricted generality. Global dual
 countability, summability and convergence of Lévy's genuinely infinite heat-kernel expansion,

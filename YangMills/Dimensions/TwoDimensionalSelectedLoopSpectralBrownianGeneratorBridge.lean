@@ -122,6 +122,79 @@ theorem integral_spectralDensity_eq_integral_densityReal_mul
       bridge.spectralHeatKernel.heatEquationBridge.spectralDensityBridge.positivity ht h).le]
   rfl
 
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Driver's kernel formula is equivalently right translation by the spectral density. The proof
+uses left Haar invariance and spectral inversion symmetry; no commutativity is used. -/
+theorem generated_operator_eq_rightIncrementIntegral
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (t : ℝ) (ht : 0 < t) (f : C(G, ℝ)) (g : G) :
+    bridge.spectralHeatKernel.kernelOperator.heatOperator t f g =
+      ∫ x, unitaryMatrixDualCasimirHeatDensityReal heatTraceData t x * f (g * x)
+        ∂normalizedCompactHaarMeasure G := by
+  let μ := normalizedCompactHaarMeasure G
+  let kernelIntegrand : G → ℝ := fun h =>
+    unitaryMatrixDualCasimirHeatDensityReal heatTraceData t (h⁻¹ * g) * f h
+  have kernelIntegrand_continuous : Continuous kernelIntegrand := by
+    exact ((continuous_unitaryMatrixDualCasimirHeatDensityReal heatTraceData t).comp
+      (continuous_inv.mul continuous_const)).mul f.continuous
+  have left_measurable : Measurable (fun x : G => g * x) :=
+    (continuous_const_mul g).measurable
+  calc
+    bridge.spectralHeatKernel.kernelOperator.heatOperator t f g = ∫ h, kernelIntegrand h ∂μ := by
+      simpa only [kernelIntegrand, μ,
+        TwoDimensionalSelectedLoopSpectralHeatEquationBridgeData.toHeatEquationCoreData]
+        using bridge.spectralHeatKernel.kernelOperator.heatOperator_eq_kernelIntegral t ht f g
+    _ = ∫ h, kernelIntegrand h ∂Measure.map (g * ·) μ := by
+      rw [normalizedCompactHaarMeasure_map_mul_left]
+    _ = ∫ x, kernelIntegrand (g * x) ∂μ :=
+      integral_map left_measurable.aemeasurable kernelIntegrand_continuous.aestronglyMeasurable
+    _ = ∫ x, unitaryMatrixDualCasimirHeatDensityReal heatTraceData t x * f (g * x) ∂μ := by
+      apply integral_congr_ae
+      filter_upwards [] with x
+      dsimp only [kernelIntegrand]
+      rw [show (g * x)⁻¹ * g = x⁻¹ by group,
+        unitaryMatrixDualCasimirHeatDensityReal_inv heatTraceData ht]
+
+omit [FiniteDimensional ℝ E] in
+/-- At every deterministic base point, Driver's generated heat operator is exactly expectation of a
+continuous test after right multiplication by any positive Brownian increment. This remains an
+unconditional equality and does not assert a conditional Markov property for the random process. -/
+theorem generated_operator_eq_rightIncrementExpectation
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (g : G) (s t : NNReal) (ht : 0 < t) (f : C(G, ℝ)) :
+    bridge.spectralHeatKernel.kernelOperator.heatOperator (t : ℝ) f g =
+      ∫ samplePoint, f (g * ((bridge.brownian.process s samplePoint)⁻¹ *
+        bridge.brownian.process (s + t) samplePoint)) ∂bridge.brownian.probabilityMeasure := by
+  let increment : Ω → G := fun samplePoint =>
+    (bridge.brownian.process s samplePoint)⁻¹ * bridge.brownian.process (s + t) samplePoint
+  let translated : C(G, ℝ) :=
+    ⟨fun x => f (g * x), f.continuous.comp (continuous_const_mul g)⟩
+  have increment_measurable : Measurable increment :=
+    (bridge.brownian.process_measurable s).inv.mul
+      (bridge.brownian.process_measurable (s + t))
+  have hmap := bridge.stationary_increment_law_spectral s t ht
+  have hintegralMap :
+      (∫ x, translated x ∂Measure.map increment bridge.brownian.probabilityMeasure) =
+        ∫ samplePoint, translated (increment samplePoint) ∂bridge.brownian.probabilityMeasure :=
+    integral_map increment_measurable.aemeasurable translated.continuous.aestronglyMeasurable
+  calc
+    bridge.spectralHeatKernel.kernelOperator.heatOperator (t : ℝ) f g =
+        ∫ x, unitaryMatrixDualCasimirHeatDensityReal heatTraceData (t : ℝ) x * f (g * x)
+          ∂normalizedCompactHaarMeasure G :=
+      bridge.generated_operator_eq_rightIncrementIntegral (t : ℝ) (by exact_mod_cast ht) f g
+    _ = ∫ x, translated x ∂(normalizedCompactHaarMeasure G).withDensity
+          (unitaryMatrixDualCasimirHeatDensityENNReal heatTraceData (t : ℝ)) :=
+      (bridge.integral_spectralDensity_eq_integral_densityReal_mul
+        (t : ℝ) (by exact_mod_cast ht) translated).symm
+    _ = ∫ x, translated x ∂Measure.map increment bridge.brownian.probabilityMeasure := by
+      rw [hmap]
+    _ = ∫ samplePoint, translated (increment samplePoint) ∂bridge.brownian.probabilityMeasure :=
+      hintegralMap
+
 omit [FiniteDimensional ℝ E] in
 /-- At the identity, Driver's generated heat operator is exactly expectation of a continuous test
 function of any positive Brownian right increment. This is an unconditional equality and does not
@@ -134,37 +207,8 @@ theorem generated_operator_one_eq_increment_expectation
     bridge.spectralHeatKernel.kernelOperator.heatOperator (t : ℝ) f 1 =
       ∫ samplePoint, f ((bridge.brownian.process s samplePoint)⁻¹ *
         bridge.brownian.process (s + t) samplePoint) ∂bridge.brownian.probabilityMeasure := by
-  let increment : Ω → G := fun samplePoint =>
-    (bridge.brownian.process s samplePoint)⁻¹ * bridge.brownian.process (s + t) samplePoint
-  have increment_measurable : Measurable increment :=
-    (bridge.brownian.process_measurable s).inv.mul
-      (bridge.brownian.process_measurable (s + t))
-  have hmap := bridge.stationary_increment_law_spectral s t ht
-  have hintegralMap :
-      (∫ x, f x ∂Measure.map increment bridge.brownian.probabilityMeasure) =
-        ∫ samplePoint, f (increment samplePoint) ∂bridge.brownian.probabilityMeasure :=
-    integral_map increment_measurable.aemeasurable f.continuous.aestronglyMeasurable
-  calc
-    bridge.spectralHeatKernel.kernelOperator.heatOperator (t : ℝ) f 1 =
-        ∫ h, unitaryMatrixDualCasimirHeatDensityReal heatTraceData (t : ℝ) (h⁻¹ * 1) * f h
-          ∂normalizedCompactHaarMeasure G := by
-      simpa only [TwoDimensionalSelectedLoopSpectralHeatEquationBridgeData.toHeatEquationCoreData]
-        using bridge.spectralHeatKernel.kernelOperator.heatOperator_eq_kernelIntegral
-          (t : ℝ) (by exact_mod_cast ht) f 1
-    _ = ∫ h, unitaryMatrixDualCasimirHeatDensityReal heatTraceData (t : ℝ) h * f h
-          ∂normalizedCompactHaarMeasure G := by
-      apply integral_congr_ae
-      filter_upwards [] with h
-      rw [mul_one,
-        unitaryMatrixDualCasimirHeatDensityReal_inv heatTraceData (by exact_mod_cast ht)]
-    _ = ∫ h, f h ∂(normalizedCompactHaarMeasure G).withDensity
-          (unitaryMatrixDualCasimirHeatDensityENNReal heatTraceData (t : ℝ)) :=
-      (bridge.integral_spectralDensity_eq_integral_densityReal_mul
-        (t : ℝ) (by exact_mod_cast ht) f).symm
-    _ = ∫ x, f x ∂Measure.map increment bridge.brownian.probabilityMeasure := by
-      rw [hmap]
-    _ = ∫ samplePoint, f (increment samplePoint) ∂bridge.brownian.probabilityMeasure :=
-      hintegralMap
+  simpa only [one_mul] using
+    bridge.generated_operator_eq_rightIncrementExpectation 1 s t ht f
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- The operator attached to the same spectral heat core is generated by the unchanged real

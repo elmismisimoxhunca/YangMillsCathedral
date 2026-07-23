@@ -174,8 +174,9 @@ existing common faithful-representation/induced-pairing/Laplacian/heat/kernel ce
 removing any representation, normalization, pairing, or operator obligation. A further exact
 uninhabited bridge forces a supplied continuous independent-increment Brownian realization and the
 generated operator to share that spectral heat core, deriving spectral increment/marginal laws and
-proving that at the identity its action on every continuous test is the unconditional expectation of
-that test on any positive stationary right increment, while leaving the stronger
+proving at every deterministic base point that its action on every continuous test is the
+unconditional expectation of that test after right multiplication by any positive stationary
+increment, while leaving the stronger
 conditional-expectation/Markov generator theorem explicit future debt. Neither
 coherence nor interchange is inhabited. The proof-required `B → VB` enlargement now has BC certificates on both graphs, literal coarse-edge
 subdivision paths, the exact vertical/x-axis tree, total coverage excluding unrelated enlarged edges,
