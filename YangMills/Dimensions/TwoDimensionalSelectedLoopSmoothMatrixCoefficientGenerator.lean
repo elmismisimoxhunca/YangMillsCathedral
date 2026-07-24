@@ -154,6 +154,58 @@ theorem twoDimensionalSelectedLoopHeatOperator_smoothMatrixCoefficient
           ring
         _ = _ := integral_im (integrableCoefficientKernel g)
 
+/-- Finite real synthesis with each explicit matrix coordinate multiplied by its exact Casimir
+heat eigenvalue. -/
+noncomputable def twoDimensionalSelectedLoopSmoothMatrixCoefficientHeatEvolution
+    (t : ℝ) : SmoothUnitaryMatrixCoefficientRealCoefficients E G →ₗ[ℝ]
+      SmoothLieGroupScalarFunction (E := E) (G := G) :=
+  Finsupp.linearCombination ℝ (fun index =>
+    Real.exp (-(t / 2) * heatTraceData.casimirWeight
+      (unitaryMatrixDualClass
+        index.representation.toContinuousUnitaryIrreducibleMatrixRepresentation)) •
+      smoothUnitaryMatrixCoefficientRealFunction index)
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Exact positive-time heat action on every finite real smooth matrix-coefficient synthesis. -/
+theorem twoDimensionalSelectedLoopHeatOperator_smoothMatrixCoefficientSynthesis
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (t : ℝ) (ht : 0 < t)
+    (coefficients : SmoothUnitaryMatrixCoefficientRealCoefficients E G) :
+    bridge.spectralHeatKernel.kernelOperator.heatOperator t
+        (smoothLieGroupScalarToContinuousLinearMap
+          (smoothUnitaryMatrixCoefficientRealSynthesis coefficients)) =
+      smoothLieGroupScalarToContinuousLinearMap
+        (twoDimensionalSelectedLoopSmoothMatrixCoefficientHeatEvolution
+          (heatTraceData := heatTraceData) t coefficients) := by
+  let heatMap := twoDimensionalSelectedLoopPositiveHeatOperatorLinearMap bridge t ht
+  have mapEquality :
+      heatMap.comp ((smoothLieGroupScalarToContinuousLinearMap (E := E) (G := G)).comp
+        (smoothUnitaryMatrixCoefficientRealSynthesis (E := E) (G := G))) =
+      (smoothLieGroupScalarToContinuousLinearMap (E := E) (G := G)).comp
+        (twoDimensionalSelectedLoopSmoothMatrixCoefficientHeatEvolution
+          (E := E) (G := G) (heatTraceData := heatTraceData) t) := by
+    apply Finsupp.lhom_ext
+    intro index coefficient
+    simp only [LinearMap.comp_apply, smoothUnitaryMatrixCoefficientRealSynthesis,
+      twoDimensionalSelectedLoopSmoothMatrixCoefficientHeatEvolution,
+      Finsupp.linearCombination_single]
+    change heatMap (coefficient • smoothLieGroupScalarToContinuousLinearMap
+      (smoothUnitaryMatrixCoefficientRealFunction index)) =
+      coefficient • smoothLieGroupScalarToContinuousLinearMap
+        (Real.exp (-(t / 2) * heatTraceData.casimirWeight
+          (unitaryMatrixDualClass
+            index.representation.toContinuousUnitaryIrreducibleMatrixRepresentation)) •
+          smoothUnitaryMatrixCoefficientRealFunction index)
+    rw [map_smul, map_smul]
+    congr 1
+    change bridge.spectralHeatKernel.kernelOperator.heatOperator t
+      (smoothLieGroupScalarToContinuousLinearMap
+        (smoothUnitaryMatrixCoefficientRealFunction index)) = _
+    rw [twoDimensionalSelectedLoopHeatOperator_smoothMatrixCoefficient bridge t ht index]
+  exact LinearMap.congr_fun mapEquality coefficients
+
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Positive-time heat differentiation and the exact diagonal heat action force the real pairing-
 Laplacian Casimir equation for every smooth matrix-coefficient component. This derives the equation

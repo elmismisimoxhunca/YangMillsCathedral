@@ -53,6 +53,36 @@ theorem exact_selectedLoopHeatOperator_smoothMatrixCoefficient
   twoDimensionalSelectedLoopHeatOperator_smoothMatrixCoefficient bridge t ht index
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Exact positive-time heat evolution on every finite real coefficient synthesis. -/
+theorem exact_selectedLoopHeatOperator_smoothMatrixCoefficientSynthesis
+    (t : ℝ) (ht : 0 < t)
+    (coefficients : SmoothUnitaryMatrixCoefficientRealCoefficients E G) :
+    bridge.spectralHeatKernel.kernelOperator.heatOperator t
+        (smoothLieGroupScalarToContinuousLinearMap
+          (smoothUnitaryMatrixCoefficientRealSynthesis coefficients)) =
+      smoothLieGroupScalarToContinuousLinearMap
+        (twoDimensionalSelectedLoopSmoothMatrixCoefficientHeatEvolution
+          (heatTraceData := heatTraceData) t coefficients) :=
+  twoDimensionalSelectedLoopHeatOperator_smoothMatrixCoefficientSynthesis
+    bridge t ht coefficients
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Hostile finite-evolution probe: changing the coefficientwise heat synthesis is contradictory. -/
+theorem changed_selectedLoopHeatOperator_smoothMatrixCoefficientSynthesis_blocked
+    (t : ℝ) (ht : 0 < t)
+    (coefficients : SmoothUnitaryMatrixCoefficientRealCoefficients E G)
+    (changed : C(G, ℝ))
+    (changed_ne_exact : changed ≠ smoothLieGroupScalarToContinuousLinearMap
+      (twoDimensionalSelectedLoopSmoothMatrixCoefficientHeatEvolution
+        (heatTraceData := heatTraceData) t coefficients))
+    (claimed : bridge.spectralHeatKernel.kernelOperator.heatOperator t
+      (smoothLieGroupScalarToContinuousLinearMap
+        (smoothUnitaryMatrixCoefficientRealSynthesis coefficients)) = changed) : False :=
+  changed_ne_exact (claimed.symm.trans
+    (twoDimensionalSelectedLoopHeatOperator_smoothMatrixCoefficientSynthesis
+      bridge t ht coefficients))
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 include bridge in
 /-- Exact derived real pairing-Laplacian eigenvalue probe. -/
 theorem exact_selectedLoop_smoothMatrixCoefficient_laplacian
