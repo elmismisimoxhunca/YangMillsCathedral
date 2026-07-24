@@ -5259,7 +5259,8 @@ reusable `finiteRightIncrementProduct_eq_endpoints` first proves the exact order
 telescope `(x₀⁻¹x₁)…(xₙ₋₁⁻¹xₙ)=x₀⁻¹xₙ`, including zero-step and changed-endpoint probes. Its
 process specialization packages the increment-history product as a continuous map, identifies it
 pointwise with `B(t₀)⁻¹B(tₙ)`, and uses the unchanged almost-sure identity start to reconstruct the
-current state `B(tₙ)` whenever `t₀=0`. The
+current state `B(tₙ)` whenever `t₀=0`. Its continuous complete prefix-product vector simultaneously
+reconstructs `(B(t₁),…,B(tₙ))` almost surely. The
 `TwoDimensionalSelectedLoopFinitePastIncrementIndependence` layer then groups the supplied mutually
 independent coordinates: for every finite monotone time family, the complete vector of its first
 `n` consecutive right increments is independent of the exact final increment. Exact index/formula
@@ -5268,9 +5269,10 @@ that final increment with the unchanged spectral probability measure and uses pr
 `E[Φ(H) f(S(H)Y)] = E[Φ(H) P_t f(S(H))]` for every continuous finite-history test `Φ`, continuous
 history-extracted state `S`, and terminal test `f`; a changed transition value is hostilely rejected.
 Almost-sure reconstruction specializes `S` to the ordered history product and rewrites both sides as
-`E[Φ(H)f(B(tₙ₊₁))] = E[Φ(H)P_t f(B(tₙ))]` with actual current/future process values. The test
-carrier remains the finite increment vector `H`. This remains a weak finite-history identity, not
-conditioning. Conditioning on the full past sigma-algebra and stochastic-generator identification remain explicit future proof debt. The
+`E[Φ(H)f(B(tₙ₊₁))] = E[Φ(H)P_t f(B(tₙ))]` with actual current/future process values. Composing an
+arbitrary continuous test with the continuous prefix-product vector then proves the same identity for
+the actual finite process history `(B(t₁),…,B(tₙ))`, with changed-value hostility. This remains a
+weak finite-history identity, not conditioning. Conditioning on the full past sigma-algebra and stochastic-generator identification remain explicit future proof debt. The
 common Wilson chain now forgets only its genuinely stronger global-faithfulness and normalization
 fields to construct Driver's exact Villain common heat chain. Uninhabited
 `TwoDimensionalSpectralVillainWeakLimitBridgeData` ties the unchanged Theorem 7.2 contract to the

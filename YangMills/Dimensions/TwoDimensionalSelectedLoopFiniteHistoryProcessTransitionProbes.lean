@@ -82,6 +82,47 @@ theorem changed_finiteIncrementHistory_process_transition_blocked
     n times times_monotone times_zero t ht final_time Φ f] at claimed
   exact changed_ne_exact claimed.symm
 
+omit [FiniteDimensional ℝ E] in
+/-- Exact transition identity for arbitrary continuous tests of actual finite process histories. -/
+theorem exact_finiteProcessHistory_weakMarkov_identity
+    (n : ℕ) (times : Fin (n + 2) → NNReal) (times_monotone : Monotone times)
+    (times_zero : times 0 = 0) (t : NNReal) (ht : 0 < t)
+    (final_time : times (Fin.last (n + 1)) = times (Fin.last n).castSucc + t)
+    (Ψ : C(Fin n → G, ℝ)) (f : C(G, ℝ)) :
+    (∫ samplePoint,
+      Ψ (twoDimensionalPastProcessValues bridge.brownian n times samplePoint) *
+        f (bridge.brownian.process (times (Fin.last (n + 1))) samplePoint)
+      ∂bridge.brownian.probabilityMeasure) =
+    ∫ samplePoint,
+      Ψ (twoDimensionalPastProcessValues bridge.brownian n times samplePoint) *
+        bridge.spectralHeatKernel.kernelOperator.heatOperator (t : ℝ) f
+          (bridge.brownian.process (times (Fin.last n).castSucc) samplePoint)
+      ∂bridge.brownian.probabilityMeasure :=
+  bridge.finiteProcessHistory_weakMarkov_identity
+    n times times_monotone times_zero t ht final_time Ψ f
+
+omit [FiniteDimensional ℝ E] in
+/-- Hostile process-history probe: an unrelated changed transition value is contradictory. -/
+theorem changed_finiteProcessHistory_transition_blocked
+    (n : ℕ) (times : Fin (n + 2) → NNReal) (times_monotone : Monotone times)
+    (times_zero : times 0 = 0) (t : NNReal) (ht : 0 < t)
+    (final_time : times (Fin.last (n + 1)) = times (Fin.last n).castSucc + t)
+    (Ψ : C(Fin n → G, ℝ)) (f : C(G, ℝ)) (changed : ℝ)
+    (changed_ne_exact : changed ≠
+      ∫ samplePoint,
+        Ψ (twoDimensionalPastProcessValues bridge.brownian n times samplePoint) *
+          bridge.spectralHeatKernel.kernelOperator.heatOperator (t : ℝ) f
+            (bridge.brownian.process (times (Fin.last n).castSucc) samplePoint)
+        ∂bridge.brownian.probabilityMeasure)
+    (claimed :
+      (∫ samplePoint,
+        Ψ (twoDimensionalPastProcessValues bridge.brownian n times samplePoint) *
+          f (bridge.brownian.process (times (Fin.last (n + 1))) samplePoint)
+        ∂bridge.brownian.probabilityMeasure) = changed) : False := by
+  rw [bridge.finiteProcessHistory_weakMarkov_identity
+    n times times_monotone times_zero t ht final_time Ψ f] at claimed
+  exact changed_ne_exact claimed.symm
+
 end
 
 end YangMills.Dimensions

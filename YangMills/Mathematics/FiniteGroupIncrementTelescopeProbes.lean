@@ -24,6 +24,14 @@ theorem zero_right_increments_exact
     (List.ofFn (fun i : Fin 0 => (value i.castSucc)⁻¹ * value i.succ)).prod = 1 := by
   simp
 
+/-- Every first-coordinate prefix is the first right increment. -/
+theorem first_right_increment_prefix_exact
+    {G : Type*} [Group G] (n : ℕ) (value : Fin (n + 2) → G) :
+    finiteRightIncrementPrefixProducts (n + 1)
+        (fun k => (value k.castSucc)⁻¹ * value k.succ) 0 =
+      (value 0)⁻¹ * value 1 :=
+  finiteRightIncrementPrefixProducts_eq_endpoints (n + 1) value 0
+
 /-- Hostile endpoint probe: replacing the exact endpoint expression by a distinct value contradicts
 the telescoping theorem. -/
 theorem changed_right_increment_endpoint_blocked

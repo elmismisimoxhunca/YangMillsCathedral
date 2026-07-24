@@ -49,6 +49,13 @@ theorem exact_historyProduct_continuous (n : ℕ) :
 
 omit [T2Space G] [SecondCountableTopology G] [CompactSpace G]
     [MeasurableSpace G] [BorelSpace G] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Every prefix-product coordinate is packaged in one continuous history-to-process-vector map. -/
+theorem exact_prefixProducts_continuous (n : ℕ) :
+    Continuous (finiteRightIncrementPrefixProductsContinuousMap (G := G) n) :=
+  (finiteRightIncrementPrefixProductsContinuousMap n).continuous
+
+omit [T2Space G] [SecondCountableTopology G] [CompactSpace G]
+    [MeasurableSpace G] [BorelSpace G] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Empty increment history has the exact identity product. -/
 theorem empty_historyProduct_exact (history : Fin 0 → G) :
     finiteRightIncrementHistoryProduct 0 history = 1 := by
@@ -73,6 +80,18 @@ theorem exact_historyProduct_currentState
       twoDimensionalPastRightIncrementProduct brownian n times samplePoint =
         brownian.process (times (Fin.last n).castSucc) samplePoint :=
   brownian.pastRightIncrementProduct_ae_eq_currentState n times times_zero
+
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
+/-- The complete prefix-product vector simultaneously reconstructs all selected past process
+values. -/
+theorem exact_prefixProducts_processValues
+    (n : ℕ) (times : Fin (n + 2) → NNReal) (times_zero : times 0 = 0) :
+    ∀ᵐ samplePoint ∂brownian.probabilityMeasure,
+      finiteRightIncrementPrefixProductsContinuousMap n
+          (twoDimensionalPastRightIncrements brownian n times samplePoint) =
+        twoDimensionalPastProcessValues brownian n times samplePoint :=
+  brownian.pastRightIncrementPrefixProducts_ae_eq_processValues n times times_zero
 
 omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
     [MeasurableMul₂ G] [MeasurableInv G] in
