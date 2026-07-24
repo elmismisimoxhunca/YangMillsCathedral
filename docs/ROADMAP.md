@@ -958,7 +958,9 @@ committed before higher layers depend on it.
   derivatives, and finite-basis/pairing Laplacians, and package the exact pairing Laplacian as the
   algebraic linear map from the smooth proper domain into `C(G, ℝ)`.
 - [x] Use the exact spectral probability-measure formula to bundle every positive-time real heat
-  operator and its right difference quotient as algebraic linear maps on `C(G, ℝ)`. Instantiate the
+  operator and its right difference quotient as algebraic linear maps on `C(G, ℝ)`, prove uniform-
+  norm contraction, bundle the heat operator continuously with norm at most one, and derive the
+  explicit singular quotient estimate `2 t⁻¹ ‖f‖` without treating it as a uniform graph bound. Instantiate the
   abstract proper-domain closure API in an explicit record retaining a designated smooth core, graph
   density, an eventual uniform graph bound, and generator convergence on the core; prove that this
   record yields uniform generation on all smooth tests and the stochastic generator endpoint.

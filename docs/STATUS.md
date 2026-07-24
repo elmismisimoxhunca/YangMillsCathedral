@@ -5334,8 +5334,10 @@ is definitionally identified with Mathlib's vector-valued exterior derivative; i
 scalar-multiplicative rules propagate through the smooth iterated derivatives and finite basis sum,
 proving pairing-Laplacian linearity and constructing the canonical algebraic linear map from the
 smooth domain into `C(G, ℝ)` without a caller-supplied regularity witness. The exact spectral
-probability-measure formula proves positive-time heat-operator additivity/homogeneity and bundles the
-operator and right difference quotient as linear maps on `C(G, ℝ)`. The concrete
+probability-measure formula proves positive-time heat-operator additivity/homogeneity and uniform-
+norm contraction, bundles the operator as a continuous linear map of norm at most one, and gives the
+explicit difference-quotient bound `2 t⁻¹ ‖f‖`. Its singular factor is not the missing eventual
+uniform graph bound. The concrete
 `TwoDimensionalSelectedLoopPairingGraphCoreGeneratorData` then retains a designated smooth core,
 graph density, an eventual uniform graph bound, and generator convergence on that core; the generic
 closure theorem derives uniform convergence for every smooth test, and point evaluation constructs
@@ -5372,7 +5374,7 @@ for the designated coefficient range. A smaller uninhabited reduction record now
 graph density and the eventual uniform graph bound before constructing the existing all-smooth
 stochastic endpoint; its exact `Nonempty` equivalence proves these two obligations, including one
 nonnegative bound constant, are exhaustive rather than a summary. No graph-core record inhabitant is built: smooth-representative coverage,
-graph density, and the quotient bound remain unconstructed, while Laplace–Beltrami comparison
+graph density, and the eventual uniform all-domain graph bound remain unconstructed, while Laplace–Beltrami comparison
 remains open. The
 common Wilson chain now forgets only its genuinely stronger global-faithfulness and normalization
 fields to construct Driver's exact Villain common heat chain. Uninhabited
