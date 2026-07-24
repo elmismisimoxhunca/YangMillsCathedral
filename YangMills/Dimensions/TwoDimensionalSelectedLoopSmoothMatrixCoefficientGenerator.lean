@@ -581,6 +581,41 @@ theorem twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_heatOperator_tend
   · exact hf
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Smooth graph density alone extends strong right-continuity of the contraction semigroup from the
+coefficient core to every smooth test. The separate uniform graph bound is still required for
+all-smooth generator convergence, not for this zeroth-order continuity statement. -/
+theorem twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_heatOperator_tendsto_zero_of_graphDense
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (graphDense : IsLinearMapDomainGraphDenseCore
+      smoothLieGroupScalarToContinuousLinearMap
+      (twoDimensionalSelectedLoopPairingGeneratorLinearMap
+        (realLaplacian := realLaplacian))
+      (smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G)))
+    (f : SmoothLieGroupScalarFunction (E := E) (G := G)) :
+    Tendsto (fun t : NNReal =>
+      twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t
+        (smoothLieGroupScalarToContinuousLinearMap f))
+      (nhdsWithin 0 (Set.Ioi 0))
+      (nhds (smoothLieGroupScalarToContinuousLinearMap f)) := by
+  have hclosure : smoothLieGroupScalarToContinuousLinearMap f ∈ closure
+      (smoothLieGroupScalarToContinuousLinearMap ''
+        smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G)) :=
+    IsLinearMapDomainGraphDenseAt.mem_closure_image
+      (𝕜 := ℝ)
+      (D := SmoothLieGroupScalarFunction (E := E) (G := G))
+      (X := C(G, ℝ))
+      smoothLieGroupScalarToContinuousLinearMap
+      (twoDimensionalSelectedLoopPairingGeneratorLinearMap
+        (realLaplacian := realLaplacian))
+      (smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G)) f
+      (graphDense f)
+  exact
+    twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_heatOperator_tendsto_zero_of_mem_closure
+      bridge (smoothLieGroupScalarToContinuousLinearMap f) hclosure
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Core convergence supplies an eventual norm bound separately for each finite coefficient test.
 The quantifiers are deliberately pointwise in `f`; this is strictly weaker than the single uniform
 all-domain graph bound required below. -/
@@ -647,6 +682,23 @@ structure TwoDimensionalSelectedLoopSmoothMatrixCoefficientGraphCoreData
               (realLaplacian := realLaplacian) f‖)
 
 namespace TwoDimensionalSelectedLoopSmoothMatrixCoefficientGraphCoreData
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Any coefficient graph-core witness already supplies strong right-continuity of the heat
+semigroup on every smooth test through its graph-density field alone. -/
+theorem allSmooth_heatOperator_tendsto_zero
+    {bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)}
+    (data : TwoDimensionalSelectedLoopSmoothMatrixCoefficientGraphCoreData bridge)
+    (f : SmoothLieGroupScalarFunction (E := E) (G := G)) :
+    Tendsto (fun t : NNReal =>
+      twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t
+        (smoothLieGroupScalarToContinuousLinearMap f))
+      (nhdsWithin 0 (Set.Ioi 0))
+      (nhds (smoothLieGroupScalarToContinuousLinearMap f)) :=
+  twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_heatOperator_tendsto_zero_of_graphDense
+    bridge data.graphDense f
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Exact inhabitance audit: after the derived coefficient Laplacian and core convergence, the

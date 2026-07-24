@@ -48,6 +48,20 @@ def IsLinearMapDomainGraphDenseCore
     (J A : D →ₗ[𝕜] X) (core : Set D) : Prop :=
   ∀ x, IsLinearMapDomainGraphDenseAt J A core x
 
+/-- Proper-domain graph approximation in particular places the ambient image of the approximated
+vector in the norm closure of the ambient core image. The operator-coordinate approximation is not
+discarded from the hypothesis, but is not needed for this projection to the first graph coordinate. -/
+theorem IsLinearMapDomainGraphDenseAt.mem_closure_image
+    (J A : D →ₗ[𝕜] X) (core : Set D) (x : D)
+    (graphApprox : IsLinearMapDomainGraphDenseAt J A core x) :
+    J x ∈ closure (J '' core) := by
+  rw [Metric.mem_closure_iff]
+  intro ε hε
+  obtain ⟨z, hz, hJ, _hA⟩ := graphApprox ε hε
+  refine ⟨J z, ⟨z, hz, rfl⟩, ?_⟩
+  rw [dist_eq_norm]
+  exact hJ
+
 /-- Pointwise graph-density of `core` for an algebraic linear operator `A`. This epsilon form avoids
 assuming that `A` is bounded or installing a separate graph-norm topology. -/
 def IsLinearMapGraphDenseAt

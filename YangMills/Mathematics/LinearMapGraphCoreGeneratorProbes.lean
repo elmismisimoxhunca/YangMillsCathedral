@@ -39,6 +39,14 @@ theorem exact_exists_eventually_pointwise_graphBound_of_tendsto
       ‖Q i (J z)‖ ≤ Cz * (‖J z‖ + ‖AOnDomain z‖) :=
   exists_eventually_pointwise_graphBound_of_tendsto J AOnDomain Q z hz
 
+/-- Exact graph-coordinate projection probe: proper-domain graph approximation puts the ambient
+image in the norm closure of the ambient core image. -/
+theorem exact_domainGraphDense_mem_closure_image
+    (J AOnDomain : D →ₗ[𝕜] X) (domainCore : Set D) (x : D)
+    (graphApprox : IsLinearMapDomainGraphDenseAt J AOnDomain domainCore x) :
+    J x ∈ closure (J '' domainCore) :=
+  graphApprox.mem_closure_image J AOnDomain domainCore x
+
 /-- Exact contraction-core closure probe: strong identity convergence extends to the norm closure
 of the tested subset. -/
 theorem exact_contractionCore_strongIdentity_on_closure

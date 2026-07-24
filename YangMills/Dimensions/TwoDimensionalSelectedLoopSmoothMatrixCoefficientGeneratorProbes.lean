@@ -259,6 +259,24 @@ theorem exact_selectedLoop_smoothMatrixCoefficientCore_heatOperator_tendsto_zero
     bridge f hf
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Exact consequence of the still-open graph-density field: zeroth-order strong heat continuity
+then holds on every smooth test without using the uniform graph bound. -/
+theorem exact_selectedLoop_smoothMatrixCoefficientCore_heatOperator_tendsto_zero_of_graphDense
+    (graphDense : IsLinearMapDomainGraphDenseCore
+      smoothLieGroupScalarToContinuousLinearMap
+      (twoDimensionalSelectedLoopPairingGeneratorLinearMap
+        (realLaplacian := realLaplacian))
+      (smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G)))
+    (f : SmoothLieGroupScalarFunction (E := E) (G := G)) :
+    Tendsto (fun t : NNReal =>
+      twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t
+        (smoothLieGroupScalarToContinuousLinearMap f))
+      (nhdsWithin 0 (Set.Ioi 0))
+      (nhds (smoothLieGroupScalarToContinuousLinearMap f)) :=
+  twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_heatOperator_tendsto_zero_of_graphDense
+    bridge graphDense f
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Exact pointwise boundedness probe. Its event and bound may depend on the chosen core vector, so
 it is not the uniform graph-bound field of the reduction record. -/
 theorem exact_selectedLoop_smoothMatrixCoefficientCore_eventually_pointwiseNormBound
@@ -285,6 +303,19 @@ theorem exact_selectedLoop_smoothMatrixCoefficientCore_exists_eventually_pointwi
             (realLaplacian := realLaplacian) f‖) :=
   twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_exists_eventually_pointwiseGraphBound
     bridge f hf
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- An actual coefficient graph-core witness yields all-smooth strong heat continuity through graph
+density, independently of its separate uniform graph-bound field. -/
+theorem exact_smoothMatrixCoefficientGraphCore_allSmooth_heatOperator_tendsto_zero
+    (data : TwoDimensionalSelectedLoopSmoothMatrixCoefficientGraphCoreData bridge)
+    (f : SmoothLieGroupScalarFunction (E := E) (G := G)) :
+    Tendsto (fun t : NNReal =>
+      twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t
+        (smoothLieGroupScalarToContinuousLinearMap f))
+      (nhdsWithin 0 (Set.Ioi 0))
+      (nhds (smoothLieGroupScalarToContinuousLinearMap f)) :=
+  data.allSmooth_heatOperator_tendsto_zero f
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- The coefficient-specific reduction uses exactly the constructed matrix-coefficient range. -/
