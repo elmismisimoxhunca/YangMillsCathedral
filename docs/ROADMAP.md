@@ -940,8 +940,12 @@ committed before higher layers depend on it.
   arbitrary finite selected-character combinations in the uniform norm, then bridge that auxiliary
   set/function presentation exactly to canonical `Finsupp` quotient-dual coefficients and continuous
   character synthesis. Keep this explicitly at the algebraic selected-character core rather than claiming an all-smooth-tests generator.
-- [ ] Extend the selected-character generator to the required smooth domain with justified graph-
-  norm/core convergence, construct the pairing-generator boundary-continuity witness, and prove
+- [x] Prove a reusable functional-analytic closure theorem extending convergence of algebraic linear
+  approximants from a graph-dense core under an eventual uniform graph-norm bound, with exact and
+  changed-target probes and no continuity assumption on the unbounded algebraic generator.
+- [ ] Instantiate that closure theorem for the selected-character core by proving graph density and
+  the required eventual heat-quotient graph bound; then extend the generator to the required smooth
+  domain, construct the pairing-generator boundary-continuity witness, and prove
   comparison of the exact pairing Laplacian with the geometric Laplace–Beltrami operator.
 - [x] Prove that the common Wilson chain forgets only global faithfulness and Wilson normalization to
   construct Driver's exact Villain common heat chain. Attach the still-uninhabited Theorem 7.2

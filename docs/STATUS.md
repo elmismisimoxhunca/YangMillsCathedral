@@ -5311,7 +5311,11 @@ scalar right-hand quotient converges to `-c_q/2`, with changed-limit hostility. 
 constructs coefficientwise heat evolution and the uniform-norm zero-time generator for every finite
 selected-character combination. Exact support synthesis identifies this auxiliary presentation with
 the canonical finitely supported quotient-dual coefficient carrier, yielding direct canonical heat
-and generator theorems. This establishes only the algebraic character core; graph-norm extension to every required smooth test and Laplace–Beltrami
+and generator theorems. `LinearMapGraphCoreGenerator` now proves the reusable abstract extension:
+core convergence plus graph density and an eventual uniform graph-norm bound imply convergence on
+the full algebraic domain, without assuming the generator is bounded. Exact and changed-target
+probes protect this interface. The selected-character graph-density and heat-quotient graph-bound
+instances are not constructed, so extension to every required smooth test and Laplace–Beltrami
 comparison remain open. The
 common Wilson chain now forgets only its genuinely stronger global-faithfulness and normalization
 fields to construct Driver's exact Villain common heat chain. Uninhabited

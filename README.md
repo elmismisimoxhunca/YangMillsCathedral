@@ -710,8 +710,11 @@ selected irreducible character using unconditional uniform-series convolution, a
 zero-time generator. Finite linearity upgrades this to exact coefficientwise heat action and a
 uniform-norm generator theorem for every finite selected-character combination. The result is
 bridged exactly to the canonical finitely supported quotient-dual coefficient carrier and its
-injective continuous character synthesis. This is only the algebraic selected-character core and does not fill the
-remaining all-smooth-tests boundary field. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
+injective continuous character synthesis. A separate reusable closure theorem now extends linear
+approximant convergence from any graph-dense algebraic core under an eventual uniform graph-norm
+bound, while keeping graph density, core convergence, and the bound distinct. Applying it here still
+requires selected-character graph density and a heat-quotient graph bound, so the algebraic core does
+not fill the remaining all-smooth-tests boundary field. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
 marginals are derived, including exact equality at the selected area with the sampled loop-holonomy
 law. The metric bridge now transports the exact invariant pairing to every group tangent fiber by
 left Maurer–Cartan trivialization and proves its inverse, symmetry, strict positivity, and left/right
