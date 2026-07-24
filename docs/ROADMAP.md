@@ -1651,8 +1651,10 @@ committed before higher layers depend on it.
     current-strength witness. Derive the all-smooth zero-time stochastic generator on that exact
     bridge through the verified analytic chain, and connect the proposition to the existing direct
     operator-generator source acceptance while forgetting general Fact 3 only in the conclusion.
-    Probe both constituent fields, the exact endpoint and implication, rank-two/4D separation, and
-    omission of the analytic field or endpoint; retain construction and inhabitation as debt.
+    Add an exact inhabitance equivalence exposing only the strict general-Fact-3 source and its
+    dependently indexed analytic debt. Probe both constituent fields, the component audit, exact
+    endpoint and implication, rank-two/4D separation, and omission of the analytic field or endpoint;
+    retain construction and inhabitation as debt.
   - [x] Add `TwoDimensionalFullPastCurrentStrengthSourceIndexedLiteratureAcceptance`, strengthening
     the same flattened six source components with the exact finite-past-cylinder transition
     obligation on the unchanged nested spectral Brownian bridge, from which the pi-system theorem

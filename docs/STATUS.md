@@ -5829,8 +5829,10 @@ then joins that exact strict source to the four selected-Fourier/rescaled-deriva
 the identical spectral Brownian bridge chosen by its current witness. Neither field is constructed;
 the existing analytic chain definitionally derives the all-smooth zero-time stochastic-generator
 datum on that same bridge. A proposition-level implication reaches the existing direct
-operator-generator source acceptance, forgetting general Fact 3 only in the conclusion. Probes
-expose this implication, the general candidate class, exact analytic acceptance, exact generator
+operator-generator source acceptance, forgetting general Fact 3 only in the conclusion. An exact
+inhabitance equivalence audits the only remaining components as the strict general-Fact-3
+source and its dependently indexed analytic obligations. Probes expose this component audit and
+operator implication, the general candidate class, exact analytic acceptance, exact generator
 endpoint, rank-two/4D contract, and reject omission of either analytic input or the derived endpoint.
 `TwoDimensionalFullPastCurrentStrengthSourceIndexedLiteratureAcceptance` now adds the exact
 `TwoDimensionalSelectedLoopFinitePastCylinderMarkovData` field to those same six components, indexed

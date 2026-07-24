@@ -1240,8 +1240,10 @@ further strict joint record adds the exact selected-Fourier/rescaled-derivative 
 identical spectral bridge selected by that source witness and derives the all-smooth zero-time
 stochastic-generator datum on that exact bridge through the verified analytic chain. A theorem
 reaches the existing direct operator-generator source acceptance while forgetting general Fact 3
-only in its conclusion. Probes retain this implication, the general candidate class, analytic field,
-exact generator endpoint, rank-two contract, and 4D rejection; neither constituent is inhabited.
+only in its conclusion. An exact inhabitance equivalence exposes only the strict general-Fact-3
+source and its dependently indexed analytic obligations. Probes retain this audit and implication,
+the general candidate class, analytic field, exact generator endpoint, rank-two contract, and 4D
+rejection; neither constituent is inhabited.
 `TwoDimensionalFullPastCurrentStrengthSourceIndexedLiteratureAcceptance` strengthens those exact six
 components with the canonically derived
 `TwoDimensionalSelectedLoopFinitePastCylinderMarkovData` on the unchanged nested spectral Brownian
