@@ -913,6 +913,82 @@ noncomputable def ofContinuousPeterWeylOfSmoothCoverage
 
 end TwoDimensionalSelectedLoopStrongContinuousHeatSemigroupData
 
+/-- Differentiability of every unit-rescaled heat trajectory with derivative given by the heat
+semigroup applied to the pairing generator. The derivative is required only on the open unit
+interval and only from the right, matching the one-sided fundamental theorem of calculus used below.
+This is a proof-local analytic strengthening and is not attributed to Driver Remark 4.13. -/
+structure TwoDimensionalSelectedLoopPairingRescaledHeatDerivativeData
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)) where
+  strongContinuity : TwoDimensionalSelectedLoopStrongContinuousHeatSemigroupData bridge
+  derivative : ∀ (t : NNReal), 0 < t →
+    ∀ f : SmoothLieGroupScalarFunction (E := E) (G := G),
+      ∀ s ∈ Set.Ioo (0 : ℝ) 1,
+        HasDerivWithinAt (fun r : ℝ =>
+          twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge
+            (Real.toNNReal r * t)
+            (smoothLieGroupScalarToContinuousLinearMap f))
+          ((t : ℝ) • twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge
+            (Real.toNNReal s * t)
+            (twoDimensionalSelectedLoopPairingGeneratorLinearMap
+              (realLaplacian := realLaplacian) f))
+          (Set.Ioi s) s
+
+namespace TwoDimensionalSelectedLoopPairingRescaledHeatDerivativeData
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Strong continuity and the exact rescaled heat-trajectory derivative imply the unit-interval
+Duhamel identity by the one-sided Banach-valued fundamental theorem of calculus. -/
+theorem duhamelIdentity
+    {bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)}
+    (data : TwoDimensionalSelectedLoopPairingRescaledHeatDerivativeData bridge) :
+    TwoDimensionalSelectedLoopPairingDuhamelIdentity bridge := by
+  intro t ht f
+  let Jf := smoothLieGroupScalarToContinuousLinearMap f
+  let Af := twoDimensionalSelectedLoopPairingGeneratorLinearMap
+    (realLaplacian := realLaplacian) f
+  let F : ℝ → C(G, ℝ) := fun s =>
+    twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge
+      (Real.toNNReal s * t) Jf
+  let V : ℝ → C(G, ℝ) := fun s =>
+    twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge
+      (Real.toNNReal s * t) Af
+  have htime : Continuous (fun s : ℝ => Real.toNNReal s * t) :=
+    continuous_real_toNNReal.mul continuous_const
+  have hFcont : Continuous F :=
+    (data.strongContinuity.trajectory_continuous Jf).comp htime
+  have hVcont : Continuous V :=
+    (data.strongContinuity.trajectory_continuous Af).comp htime
+  have hscaledInt : IntervalIntegrable (fun s : ℝ => (t : ℝ) • V s) volume 0 1 :=
+    (hVcont.const_smul (t : ℝ)).intervalIntegrable 0 1
+  have hFTC := intervalIntegral.integral_eq_sub_of_hasDeriv_right_of_le
+    (E := C(G, ℝ)) zero_le_one hFcont.continuousOn (by
+      intro s hs
+      exact data.derivative t ht f s hs) hscaledInt
+  rw [intervalIntegral.integral_smul] at hFTC
+  have hFzero : F 0 = Jf := by
+    simp [F, twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap]
+  have hFone : F 1 =
+      twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t Jf := by
+    simp [F]
+  rw [hFzero, hFone] at hFTC
+  have hrecovery :=
+    twoDimensionalSelectedLoopHeatOperator_eq_add_smul_differenceQuotient bridge t Jf
+  have hdifference :
+      twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t Jf - Jf =
+        (t : ℝ) • twoDimensionalSelectedLoopHeatDifferenceQuotientLinearMap bridge t Jf := by
+    rw [hrecovery]
+    abel
+  rw [hdifference] at hFTC
+  have htne : (t : ℝ) ≠ 0 := by exact_mod_cast ne_of_gt ht
+  have heq := (smul_right_injective C(G, ℝ) htne) hFTC
+  exact heq.symm
+
+end TwoDimensionalSelectedLoopPairingRescaledHeatDerivativeData
+
 /-- A continuous Duhamel strengthening stores strong semigroup continuity and the exact identity.
 Strong continuity derives the genuine interval-integrability field of the prior Duhamel record. -/
 structure TwoDimensionalSelectedLoopPairingContinuousDuhamelData
@@ -923,6 +999,18 @@ structure TwoDimensionalSelectedLoopPairingContinuousDuhamelData
   duhamel : TwoDimensionalSelectedLoopPairingDuhamelIdentity bridge
 
 namespace TwoDimensionalSelectedLoopPairingContinuousDuhamelData
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Rescaled heat-trajectory differentiability derives the exact Duhamel identity, so it constructs
+continuous Duhamel data without taking the identity as a separate premise. -/
+noncomputable def ofRescaledHeatDerivative
+    {bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)}
+    (data : TwoDimensionalSelectedLoopPairingRescaledHeatDerivativeData bridge) :
+    TwoDimensionalSelectedLoopPairingContinuousDuhamelData bridge where
+  strongContinuity := data.strongContinuity
+  duhamel := data.duhamelIdentity
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Uniform coefficient-image density plus the exact Duhamel identity constructs continuous Duhamel
@@ -1320,6 +1408,50 @@ noncomputable def toStochasticGeneratorAtZeroData
   acceptance.implies_DuhamelAnalyticAcceptance.toStochasticGeneratorAtZeroData
 
 end TwoDimensionalSelectedLoopSmoothMatrixCoefficientContinuousDuhamelAnalyticAcceptance
+
+/-- Differentiability-facing analytic acceptance: simultaneous finite graph approximation together
+with inhabited strong-continuous rescaled heat-trajectory derivative data. The Duhamel identity,
+interval integrability, and graph bound are all derived. -/
+def TwoDimensionalSelectedLoopSmoothMatrixCoefficientRescaledDerivativeAnalyticAcceptance
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)) : Prop :=
+  TwoDimensionalSelectedLoopSmoothMatrixCoefficientFiniteGraphApproximation
+      (realLaplacian := realLaplacian) ∧
+    Nonempty (TwoDimensionalSelectedLoopPairingRescaledHeatDerivativeData bridge)
+
+namespace TwoDimensionalSelectedLoopSmoothMatrixCoefficientRescaledDerivativeAnalyticAcceptance
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Rescaled derivative acceptance implies the strongly-continuous Duhamel acceptance by the
+one-sided fundamental theorem of calculus. -/
+theorem implies_continuousDuhamelAnalyticAcceptance
+    {bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)}
+    (acceptance :
+      TwoDimensionalSelectedLoopSmoothMatrixCoefficientRescaledDerivativeAnalyticAcceptance
+        bridge) :
+    TwoDimensionalSelectedLoopSmoothMatrixCoefficientContinuousDuhamelAnalyticAcceptance
+      bridge := by
+  rcases acceptance with ⟨finiteApproximation, ⟨derivativeData⟩⟩
+  exact ⟨finiteApproximation,
+    ⟨TwoDimensionalSelectedLoopPairingContinuousDuhamelData.ofRescaledHeatDerivative
+      derivativeData⟩⟩
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- The differentiability-facing acceptance reaches the all-smooth stochastic generator endpoint. -/
+noncomputable def toStochasticGeneratorAtZeroData
+    {bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)}
+    (acceptance :
+      TwoDimensionalSelectedLoopSmoothMatrixCoefficientRescaledDerivativeAnalyticAcceptance
+        bridge) :
+    TwoDimensionalSelectedLoopStochasticGeneratorAtZeroData bridge :=
+  acceptance.implies_continuousDuhamelAnalyticAcceptance.toStochasticGeneratorAtZeroData
+
+end TwoDimensionalSelectedLoopSmoothMatrixCoefficientRescaledDerivativeAnalyticAcceptance
 
 /-- Exact three-part analytic acceptance route: simultaneous finite graph approximation, uniform
 density of all smooth real tests in the continuous ambient space, and the exact Duhamel identity.

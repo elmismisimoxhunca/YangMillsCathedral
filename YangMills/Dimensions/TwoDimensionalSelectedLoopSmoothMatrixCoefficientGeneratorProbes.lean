@@ -409,6 +409,13 @@ theorem exact_selectedLoopPairingDuhamel_graphBound
     data.quotient_norm_le_generator t ht f, data.eventual_graphBound_one⟩
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Exact differentiability probe: the rescaled heat derivative implies the Duhamel identity. -/
+theorem exact_rescaledHeatDerivative_derives_DuhamelIdentity
+    (data : TwoDimensionalSelectedLoopPairingRescaledHeatDerivativeData bridge) :
+    TwoDimensionalSelectedLoopPairingDuhamelIdentity bridge :=
+  data.duhamelIdentity
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Exact semigroup probe: all-test right continuity at zero derives global orbit continuity. -/
 theorem exact_tendstoZero_derives_strongContinuousHeatSemigroup
     (atZero : ∀ f : C(G, ℝ), Tendsto (fun t : NNReal =>
@@ -514,6 +521,26 @@ omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 theorem missing_continuousDuhamel_blocks_ContinuousDuhamelAnalyticAcceptance
     (missing : ¬ Nonempty (TwoDimensionalSelectedLoopPairingContinuousDuhamelData bridge)) :
     ¬ TwoDimensionalSelectedLoopSmoothMatrixCoefficientContinuousDuhamelAnalyticAcceptance
+      bridge := by
+  intro acceptance
+  exact missing acceptance.2
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Exact rescaled-derivative analytic endpoint. -/
+theorem exact_RescaledDerivativeAnalyticAcceptance_stochasticGenerator
+    (acceptance :
+      TwoDimensionalSelectedLoopSmoothMatrixCoefficientRescaledDerivativeAnalyticAcceptance
+        bridge) :
+    TwoDimensionalSelectedLoopSmoothMatrixCoefficientContinuousDuhamelAnalyticAcceptance bridge ∧
+      Nonempty (TwoDimensionalSelectedLoopStochasticGeneratorAtZeroData bridge) :=
+  ⟨acceptance.implies_continuousDuhamelAnalyticAcceptance,
+    ⟨acceptance.toStochasticGeneratorAtZeroData⟩⟩
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Hostile derivative acceptance probe: missing rescaled derivative data blocks acceptance. -/
+theorem missing_rescaledDerivative_blocks_RescaledDerivativeAnalyticAcceptance
+    (missing : ¬ Nonempty (TwoDimensionalSelectedLoopPairingRescaledHeatDerivativeData bridge)) :
+    ¬ TwoDimensionalSelectedLoopSmoothMatrixCoefficientRescaledDerivativeAnalyticAcceptance
       bridge := by
   intro acceptance
   exact missing acceptance.2
