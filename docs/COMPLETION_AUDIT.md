@@ -1,7 +1,7 @@
 # Completion audit
 
 **Audit kind:** living prompt-to-artifact checklist  
-**Last fully validated implementation commit:** `b5b4a8c` (`cathedral`)
+**Last fully validated implementation commit:** `3198e38` (`cathedral`)
 
 **Working tree immediately after that commit:** clean
 
@@ -91,10 +91,10 @@ Criteria 15–18 are currently decisive failures; several earlier criteria are a
 | Final Clay proposition | `FourDimensionalCurrentStrengthUniversalAcceptance.lean` is an explicitly preliminary universal target; no source-complete final declaration exists | Quantifier-order, exact-gauge-index, same-spectrum-gap, physical-nontriviality, conditional headline-projection, and lower-carrier probes | Open | The preliminary target must be upgraded only after the documented OS, Poincare, observable/OPE/mixing, and remaining source-strength debts close; it intentionally has no inhabitance theorem |
 | Hostile probes | 521 `*Probes.lean` files for 1,049 Lean files at the validated snapshot; all imported major probes are rooted through `YangMills.lean` | Full build and namespace audit | Partial but broad | No verifier proves that every semantic requirement has an adequate mutation probe; some support modules have no same-name probe and require indirect-coverage review |
 | Reusable mathematics rather than hidden assumptions | `YangMills/Mathematics/*` packages graded wedges, exterior-calculus, Schwartz, tensor-candidate, basis, and coordinate infrastructure; architecture/source map distinguish definitions, requirements, bridges, and debt | Kernel audit plus manual inspection of Bianchi and completed-tensor interfaces | Partial | Chart naturality, completeness, completed projective tensors, and nuclearity are still explicit hypotheses/debt; final review must ensure none is disguised as an arbitrary disconnected proposition |
-| No `sorry` or project axioms | `scripts/audit_lean.py`; `YangMills/Audit.lean`; root import graph | Source audit passed 1,049 Lean files; kernel audit passed 15,209 declarations | Implemented at baseline | Must rerun at final commit; result covers imported `YangMills` declarations, not physical adequacy |
+| No `sorry` or project axioms | `scripts/audit_lean.py`; `YangMills/Audit.lean`; root import graph | Source audit passed 1,049 Lean files; kernel audit passed 15,224 declarations | Implemented at baseline | Must rerun at final commit; result covers imported `YangMills` declarations, not physical adequacy |
 | Declaration-level provenance | `docs/SOURCE_MAP.md`, `docs/PROVENANCE.md`, `docs/SUPPLIED_SOURCE_INGESTION_AUDIT.md`, and 39 manifests | Source verifier, 33/33 supplied-PDF hash coverage, 31/31 reproducible native extractions, Mathpix selftest/adjudication, and manual source-map inspection | Partial | A manifest verifies bytes only; exact load-bearing locators, redistribution rights, completeness and interpretation still require final row-by-row audit |
 | Human-readable paper-grade documentation | README, architecture, provenance, roadmap, status, source map, bibliography, legacy ledger, this audit | Manual inspection | Partial | Documentation contains evolving current-strength prose and must be reconciled at final commit |
-| Small verified commits | Git history through `b5b4a8c` | Recent commits have targeted/full builds and audits recorded in status | Implemented locally | Publication requirement remains blocked |
+| Small verified commits | Git history through `3198e38` | Recent commits have targeted/full builds and audits recorded in status | Implemented locally | Publication requirement remains blocked |
 | Push/PR state | Branch `cathedral`; `git remote -v` produced no entries | Direct Git inspection | Blocked / unverified | No designated writable remote exists in this checkout, so no push or PR is evidenced locally; global publication absence is not inferred |
 
 ## 3. Dimension matrix
@@ -128,17 +128,17 @@ not yet prove witness-level noninhabitation of the future source-complete final 
 
 ## 5. Verification gates and their limits
 
-Evidence inspected at validated implementation commit `b5b4a8c`:
+Evidence inspected at validated implementation commit `3198e38`:
 
 | Command or gate | Baseline result | What it verifies | What it does not verify |
 |---|---:|---|---|
 | `lake build YangMills` | PASS, 4,619 jobs | Elaboration, compilation, all root imports, and execution of the root audit command | Source fidelity, completeness, consistency/inhabitation, or the final objective |
-| Kernel namespace audit in `YangMills.lean` | PASS, 15,209 declarations | No transitive unexpected axioms/`sorryAx` in imported `YangMills` declarations under the audit policy | Unimported files, semantic adequacy, or literature interpretation |
+| Kernel namespace audit in `YangMills.lean` | PASS, 15,224 declarations | No transitive unexpected axioms/`sorryAx` in imported `YangMills` declarations under the audit policy | Unimported files, semantic adequacy, or literature interpretation |
 | `python3 scripts/audit_lean.py` | PASS, 1,049 Lean files | Conservative source scan and confirmation that semantic audit is rooted | Mathematical correctness or source completeness |
-| `python3 scripts/verify_sources.py` at `b5b4a8c` | PASS, 39 manifests | Retained native artifacts, all 31 reproducible native extractions, and the two recursive Mathpix/adjudication artifact trees match their manifests | This does not establish authority, interpretation, redistribution safety, or declaration sufficiency |
+| `python3 scripts/verify_sources.py` at `3198e38` | PASS, 39 manifests | Retained native artifacts, all 31 reproducible native extractions, and the two recursive Mathpix/adjudication artifact trees match their manifests | This does not establish authority, interpretation, redistribution safety, or declaration sufficiency |
 | `python3 scripts/verify_audit_bibliography.py` | PASS, 36 DOI records | Offline DOI metadata snapshot consistency | Canonical source status or declaration-level use |
 | `git diff --check` | PASS | Whitespace/conflict-marker hygiene in tracked diffs | Build correctness or semantic coverage |
-| `git status --short` | Empty immediately after `b5b4a8c` | The inspected documented state through that follow-up commit had no pending changes | Later implementation work or remote publication |
+| `git status --short` | Empty immediately after `3198e38` | The inspected documented state through that follow-up commit had no pending changes | Later implementation work or remote publication |
 | `git remote -v` | Empty | There is no configured remote in this checkout | Whether another checkout or hosting service contains a push/PR |
 
 A final audit must rerun every gate after the final proposition and all documentation changes. The
