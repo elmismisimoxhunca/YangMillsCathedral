@@ -133,6 +133,31 @@ def smoothUnitaryMatrixCoefficientRealCoreCandidate :
   Set.range (smoothUnitaryMatrixCoefficientRealSynthesis (E := E) (G := G))
 
 omit [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- The same finite real smooth matrix-coefficient range, bundled as an algebraic real
+submodule. No topology or closure is installed on the smooth domain. -/
+noncomputable def smoothUnitaryMatrixCoefficientRealCoreSubmodule :
+    Submodule ℝ (SmoothLieGroupScalarFunction (E := E) (G := G)) :=
+  LinearMap.range (smoothUnitaryMatrixCoefficientRealSynthesis (E := E) (G := G))
+
+omit [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- The set-valued candidate and bundled algebraic submodule have exactly the same carrier. -/
+@[simp]
+theorem smoothUnitaryMatrixCoefficientRealCoreSubmodule_carrier :
+    (smoothUnitaryMatrixCoefficientRealCoreSubmodule (E := E) (G := G) :
+      Set (SmoothLieGroupScalarFunction (E := E) (G := G))) =
+      smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G) :=
+  rfl
+
+omit [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- Membership in the bundled core is exactly finite real coefficient synthesis. -/
+theorem mem_smoothUnitaryMatrixCoefficientRealCoreSubmodule_iff
+    (f : SmoothLieGroupScalarFunction (E := E) (G := G)) :
+    f ∈ smoothUnitaryMatrixCoefficientRealCoreSubmodule (E := E) (G := G) ↔
+      ∃ coefficients : SmoothUnitaryMatrixCoefficientRealCoefficients E G,
+        smoothUnitaryMatrixCoefficientRealSynthesis coefficients = f :=
+  Iff.rfl
+
+omit [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
 /-- Every individual real or imaginary matrix coefficient lies in the finite synthesis range. -/
 theorem smoothUnitaryMatrixCoefficientRealFunction_mem_coreCandidate
     (index : SmoothUnitaryMatrixCoefficientRealIndex E G) :

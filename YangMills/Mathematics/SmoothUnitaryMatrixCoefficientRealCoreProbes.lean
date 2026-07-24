@@ -60,6 +60,25 @@ theorem exact_smoothMatrixCoefficient_mem_coreCandidate
   smoothUnitaryMatrixCoefficientRealFunction_mem_coreCandidate index
 
 omit [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- Exact carrier probe: the set candidate is the bundled algebraic submodule carrier. -/
+theorem exact_smoothMatrixCoefficient_coreSubmodule_carrier :
+    (smoothUnitaryMatrixCoefficientRealCoreSubmodule (E := E) (G := G) :
+      Set (SmoothLieGroupScalarFunction (E := E) (G := G))) =
+      smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G) :=
+  smoothUnitaryMatrixCoefficientRealCoreSubmodule_carrier
+
+omit [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- The matrix-coefficient core candidate is closed under real linear combinations. -/
+theorem exact_smoothMatrixCoefficient_coreCandidate_linear
+    (c : ℝ) (f h : SmoothLieGroupScalarFunction (E := E) (G := G))
+    (hf : f ∈ smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G))
+    (hh : h ∈ smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G)) :
+    c • f + h ∈ smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G) := by
+  change c • f + h ∈ smoothUnitaryMatrixCoefficientRealCoreSubmodule (E := E) (G := G)
+  exact (smoothUnitaryMatrixCoefficientRealCoreSubmodule (E := E) (G := G)).add_mem
+    ((smoothUnitaryMatrixCoefficientRealCoreSubmodule (E := E) (G := G)).smul_mem c hf) hh
+
+omit [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
 /-- A supplied smooth representation makes the coefficient range genuinely nonzero. -/
 theorem exact_smoothMatrixCoefficient_coreCandidate_nontrivial
     (ρ : SmoothUnitaryIrreducibleMatrixRepresentation E G) :

@@ -165,6 +165,33 @@ noncomputable def twoDimensionalSelectedLoopSmoothMatrixCoefficientHeatEvolution
         index.representation.toContinuousUnitaryIrreducibleMatrixRepresentation)) •
       smoothUnitaryMatrixCoefficientRealFunction index)
 
+omit [FiniteDimensional ℝ E] [IsTopologicalGroup G] [CompactSpace G] [T2Space G]
+    [SecondCountableTopology G] [MeasurableSpace G] [BorelSpace G]
+    [MeasurableMul₂ G] [MeasurableInv G]
+    [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- Finite coefficientwise heat evolution remains in the same algebraic smooth core. -/
+theorem twoDimensionalSelectedLoopSmoothMatrixCoefficientHeatEvolution_mem_coreCandidate
+    (t : ℝ) (coefficients : SmoothUnitaryMatrixCoefficientRealCoefficients E G) :
+    twoDimensionalSelectedLoopSmoothMatrixCoefficientHeatEvolution
+      (heatTraceData := heatTraceData) t coefficients ∈
+      smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G) := by
+  classical
+  induction coefficients using Finsupp.induction with
+  | zero =>
+      rw [map_zero]
+      change (0 : SmoothLieGroupScalarFunction (E := E) (G := G)) ∈
+        smoothUnitaryMatrixCoefficientRealCoreSubmodule (E := E) (G := G)
+      exact (smoothUnitaryMatrixCoefficientRealCoreSubmodule (E := E) (G := G)).zero_mem
+  | @single_add index coefficient coefficients hindex hcoefficient induction =>
+      rw [map_add]
+      apply (smoothUnitaryMatrixCoefficientRealCoreSubmodule (E := E) (G := G)).add_mem
+      · simp only [twoDimensionalSelectedLoopSmoothMatrixCoefficientHeatEvolution,
+          Finsupp.linearCombination_single]
+        apply (smoothUnitaryMatrixCoefficientRealCoreSubmodule (E := E) (G := G)).smul_mem
+        apply (smoothUnitaryMatrixCoefficientRealCoreSubmodule (E := E) (G := G)).smul_mem
+        exact smoothUnitaryMatrixCoefficientRealFunction_mem_coreCandidate index
+      · exact induction
+
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Exact positive-time heat action on every finite real smooth matrix-coefficient synthesis. -/
 theorem twoDimensionalSelectedLoopHeatOperator_smoothMatrixCoefficientSynthesis
@@ -247,6 +274,31 @@ theorem twoDimensionalSelectedLoopSmoothMatrixCoefficientDifferenceQuotientEvolu
   unfold twoDimensionalSelectedLoopSmoothMatrixCoefficientDifferenceQuotientEvolution
   rw [dif_pos ht]
   rfl
+
+omit [FiniteDimensional ℝ E] [IsTopologicalGroup G] [CompactSpace G] [T2Space G]
+    [SecondCountableTopology G] [MeasurableSpace G] [BorelSpace G]
+    [MeasurableMul₂ G] [MeasurableInv G]
+    [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- Every positive coefficient-space heat difference quotient remains in the same algebraic smooth
+core. -/
+theorem twoDimensionalSelectedLoopSmoothMatrixCoefficientDifferenceQuotientEvolution_mem_coreCandidate
+    (t : NNReal) (ht : 0 < t)
+    (coefficients : SmoothUnitaryMatrixCoefficientRealCoefficients E G) :
+    twoDimensionalSelectedLoopSmoothMatrixCoefficientDifferenceQuotientEvolution
+      (heatTraceData := heatTraceData) t coefficients ∈
+      smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G) := by
+  rw [twoDimensionalSelectedLoopSmoothMatrixCoefficientDifferenceQuotientEvolution_apply
+    t ht coefficients]
+  change ((t : ℝ)⁻¹) •
+      (twoDimensionalSelectedLoopSmoothMatrixCoefficientHeatEvolution
+          (heatTraceData := heatTraceData) (t : ℝ) coefficients -
+        smoothUnitaryMatrixCoefficientRealSynthesis coefficients) ∈
+    smoothUnitaryMatrixCoefficientRealCoreSubmodule (E := E) (G := G)
+  apply (smoothUnitaryMatrixCoefficientRealCoreSubmodule (E := E) (G := G)).smul_mem
+  apply (smoothUnitaryMatrixCoefficientRealCoreSubmodule (E := E) (G := G)).sub_mem
+  · exact twoDimensionalSelectedLoopSmoothMatrixCoefficientHeatEvolution_mem_coreCandidate
+      (heatTraceData := heatTraceData) (t : ℝ) coefficients
+  · exact ⟨coefficients, rfl⟩
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- The ambient selected-loop difference quotient on a finite coefficient synthesis is exactly the

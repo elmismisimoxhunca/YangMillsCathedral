@@ -66,6 +66,19 @@ theorem exact_selectedLoopHeatOperator_smoothMatrixCoefficientSynthesis
   twoDimensionalSelectedLoopHeatOperator_smoothMatrixCoefficientSynthesis
     bridge t ht coefficients
 
+omit [FiniteDimensional ℝ E] [IsTopologicalGroup G] [CompactSpace G] [T2Space G]
+    [SecondCountableTopology G] [MeasurableSpace G] [BorelSpace G]
+    [MeasurableMul₂ G] [MeasurableInv G]
+    [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- Exact algebraic-core invariance under finite coefficient heat evolution. -/
+theorem exact_smoothMatrixCoefficientHeatEvolution_mem_core
+    (t : ℝ) (coefficients : SmoothUnitaryMatrixCoefficientRealCoefficients E G) :
+    twoDimensionalSelectedLoopSmoothMatrixCoefficientHeatEvolution
+      (heatTraceData := heatTraceData) t coefficients ∈
+      smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G) :=
+  twoDimensionalSelectedLoopSmoothMatrixCoefficientHeatEvolution_mem_coreCandidate
+    (heatTraceData := heatTraceData) t coefficients
+
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Hostile finite-evolution probe: changing the coefficientwise heat synthesis is contradictory. -/
 theorem changed_selectedLoopHeatOperator_smoothMatrixCoefficientSynthesis_blocked
@@ -105,6 +118,20 @@ theorem exact_selectedLoopHeatDifferenceQuotient_smoothMatrixCoefficientSynthesi
           (heatTraceData := heatTraceData) t coefficients) :=
   twoDimensionalSelectedLoopHeatDifferenceQuotient_smoothMatrixCoefficientSynthesis
     bridge t ht coefficients
+
+omit [FiniteDimensional ℝ E] [IsTopologicalGroup G] [CompactSpace G] [T2Space G]
+    [SecondCountableTopology G] [MeasurableSpace G] [BorelSpace G]
+    [MeasurableMul₂ G] [MeasurableInv G]
+    [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- Exact algebraic-core invariance under every positive coefficient difference quotient. -/
+theorem exact_smoothMatrixCoefficientDifferenceQuotient_mem_core
+    (t : NNReal) (ht : 0 < t)
+    (coefficients : SmoothUnitaryMatrixCoefficientRealCoefficients E G) :
+    twoDimensionalSelectedLoopSmoothMatrixCoefficientDifferenceQuotientEvolution
+      (heatTraceData := heatTraceData) t coefficients ∈
+      smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G) :=
+  twoDimensionalSelectedLoopSmoothMatrixCoefficientDifferenceQuotientEvolution_mem_coreCandidate
+    (heatTraceData := heatTraceData) t ht coefficients
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Hostile quotient-coherence probe: a changed coefficient-space realization is contradictory. -/
