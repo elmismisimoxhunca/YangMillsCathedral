@@ -5353,7 +5353,10 @@ complex coefficients, their real/imaginary components, a dependent finite real s
 bundled as an exact algebraic real submodule, exact row/column conjugation mixing, singleton
 inclusion, and conditional nontriviality. Finite complex matrix-weighted sums from one explicit
 smooth presentation have canonical finitely supported realification coefficients using both
-component generators, with exact synthesis, pointwise real-part, and continuous-core-image theorems. An explicit reusable
+component generators, with exact synthesis, pointwise real-part, and continuous-core-image theorems.
+Every selected continuous-dual block with a retained `HasSmoothRepresentative` witness is now
+transported through both basis-change matrices to one such smooth realification, without inferring
+smooth coverage of all dual classes. An explicit reusable
 coefficientwise Casimir bridge prevents the existing trace eigen-equation from being silently
 promoted to matrix entries; in isolation it remains uninhabited, while any supplied instance
 canonically yields both real-component Casimir equations, eigenvalue uniqueness from a diagonal

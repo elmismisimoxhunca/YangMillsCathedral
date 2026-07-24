@@ -740,7 +740,10 @@ irreducible unitary presentations and bundled as an exact algebraic real submodu
 mixing, singleton inclusion, and conditional nontriviality. Every finite complex matrix-weighted sum
 from one smooth presentation now has canonical finitely supported realification coefficients using
 both real and imaginary generators, with exact synthesis, pointwise value, and continuous-core-image
-membership. A reusable coefficientwise
+membership. For every selected continuous-dual block carrying an explicit
+`HasSmoothRepresentative` witness, basis-aware pullback through both coordinate-change matrices now
+transports its full weighted synthesis to such a smooth presentation, so its real part lies in the
+same smooth and continuous core images. No universal smooth-dual coverage is inferred. A reusable coefficientwise
 Casimir bridge explicitly strengthens the trace equation to every matrix coordinate; in isolation it
 remains an honest uninhabited interface, and when supplied canonical real/complex coherence proves
 both real-component eigenvalue equations and finite synthesis linearity for the pairing Laplacian. Direct matrix-coefficient orthogonality now proves

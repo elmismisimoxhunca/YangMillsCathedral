@@ -975,8 +975,9 @@ committed before higher layers depend on it.
   singleton inclusion, conditional nontriviality, and an exact algebraic real-submodule carrier.
   Realify every finite complex matrix-weighted sum from one explicit smooth presentation using both
   component generators through canonical finitely supported coefficients, with exact synthesis and
-  continuous-core-image membership, without claiming quotient-
-  dual coverage or topological closure.
+  continuous-core-image membership. Transport a full selected-dual coefficient block with a retained
+  smooth-representative witness through both basis-change matrices to this realification, without
+  claiming universal quotient-dual coverage or topological closure.
 - [x] Isolate the stronger coefficientwise Casimir/Laplacian identification as an explicit
   uninhabited bridge and conditionally derive the real/imaginary eigenvalue equations and exact
   finite-synthesis pairing-Laplacian action.
