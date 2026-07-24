@@ -1648,8 +1648,10 @@ committed before higher layers depend on it.
     and unrestricted/full Fact 3 as debt.
   - [x] Add a strict joint general-Fact-3/selected-Fourier-derivative source record, indexing the exact
     four analytic obligations by the identical spectral Brownian bridge selected from the same
-    current-strength witness. Probe both constituent fields, rank-two/4D separation, and omission of
-    the analytic field; retain construction and inhabitation as debt.
+    current-strength witness. Derive the all-smooth zero-time stochastic generator on that exact
+    bridge through the verified analytic chain. Probe both constituent fields, the exact endpoint,
+    rank-two/4D separation, and omission of the analytic field or endpoint; retain construction and
+    inhabitation as debt.
   - [x] Add `TwoDimensionalFullPastCurrentStrengthSourceIndexedLiteratureAcceptance`, strengthening
     the same flattened six source components with the exact finite-past-cylinder transition
     obligation on the unchanged nested spectral Brownian bridge, from which the pi-system theorem

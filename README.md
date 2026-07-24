@@ -1237,8 +1237,10 @@ finite law, and density. Its exact inhabitance audit exposes just that current p
 universal witness. It forgets to current strength, remains rank two, and rejects a 4D linear
 model; its general Fact 3 witness remains uninhabited, and unrestricted/full Fact 3 remains open. A
 further strict joint record adds the exact selected-Fourier/rescaled-derivative obligations on the
-identical spectral bridge selected by that source witness. Probes retain the general candidate class,
-analytic field, rank-two contract, and 4D rejection; neither constituent is inhabited.
+identical spectral bridge selected by that source witness and derives the all-smooth zero-time
+stochastic-generator datum on that exact bridge through the verified analytic chain. Probes retain
+the general candidate class, analytic field, exact generator endpoint, rank-two contract, and 4D
+rejection; neither constituent is inhabited.
 `TwoDimensionalFullPastCurrentStrengthSourceIndexedLiteratureAcceptance` strengthens those exact six
 components with the canonically derived
 `TwoDimensionalSelectedLoopFinitePastCylinderMarkovData` on the unchanged nested spectral Brownian
