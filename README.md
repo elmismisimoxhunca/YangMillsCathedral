@@ -676,9 +676,10 @@ increment-history vector is independent of the exact final increment in a monoto
 law with the spectral increment measure and Fubini derives a weak transition identity for every
 continuous history test and every continuous state extracted from that finite history. Almost-sure
 state reconstruction then rewrites this identity with the actual current value `B(tₙ)` and future
-value `B(tₙ₊₁)`. Continuous prefix-product reconstruction further transports arbitrary continuous
-tests to the actual finite process-evaluation vector `(B(t₁),…,B(tₙ))`. This is not full-past
-conditioning or a full Markov theorem. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
+value `B(tₙ₊₁)`. Continuous prefix-product reconstruction further transports tests to the actual finite process-
+evaluation vector `(B(t₁),…,B(tₙ))`. A direct finite-measure/Fubini argument now extends the history
+test from continuous to arbitrary explicitly bounded measurable real functions. This is not
+full-past conditioning or a full Markov theorem. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
 marginals are derived, including exact equality at the selected area with the sampled loop-holonomy
 law. The metric bridge now transports the exact invariant pairing to every group tangent fiber by
 left Maurer–Cartan trivialization and proves its inverse, symmetry, strict positivity, and left/right

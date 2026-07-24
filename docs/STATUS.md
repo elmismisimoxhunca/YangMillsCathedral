@@ -5271,8 +5271,11 @@ history-extracted state `S`, and terminal test `f`; a changed transition value i
 Almost-sure reconstruction specializes `S` to the ordered history product and rewrites both sides as
 `E[Φ(H)f(B(tₙ₊₁))] = E[Φ(H)P_t f(B(tₙ))]` with actual current/future process values. Composing an
 arbitrary continuous test with the continuous prefix-product vector then proves the same identity for
-the actual finite process history `(B(t₁),…,B(tₙ))`, with changed-value hostility. This remains a
-weak finite-history identity, not conditioning. Conditioning on the full past sigma-algebra and stochastic-generator identification remain explicit future proof debt. The
+the actual finite process history `(B(t₁),…,B(tₙ))`. A separate direct product-law proof now permits
+any measurable real history test with an explicit global norm bound; integrability follows from that
+bound, the compact continuous terminal factor, and finite history/spectral measures. The resulting
+bounded-measurable process-history identity has changed-value hostility. This remains a weak finite-
+history identity, not conditioning. Conditioning on the full past sigma-algebra and stochastic-generator identification remain explicit future proof debt. The
 common Wilson chain now forgets only its genuinely stronger global-faithfulness and normalization
 fields to construct Driver's exact Villain common heat chain. Uninhabited
 `TwoDimensionalSpectralVillainWeakLimitBridgeData` ties the unchanged Theorem 7.2 contract to the
