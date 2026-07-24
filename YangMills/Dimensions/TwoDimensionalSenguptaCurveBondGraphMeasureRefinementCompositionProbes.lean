@@ -76,6 +76,20 @@ theorem changed_middle_curve_refinement_blocked
       data.curveComposition.coarseToMiddle) : False :=
   changed data.coarseToMiddle_curveRefinement_eq
 
+omit [T2Space CoverGroup] [Fintype Curve] [Nonempty Curve] [DecidableEq CoarseEdge] in
+/-- The direct configuration map remains surjective after composing both exact refinement stages. -/
+theorem direct_configurationMap_surjective : Function.Surjective
+    ((data.direct).curveRefinement.graph.configurationMap (G := CoverGroup)) :=
+  (data.direct).configurationMap_surjective
+
+omit [T2Space CoverGroup] [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup]
+    [Fintype Curve] [Nonempty Curve] [DecidableEq CoarseEdge] in
+/-- Hostile stage probe: a nonsurjective fine-to-middle map cannot enter the composition. -/
+theorem nonsurjective_fine_to_middle_blocked
+    (changed : ¬Function.Surjective
+      (data.curveComposition.middleToFine.graph.configurationMap (G := CoverGroup))) : False :=
+  changed data.fineToMiddle_configurationMap_surjective
+
 omit [T2Space CoverGroup] [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup]
     [Fintype Curve] [Nonempty Curve] [DecidableEq CoarseEdge] in
 /-- Hostile stage-law probe: changing the supplied fine-to-middle pushforward is rejected. -/

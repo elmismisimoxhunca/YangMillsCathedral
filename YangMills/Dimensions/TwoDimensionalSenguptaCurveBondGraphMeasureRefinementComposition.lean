@@ -80,6 +80,8 @@ structure TwoDimensionalSenguptaCurveBondGraphMeasureRefinementCompositionData w
       ∂normalizedCompactHaarFiniteProductMeasure (Edge := FineEdge) (G := CoverGroup)
   finePartitionFunction_ne_zero : finePartitionFunction ≠ 0
   finePartitionFunction_ne_top : finePartitionFunction ≠ ⊤
+  fineToMiddle_configurationMap_surjective : Function.Surjective
+    (curveComposition.middleToFine.graph.configurationMap (G := CoverGroup))
   fineToMiddle_pushforward : ∀ region,
     Measure.map (curveComposition.middleToFine.graph.configurationMap (G := CoverGroup))
       (senguptaCompactSurfaceGraphMeasure finePartitionFunction coarseLaw.bundleClass region
@@ -102,6 +104,13 @@ noncomputable def direct
       (fineSource := fineSource) (fineTarget := fineTarget)
       (fineCurveWord := fineCurveWord) where
   curveRefinement := data.curveComposition.direct
+  configurationMap_surjective := by
+    change Function.Surjective
+      (data.curveComposition.directGraph.configurationMap (G := CoverGroup))
+    rw [data.curveComposition.direct_configurationMap_eq_comp (CoverGroup := CoverGroup)]
+    have coarseSurjective := data.coarseToMiddleMeasure.configurationMap_surjective
+    rw [data.coarseToMiddle_curveRefinement_eq] at coarseSurjective
+    exact coarseSurjective.comp data.fineToMiddle_configurationMap_surjective
   projection_measurable := data.coarseToMiddleMeasure.projection_measurable
   fineOrdinaryRegionWeight := data.fineOrdinaryRegionWeight
   fineTwistedRegionWeight := data.fineTwistedRegionWeight

@@ -72,6 +72,75 @@ theorem exact_weighted_pushforward (region : Region) :
 
 omit [T2Space CoverGroup] [Fintype Curve] [Nonempty Curve]
     [DecidableEq CoarseEdge] [DecidableEq FineEdge] in
+/-- Forgetting the stochastic/sample wrapper preserves the exact weighted-measure
+pushforward definitionally. -/
+theorem parameterized_weighted_pushforward (region : Region) :
+    Measure.map
+        ((data.toParameterized).curveRefinement.graph.configurationMap (G := CoverGroup))
+        (senguptaCompactSurfaceGraphMeasure (data.toParameterized).finePartitionFunction
+          coarseLaw.bundleClass region (data.toParameterized).fineOrdinaryRegionWeight
+          (data.toParameterized).fineTwistedRegionWeight) =
+      senguptaCompactSurfaceGraphMeasure coarseLaw.partitionFunction coarseLaw.bundleClass region
+        coarseLaw.ordinaryRegionWeight coarseLaw.twistedRegionWeight :=
+  (data.toParameterized).exact_graphMeasure_pushforward region
+
+omit [T2Space CoverGroup] [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup]
+    [Fintype Curve] [Nonempty Curve] [DecidableEq CoarseEdge] [DecidableEq FineEdge] in
+/-- An arbitrary standalone parameterized certificate is normalized at every region, not only at
+its normalizer's selected distinguished region. -/
+theorem parameterized_all_region_nonvacuity
+    (parameterized : TwoDimensionalSenguptaParameterizedCurveBondGraphMeasureRefinementData
+      (coarseSource := coarseSource) (coarseTarget := coarseTarget)
+      (fineSource := fineSource) (fineTarget := fineTarget)
+      coarseLaw.curveWord coarseLaw.bundleClass coarseLaw.ordinaryRegionWeight
+      coarseLaw.twistedRegionWeight coarseLaw.partitionFunction coarseLaw.distinguishedRegion
+      fineCurveWord)
+    (region : Region) :
+    senguptaCompactSurfaceGraphMeasure coarseLaw.partitionFunction coarseLaw.bundleClass region
+        coarseLaw.ordinaryRegionWeight coarseLaw.twistedRegionWeight Set.univ = 1 ∧
+      senguptaCompactSurfaceGraphMeasure parameterized.finePartitionFunction
+        coarseLaw.bundleClass region parameterized.fineOrdinaryRegionWeight
+        parameterized.fineTwistedRegionWeight Set.univ = 1 :=
+  ⟨parameterized.coarseGraphMeasure_univ region, parameterized.fineGraphMeasure_univ region⟩
+
+omit [T2Space CoverGroup] [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup]
+    [Fintype Curve] [Nonempty Curve] [DecidableEq CoarseEdge] [DecidableEq FineEdge] in
+/-- Hostile standalone probe: a nonsurjective refinement cannot satisfy the parameterized
+certificate, independently of any stochastic wrapper. -/
+theorem parameterized_nonsurjective_refinement_blocked
+    (parameterized : TwoDimensionalSenguptaParameterizedCurveBondGraphMeasureRefinementData
+      (coarseSource := coarseSource) (coarseTarget := coarseTarget)
+      (fineSource := fineSource) (fineTarget := fineTarget)
+      coarseLaw.curveWord coarseLaw.bundleClass coarseLaw.ordinaryRegionWeight
+      coarseLaw.twistedRegionWeight coarseLaw.partitionFunction coarseLaw.distinguishedRegion
+      fineCurveWord)
+    (nonsurjective : ¬Function.Surjective
+      (parameterized.curveRefinement.graph.configurationMap (G := CoverGroup))) : False :=
+  nonsurjective parameterized.configurationMap_surjective
+
+omit [T2Space CoverGroup] [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup]
+    [Fintype Curve] [Nonempty Curve] [DecidableEq CoarseEdge] [DecidableEq FineEdge] in
+/-- Hostile standalone probe: changing any all-region weighted pushforward is rejected without
+passing through the stronger stochastic wrapper. -/
+theorem parameterized_changed_pushforward_blocked
+    (parameterized : TwoDimensionalSenguptaParameterizedCurveBondGraphMeasureRefinementData
+      (coarseSource := coarseSource) (coarseTarget := coarseTarget)
+      (fineSource := fineSource) (fineTarget := fineTarget)
+      coarseLaw.curveWord coarseLaw.bundleClass coarseLaw.ordinaryRegionWeight
+      coarseLaw.twistedRegionWeight coarseLaw.partitionFunction coarseLaw.distinguishedRegion
+      fineCurveWord)
+    (region : Region)
+    (changed : Measure.map
+        (parameterized.curveRefinement.graph.configurationMap (G := CoverGroup))
+        (senguptaCompactSurfaceGraphMeasure parameterized.finePartitionFunction
+          coarseLaw.bundleClass region parameterized.fineOrdinaryRegionWeight
+          parameterized.fineTwistedRegionWeight) ≠
+      senguptaCompactSurfaceGraphMeasure coarseLaw.partitionFunction coarseLaw.bundleClass region
+        coarseLaw.ordinaryRegionWeight coarseLaw.twistedRegionWeight) : False :=
+  changed (parameterized.graphMeasure_pushforward region)
+
+omit [T2Space CoverGroup] [Fintype Curve] [Nonempty Curve]
+    [DecidableEq CoarseEdge] [DecidableEq FineEdge] in
 /-- The fine equation-(8.3) measure is normalized and nonzero, rather than an empty surrogate. -/
 theorem fine_measure_nonvacuity (region : Region) :
     senguptaCompactSurfaceGraphMeasure data.finePartitionFunction coarseLaw.bundleClass region

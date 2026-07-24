@@ -48,6 +48,57 @@ variable
       (Region := Region) (Sample := Sample)}
     {fineCurveWord : Curve → List (OrientedEdge FineEdge)}
 
+/-- Parameterized equation-(8.3) graph-measure refinement independent of a physical projection,
+sample law, or pre-existing finite-law wrapper. Both coarse and fine weights and normalizers are
+explicit, and the exact refinement map pushes the fine weighted measure to the coarse one. -/
+structure TwoDimensionalSenguptaParameterizedCurveBondGraphMeasureRefinementData
+    (coarseCurveWord : Curve → List (OrientedEdge CoarseEdge))
+    (bundleClass : CoverGroup)
+    (coarseOrdinaryRegionWeight : Region → (CoarseEdge → CoverGroup) → ℝ≥0∞)
+    (coarseTwistedRegionWeight : CoverGroup → Region → (CoarseEdge → CoverGroup) → ℝ≥0∞)
+    (coarsePartitionFunction : ℝ≥0∞)
+    (distinguishedRegion : Region)
+    (parameterizedFineCurveWord : Curve → List (OrientedEdge FineEdge)) where
+  curveRefinement : TwoDimensionalSenguptaCurveBondRefinementData
+    (coarseSource := coarseSource) (coarseTarget := coarseTarget)
+    (fineSource := fineSource) (fineTarget := fineTarget)
+    (coarseCurveWord := coarseCurveWord) (fineCurveWord := parameterizedFineCurveWord)
+  configurationMap_surjective : Function.Surjective
+    (curveRefinement.graph.configurationMap (G := CoverGroup))
+  coarseGraphWeight_measurable : Measurable
+    (senguptaCompactSurfaceGraphWeight bundleClass distinguishedRegion
+      coarseOrdinaryRegionWeight coarseTwistedRegionWeight)
+  coarsePartitionFunction_eq_lintegral : coarsePartitionFunction =
+    ∫⁻ field, senguptaCompactSurfaceGraphWeight bundleClass distinguishedRegion
+      coarseOrdinaryRegionWeight coarseTwistedRegionWeight field
+      ∂normalizedCompactHaarFiniteProductMeasure (Edge := CoarseEdge) (G := CoverGroup)
+  coarsePartitionFunction_ne_zero : coarsePartitionFunction ≠ 0
+  coarsePartitionFunction_ne_top : coarsePartitionFunction ≠ ⊤
+  fineOrdinaryRegionWeight : Region → (FineEdge → CoverGroup) → ℝ≥0∞
+  fineTwistedRegionWeight : CoverGroup → Region → (FineEdge → CoverGroup) → ℝ≥0∞
+  finePartitionFunction : ℝ≥0∞
+  fineGraphWeight_measurable : Measurable
+    (senguptaCompactSurfaceGraphWeight bundleClass distinguishedRegion
+      fineOrdinaryRegionWeight fineTwistedRegionWeight)
+  finePartitionFunction_eq_lintegral : finePartitionFunction =
+    ∫⁻ field, senguptaCompactSurfaceGraphWeight bundleClass distinguishedRegion
+      fineOrdinaryRegionWeight fineTwistedRegionWeight field
+      ∂normalizedCompactHaarFiniteProductMeasure (Edge := FineEdge) (G := CoverGroup)
+  finePartitionFunction_ne_zero : finePartitionFunction ≠ 0
+  finePartitionFunction_ne_top : finePartitionFunction ≠ ⊤
+  coarseGraphMeasure_univ : ∀ region,
+    senguptaCompactSurfaceGraphMeasure coarsePartitionFunction bundleClass region
+      coarseOrdinaryRegionWeight coarseTwistedRegionWeight Set.univ = 1
+  fineGraphMeasure_univ : ∀ region,
+    senguptaCompactSurfaceGraphMeasure finePartitionFunction bundleClass region
+      fineOrdinaryRegionWeight fineTwistedRegionWeight Set.univ = 1
+  graphMeasure_pushforward : ∀ region,
+    Measure.map (curveRefinement.graph.configurationMap (G := CoverGroup))
+      (senguptaCompactSurfaceGraphMeasure finePartitionFunction bundleClass region
+        fineOrdinaryRegionWeight fineTwistedRegionWeight) =
+    senguptaCompactSurfaceGraphMeasure coarsePartitionFunction bundleClass region
+      coarseOrdinaryRegionWeight coarseTwistedRegionWeight
+
 /-- A fine equation-(8.3) graph measure whose exact configuration pushforward is the coarse one,
 including refinements that split bonds traversed by the selected curves. -/
 structure TwoDimensionalSenguptaCurveBondGraphMeasureRefinementData where
@@ -55,6 +106,8 @@ structure TwoDimensionalSenguptaCurveBondGraphMeasureRefinementData where
     (coarseSource := coarseSource) (coarseTarget := coarseTarget)
     (fineSource := fineSource) (fineTarget := fineTarget)
     (coarseCurveWord := coarseLaw.curveWord) (fineCurveWord := fineCurveWord)
+  configurationMap_surjective : Function.Surjective
+    (curveRefinement.graph.configurationMap (G := CoverGroup))
   projection_measurable : Measurable coarseLaw.projection
   fineOrdinaryRegionWeight : Region → (FineEdge → CoverGroup) → ℝ≥0∞
   fineTwistedRegionWeight : CoverGroup → Region → (FineEdge → CoverGroup) → ℝ≥0∞
@@ -76,7 +129,69 @@ structure TwoDimensionalSenguptaCurveBondGraphMeasureRefinementData where
     senguptaCompactSurfaceGraphMeasure coarseLaw.partitionFunction coarseLaw.bundleClass region
       coarseLaw.ordinaryRegionWeight coarseLaw.twistedRegionWeight
 
+namespace TwoDimensionalSenguptaParameterizedCurveBondGraphMeasureRefinementData
+
+omit [T2Space CoverGroup] [Fintype Curve] [Nonempty Curve]
+    [DecidableEq CoarseEdge] [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in
+/-- The parameterized certificate stores the literal weighted-measure pushforward for every
+complementary distinguished region. -/
+theorem exact_graphMeasure_pushforward
+    {coarseCurveWord : Curve → List (OrientedEdge CoarseEdge)}
+    {bundleClass : CoverGroup}
+    {coarseOrdinaryRegionWeight : Region → (CoarseEdge → CoverGroup) → ℝ≥0∞}
+    {coarseTwistedRegionWeight : CoverGroup → Region → (CoarseEdge → CoverGroup) → ℝ≥0∞}
+    {coarsePartitionFunction : ℝ≥0∞} {distinguishedRegion : Region}
+    (data : TwoDimensionalSenguptaParameterizedCurveBondGraphMeasureRefinementData
+      (coarseSource := coarseSource) (coarseTarget := coarseTarget)
+      (fineSource := fineSource) (fineTarget := fineTarget)
+      coarseCurveWord bundleClass coarseOrdinaryRegionWeight coarseTwistedRegionWeight
+      coarsePartitionFunction distinguishedRegion fineCurveWord)
+    (region : Region) :
+    Measure.map (data.curveRefinement.graph.configurationMap (G := CoverGroup))
+      (senguptaCompactSurfaceGraphMeasure data.finePartitionFunction bundleClass region
+        data.fineOrdinaryRegionWeight data.fineTwistedRegionWeight) =
+    senguptaCompactSurfaceGraphMeasure coarsePartitionFunction bundleClass region
+      coarseOrdinaryRegionWeight coarseTwistedRegionWeight :=
+  data.graphMeasure_pushforward region
+
+end TwoDimensionalSenguptaParameterizedCurveBondGraphMeasureRefinementData
+
 namespace TwoDimensionalSenguptaCurveBondGraphMeasureRefinementData
+
+/-- Forget the physical projection and sample law while retaining the exact coarse/fine weighted
+measures, normalizers, refinement, and pushforward. -/
+noncomputable def toParameterized
+    (data : TwoDimensionalSenguptaCurveBondGraphMeasureRefinementData
+      (coarseLaw := coarseLaw) (coarseSource := coarseSource) (coarseTarget := coarseTarget)
+      (fineSource := fineSource) (fineTarget := fineTarget)
+      (fineCurveWord := fineCurveWord)) :
+    TwoDimensionalSenguptaParameterizedCurveBondGraphMeasureRefinementData
+      (coarseSource := coarseSource) (coarseTarget := coarseTarget)
+      (fineSource := fineSource) (fineTarget := fineTarget)
+      coarseLaw.curveWord coarseLaw.bundleClass coarseLaw.ordinaryRegionWeight
+      coarseLaw.twistedRegionWeight coarseLaw.partitionFunction coarseLaw.distinguishedRegion
+      fineCurveWord where
+  curveRefinement := data.curveRefinement
+  configurationMap_surjective := data.configurationMap_surjective
+  coarseGraphWeight_measurable := coarseLaw.graphWeight_measurable
+  coarsePartitionFunction_eq_lintegral := coarseLaw.partitionFunction_eq_lintegral
+  coarsePartitionFunction_ne_zero := coarseLaw.partitionFunction_ne_zero
+  coarsePartitionFunction_ne_top := coarseLaw.partitionFunction_ne_top
+  fineOrdinaryRegionWeight := data.fineOrdinaryRegionWeight
+  fineTwistedRegionWeight := data.fineTwistedRegionWeight
+  finePartitionFunction := data.finePartitionFunction
+  fineGraphWeight_measurable := data.fineGraphWeight_measurable
+  finePartitionFunction_eq_lintegral := data.finePartitionFunction_eq_lintegral
+  finePartitionFunction_ne_zero := data.finePartitionFunction_ne_zero
+  finePartitionFunction_ne_top := data.finePartitionFunction_ne_top
+  coarseGraphMeasure_univ := coarseLaw.graphMeasure_univ
+  fineGraphMeasure_univ region := by
+    have pushforward := congrArg (fun measure : Measure (CoarseEdge → CoverGroup) =>
+      measure Set.univ) (data.graphMeasure_pushforward region)
+    rw [Measure.map_apply data.curveRefinement.graph.configurationMap_measurable MeasurableSet.univ]
+      at pushforward
+    simpa [coarseLaw.graphMeasure_univ region] using pushforward
+  graphMeasure_pushforward := data.graphMeasure_pushforward
 
 omit [T2Space CoverGroup] [Fintype Curve] [Nonempty Curve]
     [DecidableEq CoarseEdge]
