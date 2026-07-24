@@ -11,8 +11,8 @@ import YangMills.Mathematics.LieGroupRightInvariantComplexLaplacian
 The Driver two-dimensional heat interface is real-valued, while the character spectral development
 uses a complex-valued Laplacian. Both operators are indexed by the same invariant pairing, but the
 current basis-independence packages do not themselves identify the two value types. This file proves
-that taking real parts commutes with each right-invariant derivative by the manifold chain rule,
-constructs smooth complex directional derivatives using tangent-map calculus, propagates coherence
+that taking real and imaginary parts commutes with each right-invariant derivative by the manifold
+chain rule, constructs smooth complex directional derivatives using tangent-map calculus, propagates coherence
 through second derivatives and finite basis sums, and canonically inhabits
 `RightInvariantPairingRealComplexLaplacianCoherenceData` for Laplacians normalized by the same
 pairing. No equality is asserted between unrelated pairings or Laplacians.
@@ -42,6 +42,10 @@ structure RightInvariantPairingRealComplexLaplacianCoherenceData
     (f : SmoothLieGroupComplexFunction (E := E) (G := G)) (g : G),
     realLaplacian.laplacian f.realPart g =
       (complexLaplacian.laplacian f g).re
+  laplacian_imaginaryPart : ∀
+    (f : SmoothLieGroupComplexFunction (E := E) (G := G)) (g : G),
+    realLaplacian.laplacian f.imaginaryPart g =
+      (complexLaplacian.laplacian f g).im
 
 omit [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
 /-- Taking real parts commutes with one right-invariant derivative. -/
@@ -56,6 +60,22 @@ theorem rightInvariantScalarDerivative_realPart
     (f := f.toFun) (g := Complex.reCLM) g Complex.reCLM.mdifferentiableAt
     (f.contMDiff.mdifferentiableAt (by simp))
   rw [Complex.reCLM.hasMFDerivAt.mfderiv] at chain
+  exact congrArg
+    (fun L => L (mulRightInvariantVectorField (modelWithCornersSelf ℝ E) Y g)) chain
+
+omit [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- Taking imaginary parts commutes with one right-invariant derivative. -/
+theorem rightInvariantScalarDerivative_imaginaryPart
+    (f : SmoothLieGroupComplexFunction (E := E) (G := G))
+    (Y : GroupLieAlgebra (modelWithCornersSelf ℝ E) G) (g : G) :
+    rightInvariantScalarDerivative f.imaginaryPart Y g =
+      (rightInvariantComplexDerivative f Y g).im := by
+  unfold rightInvariantScalarDerivative rightInvariantComplexDerivative
+  have chain := mfderiv_comp (I := modelWithCornersSelf ℝ E)
+    (I' := modelWithCornersSelf ℝ ℂ) (I'' := modelWithCornersSelf ℝ ℝ)
+    (f := f.toFun) (g := Complex.imCLM) g Complex.imCLM.mdifferentiableAt
+    (f.contMDiff.mdifferentiableAt (by simp))
+  rw [Complex.imCLM.hasMFDerivAt.mfderiv] at chain
   exact congrArg
     (fun L => L (mulRightInvariantVectorField (modelWithCornersSelf ℝ E) Y g)) chain
 
@@ -102,6 +122,22 @@ theorem rightInvariantScalarSecondDerivative_realPart
     _ = _ := rightInvariantScalarDerivative_realPart
       (smoothRightInvariantComplexDerivative f Y) X g
 
+/-- Taking imaginary parts commutes with the ordered second derivative (`X` after `Y`). -/
+theorem rightInvariantScalarSecondDerivative_imaginaryPart
+    (f : SmoothLieGroupComplexFunction (E := E) (G := G))
+    (X Y : GroupLieAlgebra (modelWithCornersSelf ℝ E) G) (g : G) :
+    rightInvariantScalarSecondDerivative f.imaginaryPart X Y g =
+      (rightInvariantComplexSecondDerivative f X Y g).im := by
+  calc
+    _ = rightInvariantScalarDerivative
+        (smoothRightInvariantComplexDerivative f Y).imaginaryPart X g := by
+      unfold rightInvariantScalarSecondDerivative
+      congr 2
+      funext q
+      exact rightInvariantScalarDerivative_imaginaryPart f Y q
+    _ = _ := rightInvariantScalarDerivative_imaginaryPart
+      (smoothRightInvariantComplexDerivative f Y) X g
+
 /-- Taking real parts commutes with every finite-basis Laplacian. -/
 theorem rightInvariantScalarLaplacianInBasis_realPart
     {rank : ℕ}
@@ -117,6 +153,22 @@ theorem rightInvariantScalarLaplacianInBasis_realPart
   apply Finset.sum_congr rfl
   intro a ha
   exact rightInvariantScalarSecondDerivative_realPart f (basis a) (basis a) g
+
+/-- Taking imaginary parts commutes with every finite-basis Laplacian. -/
+theorem rightInvariantScalarLaplacianInBasis_imaginaryPart
+    {rank : ℕ}
+    (basis : Module.Basis (Fin rank) ℝ
+      (GroupLieAlgebra (modelWithCornersSelf ℝ E) G))
+    (f : SmoothLieGroupComplexFunction (E := E) (G := G)) (g : G) :
+    rightInvariantScalarLaplacianInBasis basis f.imaginaryPart g =
+      (rightInvariantComplexLaplacianInBasis basis f g).im := by
+  unfold rightInvariantScalarLaplacianInBasis rightInvariantComplexLaplacianInBasis
+  change (∑ a, rightInvariantScalarSecondDerivative f.imaginaryPart (basis a) (basis a) g) =
+    Complex.imCLM (∑ a, rightInvariantComplexSecondDerivative f (basis a) (basis a) g)
+  rw [map_sum]
+  apply Finset.sum_congr rfl
+  intro a ha
+  exact rightInvariantScalarSecondDerivative_imaginaryPart f (basis a) (basis a) g
 
 /-- Canonical real/complex coherence for pairing Laplacians normalized by the same invariant
 pairing. Basis independence aligns the real basis with the selected complex basis. -/
@@ -134,6 +186,14 @@ noncomputable def rightInvariantPairingRealComplexLaplacianCoherenceData
         (rightInvariantComplexLaplacianInBasis
           complexLaplacian.orthonormalBasis.basis f g).re
     exact rightInvariantScalarLaplacianInBasis_realPart
+      complexLaplacian.orthonormalBasis.basis f g
+  laplacian_imaginaryPart f g := by
+    rw [realLaplacian.laplacian_eq_inBasis complexLaplacian.orthonormalBasis]
+    change rightInvariantScalarLaplacianInBasis
+      complexLaplacian.orthonormalBasis.basis f.imaginaryPart g =
+        (rightInvariantComplexLaplacianInBasis
+          complexLaplacian.orthonormalBasis.basis f g).im
+    exact rightInvariantScalarLaplacianInBasis_imaginaryPart
       complexLaplacian.orthonormalBasis.basis f g
 
 end

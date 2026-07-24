@@ -36,6 +36,13 @@ theorem exact_smooth_real_part
     f.realPart g = (f g).re :=
   rfl
 
+omit [Group G] [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- The smooth imaginary part retains the exact underlying pointwise imaginary part. -/
+theorem exact_smooth_imaginary_part
+    (f : SmoothLieGroupComplexFunction (E := E) (G := G)) (g : G) :
+    f.imaginaryPart g = (f g).im :=
+  rfl
+
 /-- The same-pairing coherence interface is canonically inhabited. -/
 theorem exact_realComplexLaplacianCoherence_inhabited :
     Nonempty (RightInvariantPairingRealComplexLaplacianCoherenceData
@@ -51,6 +58,15 @@ theorem exact_derivative_real_part
     rightInvariantScalarDerivative f.realPart Y g =
       (rightInvariantComplexDerivative f Y g).re :=
   rightInvariantScalarDerivative_realPart f Y g
+
+omit [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- Exact first-derivative imaginary-part coherence. -/
+theorem exact_derivative_imaginary_part
+    (f : SmoothLieGroupComplexFunction (E := E) (G := G))
+    (Y : GroupLieAlgebra (modelWithCornersSelf ℝ E) G) (g : G) :
+    rightInvariantScalarDerivative f.imaginaryPart Y g =
+      (rightInvariantComplexDerivative f Y g).im :=
+  rightInvariantScalarDerivative_imaginaryPart f Y g
 
 /-- Exact smoothness probe for the complex directional derivative. -/
 theorem exact_complexDerivative_smooth
@@ -68,6 +84,14 @@ theorem exact_secondDerivative_real_part
       (rightInvariantComplexSecondDerivative f X Y g).re :=
   rightInvariantScalarSecondDerivative_realPart f X Y g
 
+/-- Exact ordered-second-derivative imaginary-part coherence. -/
+theorem exact_secondDerivative_imaginary_part
+    (f : SmoothLieGroupComplexFunction (E := E) (G := G))
+    (X Y : GroupLieAlgebra (modelWithCornersSelf ℝ E) G) (g : G) :
+    rightInvariantScalarSecondDerivative f.imaginaryPart X Y g =
+      (rightInvariantComplexSecondDerivative f X Y g).im :=
+  rightInvariantScalarSecondDerivative_imaginaryPart f X Y g
+
 /-- Exact finite-basis real-part coherence. -/
 theorem exact_laplacianInBasis_real_part
     {rank : ℕ}
@@ -78,6 +102,16 @@ theorem exact_laplacianInBasis_real_part
       (rightInvariantComplexLaplacianInBasis basis f g).re :=
   rightInvariantScalarLaplacianInBasis_realPart basis f g
 
+/-- Exact finite-basis imaginary-part coherence. -/
+theorem exact_laplacianInBasis_imaginary_part
+    {rank : ℕ}
+    (basis : Module.Basis (Fin rank) ℝ
+      (GroupLieAlgebra (modelWithCornersSelf ℝ E) G))
+    (f : SmoothLieGroupComplexFunction (E := E) (G := G)) (g : G) :
+    rightInvariantScalarLaplacianInBasis basis f.imaginaryPart g =
+      (rightInvariantComplexLaplacianInBasis basis f g).im :=
+  rightInvariantScalarLaplacianInBasis_imaginaryPart basis f g
+
 /-- Coherence uses the same invariant pairing and exact real part of the complex Laplacian. -/
 theorem exact_laplacian_real_part
     (f : SmoothLieGroupComplexFunction (E := E) (G := G)) (g : G) :
@@ -85,6 +119,14 @@ theorem exact_laplacian_real_part
       (complexLaplacian.laplacian f g).re :=
   (rightInvariantPairingRealComplexLaplacianCoherenceData
     realLaplacian complexLaplacian).laplacian_realPart f g
+
+/-- Pairing coherence also uses the exact imaginary part of the complex Laplacian. -/
+theorem exact_laplacian_imaginary_part
+    (f : SmoothLieGroupComplexFunction (E := E) (G := G)) (g : G) :
+    realLaplacian.laplacian f.imaginaryPart g =
+      (complexLaplacian.laplacian f g).im :=
+  (rightInvariantPairingRealComplexLaplacianCoherenceData
+    realLaplacian complexLaplacian).laplacian_imaginaryPart f g
 
 /-- Hostile coherence probe: a changed real Laplacian value is contradictory. -/
 theorem changed_laplacian_real_part_blocked
@@ -95,6 +137,16 @@ theorem changed_laplacian_real_part_blocked
   rw [← changedReal]
   exact (rightInvariantPairingRealComplexLaplacianCoherenceData
     realLaplacian complexLaplacian).laplacian_realPart f g
+
+/-- Hostile imaginary-part coherence probe: a changed real Laplacian value is contradictory. -/
+theorem changed_laplacian_imaginary_part_blocked
+    (f : SmoothLieGroupComplexFunction (E := E) (G := G)) (g : G)
+    (changed : ℝ) (hchanged : changed ≠ (complexLaplacian.laplacian f g).im)
+    (changedReal : realLaplacian.laplacian f.imaginaryPart g = changed) : False := by
+  apply hchanged
+  rw [← changedReal]
+  exact (rightInvariantPairingRealComplexLaplacianCoherenceData
+    realLaplacian complexLaplacian).laplacian_imaginaryPart f g
 
 end
 
