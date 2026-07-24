@@ -895,6 +895,9 @@ committed before higher layers depend on it.
   changed spectral increment, joint, and weak-Markov laws.
 - [x] Package reusable noncommutative finite right-increment telescoping:
   `(x₀⁻¹x₁)…(xₙ₋₁⁻¹xₙ)=x₀⁻¹xₙ`, including the zero-step endpoint and hostile changed-endpoint probes.
+- [x] Package the ordered increment-history product as a continuous map, prove its exact endpoint
+  formula `B(t₀)⁻¹B(tₙ)`, and use the supplied almost-sure identity start to reconstruct `B(tₙ)`
+  almost surely whenever `t₀ = 0`.
 - [x] Strengthen the stochastic algebra beneath the future full-past theorem: for every finite
   monotone `(n+2)`-time family, package the first `n` consecutive right increments as one measurable
   history vector and prove it independent of the exact final increment by grouping disjoint

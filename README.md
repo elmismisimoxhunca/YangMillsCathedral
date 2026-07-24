@@ -668,9 +668,11 @@ uninhabited heat core has compact Lie-group scope without a compact-simple index
 positive spatially smooth real family pointwise, via `ENNReal.ofReal`, to the unchanged density; it
 requires Driver's exact `∂ₜQ=½ΔQ` sign and factor against that same Laplacian. A further uninhabited
 process realization consumes that same general heat core, starts at the identity almost surely, has almost-surely continuous paths and
-mutually independent stationary right increments with those unchanged density laws. Grouping the
-supplied finite mutual-independence law now proves that every complete first-`n` increment-history
-vector is independent of the exact final increment in a monotone time family. Combining that product
+mutually independent stationary right increments with those unchanged density laws. Ordered
+noncommutative telescoping now packages the increment-history product continuously,
+identifies it with `B(t₀)⁻¹B(tₙ)`, and reconstructs the exact current state almost surely from the
+identity start. The supplied finite mutual-independence law proves that every complete first-`n`
+increment-history vector is independent of the exact final increment in a monotone time family. Combining that product
 law with the spectral increment measure and Fubini derives a weak transition identity for every
 continuous history test and every continuous state extracted from that finite history. This is not
 full-past conditioning or a full Markov theorem. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time

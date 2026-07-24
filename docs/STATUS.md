@@ -5256,7 +5256,10 @@ integration against the spectral probability measure. Product Fubini then derive
 continuous-test weak current-state identity
 `E[φ(B_s)f(B_{s+t})]=E[φ(B_s)P_t f(B_s)]`, with changed-identity hostility. The new
 reusable `finiteRightIncrementProduct_eq_endpoints` first proves the exact ordered noncommutative
-telescope `(x₀⁻¹x₁)…(xₙ₋₁⁻¹xₙ)=x₀⁻¹xₙ`, including zero-step and changed-endpoint probes. The
+telescope `(x₀⁻¹x₁)…(xₙ₋₁⁻¹xₙ)=x₀⁻¹xₙ`, including zero-step and changed-endpoint probes. Its
+process specialization packages the increment-history product as a continuous map, identifies it
+pointwise with `B(t₀)⁻¹B(tₙ)`, and uses the unchanged almost-sure identity start to reconstruct the
+current state `B(tₙ)` whenever `t₀=0`. The
 `TwoDimensionalSelectedLoopFinitePastIncrementIndependence` layer then groups the supplied mutually
 independent coordinates: for every finite monotone time family, the complete vector of its first
 `n` consecutive right increments is independent of the exact final increment. Exact index/formula
