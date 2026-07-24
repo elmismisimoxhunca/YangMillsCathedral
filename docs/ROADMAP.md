@@ -1021,7 +1021,9 @@ committed before higher layers depend on it.
   raw derivative from continuity and conditionally supply continuity from selected Peter–Weyl
   density plus smooth coverage; package the resulting four exact Fourier/differentiability fields;
   use the Banach-valued one-sided fundamental theorem of calculus to derive the Duhamel identity and
-  stochastic endpoint. Then construct the pairing-
+  stochastic endpoint; dependently join those exact four fields to the unchanged source-indexed
+  Driver–Lévy–Sengupta current-strength components and construct the separate conditional
+  source-indexed operator-generator acceptance. Then construct the pairing-
   generator boundary-continuity witness and prove
   comparison of the exact pairing Laplacian with the geometric Laplace–Beltrami operator.
 - [x] Prove that the common Wilson chain forgets only global faithfulness and Wilson normalization to

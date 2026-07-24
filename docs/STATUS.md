@@ -5416,7 +5416,13 @@ fundamental theorem of calculus derives the Duhamel identity, interval integrabi
 and stochastic endpoint. The raw derivative is separated from strong continuity; selected
 continuous Peter–Weyl density plus smooth-dual coverage conditionally supplies the latter. The exact
 four-field Fourier/differentiability acceptance retains finite graph approximation, selected
-continuous density, smooth coverage, and the raw derivative; none is unconditionally inhabited. No graph-core record inhabitant is built: smooth-representative coverage,
+continuous density, smooth coverage, and the raw derivative; none is unconditionally inhabited.
+The exact four-field acceptance is now dependently joined to the unchanged source-indexed
+Driver–Lévy–Sengupta `CurrentStrength` components and conditionally constructs a distinct
+source-indexed all-smooth operator-generator acceptance. It does not inhabit the older
+boundary-continuity strengthening and remains nonfinal. Its dependent source witness retains the
+rank-two descended model and explicitly rejects identification with four-dimensional Euclidean
+spacetime. No graph-core record inhabitant is built: smooth-representative coverage,
 graph density, and the eventual uniform all-domain graph bound remain unconstructed, while Laplace–Beltrami comparison
 remains open. The
 common Wilson chain now forgets only its genuinely stronger global-faithfulness and normalization
