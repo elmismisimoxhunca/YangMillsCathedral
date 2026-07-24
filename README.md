@@ -1233,7 +1233,8 @@ four-dimensional linear model. A distinct strict
 `TwoDimensionalGeneralFactThreeCurrentStrengthSourceIndexedLiteratureAcceptanceData` uses the exact
 strongest witness selected by the unchanged current proposition and dependently requires
 fixed-universe universal general-Fact-3 finite-curve-law acceptance on that witness's embedded base,
-finite law, and density. It forgets to current strength, remains rank two, and rejects a 4D linear
+finite law, and density. Its exact inhabitance audit exposes just that current proof and dependent
+universal witness. It forgets to current strength, remains rank two, and rejects a 4D linear
 model; its general Fact 3 witness remains uninhabited, and unrestricted/full Fact 3 remains open.
 `TwoDimensionalFullPastCurrentStrengthSourceIndexedLiteratureAcceptance` strengthens those exact six
 components with the canonically derived

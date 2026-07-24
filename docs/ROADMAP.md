@@ -1643,8 +1643,8 @@ committed before higher layers depend on it.
   - [x] Add a distinct strict
     `TwoDimensionalGeneralFactThreeCurrentStrengthSourceIndexedLiteratureAcceptanceData`, indexing
     fixed-universe universal general-Fact-3 finite-curve-law acceptance by the exact embedded base,
-    finite law, and density selected from one unchanged current-strength witness. Prove forgetting,
-    rank-two retention, 4D linear separation, and nonempty-candidate hostility. Retain construction
+    finite law, and density selected from one unchanged current-strength witness. Add an exact
+    two-component `Nonempty` audit, then prove forgetting, rank-two retention, 4D linear separation, and nonempty-candidate hostility. Retain construction
     and unrestricted/full Fact 3 as debt.
   - [x] Add `TwoDimensionalFullPastCurrentStrengthSourceIndexedLiteratureAcceptance`, strengthening
     the same flattened six source components with the exact finite-past-cylinder transition

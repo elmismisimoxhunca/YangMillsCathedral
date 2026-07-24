@@ -5820,8 +5820,9 @@ loses this conclusion.
 `TwoDimensionalGeneralFactThreeCurrentStrengthSourceIndexedLiteratureAcceptanceData` is a distinct
 strict strengthening: its `current` proof selects one exact strongest witness, and its dependent
 `generalFactThree` field uses that witness's unchanged embedded Sengupta base, finite law, and
-covering density. It forgets to current strength, retains exact rank two, and rejects a 4D linear
-model. The fixed-universe universal Fact 3 field remains uninhabited and constructs no subdivisions
+covering density. Its exact `Nonempty` audit exposes only the current-strength proof and the
+dependent universal general-Fact-3 witness. It forgets to current strength, retains exact rank two,
+and rejects a 4D linear model. The fixed-universe universal Fact 3 field remains uninhabited and constructs no subdivisions
 or analytic transports; unrestricted/full Fact 3 remains open.
 `TwoDimensionalFullPastCurrentStrengthSourceIndexedLiteratureAcceptance` now adds the exact
 `TwoDimensionalSelectedLoopFinitePastCylinderMarkovData` field to those same six components, indexed
