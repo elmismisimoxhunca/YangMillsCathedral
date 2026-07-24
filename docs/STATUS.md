@@ -5653,6 +5653,13 @@ coarse/fine equation-(8.3) weighted Haar measures, their exact integral normaliz
 mass, configuration-map surjectivity, and their configuration-map pushforward without requiring a physical projection, sample law, or finite-law
 wrapper. Every existing stochastic graph refinement forgets to this parameterized certificate
 without changing its curve refinement, weights, normalizers, or pushforward.
+`TwoDimensionalSenguptaParameterizedSubdivisionGraphMeasureTransportData` now attaches that generic
+certificate to one exact parameterized embedded split-bond subdivision geometry. It stores the normalized covering density-semigroup witness and a
+central fixed twist; its refinement is the geometric one, its ordinary factors are exact, and its
+twisted factor is exact at that fixed central slice. The literal geometric weighted pushforward is
+derived by substitution. Because this reusable layer has no covering projection, kernel membership
+remains an outer finite-law obligation. The certificate remains uninhabited and supplies no
+subdivision or convolution integration.
 `TwoDimensionalSenguptaCurveBondGraphMeasureRefinementData` specializes that premise
 to a literal normalized equation-(8.3) weighted Haar graph measure: its fine normalizer is the exact
 fine graph-weight integral and the fine measure must push forward to the coarse graph measure for

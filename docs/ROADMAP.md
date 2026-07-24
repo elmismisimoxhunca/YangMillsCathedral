@@ -1515,6 +1515,11 @@ committed before higher layers depend on it.
     configuration-map pushforward without a
     physical projection, sample law, or finite-law wrapper; forget every existing stochastic
     refinement to it definitionally.
+  - [x] Attach the parameterized graph-measure refinement to one exact parameterized embedded
+    split-bond geometry, requiring a normalized covering density-semigroup witness, a central fixed
+    twist, the geometric curve refinement, exact ordinary factors, and that exact fixed twisted
+    slice; derive the literal geometric weighted pushforward by substitution. Retain outer
+    projection/kernel membership, construction, convolution integration, and inhabitation as debt.
   - [x] Join that transport to a literal fine equation-(8.3) weighted Haar graph measure and integral
     normalizer: require exact fine-to-coarse weighted-measure pushforward for every distinguished
     region, then derive fine normalization/nonzeroness and the unchanged stochastic finite-curve law.

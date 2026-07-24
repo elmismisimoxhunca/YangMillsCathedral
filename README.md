@@ -1118,8 +1118,12 @@ derive the direct fine-to-coarse weighted refinement and finest-graph stochastic
 stage measures and analytic pushforwards remain supplied, while the graph composite is canonical.
 A parameterized graph-measure certificate now isolates the exact coarse/fine weights, integral
 normalizers, all-region unit mass, surjective curve refinement, and weighted pushforward without a projection, sample law, or
-finite-law wrapper; the existing stochastic certificate forgets to it definitionally. A dependent
-normalized equation-(8.3) layer accepts a literal fine weighted Haar graph measure with its
+finite-law wrapper; the existing stochastic certificate forgets to it definitionally. A specialized
+parameterized certificate now attaches this analytic data to one exact embedded split-bond
+subdivision geometry, stores the normalized covering density-semigroup witness and a central fixed
+twist, identifies its curve refinement and factors, and derives the literal geometric pushforward
+by substitution. It requires only that fixed central twisted slice; kernel membership remains an
+outer projection-bearing finite-law obligation. The certificate remains uninhabited. A dependent normalized equation-(8.3) layer accepts a literal fine weighted Haar graph measure with its
 integral normalizer and requires its pushforward through that exact graph map for every distinguished
 region; fine normalization/nonzeroness and the unchanged complete projected finite-curve law then
 derive. The weighted pushforward remains an obligation—no heat-factor/convolution integration proof,
