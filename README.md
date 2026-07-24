@@ -1142,7 +1142,11 @@ the nonorientable fixed twist are explicit. Negative sign does not force local f
 nonorientable source. The broader pre-simplicial Fact 3 outer candidate is now also concrete: it
 stores two actual embedded pairs, an actual surface homeomorphism, and indexed ordered directed
 curve transport after an endpoint-fixing whole-curve homeomorphic reparametrization, with equality
-only of total simplex area and no direct cell maps. Constructing/certifying preliminary source/target subdivisions tied to that same homeomorphism—and hence full
+only of total simplex area and no direct cell maps. The existing direct-cellwise geometry and its
+matching factor certificate are now separately parameterized by already chosen source and target
+presentations, and every bundled cellwise candidate forgets to this view definitionally. This enables
+future preliminary subdivisions to select fine presentations first without constructing them.
+Constructing/certifying preliminary source/target subdivisions tied to that same homeomorphism—and hence full
 universal Fact 3—remain open; the subclass record is uninhabited. The exact algebraic proof pattern
 through preliminary source and target subdivisions is now derived separately: source subdivision,
 cellwise signed homeomorphism, and reverse target subdivision compose to coarse ordinary and

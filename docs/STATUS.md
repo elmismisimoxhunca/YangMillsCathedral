@@ -5683,7 +5683,11 @@ Negative global sign does not force local face reversal on a nonorientable sourc
 `TwoDimensionalSenguptaGeneralEmbeddedHomeomorphismCandidateData` now formalizes the broader outer
 Fact 3 source class before simplicialization: two actual embedded admissible pairs, an actual surface
 homeomorphism, indexed ordered directed curve transport after an endpoint-fixing whole-curve
-homeomorphic reparametrization, and equality only of total simplex area. It intentionally contains no direct cell equivalences.
+homeomorphic reparametrization, and equality only of total simplex area. It intentionally contains no direct cell equivalences. The exact direct-cellwise geometry and
+matching factor certificate are now also exposed as
+`TwoDimensionalSenguptaCellwiseEmbeddedHomeomorphismGeometryData`, parameterized by already chosen
+source and target presentations; every bundled cellwise candidate forgets to that view
+definitionally. This is infrastructure for preliminary subdivisions, not their construction.
 Construction/certification of preliminary subdivisions tied to that same homeomorphism, full
 universal Fact 3, and inhabitation remain open.
 `TwoDimensionalSenguptaPreliminarySubdivisionHomeomorphismFactorData` now derives the exact algebraic

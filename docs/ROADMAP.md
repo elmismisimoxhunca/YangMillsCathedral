@@ -1539,6 +1539,10 @@ committed before higher layers depend on it.
     simplex area. Deliberately
     require no direct edge/face/vertex/region equivalences. Retain construction and certification of
     preliminary subdivisions and their relation to this exact homeomorphism as debt.
+  - [x] Extract the exact cellwise homeomorphism geometry and matching factor certificate from the
+    bundled target candidate into a parameterized source/target-presentation view. Prove bundled
+    candidates forget to it definitionally, enabling future preliminary subdivisions to choose fine
+    presentations before supplying their cellwise geometry.
   - [x] Derive the exact algebraic Fact 3 proof pattern once preliminary source/target subdivision
     certificates and one cellwise homeomorphism certificate are supplied: ordinary and signed-twist
     factor equalities compose transitively, with the target subdivision using exactly transported
