@@ -381,6 +381,26 @@ theorem twoDimensionalSelectedLoopHeatDifferenceQuotientLinearMap_apply
   rfl
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Exact recovery of the total heat semigroup from its totalized right difference quotient. -/
+theorem twoDimensionalSelectedLoopHeatOperator_eq_add_smul_differenceQuotient
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (t : NNReal) (f : C(G, ℝ)) :
+    twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t f =
+      f + (t : ℝ) • twoDimensionalSelectedLoopHeatDifferenceQuotientLinearMap bridge t f := by
+  by_cases ht : 0 < t
+  · rw [twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap_apply,
+      twoDimensionalSelectedLoopHeatDifferenceQuotientLinearMap_apply bridge t ht f]
+    have htne : (t : ℝ) ≠ 0 := by exact_mod_cast ne_of_gt ht
+    rw [smul_smul, mul_inv_cancel₀ htne, one_smul]
+    abel
+  · have ht0 : t = 0 := le_antisymm (not_lt.mp ht) bot_le
+    subst t
+    simp [twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap,
+      twoDimensionalSelectedLoopHeatDifferenceQuotientLinearMap]
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Contraction gives the elementary time-dependent bound `2 t⁻¹ ‖f‖` for the positive heat
 difference quotient. Its singular time factor is explicit, so this theorem is not the eventual
 uniform graph bound required for generator closure. -/

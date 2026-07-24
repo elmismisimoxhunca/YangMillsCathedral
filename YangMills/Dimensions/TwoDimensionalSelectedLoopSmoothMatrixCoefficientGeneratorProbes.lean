@@ -233,6 +233,19 @@ theorem exact_selectedLoop_smoothMatrixCoefficientCore_generator :
     bridge
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Exact strong right-continuity probe on the designated finite coefficient core only. -/
+theorem exact_selectedLoop_smoothMatrixCoefficientCore_heatOperator_tendsto_zero
+    (f : SmoothLieGroupScalarFunction (E := E) (G := G))
+    (hf : f ∈ smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G)) :
+    Tendsto (fun t : NNReal =>
+      twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t
+        (smoothLieGroupScalarToContinuousLinearMap f))
+      (nhdsWithin 0 (Set.Ioi 0))
+      (nhds (smoothLieGroupScalarToContinuousLinearMap f)) :=
+  twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_heatOperator_tendsto_zero
+    bridge f hf
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Exact pointwise boundedness probe. Its event and bound may depend on the chosen core vector, so
 it is not the uniform graph-bound field of the reduction record. -/
 theorem exact_selectedLoop_smoothMatrixCoefficientCore_eventually_pointwiseNormBound

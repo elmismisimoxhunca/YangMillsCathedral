@@ -142,6 +142,14 @@ theorem expanded_positiveHeatOperator_norm_blocked
     (twoDimensionalSelectedLoopPositiveHeatOperatorLinearMap_norm_le bridge t ht f)) claimed
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Exact algebraic recovery of the total heat operator from the totalized quotient. -/
+theorem exact_heatOperator_eq_add_smul_differenceQuotient
+    (t : NNReal) (f : C(G, ℝ)) :
+    twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t f =
+      f + (t : ℝ) • twoDimensionalSelectedLoopHeatDifferenceQuotientLinearMap bridge t f :=
+  twoDimensionalSelectedLoopHeatOperator_eq_add_smul_differenceQuotient bridge t f
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Exact contraction-derived quotient bound with its singular inverse-time factor exposed. -/
 theorem exact_heatDifferenceQuotientLinearMap_norm_le
     (t : NNReal) (ht : 0 < t) (f : C(G, ℝ)) :

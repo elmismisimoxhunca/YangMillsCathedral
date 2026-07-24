@@ -515,6 +515,45 @@ theorem twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_generator
     bridge coefficients
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Generator convergence and the exact quotient identity make the total continuous-linear heat
+semigroup strongly right-continuous at zero on every test in the finite coefficient core. This does
+not claim strong continuity on all of `C(G, ℝ)`. -/
+theorem twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_heatOperator_tendsto_zero
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (f : SmoothLieGroupScalarFunction (E := E) (G := G))
+    (hf : f ∈ smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G)) :
+    Tendsto (fun t : NNReal =>
+      twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t
+        (smoothLieGroupScalarToContinuousLinearMap f))
+      (nhdsWithin 0 (Set.Ioi 0))
+      (nhds (smoothLieGroupScalarToContinuousLinearMap f)) := by
+  have hcoe : Tendsto (fun t : NNReal => (t : ℝ))
+      (nhdsWithin 0 (Set.Ioi 0)) (nhds 0) := by
+    change Tendsto NNReal.toReal (nhdsWithin 0 (Set.Ioi 0))
+      (nhds ((0 : NNReal) : ℝ))
+    exact NNReal.continuous_coe.continuousAt.mono_left inf_le_left
+  have hquotient :=
+    twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_generator bridge f hf
+  have hscaled : Tendsto (fun t : NNReal =>
+      (t : ℝ) • twoDimensionalSelectedLoopHeatDifferenceQuotientLinearMap bridge t
+        (smoothLieGroupScalarToContinuousLinearMap f))
+      (nhdsWithin 0 (Set.Ioi 0)) (nhds 0) := by
+    simpa using hcoe.smul hquotient
+  have hadd : Tendsto (fun t : NNReal =>
+      smoothLieGroupScalarToContinuousLinearMap f +
+        (t : ℝ) • twoDimensionalSelectedLoopHeatDifferenceQuotientLinearMap bridge t
+          (smoothLieGroupScalarToContinuousLinearMap f))
+      (nhdsWithin 0 (Set.Ioi 0))
+      (nhds (smoothLieGroupScalarToContinuousLinearMap f)) := by
+    simpa only [add_zero] using tendsto_const_nhds.add hscaled
+  apply hadd.congr'
+  filter_upwards [] with t
+  exact (twoDimensionalSelectedLoopHeatOperator_eq_add_smul_differenceQuotient
+    bridge t (smoothLieGroupScalarToContinuousLinearMap f)).symm
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Core convergence supplies an eventual norm bound separately for each finite coefficient test.
 The quantifiers are deliberately pointwise in `f`; this is strictly weaker than the single uniform
 all-domain graph bound required below. -/
