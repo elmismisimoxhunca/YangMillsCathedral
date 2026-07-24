@@ -491,6 +491,8 @@ import YangMills.Mathematics.FiniteGraphTree
 import YangMills.Mathematics.FiniteGraphTreeProbes
 import YangMills.Mathematics.FiniteGraphRefinement
 import YangMills.Mathematics.FiniteGraphRefinementProbes
+import YangMills.Mathematics.FiniteGroupIncrementTelescope
+import YangMills.Mathematics.FiniteGroupIncrementTelescopeProbes
 import YangMills.Mathematics.NormalizedCompactHaarFiniteProduct
 import YangMills.Mathematics.NormalizedCompactHaarFiniteProductProbes
 import YangMills.Mathematics.NormalizedCompactHaarDensitySemigroup

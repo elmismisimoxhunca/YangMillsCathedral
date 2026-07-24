@@ -893,6 +893,8 @@ committed before higher layers depend on it.
   identity `E[φ(B_s)f(B_{s+t})]=E[φ(B_s)P_t f(B_s)]`. Keep conditioning on the full past
   sigma-algebra and stochastic-generator identification as explicit future proof debt, and reject
   changed spectral increment, joint, and weak-Markov laws.
+- [x] Package reusable noncommutative finite right-increment telescoping:
+  `(x₀⁻¹x₁)…(xₙ₋₁⁻¹xₙ)=x₀⁻¹xₙ`, including the zero-step endpoint and hostile changed-endpoint probes.
 - [x] Strengthen the stochastic algebra beneath the future full-past theorem: for every finite
   monotone `(n+2)`-time family, package the first `n` consecutive right increments as one measurable
   history vector and prove it independent of the exact final increment by grouping disjoint

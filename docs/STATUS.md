@@ -5255,7 +5255,9 @@ law hostility. The operator is also identified directly as deterministic right-t
 integration against the spectral probability measure. Product Fubini then derives the exact
 continuous-test weak current-state identity
 `E[φ(B_s)f(B_{s+t})]=E[φ(B_s)P_t f(B_s)]`, with changed-identity hostility. The new
-`TwoDimensionalSelectedLoopFinitePastIncrementIndependence` layer groups the supplied mutually
+reusable `finiteRightIncrementProduct_eq_endpoints` first proves the exact ordered noncommutative
+telescope `(x₀⁻¹x₁)…(xₙ₋₁⁻¹xₙ)=x₀⁻¹xₙ`, including zero-step and changed-endpoint probes. The
+`TwoDimensionalSelectedLoopFinitePastIncrementIndependence` layer then groups the supplied mutually
 independent coordinates: for every finite monotone time family, the complete vector of its first
 `n` consecutive right increments is independent of the exact final increment. Exact index/formula
 probes reject overlap with the final coordinate. The dependent spectral-transition layer identifies
