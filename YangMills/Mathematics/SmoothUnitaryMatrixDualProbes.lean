@@ -69,6 +69,26 @@ theorem smooth_representative_extracts_explicit_presentation
           ρ.toContinuousUnitaryIrreducibleMatrixRepresentation = q :=
   q.hasSmoothRepresentative_iff_exists_representation
 
+/-- Exact automatic-smoothness bridge: coordinate smoothness of every bundled continuous
+representation supplies smooth coverage of every quotient class. -/
+theorem automatic_smooth_coordinates_supply_dual_coverage
+    (automaticSmoothness :
+      AllContinuousUnitaryIrreducibleMatrixRepresentationsHaveSmoothCoordinates
+        (E := E) (G := G)) :
+    ∀ q : UnitaryMatrixDual G, q.HasSmoothRepresentative (E := E) :=
+  all_unitaryMatrixDual_hasSmoothRepresentative_of_all_hasSmoothCoordinates
+    automaticSmoothness
+
+/-- Hostile automatic-smoothness probe: one explicitly nonsmooth coordinate presentation blocks the
+universal automatic-smoothness premise. -/
+theorem missing_smooth_coordinates_blocks_automatic_smoothness
+    (ρ : ContinuousUnitaryIrreducibleMatrixRepresentation G)
+    (missing : ¬ρ.HasSmoothCoordinates (E := E)) :
+    ¬AllContinuousUnitaryIrreducibleMatrixRepresentationsHaveSmoothCoordinates
+      (E := E) (G := G) := by
+  intro automaticSmoothness
+  exact missing (automaticSmoothness ρ)
+
 /-- The exact comparison debt is retained: surjectivity is equivalent to smooth representability of
 every continuous coordinate class. -/
 theorem surjectivity_exactly_matches_smooth_coverage :

@@ -49,6 +49,21 @@ structure SmoothUnitaryIrreducibleMatrixRepresentation
     Fin toContinuousUnitaryIrreducibleMatrixRepresentation.dimension → ℂ)) ∞
   (fun g i j => toContinuousUnitaryIrreducibleMatrixRepresentation.representation g i j)
 
+/-- Exact automatic-smoothness target for one bundled continuous irreducible unitary matrix
+representation on the supplied Lie-group manifold model. -/
+def ContinuousUnitaryIrreducibleMatrixRepresentation.HasSmoothCoordinates
+ (ρ:ContinuousUnitaryIrreducibleMatrixRepresentation G) : Prop :=
+ ContMDiff (modelWithCornersSelf ℝ E)
+  (modelWithCornersSelf ℝ
+   (Fin ρ.dimension → Fin ρ.dimension → ℂ)) ∞
+  (fun g i j => ρ.representation g i j)
+
+/-- Source-facing automatic-smoothness target for every explicitly bundled continuous irreducible
+unitary matrix representation. It is retained as a proposition rather than assumed as an instance. -/
+def AllContinuousUnitaryIrreducibleMatrixRepresentationsHaveSmoothCoordinates : Prop :=
+ ∀ρ:ContinuousUnitaryIrreducibleMatrixRepresentation G,
+  ρ.HasSmoothCoordinates (E:=E)
+
 def SmoothUnitaryIrreducibleMatrixRepresentation.IsEquivalent
  (ρ σ:SmoothUnitaryIrreducibleMatrixRepresentation E G) : Prop :=
  ρ.toContinuousUnitaryIrreducibleMatrixRepresentation.IsEquivalent
@@ -153,6 +168,21 @@ theorem UnitaryMatrixDual.hasSmoothRepresentative_iff_exists_representation
    refine ⟨smoothUnitaryMatrixDualClass ρ, ?_⟩
    rw [smoothUnitaryMatrixDualToUnitaryMatrixDual_class]
    exact hρ
+
+/-- Automatic smoothness of every bundled continuous irreducible unitary matrix representation
+supplies smooth coverage of every continuous coordinate-dual class. -/
+theorem all_unitaryMatrixDual_hasSmoothRepresentative_of_all_hasSmoothCoordinates
+ (automaticSmoothness:
+  AllContinuousUnitaryIrreducibleMatrixRepresentationsHaveSmoothCoordinates
+   (E:=E) (G:=G)) :
+ ∀q:UnitaryMatrixDual G,q.HasSmoothRepresentative (E:=E) := by
+ intro q
+ let selected := unitaryMatrixDualRepresentative q
+ let smoothSelected : SmoothUnitaryIrreducibleMatrixRepresentation E G := {
+  toContinuousUnitaryIrreducibleMatrixRepresentation := selected
+  representation_contMDiff := automaticSmoothness selected }
+ have hsmooth := unitaryMatrixDualClass_hasSmoothRepresentative smoothSelected
+ simpa [smoothSelected, selected] using hsmooth
 
 /-- Surjectivity of the comparison map is exactly the unresolved assertion that every continuous
 coordinate class has a smooth representative. -/
