@@ -5828,9 +5828,10 @@ or analytic transports; unrestricted/full Fact 3 remains open.
 then joins that exact strict source to the four selected-Fourier/rescaled-derivative obligations on
 the identical spectral Brownian bridge chosen by its current witness. Neither field is constructed;
 the existing analytic chain definitionally derives the all-smooth zero-time stochastic-generator
-datum on that same bridge. Probes expose the general candidate class, exact analytic acceptance,
-exact generator endpoint, rank-two/4D contract, and reject omission of either analytic input or the
-derived endpoint.
+datum on that same bridge. A proposition-level implication reaches the existing direct
+operator-generator source acceptance, forgetting general Fact 3 only in the conclusion. Probes
+expose this implication, the general candidate class, exact analytic acceptance, exact generator
+endpoint, rank-two/4D contract, and reject omission of either analytic input or the derived endpoint.
 `TwoDimensionalFullPastCurrentStrengthSourceIndexedLiteratureAcceptance` now adds the exact
 `TwoDimensionalSelectedLoopFinitePastCylinderMarkovData` field to those same six components, indexed
 by their unchanged nested spectral Brownian bridge. Its `Nonempty` audit exposes the old components
