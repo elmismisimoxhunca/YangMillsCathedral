@@ -403,6 +403,51 @@ theorem exact_smoothMatrixCoefficientGraphCore_reduction_core
       smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G) :=
   rfl
 
+omit [FiniteDimensional ℝ E] [IsTopologicalGroup G] [T2Space G]
+    [SecondCountableTopology G] [MeasurableSpace G] [BorelSpace G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Exact Fourier-facing graph-density probe: one finite synthesis must approximate both graph
+coordinates simultaneously. -/
+theorem exact_smoothMatrixCoefficient_graphDense_iff_finiteSynthesis_graphApproximation :
+    IsLinearMapDomainGraphDenseCore
+      smoothLieGroupScalarToContinuousLinearMap
+      (twoDimensionalSelectedLoopPairingGeneratorLinearMap
+        (realLaplacian := realLaplacian))
+      (smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G)) ↔
+    ∀ f : SmoothLieGroupScalarFunction (E := E) (G := G),
+      ∀ ε : ℝ, 0 < ε →
+        ∃ coefficients : SmoothUnitaryMatrixCoefficientRealCoefficients E G,
+          ‖smoothLieGroupScalarToContinuousLinearMap f -
+              smoothLieGroupScalarToContinuousLinearMap
+                (smoothUnitaryMatrixCoefficientRealSynthesis coefficients)‖ < ε ∧
+            ‖twoDimensionalSelectedLoopPairingGeneratorLinearMap
+                (realLaplacian := realLaplacian) f -
+              twoDimensionalSelectedLoopPairingGeneratorLinearMap
+                (realLaplacian := realLaplacian)
+                (smoothUnitaryMatrixCoefficientRealSynthesis coefficients)‖ < ε :=
+  smoothMatrixCoefficient_graphDense_iff_finiteSynthesis_graphApproximation
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Hostile Fourier-facing debt probe: failure of simultaneous finite synthesis approximation blocks
+the coefficient graph-core record. -/
+theorem missing_finiteSynthesis_graphApproximation_blocks_reduction
+    (missing : ¬ ∀ f : SmoothLieGroupScalarFunction (E := E) (G := G),
+      ∀ ε : ℝ, 0 < ε →
+        ∃ coefficients : SmoothUnitaryMatrixCoefficientRealCoefficients E G,
+          ‖smoothLieGroupScalarToContinuousLinearMap f -
+              smoothLieGroupScalarToContinuousLinearMap
+                (smoothUnitaryMatrixCoefficientRealSynthesis coefficients)‖ < ε ∧
+            ‖twoDimensionalSelectedLoopPairingGeneratorLinearMap
+                (realLaplacian := realLaplacian) f -
+              twoDimensionalSelectedLoopPairingGeneratorLinearMap
+                (realLaplacian := realLaplacian)
+                (smoothUnitaryMatrixCoefficientRealSynthesis coefficients)‖ < ε) :
+    ¬ Nonempty (TwoDimensionalSelectedLoopSmoothMatrixCoefficientGraphCoreData bridge) := by
+  rintro ⟨data⟩
+  apply missing
+  exact smoothMatrixCoefficient_graphDense_iff_finiteSynthesis_graphApproximation.mp
+    data.graphDense
+
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Exact debt probe: every coefficient-specific reduction supplies graph density for the fixed
 matrix-coefficient range. -/

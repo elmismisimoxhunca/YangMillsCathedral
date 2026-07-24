@@ -753,6 +753,39 @@ theorem twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_exists_eventually
     (twoDimensionalSelectedLoopHeatDifferenceQuotientLinearMap bridge) f
     (twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_generator bridge f hf)
 
+omit [FiniteDimensional ℝ E] [IsTopologicalGroup G] [T2Space G]
+    [SecondCountableTopology G] [MeasurableSpace G] [BorelSpace G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Smooth graph density of the designated core is exactly simultaneous uniform approximation of a
+smooth test and its pairing generator by one finite real coefficient synthesis. This source-facing
+form exposes the precise Fourier approximation theorem still required. -/
+theorem smoothMatrixCoefficient_graphDense_iff_finiteSynthesis_graphApproximation :
+    IsLinearMapDomainGraphDenseCore
+      smoothLieGroupScalarToContinuousLinearMap
+      (twoDimensionalSelectedLoopPairingGeneratorLinearMap
+        (realLaplacian := realLaplacian))
+      (smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G)) ↔
+    ∀ f : SmoothLieGroupScalarFunction (E := E) (G := G),
+      ∀ ε : ℝ, 0 < ε →
+        ∃ coefficients : SmoothUnitaryMatrixCoefficientRealCoefficients E G,
+          ‖smoothLieGroupScalarToContinuousLinearMap f -
+              smoothLieGroupScalarToContinuousLinearMap
+                (smoothUnitaryMatrixCoefficientRealSynthesis coefficients)‖ < ε ∧
+            ‖twoDimensionalSelectedLoopPairingGeneratorLinearMap
+                (realLaplacian := realLaplacian) f -
+              twoDimensionalSelectedLoopPairingGeneratorLinearMap
+                (realLaplacian := realLaplacian)
+                (smoothUnitaryMatrixCoefficientRealSynthesis coefficients)‖ < ε := by
+  constructor
+  · intro graphDense f ε hε
+    obtain ⟨z, hz, hJ, hA⟩ := graphDense f ε hε
+    obtain ⟨coefficients, rfl⟩ := hz
+    exact ⟨coefficients, hJ, hA⟩
+  · intro finiteApproximation f ε hε
+    obtain ⟨coefficients, hJ, hA⟩ := finiteApproximation f ε hε
+    exact ⟨smoothUnitaryMatrixCoefficientRealSynthesis coefficients,
+      ⟨coefficients, rfl⟩, hJ, hA⟩
+
 /-- Exact remaining obligations after selecting the finite real smooth matrix-coefficient range,
 deriving its real pairing-Laplacian eigenvalues, and proving its generator convergence. -/
 structure TwoDimensionalSelectedLoopSmoothMatrixCoefficientGraphCoreData
@@ -826,6 +859,37 @@ theorem nonempty_iff_graphDense_and_eventualGraphBound
       graphBoundConstant := C
       graphBoundConstant_nonneg := hC
       eventual_graphBound := graphBound }⟩
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Fourier-facing inhabitance audit: the graph-core record is inhabited exactly when every smooth
+test and its pairing generator have one simultaneous finite coefficient approximation and one
+uniform eventual all-domain graph bound is supplied. -/
+theorem nonempty_iff_finiteSynthesis_graphApproximation_and_eventualGraphBound
+    {bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)} :
+    Nonempty (TwoDimensionalSelectedLoopSmoothMatrixCoefficientGraphCoreData bridge) ↔
+      (∀ f : SmoothLieGroupScalarFunction (E := E) (G := G),
+        ∀ ε : ℝ, 0 < ε →
+          ∃ coefficients : SmoothUnitaryMatrixCoefficientRealCoefficients E G,
+            ‖smoothLieGroupScalarToContinuousLinearMap f -
+                smoothLieGroupScalarToContinuousLinearMap
+                  (smoothUnitaryMatrixCoefficientRealSynthesis coefficients)‖ < ε ∧
+              ‖twoDimensionalSelectedLoopPairingGeneratorLinearMap
+                  (realLaplacian := realLaplacian) f -
+                twoDimensionalSelectedLoopPairingGeneratorLinearMap
+                  (realLaplacian := realLaplacian)
+                  (smoothUnitaryMatrixCoefficientRealSynthesis coefficients)‖ < ε) ∧
+        ∃ C : ℝ, 0 ≤ C ∧
+          ∀ᶠ t : NNReal in nhdsWithin 0 (Set.Ioi 0),
+            ∀ f : SmoothLieGroupScalarFunction (E := E) (G := G),
+              ‖twoDimensionalSelectedLoopHeatDifferenceQuotientLinearMap bridge t
+                  (smoothLieGroupScalarToContinuousLinearMap f)‖ ≤
+                C * (‖smoothLieGroupScalarToContinuousLinearMap f‖ +
+                  ‖twoDimensionalSelectedLoopPairingGeneratorLinearMap
+                    (realLaplacian := realLaplacian) f‖) := by
+  rw [nonempty_iff_graphDense_and_eventualGraphBound,
+    smoothMatrixCoefficient_graphDense_iff_finiteSynthesis_graphApproximation]
 
 /-- The coefficient-specific remaining data canonically fills the generic graph-core record; both its
 core convergence and coefficient Laplacian identification are now derived rather than caller supplied. -/
