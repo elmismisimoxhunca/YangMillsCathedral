@@ -788,7 +788,10 @@ canonically reaches the existing all-smooth stochastic generator endpoint. A str
 Duhamel acceptance replaces raw integrability by global strong continuity of the total heat
 semigroup; a reusable contraction-semigroup theorem derives that continuity from all-test right
 continuity at zero, hence conditionally from coefficient-image density. Continuity then derives
-interval integrability, but no required density or Duhamel-identity witness is constructed. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
+interval integrability. Finite graph approximation plus a separately named ambient smooth-function
+density target derives the required coefficient-image density. An exact three-field analytic
+acceptance now retains precisely finite graph approximation, ambient smooth density, and the
+Duhamel identity; no witness for any of those fields is constructed. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
 marginals are derived, including exact equality at the selected area with the sampled loop-holonomy
 law. The metric bridge now transports the exact invariant pairing to every group tangent fiber by
 left Maurer–Cartan trivialization and proves its inverse, symmetry, strict positivity, and left/right

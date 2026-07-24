@@ -1011,8 +1011,10 @@ committed before higher layers depend on it.
   approximation plus inhabited Duhamel data as an exact analytic acceptance reaching the stochastic
   endpoint. Also package a stronger continuous-Duhamel acceptance, derive global strong continuity
   from all-test right continuity at zero for the contraction semigroup, and derive that premise
-  conditionally from coefficient-image density; then construct the missing density and Duhamel-
-  identity witnesses needed for an inhabitant of either route and the pairing-
+  conditionally from coefficient-image density; derive that coefficient density from finite graph
+  approximation plus a separately named ambient smooth-function density target; package the exact
+  three remaining fields as finite graph approximation, ambient smooth density, and the Duhamel
+  identity; then construct those missing witnesses needed for an inhabitant and the pairing-
   generator boundary-continuity witness and prove
   comparison of the exact pairing Laplacian with the geometric Laplace–Beltrami operator.
 - [x] Prove that the common Wilson chain forgets only global faithfulness and Wilson normalization to
