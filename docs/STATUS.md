@@ -5292,7 +5292,15 @@ of a measurable set under an explicitly increasing finite evaluation vector. Adj
 `s+t` gives a proved monotone timeline, so the bounded-measurable finite-history theorem applied to
 the cylinder indicator constructs every basic set-integral identity. Thus the unchanged spectral
 Brownian bridge now constructs exact weak and conditional full-past Markov semantics; stochastic-
-generator identification remains separate future proof debt. The
+generator identification remains separate future proof debt.
+`HasOperatorGeneratorAtZero` now states that debt exactly as the right-hand `NNReal` difference-
+quotient limit of the heat operator on every smooth test, with target one half of the unchanged
+pairing Laplacian. `TwoDimensionalSelectedLoopStochasticGeneratorAtZeroData` remains uninhabited;
+from any supplied boundary limit, the exact positive-increment expectation formula derives
+`HasStochasticRightIncrementGeneratorAtZero` at every deterministic base time, and one base time
+proves the converse, yielding exact equivalence. A changed-limit probe
+uses uniqueness of limits. Positive-time heat differentiation is explicitly not treated as a proof
+at time zero, and Laplace–Beltrami comparison remains open. The
 common Wilson chain now forgets only its genuinely stronger global-faithfulness and normalization
 fields to construct Driver's exact Villain common heat chain. Uninhabited
 `TwoDimensionalSpectralVillainWeakLimitBridgeData` ties the unchanged Theorem 7.2 contract to the

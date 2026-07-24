@@ -693,7 +693,14 @@ past without a countability assumption. `TwoDimensionalSelectedLoopFinitePastCyl
 is now constructed from the bounded-measurable ordered-history theorem: each cylinder is represented
 by an explicitly sorted finite evaluation vector, extended by `0`, `s`, and `s+t`, and tested by its
 measurable indicator. The generic pi-system closure therefore derives both exact full-past semantics
-from the unchanged spectral Brownian bridge without an additional stochastic field. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
+from the unchanged spectral Brownian bridge without an additional stochastic field. Genuine
+zero-time stochastic-generator semantics are now stated separately as the right-hand difference-
+quotient limit on every smooth test. `TwoDimensionalSelectedLoopStochasticGeneratorAtZeroData`
+retains that boundary regularity as an explicit uninhabited obligation and proves, via the exact
+operator/increment expectation identity, the corresponding Brownian right-increment generator at
+every deterministic base time; choosing one base time proves the converse, so the two zero-time
+semantics are equivalent. Positive-time heat differentiation is not misused to fill this
+zero-time gap. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
 marginals are derived, including exact equality at the selected area with the sampled loop-holonomy
 law. The metric bridge now transports the exact invariant pairing to every group tangent fiber by
 left Maurer–Cartan trivialization and proves its inverse, symmetry, strict positivity, and left/right

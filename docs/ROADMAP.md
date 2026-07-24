@@ -922,6 +922,15 @@ committed before higher layers depend on it.
   adjoin `0`, `s`, and `s+t`, prove the resulting timeline monotone, and apply the existing bounded-
   measurable finite-history theorem to its indicator. This constructs the basic set-integral field
   and hence both full-past semantics from the unchanged spectral Brownian bridge.
+- [x] Separate genuine zero-time generator semantics from positive-time heat differentiation. State
+  the right-hand `NNReal` difference-quotient limit on smooth tests as
+  `HasOperatorGeneratorAtZero`, retain its boundary regularity as explicit
+  `TwoDimensionalSelectedLoopStochasticGeneratorAtZeroData`, and prove that the unchanged
+  operator/right-increment expectation identity transports it to the stochastic Brownian generator
+  at every deterministic base time, and prove the converse from one base time so the two semantics
+  are equivalent. Do not infer or inhabit the zero-time limit from positive-time derivatives alone.
+- [ ] Construct the zero-time operator-generator witness from spectral/Casimir estimates and prove
+  comparison of the exact pairing Laplacian with the geometric Laplace–Beltrami operator.
 - [x] Prove that the common Wilson chain forgets only global faithfulness and Wilson normalization to
   construct Driver's exact Villain common heat chain. Attach the still-uninhabited Theorem 7.2
   weak-limit contract to the literal spectral `Q_{ε²}` action at one positive spacing, deriving
