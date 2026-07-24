@@ -1017,8 +1017,10 @@ committed before higher layers depend on it.
   identity; conditionally discharge ambient smooth density from selected continuous Peter–Weyl
   density plus smooth-dual coverage; then construct the remaining Fourier/smooth-coverage, finite-
   graph, and Duhamel witnesses needed for an inhabitant. Alternatively construct global strong
-  continuity plus the exact right derivative of every unit-rescaled heat trajectory; use the
-  Banach-valued one-sided fundamental theorem of calculus to derive the Duhamel identity and the
+  continuity plus the exact right derivative of every unit-rescaled heat trajectory; separate the
+  raw derivative from continuity and conditionally supply continuity from selected Peter–Weyl
+  density plus smooth coverage; package the resulting four exact Fourier/differentiability fields;
+  use the Banach-valued one-sided fundamental theorem of calculus to derive the Duhamel identity and
   stochastic endpoint. Then construct the pairing-
   generator boundary-continuity witness and prove
   comparison of the exact pairing Laplacian with the geometric Laplace–Beltrami operator.

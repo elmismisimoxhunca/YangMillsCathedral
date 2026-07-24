@@ -796,8 +796,11 @@ discharges the ambient smooth-density field, but no finite graph approximation, 
 or unconditional Fourier/smooth-coverage witness is constructed. A separate differentiability-facing
 route requires global strong continuity plus the exact right derivative of each unit-rescaled heat
 trajectory; the Banach-valued one-sided fundamental theorem of calculus then derives the Duhamel
-identity, interval integrability, graph bound, and stochastic endpoint. No such derivative datum is
-constructed. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
+identity, interval integrability, graph bound, and stochastic endpoint. The raw derivative is now
+separated from strong continuity: selected continuous Peter–Weyl density plus smooth-dual coverage
+supplies the latter. A four-field Fourier/differentiability acceptance retains exactly finite graph
+approximation, selected continuous density, smooth coverage, and the raw rescaled derivative; none
+is unconditionally inhabited. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
 marginals are derived, including exact equality at the selected area with the sampled loop-holonomy
 law. The metric bridge now transports the exact invariant pairing to every group tangent fiber by
 left Maurer–Cartan trivialization and proves its inverse, symmetry, strict positivity, and left/right
