@@ -1396,8 +1396,11 @@ committed before higher layers depend on it.
     `h` or `h⁻¹`. Retain construction of those subdivisions as debt.
   - [x] Dependently join the exact embedded finite law, selected geometric comparison, curve-fixed
     universal Fact 2 subclass, and cellwise-compatible universal Fact 3 subclass on one exact base,
-    covering density, and fixed bundle class. Keep this strongest current compact finite-law record
-    explicitly nonfinal.
+    covering density, and fixed bundle class. Keep this prior chain explicitly nonfinal.
+  - [x] Dependently strengthen that exact chain with universal embedded split-curve-bond Fact 2
+    certification on its unchanged embedded base and covering density. Keep this strongest current
+    compact finite-law record explicitly nonfinal pending unrestricted-universe/full Fact 2, general
+    Fact 3, construction, and inhabitation.
   - [x] Dependently require closed triangular incidence for the exact finite-law heat-factor base and
     the exact fine/transported candidates used by one Facts 2–3 bridge. Keep this combined bridge
     separate from the augmented record until embedded and universal source semantics are available.

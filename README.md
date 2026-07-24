@@ -1001,8 +1001,11 @@ cellwise signed homeomorphism, and reverse target subdivision compose to coarse 
 `h`/`h⁻¹` twisted factor equalities. Constructing the required subdivisions remains open. The new
 `TwoDimensionalSenguptaEmbeddedUniversalFiniteLawAcceptanceData` dependently joins the exact embedded
 finite law, selected geometric comparison, curve-fixed Fact 2 subclass, and cellwise-compatible Fact
-3 subclass on the same base, density, and fixed twist. It is the strongest current compact finite-law
-record but remains explicitly nonfinal.
+3 subclass on the same base, density, and fixed twist. The stronger
+`TwoDimensionalSenguptaSplitBondEmbeddedUniversalFiniteLawAcceptanceData` retains that entire chain
+and dependently adds the universal embedded split-curve-bond Fact 2 record on its exact embedded base
+and covering density. It is the strongest current compact finite-law record but remains explicitly
+nonfinal: unrestricted-universe/full Fact 2 and general Fact 3 remain open.
 Facts 0–1 are now explicit uninhabited
 fields requiring distinguished-face and positive same-total area-splitting invariance. A separate
 one-step Fact 2 building block compares one coarse/fine candidate pair on one normalized nonzero
