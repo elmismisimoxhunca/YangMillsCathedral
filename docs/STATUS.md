@@ -5355,8 +5355,10 @@ inclusion, and conditional nontriviality. Finite complex matrix-weighted sums fr
 smooth presentation have canonical finitely supported realification coefficients using both
 component generators, with exact synthesis, pointwise real-part, and continuous-core-image theorems.
 Every selected continuous-dual block with a retained `HasSmoothRepresentative` witness is now
-transported through both basis-change matrices to one such smooth realification, without inferring
-smooth coverage of all dual classes. An explicit reusable
+transported through both basis-change matrices to one such smooth realification. Explicit all-class
+smooth coverage extends this to every finite-support selected synthesis; combined with selected
+continuous Peter–Weyl density, it proves uniform density of the real core image. Faithful finite
+matrix coordinates discharge only the density premise, not the still-open smooth coverage premise. An explicit reusable
 coefficientwise Casimir bridge prevents the existing trace eigen-equation from being silently
 promoted to matrix entries; in isolation it remains uninhabited, while any supplied instance
 canonically yields both real-component Casimir equations, eigenvalue uniqueness from a diagonal
@@ -5374,8 +5376,10 @@ matching the ambient family and maps exactly to the positive ambient selected-lo
 evolution families are proved to remain in the unchanged algebraic coefficient core. Convergence
 and the exact quotient identity also yield strong right-continuity at zero on every finite coefficient
 core test, while contractivity extends it to the uniform closure of the continuous core image without
-claiming that image dense in all `C(G, ℝ)`. A future uniform Peter–Weyl density theorem for this
-exact selected smooth image would extend strong continuity to every continuous function. The open
+claiming that image dense in all `C(G, ℝ)`. Selected continuous Peter–Weyl density plus explicit
+smooth coverage of every continuous-dual class now proves exact density of that real image and
+extends strong continuity to every continuous function. Faithful finite matrix coordinates supply
+the continuous-density premise, while universal smooth coverage remains open. The open
 graph-density field alone would instead extend this zeroth-order continuity to every smooth test; the uniform graph bound remains separately necessary
 for all-smooth generator convergence. Core convergence also yields eventual norm and graph-relative bounds separately for each test; their vector-
 dependent constants and events realize only `∀ f, ∃ C_f, ∀ᶠ t`, not the required uniform

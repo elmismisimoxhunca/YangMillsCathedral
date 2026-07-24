@@ -743,7 +743,10 @@ both real and imaginary generators, with exact synthesis, pointwise value, and c
 membership. For every selected continuous-dual block carrying an explicit
 `HasSmoothRepresentative` witness, basis-aware pullback through both coordinate-change matrices now
 transports its full weighted synthesis to such a smooth presentation, so its real part lies in the
-same smooth and continuous core images. No universal smooth-dual coverage is inferred. A reusable coefficientwise
+same smooth and continuous core images. Explicit all-class smooth coverage extends this to every
+finite-support selected synthesis; together with selected continuous Peter–Weyl density it proves
+uniform density of the real core image. Faithful finite matrix coordinates supply only the density
+premise, while universal smooth-dual coverage remains open. A reusable coefficientwise
 Casimir bridge explicitly strengthens the trace equation to every matrix coordinate; in isolation it
 remains an honest uninhabited interface, and when supplied canonical real/complex coherence proves
 both real-component eigenvalue equations and finite synthesis linearity for the pairing Laplacian. Direct matrix-coefficient orthogonality now proves
@@ -759,8 +762,10 @@ quotient maps exactly to the ambient selected-loop difference quotient. Both fin
 and every positive coefficient quotient remain inside that same algebraic core. Core convergence and the exact quotient identity also prove strong right-continuity at zero of the
 total heat semigroup on every finite coefficient test; contractivity extends this to the uniform-norm
 closure of the continuous coefficient-core image, without asserting that closure is all of
-`C(G, ℝ)`. A future uniform Peter–Weyl density theorem for this exact selected smooth image would
-therefore give strong right-continuity on every continuous function. Independently, the still-open
+`C(G, ℝ)`. Selected continuous Peter–Weyl density together with explicit smooth coverage of every
+continuous-dual class now proves that exact real-image density and therefore strong right-continuity
+on every continuous function. Faithful finite matrix coordinates discharge the first premise; the
+universal smooth-representative premise remains open. Independently, the still-open
 smooth graph-density field by itself would place every smooth test in that closure and hence yield all-smooth strong heat continuity; the separate uniform graph bound remains
 necessary for all-smooth generator convergence. Core convergence also gives both an eventual norm bound and a
 graph-relative bound separately for each such test. Their constant and eventual set may depend on the test, so they deliberately do not promote
