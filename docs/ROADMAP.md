@@ -1527,6 +1527,11 @@ committed before higher layers depend on it.
     nonorientability. Require every candidate to receive a normalized equation-(8.3) graph-measure pushforward with its own exact ordinary and
     fixed-twist covering heat factors, and require candidate nonemptiness. Retain construction, the
     heat-kernel integration proof, unrestricted universe scope, and full Fact 2 as debt.
+  - [x] Extract split-curve-bond subdivision geometry into a parameterized coarse/fine embedded view
+    independent of finite-law and heat-factor wrappers, retaining exact coarse/fine curve words,
+    geometric edge-word realization, face partitions, signed boundary chains, regions, and
+    orientability. Prove the existing finite-law geometry forgets to this view exactly, preparing
+    source and target preliminary subdivisions for general Fact 3.
   - [x] State universal acceptance for the directly cellwise-compatible embedded Fact 3 subclass at
     fixed universe levels using a concrete bundled target/homeomorphism candidate type, exact
     total-area, independent face-orientation, and global-sign semantics, a matching factor

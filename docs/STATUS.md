@@ -5673,6 +5673,11 @@ certificate whose ordinary and fixed-twist weights are its own boundary-conditio
 factors; candidate nonemptiness blocks vacuous quantification, and each certificate reconstructs the
 one-pair bridge. The record remains uninhabited; the heat-kernel integration proof, construction,
 unrestricted universe scope, and full Fact 2 remain open.
+`TwoDimensionalSenguptaParameterizedEmbeddedCurveBondSubdivisionGeometryData` now exposes the exact
+split-bond geometry with explicit coarse/fine embedded presentations and no finite-law or heat-factor
+wrapper. The existing one-pair geometry forgets to it exactly, preserving coarse/fine curve words,
+edge-word realization, face partitions, signed chains, regions, and orientability. This prepares
+both sides of a future preliminary-subdivision Fact 3 certificate but constructs neither side.
 `TwoDimensionalSenguptaUniversalCellwiseEmbeddedHomeomorphismData` now states universal acceptance
 for the directly cellwise-compatible embedded Fact 3 subclass at fixed universe levels. Its concrete
 bundled candidates contain targets and homeomorphisms with direct cell equivalences, exact mapped

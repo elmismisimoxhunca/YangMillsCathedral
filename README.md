@@ -1134,7 +1134,10 @@ but no weighted pushforward. Fine nonorientability therefore forces the same fix
 condition already attached to the base. Every candidate must
 then receive an equation-(8.3) graph-measure certificate with its own exact ordinary and fixed-twist
 heat factors; candidate nonemptiness blocks empty-class vacuity. The heat-kernel integration proof,
-construction, and unrestricted universe-polymorphic/full Fact 2 remain open. Universal acceptance for the directly cellwise-compatible embedded Fact 3 subclass is now separately
+construction, and unrestricted universe-polymorphic/full Fact 2 remain open. The exact split-bond
+geometry is now also parameterized directly by coarse/fine embedded presentations, independent of
+finite-law and heat-factor wrappers; the existing geometry forgets to it without changing curve
+words, face partitions, signed chains, regions, or orientability. Universal acceptance for the directly cellwise-compatible embedded Fact 3 subclass is now separately
 specified at fixed universe levels: a concrete bundled candidate covers targets and homeomorphisms
 with direct edge/face equivalences, and every candidate must receive a factor certificate with the
 same global sign, per-face simplex-orientation choices, and equivalences. Candidate nonemptiness and
