@@ -979,7 +979,9 @@ committed before higher layers depend on it.
   smooth-representative witness through both basis-change matrices to this realification. Under an
   explicit all-class smooth-coverage premise, extend this to every finite-support selected synthesis
   and transfer selected continuous Peter–Weyl density to uniform density of the real core image;
-  retain smooth coverage and general Peter–Weyl density rather than claiming them unconditionally.
+  reduce smooth coverage to a sufficient source-facing automatic-smooth-coordinate proposition for
+  every bundled continuous irreducible unitary representation, and retain that proposition and
+  general Peter–Weyl density rather than claiming them unconditionally.
 - [x] Isolate the stronger coefficientwise Casimir/Laplacian identification as an explicit
   uninhabited bridge and conditionally derive the real/imaginary eigenvalue equations and exact
   finite-synthesis pairing-Laplacian action.
@@ -994,7 +996,9 @@ committed before higher layers depend on it.
   continuity at zero there from the exact quotient identity, extend it by contractivity to the
   uniform closure of the continuous coefficient-core image without assuming density, use selected
   continuous Peter–Weyl density plus all-class smooth coverage to derive exact image density and
-  strong continuity on every continuous test (with a faithful-matrix specialization), and prove that the still-open graph-density field alone would extend this zeroth-order continuity to every smooth
+  strong continuity on every continuous test, with faithful-matrix, automatic-smoothness, and
+  faithful-plus-automatic-smoothness specializations, and prove that the still-open graph-density
+  field alone would extend this zeroth-order continuity to every smooth
   test, and derive pointwise eventual norm and graph-relative bounds in the exact `∀ f, ∃ C_f, ∀ᶠ t` order, and derive the
   coefficient-specific graph-core reduction without conflating those pointwise bounds with the
   required `∃ C, ∀ᶠ t, ∀ f` uniform all-domain bound.

@@ -5358,7 +5358,9 @@ Every selected continuous-dual block with a retained `HasSmoothRepresentative` w
 transported through both basis-change matrices to one such smooth realification. Explicit all-class
 smooth coverage extends this to every finite-support selected synthesis; combined with selected
 continuous Peter–Weyl density, it proves uniform density of the real core image. Faithful finite
-matrix coordinates discharge only the density premise, not the still-open smooth coverage premise. An explicit reusable
+matrix coordinates discharge only the density premise. A source-facing automatic-smooth-coordinate
+proposition for every bundled continuous irreducible unitary representation now discharges smooth
+coverage, but that proposition remains explicit and uninhabited. An explicit reusable
 coefficientwise Casimir bridge prevents the existing trace eigen-equation from being silently
 promoted to matrix entries; in isolation it remains uninhabited, while any supplied instance
 canonically yields both real-component Casimir equations, eigenvalue uniqueness from a diagonal
@@ -5379,7 +5381,9 @@ core test, while contractivity extends it to the uniform closure of the continuo
 claiming that image dense in all `C(G, ℝ)`. Selected continuous Peter–Weyl density plus explicit
 smooth coverage of every continuous-dual class now proves exact density of that real image and
 extends strong continuity to every continuous function. Faithful finite matrix coordinates supply
-the continuous-density premise, while universal smooth coverage remains open. The open
+the continuous-density premise. Automatic smoothness of every bundled continuous irreducible
+unitary coordinate representation is now a sufficient named route to smooth coverage, but remains
+open. The open
 graph-density field alone would instead extend this zeroth-order continuity to every smooth test; the uniform graph bound remains separately necessary
 for all-smooth generator convergence. Core convergence also yields eventual norm and graph-relative bounds separately for each test; their vector-
 dependent constants and events realize only `∀ f, ∃ C_f, ∀ᶠ t`, not the required uniform
