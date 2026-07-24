@@ -449,6 +449,53 @@ theorem nonempty_iff_components :
   · rintro ⟨augmented, ⟨compactFiniteLaw⟩⟩
     exact ⟨⟨augmented, compactFiniteLaw⟩⟩
 
+omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
+    [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in
+/-- The strongest cross-source wrapper retains the actual descended compact-surface model's exact
+real dimension two. -/
+theorem compactSurface_model_finrank_two
+    (data : TwoDimensionalSenguptaSplitBondEmbeddedUniversalAugmentedCurrentStrengthAcceptanceData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+      (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)
+      (identification := identification) (IG := IG)
+      (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+      (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)
+      (CoverGroup := CoverGroup) (CurveS := CurveS) (EdgeS := EdgeS)
+      (InternalEdge := InternalEdge) (FaceS := FaceS) (RegionS := RegionS)
+      (SenguptaSample := SenguptaSample) (coverDensity := coverDensity)
+      (SenguptaSurface := SenguptaSurface) (SenguptaBaseVertex := SenguptaBaseVertex)
+      (SenguptaFineVertex := SenguptaFineVertex) (senguptaFine := senguptaFine)
+      (SenguptaTargetVertex := SenguptaTargetVertex) (senguptaTarget := senguptaTarget)
+      (SenguptaTargetSurface := SenguptaTargetSurface)) :
+    Module.finrank ℝ EG = 2 :=
+  data.augmented.current.compactSurface_model_finrank_two
+
+omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
+    [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in
+/-- Even an inhabitant of the strongest current 2D wrapper cannot identify its actual descended
+surface model with four-dimensional Euclidean spacetime. -/
+theorem compactSurface_model_not_linearEquiv_four
+    (data : TwoDimensionalSenguptaSplitBondEmbeddedUniversalAugmentedCurrentStrengthAcceptanceData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+      (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)
+      (identification := identification) (IG := IG)
+      (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+      (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)
+      (CoverGroup := CoverGroup) (CurveS := CurveS) (EdgeS := EdgeS)
+      (InternalEdge := InternalEdge) (FaceS := FaceS) (RegionS := RegionS)
+      (SenguptaSample := SenguptaSample) (coverDensity := coverDensity)
+      (SenguptaSurface := SenguptaSurface) (SenguptaBaseVertex := SenguptaBaseVertex)
+      (SenguptaFineVertex := SenguptaFineVertex) (senguptaFine := senguptaFine)
+      (SenguptaTargetVertex := SenguptaTargetVertex) (senguptaTarget := senguptaTarget)
+      (SenguptaTargetSurface := SenguptaTargetSurface)) :
+    ¬ Nonempty (EG ≃ₗ[ℝ] EuclideanDimension.four.Spacetime) := by
+  rintro ⟨equiv⟩
+  have ranks := LinearEquiv.finrank_eq equiv
+  rw [data.compactSurface_model_finrank_two] at ranks
+  norm_num [EuclideanDimension.finrank_spacetime] at ranks
+
 end TwoDimensionalSenguptaSplitBondEmbeddedUniversalAugmentedCurrentStrengthAcceptanceData
 
 end

@@ -1443,8 +1443,11 @@ committed before higher layers depend on it.
     lattice, heat/Brownian, weak-limit continuum, compact-surface, and sewing chains; attempt to
     inhabit it solely from formalized Driver/Lévy/Sengupta results and record every remaining
     supplied field as a concrete literature or infrastructure debt.
-  - [ ] Add hostile separation proving that even an inhabited final 2D proposition cannot inhabit,
-    imply, or be coerced into the 4D Clay acceptance proposition.
+  - [x] Prove witness-level dimensional separation for the strongest current cross-source 2D
+    wrapper: its actual descended compact-surface model has real rank two and admits no real-linear
+    equivalence with four-dimensional Euclidean spacetime.
+  - [ ] Add final-proposition-level hostile separation proving that even an inhabited final 2D
+    proposition cannot inhabit, imply, or be coerced into the 4D Clay acceptance proposition.
 - [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.
   - [x] Add a current-strength continuum core hard-wired to coordinate `ℝ³` with coordinate
     Lebesgue action measure, dependently joining compact-simple gauge/classical data, strict

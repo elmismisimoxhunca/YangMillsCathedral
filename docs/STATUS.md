@@ -5561,8 +5561,11 @@ cellwise-compatible finite-law chain. The stronger
 the unchanged augmented witness to the strongest fixed-universe compact finite-law record, including
 universal embedded split-curve-bond Fact 2 certification. It is indexed by the former's exact finite
 law, heat factors, planar spectral semigroup, covering density, and fixed bundle class. Its
-`Nonempty` equivalence exposes both dependent witnesses without synthesis. This is the strongest
-current cross-source 2D join, but unrestricted-universe/full Fact 2, general Fact 3, heat-kernel
+`Nonempty` equivalence exposes both dependent witnesses without synthesis. The actual descended
+compact-surface model retained by this strongest wrapper has exact real rank two and cannot be
+real-linearly equivalent to four-dimensional Euclidean spacetime, so the strengthened finite-law
+chain does not erase witness-level dimensional separation. This is the strongest current
+cross-source 2D join, but unrestricted-universe/full Fact 2, general Fact 3, heat-kernel
 integration, construction, and all component inhabitance remain open.
 
 The preliminary `FourDimensionalCurrentStrengthUniversalAcceptance` declaration is intentionally

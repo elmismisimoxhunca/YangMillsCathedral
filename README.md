@@ -1038,7 +1038,10 @@ stronger `TwoDimensionalSenguptaSplitBondEmbeddedUniversalAugmentedCurrentStreng
 now joins the unchanged augmented witness to the strongest fixed-universe compact finite-law record,
 including universal embedded split-curve-bond Fact 2 certification, while sharing its finite law,
 heat factors, planar spectral semigroup, density, and fixed bundle class. Its exact `Nonempty` audit
-exposes both dependent components. It is still nonfinal and uninhabited.
+exposes both dependent components. The actual descended compact-surface model retained by this
+strongest wrapper has exact real rank two and is proved not real-linearly equivalent to
+four-dimensional Euclidean spacetime for every supplied witness; no witness is constructed. It is
+still nonfinal and uninhabited.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly
