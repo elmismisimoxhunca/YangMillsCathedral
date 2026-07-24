@@ -118,6 +118,62 @@ theorem twoDimensionalSelectedLoopPositiveHeatOperatorLinearMap_norm_le
         (Filter.Eventually.of_forall fun x => ContinuousMap.norm_coe_le_norm f (g * x))
     _ = ‖f‖ := by simp
 
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- The positive selected-loop heat operator preserves every constant function exactly. -/
+theorem twoDimensionalSelectedLoopPositiveHeatOperatorLinearMap_const
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (t : ℝ) (ht : 0 < t) (c : ℝ) :
+    twoDimensionalSelectedLoopPositiveHeatOperatorLinearMap bridge t ht
+        (ContinuousMap.const G c) = ContinuousMap.const G c := by
+  let μ := unitaryMatrixDualCasimirHeatProbabilityMeasure heatTraceData t
+  letI : IsProbabilityMeasure μ := ⟨by
+    exact unitaryMatrixDualCasimirHeatProbabilityMeasure_univ
+      bridge.spectralHeatKernel.heatEquationBridge.spectralDensityBridge.casimirBridge
+      bridge.spectralHeatKernel.heatEquationBridge.spectralDensityBridge.positivity ht⟩
+  ext g
+  change bridge.spectralHeatKernel.kernelOperator.heatOperator t
+    (ContinuousMap.const G c) g = c
+  rw [bridge.generated_operator_eq_spectralMeasureIntegral t ht]
+  simp [μ]
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- The positive selected-loop heat operator preserves pointwise nonnegativity. Together with
+preservation of constants and contraction, this is the exact Markov-operator content of the spectral
+probability formula at positive time. -/
+theorem twoDimensionalSelectedLoopPositiveHeatOperatorLinearMap_nonneg
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (t : ℝ) (ht : 0 < t) (f : C(G, ℝ)) (hf : ∀ g, 0 ≤ f g) :
+    ∀ g, 0 ≤ twoDimensionalSelectedLoopPositiveHeatOperatorLinearMap bridge t ht f g := by
+  intro g
+  change 0 ≤ bridge.spectralHeatKernel.kernelOperator.heatOperator t f g
+  rw [bridge.generated_operator_eq_spectralMeasureIntegral t ht]
+  exact integral_nonneg (fun x => hf (g * x))
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- The positive selected-loop heat operator is pointwise monotone. -/
+theorem twoDimensionalSelectedLoopPositiveHeatOperatorLinearMap_mono
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (t : ℝ) (ht : 0 < t) (f h : C(G, ℝ)) (hfh : ∀ g, f g ≤ h g) :
+    ∀ g,
+      twoDimensionalSelectedLoopPositiveHeatOperatorLinearMap bridge t ht f g ≤
+        twoDimensionalSelectedLoopPositiveHeatOperatorLinearMap bridge t ht h g := by
+  have hnonneg : ∀ g, 0 ≤
+      twoDimensionalSelectedLoopPositiveHeatOperatorLinearMap bridge t ht (h - f) g :=
+    twoDimensionalSelectedLoopPositiveHeatOperatorLinearMap_nonneg bridge t ht (h - f) (by
+      intro g
+      simp only [ContinuousMap.coe_sub, Pi.sub_apply, sub_nonneg]
+      exact hfh g)
+  intro g
+  have hg := hnonneg g
+  rw [map_sub] at hg
+  exact sub_nonneg.mp hg
+
 /-- The positive selected-loop heat operator as a continuous real-linear contraction. -/
 noncomputable def twoDimensionalSelectedLoopPositiveHeatOperatorContinuousLinearMap
     (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
@@ -151,6 +207,86 @@ theorem twoDimensionalSelectedLoopPositiveHeatOperatorContinuousLinearMap_norm_l
   apply ContinuousLinearMap.opNorm_le_bound _ zero_le_one
   intro f
   simpa using twoDimensionalSelectedLoopPositiveHeatOperatorLinearMap_norm_le bridge t ht f
+
+/-- The selected-loop heat contraction as a total continuous-linear family on nonnegative time.
+The zero branch is the identity operator, coherently with the stored heat initial identity. -/
+noncomputable def twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (t : NNReal) : C(G, ℝ) →L[ℝ] C(G, ℝ) :=
+  if ht : 0 < t then
+    twoDimensionalSelectedLoopPositiveHeatOperatorContinuousLinearMap bridge (t : ℝ)
+      (by exact_mod_cast ht)
+  else ContinuousLinearMap.id ℝ C(G, ℝ)
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- The total continuous-linear family realizes the stored heat operator at every nonnegative time. -/
+@[simp]
+theorem twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap_apply
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (t : NNReal) (f : C(G, ℝ)) :
+    twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t f =
+      bridge.spectralHeatKernel.kernelOperator.heatOperator (t : ℝ) f := by
+  by_cases ht : 0 < t
+  · unfold twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap
+    rw [dif_pos ht]
+    rfl
+  · have ht0 : t = 0 := le_antisymm (not_lt.mp ht) bot_le
+    subst t
+    unfold twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap
+    rw [dif_neg (lt_irrefl 0)]
+    simp only [ContinuousLinearMap.id_apply, NNReal.coe_zero]
+    exact (bridge.spectralHeatKernel.kernelOperator.heatOperator_zero f).symm
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Every operator in the total nonnegative-time family is contractive. -/
+theorem twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap_apply_norm_le
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (t : NNReal) (f : C(G, ℝ)) :
+    ‖twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t f‖ ≤ ‖f‖ := by
+  by_cases ht : 0 < t
+  · rw [twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap_apply]
+    have hP := twoDimensionalSelectedLoopPositiveHeatOperatorLinearMap_norm_le
+      bridge (t : ℝ) (by exact_mod_cast ht) f
+    change ‖bridge.spectralHeatKernel.kernelOperator.heatOperator (t : ℝ) f‖ ≤ ‖f‖ at hP
+    exact hP
+  · have ht0 : t = 0 := le_antisymm (not_lt.mp ht) bot_le
+    subst t
+    simp [twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap]
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- The total heat family has operator norm at most one. -/
+theorem twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap_norm_le_one
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (t : NNReal) :
+    ‖twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t‖ ≤ 1 := by
+  apply ContinuousLinearMap.opNorm_le_bound _ zero_le_one
+  intro f
+  simpa using twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap_apply_norm_le bridge t f
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Exact continuous-linear semigroup law on nonnegative time. -/
+theorem twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap_add
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (s t : NNReal) :
+    twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge (s + t) =
+      (twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge s).comp
+        (twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t) := by
+  apply ContinuousLinearMap.ext
+  intro f
+  simp only [ContinuousLinearMap.comp_apply,
+    twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap_apply]
+  simpa using bridge.spectralHeatKernel.kernelOperator.heatOperator_add
+    (s : ℝ) (t : ℝ) s.coe_nonneg t.coe_nonneg f
 
 /-- Positive right-hand heat difference quotient as a linear map. The zero branch is irrelevant on
 `Ioi 0` but makes the family total on `NNReal`. -/
