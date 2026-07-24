@@ -1701,6 +1701,50 @@ def TwoDimensionalOperatorGeneratorCurrentStrengthSourceIndexedLiteratureAccepta
     Nonempty (TwoDimensionalSelectedLoopStochasticGeneratorAtZeroData
       source.current.planar.toSpectralBrownianGeneratorBridgeData)
 
+namespace TwoDimensionalGeneralFactThreeSelectedFourierDerivativeCurrentStrengthSourceIndexedLiteratureAcceptanceData
+
+omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
+    [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in
+/-- Derive the all-smooth zero-time stochastic generator on the exact spectral bridge selected by
+this same strict general-Fact-3 source witness. This constructs no new analytic input. -/
+noncomputable def toStochasticGeneratorAtZeroData
+    (data : TwoDimensionalGeneralFactThreeSelectedFourierDerivativeCurrentStrengthSourceIndexedLiteratureAcceptanceData.{uE,
+      uG, uGauge, uSample, uConnection, uΩ, uVertex, uEdge, uFace, uXAxisCell,
+      uLargeVertex, uLargeEdge, uLargeFace, uLargeXAxisCell, uFineVertex, uFineEdge,
+      uFineFace, uFineXAxisCell, uFineLargeVertex, uFineLargeEdge, uFineLargeFace,
+      uFineLargeXAxisCell, uEL, uHL, uSL, uER, uHR, uSR, uEG, uHG, uLeftBase,
+      uRightBase, uWholeBase, uLeftLoop, uRightLoop, uWholeLoop, uLeftSample,
+      uRightSample, uWholeSample, uCover, uCurveS, uEdgeS, uInternalEdge, uFaceS,
+      uRegionS, uSenguptaSample, uSenguptaSurface, uSenguptaBaseVertex,
+      uSenguptaFineInternal, uSenguptaFineFace, uSenguptaFineVertex,
+      uSenguptaTargetEdge, uSenguptaTargetInternal, uSenguptaTargetFace,
+      uSenguptaTargetRegion, uSenguptaTargetVertex, uSenguptaTargetSurface,
+      uCandidateFineEdge, uCandidateFineInternal, uCandidateFineFace, uCandidateFineVertex,
+      uGeneralTargetEdge, uGeneralTargetInternal, uGeneralTargetFace, uGeneralTargetRegion,
+      uGeneralTargetSurface, uGeneralTargetVertex, uGeneralSourceFineEdge,
+      uGeneralSourceFineInternal, uGeneralSourceFineFace, uGeneralSourceFineVertex,
+      uGeneralTargetFineEdge, uGeneralTargetFineInternal, uGeneralTargetFineFace,
+      uGeneralTargetFineVertex, uPath, uObservable}
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+      (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)
+      (identification := identification) (IG := IG)
+      (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+      (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)
+      (CoverGroup := CoverGroup) (CurveS := CurveS) (EdgeS := EdgeS)
+      (InternalEdge := InternalEdge) (FaceS := FaceS) (RegionS := RegionS)
+      (SenguptaSample := SenguptaSample) (coverDensity := coverDensity)
+      (SenguptaSurface := SenguptaSurface) (SenguptaBaseVertex := SenguptaBaseVertex)
+      (SenguptaFineVertex := SenguptaFineVertex) (senguptaFine := senguptaFine)
+      (SenguptaTargetVertex := SenguptaTargetVertex) (senguptaTarget := senguptaTarget)
+      (SenguptaTargetSurface := SenguptaTargetSurface)) :
+    TwoDimensionalSelectedLoopStochasticGeneratorAtZeroData
+      ((Classical.choice data.source.current).augmented.current.planar
+        |>.toSpectralBrownianGeneratorBridgeData) :=
+  data.selectedFourierDerivative.toStochasticGeneratorAtZeroData
+
+end TwoDimensionalGeneralFactThreeSelectedFourierDerivativeCurrentStrengthSourceIndexedLiteratureAcceptanceData
+
 variable (operatorGeneratorAcceptance :
     TwoDimensionalOperatorGeneratorCurrentStrengthSourceIndexedLiteratureAcceptance.{uE, uG, uGauge, uSample, uConnection,
       uΩ, uVertex, uEdge, uFace, uXAxisCell,

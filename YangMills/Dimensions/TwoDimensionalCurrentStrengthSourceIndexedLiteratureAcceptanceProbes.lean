@@ -785,6 +785,27 @@ theorem exact_generalFactThreeFourier_analytic :
 include generalFactThreeFourierData in
 omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
     [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in
+/-- The four analytic obligations derive the all-smooth generator on that same exact bridge. -/
+noncomputable def exact_generalFactThreeFourier_operatorGenerator :
+    TwoDimensionalSelectedLoopStochasticGeneratorAtZeroData
+      ((Classical.choice generalFactThreeFourierData.source.current).augmented.current.planar
+        |>.toSpectralBrownianGeneratorBridgeData) :=
+  generalFactThreeFourierData.toStochasticGeneratorAtZeroData
+
+include generalFactThreeFourierData in
+omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
+    [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in
+/-- Hostile endpoint probe: the derived generator cannot be absent from the selected bridge. -/
+theorem missing_generalFactThreeFourier_operatorGenerator_blocked
+    (missing : ¬Nonempty
+      (TwoDimensionalSelectedLoopStochasticGeneratorAtZeroData
+        ((Classical.choice generalFactThreeFourierData.source.current).augmented.current.planar
+          |>.toSpectralBrownianGeneratorBridgeData))) : False :=
+  missing ⟨generalFactThreeFourierData.toStochasticGeneratorAtZeroData⟩
+
+include generalFactThreeFourierData in
+omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
+    [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in
 /-- The joint acceptance remains rank two and rejects a 4D linear model. -/
 theorem exact_generalFactThreeFourier_dimension_contract :
     Module.finrank ℝ EG = 2 ∧
