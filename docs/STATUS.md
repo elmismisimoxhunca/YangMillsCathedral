@@ -5317,7 +5317,11 @@ the full algebraic domain, without assuming the generator is bounded. The strong
 possibly proper, unnormed algebraic domain with a separate, not-necessarily-injective linear map into
 the ambient normed space; the earlier same-space statement is retained as a specialization. Exact and changed-target
 probes protect both interfaces. The selected-character graph-density and heat-quotient graph-bound
-instances are not constructed, so extension to every required smooth test and Laplace–Beltrami
+instances are not constructed. `SmoothLieGroupScalarFunctionLinear` now gives the exact smooth real
+test carrier its pointwise real module structure and a faithful algebraic linear map into the
+continuous ambient carrier, matching the proper-domain closure API without imposing a smooth-domain
+norm. Pairing-Laplacian linearity/continuous-valued regularity, core graph density, and the quotient
+bound remain unconstructed, so extension to every required smooth test and Laplace–Beltrami
 comparison remain open. The
 common Wilson chain now forgets only its genuinely stronger global-faithfulness and normalization
 fields to construct Driver's exact Villain common heat chain. Uninhabited

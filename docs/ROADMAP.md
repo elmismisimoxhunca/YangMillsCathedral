@@ -945,7 +945,11 @@ committed before higher layers depend on it.
   possibly proper and unnormed algebraic operator domain represented in the ambient normed space and
   then on the same-space specialization, with exact and changed-target probes and no continuity
   assumption on the unbounded algebraic generator.
-- [ ] Instantiate that closure theorem for the selected-character core by proving graph density and
+- [x] Equip the exact smooth real Lie-group scalar-function carrier with its pointwise real vector-
+  space structure and construct the injective algebraic linear map into `C(G, ℝ)`, without installing
+  a norm on the smooth domain or inferring Laplacian regularity.
+- [ ] Package the pairing Laplacian as a linear map into the continuous ambient carrier, instantiate
+  the closure theorem for an appropriate character-derived real core by proving graph density and
   the required eventual heat-quotient graph bound; then extend the generator to the required smooth
   domain, construct the pairing-generator boundary-continuity witness, and prove
   comparison of the exact pairing Laplacian with the geometric Laplace–Beltrami operator.

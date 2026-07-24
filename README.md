@@ -714,8 +714,10 @@ injective continuous character synthesis. A separate reusable closure theorem no
 approximant convergence from any graph-dense algebraic core under an eventual uniform graph-norm
 bound, including a possibly proper and unnormed operator domain represented in the ambient normed
 space by a separate linear map, while keeping graph density, core convergence, and the bound distinct. Applying it here still
-requires selected-character graph density and a heat-quotient graph bound, so the algebraic core does
-not fill the remaining all-smooth-tests boundary field. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
+requires selected-character graph density and a heat-quotient graph bound. The real smooth-test
+carrier now has a proved pointwise real vector-space structure and an injective algebraic linear map
+into `C(G, ℝ)`, providing the proper domain/ambient map needed by the closure theorem; linearity and
+continuous-valued regularity of the pairing Laplacian remain open, so the algebraic core does not fill the remaining all-smooth-tests boundary field. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
 marginals are derived, including exact equality at the selected area with the sampled loop-holonomy
 law. The metric bridge now transports the exact invariant pairing to every group tangent fiber by
 left Maurer–Cartan trivialization and proves its inverse, symmetry, strict positivity, and left/right
