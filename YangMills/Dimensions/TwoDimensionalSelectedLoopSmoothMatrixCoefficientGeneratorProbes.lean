@@ -259,6 +259,19 @@ theorem exact_selectedLoop_smoothMatrixCoefficientCore_heatOperator_tendsto_zero
     bridge f hf
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Exact Peter–Weyl-facing bridge: uniform density of the smooth coefficient image would give
+strong right-continuity on every continuous function. -/
+theorem exact_selectedLoop_smoothMatrixCoefficientCore_heatOperator_tendsto_zero_of_dense
+    (dense : Dense
+      (smoothLieGroupScalarToContinuousLinearMap ''
+        smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G))) :
+    ∀ f : C(G, ℝ), Tendsto (fun t : NNReal =>
+      twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t f)
+      (nhdsWithin 0 (Set.Ioi 0)) (nhds f) :=
+  twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_heatOperator_tendsto_zero_of_dense
+    bridge dense
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Exact consequence of the still-open graph-density field: zeroth-order strong heat continuity
 then holds on every smooth test without using the uniform graph bound. -/
 theorem exact_selectedLoop_smoothMatrixCoefficientCore_heatOperator_tendsto_zero_of_graphDense

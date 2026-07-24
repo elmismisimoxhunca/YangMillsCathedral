@@ -581,6 +581,27 @@ theorem twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_heatOperator_tend
   · exact hf
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- A future uniform Peter–Weyl density theorem for the selected smooth coefficient image would
+upgrade the contraction semigroup to strong right-continuity at zero on every continuous function.
+The density premise remains explicit and is not inferred from the spectral bridge. -/
+theorem twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_heatOperator_tendsto_zero_of_dense
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (dense : Dense
+      (smoothLieGroupScalarToContinuousLinearMap ''
+        smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G))) :
+    ∀ f : C(G, ℝ), Tendsto (fun t : NNReal =>
+      twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t f)
+      (nhdsWithin 0 (Set.Ioi 0)) (nhds f) := by
+  intro f
+  apply
+    twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_heatOperator_tendsto_zero_of_mem_closure
+      bridge f
+  rw [dense.closure_eq]
+  exact Set.mem_univ f
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Smooth graph density alone extends strong right-continuity of the contraction semigroup from the
 coefficient core to every smooth test. The separate uniform graph bound is still required for
 all-smooth generator convergence, not for this zeroth-order continuity statement. -/

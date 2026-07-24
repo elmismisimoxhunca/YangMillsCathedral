@@ -146,6 +146,20 @@ theorem tendsto_continuousLinearMap_id_of_mem_closure_of_contraction
       rw [norm_sub_rev z x]
       linarith
 
+/-- Dense-core specialization: continuous-linear contractions converging strongly to the identity
+on a norm-dense subset converge strongly to the identity everywhere. -/
+theorem tendsto_continuousLinearMap_id_of_dense_of_contraction
+    (T : ι → X →L[𝕜] X) (core : Set X)
+    (contraction : ∀ᶠ i in l, ∀ x : X, ‖T i x‖ ≤ ‖x‖)
+    (coreLimit : ∀ z ∈ core, Tendsto (fun i => T i z) l (nhds z))
+    (coreDense : Dense core) :
+    ∀ x : X, Tendsto (fun i => T i x) l (nhds x) := by
+  intro x
+  apply tendsto_continuousLinearMap_id_of_mem_closure_of_contraction
+    T core contraction coreLimit
+  rw [coreDense.closure_eq]
+  exact Set.mem_univ x
+
 /-- Generator convergence extends from a graph-dense subset of a possibly proper algebraic
 domain. Neither the domain `D` nor its ambient map `J` is assumed complete, normed, or injective. -/
 theorem tendsto_linearMapOnDomain_of_graphDenseAt_of_eventually_graphBound

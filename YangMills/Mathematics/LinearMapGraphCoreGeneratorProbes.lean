@@ -58,6 +58,16 @@ theorem exact_contractionCore_strongIdentity_on_closure
   tendsto_continuousLinearMap_id_of_mem_closure_of_contraction
     T tested contraction testedLimit hx
 
+/-- Exact dense-core contraction probe: strong identity convergence then holds everywhere. -/
+theorem exact_contractionDenseCore_strongIdentity
+    (T : ι → X →L[𝕜] X) (tested : Set X)
+    (contraction : ∀ᶠ i in l, ∀ x : X, ‖T i x‖ ≤ ‖x‖)
+    (testedLimit : ∀ z ∈ tested, Tendsto (fun i => T i z) l (nhds z))
+    (testedDense : Dense tested) :
+    ∀ x : X, Tendsto (fun i => T i x) l (nhds x) :=
+  tendsto_continuousLinearMap_id_of_dense_of_contraction
+    T tested contraction testedLimit testedDense
+
 /-- Positive probe: graph approximation on a proper algebraic domain supplies the ambient
 operator limit. -/
 theorem exact_domainGraphCore_generator_extension
