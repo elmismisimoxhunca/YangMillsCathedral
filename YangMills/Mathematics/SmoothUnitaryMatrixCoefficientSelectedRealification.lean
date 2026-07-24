@@ -196,6 +196,21 @@ theorem smoothUnitaryMatrixCoefficientRealCore_continuousImage_dense
       hcomplexDistance
 
 omit [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- Selected Peter--Weyl density and smooth-dual coverage also inhabit the separately named ambient
+smooth-function density target, because the smooth coefficient image lies in the full smooth image. -/
+theorem smoothLieGroupScalarFunctionsDenseInContinuous_of_continuousPeterWeyl_of_smoothCoverage
+    [CompactSpace G] [T2Space G]
+    (continuousDensity : UnitaryMatrixDual.HasContinuousPeterWeylDensity G)
+    (smoothCoverage : ∀ q : UnitaryMatrixDual G,
+      q.HasSmoothRepresentative (E := E)) :
+    SmoothLieGroupScalarFunctionsDenseInContinuous (E := E) (G := G) := by
+  apply Dense.mono _
+    (smoothUnitaryMatrixCoefficientRealCore_continuousImage_dense
+      continuousDensity smoothCoverage)
+  rintro _ ⟨f, _hf, rfl⟩
+  exact ⟨f, rfl⟩
+
+omit [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
 /-- Automatic smoothness of all bundled continuous irreducible unitary coordinates discharges the
 smooth-coverage premise in the density transfer. -/
 theorem smoothUnitaryMatrixCoefficientRealCore_continuousImage_dense_of_automaticSmoothness

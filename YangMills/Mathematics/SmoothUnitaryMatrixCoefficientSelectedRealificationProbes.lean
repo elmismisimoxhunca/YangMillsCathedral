@@ -109,6 +109,17 @@ theorem exact_smoothRealCoefficientCore_density
     continuousDensity smoothCoverage
 
 omit [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- Exact ambient smooth-density consequence of the same selected Fourier hypotheses. -/
+theorem exact_smoothAmbientDensity_of_selectedPeterWeyl_smoothCoverage
+    [CompactSpace G] [T2Space G]
+    (continuousDensity : UnitaryMatrixDual.HasContinuousPeterWeylDensity G)
+    (smoothCoverage : ∀ q : UnitaryMatrixDual G,
+      q.HasSmoothRepresentative (E := E)) :
+    SmoothLieGroupScalarFunctionsDenseInContinuous (E := E) (G := G) :=
+  smoothLieGroupScalarFunctionsDenseInContinuous_of_continuousPeterWeyl_of_smoothCoverage
+    continuousDensity smoothCoverage
+
+omit [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
 /-- Exact automatic-smoothness specialization of the density transfer. -/
 theorem exact_smoothRealCoefficientCore_density_of_automaticSmoothness
     [CompactSpace G] [T2Space G]
