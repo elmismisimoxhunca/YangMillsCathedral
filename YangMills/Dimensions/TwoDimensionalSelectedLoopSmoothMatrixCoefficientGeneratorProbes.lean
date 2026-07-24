@@ -409,6 +409,18 @@ theorem exact_selectedLoopPairingDuhamel_graphBound
     data.quotient_norm_le_generator t ht f, data.eventual_graphBound_one⟩
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Exact continuous-Duhamel probe: strong semigroup continuity supplies interval integrability. -/
+theorem exact_selectedLoopPairingContinuousDuhamel_integrable
+    (data : TwoDimensionalSelectedLoopPairingContinuousDuhamelData bridge)
+    (t : NNReal) (f : SmoothLieGroupScalarFunction (E := E) (G := G)) :
+    IntervalIntegrable (fun s : ℝ =>
+      twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge
+        (Real.toNNReal s * t)
+        (twoDimensionalSelectedLoopPairingGeneratorLinearMap
+          (realLaplacian := realLaplacian) f)) MeasureTheory.volume 0 1 :=
+  data.toDuhamelData.trajectory_intervalIntegrable t f
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Hostile Duhamel probe: changing the exact averaged heat trajectory is contradictory. -/
 theorem changed_selectedLoopPairingDuhamel_blocked
     (data : TwoDimensionalSelectedLoopPairingDuhamelData bridge)
@@ -448,6 +460,25 @@ omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 theorem missing_Duhamel_blocks_DuhamelAnalyticAcceptance
     (missing : ¬ Nonempty (TwoDimensionalSelectedLoopPairingDuhamelData bridge)) :
     ¬ TwoDimensionalSelectedLoopSmoothMatrixCoefficientDuhamelAnalyticAcceptance bridge := by
+  intro acceptance
+  exact missing acceptance.2
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Exact strongly-continuous Duhamel analytic endpoint. -/
+theorem exact_ContinuousDuhamelAnalyticAcceptance_stochasticGenerator
+    (acceptance :
+      TwoDimensionalSelectedLoopSmoothMatrixCoefficientContinuousDuhamelAnalyticAcceptance bridge) :
+    TwoDimensionalSelectedLoopSmoothMatrixCoefficientDuhamelAnalyticAcceptance bridge ∧
+      Nonempty (TwoDimensionalSelectedLoopStochasticGeneratorAtZeroData bridge) :=
+  ⟨acceptance.implies_DuhamelAnalyticAcceptance,
+    ⟨acceptance.toStochasticGeneratorAtZeroData⟩⟩
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Hostile strongly-continuous Duhamel acceptance probe: missing continuous Duhamel data blocks it. -/
+theorem missing_continuousDuhamel_blocks_ContinuousDuhamelAnalyticAcceptance
+    (missing : ¬ Nonempty (TwoDimensionalSelectedLoopPairingContinuousDuhamelData bridge)) :
+    ¬ TwoDimensionalSelectedLoopSmoothMatrixCoefficientContinuousDuhamelAnalyticAcceptance
+      bridge := by
   intro acceptance
   exact missing acceptance.2
 

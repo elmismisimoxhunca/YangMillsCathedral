@@ -832,6 +832,55 @@ theorem eventual_graphBound_one
 
 end TwoDimensionalSelectedLoopPairingDuhamelData
 
+/-- Strong continuity of the total nonnegative-time selected-loop heat semigroup on all continuous
+real tests. This is a separate semigroup-analytic target; right continuity at zero on the coefficient
+core does not by itself inhabit it. -/
+structure TwoDimensionalSelectedLoopStrongContinuousHeatSemigroupData
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)) where
+  trajectory_continuous : ∀ f : C(G, ℝ),
+    Continuous (fun t : NNReal =>
+      twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t f)
+
+/-- A continuous Duhamel strengthening stores strong semigroup continuity and the exact identity.
+Strong continuity derives the genuine interval-integrability field of the prior Duhamel record. -/
+structure TwoDimensionalSelectedLoopPairingContinuousDuhamelData
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)) where
+  strongContinuity : TwoDimensionalSelectedLoopStrongContinuousHeatSemigroupData bridge
+  duhamel : ∀ (t : NNReal), 0 < t →
+    ∀ f : SmoothLieGroupScalarFunction (E := E) (G := G),
+      twoDimensionalSelectedLoopHeatDifferenceQuotientLinearMap bridge t
+          (smoothLieGroupScalarToContinuousLinearMap f) =
+        ∫ s : ℝ in 0..1,
+          twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge
+            (Real.toNNReal s * t)
+            (twoDimensionalSelectedLoopPairingGeneratorLinearMap
+              (realLaplacian := realLaplacian) f)
+
+namespace TwoDimensionalSelectedLoopPairingContinuousDuhamelData
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Strong continuity supplies genuine interval integrability, so continuous Duhamel data canonically
+inhabits the integrable Duhamel interface. -/
+noncomputable def toDuhamelData
+    {bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)}
+    (data : TwoDimensionalSelectedLoopPairingContinuousDuhamelData bridge) :
+    TwoDimensionalSelectedLoopPairingDuhamelData bridge where
+  trajectory_intervalIntegrable t f := by
+    have htime : Continuous (fun s : ℝ => Real.toNNReal s * t) :=
+      continuous_real_toNNReal.mul continuous_const
+    exact ((data.strongContinuity.trajectory_continuous
+      (twoDimensionalSelectedLoopPairingGeneratorLinearMap
+        (realLaplacian := realLaplacian) f)).comp htime).intervalIntegrable 0 1
+  duhamel := data.duhamel
+
+end TwoDimensionalSelectedLoopPairingContinuousDuhamelData
+
 /-- Explicit Fourier-facing simultaneous approximation target for the smooth coefficient core. -/
 def TwoDimensionalSelectedLoopSmoothMatrixCoefficientFiniteGraphApproximation : Prop :=
   ∀ f : SmoothLieGroupScalarFunction (E := E) (G := G),
@@ -928,6 +977,20 @@ noncomputable def ofFiniteSynthesisGraphApproximationDuhamel
   ofGraphDenseDuhamel
     (smoothMatrixCoefficient_graphDense_iff_finiteSynthesis_graphApproximation.mpr
       finiteApproximation) duhamel
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Simultaneous finite graph approximation plus continuous Duhamel data constructs the graph core;
+strong continuity supplies the required integrability automatically. -/
+noncomputable def ofFiniteSynthesisGraphApproximationContinuousDuhamel
+    {bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)}
+    (finiteApproximation :
+      TwoDimensionalSelectedLoopSmoothMatrixCoefficientFiniteGraphApproximation
+        (realLaplacian := realLaplacian))
+    (duhamel : TwoDimensionalSelectedLoopPairingContinuousDuhamelData bridge) :
+    TwoDimensionalSelectedLoopSmoothMatrixCoefficientGraphCoreData bridge :=
+  ofFiniteSynthesisGraphApproximationDuhamel finiteApproximation duhamel.toDuhamelData
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Any coefficient graph-core witness already supplies strong right-continuity of the heat
@@ -1065,6 +1128,44 @@ noncomputable def toStochasticGeneratorAtZeroData
   acceptance.toGraphCoreData.toStochasticGeneratorAtZeroData
 
 end TwoDimensionalSelectedLoopSmoothMatrixCoefficientDuhamelAnalyticAcceptance
+
+/-- Strongly-continuous Duhamel analytic acceptance. It replaces raw interval-integrability data by
+strong continuity of the total contraction semigroup together with the exact Duhamel identity. -/
+def TwoDimensionalSelectedLoopSmoothMatrixCoefficientContinuousDuhamelAnalyticAcceptance
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)) : Prop :=
+  TwoDimensionalSelectedLoopSmoothMatrixCoefficientFiniteGraphApproximation
+      (realLaplacian := realLaplacian) ∧
+    Nonempty (TwoDimensionalSelectedLoopPairingContinuousDuhamelData bridge)
+
+namespace TwoDimensionalSelectedLoopSmoothMatrixCoefficientContinuousDuhamelAnalyticAcceptance
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Forgetting the strong-continuity derivation of integrability recovers the prior Duhamel analytic
+acceptance. -/
+theorem implies_DuhamelAnalyticAcceptance
+    {bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)}
+    (acceptance :
+      TwoDimensionalSelectedLoopSmoothMatrixCoefficientContinuousDuhamelAnalyticAcceptance bridge) :
+    TwoDimensionalSelectedLoopSmoothMatrixCoefficientDuhamelAnalyticAcceptance bridge := by
+  rcases acceptance with ⟨finiteApproximation, ⟨duhamel⟩⟩
+  exact ⟨finiteApproximation, ⟨duhamel.toDuhamelData⟩⟩
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- The strongly-continuous Duhamel acceptance reaches the all-smooth stochastic generator endpoint. -/
+noncomputable def toStochasticGeneratorAtZeroData
+    {bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)}
+    (acceptance :
+      TwoDimensionalSelectedLoopSmoothMatrixCoefficientContinuousDuhamelAnalyticAcceptance bridge) :
+    TwoDimensionalSelectedLoopStochasticGeneratorAtZeroData bridge :=
+  acceptance.implies_DuhamelAnalyticAcceptance.toStochasticGeneratorAtZeroData
+
+end TwoDimensionalSelectedLoopSmoothMatrixCoefficientContinuousDuhamelAnalyticAcceptance
 
 end
 
