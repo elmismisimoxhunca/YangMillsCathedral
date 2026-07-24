@@ -5334,9 +5334,10 @@ is definitionally identified with Mathlib's vector-valued exterior derivative; i
 scalar-multiplicative rules propagate through the smooth iterated derivatives and finite basis sum,
 proving pairing-Laplacian linearity and constructing the canonical algebraic linear map from the
 smooth domain into `C(G, ℝ)` without a caller-supplied regularity witness. The exact spectral
-probability-measure formula proves positive-time heat-operator additivity/homogeneity and uniform-
-norm contraction, bundles the operator as a continuous linear map of norm at most one, and gives the
-explicit difference-quotient bound `2 t⁻¹ ‖f‖`. Its singular factor is not the missing eventual
+probability-measure formula proves positive-time heat-operator additivity/homogeneity, constant/
+positivity/order preservation, and uniform-norm contraction; it bundles a total nonnegative-time
+continuous-linear contraction semigroup of norm at most one and gives the explicit difference-
+quotient bound `2 t⁻¹ ‖f‖`. Its singular factor is not the missing eventual
 uniform graph bound. The concrete
 `TwoDimensionalSelectedLoopPairingGraphCoreGeneratorData` then retains a designated smooth core,
 graph density, an eventual uniform graph bound, and generator convergence on that core; the generic

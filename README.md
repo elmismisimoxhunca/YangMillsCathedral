@@ -724,8 +724,9 @@ valued exterior derivative proves first- and second-derivative linearity, finite
 finally packages the pairing Laplacian as the canonical algebraic linear map from the smooth domain
 into `C(G, ℝ)`, with no caller-supplied regularity witness. The spectral probability-measure formula
 also bundles every positive-time real heat operator and its right difference quotient as linear maps,
-proves the heat operator is a uniform-norm contraction, upgrades it to a continuous linear map of
-operator norm at most one, and exposes the elementary quotient estimate `2 t⁻¹ ‖f‖`. The singular
+proves the heat operator preserves constants, positivity, and order, is a uniform-norm contraction,
+and upgrades it to a total nonnegative-time continuous-linear contraction semigroup of operator norm
+at most one. It also exposes the elementary quotient estimate `2 t⁻¹ ‖f‖`. The singular
 inverse-time factor is not accepted as the missing eventual uniform graph bound.
 `TwoDimensionalSelectedLoopPairingGraphCoreGeneratorData` now isolates exactly a designated smooth
 core, its graph density, an eventual uniform graph bound, and generator convergence on that core;
