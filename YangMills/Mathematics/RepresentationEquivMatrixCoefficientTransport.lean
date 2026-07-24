@@ -114,6 +114,79 @@ theorem representationEquiv_matrixCoefficient
   simp only [Matrix.mul_apply, Finset.sum_mul]
   rw [Finset.sum_comm]
 
+/-- Pullback of a target-presentation coefficient weight matrix to source coordinates through the
+exact representation equivalence. -/
+def representationEquivPullbackCoefficientMatrix
+    {G : Type uG} [Monoid G] {m n : ℕ}
+    {ρ : G →* Matrix (Fin m) (Fin m) ℂ}
+    {σ : G →* Matrix (Fin n) (Fin n) ℂ}
+    (equivalence : Representation.Equiv (matrixRepresentation ρ)
+      (matrixRepresentation σ))
+    (A : Matrix (Fin n) (Fin n) ℂ) : Matrix (Fin m) (Fin m) ℂ :=
+  fun sourceRow sourceColumn =>
+    ∑ targetRow, ∑ targetColumn,
+      A targetRow targetColumn *
+        representationEquivMatrix equivalence targetRow sourceRow *
+          representationEquivInverseMatrix equivalence sourceColumn targetColumn
+
+/-- A finite matrix-weighted sum of target coefficients is exactly the weighted sum of source
+coefficients using the pulled-back matrix. This is the synthesis-level, basis-aware transport law. -/
+theorem representationEquiv_weightedMatrixCoefficientSum
+    {G : Type uG} [Monoid G] {m n : ℕ}
+    (ρ : G →* Matrix (Fin m) (Fin m) ℂ)
+    (σ : G →* Matrix (Fin n) (Fin n) ℂ)
+    (equivalence : Representation.Equiv (matrixRepresentation ρ)
+      (matrixRepresentation σ))
+    (A : Matrix (Fin n) (Fin n) ℂ) (g : G) :
+    (∑ targetRow, ∑ targetColumn,
+      A targetRow targetColumn * σ g targetRow targetColumn) =
+      ∑ sourceRow, ∑ sourceColumn,
+        representationEquivPullbackCoefficientMatrix equivalence A sourceRow sourceColumn *
+          ρ g sourceRow sourceColumn := by
+  classical
+  simp_rw [representationEquiv_matrixCoefficient ρ σ equivalence]
+  simp only [representationEquivPullbackCoefficientMatrix, Finset.sum_mul,
+    Finset.mul_sum]
+  let F := fun targetRow targetColumn sourceRow sourceColumn =>
+    A targetRow targetColumn *
+      (representationEquivMatrix equivalence targetRow sourceRow *
+        ρ g sourceRow sourceColumn *
+          representationEquivInverseMatrix equivalence sourceColumn targetColumn)
+  change (∑ targetRow, ∑ targetColumn, ∑ sourceRow, ∑ sourceColumn,
+      F targetRow targetColumn sourceRow sourceColumn) = _
+  calc
+    _ = ∑ targetRow, ∑ sourceRow, ∑ targetColumn, ∑ sourceColumn,
+        F targetRow targetColumn sourceRow sourceColumn := by
+      apply Finset.sum_congr rfl
+      intro targetRow _
+      rw [Finset.sum_comm]
+    _ = ∑ sourceRow, ∑ targetRow, ∑ targetColumn, ∑ sourceColumn,
+        F targetRow targetColumn sourceRow sourceColumn := by
+      rw [Finset.sum_comm]
+    _ = ∑ sourceRow, ∑ targetRow, ∑ sourceColumn, ∑ targetColumn,
+        F targetRow targetColumn sourceRow sourceColumn := by
+      apply Finset.sum_congr rfl
+      intro sourceRow _
+      apply Finset.sum_congr rfl
+      intro targetRow _
+      rw [Finset.sum_comm]
+    _ = ∑ sourceRow, ∑ sourceColumn, ∑ targetRow, ∑ targetColumn,
+        F targetRow targetColumn sourceRow sourceColumn := by
+      apply Finset.sum_congr rfl
+      intro sourceRow _
+      rw [Finset.sum_comm]
+    _ = _ := by
+      apply Finset.sum_congr rfl
+      intro sourceRow _
+      apply Finset.sum_congr rfl
+      intro sourceColumn _
+      apply Finset.sum_congr rfl
+      intro targetRow _
+      apply Finset.sum_congr rfl
+      intro targetColumn _
+      dsimp [F]
+      ring
+
 end
 
 end Mathematics

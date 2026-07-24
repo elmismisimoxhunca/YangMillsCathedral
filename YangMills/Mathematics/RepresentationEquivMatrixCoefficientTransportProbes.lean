@@ -94,6 +94,37 @@ theorem changed_basis_aware_coefficient_blocked
           representationEquivInverseMatrix equivalence sourceColumn column) : False :=
   changed (representationEquiv_matrixCoefficient ρ σ equivalence g row column)
 
+/-- Exact synthesis-level transport probe for an arbitrary target coefficient-weight matrix. -/
+theorem exact_basis_aware_weighted_coefficient_sum
+    {G : Type uG} [Monoid G] {m n : ℕ}
+    (ρ : G →* Matrix (Fin m) (Fin m) ℂ)
+    (σ : G →* Matrix (Fin n) (Fin n) ℂ)
+    (equivalence : Representation.Equiv (matrixRepresentation ρ)
+      (matrixRepresentation σ))
+    (A : Matrix (Fin n) (Fin n) ℂ) (g : G) :
+    (∑ targetRow, ∑ targetColumn,
+      A targetRow targetColumn * σ g targetRow targetColumn) =
+      ∑ sourceRow, ∑ sourceColumn,
+        representationEquivPullbackCoefficientMatrix equivalence A sourceRow sourceColumn *
+          ρ g sourceRow sourceColumn :=
+  representationEquiv_weightedMatrixCoefficientSum ρ σ equivalence A g
+
+/-- Hostile synthesis probe: changing the exact pulled-back weighted sum is contradictory. -/
+theorem changed_basis_aware_weighted_coefficient_sum_blocked
+    {G : Type uG} [Monoid G] {m n : ℕ}
+    (ρ : G →* Matrix (Fin m) (Fin m) ℂ)
+    (σ : G →* Matrix (Fin n) (Fin n) ℂ)
+    (equivalence : Representation.Equiv (matrixRepresentation ρ)
+      (matrixRepresentation σ))
+    (A : Matrix (Fin n) (Fin n) ℂ) (g : G) (changed : ℂ)
+    (changed_ne_exact : changed ≠ ∑ sourceRow, ∑ sourceColumn,
+      representationEquivPullbackCoefficientMatrix equivalence A sourceRow sourceColumn *
+        ρ g sourceRow sourceColumn)
+    (claimed : (∑ targetRow, ∑ targetColumn,
+      A targetRow targetColumn * σ g targetRow targetColumn) = changed) : False :=
+  changed_ne_exact (claimed.symm.trans
+    (representationEquiv_weightedMatrixCoefficientSum ρ σ equivalence A g))
+
 /-- Anti-collapse probe: in positive source dimension the forward change-of-basis matrix cannot be
 zero, because its exact left inverse would make the identity matrix zero. -/
 theorem positive_dimension_change_matrix_ne_zero
