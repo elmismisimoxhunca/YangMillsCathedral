@@ -746,8 +746,9 @@ canonical real/complex coherence consequently constructs the generic coefficient
 this nested 2D data. Finite linearity then proves generator convergence on the entire smooth real
 coefficient range, so its `core_generator` obligation is no longer caller supplied. It does not
 assert that every continuous dual class has a smooth representative. No inhabitant of the graph-core
-record is constructed: smooth graph density and the eventual uniform graph bound are now the exact
-coefficient-specific boundary before all-smooth generation. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
+record is constructed: an exact `Nonempty` audit proves that smooth graph density and one
+nonnegative eventual uniform graph bound are precisely the remaining coefficient-specific boundary
+before all-smooth generation. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
 marginals are derived, including exact equality at the selected area with the sampled loop-holonomy
 law. The metric bridge now transports the exact invariant pairing to every group tangent fiber by
 left Maurer–Cartan trivialization and proves its inverse, symmetry, strict positivity, and left/right

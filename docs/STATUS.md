@@ -5362,7 +5362,8 @@ coherence then constructs the generic complex coefficientwise bridge for the nes
 linearity proves the exact pairing generator on every finite synthesis and fills `core_generator`
 for the designated coefficient range. A smaller uninhabited reduction record now retains only smooth
 graph density and the eventual uniform graph bound before constructing the existing all-smooth
-stochastic endpoint. No graph-core record inhabitant is built: smooth-representative coverage,
+stochastic endpoint; its exact `Nonempty` equivalence proves these two obligations, including one
+nonnegative bound constant, are exhaustive rather than a summary. No graph-core record inhabitant is built: smooth-representative coverage,
 graph density, and the quotient bound remain unconstructed, while Laplace–Beltrami comparison
 remains open. The
 common Wilson chain now forgets only its genuinely stronger global-faithfulness and normalization
