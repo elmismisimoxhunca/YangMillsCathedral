@@ -5274,8 +5274,13 @@ arbitrary continuous test with the continuous prefix-product vector then proves 
 the actual finite process history `(B(t₁),…,B(tₙ))`. A separate direct product-law proof now permits
 any measurable real history test with an explicit global norm bound; integrability follows from that
 bound, the compact continuous terminal factor, and finite history/spectral measures. The resulting
-bounded-measurable process-history identity has changed-value hostility. This remains a weak finite-
-history identity, not conditioning. Conditioning on the full past sigma-algebra and stochastic-generator identification remain explicit future proof debt. The
+bounded-measurable process-history identity has changed-value hostility. The exact past measurable
+space at `s` is now the supremum of the pullbacks by every `B(t)`, `t≤s`; included evaluations are
+measurable, these spaces increase with time and lie below the ambient sigma-algebra, and every proved
+finite cylinder is past-measurable and satisfies the exact transition test. The uninhabited
+`TwoDimensionalSelectedLoopFullPastMarkovData` requires that identity for every bounded real test
+measurable for this generated past. The missing monotone-class extension and conditional-expectation
+packaging remain explicit; no full conditional Markov theorem is constructed. Conditioning on the full past sigma-algebra and stochastic-generator identification remain explicit future proof debt. The
 common Wilson chain now forgets only its genuinely stronger global-faithfulness and normalization
 fields to construct Driver's exact Villain common heat chain. Uninhabited
 `TwoDimensionalSpectralVillainWeakLimitBridgeData` ties the unchanged Theorem 7.2 contract to the

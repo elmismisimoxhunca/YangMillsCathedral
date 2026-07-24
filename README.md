@@ -678,8 +678,11 @@ continuous history test and every continuous state extracted from that finite hi
 state reconstruction then rewrites this identity with the actual current value `B(tₙ)` and future
 value `B(tₙ₊₁)`. Continuous prefix-product reconstruction further transports tests to the actual finite process-
 evaluation vector `(B(t₁),…,B(tₙ))`. A direct finite-measure/Fubini argument now extends the history
-test from continuous to arbitrary explicitly bounded measurable real functions. This is not
-full-past conditioning or a full Markov theorem. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
+test from continuous to arbitrary explicitly bounded measurable real functions. The exact process-
+past sigma-algebra is now defined as the supremum of all evaluation pullbacks up to the current time;
+every such finite cylinder is proved past-measurable and satisfies the required identity. Extending
+from finite cylinders to every bounded full-past-measurable test remains an explicit uninhabited
+monotone-class obligation, so no full conditional Markov theorem is claimed. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
 marginals are derived, including exact equality at the selected area with the sampled loop-holonomy
 law. The metric bridge now transports the exact invariant pairing to every group tangent fiber by
 left Maurer–Cartan trivialization and proves its inverse, symmetry, strict positivity, and left/right

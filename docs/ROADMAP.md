@@ -908,7 +908,10 @@ committed before higher layers depend on it.
   values, then use the continuous complete prefix-product vector to transport every continuous test
   to the actual finite process-evaluation history `(B(t₁),…,B(tₙ))`. Re-run the product/Fubini proof
   with explicit measurability and a uniform bound to cover every bounded measurable real history
-  test. Retain full-past sigma-algebra conditioning as a separate next step.
+  test. Define the exact past sigma-algebra as the supremum of every evaluation pullback at times
+  `≤ s`, prove evaluation, monotonicity, ambient inclusion, and finite-cylinder measurability, and
+  package the all-bounded-past-test weak Markov statement as an explicit monotone-class obligation.
+  Retain construction of that obligation and conditional-expectation packaging as separate steps.
 - [x] Prove that the common Wilson chain forgets only global faithfulness and Wilson normalization to
   construct Driver's exact Villain common heat chain. Attach the still-uninhabited Theorem 7.2
   weak-limit contract to the literal spectral `Q_{ε²}` action at one positive spacing, deriving
