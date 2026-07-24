@@ -5339,9 +5339,14 @@ operator and right difference quotient as linear maps on `C(G, ℝ)`. The concre
 `TwoDimensionalSelectedLoopPairingGraphCoreGeneratorData` then retains a designated smooth core,
 graph density, an eventual uniform graph bound, and generator convergence on that core; the generic
 closure theorem derives uniform convergence for every smooth test, and point evaluation constructs
-the existing stochastic generator endpoint. No record inhabitant is built: a suitable real smooth
-core, its core convergence, graph density, and the quotient bound remain unconstructed, while
-Laplace–Beltrami comparison remains open. The
+the existing stochastic generator endpoint. Real and imaginary parts of every selected smooth
+character are now smooth real tests; canonical real/complex coherence transports the complex
+Casimir equation to the exact real pairing-Laplacian eigenvalue, and finite-support real synthesis
+constructs an explicit smooth central character range containing each component. Every member is
+proved conjugation-invariant, and noncentral smooth tests are explicitly excluded, so this range is
+not an all-smooth graph-core candidate on a nonabelian group. No graph-core record inhabitant is
+built: a matrix-coefficient-derived real smooth core, core heat-quotient convergence, graph density,
+and the quotient bound remain unconstructed, while Laplace–Beltrami comparison remains open. The
 common Wilson chain now forgets only its genuinely stronger global-faithfulness and normalization
 fields to construct Driver's exact Villain common heat chain. Uninhabited
 `TwoDimensionalSpectralVillainWeakLimitBridgeData` ties the unchanged Theorem 7.2 contract to the

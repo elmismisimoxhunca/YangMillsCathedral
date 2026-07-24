@@ -727,8 +727,12 @@ also bundles every positive-time real heat operator and its right difference quo
 `TwoDimensionalSelectedLoopPairingGraphCoreGeneratorData` now isolates exactly a designated smooth
 core, its graph density, an eventual uniform graph bound, and generator convergence on that core;
 these fields construct uniform generation on every smooth test and the existing stochastic generator
-endpoint. No inhabitant of this graph-core record is constructed: a suitable real smooth core, its
-core convergence, graph density, and the heat-quotient bound still prevent the algebraic core from filling the remaining all-smooth-tests boundary field. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
+endpoint. Real and imaginary parts of every smooth selected character are now packaged as real
+smooth tests, proved to have the exact real pairing-Laplacian Casimir eigenvalue, and finitely
+synthesized into an explicit real smooth central character range. This range is proved conjugation-
+invariant and is therefore not proposed as a graph-dense core for all smooth tests on a nonabelian
+group. No inhabitant of the graph-core record is constructed: a matrix-coefficient-derived real
+smooth core, its heat-quotient convergence, graph density, and the uniform bound still prevent the algebraic core from filling the remaining all-smooth-tests boundary field. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
 marginals are derived, including exact equality at the selected area with the sampled loop-holonomy
 law. The metric bridge now transports the exact invariant pairing to every group tangent fiber by
 left Maurer–Cartan trivialization and proves its inverse, symmetry, strict positivity, and left/right

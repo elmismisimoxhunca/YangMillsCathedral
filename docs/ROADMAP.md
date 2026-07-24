@@ -962,8 +962,13 @@ committed before higher layers depend on it.
   abstract proper-domain closure API in an explicit record retaining a designated smooth core, graph
   density, an eventual uniform graph bound, and generator convergence on the core; prove that this
   record yields uniform generation on all smooth tests and the stochastic generator endpoint.
-- [ ] Construct an appropriate character-derived real smooth core and prove its core generator
-  convergence, graph density, and the required eventual heat-quotient graph bound; then construct the
+- [x] Package both real and imaginary parts of every smooth selected irreducible character as real
+  smooth tests, prove their exact real pairing-Laplacian Casimir eigenvalue through canonical real/
+  complex coherence, and construct the explicit finite-support real synthesis range as the smooth
+  central character range, together with exact conjugation-invariance and noncentral-exclusion
+  theorems. This central range is not an all-smooth graph-core candidate.
+- [ ] Construct a real smooth matrix-coefficient-derived core and prove its heat-quotient generator
+  convergence, graph density, and the required eventual uniform graph bound; then construct the
   pairing-generator boundary-continuity witness and prove
   comparison of the exact pairing Laplacian with the geometric Laplace–Beltrami operator.
 - [x] Prove that the common Wilson chain forgets only global faithfulness and Wilson normalization to
