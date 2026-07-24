@@ -804,7 +804,9 @@ is unconditionally inhabited. That exact four-field acceptance is now dependentl
 unchanged source-indexed Driver–Lévy–Sengupta `CurrentStrength` components and conditionally
 constructs a separate source-indexed all-smooth operator-generator acceptance. This does not fill the
 older boundary-continuity route, remains nonfinal, and retains the explicit rank-two witness that
-rejects identification with four-dimensional Euclidean spacetime. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
+rejects identification with four-dimensional Euclidean spacetime. The direct operator-generator
+acceptance independently forgets to unchanged current strength and exposes the same rank-two/4D
+contract. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
 marginals are derived, including exact equality at the selected area with the sampled loop-holonomy
 law. The metric bridge now transports the exact invariant pairing to every group tangent fiber by
 left Maurer–Cartan trivialization and proves its inverse, symmetry, strict positivity, and left/right

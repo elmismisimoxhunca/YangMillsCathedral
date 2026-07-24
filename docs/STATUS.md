@@ -5422,7 +5422,8 @@ Driver–Lévy–Sengupta `CurrentStrength` components and conditionally constru
 source-indexed all-smooth operator-generator acceptance. It does not inhabit the older
 boundary-continuity strengthening and remains nonfinal. Its dependent source witness retains the
 rank-two descended model and explicitly rejects identification with four-dimensional Euclidean
-spacetime. No graph-core record inhabitant is built: smooth-representative coverage,
+spacetime. The direct operator-generator acceptance independently forgets to unchanged current
+strength and exposes the same rank-two/4D contract. No graph-core record inhabitant is built: smooth-representative coverage,
 graph density, and the eventual uniform all-domain graph bound remain unconstructed, while Laplace–Beltrami comparison
 remains open. The
 common Wilson chain now forgets only its genuinely stronger global-faithfulness and normalization
