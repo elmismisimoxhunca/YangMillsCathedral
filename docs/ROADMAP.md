@@ -904,7 +904,9 @@ committed before higher layers depend on it.
   coordinates of the supplied mutual-independence law. Combine that exact product law with the
   spectral final-increment measure and product Fubini to derive the weak transition identity for
   every continuous finite-history test, continuous history-extracted state, and terminal test.
-  Retain full-past sigma-algebra conditioning as a separate next step.
+  Use almost-sure state reconstruction to rewrite this with the actual `B(tₙ)` and `B(tₙ₊₁)` process
+  values while retaining the finite increment-history test carrier. Retain process-evaluation
+  history tests and full-past sigma-algebra conditioning as separate next steps.
 - [x] Prove that the common Wilson chain forgets only global faithfulness and Wilson normalization to
   construct Driver's exact Villain common heat chain. Attach the still-uninhabited Theorem 7.2
   weak-limit contract to the literal spectral `Q_{ε²}` action at one positive spacing, deriving

@@ -5267,7 +5267,10 @@ probes reject overlap with the final coordinate. The dependent spectral-transiti
 that final increment with the unchanged spectral probability measure and uses product Fubini to prove
 `E[Φ(H) f(S(H)Y)] = E[Φ(H) P_t f(S(H))]` for every continuous finite-history test `Φ`, continuous
 history-extracted state `S`, and terminal test `f`; a changed transition value is hostilely rejected.
-This remains a weak finite-history identity, not conditioning. Conditioning on the full past sigma-algebra and stochastic-generator identification remain explicit future proof debt. The
+Almost-sure reconstruction specializes `S` to the ordered history product and rewrites both sides as
+`E[Φ(H)f(B(tₙ₊₁))] = E[Φ(H)P_t f(B(tₙ))]` with actual current/future process values. The test
+carrier remains the finite increment vector `H`. This remains a weak finite-history identity, not
+conditioning. Conditioning on the full past sigma-algebra and stochastic-generator identification remain explicit future proof debt. The
 common Wilson chain now forgets only its genuinely stronger global-faithfulness and normalization
 fields to construct Driver's exact Villain common heat chain. Uninhabited
 `TwoDimensionalSpectralVillainWeakLimitBridgeData` ties the unchanged Theorem 7.2 contract to the

@@ -674,8 +674,10 @@ identifies it with `B(t₀)⁻¹B(tₙ)`, and reconstructs the exact current sta
 identity start. The supplied finite mutual-independence law proves that every complete first-`n`
 increment-history vector is independent of the exact final increment in a monotone time family. Combining that product
 law with the spectral increment measure and Fubini derives a weak transition identity for every
-continuous history test and every continuous state extracted from that finite history. This is not
-full-past conditioning or a full Markov theorem. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
+continuous history test and every continuous state extracted from that finite history. Almost-sure
+state reconstruction then rewrites this identity with the actual current value `B(tₙ)` and future
+value `B(tₙ₊₁)`, while the test still observes the finite increment vector. This is not full-past
+conditioning or a full Markov theorem. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
 marginals are derived, including exact equality at the selected area with the sampled loop-holonomy
 law. The metric bridge now transports the exact invariant pairing to every group tangent fiber by
 left Maurer–Cartan trivialization and proves its inverse, symmetry, strict positivity, and left/right
