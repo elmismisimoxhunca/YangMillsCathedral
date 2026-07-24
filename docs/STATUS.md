@@ -5360,7 +5360,8 @@ smooth coverage extends this to every finite-support selected synthesis; combine
 continuous Peter–Weyl density, it proves uniform density of the real core image. Faithful finite
 matrix coordinates discharge only the density premise. A source-facing automatic-smooth-coordinate
 proposition for every bundled continuous irreducible unitary representation now discharges smooth
-coverage, but that proposition remains explicit and uninhabited. An explicit reusable
+coverage; finite change-of-basis transport proves the converse, so this proposition, universal
+smooth coverage, and comparison surjectivity are the same exact uninhabited debt. An explicit reusable
 coefficientwise Casimir bridge prevents the existing trace eigen-equation from being silently
 promoted to matrix entries; in isolation it remains uninhabited, while any supplied instance
 canonically yields both real-component Casimir equations, eigenvalue uniqueness from a diagonal
@@ -5382,8 +5383,8 @@ claiming that image dense in all `C(G, ℝ)`. Selected continuous Peter–Weyl d
 smooth coverage of every continuous-dual class now proves exact density of that real image and
 extends strong continuity to every continuous function. Faithful finite matrix coordinates supply
 the continuous-density premise. Automatic smoothness of every bundled continuous irreducible
-unitary coordinate representation is now a sufficient named route to smooth coverage, but remains
-open. The open
+unitary coordinate representation is now proved equivalent to smooth coverage and comparison
+surjectivity, and remains open. The open
 graph-density field alone would instead extend this zeroth-order continuity to every smooth test; the uniform graph bound remains separately necessary
 for all-smooth generator convergence. Core convergence also yields eventual norm and graph-relative bounds separately for each test; their vector-
 dependent constants and events realize only `∀ f, ∃ C_f, ∀ᶠ t`, not the required uniform

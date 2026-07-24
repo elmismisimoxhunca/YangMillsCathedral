@@ -747,8 +747,8 @@ same smooth and continuous core images. Explicit all-class smooth coverage exten
 finite-support selected synthesis; together with selected continuous Peter–Weyl density it proves
 uniform density of the real core image. Faithful finite matrix coordinates supply only the density
 premise. A source-facing automatic-smoothness proposition for every bundled continuous irreducible
-unitary coordinate representation now discharges universal smooth-dual coverage, but that
-proposition remains open. A reusable coefficientwise
+unitary coordinate representation is now proved exactly equivalent to universal smooth-dual
+coverage and comparison-map surjectivity, but no inhabitant is constructed. A reusable coefficientwise
 Casimir bridge explicitly strengthens the trace equation to every matrix coordinate; in isolation it
 remains an honest uninhabited interface, and when supplied canonical real/complex coherence proves
 both real-component eigenvalue equations and finite synthesis linearity for the pairing Laplacian. Direct matrix-coefficient orthogonality now proves
@@ -767,8 +767,8 @@ closure of the continuous coefficient-core image, without asserting that closure
 `C(G, ℝ)`. Selected continuous Peter–Weyl density together with explicit smooth coverage of every
 continuous-dual class now proves that exact real-image density and therefore strong right-continuity
 on every continuous function. Faithful finite matrix coordinates discharge the first premise; the
-universal smooth-representative premise remains open; the new automatic-smooth-coordinate target is
-a sufficient explicit route to discharge it. Independently, the still-open
+universal smooth-representative premise remains open; the automatic-smooth-coordinate target is now
+proved to be the same exact debt rather than merely a sufficient route. Independently, the still-open
 smooth graph-density field by itself would place every smooth test in that closure and hence yield all-smooth strong heat continuity; the separate uniform graph bound remains
 necessary for all-smooth generator convergence. Core convergence also gives both an eventual norm bound and a
 graph-relative bound separately for each such test. Their constant and eventual set may depend on the test, so they deliberately do not promote

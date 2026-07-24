@@ -979,9 +979,10 @@ committed before higher layers depend on it.
   smooth-representative witness through both basis-change matrices to this realification. Under an
   explicit all-class smooth-coverage premise, extend this to every finite-support selected synthesis
   and transfer selected continuous Peter–Weyl density to uniform density of the real core image;
-  reduce smooth coverage to a sufficient source-facing automatic-smooth-coordinate proposition for
-  every bundled continuous irreducible unitary representation, and retain that proposition and
-  general Peter–Weyl density rather than claiming them unconditionally.
+  prove that smooth coverage, smooth-to-continuous dual surjectivity, and the source-facing
+  automatic-smooth-coordinate proposition for every bundled continuous irreducible unitary
+  representation are equivalent, and retain this exact debt and general Peter–Weyl density rather
+  than claiming them unconditionally.
 - [x] Isolate the stronger coefficientwise Casimir/Laplacian identification as an explicit
   uninhabited bridge and conditionally derive the real/imaginary eigenvalue equations and exact
   finite-synthesis pairing-Laplacian action.
