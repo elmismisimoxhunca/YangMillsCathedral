@@ -272,6 +272,45 @@ theorem exact_selectedLoop_smoothMatrixCoefficientCore_heatOperator_tendsto_zero
     bridge dense
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Exact Fourier-to-semigroup bridge under selected continuous density and smooth-dual coverage. -/
+theorem exact_selectedLoop_heatOperator_tendsto_zero_of_continuousPeterWeyl_of_smoothCoverage
+    (continuousDensity : UnitaryMatrixDual.HasContinuousPeterWeylDensity G)
+    (smoothCoverage : ∀ q : UnitaryMatrixDual G,
+      q.HasSmoothRepresentative (E := E)) :
+    ∀ f : C(G, ℝ), Tendsto (fun t : NNReal =>
+      twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t f)
+      (nhdsWithin 0 (Set.Ioi 0)) (nhds f) :=
+  twoDimensionalSelectedLoop_heatOperator_tendsto_zero_of_continuousPeterWeyl_of_smoothCoverage
+    bridge continuousDensity smoothCoverage
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Hostile Fourier-to-semigroup probe: failure of strong continuity at one continuous test blocks
+the joint selected-density and smooth-coverage hypotheses. -/
+theorem missing_selectedLoop_heatOperator_continuity_blocks_PeterWeyl_smoothCoverage
+    (f : C(G, ℝ))
+    (missing : ¬ Tendsto (fun t : NNReal =>
+      twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t f)
+      (nhdsWithin 0 (Set.Ioi 0)) (nhds f))
+    (continuousDensity : UnitaryMatrixDual.HasContinuousPeterWeylDensity G)
+    (smoothCoverage : ∀ q : UnitaryMatrixDual G,
+      q.HasSmoothRepresentative (E := E)) : False :=
+  missing
+    (twoDimensionalSelectedLoop_heatOperator_tendsto_zero_of_continuousPeterWeyl_of_smoothCoverage
+      bridge continuousDensity smoothCoverage f)
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Exact faithful compact matrix-group Fourier-to-semigroup specialization. -/
+theorem exact_selectedLoop_heatOperator_tendsto_zero_of_faithful_of_smoothCoverage
+    (faithful : ContinuousFaithfulFiniteMatrixRepresentation G)
+    (smoothCoverage : ∀ q : UnitaryMatrixDual G,
+      q.HasSmoothRepresentative (E := E)) :
+    ∀ f : C(G, ℝ), Tendsto (fun t : NNReal =>
+      twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t f)
+      (nhdsWithin 0 (Set.Ioi 0)) (nhds f) :=
+  twoDimensionalSelectedLoop_heatOperator_tendsto_zero_of_faithful_of_smoothCoverage
+    bridge faithful smoothCoverage
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Exact consequence of the still-open graph-density field: zeroth-order strong heat continuity
 then holds on every smooth test without using the uniform graph bound. -/
 theorem exact_selectedLoop_smoothMatrixCoefficientCore_heatOperator_tendsto_zero_of_graphDense

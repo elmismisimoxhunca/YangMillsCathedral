@@ -5,6 +5,7 @@ Authors: YangMillsDefinition contributors
 -/
 import YangMills.Dimensions.TwoDimensionalSelectedLoopPairingGraphCoreGenerator
 import YangMills.Mathematics.SmoothUnitaryMatrixCoefficientCasimirLaplacianBridge
+import YangMills.Mathematics.SmoothUnitaryMatrixCoefficientSelectedRealification
 import YangMills.Mathematics.UnitaryMatrixDualCasimirHeatMatrixCoefficientGenerator
 
 /-!
@@ -600,6 +601,40 @@ theorem twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_heatOperator_tend
       bridge f
   rw [dense.closure_eq]
   exact Set.mem_univ f
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Selected continuous Peter--Weyl density and explicit smooth-dual coverage construct the exact
+uniform-density premise above, hence strong right-continuity at zero on every continuous test. -/
+theorem twoDimensionalSelectedLoop_heatOperator_tendsto_zero_of_continuousPeterWeyl_of_smoothCoverage
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (continuousDensity : UnitaryMatrixDual.HasContinuousPeterWeylDensity G)
+    (smoothCoverage : ∀ q : UnitaryMatrixDual G,
+      q.HasSmoothRepresentative (E := E)) :
+    ∀ f : C(G, ℝ), Tendsto (fun t : NNReal =>
+      twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t f)
+      (nhdsWithin 0 (Set.Ioi 0)) (nhds f) :=
+  twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_heatOperator_tendsto_zero_of_dense
+    bridge (smoothUnitaryMatrixCoefficientRealCore_continuousImage_dense
+      continuousDensity smoothCoverage)
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Faithful compact matrix coordinates discharge the continuous density premise; smooth-dual
+coverage remains explicit. -/
+theorem twoDimensionalSelectedLoop_heatOperator_tendsto_zero_of_faithful_of_smoothCoverage
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (faithful : ContinuousFaithfulFiniteMatrixRepresentation G)
+    (smoothCoverage : ∀ q : UnitaryMatrixDual G,
+      q.HasSmoothRepresentative (E := E)) :
+    ∀ f : C(G, ℝ), Tendsto (fun t : NNReal =>
+      twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t f)
+      (nhdsWithin 0 (Set.Ioi 0)) (nhds f) :=
+  twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_heatOperator_tendsto_zero_of_dense
+    bridge (smoothUnitaryMatrixCoefficientRealCore_continuousImage_dense_of_faithful
+      faithful smoothCoverage)
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Smooth graph density alone extends strong right-continuity of the contraction semigroup from the
