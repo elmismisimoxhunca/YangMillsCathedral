@@ -554,6 +554,33 @@ theorem twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_heatOperator_tend
     bridge t (smoothLieGroupScalarToContinuousLinearMap f)).symm
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Contractivity extends strong right-continuity from the finite coefficient core to its uniform-
+norm closure in `C(G, ℝ)`. Reaching every continuous function still requires a separate uniform
+density theorem for this selected smooth coefficient family. -/
+theorem twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_heatOperator_tendsto_zero_of_mem_closure
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (f : C(G, ℝ))
+    (hf : f ∈ closure
+      (smoothLieGroupScalarToContinuousLinearMap ''
+        smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G))) :
+    Tendsto (fun t : NNReal =>
+      twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t f)
+      (nhdsWithin 0 (Set.Ioi 0)) (nhds f) := by
+  apply tendsto_continuousLinearMap_id_of_mem_closure_of_contraction
+    (twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge)
+    (smoothLieGroupScalarToContinuousLinearMap ''
+      smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G))
+  · exact Filter.Eventually.of_forall fun t h =>
+      twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap_apply_norm_le bridge t h
+  · intro h hh
+    obtain ⟨coreTest, hcoreTest, rfl⟩ := hh
+    exact twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_heatOperator_tendsto_zero
+      bridge coreTest hcoreTest
+  · exact hf
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Core convergence supplies an eventual norm bound separately for each finite coefficient test.
 The quantifiers are deliberately pointwise in `f`; this is strictly weaker than the single uniform
 all-domain graph bound required below. -/

@@ -101,6 +101,37 @@ theorem exists_eventually_pointwise_graphBound_of_tendsto
         change ‖A z‖ + 1 = (‖A z‖ + 1) / d * d
         exact (div_mul_cancel₀ _ hd).symm
 
+/-- Strong convergence of continuous-linear contractions to the identity extends from a subset to
+its norm closure. This is the elementary dense-core closure principle for contraction semigroups;
+it does not supply density of any concrete coefficient family. -/
+theorem tendsto_continuousLinearMap_id_of_mem_closure_of_contraction
+    (T : ι → X →L[𝕜] X) (core : Set X)
+    (contraction : ∀ᶠ i in l, ∀ x : X, ‖T i x‖ ≤ ‖x‖)
+    (coreLimit : ∀ z ∈ core, Tendsto (fun i => T i z) l (nhds z))
+    {x : X} (hx : x ∈ closure core) :
+    Tendsto (fun i => T i x) l (nhds x) := by
+  rw [Metric.tendsto_nhds]
+  intro ε hε
+  obtain ⟨z, hz, hxz⟩ := Metric.mem_closure_iff.mp hx (ε / 3) (by positivity)
+  have hcoreEventually :=
+    (Metric.tendsto_nhds.mp (coreLimit z hz)) (ε / 3) (by positivity)
+  rw [dist_eq_norm] at hxz
+  filter_upwards [contraction, hcoreEventually] with i hiContract hiCore
+  rw [dist_eq_norm] at hiCore ⊢
+  have split : T i x - x = T i (x - z) + (T i z - z) + (z - x) := by
+    rw [map_sub]
+    abel
+  rw [split]
+  calc
+    ‖T i (x - z) + (T i z - z) + (z - x)‖
+        ≤ ‖T i (x - z)‖ + ‖T i z - z‖ + ‖z - x‖ := norm_add₃_le
+    _ ≤ ‖x - z‖ + ‖T i z - z‖ + ‖z - x‖ := by
+      gcongr
+      exact hiContract (x - z)
+    _ < ε := by
+      rw [norm_sub_rev z x]
+      linarith
+
 /-- Generator convergence extends from a graph-dense subset of a possibly proper algebraic
 domain. Neither the domain `D` nor its ambient map `J` is assumed complete, normed, or injective. -/
 theorem tendsto_linearMapOnDomain_of_graphDenseAt_of_eventually_graphBound

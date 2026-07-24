@@ -246,6 +246,19 @@ theorem exact_selectedLoop_smoothMatrixCoefficientCore_heatOperator_tendsto_zero
     bridge f hf
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Exact contraction extension to the uniform closure of the continuous coefficient-core image. -/
+theorem exact_selectedLoop_smoothMatrixCoefficientCore_heatOperator_tendsto_zero_on_closure
+    (f : C(G, ℝ))
+    (hf : f ∈ closure
+      (smoothLieGroupScalarToContinuousLinearMap ''
+        smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G))) :
+    Tendsto (fun t : NNReal =>
+      twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t f)
+      (nhdsWithin 0 (Set.Ioi 0)) (nhds f) :=
+  twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_heatOperator_tendsto_zero_of_mem_closure
+    bridge f hf
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Exact pointwise boundedness probe. Its event and bound may depend on the chosen core vector, so
 it is not the uniform graph-bound field of the reduction record. -/
 theorem exact_selectedLoop_smoothMatrixCoefficientCore_eventually_pointwiseNormBound

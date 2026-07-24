@@ -39,6 +39,17 @@ theorem exact_exists_eventually_pointwise_graphBound_of_tendsto
       ‖Q i (J z)‖ ≤ Cz * (‖J z‖ + ‖AOnDomain z‖) :=
   exists_eventually_pointwise_graphBound_of_tendsto J AOnDomain Q z hz
 
+/-- Exact contraction-core closure probe: strong identity convergence extends to the norm closure
+of the tested subset. -/
+theorem exact_contractionCore_strongIdentity_on_closure
+    (T : ι → X →L[𝕜] X) (tested : Set X)
+    (contraction : ∀ᶠ i in l, ∀ x : X, ‖T i x‖ ≤ ‖x‖)
+    (testedLimit : ∀ z ∈ tested, Tendsto (fun i => T i z) l (nhds z))
+    {x : X} (hx : x ∈ closure tested) :
+    Tendsto (fun i => T i x) l (nhds x) :=
+  tendsto_continuousLinearMap_id_of_mem_closure_of_contraction
+    T tested contraction testedLimit hx
+
 /-- Positive probe: graph approximation on a proper algebraic domain supplies the ambient
 operator limit. -/
 theorem exact_domainGraphCore_generator_extension
