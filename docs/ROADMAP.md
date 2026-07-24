@@ -1510,6 +1510,11 @@ committed before higher layers depend on it.
     direct fine-to-coarse weighted refinement and finest-graph stochastic finite law. Retain the
     stage measures/pushforwards, heat-factor proof, and embedded construction as debt; the graph
     composite itself is now canonical.
+  - [x] Isolate a parameterized graph-measure refinement certificate containing both exact weighted
+    measures, integral normalizers, all-region unit mass, surjective curve refinement, and
+    configuration-map pushforward without a
+    physical projection, sample law, or finite-law wrapper; forget every existing stochastic
+    refinement to it definitionally.
   - [x] Join that transport to a literal fine equation-(8.3) weighted Haar graph measure and integral
     normalizer: require exact fine-to-coarse weighted-measure pushforward for every distinguished
     region, then derive fine normalization/nonzeroness and the unchanged stochastic finite-curve law.

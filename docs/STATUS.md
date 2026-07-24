@@ -5648,7 +5648,12 @@ equation-(8.3) graph measures: a coarse-to-middle weighted refinement and suppli
 weighted pushforward on the same coherent triple derive the direct fine-to-coarse weighted
 refinement and finest-graph stochastic finite law. The graph composite is canonical; the stage
 weighted measures and analytic pushforwards remain supplied.
-`TwoDimensionalSenguptaCurveBondGraphMeasureRefinementData` now specializes that premise
+`TwoDimensionalSenguptaParameterizedCurveBondGraphMeasureRefinementData` now isolates the literal
+coarse/fine equation-(8.3) weighted Haar measures, their exact integral normalizers, all-region unit
+mass, configuration-map surjectivity, and their configuration-map pushforward without requiring a physical projection, sample law, or finite-law
+wrapper. Every existing stochastic graph refinement forgets to this parameterized certificate
+without changing its curve refinement, weights, normalizers, or pushforward.
+`TwoDimensionalSenguptaCurveBondGraphMeasureRefinementData` specializes that premise
 to a literal normalized equation-(8.3) weighted Haar graph measure: its fine normalizer is the exact
 fine graph-weight integral and the fine measure must push forward to the coarse graph measure for
 every distinguished region. Fine normalization/nonzeroness and the unchanged projected stochastic

@@ -1115,8 +1115,11 @@ refinement is then derived; its configuration map, stagewise measure pushforward
 projected finite-curve law compose without an unrelated measure-law witness. At the normalized equation-(8.3) scope, a coarse-to-middle weighted
 refinement and a supplied fine-to-middle weighted pushforward on that same coherent triple now
 derive the direct fine-to-coarse weighted refinement and finest-graph stochastic finite law; the
-stage measures and analytic pushforwards remain supplied, while the graph composite is canonical. A dependent
-normalized equation-(8.3) layer now accepts a literal fine weighted Haar graph measure with its
+stage measures and analytic pushforwards remain supplied, while the graph composite is canonical.
+A parameterized graph-measure certificate now isolates the exact coarse/fine weights, integral
+normalizers, all-region unit mass, surjective curve refinement, and weighted pushforward without a projection, sample law, or
+finite-law wrapper; the existing stochastic certificate forgets to it definitionally. A dependent
+normalized equation-(8.3) layer accepts a literal fine weighted Haar graph measure with its
 integral normalizer and requires its pushforward through that exact graph map for every distinguished
 region; fine normalization/nonzeroness and the unchanged complete projected finite-curve law then
 derive. The weighted pushforward remains an obligation—no heat-factor/convolution integration proof,
