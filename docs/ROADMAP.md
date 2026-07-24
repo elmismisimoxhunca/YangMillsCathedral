@@ -1580,6 +1580,11 @@ committed before higher layers depend on it.
     by exact words and factors, then derive its unchanged target-presentation law. Retain
     construction of the sample law and subdivisions, integration, inhabitation, and full Fact 3 as
     debt.
+  - [x] State nonvacuous fixed-universe universal acceptance requiring every concrete general outer
+    candidate to receive its own preliminary geometry, analytic chain, target normalizer, and target
+    representation of the unchanged source stochastic law. Forget exactly to the prior universal
+    geometric target. Retain construction, unrestricted-universe/full Fact 3, and inhabitation as
+    debt.
   - [x] Derive the exact algebraic Fact 3 proof pattern once preliminary source/target subdivision
     certificates and one cellwise homeomorphism certificate are supplied: ordinary and signed-twist
     factor equalities compose transitively, with the target subdivision using exactly transported

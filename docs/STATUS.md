@@ -5732,8 +5732,12 @@ that identification: one existing source finite-holonomy sample law must have th
 words and normalized density-semigroup factors, with a measurable projection. Its genuine covering
 projection constructs the projection-bearing endpoint, after which the unchanged stochastic sample
 law is derived on the original target presentation for every region. Construction and analytic
-certification of those preliminary subdivisions, the sample law itself, full universal Fact 3, and
-inhabitation remain open.
+certification of those preliminary subdivisions and the sample law itself remain open.
+`TwoDimensionalSenguptaUniversalGeneralHomeomorphismFiniteCurveLawData` now states the nonvacuous
+fixed-universe universal endpoint: every concrete general outer candidate receives its own geometry,
+analytic chain, target normalizer, and target representation of that unchanged stochastic law.
+Forgetting certification recovers the prior universal geometry target. The record remains
+uninhabited; unrestricted-universe/full Fact 3, construction, and inhabitation remain open.
 `TwoDimensionalSenguptaPreliminarySubdivisionHomeomorphismFactorData` now derives the exact algebraic
 proof pattern after such subdivisions are supplied: source coarse-to-fine equality, signed cellwise
 homeomorphism equality, and reverse target coarse-to-fine equality compose to the coarse ordinary

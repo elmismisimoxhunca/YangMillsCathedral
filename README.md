@@ -1173,10 +1173,12 @@ twist in its kernel, derives kernel membership for the orientation-transported t
 retains the same law equality; by itself it does not identify either side with a stochastic sample
 law. A further conditional endpoint requires one existing source finite-holonomy sample law to use
 the exact source curve words and normalized density-semigroup factors. It then derives that the
-unchanged sample law is represented on the original target presentation for every region. This
-target remains uninhabited and constructs no geometry or integration witness. Constructing and
-certifying preliminary subdivisions tied to that same homeomorphism—and hence full universal Fact
-3—remain open; the subclass record is uninhabited. The exact algebraic proof pattern
+unchanged sample law is represented on the original target presentation for every region. A
+nonvacuous fixed-universe universal wrapper now requires this complete certificate for every concrete
+general outer candidate, with candidate-dependent subdivisions and target normalizers; forgetting
+certification recovers the prior universal geometry target. This target remains uninhabited and
+constructs no geometry, law, or integration witness. Unrestricted-universe/full Fact 3 and
+construction remain open; the subclass records are uninhabited. The exact algebraic proof pattern
 through preliminary source and target subdivisions is now derived separately: source subdivision,
 cellwise signed homeomorphism, and reverse target subdivision compose to coarse ordinary and
 `h`/`h⁻¹` twisted factor equalities. Constructing the required subdivisions remains open. The new
