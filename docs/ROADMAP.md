@@ -1499,6 +1499,11 @@ committed before higher layers depend on it.
     constructs full-past semantics. Construct that finite-cylinder record from the prior bounded-
     measurable finite-history theorem, prove implications in both directions with the prior source
     acceptance, and retain proposition-level rank-two/4D separation.
+  - [x] Add
+    `TwoDimensionalStochasticGeneratorCurrentStrengthSourceIndexedLiteratureAcceptance`, exactly
+    decomposed into the prior six source components plus the dependent uninhabited zero-time
+    generator witness on their unchanged spectral Brownian bridge. Prove forgetting, rank-two, and
+    4D-separation theorems and direct probes.
   - [ ] Assemble a final source-indexed 2D acceptance proposition joining the constructed finite
     lattice, heat/Brownian, weak-limit continuum, compact-surface, and sewing chains; attempt to
     inhabit it solely from formalized Driver/Lévy/Sengupta results and record every remaining

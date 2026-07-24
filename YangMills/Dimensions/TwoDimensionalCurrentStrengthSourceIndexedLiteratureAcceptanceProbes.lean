@@ -364,6 +364,117 @@ theorem fullPast_four_dimensional_linear_model_blocked :
   TwoDimensionalFullPastCurrentStrengthSourceIndexedLiteratureAcceptance.not_linearEquiv_four
     fullAcceptance
 
+
+variable (generatorAcceptance : TwoDimensionalStochasticGeneratorCurrentStrengthSourceIndexedLiteratureAcceptance.{uE, uG, uGauge, uSample, uConnection,
+      uΩ, uVertex, uEdge, uFace, uXAxisCell,
+      uLargeVertex, uLargeEdge, uLargeFace, uLargeXAxisCell, uFineVertex,
+      uFineEdge, uFineFace, uFineXAxisCell, uFineLargeVertex, uFineLargeEdge,
+      uFineLargeFace, uFineLargeXAxisCell, uEL, uHL, uSL,
+      uER, uHR, uSR, uEG, uHG,
+      uLeftBase, uRightBase, uWholeBase, uLeftLoop, uRightLoop,
+      uWholeLoop, uLeftSample, uRightSample, uWholeSample, uCover,
+      uCurveS, uEdgeS, uInternalEdge, uFaceS, uRegionS,
+      uSenguptaSample, uSenguptaSurface, uSenguptaBaseVertex, uSenguptaFineInternal, uSenguptaFineFace,
+      uSenguptaFineVertex, uSenguptaTargetEdge, uSenguptaTargetInternal, uSenguptaTargetFace, uSenguptaTargetRegion,
+      uSenguptaTargetVertex, uSenguptaTargetSurface, uCandidateFineEdge, uCandidateFineInternal, uCandidateFineFace,
+      uCandidateFineVertex, uPath, uObservable}
+    (law := law) (inner := inner) (realLaplacian := realLaplacian)
+    (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+    (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)
+    (identification := identification) (IG := IG)
+    (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+    (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)
+    (CoverGroup := CoverGroup) (CurveS := CurveS) (EdgeS := EdgeS)
+    (InternalEdge := InternalEdge) (FaceS := FaceS) (RegionS := RegionS)
+    (SenguptaSample := SenguptaSample) (coverDensity := coverDensity)
+    (SenguptaSurface := SenguptaSurface) (SenguptaBaseVertex := SenguptaBaseVertex)
+    (SenguptaFineVertex := SenguptaFineVertex) (senguptaFine := senguptaFine)
+    (SenguptaTargetVertex := SenguptaTargetVertex) (senguptaTarget := senguptaTarget)
+    (SenguptaTargetSurface := SenguptaTargetSurface))
+
+include generatorAcceptance in
+omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
+    [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in
+/-- Exact zero-time generator inhabitance audit on the unchanged source components. -/
+theorem exact_stochasticGenerator_component_audit :
+    ∃ source : TwoDimensionalCurrentStrengthSourceIndexedLiteratureComponents.{uE, uG, uGauge, uSample, uConnection,
+      uΩ, uVertex, uEdge, uFace, uXAxisCell,
+      uLargeVertex, uLargeEdge, uLargeFace, uLargeXAxisCell, uFineVertex,
+      uFineEdge, uFineFace, uFineXAxisCell, uFineLargeVertex, uFineLargeEdge,
+      uFineLargeFace, uFineLargeXAxisCell, uEL, uHL, uSL,
+      uER, uHR, uSR, uEG, uHG,
+      uLeftBase, uRightBase, uWholeBase, uLeftLoop, uRightLoop,
+      uWholeLoop, uLeftSample, uRightSample, uWholeSample, uCover,
+      uCurveS, uEdgeS, uInternalEdge, uFaceS, uRegionS,
+      uSenguptaSample, uSenguptaSurface, uSenguptaBaseVertex, uSenguptaFineInternal, uSenguptaFineFace,
+      uSenguptaFineVertex, uSenguptaTargetEdge, uSenguptaTargetInternal, uSenguptaTargetFace, uSenguptaTargetRegion,
+      uSenguptaTargetVertex, uSenguptaTargetSurface, uCandidateFineEdge, uCandidateFineInternal, uCandidateFineFace,
+      uCandidateFineVertex, uPath, uObservable}
+    (law := law) (inner := inner) (realLaplacian := realLaplacian)
+    (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+    (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)
+    (identification := identification) (IG := IG)
+    (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+    (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)
+    (CoverGroup := CoverGroup) (CurveS := CurveS) (EdgeS := EdgeS)
+    (InternalEdge := InternalEdge) (FaceS := FaceS) (RegionS := RegionS)
+    (SenguptaSample := SenguptaSample) (coverDensity := coverDensity)
+    (SenguptaSurface := SenguptaSurface) (SenguptaBaseVertex := SenguptaBaseVertex)
+    (SenguptaFineVertex := SenguptaFineVertex) (senguptaFine := senguptaFine)
+    (SenguptaTargetVertex := SenguptaTargetVertex) (senguptaTarget := senguptaTarget)
+    (SenguptaTargetSurface := SenguptaTargetSurface),
+        Nonempty (TwoDimensionalSelectedLoopStochasticGeneratorAtZeroData
+          source.current.planar.toSpectralBrownianGeneratorBridgeData) :=
+  TwoDimensionalStochasticGeneratorCurrentStrengthSourceIndexedLiteratureAcceptance.iff_components.mp generatorAcceptance
+
+include generatorAcceptance in
+omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
+    [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in
+/-- Forgetting the zero-time generator field recovers the prior source acceptance. -/
+theorem exact_stochasticGenerator_implies_current :
+    TwoDimensionalCurrentStrengthSourceIndexedLiteratureAcceptance.{uE, uG, uGauge, uSample, uConnection,
+      uΩ, uVertex, uEdge, uFace, uXAxisCell,
+      uLargeVertex, uLargeEdge, uLargeFace, uLargeXAxisCell, uFineVertex,
+      uFineEdge, uFineFace, uFineXAxisCell, uFineLargeVertex, uFineLargeEdge,
+      uFineLargeFace, uFineLargeXAxisCell, uEL, uHL, uSL,
+      uER, uHR, uSR, uEG, uHG,
+      uLeftBase, uRightBase, uWholeBase, uLeftLoop, uRightLoop,
+      uWholeLoop, uLeftSample, uRightSample, uWholeSample, uCover,
+      uCurveS, uEdgeS, uInternalEdge, uFaceS, uRegionS,
+      uSenguptaSample, uSenguptaSurface, uSenguptaBaseVertex, uSenguptaFineInternal, uSenguptaFineFace,
+      uSenguptaFineVertex, uSenguptaTargetEdge, uSenguptaTargetInternal, uSenguptaTargetFace, uSenguptaTargetRegion,
+      uSenguptaTargetVertex, uSenguptaTargetSurface, uCandidateFineEdge, uCandidateFineInternal, uCandidateFineFace,
+      uCandidateFineVertex, uPath, uObservable}
+    (law := law) (inner := inner) (realLaplacian := realLaplacian)
+    (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+    (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)
+    (identification := identification) (IG := IG)
+    (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+    (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)
+    (CoverGroup := CoverGroup) (CurveS := CurveS) (EdgeS := EdgeS)
+    (InternalEdge := InternalEdge) (FaceS := FaceS) (RegionS := RegionS)
+    (SenguptaSample := SenguptaSample) (coverDensity := coverDensity)
+    (SenguptaSurface := SenguptaSurface) (SenguptaBaseVertex := SenguptaBaseVertex)
+    (SenguptaFineVertex := SenguptaFineVertex) (senguptaFine := senguptaFine)
+    (SenguptaTargetVertex := SenguptaTargetVertex) (senguptaTarget := senguptaTarget)
+    (SenguptaTargetSurface := SenguptaTargetSurface) :=
+  TwoDimensionalStochasticGeneratorCurrentStrengthSourceIndexedLiteratureAcceptance.implies_current generatorAcceptance
+
+include generatorAcceptance in
+omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
+    [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in
+/-- Zero-time generator strengthening remains exactly rank two. -/
+theorem exact_stochasticGenerator_rank_two : Module.finrank ℝ EG = 2 :=
+  TwoDimensionalStochasticGeneratorCurrentStrengthSourceIndexedLiteratureAcceptance.model_finrank_two generatorAcceptance
+
+include generatorAcceptance in
+omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
+    [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in
+/-- Zero-time generator strengthening cannot become the four-dimensional model. -/
+theorem stochasticGenerator_four_dimensional_linear_model_blocked :
+    ¬ Nonempty (EG ≃ₗ[ℝ] EuclideanDimension.four.Spacetime) :=
+  TwoDimensionalStochasticGeneratorCurrentStrengthSourceIndexedLiteratureAcceptance.not_linearEquiv_four generatorAcceptance
+
 end TwoDimensionalCurrentStrengthSourceIndexedLiteratureAcceptanceProbes
 
 end

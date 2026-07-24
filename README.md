@@ -1091,7 +1091,12 @@ components with the canonically derived
 `TwoDimensionalSelectedLoopFinitePastCylinderMarkovData` on the unchanged nested spectral Brownian
 bridge. The proved pi-system closure constructs full-past semantics, and exact implications in both
 directions show this strengthening introduces no new inhabitance hypothesis, and
-rank-two/4D separation is retained. The `CurrentStrength` qualifier remains binding: this is not the final source-complete 2D target, and no
+rank-two/4D separation is retained.
+`TwoDimensionalStochasticGeneratorCurrentStrengthSourceIndexedLiteratureAcceptance` then adds the
+genuine unconstructed zero-time generator witness to the same exact source components and nested
+spectral Brownian bridge. Its existential audit exposes this dependent boundary-regularity debt;
+forgetting it recovers the prior proposition, and rank-two/4D separation is retained. The
+`CurrentStrength` qualifier remains binding: this is not the final source-complete 2D target, and no
 inhabitant is constructed.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to

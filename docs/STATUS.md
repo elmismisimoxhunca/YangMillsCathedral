@@ -5638,7 +5638,12 @@ by their unchanged nested spectral Brownian bridge. Its `Nonempty` audit exposes
 plus the canonically derived finite-coordinate transition record; `.ofCurrent` and `.implies_current`
 prove that this full-past strengthening adds no inhabitance hypothesis. The pi-system theorem
 constructs full-past semantics rather than accepting a second monotone-class field. Rank-two and 4D linear-model
-exclusion persist. The name remains explicitly `CurrentStrength`: the final source-complete 2D
+exclusion persist.
+`TwoDimensionalStochasticGeneratorCurrentStrengthSourceIndexedLiteratureAcceptance` is the next
+strict proposition-shaped layer: it existentially pairs those prior exact components with
+`TwoDimensionalSelectedLoopStochasticGeneratorAtZeroData` on their unchanged nested spectral
+Brownian bridge. Its exact decomposition, forgetful implication, rank-two theorem, and 4D exclusion
+are probed; unlike the full-past field, this zero-time witness is not constructed. The name remains explicitly `CurrentStrength`: the final source-complete 2D
 proposition and literature-only inhabitant are still open.
 
 The preliminary `FourDimensionalCurrentStrengthUniversalAcceptance` declaration is intentionally
