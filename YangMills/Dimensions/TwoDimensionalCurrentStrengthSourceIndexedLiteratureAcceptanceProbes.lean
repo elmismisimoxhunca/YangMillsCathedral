@@ -815,6 +815,14 @@ noncomputable def exact_generalFactThreeFourier_implies_operatorGenerator :=
 include generalFactThreeFourierData in
 omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
     [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in
+/-- The exact inhabitance audit extracts only the dependently connected source and analytic debt. -/
+noncomputable def exact_generalFactThreeFourier_component_audit :=
+  TwoDimensionalGeneralFactThreeSelectedFourierDerivativeCurrentStrengthSourceIndexedLiteratureAcceptance.nonempty_iff_components.mp
+    (⟨generalFactThreeFourierData⟩)
+
+include generalFactThreeFourierData in
+omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
+    [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in
 /-- The joint acceptance remains rank two and rejects a 4D linear model. -/
 theorem exact_generalFactThreeFourier_dimension_contract :
     Module.finrank ℝ EG = 2 ∧
