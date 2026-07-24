@@ -5476,8 +5476,9 @@ pairings now prove all-coordinate-class algebraic Plancherel:
 actual finite support and prevents this identity from being read as an infinite-series theorem.
 A separate smooth coordinate dual now stores exact `ContMDiff` matrix coordinates and maps
 injectively into the continuous dual. Its image is exactly the classes satisfying
-`HasSmoothRepresentative`; comparison surjectivity is proved equivalent to every continuous class
-having such a representative. A hostile probe shows one missing smooth representative blocks
+`HasSmoothRepresentative`; this predicate eliminates to an explicit bundled smooth presentation of
+the unchanged continuous class. Comparison surjectivity is proved equivalent to every continuous
+class having such a representative. A hostile probe shows one missing smooth representative blocks
 surjectivity, so no silent dual equivalence is possible. Algebraic synthesis now also lands in
 Mathlib's actual normalized-Haar `Lp ℂ 2`, where its inner product is proved equal to the exact
 algebraic Fourier pairing. The algebraic `L²` range and closed coefficient span are concrete, and
