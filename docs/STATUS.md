@@ -5679,8 +5679,13 @@ bundled candidates contain targets and homeomorphisms with direct cell equivalen
 total area, curve words, endpoint-preserving edge transport, independent per-face simplex
 orientations, global sign, face disks, and complement regions. Every candidate must receive a
 matching factor certificate; candidate nonemptiness and the nonorientable fixed twist are explicit.
-Negative global sign does not force local face reversal on a nonorientable source. Homeomorphisms
-requiring preliminary subdivisions, full universal Fact 3, and inhabitation remain open.
+Negative global sign does not force local face reversal on a nonorientable source.
+`TwoDimensionalSenguptaGeneralEmbeddedHomeomorphismCandidateData` now formalizes the broader outer
+Fact 3 source class before simplicialization: two actual embedded admissible pairs, an actual surface
+homeomorphism, indexed ordered directed curve transport after an endpoint-fixing whole-curve
+homeomorphic reparametrization, and equality only of total simplex area. It intentionally contains no direct cell equivalences.
+Construction/certification of preliminary subdivisions tied to that same homeomorphism, full
+universal Fact 3, and inhabitation remain open.
 `TwoDimensionalSenguptaPreliminarySubdivisionHomeomorphismFactorData` now derives the exact algebraic
 proof pattern after such subdivisions are supplied: source coarse-to-fine equality, signed cellwise
 homeomorphism equality, and reverse target coarse-to-fine equality compose to the coarse ordinary

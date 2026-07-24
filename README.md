@@ -1139,7 +1139,10 @@ specified at fixed universe levels: a concrete bundled candidate covers targets 
 with direct edge/face equivalences, and every candidate must receive a factor certificate with the
 same global sign, per-face simplex-orientation choices, and equivalences. Candidate nonemptiness and
 the nonorientable fixed twist are explicit. Negative sign does not force local face reversal on a
-nonorientable source. Homeomorphisms requiring preliminary source/target subdivisions—and hence full
+nonorientable source. The broader pre-simplicial Fact 3 outer candidate is now also concrete: it
+stores two actual embedded pairs, an actual surface homeomorphism, and indexed ordered directed
+curve transport after an endpoint-fixing whole-curve homeomorphic reparametrization, with equality
+only of total simplex area and no direct cell maps. Constructing/certifying preliminary source/target subdivisions tied to that same homeomorphism—and hence full
 universal Fact 3—remain open; the subclass record is uninhabited. The exact algebraic proof pattern
 through preliminary source and target subdivisions is now derived separately: source subdivision,
 cellwise signed homeomorphism, and reverse target subdivision compose to coarse ordinary and

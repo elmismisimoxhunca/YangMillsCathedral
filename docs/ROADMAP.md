@@ -1533,6 +1533,12 @@ committed before higher layers depend on it.
     certificate for every candidate, candidate nonemptiness, and the nonorientable fixed twist.
     Retain homeomorphisms requiring preliminary source/target subdivision, full universal Fact 3,
     and inhabitation as debt.
+  - [x] Formalize the broader outer Fact 3 candidate before simplicialization: two actual embedded
+    admissible pairs, an actual surface homeomorphism, and indexed ordered directed curve transport
+    after an endpoint-fixing whole-curve homeomorphic reparametrization, with equality only of total
+    simplex area. Deliberately
+    require no direct edge/face/vertex/region equivalences. Retain construction and certification of
+    preliminary subdivisions and their relation to this exact homeomorphism as debt.
   - [x] Derive the exact algebraic Fact 3 proof pattern once preliminary source/target subdivision
     certificates and one cellwise homeomorphism certificate are supplied: ordinary and signed-twist
     factor equalities compose transitively, with the target subdivision using exactly transported
