@@ -168,6 +168,113 @@ theorem smoothUnitaryMatrixCoefficientRealFunction_mem_coreCandidate
   simp [smoothUnitaryMatrixCoefficientRealSynthesis]
 
 omit [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- A finite complex-matrix-weighted sum of coefficients from one explicitly smooth
+representation, retained as a pointwise complex function. -/
+def smoothUnitaryMatrixCoefficientMatrixWeightedSum
+    (ρ : SmoothUnitaryIrreducibleMatrixRepresentation E G)
+    (A : Matrix (Fin ρ.dimension) (Fin ρ.dimension) ℂ) (g : G) : ℂ :=
+  ∑ row, ∑ column, A row column * ρ.representation g row column
+
+/-- Canonical smooth real function obtained by expanding the real part of one complex-matrix-
+weighted coefficient sum into the real and imaginary coefficient generators. -/
+noncomputable def smoothUnitaryMatrixCoefficientMatrixRealification
+    (ρ : SmoothUnitaryIrreducibleMatrixRepresentation E G)
+    (A : Matrix (Fin ρ.dimension) (Fin ρ.dimension) ℂ) :
+    SmoothLieGroupScalarFunction (E := E) (G := G) :=
+  ∑ row, ∑ column,
+    ((A row column).re • smoothUnitaryMatrixCoefficientRealFunction
+        ⟨ρ, row, column, .real⟩ -
+      (A row column).im • smoothUnitaryMatrixCoefficientRealFunction
+        ⟨ρ, row, column, .imaginary⟩)
+
+/-- Canonical finitely supported real coefficients implementing matrix realification. -/
+noncomputable def smoothUnitaryMatrixCoefficientMatrixRealificationCoefficients
+    (ρ : SmoothUnitaryIrreducibleMatrixRepresentation E G)
+    (A : Matrix (Fin ρ.dimension) (Fin ρ.dimension) ℂ) :
+    SmoothUnitaryMatrixCoefficientRealCoefficients E G :=
+  ∑ row, ∑ column,
+    ((A row column).re • Finsupp.single
+        ⟨ρ, row, column, .real⟩ 1 -
+      (A row column).im • Finsupp.single
+        ⟨ρ, row, column, .imaginary⟩ 1)
+
+omit [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- The realification has exactly the pointwise real part of the original complex weighted sum. -/
+theorem smoothUnitaryMatrixCoefficientMatrixRealification_apply
+    (ρ : SmoothUnitaryIrreducibleMatrixRepresentation E G)
+    (A : Matrix (Fin ρ.dimension) (Fin ρ.dimension) ℂ) (g : G) :
+    smoothUnitaryMatrixCoefficientMatrixRealification ρ A g =
+      (smoothUnitaryMatrixCoefficientMatrixWeightedSum ρ A g).re := by
+  simp only [smoothUnitaryMatrixCoefficientMatrixRealification,
+    smoothUnitaryMatrixCoefficientMatrixWeightedSum,
+    SmoothLieGroupScalarFunction.finset_sum_apply, SmoothLieGroupScalarFunction.sub_apply,
+    SmoothLieGroupScalarFunction.smul_apply,
+    smoothUnitaryMatrixCoefficientRealFunction_real_apply,
+    smoothUnitaryMatrixCoefficientRealFunction_imaginary_apply]
+  change (∑ row, ∑ column,
+      ((A row column).re * (ρ.representation g row column).re -
+        (A row column).im * (ρ.representation g row column).im)) =
+    Complex.reCLM (∑ row, ∑ column,
+      A row column * ρ.representation g row column)
+  rw [map_sum]
+  apply Finset.sum_congr rfl
+  intro row _
+  rw [map_sum]
+  apply Finset.sum_congr rfl
+  intro column _
+  rw [Complex.reCLM_apply, Complex.mul_re]
+
+omit [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- Synthesis of the canonical finitely supported coefficients is exactly matrix realification. -/
+theorem smoothUnitaryMatrixCoefficientRealSynthesis_realificationCoefficients
+    (ρ : SmoothUnitaryIrreducibleMatrixRepresentation E G)
+    (A : Matrix (Fin ρ.dimension) (Fin ρ.dimension) ℂ) :
+    smoothUnitaryMatrixCoefficientRealSynthesis
+        (smoothUnitaryMatrixCoefficientMatrixRealificationCoefficients ρ A) =
+      smoothUnitaryMatrixCoefficientMatrixRealification ρ A := by
+  classical
+  simp only [smoothUnitaryMatrixCoefficientMatrixRealificationCoefficients,
+    smoothUnitaryMatrixCoefficientMatrixRealification, map_sum, map_sub, map_smul,
+    smoothUnitaryMatrixCoefficientRealSynthesis, Finsupp.linearCombination_single,
+    one_smul]
+
+omit [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- Realification of every finite complex matrix-weighted sum remains in the algebraic smooth real
+coefficient core. -/
+theorem smoothUnitaryMatrixCoefficientMatrixRealification_mem_coreCandidate
+    (ρ : SmoothUnitaryIrreducibleMatrixRepresentation E G)
+    (A : Matrix (Fin ρ.dimension) (Fin ρ.dimension) ℂ) :
+    smoothUnitaryMatrixCoefficientMatrixRealification ρ A ∈
+      smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G) := by
+  change smoothUnitaryMatrixCoefficientMatrixRealification ρ A ∈
+    smoothUnitaryMatrixCoefficientRealCoreSubmodule (E := E) (G := G)
+  unfold smoothUnitaryMatrixCoefficientMatrixRealification
+  apply Submodule.sum_mem
+  intro row _
+  apply Submodule.sum_mem
+  intro column _
+  apply Submodule.sub_mem
+  · apply Submodule.smul_mem
+    exact smoothUnitaryMatrixCoefficientRealFunction_mem_coreCandidate
+      ⟨ρ, row, column, .real⟩
+  · apply Submodule.smul_mem
+    exact smoothUnitaryMatrixCoefficientRealFunction_mem_coreCandidate
+      ⟨ρ, row, column, .imaginary⟩
+
+omit [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- The continuous realization of realified complex coefficient synthesis lies in the exact
+continuous image used by the selected-loop density bridge. -/
+theorem smoothUnitaryMatrixCoefficientMatrixRealification_mem_continuousCoreImage
+    (ρ : SmoothUnitaryIrreducibleMatrixRepresentation E G)
+    (A : Matrix (Fin ρ.dimension) (Fin ρ.dimension) ℂ) :
+    smoothLieGroupScalarToContinuousLinearMap
+        (smoothUnitaryMatrixCoefficientMatrixRealification ρ A) ∈
+      smoothLieGroupScalarToContinuousLinearMap ''
+        smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G) :=
+  ⟨smoothUnitaryMatrixCoefficientMatrixRealification ρ A,
+    smoothUnitaryMatrixCoefficientMatrixRealification_mem_coreCandidate ρ A, rfl⟩
+
+omit [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
 /-- Every bundled smooth representation contributes a nonzero diagonal real coefficient. This
 prevents the candidate range from collapsing once such a representation is supplied. -/
 theorem smoothUnitaryMatrixCoefficientRealFunction_diagonal_real_ne_zero

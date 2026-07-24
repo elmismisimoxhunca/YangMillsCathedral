@@ -79,6 +79,35 @@ theorem exact_smoothMatrixCoefficient_coreCandidate_linear
     ((smoothUnitaryMatrixCoefficientRealCoreSubmodule (E := E) (G := G)).smul_mem c hf) hh
 
 omit [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- Exact realification probe for a finite complex matrix-weighted smooth coefficient sum. -/
+theorem exact_smoothMatrixCoefficient_matrixRealification
+    (ρ : SmoothUnitaryIrreducibleMatrixRepresentation E G)
+    (A : Matrix (Fin ρ.dimension) (Fin ρ.dimension) ℂ) (g : G) :
+    smoothUnitaryMatrixCoefficientMatrixRealification ρ A g =
+      (smoothUnitaryMatrixCoefficientMatrixWeightedSum ρ A g).re ∧
+    smoothUnitaryMatrixCoefficientRealSynthesis
+        (smoothUnitaryMatrixCoefficientMatrixRealificationCoefficients ρ A) =
+      smoothUnitaryMatrixCoefficientMatrixRealification ρ A ∧
+    smoothLieGroupScalarToContinuousLinearMap
+        (smoothUnitaryMatrixCoefficientMatrixRealification ρ A) ∈
+      smoothLieGroupScalarToContinuousLinearMap ''
+        smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G) :=
+  ⟨smoothUnitaryMatrixCoefficientMatrixRealification_apply ρ A g,
+    smoothUnitaryMatrixCoefficientRealSynthesis_realificationCoefficients ρ A,
+    smoothUnitaryMatrixCoefficientMatrixRealification_mem_continuousCoreImage ρ A⟩
+
+omit [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- Hostile realification probe: changing the exact real part is contradictory. -/
+theorem changed_smoothMatrixCoefficient_matrixRealification_blocked
+    (ρ : SmoothUnitaryIrreducibleMatrixRepresentation E G)
+    (A : Matrix (Fin ρ.dimension) (Fin ρ.dimension) ℂ) (g : G) (changed : ℝ)
+    (changed_ne_exact : changed ≠
+      (smoothUnitaryMatrixCoefficientMatrixWeightedSum ρ A g).re)
+    (claimed : smoothUnitaryMatrixCoefficientMatrixRealification ρ A g = changed) : False :=
+  changed_ne_exact (claimed.symm.trans
+    (smoothUnitaryMatrixCoefficientMatrixRealification_apply ρ A g))
+
+omit [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
 /-- A supplied smooth representation makes the coefficient range genuinely nonzero. -/
 theorem exact_smoothMatrixCoefficient_coreCandidate_nontrivial
     (ρ : SmoothUnitaryIrreducibleMatrixRepresentation E G) :
