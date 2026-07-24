@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: YangMillsDefinition contributors
 -/
 import Mathlib.Analysis.Normed.Module.Basic
+import Mathlib.Topology.Instances.NNReal.Lemmas
 
 /-!
 # Extending generator convergence from a graph-dense core
@@ -29,6 +30,65 @@ namespace Mathematics
 open Filter
 
 noncomputable section
+
+/-- A contractive semigroup on nonnegative time whose every orbit is right-continuous at zero has
+continuous orbits at every nonnegative time. The `Ioi 0` premise is deliberately one-sided; the
+proof first inserts the exact zero value and then uses the semigroup law on either side of each time. -/
+theorem continuous_nnreal_semigroup_orbit_of_contractive_of_tendsto_zero
+    {X : Type*} [NormedAddCommGroup X]
+    (T : NNReal → X → X)
+    (zero_apply : ∀ x, T 0 x = x)
+    (add_apply : ∀ s t x, T (s + t) x = T s (T t x))
+    (contractive : ∀ t x y, dist (T t x) (T t y) ≤ dist x y)
+    (tendsto_zero : ∀ x, Tendsto (fun t : NNReal => T t x)
+      (nhdsWithin 0 (Set.Ioi 0)) (nhds x))
+    (x : X) : Continuous (fun t : NNReal => T t x) := by
+  have continuousAt_zero (z : X) : ContinuousAt (fun t : NNReal => T t z) 0 := by
+    rw [Metric.continuousAt_iff]
+    intro ε hε
+    have hev : ∀ᶠ t : NNReal in nhdsWithin 0 (Set.Ioi 0), dist (T t z) z < ε :=
+      (Metric.tendsto_nhds.mp (tendsto_zero z)) ε hε
+    change {t : NNReal | dist (T t z) z < ε} ∈ nhdsWithin 0 (Set.Ioi 0) at hev
+    rw [mem_nhdsWithin_iff_exists_mem_nhds_inter] at hev
+    obtain ⟨u, hu, hsub⟩ := hev
+    rw [Metric.mem_nhds_iff] at hu
+    obtain ⟨δ, hδ, hball⟩ := hu
+    refine ⟨δ, hδ, ?_⟩
+    intro t ht
+    by_cases ht0 : t = 0
+    · subst t
+      simpa [zero_apply]
+    · simpa [zero_apply] using hsub ⟨hball ht, (pos_iff_ne_zero.mpr ht0)⟩
+  have sub_dist_zero {a b : NNReal} (h : b ≤ a) : dist (a - b) 0 = dist a b := by
+    simp only [NNReal.dist_eq, NNReal.coe_sub h, NNReal.coe_zero, sub_zero]
+  rw [Metric.continuous_iff]
+  intro t ε hε
+  obtain ⟨δ, hδ, hzero⟩ := Metric.continuousAt_iff.mp (continuousAt_zero x) ε hε
+  refine ⟨δ, hδ, ?_⟩
+  intro s hst
+  by_cases hle : t ≤ s
+  · have hsmall : dist (T (s - t) x) x < ε := by
+      simpa [zero_apply] using hzero (sub_dist_zero hle ▸ hst)
+    calc
+      dist (T s x) (T t x) = dist (T t (T (s - t) x)) (T t x) := by
+        rw [← add_apply]
+        congr 2
+        exact (tsub_add_cancel_of_le hle).symm.trans (add_comm _ _)
+      _ ≤ dist (T (s - t) x) x := contractive _ _ _
+      _ < ε := hsmall
+  · have hle' : s ≤ t := le_of_not_ge hle
+    have hsmall : dist (T (t - s) x) x < ε := by
+      simpa [zero_apply] using hzero (by
+        rw [sub_dist_zero hle', dist_comm]
+        exact hst)
+    calc
+      dist (T s x) (T t x) = dist (T s x) (T s (T (t - s) x)) := by
+        rw [← add_apply]
+        congr 2
+        exact (tsub_add_cancel_of_le hle').symm.trans (add_comm _ _)
+      _ ≤ dist x (T (t - s) x) := contractive _ _ _
+      _ = dist (T (t - s) x) x := dist_comm _ _
+      _ < ε := hsmall
 
 universe uK uD uX uI
 

@@ -23,6 +23,19 @@ variable {𝕜 : Type uK} [NormedField 𝕜]
   (graphBound : ∀ᶠ i in l, ∀ z : X, ‖Q i z‖ ≤ C * (‖z‖ + ‖A z‖))
   (coreGenerator : ∀ z ∈ core, Tendsto (fun i => Q i z) l (nhds (A z)))
 
+/-- Exact nonnegative-time semigroup probe: one-sided zero continuity, exact identity at zero,
+composition, and contraction give continuity of every orbit at every time. -/
+theorem exact_continuous_nnreal_semigroup_orbit
+    (T : NNReal → X → X)
+    (zero_apply : ∀ x, T 0 x = x)
+    (add_apply : ∀ s t x, T (s + t) x = T s (T t x))
+    (contractive : ∀ t x y, dist (T t x) (T t y) ≤ dist x y)
+    (tendsto_zero : ∀ x, Tendsto (fun t : NNReal => T t x)
+      (nhdsWithin 0 (Set.Ioi 0)) (nhds x))
+    (x : X) : Continuous (fun t : NNReal => T t x) :=
+  continuous_nnreal_semigroup_orbit_of_contractive_of_tendsto_zero
+    T zero_apply add_apply contractive tendsto_zero x
+
 /-- Positive probe: convergence gives a pointwise eventual norm bound, without asserting a
 bound uniform over a family of vectors. -/
 theorem exact_eventually_normBound_of_tendsto
