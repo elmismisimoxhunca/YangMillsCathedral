@@ -29,6 +29,10 @@ universe uE uG uGauge uSample uConnection uΩ
   uSenguptaFineVertex uSenguptaTargetEdge uSenguptaTargetInternal uSenguptaTargetFace
   uSenguptaTargetRegion uSenguptaTargetVertex uSenguptaTargetSurface
   uCandidateFineEdge uCandidateFineInternal uCandidateFineFace uCandidateFineVertex
+  uGeneralTargetEdge uGeneralTargetInternal uGeneralTargetFace uGeneralTargetRegion
+  uGeneralTargetSurface uGeneralTargetVertex uGeneralSourceFineEdge uGeneralSourceFineInternal
+  uGeneralSourceFineFace uGeneralSourceFineVertex uGeneralTargetFineEdge
+  uGeneralTargetFineInternal uGeneralTargetFineFace uGeneralTargetFineVertex
   uPath uObservable
 
 attribute [local instance]
@@ -625,6 +629,100 @@ omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
 theorem stochasticGenerator_four_dimensional_linear_model_blocked :
     ¬ Nonempty (EG ≃ₗ[ℝ] EuclideanDimension.four.Spacetime) :=
   TwoDimensionalStochasticGeneratorCurrentStrengthSourceIndexedLiteratureAcceptance.not_linearEquiv_four generatorAcceptance
+
+variable
+  (generalFactThreeData :
+    TwoDimensionalGeneralFactThreeCurrentStrengthSourceIndexedLiteratureAcceptanceData.{uE, uG,
+      uGauge, uSample, uConnection, uΩ, uVertex, uEdge, uFace, uXAxisCell, uLargeVertex,
+      uLargeEdge, uLargeFace, uLargeXAxisCell, uFineVertex, uFineEdge, uFineFace,
+      uFineXAxisCell, uFineLargeVertex, uFineLargeEdge, uFineLargeFace, uFineLargeXAxisCell,
+      uEL, uHL, uSL, uER, uHR, uSR, uEG, uHG, uLeftBase, uRightBase, uWholeBase,
+      uLeftLoop, uRightLoop, uWholeLoop, uLeftSample, uRightSample, uWholeSample, uCover,
+      uCurveS, uEdgeS, uInternalEdge, uFaceS, uRegionS, uSenguptaSample, uSenguptaSurface,
+      uSenguptaBaseVertex, uSenguptaFineInternal, uSenguptaFineFace, uSenguptaFineVertex,
+      uSenguptaTargetEdge, uSenguptaTargetInternal, uSenguptaTargetFace,
+      uSenguptaTargetRegion, uSenguptaTargetVertex, uSenguptaTargetSurface,
+      uCandidateFineEdge, uCandidateFineInternal, uCandidateFineFace, uCandidateFineVertex,
+      uGeneralTargetEdge, uGeneralTargetInternal, uGeneralTargetFace, uGeneralTargetRegion,
+      uGeneralTargetSurface, uGeneralTargetVertex, uGeneralSourceFineEdge,
+      uGeneralSourceFineInternal, uGeneralSourceFineFace, uGeneralSourceFineVertex,
+      uGeneralTargetFineEdge, uGeneralTargetFineInternal, uGeneralTargetFineFace,
+      uGeneralTargetFineVertex, uPath, uObservable}
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+      (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)
+      (identification := identification) (IG := IG)
+      (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+      (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)
+      (CoverGroup := CoverGroup) (CurveS := CurveS) (EdgeS := EdgeS)
+      (InternalEdge := InternalEdge) (FaceS := FaceS) (RegionS := RegionS)
+      (SenguptaSample := SenguptaSample) (coverDensity := coverDensity)
+      (SenguptaSurface := SenguptaSurface) (SenguptaBaseVertex := SenguptaBaseVertex)
+      (SenguptaFineVertex := SenguptaFineVertex) (senguptaFine := senguptaFine)
+      (SenguptaTargetVertex := SenguptaTargetVertex) (senguptaTarget := senguptaTarget)
+      (SenguptaTargetSurface := SenguptaTargetSurface))
+
+include generalFactThreeData in
+omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
+    [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in
+/-- The general-Fact-3 strengthening forgets to the unchanged current-strength source witness. -/
+theorem exact_generalFactThree_implies_current :
+    TwoDimensionalCurrentStrengthSourceIndexedLiteratureAcceptance.{uE, uG, uGauge,
+      uSample, uConnection, uΩ, uVertex, uEdge, uFace, uXAxisCell, uLargeVertex,
+      uLargeEdge, uLargeFace, uLargeXAxisCell, uFineVertex, uFineEdge, uFineFace,
+      uFineXAxisCell, uFineLargeVertex, uFineLargeEdge, uFineLargeFace,
+      uFineLargeXAxisCell, uEL, uHL, uSL, uER, uHR, uSR, uEG, uHG, uLeftBase,
+      uRightBase, uWholeBase, uLeftLoop, uRightLoop, uWholeLoop, uLeftSample,
+      uRightSample, uWholeSample, uCover, uCurveS, uEdgeS, uInternalEdge, uFaceS,
+      uRegionS, uSenguptaSample, uSenguptaSurface, uSenguptaBaseVertex,
+      uSenguptaFineInternal, uSenguptaFineFace, uSenguptaFineVertex,
+      uSenguptaTargetEdge, uSenguptaTargetInternal, uSenguptaTargetFace,
+      uSenguptaTargetRegion, uSenguptaTargetVertex, uSenguptaTargetSurface,
+      uCandidateFineEdge, uCandidateFineInternal, uCandidateFineFace, uCandidateFineVertex,
+      uPath, uObservable}
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+      (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)
+      (identification := identification) (IG := IG)
+      (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+      (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)
+      (CoverGroup := CoverGroup) (CurveS := CurveS) (EdgeS := EdgeS)
+      (InternalEdge := InternalEdge) (FaceS := FaceS) (RegionS := RegionS)
+      (SenguptaSample := SenguptaSample) (coverDensity := coverDensity)
+      (SenguptaSurface := SenguptaSurface) (SenguptaBaseVertex := SenguptaBaseVertex)
+      (SenguptaFineVertex := SenguptaFineVertex) (senguptaFine := senguptaFine)
+      (SenguptaTargetVertex := SenguptaTargetVertex) (senguptaTarget := senguptaTarget)
+      (SenguptaTargetSurface := SenguptaTargetSurface) :=
+  generalFactThreeData.implies_current
+
+include generalFactThreeData in
+omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
+    [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in
+/-- General Fact 3 acceptance remains exactly rank two. -/
+theorem exact_generalFactThree_rank_two : Module.finrank ℝ EG = 2 :=
+  generalFactThreeData.model_finrank_two
+
+include generalFactThreeData in
+omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
+    [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in
+/-- General Fact 3 acceptance cannot become a four-dimensional linear model. -/
+theorem generalFactThree_four_dimensional_linear_model_blocked :
+    ¬ Nonempty (EG ≃ₗ[ℝ] EuclideanDimension.four.Spacetime) :=
+  generalFactThreeData.not_linearEquiv_four
+
+include generalFactThreeData in
+omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
+    [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in
+/-- Hostile dependency probe: the fixed-universe general candidate class cannot be empty. -/
+theorem generalFactThree_empty_candidate_class_blocked
+    (empty : ¬Nonempty
+      (TwoDimensionalSenguptaGeneralEmbeddedHomeomorphismCandidateData.{uCurveS, uEdgeS,
+        uInternalEdge, uFaceS, uRegionS, uSenguptaSurface, uSenguptaBaseVertex,
+        uGeneralTargetEdge, uGeneralTargetInternal, uGeneralTargetFace, uGeneralTargetRegion,
+        uGeneralTargetSurface, uGeneralTargetVertex}
+        (baseEmbedded := (Classical.choice generalFactThreeData.current).compactFiniteLaw.current
+          |>.embeddedFiniteLaw.embeddedBase))) : False :=
+  empty generalFactThreeData.generalFactThree.candidate_nonempty
 
 end TwoDimensionalCurrentStrengthSourceIndexedLiteratureAcceptanceProbes
 
