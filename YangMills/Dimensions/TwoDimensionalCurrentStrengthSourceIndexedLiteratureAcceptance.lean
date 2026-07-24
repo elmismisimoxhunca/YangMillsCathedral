@@ -389,6 +389,86 @@ theorem not_linearEquiv_four
     ¬ Nonempty (EG ≃ₗ[ℝ] EuclideanDimension.four.Spacetime) :=
   (Classical.choice data.current).compactSurface_model_not_linearEquiv_four
 
+omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
+    [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in
+/-- Exact inhabitance audit: the strict join consists only of one current-strength proof and the
+fixed-universe universal general Fact 3 witness indexed by its exact selected data. -/
+theorem nonempty_iff_components :
+    Nonempty
+      (TwoDimensionalGeneralFactThreeCurrentStrengthSourceIndexedLiteratureAcceptanceData.{uE, uG,
+        uGauge, uSample, uConnection, uΩ, uVertex, uEdge, uFace, uXAxisCell,
+        uLargeVertex, uLargeEdge, uLargeFace, uLargeXAxisCell, uFineVertex, uFineEdge,
+        uFineFace, uFineXAxisCell, uFineLargeVertex, uFineLargeEdge, uFineLargeFace,
+        uFineLargeXAxisCell, uEL, uHL, uSL, uER, uHR, uSR, uEG, uHG, uLeftBase,
+        uRightBase, uWholeBase, uLeftLoop, uRightLoop, uWholeLoop, uLeftSample,
+        uRightSample, uWholeSample, uCover, uCurveS, uEdgeS, uInternalEdge, uFaceS,
+        uRegionS, uSenguptaSample, uSenguptaSurface, uSenguptaBaseVertex,
+        uSenguptaFineInternal, uSenguptaFineFace, uSenguptaFineVertex,
+        uSenguptaTargetEdge, uSenguptaTargetInternal, uSenguptaTargetFace,
+        uSenguptaTargetRegion, uSenguptaTargetVertex, uSenguptaTargetSurface,
+        uCandidateFineEdge, uCandidateFineInternal, uCandidateFineFace, uCandidateFineVertex,
+        uGeneralTargetEdge, uGeneralTargetInternal, uGeneralTargetFace, uGeneralTargetRegion,
+        uGeneralTargetSurface, uGeneralTargetVertex, uGeneralSourceFineEdge,
+        uGeneralSourceFineInternal, uGeneralSourceFineFace, uGeneralSourceFineVertex,
+        uGeneralTargetFineEdge, uGeneralTargetFineInternal, uGeneralTargetFineFace,
+        uGeneralTargetFineVertex, uPath, uObservable}
+        (law := law) (inner := inner) (realLaplacian := realLaplacian)
+        (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+        (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)
+        (identification := identification) (IG := IG)
+        (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+        (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)
+        (CoverGroup := CoverGroup) (CurveS := CurveS) (EdgeS := EdgeS)
+        (InternalEdge := InternalEdge) (FaceS := FaceS) (RegionS := RegionS)
+        (SenguptaSample := SenguptaSample) (coverDensity := coverDensity)
+        (SenguptaSurface := SenguptaSurface) (SenguptaBaseVertex := SenguptaBaseVertex)
+        (SenguptaFineVertex := SenguptaFineVertex) (senguptaFine := senguptaFine)
+        (SenguptaTargetVertex := SenguptaTargetVertex) (senguptaTarget := senguptaTarget)
+        (SenguptaTargetSurface := SenguptaTargetSurface)) ↔
+    ∃ current : TwoDimensionalCurrentStrengthSourceIndexedLiteratureAcceptance.{uE, uG,
+        uGauge, uSample, uConnection, uΩ, uVertex, uEdge, uFace, uXAxisCell,
+        uLargeVertex, uLargeEdge, uLargeFace, uLargeXAxisCell, uFineVertex, uFineEdge,
+        uFineFace, uFineXAxisCell, uFineLargeVertex, uFineLargeEdge, uFineLargeFace,
+        uFineLargeXAxisCell, uEL, uHL, uSL, uER, uHR, uSR, uEG, uHG, uLeftBase,
+        uRightBase, uWholeBase, uLeftLoop, uRightLoop, uWholeLoop, uLeftSample,
+        uRightSample, uWholeSample, uCover, uCurveS, uEdgeS, uInternalEdge, uFaceS,
+        uRegionS, uSenguptaSample, uSenguptaSurface, uSenguptaBaseVertex,
+        uSenguptaFineInternal, uSenguptaFineFace, uSenguptaFineVertex,
+        uSenguptaTargetEdge, uSenguptaTargetInternal, uSenguptaTargetFace,
+        uSenguptaTargetRegion, uSenguptaTargetVertex, uSenguptaTargetSurface,
+        uCandidateFineEdge, uCandidateFineInternal, uCandidateFineFace, uCandidateFineVertex,
+        uPath, uObservable}
+        (law := law) (inner := inner) (realLaplacian := realLaplacian)
+        (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+        (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)
+        (identification := identification) (IG := IG)
+        (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+        (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)
+        (CoverGroup := CoverGroup) (CurveS := CurveS) (EdgeS := EdgeS)
+        (InternalEdge := InternalEdge) (FaceS := FaceS) (RegionS := RegionS)
+        (SenguptaSample := SenguptaSample) (coverDensity := coverDensity)
+        (SenguptaSurface := SenguptaSurface) (SenguptaBaseVertex := SenguptaBaseVertex)
+        (SenguptaFineVertex := SenguptaFineVertex) (senguptaFine := senguptaFine)
+        (SenguptaTargetVertex := SenguptaTargetVertex) (senguptaTarget := senguptaTarget)
+        (SenguptaTargetSurface := SenguptaTargetSurface),
+      Nonempty
+        (TwoDimensionalSenguptaUniversalGeneralHomeomorphismFiniteCurveLawData.{uG, uCover,
+          uSenguptaSample, uCurveS, uEdgeS, uInternalEdge, uFaceS, uRegionS,
+          uSenguptaSurface, uSenguptaBaseVertex, uGeneralTargetEdge,
+          uGeneralTargetInternal, uGeneralTargetFace, uGeneralTargetRegion,
+          uGeneralTargetSurface, uGeneralTargetVertex, uGeneralSourceFineEdge,
+          uGeneralSourceFineInternal, uGeneralSourceFineFace, uGeneralSourceFineVertex,
+          uGeneralTargetFineEdge, uGeneralTargetFineInternal, uGeneralTargetFineFace,
+          uGeneralTargetFineVertex}
+          (baseEmbedded := (Classical.choice current).compactFiniteLaw.current.embeddedFiniteLaw.embeddedBase)
+          (sourceLaw := (Classical.choice current).augmented.finiteLaw)
+          (coverDensity := coverDensity)) := by
+  constructor
+  · rintro ⟨data⟩
+    exact ⟨data.current, ⟨data.generalFactThree⟩⟩
+  · rintro ⟨current, ⟨generalFactThree⟩⟩
+    exact ⟨⟨current, generalFactThree⟩⟩
+
 end TwoDimensionalGeneralFactThreeCurrentStrengthSourceIndexedLiteratureAcceptanceData
 
 /-- Flattened literature-inhabitation components for the proposition-shaped current-strength 2D
