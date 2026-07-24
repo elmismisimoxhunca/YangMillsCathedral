@@ -1337,6 +1337,29 @@ structure TwoDimensionalSelectedLoopSmoothMatrixCoefficientSmoothDensityDuhamelA
 namespace TwoDimensionalSelectedLoopSmoothMatrixCoefficientSmoothDensityDuhamelAnalyticAcceptance
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Selected continuous Peter--Weyl density and smooth-dual coverage discharge the ambient smooth
+density field of the exact three-part acceptance. Finite graph approximation and the Duhamel
+identity remain explicit. -/
+def ofContinuousPeterWeylOfSmoothCoverage
+    {bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)}
+    (finiteGraphApproximation :
+      TwoDimensionalSelectedLoopSmoothMatrixCoefficientFiniteGraphApproximation
+        (realLaplacian := realLaplacian))
+    (continuousDensity : UnitaryMatrixDual.HasContinuousPeterWeylDensity G)
+    (smoothCoverage : ∀ q : UnitaryMatrixDual G,
+      q.HasSmoothRepresentative (E := E))
+    (duhamelIdentity : TwoDimensionalSelectedLoopPairingDuhamelIdentity bridge) :
+    TwoDimensionalSelectedLoopSmoothMatrixCoefficientSmoothDensityDuhamelAnalyticAcceptance
+      bridge where
+  finiteGraphApproximation := finiteGraphApproximation
+  smoothDense :=
+    smoothLieGroupScalarFunctionsDenseInContinuous_of_continuousPeterWeyl_of_smoothCoverage
+      continuousDensity smoothCoverage
+  duhamelIdentity := duhamelIdentity
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- The exact three-part route constructs the prior strongly-continuous Duhamel acceptance. -/
 theorem implies_continuousDuhamelAnalyticAcceptance
     {bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData

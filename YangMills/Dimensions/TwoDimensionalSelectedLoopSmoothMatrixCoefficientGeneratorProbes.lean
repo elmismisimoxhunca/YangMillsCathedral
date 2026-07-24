@@ -519,6 +519,23 @@ theorem missing_continuousDuhamel_blocks_ContinuousDuhamelAnalyticAcceptance
   exact missing acceptance.2
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Exact selected-Fourier constructor for the three-part analytic acceptance. -/
+theorem exact_selectedPeterWeyl_smoothCoverage_constructs_smoothDensityAcceptance
+    (finiteGraphApproximation :
+      TwoDimensionalSelectedLoopSmoothMatrixCoefficientFiniteGraphApproximation
+        (realLaplacian := realLaplacian))
+    (continuousDensity : UnitaryMatrixDual.HasContinuousPeterWeylDensity G)
+    (smoothCoverage : ∀ q : UnitaryMatrixDual G,
+      q.HasSmoothRepresentative (E := E))
+    (duhamelIdentity : TwoDimensionalSelectedLoopPairingDuhamelIdentity bridge) :
+    Nonempty
+      (TwoDimensionalSelectedLoopSmoothMatrixCoefficientSmoothDensityDuhamelAnalyticAcceptance
+        bridge) :=
+  ⟨TwoDimensionalSelectedLoopSmoothMatrixCoefficientSmoothDensityDuhamelAnalyticAcceptance.ofContinuousPeterWeylOfSmoothCoverage
+      finiteGraphApproximation continuousDensity smoothCoverage
+      duhamelIdentity⟩
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Exact three-part smooth-density Duhamel analytic endpoint. -/
 theorem exact_SmoothDensityDuhamelAnalyticAcceptance_stochasticGenerator
     (acceptance :
