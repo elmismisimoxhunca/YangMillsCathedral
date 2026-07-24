@@ -84,6 +84,19 @@ theorem refineOrientedWord_comp
       | reverse edge =>
           exact refineOrientedWord_reverseFiniteOrientedWord middleToFine (coarseToMiddle edge)
 
+/-- Reversing and flipping a composable oriented word preserves composability. -/
+theorem isChain_reverseFiniteOrientedWord
+    {Vertex Edge : Type*} (edgeSource edgeTarget : Edge → Vertex)
+    (word : List (OrientedEdge Edge))
+    (chain : List.IsChain (OrientedEdgeComposable edgeSource edgeTarget) word) :
+    List.IsChain (OrientedEdgeComposable edgeSource edgeTarget)
+      (reverseFiniteOrientedWord word) := by
+  simp only [reverseFiniteOrientedWord, List.isChain_map, List.isChain_reverse]
+  apply chain.imp
+  intro first second composable
+  simpa [OrientedEdgeComposable, OrientedEdge.source_flip, OrientedEdge.target_flip]
+    using composable.symm
+
 /-- Fine configurations induce coarse configurations by exact word holonomy. -/
 def finiteEdgeRefinementConfigurationMap
     {CoarseEdge : Type uCoarseEdge} {FineEdge : Type uFineEdge}
@@ -195,6 +208,194 @@ theorem eq_of_vertexMap_edgeWord_eq
   cases second
   simp_all
 
+/-- The fine word replacing any oriented coarse edge is nonempty. -/
+theorem refineOrientedEdge_nonempty
+    {CoarseVertex : Type uCoarseVertex} {FineVertex : Type uFineVertex}
+    {CoarseEdge : Type uCoarseEdge} {FineEdge : Type uFineEdge}
+    [Fintype CoarseEdge] [Fintype FineEdge]
+    {coarseSource coarseTarget : CoarseEdge → CoarseVertex}
+    {fineSource fineTarget : FineEdge → FineVertex}
+    (refinement : FiniteGraphRefinementData CoarseVertex FineVertex CoarseEdge FineEdge
+      coarseSource coarseTarget fineSource fineTarget)
+    (edge : OrientedEdge CoarseEdge) :
+    refineOrientedEdge refinement.edgeWord edge ≠ [] := by
+  cases edge with
+  | forward edge => exact refinement.edgeWord_nonempty edge
+  | reverse edge =>
+      simpa [refineOrientedEdge, reverseFiniteOrientedWord] using
+        refinement.edgeWord_nonempty edge
+
+/-- The fine word replacing any oriented coarse edge is composable. -/
+theorem refineOrientedEdge_chain
+    {CoarseVertex : Type uCoarseVertex} {FineVertex : Type uFineVertex}
+    {CoarseEdge : Type uCoarseEdge} {FineEdge : Type uFineEdge}
+    [Fintype CoarseEdge] [Fintype FineEdge]
+    {coarseSource coarseTarget : CoarseEdge → CoarseVertex}
+    {fineSource fineTarget : FineEdge → FineVertex}
+    (refinement : FiniteGraphRefinementData CoarseVertex FineVertex CoarseEdge FineEdge
+      coarseSource coarseTarget fineSource fineTarget)
+    (edge : OrientedEdge CoarseEdge) :
+    List.IsChain (OrientedEdgeComposable fineSource fineTarget)
+      (refineOrientedEdge refinement.edgeWord edge) := by
+  cases edge with
+  | forward edge => exact refinement.edgeWord_chain edge
+  | reverse edge =>
+      exact isChain_reverseFiniteOrientedWord fineSource fineTarget
+        (refinement.edgeWord edge) (refinement.edgeWord_chain edge)
+
+/-- The source of an oriented refined edge word is the mapped coarse oriented source. -/
+theorem refineOrientedEdge_source
+    {CoarseVertex : Type uCoarseVertex} {FineVertex : Type uFineVertex}
+    {CoarseEdge : Type uCoarseEdge} {FineEdge : Type uFineEdge}
+    [Fintype CoarseEdge] [Fintype FineEdge]
+    {coarseSource coarseTarget : CoarseEdge → CoarseVertex}
+    {fineSource fineTarget : FineEdge → FineVertex}
+    (refinement : FiniteGraphRefinementData CoarseVertex FineVertex CoarseEdge FineEdge
+      coarseSource coarseTarget fineSource fineTarget)
+    (edge : OrientedEdge CoarseEdge) :
+    OrientedEdge.source fineSource fineTarget
+        ((refineOrientedEdge refinement.edgeWord edge).head
+          (refinement.refineOrientedEdge_nonempty edge)) =
+      refinement.vertexMap (OrientedEdge.source coarseSource coarseTarget edge) := by
+  cases edge with
+  | forward edge => exact refinement.edgeWord_source edge
+  | reverse edge =>
+      simp only [refineOrientedEdge]
+      rw [show (reverseFiniteOrientedWord (refinement.edgeWord edge)).head
+          (refinement.refineOrientedEdge_nonempty (.reverse edge)) =
+        OrientedEdge.flip ((refinement.edgeWord edge).getLast
+          (refinement.edgeWord_nonempty edge)) by
+            simp [reverseFiniteOrientedWord]]
+      rw [OrientedEdge.source_flip, refinement.edgeWord_target]
+      rfl
+
+/-- The target of an oriented refined edge word is the mapped coarse oriented target. -/
+theorem refineOrientedEdge_target
+    {CoarseVertex : Type uCoarseVertex} {FineVertex : Type uFineVertex}
+    {CoarseEdge : Type uCoarseEdge} {FineEdge : Type uFineEdge}
+    [Fintype CoarseEdge] [Fintype FineEdge]
+    {coarseSource coarseTarget : CoarseEdge → CoarseVertex}
+    {fineSource fineTarget : FineEdge → FineVertex}
+    (refinement : FiniteGraphRefinementData CoarseVertex FineVertex CoarseEdge FineEdge
+      coarseSource coarseTarget fineSource fineTarget)
+    (edge : OrientedEdge CoarseEdge) :
+    OrientedEdge.target fineSource fineTarget
+        ((refineOrientedEdge refinement.edgeWord edge).getLast
+          (refinement.refineOrientedEdge_nonempty edge)) =
+      refinement.vertexMap (OrientedEdge.target coarseSource coarseTarget edge) := by
+  cases edge with
+  | forward edge => exact refinement.edgeWord_target edge
+  | reverse edge =>
+      simp only [refineOrientedEdge]
+      rw [show (reverseFiniteOrientedWord (refinement.edgeWord edge)).getLast
+          (refinement.refineOrientedEdge_nonempty (.reverse edge)) =
+        OrientedEdge.flip ((refinement.edgeWord edge).head
+          (refinement.edgeWord_nonempty edge)) by
+            simp [reverseFiniteOrientedWord]]
+      rw [OrientedEdge.target_flip, refinement.edgeWord_source]
+      rfl
+
+/-- Refining a nonempty oriented word remains nonempty. -/
+theorem refineOrientedWord_nonempty
+    {CoarseVertex : Type uCoarseVertex} {FineVertex : Type uFineVertex}
+    {CoarseEdge : Type uCoarseEdge} {FineEdge : Type uFineEdge}
+    [Fintype CoarseEdge] [Fintype FineEdge]
+    {coarseSource coarseTarget : CoarseEdge → CoarseVertex}
+    {fineSource fineTarget : FineEdge → FineVertex}
+    (refinement : FiniteGraphRefinementData CoarseVertex FineVertex CoarseEdge FineEdge
+      coarseSource coarseTarget fineSource fineTarget)
+    (word : List (OrientedEdge CoarseEdge)) (word_nonempty : word ≠ []) :
+    refineOrientedWord refinement.edgeWord word ≠ [] := by
+  intro refinedEmpty
+  rw [refineOrientedWord, List.flatMap_eq_nil_iff] at refinedEmpty
+  obtain ⟨edge, member⟩ := List.exists_mem_of_ne_nil word word_nonempty
+  exact refinement.refineOrientedEdge_nonempty edge (refinedEmpty edge member)
+
+/-- Refinement preserves composability of an entire oriented word. -/
+theorem refineOrientedWord_chain
+    {CoarseVertex : Type uCoarseVertex} {FineVertex : Type uFineVertex}
+    {CoarseEdge : Type uCoarseEdge} {FineEdge : Type uFineEdge}
+    [Fintype CoarseEdge] [Fintype FineEdge]
+    {coarseSource coarseTarget : CoarseEdge → CoarseVertex}
+    {fineSource fineTarget : FineEdge → FineVertex}
+    (refinement : FiniteGraphRefinementData CoarseVertex FineVertex CoarseEdge FineEdge
+      coarseSource coarseTarget fineSource fineTarget)
+    (word : List (OrientedEdge CoarseEdge))
+    (chain : List.IsChain (OrientedEdgeComposable coarseSource coarseTarget) word) :
+    List.IsChain (OrientedEdgeComposable fineSource fineTarget)
+      (refineOrientedWord refinement.edgeWord word) := by
+  induction word with
+  | nil => simp [refineOrientedWord]
+  | cons edge tail ih =>
+      rw [show refineOrientedWord refinement.edgeWord (edge :: tail) =
+        refineOrientedEdge refinement.edgeWord edge ++
+          refineOrientedWord refinement.edgeWord tail by rfl]
+      apply List.IsChain.append (refinement.refineOrientedEdge_chain edge)
+        (ih (List.IsChain.tail chain))
+      intro last last_mem first first_mem
+      rw [List.getLast?_eq_some_getLast (refinement.refineOrientedEdge_nonempty edge)] at last_mem
+      simp only [Option.mem_def, Option.some.injEq] at last_mem
+      subst last
+      cases tail with
+      | nil => simp [refineOrientedWord] at first_mem
+      | cons next rest =>
+          have pair : OrientedEdgeComposable coarseSource coarseTarget edge next := chain.rel
+          have tail_nonempty :
+              refineOrientedWord refinement.edgeWord (next :: rest) ≠ [] :=
+            refinement.refineOrientedWord_nonempty (next :: rest) (by simp)
+          rw [List.head?_eq_some_head tail_nonempty] at first_mem
+          simp only [Option.mem_def, Option.some.injEq] at first_mem
+          have head_eq :
+              (refineOrientedWord refinement.edgeWord (next :: rest)).head tail_nonempty =
+                (refineOrientedEdge refinement.edgeWord next).head
+                  (refinement.refineOrientedEdge_nonempty next) := by
+            simp [refineOrientedWord, refinement.refineOrientedEdge_nonempty]
+          rw [head_eq] at first_mem
+          subst first
+          rw [OrientedEdgeComposable, refinement.refineOrientedEdge_target,
+            refinement.refineOrientedEdge_source]
+          exact congrArg refinement.vertexMap pair
+
+/-- The source of a refined nonempty word is the image of its coarse source. -/
+theorem refineOrientedWord_source
+    {CoarseVertex : Type uCoarseVertex} {FineVertex : Type uFineVertex}
+    {CoarseEdge : Type uCoarseEdge} {FineEdge : Type uFineEdge}
+    [Fintype CoarseEdge] [Fintype FineEdge]
+    {coarseSource coarseTarget : CoarseEdge → CoarseVertex}
+    {fineSource fineTarget : FineEdge → FineVertex}
+    (refinement : FiniteGraphRefinementData CoarseVertex FineVertex CoarseEdge FineEdge
+      coarseSource coarseTarget fineSource fineTarget)
+    (word : List (OrientedEdge CoarseEdge)) (word_nonempty : word ≠ []) :
+    OrientedEdge.source fineSource fineTarget
+        ((refineOrientedWord refinement.edgeWord word).head
+          (refinement.refineOrientedWord_nonempty word word_nonempty)) =
+      refinement.vertexMap
+        (OrientedEdge.source coarseSource coarseTarget (word.head word_nonempty)) := by
+  obtain ⟨edge, tail, rfl⟩ := List.exists_cons_of_ne_nil word_nonempty
+  simp [refineOrientedWord, refinement.refineOrientedEdge_nonempty,
+    refinement.refineOrientedEdge_source]
+
+/-- The target of a refined nonempty word is the image of its coarse target. -/
+theorem refineOrientedWord_target
+    {CoarseVertex : Type uCoarseVertex} {FineVertex : Type uFineVertex}
+    {CoarseEdge : Type uCoarseEdge} {FineEdge : Type uFineEdge}
+    [Fintype CoarseEdge] [Fintype FineEdge]
+    {coarseSource coarseTarget : CoarseEdge → CoarseVertex}
+    {fineSource fineTarget : FineEdge → FineVertex}
+    (refinement : FiniteGraphRefinementData CoarseVertex FineVertex CoarseEdge FineEdge
+      coarseSource coarseTarget fineSource fineTarget)
+    (word : List (OrientedEdge CoarseEdge)) (word_nonempty : word ≠ []) :
+    OrientedEdge.target fineSource fineTarget
+        ((refineOrientedWord refinement.edgeWord word).getLast
+          (refinement.refineOrientedWord_nonempty word word_nonempty)) =
+      refinement.vertexMap
+        (OrientedEdge.target coarseSource coarseTarget (word.getLast word_nonempty)) := by
+  induction word using List.reverseRecOn with
+  | nil => contradiction
+  | append_singleton init edge =>
+      simp [refineOrientedWord, refinement.refineOrientedEdge_nonempty,
+        refinement.refineOrientedEdge_target]
+
 variable
     {CoarseVertex : Type uCoarseVertex} {FineVertex : Type uFineVertex}
     {CoarseEdge : Type uCoarseEdge} {FineEdge : Type uFineEdge}
@@ -235,6 +436,40 @@ theorem configurationMap_gauge
     rw [← refinement.edgeWord_target edge, ← refinement.edgeWord_source edge]
     simp [finiteEdgeRefinementConfigurationMap, word_eq]
   · simpa [word_eq] using refinement.edgeWord_chain edge
+
+/-- Canonical composite of two finite graph refinements. -/
+noncomputable def comp
+    {CoarseVertex : Type uCoarseVertex} {MiddleVertex : Type uFineVertex}
+    {FineVertex : Type*} {CoarseEdge : Type uCoarseEdge}
+    {MiddleEdge : Type uFineEdge} {FineEdge : Type*}
+    [Fintype CoarseEdge] [Fintype MiddleEdge] [Fintype FineEdge]
+    {coarseSource coarseTarget : CoarseEdge → CoarseVertex}
+    {middleSource middleTarget : MiddleEdge → MiddleVertex}
+    {fineSource fineTarget : FineEdge → FineVertex}
+    (coarseToMiddle : FiniteGraphRefinementData
+      CoarseVertex MiddleVertex CoarseEdge MiddleEdge
+      coarseSource coarseTarget middleSource middleTarget)
+    (middleToFine : FiniteGraphRefinementData
+      MiddleVertex FineVertex MiddleEdge FineEdge
+      middleSource middleTarget fineSource fineTarget) :
+    FiniteGraphRefinementData CoarseVertex FineVertex CoarseEdge FineEdge
+      coarseSource coarseTarget fineSource fineTarget where
+  vertexMap := middleToFine.vertexMap ∘ coarseToMiddle.vertexMap
+  edgeWord edge := refineOrientedWord middleToFine.edgeWord (coarseToMiddle.edgeWord edge)
+  edgeWord_nonempty edge := middleToFine.refineOrientedWord_nonempty
+    (coarseToMiddle.edgeWord edge) (coarseToMiddle.edgeWord_nonempty edge)
+  edgeWord_chain edge := middleToFine.refineOrientedWord_chain
+    (coarseToMiddle.edgeWord edge) (coarseToMiddle.edgeWord_chain edge)
+  edgeWord_source edge := by
+    rw [middleToFine.refineOrientedWord_source (coarseToMiddle.edgeWord edge)
+      (coarseToMiddle.edgeWord_nonempty edge)]
+    rw [coarseToMiddle.edgeWord_source]
+    rfl
+  edgeWord_target edge := by
+    rw [middleToFine.refineOrientedWord_target (coarseToMiddle.edgeWord edge)
+      (coarseToMiddle.edgeWord_nonempty edge)]
+    rw [coarseToMiddle.edgeWord_target]
+    rfl
 
 end FiniteGraphRefinementData
 
@@ -278,6 +513,26 @@ structure FiniteGraphRefinementCompositionData
   edgeWord_eq : ∀ edge, coarseToFine.edgeWord edge =
     refineOrientedWord middleToFine.edgeWord (coarseToMiddle.edgeWord edge)
 
+/-- Every two-stage finite graph refinement has a canonical coherent direct refinement. -/
+noncomputable def finiteGraphRefinementCompositionData
+    {CoarseVertex : Type uCoarseVertex} {MiddleVertex : Type uFineVertex}
+    {FineVertex : Type*} {CoarseEdge : Type uCoarseEdge}
+    {MiddleEdge : Type uFineEdge} {FineEdge : Type*}
+    [Fintype CoarseEdge] [Fintype MiddleEdge] [Fintype FineEdge]
+    {coarseSource coarseTarget : CoarseEdge → CoarseVertex}
+    {middleSource middleTarget : MiddleEdge → MiddleVertex}
+    {fineSource fineTarget : FineEdge → FineVertex}
+    (coarseToMiddle : FiniteGraphRefinementData
+      CoarseVertex MiddleVertex CoarseEdge MiddleEdge
+      coarseSource coarseTarget middleSource middleTarget)
+    (middleToFine : FiniteGraphRefinementData
+      MiddleVertex FineVertex MiddleEdge FineEdge
+      middleSource middleTarget fineSource fineTarget) :
+    FiniteGraphRefinementCompositionData coarseToMiddle middleToFine
+      (coarseToMiddle.comp middleToFine) where
+  vertexMap_eq := rfl
+  edgeWord_eq _edge := rfl
+
 /-- Identity refinements compose coherently, providing positive evidence for the composition API. -/
 noncomputable def finiteGraphIdentityRefinementCompositionData
     (Vertex : Type uCoarseVertex) (Edge : Type uCoarseEdge) [Fintype Edge]
@@ -292,8 +547,8 @@ noncomputable def finiteGraphIdentityRefinementCompositionData
 
 namespace FiniteGraphRefinementCompositionData
 
-/-- Any two direct graph refinements coherent with the same two stages are equal. Thus the direct
-graph is supplied for existence, but cannot carry unrelated combinatorial data. -/
+/-- Any two direct graph refinements coherent with the same two stages are equal. In particular,
+every stored coherent direct graph equals the canonical composite constructed by `comp`. -/
 theorem directGraph_unique
     {CoarseVertex : Type uCoarseVertex} {MiddleVertex : Type uFineVertex}
     {FineVertex : Type*} {CoarseEdge : Type uCoarseEdge}

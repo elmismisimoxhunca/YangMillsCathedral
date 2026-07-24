@@ -1367,14 +1367,16 @@ committed before higher layers depend on it.
   - [x] Add the exact curve-bond refinement layer: fine indexed curve words are literal finite-graph
     substitutions; covering and projected simultaneous curve holonomies commute; and any supplied
     graph-measure pushforward transports the complete finite curve law.
-  - [x] Prove reverse-aware associativity of oriented-word refinement, prove any coherent direct
-    graph refinement unique from its vertex/edge-word data, and, given supplied existence, package exact two-stage curve-bond composition: derive the direct curve
-    refinement, composite configuration map,
+  - [x] Prove reverse-aware associativity of oriented-word refinement and canonically construct the
+    direct graph from any two stages, deriving edge-word nonemptiness, composability, endpoints, and
+    uniqueness. Package exact two-stage curve-bond composition: derive the direct curve refinement
+    and composite configuration map,
     stagewise-to-direct measure pushforward, and complete projected finite-curve-law transport.
   - [x] Lift that composition to normalized equation-(8.3) weighted graph measures: from one exact
     coarse-to-middle weighted refinement and supplied fine-to-middle weighted pushforward, derive the
     direct fine-to-coarse weighted refinement and finest-graph stochastic finite law. Retain the
-    direct graph, stage measures/pushforwards, heat-factor proof, and embedded construction as debt.
+    stage measures/pushforwards, heat-factor proof, and embedded construction as debt; the graph
+    composite itself is now canonical.
   - [x] Join that transport to a literal fine equation-(8.3) weighted Haar graph measure and integral
     normalizer: require exact fine-to-coarse weighted-measure pushforward for every distinguished
     region, then derive fine normalization/nonzeroness and the unchanged stochastic finite-curve law.

@@ -5466,16 +5466,17 @@ nonorientable fixed-twist condition. Candidates keep external curve bonds and pa
 fixed. `TwoDimensionalSenguptaCurveBondRefinementData` now supplies the exact missing combinatorics:
 fine indexed curve words are literal finite-graph substitutions, covering and projected simultaneous
 curve holonomies commute, and any supplied graph-measure pushforward transports the whole finite
-curve law. Reverse-aware word substitution is now proved associative, and any two coherent direct
-graph refinements for the same stages are equal. Given caller-supplied existence of that uniquely
-determined direct graph for two exact stages, the direct curve refinement is derived; its
+curve law. Reverse-aware word substitution is now proved associative. Two graph refinements now
+canonically construct their direct refinement by substituted edge words and composed vertex maps;
+nonemptiness, composability, and endpoints are derived, and any other coherent direct graph is equal.
+The direct curve refinement is then derived; its
 configuration map is the composite, stagewise measure pushforwards imply the direct pushforward, and
 the complete projected finite-curve law transports without a disconnected measure-law witness.
 `TwoDimensionalSenguptaCurveBondGraphMeasureRefinementCompositionData` lifts this to normalized
 equation-(8.3) graph measures: a coarse-to-middle weighted refinement and supplied fine-to-middle
 weighted pushforward on the same coherent triple derive the direct fine-to-coarse weighted
-refinement and finest-graph stochastic finite law. The direct graph, stage measures, and stage
-pushforwards remain supplied.
+refinement and finest-graph stochastic finite law. The graph composite is canonical; the stage
+weighted measures and analytic pushforwards remain supplied.
 `TwoDimensionalSenguptaCurveBondGraphMeasureRefinementData` now specializes that premise
 to a literal normalized equation-(8.3) weighted Haar graph measure: its fine normalizer is the exact
 fine graph-weight integral and the fine measure must push forward to the coarse graph measure for

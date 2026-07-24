@@ -971,13 +971,14 @@ paths unchanged. It requires a matching exact factor certificate for each candid
 nonemptiness, source total-region-area equality without fixed simplex allocations, and the
 nonorientable fixed-twist condition. The exact curve-bond combinatorics are now available separately: fine indexed curve words are
 literal finite-graph substitutions and covering/projected curve holonomies commute. Reverse-aware
-word substitution is now proved associative. A coherent direct graph refinement is proved unique
-from its vertex map and edge words; given its caller-supplied existence for two stages, the exact direct curve refinement is derived; its configuration map,
-stagewise measure pushforwards, and complete projected finite-curve law compose without an unrelated
-measure-law witness. At the normalized equation-(8.3) scope, a coarse-to-middle weighted
+word substitution is now proved associative. Two graph refinements canonically construct their
+coherent direct refinement by substituted edge words and composed vertex maps; composability and
+endpoints are derived, and any other coherent direct graph is equal. The exact direct curve
+refinement is then derived; its configuration map, stagewise measure pushforwards, and complete
+projected finite-curve law compose without an unrelated measure-law witness. At the normalized equation-(8.3) scope, a coarse-to-middle weighted
 refinement and a supplied fine-to-middle weighted pushforward on that same coherent triple now
 derive the direct fine-to-coarse weighted refinement and finest-graph stochastic finite law; the
-direct graph and both stage measures remain supplied. A dependent
+stage measures and analytic pushforwards remain supplied, while the graph composite is canonical. A dependent
 normalized equation-(8.3) layer now accepts a literal fine weighted Haar graph measure with its
 integral normalizer and requires its pushforward through that exact graph map for every distinguished
 region; fine normalization/nonzeroness and the unchanged complete projected finite-curve law then

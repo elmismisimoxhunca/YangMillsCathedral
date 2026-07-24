@@ -57,6 +57,29 @@ structure TwoDimensionalSenguptaCurveBondRefinementCompositionData where
 
 namespace TwoDimensionalSenguptaCurveBondRefinementCompositionData
 
+/-- Any two exact curve-bond refinement stages canonically construct their coherent direct graph and
+composition certificate. -/
+noncomputable def ofStages
+    (coarseToMiddle : TwoDimensionalSenguptaCurveBondRefinementData
+      (coarseSource := coarseSource) (coarseTarget := coarseTarget)
+      (fineSource := middleSource) (fineTarget := middleTarget)
+      (coarseCurveWord := coarseCurveWord) (fineCurveWord := middleCurveWord))
+    (middleToFine : TwoDimensionalSenguptaCurveBondRefinementData
+      (coarseSource := middleSource) (coarseTarget := middleTarget)
+      (fineSource := fineSource) (fineTarget := fineTarget)
+      (coarseCurveWord := middleCurveWord) (fineCurveWord := fineCurveWord)) :
+    TwoDimensionalSenguptaCurveBondRefinementCompositionData
+      (coarseSource := coarseSource) (coarseTarget := coarseTarget)
+      (middleSource := middleSource) (middleTarget := middleTarget)
+      (fineSource := fineSource) (fineTarget := fineTarget)
+      (coarseCurveWord := coarseCurveWord) (middleCurveWord := middleCurveWord)
+      (fineCurveWord := fineCurveWord) where
+  coarseToMiddle := coarseToMiddle
+  middleToFine := middleToFine
+  directGraph := coarseToMiddle.graph.comp middleToFine.graph
+  graphComposition := finiteGraphRefinementCompositionData
+    coarseToMiddle.graph middleToFine.graph
+
 /-- The direct curve refinement is derived from the two exact stages and graph-word composition. -/
 noncomputable def direct
     (data : TwoDimensionalSenguptaCurveBondRefinementCompositionData
@@ -93,7 +116,7 @@ noncomputable def direct
         exact (data.graphComposition.edgeWord_eq edge).symm
 
 /-- Any other direct graph coherent with the same two curve-refinement stages equals the stored
-direct graph. The direct graph remains an existence input, but its data are unique. -/
+direct graph. Hence every stored direct graph agrees with the canonical `ofStages` construction. -/
 theorem directGraph_unique
     (data : TwoDimensionalSenguptaCurveBondRefinementCompositionData
       (coarseSource := coarseSource) (coarseTarget := coarseTarget)

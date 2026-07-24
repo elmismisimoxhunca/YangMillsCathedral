@@ -43,6 +43,12 @@ theorem changed_direct_edge_word_blocked (edge : CoarseEdge)
         (data.coarseToMiddle.graph.edgeWord edge)) : False :=
   changed (data.graphComposition.edgeWord_eq edge)
 
+/-- The stored direct graph is the canonically constructed composite of both stages. -/
+theorem exact_direct_graph_construction :
+    data.directGraph = data.coarseToMiddle.graph.comp data.middleToFine.graph :=
+  data.directGraph_unique
+    (finiteGraphRefinementCompositionData data.coarseToMiddle.graph data.middleToFine.graph)
+
 /-- Any alternate coherent direct graph is forced to equal the stored direct graph. -/
 theorem exact_direct_graph_unique
     {otherDirect : FiniteGraphRefinementData CoarseVertex FineVertex CoarseEdge FineEdge

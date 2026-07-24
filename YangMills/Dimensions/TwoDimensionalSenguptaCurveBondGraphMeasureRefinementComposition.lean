@@ -13,7 +13,8 @@ A coarse-to-middle equation-(8.3) graph-measure refinement and a supplied fine-t
 pushforward compose along one coherent curve-bond refinement triple. The direct fine-to-coarse
 weighted graph-measure refinement and complete projected finite-curve law are derived.
 
-The coherent direct graph, both weighted measures, and both stagewise pushforwards remain supplied.
+The coherent direct graph is canonically constructible from the two refinement stages; this record
+stores that composition data together with both supplied weighted measures and stagewise pushforwards.
 No heat-factor integration or embedded preliminary subdivision is constructed.
 -/
 

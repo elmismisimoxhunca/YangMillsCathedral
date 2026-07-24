@@ -142,6 +142,25 @@ theorem exact_certified_refinement_composition
       coarseToMiddle.configurationMap ∘ middleToFine.configurationMap :=
   composition.configurationMap_eq_comp
 
+/-- Every two-stage refinement has an explicitly constructed coherent direct graph. -/
+theorem direct_graph_composition_nonempty
+    {CoarseVertex : Type uCoarseVertex} {MiddleVertex : Type uFineVertex}
+    {FineVertex : Type*} {CoarseEdge : Type uCoarseEdge}
+    {MiddleEdge : Type uFineEdge} {FineEdge : Type*}
+    [Fintype CoarseEdge] [Fintype MiddleEdge] [Fintype FineEdge]
+    {coarseSource coarseTarget : CoarseEdge → CoarseVertex}
+    {middleSource middleTarget : MiddleEdge → MiddleVertex}
+    {fineSource fineTarget : FineEdge → FineVertex}
+    (coarseToMiddle : FiniteGraphRefinementData
+      CoarseVertex MiddleVertex CoarseEdge MiddleEdge
+      coarseSource coarseTarget middleSource middleTarget)
+    (middleToFine : FiniteGraphRefinementData
+      MiddleVertex FineVertex MiddleEdge FineEdge
+      middleSource middleTarget fineSource fineTarget) :
+    Nonempty (FiniteGraphRefinementCompositionData coarseToMiddle middleToFine
+      (coarseToMiddle.comp middleToFine)) :=
+  ⟨finiteGraphRefinementCompositionData coarseToMiddle middleToFine⟩
+
 /-- Hostile direct-graph probe: two coherent direct refinements of the same stages cannot differ. -/
 theorem changed_direct_graph_blocked
     {CoarseVertex : Type uCoarseVertex} {MiddleVertex : Type uFineVertex}
