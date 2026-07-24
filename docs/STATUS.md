@@ -5360,7 +5360,8 @@ selected-loop real kernel inherits this action on both real components. Its stor
 derivative forces the pairing-Laplacian Casimir equations on that same chain; canonical real/complex
 coherence then constructs the generic complex coefficientwise bridge for the nested 2D data. A
 canonical finite coefficientwise heat-evolution linear map gives the exact positive-time operator on
-every finite real synthesis. Finite linearity proves the exact pairing generator on every finite synthesis and fills `core_generator`
+every finite real synthesis; its totalized coefficient-space difference quotient has a zero branch
+matching the ambient family and maps exactly to the positive ambient selected-loop quotient. Finite linearity proves the exact pairing generator on every finite synthesis and fills `core_generator`
 for the designated coefficient range. A smaller uninhabited reduction record now retains only smooth
 graph density and the eventual uniform graph bound before constructing the existing all-smooth
 stochastic endpoint; its exact `Nonempty` equivalence proves these two obligations, including one
