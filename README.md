@@ -750,9 +750,9 @@ canonical real/complex coherence consequently constructs the generic coefficient
 this nested 2D data. A canonical finite coefficientwise heat-evolution linear map gives exact
 positive-time action on every finite real synthesis, and its totalized coefficient-space difference
 quotient maps exactly to the ambient selected-loop difference quotient. Both finite heat evolution
-and every positive coefficient quotient remain inside that same algebraic core. Core convergence also
-gives both an eventual norm bound and a graph-relative bound separately for each fixed coefficient
-test. Their constant and eventual set may depend on the test, so they deliberately do not promote
+and every positive coefficient quotient remain inside that same algebraic core. Core convergence and the exact quotient identity also prove strong right-continuity at zero of the
+total heat semigroup on every finite coefficient test, and give both an eventual norm bound and a
+graph-relative bound separately for each such test. Their constant and eventual set may depend on the test, so they deliberately do not promote
 the quantifier order to one uniform all-domain graph bound. Finite linearity then proves generator
 convergence on the entire smooth real coefficient range, so its `core_generator` obligation is no longer caller supplied. It does not
 assert that every continuous dual class has a smooth representative. No inhabitant of the graph-core

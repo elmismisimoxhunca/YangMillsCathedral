@@ -984,8 +984,9 @@ committed before higher layers depend on it.
   heat differentiation to derive their pairing-Laplacian Casimir equations, reconstruct the generic
   complex coefficientwise bridge by canonical real/complex coherence, prove exact finite heat and
   difference-quotient evolution inside the unchanged algebraic core, prove generator convergence on
-  every finite real synthesis and the entire designated coefficient range, derive its pointwise
-  eventual norm and graph-relative bounds in the exact `∀ f, ∃ C_f, ∀ᶠ t` order, and derive the
+  every finite real synthesis and the entire designated coefficient range, derive strong right-
+  continuity at zero there from the exact quotient identity, and derive its pointwise eventual norm
+  and graph-relative bounds in the exact `∀ f, ∃ C_f, ∀ᶠ t` order, and derive the
   coefficient-specific graph-core reduction without conflating those pointwise bounds with the
   required `∃ C, ∀ᶠ t, ∀ f` uniform all-domain bound.
 - [ ] Prove smooth graph density and the required eventual uniform graph bound for that range; then construct the
