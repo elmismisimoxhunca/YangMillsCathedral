@@ -982,8 +982,9 @@ committed before higher layers depend on it.
   complex coefficientwise bridge by canonical real/complex coherence, prove exact finite heat and
   difference-quotient evolution inside the unchanged algebraic core, prove generator convergence on
   every finite real synthesis and the entire designated coefficient range, derive its pointwise
-  eventual norm bound, and derive the coefficient-specific graph-core reduction without conflating
-  that pointwise bound with a single uniform all-domain bound.
+  eventual norm and graph-relative bounds in the exact `∀ f, ∃ C_f, ∀ᶠ t` order, and derive the
+  coefficient-specific graph-core reduction without conflating those pointwise bounds with the
+  required `∃ C, ∀ᶠ t, ∀ f` uniform all-domain bound.
 - [ ] Prove smooth graph density and the required eventual uniform graph bound for that range; then construct the
   pairing-generator boundary-continuity witness and prove
   comparison of the exact pairing Laplacian with the geometric Laplace–Beltrami operator.
