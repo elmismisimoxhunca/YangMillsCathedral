@@ -753,7 +753,9 @@ quotient maps exactly to the ambient selected-loop difference quotient. Both fin
 and every positive coefficient quotient remain inside that same algebraic core. Core convergence and the exact quotient identity also prove strong right-continuity at zero of the
 total heat semigroup on every finite coefficient test; contractivity extends this to the uniform-norm
 closure of the continuous coefficient-core image, without asserting that closure is all of
-`C(G, ℝ)`. Core convergence also gives both an eventual norm bound and a
+`C(G, ℝ)`. The still-open smooth graph-density field by itself would place every smooth test in that
+closure and hence yield all-smooth strong heat continuity; the separate uniform graph bound remains
+necessary for all-smooth generator convergence. Core convergence also gives both an eventual norm bound and a
 graph-relative bound separately for each such test. Their constant and eventual set may depend on the test, so they deliberately do not promote
 the quantifier order to one uniform all-domain graph bound. Finite linearity then proves generator
 convergence on the entire smooth real coefficient range, so its `core_generator` obligation is no longer caller supplied. It does not

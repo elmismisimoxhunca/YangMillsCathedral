@@ -5369,7 +5369,9 @@ matching the ambient family and maps exactly to the positive ambient selected-lo
 evolution families are proved to remain in the unchanged algebraic coefficient core. Convergence
 and the exact quotient identity also yield strong right-continuity at zero on every finite coefficient
 core test, while contractivity extends it to the uniform closure of the continuous core image without
-claiming that image dense in all `C(G, ℝ)`. They also yield eventual norm and graph-relative bounds separately for each test; their vector-
+claiming that image dense in all `C(G, ℝ)`. The open graph-density field alone would extend this
+zeroth-order continuity to every smooth test; the uniform graph bound remains separately necessary
+for all-smooth generator convergence. Core convergence also yields eventual norm and graph-relative bounds separately for each test; their vector-
 dependent constants and events realize only `∀ f, ∃ C_f, ∀ᶠ t`, not the required uniform
 `∃ C, ∀ᶠ t, ∀ f` all-domain graph bound. Finite linearity proves the exact
 pairing generator on every finite synthesis and fills `core_generator`
