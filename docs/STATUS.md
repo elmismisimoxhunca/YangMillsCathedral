@@ -5466,8 +5466,13 @@ nonorientable fixed-twist condition. Candidates keep external curve bonds and pa
 fixed. `TwoDimensionalSenguptaCurveBondRefinementData` now supplies the exact missing combinatorics:
 fine indexed curve words are literal finite-graph substitutions, covering and projected simultaneous
 curve holonomies commute, and any supplied graph-measure pushforward transports the whole finite
-curve law. Construction of the fine heat-factor measure, full source-valid subdivisions, and full
-universal Fact 2 remain open.
+curve law. `TwoDimensionalSenguptaCurveBondGraphMeasureRefinementData` now specializes that premise
+to a literal normalized equation-(8.3) weighted Haar graph measure: its fine normalizer is the exact
+fine graph-weight integral and the fine measure must push forward to the coarse graph measure for
+every distinguished region. Fine normalization/nonzeroness and the unchanged projected stochastic
+finite-curve law are derived. The weighted pushforward itself remains an explicit obligation;
+heat-factor/convolution integration, unnormalized-weight equality, fine embedded subdivision, full
+source-valid subdivisions, and full universal Fact 2 remain open.
 `TwoDimensionalSenguptaUniversalCellwiseEmbeddedHomeomorphismData` now states universal acceptance
 for the directly cellwise-compatible embedded Fact 3 subclass at fixed universe levels. Its concrete
 bundled candidates contain targets and homeomorphisms with direct cell equivalences, exact mapped
@@ -5480,7 +5485,8 @@ requiring preliminary subdivisions, full universal Fact 3, and inhabitation rema
 proof pattern after such subdivisions are supplied: source coarse-to-fine equality, signed cellwise
 homeomorphism equality, and reverse target coarse-to-fine equality compose to the coarse ordinary
 and transported-twist laws. The target subdivision uses exactly the resulting `h` or `h⁻¹`.
-Subdivision construction and curve-bond refinement remain open.
+Preliminary-subdivision construction and the geometric/heat-factor proof of curve-bond weighted
+refinement remain open.
 `TwoDimensionalSenguptaEmbeddedUniversalFiniteLawAcceptanceData` now dependently joins the exact
 embedded finite-law base, selected geometric comparison, curve-fixed universal Fact 2 subclass, and
 cellwise-compatible universal Fact 3 subclass on the same covering density and fixed bundle class.

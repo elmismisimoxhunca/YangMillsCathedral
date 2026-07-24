@@ -1366,8 +1366,12 @@ committed before higher layers depend on it.
     debt.
   - [x] Add the exact curve-bond refinement layer: fine indexed curve words are literal finite-graph
     substitutions; covering and projected simultaneous curve holonomies commute; and any supplied
-    graph-measure pushforward transports the complete finite curve law. Retain construction of the
-    fine heat-factor measure and full source-valid subdivision as debt.
+    graph-measure pushforward transports the complete finite curve law.
+  - [x] Join that transport to a literal fine equation-(8.3) weighted Haar graph measure and integral
+    normalizer: require exact fine-to-coarse weighted-measure pushforward for every distinguished
+    region, then derive fine normalization/nonzeroness and the unchanged stochastic finite-curve law.
+    Retain the heat-factor/convolution proof of that pushforward, any unnormalized-weight identity,
+    the fine embedded subdivision, and full universal Fact 2 as debt.
   - [x] State universal acceptance for the directly cellwise-compatible embedded Fact 3 subclass at
     fixed universe levels using a concrete bundled target/homeomorphism candidate type, exact
     total-area, independent face-orientation, and global-sign semantics, a matching factor
