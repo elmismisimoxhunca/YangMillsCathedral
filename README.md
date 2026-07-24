@@ -786,8 +786,9 @@ uniform-bound field sharply with constant one. This strengthening is not stated 
 exactly simultaneous finite graph approximation and inhabited integrable Duhamel data and
 canonically reaches the existing all-smooth stochastic generator endpoint. A stronger continuous-
 Duhamel acceptance replaces raw integrability by global strong continuity of the total heat
-semigroup; continuity then derives interval integrability, but neither strong continuity nor the
-Duhamel identity is constructed. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
+semigroup; a reusable contraction-semigroup theorem derives that continuity from all-test right
+continuity at zero, hence conditionally from coefficient-image density. Continuity then derives
+interval integrability, but no required density or Duhamel-identity witness is constructed. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
 marginals are derived, including exact equality at the selected area with the sampled loop-holonomy
 law. The metric bridge now transports the exact invariant pairing to every group tangent fiber by
 left Maurer–Cartan trivialization and proves its inverse, symmetry, strict positivity, and left/right
