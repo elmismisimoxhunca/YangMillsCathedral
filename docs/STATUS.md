@@ -5313,8 +5313,10 @@ selected-character combination. Exact support synthesis identifies this auxiliar
 the canonical finitely supported quotient-dual coefficient carrier, yielding direct canonical heat
 and generator theorems. `LinearMapGraphCoreGenerator` now proves the reusable abstract extension:
 core convergence plus graph density and an eventual uniform graph-norm bound imply convergence on
-the full algebraic domain, without assuming the generator is bounded. Exact and changed-target
-probes protect this interface. The selected-character graph-density and heat-quotient graph-bound
+the full algebraic domain, without assuming the generator is bounded. The strongest form permits a
+possibly proper, unnormed algebraic domain with a separate, not-necessarily-injective linear map into
+the ambient normed space; the earlier same-space statement is retained as a specialization. Exact and changed-target
+probes protect both interfaces. The selected-character graph-density and heat-quotient graph-bound
 instances are not constructed, so extension to every required smooth test and Laplace–Beltrami
 comparison remain open. The
 common Wilson chain now forgets only its genuinely stronger global-faithfulness and normalization

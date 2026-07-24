@@ -12,15 +12,60 @@ open Filter
 
 noncomputable section
 
-universe uK uX uI
+universe uK uD uX uI
 
 variable {𝕜 : Type uK} [NormedField 𝕜]
+  {D : Type uD} [AddCommGroup D] [Module 𝕜 D]
   {X : Type uX} [NormedAddCommGroup X] [NormedSpace 𝕜 X]
   {ι : Type uI} {l : Filter ι}
   (A : X →ₗ[𝕜] X) (Q : ι → X →ₗ[𝕜] X) (core : Set X)
   (C : ℝ) (hC : 0 ≤ C)
   (graphBound : ∀ᶠ i in l, ∀ z : X, ‖Q i z‖ ≤ C * (‖z‖ + ‖A z‖))
   (coreGenerator : ∀ z ∈ core, Tendsto (fun i => Q i z) l (nhds (A z)))
+
+/-- Positive probe: graph approximation on a proper algebraic domain supplies the ambient
+operator limit. -/
+theorem exact_domainGraphCore_generator_extension
+    (J AOnDomain : D →ₗ[𝕜] X) (domainCore : Set D)
+    (hC : 0 ≤ C)
+    (graphBound : ∀ᶠ i in l, ∀ z : D,
+      ‖Q i (J z)‖ ≤ C * (‖J z‖ + ‖AOnDomain z‖))
+    (coreGenerator : ∀ z ∈ domainCore,
+      Tendsto (fun i => Q i (J z)) l (nhds (AOnDomain z)))
+    {x : D} (graphApprox :
+      IsLinearMapDomainGraphDenseAt J AOnDomain domainCore x) :
+    Tendsto (fun i => Q i (J x)) l (nhds (AOnDomain x)) :=
+  tendsto_linearMapOnDomain_of_graphDenseAt_of_eventually_graphBound
+    J AOnDomain Q domainCore C hC graphBound coreGenerator graphApprox
+
+/-- Positive probe: a global graph core on a proper algebraic domain gives convergence everywhere
+on that domain. -/
+theorem exact_globalDomainGraphCore_generator_extension
+    (J AOnDomain : D →ₗ[𝕜] X) (domainCore : Set D)
+    (hC : 0 ≤ C)
+    (graphDense : IsLinearMapDomainGraphDenseCore J AOnDomain domainCore)
+    (graphBound : ∀ᶠ i in l, ∀ z : D,
+      ‖Q i (J z)‖ ≤ C * (‖J z‖ + ‖AOnDomain z‖))
+    (coreGenerator : ∀ z ∈ domainCore,
+      Tendsto (fun i => Q i (J z)) l (nhds (AOnDomain z))) :
+    ∀ x, Tendsto (fun i => Q i (J x)) l (nhds (AOnDomain x)) :=
+  tendsto_linearMapOnDomain_of_graphDenseCore_of_eventually_graphBound
+    J AOnDomain Q domainCore C hC graphDense graphBound coreGenerator
+
+/-- Hostile proper-domain probe: exact hypotheses reject a changed ambient generator target. -/
+theorem changed_domainGraphCore_generator_target_blocked
+    [NeBot l] (J AOnDomain : D →ₗ[𝕜] X) (domainCore : Set D)
+    (hC : 0 ≤ C)
+    (graphBound : ∀ᶠ i in l, ∀ z : D,
+      ‖Q i (J z)‖ ≤ C * (‖J z‖ + ‖AOnDomain z‖))
+    (coreGenerator : ∀ z ∈ domainCore,
+      Tendsto (fun i => Q i (J z)) l (nhds (AOnDomain z)))
+    {x : D} (graphApprox : IsLinearMapDomainGraphDenseAt J AOnDomain domainCore x)
+    (changed : X) (changed_ne_exact : changed ≠ AOnDomain x)
+    (claimed : Tendsto (fun i => Q i (J x)) l (nhds changed)) : False :=
+  changed_ne_exact (tendsto_nhds_unique claimed
+    (tendsto_linearMapOnDomain_of_graphDenseAt_of_eventually_graphBound
+      J AOnDomain Q domainCore C hC graphBound coreGenerator graphApprox))
 
 /-- Positive probe: pointwise graph approximation supplies the full generator limit. -/
 theorem exact_graphCore_generator_extension

@@ -941,8 +941,10 @@ committed before higher layers depend on it.
   set/function presentation exactly to canonical `Finsupp` quotient-dual coefficients and continuous
   character synthesis. Keep this explicitly at the algebraic selected-character core rather than claiming an all-smooth-tests generator.
 - [x] Prove a reusable functional-analytic closure theorem extending convergence of algebraic linear
-  approximants from a graph-dense core under an eventual uniform graph-norm bound, with exact and
-  changed-target probes and no continuity assumption on the unbounded algebraic generator.
+  approximants from a graph-dense core under an eventual uniform graph-norm bound, first on a
+  possibly proper and unnormed algebraic operator domain represented in the ambient normed space and
+  then on the same-space specialization, with exact and changed-target probes and no continuity
+  assumption on the unbounded algebraic generator.
 - [ ] Instantiate that closure theorem for the selected-character core by proving graph density and
   the required eventual heat-quotient graph bound; then extend the generator to the required smooth
   domain, construct the pairing-generator boundary-continuity witness, and prove

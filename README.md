@@ -712,7 +712,8 @@ uniform-norm generator theorem for every finite selected-character combination. 
 bridged exactly to the canonical finitely supported quotient-dual coefficient carrier and its
 injective continuous character synthesis. A separate reusable closure theorem now extends linear
 approximant convergence from any graph-dense algebraic core under an eventual uniform graph-norm
-bound, while keeping graph density, core convergence, and the bound distinct. Applying it here still
+bound, including a possibly proper and unnormed operator domain represented in the ambient normed
+space by a separate linear map, while keeping graph density, core convergence, and the bound distinct. Applying it here still
 requires selected-character graph density and a heat-quotient graph bound, so the algebraic core does
 not fill the remaining all-smooth-tests boundary field. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
 marginals are derived, including exact equality at the selected area with the sampled loop-holonomy

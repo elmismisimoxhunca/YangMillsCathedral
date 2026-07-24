@@ -30,11 +30,23 @@ open Filter
 
 noncomputable section
 
-universe uK uX uI
+universe uK uD uX uI
 
 variable {𝕜 : Type uK} [NormedField 𝕜]
+  {D : Type uD} [AddCommGroup D] [Module 𝕜 D]
   {X : Type uX} [NormedAddCommGroup X] [NormedSpace 𝕜 X]
   {ι : Type uI} {l : Filter ι}
+
+/-- Pointwise graph density for an operator `A : D → X` whose possibly unnormed algebraic domain is
+represented in the ambient normed space by `J : D → X`. No injectivity is required. -/
+def IsLinearMapDomainGraphDenseAt
+    (J A : D →ₗ[𝕜] X) (core : Set D) (x : D) : Prop :=
+  ∀ δ : ℝ, 0 < δ → ∃ z ∈ core, ‖J x - J z‖ < δ ∧ ‖A x - A z‖ < δ
+
+/-- Global graph density on a possibly proper algebraic operator domain. -/
+def IsLinearMapDomainGraphDenseCore
+    (J A : D →ₗ[𝕜] X) (core : Set D) : Prop :=
+  ∀ x, IsLinearMapDomainGraphDenseAt J A core x
 
 /-- Pointwise graph-density of `core` for an algebraic linear operator `A`. This epsilon form avoids
 assuming that `A` is bounded or installing a separate graph-norm topology. -/
@@ -46,6 +58,67 @@ def IsLinearMapGraphDenseAt
 def IsLinearMapGraphDenseCore
     (A : X →ₗ[𝕜] X) (core : Set X) : Prop :=
   ∀ x, IsLinearMapGraphDenseAt A core x
+
+/-- Generator convergence extends from a graph-dense subset of a possibly proper algebraic
+domain. Neither the domain `D` nor its ambient map `J` is assumed complete, normed, or injective. -/
+theorem tendsto_linearMapOnDomain_of_graphDenseAt_of_eventually_graphBound
+    (J A : D →ₗ[𝕜] X) (Q : ι → X →ₗ[𝕜] X) (core : Set D)
+    (C : ℝ) (hC : 0 ≤ C)
+    (graphBound : ∀ᶠ i in l, ∀ z : D,
+      ‖Q i (J z)‖ ≤ C * (‖J z‖ + ‖A z‖))
+    (coreGenerator : ∀ z ∈ core, Tendsto (fun i => Q i (J z)) l (nhds (A z)))
+    {x : D} (graphApprox : IsLinearMapDomainGraphDenseAt J A core x) :
+    Tendsto (fun i => Q i (J x)) l (nhds (A x)) := by
+  rw [Metric.tendsto_nhds]
+  intro ε hε
+  let δ : ℝ := ε / (4 * (2 * C + 1))
+  have hden : 0 < 4 * (2 * C + 1) := by positivity
+  have hδ : 0 < δ := div_pos hε hden
+  obtain ⟨z, hzcore, hxz, hAxz⟩ := graphApprox δ hδ
+  have coreEventually :=
+    (Metric.tendsto_nhds.mp (coreGenerator z hzcore)) (ε / 2) (by positivity)
+  filter_upwards [graphBound, coreEventually] with i hiBound hiCore
+  rw [dist_eq_norm]
+  have split : Q i (J x) - A x =
+      Q i (J (x - z)) + (Q i (J z) - A z) + (A z - A x) := by
+    simp only [map_sub]
+    abel
+  rw [split]
+  calc
+    ‖Q i (J (x - z)) + (Q i (J z) - A z) + (A z - A x)‖
+        ≤ ‖Q i (J (x - z))‖ + ‖Q i (J z) - A z‖ + ‖A z - A x‖ :=
+      norm_add₃_le
+    _ < C * (2 * δ) + ε / 2 + δ := by
+      have hQ := hiBound (x - z)
+      have hJ : ‖J (x - z)‖ = ‖J x - J z‖ := by rw [map_sub]
+      have hA : ‖A (x - z)‖ = ‖A x - A z‖ := by rw [map_sub]
+      have hdiff : ‖J (x - z)‖ + ‖A (x - z)‖ < 2 * δ := by
+        rw [hJ, hA]
+        linarith
+      have hQle : ‖Q i (J (x - z))‖ ≤ C * (2 * δ) :=
+        hQ.trans (mul_le_mul_of_nonneg_left hdiff.le hC)
+      have hrev : ‖A z - A x‖ = ‖A x - A z‖ := norm_sub_rev _ _
+      rw [dist_eq_norm] at hiCore
+      rw [hrev]
+      linarith
+    _ < ε := by
+      have hquarter : C * (2 * δ) + δ = ε / 4 := by
+        dsimp [δ]
+        field_simp
+      linarith [hquarter]
+
+/-- Global proper-domain specialization of the graph-core closure theorem. -/
+theorem tendsto_linearMapOnDomain_of_graphDenseCore_of_eventually_graphBound
+    (J A : D →ₗ[𝕜] X) (Q : ι → X →ₗ[𝕜] X) (core : Set D)
+    (C : ℝ) (hC : 0 ≤ C)
+    (graphDense : IsLinearMapDomainGraphDenseCore J A core)
+    (graphBound : ∀ᶠ i in l, ∀ z : D,
+      ‖Q i (J z)‖ ≤ C * (‖J z‖ + ‖A z‖))
+    (coreGenerator : ∀ z ∈ core, Tendsto (fun i => Q i (J z)) l (nhds (A z))) :
+    ∀ x, Tendsto (fun i => Q i (J x)) l (nhds (A x)) := by
+  intro x
+  exact tendsto_linearMapOnDomain_of_graphDenseAt_of_eventually_graphBound
+    J A Q core C hC graphBound coreGenerator (graphDense x)
 
 /-- Generator convergence extends from a graph-dense core under an eventual uniform graph bound.
 No continuity of `A` or of the algebraic maps `Q i` is assumed. -/
