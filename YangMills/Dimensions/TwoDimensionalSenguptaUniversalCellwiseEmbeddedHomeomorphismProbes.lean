@@ -43,6 +43,55 @@ variable
       (baseEmbedded := baseEmbedded) (coverDensity := coverDensity)
       (bundleClass := bundleClass))
 
+attribute [local instance]
+  TwoDimensionalSenguptaEmbeddedHomeomorphismCandidateData.targetEdgeFintype
+  TwoDimensionalSenguptaEmbeddedHomeomorphismCandidateData.targetEdgeDecidableEq
+  TwoDimensionalSenguptaEmbeddedHomeomorphismCandidateData.targetInternalFintype
+  TwoDimensionalSenguptaEmbeddedHomeomorphismCandidateData.targetInternalDecidableEq
+  TwoDimensionalSenguptaEmbeddedHomeomorphismCandidateData.targetFaceFintype
+  TwoDimensionalSenguptaEmbeddedHomeomorphismCandidateData.targetFaceDecidableEq
+  TwoDimensionalSenguptaEmbeddedHomeomorphismCandidateData.targetRegionFintype
+  TwoDimensionalSenguptaEmbeddedHomeomorphismCandidateData.targetRegionDecidableEq
+  TwoDimensionalSenguptaEmbeddedHomeomorphismCandidateData.targetSurfaceTopology
+  TwoDimensionalSenguptaEmbeddedHomeomorphismCandidateData.targetSurfaceCharted
+
+omit [Fintype InternalEdge] in
+/-- Exact parameterized-view probe: forgetting target bundling preserves the global sign and actual
+surface homeomorphism. -/
+theorem exact_candidate_toCellwiseGeometry
+    (candidate : TwoDimensionalSenguptaEmbeddedHomeomorphismCandidateData.{uCurve, uEdge,
+      uInternal, uFace, uRegion, uSurface, uVertex, uTargetEdge, uTargetInternal,
+      uTargetFace, uTargetRegion, uTargetSurface, uTargetVertex}
+      (baseEmbedded := baseEmbedded)) :
+    candidate.toCellwiseGeometry.orientationSign = candidate.orientationSign ∧
+      candidate.toCellwiseGeometry.surfaceHomeomorphism = candidate.surfaceHomeomorphism :=
+  ⟨rfl, rfl⟩
+
+/-- Exact certificate transport probe: the bundled candidate certificate is definitionally the
+certificate of its parameterized geometry view. -/
+theorem exact_candidate_factorCertificate_parameterized
+    (candidate : TwoDimensionalSenguptaEmbeddedHomeomorphismCandidateData.{uCurve, uEdge,
+      uInternal, uFace, uRegion, uSurface, uVertex, uTargetEdge, uTargetInternal,
+      uTargetFace, uTargetRegion, uTargetSurface, uTargetVertex}
+      (baseEmbedded := baseEmbedded))
+    (certificate : candidate.HasFactorCertificate
+      (coverDensity := coverDensity) (bundleClass := bundleClass)) :
+    candidate.toCellwiseGeometry.HasFactorCertificate
+      (coverDensity := coverDensity) (bundleClass := bundleClass) :=
+  certificate
+
+omit [Fintype InternalEdge] in
+/-- Hostile parameterized-view probe: forgetting target bundling cannot change the global sign. -/
+theorem changed_candidate_toCellwiseGeometry_sign_blocked
+    (candidate : TwoDimensionalSenguptaEmbeddedHomeomorphismCandidateData.{uCurve, uEdge,
+      uInternal, uFace, uRegion, uSurface, uVertex, uTargetEdge, uTargetInternal,
+      uTargetFace, uTargetRegion, uTargetSurface, uTargetVertex}
+      (baseEmbedded := baseEmbedded))
+    (changed : SenguptaHomeomorphismOrientationSign)
+    (changed_ne : changed ≠ candidate.orientationSign)
+    (claimed : candidate.toCellwiseGeometry.orientationSign = changed) : False :=
+  changed_ne claimed.symm
+
 include data in
 /-- The concrete embedded-homeomorphism candidate class is nonempty. -/
 theorem exact_candidate_nonempty : Nonempty
