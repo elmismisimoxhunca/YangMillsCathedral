@@ -782,7 +782,9 @@ coefficient-specific boundary
 before all-smooth generation. A proof-local semigroup-analytic Duhamel strengthening requiring genuine interval integrability and
 expressing each quotient as the unit-interval average of the contraction semigroup applied to the pairing generator now discharges the
 uniform-bound field sharply with constant one. This strengthening is not stated in Driver Remark
-4.13 and is not yet constructed. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
+4.13 and is not yet constructed. A proposition-shaped Duhamel analytic acceptance now retains
+exactly simultaneous finite graph approximation and inhabited integrable Duhamel data and
+canonically reaches the existing all-smooth stochastic generator endpoint. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
 marginals are derived, including exact equality at the selected area with the sampled loop-holonomy
 law. The metric bridge now transports the exact invariant pairing to every group tangent fiber by
 left Maurer–Cartan trivialization and proves its inverse, symmetry, strict positivity, and left/right
