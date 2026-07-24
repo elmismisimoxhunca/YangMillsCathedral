@@ -791,7 +791,9 @@ continuity at zero, hence conditionally from coefficient-image density. Continui
 interval integrability. Finite graph approximation plus a separately named ambient smooth-function
 density target derives the required coefficient-image density. An exact three-field analytic
 acceptance now retains precisely finite graph approximation, ambient smooth density, and the
-Duhamel identity; no witness for any of those fields is constructed. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
+Duhamel identity. Selected continuous Peter–Weyl density plus smooth-dual coverage conditionally
+discharges the ambient smooth-density field, but no finite graph approximation, Duhamel identity,
+or unconditional Fourier/smooth-coverage witness is constructed. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
 marginals are derived, including exact equality at the selected area with the sampled loop-holonomy
 law. The metric bridge now transports the exact invariant pairing to every group tangent fiber by
 left Maurer–Cartan trivialization and proves its inverse, symmetry, strict positivity, and left/right

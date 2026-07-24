@@ -1014,7 +1014,9 @@ committed before higher layers depend on it.
   conditionally from coefficient-image density; derive that coefficient density from finite graph
   approximation plus a separately named ambient smooth-function density target; package the exact
   three remaining fields as finite graph approximation, ambient smooth density, and the Duhamel
-  identity; then construct those missing witnesses needed for an inhabitant and the pairing-
+  identity; conditionally discharge ambient smooth density from selected continuous Peter–Weyl
+  density plus smooth-dual coverage; then construct the remaining Fourier/smooth-coverage, finite-
+  graph, and Duhamel witnesses needed for an inhabitant and the pairing-
   generator boundary-continuity witness and prove
   comparison of the exact pairing Laplacian with the geometric Laplace–Beltrami operator.
 - [x] Prove that the common Wilson chain forgets only global faithfulness and Wilson normalization to

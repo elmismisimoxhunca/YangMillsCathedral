@@ -5407,8 +5407,10 @@ coefficient-image density conditionally supplies that premise, and continuity de
 integrability by composition with the rescaled time path. Finite graph approximation plus the
 separately named ambient smooth-function density target derives coefficient-image density. The
 resulting exact three-field acceptance retains precisely finite graph approximation, ambient smooth
-density, and the Duhamel identity. No witness for any of those three fields, and hence no acceptance
-inhabitant, is constructed. No graph-core record inhabitant is built: smooth-representative coverage,
+density, and the Duhamel identity. Selected continuous Peter–Weyl density plus smooth-dual coverage
+conditionally discharges the ambient smooth-density field. No finite graph approximation, Duhamel
+identity, or unconditional Fourier/smooth-coverage witness, and hence no acceptance inhabitant, is
+constructed. No graph-core record inhabitant is built: smooth-representative coverage,
 graph density, and the eventual uniform all-domain graph bound remain unconstructed, while Laplace–Beltrami comparison
 remains open. The
 common Wilson chain now forgets only its genuinely stronger global-faithfulness and normalization
