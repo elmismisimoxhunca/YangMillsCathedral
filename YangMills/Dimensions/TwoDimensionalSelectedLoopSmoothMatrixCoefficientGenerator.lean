@@ -13,11 +13,12 @@ import YangMills.Mathematics.UnitaryMatrixDualCasimirHeatMatrixCoefficientGenera
 The complex spectral heat operator acts diagonally on every explicit irreducible matrix coefficient.
 This file transports that result to both real components of the exact generated selected-loop heat
 operator, proves the right-hand zero-time generator on every finite real matrix-coefficient
-synthesis, and fills the `core_generator` obligation for the resulting range, conditional only on
-the explicit coefficientwise Casimir/Laplacian bridge.
+synthesis, and fills the `core_generator` obligation for the resulting range. Positive-time heat
+differentiation derives the required real pairing-Laplacian eigenvalue inside the same spectral chain,
+so the separate generic complex coefficient bridge is not assumed here.
 
-A final reduction record retains exactly the still-unproved coefficientwise Casimir bridge, smooth
-graph density, and eventual uniform graph bound. It does not construct any of these fields, assert
+A final reduction record retains exactly smooth graph density and the eventual uniform graph bound.
+It does not construct either field, assert
 coverage of the continuous unitary dual by smooth representatives, or extend the generator to all
 smooth tests without the graph-core hypotheses.
 -/
@@ -154,14 +155,113 @@ theorem twoDimensionalSelectedLoopHeatOperator_smoothMatrixCoefficient
         _ = _ := integral_im (integrableCoefficientKernel g)
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
-/-- With the explicit coefficientwise Casimir bridge, every real matrix-coefficient component has
-the exact right-hand selected-loop generator in uniform norm. -/
+/-- Positive-time heat differentiation and the exact diagonal heat action force the real pairing-
+Laplacian Casimir equation for every smooth matrix-coefficient component. This derives the equation
+inside the selected-loop spectral chain without assuming the separate generic complex coefficient
+bridge. -/
+theorem twoDimensionalSelectedLoop_smoothMatrixCoefficient_laplacian
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (index : SmoothUnitaryMatrixCoefficientRealIndex E G) (g : G) :
+    realLaplacian.laplacian (smoothUnitaryMatrixCoefficientRealFunction index) g =
+      -(heatTraceData.casimirWeight (unitaryMatrixDualClass
+        index.representation.toContinuousUnitaryIrreducibleMatrixRepresentation)) *
+        smoothUnitaryMatrixCoefficientRealFunction index g := by
+  let f := smoothUnitaryMatrixCoefficientRealFunction index
+  let q := unitaryMatrixDualClass
+    index.representation.toContinuousUnitaryIrreducibleMatrixRepresentation
+  let t : ℝ := 1
+  have ht : 0 < t := by norm_num [t]
+  let eigen : ℝ := Real.exp (-(t / 2) * heatTraceData.casimirWeight q)
+  have smoothEquality :
+      TwoDimensionalSelectedLoopHeatKernelOperatorData.positiveTimeSmooth
+        bridge.spectralHeatKernel.kernelOperator t ht
+          (smoothLieGroupScalarToContinuousLinearMap f) = eigen • f := by
+    ext x
+    rw [TwoDimensionalSelectedLoopHeatKernelOperatorData.positiveTimeSmooth_apply
+      bridge.spectralHeatKernel.kernelOperator]
+    have action := twoDimensionalSelectedLoopHeatOperator_smoothMatrixCoefficient
+      bridge t ht index
+    have pointAction := congrArg (fun F : C(G, ℝ) => F x) action
+    simpa [f, q, eigen] using pointAction
+  have storedDerivative :=
+    TwoDimensionalSelectedLoopHeatKernelOperatorData.heatOperator_hasDerivAt
+      bridge.spectralHeatKernel.kernelOperator t ht
+        (smoothLieGroupScalarToContinuousLinearMap f) g
+  rw [smoothEquality] at storedDerivative
+  rw [RightInvariantScalarDerivativeSmoothnessData.pairingLaplacian_smul
+    realLaplacian rightInvariantScalarDerivativeSmoothnessData] at storedDerivative
+  have scalarDerivative : HasDerivAt
+      (fun s : ℝ => Real.exp (-(s / 2) * heatTraceData.casimirWeight q) * f g)
+      (-(heatTraceData.casimirWeight q / 2) * eigen * f g) t := by
+    have innerDerivative : HasDerivAt
+        (fun s : ℝ => -(s / 2) * heatTraceData.casimirWeight q)
+        (-(heatTraceData.casimirWeight q / 2)) t := by
+      have raw := (((hasDerivAt_id t).div_const 2).neg.mul_const
+        (heatTraceData.casimirWeight q))
+      have transformed : HasDerivAt
+          (fun s : ℝ => -(s / 2) * heatTraceData.casimirWeight q)
+          (-(1 / 2) * heatTraceData.casimirWeight q) t := by
+        apply raw.congr_of_eventuallyEq
+        filter_upwards [] with s
+        simp only [Function.id_def, Pi.neg_apply]
+      exact transformed.congr_deriv (by ring)
+    have raw := innerDerivative.exp.mul_const (f g)
+    exact raw.congr_deriv (by dsimp [eigen]; ring)
+  have eventualPositive : ∀ᶠ s : ℝ in nhds t, 0 < s :=
+    isOpen_Ioi.eventually_mem ht
+  have trajectoryEquality :
+      (fun s : ℝ => bridge.spectralHeatKernel.kernelOperator.heatOperator s
+        (smoothLieGroupScalarToContinuousLinearMap f) g) =ᶠ[nhds t]
+      (fun s : ℝ => Real.exp (-(s / 2) * heatTraceData.casimirWeight q) * f g) := by
+    filter_upwards [eventualPositive] with s hs
+    have action := twoDimensionalSelectedLoopHeatOperator_smoothMatrixCoefficient
+      bridge s hs index
+    have pointAction := congrArg (fun F : C(G, ℝ) => F g) action
+    simpa [f, q] using pointAction
+  have scalarDerivativeOnHeat :=
+    scalarDerivative.congr_of_eventuallyEq trajectoryEquality
+  have derivativeEquality := storedDerivative.unique scalarDerivativeOnHeat
+  have eigenPositive : 0 < eigen := Real.exp_pos _
+  dsimp [q, f] at derivativeEquality ⊢
+  nlinarith
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- The same-chain real and imaginary eigenvalue equations, together with canonical same-pairing
+real/complex coherence, construct the previously explicit generic complex coefficientwise Casimir
+bridge for this spectral selected-loop chain. -/
+noncomputable def twoDimensionalSelectedLoopCoefficientCasimirLaplacianBridgeData
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)) :
+    SmoothUnitaryMatrixCoefficientCasimirLaplacianBridgeData
+      inner complexLaplacian heatTraceData where
+  coefficient_laplacian := by
+    intro ρ row column g
+    let coefficient := smoothUnitaryMatrixCoefficient ρ row column
+    let coherence := rightInvariantPairingRealComplexLaplacianCoherenceData
+      realLaplacian complexLaplacian
+    apply Complex.ext
+    · rw [← coherence.laplacian_realPart coefficient g]
+      have realEquation := twoDimensionalSelectedLoop_smoothMatrixCoefficient_laplacian
+        bridge ⟨ρ, row, column, .real⟩ g
+      simpa [coefficient, smoothUnitaryMatrixCoefficientRealFunction, Complex.mul_re] using
+        realEquation
+    · rw [← coherence.laplacian_imaginaryPart coefficient g]
+      have imaginaryEquation := twoDimensionalSelectedLoop_smoothMatrixCoefficient_laplacian
+        bridge ⟨ρ, row, column, .imaginary⟩ g
+      simpa [coefficient, smoothUnitaryMatrixCoefficientRealFunction, Complex.mul_im] using
+        imaginaryEquation
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Every real matrix-coefficient component has the exact right-hand selected-loop generator in
+uniform norm. The pairing-Laplacian identification is now derived from the same spectral heat chain,
+not supplied by the generic coefficientwise bridge. -/
 theorem tendsto_twoDimensionalSelectedLoop_smoothMatrixCoefficient_generator
     (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
       (law := law) (inner := inner) (realLaplacian := realLaplacian)
       (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
-    (casimirBridge : SmoothUnitaryMatrixCoefficientCasimirLaplacianBridgeData
-      inner complexLaplacian heatTraceData)
     (index : SmoothUnitaryMatrixCoefficientRealIndex E G) :
     Tendsto (fun t : NNReal =>
       twoDimensionalSelectedLoopHeatDifferenceQuotientLinearMap bridge t
@@ -183,8 +283,7 @@ theorem tendsto_twoDimensionalSelectedLoop_smoothMatrixCoefficient_generator
         (smoothUnitaryMatrixCoefficientRealFunction index) := by
     ext g
     rw [twoDimensionalSelectedLoopPairingGeneratorLinearMap_apply]
-    rw [SmoothUnitaryMatrixCoefficientCasimirLaplacianBridgeData.laplacian_smoothRealCoefficient
-      realLaplacian complexLaplacian casimirBridge index g]
+    rw [twoDimensionalSelectedLoop_smoothMatrixCoefficient_laplacian bridge index g]
     simp [f, q]
     ring
   rw [← targetEquality]
@@ -207,8 +306,6 @@ theorem tendsto_twoDimensionalSelectedLoop_smoothMatrixCoefficientSynthesis_gene
     (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
       (law := law) (inner := inner) (realLaplacian := realLaplacian)
       (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
-    (casimirBridge : SmoothUnitaryMatrixCoefficientCasimirLaplacianBridgeData
-      inner complexLaplacian heatTraceData)
     (coefficients : SmoothUnitaryMatrixCoefficientRealCoefficients E G) :
     Tendsto (fun t : NNReal =>
       twoDimensionalSelectedLoopHeatDifferenceQuotientLinearMap bridge t
@@ -225,7 +322,7 @@ theorem tendsto_twoDimensionalSelectedLoop_smoothMatrixCoefficientSynthesis_gene
   | @single_add index coefficient coefficients hindex hcoefficient induction =>
       have componentLimit :=
         tendsto_twoDimensionalSelectedLoop_smoothMatrixCoefficient_generator
-          bridge casimirBridge index
+          bridge index
       have scaledLimit := componentLimit.const_smul coefficient
       have combinedLimit := scaledLimit.add induction
       simpa [smoothUnitaryMatrixCoefficientRealSynthesis] using combinedLimit
@@ -237,9 +334,7 @@ theorem twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_generator
     (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
       (law := law) (inner := inner) (realLaplacian := realLaplacian)
       (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
-    (casimirBridge : SmoothUnitaryMatrixCoefficientCasimirLaplacianBridgeData
-      inner complexLaplacian heatTraceData) :
-    ∀ f ∈ smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G),
+    : ∀ f ∈ smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G),
       Tendsto (fun t : NNReal =>
         twoDimensionalSelectedLoopHeatDifferenceQuotientLinearMap bridge t
           (smoothLieGroupScalarToContinuousLinearMap f))
@@ -249,16 +344,14 @@ theorem twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_generator
   intro f hf
   obtain ⟨coefficients, rfl⟩ := hf
   exact tendsto_twoDimensionalSelectedLoop_smoothMatrixCoefficientSynthesis_generator
-    bridge casimirBridge coefficients
+    bridge coefficients
 
-/-- Exact remaining obligations after selecting the finite real smooth matrix-coefficient range and
-proving its generator convergence. -/
+/-- Exact remaining obligations after selecting the finite real smooth matrix-coefficient range,
+deriving its real pairing-Laplacian eigenvalues, and proving its generator convergence. -/
 structure TwoDimensionalSelectedLoopSmoothMatrixCoefficientGraphCoreData
     (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
       (law := law) (inner := inner) (realLaplacian := realLaplacian)
       (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)) where
-  coefficientCasimirBridge : SmoothUnitaryMatrixCoefficientCasimirLaplacianBridgeData
-    inner complexLaplacian heatTraceData
   graphDense : IsLinearMapDomainGraphDenseCore
     smoothLieGroupScalarToContinuousLinearMap
     (twoDimensionalSelectedLoopPairingGeneratorLinearMap
@@ -277,8 +370,8 @@ structure TwoDimensionalSelectedLoopSmoothMatrixCoefficientGraphCoreData
 
 namespace TwoDimensionalSelectedLoopSmoothMatrixCoefficientGraphCoreData
 
-/-- The coefficient-specific remaining data canonically fills the generic graph-core record; its
-core convergence field is now derived rather than caller supplied. -/
+/-- The coefficient-specific remaining data canonically fills the generic graph-core record; both its
+core convergence and coefficient Laplacian identification are now derived rather than caller supplied. -/
 noncomputable def toPairingGraphCoreGeneratorData
     {bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
       (law := law) (inner := inner) (realLaplacian := realLaplacian)
@@ -290,8 +383,7 @@ noncomputable def toPairingGraphCoreGeneratorData
   graphBoundConstant := data.graphBoundConstant
   graphBoundConstant_nonneg := data.graphBoundConstant_nonneg
   eventual_graphBound := data.eventual_graphBound
-  core_generator := twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_generator
-    bridge data.coefficientCasimirBridge
+  core_generator := twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_generator bridge
 
 /-- The reduced coefficient-specific obligations imply the existing all-smooth stochastic generator
 endpoint. -/

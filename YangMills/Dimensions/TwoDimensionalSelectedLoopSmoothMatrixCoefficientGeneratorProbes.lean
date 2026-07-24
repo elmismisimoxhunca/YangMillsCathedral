@@ -37,8 +37,6 @@ variable
     (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
       (law := law) (inner := inner) (realLaplacian := realLaplacian)
       (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
-    (casimirBridge : SmoothUnitaryMatrixCoefficientCasimirLaplacianBridgeData
-      inner complexLaplacian heatTraceData)
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Exact real/imaginary matrix-coefficient heat action probe. -/
@@ -55,7 +53,46 @@ theorem exact_selectedLoopHeatOperator_smoothMatrixCoefficient
   twoDimensionalSelectedLoopHeatOperator_smoothMatrixCoefficient bridge t ht index
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
-include casimirBridge in
+include bridge in
+/-- Exact derived real pairing-Laplacian eigenvalue probe. -/
+theorem exact_selectedLoop_smoothMatrixCoefficient_laplacian
+    (index : SmoothUnitaryMatrixCoefficientRealIndex E G) (g : G) :
+    realLaplacian.laplacian (smoothUnitaryMatrixCoefficientRealFunction index) g =
+      -(heatTraceData.casimirWeight (unitaryMatrixDualClass
+        index.representation.toContinuousUnitaryIrreducibleMatrixRepresentation)) *
+        smoothUnitaryMatrixCoefficientRealFunction index g :=
+  twoDimensionalSelectedLoop_smoothMatrixCoefficient_laplacian bridge index g
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+include bridge in
+/-- Hostile derived-Laplacian probe: changing the selected eigenvalue output is contradictory. -/
+theorem changed_selectedLoop_smoothMatrixCoefficient_laplacian_blocked
+    (index : SmoothUnitaryMatrixCoefficientRealIndex E G) (g : G) (changed : ℝ)
+    (changed_ne_exact : changed ≠
+      -(heatTraceData.casimirWeight (unitaryMatrixDualClass
+        index.representation.toContinuousUnitaryIrreducibleMatrixRepresentation)) *
+        smoothUnitaryMatrixCoefficientRealFunction index g)
+    (claimed : realLaplacian.laplacian
+      (smoothUnitaryMatrixCoefficientRealFunction index) g = changed) : False := by
+  apply changed_ne_exact
+  rw [← claimed]
+  exact twoDimensionalSelectedLoop_smoothMatrixCoefficient_laplacian bridge index g
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+include bridge in
+/-- Exact constructed complex coefficientwise Casimir-bridge probe. -/
+theorem exact_selectedLoop_constructedCoefficientCasimirBridge
+    (ρ : SmoothUnitaryIrreducibleMatrixRepresentation E G)
+    (row column : Fin ρ.dimension) (g : G) :
+    complexLaplacian.laplacian (smoothUnitaryMatrixCoefficient ρ row column) g =
+      -(heatTraceData.casimirWeight (unitaryMatrixDualClass
+        ρ.toContinuousUnitaryIrreducibleMatrixRepresentation) : ℂ) *
+        smoothUnitaryMatrixCoefficient ρ row column g :=
+  SmoothUnitaryMatrixCoefficientCasimirLaplacianBridgeData.laplacian_smoothCoefficient
+    (twoDimensionalSelectedLoopCoefficientCasimirLaplacianBridgeData bridge)
+    ρ row column g
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Exact uniform-norm zero-time generator probe for either real component. -/
 theorem exact_selectedLoop_smoothMatrixCoefficient_generator
     (index : SmoothUnitaryMatrixCoefficientRealIndex E G) :
@@ -68,10 +105,9 @@ theorem exact_selectedLoop_smoothMatrixCoefficient_generator
         (realLaplacian := realLaplacian)
         (smoothUnitaryMatrixCoefficientRealFunction index))) :=
   tendsto_twoDimensionalSelectedLoop_smoothMatrixCoefficient_generator
-    bridge casimirBridge index
+    bridge index
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
-include casimirBridge in
 /-- Exact finite-synthesis generator probe. -/
 theorem exact_selectedLoop_smoothMatrixCoefficientSynthesis_generator
     (coefficients : SmoothUnitaryMatrixCoefficientRealCoefficients E G) :
@@ -84,10 +120,9 @@ theorem exact_selectedLoop_smoothMatrixCoefficientSynthesis_generator
         (realLaplacian := realLaplacian)
         (smoothUnitaryMatrixCoefficientRealSynthesis coefficients))) :=
   tendsto_twoDimensionalSelectedLoop_smoothMatrixCoefficientSynthesis_generator
-    bridge casimirBridge coefficients
+    bridge coefficients
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
-include casimirBridge in
 /-- Exact fixed-range `core_generator` probe. -/
 theorem exact_selectedLoop_smoothMatrixCoefficientCore_generator :
     ∀ f ∈ smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G),
@@ -98,7 +133,7 @@ theorem exact_selectedLoop_smoothMatrixCoefficientCore_generator :
         (nhds (twoDimensionalSelectedLoopPairingGeneratorLinearMap
           (realLaplacian := realLaplacian) f)) :=
   twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_generator
-    bridge casimirBridge
+    bridge
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- The coefficient-specific reduction uses exactly the constructed matrix-coefficient range. -/
@@ -126,7 +161,6 @@ theorem changed_selectedLoopHeatOperator_smoothMatrixCoefficient_blocked
     (twoDimensionalSelectedLoopHeatOperator_smoothMatrixCoefficient bridge t ht index))
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
-include casimirBridge in
 /-- Hostile generator probe: no changed target shares the uniform-norm right-hand limit. -/
 theorem changed_selectedLoop_smoothMatrixCoefficient_generator_blocked
     (index : SmoothUnitaryMatrixCoefficientRealIndex E G) (changed : C(G, ℝ))
@@ -141,7 +175,7 @@ theorem changed_selectedLoop_smoothMatrixCoefficient_generator_blocked
       (nhdsWithin 0 (Set.Ioi 0)) (nhds changed)) : False :=
   changed_ne_exact (tendsto_nhds_unique claimed
     (tendsto_twoDimensionalSelectedLoop_smoothMatrixCoefficient_generator
-      bridge casimirBridge index))
+      bridge index))
 
 end
 
