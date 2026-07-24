@@ -972,8 +972,11 @@ committed before higher layers depend on it.
   theorems. This central range is not an all-smooth graph-core candidate.
 - [x] Construct the finite real smooth matrix-coefficient range over explicitly bundled smooth
   irreducible presentations, retaining dependent row/column indices, exact conjugation mixing,
-  singleton inclusion, conditional nontriviality, and an exact algebraic real-submodule carrier
-  without claiming quotient-dual coverage or topological closure.
+  singleton inclusion, conditional nontriviality, and an exact algebraic real-submodule carrier.
+  Realify every finite complex matrix-weighted sum from one explicit smooth presentation using both
+  component generators through canonical finitely supported coefficients, with exact synthesis and
+  continuous-core-image membership, without claiming quotient-
+  dual coverage or topological closure.
 - [x] Isolate the stronger coefficientwise Casimir/Laplacian identification as an explicit
   uninhabited bridge and conditionally derive the real/imaginary eigenvalue equations and exact
   finite-synthesis pairing-Laplacian action.

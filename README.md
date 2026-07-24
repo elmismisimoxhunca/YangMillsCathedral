@@ -737,7 +737,10 @@ synthesized into an explicit real smooth central character range. This range is 
 invariant and is therefore not proposed as a graph-dense core for all smooth tests on a nonabelian
 group. A separate finite real matrix-coefficient range is now constructed from explicitly bundled smooth
 irreducible unitary presentations and bundled as an exact algebraic real submodule, with dependent row/column indices, exact noncentral conjugation
-mixing, singleton inclusion, and conditional nontriviality. A reusable coefficientwise
+mixing, singleton inclusion, and conditional nontriviality. Every finite complex matrix-weighted sum
+from one smooth presentation now has canonical finitely supported realification coefficients using
+both real and imaginary generators, with exact synthesis, pointwise value, and continuous-core-image
+membership. A reusable coefficientwise
 Casimir bridge explicitly strengthens the trace equation to every matrix coordinate; in isolation it
 remains an honest uninhabited interface, and when supplied canonical real/complex coherence proves
 both real-component eigenvalue equations and finite synthesis linearity for the pairing Laplacian. Direct matrix-coefficient orthogonality now proves

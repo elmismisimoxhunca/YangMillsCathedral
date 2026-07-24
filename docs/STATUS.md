@@ -5351,7 +5351,9 @@ not an all-smooth graph-core candidate on a nonabelian group. The correct algebr
 constructed separately: explicitly bundled smooth irreducible unitary presentations provide smooth
 complex coefficients, their real/imaginary components, a dependent finite real synthesis range
 bundled as an exact algebraic real submodule, exact row/column conjugation mixing, singleton
-inclusion, and conditional nontriviality. An explicit reusable
+inclusion, and conditional nontriviality. Finite complex matrix-weighted sums from one explicit
+smooth presentation have canonical finitely supported realification coefficients using both
+component generators, with exact synthesis, pointwise real-part, and continuous-core-image theorems. An explicit reusable
 coefficientwise Casimir bridge prevents the existing trace eigen-equation from being silently
 promoted to matrix entries; in isolation it remains uninhabited, while any supplied instance
 canonically yields both real-component Casimir equations, eigenvalue uniqueness from a diagonal
