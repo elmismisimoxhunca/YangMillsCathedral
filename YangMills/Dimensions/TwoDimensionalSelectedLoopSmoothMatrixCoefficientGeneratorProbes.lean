@@ -383,6 +383,48 @@ theorem exact_selectedLoop_smoothMatrixCoefficientCore_exists_eventually_pointwi
     bridge f hf
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Exact Duhamel probe: contraction gives the sharp generator bound and hence the uniform graph
+bound with constant one. -/
+theorem exact_selectedLoopPairingDuhamel_graphBound
+    (data : TwoDimensionalSelectedLoopPairingDuhamelData bridge)
+    (t : NNReal) (ht : 0 < t)
+    (f : SmoothLieGroupScalarFunction (E := E) (G := G)) :
+    IntervalIntegrable (fun s : ℝ =>
+        twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge
+          (Real.toNNReal s * t)
+          (twoDimensionalSelectedLoopPairingGeneratorLinearMap
+            (realLaplacian := realLaplacian) f)) MeasureTheory.volume 0 1 ∧
+    ‖twoDimensionalSelectedLoopHeatDifferenceQuotientLinearMap bridge t
+        (smoothLieGroupScalarToContinuousLinearMap f)‖ ≤
+      ‖twoDimensionalSelectedLoopPairingGeneratorLinearMap
+        (realLaplacian := realLaplacian) f‖ ∧
+    (∀ᶠ t : NNReal in nhdsWithin 0 (Set.Ioi 0),
+      ∀ f : SmoothLieGroupScalarFunction (E := E) (G := G),
+        ‖twoDimensionalSelectedLoopHeatDifferenceQuotientLinearMap bridge t
+            (smoothLieGroupScalarToContinuousLinearMap f)‖ ≤
+          1 * (‖smoothLieGroupScalarToContinuousLinearMap f‖ +
+            ‖twoDimensionalSelectedLoopPairingGeneratorLinearMap
+              (realLaplacian := realLaplacian) f‖)) :=
+  ⟨data.trajectory_intervalIntegrable t f,
+    data.quotient_norm_le_generator t ht f, data.eventual_graphBound_one⟩
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Hostile Duhamel probe: changing the exact averaged heat trajectory is contradictory. -/
+theorem changed_selectedLoopPairingDuhamel_blocked
+    (data : TwoDimensionalSelectedLoopPairingDuhamelData bridge)
+    (t : NNReal) (ht : 0 < t)
+    (f : SmoothLieGroupScalarFunction (E := E) (G := G)) (changed : C(G, ℝ))
+    (changed_ne_exact : changed ≠
+      ∫ s : ℝ in 0..1,
+        twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge
+          (Real.toNNReal s * t)
+          (twoDimensionalSelectedLoopPairingGeneratorLinearMap
+            (realLaplacian := realLaplacian) f))
+    (claimed : twoDimensionalSelectedLoopHeatDifferenceQuotientLinearMap bridge t
+      (smoothLieGroupScalarToContinuousLinearMap f) = changed) : False :=
+  changed_ne_exact (claimed.symm.trans (data.duhamel t ht f))
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- An actual coefficient graph-core witness yields all-smooth strong heat continuity through graph
 density, independently of its separate uniform graph-bound field. -/
 theorem exact_smoothMatrixCoefficientGraphCore_allSmooth_heatOperator_tendsto_zero

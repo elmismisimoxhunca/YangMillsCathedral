@@ -753,6 +753,85 @@ theorem twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_exists_eventually
     (twoDimensionalSelectedLoopHeatDifferenceQuotientLinearMap bridge) f
     (twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_generator bridge f hf)
 
+/-- Proof-local semigroup-analytic Duhamel strengthening for the right heat difference quotient on
+the full smooth domain. It requires genuine interval integrability and identifies the quotient with
+the unit-interval average of the total contraction semigroup applied to the pairing generator. This
+is not quoted from Driver Remark 4.13 and no such datum is asserted without a witness. -/
+structure TwoDimensionalSelectedLoopPairingDuhamelData
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)) where
+  trajectory_intervalIntegrable : ∀ (t : NNReal),
+    ∀ f : SmoothLieGroupScalarFunction (E := E) (G := G),
+      IntervalIntegrable (fun s : ℝ =>
+        twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge
+          (Real.toNNReal s * t)
+          (twoDimensionalSelectedLoopPairingGeneratorLinearMap
+            (realLaplacian := realLaplacian) f)) volume 0 1
+  duhamel : ∀ (t : NNReal), 0 < t →
+    ∀ f : SmoothLieGroupScalarFunction (E := E) (G := G),
+      twoDimensionalSelectedLoopHeatDifferenceQuotientLinearMap bridge t
+          (smoothLieGroupScalarToContinuousLinearMap f) =
+        ∫ s : ℝ in 0..1,
+          twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge
+            (Real.toNNReal s * t)
+            (twoDimensionalSelectedLoopPairingGeneratorLinearMap
+              (realLaplacian := realLaplacian) f)
+
+namespace TwoDimensionalSelectedLoopPairingDuhamelData
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Duhamel plus heat contraction gives the sharp all-domain quotient bound by the pairing generator. -/
+theorem quotient_norm_le_generator
+    {bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)}
+    (data : TwoDimensionalSelectedLoopPairingDuhamelData bridge)
+    (t : NNReal) (ht : 0 < t)
+    (f : SmoothLieGroupScalarFunction (E := E) (G := G)) :
+    ‖twoDimensionalSelectedLoopHeatDifferenceQuotientLinearMap bridge t
+        (smoothLieGroupScalarToContinuousLinearMap f)‖ ≤
+      ‖twoDimensionalSelectedLoopPairingGeneratorLinearMap
+        (realLaplacian := realLaplacian) f‖ := by
+  rw [data.duhamel t ht f]
+  calc
+    ‖∫ s : ℝ in 0..1,
+        twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge
+          (Real.toNNReal s * t)
+          (twoDimensionalSelectedLoopPairingGeneratorLinearMap
+            (realLaplacian := realLaplacian) f)‖
+        ≤ ‖twoDimensionalSelectedLoopPairingGeneratorLinearMap
+            (realLaplacian := realLaplacian) f‖ * |1 - 0| :=
+      intervalIntegral.norm_integral_le_of_norm_le_const (fun s _ =>
+        twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap_apply_norm_le
+          bridge (Real.toNNReal s * t)
+          (twoDimensionalSelectedLoopPairingGeneratorLinearMap
+            (realLaplacian := realLaplacian) f))
+    _ = ‖twoDimensionalSelectedLoopPairingGeneratorLinearMap
+          (realLaplacian := realLaplacian) f‖ := by simp
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Duhamel constructs the exact uniform graph-bound field with constant one. -/
+theorem eventual_graphBound_one
+    {bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)}
+    (data : TwoDimensionalSelectedLoopPairingDuhamelData bridge) :
+    ∀ᶠ t : NNReal in nhdsWithin 0 (Set.Ioi 0),
+      ∀ f : SmoothLieGroupScalarFunction (E := E) (G := G),
+        ‖twoDimensionalSelectedLoopHeatDifferenceQuotientLinearMap bridge t
+            (smoothLieGroupScalarToContinuousLinearMap f)‖ ≤
+          1 * (‖smoothLieGroupScalarToContinuousLinearMap f‖ +
+            ‖twoDimensionalSelectedLoopPairingGeneratorLinearMap
+              (realLaplacian := realLaplacian) f‖) := by
+  filter_upwards [self_mem_nhdsWithin] with t ht
+  intro f
+  have hbound := data.quotient_norm_le_generator t ht f
+  simpa only [one_mul] using hbound.trans
+    (le_add_of_nonneg_left (norm_nonneg (smoothLieGroupScalarToContinuousLinearMap f)))
+
+end TwoDimensionalSelectedLoopPairingDuhamelData
+
 omit [FiniteDimensional ℝ E] [IsTopologicalGroup G] [T2Space G]
     [SecondCountableTopology G] [MeasurableSpace G] [BorelSpace G]
     [MeasurableMul₂ G] [MeasurableInv G] in
@@ -809,6 +888,50 @@ structure TwoDimensionalSelectedLoopSmoothMatrixCoefficientGraphCoreData
               (realLaplacian := realLaplacian) f‖)
 
 namespace TwoDimensionalSelectedLoopSmoothMatrixCoefficientGraphCoreData
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Smooth graph density together with the proof-local Duhamel strengthening constructs the coefficient
+graph-core record with sharp graph-bound constant one. -/
+noncomputable def ofGraphDenseDuhamel
+    {bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)}
+    (graphDense : IsLinearMapDomainGraphDenseCore
+      smoothLieGroupScalarToContinuousLinearMap
+      (twoDimensionalSelectedLoopPairingGeneratorLinearMap
+        (realLaplacian := realLaplacian))
+      (smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G)))
+    (duhamel : TwoDimensionalSelectedLoopPairingDuhamelData bridge) :
+    TwoDimensionalSelectedLoopSmoothMatrixCoefficientGraphCoreData bridge where
+  graphDense := graphDense
+  graphBoundConstant := 1
+  graphBoundConstant_nonneg := zero_le_one
+  eventual_graphBound := duhamel.eventual_graphBound_one
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Fully analytic constructor: simultaneous finite coefficient graph approximation plus the
+integrable Duhamel identity constructs the coefficient graph-core record. -/
+noncomputable def ofFiniteSynthesisGraphApproximationDuhamel
+    {bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)}
+    (finiteApproximation :
+      ∀ f : SmoothLieGroupScalarFunction (E := E) (G := G),
+        ∀ ε : ℝ, 0 < ε →
+          ∃ coefficients : SmoothUnitaryMatrixCoefficientRealCoefficients E G,
+            ‖smoothLieGroupScalarToContinuousLinearMap f -
+                smoothLieGroupScalarToContinuousLinearMap
+                  (smoothUnitaryMatrixCoefficientRealSynthesis coefficients)‖ < ε ∧
+              ‖twoDimensionalSelectedLoopPairingGeneratorLinearMap
+                  (realLaplacian := realLaplacian) f -
+                twoDimensionalSelectedLoopPairingGeneratorLinearMap
+                  (realLaplacian := realLaplacian)
+                  (smoothUnitaryMatrixCoefficientRealSynthesis coefficients)‖ < ε)
+    (duhamel : TwoDimensionalSelectedLoopPairingDuhamelData bridge) :
+    TwoDimensionalSelectedLoopSmoothMatrixCoefficientGraphCoreData bridge :=
+  ofGraphDenseDuhamel
+    (smoothMatrixCoefficient_graphDense_iff_finiteSynthesis_graphApproximation.mpr
+      finiteApproximation) duhamel
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Any coefficient graph-core witness already supplies strong right-continuity of the heat
