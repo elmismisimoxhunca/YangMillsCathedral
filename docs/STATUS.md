@@ -5307,8 +5307,9 @@ gives a derivative on `Ici 0`; its slope characterization and the `NNReal` coerc
 the required quotient. A changed-limit probe uses uniqueness of limits. Separately, the reusable
 `unitaryMatrixDualCasimirHeatComplexOperator` acts diagonally on every selected irreducible character
 with eigenvalue `exp(-tc_q/2)`, proved through unconditional uniform character convolution. Its
-scalar right-hand quotient converges to `-c_q/2`, with changed-limit hostility. This establishes only
-the selected-character core; graph-norm extension to every required smooth test and Laplace–Beltrami
+scalar right-hand quotient converges to `-c_q/2`, with changed-limit hostility. Finite linearity
+constructs coefficientwise heat evolution and the uniform-norm zero-time generator for every finite
+selected-character combination. This establishes only the algebraic character core; graph-norm extension to every required smooth test and Laplace–Beltrami
 comparison remain open. The
 common Wilson chain now forgets only its genuinely stronger global-faithfulness and normalization
 fields to construct Driver's exact Villain common heat chain. Uninhabited

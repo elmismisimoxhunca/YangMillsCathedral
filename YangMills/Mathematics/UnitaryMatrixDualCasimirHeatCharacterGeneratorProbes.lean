@@ -32,6 +32,59 @@ theorem exact_casimirHeatOperator_character
         unitaryMatrixDualContinuousCharacter q :=
   unitaryMatrixDualCasimirHeatComplexOperator_character data t ht q
 
+/-- Exact coefficientwise heat action on an arbitrary finite selected-character combination. -/
+theorem exact_casimirHeatOperator_finiteCharacterCombination
+    (t : ℝ) (ht : 0 < t) (s : Finset (UnitaryMatrixDual G))
+    (a : UnitaryMatrixDual G → ℂ) :
+    unitaryMatrixDualCasimirHeatComplexOperator data t
+      (unitaryMatrixDualFiniteCharacterCombination s a) =
+      unitaryMatrixDualCasimirHeatFiniteCharacterEvolution data t s a :=
+  unitaryMatrixDualCasimirHeatComplexOperator_finiteCharacterCombination data t ht s a
+
+/-- Exact uniform-norm zero-time generator on every finite selected-character combination. -/
+theorem exact_casimirHeatOperator_finiteCharacterCombination_generator
+    (s : Finset (UnitaryMatrixDual G)) (a : UnitaryMatrixDual G → ℂ) :
+    Tendsto
+      (fun t : NNReal => ((t : ℂ)⁻¹) •
+        (unitaryMatrixDualCasimirHeatComplexOperator data (t : ℝ)
+            (unitaryMatrixDualFiniteCharacterCombination s a) -
+          unitaryMatrixDualFiniteCharacterCombination s a))
+      (nhdsWithin 0 (Set.Ioi 0))
+      (nhds (∑ q ∈ s,
+        (((-(data.casimirWeight q / 2) : ℝ) : ℂ) * a q) •
+          unitaryMatrixDualContinuousCharacter q)) :=
+  tendsto_unitaryMatrixDualCasimirHeatComplexOperator_finiteCharacterCombination_generator
+    data s a
+
+/-- Hostile finite-evolution probe: changing any resulting continuous function contradicts exact
+coefficientwise heat action. -/
+theorem changed_casimirHeatOperator_finiteCharacterEvolution_blocked
+    (t : ℝ) (ht : 0 < t) (s : Finset (UnitaryMatrixDual G))
+    (a : UnitaryMatrixDual G → ℂ) (changed : C(G, ℂ))
+    (changed_ne_exact : changed ≠ unitaryMatrixDualCasimirHeatFiniteCharacterEvolution data t s a)
+    (claimed : unitaryMatrixDualCasimirHeatComplexOperator data t
+      (unitaryMatrixDualFiniteCharacterCombination s a) = changed) : False :=
+  changed_ne_exact (claimed.symm.trans
+    (unitaryMatrixDualCasimirHeatComplexOperator_finiteCharacterCombination data t ht s a))
+
+/-- Hostile finite-generator probe: the uniform operator quotient cannot converge to an a.e. or
+pointwise substitute with a different continuous-function target. -/
+theorem changed_casimirHeatOperator_finiteCharacterGenerator_blocked
+    (s : Finset (UnitaryMatrixDual G)) (a : UnitaryMatrixDual G → ℂ)
+    (changed : C(G, ℂ))
+    (changed_ne_exact : changed ≠ ∑ q ∈ s,
+      (((-(data.casimirWeight q / 2) : ℝ) : ℂ) * a q) •
+        unitaryMatrixDualContinuousCharacter q)
+    (claimed : Tendsto
+      (fun t : NNReal => ((t : ℂ)⁻¹) •
+        (unitaryMatrixDualCasimirHeatComplexOperator data (t : ℝ)
+            (unitaryMatrixDualFiniteCharacterCombination s a) -
+          unitaryMatrixDualFiniteCharacterCombination s a))
+      (nhdsWithin 0 (Set.Ioi 0)) (nhds changed)) : False :=
+  changed_ne_exact (tendsto_nhds_unique claimed
+    (tendsto_unitaryMatrixDualCasimirHeatComplexOperator_finiteCharacterCombination_generator
+      data s a))
+
 omit [IsTopologicalGroup G] [CompactSpace G] [T2Space G] [SecondCountableTopology G]
     [MeasurableSpace G] [BorelSpace G] in
 /-- Exact scalar zero-time generator on every selected character eigenvalue. -/
