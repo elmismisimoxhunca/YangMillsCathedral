@@ -724,6 +724,84 @@ theorem generalFactThree_empty_candidate_class_blocked
           |>.embeddedFiniteLaw.embeddedBase))) : False :=
   empty generalFactThreeData.generalFactThree.candidate_nonempty
 
+variable
+  (generalFactThreeFourierData :
+    TwoDimensionalGeneralFactThreeSelectedFourierDerivativeCurrentStrengthSourceIndexedLiteratureAcceptanceData.{uE,
+      uG, uGauge, uSample, uConnection, uΩ, uVertex, uEdge, uFace, uXAxisCell,
+      uLargeVertex, uLargeEdge, uLargeFace, uLargeXAxisCell, uFineVertex, uFineEdge,
+      uFineFace, uFineXAxisCell, uFineLargeVertex, uFineLargeEdge, uFineLargeFace,
+      uFineLargeXAxisCell, uEL, uHL, uSL, uER, uHR, uSR, uEG, uHG, uLeftBase,
+      uRightBase, uWholeBase, uLeftLoop, uRightLoop, uWholeLoop, uLeftSample,
+      uRightSample, uWholeSample, uCover, uCurveS, uEdgeS, uInternalEdge, uFaceS,
+      uRegionS, uSenguptaSample, uSenguptaSurface, uSenguptaBaseVertex,
+      uSenguptaFineInternal, uSenguptaFineFace, uSenguptaFineVertex,
+      uSenguptaTargetEdge, uSenguptaTargetInternal, uSenguptaTargetFace,
+      uSenguptaTargetRegion, uSenguptaTargetVertex, uSenguptaTargetSurface,
+      uCandidateFineEdge, uCandidateFineInternal, uCandidateFineFace, uCandidateFineVertex,
+      uGeneralTargetEdge, uGeneralTargetInternal, uGeneralTargetFace, uGeneralTargetRegion,
+      uGeneralTargetSurface, uGeneralTargetVertex, uGeneralSourceFineEdge,
+      uGeneralSourceFineInternal, uGeneralSourceFineFace, uGeneralSourceFineVertex,
+      uGeneralTargetFineEdge, uGeneralTargetFineInternal, uGeneralTargetFineFace,
+      uGeneralTargetFineVertex, uPath, uObservable}
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+      (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)
+      (identification := identification) (IG := IG)
+      (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+      (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)
+      (CoverGroup := CoverGroup) (CurveS := CurveS) (EdgeS := EdgeS)
+      (InternalEdge := InternalEdge) (FaceS := FaceS) (RegionS := RegionS)
+      (SenguptaSample := SenguptaSample) (coverDensity := coverDensity)
+      (SenguptaSurface := SenguptaSurface) (SenguptaBaseVertex := SenguptaBaseVertex)
+      (SenguptaFineVertex := SenguptaFineVertex) (senguptaFine := senguptaFine)
+      (SenguptaTargetVertex := SenguptaTargetVertex) (senguptaTarget := senguptaTarget)
+      (SenguptaTargetSurface := SenguptaTargetSurface))
+
+include generalFactThreeFourierData in
+omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
+    [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in
+/-- The joint acceptance retains the nonempty universal general-Fact-3 candidate class selected by
+its exact source component. -/
+theorem exact_generalFactThreeFourier_source :
+    Nonempty
+      (TwoDimensionalSenguptaGeneralEmbeddedHomeomorphismCandidateData.{uCurveS, uEdgeS,
+        uInternalEdge, uFaceS, uRegionS, uSenguptaSurface, uSenguptaBaseVertex,
+        uGeneralTargetEdge, uGeneralTargetInternal, uGeneralTargetFace, uGeneralTargetRegion,
+        uGeneralTargetSurface, uGeneralTargetVertex}
+        (baseEmbedded := (Classical.choice generalFactThreeFourierData.source.current)
+          |>.compactFiniteLaw.current.embeddedFiniteLaw.embeddedBase)) :=
+  generalFactThreeFourierData.source.generalFactThree.candidate_nonempty
+
+include generalFactThreeFourierData in
+omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
+    [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in
+/-- The joint acceptance exposes the exact four selected-Fourier derivative obligations. -/
+theorem exact_generalFactThreeFourier_analytic :
+    TwoDimensionalSelectedLoopSmoothMatrixCoefficientSelectedFourierDerivativeAnalyticAcceptance
+      ((Classical.choice generalFactThreeFourierData.source.current).augmented.current.planar
+        |>.toSpectralBrownianGeneratorBridgeData) :=
+  generalFactThreeFourierData.selectedFourierDerivative
+
+include generalFactThreeFourierData in
+omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
+    [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in
+/-- The joint acceptance remains rank two and rejects a 4D linear model. -/
+theorem exact_generalFactThreeFourier_dimension_contract :
+    Module.finrank ℝ EG = 2 ∧
+      ¬ Nonempty (EG ≃ₗ[ℝ] EuclideanDimension.four.Spacetime) :=
+  ⟨generalFactThreeFourierData.source.model_finrank_two,
+    generalFactThreeFourierData.source.not_linearEquiv_four⟩
+
+include generalFactThreeFourierData in
+omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
+    [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in
+/-- Hostile analytic probe: omitting the exact selected-Fourier derivative obligations is rejected. -/
+theorem missing_generalFactThreeFourier_analytic_blocked
+    (missing : ¬TwoDimensionalSelectedLoopSmoothMatrixCoefficientSelectedFourierDerivativeAnalyticAcceptance
+      ((Classical.choice generalFactThreeFourierData.source.current).augmented.current.planar
+        |>.toSpectralBrownianGeneratorBridgeData)) : False :=
+  missing generalFactThreeFourierData.selectedFourierDerivative
+
 end TwoDimensionalCurrentStrengthSourceIndexedLiteratureAcceptanceProbes
 
 end

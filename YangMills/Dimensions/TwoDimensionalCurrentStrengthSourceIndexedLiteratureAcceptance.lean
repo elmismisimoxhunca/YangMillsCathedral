@@ -1594,6 +1594,80 @@ def TwoDimensionalSelectedFourierDerivativeCurrentStrengthSourceIndexedLiteratur
     TwoDimensionalSelectedLoopSmoothMatrixCoefficientSelectedFourierDerivativeAnalyticAcceptance
       source.current.planar.toSpectralBrownianGeneratorBridgeData
 
+/-- Strict joint source-indexed acceptance combining fixed-universe universal general Fact 3 with
+the exact selected-Fourier/rescaled-derivative analytic obligations on the same current-strength
+witness. -/
+structure TwoDimensionalGeneralFactThreeSelectedFourierDerivativeCurrentStrengthSourceIndexedLiteratureAcceptanceData where
+  source :
+    TwoDimensionalGeneralFactThreeCurrentStrengthSourceIndexedLiteratureAcceptanceData.{uE, uG,
+      uGauge, uSample, uConnection, uΩ, uVertex, uEdge, uFace, uXAxisCell, uLargeVertex,
+      uLargeEdge, uLargeFace, uLargeXAxisCell, uFineVertex, uFineEdge, uFineFace,
+      uFineXAxisCell, uFineLargeVertex, uFineLargeEdge, uFineLargeFace, uFineLargeXAxisCell,
+      uEL, uHL, uSL, uER, uHR, uSR, uEG, uHG, uLeftBase, uRightBase, uWholeBase,
+      uLeftLoop, uRightLoop, uWholeLoop, uLeftSample, uRightSample, uWholeSample, uCover,
+      uCurveS, uEdgeS, uInternalEdge, uFaceS, uRegionS, uSenguptaSample, uSenguptaSurface,
+      uSenguptaBaseVertex, uSenguptaFineInternal, uSenguptaFineFace, uSenguptaFineVertex,
+      uSenguptaTargetEdge, uSenguptaTargetInternal, uSenguptaTargetFace,
+      uSenguptaTargetRegion, uSenguptaTargetVertex, uSenguptaTargetSurface,
+      uCandidateFineEdge, uCandidateFineInternal, uCandidateFineFace, uCandidateFineVertex,
+      uGeneralTargetEdge, uGeneralTargetInternal, uGeneralTargetFace, uGeneralTargetRegion,
+      uGeneralTargetSurface, uGeneralTargetVertex, uGeneralSourceFineEdge,
+      uGeneralSourceFineInternal, uGeneralSourceFineFace, uGeneralSourceFineVertex,
+      uGeneralTargetFineEdge, uGeneralTargetFineInternal, uGeneralTargetFineFace,
+      uGeneralTargetFineVertex, uPath, uObservable}
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+      (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)
+      (identification := identification) (IG := IG)
+      (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+      (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)
+      (CoverGroup := CoverGroup) (CurveS := CurveS) (EdgeS := EdgeS)
+      (InternalEdge := InternalEdge) (FaceS := FaceS) (RegionS := RegionS)
+      (SenguptaSample := SenguptaSample) (coverDensity := coverDensity)
+      (SenguptaSurface := SenguptaSurface) (SenguptaBaseVertex := SenguptaBaseVertex)
+      (SenguptaFineVertex := SenguptaFineVertex) (senguptaFine := senguptaFine)
+      (SenguptaTargetVertex := SenguptaTargetVertex) (senguptaTarget := senguptaTarget)
+      (SenguptaTargetSurface := SenguptaTargetSurface)
+  selectedFourierDerivative :
+    TwoDimensionalSelectedLoopSmoothMatrixCoefficientSelectedFourierDerivativeAnalyticAcceptance
+      (Classical.choice source.current).augmented.current.planar.toSpectralBrownianGeneratorBridgeData
+
+/-- Proposition-shaped joint general-Fact-3/Fourier-derivative strengthening. No inhabitant is
+constructed. -/
+def TwoDimensionalGeneralFactThreeSelectedFourierDerivativeCurrentStrengthSourceIndexedLiteratureAcceptance :
+    Prop :=
+  Nonempty
+    (TwoDimensionalGeneralFactThreeSelectedFourierDerivativeCurrentStrengthSourceIndexedLiteratureAcceptanceData.{uE,
+      uG, uGauge, uSample, uConnection, uΩ, uVertex, uEdge, uFace, uXAxisCell,
+      uLargeVertex, uLargeEdge, uLargeFace, uLargeXAxisCell, uFineVertex, uFineEdge,
+      uFineFace, uFineXAxisCell, uFineLargeVertex, uFineLargeEdge, uFineLargeFace,
+      uFineLargeXAxisCell, uEL, uHL, uSL, uER, uHR, uSR, uEG, uHG, uLeftBase,
+      uRightBase, uWholeBase, uLeftLoop, uRightLoop, uWholeLoop, uLeftSample,
+      uRightSample, uWholeSample, uCover, uCurveS, uEdgeS, uInternalEdge, uFaceS,
+      uRegionS, uSenguptaSample, uSenguptaSurface, uSenguptaBaseVertex,
+      uSenguptaFineInternal, uSenguptaFineFace, uSenguptaFineVertex,
+      uSenguptaTargetEdge, uSenguptaTargetInternal, uSenguptaTargetFace,
+      uSenguptaTargetRegion, uSenguptaTargetVertex, uSenguptaTargetSurface,
+      uCandidateFineEdge, uCandidateFineInternal, uCandidateFineFace, uCandidateFineVertex,
+      uGeneralTargetEdge, uGeneralTargetInternal, uGeneralTargetFace, uGeneralTargetRegion,
+      uGeneralTargetSurface, uGeneralTargetVertex, uGeneralSourceFineEdge,
+      uGeneralSourceFineInternal, uGeneralSourceFineFace, uGeneralSourceFineVertex,
+      uGeneralTargetFineEdge, uGeneralTargetFineInternal, uGeneralTargetFineFace,
+      uGeneralTargetFineVertex, uPath, uObservable}
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+      (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)
+      (identification := identification) (IG := IG)
+      (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+      (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)
+      (CoverGroup := CoverGroup) (CurveS := CurveS) (EdgeS := EdgeS)
+      (InternalEdge := InternalEdge) (FaceS := FaceS) (RegionS := RegionS)
+      (SenguptaSample := SenguptaSample) (coverDensity := coverDensity)
+      (SenguptaSurface := SenguptaSurface) (SenguptaBaseVertex := SenguptaBaseVertex)
+      (SenguptaFineVertex := SenguptaFineVertex) (senguptaFine := senguptaFine)
+      (SenguptaTargetVertex := SenguptaTargetVertex) (senguptaTarget := senguptaTarget)
+      (SenguptaTargetSurface := SenguptaTargetSurface))
+
 /-- Source-indexed current-strength acceptance augmented directly by an inhabited all-smooth
 zero-time operator/stochastic generator datum on the unchanged nested bridge. This is deliberately
 distinct from the earlier boundary-continuity strengthening. -/
