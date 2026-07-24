@@ -137,6 +137,23 @@ theorem unitaryMatrixDual_hasSmoothRepresentative_iff_mem_range
  q∈Set.range (smoothUnitaryMatrixDualToUnitaryMatrixDual (E:=E) (G:=G)) := by
  rfl
 
+/-- A smooth-representative class predicate can be eliminated to one explicitly bundled smooth
+irreducible presentation of the given continuous-dual class. -/
+theorem UnitaryMatrixDual.hasSmoothRepresentative_iff_exists_representation
+ (q:UnitaryMatrixDual G) :
+ q.HasSmoothRepresentative (E:=E) ↔
+ ∃ρ:SmoothUnitaryIrreducibleMatrixRepresentation E G,
+  unitaryMatrixDualClass
+   ρ.toContinuousUnitaryIrreducibleMatrixRepresentation=q := by
+ constructor
+ · rintro ⟨smoothClass, hsmoothClass⟩
+   induction smoothClass using Quotient.inductionOn with
+   | _ ρ => exact ⟨ρ, hsmoothClass⟩
+ · rintro ⟨ρ, hρ⟩
+   refine ⟨smoothUnitaryMatrixDualClass ρ, ?_⟩
+   rw [smoothUnitaryMatrixDualToUnitaryMatrixDual_class]
+   exact hρ
+
 /-- Surjectivity of the comparison map is exactly the unresolved assertion that every continuous
 coordinate class has a smooth representative. -/
 theorem smoothUnitaryMatrixDual_surjective_iff_all_hasSmoothRepresentative :

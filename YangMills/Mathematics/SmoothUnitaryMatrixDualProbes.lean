@@ -59,6 +59,16 @@ theorem smooth_bundle_is_in_comparison_image
         (E := E) :=
   unitaryMatrixDualClass_hasSmoothRepresentative ρ
 
+/-- Exact quotient-elimination probe: the image predicate supplies an explicit smooth
+presentation of the unchanged continuous class. -/
+theorem smooth_representative_extracts_explicit_presentation
+    (q : UnitaryMatrixDual G) :
+    q.HasSmoothRepresentative (E := E) ↔
+      ∃ ρ : SmoothUnitaryIrreducibleMatrixRepresentation E G,
+        unitaryMatrixDualClass
+          ρ.toContinuousUnitaryIrreducibleMatrixRepresentation = q :=
+  q.hasSmoothRepresentative_iff_exists_representation
+
 /-- The exact comparison debt is retained: surjectivity is equivalent to smooth representability of
 every continuous coordinate class. -/
 theorem surjectivity_exactly_matches_smooth_coverage :
