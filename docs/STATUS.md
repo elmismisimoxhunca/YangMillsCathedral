@@ -5480,7 +5480,17 @@ coarse total bond by a composable fine word, identifies each external subword wi
 refinement, and enforces signed internal-edge cancellation. Its fine ordinary and fixed-twist graph
 weights are exactly the fine boundary-conditioned covering heat factors, so the unchanged projected
 stochastic finite law is represented on the actual fine embedded curve words. The record remains
-uninhabited and assumes the normalized weighted pushforward; it is not universal Fact 2.
+uninhabited and assumes the normalized weighted pushforward.
+`TwoDimensionalSenguptaUniversalEmbeddedCurveBondSubdivisionData` now adds universal acceptance over
+a concrete fixed-universe candidate class whose source geometry is bundled before analytic
+certification. Each candidate contains its fine triangular/embedded presentation, literal split-bond
+curve refinement, face partition, total-edge paths, signed cancellation, unchanged regions, and
+exact preservation of the base orientability class but no weighted pushforward. Fine
+nonorientability therefore derives the same fixed `h = h⁻¹` condition already attached to the base. Every candidate must receive a normalized equation-(8.3) graph-measure
+certificate whose ordinary and fixed-twist weights are its own boundary-conditioned covering heat
+factors; candidate nonemptiness blocks vacuous quantification, and each certificate reconstructs the
+one-pair bridge. The record remains uninhabited; the heat-kernel integration proof, construction,
+unrestricted universe scope, and full Fact 2 remain open.
 `TwoDimensionalSenguptaUniversalCellwiseEmbeddedHomeomorphismData` now states universal acceptance
 for the directly cellwise-compatible embedded Fact 3 subclass at fixed universe levels. Its concrete
 bundled candidates contain targets and homeomorphisms with direct cell equivalences, exact mapped

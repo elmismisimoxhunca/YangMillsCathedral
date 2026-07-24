@@ -98,6 +98,16 @@ variable
     {fineEmbedded : TwoDimensionalSenguptaEmbeddedTriangularPresentationData
       (Surface := Surface) (Curve := Curve) (closed := fineClosed)}
     {fineCurveWord : Curve → List (OrientedEdge FineEdge)}
+    {curveRefinement : TwoDimensionalSenguptaCurveBondRefinementData
+      (coarseSource := fun edge =>
+        embeddedFiniteLaw.closedInvariance.baseClosed.edgeInitial
+          (Sum.inl edge : Sum Edge InternalEdge))
+      (coarseTarget := fun edge =>
+        embeddedFiniteLaw.closedInvariance.baseClosed.edgeTerminal
+          (Sum.inl edge : Sum Edge InternalEdge))
+      (fineSource := fun edge => fineClosed.edgeInitial (Sum.inl edge : Sum FineEdge FineInternal))
+      (fineTarget := fun edge => fineClosed.edgeTerminal (Sum.inl edge : Sum FineEdge FineInternal))
+      (coarseCurveWord := finiteLaw.curveWord) (fineCurveWord := fineCurveWord)}
     {graphRefinement : TwoDimensionalSenguptaCurveBondGraphMeasureRefinementData
       (coarseLaw := finiteLaw)
       (coarseSource := fun edge =>
@@ -110,15 +120,10 @@ variable
       (fineTarget := fun edge => fineClosed.edgeTerminal (Sum.inl edge : Sum FineEdge FineInternal))
       (fineCurveWord := fineCurveWord)}
 
-/-- Geometric and heat-factor realization of one split-curve-bond weighted graph refinement. -/
-structure TwoDimensionalSenguptaEmbeddedCurveBondGraphMeasureBridgeData where
+/-- Source-valid geometric content of one embedded subdivision that may split external curve bonds.
+This record contains no weighted graph-measure pushforward certificate. -/
+structure TwoDimensionalSenguptaEmbeddedCurveBondSubdivisionGeometryData where
   fineCurveWord_eq_embedded : fineCurveWord = fineEmbedded.curveWord
-  fineOrdinaryRegionWeight_eq : ∀ region external,
-    graphRefinement.fineOrdinaryRegionWeight region external =
-      senguptaTriangulatedRegionFactor fine coverDensity region external
-  fineTwistedRegionWeight_eq : ∀ region external,
-    graphRefinement.fineTwistedRegionWeight finiteLaw.bundleClass region external =
-      senguptaTriangulatedTwistedRegionFactor fine coverDensity finiteLaw.bundleClass region external
   fineFaceToCoarse : FineFace → Face
   fineFaceToCoarse_surjective : Function.Surjective fineFaceToCoarse
   faceRegion_coherence : ∀ fineFace,
@@ -141,8 +146,7 @@ structure TwoDimensionalSenguptaEmbeddedCurveBondGraphMeasureBridgeData where
     List (OrientedEdge (Sum FineEdge FineInternal))
   externalEdgeWord_coherence : ∀ edge,
     coarseEdgeToFineWord (Sum.inl edge) =
-      (graphRefinement.curveRefinement.graph.edgeWord edge).map
-        senguptaIncludeExternalOrientedEdge
+      (curveRefinement.graph.edgeWord edge).map senguptaIncludeExternalOrientedEdge
   coarseEdgeToFineWord_realizes : ∀ edge,
     IsSenguptaEmbeddedPathSubdivision embeddedFiniteLaw.embeddedBase.edgePath
       fineEmbedded.edgePath edge (coarseEdgeToFineWord edge)
@@ -156,6 +160,39 @@ structure TwoDimensionalSenguptaEmbeddedCurveBondGraphMeasureBridgeData where
       senguptaOrientedWordSignedIncidence fineEdge (fine.boundaryWord fineFace)
   fineRegionSet_eq : ∀ region : Region,
     fineEmbedded.regionSet region = embeddedFiniteLaw.embeddedBase.regionSet region
+  /-- Subdivision preserves the orientability class of the same embedded surface. -/
+  fine_orientable_iff_base :
+    IsSenguptaCombinatoriallyOrientable fine ↔
+      IsSenguptaCombinatoriallyOrientable heatFactors.triangulation
+
+namespace TwoDimensionalSenguptaEmbeddedCurveBondSubdivisionGeometryData
+
+omit [T2Space CoverGroup] [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup]
+    [Nonempty Curve] [Fintype TargetEdge] [Fintype FineInternal] in
+/-- Fine nonorientability forces the exact fixed bundle class to be involutive through preservation
+of the base surface's orientability class. -/
+theorem bundleClass_eq_inv_of_fine_nonorientable
+    (data : TwoDimensionalSenguptaEmbeddedCurveBondSubdivisionGeometryData
+      (embeddedFiniteLaw := embeddedFiniteLaw) (fine := fine) (fineClosed := fineClosed)
+      (fineEmbedded := fineEmbedded) (curveRefinement := curveRefinement))
+    (fineNonorientable : ¬ IsSenguptaCombinatoriallyOrientable fine) :
+    finiteLaw.bundleClass = finiteLaw.bundleClass⁻¹ :=
+  embeddedFiniteLaw.nonorientable_bundleClass_involutive
+    (fun baseOrientable => fineNonorientable (data.fine_orientable_iff_base.mpr baseOrientable))
+
+end TwoDimensionalSenguptaEmbeddedCurveBondSubdivisionGeometryData
+
+/-- Geometric and heat-factor realization of one split-curve-bond weighted graph refinement. -/
+structure TwoDimensionalSenguptaEmbeddedCurveBondGraphMeasureBridgeData extends
+    TwoDimensionalSenguptaEmbeddedCurveBondSubdivisionGeometryData
+      (embeddedFiniteLaw := embeddedFiniteLaw) (fine := fine) (fineClosed := fineClosed)
+      (fineEmbedded := fineEmbedded) (curveRefinement := graphRefinement.curveRefinement) where
+  fineOrdinaryRegionWeight_eq : ∀ region external,
+    graphRefinement.fineOrdinaryRegionWeight region external =
+      senguptaTriangulatedRegionFactor fine coverDensity region external
+  fineTwistedRegionWeight_eq : ∀ region external,
+    graphRefinement.fineTwistedRegionWeight finiteLaw.bundleClass region external =
+      senguptaTriangulatedTwistedRegionFactor fine coverDensity finiteLaw.bundleClass region external
 
 namespace TwoDimensionalSenguptaEmbeddedCurveBondGraphMeasureBridgeData
 

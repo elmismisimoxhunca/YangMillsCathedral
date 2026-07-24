@@ -1378,6 +1378,12 @@ committed before higher layers depend on it.
     persist; and the fine equation-(8.3) weights equal the fine boundary-conditioned covering heat
     factors. Retain construction of this witness, proof of its weighted pushforward, universal
     quantification, and full Fact 2 as debt.
+  - [x] State universal acceptance over a concrete fixed-universe class of embedded split-curve-bond
+    candidates whose geometry is fixed before analytic certification. Require exact preservation of
+    the base orientability class, deriving the same fixed involutive twist from fine
+    nonorientability. Require every candidate to receive a normalized equation-(8.3) graph-measure pushforward with its own exact ordinary and
+    fixed-twist covering heat factors, and require candidate nonemptiness. Retain construction, the
+    heat-kernel integration proof, unrestricted universe scope, and full Fact 2 as debt.
   - [x] State universal acceptance for the directly cellwise-compatible embedded Fact 3 subclass at
     fixed universe levels using a concrete bundled target/homeomorphism candidate type, exact
     total-area, independent face-orientation, and global-sign semantics, a matching factor

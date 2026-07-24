@@ -981,7 +981,15 @@ triangular presentation on the same surface partitions coarse faces, realizes ev
 bond by a fine word, identifies external subwords with the exact graph refinement, enforces signed
 internal-edge cancellation and unchanged regions, and identifies the fine graph weights with the
 boundary-conditioned covering heat factors. It still assumes the normalized weighted pushforward
-and does not construct a subdivision or universal theorem. Universal acceptance for the directly cellwise-compatible embedded Fact 3 subclass is now separately
+and does not construct a subdivision. A separate uninhabited universal record now quantifies over a
+concrete fixed-universe class of all such source-geometric split-bond candidates *before* analytic
+certification: each candidate bundles its fine triangulation, embedded paths/faces/regions, literal
+curve refinement, signed-boundary geometry, and exact preservation of the base orientability class
+but no weighted pushforward. Fine nonorientability therefore forces the same fixed `h = h⁻¹`
+condition already attached to the base. Every candidate must
+then receive an equation-(8.3) graph-measure certificate with its own exact ordinary and fixed-twist
+heat factors; candidate nonemptiness blocks empty-class vacuity. The heat-kernel integration proof,
+construction, and unrestricted universe-polymorphic/full Fact 2 remain open. Universal acceptance for the directly cellwise-compatible embedded Fact 3 subclass is now separately
 specified at fixed universe levels: a concrete bundled candidate covers targets and homeomorphisms
 with direct edge/face equivalences, and every candidate must receive a factor certificate with the
 same global sign, per-face simplex-orientation choices, and equivalences. Candidate nonemptiness and
