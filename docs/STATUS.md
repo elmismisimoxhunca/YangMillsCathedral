@@ -5410,7 +5410,10 @@ resulting exact three-field acceptance retains precisely finite graph approximat
 density, and the Duhamel identity. Selected continuous Peter–Weyl density plus smooth-dual coverage
 conditionally discharges the ambient smooth-density field. No finite graph approximation, Duhamel
 identity, or unconditional Fourier/smooth-coverage witness, and hence no acceptance inhabitant, is
-constructed. No graph-core record inhabitant is built: smooth-representative coverage,
+constructed. A separate differentiability-facing route requires global strong continuity and the
+exact right derivative of each unit-rescaled heat trajectory. The Banach-valued one-sided
+fundamental theorem of calculus derives the Duhamel identity, interval integrability, graph bound,
+and stochastic endpoint; no such derivative datum is constructed. No graph-core record inhabitant is built: smooth-representative coverage,
 graph density, and the eventual uniform all-domain graph bound remain unconstructed, while Laplace–Beltrami comparison
 remains open. The
 common Wilson chain now forgets only its genuinely stronger global-faithfulness and normalization

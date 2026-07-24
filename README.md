@@ -793,7 +793,11 @@ density target derives the required coefficient-image density. An exact three-fi
 acceptance now retains precisely finite graph approximation, ambient smooth density, and the
 Duhamel identity. Selected continuous Peter–Weyl density plus smooth-dual coverage conditionally
 discharges the ambient smooth-density field, but no finite graph approximation, Duhamel identity,
-or unconditional Fourier/smooth-coverage witness is constructed. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
+or unconditional Fourier/smooth-coverage witness is constructed. A separate differentiability-facing
+route requires global strong continuity plus the exact right derivative of each unit-rescaled heat
+trajectory; the Banach-valued one-sided fundamental theorem of calculus then derives the Duhamel
+identity, interval integrability, graph bound, and stochastic endpoint. No such derivative datum is
+constructed. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
 marginals are derived, including exact equality at the selected area with the sampled loop-holonomy
 law. The metric bridge now transports the exact invariant pairing to every group tangent fiber by
 left Maurer–Cartan trivialization and proves its inverse, symmetry, strict positivity, and left/right
