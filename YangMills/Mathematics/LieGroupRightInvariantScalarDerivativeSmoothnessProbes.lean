@@ -20,31 +20,62 @@ variable {E : Type uE} [NormedAddCommGroup E] [NormedSpace ℝ E]
   {inner : Geometry.InvariantInnerProductData
     (I := modelWithCornersSelf ℝ E) (G := G)}
   (laplacianData : RightInvariantPairingLaplacianData inner)
-  (regularity : RightInvariantScalarDerivativeSmoothnessData (E := E) (G := G))
+
+/-- Exact probe: the one-step smoothness interface is canonically inhabited. -/
+theorem exact_rightInvariantScalarDerivativeSmoothness_inhabited :
+    Nonempty (RightInvariantScalarDerivativeSmoothnessData (E := E) (G := G)) :=
+  ⟨rightInvariantScalarDerivativeSmoothnessData⟩
 
 omit [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
-/-- Exact probe: the supplied one-step regularity constructs a smooth iterated derivative. -/
+/-- Exact probe: the raw directional derivative is the vector-valued exterior derivative evaluated
+on the right-invariant vector. -/
+theorem exact_rightInvariantScalarDerivative_mvfderiv
+    (f : G → ℝ) (Y : GroupLieAlgebra (modelWithCornersSelf ℝ E) G) (g : G) :
+    rightInvariantScalarDerivative f Y g =
+      mvfderiv (modelWithCornersSelf ℝ E) f g
+        (mulRightInvariantVectorField (modelWithCornersSelf ℝ E) Y g) :=
+  RightInvariantScalarDerivativeSmoothnessData.rightInvariantScalarDerivative_eq_mvfderiv
+    f Y g
+
+/-- Exact probe: the canonical one-step regularity constructs a smooth iterated derivative. -/
 theorem exact_smoothSecondDerivative
     (f : SmoothLieGroupScalarFunction (E := E) (G := G))
     (X Y : GroupLieAlgebra (modelWithCornersSelf ℝ E) G) (g : G) :
-    regularity.smoothSecondDerivative f X Y g =
+    rightInvariantScalarDerivativeSmoothnessData.smoothSecondDerivative f X Y g =
       rightInvariantScalarSecondDerivative f X Y g :=
-  regularity.smoothSecondDerivative_apply f X Y g
+  rightInvariantScalarDerivativeSmoothnessData.smoothSecondDerivative_apply f X Y g
 
 /-- Exact probe: the continuous ambient representative has the original pairing-Laplacian value. -/
 theorem exact_pairingLaplacianContinuousMap
     (f : SmoothLieGroupScalarFunction (E := E) (G := G)) (g : G) :
-    regularity.pairingLaplacianContinuousMap laplacianData f g =
-      laplacianData.laplacian f g :=
-  regularity.pairingLaplacianContinuousMap_apply laplacianData f g
+    rightInvariantScalarDerivativeSmoothnessData.pairingLaplacianContinuousMap
+      laplacianData f g = laplacianData.laplacian f g :=
+  rightInvariantScalarDerivativeSmoothnessData.pairingLaplacianContinuousMap_apply
+    laplacianData f g
 
-/-- Hostile probe: no changed continuous function can be identified with the constructed pairing
-Laplacian representative. -/
-theorem changed_pairingLaplacianContinuousMap_blocked
+/-- Exact probe: the pairing Laplacian is now a linear map from the smooth domain into the
+continuous ambient carrier. -/
+theorem exact_pairingLaplacianLinearMap
+    (f : SmoothLieGroupScalarFunction (E := E) (G := G)) (g : G) :
+    rightInvariantPairingLaplacianLinearMap laplacianData f g =
+      laplacianData.laplacian f g :=
+  rightInvariantPairingLaplacianLinearMap_apply laplacianData f g
+
+/-- Exact probe: additivity and real homogeneity hold in the continuous ambient carrier. -/
+theorem exact_pairingLaplacianLinearMap_linearity
+    (c : ℝ) (f h : SmoothLieGroupScalarFunction (E := E) (G := G)) :
+    rightInvariantPairingLaplacianLinearMap laplacianData (c • f + h) =
+      c • rightInvariantPairingLaplacianLinearMap laplacianData f +
+        rightInvariantPairingLaplacianLinearMap laplacianData h := by
+  rw [map_add, map_smul]
+
+/-- Hostile probe: no changed continuous function can replace the constructed linear pairing-
+Laplacian value. -/
+theorem changed_pairingLaplacianLinearMap_blocked
     (f : SmoothLieGroupScalarFunction (E := E) (G := G)) (changed : C(G, ℝ))
     (changed_ne_exact : changed ≠
-      regularity.pairingLaplacianContinuousMap laplacianData f)
-    (claimed : regularity.pairingLaplacianContinuousMap laplacianData f = changed) : False :=
+      rightInvariantPairingLaplacianLinearMap laplacianData f)
+    (claimed : rightInvariantPairingLaplacianLinearMap laplacianData f = changed) : False :=
   changed_ne_exact claimed.symm
 
 end

@@ -716,10 +716,14 @@ bound, including a possibly proper and unnormed operator domain represented in t
 space by a separate linear map, while keeping graph density, core convergence, and the bound distinct. Applying it here still
 requires selected-character graph density and a heat-quotient graph bound. The real smooth-test
 carrier now has a proved pointwise real vector-space structure and an injective algebraic linear map
-into `C(G, ℝ)`, providing the proper domain/ambient map needed by the closure theorem. One explicit, still-
-uninhabited first-directional-derivative smoothness field now constructs smooth first and second
-derivatives, smooth finite-basis Laplacians, and a continuous-valued pairing Laplacian. Linearity of
-the raw `mfderiv`-based Laplacian remains open, so the algebraic core does not fill the remaining all-smooth-tests boundary field. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
+into `C(G, ℝ)`, providing the proper domain/ambient map needed by the closure theorem. Smoothness of
+the right-invariant vector field and Mathlib tangent-map calculus canonically inhabit the one-step
+derivative-smoothness interface, constructing smooth first/second derivatives, smooth finite-basis
+Laplacians, and a continuous-valued pairing Laplacian. A definitional bridge to Mathlib's vector-
+valued exterior derivative proves first- and second-derivative linearity, finite-sum linearity, and
+finally packages the pairing Laplacian as the canonical algebraic linear map from the smooth domain
+into `C(G, ℝ)`, with no caller-supplied regularity witness. Missing graph density and the heat-
+quotient bound still prevent the algebraic core from filling the remaining all-smooth-tests boundary field. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
 marginals are derived, including exact equality at the selected area with the sampled loop-holonomy
 law. The metric bridge now transports the exact invariant pairing to every group tangent fiber by
 left Maurer–Cartan trivialization and proves its inverse, symmetry, strict positivity, and left/right

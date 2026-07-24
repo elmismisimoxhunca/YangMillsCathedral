@@ -949,10 +949,14 @@ committed before higher layers depend on it.
   space structure and construct the injective algebraic linear map into `C(G, ℝ)`, without installing
   a norm on the smooth domain or inferring Laplacian regularity.
 - [x] Reduce continuous-valued regularity of the pairing Laplacian to one explicit first-directional-
-  derivative smoothness field, and from it construct smooth first/second derivatives, smooth finite-
+  derivative smoothness field, canonically inhabit it from the smooth right-invariant vector field
+  and Mathlib tangent-map calculus, and construct smooth first/second derivatives, smooth finite-
   basis and pairing Laplacians, and the exact continuous ambient representative.
-- [ ] Prove linearity of the raw `mfderiv`-based pairing Laplacian and package it as a linear map into
-  the continuous ambient carrier; instantiate the closure theorem for an appropriate character-derived real core by proving graph density and
+- [x] Bridge the raw scalar `mfderiv` directional derivative definitionally to Mathlib's vector-valued
+  exterior derivative, prove additivity and real homogeneity through first derivatives, iterated
+  derivatives, and finite-basis/pairing Laplacians, and package the exact pairing Laplacian as the
+  algebraic linear map from the smooth proper domain into `C(G, ℝ)`.
+- [ ] Instantiate the closure theorem for an appropriate character-derived real core by proving graph density and
   the required eventual heat-quotient graph bound; then extend the generator to the required smooth
   domain, construct the pairing-generator boundary-continuity witness, and prove
   comparison of the exact pairing Laplacian with the geometric Laplace–Beltrami operator.
