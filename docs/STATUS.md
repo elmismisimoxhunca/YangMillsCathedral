@@ -5391,9 +5391,10 @@ dependent constants and events realize only `∀ f, ∃ C_f, ∀ᶠ t`, not the 
 `∃ C, ∀ᶠ t, ∀ f` all-domain graph bound. Finite linearity proves the exact
 pairing generator on every finite synthesis and fills `core_generator`
 for the designated coefficient range. A smaller uninhabited reduction record now retains only smooth
-graph density and the eventual uniform graph bound before constructing the existing all-smooth
-stochastic endpoint; its exact `Nonempty` equivalence proves these two obligations, including one
-nonnegative bound constant, are exhaustive rather than a summary. No graph-core record inhabitant is built: smooth-representative coverage,
+simultaneous finite-coefficient approximation of every smooth test and its pairing generator, plus
+the eventual uniform graph bound, before constructing the existing all-smooth stochastic endpoint;
+exact graph-density and `Nonempty` equivalences prove these two Fourier-facing obligations, including
+one nonnegative bound constant, are exhaustive rather than a summary. No graph-core record inhabitant is built: smooth-representative coverage,
 graph density, and the eventual uniform all-domain graph bound remain unconstructed, while Laplace–Beltrami comparison
 remains open. The
 common Wilson chain now forgets only its genuinely stronger global-faithfulness and normalization

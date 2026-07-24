@@ -1003,7 +1003,9 @@ committed before higher layers depend on it.
   test, and derive pointwise eventual norm and graph-relative bounds in the exact `∀ f, ∃ C_f, ∀ᶠ t` order, and derive the
   coefficient-specific graph-core reduction without conflating those pointwise bounds with the
   required `∃ C, ∀ᶠ t, ∀ f` uniform all-domain bound.
-- [ ] Prove smooth graph density and the required eventual uniform graph bound for that range; then construct the
+- [ ] Prove simultaneous approximation of every smooth test and its pairing generator by one finite
+  real matrix-coefficient synthesis (equivalently smooth graph density), plus the required eventual
+  uniform graph bound for that range; then construct the
   pairing-generator boundary-continuity witness and prove
   comparison of the exact pairing Laplacian with the geometric Laplace–Beltrami operator.
 - [x] Prove that the common Wilson chain forgets only global faithfulness and Wilson normalization to

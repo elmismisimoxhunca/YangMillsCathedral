@@ -775,8 +775,10 @@ graph-relative bound separately for each such test. Their constant and eventual 
 the quantifier order to one uniform all-domain graph bound. Finite linearity then proves generator
 convergence on the entire smooth real coefficient range, so its `core_generator` obligation is no longer caller supplied. It does not
 assert that every continuous dual class has a smooth representative. No inhabitant of the graph-core
-record is constructed: an exact `Nonempty` audit proves that smooth graph density and one
-nonnegative eventual uniform graph bound are precisely the remaining coefficient-specific boundary
+record is constructed: exact graph-density and `Nonempty` audits prove that simultaneous
+approximation of every smooth test and its pairing generator by one finite real coefficient
+synthesis, together with one nonnegative eventual uniform graph bound, is precisely the remaining
+coefficient-specific boundary
 before all-smooth generation. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
 marginals are derived, including exact equality at the selected area with the sampled loop-holonomy
 law. The metric bridge now transports the exact invariant pairing to every group tangent fiber by
