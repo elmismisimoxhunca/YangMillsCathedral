@@ -1574,7 +1574,10 @@ committed before higher layers depend on it.
     graph-measure transports over one exact preliminary-subdivision geometry. Identify both fine
     normalizers and derive that one source-fine measure recovers both original coarse graph measures,
     with the target leg proved by measurable-map composition and the transported central twist.
-    Retain construction, integration, finite-holonomy-law comparison, and full Fact 3 as debt.
+    Derive exact equality of both original coarse complete projected finite-curve laws, then add a
+    source-facing wrapper with a genuine surjective covering projection and kernel-valued source and
+    transported target twists. Retain construction, integration, identification with a stochastic
+    sample law, and full Fact 3 as debt.
   - [x] Derive the exact algebraic Fact 3 proof pattern once preliminary source/target subdivision
     certificates and one cellwise homeomorphism certificate are supplied: ordinary and signed-twist
     factor equalities compose transitively, with the target subdivision using exactly transported

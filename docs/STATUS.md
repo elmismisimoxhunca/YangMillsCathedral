@@ -5721,7 +5721,12 @@ or weighted-measure certificate.
 to source-subdivision, fine-cellwise, and target-subdivision normalized graph-measure transports.
 Exact fine-normalizer coherence makes one source-fine measure recover the original source graph and,
 through measurable map composition, the original target graph with the mapped region and
-orientation-transported central twist. The composite is derived rather than stored. Construction
+orientation-transported central twist. The composite is derived rather than stored. Exact
+curve-word transport further derives equality of the two original coarse complete projected
+finite-curve laws under every measurable group homomorphism. A separate projection-bearing wrapper
+requires a genuine surjective covering map and source twist in its kernel, derives target-twist
+kernel membership, and exposes the same law equality without claiming a stochastic sample-law
+identification. Construction
 and analytic certification of those preliminary subdivisions, full universal Fact 3, and
 inhabitation remain open.
 `TwoDimensionalSenguptaPreliminarySubdivisionHomeomorphismFactorData` now derives the exact algebraic

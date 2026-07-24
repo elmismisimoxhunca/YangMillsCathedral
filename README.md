@@ -1166,7 +1166,11 @@ Sengupta's deformation before the final simplicial map. A new dependent graph-me
 any supplied geometry to its source-subdivision, fine-cellwise, and target-subdivision transports.
 One exact source-fine measure recovers both original coarse graphs through the two derived legs, with
 fine-normalizer coherence, the mapped region, and the orientation-transported central twist; the
-composite target pushforward is proved by measurable-map composition rather than assumed. This
+composite target pushforward is proved by measurable-map composition rather than assumed. Exact
+curve-word transport then derives equality of the original coarse complete projected finite-curve
+laws. A distinct source-facing wrapper requires a genuine surjective covering projection and source
+twist in its kernel, derives kernel membership for the orientation-transported target twist, and
+retains the same law equality; it does not identify either side with a stochastic sample law. This
 target remains uninhabited and constructs no geometry or integration witness. Constructing and
 certifying preliminary subdivisions tied to that same homeomorphism—and hence full universal Fact
 3—remain open; the subclass record is uninhabited. The exact algebraic proof pattern
