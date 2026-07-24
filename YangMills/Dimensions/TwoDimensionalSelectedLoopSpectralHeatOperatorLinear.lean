@@ -242,6 +242,60 @@ theorem twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap_apply
     exact (bridge.spectralHeatKernel.kernelOperator.heatOperator_zero f).symm
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Constant preservation extends to the total nonnegative-time family. -/
+theorem twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap_const
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (t : NNReal) (c : ℝ) :
+    twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t
+        (ContinuousMap.const G c) = ContinuousMap.const G c := by
+  by_cases ht : 0 < t
+  · unfold twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap
+    rw [dif_pos ht]
+    exact twoDimensionalSelectedLoopPositiveHeatOperatorLinearMap_const
+      bridge (t : ℝ) (by exact_mod_cast ht) c
+  · have ht0 : t = 0 := le_antisymm (not_lt.mp ht) bot_le
+    subst t
+    simp [twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap]
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Pointwise nonnegativity preservation extends to the total nonnegative-time family. -/
+theorem twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap_nonneg
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (t : NNReal) (f : C(G, ℝ)) (hf : ∀ g, 0 ≤ f g) :
+    ∀ g, 0 ≤ twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t f g := by
+  by_cases ht : 0 < t
+  · unfold twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap
+    rw [dif_pos ht]
+    exact twoDimensionalSelectedLoopPositiveHeatOperatorLinearMap_nonneg
+      bridge (t : ℝ) (by exact_mod_cast ht) f hf
+  · have ht0 : t = 0 := le_antisymm (not_lt.mp ht) bot_le
+    subst t
+    simpa [twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap] using hf
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Pointwise monotonicity extends to the total nonnegative-time family. -/
+theorem twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap_mono
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (t : NNReal) (f h : C(G, ℝ)) (hfh : ∀ g, f g ≤ h g) :
+    ∀ g, twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t f g ≤
+      twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t h g := by
+  have hnonneg := twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap_nonneg
+    bridge t (h - f) (by
+      intro g
+      simp only [ContinuousMap.coe_sub, Pi.sub_apply, sub_nonneg]
+      exact hfh g)
+  intro g
+  have hg := hnonneg g
+  rw [map_sub] at hg
+  exact sub_nonneg.mp hg
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Every operator in the total nonnegative-time family is contractive. -/
 theorem twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap_apply_norm_le
     (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData

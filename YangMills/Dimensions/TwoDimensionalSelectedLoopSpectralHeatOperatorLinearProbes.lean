@@ -119,6 +119,20 @@ theorem exact_heatOperatorContinuousLinearMap_zero :
   rw [dif_neg (lt_irrefl 0)]
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Exact Markov-order properties of the total nonnegative-time family. -/
+theorem exact_heatOperatorContinuousLinearMap_markov
+    (t : NNReal) (c : ℝ) (f h : C(G, ℝ))
+    (hf : ∀ g, 0 ≤ f g) (hfh : ∀ g, f g ≤ h g) :
+    twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t
+        (ContinuousMap.const G c) = ContinuousMap.const G c ∧
+      (∀ g, 0 ≤ twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t f g) ∧
+      (∀ g, twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t f g ≤
+        twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t h g) :=
+  ⟨twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap_const bridge t c,
+    twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap_nonneg bridge t f hf,
+    twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap_mono bridge t f h hfh⟩
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Hostile contraction probe: a strict uniform-norm increase is contradictory. -/
 theorem expanded_positiveHeatOperator_norm_blocked
     (t : ℝ) (ht : 0 < t) (f : C(G, ℝ))
