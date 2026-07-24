@@ -43,6 +43,47 @@ def refineOrientedWord
     (word : List (OrientedEdge CoarseEdge)) : List (OrientedEdge FineEdge) :=
   word.flatMap (refineOrientedEdge edgeWord)
 
+/-- Refining a reversed traversal is exactly reversal of the refined traversal. -/
+theorem refineOrientedWord_reverseFiniteOrientedWord
+    {CoarseEdge : Type uCoarseEdge} {FineEdge : Type uFineEdge}
+    (edgeWord : CoarseEdge → List (OrientedEdge FineEdge))
+    (word : List (OrientedEdge CoarseEdge)) :
+    refineOrientedWord edgeWord (reverseFiniteOrientedWord word) =
+      reverseFiniteOrientedWord (refineOrientedWord edgeWord word) := by
+  induction word with
+  | nil => rfl
+  | cons oriented tail ih =>
+      rw [show reverseFiniteOrientedWord (oriented :: tail) =
+        reverseFiniteOrientedWord tail ++ [OrientedEdge.flip oriented] by
+          simp [reverseFiniteOrientedWord, List.map_reverse]]
+      simp only [refineOrientedWord, List.flatMap_append, List.flatMap_singleton]
+      simp only [refineOrientedWord] at ih
+      rw [ih]
+      cases oriented <;>
+        simp [refineOrientedEdge, reverseFiniteOrientedWord, List.map_reverse,
+          Function.comp_def, OrientedEdge.flip_flip]
+
+/-- Two successive oriented-word substitutions equal one substitution by the composed edge words. -/
+theorem refineOrientedWord_comp
+    {CoarseEdge : Type uCoarseEdge} {MiddleEdge : Type uFineEdge} {FineEdge : Type*}
+    (coarseToMiddle : CoarseEdge → List (OrientedEdge MiddleEdge))
+    (middleToFine : MiddleEdge → List (OrientedEdge FineEdge))
+    (word : List (OrientedEdge CoarseEdge)) :
+    refineOrientedWord middleToFine (refineOrientedWord coarseToMiddle word) =
+      refineOrientedWord
+        (fun edge => refineOrientedWord middleToFine (coarseToMiddle edge)) word := by
+  induction word with
+  | nil => rfl
+  | cons oriented tail ih =>
+      simp only [refineOrientedWord, List.flatMap_cons, List.flatMap_append]
+      simp only [refineOrientedWord] at ih
+      rw [ih]
+      congr 1
+      cases oriented with
+      | forward edge => rfl
+      | reverse edge =>
+          exact refineOrientedWord_reverseFiniteOrientedWord middleToFine (coarseToMiddle edge)
+
 /-- Fine configurations induce coarse configurations by exact word holonomy. -/
 def finiteEdgeRefinementConfigurationMap
     {CoarseEdge : Type uCoarseEdge} {FineEdge : Type uFineEdge}

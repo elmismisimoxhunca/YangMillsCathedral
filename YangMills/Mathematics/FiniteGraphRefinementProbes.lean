@@ -24,6 +24,26 @@ theorem exact_reverse_substitution
       reverseFiniteOrientedWord (edgeWord edge) :=
   rfl
 
+/-- Refinement commutes with reversal of an entire coarse path. -/
+theorem exact_refined_word_reversal
+    {CoarseEdge : Type uCoarseEdge} {FineEdge : Type uFineEdge}
+    (edgeWord : CoarseEdge → List (OrientedEdge FineEdge))
+    (word : List (OrientedEdge CoarseEdge)) :
+    refineOrientedWord edgeWord (reverseFiniteOrientedWord word) =
+      reverseFiniteOrientedWord (refineOrientedWord edgeWord word) :=
+  refineOrientedWord_reverseFiniteOrientedWord edgeWord word
+
+/-- Hostile associativity probe: two substitutions equal the literal composed substitution. -/
+theorem exact_word_substitution_composition
+    {CoarseEdge : Type uCoarseEdge} {MiddleEdge : Type uFineEdge} {FineEdge : Type*}
+    (coarseToMiddle : CoarseEdge → List (OrientedEdge MiddleEdge))
+    (middleToFine : MiddleEdge → List (OrientedEdge FineEdge))
+    (word : List (OrientedEdge CoarseEdge)) :
+    refineOrientedWord middleToFine (refineOrientedWord coarseToMiddle word) =
+      refineOrientedWord
+        (fun edge => refineOrientedWord middleToFine (coarseToMiddle edge)) word :=
+  refineOrientedWord_comp coarseToMiddle middleToFine word
+
 /-- Holonomy of every substituted word is computed by the induced coarse configuration. -/
 theorem exact_substitution_holonomy
     {CoarseEdge : Type uCoarseEdge} {FineEdge : Type uFineEdge}

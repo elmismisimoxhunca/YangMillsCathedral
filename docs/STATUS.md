@@ -5466,7 +5466,10 @@ nonorientable fixed-twist condition. Candidates keep external curve bonds and pa
 fixed. `TwoDimensionalSenguptaCurveBondRefinementData` now supplies the exact missing combinatorics:
 fine indexed curve words are literal finite-graph substitutions, covering and projected simultaneous
 curve holonomies commute, and any supplied graph-measure pushforward transports the whole finite
-curve law. `TwoDimensionalSenguptaCurveBondGraphMeasureRefinementData` now specializes that premise
+curve law. Reverse-aware word substitution is now proved associative. Given a caller-supplied
+coherent direct graph refinement for two exact stages, the direct curve refinement is derived; its
+configuration map is the composite, stagewise measure pushforwards imply the direct pushforward, and
+the complete projected finite-curve law transports without a disconnected measure-law witness. `TwoDimensionalSenguptaCurveBondGraphMeasureRefinementData` now specializes that premise
 to a literal normalized equation-(8.3) weighted Haar graph measure: its fine normalizer is the exact
 fine graph-weight integral and the fine measure must push forward to the coarse graph measure for
 every distinguished region. Fine normalization/nonzeroness and the unchanged projected stochastic
