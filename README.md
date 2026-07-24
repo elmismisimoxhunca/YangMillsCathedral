@@ -1031,11 +1031,14 @@ current-strength witness, one finite Sengupta law, its dependent heat-factor wit
 dependent Lévy-law witness. It is
 still not final: embedded compact-surface presentation, Facts 2–3, and all component inhabitants
 remain open. Its explicit compact-simple gauge geometry now derives Mathlib semisimplicity and thus
-discharges Sengupta Theorem 8.4's first source alternative without a vacuous case tag. The stronger
-`TwoDimensionalSenguptaEmbeddedUniversalAugmentedCurrentStrengthAcceptanceData` now dependently joins
-that exact augmented witness to the strongest current embedded-universal finite-law record, sharing
-its finite law, heat factors, planar spectral semigroup, density, and fixed bundle class. Its exact
-`Nonempty` audit exposes both dependent components. It is still nonfinal and uninhabited.
+discharges Sengupta Theorem 8.4's first source alternative without a vacuous case tag. The prior
+`TwoDimensionalSenguptaEmbeddedUniversalAugmentedCurrentStrengthAcceptanceData` dependently joins
+that exact augmented witness to the curve-fixed/cellwise embedded-universal finite-law record. The
+stronger `TwoDimensionalSenguptaSplitBondEmbeddedUniversalAugmentedCurrentStrengthAcceptanceData`
+now joins the unchanged augmented witness to the strongest fixed-universe compact finite-law record,
+including universal embedded split-curve-bond Fact 2 certification, while sharing its finite law,
+heat factors, planar spectral semigroup, density, and fixed bundle class. Its exact `Nonempty` audit
+exposes both dependent components. It is still nonfinal and uninhabited.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to
 three-dimensional spacetime and its two-dimensional spatial slice. Its classical base is exactly

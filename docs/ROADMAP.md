@@ -1432,9 +1432,13 @@ committed before higher layers depend on it.
     equivalence requiring compact-simple gauge geometry, the prior current-strength witness, one
     finite law, its dependent heat factors, and its dependent Lévy-law coherence.
   - [x] Assemble `TwoDimensionalSenguptaEmbeddedUniversalAugmentedCurrentStrengthAcceptanceData`,
-    dependently joining that exact augmented planar/Driver/Lévy/Sengupta witness to the strongest
-    current embedded-universal compact finite-law record. Retain full Facts 2–3 and component
-    inhabitance as explicit debt.
+    dependently joining that exact augmented planar/Driver/Lévy/Sengupta witness to the prior
+    curve-fixed/cellwise embedded-universal compact finite-law record.
+  - [x] Strengthen the cross-source join with
+    `TwoDimensionalSenguptaSplitBondEmbeddedUniversalAugmentedCurrentStrengthAcceptanceData`, using
+    the strongest fixed-universe compact finite-law record including universal embedded split-bond
+    Fact 2 certification on the unchanged finite law, heat factors, spectral semigroup, density, and
+    fixed twist. Retain unrestricted/full Fact 2, general Fact 3, and component inhabitation as debt.
   - [ ] Assemble a final source-indexed 2D acceptance proposition joining the constructed finite
     lattice, heat/Brownian, weak-limit continuum, compact-surface, and sewing chains; attempt to
     inhabit it solely from formalized Driver/Lévy/Sengupta results and record every remaining

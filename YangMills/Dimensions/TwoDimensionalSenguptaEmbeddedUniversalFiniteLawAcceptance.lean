@@ -74,7 +74,7 @@ variable
     {TargetSurface : Type uTargetSurface} [TopologicalSpace TargetSurface]
     [ChartedSpace (EuclideanSpace ℝ (Fin 2)) TargetSurface]
 
-/-- Strongest current source-indexed finite-law acceptance, still short of full Facts 2--3. -/
+/-- Prior curve-fixed/cellwise source-indexed finite-law acceptance, still short of full Facts 2--3. -/
 structure TwoDimensionalSenguptaEmbeddedUniversalFiniteLawAcceptanceData where
   embeddedFiniteLaw : TwoDimensionalSenguptaEmbeddedFiniteLawBridgeData
     (heatFactors := heatFactors) (Surface := Surface) (BaseVertex := BaseVertex)
