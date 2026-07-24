@@ -144,6 +144,31 @@ theorem exact_smoothMatrixCoefficientGraphCore_reduction_core
   rfl
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Exact debt probe: every coefficient-specific reduction supplies graph density for the fixed
+matrix-coefficient range. -/
+theorem exact_smoothMatrixCoefficientGraphCore_graphDense
+    (data : TwoDimensionalSelectedLoopSmoothMatrixCoefficientGraphCoreData bridge) :
+    IsLinearMapDomainGraphDenseCore
+      smoothLieGroupScalarToContinuousLinearMap
+      (twoDimensionalSelectedLoopPairingGeneratorLinearMap
+        (realLaplacian := realLaplacian))
+      (smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G)) :=
+  data.graphDense
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Hostile debt probe: absent graph density, the reduced coefficient graph-core record is
+uninhabitable. -/
+theorem missing_smoothMatrixCoefficientGraphDensity_blocks_reduction
+    (missing : ¬ IsLinearMapDomainGraphDenseCore
+      smoothLieGroupScalarToContinuousLinearMap
+      (twoDimensionalSelectedLoopPairingGeneratorLinearMap
+        (realLaplacian := realLaplacian))
+      (smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G))) :
+    ¬ Nonempty (TwoDimensionalSelectedLoopSmoothMatrixCoefficientGraphCoreData bridge) := by
+  rintro ⟨data⟩
+  exact missing data.graphDense
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Hostile heat-action probe: a changed real coefficient output is contradictory. -/
 theorem changed_selectedLoopHeatOperator_smoothMatrixCoefficient_blocked
     (t : ℝ) (ht : 0 < t) (index : SmoothUnitaryMatrixCoefficientRealIndex E G)

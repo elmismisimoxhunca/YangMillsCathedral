@@ -370,6 +370,39 @@ structure TwoDimensionalSelectedLoopSmoothMatrixCoefficientGraphCoreData
 
 namespace TwoDimensionalSelectedLoopSmoothMatrixCoefficientGraphCoreData
 
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Exact inhabitance audit: after the derived coefficient Laplacian and core convergence, the
+coefficient-specific record is inhabited precisely by smooth graph density together with one
+nonnegative eventual graph-bound constant. -/
+theorem nonempty_iff_graphDense_and_eventualGraphBound
+    {bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)} :
+    Nonempty (TwoDimensionalSelectedLoopSmoothMatrixCoefficientGraphCoreData bridge) ↔
+      IsLinearMapDomainGraphDenseCore
+        smoothLieGroupScalarToContinuousLinearMap
+        (twoDimensionalSelectedLoopPairingGeneratorLinearMap
+          (realLaplacian := realLaplacian))
+        (smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G)) ∧
+      ∃ C : ℝ, 0 ≤ C ∧
+        ∀ᶠ t : NNReal in nhdsWithin 0 (Set.Ioi 0),
+          ∀ f : SmoothLieGroupScalarFunction (E := E) (G := G),
+            ‖twoDimensionalSelectedLoopHeatDifferenceQuotientLinearMap bridge t
+                (smoothLieGroupScalarToContinuousLinearMap f)‖ ≤
+              C * (‖smoothLieGroupScalarToContinuousLinearMap f‖ +
+                ‖twoDimensionalSelectedLoopPairingGeneratorLinearMap
+                  (realLaplacian := realLaplacian) f‖) := by
+  constructor
+  · rintro ⟨data⟩
+    exact ⟨data.graphDense, data.graphBoundConstant,
+      data.graphBoundConstant_nonneg, data.eventual_graphBound⟩
+  · rintro ⟨graphDense, C, hC, graphBound⟩
+    exact ⟨{
+      graphDense := graphDense
+      graphBoundConstant := C
+      graphBoundConstant_nonneg := hC
+      eventual_graphBound := graphBound }⟩
+
 /-- The coefficient-specific remaining data canonically fills the generic graph-core record; both its
 core convergence and coefficient Laplacian identification are now derived rather than caller supplied. -/
 noncomputable def toPairingGraphCoreGeneratorData
