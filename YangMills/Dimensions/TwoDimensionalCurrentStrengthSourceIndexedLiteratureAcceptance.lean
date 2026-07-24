@@ -337,8 +337,8 @@ noncomputable def ofStrongest
 end TwoDimensionalCurrentStrengthSourceIndexedLiteratureComponents
 
 
-/-- Current-strength source components strengthened by the finite-past-cylinder transition
-obligation that constructs full-past Markov semantics on the exact Brownian/spectral bridge already
+/-- Current-strength source components carrying the canonically constructed finite-past-cylinder
+transition record and full-past Markov semantics on the exact Brownian/spectral bridge already
 selected by the planar literature chain. -/
 structure TwoDimensionalFullPastCurrentStrengthSourceIndexedLiteratureComponents where
   source : TwoDimensionalCurrentStrengthSourceIndexedLiteratureComponents.{uE, uG, uGauge, uSample, uConnection,
@@ -370,9 +370,9 @@ structure TwoDimensionalFullPastCurrentStrengthSourceIndexedLiteratureComponents
   finitePastCylinderMarkov : TwoDimensionalSelectedLoopFinitePastCylinderMarkovData
     source.current.planar.toSpectralBrownianGeneratorBridgeData
 
-/-- Proposition-shaped current-strength source index including the exact finite-cylinder obligation
-that constructs full-past Markov semantics. It remains uninhabited and is not the final
-source-complete 2D target. -/
+/-- Proposition-shaped current-strength source index including the exact derived finite-cylinder
+record that constructs full-past Markov semantics. It is equivalent to the prior current-strength
+source proposition, remains uninhabited, and is not the final source-complete 2D target. -/
 def TwoDimensionalFullPastCurrentStrengthSourceIndexedLiteratureAcceptance : Prop :=
   Nonempty
     (TwoDimensionalFullPastCurrentStrengthSourceIndexedLiteratureComponents.{uE, uG, uGauge, uSample, uConnection,
@@ -465,11 +465,133 @@ theorem implies_current
 
 
 
+
+
 omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
     [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in
-/-- Exact failed-inhabitation audit: the strengthened proposition requires the prior six source
-components and a finite-cylinder transition witness indexed by their unchanged spectral Brownian
-bridge; the pi-system theorem constructs full-past semantics from that witness. -/
+/-- The prior current-strength source proposition constructs its full-past strengthening: the
+finite-cylinder field is now a theorem of its unchanged nested spectral Brownian bridge. -/
+theorem ofCurrent
+    (acceptance : TwoDimensionalCurrentStrengthSourceIndexedLiteratureAcceptance.{uE, uG, uGauge, uSample, uConnection,
+      uΩ, uVertex, uEdge, uFace, uXAxisCell,
+      uLargeVertex, uLargeEdge, uLargeFace, uLargeXAxisCell, uFineVertex,
+      uFineEdge, uFineFace, uFineXAxisCell, uFineLargeVertex, uFineLargeEdge,
+      uFineLargeFace, uFineLargeXAxisCell, uEL, uHL, uSL,
+      uER, uHR, uSR, uEG, uHG,
+      uLeftBase, uRightBase, uWholeBase, uLeftLoop, uRightLoop,
+      uWholeLoop, uLeftSample, uRightSample, uWholeSample, uCover,
+      uCurveS, uEdgeS, uInternalEdge, uFaceS, uRegionS,
+      uSenguptaSample, uSenguptaSurface, uSenguptaBaseVertex, uSenguptaFineInternal, uSenguptaFineFace,
+      uSenguptaFineVertex, uSenguptaTargetEdge, uSenguptaTargetInternal, uSenguptaTargetFace, uSenguptaTargetRegion,
+      uSenguptaTargetVertex, uSenguptaTargetSurface, uCandidateFineEdge, uCandidateFineInternal, uCandidateFineFace,
+      uCandidateFineVertex, uPath, uObservable}
+    (law := law) (inner := inner) (realLaplacian := realLaplacian)
+    (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+    (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)
+    (identification := identification) (IG := IG)
+    (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+    (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)
+    (CoverGroup := CoverGroup) (CurveS := CurveS) (EdgeS := EdgeS)
+    (InternalEdge := InternalEdge) (FaceS := FaceS) (RegionS := RegionS)
+    (SenguptaSample := SenguptaSample) (coverDensity := coverDensity)
+    (SenguptaSurface := SenguptaSurface) (SenguptaBaseVertex := SenguptaBaseVertex)
+    (SenguptaFineVertex := SenguptaFineVertex) (senguptaFine := senguptaFine)
+    (SenguptaTargetVertex := SenguptaTargetVertex) (senguptaTarget := senguptaTarget)
+    (SenguptaTargetSurface := SenguptaTargetSurface)) :
+    TwoDimensionalFullPastCurrentStrengthSourceIndexedLiteratureAcceptance.{uE, uG, uGauge, uSample, uConnection,
+      uΩ, uVertex, uEdge, uFace, uXAxisCell,
+      uLargeVertex, uLargeEdge, uLargeFace, uLargeXAxisCell, uFineVertex,
+      uFineEdge, uFineFace, uFineXAxisCell, uFineLargeVertex, uFineLargeEdge,
+      uFineLargeFace, uFineLargeXAxisCell, uEL, uHL, uSL,
+      uER, uHR, uSR, uEG, uHG,
+      uLeftBase, uRightBase, uWholeBase, uLeftLoop, uRightLoop,
+      uWholeLoop, uLeftSample, uRightSample, uWholeSample, uCover,
+      uCurveS, uEdgeS, uInternalEdge, uFaceS, uRegionS,
+      uSenguptaSample, uSenguptaSurface, uSenguptaBaseVertex, uSenguptaFineInternal, uSenguptaFineFace,
+      uSenguptaFineVertex, uSenguptaTargetEdge, uSenguptaTargetInternal, uSenguptaTargetFace, uSenguptaTargetRegion,
+      uSenguptaTargetVertex, uSenguptaTargetSurface, uCandidateFineEdge, uCandidateFineInternal, uCandidateFineFace,
+      uCandidateFineVertex, uPath, uObservable}
+    (law := law) (inner := inner) (realLaplacian := realLaplacian)
+    (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+    (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)
+    (identification := identification) (IG := IG)
+    (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+    (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)
+    (CoverGroup := CoverGroup) (CurveS := CurveS) (EdgeS := EdgeS)
+    (InternalEdge := InternalEdge) (FaceS := FaceS) (RegionS := RegionS)
+    (SenguptaSample := SenguptaSample) (coverDensity := coverDensity)
+    (SenguptaSurface := SenguptaSurface) (SenguptaBaseVertex := SenguptaBaseVertex)
+    (SenguptaFineVertex := SenguptaFineVertex) (senguptaFine := senguptaFine)
+    (SenguptaTargetVertex := SenguptaTargetVertex) (senguptaTarget := senguptaTarget)
+    (SenguptaTargetSurface := SenguptaTargetSurface) := by
+  rcases acceptance with ⟨strongest⟩
+  let source := TwoDimensionalCurrentStrengthSourceIndexedLiteratureComponents.ofStrongest strongest
+  exact ⟨⟨source,
+    source.current.planar.toSpectralBrownianGeneratorBridgeData.toFinitePastCylinderMarkovData⟩⟩
+
+omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
+    [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in
+/-- Full-past strengthening introduces no new inhabitance hypothesis beyond the prior exact source
+components. -/
+theorem iff_current :
+    TwoDimensionalFullPastCurrentStrengthSourceIndexedLiteratureAcceptance.{uE, uG, uGauge, uSample, uConnection,
+      uΩ, uVertex, uEdge, uFace, uXAxisCell,
+      uLargeVertex, uLargeEdge, uLargeFace, uLargeXAxisCell, uFineVertex,
+      uFineEdge, uFineFace, uFineXAxisCell, uFineLargeVertex, uFineLargeEdge,
+      uFineLargeFace, uFineLargeXAxisCell, uEL, uHL, uSL,
+      uER, uHR, uSR, uEG, uHG,
+      uLeftBase, uRightBase, uWholeBase, uLeftLoop, uRightLoop,
+      uWholeLoop, uLeftSample, uRightSample, uWholeSample, uCover,
+      uCurveS, uEdgeS, uInternalEdge, uFaceS, uRegionS,
+      uSenguptaSample, uSenguptaSurface, uSenguptaBaseVertex, uSenguptaFineInternal, uSenguptaFineFace,
+      uSenguptaFineVertex, uSenguptaTargetEdge, uSenguptaTargetInternal, uSenguptaTargetFace, uSenguptaTargetRegion,
+      uSenguptaTargetVertex, uSenguptaTargetSurface, uCandidateFineEdge, uCandidateFineInternal, uCandidateFineFace,
+      uCandidateFineVertex, uPath, uObservable}
+    (law := law) (inner := inner) (realLaplacian := realLaplacian)
+    (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+    (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)
+    (identification := identification) (IG := IG)
+    (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+    (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)
+    (CoverGroup := CoverGroup) (CurveS := CurveS) (EdgeS := EdgeS)
+    (InternalEdge := InternalEdge) (FaceS := FaceS) (RegionS := RegionS)
+    (SenguptaSample := SenguptaSample) (coverDensity := coverDensity)
+    (SenguptaSurface := SenguptaSurface) (SenguptaBaseVertex := SenguptaBaseVertex)
+    (SenguptaFineVertex := SenguptaFineVertex) (senguptaFine := senguptaFine)
+    (SenguptaTargetVertex := SenguptaTargetVertex) (senguptaTarget := senguptaTarget)
+    (SenguptaTargetSurface := SenguptaTargetSurface) ↔ TwoDimensionalCurrentStrengthSourceIndexedLiteratureAcceptance.{uE, uG, uGauge, uSample, uConnection,
+      uΩ, uVertex, uEdge, uFace, uXAxisCell,
+      uLargeVertex, uLargeEdge, uLargeFace, uLargeXAxisCell, uFineVertex,
+      uFineEdge, uFineFace, uFineXAxisCell, uFineLargeVertex, uFineLargeEdge,
+      uFineLargeFace, uFineLargeXAxisCell, uEL, uHL, uSL,
+      uER, uHR, uSR, uEG, uHG,
+      uLeftBase, uRightBase, uWholeBase, uLeftLoop, uRightLoop,
+      uWholeLoop, uLeftSample, uRightSample, uWholeSample, uCover,
+      uCurveS, uEdgeS, uInternalEdge, uFaceS, uRegionS,
+      uSenguptaSample, uSenguptaSurface, uSenguptaBaseVertex, uSenguptaFineInternal, uSenguptaFineFace,
+      uSenguptaFineVertex, uSenguptaTargetEdge, uSenguptaTargetInternal, uSenguptaTargetFace, uSenguptaTargetRegion,
+      uSenguptaTargetVertex, uSenguptaTargetSurface, uCandidateFineEdge, uCandidateFineInternal, uCandidateFineFace,
+      uCandidateFineVertex, uPath, uObservable}
+    (law := law) (inner := inner) (realLaplacian := realLaplacian)
+    (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+    (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)
+    (identification := identification) (IG := IG)
+    (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+    (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)
+    (CoverGroup := CoverGroup) (CurveS := CurveS) (EdgeS := EdgeS)
+    (InternalEdge := InternalEdge) (FaceS := FaceS) (RegionS := RegionS)
+    (SenguptaSample := SenguptaSample) (coverDensity := coverDensity)
+    (SenguptaSurface := SenguptaSurface) (SenguptaBaseVertex := SenguptaBaseVertex)
+    (SenguptaFineVertex := SenguptaFineVertex) (senguptaFine := senguptaFine)
+    (SenguptaTargetVertex := SenguptaTargetVertex) (senguptaTarget := senguptaTarget)
+    (SenguptaTargetSurface := SenguptaTargetSurface) :=
+  ⟨implies_current, ofCurrent⟩
+
+omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
+    [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in
+/-- Exact component audit: the strengthening stores the prior six source components and their
+canonically derived finite-cylinder transition record; the pi-system theorem constructs full-past
+semantics from that record. -/
 theorem iff_components :
     TwoDimensionalFullPastCurrentStrengthSourceIndexedLiteratureAcceptance.{uE, uG, uGauge, uSample, uConnection,
       uΩ, uVertex, uEdge, uFace, uXAxisCell,

@@ -918,8 +918,10 @@ committed before higher layers depend on it.
   conditional expectation, and specialize it to a reduced 2D acceptance record. Construct the
   process-specific finite-cylinder pi-system as sets measurable under some finite
   supremum of evaluation pullbacks and prove that it generates the exact past without enumerating
-  time. Retain only its basic finite-coordinate transition set-integral identities as the unresolved
-  extension step.
+  time. Represent every cylinder by the ordered finite vector supplied by `Finset.orderIsoOfFin`,
+  adjoin `0`, `s`, and `s+t`, prove the resulting timeline monotone, and apply the existing bounded-
+  measurable finite-history theorem to its indicator. This constructs the basic set-integral field
+  and hence both full-past semantics from the unchanged spectral Brownian bridge.
 - [x] Prove that the common Wilson chain forgets only global faithfulness and Wilson normalization to
   construct Driver's exact Villain common heat chain. Attach the still-uninhabited Theorem 7.2
   weak-limit contract to the literal spectral `Q_{ε²}` action at one positive spacing, deriving
@@ -1485,9 +1487,9 @@ committed before higher layers depend on it.
   - [x] Add `TwoDimensionalFullPastCurrentStrengthSourceIndexedLiteratureAcceptance`, strengthening
     the same flattened six source components with the exact finite-past-cylinder transition
     obligation on the unchanged nested spectral Brownian bridge, from which the pi-system theorem
-    constructs full-past semantics. Expose its dependent inhabitance decomposition and
-    retain proposition-level rank-two/4D separation without constructing the remaining
-    finite-cylinder transition set-integral witness.
+    constructs full-past semantics. Construct that finite-cylinder record from the prior bounded-
+    measurable finite-history theorem, prove implications in both directions with the prior source
+    acceptance, and retain proposition-level rank-two/4D separation.
   - [ ] Assemble a final source-indexed 2D acceptance proposition joining the constructed finite
     lattice, heat/Brownian, weak-limit continuum, compact-surface, and sewing chains; attempt to
     inhabit it solely from formalized Driver/Lévy/Sengupta results and record every remaining

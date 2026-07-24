@@ -59,6 +59,52 @@ theorem singleton_evaluation_preimage_is_finiteCylinder
 
 omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
     [MeasurableMul₂ G] [MeasurableInv G] in
+/-- The finite supremum is exactly the pullback by its sorted coordinate vector. -/
+theorem exact_orderedFiniteEvaluation_comap
+    (s : NNReal) (times : Finset (Set.Iic s)) :
+    twoDimensionalSelectedLoopFiniteEvaluationMeasurableSpace brownian s times =
+      MeasurableSpace.comap
+        (twoDimensionalSelectedLoopOrderedFiniteEvaluationMap brownian s times) inferInstance :=
+  twoDimensionalSelectedLoopFiniteEvaluationMeasurableSpace_eq_comap brownian s times
+
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Every cylinder has the exact measurable sorted-vector preimage representation. -/
+theorem exact_finiteCylinder_coordinate_iff (s : NNReal) (set : Set Ω) :
+    set ∈ twoDimensionalSelectedLoopFinitePastCylinderSets brownian s ↔
+      ∃ (times : Finset (Set.Iic s)) (event : Set (Fin times.card → G)),
+        MeasurableSet event ∧
+          set = twoDimensionalSelectedLoopOrderedFiniteEvaluationMap brownian s times ⁻¹' event :=
+  mem_twoDimensionalSelectedLoopFinitePastCylinderSets_iff brownian s set
+
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Empty finite histories retain exactly identity, current, and future times and remain monotone. -/
+theorem empty_finiteCylinderTimeline_exact (s t : NNReal) :
+    twoDimensionalSelectedLoopFiniteCylinderTimeline s t ∅ 0 = 0 ∧
+    twoDimensionalSelectedLoopFiniteCylinderTimeline s t ∅ 1 = s ∧
+    twoDimensionalSelectedLoopFiniteCylinderTimeline s t ∅ 2 = s + t ∧
+    Monotone (twoDimensionalSelectedLoopFiniteCylinderTimeline s t ∅) := by
+  refine ⟨rfl, ?_, ?_, twoDimensionalSelectedLoopFiniteCylinderTimeline_monotone s t ∅⟩
+  · convert twoDimensionalSelectedLoopFiniteCylinderTimeline_current s t ∅ using 1
+    congr 1
+  · convert twoDimensionalSelectedLoopFiniteCylinderTimeline_future s t ∅ using 1
+    congr 1
+
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Restricting the augmented history reads exactly the original sorted finite coordinates. -/
+theorem exact_restrictedHistory_eq_orderedEvaluation
+    (s t : NNReal) (times : Finset (Set.Iic s)) (samplePoint : Ω) :
+    (fun i : Fin times.card =>
+      twoDimensionalPastProcessValues brownian (times.card + 1)
+        (twoDimensionalSelectedLoopFiniteCylinderTimeline s t times) samplePoint i.castSucc) =
+      twoDimensionalSelectedLoopOrderedFiniteEvaluationMap brownian s times samplePoint :=
+  twoDimensionalPastProcessValues_restrict_eq_orderedFiniteEvaluationMap
+    brownian s t times samplePoint
+
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Exact generation probe: finite cylinders recover the full uncountable-time supremum. -/
 theorem finiteCylinders_generate_exact_past (s : NNReal) :
     MeasurableSpace.generateFrom (twoDimensionalSelectedLoopFinitePastCylinderSets brownian s) =
@@ -74,7 +120,19 @@ variable
       (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)}
 
 omit [FiniteDimensional ℝ E] in
-/-- The sole finite-cylinder set-integral obligation constructs universal full-past semantics. -/
+/-- The unchanged spectral Brownian bridge now constructs universal full-past semantics directly. -/
+theorem exact_bridge_toFullPast :
+    TwoDimensionalSelectedLoopFullPastMarkovData bridge :=
+  bridge.toFinitePastCylinderMarkovData.toFullPastMarkovData
+
+omit [FiniteDimensional ℝ E] in
+/-- The same unchanged bridge constructs exact conditional-expectation Markov semantics. -/
+theorem exact_bridge_fullPastConditional :
+    bridge.HasFullPastConditionalMarkovProperty :=
+  bridge.toFinitePastCylinderMarkovData.toPiSystemMarkovData.fullPastConditionalMarkov
+
+omit [FiniteDimensional ℝ E] in
+/-- The finite-cylinder set-integral record constructs universal full-past semantics. -/
 theorem exact_finiteCylinder_toFullPast
     (data : TwoDimensionalSelectedLoopFinitePastCylinderMarkovData bridge) :
     TwoDimensionalSelectedLoopFullPastMarkovData bridge :=

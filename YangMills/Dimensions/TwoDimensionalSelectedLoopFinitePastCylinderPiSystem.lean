@@ -9,9 +9,9 @@ import YangMills.Dimensions.TwoDimensionalSelectedLoopFullPastMarkov
 # Finite-cylinder pi-system for the exact selected-loop process past
 
 Finite cylinders are the sets measurable for the supremum of any finite family of process-evaluation
-pullbacks through time `s`. They form a pi-system and generate the exact full past. Thus the remaining
-Markov extension debt can be stated solely as the transition set-integral identity on these concrete
-finite-coordinate sigma-algebras.
+pullbacks through time `s`. They form a pi-system and generate the exact full past. Explicit sorting
+and the prior bounded-measurable finite-history identity prove the transition set-integral identity
+on every cylinder, so the unchanged spectral Brownian bridge constructs full-past Markov semantics.
 -/
 
 namespace YangMills.Dimensions
@@ -49,6 +49,165 @@ variable
     (s : NNReal) (times : Finset (Set.Iic s)) : MeasurableSpace Ω :=
   ⨆ t : times, MeasurableSpace.comap (brownian.process t.1.1) inferInstance
 
+/-- Increasing-order finite process-evaluation vector for one finite set of times. The finite
+order equivalence is explicit and no global enumeration of time is introduced. -/
+def twoDimensionalSelectedLoopOrderedFiniteEvaluationMap
+    (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
+      inner law semigroup laplacian heat Ω)
+    (s : NNReal) (times : Finset (Set.Iic s)) (samplePoint : Ω) : Fin times.card → G :=
+  fun i => brownian.process ((Finset.orderIsoOfFin times rfl i).1.1) samplePoint
+
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
+/-- A finite supremum of single-evaluation pullbacks is exactly the pullback by the explicitly
+ordered finite evaluation vector. -/
+theorem twoDimensionalSelectedLoopFiniteEvaluationMeasurableSpace_eq_comap
+    (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
+      inner law semigroup laplacian heat Ω)
+    (s : NNReal) (times : Finset (Set.Iic s)) :
+    twoDimensionalSelectedLoopFiniteEvaluationMeasurableSpace brownian s times =
+      MeasurableSpace.comap
+        (twoDimensionalSelectedLoopOrderedFiniteEvaluationMap brownian s times) inferInstance := by
+  apply le_antisymm
+  · apply iSup_le
+    intro t
+    apply Measurable.comap_le
+    let i : Fin times.card := (Finset.orderIsoOfFin times rfl).symm t
+    have history_measurable :
+        @Measurable Ω (Fin times.card → G)
+          (MeasurableSpace.comap
+            (twoDimensionalSelectedLoopOrderedFiniteEvaluationMap brownian s times) inferInstance) _
+          (twoDimensionalSelectedLoopOrderedFiniteEvaluationMap brownian s times) :=
+      Measurable.of_comap_le le_rfl
+    have coordinate_measurable := (measurable_pi_apply i).comp history_measurable
+    convert coordinate_measurable using 1
+    funext samplePoint
+    simp [twoDimensionalSelectedLoopOrderedFiniteEvaluationMap, i]
+  · apply Measurable.comap_le
+    apply (@measurable_pi_iff Ω (Fin times.card) (fun _ => G)
+      (twoDimensionalSelectedLoopFiniteEvaluationMeasurableSpace brownian s times)
+      (fun _ => inferInstance)).mpr
+    intro i
+    apply Measurable.of_comap_le
+    exact le_iSup
+      (fun t : times => MeasurableSpace.comap (brownian.process t.1.1) inferInstance)
+      (Finset.orderIsoOfFin times rfl i)
+
+/-- Monotone finite-history timeline obtained by adjoining identity time, the current time, and one
+future time to the explicitly increasing finite evaluation set. -/
+def twoDimensionalSelectedLoopFiniteCylinderTimeline
+    (s t : NNReal) (times : Finset (Set.Iic s)) : Fin (times.card + 3) → NNReal :=
+  Fin.cases 0
+    (Fin.lastCases (s + t)
+      (Fin.lastCases s (fun i => (Finset.orderIsoOfFin times rfl i).1.1)))
+
+@[simp] theorem twoDimensionalSelectedLoopFiniteCylinderTimeline_zero
+    (s t : NNReal) (times : Finset (Set.Iic s)) :
+    twoDimensionalSelectedLoopFiniteCylinderTimeline s t times 0 = 0 := rfl
+
+@[simp] theorem twoDimensionalSelectedLoopFiniteCylinderTimeline_ordered
+    (s t : NNReal) (times : Finset (Set.Iic s)) (i : Fin times.card) :
+    twoDimensionalSelectedLoopFiniteCylinderTimeline s t times i.castSucc.succ.castSucc =
+      (Finset.orderIsoOfFin times rfl i).1.1 := by
+  simp [twoDimensionalSelectedLoopFiniteCylinderTimeline]
+
+@[simp] theorem twoDimensionalSelectedLoopFiniteCylinderTimeline_ordered_castSucc
+    (s t : NNReal) (times : Finset (Set.Iic s)) (i : Fin times.card) :
+    twoDimensionalSelectedLoopFiniteCylinderTimeline s t times i.castSucc.castSucc.succ =
+      (Finset.orderIsoOfFin times rfl i).1.1 := by
+  rw [show i.castSucc.castSucc.succ = i.castSucc.succ.castSucc by ext; rfl]
+  exact twoDimensionalSelectedLoopFiniteCylinderTimeline_ordered s t times i
+
+@[simp] theorem twoDimensionalSelectedLoopFiniteCylinderTimeline_current
+    (s t : NNReal) (times : Finset (Set.Iic s)) :
+    twoDimensionalSelectedLoopFiniteCylinderTimeline s t times
+      (Fin.last (times.card + 1)).castSucc = s := by
+  rw [show (Fin.last (times.card + 1)).castSucc =
+    (Fin.last times.card).castSucc.succ by ext; simp]
+  simp [twoDimensionalSelectedLoopFiniteCylinderTimeline]
+
+@[simp] theorem twoDimensionalSelectedLoopFiniteCylinderTimeline_future
+    (s t : NNReal) (times : Finset (Set.Iic s)) :
+    twoDimensionalSelectedLoopFiniteCylinderTimeline s t times
+      (Fin.last (times.card + 2)) = s + t := by
+  rw [show Fin.last (times.card + 2) = (Fin.last (times.card + 1)).succ by ext; simp]
+  simp only [twoDimensionalSelectedLoopFiniteCylinderTimeline, Fin.cases_succ,
+    Fin.lastCases_last]
+
+/-- The adjoined finite-cylinder timeline is monotone: sorted past times stay below `s`, which
+stays below `s+t`. -/
+theorem twoDimensionalSelectedLoopFiniteCylinderTimeline_monotone
+    (s t : NNReal) (times : Finset (Set.Iic s)) :
+    Monotone (twoDimensionalSelectedLoopFiniteCylinderTimeline s t times) := by
+  have monotone_zero_cons {n : ℕ} (f : Fin n → NNReal) (hf : Monotone f) :
+      Monotone (Fin.cases 0 f) := by
+    intro i
+    refine Fin.cases ?_ (fun i => ?_) i
+    · intro j hij
+      exact bot_le
+    · intro j
+      refine Fin.cases ?_ (fun j => ?_) j
+      · intro hij
+        exact (not_le_of_gt i.succ_pos hij).elim
+      · intro hij
+        simpa only [Fin.cases_succ] using hf (Fin.succ_le_succ_iff.mp hij)
+  have monotone_snoc {n : ℕ} (f : Fin n → NNReal) (last : NNReal)
+      (hf : Monotone f) (hlast : ∀ i, f i ≤ last) :
+      Monotone (Fin.lastCases last f) := by
+    intro i
+    refine Fin.lastCases ?_ (fun i => ?_) i
+    · intro j hij
+      have hj : j = Fin.last n := Fin.last_le_iff.mp hij
+      subst j
+      exact le_rfl
+    · intro j
+      refine Fin.lastCases ?_ (fun j => ?_) j
+      · intro hij
+        simpa only [Fin.lastCases_castSucc, Fin.lastCases_last] using hlast i
+      · intro hij
+        simpa only [Fin.lastCases_castSucc] using
+          hf (Fin.castSucc_le_castSucc_iff.mp hij)
+  let ordered : Fin times.card → NNReal :=
+    fun i => (Finset.orderIsoOfFin times rfl i).1.1
+  have ordered_monotone : Monotone ordered := by
+    intro i j hij
+    exact (Finset.orderIsoOfFin times rfl).monotone hij
+  have ordered_le_current : ∀ i, ordered i ≤ s := by
+    intro i
+    exact (Finset.orderIsoOfFin times rfl i).1.2
+  have through_current_monotone :
+      Monotone (Fin.lastCases s ordered) :=
+    monotone_snoc ordered s ordered_monotone ordered_le_current
+  have through_current_le_future :
+      ∀ i, Fin.lastCases s ordered i ≤ s + t := by
+    intro i
+    refine Fin.lastCases ?_ (fun i => ?_) i
+    · simpa only [Fin.lastCases_last] using self_le_add_right s t
+    · simpa only [Fin.lastCases_castSucc] using
+        (ordered_le_current i).trans (self_le_add_right s t)
+  exact monotone_zero_cons
+    (Fin.lastCases (s + t) (Fin.lastCases s ordered))
+    (monotone_snoc (Fin.lastCases s ordered) (s + t)
+      through_current_monotone through_current_le_future)
+
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Restricting the adjoined finite process history to its sorted past coordinates recovers the
+original ordered finite evaluation vector exactly. -/
+theorem twoDimensionalPastProcessValues_restrict_eq_orderedFiniteEvaluationMap
+    (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
+      inner law semigroup laplacian heat Ω)
+    (s t : NNReal) (times : Finset (Set.Iic s)) (samplePoint : Ω) :
+    (fun i : Fin times.card =>
+      twoDimensionalPastProcessValues brownian (times.card + 1)
+        (twoDimensionalSelectedLoopFiniteCylinderTimeline s t times) samplePoint i.castSucc) =
+      twoDimensionalSelectedLoopOrderedFiniteEvaluationMap brownian s times samplePoint := by
+  funext i
+  change brownian.process
+    (twoDimensionalSelectedLoopFiniteCylinderTimeline s t times i.castSucc.castSucc.succ)
+      samplePoint = _
+  simp [twoDimensionalSelectedLoopOrderedFiniteEvaluationMap]
+
 /-- All sets depending measurably on some finite family of process evaluations through `s`. -/
 def twoDimensionalSelectedLoopFinitePastCylinderSets
     (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
@@ -57,6 +216,28 @@ def twoDimensionalSelectedLoopFinitePastCylinderSets
   {set | ∃ times : Finset (Set.Iic s),
     @MeasurableSet Ω (twoDimensionalSelectedLoopFiniteEvaluationMeasurableSpace brownian s times)
       set}
+
+omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Exact coordinate characterization of finite cylinders: each is the preimage of one measurable
+set under one explicitly increasing finite process-evaluation vector. -/
+theorem mem_twoDimensionalSelectedLoopFinitePastCylinderSets_iff
+    (brownian : TwoDimensionalSelectedLoopBrownianRealizationData
+      inner law semigroup laplacian heat Ω)
+    (s : NNReal) (set : Set Ω) :
+    set ∈ twoDimensionalSelectedLoopFinitePastCylinderSets brownian s ↔
+      ∃ (times : Finset (Set.Iic s)) (event : Set (Fin times.card → G)),
+        MeasurableSet event ∧
+          set = twoDimensionalSelectedLoopOrderedFiniteEvaluationMap brownian s times ⁻¹' event := by
+  constructor
+  · rintro ⟨times, set_measurable⟩
+    rw [twoDimensionalSelectedLoopFiniteEvaluationMeasurableSpace_eq_comap] at set_measurable
+    rcases set_measurable with ⟨event, event_measurable, set_eq⟩
+    exact ⟨times, event, event_measurable, set_eq.symm⟩
+  · rintro ⟨times, event, event_measurable, rfl⟩
+    refine ⟨times, ?_⟩
+    rw [twoDimensionalSelectedLoopFiniteEvaluationMeasurableSpace_eq_comap]
+    exact ⟨event, event_measurable, rfl⟩
 
 omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G]
     [MeasurableMul₂ G] [MeasurableInv G] in
@@ -130,9 +311,133 @@ theorem twoDimensionalSelectedLoopFinitePastCylinderSets_generateFrom_eq
         MeasurableSpace.comap (brownian.process u.1.1) inferInstance)
       ⟨t, Finset.mem_singleton_self t⟩) set set_measurable
 
-/-- Reduced process-specific obligation: prove the transition set-integral identity only for sets
-measurable with respect to some finite family of past evaluations. The generic pi-system theorem
-then supplies the full-past conditional and bounded-test semantics. -/
+omit [FiniteDimensional ℝ E] in
+/-- The proved bounded-measurable ordered finite-history identity supplies every set-integral
+transition identity on the concrete finite-cylinder pi-system. -/
+theorem TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData.finitePastCylinder_transition
+    {realLaplacian : RightInvariantPairingLaplacianData inner}
+    {complexLaplacian : RightInvariantPairingComplexLaplacianData inner}
+    {heatTraceData : UnitaryMatrixDualHeatTraceSummabilityData (G := G)}
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (s t : NNReal) (ht : 0 < t) (f : C(G, ℝ))
+    (set : Set Ω) (set_mem :
+      set ∈ twoDimensionalSelectedLoopFinitePastCylinderSets bridge.brownian s) :
+    (∫ samplePoint in set,
+      bridge.spectralHeatKernel.kernelOperator.heatOperator (t : ℝ) f
+        (bridge.brownian.process s samplePoint)
+      ∂bridge.brownian.probabilityMeasure) =
+    ∫ samplePoint in set, f (bridge.brownian.process (s + t) samplePoint)
+      ∂bridge.brownian.probabilityMeasure := by
+  rcases (mem_twoDimensionalSelectedLoopFinitePastCylinderSets_iff
+    bridge.brownian s set).mp set_mem with ⟨times, event, event_measurable, rfl⟩
+  let timeline := twoDimensionalSelectedLoopFiniteCylinderTimeline s t times
+  let restrictHistory : (Fin (times.card + 1) → G) → (Fin times.card → G) :=
+    fun history i => history i.castSucc
+  have restrictHistory_measurable : Measurable restrictHistory := by
+    apply measurable_pi_iff.mpr
+    intro i
+    exact measurable_pi_apply i.castSucc
+  let test : (Fin (times.card + 1) → G) → ℝ := fun history =>
+    event.indicator (fun _ => (1 : ℝ)) (restrictHistory history)
+  have test_measurable : Measurable test :=
+    (measurable_const.indicator event_measurable).comp restrictHistory_measurable
+  have test_bounded : ∀ history, ‖test history‖ ≤ (1 : ℝ) := by
+    intro history
+    by_cases hmem : restrictHistory history ∈ event <;>
+      simp [test, Set.indicator, hmem]
+  have final_time :
+      timeline (Fin.last (times.card + 2)) =
+        timeline (Fin.last (times.card + 1)).castSucc + t := by
+    simp [timeline]
+  have weak := bridge.finiteProcessHistory_boundedMeasurable_weakMarkov_identity
+    (times.card + 1) timeline
+      (twoDimensionalSelectedLoopFiniteCylinderTimeline_monotone s t times)
+      (twoDimensionalSelectedLoopFiniteCylinderTimeline_zero s t times)
+      t ht final_time test test_measurable 1 test_bounded f
+  have orderedMap_measurable : Measurable
+      (twoDimensionalSelectedLoopOrderedFiniteEvaluationMap bridge.brownian s times) := by
+    apply measurable_pi_iff.mpr
+    intro i
+    exact bridge.brownian.process_measurable _
+  have test_eq : ∀ samplePoint,
+      test (twoDimensionalPastProcessValues bridge.brownian (times.card + 1) timeline samplePoint) =
+        (twoDimensionalSelectedLoopOrderedFiniteEvaluationMap bridge.brownian s times ⁻¹' event).indicator
+          (fun _ => (1 : ℝ)) samplePoint := by
+    intro samplePoint
+    change event.indicator (fun _ => (1 : ℝ))
+      (restrictHistory
+        (twoDimensionalPastProcessValues bridge.brownian (times.card + 1) timeline samplePoint)) = _
+    rw [show restrictHistory
+      (twoDimensionalPastProcessValues bridge.brownian (times.card + 1) timeline samplePoint) =
+        twoDimensionalSelectedLoopOrderedFiniteEvaluationMap bridge.brownian s times samplePoint by
+      exact twoDimensionalPastProcessValues_restrict_eq_orderedFiniteEvaluationMap
+        bridge.brownian s t times samplePoint]
+    rfl
+  have current_time : timeline (Fin.last (times.card + 1)).castSucc = s := by
+    exact twoDimensionalSelectedLoopFiniteCylinderTimeline_current s t times
+  have future_time : timeline (Fin.last (times.card + 1 + 1)) = s + t := by
+    exact twoDimensionalSelectedLoopFiniteCylinderTimeline_future s t times
+  rw [current_time, future_time] at weak
+  calc
+    (∫ samplePoint in
+        twoDimensionalSelectedLoopOrderedFiniteEvaluationMap bridge.brownian s times ⁻¹' event,
+        bridge.spectralHeatKernel.kernelOperator.heatOperator (t : ℝ) f
+          (bridge.brownian.process s samplePoint)
+        ∂bridge.brownian.probabilityMeasure) =
+      ∫ samplePoint,
+        (twoDimensionalSelectedLoopOrderedFiniteEvaluationMap bridge.brownian s times ⁻¹' event).indicator
+            (fun _ => (1 : ℝ)) samplePoint *
+          bridge.spectralHeatKernel.kernelOperator.heatOperator (t : ℝ) f
+            (bridge.brownian.process s samplePoint)
+        ∂bridge.brownian.probabilityMeasure := by
+      rw [← integral_indicator]
+      · apply integral_congr_ae
+        exact Filter.Eventually.of_forall fun samplePoint => by
+          by_cases hmem : samplePoint ∈
+              twoDimensionalSelectedLoopOrderedFiniteEvaluationMap bridge.brownian s times ⁻¹' event <;>
+            simp [Set.indicator, hmem]
+      · exact event_measurable.preimage orderedMap_measurable
+    _ = ∫ samplePoint,
+        test (twoDimensionalPastProcessValues bridge.brownian (times.card + 1) timeline samplePoint) *
+          bridge.spectralHeatKernel.kernelOperator.heatOperator (t : ℝ) f
+            (bridge.brownian.process s samplePoint)
+        ∂bridge.brownian.probabilityMeasure := by
+      apply integral_congr_ae
+      exact Filter.Eventually.of_forall fun samplePoint => by
+        change _ = test
+          (twoDimensionalPastProcessValues bridge.brownian (times.card + 1) timeline samplePoint) * _
+        rw [test_eq]
+    _ = ∫ samplePoint,
+        test (twoDimensionalPastProcessValues bridge.brownian (times.card + 1) timeline samplePoint) *
+          f (bridge.brownian.process (s + t) samplePoint)
+        ∂bridge.brownian.probabilityMeasure := weak.symm
+    _ = ∫ samplePoint,
+        (twoDimensionalSelectedLoopOrderedFiniteEvaluationMap bridge.brownian s times ⁻¹' event).indicator
+            (fun _ => (1 : ℝ)) samplePoint *
+          f (bridge.brownian.process (s + t) samplePoint)
+        ∂bridge.brownian.probabilityMeasure := by
+      apply integral_congr_ae
+      exact Filter.Eventually.of_forall fun samplePoint => by
+        change test
+          (twoDimensionalPastProcessValues bridge.brownian (times.card + 1) timeline samplePoint) * _ = _
+        rw [test_eq]
+    _ = ∫ samplePoint in
+        twoDimensionalSelectedLoopOrderedFiniteEvaluationMap bridge.brownian s times ⁻¹' event,
+        f (bridge.brownian.process (s + t) samplePoint)
+        ∂bridge.brownian.probabilityMeasure := by
+      rw [← integral_indicator]
+      · apply integral_congr_ae
+        exact Filter.Eventually.of_forall fun samplePoint => by
+          by_cases hmem : samplePoint ∈
+              twoDimensionalSelectedLoopOrderedFiniteEvaluationMap bridge.brownian s times ⁻¹' event <;>
+            simp [Set.indicator, hmem]
+      · exact event_measurable.preimage orderedMap_measurable
+
+/-- Finite-cylinder transition interface. The theorem immediately above constructs it from the
+existing bounded-measurable finite-history identity; the generic pi-system theorem then supplies the
+full-past conditional and bounded-test semantics. -/
 structure TwoDimensionalSelectedLoopFinitePastCylinderMarkovData
     {realLaplacian : RightInvariantPairingLaplacianData inner}
     {complexLaplacian : RightInvariantPairingComplexLaplacianData inner}
@@ -150,7 +455,20 @@ structure TwoDimensionalSelectedLoopFinitePastCylinderMarkovData
         ∂bridge.brownian.probabilityMeasure
 
 omit [FiniteDimensional ℝ E] in
-/-- The finite-cylinder obligation canonically supplies the reduced pi-system record; the total
+/-- The previously proved bounded-measurable finite-history theorem constructs the complete
+finite-cylinder transition record; it is not retained as an independent stochastic assumption. -/
+noncomputable def TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData.toFinitePastCylinderMarkovData
+    {realLaplacian : RightInvariantPairingLaplacianData inner}
+    {complexLaplacian : RightInvariantPairingComplexLaplacianData inner}
+    {heatTraceData : UnitaryMatrixDualHeatTraceSummabilityData (G := G)}
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)) :
+    TwoDimensionalSelectedLoopFinitePastCylinderMarkovData bridge where
+  cylinder_transition := bridge.finitePastCylinder_transition
+
+omit [FiniteDimensional ℝ E] in
+/-- The finite-cylinder record canonically supplies the reduced pi-system record; the total
 transition identity is its `univ` case. -/
 noncomputable def TwoDimensionalSelectedLoopFinitePastCylinderMarkovData.toPiSystemMarkovData
     {realLaplacian : RightInvariantPairingLaplacianData inner}

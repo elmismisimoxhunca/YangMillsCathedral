@@ -690,8 +690,10 @@ from any generating pi-system, and `TwoDimensionalSelectedLoopFullPastPiSystemMa
 the process-specific debt to finite cylinders. The concrete family of sets measurable under some
 finite supremum of evaluation pullbacks is now proved to be a pi-system and to generate the exact
 past without a countability assumption. `TwoDimensionalSelectedLoopFinitePastCylinderMarkovData`
-therefore leaves only its basic finite-coordinate transition set-integral identity unconstructed,
-and canonically supplies both full-past semantics when that field is given. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
+is now constructed from the bounded-measurable ordered-history theorem: each cylinder is represented
+by an explicitly sorted finite evaluation vector, extended by `0`, `s`, and `s+t`, and tested by its
+measurable indicator. The generic pi-system closure therefore derives both exact full-past semantics
+from the unchanged spectral Brownian bridge without an additional stochastic field. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
 marginals are derived, including exact equality at the selected area with the sampled loop-holonomy
 law. The metric bridge now transports the exact invariant pairing to every group tangent fiber by
 left Maurer–Cartan trivialization and proves its inverse, symmetry, strict positivity, and left/right
@@ -1078,9 +1080,10 @@ law, dependent heat factors, finite-law sewing bridge, and strongest compact fin
 without synthesizing any field. Proposition-level theorems retain rank two and reject a
 four-dimensional linear model.
 `TwoDimensionalFullPastCurrentStrengthSourceIndexedLiteratureAcceptance` strengthens those exact six
-components with `TwoDimensionalSelectedLoopFinitePastCylinderMarkovData` on the unchanged nested
-spectral Brownian bridge. Its exact inhabitance audit exposes that finite-coordinate transition
-witness, from which the proved pi-system closure constructs full-past semantics, and
+components with the canonically derived
+`TwoDimensionalSelectedLoopFinitePastCylinderMarkovData` on the unchanged nested spectral Brownian
+bridge. The proved pi-system closure constructs full-past semantics, and exact implications in both
+directions show this strengthening introduces no new inhabitance hypothesis, and
 rank-two/4D separation is retained. The `CurrentStrength` qualifier remains binding: this is not the final source-complete 2D target, and no
 inhabitant is constructed.
 

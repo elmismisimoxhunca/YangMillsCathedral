@@ -15,9 +15,10 @@ The process past at time `s` is the supremum of the sigma-algebras pulled back b
 against every bounded real random variable measurable for that sigma-algebra.
 
 Every bounded measurable finite process-cylinder test is proved past-measurable and satisfies the
-required identity. Extending this finite-cylinder result to every bounded full-past-measurable test
-is retained as an explicit monotone-class obligation. From any supplied extension, conditional-
-expectation uniqueness derives the exact full-past conditional Markov identity.
+required identity. This module separates the finite-cylinder extension as a pi-system surface and
+proves its generic monotone closure. The downstream finite-cylinder module constructs that surface
+from sorted finite histories; conditional-expectation uniqueness then gives the exact full-past
+conditional Markov identity.
 -/
 
 namespace YangMills.Dimensions
@@ -170,9 +171,10 @@ def TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData.HasFullPastCon
         bridge.spectralHeatKernel.kernelOperator.heatOperator (t : ℝ) f
           (bridge.brownian.process s samplePoint)
 
-/-- Reduced full-past obligation through a generating pi-system. Application-specific work must
-supply a pi-system generating the exact process past and prove the transition set-integral identity
-on its basic finite cylinders. The generic complement/disjoint-union closure is proved separately. -/
+/-- Full-past interface through a generating pi-system. Application-specific work supplies a
+pi-system generating the exact process past and the transition set-integral identity on its basic
+finite cylinders. The generic complement/disjoint-union closure is proved here; the selected-loop
+finite-cylinder module later constructs these fields. -/
 structure TwoDimensionalSelectedLoopFullPastPiSystemMarkovData
     {realLaplacian : RightInvariantPairingLaplacianData inner}
     {complexLaplacian : RightInvariantPairingComplexLaplacianData inner}
@@ -201,8 +203,9 @@ structure TwoDimensionalSelectedLoopFullPastPiSystemMarkovData
       ∫ samplePoint in set, f (bridge.brownian.process (s + t) samplePoint)
         ∂bridge.brownian.probabilityMeasure
 
-/-- Explicit unresolved monotone-class bridge from proved bounded measurable finite cylinders to the
-full process-past sigma-algebra. No inhabitant is constructed here. -/
+/-- Universal full-past Markov interface. This module derives its conditional semantics; the later
+selected-loop finite-cylinder module constructs an inhabitant from the proved finite-history
+identity rather than accepting it as a final stochastic assumption. -/
 structure TwoDimensionalSelectedLoopFullPastMarkovData
     {realLaplacian : RightInvariantPairingLaplacianData inner}
     {complexLaplacian : RightInvariantPairingComplexLaplacianData inner}
@@ -214,8 +217,8 @@ structure TwoDimensionalSelectedLoopFullPastMarkovData
 
 omit [FiniteDimensional ℝ E] in
 /-- Universal bounded weak testing against the exact past determines the corresponding conditional
-expectation. This discharges the semantic bridge, but not the unresolved monotone-class construction
-of `TwoDimensionalSelectedLoopFullPastMarkovData`. -/
+expectation. This discharges the semantic bridge; the downstream finite-cylinder construction
+discharges the selected-loop pi-system instance. -/
 theorem TwoDimensionalSelectedLoopFullPastMarkovData.fullPastConditionalMarkov
     {realLaplacian : RightInvariantPairingLaplacianData inner}
     {complexLaplacian : RightInvariantPairingComplexLaplacianData inner}
@@ -291,8 +294,8 @@ theorem TwoDimensionalSelectedLoopFullPastMarkovData.fullPastConditionalMarkov
 
 omit [FiniteDimensional ℝ E] in
 /-- For continuous terminal tests on this normalized process, universal bounded weak testing and the
-exact conditional-expectation statement are equivalent. Thus the unresolved debt is the
-finite-cylinder-to-full-past extension, not an ambiguity between two Markov semantics. -/
+exact conditional-expectation statement are equivalent. Thus the two Markov semantics introduce no
+separate ambiguity; the downstream finite-cylinder theorem supplies their selected-loop witness. -/
 theorem TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData.fullPastConditionalMarkov_iff_weakMarkov
     {realLaplacian : RightInvariantPairingLaplacianData inner}
     {complexLaplacian : RightInvariantPairingComplexLaplacianData inner}
@@ -403,8 +406,8 @@ noncomputable def TwoDimensionalSelectedLoopFullPastPiSystemMarkovData.toFullPas
 
 omit [FiniteDimensional ℝ E] in
 /-- Every proved bounded measurable finite process cylinder is measurable for the exact past and
-satisfies the full-past testing identity. The remaining debt is extending from these cylinders to
-all bounded functions measurable for the generated past sigma-algebra. -/
+satisfies the full-past testing identity. The downstream finite-cylinder pi-system construction
+extends these identities to all bounded functions measurable for the generated past sigma-algebra. -/
 theorem TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData.finitePastCylinder_satisfies_fullPastTest
     {realLaplacian : RightInvariantPairingLaplacianData inner}
     {complexLaplacian : RightInvariantPairingComplexLaplacianData inner}
