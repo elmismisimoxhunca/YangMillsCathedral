@@ -733,19 +733,21 @@ synthesized into an explicit real smooth central character range. This range is 
 invariant and is therefore not proposed as a graph-dense core for all smooth tests on a nonabelian
 group. A separate finite real matrix-coefficient range is now constructed from explicitly bundled smooth
 irreducible unitary presentations, with dependent row/column indices, exact noncentral conjugation
-mixing, singleton inclusion, and conditional nontriviality. A new uninhabited coefficientwise
-Casimir bridge explicitly strengthens the trace equation to every matrix coordinate; when supplied,
-canonical real/complex coherence proves both real-component eigenvalue equations and finite
-synthesis linearity for the pairing Laplacian. Direct matrix-coefficient orthogonality now proves
+mixing, singleton inclusion, and conditional nontriviality. A reusable coefficientwise
+Casimir bridge explicitly strengthens the trace equation to every matrix coordinate; in isolation it
+remains an honest uninhabited interface, and when supplied canonical real/complex coherence proves
+both real-component eigenvalue equations and finite synthesis linearity for the pairing Laplacian. Direct matrix-coefficient orthogonality now proves
 exact convolution with matching and inequivalent trace characters; bounded linear convolution
 extends this to the uniform character series, giving unconditional diagonal Casimir heat action and
 the uniform-norm scalar zero-time generator on every explicit complex coefficient. The exact real
-selected-loop kernel then inherits this action on both real components. With the coefficientwise
-Casimir bridge, finite linearity proves generator convergence on the entire smooth real coefficient
-range, so its `core_generator` obligation is no longer caller supplied. It does not assert that every
-continuous dual class has a smooth representative. No inhabitant of the graph-core record is
-constructed: inhabiting the coefficientwise bridge, smooth graph density, and the eventual uniform
-graph bound remain the exact coefficient-specific boundary before all-smooth generation. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
+selected-loop kernel then inherits this action on both real components. Positive-time heat
+differentiation derives their pairing-Laplacian Casimir equations on the same spectral chain;
+canonical real/complex coherence consequently constructs the generic coefficientwise bridge for
+this nested 2D data. Finite linearity then proves generator convergence on the entire smooth real
+coefficient range, so its `core_generator` obligation is no longer caller supplied. It does not
+assert that every continuous dual class has a smooth representative. No inhabitant of the graph-core
+record is constructed: smooth graph density and the eventual uniform graph bound are now the exact
+coefficient-specific boundary before all-smooth generation. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
 marginals are derived, including exact equality at the selected area with the sampled loop-holonomy
 law. The metric bridge now transports the exact invariant pairing to every group tangent fiber by
 left Maurer–Cartan trivialization and proves its inverse, symmetry, strict positivity, and left/right

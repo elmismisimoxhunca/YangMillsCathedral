@@ -976,11 +976,12 @@ committed before higher layers depend on it.
 - [x] Prove exact matrix-coefficient convolution against matching/inequivalent trace characters,
   extend it through weighted uniform character series, and derive unconditional diagonal Casimir
   heat action plus the uniform-norm zero-time generator on every explicit complex coefficient.
-- [x] Transport that action to both real selected-loop coefficient components and, conditional on
-  the coefficientwise Casimir bridge, prove generator convergence on every finite real synthesis
-  and the entire designated coefficient range; derive the coefficient-specific graph-core reduction.
-- [ ] Inhabit the coefficientwise Casimir bridge and prove smooth graph density plus the required
-  eventual uniform graph bound; then construct the
+- [x] Transport that action to both real selected-loop coefficient components, use positive-time
+  heat differentiation to derive their pairing-Laplacian Casimir equations, reconstruct the generic
+  complex coefficientwise bridge by canonical real/complex coherence, prove generator convergence
+  on every finite real synthesis and the entire designated coefficient range, and derive the
+  coefficient-specific graph-core reduction.
+- [ ] Prove smooth graph density and the required eventual uniform graph bound for that range; then construct the
   pairing-generator boundary-continuity witness and prove
   comparison of the exact pairing Laplacian with the geometric Laplace–Beltrami operator.
 - [x] Prove that the common Wilson chain forgets only global faithfulness and Wilson normalization to
