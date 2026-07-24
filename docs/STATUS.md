@@ -5368,7 +5368,8 @@ every finite real synthesis; its totalized coefficient-space difference quotient
 matching the ambient family and maps exactly to the positive ambient selected-loop quotient. Both
 evolution families are proved to remain in the unchanged algebraic coefficient core. Convergence
 and the exact quotient identity also yield strong right-continuity at zero on every finite coefficient
-core test, plus eventual norm and graph-relative bounds separately for each test; their vector-
+core test, while contractivity extends it to the uniform closure of the continuous core image without
+claiming that image dense in all `C(G, ℝ)`. They also yield eventual norm and graph-relative bounds separately for each test; their vector-
 dependent constants and events realize only `∀ f, ∃ C_f, ∀ᶠ t`, not the required uniform
 `∃ C, ∀ᶠ t, ∀ f` all-domain graph bound. Finite linearity proves the exact
 pairing generator on every finite synthesis and fills `core_generator`
