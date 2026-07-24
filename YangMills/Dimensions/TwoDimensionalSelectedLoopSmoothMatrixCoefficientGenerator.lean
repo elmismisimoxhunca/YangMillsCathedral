@@ -913,16 +913,14 @@ noncomputable def ofContinuousPeterWeylOfSmoothCoverage
 
 end TwoDimensionalSelectedLoopStrongContinuousHeatSemigroupData
 
-/-- Differentiability of every unit-rescaled heat trajectory with derivative given by the heat
-semigroup applied to the pairing generator. The derivative is required only on the open unit
-interval and only from the right, matching the one-sided fundamental theorem of calculus used below.
-This is a proof-local analytic strengthening and is not attributed to Driver Remark 4.13. -/
-structure TwoDimensionalSelectedLoopPairingRescaledHeatDerivativeData
+/-- Exact right derivative of every unit-rescaled heat trajectory, separated from the global strong
+continuity needed to integrate it. This is a proof-local analytic target and is not attributed to
+Driver Remark 4.13. -/
+def TwoDimensionalSelectedLoopPairingRescaledHeatDerivative
     (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
       (law := law) (inner := inner) (realLaplacian := realLaplacian)
-      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)) where
-  strongContinuity : TwoDimensionalSelectedLoopStrongContinuousHeatSemigroupData bridge
-  derivative : ∀ (t : NNReal), 0 < t →
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)) : Prop :=
+  ∀ (t : NNReal), 0 < t →
     ∀ f : SmoothLieGroupScalarFunction (E := E) (G := G),
       ∀ s ∈ Set.Ioo (0 : ℝ) 1,
         HasDerivWithinAt (fun r : ℝ =>
@@ -935,7 +933,50 @@ structure TwoDimensionalSelectedLoopPairingRescaledHeatDerivativeData
               (realLaplacian := realLaplacian) f))
           (Set.Ioi s) s
 
+/-- Differentiability of every unit-rescaled heat trajectory with derivative given by the heat
+semigroup applied to the pairing generator, together with global strong continuity. The derivative
+is required only on the open unit interval and only from the right. -/
+structure TwoDimensionalSelectedLoopPairingRescaledHeatDerivativeData
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)) where
+  strongContinuity : TwoDimensionalSelectedLoopStrongContinuousHeatSemigroupData bridge
+  derivative : TwoDimensionalSelectedLoopPairingRescaledHeatDerivative bridge
+
 namespace TwoDimensionalSelectedLoopPairingRescaledHeatDerivativeData
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Coefficient-image density supplies global strong continuity, so the raw rescaled derivative is
+the only remaining field needed for derivative data. -/
+noncomputable def ofDense
+    {bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)}
+    (dense : Dense
+      (smoothLieGroupScalarToContinuousLinearMap ''
+        smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G)))
+    (derivative : TwoDimensionalSelectedLoopPairingRescaledHeatDerivative bridge) :
+    TwoDimensionalSelectedLoopPairingRescaledHeatDerivativeData bridge where
+  strongContinuity :=
+    TwoDimensionalSelectedLoopStrongContinuousHeatSemigroupData.ofDense dense
+  derivative := derivative
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Selected continuous Peter--Weyl density plus smooth-dual coverage supplies the density and strong
+continuity fields, retaining only the exact rescaled derivative as analytic input. -/
+noncomputable def ofContinuousPeterWeylOfSmoothCoverage
+    {bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)}
+    (continuousDensity : UnitaryMatrixDual.HasContinuousPeterWeylDensity G)
+    (smoothCoverage : ∀ q : UnitaryMatrixDual G,
+      q.HasSmoothRepresentative (E := E))
+    (derivative : TwoDimensionalSelectedLoopPairingRescaledHeatDerivative bridge) :
+    TwoDimensionalSelectedLoopPairingRescaledHeatDerivativeData bridge where
+  strongContinuity :=
+    TwoDimensionalSelectedLoopStrongContinuousHeatSemigroupData.ofContinuousPeterWeylOfSmoothCoverage
+      continuousDensity smoothCoverage
+  derivative := derivative
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Strong continuity and the exact rescaled heat-trajectory derivative imply the unit-interval
@@ -1452,6 +1493,54 @@ noncomputable def toStochasticGeneratorAtZeroData
   acceptance.implies_continuousDuhamelAnalyticAcceptance.toStochasticGeneratorAtZeroData
 
 end TwoDimensionalSelectedLoopSmoothMatrixCoefficientRescaledDerivativeAnalyticAcceptance
+
+/-- Selected-Fourier differentiability acceptance with four explicit obligations: finite graph
+approximation, selected continuous Peter--Weyl density, smooth-dual coverage, and the raw rescaled
+heat-trajectory derivative. Strong continuity and all Duhamel consequences are derived. -/
+structure TwoDimensionalSelectedLoopSmoothMatrixCoefficientSelectedFourierDerivativeAnalyticAcceptance
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)) : Prop where
+  finiteGraphApproximation :
+    TwoDimensionalSelectedLoopSmoothMatrixCoefficientFiniteGraphApproximation
+      (realLaplacian := realLaplacian)
+  continuousDensity : UnitaryMatrixDual.HasContinuousPeterWeylDensity G
+  smoothCoverage : ∀ q : UnitaryMatrixDual G,
+    q.HasSmoothRepresentative (E := E)
+  rescaledDerivative : TwoDimensionalSelectedLoopPairingRescaledHeatDerivative bridge
+
+namespace TwoDimensionalSelectedLoopSmoothMatrixCoefficientSelectedFourierDerivativeAnalyticAcceptance
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- The exact four selected-Fourier/differentiability obligations construct the prior derivative
+acceptance. -/
+theorem implies_rescaledDerivativeAnalyticAcceptance
+    {bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)}
+    (acceptance :
+      TwoDimensionalSelectedLoopSmoothMatrixCoefficientSelectedFourierDerivativeAnalyticAcceptance
+        bridge) :
+    TwoDimensionalSelectedLoopSmoothMatrixCoefficientRescaledDerivativeAnalyticAcceptance
+      bridge :=
+  ⟨acceptance.finiteGraphApproximation,
+    ⟨TwoDimensionalSelectedLoopPairingRescaledHeatDerivativeData.ofContinuousPeterWeylOfSmoothCoverage
+      acceptance.continuousDensity
+        acceptance.smoothCoverage acceptance.rescaledDerivative⟩⟩
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- The same four explicit obligations reach the all-smooth stochastic generator endpoint. -/
+noncomputable def toStochasticGeneratorAtZeroData
+    {bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)}
+    (acceptance :
+      TwoDimensionalSelectedLoopSmoothMatrixCoefficientSelectedFourierDerivativeAnalyticAcceptance
+        bridge) :
+    TwoDimensionalSelectedLoopStochasticGeneratorAtZeroData bridge :=
+  acceptance.implies_rescaledDerivativeAnalyticAcceptance.toStochasticGeneratorAtZeroData
+
+end TwoDimensionalSelectedLoopSmoothMatrixCoefficientSelectedFourierDerivativeAnalyticAcceptance
 
 /-- Exact three-part analytic acceptance route: simultaneous finite graph approximation, uniform
 density of all smooth real tests in the continuous ambient space, and the exact Duhamel identity.

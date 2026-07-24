@@ -416,6 +416,18 @@ theorem exact_rescaledHeatDerivative_derives_DuhamelIdentity
   data.duhamelIdentity
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Exact selected-Fourier differentiability probe: density, smooth coverage, and the raw derivative
+construct the Duhamel identity. -/
+theorem exact_selectedFourier_rescaledDerivative_derives_DuhamelIdentity
+    (continuousDensity : UnitaryMatrixDual.HasContinuousPeterWeylDensity G)
+    (smoothCoverage : ∀ q : UnitaryMatrixDual G,
+      q.HasSmoothRepresentative (E := E))
+    (derivative : TwoDimensionalSelectedLoopPairingRescaledHeatDerivative bridge) :
+    TwoDimensionalSelectedLoopPairingDuhamelIdentity bridge :=
+  (TwoDimensionalSelectedLoopPairingRescaledHeatDerivativeData.ofContinuousPeterWeylOfSmoothCoverage
+    continuousDensity smoothCoverage derivative).duhamelIdentity
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Exact semigroup probe: all-test right continuity at zero derives global orbit continuity. -/
 theorem exact_tendstoZero_derives_strongContinuousHeatSemigroup
     (atZero : ∀ f : C(G, ℝ), Tendsto (fun t : NNReal =>
@@ -544,6 +556,55 @@ theorem missing_rescaledDerivative_blocks_RescaledDerivativeAnalyticAcceptance
       bridge := by
   intro acceptance
   exact missing acceptance.2
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Exact four-part selected-Fourier derivative acceptance endpoint. -/
+theorem exact_SelectedFourierDerivativeAnalyticAcceptance_stochasticGenerator
+    (acceptance :
+      TwoDimensionalSelectedLoopSmoothMatrixCoefficientSelectedFourierDerivativeAnalyticAcceptance
+        bridge) :
+    TwoDimensionalSelectedLoopSmoothMatrixCoefficientRescaledDerivativeAnalyticAcceptance bridge ∧
+      Nonempty (TwoDimensionalSelectedLoopStochasticGeneratorAtZeroData bridge) :=
+  ⟨acceptance.implies_rescaledDerivativeAnalyticAcceptance,
+    ⟨acceptance.toStochasticGeneratorAtZeroData⟩⟩
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Hostile four-part acceptance probe: missing finite graph approximation blocks acceptance. -/
+theorem missing_finiteGraph_blocks_SelectedFourierDerivativeAnalyticAcceptance
+    (missing : ¬ TwoDimensionalSelectedLoopSmoothMatrixCoefficientFiniteGraphApproximation
+      (realLaplacian := realLaplacian)) :
+    ¬ TwoDimensionalSelectedLoopSmoothMatrixCoefficientSelectedFourierDerivativeAnalyticAcceptance
+      bridge := by
+  intro acceptance
+  exact missing acceptance.finiteGraphApproximation
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Hostile four-part acceptance probe: missing selected Peter--Weyl density blocks acceptance. -/
+theorem missing_selectedDensity_blocks_SelectedFourierDerivativeAnalyticAcceptance
+    (missing : ¬ UnitaryMatrixDual.HasContinuousPeterWeylDensity G) :
+    ¬ TwoDimensionalSelectedLoopSmoothMatrixCoefficientSelectedFourierDerivativeAnalyticAcceptance
+      bridge := by
+  intro acceptance
+  exact missing acceptance.continuousDensity
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Hostile four-part acceptance probe: missing the raw rescaled derivative blocks acceptance. -/
+theorem missing_rawDerivative_blocks_SelectedFourierDerivativeAnalyticAcceptance
+    (missing : ¬ TwoDimensionalSelectedLoopPairingRescaledHeatDerivative bridge) :
+    ¬ TwoDimensionalSelectedLoopSmoothMatrixCoefficientSelectedFourierDerivativeAnalyticAcceptance
+      bridge := by
+  intro acceptance
+  exact missing acceptance.rescaledDerivative
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Hostile four-part acceptance probe: missing smooth-dual coverage blocks acceptance. -/
+theorem missing_smoothCoverage_blocks_SelectedFourierDerivativeAnalyticAcceptance
+    (missing : ¬ ∀ q : UnitaryMatrixDual G,
+      q.HasSmoothRepresentative (E := E)) :
+    ¬ TwoDimensionalSelectedLoopSmoothMatrixCoefficientSelectedFourierDerivativeAnalyticAcceptance
+      bridge := by
+  intro acceptance
+  exact missing acceptance.smoothCoverage
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Exact selected-Fourier constructor for the three-part analytic acceptance. -/
