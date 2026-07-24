@@ -109,6 +109,19 @@ theorem exact_smoothRealCoefficientCore_density
     continuousDensity smoothCoverage
 
 omit [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- Exact automatic-smoothness specialization of the density transfer. -/
+theorem exact_smoothRealCoefficientCore_density_of_automaticSmoothness
+    [CompactSpace G] [T2Space G]
+    (continuousDensity : UnitaryMatrixDual.HasContinuousPeterWeylDensity G)
+    (automaticSmoothness :
+      AllContinuousUnitaryIrreducibleMatrixRepresentationsHaveSmoothCoordinates
+        (E := E) (G := G)) :
+    Dense (smoothLieGroupScalarToContinuousLinearMap ''
+      smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G) : Set C(G, ℝ)) :=
+  smoothUnitaryMatrixCoefficientRealCore_continuousImage_dense_of_automaticSmoothness
+    continuousDensity automaticSmoothness
+
+omit [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
 /-- Hostile density probe: failure of the target real density contradicts simultaneous selected
 continuous density and all-class smooth coverage. -/
 theorem missing_smoothRealCoefficientCore_density_blocks_joint_hypotheses
@@ -133,6 +146,20 @@ theorem exact_smoothRealCoefficientCore_density_of_faithful
       smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G) : Set C(G, ℝ)) :=
   smoothUnitaryMatrixCoefficientRealCore_continuousImage_dense_of_faithful
     faithful smoothCoverage
+
+omit [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- Exact faithful-plus-automatic-smoothness density specialization. -/
+theorem exact_smoothRealCoefficientCore_density_of_faithful_of_automaticSmoothness
+    [IsTopologicalGroup G] [CompactSpace G] [T2Space G]
+    [MeasurableSpace G] [BorelSpace G]
+    (faithful : ContinuousFaithfulFiniteMatrixRepresentation G)
+    (automaticSmoothness :
+      AllContinuousUnitaryIrreducibleMatrixRepresentationsHaveSmoothCoordinates
+        (E := E) (G := G)) :
+    Dense (smoothLieGroupScalarToContinuousLinearMap ''
+      smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G) : Set C(G, ℝ)) :=
+  smoothUnitaryMatrixCoefficientRealCore_continuousImage_dense_of_faithful_of_automaticSmoothness
+    faithful automaticSmoothness
 
 omit [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
 /-- Hostile selected-block probe: changing one exact realified point value is contradictory. -/

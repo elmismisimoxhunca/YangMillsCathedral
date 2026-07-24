@@ -620,6 +620,25 @@ theorem twoDimensionalSelectedLoop_heatOperator_tendsto_zero_of_continuousPeterW
       continuousDensity smoothCoverage)
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Automatic smoothness of all bundled continuous irreducible unitary coordinates discharges the
+smooth-coverage premise in the Fourier-to-semigroup bridge. -/
+theorem twoDimensionalSelectedLoop_heatOperator_tendsto_zero_of_continuousPeterWeyl_of_automaticSmoothness
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (continuousDensity : UnitaryMatrixDual.HasContinuousPeterWeylDensity G)
+    (automaticSmoothness :
+      AllContinuousUnitaryIrreducibleMatrixRepresentationsHaveSmoothCoordinates
+        (E := E) (G := G)) :
+    ∀ f : C(G, ℝ), Tendsto (fun t : NNReal =>
+      twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t f)
+      (nhdsWithin 0 (Set.Ioi 0)) (nhds f) :=
+  twoDimensionalSelectedLoop_heatOperator_tendsto_zero_of_continuousPeterWeyl_of_smoothCoverage
+    bridge continuousDensity
+      (all_unitaryMatrixDual_hasSmoothRepresentative_of_all_hasSmoothCoordinates
+        automaticSmoothness)
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Faithful compact matrix coordinates discharge the continuous density premise; smooth-dual
 coverage remains explicit. -/
 theorem twoDimensionalSelectedLoop_heatOperator_tendsto_zero_of_faithful_of_smoothCoverage
@@ -635,6 +654,25 @@ theorem twoDimensionalSelectedLoop_heatOperator_tendsto_zero_of_faithful_of_smoo
   twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_heatOperator_tendsto_zero_of_dense
     bridge (smoothUnitaryMatrixCoefficientRealCore_continuousImage_dense_of_faithful
       faithful smoothCoverage)
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Faithful finite matrix coordinates and automatic smoothness together imply strong right-
+continuity at zero on every continuous test. -/
+theorem twoDimensionalSelectedLoop_heatOperator_tendsto_zero_of_faithful_of_automaticSmoothness
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (faithful : ContinuousFaithfulFiniteMatrixRepresentation G)
+    (automaticSmoothness :
+      AllContinuousUnitaryIrreducibleMatrixRepresentationsHaveSmoothCoordinates
+        (E := E) (G := G)) :
+    ∀ f : C(G, ℝ), Tendsto (fun t : NNReal =>
+      twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t f)
+      (nhdsWithin 0 (Set.Ioi 0)) (nhds f) :=
+  twoDimensionalSelectedLoop_heatOperator_tendsto_zero_of_faithful_of_smoothCoverage
+    bridge faithful
+      (all_unitaryMatrixDual_hasSmoothRepresentative_of_all_hasSmoothCoordinates
+        automaticSmoothness)
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Smooth graph density alone extends strong right-continuity of the contraction semigroup from the

@@ -284,6 +284,19 @@ theorem exact_selectedLoop_heatOperator_tendsto_zero_of_continuousPeterWeyl_of_s
     bridge continuousDensity smoothCoverage
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Exact automatic-smoothness Fourier-to-semigroup specialization. -/
+theorem exact_selectedLoop_heatOperator_tendsto_zero_of_continuousPeterWeyl_of_automaticSmoothness
+    (continuousDensity : UnitaryMatrixDual.HasContinuousPeterWeylDensity G)
+    (automaticSmoothness :
+      AllContinuousUnitaryIrreducibleMatrixRepresentationsHaveSmoothCoordinates
+        (E := E) (G := G)) :
+    ∀ f : C(G, ℝ), Tendsto (fun t : NNReal =>
+      twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t f)
+      (nhdsWithin 0 (Set.Ioi 0)) (nhds f) :=
+  twoDimensionalSelectedLoop_heatOperator_tendsto_zero_of_continuousPeterWeyl_of_automaticSmoothness
+    bridge continuousDensity automaticSmoothness
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Hostile Fourier-to-semigroup probe: failure of strong continuity at one continuous test blocks
 the joint selected-density and smooth-coverage hypotheses. -/
 theorem missing_selectedLoop_heatOperator_continuity_blocks_PeterWeyl_smoothCoverage
@@ -309,6 +322,19 @@ theorem exact_selectedLoop_heatOperator_tendsto_zero_of_faithful_of_smoothCovera
       (nhdsWithin 0 (Set.Ioi 0)) (nhds f) :=
   twoDimensionalSelectedLoop_heatOperator_tendsto_zero_of_faithful_of_smoothCoverage
     bridge faithful smoothCoverage
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Exact faithful-plus-automatic-smoothness Fourier-to-semigroup specialization. -/
+theorem exact_selectedLoop_heatOperator_tendsto_zero_of_faithful_of_automaticSmoothness
+    (faithful : ContinuousFaithfulFiniteMatrixRepresentation G)
+    (automaticSmoothness :
+      AllContinuousUnitaryIrreducibleMatrixRepresentationsHaveSmoothCoordinates
+        (E := E) (G := G)) :
+    ∀ f : C(G, ℝ), Tendsto (fun t : NNReal =>
+      twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t f)
+      (nhdsWithin 0 (Set.Ioi 0)) (nhds f) :=
+  twoDimensionalSelectedLoop_heatOperator_tendsto_zero_of_faithful_of_automaticSmoothness
+    bridge faithful automaticSmoothness
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Exact consequence of the still-open graph-density field: zeroth-order strong heat continuity

@@ -196,6 +196,21 @@ theorem smoothUnitaryMatrixCoefficientRealCore_continuousImage_dense
       hcomplexDistance
 
 omit [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- Automatic smoothness of all bundled continuous irreducible unitary coordinates discharges the
+smooth-coverage premise in the density transfer. -/
+theorem smoothUnitaryMatrixCoefficientRealCore_continuousImage_dense_of_automaticSmoothness
+    [CompactSpace G] [T2Space G]
+    (continuousDensity : UnitaryMatrixDual.HasContinuousPeterWeylDensity G)
+    (automaticSmoothness :
+      AllContinuousUnitaryIrreducibleMatrixRepresentationsHaveSmoothCoordinates
+        (E := E) (G := G)) :
+    Dense (smoothLieGroupScalarToContinuousLinearMap ''
+      smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G) : Set C(G, ℝ)) :=
+  smoothUnitaryMatrixCoefficientRealCore_continuousImage_dense continuousDensity
+    (all_unitaryMatrixDual_hasSmoothRepresentative_of_all_hasSmoothCoordinates
+      automaticSmoothness)
+
+omit [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
 /-- Concrete compact matrix-group corollary: a faithful finite continuous representation supplies
 the complex density premise, while smooth coverage remains the exact unresolved comparison premise. -/
 theorem smoothUnitaryMatrixCoefficientRealCore_continuousImage_dense_of_faithful
@@ -209,6 +224,22 @@ theorem smoothUnitaryMatrixCoefficientRealCore_continuousImage_dense_of_faithful
   smoothUnitaryMatrixCoefficientRealCore_continuousImage_dense
     (unitaryMatrixDual_hasContinuousPeterWeylDensity_of_faithful faithful)
     smoothCoverage
+
+omit [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- Faithful finite matrix coordinates together with automatic smoothness of all bundled continuous
+irreducible unitary coordinates imply uniform density of the smooth real coefficient image. -/
+theorem smoothUnitaryMatrixCoefficientRealCore_continuousImage_dense_of_faithful_of_automaticSmoothness
+    [IsTopologicalGroup G] [CompactSpace G] [T2Space G]
+    [MeasurableSpace G] [BorelSpace G]
+    (faithful : ContinuousFaithfulFiniteMatrixRepresentation G)
+    (automaticSmoothness :
+      AllContinuousUnitaryIrreducibleMatrixRepresentationsHaveSmoothCoordinates
+        (E := E) (G := G)) :
+    Dense (smoothLieGroupScalarToContinuousLinearMap ''
+      smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G) : Set C(G, ℝ)) :=
+  smoothUnitaryMatrixCoefficientRealCore_continuousImage_dense_of_faithful faithful
+    (all_unitaryMatrixDual_hasSmoothRepresentative_of_all_hasSmoothCoordinates
+      automaticSmoothness)
 
 end
 
