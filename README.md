@@ -743,8 +743,9 @@ the uniform-norm scalar zero-time generator on every explicit complex coefficien
 selected-loop kernel then inherits this action on both real components. Positive-time heat
 differentiation derives their pairing-Laplacian Casimir equations on the same spectral chain;
 canonical real/complex coherence consequently constructs the generic coefficientwise bridge for
-this nested 2D data. Finite linearity then proves generator convergence on the entire smooth real
-coefficient range, so its `core_generator` obligation is no longer caller supplied. It does not
+this nested 2D data. A canonical finite coefficientwise heat-evolution linear map gives exact
+positive-time action on every finite real synthesis. Finite linearity then proves generator
+convergence on the entire smooth real coefficient range, so its `core_generator` obligation is no longer caller supplied. It does not
 assert that every continuous dual class has a smooth representative. No inhabitant of the graph-core
 record is constructed: an exact `Nonempty` audit proves that smooth graph density and one
 nonnegative eventual uniform graph bound are precisely the remaining coefficient-specific boundary

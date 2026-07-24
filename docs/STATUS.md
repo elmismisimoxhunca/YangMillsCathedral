@@ -5358,8 +5358,9 @@ passes the weighted uniform character series and yields unconditional diagonal C
 and the exact uniform-norm right zero-time generator on every explicit complex coefficient. The
 selected-loop real kernel inherits this action on both real components. Its stored positive-time heat
 derivative forces the pairing-Laplacian Casimir equations on that same chain; canonical real/complex
-coherence then constructs the generic complex coefficientwise bridge for the nested 2D data. Finite
-linearity proves the exact pairing generator on every finite synthesis and fills `core_generator`
+coherence then constructs the generic complex coefficientwise bridge for the nested 2D data. A
+canonical finite coefficientwise heat-evolution linear map gives the exact positive-time operator on
+every finite real synthesis. Finite linearity proves the exact pairing generator on every finite synthesis and fills `core_generator`
 for the designated coefficient range. A smaller uninhabited reduction record now retains only smooth
 graph density and the eventual uniform graph bound before constructing the existing all-smooth
 stochastic endpoint; its exact `Nonempty` equivalence proves these two obligations, including one
