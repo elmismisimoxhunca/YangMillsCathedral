@@ -272,15 +272,27 @@ adjudication corrections.
    compares inverse boundary holonomy, and uses `Q_t(g⁻¹) = Q_t(g)`. The canonical finite-face
    candidate therefore transports `h` to `h` or `h⁻¹` and preserves or reverses/flips the oriented
    boundary word according to the same sign. This check does not construct the source homeomorphism.
-16. Witten's subdivision/sewing formulas are exact representation-theoretic identities, not by
+16. Sengupta PDF pp. 53–54 / printed pp. 44–45 and PDF pp. 58–59 / printed pp. 49–50
+   were visually adjudicated on 2026-07-24 for Definitions 7.1–7.6 and Theorem 8.4/equation (8.3).
+   Printed pp. 44–45 visibly require oriented graph bonds, a finite connected simplicial complex,
+   finite curve and complementary-region data, same-region face chains, positive simplex areas with
+   fixed region totals, a fixed central `h`, Haar integration, and explicit boundary delta
+   constraints; arbitrary local face orientations in the nonorientable case require `h = h⁻¹`.
+   Printed pp. 49–50 visibly require the theorem's semisimple/boundary/nonorientable alternative, a
+   finite etched graph and admissible finite curve family, the covering projection and central kernel
+   class, the inverse global normalizer, one arbitrary distinguished twisted region, every remaining
+   ordinary region factor, and covering-edge-field integration followed by projection of curve
+   holonomies. These checks support conditional acceptance records only; they construct neither the
+   weighted refinement pushforward nor the stochastic law.
+17. Witten's subdivision/sewing formulas are exact representation-theoretic identities, not by
    themselves a countably additive continuum-measure construction.
-17. Atiyah–Bott is classical gauge geometry, not a source for a quantum probability measure.
-18. Sengupta's orientation-reversing covariance changes to the specified pullback bundle class; it
+18. Atiyah–Bott is classical gauge geometry, not a source for a quantum probability measure.
+19. Sengupta's orientation-reversing covariance changes to the specified pullback bundle class; it
    must not be simplified to same-bundle invariance.
-19. Kluberg-Stern–Zuber's broadest operator-renormalization statements carry dimensional/twist or
+20. Kluberg-Stern–Zuber's broadest operator-renormalization statements carry dimensional/twist or
    conjectural qualifications; they are corroboration, not an unrestricted theorem.
-20. Hollands–Kopper's convergence theorem is not a Yang–Mills convergence theorem.
-21. `yang1954.pdf` begins with one page from a preceding article; the Yang–Mills article starts on
+21. Hollands–Kopper's convergence theorem is not a Yang–Mills convergence theorem.
+22. `yang1954.pdf` begins with one page from a preceding article; the Yang–Mills article starts on
    PDF p. 2.
 
 ## 4. Concrete progress unlocked by the bundle

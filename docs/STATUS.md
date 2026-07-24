@@ -5471,8 +5471,16 @@ to a literal normalized equation-(8.3) weighted Haar graph measure: its fine nor
 fine graph-weight integral and the fine measure must push forward to the coarse graph measure for
 every distinguished region. Fine normalization/nonzeroness and the unchanged projected stochastic
 finite-curve law are derived. The weighted pushforward itself remains an explicit obligation;
-heat-factor/convolution integration, unnormalized-weight equality, fine embedded subdivision, full
-source-valid subdivisions, and full universal Fact 2 remain open.
+heat-factor/convolution integration, unnormalized-weight equality, construction/inhabitation of the
+fine embedded subdivision, full source-valid subdivisions, and full universal Fact 2 remain open.
+`TwoDimensionalSenguptaEmbeddedCurveBondGraphMeasureBridgeData` now closes the conditional one-pair
+geometric/heat-factor interface around that graph law: a fine embedded triangular presentation on
+the exact same surface partitions coarse face images, preserves vertices and regions, realizes every
+coarse total bond by a composable fine word, identifies each external subword with the exact graph
+refinement, and enforces signed internal-edge cancellation. Its fine ordinary and fixed-twist graph
+weights are exactly the fine boundary-conditioned covering heat factors, so the unchanged projected
+stochastic finite law is represented on the actual fine embedded curve words. The record remains
+uninhabited and assumes the normalized weighted pushforward; it is not universal Fact 2.
 `TwoDimensionalSenguptaUniversalCellwiseEmbeddedHomeomorphismData` now states universal acceptance
 for the directly cellwise-compatible embedded Fact 3 subclass at fixed universe levels. Its concrete
 bundled candidates contain targets and homeomorphisms with direct cell equivalences, exact mapped

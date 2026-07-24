@@ -45,6 +45,15 @@ while leaving the planar-to-arbitrary-compact-surface heat-law construction expl
 not construct
 the process or infer a Markov conditional-expectation/stochastic-generator theorem.
 
+Definitions 7.1–7.6 (printed pp. 44–45; PDF pp. 53–54) were visually adjudicated on
+2026-07-24. The scan visibly defines oriented graph bonds and fields, a finite connected simplicial
+complex cut by a finite curve family, complementary-region components and same-region face chains,
+positive simplex areas summing to each region area, one fixed central element `h`, and the
+boundary-conditioned factor with Haar integration and explicit delta constraints. It visibly allows
+arbitrary local face orientations only in the nonorientable case under `h = h⁻¹`. These pages support
+the embedded finite-presentation and fixed-boundary heat-factor acceptance fields; they do not
+construct a presentation or discharge the delta constraints.
+
 Definition 7.6, Facts 2–3 (printed pp. 46–47; PDF pp. 55–56; native extraction lines 2584–2660)
 support the uninhabited one-pair subdivision and homeomorphism factor certificates. The retained scan
 was visually adjudicated on 2026-07-23: Fact 3 transports the bundle class by the printed `±` sign,
@@ -53,6 +62,16 @@ otherwise; its proof sends positive simplex orientation to negative orientation,
 boundary holonomy, and invokes inversion symmetry of the heat density. Accordingly, the candidate
 uses `h` versus `h⁻¹` and preserves versus reverses/flips the oriented boundary word under one shared
 orientation sign. No actual subdivision or surface homeomorphism is thereby constructed.
+
+Theorem 8.4 and equation (8.3) (printed pp. 49–50; PDF pp. 58–59; native extraction lines
+2773–2825) were visually adjudicated on 2026-07-24. The scan visibly requires one of semisimplicity,
+nonempty surface boundary, or nonorientability; uses a finite graph etched by an admissible finite
+curve family; fixes a covering projection and one central kernel class `h`; includes the inverse
+global normalizer; twists one arbitrary distinguished complementary region and multiplies the
+ordinary factors for all remaining regions; and integrates covering-group edge fields before
+projecting curve holonomies to the physical group. This supports the normalized finite-law and
+split-bond graph-measure acceptance surfaces. It does not prove the supplied graph-measure
+pushforward or construct the stochastic law.
 
 ## Artifact chain
 

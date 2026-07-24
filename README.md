@@ -975,7 +975,13 @@ normalized equation-(8.3) layer now accepts a literal fine weighted Haar graph m
 integral normalizer and requires its pushforward through that exact graph map for every distinguished
 region; fine normalization/nonzeroness and the unchanged complete projected finite-curve law then
 derive. The weighted pushforward remains an obligation—no heat-factor/convolution integration proof,
-unnormalized-weight identity, fine embedded subdivision, or full universal Fact 2 is constructed. Universal acceptance for the directly cellwise-compatible embedded Fact 3 subclass is now separately
+unnormalized-weight identity, or full universal Fact 2 is constructed. A further uninhabited one-pair
+bridge now supplies the previously missing geometric/heat-factor coherence: an actual fine embedded
+triangular presentation on the same surface partitions coarse faces, realizes every coarse total
+bond by a fine word, identifies external subwords with the exact graph refinement, enforces signed
+internal-edge cancellation and unchanged regions, and identifies the fine graph weights with the
+boundary-conditioned covering heat factors. It still assumes the normalized weighted pushforward
+and does not construct a subdivision or universal theorem. Universal acceptance for the directly cellwise-compatible embedded Fact 3 subclass is now separately
 specified at fixed universe levels: a concrete bundled candidate covers targets and homeomorphisms
 with direct edge/face equivalences, and every candidate must receive a factor certificate with the
 same global sign, per-face simplex-orientation choices, and equivalences. Candidate nonemptiness and

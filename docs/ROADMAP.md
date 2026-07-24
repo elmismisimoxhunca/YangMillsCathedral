@@ -1372,6 +1372,12 @@ committed before higher layers depend on it.
     region, then derive fine normalization/nonzeroness and the unchanged stochastic finite-curve law.
     Retain the heat-factor/convolution proof of that pushforward, any unnormalized-weight identity,
     the fine embedded subdivision, and full universal Fact 2 as debt.
+  - [x] Add one-pair embedded/heat-factor coherence for split curve bonds: fine embedded triangles on
+    the same surface partition coarse faces; every coarse total bond is a geometric fine word;
+    external subwords are exactly the graph-refinement words; signed internal edges cancel; regions
+    persist; and the fine equation-(8.3) weights equal the fine boundary-conditioned covering heat
+    factors. Retain construction of this witness, proof of its weighted pushforward, universal
+    quantification, and full Fact 2 as debt.
   - [x] State universal acceptance for the directly cellwise-compatible embedded Fact 3 subclass at
     fixed universe levels using a concrete bundled target/homeomorphism candidate type, exact
     total-area, independent face-orientation, and global-sign semantics, a matching factor
