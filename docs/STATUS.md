@@ -5717,8 +5717,13 @@ original outer map by a continuous isotopy through actual homeomorphisms. The is
 supplied map and ends at the fine cellwise deformation, matching Sengupta's deformation before
 simplicialization. It remains uninhabited and contains no factor
 or weighted-measure certificate.
-Construction and analytic certification of those preliminary subdivisions, full
-universal Fact 3, and inhabitation remain open.
+`TwoDimensionalSenguptaPreliminarySubdivisionGraphMeasureChainData` now joins one supplied geometry
+to source-subdivision, fine-cellwise, and target-subdivision normalized graph-measure transports.
+Exact fine-normalizer coherence makes one source-fine measure recover the original source graph and,
+through measurable map composition, the original target graph with the mapped region and
+orientation-transported central twist. The composite is derived rather than stored. Construction
+and analytic certification of those preliminary subdivisions, full universal Fact 3, and
+inhabitation remain open.
 `TwoDimensionalSenguptaPreliminarySubdivisionHomeomorphismFactorData` now derives the exact algebraic
 proof pattern after such subdivisions are supplied: source coarse-to-fine equality, signed cellwise
 homeomorphism equality, and reverse target coarse-to-fine equality compose to the coarse ordinary

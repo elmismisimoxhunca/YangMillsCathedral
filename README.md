@@ -1162,9 +1162,14 @@ invariance and integration of the factor law are not derived. These views enable
 subdivisions to select fine presentations first without constructing them. A nonvacuous universal geometric target now requires every general outer candidate to receive source
 and target parameterized split-bond subdivisions plus fine cellwise geometry connected to the
 original outer map by a continuous isotopy through actual homeomorphisms. The isotopy records
-Sengupta's deformation before the final simplicial map. This target is uninhabited and has no analytic
-factor or weighted-measure certificate. Constructing/certifying preliminary source/target subdivisions tied to that same homeomorphism—and hence full
-universal Fact 3—remain open; the subclass record is uninhabited. The exact algebraic proof pattern
+Sengupta's deformation before the final simplicial map. A new dependent graph-measure chain joins
+any supplied geometry to its source-subdivision, fine-cellwise, and target-subdivision transports.
+One exact source-fine measure recovers both original coarse graphs through the two derived legs, with
+fine-normalizer coherence, the mapped region, and the orientation-transported central twist; the
+composite target pushforward is proved by measurable-map composition rather than assumed. This
+target remains uninhabited and constructs no geometry or integration witness. Constructing and
+certifying preliminary subdivisions tied to that same homeomorphism—and hence full universal Fact
+3—remain open; the subclass record is uninhabited. The exact algebraic proof pattern
 through preliminary source and target subdivisions is now derived separately: source subdivision,
 cellwise signed homeomorphism, and reverse target subdivision compose to coarse ordinary and
 `h`/`h⁻¹` twisted factor equalities. Constructing the required subdivisions remains open. The new

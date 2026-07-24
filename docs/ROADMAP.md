@@ -1570,6 +1570,11 @@ committed before higher layers depend on it.
     isotopy through homeomorphisms, explicitly recording Sengupta's deformation before
     simplicialization. Retain construction, factor/weighted-measure certification, and universal
     analytic Fact 3 as debt.
+  - [x] Assemble the supplied source-subdivision, fine-cellwise, and target-subdivision normalized
+    graph-measure transports over one exact preliminary-subdivision geometry. Identify both fine
+    normalizers and derive that one source-fine measure recovers both original coarse graph measures,
+    with the target leg proved by measurable-map composition and the transported central twist.
+    Retain construction, integration, finite-holonomy-law comparison, and full Fact 3 as debt.
   - [x] Derive the exact algebraic Fact 3 proof pattern once preliminary source/target subdivision
     certificates and one cellwise homeomorphism certificate are supplied: ordinary and signed-twist
     factor equalities compose transitively, with the target subdivision using exactly transported
