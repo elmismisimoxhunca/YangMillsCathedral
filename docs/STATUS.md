@@ -5320,8 +5320,11 @@ probes protect both interfaces. The selected-character graph-density and heat-qu
 instances are not constructed. `SmoothLieGroupScalarFunctionLinear` now gives the exact smooth real
 test carrier its pointwise real module structure and a faithful algebraic linear map into the
 continuous ambient carrier, matching the proper-domain closure API without imposing a smooth-domain
-norm. Pairing-Laplacian linearity/continuous-valued regularity, core graph density, and the quotient
-bound remain unconstructed, so extension to every required smooth test and Laplace–Beltrami
+norm. `RightInvariantScalarDerivativeSmoothnessData` isolates one still-uninhabited field saying a
+smooth test remains smooth after one fixed right-invariant derivative; repeated application and the
+finite smooth-function sum construct smooth second derivatives, smooth finite-basis/pairing
+Laplacians, and an exact `C(G, ℝ)` representative. Pairing-Laplacian linearity, inhabitance of that
+one-step regularity field, core graph density, and the quotient bound remain unconstructed, so extension to every required smooth test and Laplace–Beltrami
 comparison remain open. The
 common Wilson chain now forgets only its genuinely stronger global-faithfulness and normalization
 fields to construct Driver's exact Villain common heat chain. Uninhabited

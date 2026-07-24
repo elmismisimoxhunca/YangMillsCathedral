@@ -141,6 +141,17 @@ theorem SmoothLieGroupScalarFunction.zsmul_apply
 
 omit [Group G] [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
 @[simp]
+theorem SmoothLieGroupScalarFunction.finset_sum_apply
+    {ι : Type*} (s : Finset ι)
+    (f : ι → SmoothLieGroupScalarFunction (E := E) (G := G)) (g : G) :
+    (∑ i ∈ s, f i) g = ∑ i ∈ s, f i g := by
+  classical
+  induction s using Finset.induction_on with
+  | empty => simp
+  | @insert i s hi induction => simp [hi, induction]
+
+omit [Group G] [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+@[simp]
 theorem SmoothLieGroupScalarFunction.smul_apply
     (c : ℝ) (f : SmoothLieGroupScalarFunction (E := E) (G := G)) (g : G) :
     (c • f) g = c * f g :=

@@ -948,8 +948,11 @@ committed before higher layers depend on it.
 - [x] Equip the exact smooth real Lie-group scalar-function carrier with its pointwise real vector-
   space structure and construct the injective algebraic linear map into `C(G, ℝ)`, without installing
   a norm on the smooth domain or inferring Laplacian regularity.
-- [ ] Package the pairing Laplacian as a linear map into the continuous ambient carrier, instantiate
-  the closure theorem for an appropriate character-derived real core by proving graph density and
+- [x] Reduce continuous-valued regularity of the pairing Laplacian to one explicit first-directional-
+  derivative smoothness field, and from it construct smooth first/second derivatives, smooth finite-
+  basis and pairing Laplacians, and the exact continuous ambient representative.
+- [ ] Prove linearity of the raw `mfderiv`-based pairing Laplacian and package it as a linear map into
+  the continuous ambient carrier; instantiate the closure theorem for an appropriate character-derived real core by proving graph density and
   the required eventual heat-quotient graph bound; then extend the generator to the required smooth
   domain, construct the pairing-generator boundary-continuity witness, and prove
   comparison of the exact pairing Laplacian with the geometric Laplace–Beltrami operator.
