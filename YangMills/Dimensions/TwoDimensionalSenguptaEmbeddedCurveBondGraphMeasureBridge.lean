@@ -120,6 +120,85 @@ variable
       (fineTarget := fun edge => fineClosed.edgeTerminal (Sum.inl edge : Sum FineEdge FineInternal))
       (fineCurveWord := fineCurveWord)}
 
+/-- Parameterized source-valid geometry of an embedded subdivision that may split external curve
+bonds. The coarse and fine presentations are explicit parameters, independent of a finite holonomy
+law or heat-factor bridge. This is the geometric surface needed on either side of a future general
+Fact 3 preliminary-subdivision certificate. -/
+structure TwoDimensionalSenguptaParameterizedEmbeddedCurveBondSubdivisionGeometryData
+    {CoarseEdge CoarseInternal CoarseFace CoarseRegion CoarseVertex : Type*}
+    [Fintype CoarseEdge] [DecidableEq CoarseEdge]
+    [Fintype CoarseInternal] [DecidableEq CoarseInternal]
+    [Fintype CoarseFace] [DecidableEq CoarseFace] [DecidableEq CoarseRegion]
+    {CoarseSurface : Type*} [TopologicalSpace CoarseSurface]
+    [ChartedSpace (EuclideanSpace ℝ (Fin 2)) CoarseSurface]
+    {CoarseCurve : Type*} [Fintype CoarseCurve]
+    (coarse : TwoDimensionalSenguptaTriangulatedRegionData
+      CoarseEdge CoarseInternal CoarseFace CoarseRegion)
+    (coarseClosed : TwoDimensionalSenguptaClosedTriangularPresentationData
+      (Vertex := CoarseVertex) coarse)
+    (coarseEmbedded : TwoDimensionalSenguptaEmbeddedTriangularPresentationData
+      (Surface := CoarseSurface) (Curve := CoarseCurve) (closed := coarseClosed))
+    (coarseCurveWord : CoarseCurve → List (OrientedEdge CoarseEdge))
+    {ParameterizedFineEdge ParameterizedFineInternal ParameterizedFineFace
+      ParameterizedFineVertex : Type*}
+    [Fintype ParameterizedFineEdge] [DecidableEq ParameterizedFineEdge]
+    [Fintype ParameterizedFineInternal] [DecidableEq ParameterizedFineInternal]
+    [Fintype ParameterizedFineFace] [DecidableEq ParameterizedFineFace]
+    (parameterizedFine : TwoDimensionalSenguptaTriangulatedRegionData
+      ParameterizedFineEdge ParameterizedFineInternal ParameterizedFineFace CoarseRegion)
+    (parameterizedFineClosed : TwoDimensionalSenguptaClosedTriangularPresentationData
+      (Vertex := ParameterizedFineVertex) parameterizedFine)
+    (parameterizedFineEmbedded : TwoDimensionalSenguptaEmbeddedTriangularPresentationData
+      (Surface := CoarseSurface) (Curve := CoarseCurve) (closed := parameterizedFineClosed))
+    (parameterizedFineCurveWord : CoarseCurve → List (OrientedEdge ParameterizedFineEdge))
+    (parameterizedCurveRefinement : TwoDimensionalSenguptaCurveBondRefinementData
+      (coarseSource := fun edge => coarseClosed.edgeInitial (Sum.inl edge))
+      (coarseTarget := fun edge => coarseClosed.edgeTerminal (Sum.inl edge))
+      (fineSource := fun edge => parameterizedFineClosed.edgeInitial (Sum.inl edge))
+      (fineTarget := fun edge => parameterizedFineClosed.edgeTerminal (Sum.inl edge))
+      (coarseCurveWord := coarseCurveWord) (fineCurveWord := parameterizedFineCurveWord)) where
+  coarseCurveWord_eq_embedded : coarseEmbedded.curveWord = coarseCurveWord
+  fineCurveWord_eq_embedded : parameterizedFineCurveWord = parameterizedFineEmbedded.curveWord
+  fineFaceToCoarse : ParameterizedFineFace → CoarseFace
+  fineFaceToCoarse_surjective : Function.Surjective fineFaceToCoarse
+  faceRegion_coherence : ∀ fineFace,
+    coarse.faceRegion (fineFaceToCoarse fineFace) = parameterizedFine.faceRegion fineFace
+  regionArea_coherence : ∀ region,
+    coarse.regionArea region = parameterizedFine.regionArea region
+  fineFaceImage_subset : ∀ fineFace,
+    Set.range (parameterizedFineEmbedded.faceDisk fineFace) ⊆
+      Set.range (coarseEmbedded.faceDisk (fineFaceToCoarse fineFace))
+  coarseFaceImage_eq_fine_union : ∀ coarseFace,
+    Set.range (coarseEmbedded.faceDisk coarseFace) =
+      ⋃ (fineFace : ParameterizedFineFace) (_ : fineFaceToCoarse fineFace = coarseFace),
+        Set.range (parameterizedFineEmbedded.faceDisk fineFace)
+  baseVertexToFine : CoarseVertex → ParameterizedFineVertex
+  baseVertexToFine_injective : Function.Injective baseVertexToFine
+  baseVertexToFine_point : ∀ vertex,
+    parameterizedFineEmbedded.vertexPoint (baseVertexToFine vertex) =
+      coarseEmbedded.vertexPoint vertex
+  coarseEdgeToFineWord : Sum CoarseEdge CoarseInternal →
+    List (OrientedEdge (Sum ParameterizedFineEdge ParameterizedFineInternal))
+  externalEdgeWord_coherence : ∀ edge,
+    coarseEdgeToFineWord (Sum.inl edge) =
+      (parameterizedCurveRefinement.graph.edgeWord edge).map senguptaIncludeExternalOrientedEdge
+  coarseEdgeToFineWord_realizes : ∀ edge,
+    IsSenguptaEmbeddedPathSubdivision coarseEmbedded.edgePath
+      parameterizedFineEmbedded.edgePath edge (coarseEdgeToFineWord edge)
+  coarseFaceBoundary_signedChain_eq : ∀ (coarseFace : CoarseFace)
+      (fineEdge : Sum ParameterizedFineEdge ParameterizedFineInternal),
+    senguptaOrientedWordSignedIncidence fineEdge
+      (senguptaSubstituteOrientedWord coarseEdgeToFineWord
+        (coarse.boundaryWord coarseFace)) =
+    ∑ fineFace ∈ Finset.univ.filter (fun fineFace =>
+        fineFaceToCoarse fineFace = coarseFace),
+      senguptaOrientedWordSignedIncidence fineEdge (parameterizedFine.boundaryWord fineFace)
+  fineRegionSet_eq : ∀ region : CoarseRegion,
+    parameterizedFineEmbedded.regionSet region = coarseEmbedded.regionSet region
+  fine_orientable_iff_base :
+    IsSenguptaCombinatoriallyOrientable parameterizedFine ↔
+      IsSenguptaCombinatoriallyOrientable coarse
+
 /-- Source-valid geometric content of one embedded subdivision that may split external curve bonds.
 This record contains no weighted graph-measure pushforward certificate. -/
 structure TwoDimensionalSenguptaEmbeddedCurveBondSubdivisionGeometryData where
@@ -166,6 +245,36 @@ structure TwoDimensionalSenguptaEmbeddedCurveBondSubdivisionGeometryData where
       IsSenguptaCombinatoriallyOrientable heatFactors.triangulation
 
 namespace TwoDimensionalSenguptaEmbeddedCurveBondSubdivisionGeometryData
+
+omit [T2Space CoverGroup] [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup]
+    [Nonempty Curve] [Fintype TargetEdge] in
+/-- Forget the finite-law and heat-factor wrappers while preserving the exact parameterized
+coarse/fine embedded curve-bond subdivision geometry. -/
+noncomputable def toParameterizedGeometry
+    (data : TwoDimensionalSenguptaEmbeddedCurveBondSubdivisionGeometryData
+      (embeddedFiniteLaw := embeddedFiniteLaw) (fine := fine) (fineClosed := fineClosed)
+      (fineEmbedded := fineEmbedded) (curveRefinement := curveRefinement)) :
+    TwoDimensionalSenguptaParameterizedEmbeddedCurveBondSubdivisionGeometryData
+      heatFactors.triangulation embeddedFiniteLaw.closedInvariance.baseClosed
+      embeddedFiniteLaw.embeddedBase finiteLaw.curveWord fine fineClosed fineEmbedded
+      fineCurveWord curveRefinement where
+  coarseCurveWord_eq_embedded := embeddedFiniteLaw.curveWord_eq_finiteLaw
+  fineCurveWord_eq_embedded := data.fineCurveWord_eq_embedded
+  fineFaceToCoarse := data.fineFaceToCoarse
+  fineFaceToCoarse_surjective := data.fineFaceToCoarse_surjective
+  faceRegion_coherence := data.faceRegion_coherence
+  regionArea_coherence := data.regionArea_coherence
+  fineFaceImage_subset := data.fineFaceImage_subset
+  coarseFaceImage_eq_fine_union := data.coarseFaceImage_eq_fine_union
+  baseVertexToFine := data.baseVertexToFine
+  baseVertexToFine_injective := data.baseVertexToFine_injective
+  baseVertexToFine_point := data.baseVertexToFine_point
+  coarseEdgeToFineWord := data.coarseEdgeToFineWord
+  externalEdgeWord_coherence := data.externalEdgeWord_coherence
+  coarseEdgeToFineWord_realizes := data.coarseEdgeToFineWord_realizes
+  coarseFaceBoundary_signedChain_eq := data.coarseFaceBoundary_signedChain_eq
+  fineRegionSet_eq := data.fineRegionSet_eq
+  fine_orientable_iff_base := data.fine_orientable_iff_base
 
 omit [T2Space CoverGroup] [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup]
     [Nonempty Curve] [Fintype TargetEdge] [Fintype FineInternal] in

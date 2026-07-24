@@ -83,6 +83,33 @@ variable
 omit [T2Space CoverGroup] [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup]
     [Nonempty Curve] [Fintype TargetEdge] in
 include data in
+/-- Exact parameterized geometry obtained by forgetting finite-law and heat-factor wrappers. -/
+noncomputable def exact_parameterizedGeometry :=
+  data.toTwoDimensionalSenguptaEmbeddedCurveBondSubdivisionGeometryData.toParameterizedGeometry
+
+omit [T2Space CoverGroup] [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup]
+    [Nonempty Curve] [Fintype TargetEdge] in
+include data in
+/-- Forgetting wrappers preserves both coarse and fine embedded curve words exactly. -/
+theorem exact_parameterizedGeometry_curveWords :
+    (exact_parameterizedGeometry data).coarseCurveWord_eq_embedded =
+        embeddedFiniteLaw.curveWord_eq_finiteLaw ∧
+      (exact_parameterizedGeometry data).fineCurveWord_eq_embedded =
+        data.fineCurveWord_eq_embedded :=
+  ⟨rfl, rfl⟩
+
+omit [T2Space CoverGroup] [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup]
+    [Nonempty Curve] [Fintype TargetEdge] [Fintype FineEdge] [Fintype FineInternal] data in
+/-- Hostile parameterized-geometry probe: forgetting wrappers cannot change the coarse curve word. -/
+theorem changed_parameterizedGeometry_coarseCurveWord_blocked
+    (changed : (Curve → List (OrientedEdge Edge)))
+    (changed_ne : changed ≠ finiteLaw.curveWord)
+    (claimed : embeddedFiniteLaw.embeddedBase.curveWord = changed) : False :=
+  changed_ne (embeddedFiniteLaw.curveWord_eq_finiteLaw.symm.trans claimed).symm
+
+omit [T2Space CoverGroup] [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup]
+    [Nonempty Curve] [Fintype TargetEdge] in
+include data in
 /-- Embedded curve words are exactly the graph-level substitutions. -/
 theorem exact_embedded_curve_refinement (curve : Curve) :
     fineEmbedded.curveWord curve =
