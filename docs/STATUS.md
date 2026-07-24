@@ -5469,7 +5469,13 @@ curve holonomies commute, and any supplied graph-measure pushforward transports 
 curve law. Reverse-aware word substitution is now proved associative. Given a caller-supplied
 coherent direct graph refinement for two exact stages, the direct curve refinement is derived; its
 configuration map is the composite, stagewise measure pushforwards imply the direct pushforward, and
-the complete projected finite-curve law transports without a disconnected measure-law witness. `TwoDimensionalSenguptaCurveBondGraphMeasureRefinementData` now specializes that premise
+the complete projected finite-curve law transports without a disconnected measure-law witness.
+`TwoDimensionalSenguptaCurveBondGraphMeasureRefinementCompositionData` lifts this to normalized
+equation-(8.3) graph measures: a coarse-to-middle weighted refinement and supplied fine-to-middle
+weighted pushforward on the same coherent triple derive the direct fine-to-coarse weighted
+refinement and finest-graph stochastic finite law. The direct graph, stage measures, and stage
+pushforwards remain supplied.
+`TwoDimensionalSenguptaCurveBondGraphMeasureRefinementData` now specializes that premise
 to a literal normalized equation-(8.3) weighted Haar graph measure: its fine normalizer is the exact
 fine graph-weight integral and the fine measure must push forward to the coarse graph measure for
 every distinguished region. Fine normalization/nonzeroness and the unchanged projected stochastic

@@ -1371,6 +1371,10 @@ committed before higher layers depend on it.
     direct graph refinement, package exact two-stage curve-bond composition: derive the direct curve
     refinement, composite configuration map,
     stagewise-to-direct measure pushforward, and complete projected finite-curve-law transport.
+  - [x] Lift that composition to normalized equation-(8.3) weighted graph measures: from one exact
+    coarse-to-middle weighted refinement and supplied fine-to-middle weighted pushforward, derive the
+    direct fine-to-coarse weighted refinement and finest-graph stochastic finite law. Retain the
+    direct graph, stage measures/pushforwards, heat-factor proof, and embedded construction as debt.
   - [x] Join that transport to a literal fine equation-(8.3) weighted Haar graph measure and integral
     normalizer: require exact fine-to-coarse weighted-measure pushforward for every distinguished
     region, then derive fine normalization/nonzeroness and the unchanged stochastic finite-curve law.

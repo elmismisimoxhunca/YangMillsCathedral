@@ -974,7 +974,10 @@ literal finite-graph substitutions and covering/projected curve holonomies commu
 word substitution is now proved associative. Given a caller-supplied coherent direct graph
 refinement for two stages, the exact direct curve refinement is derived; its configuration map,
 stagewise measure pushforwards, and complete projected finite-curve law compose without an unrelated
-measure-law witness. A dependent
+measure-law witness. At the normalized equation-(8.3) scope, a coarse-to-middle weighted
+refinement and a supplied fine-to-middle weighted pushforward on that same coherent triple now
+derive the direct fine-to-coarse weighted refinement and finest-graph stochastic finite law; the
+direct graph and both stage measures remain supplied. A dependent
 normalized equation-(8.3) layer now accepts a literal fine weighted Haar graph measure with its
 integral normalizer and requires its pushforward through that exact graph map for every distinguished
 region; fine normalization/nonzeroness and the unchanged complete projected finite-curve law then
