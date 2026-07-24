@@ -679,18 +679,19 @@ state reconstruction then rewrites this identity with the actual current value `
 value `B(tₙ₊₁)`. Continuous prefix-product reconstruction further transports tests to the actual finite process-
 evaluation vector `(B(t₁),…,B(tₙ))`. A direct finite-measure/Fubini argument now extends the history
 test from continuous to arbitrary explicitly bounded measurable real functions. The exact process-
-past sigma-algebra is now defined as the supremum of all evaluation pullbacks up to the current time;
-every such finite cylinder is proved past-measurable and satisfies the required identity. Extending
-from finite cylinders to every bounded full-past-measurable test remains an explicit uninhabited
-monotone-class obligation. Conditional-expectation uniqueness now proves that any supplied universal
-weak witness satisfies the exact conditional Markov identity for the generated past; conversely,
+past sigma-algebra is now defined as the supremum of all evaluation pullbacks up to the current time.
+The proved ordered finite-history identities cover every explicitly bounded measurable test of those
+history vectors. Conditional-expectation uniqueness proves that any supplied universal weak witness
+satisfies the exact conditional Markov identity for the generated past; conversely,
 the conditional identity recovers every bounded weak test by the conditional pull-out theorem, so
 the two full-past semantics are equivalent. The reusable
 `ae_eq_condExp_of_piSystem_setIntegral_eq` proves the complement/disjoint-union monotone closure
 from any generating pi-system, and `TwoDimensionalSelectedLoopFullPastPiSystemMarkovData` reduces
-the process-specific debt to exhibiting an exact finite-cylinder pi-system, proving it generates
-the past, and checking its basic set-integral identities. No such process-specific witness is yet
-constructed. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
+the process-specific debt to finite cylinders. The concrete family of sets measurable under some
+finite supremum of evaluation pullbacks is now proved to be a pi-system and to generate the exact
+past without a countability assumption. `TwoDimensionalSelectedLoopFinitePastCylinderMarkovData`
+therefore leaves only its basic finite-coordinate transition set-integral identity unconstructed,
+and canonically supplies both full-past semantics when that field is given. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
 marginals are derived, including exact equality at the selected area with the sampled loop-holonomy
 law. The metric bridge now transports the exact invariant pairing to every group tangent fiber by
 left Maurer–Cartan trivialization and proves its inverse, symmetry, strict positivity, and left/right
@@ -1077,8 +1078,9 @@ law, dependent heat factors, finite-law sewing bridge, and strongest compact fin
 without synthesizing any field. Proposition-level theorems retain rank two and reject a
 four-dimensional linear model.
 `TwoDimensionalFullPastCurrentStrengthSourceIndexedLiteratureAcceptance` strengthens those exact six
-components with `TwoDimensionalSelectedLoopFullPastMarkovData` on the unchanged nested spectral
-Brownian bridge. Its exact inhabitance audit exposes that additional monotone-class witness, and
+components with `TwoDimensionalSelectedLoopFinitePastCylinderMarkovData` on the unchanged nested
+spectral Brownian bridge. Its exact inhabitance audit exposes that finite-coordinate transition
+witness, from which the proved pi-system closure constructs full-past semantics, and
 rank-two/4D separation is retained. The `CurrentStrength` qualifier remains binding: this is not the final source-complete 2D target, and no
 inhabitant is constructed.
 

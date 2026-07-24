@@ -248,7 +248,7 @@ variable (fullAcceptance : TwoDimensionalFullPastCurrentStrengthSourceIndexedLit
 include fullAcceptance in
 omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
     [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in
-/-- Forgetting the full-past field recovers the exact unchanged prior proposition. -/
+/-- Forgetting the finite-cylinder/full-past field recovers the exact unchanged prior proposition. -/
 theorem exact_fullPast_implies_current :
     TwoDimensionalCurrentStrengthSourceIndexedLiteratureAcceptance.{uE, uG, uGauge, uSample, uConnection, uΩ,
         uVertex, uEdge, uFace, uXAxisCell, uLargeVertex, uLargeEdge,
@@ -280,7 +280,8 @@ theorem exact_fullPast_implies_current :
 include fullAcceptance in
 omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
     [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in
-/-- The strengthened proposition exposes the exact prior components and dependent full-past debt. -/
+/-- The strengthened proposition exposes the exact prior components and dependent finite-cylinder
+transition debt from which full-past semantics is constructed. -/
 theorem exact_fullPast_component_audit :
     ∃ source : TwoDimensionalCurrentStrengthSourceIndexedLiteratureComponents.{uE, uG, uGauge, uSample, uConnection,
       uΩ, uVertex, uEdge, uFace, uXAxisCell,
@@ -308,7 +309,7 @@ theorem exact_fullPast_component_audit :
     (SenguptaFineVertex := SenguptaFineVertex) (senguptaFine := senguptaFine)
     (SenguptaTargetVertex := SenguptaTargetVertex) (senguptaTarget := senguptaTarget)
     (SenguptaTargetSurface := SenguptaTargetSurface),
-      Nonempty (TwoDimensionalSelectedLoopFullPastMarkovData
+      Nonempty (TwoDimensionalSelectedLoopFinitePastCylinderMarkovData
         source.current.planar.toSpectralBrownianGeneratorBridgeData) :=
   TwoDimensionalFullPastCurrentStrengthSourceIndexedLiteratureAcceptance.iff_components.mp
     fullAcceptance

@@ -915,9 +915,11 @@ committed before higher layers depend on it.
   exact conditional Markov identity for this generated past, and use conditional pull-out to prove
   the converse implication for every bounded past test. Prove a reusable pi-system theorem that
   carries basic set-integral equality through complements and countable disjoint unions to exact
-  conditional expectation, and specialize it to a reduced 2D acceptance record. Retain only the
-  process-specific construction of a finite-cylinder pi-system, its generation theorem, and its
-  basic transition identities as the unresolved extension step.
+  conditional expectation, and specialize it to a reduced 2D acceptance record. Construct the
+  process-specific finite-cylinder pi-system as sets measurable under some finite
+  supremum of evaluation pullbacks and prove that it generates the exact past without enumerating
+  time. Retain only its basic finite-coordinate transition set-integral identities as the unresolved
+  extension step.
 - [x] Prove that the common Wilson chain forgets only global faithfulness and Wilson normalization to
   construct Driver's exact Villain common heat chain. Attach the still-uninhabited Theorem 7.2
   weak-limit contract to the literal spectral `Q_{ε²}` action at one positive spacing, deriving
@@ -1481,9 +1483,11 @@ committed before higher layers depend on it.
     rank-two/four-dimensional linear-model separation. Keep `CurrentStrength`
     binding and do not treat this as the final source-complete target.
   - [x] Add `TwoDimensionalFullPastCurrentStrengthSourceIndexedLiteratureAcceptance`, strengthening
-    the same flattened six source components with the exact full-past weak Markov obligation on the
-    unchanged nested spectral Brownian bridge. Expose its dependent inhabitance decomposition and
-    retain proposition-level rank-two/4D separation without constructing the monotone-class witness.
+    the same flattened six source components with the exact finite-past-cylinder transition
+    obligation on the unchanged nested spectral Brownian bridge, from which the pi-system theorem
+    constructs full-past semantics. Expose its dependent inhabitance decomposition and
+    retain proposition-level rank-two/4D separation without constructing the remaining
+    finite-cylinder transition set-integral witness.
   - [ ] Assemble a final source-indexed 2D acceptance proposition joining the constructed finite
     lattice, heat/Brownian, weak-limit continuum, compact-surface, and sewing chains; attempt to
     inhabit it solely from formalized Driver/Lévy/Sengupta results and record every remaining

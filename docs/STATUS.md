@@ -5286,8 +5286,9 @@ semantics are equivalent, with direct and changed-version hostile probes. The re
 `ae_eq_condExp_of_piSystem_setIntegral_eq` now proves the actual complement/disjoint-union closure
 from a generating pi-system, and `TwoDimensionalSelectedLoopFullPastPiSystemMarkovData` constructs
 both universal semantics from generator, generation, total-integral, and basic set-integral fields.
-Constructing the process-specific finite-cylinder generator and those basic identities remains
-explicit; stochastic-generator identification remains separate future proof debt. The
+The concrete sets measurable under some finite supremum of past evaluation pullbacks now form a
+proved pi-system and generate the exact uncountable-time past; their `univ` case derives the total
+identity. Only the finite-cylinder transition set-integral field remains explicit; stochastic-generator identification remains separate future proof debt. The
 common Wilson chain now forgets only its genuinely stronger global-faithfulness and normalization
 fields to construct Driver's exact Villain common heat chain. Uninhabited
 `TwoDimensionalSpectralVillainWeakLimitBridgeData` ties the unchanged Theorem 7.2 contract to the
@@ -5620,9 +5621,10 @@ finite-law witness; conversion in both directions constructs no missing field. A
 four-dimensional real-linear model; a hostile probe shows that replacing the proposition by `True`
 loses this conclusion.
 `TwoDimensionalFullPastCurrentStrengthSourceIndexedLiteratureAcceptance` now adds the exact
-`TwoDimensionalSelectedLoopFullPastMarkovData` field to those same six components, indexed by their
-unchanged nested spectral Brownian bridge. Its `Nonempty` audit exposes the old components plus that
-dependent full-past witness; no monotone-class proof is synthesized. Rank-two and 4D linear-model
+`TwoDimensionalSelectedLoopFinitePastCylinderMarkovData` field to those same six components, indexed
+by their unchanged nested spectral Brownian bridge. Its `Nonempty` audit exposes the old components
+plus that dependent finite-coordinate transition witness; the proved pi-system theorem constructs
+full-past semantics rather than accepting a second monotone-class field. Rank-two and 4D linear-model
 exclusion persist. The name remains explicitly `CurrentStrength`: the final source-complete 2D
 proposition and literature-only inhabitant are still open.
 

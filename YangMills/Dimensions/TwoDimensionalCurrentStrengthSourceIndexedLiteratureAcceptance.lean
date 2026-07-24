@@ -4,7 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: YangMillsDefinition contributors
 -/
 import YangMills.Dimensions.TwoDimensionalSenguptaAugmentedCurrentStrengthAcceptance
-import YangMills.Dimensions.TwoDimensionalSelectedLoopFullPastMarkov
+import YangMills.Dimensions.TwoDimensionalSelectedLoopFinitePastCylinderPiSystem
 
 /-!
 # Proposition-shaped source index for the assembled two-dimensional literature chain
@@ -337,8 +337,9 @@ noncomputable def ofStrongest
 end TwoDimensionalCurrentStrengthSourceIndexedLiteratureComponents
 
 
-/-- Current-strength source components strengthened by the explicit full-past weak Markov
-obligation on the exact Brownian/spectral bridge already selected by the planar literature chain. -/
+/-- Current-strength source components strengthened by the finite-past-cylinder transition
+obligation that constructs full-past Markov semantics on the exact Brownian/spectral bridge already
+selected by the planar literature chain. -/
 structure TwoDimensionalFullPastCurrentStrengthSourceIndexedLiteratureComponents where
   source : TwoDimensionalCurrentStrengthSourceIndexedLiteratureComponents.{uE, uG, uGauge, uSample, uConnection,
       uΩ, uVertex, uEdge, uFace, uXAxisCell,
@@ -366,11 +367,12 @@ structure TwoDimensionalFullPastCurrentStrengthSourceIndexedLiteratureComponents
     (SenguptaFineVertex := SenguptaFineVertex) (senguptaFine := senguptaFine)
     (SenguptaTargetVertex := SenguptaTargetVertex) (senguptaTarget := senguptaTarget)
     (SenguptaTargetSurface := SenguptaTargetSurface)
-  fullPastMarkov : TwoDimensionalSelectedLoopFullPastMarkovData
+  finitePastCylinderMarkov : TwoDimensionalSelectedLoopFinitePastCylinderMarkovData
     source.current.planar.toSpectralBrownianGeneratorBridgeData
 
-/-- Proposition-shaped current-strength source index that now includes the full-past weak Markov
-obligation. It remains uninhabited and is not the final source-complete 2D target. -/
+/-- Proposition-shaped current-strength source index including the exact finite-cylinder obligation
+that constructs full-past Markov semantics. It remains uninhabited and is not the final
+source-complete 2D target. -/
 def TwoDimensionalFullPastCurrentStrengthSourceIndexedLiteratureAcceptance : Prop :=
   Nonempty
     (TwoDimensionalFullPastCurrentStrengthSourceIndexedLiteratureComponents.{uE, uG, uGauge, uSample, uConnection,
@@ -466,7 +468,8 @@ theorem implies_current
 omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
     [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in
 /-- Exact failed-inhabitation audit: the strengthened proposition requires the prior six source
-components and a full-past witness indexed by their unchanged spectral Brownian bridge. -/
+components and a finite-cylinder transition witness indexed by their unchanged spectral Brownian
+bridge; the pi-system theorem constructs full-past semantics from that witness. -/
 theorem iff_components :
     TwoDimensionalFullPastCurrentStrengthSourceIndexedLiteratureAcceptance.{uE, uG, uGauge, uSample, uConnection,
       uΩ, uVertex, uEdge, uFace, uXAxisCell,
@@ -520,13 +523,13 @@ theorem iff_components :
     (SenguptaFineVertex := SenguptaFineVertex) (senguptaFine := senguptaFine)
     (SenguptaTargetVertex := SenguptaTargetVertex) (senguptaTarget := senguptaTarget)
     (SenguptaTargetSurface := SenguptaTargetSurface),
-      Nonempty (TwoDimensionalSelectedLoopFullPastMarkovData
+      Nonempty (TwoDimensionalSelectedLoopFinitePastCylinderMarkovData
         source.current.planar.toSpectralBrownianGeneratorBridgeData) := by
   constructor
   · rintro ⟨components⟩
-    exact ⟨components.source, ⟨components.fullPastMarkov⟩⟩
-  · rintro ⟨source, ⟨fullPastMarkov⟩⟩
-    exact ⟨⟨source, fullPastMarkov⟩⟩
+    exact ⟨components.source, ⟨components.finitePastCylinderMarkov⟩⟩
+  · rintro ⟨source, ⟨finitePastCylinderMarkov⟩⟩
+    exact ⟨⟨source, finitePastCylinderMarkov⟩⟩
 
 omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
     [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in
