@@ -243,7 +243,138 @@ theorem sourceFine_to_targetCoarse
       data.targetSubdivisionTransport.exact_graphMeasure_pushforward
         (preliminaryGeometry.fineCellwise.regionEquiv region)
 
+omit [T2Space CoverGroup] [Nonempty Curve] in
+/-- Every measurable group projection sends the two original coarse graph measures to the same
+complete finite-curve holonomy law. This is a derived comparison through the common fine resolution,
+not a supplied law equality and not yet a stochastic finite-law identification. -/
+theorem coarse_projectedCurveHolonomy_law_eq
+    {G : Type*} [Group G] [MeasurableSpace G]
+    {candidate : TwoDimensionalSenguptaGeneralEmbeddedHomeomorphismCandidateData
+      (baseEmbedded := baseEmbedded)}
+    {preliminaryGeometry :
+      TwoDimensionalSenguptaGeneralHomeomorphismPreliminarySubdivisionGeometryData candidate}
+    {coverDensity : ℝ → CoverGroup → ℝ≥0∞} {sourceTwist : CoverGroup}
+    {sourceCoarsePartitionFunction targetCoarsePartitionFunction : ℝ≥0∞}
+    {distinguishedRegion : Region}
+    (data : TwoDimensionalSenguptaPreliminarySubdivisionGraphMeasureChainData candidate
+      preliminaryGeometry coverDensity sourceTwist sourceCoarsePartitionFunction
+      targetCoarsePartitionFunction distinguishedRegion)
+    (projection : CoverGroup →* G) (projection_measurable : Measurable projection)
+    (region : Region) :
+    Measure.map (senguptaFiniteGraphHolonomy projection baseEmbedded.curveWord)
+        (senguptaCompactSurfaceGraphMeasure sourceCoarsePartitionFunction sourceTwist region
+          (senguptaTriangulatedRegionFactor baseTriangulation coverDensity)
+          (senguptaTriangulatedTwistedRegionFactor baseTriangulation coverDensity)) =
+      Measure.map (senguptaFiniteGraphHolonomy projection candidate.targetEmbedded.curveWord)
+        (senguptaCompactSurfaceGraphMeasure targetCoarsePartitionFunction
+          (senguptaTransportedBundleClass
+            preliminaryGeometry.fineCellwise.orientationSign sourceTwist)
+          (preliminaryGeometry.fineCellwise.regionEquiv region)
+          (senguptaTriangulatedRegionFactor candidate.target coverDensity)
+          (senguptaTriangulatedTwistedRegionFactor candidate.target coverDensity)) := by
+  have sourceLaw := preliminaryGeometry.sourceCurveRefinement.map_projectedCurveHolonomy_eq
+    projection projection_measurable (data.sourceFineGraphMeasure region)
+    (senguptaCompactSurfaceGraphMeasure sourceCoarsePartitionFunction sourceTwist region
+      (senguptaTriangulatedRegionFactor baseTriangulation coverDensity)
+      (senguptaTriangulatedTwistedRegionFactor baseTriangulation coverDensity))
+    (data.sourceFine_to_sourceCoarse region)
+  rw [preliminaryGeometry.sourceSubdivision.fineCurveWord_eq_embedded] at sourceLaw
+  have cellwiseLaw := data.fineCellwiseTransport.map_projectedCurveHolonomy_eq
+    projection projection_measurable region
+  rw [data.sourceFinePartition_coherence, data.targetFinePartition_coherence] at cellwiseLaw
+  have targetLaw := preliminaryGeometry.targetCurveRefinement.map_projectedCurveHolonomy_eq
+    projection projection_measurable (data.targetFineGraphMeasure region)
+    (senguptaCompactSurfaceGraphMeasure targetCoarsePartitionFunction
+      (senguptaTransportedBundleClass preliminaryGeometry.fineCellwise.orientationSign sourceTwist)
+      (preliminaryGeometry.fineCellwise.regionEquiv region)
+      (senguptaTriangulatedRegionFactor candidate.target coverDensity)
+      (senguptaTriangulatedTwistedRegionFactor candidate.target coverDensity))
+    (data.targetSubdivisionTransport.exact_graphMeasure_pushforward
+      (preliminaryGeometry.fineCellwise.regionEquiv region))
+  rw [preliminaryGeometry.targetSubdivision.fineCurveWord_eq_embedded] at targetLaw
+  exact sourceLaw.trans (cellwiseLaw.symm.trans targetLaw.symm)
+
 end TwoDimensionalSenguptaPreliminarySubdivisionGraphMeasureChainData
+
+/-- Projection-bearing source-facing endpoint for the preliminary-subdivision graph-measure chain.
+It upgrades the formal projected-law comparison to one genuine covering projection and requires the
+fixed central twist to lie in its kernel. It still does not identify either graph law with a
+stochastic Yang--Mills sample law. -/
+structure TwoDimensionalSenguptaPreliminarySubdivisionProjectedFiniteCurveLawData
+    {G : Type*} [Group G] [TopologicalSpace G] [MeasurableSpace G]
+    {candidate : TwoDimensionalSenguptaGeneralEmbeddedHomeomorphismCandidateData
+      (baseEmbedded := baseEmbedded)}
+    {preliminaryGeometry :
+      TwoDimensionalSenguptaGeneralHomeomorphismPreliminarySubdivisionGeometryData candidate}
+    {coverDensity : ℝ → CoverGroup → ℝ≥0∞} {sourceTwist : CoverGroup}
+    {sourceCoarsePartitionFunction targetCoarsePartitionFunction : ℝ≥0∞}
+    {distinguishedRegion : Region}
+    (chain : TwoDimensionalSenguptaPreliminarySubdivisionGraphMeasureChainData candidate
+      preliminaryGeometry coverDensity sourceTwist sourceCoarsePartitionFunction
+      targetCoarsePartitionFunction distinguishedRegion) where
+  projection : CoverGroup →* G
+  projection_isCoveringMap : IsCoveringMap projection
+  projection_surjective : Function.Surjective projection
+  projection_measurable : Measurable projection
+  sourceTwist_mem_kernel : projection sourceTwist = 1
+
+namespace TwoDimensionalSenguptaPreliminarySubdivisionProjectedFiniteCurveLawData
+
+omit [T2Space CoverGroup] [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup]
+    [Nonempty Curve] in
+/-- The orientation-transported target twist remains in the same covering kernel. -/
+theorem targetTwist_mem_kernel
+    {G : Type*} [Group G] [TopologicalSpace G] [MeasurableSpace G]
+    {candidate : TwoDimensionalSenguptaGeneralEmbeddedHomeomorphismCandidateData
+      (baseEmbedded := baseEmbedded)}
+    {preliminaryGeometry :
+      TwoDimensionalSenguptaGeneralHomeomorphismPreliminarySubdivisionGeometryData candidate}
+    {coverDensity : ℝ → CoverGroup → ℝ≥0∞} {sourceTwist : CoverGroup}
+    {sourceCoarsePartitionFunction targetCoarsePartitionFunction : ℝ≥0∞}
+    {distinguishedRegion : Region}
+    {chain : TwoDimensionalSenguptaPreliminarySubdivisionGraphMeasureChainData candidate
+      preliminaryGeometry coverDensity sourceTwist sourceCoarsePartitionFunction
+      targetCoarsePartitionFunction distinguishedRegion}
+    (data : TwoDimensionalSenguptaPreliminarySubdivisionProjectedFiniteCurveLawData
+      (G := G) chain) :
+    data.projection (senguptaTransportedBundleClass
+      preliminaryGeometry.fineCellwise.orientationSign sourceTwist) = 1 := by
+  cases preliminaryGeometry.fineCellwise.orientationSign <;>
+    simp [senguptaTransportedBundleClass, data.sourceTwist_mem_kernel]
+
+omit [T2Space CoverGroup] [Nonempty Curve] in
+/-- The genuine covering projection gives equal complete finite-curve laws on the original source
+and target coarse graphs. -/
+theorem coarse_projectedCurveHolonomy_law_eq
+    {G : Type*} [Group G] [TopologicalSpace G] [MeasurableSpace G]
+    {candidate : TwoDimensionalSenguptaGeneralEmbeddedHomeomorphismCandidateData
+      (baseEmbedded := baseEmbedded)}
+    {preliminaryGeometry :
+      TwoDimensionalSenguptaGeneralHomeomorphismPreliminarySubdivisionGeometryData candidate}
+    {coverDensity : ℝ → CoverGroup → ℝ≥0∞} {sourceTwist : CoverGroup}
+    {sourceCoarsePartitionFunction targetCoarsePartitionFunction : ℝ≥0∞}
+    {distinguishedRegion : Region}
+    {chain : TwoDimensionalSenguptaPreliminarySubdivisionGraphMeasureChainData candidate
+      preliminaryGeometry coverDensity sourceTwist sourceCoarsePartitionFunction
+      targetCoarsePartitionFunction distinguishedRegion}
+    (data : TwoDimensionalSenguptaPreliminarySubdivisionProjectedFiniteCurveLawData
+      (G := G) chain)
+    (region : Region) :
+    Measure.map (senguptaFiniteGraphHolonomy data.projection baseEmbedded.curveWord)
+        (senguptaCompactSurfaceGraphMeasure sourceCoarsePartitionFunction sourceTwist region
+          (senguptaTriangulatedRegionFactor baseTriangulation coverDensity)
+          (senguptaTriangulatedTwistedRegionFactor baseTriangulation coverDensity)) =
+      Measure.map (senguptaFiniteGraphHolonomy data.projection candidate.targetEmbedded.curveWord)
+        (senguptaCompactSurfaceGraphMeasure targetCoarsePartitionFunction
+          (senguptaTransportedBundleClass
+            preliminaryGeometry.fineCellwise.orientationSign sourceTwist)
+          (preliminaryGeometry.fineCellwise.regionEquiv region)
+          (senguptaTriangulatedRegionFactor candidate.target coverDensity)
+          (senguptaTriangulatedTwistedRegionFactor candidate.target coverDensity)) :=
+  chain.coarse_projectedCurveHolonomy_law_eq
+    data.projection data.projection_measurable region
+
+end TwoDimensionalSenguptaPreliminarySubdivisionProjectedFiniteCurveLawData
 
 end
 

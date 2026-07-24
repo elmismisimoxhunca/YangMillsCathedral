@@ -5,6 +5,7 @@ Authors: YangMillsDefinition contributors
 -/
 import YangMills.Dimensions.TwoDimensionalSenguptaUniversalCellwiseEmbeddedHomeomorphism
 import YangMills.Dimensions.TwoDimensionalSenguptaCompactSurfaceFiniteHolonomyLaw
+import YangMills.Dimensions.TwoDimensionalSenguptaCurveBondRefinement
 
 /-!
 # Parameterized cellwise graph-measure transport
@@ -164,6 +165,68 @@ theorem all_region_nonvacuity
         (senguptaTriangulatedRegionFactor target coverDensity)
         (senguptaTriangulatedTwistedRegionFactor target coverDensity) Set.univ = 1 :=
   ⟨data.sourceGraphMeasure_univ region, data.targetGraphMeasure_univ region⟩
+
+omit [T2Space CoverGroup] [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup]
+    [Nonempty Curve] in
+/-- Fine curve holonomies commute pointwise with the exact external-edge coordinate equivalence. -/
+theorem coveringCurveHolonomy_commutes
+    (_data : TwoDimensionalSenguptaParameterizedCellwiseGraphMeasureTransportData
+      (coverDensity := coverDensity) (bundleClass := bundleClass) (geometry := geometry))
+    (configuration : Edge → CoverGroup) :
+    (fun curve => finiteOrientedWordHolonomy
+      (senguptaTransportExternalField geometry.externalEdgeEquiv configuration)
+      (targetEmbedded.curveWord curve)) =
+    (fun curve => finiteOrientedWordHolonomy configuration (baseEmbedded.curveWord curve)) := by
+  funext curve
+  rw [geometry.targetCurveWord_eq_map curve]
+  generalize baseEmbedded.curveWord curve = word
+  induction word with
+  | nil => rfl
+  | cons oriented tail ih =>
+      cases oriented <;>
+        simp [finiteOrientedWordHolonomy, senguptaMapOrientedEdge,
+          senguptaTransportExternalField, OrientedEdge.eval, ih]
+
+omit [T2Space CoverGroup] [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup]
+    [Nonempty Curve] in
+/-- Projecting the pointwise identity through any group homomorphism preserves it. -/
+theorem projectedCurveHolonomy_commutes
+    {G : Type*} [Group G]
+    (data : TwoDimensionalSenguptaParameterizedCellwiseGraphMeasureTransportData
+      (coverDensity := coverDensity) (bundleClass := bundleClass) (geometry := geometry))
+    (projection : CoverGroup →* G) (configuration : Edge → CoverGroup) :
+    senguptaFiniteGraphHolonomy projection targetEmbedded.curveWord
+        (senguptaTransportExternalField geometry.externalEdgeEquiv configuration) =
+      senguptaFiniteGraphHolonomy projection baseEmbedded.curveWord configuration := by
+  funext curve
+  exact congrArg projection (congrFun (data.coveringCurveHolonomy_commutes configuration) curve)
+
+omit [T2Space CoverGroup] [Nonempty Curve] in
+/-- The exact fine graph-measure pushforward transports the complete projected finite-curve law. -/
+theorem map_projectedCurveHolonomy_eq
+    {G : Type*} [Group G] [MeasurableSpace G]
+    (data : TwoDimensionalSenguptaParameterizedCellwiseGraphMeasureTransportData
+      (coverDensity := coverDensity) (bundleClass := bundleClass) (geometry := geometry))
+    (projection : CoverGroup →* G) (projection_measurable : Measurable projection)
+    (region : Region) :
+    Measure.map (senguptaFiniteGraphHolonomy projection targetEmbedded.curveWord)
+        (senguptaCompactSurfaceGraphMeasure data.targetPartitionFunction
+          (senguptaTransportedBundleClass geometry.orientationSign bundleClass)
+          (geometry.regionEquiv region)
+          (senguptaTriangulatedRegionFactor target coverDensity)
+          (senguptaTriangulatedTwistedRegionFactor target coverDensity)) =
+      Measure.map (senguptaFiniteGraphHolonomy projection baseEmbedded.curveWord)
+        (senguptaCompactSurfaceGraphMeasure data.sourcePartitionFunction bundleClass region
+          (senguptaTriangulatedRegionFactor baseTriangulation coverDensity)
+          (senguptaTriangulatedTwistedRegionFactor baseTriangulation coverDensity)) := by
+  rw [← data.graphMeasure_pushforward region]
+  rw [Measure.map_map
+    (TwoDimensionalSenguptaCurveBondRefinementData.projectedCurveHolonomy_measurable
+      projection projection_measurable targetEmbedded.curveWord)
+    data.transport_measurable]
+  congr 1
+  funext configuration
+  exact data.projectedCurveHolonomy_commutes projection configuration
 
 end TwoDimensionalSenguptaParameterizedCellwiseGraphMeasureTransportData
 

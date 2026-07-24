@@ -159,6 +159,35 @@ theorem nonmeasurable_transport_blocked
   nonmeasurable
     (TwoDimensionalSenguptaParameterizedCellwiseGraphMeasureTransportData.transport_measurable data)
 
+omit [T2Space CoverGroup] [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup]
+    [Nonempty Curve] in
+include data in
+/-- Exact finite-word probe: coordinate transport preserves every covering-group curve holonomy. -/
+theorem exact_covering_curve_holonomy (configuration : Edge → CoverGroup) :
+    (fun curve => finiteOrientedWordHolonomy
+      (senguptaTransportExternalField geometry.externalEdgeEquiv configuration)
+      (targetEmbedded.curveWord curve)) =
+    (fun curve => finiteOrientedWordHolonomy configuration (baseEmbedded.curveWord curve)) :=
+  data.coveringCurveHolonomy_commutes configuration
+
+omit [T2Space CoverGroup] [Nonempty Curve] in
+/-- Hostile projected-law probe: changing the transported complete finite-curve law is rejected. -/
+theorem changed_projected_curve_law_blocked
+    {G : Type*} [Group G] [MeasurableSpace G]
+    (projection : CoverGroup →* G) (projection_measurable : Measurable projection)
+    (region : Region)
+    (changed : Measure.map (senguptaFiniteGraphHolonomy projection targetEmbedded.curveWord)
+        (senguptaCompactSurfaceGraphMeasure data.targetPartitionFunction
+          (senguptaTransportedBundleClass geometry.orientationSign bundleClass)
+          (geometry.regionEquiv region)
+          (senguptaTriangulatedRegionFactor target coverDensity)
+          (senguptaTriangulatedTwistedRegionFactor target coverDensity)) ≠
+      Measure.map (senguptaFiniteGraphHolonomy projection baseEmbedded.curveWord)
+        (senguptaCompactSurfaceGraphMeasure data.sourcePartitionFunction bundleClass region
+          (senguptaTriangulatedRegionFactor baseTriangulation coverDensity)
+          (senguptaTriangulatedTwistedRegionFactor baseTriangulation coverDensity))) : False :=
+  changed (data.map_projectedCurveHolonomy_eq projection projection_measurable region)
+
 end
 
 end YangMills.Dimensions.TwoDimensionalSenguptaParameterizedCellwiseGraphMeasureTransport.Probes

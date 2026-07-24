@@ -184,6 +184,121 @@ theorem changed_target_leg_blocked (region : Region)
         (senguptaTriangulatedTwistedRegionFactor candidate.target coverDensity)) : False :=
   changed (data.sourceFine_to_targetCoarse region)
 
+omit [T2Space CoverGroup] [Nonempty Curve] in
+include data in
+/-- Exact projected-law endpoint: both original coarse graph measures induce the same complete
+finite-curve law under every measurable group projection. -/
+theorem exact_coarse_projected_curve_law
+    {G : Type*} [Group G] [MeasurableSpace G]
+    (projection : CoverGroup →* G) (projection_measurable : Measurable projection)
+    (region : Region) :
+    Measure.map (senguptaFiniteGraphHolonomy projection baseEmbedded.curveWord)
+        (senguptaCompactSurfaceGraphMeasure sourceCoarsePartitionFunction sourceTwist region
+          (senguptaTriangulatedRegionFactor baseTriangulation coverDensity)
+          (senguptaTriangulatedTwistedRegionFactor baseTriangulation coverDensity)) =
+      Measure.map (senguptaFiniteGraphHolonomy projection candidate.targetEmbedded.curveWord)
+        (senguptaCompactSurfaceGraphMeasure targetCoarsePartitionFunction
+          (senguptaTransportedBundleClass
+            preliminaryGeometry.fineCellwise.orientationSign sourceTwist)
+          (preliminaryGeometry.fineCellwise.regionEquiv region)
+          (senguptaTriangulatedRegionFactor candidate.target coverDensity)
+          (senguptaTriangulatedTwistedRegionFactor candidate.target coverDensity)) :=
+  data.coarse_projectedCurveHolonomy_law_eq projection projection_measurable region
+
+omit [T2Space CoverGroup] [Nonempty Curve] in
+include data in
+/-- Hostile projected-law probe: an altered coarse finite-curve law cannot pass through the common
+fine resolution. -/
+theorem changed_coarse_projected_curve_law_blocked
+    {G : Type*} [Group G] [MeasurableSpace G]
+    (projection : CoverGroup →* G) (projection_measurable : Measurable projection)
+    (region : Region)
+    (changed : Measure.map (senguptaFiniteGraphHolonomy projection baseEmbedded.curveWord)
+        (senguptaCompactSurfaceGraphMeasure sourceCoarsePartitionFunction sourceTwist region
+          (senguptaTriangulatedRegionFactor baseTriangulation coverDensity)
+          (senguptaTriangulatedTwistedRegionFactor baseTriangulation coverDensity)) ≠
+      Measure.map (senguptaFiniteGraphHolonomy projection candidate.targetEmbedded.curveWord)
+        (senguptaCompactSurfaceGraphMeasure targetCoarsePartitionFunction
+          (senguptaTransportedBundleClass
+            preliminaryGeometry.fineCellwise.orientationSign sourceTwist)
+          (preliminaryGeometry.fineCellwise.regionEquiv region)
+          (senguptaTriangulatedRegionFactor candidate.target coverDensity)
+          (senguptaTriangulatedTwistedRegionFactor candidate.target coverDensity))) : False :=
+  changed (data.coarse_projectedCurveHolonomy_law_eq projection projection_measurable region)
+
+omit [T2Space CoverGroup] [Nonempty Curve] in
+/-- Projection-bearing positive probe: a genuine covering projection retains both kernel twists and
+the derived coarse finite-curve law. -/
+theorem exact_covering_projected_curve_law
+    {G : Type*} [Group G] [TopologicalSpace G] [MeasurableSpace G]
+    (projected : TwoDimensionalSenguptaPreliminarySubdivisionProjectedFiniteCurveLawData
+      (G := G) data)
+    (region : Region) :
+    IsCoveringMap projected.projection ∧
+      Function.Surjective projected.projection ∧
+      Measurable projected.projection ∧
+      projected.projection sourceTwist = 1 ∧
+      projected.projection (senguptaTransportedBundleClass
+        preliminaryGeometry.fineCellwise.orientationSign sourceTwist) = 1 ∧
+      Measure.map (senguptaFiniteGraphHolonomy projected.projection baseEmbedded.curveWord)
+          (senguptaCompactSurfaceGraphMeasure sourceCoarsePartitionFunction sourceTwist region
+            (senguptaTriangulatedRegionFactor baseTriangulation coverDensity)
+            (senguptaTriangulatedTwistedRegionFactor baseTriangulation coverDensity)) =
+        Measure.map
+          (senguptaFiniteGraphHolonomy projected.projection candidate.targetEmbedded.curveWord)
+          (senguptaCompactSurfaceGraphMeasure targetCoarsePartitionFunction
+            (senguptaTransportedBundleClass
+              preliminaryGeometry.fineCellwise.orientationSign sourceTwist)
+            (preliminaryGeometry.fineCellwise.regionEquiv region)
+            (senguptaTriangulatedRegionFactor candidate.target coverDensity)
+            (senguptaTriangulatedTwistedRegionFactor candidate.target coverDensity)) :=
+  ⟨projected.projection_isCoveringMap, projected.projection_surjective,
+    projected.projection_measurable, projected.sourceTwist_mem_kernel,
+    projected.targetTwist_mem_kernel, projected.coarse_projectedCurveHolonomy_law_eq region⟩
+
+omit [T2Space CoverGroup] [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup]
+    [Nonempty Curve] in
+/-- Hostile covering probe: an outside-kernel source twist cannot enter the projection-bearing
+endpoint. -/
+theorem outside_kernel_source_twist_blocked
+    {G : Type*} [Group G] [TopologicalSpace G] [MeasurableSpace G]
+    (projected : TwoDimensionalSenguptaPreliminarySubdivisionProjectedFiniteCurveLawData
+      (G := G) data)
+    (outside : projected.projection sourceTwist ≠ 1) : False :=
+  outside projected.sourceTwist_mem_kernel
+
+omit [T2Space CoverGroup] [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup]
+    [Nonempty Curve] in
+/-- Hostile covering probe: a non-covering projection cannot inhabit the source-facing endpoint. -/
+theorem noncovering_projection_blocked
+    {G : Type*} [Group G] [TopologicalSpace G] [MeasurableSpace G]
+    (projected : TwoDimensionalSenguptaPreliminarySubdivisionProjectedFiniteCurveLawData
+      (G := G) data)
+    (noncovering : ¬IsCoveringMap projected.projection) : False :=
+  noncovering projected.projection_isCoveringMap
+
+omit [T2Space CoverGroup] [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup]
+    [Nonempty Curve] in
+/-- Hostile covering probe: a nonsurjective covering map cannot inhabit the source-facing
+endpoint. -/
+theorem nonsurjective_projection_blocked
+    {G : Type*} [Group G] [TopologicalSpace G] [MeasurableSpace G]
+    (projected : TwoDimensionalSenguptaPreliminarySubdivisionProjectedFiniteCurveLawData
+      (G := G) data)
+    (nonsurjective : ¬Function.Surjective projected.projection) : False :=
+  nonsurjective projected.projection_surjective
+
+omit [T2Space CoverGroup] [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup]
+    [Nonempty Curve] in
+/-- Hostile projection probe: topological covering data cannot replace the independently required
+measurability into the physical target sigma-algebra. -/
+theorem nonmeasurable_projection_blocked
+    {G : Type*} [Group G] [TopologicalSpace G] [MeasurableSpace G]
+    (projected : TwoDimensionalSenguptaPreliminarySubdivisionProjectedFiniteCurveLawData
+      (G := G) data)
+    (nonmeasurable : ¬Measurable projected.projection) : False :=
+  nonmeasurable projected.projection_measurable
+
 end
 
 end YangMills.Dimensions.TwoDimensionalSenguptaPreliminarySubdivisionGraphMeasureChain.Probes
