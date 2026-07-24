@@ -431,6 +431,31 @@ noncomputable def exact_selectedFourierDerivative_sourceJoin_operatorGenerator :
 include selectedFourierAcceptance in
 omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
     [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in
+/-- Exact direct operator-generator forgetting projection to unchanged current strength. -/
+noncomputable def exact_operatorGenerator_sourceJoin_current :=
+  TwoDimensionalOperatorGeneratorCurrentStrengthSourceIndexedLiteratureAcceptance.implies_current
+    (exact_selectedFourierDerivative_sourceJoin_operatorGenerator selectedFourierAcceptance)
+
+include selectedFourierAcceptance in
+omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
+    [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in
+/-- The direct operator-generator source acceptance retains exact rank two. -/
+theorem exact_operatorGenerator_sourceJoin_rank_two : Module.finrank ℝ EG = 2 :=
+  TwoDimensionalOperatorGeneratorCurrentStrengthSourceIndexedLiteratureAcceptance.model_finrank_two
+    (exact_selectedFourierDerivative_sourceJoin_operatorGenerator selectedFourierAcceptance)
+
+include selectedFourierAcceptance in
+omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
+    [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in
+/-- The direct operator-generator source acceptance rejects a four-dimensional model. -/
+theorem operatorGenerator_sourceJoin_four_dimensional_linear_model_blocked :
+    ¬ Nonempty (EG ≃ₗ[ℝ] EuclideanDimension.four.Spacetime) :=
+  TwoDimensionalOperatorGeneratorCurrentStrengthSourceIndexedLiteratureAcceptance.not_linearEquiv_four
+    (exact_selectedFourierDerivative_sourceJoin_operatorGenerator selectedFourierAcceptance)
+
+include selectedFourierAcceptance in
+omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
+    [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in
 /-- Hostile source-join probe: an accepted Fourier/derivative source cannot coexist with failure of
 the direct operator-generator acceptance. -/
 theorem selectedFourierDerivative_sourceJoin_missing_operatorGenerator_blocked
