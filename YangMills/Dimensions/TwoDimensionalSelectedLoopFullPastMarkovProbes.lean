@@ -94,6 +94,36 @@ theorem exact_fullPast_arbitrary_test
   data.fullPastWeakMarkov s t ht pastTest pastTest_measurable pastTest_bounded f
 
 omit [FiniteDimensional ℝ E] in
+/-- The two full-past formulations are exactly equivalent for the same process and spectral
+operator; neither permits an unrelated conditioning sigma-algebra or transition family. -/
+theorem exact_fullPast_semantics_equivalent :
+    bridge.HasFullPastConditionalMarkovProperty ↔ bridge.HasFullPastWeakMarkovProperty :=
+  bridge.fullPastConditionalMarkov_iff_weakMarkov
+
+omit [FiniteDimensional ℝ E] in
+/-- Hostile conditional-only probe: exact conditioning recovers the bounded weak test and rejects a
+changed transition value without first assuming `TwoDimensionalSelectedLoopFullPastMarkovData`. -/
+theorem conditional_fullPast_changed_weak_transition_blocked
+    (conditional : bridge.HasFullPastConditionalMarkovProperty)
+    (s t : NNReal) (ht : 0 < t) (pastTest : Ω → ℝ)
+    (pastTest_measurable :
+      @Measurable Ω ℝ
+        (twoDimensionalSelectedLoopPastMeasurableSpace bridge.brownian s) _ pastTest)
+    (pastTest_bounded : ∃ bound : ℝ, ∀ samplePoint, ‖pastTest samplePoint‖ ≤ bound)
+    (f : C(G, ℝ)) (changed : ℝ)
+    (changed_ne_exact : changed ≠
+      ∫ samplePoint, pastTest samplePoint *
+        bridge.spectralHeatKernel.kernelOperator.heatOperator (t : ℝ) f
+          (bridge.brownian.process s samplePoint)
+        ∂bridge.brownian.probabilityMeasure)
+    (claimed :
+      (∫ samplePoint, pastTest samplePoint * f (bridge.brownian.process (s + t) samplePoint)
+        ∂bridge.brownian.probabilityMeasure) = changed) : False := by
+  have weak := bridge.fullPastConditionalMarkov_iff_weakMarkov.mp conditional
+  rw [weak s t ht pastTest pastTest_measurable pastTest_bounded f] at claimed
+  exact changed_ne_exact claimed.symm
+
+omit [FiniteDimensional ℝ E] in
 /-- A supplied universal weak full-past witness determines the exact conditional expectation. -/
 theorem exact_fullPast_conditionalExpectation
     (data : TwoDimensionalSelectedLoopFullPastMarkovData bridge)

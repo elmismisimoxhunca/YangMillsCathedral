@@ -4,7 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: YangMillsDefinition contributors
 -/
 import YangMills.Dimensions.TwoDimensionalSelectedLoopFinitePastBoundedMeasurableTransition
-import Mathlib.MeasureTheory.Function.ConditionalExpectation.Basic
+import Mathlib.MeasureTheory.Function.ConditionalExpectation.PullOut
 
 /-!
 # Exact full-past sigma-algebra and Markov obligation
@@ -256,6 +256,58 @@ theorem TwoDimensionalSelectedLoopFullPastMarkovData.fullPastConditionalMarkov
       _ = ∫ samplePoint in measurableSet, future samplePoint ∂μ :=
         integral_indicator (hm measurableSet hmeasurableSet)
   · exact predicted_measurable.aestronglyMeasurable
+
+omit [FiniteDimensional ℝ E] in
+/-- For continuous terminal tests on this normalized process, universal bounded weak testing and the
+exact conditional-expectation statement are equivalent. Thus the unresolved debt is the
+finite-cylinder-to-full-past extension, not an ambiguity between two Markov semantics. -/
+theorem TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData.fullPastConditionalMarkov_iff_weakMarkov
+    {realLaplacian : RightInvariantPairingLaplacianData inner}
+    {complexLaplacian : RightInvariantPairingComplexLaplacianData inner}
+    {heatTraceData : UnitaryMatrixDualHeatTraceSummabilityData (G := G)}
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)) :
+    bridge.HasFullPastConditionalMarkovProperty ↔ bridge.HasFullPastWeakMarkovProperty := by
+  constructor
+  · intro conditional s t ht pastTest pastTest_measurable pastTest_bounded f
+    let μ := bridge.brownian.probabilityMeasure
+    let future : Ω → ℝ := fun samplePoint =>
+      f (bridge.brownian.process (s + t) samplePoint)
+    let predicted : Ω → ℝ := fun samplePoint =>
+      bridge.spectralHeatKernel.kernelOperator.heatOperator (t : ℝ) f
+        (bridge.brownian.process s samplePoint)
+    letI : IsProbabilityMeasure μ := ⟨bridge.brownian.probability_normalized⟩
+    have hm : twoDimensionalSelectedLoopPastMeasurableSpace bridge.brownian s ≤
+        (inferInstance : MeasurableSpace Ω) :=
+      bridge.brownian.pastMeasurableSpace_le_ambient s
+    have future_measurable : Measurable future :=
+      f.continuous.measurable.comp (bridge.brownian.process_measurable (s + t))
+    have future_integrable : Integrable future μ := by
+      apply Integrable.of_bound future_measurable.aestronglyMeasurable ‖f‖
+      exact Filter.Eventually.of_forall fun samplePoint => f.norm_coe_le_norm _
+    obtain ⟨bound, pastTest_bound⟩ := pastTest_bounded
+    have pullOut := condExp_stronglyMeasurable_mul_of_bound₀ hm
+      pastTest_measurable.aestronglyMeasurable future_integrable bound
+      (Filter.Eventually.of_forall pastTest_bound)
+    have conditionalIdentity := conditional s t ht f
+    calc
+      ∫ samplePoint, pastTest samplePoint * future samplePoint ∂μ =
+          ∫ samplePoint,
+            MeasureTheory.condExp
+              (twoDimensionalSelectedLoopPastMeasurableSpace bridge.brownian s) μ
+              (fun samplePoint => pastTest samplePoint * future samplePoint) samplePoint ∂μ :=
+        (integral_condExp hm).symm
+      _ = ∫ samplePoint, pastTest samplePoint *
+          MeasureTheory.condExp
+            (twoDimensionalSelectedLoopPastMeasurableSpace bridge.brownian s) μ future samplePoint
+          ∂μ := integral_congr_ae pullOut
+      _ = ∫ samplePoint, pastTest samplePoint * predicted samplePoint ∂μ := by
+        apply integral_congr_ae
+        filter_upwards [conditionalIdentity] with samplePoint hconditional
+        rw [hconditional]
+  · intro weak
+    exact (TwoDimensionalSelectedLoopFullPastMarkovData.mk weak).fullPastConditionalMarkov
 
 omit [FiniteDimensional ℝ E] in
 /-- Every proved bounded measurable finite process cylinder is measurable for the exact past and

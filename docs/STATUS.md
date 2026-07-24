@@ -5280,8 +5280,9 @@ measurable, these spaces increase with time and lie below the ambient sigma-alge
 finite cylinder is past-measurable and satisfies the exact transition test. The uninhabited
 `TwoDimensionalSelectedLoopFullPastMarkovData` requires that identity for every bounded real test
 measurable for this generated past. Conditional-expectation uniqueness proves that any supplied
-universal weak witness gives the exact conditional Markov identity for this generated past, with
-direct and changed-version hostile probes. Construction of the missing monotone-class extension
+universal weak witness gives the exact conditional Markov identity for this generated past;
+conditional pull-out proves the converse for every bounded past-measurable test, so these full-past
+semantics are equivalent, with direct and changed-version hostile probes. Construction of the missing monotone-class extension
 remains explicit; stochastic-generator identification remains separate future proof debt. The
 common Wilson chain now forgets only its genuinely stronger global-faithfulness and normalization
 fields to construct Driver's exact Villain common heat chain. Uninhabited

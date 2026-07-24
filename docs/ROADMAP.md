@@ -912,8 +912,9 @@ committed before higher layers depend on it.
   `≤ s`, prove evaluation, monotonicity, ambient inclusion, and finite-cylinder measurability, and
   package the all-bounded-past-test weak Markov statement as an explicit monotone-class obligation.
   Prove by conditional-expectation uniqueness that any supplied universal weak witness gives the
-  exact conditional Markov identity for this generated past. Retain construction of the universal
-  monotone-class witness as a separate step.
+  exact conditional Markov identity for this generated past, and use conditional pull-out to prove
+  the converse implication for every bounded past test. Retain construction of either equivalent
+  universal witness from finite cylinders as a separate monotone-class step.
 - [x] Prove that the common Wilson chain forgets only global faithfulness and Wilson normalization to
   construct Driver's exact Villain common heat chain. Attach the still-uninhabited Theorem 7.2
   weak-limit contract to the literal spectral `Q_{ε²}` action at one positive spacing, deriving
