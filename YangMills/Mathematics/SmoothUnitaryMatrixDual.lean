@@ -3,8 +3,9 @@ Copyright (c) 2026 YangMillsDefinition contributors. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: YangMillsDefinition contributors
 -/
-import YangMills.Mathematics.UnitaryMatrixDual
+import YangMills.Mathematics.RepresentationEquivMatrixCoefficientTransport
 import Mathlib.Geometry.Manifold.MFDeriv.SpecificFunctions
+import Mathlib.Geometry.Manifold.Algebra.Monoid
 
 /-!
 # The smooth coordinate unitary dual and its continuous comparison
@@ -169,6 +170,52 @@ theorem UnitaryMatrixDual.hasSmoothRepresentative_iff_exists_representation
    rw [smoothUnitaryMatrixDualToUnitaryMatrixDual_class]
    exact hρ
 
+/-- Smooth coverage of every continuous coordinate-dual class forces smooth coordinates for every
+explicitly bundled continuous irreducible unitary presentation: transport from a smooth equivalent
+presentation is a finite sum with constant change-of-basis coefficients. -/
+theorem all_hasSmoothCoordinates_of_all_unitaryMatrixDual_hasSmoothRepresentative
+ (smoothCoverage:∀q:UnitaryMatrixDual G,q.HasSmoothRepresentative (E:=E)) :
+ AllContinuousUnitaryIrreducibleMatrixRepresentationsHaveSmoothCoordinates
+  (E:=E) (G:=G) := by
+ intro ρ
+ obtain ⟨σ, hσ⟩ :=
+  (unitaryMatrixDualClass ρ).hasSmoothRepresentative_iff_exists_representation.mp
+   (smoothCoverage (unitaryMatrixDualClass ρ))
+ let equivalence : Representation.Equiv
+     (matrixRepresentation σ.representation)
+     (matrixRepresentation ρ.representation) :=
+  Classical.choice ((unitaryMatrixDualClass_eq_iff
+    σ.toContinuousUnitaryIrreducibleMatrixRepresentation ρ).mp hσ)
+ rw [ContinuousUnitaryIrreducibleMatrixRepresentation.HasSmoothCoordinates]
+ apply contMDiff_pi_space.mpr
+ intro row
+ apply contMDiff_pi_space.mpr
+ intro column
+ let transport :
+     (Fin σ.dimension → Fin σ.dimension → ℂ) →L[ℝ] ℂ :=
+  ∑ sourceRow, ∑ sourceColumn,
+   ((ContinuousLinearMap.lsmul ℝ ℂ)
+    (representationEquivMatrix equivalence row sourceRow *
+     representationEquivInverseMatrix equivalence sourceColumn column)).comp
+    ((ContinuousLinearMap.proj sourceColumn :
+       (Fin σ.dimension → ℂ) →L[ℝ] ℂ).comp
+     (ContinuousLinearMap.proj sourceRow :
+       (Fin σ.dimension → Fin σ.dimension → ℂ) →L[ℝ]
+        (Fin σ.dimension → ℂ)))
+ have hsmoothTransport := transport.contDiff.contMDiff.comp σ.representation_contMDiff
+ apply hsmoothTransport.congr
+ intro g
+ rw [representationEquiv_matrixCoefficient σ.representation ρ.representation
+  equivalence g row column]
+ simp only [Function.comp_apply, transport, sum_apply,
+  ContinuousLinearMap.comp_apply, ContinuousLinearMap.proj_apply,
+  ContinuousLinearMap.lsmul_apply, smul_eq_mul]
+ apply Finset.sum_congr rfl
+ intro sourceRow _
+ apply Finset.sum_congr rfl
+ intro sourceColumn _
+ ring
+
 /-- Automatic smoothness of every bundled continuous irreducible unitary matrix representation
 supplies smooth coverage of every continuous coordinate-dual class. -/
 theorem all_unitaryMatrixDual_hasSmoothRepresentative_of_all_hasSmoothCoordinates
@@ -184,12 +231,30 @@ theorem all_unitaryMatrixDual_hasSmoothRepresentative_of_all_hasSmoothCoordinate
  have hsmooth := unitaryMatrixDualClass_hasSmoothRepresentative smoothSelected
  simpa [smoothSelected, selected] using hsmooth
 
+/-- Automatic smoothness of every bundled continuous coordinate presentation is equivalent to
+smooth representability of every continuous coordinate-dual class. -/
+theorem all_hasSmoothCoordinates_iff_all_unitaryMatrixDual_hasSmoothRepresentative :
+ AllContinuousUnitaryIrreducibleMatrixRepresentationsHaveSmoothCoordinates
+    (E:=E) (G:=G) ↔
+  ∀q:UnitaryMatrixDual G,q.HasSmoothRepresentative (E:=E) :=
+ ⟨all_unitaryMatrixDual_hasSmoothRepresentative_of_all_hasSmoothCoordinates,
+  all_hasSmoothCoordinates_of_all_unitaryMatrixDual_hasSmoothRepresentative⟩
+
 /-- Surjectivity of the comparison map is exactly the unresolved assertion that every continuous
 coordinate class has a smooth representative. -/
 theorem smoothUnitaryMatrixDual_surjective_iff_all_hasSmoothRepresentative :
  Function.Surjective (smoothUnitaryMatrixDualToUnitaryMatrixDual (E:=E) (G:=G)) ↔
  ∀q:UnitaryMatrixDual G,q.HasSmoothRepresentative (E:=E) := by
  rfl
+
+/-- The same comparison surjectivity debt is equivalently the exact automatic-smooth-coordinate
+target for every bundled continuous irreducible unitary representation. -/
+theorem smoothUnitaryMatrixDual_surjective_iff_all_hasSmoothCoordinates :
+ Function.Surjective (smoothUnitaryMatrixDualToUnitaryMatrixDual (E:=E) (G:=G)) ↔
+ AllContinuousUnitaryIrreducibleMatrixRepresentationsHaveSmoothCoordinates
+  (E:=E) (G:=G) := by
+ rw [smoothUnitaryMatrixDual_surjective_iff_all_hasSmoothRepresentative,
+  all_hasSmoothCoordinates_iff_all_unitaryMatrixDual_hasSmoothRepresentative]
 
 end
 

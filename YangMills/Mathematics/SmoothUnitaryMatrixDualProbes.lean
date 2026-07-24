@@ -79,6 +79,23 @@ theorem automatic_smooth_coordinates_supply_dual_coverage
   all_unitaryMatrixDual_hasSmoothRepresentative_of_all_hasSmoothCoordinates
     automaticSmoothness
 
+/-- Exact two-way audit: universal quotient-class smooth coverage is equivalent to automatic
+smoothness of every explicit continuous coordinate presentation. -/
+theorem automatic_smooth_coordinates_iff_dual_coverage :
+    AllContinuousUnitaryIrreducibleMatrixRepresentationsHaveSmoothCoordinates
+        (E := E) (G := G) ↔
+      ∀ q : UnitaryMatrixDual G, q.HasSmoothRepresentative (E := E) :=
+  all_hasSmoothCoordinates_iff_all_unitaryMatrixDual_hasSmoothRepresentative
+
+/-- The smooth-to-continuous quotient comparison is surjective exactly when every explicit
+continuous irreducible coordinate presentation is smooth. -/
+theorem comparison_surjective_iff_automatic_smooth_coordinates :
+    Function.Surjective
+        (smoothUnitaryMatrixDualToUnitaryMatrixDual (E := E) (G := G)) ↔
+      AllContinuousUnitaryIrreducibleMatrixRepresentationsHaveSmoothCoordinates
+        (E := E) (G := G) :=
+  smoothUnitaryMatrixDual_surjective_iff_all_hasSmoothCoordinates
+
 /-- Hostile automatic-smoothness probe: one explicitly nonsmooth coordinate presentation blocks the
 universal automatic-smoothness premise. -/
 theorem missing_smooth_coordinates_blocks_automatic_smoothness
