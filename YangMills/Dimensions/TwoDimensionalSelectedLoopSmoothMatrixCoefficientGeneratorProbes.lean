@@ -82,6 +82,46 @@ theorem changed_selectedLoopHeatOperator_smoothMatrixCoefficientSynthesis_blocke
     (twoDimensionalSelectedLoopHeatOperator_smoothMatrixCoefficientSynthesis
       bridge t ht coefficients))
 
+omit [FiniteDimensional ℝ E] [IsTopologicalGroup G] [CompactSpace G] [T2Space G]
+    [SecondCountableTopology G] [MeasurableSpace G] [BorelSpace G]
+    [MeasurableMul₂ G] [MeasurableInv G]
+    [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- Exact zero branch of the coefficient-space difference quotient. -/
+theorem exact_smoothMatrixCoefficientDifferenceQuotient_zero :
+    twoDimensionalSelectedLoopSmoothMatrixCoefficientDifferenceQuotientEvolution
+      (E := E) (G := G) (heatTraceData := heatTraceData) 0 = 0 :=
+  twoDimensionalSelectedLoopSmoothMatrixCoefficientDifferenceQuotientEvolution_zero
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Exact ambient/coefficient-space difference-quotient coherence on finite syntheses. -/
+theorem exact_selectedLoopHeatDifferenceQuotient_smoothMatrixCoefficientSynthesis
+    (t : NNReal) (ht : 0 < t)
+    (coefficients : SmoothUnitaryMatrixCoefficientRealCoefficients E G) :
+    twoDimensionalSelectedLoopHeatDifferenceQuotientLinearMap bridge t
+        (smoothLieGroupScalarToContinuousLinearMap
+          (smoothUnitaryMatrixCoefficientRealSynthesis coefficients)) =
+      smoothLieGroupScalarToContinuousLinearMap
+        (twoDimensionalSelectedLoopSmoothMatrixCoefficientDifferenceQuotientEvolution
+          (heatTraceData := heatTraceData) t coefficients) :=
+  twoDimensionalSelectedLoopHeatDifferenceQuotient_smoothMatrixCoefficientSynthesis
+    bridge t ht coefficients
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Hostile quotient-coherence probe: a changed coefficient-space realization is contradictory. -/
+theorem changed_selectedLoopHeatDifferenceQuotient_smoothMatrixCoefficientSynthesis_blocked
+    (t : NNReal) (ht : 0 < t)
+    (coefficients : SmoothUnitaryMatrixCoefficientRealCoefficients E G)
+    (changed : C(G, ℝ))
+    (changed_ne_exact : changed ≠ smoothLieGroupScalarToContinuousLinearMap
+      (twoDimensionalSelectedLoopSmoothMatrixCoefficientDifferenceQuotientEvolution
+        (heatTraceData := heatTraceData) t coefficients))
+    (claimed : twoDimensionalSelectedLoopHeatDifferenceQuotientLinearMap bridge t
+      (smoothLieGroupScalarToContinuousLinearMap
+        (smoothUnitaryMatrixCoefficientRealSynthesis coefficients)) = changed) : False :=
+  changed_ne_exact (claimed.symm.trans
+    (twoDimensionalSelectedLoopHeatDifferenceQuotient_smoothMatrixCoefficientSynthesis
+      bridge t ht coefficients))
+
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 include bridge in
 /-- Exact derived real pairing-Laplacian eigenvalue probe. -/

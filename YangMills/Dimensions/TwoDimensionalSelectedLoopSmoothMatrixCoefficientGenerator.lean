@@ -206,6 +206,70 @@ theorem twoDimensionalSelectedLoopHeatOperator_smoothMatrixCoefficientSynthesis
     rw [twoDimensionalSelectedLoopHeatOperator_smoothMatrixCoefficient bridge t ht index]
   exact LinearMap.congr_fun mapEquality coefficients
 
+/-- Total coefficient-space form of the selected-loop heat difference quotient. The zero branch
+matches the totalized ambient `NNReal` family and is irrelevant on `Ioi 0`. -/
+noncomputable def twoDimensionalSelectedLoopSmoothMatrixCoefficientDifferenceQuotientEvolution
+    (t : NNReal) : SmoothUnitaryMatrixCoefficientRealCoefficients E G →ₗ[ℝ]
+      SmoothLieGroupScalarFunction (E := E) (G := G) :=
+  if _ht : 0 < t then
+    ((t : ℝ)⁻¹) •
+      (twoDimensionalSelectedLoopSmoothMatrixCoefficientHeatEvolution
+        (E := E) (G := G) (heatTraceData := heatTraceData) (t : ℝ) -
+        smoothUnitaryMatrixCoefficientRealSynthesis)
+  else 0
+
+omit [FiniteDimensional ℝ E] [IsTopologicalGroup G] [CompactSpace G] [T2Space G]
+    [SecondCountableTopology G] [MeasurableSpace G] [BorelSpace G]
+    [MeasurableMul₂ G] [MeasurableInv G]
+    [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+@[simp]
+theorem twoDimensionalSelectedLoopSmoothMatrixCoefficientDifferenceQuotientEvolution_zero :
+    twoDimensionalSelectedLoopSmoothMatrixCoefficientDifferenceQuotientEvolution
+      (E := E) (G := G) (heatTraceData := heatTraceData) 0 = 0 := by
+  unfold twoDimensionalSelectedLoopSmoothMatrixCoefficientDifferenceQuotientEvolution
+  rw [dif_neg]
+  simp
+
+omit [FiniteDimensional ℝ E] [IsTopologicalGroup G] [CompactSpace G] [T2Space G]
+    [SecondCountableTopology G] [MeasurableSpace G] [BorelSpace G]
+    [MeasurableMul₂ G] [MeasurableInv G]
+    [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- Exact positive-time coefficient-space difference quotient. -/
+theorem twoDimensionalSelectedLoopSmoothMatrixCoefficientDifferenceQuotientEvolution_apply
+    (t : NNReal) (ht : 0 < t)
+    (coefficients : SmoothUnitaryMatrixCoefficientRealCoefficients E G) :
+    twoDimensionalSelectedLoopSmoothMatrixCoefficientDifferenceQuotientEvolution
+        (E := E) (G := G) (heatTraceData := heatTraceData) t coefficients =
+      ((t : ℝ)⁻¹) •
+        (twoDimensionalSelectedLoopSmoothMatrixCoefficientHeatEvolution
+            (heatTraceData := heatTraceData) (t : ℝ) coefficients -
+          smoothUnitaryMatrixCoefficientRealSynthesis coefficients) := by
+  unfold twoDimensionalSelectedLoopSmoothMatrixCoefficientDifferenceQuotientEvolution
+  rw [dif_pos ht]
+  rfl
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- The ambient selected-loop difference quotient on a finite coefficient synthesis is exactly the
+continuous realization of the coefficient-space difference quotient. -/
+theorem twoDimensionalSelectedLoopHeatDifferenceQuotient_smoothMatrixCoefficientSynthesis
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (t : NNReal) (ht : 0 < t)
+    (coefficients : SmoothUnitaryMatrixCoefficientRealCoefficients E G) :
+    twoDimensionalSelectedLoopHeatDifferenceQuotientLinearMap bridge t
+        (smoothLieGroupScalarToContinuousLinearMap
+          (smoothUnitaryMatrixCoefficientRealSynthesis coefficients)) =
+      smoothLieGroupScalarToContinuousLinearMap
+        (twoDimensionalSelectedLoopSmoothMatrixCoefficientDifferenceQuotientEvolution
+          (heatTraceData := heatTraceData) t coefficients) := by
+  rw [twoDimensionalSelectedLoopHeatDifferenceQuotientLinearMap_apply bridge t ht]
+  rw [twoDimensionalSelectedLoopHeatOperator_smoothMatrixCoefficientSynthesis
+    bridge (t : ℝ) (by exact_mod_cast ht) coefficients]
+  rw [twoDimensionalSelectedLoopSmoothMatrixCoefficientDifferenceQuotientEvolution_apply
+    t ht coefficients]
+  rw [map_smul, map_sub]
+
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Positive-time heat differentiation and the exact diagonal heat action force the real pairing-
 Laplacian Casimir equation for every smooth matrix-coefficient component. This derives the equation
