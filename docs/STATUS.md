@@ -5254,8 +5254,12 @@ and, by the noncommutative map `(x,y) ↦ (x,x*y)`, the exact two-time process l
 law hostility. The operator is also identified directly as deterministic right-translation
 integration against the spectral probability measure. Product Fubini then derives the exact
 continuous-test weak current-state identity
-`E[φ(B_s)f(B_{s+t})]=E[φ(B_s)P_t f(B_s)]`, with changed-identity hostility. Conditioning on the full
-past sigma-algebra and stochastic-generator identification remain explicit future proof debt. The
+`E[φ(B_s)f(B_{s+t})]=E[φ(B_s)P_t f(B_s)]`, with changed-identity hostility. The new
+`TwoDimensionalSelectedLoopFinitePastIncrementIndependence` layer groups the supplied mutually
+independent coordinates: for every finite monotone time family, the complete vector of its first
+`n` consecutive right increments is independent of the exact final increment. Exact index/formula
+probes reject overlap with the final coordinate. This is finite-history stochastic algebra, not
+conditioning. Conditioning on the full past sigma-algebra and stochastic-generator identification remain explicit future proof debt. The
 common Wilson chain now forgets only its genuinely stronger global-faithfulness and normalization
 fields to construct Driver's exact Villain common heat chain. Uninhabited
 `TwoDimensionalSpectralVillainWeakLimitBridgeData` ties the unchanged Theorem 7.2 contract to the

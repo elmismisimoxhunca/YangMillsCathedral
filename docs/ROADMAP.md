@@ -893,6 +893,11 @@ committed before higher layers depend on it.
   identity `E[φ(B_s)f(B_{s+t})]=E[φ(B_s)P_t f(B_s)]`. Keep conditioning on the full past
   sigma-algebra and stochastic-generator identification as explicit future proof debt, and reject
   changed spectral increment, joint, and weak-Markov laws.
+- [x] Strengthen the stochastic algebra beneath the future full-past theorem: for every finite
+  monotone `(n+2)`-time family, package the first `n` consecutive right increments as one measurable
+  history vector and prove it independent of the exact final increment by grouping disjoint
+  coordinates of the supplied mutual-independence law. Retain full-past sigma-algebra conditioning
+  and the resulting finite-history spectral transition identity as separate next steps.
 - [x] Prove that the common Wilson chain forgets only global faithfulness and Wilson normalization to
   construct Driver's exact Villain common heat chain. Attach the still-uninhabited Theorem 7.2
   weak-limit contract to the literal spectral `Q_{ε²}` action at one positive spacing, deriving
