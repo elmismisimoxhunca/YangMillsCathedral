@@ -832,6 +832,20 @@ theorem eventual_graphBound_one
 
 end TwoDimensionalSelectedLoopPairingDuhamelData
 
+/-- Explicit Fourier-facing simultaneous approximation target for the smooth coefficient core. -/
+def TwoDimensionalSelectedLoopSmoothMatrixCoefficientFiniteGraphApproximation : Prop :=
+  ∀ f : SmoothLieGroupScalarFunction (E := E) (G := G),
+    ∀ ε : ℝ, 0 < ε →
+      ∃ coefficients : SmoothUnitaryMatrixCoefficientRealCoefficients E G,
+        ‖smoothLieGroupScalarToContinuousLinearMap f -
+            smoothLieGroupScalarToContinuousLinearMap
+              (smoothUnitaryMatrixCoefficientRealSynthesis coefficients)‖ < ε ∧
+          ‖twoDimensionalSelectedLoopPairingGeneratorLinearMap
+              (realLaplacian := realLaplacian) f -
+            twoDimensionalSelectedLoopPairingGeneratorLinearMap
+              (realLaplacian := realLaplacian)
+              (smoothUnitaryMatrixCoefficientRealSynthesis coefficients)‖ < ε
+
 omit [FiniteDimensional ℝ E] [IsTopologicalGroup G] [T2Space G]
     [SecondCountableTopology G] [MeasurableSpace G] [BorelSpace G]
     [MeasurableMul₂ G] [MeasurableInv G] in
@@ -844,17 +858,8 @@ theorem smoothMatrixCoefficient_graphDense_iff_finiteSynthesis_graphApproximatio
       (twoDimensionalSelectedLoopPairingGeneratorLinearMap
         (realLaplacian := realLaplacian))
       (smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G)) ↔
-    ∀ f : SmoothLieGroupScalarFunction (E := E) (G := G),
-      ∀ ε : ℝ, 0 < ε →
-        ∃ coefficients : SmoothUnitaryMatrixCoefficientRealCoefficients E G,
-          ‖smoothLieGroupScalarToContinuousLinearMap f -
-              smoothLieGroupScalarToContinuousLinearMap
-                (smoothUnitaryMatrixCoefficientRealSynthesis coefficients)‖ < ε ∧
-            ‖twoDimensionalSelectedLoopPairingGeneratorLinearMap
-                (realLaplacian := realLaplacian) f -
-              twoDimensionalSelectedLoopPairingGeneratorLinearMap
-                (realLaplacian := realLaplacian)
-                (smoothUnitaryMatrixCoefficientRealSynthesis coefficients)‖ < ε := by
+    TwoDimensionalSelectedLoopSmoothMatrixCoefficientFiniteGraphApproximation
+      (realLaplacian := realLaplacian) := by
   constructor
   · intro graphDense f ε hε
     obtain ⟨z, hz, hJ, hA⟩ := graphDense f ε hε
@@ -916,17 +921,8 @@ noncomputable def ofFiniteSynthesisGraphApproximationDuhamel
       (law := law) (inner := inner) (realLaplacian := realLaplacian)
       (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)}
     (finiteApproximation :
-      ∀ f : SmoothLieGroupScalarFunction (E := E) (G := G),
-        ∀ ε : ℝ, 0 < ε →
-          ∃ coefficients : SmoothUnitaryMatrixCoefficientRealCoefficients E G,
-            ‖smoothLieGroupScalarToContinuousLinearMap f -
-                smoothLieGroupScalarToContinuousLinearMap
-                  (smoothUnitaryMatrixCoefficientRealSynthesis coefficients)‖ < ε ∧
-              ‖twoDimensionalSelectedLoopPairingGeneratorLinearMap
-                  (realLaplacian := realLaplacian) f -
-                twoDimensionalSelectedLoopPairingGeneratorLinearMap
-                  (realLaplacian := realLaplacian)
-                  (smoothUnitaryMatrixCoefficientRealSynthesis coefficients)‖ < ε)
+      TwoDimensionalSelectedLoopSmoothMatrixCoefficientFiniteGraphApproximation
+        (realLaplacian := realLaplacian))
     (duhamel : TwoDimensionalSelectedLoopPairingDuhamelData bridge) :
     TwoDimensionalSelectedLoopSmoothMatrixCoefficientGraphCoreData bridge :=
   ofGraphDenseDuhamel
@@ -992,17 +988,8 @@ theorem nonempty_iff_finiteSynthesis_graphApproximation_and_eventualGraphBound
       (law := law) (inner := inner) (realLaplacian := realLaplacian)
       (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)} :
     Nonempty (TwoDimensionalSelectedLoopSmoothMatrixCoefficientGraphCoreData bridge) ↔
-      (∀ f : SmoothLieGroupScalarFunction (E := E) (G := G),
-        ∀ ε : ℝ, 0 < ε →
-          ∃ coefficients : SmoothUnitaryMatrixCoefficientRealCoefficients E G,
-            ‖smoothLieGroupScalarToContinuousLinearMap f -
-                smoothLieGroupScalarToContinuousLinearMap
-                  (smoothUnitaryMatrixCoefficientRealSynthesis coefficients)‖ < ε ∧
-              ‖twoDimensionalSelectedLoopPairingGeneratorLinearMap
-                  (realLaplacian := realLaplacian) f -
-                twoDimensionalSelectedLoopPairingGeneratorLinearMap
-                  (realLaplacian := realLaplacian)
-                  (smoothUnitaryMatrixCoefficientRealSynthesis coefficients)‖ < ε) ∧
+      TwoDimensionalSelectedLoopSmoothMatrixCoefficientFiniteGraphApproximation
+        (realLaplacian := realLaplacian) ∧
         ∃ C : ℝ, 0 ≤ C ∧
           ∀ᶠ t : NNReal in nhdsWithin 0 (Set.Ioi 0),
             ∀ f : SmoothLieGroupScalarFunction (E := E) (G := G),
@@ -1040,6 +1027,44 @@ noncomputable def toStochasticGeneratorAtZeroData
   data.toPairingGraphCoreGeneratorData.toStochasticGeneratorAtZeroData
 
 end TwoDimensionalSelectedLoopSmoothMatrixCoefficientGraphCoreData
+
+/-- Duhamel-strengthened analytic acceptance surface for the selected smooth matrix-coefficient
+track. It retains exactly simultaneous finite graph approximation and an inhabited integrable
+Duhamel identity; it does not assert either premise. -/
+def TwoDimensionalSelectedLoopSmoothMatrixCoefficientDuhamelAnalyticAcceptance
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)) : Prop :=
+  TwoDimensionalSelectedLoopSmoothMatrixCoefficientFiniteGraphApproximation
+      (realLaplacian := realLaplacian) ∧
+    Nonempty (TwoDimensionalSelectedLoopPairingDuhamelData bridge)
+
+namespace TwoDimensionalSelectedLoopSmoothMatrixCoefficientDuhamelAnalyticAcceptance
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- The Duhamel-strengthened acceptance canonically constructs the exact coefficient graph-core data. -/
+noncomputable def toGraphCoreData
+    {bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)}
+    (acceptance :
+      TwoDimensionalSelectedLoopSmoothMatrixCoefficientDuhamelAnalyticAcceptance bridge) :
+    TwoDimensionalSelectedLoopSmoothMatrixCoefficientGraphCoreData bridge :=
+  TwoDimensionalSelectedLoopSmoothMatrixCoefficientGraphCoreData.ofFiniteSynthesisGraphApproximationDuhamel
+    acceptance.1 (Classical.choice acceptance.2)
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- The same analytic acceptance reaches the existing all-smooth stochastic generator endpoint. -/
+noncomputable def toStochasticGeneratorAtZeroData
+    {bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)}
+    (acceptance :
+      TwoDimensionalSelectedLoopSmoothMatrixCoefficientDuhamelAnalyticAcceptance bridge) :
+    TwoDimensionalSelectedLoopStochasticGeneratorAtZeroData bridge :=
+  acceptance.toGraphCoreData.toStochasticGeneratorAtZeroData
+
+end TwoDimensionalSelectedLoopSmoothMatrixCoefficientDuhamelAnalyticAcceptance
 
 end
 

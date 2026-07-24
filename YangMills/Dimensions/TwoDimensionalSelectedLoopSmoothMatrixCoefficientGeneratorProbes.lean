@@ -425,6 +425,33 @@ theorem changed_selectedLoopPairingDuhamel_blocked
   changed_ne_exact (claimed.symm.trans (data.duhamel t ht f))
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Exact Duhamel-analytic acceptance endpoint. -/
+theorem exact_DuhamelAnalyticAcceptance_stochasticGenerator
+    (acceptance :
+      TwoDimensionalSelectedLoopSmoothMatrixCoefficientDuhamelAnalyticAcceptance bridge) :
+    Nonempty (TwoDimensionalSelectedLoopSmoothMatrixCoefficientGraphCoreData bridge) ∧
+      Nonempty (TwoDimensionalSelectedLoopStochasticGeneratorAtZeroData bridge) :=
+  ⟨⟨acceptance.toGraphCoreData⟩,
+    ⟨acceptance.toStochasticGeneratorAtZeroData⟩⟩
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Hostile Duhamel-analytic acceptance probe: missing finite graph approximation blocks it. -/
+theorem missing_finiteGraphApproximation_blocks_DuhamelAnalyticAcceptance
+    (missing : ¬ TwoDimensionalSelectedLoopSmoothMatrixCoefficientFiniteGraphApproximation
+      (realLaplacian := realLaplacian)) :
+    ¬ TwoDimensionalSelectedLoopSmoothMatrixCoefficientDuhamelAnalyticAcceptance bridge := by
+  intro acceptance
+  exact missing acceptance.1
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Hostile Duhamel-analytic acceptance probe: missing integrable Duhamel data blocks it. -/
+theorem missing_Duhamel_blocks_DuhamelAnalyticAcceptance
+    (missing : ¬ Nonempty (TwoDimensionalSelectedLoopPairingDuhamelData bridge)) :
+    ¬ TwoDimensionalSelectedLoopSmoothMatrixCoefficientDuhamelAnalyticAcceptance bridge := by
+  intro acceptance
+  exact missing acceptance.2
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- An actual coefficient graph-core witness yields all-smooth strong heat continuity through graph
 density, independently of its separate uniform graph-bound field. -/
 theorem exact_smoothMatrixCoefficientGraphCore_allSmooth_heatOperator_tendsto_zero
