@@ -5400,7 +5400,10 @@ interval average of the contraction semigroup on the
 pairing generator; contraction then proves `‖QₜJf‖ ≤ ‖Af‖` and constructs the uniform graph-bound
 field with constant one. A proposition-shaped Duhamel analytic acceptance retains exactly
 simultaneous finite graph approximation and inhabited integrable Duhamel data and constructs the
-existing all-smooth stochastic endpoint. No inhabitant of that acceptance is constructed. No graph-core record inhabitant is built: smooth-representative coverage,
+existing all-smooth stochastic endpoint. A stronger continuous-Duhamel acceptance replaces raw
+integrability by global strong continuity of the total heat semigroup and derives interval
+integrability by composition with the rescaled time path. No inhabitant of either acceptance is
+constructed. No graph-core record inhabitant is built: smooth-representative coverage,
 graph density, and the eventual uniform all-domain graph bound remain unconstructed, while Laplace–Beltrami comparison
 remains open. The
 common Wilson chain now forgets only its genuinely stronger global-faithfulness and normalization

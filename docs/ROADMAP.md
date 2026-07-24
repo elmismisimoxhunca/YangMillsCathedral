@@ -1009,8 +1009,9 @@ committed before higher layers depend on it.
   Duhamel strengthening, including genuine interval integrability and the exact identity, which
   contraction proves supplies that bound sharply with constant one. Package finite graph
   approximation plus inhabited Duhamel data as an exact analytic acceptance reaching the stochastic
-  endpoint; then construct an inhabitant and the
-  pairing-generator boundary-continuity witness and prove
+  endpoint. Also package a stronger continuous-Duhamel acceptance where global strong continuity
+  derives interval integrability; then construct an inhabitant of either route and the pairing-
+  generator boundary-continuity witness and prove
   comparison of the exact pairing Laplacian with the geometric Laplace–Beltrami operator.
 - [x] Prove that the common Wilson chain forgets only global faithfulness and Wilson normalization to
   construct Driver's exact Villain common heat chain. Attach the still-uninhabited Theorem 7.2
