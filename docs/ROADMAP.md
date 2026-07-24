@@ -1548,6 +1548,12 @@ committed before higher layers depend on it.
     bundled target candidate into a parameterized source/target-presentation view. Prove bundled
     candidates forget to it definitionally, enabling future preliminary subdivisions to choose fine
     presentations before supplying their cellwise geometry.
+  - [x] State the nonvacuous fixed-universe universal geometric construction target for general Fact
+    3: every broader outer candidate must receive source and target parameterized split-bond
+    subdivisions plus fine cellwise geometry connected to the original outer map by a continuous
+    isotopy through homeomorphisms, explicitly recording Sengupta's deformation before
+    simplicialization. Retain construction, factor/weighted-measure certification, and universal
+    analytic Fact 3 as debt.
   - [x] Derive the exact algebraic Fact 3 proof pattern once preliminary source/target subdivision
     certificates and one cellwise homeomorphism certificate are supplied: ordinary and signed-twist
     factor equalities compose transitively, with the target subdivision using exactly transported

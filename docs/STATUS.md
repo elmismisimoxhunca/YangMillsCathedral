@@ -5692,8 +5692,15 @@ homeomorphic reparametrization, and equality only of total simplex area. It inte
 matching factor certificate are now also exposed as
 `TwoDimensionalSenguptaCellwiseEmbeddedHomeomorphismGeometryData`, parameterized by already chosen
 source and target presentations; every bundled cellwise candidate forgets to that view
-definitionally. This is infrastructure for preliminary subdivisions, not their construction.
-Construction/certification of preliminary subdivisions tied to that same homeomorphism, full
+definitionally.
+`TwoDimensionalSenguptaUniversalGeneralHomeomorphismPreliminarySubdivisionGeometryData` now states
+the nonvacuous geometric construction target itself: every general outer candidate must receive
+source and target parameterized split-bond subdivisions and fine cellwise geometry connected to the
+original outer map by a continuous isotopy through actual homeomorphisms. The isotopy starts at the
+supplied map and ends at the fine cellwise deformation, matching Sengupta's deformation before
+simplicialization. It remains uninhabited and contains no factor
+or weighted-measure certificate.
+Construction and analytic certification of those preliminary subdivisions, full
 universal Fact 3, and inhabitation remain open.
 `TwoDimensionalSenguptaPreliminarySubdivisionHomeomorphismFactorData` now derives the exact algebraic
 proof pattern after such subdivisions are supplied: source coarse-to-fine equality, signed cellwise

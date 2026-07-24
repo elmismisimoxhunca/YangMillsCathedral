@@ -1148,8 +1148,12 @@ curve transport after an endpoint-fixing whole-curve homeomorphic reparametrizat
 only of total simplex area and no direct cell maps. The existing direct-cellwise geometry and its
 matching factor certificate are now separately parameterized by already chosen source and target
 presentations, and every bundled cellwise candidate forgets to this view definitionally. This enables
-future preliminary subdivisions to select fine presentations first without constructing them.
-Constructing/certifying preliminary source/target subdivisions tied to that same homeomorphism—and hence full
+future preliminary subdivisions to select fine presentations first without constructing them. A
+nonvacuous universal geometric target now requires every general outer candidate to receive source
+and target parameterized split-bond subdivisions plus fine cellwise geometry connected to the
+original outer map by a continuous isotopy through actual homeomorphisms. The isotopy records
+Sengupta's deformation before the final simplicial map. This target is uninhabited and has no analytic
+factor or weighted-measure certificate. Constructing/certifying preliminary source/target subdivisions tied to that same homeomorphism—and hence full
 universal Fact 3—remain open; the subclass record is uninhabited. The exact algebraic proof pattern
 through preliminary source and target subdivisions is now derived separately: source subdivision,
 cellwise signed homeomorphism, and reverse target subdivision compose to coarse ordinary and
