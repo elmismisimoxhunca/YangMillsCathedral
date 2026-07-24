@@ -731,8 +731,16 @@ endpoint. Real and imaginary parts of every smooth selected character are now pa
 smooth tests, proved to have the exact real pairing-Laplacian Casimir eigenvalue, and finitely
 synthesized into an explicit real smooth central character range. This range is proved conjugation-
 invariant and is therefore not proposed as a graph-dense core for all smooth tests on a nonabelian
-group. No inhabitant of the graph-core record is constructed: a matrix-coefficient-derived real
-smooth core, its heat-quotient convergence, graph density, and the uniform bound still prevent the algebraic core from filling the remaining all-smooth-tests boundary field. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
+group. A separate finite real matrix-coefficient range is now constructed from explicitly bundled smooth
+irreducible unitary presentations, with dependent row/column indices, exact noncentral conjugation
+mixing, singleton inclusion, and conditional nontriviality. A new uninhabited coefficientwise
+Casimir bridge explicitly strengthens the trace equation to every matrix coordinate; when supplied,
+canonical real/complex coherence proves both real-component eigenvalue equations and finite
+synthesis linearity for the pairing Laplacian. It does not assert that every continuous dual class
+has a smooth representative. No inhabitant of the graph-core record is constructed: inhabiting this
+coefficientwise bridge, coefficient heat action and heat-quotient convergence, smooth graph density,
+and the uniform bound still prevent the algebraic range from filling the remaining all-smooth-tests
+boundary field. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
 marginals are derived, including exact equality at the selected area with the sampled loop-holonomy
 law. The metric bridge now transports the exact invariant pairing to every group tangent fiber by
 left Maurer–Cartan trivialization and proves its inverse, symmetry, strict positivity, and left/right

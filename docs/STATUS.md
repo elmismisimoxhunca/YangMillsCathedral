@@ -5344,9 +5344,17 @@ character are now smooth real tests; canonical real/complex coherence transports
 Casimir equation to the exact real pairing-Laplacian eigenvalue, and finite-support real synthesis
 constructs an explicit smooth central character range containing each component. Every member is
 proved conjugation-invariant, and noncentral smooth tests are explicitly excluded, so this range is
-not an all-smooth graph-core candidate on a nonabelian group. No graph-core record inhabitant is
-built: a matrix-coefficient-derived real smooth core, core heat-quotient convergence, graph density,
-and the quotient bound remain unconstructed, while Laplace–Beltrami comparison remains open. The
+not an all-smooth graph-core candidate on a nonabelian group. The correct algebraic shape is now
+constructed separately: explicitly bundled smooth irreducible unitary presentations provide smooth
+complex coefficients, their real/imaginary components, a dependent finite real synthesis range,
+exact row/column conjugation mixing, singleton inclusion, and conditional nontriviality. An explicit
+uninhabited coefficientwise Casimir bridge prevents the existing trace eigen-equation from being
+silently promoted to matrix entries; if supplied, it canonically yields both real-component
+Casimir equations, eigenvalue uniqueness from a diagonal identity coefficient, and the exact finite-
+synthesis pairing-Laplacian action. No graph-core record inhabitant is built: smooth-representative
+coverage, inhabitation of the coefficient bridge, coefficient heat action and core heat-quotient
+convergence, graph density, and the quotient bound remain unconstructed, while Laplace–Beltrami
+comparison remains open. The
 common Wilson chain now forgets only its genuinely stronger global-faithfulness and normalization
 fields to construct Driver's exact Villain common heat chain. Uninhabited
 `TwoDimensionalSpectralVillainWeakLimitBridgeData` ties the unchanged Theorem 7.2 contract to the
