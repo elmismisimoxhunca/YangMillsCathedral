@@ -40,6 +40,14 @@ variable
       (law := law) (inner := inner) (realLaplacian := realLaplacian)
       (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)}
 
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Explicit heat-trajectory and pairing-generator boundary continuity construct the genuine
+zero-time generator obligation by one-sided extension of derivatives. -/
+theorem exact_boundaryContinuity_toGeneratorAtZero
+    (data : TwoDimensionalSelectedLoopGeneratorBoundaryContinuityData bridge) :
+    TwoDimensionalSelectedLoopStochasticGeneratorAtZeroData bridge :=
+  data.toStochasticGeneratorAtZeroData
+
 omit [FiniteDimensional ℝ E] in
 /-- Operator and stochastic right-increment formulations are exactly equivalent on the unchanged
 bridge. -/

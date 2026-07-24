@@ -929,7 +929,11 @@ committed before higher layers depend on it.
   operator/right-increment expectation identity transports it to the stochastic Brownian generator
   at every deterministic base time, and prove the converse from one base time so the two semantics
   are equivalent. Do not infer or inhabit the zero-time limit from positive-time derivatives alone.
-- [ ] Construct the zero-time operator-generator witness from spectral/Casimir estimates and prove
+- [x] Reduce the zero-time operator-generator witness to two exact boundary limits: right continuity
+  of the scalar heat trajectory and convergence of its positive-time pairing-Laplacian derivative.
+  Use Mathlib's one-sided derivative-extension theorem and slope characterization to construct the
+  `NNReal` difference quotient and hence the stochastic generator from those fields.
+- [ ] Construct those two boundary-continuity witnesses from spectral/Casimir estimates and prove
   comparison of the exact pairing Laplacian with the geometric Laplace–Beltrami operator.
 - [x] Prove that the common Wilson chain forgets only global faithfulness and Wilson normalization to
   construct Driver's exact Villain common heat chain. Attach the still-uninhabited Theorem 7.2
@@ -1501,8 +1505,9 @@ committed before higher layers depend on it.
     acceptance, and retain proposition-level rank-two/4D separation.
   - [x] Add
     `TwoDimensionalStochasticGeneratorCurrentStrengthSourceIndexedLiteratureAcceptance`, exactly
-    decomposed into the prior six source components plus the dependent uninhabited zero-time
-    generator witness on their unchanged spectral Brownian bridge. Prove forgetting, rank-two, and
+    decomposed into the prior six source components plus the dependent uninhabited heat-trajectory
+    and pairing-generator boundary-continuity witnesses on their unchanged spectral Brownian bridge.
+    Derive the actual zero-time generator witness from those fields. Prove forgetting, rank-two, and
     4D-separation theorems and direct probes.
   - [ ] Assemble a final source-indexed 2D acceptance proposition joining the constructed finite
     lattice, heat/Brownian, weak-limit continuum, compact-surface, and sewing chains; attempt to

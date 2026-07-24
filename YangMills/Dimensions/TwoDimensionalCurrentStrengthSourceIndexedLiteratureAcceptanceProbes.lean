@@ -423,9 +423,46 @@ theorem exact_stochasticGenerator_component_audit :
     (SenguptaFineVertex := SenguptaFineVertex) (senguptaFine := senguptaFine)
     (SenguptaTargetVertex := SenguptaTargetVertex) (senguptaTarget := senguptaTarget)
     (SenguptaTargetSurface := SenguptaTargetSurface),
-        Nonempty (TwoDimensionalSelectedLoopStochasticGeneratorAtZeroData
+        Nonempty (TwoDimensionalSelectedLoopGeneratorBoundaryContinuityData
           source.current.planar.toSpectralBrownianGeneratorBridgeData) :=
   TwoDimensionalStochasticGeneratorCurrentStrengthSourceIndexedLiteratureAcceptance.iff_components.mp generatorAcceptance
+
+
+
+include generatorAcceptance in
+omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
+    [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in
+/-- The audited boundary limits construct the exact operator/stochastic generator witness. -/
+theorem exact_stochasticGenerator_constructed_from_boundaries :
+    ∃ source : TwoDimensionalCurrentStrengthSourceIndexedLiteratureComponents.{uE, uG, uGauge, uSample, uConnection,
+      uΩ, uVertex, uEdge, uFace, uXAxisCell,
+      uLargeVertex, uLargeEdge, uLargeFace, uLargeXAxisCell, uFineVertex,
+      uFineEdge, uFineFace, uFineXAxisCell, uFineLargeVertex, uFineLargeEdge,
+      uFineLargeFace, uFineLargeXAxisCell, uEL, uHL, uSL,
+      uER, uHR, uSR, uEG, uHG,
+      uLeftBase, uRightBase, uWholeBase, uLeftLoop, uRightLoop,
+      uWholeLoop, uLeftSample, uRightSample, uWholeSample, uCover,
+      uCurveS, uEdgeS, uInternalEdge, uFaceS, uRegionS,
+      uSenguptaSample, uSenguptaSurface, uSenguptaBaseVertex, uSenguptaFineInternal, uSenguptaFineFace,
+      uSenguptaFineVertex, uSenguptaTargetEdge, uSenguptaTargetInternal, uSenguptaTargetFace, uSenguptaTargetRegion,
+      uSenguptaTargetVertex, uSenguptaTargetSurface, uCandidateFineEdge, uCandidateFineInternal, uCandidateFineFace,
+      uCandidateFineVertex, uPath, uObservable}
+    (law := law) (inner := inner) (realLaplacian := realLaplacian)
+    (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+    (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)
+    (identification := identification) (IG := IG)
+    (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+    (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)
+    (CoverGroup := CoverGroup) (CurveS := CurveS) (EdgeS := EdgeS)
+    (InternalEdge := InternalEdge) (FaceS := FaceS) (RegionS := RegionS)
+    (SenguptaSample := SenguptaSample) (coverDensity := coverDensity)
+    (SenguptaSurface := SenguptaSurface) (SenguptaBaseVertex := SenguptaBaseVertex)
+    (SenguptaFineVertex := SenguptaFineVertex) (senguptaFine := senguptaFine)
+    (SenguptaTargetVertex := SenguptaTargetVertex) (senguptaTarget := senguptaTarget)
+    (SenguptaTargetSurface := SenguptaTargetSurface),
+        Nonempty (TwoDimensionalSelectedLoopStochasticGeneratorAtZeroData
+          source.current.planar.toSpectralBrownianGeneratorBridgeData) :=
+  TwoDimensionalStochasticGeneratorCurrentStrengthSourceIndexedLiteratureAcceptance.generatorAtZero generatorAcceptance
 
 include generatorAcceptance in
 omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
