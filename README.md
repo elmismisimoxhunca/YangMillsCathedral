@@ -971,8 +971,8 @@ paths unchanged. It requires a matching exact factor certificate for each candid
 nonemptiness, source total-region-area equality without fixed simplex allocations, and the
 nonorientable fixed-twist condition. The exact curve-bond combinatorics are now available separately: fine indexed curve words are
 literal finite-graph substitutions and covering/projected curve holonomies commute. Reverse-aware
-word substitution is now proved associative. Given a caller-supplied coherent direct graph
-refinement for two stages, the exact direct curve refinement is derived; its configuration map,
+word substitution is now proved associative. A coherent direct graph refinement is proved unique
+from its vertex map and edge words; given its caller-supplied existence for two stages, the exact direct curve refinement is derived; its configuration map,
 stagewise measure pushforwards, and complete projected finite-curve law compose without an unrelated
 measure-law witness. At the normalized equation-(8.3) scope, a coarse-to-middle weighted
 refinement and a supplied fine-to-middle weighted pushforward on that same coherent triple now

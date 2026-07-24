@@ -5466,8 +5466,9 @@ nonorientable fixed-twist condition. Candidates keep external curve bonds and pa
 fixed. `TwoDimensionalSenguptaCurveBondRefinementData` now supplies the exact missing combinatorics:
 fine indexed curve words are literal finite-graph substitutions, covering and projected simultaneous
 curve holonomies commute, and any supplied graph-measure pushforward transports the whole finite
-curve law. Reverse-aware word substitution is now proved associative. Given a caller-supplied
-coherent direct graph refinement for two exact stages, the direct curve refinement is derived; its
+curve law. Reverse-aware word substitution is now proved associative, and any two coherent direct
+graph refinements for the same stages are equal. Given caller-supplied existence of that uniquely
+determined direct graph for two exact stages, the direct curve refinement is derived; its
 configuration map is the composite, stagewise measure pushforwards imply the direct pushforward, and
 the complete projected finite-curve law transports without a disconnected measure-law witness.
 `TwoDimensionalSenguptaCurveBondGraphMeasureRefinementCompositionData` lifts this to normalized

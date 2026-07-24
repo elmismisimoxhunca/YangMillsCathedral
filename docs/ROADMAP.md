@@ -1367,8 +1367,8 @@ committed before higher layers depend on it.
   - [x] Add the exact curve-bond refinement layer: fine indexed curve words are literal finite-graph
     substitutions; covering and projected simultaneous curve holonomies commute; and any supplied
     graph-measure pushforward transports the complete finite curve law.
-  - [x] Prove reverse-aware associativity of oriented-word refinement and, given a coherent supplied
-    direct graph refinement, package exact two-stage curve-bond composition: derive the direct curve
+  - [x] Prove reverse-aware associativity of oriented-word refinement, prove any coherent direct
+    graph refinement unique from its vertex/edge-word data, and, given supplied existence, package exact two-stage curve-bond composition: derive the direct curve
     refinement, composite configuration map,
     stagewise-to-direct measure pushforward, and complete projected finite-curve-law transport.
   - [x] Lift that composition to normalized equation-(8.3) weighted graph measures: from one exact

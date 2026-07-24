@@ -92,6 +92,22 @@ noncomputable def direct
         funext edge
         exact (data.graphComposition.edgeWord_eq edge).symm
 
+/-- Any other direct graph coherent with the same two curve-refinement stages equals the stored
+direct graph. The direct graph remains an existence input, but its data are unique. -/
+theorem directGraph_unique
+    (data : TwoDimensionalSenguptaCurveBondRefinementCompositionData
+      (coarseSource := coarseSource) (coarseTarget := coarseTarget)
+      (middleSource := middleSource) (middleTarget := middleTarget)
+      (fineSource := fineSource) (fineTarget := fineTarget)
+      (coarseCurveWord := coarseCurveWord) (middleCurveWord := middleCurveWord)
+      (fineCurveWord := fineCurveWord))
+    {otherDirect : FiniteGraphRefinementData CoarseVertex FineVertex CoarseEdge FineEdge
+      coarseSource coarseTarget fineSource fineTarget}
+    (otherComposition : FiniteGraphRefinementCompositionData
+      data.coarseToMiddle.graph data.middleToFine.graph otherDirect) :
+    data.directGraph = otherDirect :=
+  data.graphComposition.directGraph_unique otherComposition
+
 /-- The direct fine-to-coarse configuration map is literally the composite of both stage maps. -/
 theorem direct_configurationMap_eq_comp
     (data : TwoDimensionalSenguptaCurveBondRefinementCompositionData

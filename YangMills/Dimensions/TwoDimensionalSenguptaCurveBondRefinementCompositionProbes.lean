@@ -43,6 +43,15 @@ theorem changed_direct_edge_word_blocked (edge : CoarseEdge)
         (data.coarseToMiddle.graph.edgeWord edge)) : False :=
   changed (data.graphComposition.edgeWord_eq edge)
 
+/-- Any alternate coherent direct graph is forced to equal the stored direct graph. -/
+theorem exact_direct_graph_unique
+    {otherDirect : FiniteGraphRefinementData CoarseVertex FineVertex CoarseEdge FineEdge
+      coarseSource coarseTarget fineSource fineTarget}
+    (otherComposition : FiniteGraphRefinementCompositionData
+      data.coarseToMiddle.graph data.middleToFine.graph otherDirect) :
+    data.directGraph = otherDirect :=
+  data.directGraph_unique otherComposition
+
 /-- The direct configuration map is exactly the two-stage map. -/
 theorem exact_configuration_composition {H : Type*} [Group H] :
     data.directGraph.configurationMap (G := H) =

@@ -179,6 +179,22 @@ noncomputable def finiteGraphIdentityRefinementData
 
 namespace FiniteGraphRefinementData
 
+/-- A finite graph refinement is determined by its vertex map and oriented edge words; endpoint and
+chain certificates are proof-irrelevant. -/
+theorem eq_of_vertexMap_edgeWord_eq
+    {CoarseVertex : Type uCoarseVertex} {FineVertex : Type uFineVertex}
+    {CoarseEdge : Type uCoarseEdge} {FineEdge : Type uFineEdge}
+    [Fintype CoarseEdge] [Fintype FineEdge]
+    {coarseSource coarseTarget : CoarseEdge → CoarseVertex}
+    {fineSource fineTarget : FineEdge → FineVertex}
+    (first second : FiniteGraphRefinementData CoarseVertex FineVertex CoarseEdge FineEdge
+      coarseSource coarseTarget fineSource fineTarget)
+    (vertexMap_eq : first.vertexMap = second.vertexMap)
+    (edgeWord_eq : first.edgeWord = second.edgeWord) : first = second := by
+  cases first
+  cases second
+  simp_all
+
 variable
     {CoarseVertex : Type uCoarseVertex} {FineVertex : Type uFineVertex}
     {CoarseEdge : Type uCoarseEdge} {FineEdge : Type uFineEdge}
@@ -275,6 +291,35 @@ noncomputable def finiteGraphIdentityRefinementCompositionData
     simp [finiteGraphIdentityRefinementData, refineOrientedWord, refineOrientedEdge]
 
 namespace FiniteGraphRefinementCompositionData
+
+/-- Any two direct graph refinements coherent with the same two stages are equal. Thus the direct
+graph is supplied for existence, but cannot carry unrelated combinatorial data. -/
+theorem directGraph_unique
+    {CoarseVertex : Type uCoarseVertex} {MiddleVertex : Type uFineVertex}
+    {FineVertex : Type*} {CoarseEdge : Type uCoarseEdge}
+    {MiddleEdge : Type uFineEdge} {FineEdge : Type*}
+    [Fintype CoarseEdge] [Fintype MiddleEdge] [Fintype FineEdge]
+    {coarseSource coarseTarget : CoarseEdge → CoarseVertex}
+    {middleSource middleTarget : MiddleEdge → MiddleVertex}
+    {fineSource fineTarget : FineEdge → FineVertex}
+    {coarseToMiddle : FiniteGraphRefinementData
+      CoarseVertex MiddleVertex CoarseEdge MiddleEdge
+      coarseSource coarseTarget middleSource middleTarget}
+    {middleToFine : FiniteGraphRefinementData
+      MiddleVertex FineVertex MiddleEdge FineEdge
+      middleSource middleTarget fineSource fineTarget}
+    {firstDirect secondDirect : FiniteGraphRefinementData
+      CoarseVertex FineVertex CoarseEdge FineEdge
+      coarseSource coarseTarget fineSource fineTarget}
+    (first : FiniteGraphRefinementCompositionData
+      coarseToMiddle middleToFine firstDirect)
+    (second : FiniteGraphRefinementCompositionData
+      coarseToMiddle middleToFine secondDirect) :
+    firstDirect = secondDirect := by
+  apply FiniteGraphRefinementData.eq_of_vertexMap_edgeWord_eq
+  · rw [first.vertexMap_eq, second.vertexMap_eq]
+  · funext edge
+    rw [first.edgeWord_eq edge, second.edgeWord_eq edge]
 
 variable
     {CoarseVertex : Type uCoarseVertex} {MiddleVertex : Type uFineVertex}

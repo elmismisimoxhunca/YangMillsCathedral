@@ -142,6 +142,31 @@ theorem exact_certified_refinement_composition
       coarseToMiddle.configurationMap ∘ middleToFine.configurationMap :=
   composition.configurationMap_eq_comp
 
+/-- Hostile direct-graph probe: two coherent direct refinements of the same stages cannot differ. -/
+theorem changed_direct_graph_blocked
+    {CoarseVertex : Type uCoarseVertex} {MiddleVertex : Type uFineVertex}
+    {FineVertex : Type*} {CoarseEdge : Type uCoarseEdge}
+    {MiddleEdge : Type uFineEdge} {FineEdge : Type*}
+    [Fintype CoarseEdge] [Fintype MiddleEdge] [Fintype FineEdge]
+    {coarseSource coarseTarget : CoarseEdge → CoarseVertex}
+    {middleSource middleTarget : MiddleEdge → MiddleVertex}
+    {fineSource fineTarget : FineEdge → FineVertex}
+    {coarseToMiddle : FiniteGraphRefinementData
+      CoarseVertex MiddleVertex CoarseEdge MiddleEdge
+      coarseSource coarseTarget middleSource middleTarget}
+    {middleToFine : FiniteGraphRefinementData
+      MiddleVertex FineVertex MiddleEdge FineEdge
+      middleSource middleTarget fineSource fineTarget}
+    {firstDirect secondDirect : FiniteGraphRefinementData
+      CoarseVertex FineVertex CoarseEdge FineEdge
+      coarseSource coarseTarget fineSource fineTarget}
+    (first : FiniteGraphRefinementCompositionData
+      coarseToMiddle middleToFine firstDirect)
+    (second : FiniteGraphRefinementCompositionData
+      coarseToMiddle middleToFine secondDirect)
+    (changed : firstDirect ≠ secondDirect) : False :=
+  changed (first.directGraph_unique second)
+
 /-- Identity refinement composition is inhabited rather than a consistency-only empty interface. -/
 theorem identity_refinement_composition_nonempty
     (Vertex : Type uCoarseVertex) (Edge : Type uCoarseEdge) [Fintype Edge]
