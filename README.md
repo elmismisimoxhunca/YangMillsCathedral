@@ -1229,7 +1229,12 @@ wrapper into a proposition rather than another record. Its unfolding is exact, a
 inhabitance audit exposes the compact-simple geometry, current Driver/Lévy chain, Sengupta finite
 law, dependent heat factors, finite-law sewing bridge, and strongest compact finite-law witness
 without synthesizing any field. Proposition-level theorems retain rank two and reject a
-four-dimensional linear model.
+four-dimensional linear model. A distinct strict
+`TwoDimensionalGeneralFactThreeCurrentStrengthSourceIndexedLiteratureAcceptanceData` uses the exact
+strongest witness selected by the unchanged current proposition and dependently requires
+fixed-universe universal general-Fact-3 finite-curve-law acceptance on that witness's embedded base,
+finite law, and density. It forgets to current strength, remains rank two, and rejects a 4D linear
+model; its general Fact 3 witness remains uninhabited, and unrestricted/full Fact 3 remains open.
 `TwoDimensionalFullPastCurrentStrengthSourceIndexedLiteratureAcceptance` strengthens those exact six
 components with the canonically derived
 `TwoDimensionalSelectedLoopFinitePastCylinderMarkovData` on the unchanged nested spectral Brownian

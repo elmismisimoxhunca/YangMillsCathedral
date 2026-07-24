@@ -5803,9 +5803,11 @@ law, heat factors, planar spectral semigroup, covering density, and fixed bundle
 `Nonempty` equivalence exposes both dependent witnesses without synthesis. The actual descended
 compact-surface model retained by this strongest wrapper has exact real rank two and cannot be
 real-linearly equivalent to four-dimensional Euclidean spacetime, so the strengthened finite-law
-chain does not erase witness-level dimensional separation. This is the strongest current
-cross-source 2D join, but unrestricted-universe/full Fact 2, general Fact 3, heat-kernel
-integration, construction, and all component inhabitance remain open.
+chain does not erase witness-level dimensional separation. This remains the witness underlying the
+unchanged `CurrentStrength` proposition; it does not itself contain general Fact 3. A separate strict
+source-indexed join described below adds the fixed-universe general Fact 3 acceptance. Unrestricted-
+universe/full Facts 2–3, heat-kernel integration, construction, and all component inhabitance remain
+open.
 
 `TwoDimensionalCurrentStrengthSourceIndexedLiteratureAcceptance` now gives that exact strongest
 assembled chain a proposition-shaped source index. It is definitionally equivalent to nonemptiness
@@ -5815,6 +5817,12 @@ Sengupta finite law, dependent heat factors, finite-law sewing bridge, and stron
 finite-law witness; conversion in both directions constructs no missing field. Any inhabitant retains exact rank two and rejects a
 four-dimensional real-linear model; a hostile probe shows that replacing the proposition by `True`
 loses this conclusion.
+`TwoDimensionalGeneralFactThreeCurrentStrengthSourceIndexedLiteratureAcceptanceData` is a distinct
+strict strengthening: its `current` proof selects one exact strongest witness, and its dependent
+`generalFactThree` field uses that witness's unchanged embedded Sengupta base, finite law, and
+covering density. It forgets to current strength, retains exact rank two, and rejects a 4D linear
+model. The fixed-universe universal Fact 3 field remains uninhabited and constructs no subdivisions
+or analytic transports; unrestricted/full Fact 3 remains open.
 `TwoDimensionalFullPastCurrentStrengthSourceIndexedLiteratureAcceptance` now adds the exact
 `TwoDimensionalSelectedLoopFinitePastCylinderMarkovData` field to those same six components, indexed
 by their unchanged nested spectral Brownian bridge. Its `Nonempty` audit exposes the old components
