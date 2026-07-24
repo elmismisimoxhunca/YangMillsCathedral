@@ -1457,8 +1457,12 @@ committed before higher layers depend on it.
     semigroup homomorphism interface; forget the exact planar selected-loop semigroup into it. Add an
     uninhabited Sengupta covering bridge requiring a cover-group semigroup to push forward through
     the finite law's same covering projection at every positive time. Decompose its inhabitance
-    exactly into the cover semigroup and dependent measure-homomorphism witnesses. Retain
-    cover-density debt.
+    exactly into the cover semigroup and dependent measure-homomorphism witnesses.
+  - [x] Assemble the conditional Casimir spectral density into that generic semigroup interface from
+    the exact heat-trace, Casimir/Laplacian, positivity, and weak-initial-identity inputs. Use it to
+    discharge the Sengupta covering semigroup field while retaining the measure-level projection
+    homomorphism as explicit dependent debt. Construct none of the analytic inputs or projection
+    theorem.
   - [x] Define the boundary-conditioned finite-face factor reduction used in the proof of Theorem
     8.4, with Definition 7.6's delta constraints discharged by fixed external values,
     Haar-integrated internal edges, positive candidate-face/region areas, three-traversal face words,

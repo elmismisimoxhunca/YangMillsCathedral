@@ -5591,8 +5591,12 @@ interface transports every positive-time measure and continuous-test integral. T
 `TwoDimensionalSenguptaCoveringHeatSemigroupBridgeData` applies that interface to the same covering
 projection stored by the finite compact-surface law, requiring a covering-group semigroup to push
 forward to the unchanged planar density semigroup. An exact `Nonempty` equivalence splits this into
-the missing cover-semigroup witness and its dependent measure-homomorphism witness. No cover density
-is supplied.
+the missing cover-semigroup witness and its dependent measure-homomorphism witness. The conditional
+Casimir spectral chain now assembles measurability, centrality, inversion symmetry, normalized mass,
+convolution addition, and weak identity into an exact reusable density-semigroup witness. Applied on
+the covering group, this discharges the cover-semigroup field from explicit heat-trace,
+Casimir/Laplacian, positivity, and weak-initial-identity inputs; the exact projection homomorphism
+remains caller-supplied. None of those analytic inputs or the projection theorem is constructed.
 
 `TwoDimensionalSenguptaTriangulatedHeatFactorBridgeData` now supplies the boundary-conditioned
 finite-face formula used in the proof of Theorem 8.4: Definition 7.6's delta constraints are discharged

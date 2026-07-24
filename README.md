@@ -1074,7 +1074,11 @@ cover-group compactness directly rather than retaining the source's disjunction 
 reusable normalized compact-Haar density-semigroup interface now receives the unchanged planar
 selected-loop semigroup, and an uninhabited covering bridge requires a covering-group semigroup to
 push forward through Sengupta's same projection at every positive time. Its exact `Nonempty`
-decomposition separates the missing cover semigroup from the dependent measure-homomorphism proof. A further uninhabited bridge
+decomposition separates the missing cover semigroup from the dependent measure-homomorphism proof.
+The conditional Casimir spectral chain now assembles its exact density into the reusable semigroup
+interface from explicit heat-trace, Casimir/Laplacian, positivity, and weak-initial-identity inputs.
+On the covering group this discharges the semigroup field while leaving the exact projection
+homomorphism supplied; no analytic input or projection theorem is constructed. A further uninhabited bridge
 now writes the stored region weights as the boundary-conditioned finite-face integrals used in the
 proof of Theorem 8.4: Definition 7.6's delta constraints are discharged by fixed external boundary
 values, internal edges are Haar-integrated, positive candidate-face areas sum to region area, each
