@@ -5698,6 +5698,11 @@ matching factor certificate are now also exposed as
 `TwoDimensionalSenguptaCellwiseEmbeddedHomeomorphismGeometryData`, parameterized by already chosen
 source and target presentations; every bundled cellwise candidate forgets to that view
 definitionally.
+`TwoDimensionalSenguptaParameterizedCellwiseGraphMeasureTransportData` now adds the corresponding
+fine-to-fine analytic target: exact normalized covering density-semigroup factors, finite nonzero and equal
+normalizers, all-region unit mass, measurable edge-coordinate transport, and exact weighted-measure
+pushforward, all indexed by that same geometry and factor certificate. It is uninhabited and does
+not derive product-Haar coordinate invariance or integrate the factor identity.
 `TwoDimensionalSenguptaUniversalGeneralHomeomorphismPreliminarySubdivisionGeometryData` now states
 the nonvacuous geometric construction target itself: every general outer candidate must receive
 source and target parameterized split-bond subdivisions and fine cellwise geometry connected to the

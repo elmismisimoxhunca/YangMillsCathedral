@@ -1553,6 +1553,12 @@ committed before higher layers depend on it.
     bundled target candidate into a parameterized source/target-presentation view. Prove bundled
     candidates forget to it definitionally, enabling future preliminary subdivisions to choose fine
     presentations before supplying their cellwise geometry.
+  - [x] Add the parameterized fine-to-fine graph-measure transport target on that exact geometry:
+    require the matching factor certificate, exact normalized covering density-semigroup factors,
+    equal finite
+    nonzero normalizers, all-region unit mass, measurable coordinate transport, and exact weighted
+    pushforward. Retain product-Haar coordinate invariance, integration of the factor identity, and
+    inhabitation as analytic debt.
   - [x] State the nonvacuous fixed-universe universal geometric construction target for general Fact
     3: every broader outer candidate must receive source and target parameterized split-bond
     subdivisions plus fine cellwise geometry connected to the original outer map by a continuous

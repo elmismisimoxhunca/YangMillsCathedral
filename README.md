@@ -1150,9 +1150,12 @@ stores two actual embedded pairs, an actual surface homeomorphism, and indexed o
 curve transport after an endpoint-fixing whole-curve homeomorphic reparametrization, with equality
 only of total simplex area and no direct cell maps. The existing direct-cellwise geometry and its
 matching factor certificate are now separately parameterized by already chosen source and target
-presentations, and every bundled cellwise candidate forgets to this view definitionally. This enables
-future preliminary subdivisions to select fine presentations first without constructing them. A
-nonvacuous universal geometric target now requires every general outer candidate to receive source
+presentations, and every bundled cellwise candidate forgets to this view definitionally. A matching
+parameterized analytic target joins that geometry and factor certificate to the two exact normalized
+covering density-semigroup graph measures, equal finite nonzero normalizers, all-region unit mass, measurable edge
+transport, and exact weighted-measure pushforward. It remains uninhabited: product-Haar coordinate
+invariance and integration of the factor law are not derived. These views enable future preliminary
+subdivisions to select fine presentations first without constructing them. A nonvacuous universal geometric target now requires every general outer candidate to receive source
 and target parameterized split-bond subdivisions plus fine cellwise geometry connected to the
 original outer map by a continuous isotopy through actual homeomorphisms. The isotopy records
 Sengupta's deformation before the final simplicial map. This target is uninhabited and has no analytic
