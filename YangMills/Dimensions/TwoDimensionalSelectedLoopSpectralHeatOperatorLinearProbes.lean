@@ -47,6 +47,40 @@ theorem exact_positiveHeatOperator_linearity
   rw [map_add, map_smul]
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Exact probability-measure contraction probe. -/
+theorem exact_positiveHeatOperator_norm_le
+    (t : ℝ) (ht : 0 < t) (f : C(G, ℝ)) :
+    ‖twoDimensionalSelectedLoopPositiveHeatOperatorLinearMap bridge t ht f‖ ≤ ‖f‖ :=
+  twoDimensionalSelectedLoopPositiveHeatOperatorLinearMap_norm_le bridge t ht f
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Exact continuous-linear realization and operator-norm probe. -/
+theorem exact_positiveHeatOperator_continuousLinearMap
+    (t : ℝ) (ht : 0 < t) (f : C(G, ℝ)) :
+    twoDimensionalSelectedLoopPositiveHeatOperatorContinuousLinearMap bridge t ht f =
+      bridge.spectralHeatKernel.kernelOperator.heatOperator t f ∧
+    ‖twoDimensionalSelectedLoopPositiveHeatOperatorContinuousLinearMap bridge t ht‖ ≤ 1 :=
+  ⟨twoDimensionalSelectedLoopPositiveHeatOperatorContinuousLinearMap_apply bridge t ht f,
+    twoDimensionalSelectedLoopPositiveHeatOperatorContinuousLinearMap_norm_le_one bridge t ht⟩
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Hostile contraction probe: a strict uniform-norm increase is contradictory. -/
+theorem expanded_positiveHeatOperator_norm_blocked
+    (t : ℝ) (ht : 0 < t) (f : C(G, ℝ))
+    (claimed : ‖f‖ < ‖twoDimensionalSelectedLoopPositiveHeatOperatorLinearMap bridge t ht f‖) :
+    False :=
+  (not_lt_of_ge
+    (twoDimensionalSelectedLoopPositiveHeatOperatorLinearMap_norm_le bridge t ht f)) claimed
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Exact contraction-derived quotient bound with its singular inverse-time factor exposed. -/
+theorem exact_heatDifferenceQuotientLinearMap_norm_le
+    (t : NNReal) (ht : 0 < t) (f : C(G, ℝ)) :
+    ‖twoDimensionalSelectedLoopHeatDifferenceQuotientLinearMap bridge t f‖ ≤
+      2 * (t : ℝ)⁻¹ * ‖f‖ :=
+  twoDimensionalSelectedLoopHeatDifferenceQuotientLinearMap_norm_le bridge t ht f
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Exact totalization probe: the excluded zero-time branch is the zero linear map. -/
 theorem exact_heatDifferenceQuotientLinearMap_zero :
     twoDimensionalSelectedLoopHeatDifferenceQuotientLinearMap bridge 0 = 0 :=
