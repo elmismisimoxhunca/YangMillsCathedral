@@ -843,6 +843,67 @@ structure TwoDimensionalSelectedLoopStrongContinuousHeatSemigroupData
     Continuous (fun t : NNReal =>
       twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t f)
 
+namespace TwoDimensionalSelectedLoopStrongContinuousHeatSemigroupData
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- For the already constructed Markov contraction semigroup, right continuity at zero on every
+continuous test upgrades to global strong continuity by the generic nonnegative-time semigroup
+lemma. Thus no separate continuity-at-positive-time premise is needed. -/
+noncomputable def ofTendstoZero
+    {bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)}
+    (atZero : ∀ f : C(G, ℝ), Tendsto (fun t : NNReal =>
+      twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t f)
+      (nhdsWithin 0 (Set.Ioi 0)) (nhds f)) :
+    TwoDimensionalSelectedLoopStrongContinuousHeatSemigroupData bridge where
+  trajectory_continuous f := by
+    apply continuous_nnreal_semigroup_orbit_of_contractive_of_tendsto_zero
+      (fun t : NNReal =>
+        twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t)
+    · intro h
+      simp [twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap]
+    · intro s t h
+      have hadd := congrArg (fun operator : C(G, ℝ) →L[ℝ] C(G, ℝ) => operator h)
+        (twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap_add bridge s t)
+      simpa using hadd
+    · intro t h k
+      rw [dist_eq_norm, dist_eq_norm, ← map_sub]
+      exact twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap_apply_norm_le bridge t (h - k)
+    · exact atZero
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Uniform density of the designated smooth coefficient image gives right continuity at zero on all
+continuous tests and hence global strong continuity of the heat semigroup. -/
+noncomputable def ofDense
+    {bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)}
+    (dense : Dense
+      (smoothLieGroupScalarToContinuousLinearMap ''
+        smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G))) :
+    TwoDimensionalSelectedLoopStrongContinuousHeatSemigroupData bridge :=
+  ofTendstoZero
+    (twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_heatOperator_tendsto_zero_of_dense
+      bridge dense)
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Selected continuous Peter--Weyl density plus smooth-dual coverage therefore construct global
+strong continuity, while retaining both Fourier hypotheses explicitly. -/
+noncomputable def ofContinuousPeterWeylOfSmoothCoverage
+    {bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)}
+    (continuousDensity : UnitaryMatrixDual.HasContinuousPeterWeylDensity G)
+    (smoothCoverage : ∀ q : UnitaryMatrixDual G,
+      q.HasSmoothRepresentative (E := E)) :
+    TwoDimensionalSelectedLoopStrongContinuousHeatSemigroupData bridge :=
+  ofTendstoZero
+    (twoDimensionalSelectedLoop_heatOperator_tendsto_zero_of_continuousPeterWeyl_of_smoothCoverage
+      bridge continuousDensity smoothCoverage)
+
+end TwoDimensionalSelectedLoopStrongContinuousHeatSemigroupData
+
 /-- A continuous Duhamel strengthening stores strong semigroup continuity and the exact identity.
 Strong continuity derives the genuine interval-integrability field of the prior Duhamel record. -/
 structure TwoDimensionalSelectedLoopPairingContinuousDuhamelData
@@ -861,6 +922,30 @@ structure TwoDimensionalSelectedLoopPairingContinuousDuhamelData
               (realLaplacian := realLaplacian) f)
 
 namespace TwoDimensionalSelectedLoopPairingContinuousDuhamelData
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Uniform coefficient-image density plus the exact Duhamel identity constructs continuous Duhamel
+data; global strong continuity and interval integrability are then derived rather than assumed. -/
+noncomputable def ofDense
+    {bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)}
+    (dense : Dense
+      (smoothLieGroupScalarToContinuousLinearMap ''
+        smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G)))
+    (duhamelIdentity : ∀ (t : NNReal), 0 < t →
+      ∀ f : SmoothLieGroupScalarFunction (E := E) (G := G),
+        twoDimensionalSelectedLoopHeatDifferenceQuotientLinearMap bridge t
+            (smoothLieGroupScalarToContinuousLinearMap f) =
+          ∫ s : ℝ in 0..1,
+            twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge
+              (Real.toNNReal s * t)
+              (twoDimensionalSelectedLoopPairingGeneratorLinearMap
+                (realLaplacian := realLaplacian) f)) :
+    TwoDimensionalSelectedLoopPairingContinuousDuhamelData bridge where
+  strongContinuity :=
+    TwoDimensionalSelectedLoopStrongContinuousHeatSemigroupData.ofDense dense
+  duhamel := duhamelIdentity
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Strong continuity supplies genuine interval integrability, so continuous Duhamel data canonically

@@ -409,6 +409,26 @@ theorem exact_selectedLoopPairingDuhamel_graphBound
     data.quotient_norm_le_generator t ht f, data.eventual_graphBound_one⟩
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Exact semigroup probe: all-test right continuity at zero derives global orbit continuity. -/
+theorem exact_tendstoZero_derives_strongContinuousHeatSemigroup
+    (atZero : ∀ f : C(G, ℝ), Tendsto (fun t : NNReal =>
+      twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t f)
+      (nhdsWithin 0 (Set.Ioi 0)) (nhds f))
+    (f : C(G, ℝ)) :
+    Continuous (fun t : NNReal =>
+      twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge t f) :=
+  (TwoDimensionalSelectedLoopStrongContinuousHeatSemigroupData.ofTendstoZero atZero).trajectory_continuous f
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Exact density probe: coefficient-image density derives global strong continuity. -/
+theorem exact_dense_derives_strongContinuousHeatSemigroup
+    (dense : Dense
+      (smoothLieGroupScalarToContinuousLinearMap ''
+        smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G))) :
+    Nonempty (TwoDimensionalSelectedLoopStrongContinuousHeatSemigroupData bridge) :=
+  ⟨TwoDimensionalSelectedLoopStrongContinuousHeatSemigroupData.ofDense dense⟩
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Exact continuous-Duhamel probe: strong semigroup continuity supplies interval integrability. -/
 theorem exact_selectedLoopPairingContinuousDuhamel_integrable
     (data : TwoDimensionalSelectedLoopPairingContinuousDuhamelData bridge)
