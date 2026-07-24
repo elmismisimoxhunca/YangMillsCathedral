@@ -1474,6 +1474,10 @@ committed before higher layers depend on it.
     six-component literature-inhabitation audit, then derive proposition-level
     rank-two/four-dimensional linear-model separation. Keep `CurrentStrength`
     binding and do not treat this as the final source-complete target.
+  - [x] Add `TwoDimensionalFullPastCurrentStrengthSourceIndexedLiteratureAcceptance`, strengthening
+    the same flattened six source components with the exact full-past weak Markov obligation on the
+    unchanged nested spectral Brownian bridge. Expose its dependent inhabitance decomposition and
+    retain proposition-level rank-two/4D separation without constructing the monotone-class witness.
   - [ ] Assemble a final source-indexed 2D acceptance proposition joining the constructed finite
     lattice, heat/Brownian, weak-limit continuum, compact-surface, and sewing chains; attempt to
     inhabit it solely from formalized Driver/Lévy/Sengupta results and record every remaining

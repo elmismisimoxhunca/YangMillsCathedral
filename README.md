@@ -1067,8 +1067,11 @@ wrapper into a proposition rather than another record. Its unfolding is exact, a
 inhabitance audit exposes the compact-simple geometry, current Driver/Lévy chain, Sengupta finite
 law, dependent heat factors, finite-law sewing bridge, and strongest compact finite-law witness
 without synthesizing any field. Proposition-level theorems retain rank two and reject a
-four-dimensional linear model. The
-`CurrentStrength` qualifier remains binding: this is not the final source-complete 2D target, and no
+four-dimensional linear model.
+`TwoDimensionalFullPastCurrentStrengthSourceIndexedLiteratureAcceptance` strengthens those exact six
+components with `TwoDimensionalSelectedLoopFullPastMarkovData` on the unchanged nested spectral
+Brownian bridge. Its exact inhabitance audit exposes that additional monotone-class witness, and
+rank-two/4D separation is retained. The `CurrentStrength` qualifier remains binding: this is not the final source-complete 2D target, and no
 inhabitant is constructed.
 
 A first uninhabited three-dimensional current-strength continuum core is now hard-wired to

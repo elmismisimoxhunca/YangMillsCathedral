@@ -5611,7 +5611,12 @@ inhabitance audit separately exposes the compact-simple geometry, current Driver
 Sengupta finite law, dependent heat factors, finite-law sewing bridge, and strongest compact
 finite-law witness; conversion in both directions constructs no missing field. Any inhabitant retains exact rank two and rejects a
 four-dimensional real-linear model; a hostile probe shows that replacing the proposition by `True`
-loses this conclusion. The name remains explicitly `CurrentStrength`: the final source-complete 2D
+loses this conclusion.
+`TwoDimensionalFullPastCurrentStrengthSourceIndexedLiteratureAcceptance` now adds the exact
+`TwoDimensionalSelectedLoopFullPastMarkovData` field to those same six components, indexed by their
+unchanged nested spectral Brownian bridge. Its `Nonempty` audit exposes the old components plus that
+dependent full-past witness; no monotone-class proof is synthesized. Rank-two and 4D linear-model
+exclusion persist. The name remains explicitly `CurrentStrength`: the final source-complete 2D
 proposition and literature-only inhabitant are still open.
 
 The preliminary `FourDimensionalCurrentStrengthUniversalAcceptance` declaration is intentionally
