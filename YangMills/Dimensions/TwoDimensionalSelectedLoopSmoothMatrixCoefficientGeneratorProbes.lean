@@ -428,6 +428,22 @@ theorem exact_dense_derives_strongContinuousHeatSemigroup
     Nonempty (TwoDimensionalSelectedLoopStrongContinuousHeatSemigroupData bridge) :=
   ⟨TwoDimensionalSelectedLoopStrongContinuousHeatSemigroupData.ofDense dense⟩
 
+omit [FiniteDimensional ℝ E] [IsTopologicalGroup G] [T2Space G]
+    [SecondCountableTopology G] [MeasurableSpace G] [BorelSpace G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Exact density bridge probe: finite graph approximation plus ambient smooth density makes the
+coefficient image dense in all continuous tests. -/
+theorem exact_finiteGraphApproximation_smoothDense_coefficientImage_dense
+    (finiteApproximation :
+      TwoDimensionalSelectedLoopSmoothMatrixCoefficientFiniteGraphApproximation
+        (realLaplacian := realLaplacian))
+    (smoothDense : SmoothLieGroupScalarFunctionsDenseInContinuous (E := E) (G := G)) :
+    Dense
+      (smoothLieGroupScalarToContinuousLinearMap ''
+        smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G)) :=
+  smoothMatrixCoefficient_continuousImage_dense_of_finiteGraphApproximation_of_smoothDense
+    finiteApproximation smoothDense
+
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Exact continuous-Duhamel probe: strong semigroup continuity supplies interval integrability. -/
 theorem exact_selectedLoopPairingContinuousDuhamel_integrable
@@ -501,6 +517,45 @@ theorem missing_continuousDuhamel_blocks_ContinuousDuhamelAnalyticAcceptance
       bridge := by
   intro acceptance
   exact missing acceptance.2
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Exact three-part smooth-density Duhamel analytic endpoint. -/
+theorem exact_SmoothDensityDuhamelAnalyticAcceptance_stochasticGenerator
+    (acceptance :
+      TwoDimensionalSelectedLoopSmoothMatrixCoefficientSmoothDensityDuhamelAnalyticAcceptance
+        bridge) :
+    TwoDimensionalSelectedLoopSmoothMatrixCoefficientContinuousDuhamelAnalyticAcceptance bridge ∧
+      Nonempty (TwoDimensionalSelectedLoopStochasticGeneratorAtZeroData bridge) :=
+  ⟨acceptance.implies_continuousDuhamelAnalyticAcceptance,
+    ⟨acceptance.toStochasticGeneratorAtZeroData⟩⟩
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Hostile three-part acceptance probe: missing finite graph approximation blocks acceptance. -/
+theorem missing_finiteGraphApproximation_blocks_SmoothDensityDuhamelAnalyticAcceptance
+    (missing : ¬ TwoDimensionalSelectedLoopSmoothMatrixCoefficientFiniteGraphApproximation
+      (realLaplacian := realLaplacian)) :
+    ¬ TwoDimensionalSelectedLoopSmoothMatrixCoefficientSmoothDensityDuhamelAnalyticAcceptance
+      bridge := by
+  intro acceptance
+  exact missing acceptance.finiteGraphApproximation
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Hostile three-part acceptance probe: missing smooth ambient density blocks acceptance. -/
+theorem missing_smoothDensity_blocks_SmoothDensityDuhamelAnalyticAcceptance
+    (missing : ¬ SmoothLieGroupScalarFunctionsDenseInContinuous (E := E) (G := G)) :
+    ¬ TwoDimensionalSelectedLoopSmoothMatrixCoefficientSmoothDensityDuhamelAnalyticAcceptance
+      bridge := by
+  intro acceptance
+  exact missing acceptance.smoothDense
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Hostile three-part acceptance probe: missing the exact Duhamel identity blocks acceptance. -/
+theorem missing_identity_blocks_SmoothDensityDuhamelAnalyticAcceptance
+    (missing : ¬ TwoDimensionalSelectedLoopPairingDuhamelIdentity bridge) :
+    ¬ TwoDimensionalSelectedLoopSmoothMatrixCoefficientSmoothDensityDuhamelAnalyticAcceptance
+      bridge := by
+  intro acceptance
+  exact missing acceptance.duhamelIdentity
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- An actual coefficient graph-core witness yields all-smooth strong heat continuity through graph

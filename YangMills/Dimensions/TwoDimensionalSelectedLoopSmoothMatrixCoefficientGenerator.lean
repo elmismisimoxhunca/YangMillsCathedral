@@ -753,6 +753,23 @@ theorem twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_exists_eventually
     (twoDimensionalSelectedLoopHeatDifferenceQuotientLinearMap bridge) f
     (twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_generator bridge f hf)
 
+/-- Exact unit-interval Duhamel identity for the selected pairing generator. This proposition does
+not include integrability or claim that the identity follows from the stored positive-time heat
+equation. -/
+def TwoDimensionalSelectedLoopPairingDuhamelIdentity
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)) : Prop :=
+  ∀ (t : NNReal), 0 < t →
+    ∀ f : SmoothLieGroupScalarFunction (E := E) (G := G),
+      twoDimensionalSelectedLoopHeatDifferenceQuotientLinearMap bridge t
+          (smoothLieGroupScalarToContinuousLinearMap f) =
+        ∫ s : ℝ in 0..1,
+          twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge
+            (Real.toNNReal s * t)
+            (twoDimensionalSelectedLoopPairingGeneratorLinearMap
+              (realLaplacian := realLaplacian) f)
+
 /-- Proof-local semigroup-analytic Duhamel strengthening for the right heat difference quotient on
 the full smooth domain. It requires genuine interval integrability and identifies the quotient with
 the unit-interval average of the total contraction semigroup applied to the pairing generator. This
@@ -768,15 +785,7 @@ structure TwoDimensionalSelectedLoopPairingDuhamelData
           (Real.toNNReal s * t)
           (twoDimensionalSelectedLoopPairingGeneratorLinearMap
             (realLaplacian := realLaplacian) f)) volume 0 1
-  duhamel : ∀ (t : NNReal), 0 < t →
-    ∀ f : SmoothLieGroupScalarFunction (E := E) (G := G),
-      twoDimensionalSelectedLoopHeatDifferenceQuotientLinearMap bridge t
-          (smoothLieGroupScalarToContinuousLinearMap f) =
-        ∫ s : ℝ in 0..1,
-          twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge
-            (Real.toNNReal s * t)
-            (twoDimensionalSelectedLoopPairingGeneratorLinearMap
-              (realLaplacian := realLaplacian) f)
+  duhamel : TwoDimensionalSelectedLoopPairingDuhamelIdentity bridge
 
 namespace TwoDimensionalSelectedLoopPairingDuhamelData
 
@@ -911,15 +920,7 @@ structure TwoDimensionalSelectedLoopPairingContinuousDuhamelData
       (law := law) (inner := inner) (realLaplacian := realLaplacian)
       (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)) where
   strongContinuity : TwoDimensionalSelectedLoopStrongContinuousHeatSemigroupData bridge
-  duhamel : ∀ (t : NNReal), 0 < t →
-    ∀ f : SmoothLieGroupScalarFunction (E := E) (G := G),
-      twoDimensionalSelectedLoopHeatDifferenceQuotientLinearMap bridge t
-          (smoothLieGroupScalarToContinuousLinearMap f) =
-        ∫ s : ℝ in 0..1,
-          twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge
-            (Real.toNNReal s * t)
-            (twoDimensionalSelectedLoopPairingGeneratorLinearMap
-              (realLaplacian := realLaplacian) f)
+  duhamel : TwoDimensionalSelectedLoopPairingDuhamelIdentity bridge
 
 namespace TwoDimensionalSelectedLoopPairingContinuousDuhamelData
 
@@ -933,15 +934,7 @@ noncomputable def ofDense
     (dense : Dense
       (smoothLieGroupScalarToContinuousLinearMap ''
         smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G)))
-    (duhamelIdentity : ∀ (t : NNReal), 0 < t →
-      ∀ f : SmoothLieGroupScalarFunction (E := E) (G := G),
-        twoDimensionalSelectedLoopHeatDifferenceQuotientLinearMap bridge t
-            (smoothLieGroupScalarToContinuousLinearMap f) =
-          ∫ s : ℝ in 0..1,
-            twoDimensionalSelectedLoopHeatOperatorContinuousLinearMap bridge
-              (Real.toNNReal s * t)
-              (twoDimensionalSelectedLoopPairingGeneratorLinearMap
-                (realLaplacian := realLaplacian) f)) :
+    (duhamelIdentity : TwoDimensionalSelectedLoopPairingDuhamelIdentity bridge) :
     TwoDimensionalSelectedLoopPairingContinuousDuhamelData bridge where
   strongContinuity :=
     TwoDimensionalSelectedLoopStrongContinuousHeatSemigroupData.ofDense dense
@@ -1003,6 +996,82 @@ theorem smoothMatrixCoefficient_graphDense_iff_finiteSynthesis_graphApproximatio
     obtain ⟨coefficients, hJ, hA⟩ := finiteApproximation f ε hε
     exact ⟨smoothUnitaryMatrixCoefficientRealSynthesis coefficients,
       ⟨coefficients, rfl⟩, hJ, hA⟩
+
+omit [FiniteDimensional ℝ E] [IsTopologicalGroup G] [T2Space G]
+    [SecondCountableTopology G] [MeasurableSpace G] [BorelSpace G]
+    [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Simultaneous finite graph approximation contains uniform approximation of every smooth test.
+If smooth real functions themselves are dense in the continuous ambient space, this zeroth graph
+coordinate therefore makes the smooth coefficient image dense in all continuous tests. -/
+theorem smoothMatrixCoefficient_continuousImage_dense_of_finiteGraphApproximation_of_smoothDense
+    (finiteApproximation :
+      TwoDimensionalSelectedLoopSmoothMatrixCoefficientFiniteGraphApproximation
+        (realLaplacian := realLaplacian))
+    (smoothDense : SmoothLieGroupScalarFunctionsDenseInContinuous (E := E) (G := G)) :
+    Dense
+      (smoothLieGroupScalarToContinuousLinearMap ''
+        smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G)) := by
+  let J := smoothLieGroupScalarToContinuousLinearMap (E := E) (G := G)
+  let A := twoDimensionalSelectedLoopPairingGeneratorLinearMap
+    (realLaplacian := realLaplacian)
+  let core := smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G)
+  have graphDense : IsLinearMapDomainGraphDenseCore J A core :=
+    smoothMatrixCoefficient_graphDense_iff_finiteSynthesis_graphApproximation.mpr
+      finiteApproximation
+  have range_subset : Set.range J ⊆ closure (J '' core) := by
+    rintro _ ⟨f, rfl⟩
+    exact (graphDense f).mem_closure_image J A core
+  have closure_subset : closure (Set.range J) ⊆ closure (J '' core) :=
+    closure_minimal range_subset isClosed_closure
+  rw [dense_iff_closure_eq]
+  apply Set.Subset.antisymm
+  · exact Set.subset_univ _
+  intro f _hf
+  apply closure_subset
+  rw [smoothDense.closure_eq]
+  exact Set.mem_univ f
+
+namespace TwoDimensionalSelectedLoopStrongContinuousHeatSemigroupData
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Finite graph approximation plus density of all smooth tests in the continuous ambient space
+constructs global strong continuity of the selected heat semigroup. -/
+noncomputable def ofFiniteGraphApproximationOfSmoothDense
+    {bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)}
+    (finiteApproximation :
+      TwoDimensionalSelectedLoopSmoothMatrixCoefficientFiniteGraphApproximation
+        (realLaplacian := realLaplacian))
+    (smoothDense : SmoothLieGroupScalarFunctionsDenseInContinuous (E := E) (G := G)) :
+    TwoDimensionalSelectedLoopStrongContinuousHeatSemigroupData bridge :=
+  ofDense
+    (smoothMatrixCoefficient_continuousImage_dense_of_finiteGraphApproximation_of_smoothDense
+      finiteApproximation smoothDense)
+
+end TwoDimensionalSelectedLoopStrongContinuousHeatSemigroupData
+
+namespace TwoDimensionalSelectedLoopPairingContinuousDuhamelData
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Finite graph approximation, ambient smooth density, and the exact Duhamel identity construct
+continuous Duhamel data without an additional coefficient-density premise. -/
+noncomputable def ofFiniteGraphApproximationOfSmoothDense
+    {bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)}
+    (finiteApproximation :
+      TwoDimensionalSelectedLoopSmoothMatrixCoefficientFiniteGraphApproximation
+        (realLaplacian := realLaplacian))
+    (smoothDense : SmoothLieGroupScalarFunctionsDenseInContinuous (E := E) (G := G))
+    (duhamelIdentity : TwoDimensionalSelectedLoopPairingDuhamelIdentity bridge) :
+    TwoDimensionalSelectedLoopPairingContinuousDuhamelData bridge :=
+  ofDense
+    (smoothMatrixCoefficient_continuousImage_dense_of_finiteGraphApproximation_of_smoothDense
+      finiteApproximation smoothDense)
+    duhamelIdentity
+
+end TwoDimensionalSelectedLoopPairingContinuousDuhamelData
 
 /-- Exact remaining obligations after selecting the finite real smooth matrix-coefficient range,
 deriving its real pairing-Laplacian eigenvalues, and proving its generator convergence. -/
@@ -1251,6 +1320,51 @@ noncomputable def toStochasticGeneratorAtZeroData
   acceptance.implies_DuhamelAnalyticAcceptance.toStochasticGeneratorAtZeroData
 
 end TwoDimensionalSelectedLoopSmoothMatrixCoefficientContinuousDuhamelAnalyticAcceptance
+
+/-- Exact three-part analytic acceptance route: simultaneous finite graph approximation, uniform
+density of all smooth real tests in the continuous ambient space, and the exact Duhamel identity.
+All continuity, interval integrability, and graph bounds are derived from these fields. -/
+structure TwoDimensionalSelectedLoopSmoothMatrixCoefficientSmoothDensityDuhamelAnalyticAcceptance
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)) : Prop where
+  finiteGraphApproximation :
+    TwoDimensionalSelectedLoopSmoothMatrixCoefficientFiniteGraphApproximation
+      (realLaplacian := realLaplacian)
+  smoothDense : SmoothLieGroupScalarFunctionsDenseInContinuous (E := E) (G := G)
+  duhamelIdentity : TwoDimensionalSelectedLoopPairingDuhamelIdentity bridge
+
+namespace TwoDimensionalSelectedLoopSmoothMatrixCoefficientSmoothDensityDuhamelAnalyticAcceptance
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- The exact three-part route constructs the prior strongly-continuous Duhamel acceptance. -/
+theorem implies_continuousDuhamelAnalyticAcceptance
+    {bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)}
+    (acceptance :
+      TwoDimensionalSelectedLoopSmoothMatrixCoefficientSmoothDensityDuhamelAnalyticAcceptance
+        bridge) :
+    TwoDimensionalSelectedLoopSmoothMatrixCoefficientContinuousDuhamelAnalyticAcceptance
+      bridge :=
+  ⟨acceptance.finiteGraphApproximation,
+    ⟨TwoDimensionalSelectedLoopPairingContinuousDuhamelData.ofFiniteGraphApproximationOfSmoothDense
+        acceptance.finiteGraphApproximation
+        acceptance.smoothDense acceptance.duhamelIdentity⟩⟩
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- The same exact three obligations reach the all-smooth stochastic generator endpoint. -/
+noncomputable def toStochasticGeneratorAtZeroData
+    {bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)}
+    (acceptance :
+      TwoDimensionalSelectedLoopSmoothMatrixCoefficientSmoothDensityDuhamelAnalyticAcceptance
+        bridge) :
+    TwoDimensionalSelectedLoopStochasticGeneratorAtZeroData bridge :=
+  acceptance.implies_continuousDuhamelAnalyticAcceptance.toStochasticGeneratorAtZeroData
+
+end TwoDimensionalSelectedLoopSmoothMatrixCoefficientSmoothDensityDuhamelAnalyticAcceptance
 
 end
 
