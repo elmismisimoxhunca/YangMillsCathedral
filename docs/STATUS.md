@@ -5282,8 +5282,12 @@ finite cylinder is past-measurable and satisfies the exact transition test. The 
 measurable for this generated past. Conditional-expectation uniqueness proves that any supplied
 universal weak witness gives the exact conditional Markov identity for this generated past;
 conditional pull-out proves the converse for every bounded past-measurable test, so these full-past
-semantics are equivalent, with direct and changed-version hostile probes. Construction of the missing monotone-class extension
-remains explicit; stochastic-generator identification remains separate future proof debt. The
+semantics are equivalent, with direct and changed-version hostile probes. The reusable
+`ae_eq_condExp_of_piSystem_setIntegral_eq` now proves the actual complement/disjoint-union closure
+from a generating pi-system, and `TwoDimensionalSelectedLoopFullPastPiSystemMarkovData` constructs
+both universal semantics from generator, generation, total-integral, and basic set-integral fields.
+Constructing the process-specific finite-cylinder generator and those basic identities remains
+explicit; stochastic-generator identification remains separate future proof debt. The
 common Wilson chain now forgets only its genuinely stronger global-faithfulness and normalization
 fields to construct Driver's exact Villain common heat chain. Uninhabited
 `TwoDimensionalSpectralVillainWeakLimitBridgeData` ties the unchanged Theorem 7.2 contract to the

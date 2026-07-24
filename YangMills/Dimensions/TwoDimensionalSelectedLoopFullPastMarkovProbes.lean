@@ -94,6 +94,39 @@ theorem exact_fullPast_arbitrary_test
   data.fullPastWeakMarkov s t ht pastTest pastTest_measurable pastTest_bounded f
 
 omit [FiniteDimensional ℝ E] in
+/-- A supplied generating pi-system with basic set-integral identities constructs the exact
+conditional semantics through the reusable monotone-class theorem. -/
+theorem exact_piSystem_fullPastConditional
+    (data : TwoDimensionalSelectedLoopFullPastPiSystemMarkovData bridge) :
+    bridge.HasFullPastConditionalMarkovProperty :=
+  data.fullPastConditionalMarkov
+
+omit [FiniteDimensional ℝ E] in
+/-- Hostile reduced-record probe: a changed conditional version is incompatible with the supplied
+pi-system generator and basic transition identities. -/
+theorem changed_piSystem_fullPastConditional_blocked
+    (data : TwoDimensionalSelectedLoopFullPastPiSystemMarkovData bridge)
+    (s t : NNReal) (ht : 0 < t) (f : C(G, ℝ)) (changed : Ω → ℝ)
+    (changed_ne_exact : ¬ changed =ᵐ[bridge.brownian.probabilityMeasure]
+      fun samplePoint =>
+        bridge.spectralHeatKernel.kernelOperator.heatOperator (t : ℝ) f
+          (bridge.brownian.process s samplePoint))
+    (claimed :
+      MeasureTheory.condExp
+          (twoDimensionalSelectedLoopPastMeasurableSpace bridge.brownian s)
+          bridge.brownian.probabilityMeasure
+          (fun samplePoint => f (bridge.brownian.process (s + t) samplePoint)) =ᵐ[
+            bridge.brownian.probabilityMeasure] changed) : False :=
+  changed_ne_exact (claimed.symm.trans (data.fullPastConditionalMarkov s t ht f))
+
+omit [FiniteDimensional ℝ E] in
+/-- The same reduced pi-system data constructs the prior universal bounded-test acceptance field. -/
+theorem exact_piSystem_toFullPast
+    (data : TwoDimensionalSelectedLoopFullPastPiSystemMarkovData bridge) :
+    TwoDimensionalSelectedLoopFullPastMarkovData bridge :=
+  data.toFullPastMarkovData
+
+omit [FiniteDimensional ℝ E] in
 /-- The two full-past formulations are exactly equivalent for the same process and spectral
 operator; neither permits an unrelated conditioning sigma-algebra or transition family. -/
 theorem exact_fullPast_semantics_equivalent :

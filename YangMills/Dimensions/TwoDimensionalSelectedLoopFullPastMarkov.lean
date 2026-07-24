@@ -5,6 +5,7 @@ Authors: YangMillsDefinition contributors
 -/
 import YangMills.Dimensions.TwoDimensionalSelectedLoopFinitePastBoundedMeasurableTransition
 import Mathlib.MeasureTheory.Function.ConditionalExpectation.PullOut
+import YangMills.Mathematics.ConditionalExpectationPiSystem
 
 /-!
 # Exact full-past sigma-algebra and Markov obligation
@@ -169,6 +170,37 @@ def TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData.HasFullPastCon
         bridge.spectralHeatKernel.kernelOperator.heatOperator (t : ℝ) f
           (bridge.brownian.process s samplePoint)
 
+/-- Reduced full-past obligation through a generating pi-system. Application-specific work must
+supply a pi-system generating the exact process past and prove the transition set-integral identity
+on its basic finite cylinders. The generic complement/disjoint-union closure is proved separately. -/
+structure TwoDimensionalSelectedLoopFullPastPiSystemMarkovData
+    {realLaplacian : RightInvariantPairingLaplacianData inner}
+    {complexLaplacian : RightInvariantPairingComplexLaplacianData inner}
+    {heatTraceData : UnitaryMatrixDualHeatTraceSummabilityData (G := G)}
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)) where
+  generator : NNReal → Set (Set Ω)
+  generator_pi : ∀ s, IsPiSystem (generator s)
+  generator_eq : ∀ s,
+    twoDimensionalSelectedLoopPastMeasurableSpace bridge.brownian s =
+      MeasurableSpace.generateFrom (generator s)
+  total_transition : ∀ (s t : NNReal), 0 < t → ∀ f : C(G, ℝ),
+    (∫ samplePoint,
+      bridge.spectralHeatKernel.kernelOperator.heatOperator (t : ℝ) f
+        (bridge.brownian.process s samplePoint)
+      ∂bridge.brownian.probabilityMeasure) =
+    ∫ samplePoint, f (bridge.brownian.process (s + t) samplePoint)
+      ∂bridge.brownian.probabilityMeasure
+  generator_transition : ∀ (s t : NNReal), 0 < t → ∀ f : C(G, ℝ),
+    ∀ set, set ∈ generator s →
+      (∫ samplePoint in set,
+        bridge.spectralHeatKernel.kernelOperator.heatOperator (t : ℝ) f
+          (bridge.brownian.process s samplePoint)
+        ∂bridge.brownian.probabilityMeasure) =
+      ∫ samplePoint in set, f (bridge.brownian.process (s + t) samplePoint)
+        ∂bridge.brownian.probabilityMeasure
+
 /-- Explicit unresolved monotone-class bridge from proved bounded measurable finite cylinders to the
 full process-past sigma-algebra. No inhabitant is constructed here. -/
 structure TwoDimensionalSelectedLoopFullPastMarkovData
@@ -308,6 +340,66 @@ theorem TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData.fullPastCo
         rw [hconditional]
   · intro weak
     exact (TwoDimensionalSelectedLoopFullPastMarkovData.mk weak).fullPastConditionalMarkov
+
+omit [FiniteDimensional ℝ E] in
+/-- The generic pi-system monotone-class theorem converts the reduced finite-cylinder obligation
+into exact conditional-expectation semantics. -/
+theorem TwoDimensionalSelectedLoopFullPastPiSystemMarkovData.fullPastConditionalMarkov
+    {realLaplacian : RightInvariantPairingLaplacianData inner}
+    {complexLaplacian : RightInvariantPairingComplexLaplacianData inner}
+    {heatTraceData : UnitaryMatrixDualHeatTraceSummabilityData (G := G)}
+    {bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)}
+    (data : TwoDimensionalSelectedLoopFullPastPiSystemMarkovData bridge) :
+    bridge.HasFullPastConditionalMarkovProperty := by
+  intro s t ht f
+  let μ := bridge.brownian.probabilityMeasure
+  let future : Ω → ℝ := fun samplePoint =>
+    f (bridge.brownian.process (s + t) samplePoint)
+  let predicted : Ω → ℝ := fun samplePoint =>
+    bridge.spectralHeatKernel.kernelOperator.heatOperator (t : ℝ) f
+      (bridge.brownian.process s samplePoint)
+  letI : IsProbabilityMeasure μ := ⟨bridge.brownian.probability_normalized⟩
+  have hm : twoDimensionalSelectedLoopPastMeasurableSpace bridge.brownian s ≤
+      (inferInstance : MeasurableSpace Ω) :=
+    bridge.brownian.pastMeasurableSpace_le_ambient s
+  have future_measurable : Measurable future :=
+    f.continuous.measurable.comp (bridge.brownian.process_measurable (s + t))
+  have future_integrable : Integrable future μ := by
+    apply Integrable.of_bound future_measurable.aestronglyMeasurable ‖f‖
+    exact Filter.Eventually.of_forall fun samplePoint => f.norm_coe_le_norm _
+  have predicted_measurable :
+      @Measurable Ω ℝ (twoDimensionalSelectedLoopPastMeasurableSpace bridge.brownian s) _
+        predicted :=
+    (bridge.spectralHeatKernel.kernelOperator.heatOperator (t : ℝ) f).continuous.measurable.comp
+      (bridge.brownian.process_measurable_past s s le_rfl)
+  have predicted_integrable : Integrable predicted μ := by
+    apply Integrable.of_bound
+      ((bridge.spectralHeatKernel.kernelOperator.heatOperator (t : ℝ) f).continuous.measurable.comp
+        (bridge.brownian.process_measurable s)).aestronglyMeasurable
+      ‖bridge.spectralHeatKernel.kernelOperator.heatOperator (t : ℝ) f‖
+    exact Filter.Eventually.of_forall fun samplePoint =>
+      (bridge.spectralHeatKernel.kernelOperator.heatOperator (t : ℝ) f).norm_coe_le_norm _
+  exact (ae_eq_condExp_of_piSystem_setIntegral_eq hm future_integrable predicted_integrable
+    predicted_measurable.aestronglyMeasurable (data.generator s) (data.generator_pi s)
+    (data.generator_eq s) (data.total_transition s t ht f)
+    (data.generator_transition s t ht f)).symm
+
+omit [FiniteDimensional ℝ E] in
+/-- Forget the pi-system presentation after the generic closure theorem has constructed the exact
+universal full-past semantics. -/
+noncomputable def TwoDimensionalSelectedLoopFullPastPiSystemMarkovData.toFullPastMarkovData
+    {realLaplacian : RightInvariantPairingLaplacianData inner}
+    {complexLaplacian : RightInvariantPairingComplexLaplacianData inner}
+    {heatTraceData : UnitaryMatrixDualHeatTraceSummabilityData (G := G)}
+    {bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)}
+    (data : TwoDimensionalSelectedLoopFullPastPiSystemMarkovData bridge) :
+    TwoDimensionalSelectedLoopFullPastMarkovData bridge where
+  fullPastWeakMarkov :=
+    bridge.fullPastConditionalMarkov_iff_weakMarkov.mp data.fullPastConditionalMarkov
 
 omit [FiniteDimensional ℝ E] in
 /-- Every proved bounded measurable finite process cylinder is measurable for the exact past and

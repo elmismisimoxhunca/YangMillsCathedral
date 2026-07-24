@@ -685,7 +685,12 @@ from finite cylinders to every bounded full-past-measurable test remains an expl
 monotone-class obligation. Conditional-expectation uniqueness now proves that any supplied universal
 weak witness satisfies the exact conditional Markov identity for the generated past; conversely,
 the conditional identity recovers every bounded weak test by the conditional pull-out theorem, so
-the two full-past semantics are equivalent. Constructing either universal witness remains open. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
+the two full-past semantics are equivalent. The reusable
+`ae_eq_condExp_of_piSystem_setIntegral_eq` proves the complement/disjoint-union monotone closure
+from any generating pi-system, and `TwoDimensionalSelectedLoopFullPastPiSystemMarkovData` reduces
+the process-specific debt to exhibiting an exact finite-cylinder pi-system, proving it generates
+the past, and checking its basic set-integral identities. No such process-specific witness is yet
+constructed. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
 marginals are derived, including exact equality at the selected area with the sampled loop-holonomy
 law. The metric bridge now transports the exact invariant pairing to every group tangent fiber by
 left Maurer–Cartan trivialization and proves its inverse, symmetry, strict positivity, and left/right
