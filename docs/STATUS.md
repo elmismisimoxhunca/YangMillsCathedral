@@ -5351,10 +5351,19 @@ exact row/column conjugation mixing, singleton inclusion, and conditional nontri
 uninhabited coefficientwise Casimir bridge prevents the existing trace eigen-equation from being
 silently promoted to matrix entries; if supplied, it canonically yields both real-component
 Casimir equations, eigenvalue uniqueness from a diagonal identity coefficient, and the exact finite-
-synthesis pairing-Laplacian action. No graph-core record inhabitant is built: smooth-representative
-coverage, inhabitation of the coefficient bridge, coefficient heat action and core heat-quotient
-convergence, graph density, and the quotient bound remain unconstructed, while Laplace–Beltrami
-comparison remains open. The
+synthesis pairing-Laplacian action. Direct orthogonality now proves that each raw coefficient
+convolved with its matching trace character is inverse-dimension times itself and vanishes against
+inequivalent characters, without identifying equivalent raw bases. Bounded linear convolution
+passes the weighted uniform character series and yields unconditional diagonal Casimir heat action
+and the exact uniform-norm right zero-time generator on every explicit complex coefficient. The
+selected-loop real kernel inherits this action on both real components; with the coefficientwise
+Casimir bridge, finite linearity proves the exact pairing generator on every finite synthesis and
+fills `core_generator` for the designated coefficient range. A smaller uninhabited reduction record
+now retains only the coefficientwise Casimir bridge, smooth graph density, and the eventual uniform
+graph bound before constructing the existing all-smooth stochastic endpoint. No graph-core record
+inhabitant is built: smooth-representative coverage, inhabitation of the coefficient bridge, graph
+density, and the quotient bound remain unconstructed, while Laplace–Beltrami comparison remains
+open. The
 common Wilson chain now forgets only its genuinely stronger global-faithfulness and normalization
 fields to construct Driver's exact Villain common heat chain. Uninhabited
 `TwoDimensionalSpectralVillainWeakLimitBridgeData` ties the unchanged Theorem 7.2 contract to the

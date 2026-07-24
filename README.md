@@ -736,11 +736,16 @@ irreducible unitary presentations, with dependent row/column indices, exact nonc
 mixing, singleton inclusion, and conditional nontriviality. A new uninhabited coefficientwise
 Casimir bridge explicitly strengthens the trace equation to every matrix coordinate; when supplied,
 canonical real/complex coherence proves both real-component eigenvalue equations and finite
-synthesis linearity for the pairing Laplacian. It does not assert that every continuous dual class
-has a smooth representative. No inhabitant of the graph-core record is constructed: inhabiting this
-coefficientwise bridge, coefficient heat action and heat-quotient convergence, smooth graph density,
-and the uniform bound still prevent the algebraic range from filling the remaining all-smooth-tests
-boundary field. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
+synthesis linearity for the pairing Laplacian. Direct matrix-coefficient orthogonality now proves
+exact convolution with matching and inequivalent trace characters; bounded linear convolution
+extends this to the uniform character series, giving unconditional diagonal Casimir heat action and
+the uniform-norm scalar zero-time generator on every explicit complex coefficient. The exact real
+selected-loop kernel then inherits this action on both real components. With the coefficientwise
+Casimir bridge, finite linearity proves generator convergence on the entire smooth real coefficient
+range, so its `core_generator` obligation is no longer caller supplied. It does not assert that every
+continuous dual class has a smooth representative. No inhabitant of the graph-core record is
+constructed: inhabiting the coefficientwise bridge, smooth graph density, and the eventual uniform
+graph bound remain the exact coefficient-specific boundary before all-smooth generation. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
 marginals are derived, including exact equality at the selected area with the sampled loop-holonomy
 law. The metric bridge now transports the exact invariant pairing to every group tangent fiber by
 left Maurer–Cartan trivialization and proves its inverse, symmetry, strict positivity, and left/right

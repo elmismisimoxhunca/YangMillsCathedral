@@ -973,8 +973,14 @@ committed before higher layers depend on it.
 - [x] Isolate the stronger coefficientwise Casimir/Laplacian identification as an explicit
   uninhabited bridge and conditionally derive the real/imaginary eigenvalue equations and exact
   finite-synthesis pairing-Laplacian action.
-- [ ] Inhabit the coefficientwise Casimir bridge; prove coefficient heat action and heat-quotient
-  generator convergence, smooth graph density, and the required eventual uniform graph bound; then construct the
+- [x] Prove exact matrix-coefficient convolution against matching/inequivalent trace characters,
+  extend it through weighted uniform character series, and derive unconditional diagonal Casimir
+  heat action plus the uniform-norm zero-time generator on every explicit complex coefficient.
+- [x] Transport that action to both real selected-loop coefficient components and, conditional on
+  the coefficientwise Casimir bridge, prove generator convergence on every finite real synthesis
+  and the entire designated coefficient range; derive the coefficient-specific graph-core reduction.
+- [ ] Inhabit the coefficientwise Casimir bridge and prove smooth graph density plus the required
+  eventual uniform graph bound; then construct the
   pairing-generator boundary-continuity witness and prove
   comparison of the exact pairing Laplacian with the geometric Laplace–Beltrami operator.
 - [x] Prove that the common Wilson chain forgets only global faithfulness and Wilson normalization to
