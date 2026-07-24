@@ -58,10 +58,55 @@ theorem unitaryMatrixDualCasimirHeatComplexOperator_character
   push_cast
   rfl
 
+/-- Canonical finitely supported coefficient vector represented by a finite set and a total
+coefficient function. Coefficients outside `s` are discarded. -/
+noncomputable def unitaryMatrixDualFiniteCharacterCoefficients
+    (s : Finset (UnitaryMatrixDual G)) (a : UnitaryMatrixDual G → ℂ) :
+    UnitaryMatrixDualCharacterCoefficients G :=
+  ∑ q ∈ s, Finsupp.single q (a q)
+
+omit [IsTopologicalGroup G] [CompactSpace G] [T2Space G] [SecondCountableTopology G]
+    [MeasurableSpace G] [BorelSpace G] in
+/-- The set/function presentation recovers a canonical coefficient vector when the set is its exact
+support. -/
+@[simp]
+theorem unitaryMatrixDualFiniteCharacterCoefficients_support
+    (c : UnitaryMatrixDualCharacterCoefficients G) :
+    unitaryMatrixDualFiniteCharacterCoefficients c.support c = c := by
+  classical
+  unfold unitaryMatrixDualFiniteCharacterCoefficients
+  exact Finsupp.sum_single c
+
 /-- Finite algebraic selected-character combination. -/
 noncomputable def unitaryMatrixDualFiniteCharacterCombination
     (s : Finset (UnitaryMatrixDual G)) (a : UnitaryMatrixDual G → ℂ) : C(G, ℂ) :=
   ∑ q ∈ s, a q • unitaryMatrixDualContinuousCharacter q
+
+omit [IsTopologicalGroup G] [CompactSpace G] [T2Space G] [SecondCountableTopology G]
+    [MeasurableSpace G] [BorelSpace G] in
+/-- The set/function combination is exactly canonical finite-support character synthesis. -/
+theorem unitaryMatrixDualFiniteCharacterCombination_eq_synthesis
+    (s : Finset (UnitaryMatrixDual G)) (a : UnitaryMatrixDual G → ℂ) :
+    unitaryMatrixDualFiniteCharacterCombination s a =
+      unitaryMatrixDualContinuousCharacterSynthesis G
+        (unitaryMatrixDualFiniteCharacterCoefficients s a) := by
+  unfold unitaryMatrixDualFiniteCharacterCombination
+    unitaryMatrixDualFiniteCharacterCoefficients
+  rw [map_sum]
+  apply Finset.sum_congr rfl
+  intro q hq
+  ext g
+  exact congrFun (unitaryMatrixDualCharacterSynthesis_single q (a q)).symm g
+
+omit [IsTopologicalGroup G] [CompactSpace G] [T2Space G] [SecondCountableTopology G]
+    [MeasurableSpace G] [BorelSpace G] in
+/-- Canonical finite-support synthesis agrees with the set/function combination on exact support. -/
+theorem unitaryMatrixDualContinuousCharacterSynthesis_eq_finiteCharacterCombination
+    (c : UnitaryMatrixDualCharacterCoefficients G) :
+    unitaryMatrixDualContinuousCharacterSynthesis G c =
+      unitaryMatrixDualFiniteCharacterCombination c.support c := by
+  rw [unitaryMatrixDualFiniteCharacterCombination_eq_synthesis,
+    unitaryMatrixDualFiniteCharacterCoefficients_support]
 
 /-- Positive-time coefficientwise heat evolution of a finite selected-character combination. -/
 noncomputable def unitaryMatrixDualCasimirHeatFiniteCharacterEvolution
@@ -70,6 +115,20 @@ noncomputable def unitaryMatrixDualCasimirHeatFiniteCharacterEvolution
     (a : UnitaryMatrixDual G → ℂ) : C(G, ℂ) :=
   ∑ q ∈ s, (a q * Real.exp (-(t / 2) * data.casimirWeight q)) •
     unitaryMatrixDualContinuousCharacter q
+
+/-- Coefficientwise heat evolution on the canonical finitely supported coefficient carrier. -/
+noncomputable def unitaryMatrixDualCasimirHeatCharacterCoefficientEvolution
+    (data : UnitaryMatrixDualHeatTraceSummabilityData (G := G))
+    (t : ℝ) (c : UnitaryMatrixDualCharacterCoefficients G) : C(G, ℂ) :=
+  unitaryMatrixDualCasimirHeatFiniteCharacterEvolution data t c.support c
+
+/-- Casimir generator synthesis on the canonical finitely supported coefficient carrier. -/
+noncomputable def unitaryMatrixDualCasimirFiniteCharacterGeneratorSynthesis
+    (data : UnitaryMatrixDualHeatTraceSummabilityData (G := G))
+    (c : UnitaryMatrixDualCharacterCoefficients G) : C(G, ℂ) :=
+  ∑ q ∈ c.support,
+    (((-(data.casimirWeight q / 2) : ℝ) : ℂ) * c q) •
+      unitaryMatrixDualContinuousCharacter q
 
 /-- The spectral heat operator acts coefficientwise on every finite selected-character combination. -/
 theorem unitaryMatrixDualCasimirHeatComplexOperator_finiteCharacterCombination
@@ -93,6 +152,17 @@ theorem unitaryMatrixDualCasimirHeatComplexOperator_finiteCharacterCombination
     (unitaryMatrixDualContinuousCharacter q) = _
   rw [unitaryMatrixDualCasimirHeatComplexOperator_character data t ht q]
   module
+
+/-- Exact coefficientwise heat action on canonical finite-support character synthesis. -/
+theorem unitaryMatrixDualCasimirHeatComplexOperator_characterSynthesis
+    (data : UnitaryMatrixDualHeatTraceSummabilityData (G := G))
+    (t : ℝ) (ht : 0 < t) (c : UnitaryMatrixDualCharacterCoefficients G) :
+    unitaryMatrixDualCasimirHeatComplexOperator data t
+      (unitaryMatrixDualContinuousCharacterSynthesis G c) =
+      unitaryMatrixDualCasimirHeatCharacterCoefficientEvolution data t c := by
+  rw [unitaryMatrixDualContinuousCharacterSynthesis_eq_finiteCharacterCombination]
+  exact unitaryMatrixDualCasimirHeatComplexOperator_finiteCharacterCombination
+    data t ht c.support c
 
 omit [IsTopologicalGroup G] [CompactSpace G] [T2Space G] [SecondCountableTopology G]
     [MeasurableSpace G] [BorelSpace G] in
@@ -203,6 +273,22 @@ theorem tendsto_unitaryMatrixDualCasimirHeatComplexOperator_finiteCharacterCombi
     Pi.smul_apply, smul_eq_mul]
   push_cast
   field_simp [ht_ne]
+
+/-- Exact uniform-norm zero-time generator on canonical finite-support character synthesis. -/
+theorem tendsto_unitaryMatrixDualCasimirHeatComplexOperator_characterSynthesis_generator
+    (data : UnitaryMatrixDualHeatTraceSummabilityData (G := G))
+    (c : UnitaryMatrixDualCharacterCoefficients G) :
+    Tendsto
+      (fun t : NNReal => ((t : ℂ)⁻¹) •
+        (unitaryMatrixDualCasimirHeatComplexOperator data (t : ℝ)
+            (unitaryMatrixDualContinuousCharacterSynthesis G c) -
+          unitaryMatrixDualContinuousCharacterSynthesis G c))
+      (nhdsWithin 0 (Set.Ioi 0))
+      (nhds (unitaryMatrixDualCasimirFiniteCharacterGeneratorSynthesis data c)) := by
+  rw [unitaryMatrixDualContinuousCharacterSynthesis_eq_finiteCharacterCombination]
+  exact
+    tendsto_unitaryMatrixDualCasimirHeatComplexOperator_finiteCharacterCombination_generator
+      data c.support c
 
 end
 

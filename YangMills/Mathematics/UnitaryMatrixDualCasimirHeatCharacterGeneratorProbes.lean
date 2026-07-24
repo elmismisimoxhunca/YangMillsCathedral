@@ -32,6 +32,38 @@ theorem exact_casimirHeatOperator_character
         unitaryMatrixDualContinuousCharacter q :=
   unitaryMatrixDualCasimirHeatComplexOperator_character data t ht q
 
+omit [IsTopologicalGroup G] [CompactSpace G] [T2Space G] [SecondCountableTopology G]
+    [MeasurableSpace G] [BorelSpace G] in
+/-- Exact bridge from the auxiliary set/function presentation to canonical `Finsupp` synthesis. -/
+theorem exact_finiteCharacterCombination_canonical_bridge
+    (s : Finset (UnitaryMatrixDual G)) (a : UnitaryMatrixDual G → ℂ) :
+    unitaryMatrixDualFiniteCharacterCombination s a =
+      unitaryMatrixDualContinuousCharacterSynthesis G
+        (unitaryMatrixDualFiniteCharacterCoefficients s a) :=
+  unitaryMatrixDualFiniteCharacterCombination_eq_synthesis s a
+
+omit [IsTopologicalGroup G] [CompactSpace G] [T2Space G] [SecondCountableTopology G]
+    [MeasurableSpace G] [BorelSpace G] in
+/-- Hostile bridge probe: the auxiliary finite combination cannot equal a changed canonical
+synthesis target. -/
+theorem changed_finiteCharacterCombination_canonical_bridge_blocked
+    (s : Finset (UnitaryMatrixDual G)) (a : UnitaryMatrixDual G → ℂ)
+    (changed : C(G, ℂ))
+    (changed_ne_exact : changed ≠ unitaryMatrixDualContinuousCharacterSynthesis G
+      (unitaryMatrixDualFiniteCharacterCoefficients s a))
+    (claimed : unitaryMatrixDualFiniteCharacterCombination s a = changed) : False :=
+  changed_ne_exact (claimed.symm.trans
+    (unitaryMatrixDualFiniteCharacterCombination_eq_synthesis s a))
+
+omit [IsTopologicalGroup G] [CompactSpace G] [T2Space G] [SecondCountableTopology G]
+    [MeasurableSpace G] [BorelSpace G] in
+/-- Hostile support-reconstruction probe: exact support cannot reconstruct a changed coefficient
+vector. -/
+theorem changed_finiteCharacterCoefficients_support_blocked
+    (c changed : UnitaryMatrixDualCharacterCoefficients G) (changed_ne : changed ≠ c)
+    (claimed : unitaryMatrixDualFiniteCharacterCoefficients c.support c = changed) : False :=
+  changed_ne (claimed.symm.trans (unitaryMatrixDualFiniteCharacterCoefficients_support c))
+
 /-- Exact coefficientwise heat action on an arbitrary finite selected-character combination. -/
 theorem exact_casimirHeatOperator_finiteCharacterCombination
     (t : ℝ) (ht : 0 < t) (s : Finset (UnitaryMatrixDual G))
@@ -55,6 +87,26 @@ theorem exact_casimirHeatOperator_finiteCharacterCombination_generator
           unitaryMatrixDualContinuousCharacter q)) :=
   tendsto_unitaryMatrixDualCasimirHeatComplexOperator_finiteCharacterCombination_generator
     data s a
+
+/-- Exact heat action on the canonical finite-support coefficient carrier. -/
+theorem exact_casimirHeatOperator_characterSynthesis
+    (t : ℝ) (ht : 0 < t) (c : UnitaryMatrixDualCharacterCoefficients G) :
+    unitaryMatrixDualCasimirHeatComplexOperator data t
+      (unitaryMatrixDualContinuousCharacterSynthesis G c) =
+      unitaryMatrixDualCasimirHeatCharacterCoefficientEvolution data t c :=
+  unitaryMatrixDualCasimirHeatComplexOperator_characterSynthesis data t ht c
+
+/-- Exact uniform-norm generator theorem on the canonical finite-support coefficient carrier. -/
+theorem exact_casimirHeatOperator_characterSynthesis_generator
+    (c : UnitaryMatrixDualCharacterCoefficients G) :
+    Tendsto
+      (fun t : NNReal => ((t : ℂ)⁻¹) •
+        (unitaryMatrixDualCasimirHeatComplexOperator data (t : ℝ)
+            (unitaryMatrixDualContinuousCharacterSynthesis G c) -
+          unitaryMatrixDualContinuousCharacterSynthesis G c))
+      (nhdsWithin 0 (Set.Ioi 0))
+      (nhds (unitaryMatrixDualCasimirFiniteCharacterGeneratorSynthesis data c)) :=
+  tendsto_unitaryMatrixDualCasimirHeatComplexOperator_characterSynthesis_generator data c
 
 /-- Hostile finite-evolution probe: changing any resulting continuous function contradicts exact
 coefficientwise heat action. -/
@@ -84,6 +136,32 @@ theorem changed_casimirHeatOperator_finiteCharacterGenerator_blocked
   changed_ne_exact (tendsto_nhds_unique claimed
     (tendsto_unitaryMatrixDualCasimirHeatComplexOperator_finiteCharacterCombination_generator
       data s a))
+
+/-- Hostile canonical-evolution probe: changing the coefficientwise evolved synthesis contradicts
+the exact heat action. -/
+theorem changed_casimirHeatOperator_characterSynthesis_blocked
+    (t : ℝ) (ht : 0 < t) (c : UnitaryMatrixDualCharacterCoefficients G)
+    (changed : C(G, ℂ))
+    (changed_ne_exact :
+      changed ≠ unitaryMatrixDualCasimirHeatCharacterCoefficientEvolution data t c)
+    (claimed : unitaryMatrixDualCasimirHeatComplexOperator data t
+      (unitaryMatrixDualContinuousCharacterSynthesis G c) = changed) : False :=
+  changed_ne_exact (claimed.symm.trans
+    (unitaryMatrixDualCasimirHeatComplexOperator_characterSynthesis data t ht c))
+
+/-- Hostile canonical-generator probe: no changed target can share the uniform-norm limit. -/
+theorem changed_casimirHeatOperator_characterSynthesis_generator_blocked
+    (c : UnitaryMatrixDualCharacterCoefficients G) (changed : C(G, ℂ))
+    (changed_ne_exact :
+      changed ≠ unitaryMatrixDualCasimirFiniteCharacterGeneratorSynthesis data c)
+    (claimed : Tendsto
+      (fun t : NNReal => ((t : ℂ)⁻¹) •
+        (unitaryMatrixDualCasimirHeatComplexOperator data (t : ℝ)
+            (unitaryMatrixDualContinuousCharacterSynthesis G c) -
+          unitaryMatrixDualContinuousCharacterSynthesis G c))
+      (nhdsWithin 0 (Set.Ioi 0)) (nhds changed)) : False :=
+  changed_ne_exact (tendsto_nhds_unique claimed
+    (tendsto_unitaryMatrixDualCasimirHeatComplexOperator_characterSynthesis_generator data c))
 
 omit [IsTopologicalGroup G] [CompactSpace G] [T2Space G] [SecondCountableTopology G]
     [MeasurableSpace G] [BorelSpace G] in

@@ -708,8 +708,9 @@ derivative-extension theorem constructs the zero-time generator from that single
 selected irreducible character using unconditional uniform-series convolution, and
 `tendsto_unitaryMatrixDualCasimirHeatEigenvalue_slope_zero` constructs its exact scalar `-c_q/2`
 zero-time generator. Finite linearity upgrades this to exact coefficientwise heat action and a
-uniform-norm generator theorem for every finite selected-character combination. This is only the
-algebraic selected-character core and does not fill the
+uniform-norm generator theorem for every finite selected-character combination. The result is
+bridged exactly to the canonical finitely supported quotient-dual coefficient carrier and its
+injective continuous character synthesis. This is only the algebraic selected-character core and does not fill the
 remaining all-smooth-tests boundary field. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
 marginals are derived, including exact equality at the selected area with the sampled loop-holonomy
 law. The metric bridge now transports the exact invariant pairing to every group tangent fiber by

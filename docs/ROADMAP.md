@@ -937,8 +937,9 @@ committed before higher layers depend on it.
 - [x] Define the reusable complex Casimir heat convolution operator, prove exact diagonal action on
   every selected irreducible character by unconditional uniform-series convolution, construct
   the scalar right-hand zero-time generator `-c_q/2`, and extend both results by finite linearity to
-  arbitrary finite selected-character combinations in the uniform norm. Keep this explicitly at the
-  algebraic selected-character core rather than claiming an all-smooth-tests generator.
+  arbitrary finite selected-character combinations in the uniform norm, then bridge that auxiliary
+  set/function presentation exactly to canonical `Finsupp` quotient-dual coefficients and continuous
+  character synthesis. Keep this explicitly at the algebraic selected-character core rather than claiming an all-smooth-tests generator.
 - [ ] Extend the selected-character generator to the required smooth domain with justified graph-
   norm/core convergence, construct the pairing-generator boundary-continuity witness, and prove
   comparison of the exact pairing Laplacian with the geometric Laplace–Beltrami operator.
