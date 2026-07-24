@@ -12,16 +12,16 @@ import YangMills.Mathematics.UnitaryMatrixDualCasimirHeatEquation
 # Bridge from the spectral heat equation to the selected-loop real heat core
 
 This file extends the exact selected-loop spectral-density bridge through the existing real-valued
-Driver heat-equation interface. It keeps the real and complex pairing Laplacians separate and
-requires explicit same-pairing coherence under real parts. It also retains the uninhabited
-infinite-series interchange datum.
+Driver heat-equation interface. It keeps the real and complex pairing Laplacians separate, derives
+same-pairing coherence under real parts canonically, and retains only the uninhabited infinite-series
+interchange datum.
 
-From these exact fields it constructs `TwoDimensionalSelectedLoopHeatEquationCoreData` on the
+From these exact inputs it constructs `TwoDimensionalSelectedLoopHeatEquationCoreData` on the
 unchanged selected-loop law and the semigroup certificate already derived from the spectral density.
 Strict positivity, the `ENNReal` bridge, spatial smoothness, and `∂ₜQ=½ΔQ` are all inherited or
 derived; none is duplicated as a new conclusion field.
 
-No coherence/interchange inhabitant, density, Brownian motion, or Yang–Mills measure is constructed.
+No interchange inhabitant, density, Brownian motion, or Yang–Mills measure is constructed.
 -/
 
 namespace YangMills
@@ -54,12 +54,11 @@ variable
 
 /-- Exact remaining coherence needed to transport the complex spectral heat equation to the
 unchanged real selected-loop heat interface. -/
-structure TwoDimensionalSelectedLoopSpectralHeatEquationBridgeData where
+structure TwoDimensionalSelectedLoopSpectralHeatEquationBridgeData
+    (realLaplacian : RightInvariantPairingLaplacianData inner) where
   spectralDensityBridge : TwoDimensionalSelectedLoopSpectralDensityBridgeData
     (law := law) (inner := inner) (laplacianData := complexLaplacian)
     (heatTraceData := heatTraceData)
-  laplacianCoherence : RightInvariantPairingRealComplexLaplacianCoherenceData
-    inner realLaplacian complexLaplacian
   heatEquationInterchange : UnitaryMatrixDualCasimirHeatEquationInterchangeData
     spectralDensityBridge.casimirBridge
 
@@ -96,8 +95,10 @@ noncomputable def toHeatEquationCoreData
       have hmapped := hconst.clm_apply hc
       simpa [unitaryMatrixDualCasimirHeatDensityReal] using hmapped
     apply hr.congr_deriv
-    have hcoh := bridge.laplacianCoherence.laplacian_realPart
-      (bridge.heatEquationInterchange.smoothHeatCharacterSeries t ht) g
+    have hcoh :=
+      (rightInvariantPairingRealComplexLaplacianCoherenceData
+        realLaplacian complexLaplacian).laplacian_realPart
+        (bridge.heatEquationInterchange.smoothHeatCharacterSeries t ht) g
     change (((1 / 2 : ℂ) * complexLaplacian.laplacian
       (bridge.heatEquationInterchange.smoothHeatCharacterSeries t ht) g).re) =
       (1 / 2 : ℝ) * realLaplacian.laplacian

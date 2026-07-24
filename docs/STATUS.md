@@ -5200,7 +5200,10 @@ explicitly weighted unconditional uniform sums, giving
 exchange. Driver's pairing-normalized right-invariant Laplacian now also has a smooth complex-valued scalar
 carrier using the identical manifold derivative, right-invariant fields, and same-pairing
 orthonormal-basis independence contract; constants vanish, but that carrier alone infers no
-character eigenvalue. A separate uninhabited `UnitaryMatrixDualCasimirLaplacianBridgeData` now
+character eigenvalue. The manifold chain rule proves that real parts commute with one and two
+ordered right-invariant derivatives; tangent-map calculus makes the intermediate complex derivative
+smooth, finite sums preserve coherence, and basis independence aligns the selected bases to
+canonically construct same-pairing real/complex Laplacian coherence. A separate uninhabited `UnitaryMatrixDualCasimirLaplacianBridgeData` now
 requires every selected character smooth and `Δχ_q=-c_qχ_q` for the unchanged pairing Laplacian.
 It proves each weight unique from `χ_q(1)=dim(q)>0`, the exact `-(c_q/2)` coefficient derivative,
 and the single-character `∂ₜ=½Δ` identity without passing either operator through an infinite sum.
@@ -5228,10 +5231,12 @@ exact real and source-facing `ENNReal` `x⁻¹z` density semigroup laws. Uninhab
 `TwoDimensionalSelectedLoopSpectralDensityBridgeData` identifies the unchanged selected-loop
 density with this spectral density and constructs its existing normalization, convolution, and weak
 identity certificate from the geometric bridge, positivity, and initial identity rather than storing
-those conclusions again. Smooth complex functions now have exact smooth real-part packaging, and
-uninhabited `RightInvariantPairingRealComplexLaplacianCoherenceData` ties real and complex
-Laplacians normalized by the same invariant pairing. Together with the spectral density bridge and
-series interchange, uninhabited `TwoDimensionalSelectedLoopSpectralHeatEquationBridgeData`
+those conclusions again. Smooth complex functions now have exact smooth real-part packaging; chain-
+rule/tangent-map calculus and basis independence canonically construct
+`RightInvariantPairingRealComplexLaplacianCoherenceData` for real and complex Laplacians normalized
+by the same invariant pairing. Together with the spectral density bridge and still-uninhabited series
+interchange—without storing coherence as a caller field—uninhabited
+`TwoDimensionalSelectedLoopSpectralHeatEquationBridgeData`
 constructs the existing positive smooth real selected-loop `∂ₜQ=½ΔQ` heat core on the unchanged
 law, derived semigroup, and real pairing Laplacian. Uninhabited
 `TwoDimensionalSelectedLoopSpectralHeatKernelBridgeData` explicitly retains Driver's stronger

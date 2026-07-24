@@ -872,8 +872,9 @@ committed before higher layers depend on it.
   unchanged selected-loop `ENNReal` density with the spectral density. From its geometric bridge,
   positivity, and weak identity, construct the existing selected-loop normalization/convolution/
   weak-identity certificate rather than duplicating those results as assumptions.
-- [x] Package smooth real parts and expose uninhabited same-pairing real/complex Laplacian
-  coherence. Combine it with the spectral-density bridge and interchange datum in
+- [x] Package smooth real parts, prove first/ordered-second/finite-basis real-part coherence by the
+  manifold chain rule and smooth tangent-map calculus, and canonically construct same-pairing real/
+  complex Laplacian coherence after aligning bases through basis independence. Combine it with the spectral-density bridge and interchange datum in
   `TwoDimensionalSelectedLoopSpectralHeatEquationBridgeData`, deriving the existing unchanged real
   selected-loop positive smooth `∂ₜQ=½ΔQ` heat core and rejecting changed derivatives.
 - [x] Attach Driver's stronger uninhabited generated-operator/kernel formula to that exact spectral

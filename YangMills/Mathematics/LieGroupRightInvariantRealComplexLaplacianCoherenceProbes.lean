@@ -36,25 +36,65 @@ theorem exact_smooth_real_part
     f.realPart g = (f g).re :=
   rfl
 
+/-- The same-pairing coherence interface is canonically inhabited. -/
+theorem exact_realComplexLaplacianCoherence_inhabited :
+    Nonempty (RightInvariantPairingRealComplexLaplacianCoherenceData
+      inner realLaplacian complexLaplacian) :=
+  ⟨rightInvariantPairingRealComplexLaplacianCoherenceData
+    realLaplacian complexLaplacian⟩
+
+omit [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- Exact first-derivative real-part coherence. -/
+theorem exact_derivative_real_part
+    (f : SmoothLieGroupComplexFunction (E := E) (G := G))
+    (Y : GroupLieAlgebra (modelWithCornersSelf ℝ E) G) (g : G) :
+    rightInvariantScalarDerivative f.realPart Y g =
+      (rightInvariantComplexDerivative f Y g).re :=
+  rightInvariantScalarDerivative_realPart f Y g
+
+/-- Exact smoothness probe for the complex directional derivative. -/
+theorem exact_complexDerivative_smooth
+    (f : SmoothLieGroupComplexFunction (E := E) (G := G))
+    (Y : GroupLieAlgebra (modelWithCornersSelf ℝ E) G) :
+    ContMDiff (modelWithCornersSelf ℝ E) (modelWithCornersSelf ℝ ℂ) ∞
+      (fun g => rightInvariantComplexDerivative f Y g) :=
+  contMDiff_rightInvariantComplexDerivative f Y
+
+/-- Exact ordered-second-derivative real-part coherence. -/
+theorem exact_secondDerivative_real_part
+    (f : SmoothLieGroupComplexFunction (E := E) (G := G))
+    (X Y : GroupLieAlgebra (modelWithCornersSelf ℝ E) G) (g : G) :
+    rightInvariantScalarSecondDerivative f.realPart X Y g =
+      (rightInvariantComplexSecondDerivative f X Y g).re :=
+  rightInvariantScalarSecondDerivative_realPart f X Y g
+
+/-- Exact finite-basis real-part coherence. -/
+theorem exact_laplacianInBasis_real_part
+    {rank : ℕ}
+    (basis : Module.Basis (Fin rank) ℝ
+      (GroupLieAlgebra (modelWithCornersSelf ℝ E) G))
+    (f : SmoothLieGroupComplexFunction (E := E) (G := G)) (g : G) :
+    rightInvariantScalarLaplacianInBasis basis f.realPart g =
+      (rightInvariantComplexLaplacianInBasis basis f g).re :=
+  rightInvariantScalarLaplacianInBasis_realPart basis f g
+
 /-- Coherence uses the same invariant pairing and exact real part of the complex Laplacian. -/
 theorem exact_laplacian_real_part
-    (coherence : RightInvariantPairingRealComplexLaplacianCoherenceData
-      inner realLaplacian complexLaplacian)
     (f : SmoothLieGroupComplexFunction (E := E) (G := G)) (g : G) :
     realLaplacian.laplacian f.realPart g =
       (complexLaplacian.laplacian f g).re :=
-  coherence.laplacian_realPart f g
+  (rightInvariantPairingRealComplexLaplacianCoherenceData
+    realLaplacian complexLaplacian).laplacian_realPart f g
 
 /-- Hostile coherence probe: a changed real Laplacian value is contradictory. -/
 theorem changed_laplacian_real_part_blocked
-    (coherence : RightInvariantPairingRealComplexLaplacianCoherenceData
-      inner realLaplacian complexLaplacian)
     (f : SmoothLieGroupComplexFunction (E := E) (G := G)) (g : G)
     (changed : ℝ) (hchanged : changed ≠ (complexLaplacian.laplacian f g).re)
     (changedReal : realLaplacian.laplacian f.realPart g = changed) : False := by
   apply hchanged
   rw [← changedReal]
-  exact coherence.laplacian_realPart f g
+  exact (rightInvariantPairingRealComplexLaplacianCoherenceData
+    realLaplacian complexLaplacian).laplacian_realPart f g
 
 end
 

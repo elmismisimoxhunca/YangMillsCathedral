@@ -39,16 +39,15 @@ variable
     {complexLaplacian : RightInvariantPairingComplexLaplacianData inner}
     {heatTraceData : UnitaryMatrixDualHeatTraceSummabilityData (G := G)}
 
-omit [FiniteDimensional ℝ E] [T2Space G] [SecondCountableTopology G] in
+omit [FiniteDimensional ℝ E] [IsTopologicalGroup G] [CompactSpace G] [T2Space G]
+    [SecondCountableTopology G] [MeasurableSpace G] [BorelSpace G] in
 /-- The bridge exposes exact same-pairing real/complex Laplacian coherence. -/
 theorem exact_laplacian_coherence
-    (bridge : TwoDimensionalSelectedLoopSpectralHeatEquationBridgeData
-      (law := law) (inner := inner) (realLaplacian := realLaplacian)
-      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData))
     (f : SmoothLieGroupComplexFunction (E := E) (G := G)) (g : G) :
     realLaplacian.laplacian f.realPart g =
       (complexLaplacian.laplacian f g).re :=
-  bridge.laplacianCoherence.laplacian_realPart f g
+  (rightInvariantPairingRealComplexLaplacianCoherenceData
+    realLaplacian complexLaplacian).laplacian_realPart f g
 
 /-- The resulting heat core is attached to the unchanged selected-loop law and derived spectral
 semigroup certificate. -/
