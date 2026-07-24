@@ -5726,8 +5726,13 @@ curve-word transport further derives equality of the two original coarse complet
 finite-curve laws under every measurable group homomorphism. A separate projection-bearing wrapper
 requires a genuine surjective covering map and source twist in its kernel, derives target-twist
 kernel membership, and exposes the same law equality without claiming a stochastic sample-law
-identification. Construction
-and analytic certification of those preliminary subdivisions, full universal Fact 3, and
+identification.
+`TwoDimensionalSenguptaPreliminarySubdivisionStochasticFiniteCurveLawData` now conditionally supplies
+that identification: one existing source finite-holonomy sample law must have the exact source curve
+words and normalized density-semigroup factors, with a measurable projection. Its genuine covering
+projection constructs the projection-bearing endpoint, after which the unchanged stochastic sample
+law is derived on the original target presentation for every region. Construction and analytic
+certification of those preliminary subdivisions, the sample law itself, full universal Fact 3, and
 inhabitation remain open.
 `TwoDimensionalSenguptaPreliminarySubdivisionHomeomorphismFactorData` now derives the exact algebraic
 proof pattern after such subdivisions are supplied: source coarse-to-fine equality, signed cellwise

@@ -1576,8 +1576,10 @@ committed before higher layers depend on it.
     with the target leg proved by measurable-map composition and the transported central twist.
     Derive exact equality of both original coarse complete projected finite-curve laws, then add a
     source-facing wrapper with a genuine surjective covering projection and kernel-valued source and
-    transported target twists. Retain construction, integration, identification with a stochastic
-    sample law, and full Fact 3 as debt.
+    transported target twists. Conditionally identify one existing source finite-holonomy sample law
+    by exact words and factors, then derive its unchanged target-presentation law. Retain
+    construction of the sample law and subdivisions, integration, inhabitation, and full Fact 3 as
+    debt.
   - [x] Derive the exact algebraic Fact 3 proof pattern once preliminary source/target subdivision
     certificates and one cellwise homeomorphism certificate are supplied: ordinary and signed-twist
     factor equalities compose transitively, with the target subdivision using exactly transported

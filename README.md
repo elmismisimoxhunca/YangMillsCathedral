@@ -1170,7 +1170,10 @@ composite target pushforward is proved by measurable-map composition rather than
 curve-word transport then derives equality of the original coarse complete projected finite-curve
 laws. A distinct source-facing wrapper requires a genuine surjective covering projection and source
 twist in its kernel, derives kernel membership for the orientation-transported target twist, and
-retains the same law equality; it does not identify either side with a stochastic sample law. This
+retains the same law equality; by itself it does not identify either side with a stochastic sample
+law. A further conditional endpoint requires one existing source finite-holonomy sample law to use
+the exact source curve words and normalized density-semigroup factors. It then derives that the
+unchanged sample law is represented on the original target presentation for every region. This
 target remains uninhabited and constructs no geometry or integration witness. Constructing and
 certifying preliminary subdivisions tied to that same homeomorphism—and hence full universal Fact
 3—remain open; the subclass record is uninhabited. The exact algebraic proof pattern
