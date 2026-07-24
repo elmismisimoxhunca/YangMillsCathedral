@@ -532,6 +532,32 @@ theorem twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_eventually_pointw
   eventually_norm_le_norm_add_one_of_tendsto
     (twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_generator bridge f hf)
 
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- The core therefore satisfies a graph-relative bound in the weaker pointwise quantifier order:
+each fixed test has its own nonnegative constant and eventual set. This does not commute those
+quantifiers into the uniform field required by the graph-core reduction. -/
+theorem twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_exists_eventually_pointwiseGraphBound
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (f : SmoothLieGroupScalarFunction (E := E) (G := G))
+    (hf : f ∈ smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G)) :
+    ∃ Cf : ℝ, 0 ≤ Cf ∧ ∀ᶠ t : NNReal in nhdsWithin 0 (Set.Ioi 0),
+      ‖twoDimensionalSelectedLoopHeatDifferenceQuotientLinearMap bridge t
+          (smoothLieGroupScalarToContinuousLinearMap f)‖ ≤
+        Cf * (‖smoothLieGroupScalarToContinuousLinearMap f‖ +
+          ‖twoDimensionalSelectedLoopPairingGeneratorLinearMap
+            (realLaplacian := realLaplacian) f‖) :=
+  exists_eventually_pointwise_graphBound_of_tendsto
+    (𝕜 := ℝ)
+    (D := SmoothLieGroupScalarFunction (E := E) (G := G))
+    (X := C(G, ℝ)) (ι := NNReal) (l := nhdsWithin 0 (Set.Ioi 0))
+    smoothLieGroupScalarToContinuousLinearMap
+    (twoDimensionalSelectedLoopPairingGeneratorLinearMap
+      (realLaplacian := realLaplacian))
+    (twoDimensionalSelectedLoopHeatDifferenceQuotientLinearMap bridge) f
+    (twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_generator bridge f hf)
+
 /-- Exact remaining obligations after selecting the finite real smooth matrix-coefficient range,
 deriving its real pairing-Laplacian eigenvalues, and proving its generator convergence. -/
 structure TwoDimensionalSelectedLoopSmoothMatrixCoefficientGraphCoreData

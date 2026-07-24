@@ -30,6 +30,15 @@ theorem exact_eventually_normBound_of_tendsto
     ∀ᶠ i in l, ‖f i‖ ≤ ‖y‖ + 1 :=
   eventually_norm_le_norm_add_one_of_tendsto hf
 
+/-- Exact quantifier-order probe: convergence at one domain vector gives one vector-dependent
+nonnegative graph-bound constant. -/
+theorem exact_exists_eventually_pointwise_graphBound_of_tendsto
+    (J AOnDomain : D →ₗ[𝕜] X) (z : D)
+    (hz : Tendsto (fun i => Q i (J z)) l (nhds (AOnDomain z))) :
+    ∃ Cz : ℝ, 0 ≤ Cz ∧ ∀ᶠ i in l,
+      ‖Q i (J z)‖ ≤ Cz * (‖J z‖ + ‖AOnDomain z‖) :=
+  exists_eventually_pointwise_graphBound_of_tendsto J AOnDomain Q z hz
+
 /-- Positive probe: graph approximation on a proper algebraic domain supplies the ambient
 operator limit. -/
 theorem exact_domainGraphCore_generator_extension

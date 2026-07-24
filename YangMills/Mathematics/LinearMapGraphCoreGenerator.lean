@@ -71,6 +71,36 @@ theorem eventually_norm_le_norm_add_one_of_tendsto
   rw [Real.dist_eq] at hi
   linarith [le_abs_self (‖f i‖ - ‖y‖)]
 
+/-- Pointwise generator convergence gives a graph-norm bound with a constant and eventual
+set allowed to depend on the chosen domain vector. This records the exact weaker quantifier order
+`∀ z, ∃ C, ∀ᶠ i`; it does not provide the uniform `∃ C, ∀ᶠ i, ∀ z` hypothesis used by the graph-core
+closure theorem. -/
+theorem exists_eventually_pointwise_graphBound_of_tendsto
+    (J A : D →ₗ[𝕜] X) (Q : ι → X →ₗ[𝕜] X) (z : D)
+    (hz : Tendsto (fun i => Q i (J z)) l (nhds (A z))) :
+    ∃ C : ℝ, 0 ≤ C ∧ ∀ᶠ i in l,
+      ‖Q i (J z)‖ ≤ C * (‖J z‖ + ‖A z‖) := by
+  let d : ℝ := ‖J z‖ + ‖A z‖
+  by_cases hd : d = 0
+  · have hJnorm : ‖J z‖ = 0 := by
+      have hJnonneg : 0 ≤ ‖J z‖ := norm_nonneg _
+      have hAnonneg : 0 ≤ ‖A z‖ := norm_nonneg _
+      dsimp [d] at hd
+      linarith
+    have hJ : J z = 0 := norm_eq_zero.mp hJnorm
+    refine ⟨0, le_rfl, Filter.Eventually.of_forall ?_⟩
+    intro i
+    simp [hJ]
+  · have hdpos : 0 < d := lt_of_le_of_ne (by positivity) (Ne.symm hd)
+    let C : ℝ := (‖A z‖ + 1) / d
+    refine ⟨C, by positivity, ?_⟩
+    filter_upwards [eventually_norm_le_norm_add_one_of_tendsto hz] with i hi
+    calc
+      ‖Q i (J z)‖ ≤ ‖A z‖ + 1 := hi
+      _ = C * (‖J z‖ + ‖A z‖) := by
+        change ‖A z‖ + 1 = (‖A z‖ + 1) / d * d
+        exact (div_mul_cancel₀ _ hd).symm
+
 /-- Generator convergence extends from a graph-dense subset of a possibly proper algebraic
 domain. Neither the domain `D` nor its ambient map `J` is assumed complete, normed, or injective. -/
 theorem tendsto_linearMapOnDomain_of_graphDenseAt_of_eventually_graphBound

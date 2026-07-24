@@ -247,6 +247,20 @@ theorem exact_selectedLoop_smoothMatrixCoefficientCore_eventually_pointwiseNormB
     bridge f hf
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Exact weaker-quantifier probe: each fixed core test has some pointwise graph-bound constant. -/
+theorem exact_selectedLoop_smoothMatrixCoefficientCore_exists_eventually_pointwiseGraphBound
+    (f : SmoothLieGroupScalarFunction (E := E) (G := G))
+    (hf : f ∈ smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G)) :
+    ∃ Cf : ℝ, 0 ≤ Cf ∧ ∀ᶠ t : NNReal in nhdsWithin 0 (Set.Ioi 0),
+      ‖twoDimensionalSelectedLoopHeatDifferenceQuotientLinearMap bridge t
+          (smoothLieGroupScalarToContinuousLinearMap f)‖ ≤
+        Cf * (‖smoothLieGroupScalarToContinuousLinearMap f‖ +
+          ‖twoDimensionalSelectedLoopPairingGeneratorLinearMap
+            (realLaplacian := realLaplacian) f‖) :=
+  twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_exists_eventually_pointwiseGraphBound
+    bridge f hf
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- The coefficient-specific reduction uses exactly the constructed matrix-coefficient range. -/
 theorem exact_smoothMatrixCoefficientGraphCore_reduction_core
     (data : TwoDimensionalSelectedLoopSmoothMatrixCoefficientGraphCoreData bridge) :
