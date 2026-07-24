@@ -5394,7 +5394,11 @@ for the designated coefficient range. A smaller uninhabited reduction record now
 simultaneous finite-coefficient approximation of every smooth test and its pairing generator, plus
 the eventual uniform graph bound, before constructing the existing all-smooth stochastic endpoint;
 exact graph-density and `Nonempty` equivalences prove these two Fourier-facing obligations, including
-one nonnegative bound constant, are exhaustive rather than a summary. No graph-core record inhabitant is built: smooth-representative coverage,
+one nonnegative bound constant, are exhaustive rather than a summary. A separate proof-local semigroup-analytic
+Duhamel strengthening requires genuine interval integrability and reduces the quotient to a unit-
+interval average of the contraction semigroup on the
+pairing generator; contraction then proves `‖QₜJf‖ ≤ ‖Af‖` and constructs the uniform graph-bound
+field with constant one. No Duhamel witness is constructed. No graph-core record inhabitant is built: smooth-representative coverage,
 graph density, and the eventual uniform all-domain graph bound remain unconstructed, while Laplace–Beltrami comparison
 remains open. The
 common Wilson chain now forgets only its genuinely stronger global-faithfulness and normalization

@@ -1005,7 +1005,8 @@ committed before higher layers depend on it.
   required `∃ C, ∀ᶠ t, ∀ f` uniform all-domain bound.
 - [ ] Prove simultaneous approximation of every smooth test and its pairing generator by one finite
   real matrix-coefficient synthesis (equivalently smooth graph density), plus the required eventual
-  uniform graph bound for that range; then construct the
+  uniform graph bound for that range. Alternatively construct the proof-local semigroup-analytic
+  Duhamel strengthening, including genuine interval integrability and the exact identity, which contraction proves supplies that bound sharply with constant one; then construct the
   pairing-generator boundary-continuity witness and prove
   comparison of the exact pairing Laplacian with the geometric Laplace–Beltrami operator.
 - [x] Prove that the common Wilson chain forgets only global faithfulness and Wilson normalization to

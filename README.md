@@ -779,7 +779,10 @@ record is constructed: exact graph-density and `Nonempty` audits prove that simu
 approximation of every smooth test and its pairing generator by one finite real coefficient
 synthesis, together with one nonnegative eventual uniform graph bound, is precisely the remaining
 coefficient-specific boundary
-before all-smooth generation. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
+before all-smooth generation. A proof-local semigroup-analytic Duhamel strengthening requiring genuine interval integrability and
+expressing each quotient as the unit-interval average of the contraction semigroup applied to the pairing generator now discharges the
+uniform-bound field sharply with constant one. This strengthening is not stated in Driver Remark
+4.13 and is not yet constructed. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
 marginals are derived, including exact equality at the selected area with the sampled loop-holonomy
 law. The metric bridge now transports the exact invariant pairing to every group tangent fiber by
 left Maurer–Cartan trivialization and proves its inverse, symmetry, strict positivity, and left/right
