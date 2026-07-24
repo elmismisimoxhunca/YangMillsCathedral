@@ -1451,8 +1451,9 @@ committed before higher layers depend on it.
     fixed twist. Retain unrestricted/full Fact 2, general Fact 3, and component inhabitation as debt.
   - [x] Close the strongest assembled cross-source record into the proposition-shaped
     `TwoDimensionalCurrentStrengthSourceIndexedLiteratureAcceptance`, definitionally equal to that
-    witness type's nonemptiness; expose its exact two-component inhabitance audit and derive
-    proposition-level rank-two/four-dimensional linear-model separation. Keep `CurrentStrength`
+    witness type's nonemptiness; expose both its exact dependent two-component audit and a flattened
+    six-component literature-inhabitation audit, then derive proposition-level
+    rank-two/four-dimensional linear-model separation. Keep `CurrentStrength`
     binding and do not treat this as the final source-complete target.
   - [ ] Assemble a final source-indexed 2D acceptance proposition joining the constructed finite
     lattice, heat/Brownian, weak-limit continuum, compact-surface, and sewing chains; attempt to

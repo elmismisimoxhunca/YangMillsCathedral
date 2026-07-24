@@ -1050,8 +1050,11 @@ exposes both dependent components. The actual descended compact-surface model re
 strongest wrapper has exact real rank two and is proved not real-linearly equivalent to
 four-dimensional Euclidean spacetime for every supplied witness; no witness is constructed.
 `TwoDimensionalCurrentStrengthSourceIndexedLiteratureAcceptance` now closes this exact strongest
-wrapper into a proposition rather than another record. Its unfolding and component audit are exact,
-and proposition-level theorems retain rank two and reject a four-dimensional linear model. The
+wrapper into a proposition rather than another record. Its unfolding is exact, and a flattened
+inhabitance audit exposes the compact-simple geometry, current Driver/Lévy chain, Sengupta finite
+law, dependent heat factors, finite-law sewing bridge, and strongest compact finite-law witness
+without synthesizing any field. Proposition-level theorems retain rank two and reject a
+four-dimensional linear model. The
 `CurrentStrength` qualifier remains binding: this is not the final source-complete 2D target, and no
 inhabitant is constructed.
 

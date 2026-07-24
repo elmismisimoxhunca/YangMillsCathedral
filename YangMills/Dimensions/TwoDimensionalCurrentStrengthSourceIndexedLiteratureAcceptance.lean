@@ -168,6 +168,173 @@ def TwoDimensionalCurrentStrengthSourceIndexedLiteratureAcceptance : Prop :=
       (SenguptaTargetVertex := SenguptaTargetVertex) (senguptaTarget := senguptaTarget)
       (SenguptaTargetSurface := SenguptaTargetSurface))
 
+/-- Flattened literature-inhabitation components for the proposition-shaped current-strength 2D
+surface. Every field is an existing source-facing witness; this structure constructs none of them. -/
+structure TwoDimensionalCurrentStrengthSourceIndexedLiteratureComponents where
+  gaugeGeometry : Geometry.CompactSimpleGaugeGroupData G E
+  current : TwoDimensionalCurrentStrengthLiteratureAcceptanceData
+    (law := law) (inner := inner) (realLaplacian := realLaplacian)
+    (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+    (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)
+    (identification := identification) (IG := IG)
+    (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+    (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)
+  finiteLaw : TwoDimensionalSenguptaCompactSurfaceFiniteHolonomyLawData
+    (G := G) (CoverGroup := CoverGroup) (Curve := CurveS) (Edge := EdgeS)
+    (Region := RegionS) (Sample := SenguptaSample)
+  heatFactors : TwoDimensionalSenguptaTriangulatedHeatFactorBridgeData
+    (planarSemigroup := current.planar.convergence.productBridge.weakLimitFamily.spectralWilson
+      |>.spectralHeatKernel.convolutionSemigroup)
+    (finiteLaw := finiteLaw) (coverDensity := coverDensity)
+    (InternalEdge := InternalEdge) (Face := FaceS)
+  finiteLawSewing : TwoDimensionalSenguptaLevyFiniteHolonomyBridgeData
+    finiteLaw current.compactSurface.sewing
+  compactFiniteLaw :
+    TwoDimensionalSenguptaSplitBondEmbeddedUniversalFiniteLawAcceptanceData.{uG, uCover,
+      uGauge, uSample, uConnection, uCurveS, uEdgeS, uInternalEdge, uFaceS, uRegionS,
+      uSenguptaSample, uSenguptaSurface, uSenguptaBaseVertex, uSenguptaFineInternal,
+      uSenguptaFineFace, uSenguptaFineVertex, uSenguptaTargetEdge,
+      uSenguptaTargetInternal, uSenguptaTargetFace, uSenguptaTargetRegion,
+      uSenguptaTargetVertex, uSenguptaTargetSurface, uCandidateFineEdge,
+      uCandidateFineInternal, uCandidateFineFace, uCandidateFineVertex}
+      (planarSemigroup := current.planar.convergence.productBridge.weakLimitFamily.spectralWilson
+        |>.spectralHeatKernel.convolutionSemigroup)
+      (finiteLaw := finiteLaw) (coverDensity := coverDensity)
+      (heatFactors := heatFactors) (Surface := SenguptaSurface)
+      (BaseVertex := SenguptaBaseVertex) (FineVertex := SenguptaFineVertex)
+      (fine := senguptaFine) (TargetVertex := SenguptaTargetVertex)
+      (target := senguptaTarget) (TargetSurface := SenguptaTargetSurface)
+
+namespace TwoDimensionalCurrentStrengthSourceIndexedLiteratureComponents
+
+/-- Reassemble the exact prior augmented chain from the flattened literature components. -/
+noncomputable def augmented
+    (components : TwoDimensionalCurrentStrengthSourceIndexedLiteratureComponents
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+      (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)
+      (identification := identification) (IG := IG)
+      (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+      (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)
+      (CoverGroup := CoverGroup) (CurveS := CurveS) (EdgeS := EdgeS)
+      (InternalEdge := InternalEdge) (FaceS := FaceS) (RegionS := RegionS)
+      (SenguptaSample := SenguptaSample) (coverDensity := coverDensity)
+      (SenguptaSurface := SenguptaSurface) (SenguptaBaseVertex := SenguptaBaseVertex)
+      (SenguptaFineVertex := SenguptaFineVertex) (senguptaFine := senguptaFine)
+      (SenguptaTargetVertex := SenguptaTargetVertex) (senguptaTarget := senguptaTarget)
+      (SenguptaTargetSurface := SenguptaTargetSurface)) :
+    TwoDimensionalSenguptaAugmentedCurrentStrengthAcceptanceData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+      (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)
+      (identification := identification) (IG := IG)
+      (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+      (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)
+      (CoverGroup := CoverGroup) (CurveS := CurveS) (EdgeS := EdgeS)
+      (InternalEdge := InternalEdge) (FaceS := FaceS) (RegionS := RegionS)
+      (SenguptaSample := SenguptaSample) (coverDensity := coverDensity) where
+  gaugeGeometry := components.gaugeGeometry
+  current := components.current
+  finiteLaw := components.finiteLaw
+  heatFactors := components.heatFactors
+  finiteLawSewing := components.finiteLawSewing
+
+/-- Reassemble the strongest exact wrapper without introducing any additional witness. -/
+noncomputable def strongest
+    (components : TwoDimensionalCurrentStrengthSourceIndexedLiteratureComponents
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+      (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)
+      (identification := identification) (IG := IG)
+      (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+      (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)
+      (CoverGroup := CoverGroup) (CurveS := CurveS) (EdgeS := EdgeS)
+      (InternalEdge := InternalEdge) (FaceS := FaceS) (RegionS := RegionS)
+      (SenguptaSample := SenguptaSample) (coverDensity := coverDensity)
+      (SenguptaSurface := SenguptaSurface) (SenguptaBaseVertex := SenguptaBaseVertex)
+      (SenguptaFineVertex := SenguptaFineVertex) (senguptaFine := senguptaFine)
+      (SenguptaTargetVertex := SenguptaTargetVertex) (senguptaTarget := senguptaTarget)
+      (SenguptaTargetSurface := SenguptaTargetSurface)) :
+    TwoDimensionalSenguptaSplitBondEmbeddedUniversalAugmentedCurrentStrengthAcceptanceData.{uE,
+      uG, uGauge, uSample, uConnection, uΩ, uVertex, uEdge, uFace, uXAxisCell,
+      uLargeVertex, uLargeEdge, uLargeFace, uLargeXAxisCell, uFineVertex, uFineEdge,
+      uFineFace, uFineXAxisCell, uFineLargeVertex, uFineLargeEdge, uFineLargeFace,
+      uFineLargeXAxisCell, uEL, uHL, uSL, uER, uHR, uSR, uEG, uHG, uLeftBase,
+      uRightBase, uWholeBase, uLeftLoop, uRightLoop, uWholeLoop, uLeftSample,
+      uRightSample, uWholeSample, uCover, uCurveS, uEdgeS, uInternalEdge, uFaceS,
+      uRegionS, uSenguptaSample, uSenguptaSurface, uSenguptaBaseVertex,
+      uSenguptaFineInternal, uSenguptaFineFace, uSenguptaFineVertex,
+      uSenguptaTargetEdge, uSenguptaTargetInternal, uSenguptaTargetFace,
+      uSenguptaTargetRegion, uSenguptaTargetVertex, uSenguptaTargetSurface,
+      uCandidateFineEdge, uCandidateFineInternal, uCandidateFineFace,
+      uCandidateFineVertex, uPath, uObservable}
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+      (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)
+      (identification := identification) (IG := IG)
+      (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+      (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)
+      (CoverGroup := CoverGroup) (CurveS := CurveS) (EdgeS := EdgeS)
+      (InternalEdge := InternalEdge) (FaceS := FaceS) (RegionS := RegionS)
+      (SenguptaSample := SenguptaSample) (coverDensity := coverDensity)
+      (SenguptaSurface := SenguptaSurface) (SenguptaBaseVertex := SenguptaBaseVertex)
+      (SenguptaFineVertex := SenguptaFineVertex) (senguptaFine := senguptaFine)
+      (SenguptaTargetVertex := SenguptaTargetVertex) (senguptaTarget := senguptaTarget)
+      (SenguptaTargetSurface := SenguptaTargetSurface) where
+  augmented := components.augmented
+  compactFiniteLaw := components.compactFiniteLaw
+
+/-- Flatten an existing strongest wrapper into its six source-facing construction components. -/
+noncomputable def ofStrongest
+    (data : TwoDimensionalSenguptaSplitBondEmbeddedUniversalAugmentedCurrentStrengthAcceptanceData.{uE,
+      uG, uGauge, uSample, uConnection, uΩ, uVertex, uEdge, uFace, uXAxisCell,
+      uLargeVertex, uLargeEdge, uLargeFace, uLargeXAxisCell, uFineVertex, uFineEdge,
+      uFineFace, uFineXAxisCell, uFineLargeVertex, uFineLargeEdge, uFineLargeFace,
+      uFineLargeXAxisCell, uEL, uHL, uSL, uER, uHR, uSR, uEG, uHG, uLeftBase,
+      uRightBase, uWholeBase, uLeftLoop, uRightLoop, uWholeLoop, uLeftSample,
+      uRightSample, uWholeSample, uCover, uCurveS, uEdgeS, uInternalEdge, uFaceS,
+      uRegionS, uSenguptaSample, uSenguptaSurface, uSenguptaBaseVertex,
+      uSenguptaFineInternal, uSenguptaFineFace, uSenguptaFineVertex,
+      uSenguptaTargetEdge, uSenguptaTargetInternal, uSenguptaTargetFace,
+      uSenguptaTargetRegion, uSenguptaTargetVertex, uSenguptaTargetSurface,
+      uCandidateFineEdge, uCandidateFineInternal, uCandidateFineFace,
+      uCandidateFineVertex, uPath, uObservable}
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+      (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)
+      (identification := identification) (IG := IG)
+      (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+      (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)
+      (CoverGroup := CoverGroup) (CurveS := CurveS) (EdgeS := EdgeS)
+      (InternalEdge := InternalEdge) (FaceS := FaceS) (RegionS := RegionS)
+      (SenguptaSample := SenguptaSample) (coverDensity := coverDensity)
+      (SenguptaSurface := SenguptaSurface) (SenguptaBaseVertex := SenguptaBaseVertex)
+      (SenguptaFineVertex := SenguptaFineVertex) (senguptaFine := senguptaFine)
+      (SenguptaTargetVertex := SenguptaTargetVertex) (senguptaTarget := senguptaTarget)
+      (SenguptaTargetSurface := SenguptaTargetSurface)) :
+    TwoDimensionalCurrentStrengthSourceIndexedLiteratureComponents
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+      (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)
+      (identification := identification) (IG := IG)
+      (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+      (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)
+      (CoverGroup := CoverGroup) (CurveS := CurveS) (EdgeS := EdgeS)
+      (InternalEdge := InternalEdge) (FaceS := FaceS) (RegionS := RegionS)
+      (SenguptaSample := SenguptaSample) (coverDensity := coverDensity)
+      (SenguptaSurface := SenguptaSurface) (SenguptaBaseVertex := SenguptaBaseVertex)
+      (SenguptaFineVertex := SenguptaFineVertex) (senguptaFine := senguptaFine)
+      (SenguptaTargetVertex := SenguptaTargetVertex) (senguptaTarget := senguptaTarget)
+      (SenguptaTargetSurface := SenguptaTargetSurface) where
+  gaugeGeometry := data.augmented.gaugeGeometry
+  current := data.augmented.current
+  finiteLaw := data.augmented.finiteLaw
+  heatFactors := data.augmented.heatFactors
+  finiteLawSewing := data.augmented.finiteLawSewing
+  compactFiniteLaw := data.compactFiniteLaw
+
+end TwoDimensionalCurrentStrengthSourceIndexedLiteratureComponents
+
 namespace TwoDimensionalCurrentStrengthSourceIndexedLiteratureAcceptance
 
 omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
@@ -224,6 +391,69 @@ theorem iff_strongest_witness :
         (SenguptaTargetVertex := SenguptaTargetVertex) (senguptaTarget := senguptaTarget)
         (SenguptaTargetSurface := SenguptaTargetSurface)) :=
   Iff.rfl
+
+omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
+    [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in
+/-- Fully flattened failed-inhabitation audit: the proposition is equivalent to supplying the exact
+compact-simple geometry, current Driver/Lévy chain, Sengupta finite law, heat factors, finite-law
+sewing bridge, and strongest dependent compact finite-law witness. -/
+theorem iff_flat_components :
+    TwoDimensionalCurrentStrengthSourceIndexedLiteratureAcceptance.{uE, uG, uGauge, uSample, uConnection, uΩ,
+        uVertex, uEdge, uFace, uXAxisCell, uLargeVertex, uLargeEdge,
+        uLargeFace, uLargeXAxisCell, uFineVertex, uFineEdge, uFineFace, uFineXAxisCell,
+        uFineLargeVertex, uFineLargeEdge, uFineLargeFace, uFineLargeXAxisCell, uEL, uHL,
+        uSL, uER, uHR, uSR, uEG, uHG,
+        uLeftBase, uRightBase, uWholeBase, uLeftLoop, uRightLoop, uWholeLoop,
+        uLeftSample, uRightSample, uWholeSample, uCover, uCurveS, uEdgeS,
+        uInternalEdge, uFaceS, uRegionS, uSenguptaSample, uSenguptaSurface, uSenguptaBaseVertex,
+        uSenguptaFineInternal, uSenguptaFineFace, uSenguptaFineVertex, uSenguptaTargetEdge, uSenguptaTargetInternal, uSenguptaTargetFace,
+        uSenguptaTargetRegion, uSenguptaTargetVertex, uSenguptaTargetSurface, uCandidateFineEdge, uCandidateFineInternal, uCandidateFineFace,
+        uCandidateFineVertex, uPath, uObservable}
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+      (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)
+      (identification := identification) (IG := IG)
+      (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+      (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)
+      (CoverGroup := CoverGroup) (CurveS := CurveS) (EdgeS := EdgeS)
+      (InternalEdge := InternalEdge) (FaceS := FaceS) (RegionS := RegionS)
+      (SenguptaSample := SenguptaSample) (coverDensity := coverDensity)
+      (SenguptaSurface := SenguptaSurface) (SenguptaBaseVertex := SenguptaBaseVertex)
+      (SenguptaFineVertex := SenguptaFineVertex) (senguptaFine := senguptaFine)
+      (SenguptaTargetVertex := SenguptaTargetVertex) (senguptaTarget := senguptaTarget)
+      (SenguptaTargetSurface := SenguptaTargetSurface) ↔
+    Nonempty
+      (TwoDimensionalCurrentStrengthSourceIndexedLiteratureComponents.{uE, uG, uGauge, uSample, uConnection,
+        uΩ, uVertex, uEdge, uFace, uXAxisCell,
+        uLargeVertex, uLargeEdge, uLargeFace, uLargeXAxisCell, uFineVertex,
+        uFineEdge, uFineFace, uFineXAxisCell, uFineLargeVertex, uFineLargeEdge,
+        uFineLargeFace, uFineLargeXAxisCell, uEL, uHL, uSL,
+        uER, uHR, uSR, uEG, uHG,
+        uLeftBase, uRightBase, uWholeBase, uLeftLoop, uRightLoop,
+        uWholeLoop, uLeftSample, uRightSample, uWholeSample, uCover,
+        uCurveS, uEdgeS, uInternalEdge, uFaceS, uRegionS,
+        uSenguptaSample, uSenguptaSurface, uSenguptaBaseVertex, uSenguptaFineInternal, uSenguptaFineFace,
+        uSenguptaFineVertex, uSenguptaTargetEdge, uSenguptaTargetInternal, uSenguptaTargetFace, uSenguptaTargetRegion,
+        uSenguptaTargetVertex, uSenguptaTargetSurface, uCandidateFineEdge, uCandidateFineInternal, uCandidateFineFace,
+        uCandidateFineVertex, uPath, uObservable}
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData)
+      (continuum := continuum) (faceGeometry := faceGeometry) (Ω := Ω)
+      (identification := identification) (IG := IG)
+      (LeftLoop := LeftLoop) (RightLoop := RightLoop) (WholeLoop := WholeLoop)
+      (LeftSample := LeftSample) (RightSample := RightSample) (WholeSample := WholeSample)
+      (CoverGroup := CoverGroup) (CurveS := CurveS) (EdgeS := EdgeS)
+      (InternalEdge := InternalEdge) (FaceS := FaceS) (RegionS := RegionS)
+      (SenguptaSample := SenguptaSample) (coverDensity := coverDensity)
+      (SenguptaSurface := SenguptaSurface) (SenguptaBaseVertex := SenguptaBaseVertex)
+      (SenguptaFineVertex := SenguptaFineVertex) (senguptaFine := senguptaFine)
+      (SenguptaTargetVertex := SenguptaTargetVertex) (senguptaTarget := senguptaTarget)
+      (SenguptaTargetSurface := SenguptaTargetSurface)) := by
+  constructor
+  · rintro ⟨data⟩
+    exact ⟨TwoDimensionalCurrentStrengthSourceIndexedLiteratureComponents.ofStrongest data⟩
+  · rintro ⟨components⟩
+    exact ⟨components.strongest⟩
 
 omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
     [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in

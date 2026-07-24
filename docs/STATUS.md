@@ -5581,8 +5581,10 @@ integration, construction, and all component inhabitance remain open.
 
 `TwoDimensionalCurrentStrengthSourceIndexedLiteratureAcceptance` now gives that exact strongest
 assembled chain a proposition-shaped source index. It is definitionally equivalent to nonemptiness
-of the unchanged wrapper, and its proposition-level inhabitance audit exposes the augmented chain
-plus dependent compact finite-law witness. Any inhabitant retains exact rank two and rejects a
+of the unchanged wrapper. Besides the exact dependent augmented/compact split, its flattened
+inhabitance audit separately exposes the compact-simple geometry, current Driver/Lévy chain,
+Sengupta finite law, dependent heat factors, finite-law sewing bridge, and strongest compact
+finite-law witness; conversion in both directions constructs no missing field. Any inhabitant retains exact rank two and rejects a
 four-dimensional real-linear model; a hostile probe shows that replacing the proposition by `True`
 loses this conclusion. The name remains explicitly `CurrentStrength`: the final source-complete 2D
 proposition and literature-only inhabitant are still open.
