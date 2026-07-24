@@ -754,7 +754,7 @@ def TwoDimensionalStochasticGeneratorCurrentStrengthSourceIndexedLiteratureAccep
     (SenguptaFineVertex := SenguptaFineVertex) (senguptaFine := senguptaFine)
     (SenguptaTargetVertex := SenguptaTargetVertex) (senguptaTarget := senguptaTarget)
     (SenguptaTargetSurface := SenguptaTargetSurface),
-    Nonempty (TwoDimensionalSelectedLoopGeneratorBoundaryContinuityData
+    Nonempty (TwoDimensionalSelectedLoopPairingGeneratorBoundaryContinuityData
       source.current.planar.toSpectralBrownianGeneratorBridgeData)
 
 namespace TwoDimensionalStochasticGeneratorCurrentStrengthSourceIndexedLiteratureAcceptance
@@ -816,7 +816,7 @@ theorem iff_components :
     (SenguptaFineVertex := SenguptaFineVertex) (senguptaFine := senguptaFine)
     (SenguptaTargetVertex := SenguptaTargetVertex) (senguptaTarget := senguptaTarget)
     (SenguptaTargetSurface := SenguptaTargetSurface),
-        Nonempty (TwoDimensionalSelectedLoopGeneratorBoundaryContinuityData
+        Nonempty (TwoDimensionalSelectedLoopPairingGeneratorBoundaryContinuityData
           source.current.planar.toSpectralBrownianGeneratorBridgeData) := by
   rfl
 
@@ -824,7 +824,7 @@ theorem iff_components :
 
 omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
     [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in
-/-- The two boundary-continuity limits construct the actual zero-time operator/stochastic generator
+/-- The pairing-generator boundary-continuity limit constructs the actual zero-time operator/stochastic generator
 witness on the same source components. -/
 theorem generatorAtZero
     (acceptance : TwoDimensionalStochasticGeneratorCurrentStrengthSourceIndexedLiteratureAcceptance.{uE, uG, uGauge, uSample, uConnection,
@@ -882,7 +882,7 @@ theorem generatorAtZero
         Nonempty (TwoDimensionalSelectedLoopStochasticGeneratorAtZeroData
           source.current.planar.toSpectralBrownianGeneratorBridgeData) := by
   rcases acceptance with ⟨source, ⟨boundary⟩⟩
-  exact ⟨source, ⟨boundary.toStochasticGeneratorAtZeroData⟩⟩
+  exact ⟨source, ⟨boundary.toBoundaryContinuityData.toStochasticGeneratorAtZeroData⟩⟩
 
 omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
     [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in

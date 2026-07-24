@@ -95,6 +95,53 @@ def twoDimensionalSelectedLoopHeatTrajectory
   bridge.spectralHeatKernel.kernelOperator.heatOperator t
     (smoothLieGroupScalarContinuousMap f) g
 
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Spectral weak convergence to the identity derives right continuity of every scalar heat
+trajectory at zero. This is not an additional boundary assumption. -/
+theorem TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData.heatTrajectory_tendsto_zero
+    {realLaplacian : RightInvariantPairingLaplacianData inner}
+    {complexLaplacian : RightInvariantPairingComplexLaplacianData inner}
+    {heatTraceData : UnitaryMatrixDualHeatTraceSummabilityData (G := G)}
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (f : SmoothLieGroupScalarFunction (E := E) (G := G)) (g : G) :
+    Tendsto (twoDimensionalSelectedLoopHeatTrajectory bridge f g)
+      (nhdsWithin 0 (Set.Ioi 0)) (nhds (f g)) := by
+  let translatedReal : C(G, ℝ) :=
+    ⟨fun x => f (g * x), f.contMDiff.continuous.comp (continuous_const_mul g)⟩
+  let translatedComplex : C(G, ℂ) :=
+    ⟨fun x => (translatedReal x : ℂ),
+      Complex.continuous_ofReal.comp translatedReal.continuous⟩
+  have complexLimit :=
+    tendsto_integral_casimirHeatProbabilityMeasure_nhdsWithin_zero heatTraceData
+      bridge.spectralHeatKernel.heatEquationBridge.spectralDensityBridge.positivity
+      bridge.spectralHeatKernel.heatEquationBridge.spectralDensityBridge.initialIdentity
+      translatedComplex
+  have realLimit : Tendsto
+      (fun t => Complex.re
+        (∫ x, translatedComplex x
+          ∂unitaryMatrixDualCasimirHeatProbabilityMeasure heatTraceData t))
+      (nhdsWithin 0 (Set.Ioi 0)) (nhds (f g)) := by
+    have mapped := (Complex.continuous_re.tendsto (translatedComplex 1)).comp complexLimit
+    change Tendsto
+      (fun t => Complex.re
+        (∫ x, translatedComplex x
+          ∂unitaryMatrixDualCasimirHeatProbabilityMeasure heatTraceData t))
+      (nhdsWithin 0 (Set.Ioi 0)) (nhds (Complex.re (translatedComplex 1))) at mapped
+    convert mapped using 1
+    simp [translatedComplex, translatedReal]
+  apply realLimit.congr'
+  filter_upwards [self_mem_nhdsWithin] with t ht
+  change Complex.re
+      (∫ x, (translatedReal x : ℂ)
+        ∂unitaryMatrixDualCasimirHeatProbabilityMeasure heatTraceData t) =
+    bridge.spectralHeatKernel.kernelOperator.heatOperator t
+      (smoothLieGroupScalarContinuousMap f) g
+  rw [integral_complex_ofReal, Complex.ofReal_re]
+  exact (bridge.generated_operator_eq_spectralMeasureIntegral t ht
+    (smoothLieGroupScalarContinuousMap f) g).symm
+
 /-- Positive-time derivative value, extended at nonpositive times by the desired boundary value.
 Only its restriction to `Ioi 0` matters in the boundary limit. -/
 def twoDimensionalSelectedLoopExtendedPairingGenerator
@@ -131,6 +178,36 @@ structure TwoDimensionalSelectedLoopGeneratorBoundaryContinuityData
       Tendsto (twoDimensionalSelectedLoopExtendedPairingGenerator bridge f g)
         (nhdsWithin 0 (Set.Ioi 0))
         (nhds ((1 / 2 : ℝ) * realLaplacian.laplacian f g))
+
+/-- Irreducible remaining boundary interface: convergence of the positive-time pairing-Laplacian
+derivative. Heat-trajectory continuity is derived from the existing spectral initial identity. -/
+structure TwoDimensionalSelectedLoopPairingGeneratorBoundaryContinuityData
+    {realLaplacian : RightInvariantPairingLaplacianData inner}
+    {complexLaplacian : RightInvariantPairingComplexLaplacianData inner}
+    {heatTraceData : UnitaryMatrixDualHeatTraceSummabilityData (G := G)}
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)) where
+  pairingGenerator_tendsto_zero :
+    ∀ (f : SmoothLieGroupScalarFunction (E := E) (G := G)) (g : G),
+      Tendsto (twoDimensionalSelectedLoopExtendedPairingGenerator bridge f g)
+        (nhdsWithin 0 (Set.Ioi 0))
+        (nhds ((1 / 2 : ℝ) * realLaplacian.laplacian f g))
+
+omit [FiniteDimensional ℝ E] in
+/-- The single pairing-generator boundary field constructs the two-field calculus interface because
+spectral weak convergence already supplies heat-trajectory continuity. -/
+noncomputable def TwoDimensionalSelectedLoopPairingGeneratorBoundaryContinuityData.toBoundaryContinuityData
+    {realLaplacian : RightInvariantPairingLaplacianData inner}
+    {complexLaplacian : RightInvariantPairingComplexLaplacianData inner}
+    {heatTraceData : UnitaryMatrixDualHeatTraceSummabilityData (G := G)}
+    {bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)}
+    (data : TwoDimensionalSelectedLoopPairingGeneratorBoundaryContinuityData bridge) :
+    TwoDimensionalSelectedLoopGeneratorBoundaryContinuityData bridge where
+  heatTrajectory_tendsto_zero := bridge.heatTrajectory_tendsto_zero
+  pairingGenerator_tendsto_zero := data.pairingGenerator_tendsto_zero
 
 /-- Explicit remaining zero-time regularity obligation. Positive-time differentiation alone does
 not supply this boundary limit, so no inhabitant is fabricated here. -/

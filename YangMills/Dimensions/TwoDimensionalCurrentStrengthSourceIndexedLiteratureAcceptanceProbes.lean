@@ -423,7 +423,7 @@ theorem exact_stochasticGenerator_component_audit :
     (SenguptaFineVertex := SenguptaFineVertex) (senguptaFine := senguptaFine)
     (SenguptaTargetVertex := SenguptaTargetVertex) (senguptaTarget := senguptaTarget)
     (SenguptaTargetSurface := SenguptaTargetSurface),
-        Nonempty (TwoDimensionalSelectedLoopGeneratorBoundaryContinuityData
+        Nonempty (TwoDimensionalSelectedLoopPairingGeneratorBoundaryContinuityData
           source.current.planar.toSpectralBrownianGeneratorBridgeData) :=
   TwoDimensionalStochasticGeneratorCurrentStrengthSourceIndexedLiteratureAcceptance.iff_components.mp generatorAcceptance
 
@@ -432,7 +432,7 @@ theorem exact_stochasticGenerator_component_audit :
 include generatorAcceptance in
 omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
     [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in
-/-- The audited boundary limits construct the exact operator/stochastic generator witness. -/
+/-- The audited pairing-generator boundary limit constructs the exact operator/stochastic generator witness. -/
 theorem exact_stochasticGenerator_constructed_from_boundaries :
     ∃ source : TwoDimensionalCurrentStrengthSourceIndexedLiteratureComponents.{uE, uG, uGauge, uSample, uConnection,
       uΩ, uVertex, uEdge, uFace, uXAxisCell,

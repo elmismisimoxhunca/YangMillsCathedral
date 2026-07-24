@@ -5299,10 +5299,12 @@ pairing Laplacian. `TwoDimensionalSelectedLoopStochasticGeneratorAtZeroData` rem
 from any supplied boundary limit, the exact positive-increment expectation formula derives
 `HasStochasticRightIncrementGeneratorAtZero` at every deterministic base time, and one base time
 proves the converse, yielding exact equivalence.
-`TwoDimensionalSelectedLoopGeneratorBoundaryContinuityData` further decomposes the raw zero-time
-limit into right continuity of the scalar heat trajectory and convergence of its explicit positive-
-time pairing-Laplacian derivative. Mathlib's one-sided derivative extension gives a derivative on
-`Ici 0`; its slope characterization and the `NNReal` coercion filter construct the required quotient. A changed-limit probe
+Spectral weak convergence to the identity now derives right continuity of every scalar heat
+trajectory by complexification, real-part transport, and the exact spectral-measure operator
+formula. `TwoDimensionalSelectedLoopPairingGeneratorBoundaryContinuityData` retains only convergence
+of the explicit positive-time pairing-Laplacian derivative. Mathlib's one-sided derivative extension
+gives a derivative on `Ici 0`; its slope characterization and the `NNReal` coercion filter construct
+the required quotient. A changed-limit probe
 uses uniqueness of limits. Positive-time heat differentiation is explicitly not treated as a proof
 at time zero, and Laplace–Beltrami comparison remains open. The
 common Wilson chain now forgets only its genuinely stronger global-faithfulness and normalization
@@ -5645,10 +5647,10 @@ constructs full-past semantics rather than accepting a second monotone-class fie
 exclusion persist.
 `TwoDimensionalStochasticGeneratorCurrentStrengthSourceIndexedLiteratureAcceptance` is the next
 strict proposition-shaped layer: it existentially pairs those prior exact components with
-`TwoDimensionalSelectedLoopGeneratorBoundaryContinuityData` on their unchanged nested spectral
+`TwoDimensionalSelectedLoopPairingGeneratorBoundaryContinuityData` on their unchanged nested spectral
 Brownian bridge. Its exact decomposition, derived zero-time generator, forgetful implication, rank-two theorem, and
-4D exclusion are probed; unlike the full-past field, the two boundary-continuity witnesses are not
-constructed. The name remains explicitly `CurrentStrength`: the final source-complete 2D
+4D exclusion are probed; unlike the full-past field, the pairing-generator boundary-continuity
+witness is not constructed. The name remains explicitly `CurrentStrength`: the final source-complete 2D
 proposition and literature-only inhabitant are still open.
 
 The preliminary `FourDimensionalCurrentStrengthUniversalAcceptance` declaration is intentionally

@@ -700,10 +700,10 @@ retains that boundary regularity as an explicit uninhabited obligation and prove
 operator/increment expectation identity, the corresponding Brownian right-increment generator at
 every deterministic base time; choosing one base time proves the converse, so the two zero-time
 semantics are equivalent. Positive-time heat differentiation is not misused to fill this
-zero-time gap. `TwoDimensionalSelectedLoopGeneratorBoundaryContinuityData` reduces the obligation to
-right continuity of the scalar heat trajectory and convergence of its explicit positive-time
-pairing-Laplacian derivative; Mathlib's one-sided derivative-extension theorem constructs the
-zero-time generator from exactly those two fields. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
+zero-time gap. Spectral weak convergence now derives right continuity of every scalar heat
+trajectory. `TwoDimensionalSelectedLoopPairingGeneratorBoundaryContinuityData` therefore retains
+only convergence of the explicit positive-time pairing-Laplacian derivative; Mathlib's one-sided
+derivative-extension theorem constructs the zero-time generator from that single remaining field. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
 marginals are derived, including exact equality at the selected area with the sampled loop-holonomy
 law. The metric bridge now transports the exact invariant pairing to every group tangent fiber by
 left Maurer–Cartan trivialization and proves its inverse, symmetry, strict positivity, and left/right
@@ -1096,7 +1096,8 @@ bridge. The proved pi-system closure constructs full-past semantics, and exact i
 directions show this strengthening introduces no new inhabitance hypothesis, and
 rank-two/4D separation is retained.
 `TwoDimensionalStochasticGeneratorCurrentStrengthSourceIndexedLiteratureAcceptance` then adds the
-two explicit unconstructed boundary-continuity witnesses that construct the zero-time generator to the same exact source components and nested
+single explicit unconstructed pairing-generator boundary-continuity witness that constructs the
+zero-time generator to the same exact source components and nested
 spectral Brownian bridge. Its existential audit exposes this dependent boundary-regularity debt and a derived theorem returns
 the actual generator witness; forgetting it recovers the prior proposition, and rank-two/4D separation is retained. The
 `CurrentStrength` qualifier remains binding: this is not the final source-complete 2D target, and no

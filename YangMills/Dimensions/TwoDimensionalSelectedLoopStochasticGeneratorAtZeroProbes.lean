@@ -41,6 +41,22 @@ variable
       (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω)}
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Spectral weak initial convergence directly supplies scalar heat-trajectory continuity. -/
+theorem exact_heatTrajectory_tendsto_zero
+    (f : SmoothLieGroupScalarFunction (E := E) (G := G)) (g : G) :
+    Tendsto (twoDimensionalSelectedLoopHeatTrajectory bridge f g)
+      (nhdsWithin 0 (Set.Ioi 0)) (nhds (f g)) :=
+  bridge.heatTrajectory_tendsto_zero f g
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- The sole remaining pairing-generator boundary limit constructs the genuine zero-time generator;
+heat-trajectory continuity is supplied by spectral weak convergence. -/
+theorem exact_pairingGeneratorBoundary_toGeneratorAtZero
+    (data : TwoDimensionalSelectedLoopPairingGeneratorBoundaryContinuityData bridge) :
+    TwoDimensionalSelectedLoopStochasticGeneratorAtZeroData bridge :=
+  data.toBoundaryContinuityData.toStochasticGeneratorAtZeroData
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Explicit heat-trajectory and pairing-generator boundary continuity construct the genuine
 zero-time generator obligation by one-sided extension of derivatives. -/
 theorem exact_boundaryContinuity_toGeneratorAtZero
