@@ -1449,6 +1449,11 @@ committed before higher layers depend on it.
     the strongest fixed-universe compact finite-law record including universal embedded split-bond
     Fact 2 certification on the unchanged finite law, heat factors, spectral semigroup, density, and
     fixed twist. Retain unrestricted/full Fact 2, general Fact 3, and component inhabitation as debt.
+  - [x] Close the strongest assembled cross-source record into the proposition-shaped
+    `TwoDimensionalCurrentStrengthSourceIndexedLiteratureAcceptance`, definitionally equal to that
+    witness type's nonemptiness; expose its exact two-component inhabitance audit and derive
+    proposition-level rank-two/four-dimensional linear-model separation. Keep `CurrentStrength`
+    binding and do not treat this as the final source-complete target.
   - [ ] Assemble a final source-indexed 2D acceptance proposition joining the constructed finite
     lattice, heat/Brownian, weak-limit continuum, compact-surface, and sewing chains; attempt to
     inhabit it solely from formalized Driver/Lévy/Sengupta results and record every remaining

@@ -5579,6 +5579,14 @@ chain does not erase witness-level dimensional separation. This is the strongest
 cross-source 2D join, but unrestricted-universe/full Fact 2, general Fact 3, heat-kernel
 integration, construction, and all component inhabitance remain open.
 
+`TwoDimensionalCurrentStrengthSourceIndexedLiteratureAcceptance` now gives that exact strongest
+assembled chain a proposition-shaped source index. It is definitionally equivalent to nonemptiness
+of the unchanged wrapper, and its proposition-level inhabitance audit exposes the augmented chain
+plus dependent compact finite-law witness. Any inhabitant retains exact rank two and rejects a
+four-dimensional real-linear model; a hostile probe shows that replacing the proposition by `True`
+loses this conclusion. The name remains explicitly `CurrentStrength`: the final source-complete 2D
+proposition and literature-only inhabitant are still open.
+
 The preliminary `FourDimensionalCurrentStrengthUniversalAcceptance` declaration is intentionally
 qualified and uninhabited. No final source-complete acceptance declaration, placeholder inhabitance
 theorem, or arbitrary structure is introduced merely to make the project appear complete.
