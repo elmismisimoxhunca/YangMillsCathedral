@@ -171,6 +171,13 @@ theorem smoothLieGroupScalarToContinuousLinearMap_apply
     smoothLieGroupScalarToContinuousLinearMap f g = f g :=
   rfl
 
+/-- Explicit uniform-density target for smooth real scalar functions inside continuous real
+functions. It is intentionally only a proposition here; this algebraic file does not assert a smooth
+approximation theorem. -/
+def SmoothLieGroupScalarFunctionsDenseInContinuous : Prop :=
+  Dense (Set.range
+    (smoothLieGroupScalarToContinuousLinearMap (E := E) (G := G)))
+
 omit [Group G] [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
 /-- The smooth-to-continuous linear map is faithful. -/
 theorem smoothLieGroupScalarToContinuousLinearMap_injective :

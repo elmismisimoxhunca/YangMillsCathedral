@@ -43,6 +43,14 @@ theorem exact_smoothScalar_continuousLinearMap
   smoothLieGroupScalarToContinuousLinearMap_apply f g
 
 omit [Group G] [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
+/-- Exact density-target probe: the named proposition is precisely density of the smooth image. -/
+theorem exact_smoothLieGroupScalarFunctionsDenseInContinuous
+    (dense : SmoothLieGroupScalarFunctionsDenseInContinuous (E := E) (G := G)) :
+    Dense (Set.range
+      (smoothLieGroupScalarToContinuousLinearMap (E := E) (G := G))) :=
+  dense
+
+omit [Group G] [LieGroup (modelWithCornersSelf ℝ E) ∞ G] in
 /-- Hostile probe: two distinct smooth functions cannot have the same ambient continuous image. -/
 theorem changed_smoothScalar_continuousImage_blocked
     (f changed : SmoothLieGroupScalarFunction (E := E) (G := G))
