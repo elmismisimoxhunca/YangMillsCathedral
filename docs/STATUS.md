@@ -5824,6 +5824,11 @@ covering density. Its exact `Nonempty` audit exposes only the current-strength p
 dependent universal general-Fact-3 witness. It forgets to current strength, retains exact rank two,
 and rejects a 4D linear model. The fixed-universe universal Fact 3 field remains uninhabited and constructs no subdivisions
 or analytic transports; unrestricted/full Fact 3 remains open.
+`TwoDimensionalGeneralFactThreeSelectedFourierDerivativeCurrentStrengthSourceIndexedLiteratureAcceptanceData`
+then joins that exact strict source to the four selected-Fourier/rescaled-derivative obligations on
+the identical spectral Brownian bridge chosen by its current witness. Neither field is constructed;
+probes expose the general candidate class, exact analytic acceptance, rank-two/4D contract, and
+reject omission of the analytic field.
 `TwoDimensionalFullPastCurrentStrengthSourceIndexedLiteratureAcceptance` now adds the exact
 `TwoDimensionalSelectedLoopFinitePastCylinderMarkovData` field to those same six components, indexed
 by their unchanged nested spectral Brownian bridge. Its `Nonempty` audit exposes the old components

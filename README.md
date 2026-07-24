@@ -1235,7 +1235,10 @@ strongest witness selected by the unchanged current proposition and dependently 
 fixed-universe universal general-Fact-3 finite-curve-law acceptance on that witness's embedded base,
 finite law, and density. Its exact inhabitance audit exposes just that current proof and dependent
 universal witness. It forgets to current strength, remains rank two, and rejects a 4D linear
-model; its general Fact 3 witness remains uninhabited, and unrestricted/full Fact 3 remains open.
+model; its general Fact 3 witness remains uninhabited, and unrestricted/full Fact 3 remains open. A
+further strict joint record adds the exact selected-Fourier/rescaled-derivative obligations on the
+identical spectral bridge selected by that source witness. Probes retain the general candidate class,
+analytic field, rank-two contract, and 4D rejection; neither constituent is inhabited.
 `TwoDimensionalFullPastCurrentStrengthSourceIndexedLiteratureAcceptance` strengthens those exact six
 components with the canonically derived
 `TwoDimensionalSelectedLoopFinitePastCylinderMarkovData` on the unchanged nested spectral Brownian
