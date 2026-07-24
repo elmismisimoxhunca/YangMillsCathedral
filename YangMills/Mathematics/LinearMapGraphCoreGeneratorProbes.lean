@@ -23,6 +23,13 @@ variable {𝕜 : Type uK} [NormedField 𝕜]
   (graphBound : ∀ᶠ i in l, ∀ z : X, ‖Q i z‖ ≤ C * (‖z‖ + ‖A z‖))
   (coreGenerator : ∀ z ∈ core, Tendsto (fun i => Q i z) l (nhds (A z)))
 
+/-- Positive probe: convergence gives a pointwise eventual norm bound, without asserting a
+bound uniform over a family of vectors. -/
+theorem exact_eventually_normBound_of_tendsto
+    {f : ι → X} {y : X} (hf : Tendsto f l (nhds y)) :
+    ∀ᶠ i in l, ‖f i‖ ≤ ‖y‖ + 1 :=
+  eventually_norm_le_norm_add_one_of_tendsto hf
+
 /-- Positive probe: graph approximation on a proper algebraic domain supplies the ambient
 operator limit. -/
 theorem exact_domainGraphCore_generator_extension

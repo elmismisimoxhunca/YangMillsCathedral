@@ -514,6 +514,24 @@ theorem twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_generator
   exact tendsto_twoDimensionalSelectedLoop_smoothMatrixCoefficientSynthesis_generator
     bridge coefficients
 
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Core convergence supplies an eventual norm bound separately for each finite coefficient test.
+The quantifiers are deliberately pointwise in `f`; this is strictly weaker than the single uniform
+all-domain graph bound required below. -/
+theorem twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_eventually_pointwiseNormBound
+    (bridge : TwoDimensionalSelectedLoopSpectralBrownianGeneratorBridgeData
+      (law := law) (inner := inner) (realLaplacian := realLaplacian)
+      (complexLaplacian := complexLaplacian) (heatTraceData := heatTraceData) (Ω := Ω))
+    (f : SmoothLieGroupScalarFunction (E := E) (G := G))
+    (hf : f ∈ smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G)) :
+    ∀ᶠ t : NNReal in nhdsWithin 0 (Set.Ioi 0),
+      ‖twoDimensionalSelectedLoopHeatDifferenceQuotientLinearMap bridge t
+          (smoothLieGroupScalarToContinuousLinearMap f)‖ ≤
+        ‖twoDimensionalSelectedLoopPairingGeneratorLinearMap
+          (realLaplacian := realLaplacian) f‖ + 1 :=
+  eventually_norm_le_norm_add_one_of_tendsto
+    (twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_generator bridge f hf)
+
 /-- Exact remaining obligations after selecting the finite real smooth matrix-coefficient range,
 deriving its real pairing-Laplacian eigenvalues, and proving its generator convergence. -/
 structure TwoDimensionalSelectedLoopSmoothMatrixCoefficientGraphCoreData

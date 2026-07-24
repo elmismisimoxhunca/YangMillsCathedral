@@ -59,6 +59,18 @@ def IsLinearMapGraphDenseCore
     (A : X →ₗ[𝕜] X) (core : Set X) : Prop :=
   ∀ x, IsLinearMapGraphDenseAt A core x
 
+/-- Convergence in a normed space gives an eventual pointwise norm bound. This elementary
+lemma is useful for auditing the quantifier gap between convergence on each core vector and a single
+operator bound uniform over the whole domain. -/
+theorem eventually_norm_le_norm_add_one_of_tendsto
+    {f : ι → X} {y : X} (hf : Tendsto f l (nhds y)) :
+    ∀ᶠ i in l, ‖f i‖ ≤ ‖y‖ + 1 := by
+  have hnorm : Tendsto (fun i => ‖f i‖) l (nhds ‖y‖) := tendsto_norm.comp hf
+  have heventually := (Metric.tendsto_nhds.mp hnorm) 1 zero_lt_one
+  filter_upwards [heventually] with i hi
+  rw [Real.dist_eq] at hi
+  linarith [le_abs_self (‖f i‖ - ‖y‖)]
+
 /-- Generator convergence extends from a graph-dense subset of a possibly proper algebraic
 domain. Neither the domain `D` nor its ambient map `J` is assumed complete, normed, or injective. -/
 theorem tendsto_linearMapOnDomain_of_graphDenseAt_of_eventually_graphBound

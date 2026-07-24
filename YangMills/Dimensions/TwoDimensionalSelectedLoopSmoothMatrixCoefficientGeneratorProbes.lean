@@ -233,6 +233,20 @@ theorem exact_selectedLoop_smoothMatrixCoefficientCore_generator :
     bridge
 
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
+/-- Exact pointwise boundedness probe. Its event and bound may depend on the chosen core vector, so
+it is not the uniform graph-bound field of the reduction record. -/
+theorem exact_selectedLoop_smoothMatrixCoefficientCore_eventually_pointwiseNormBound
+    (f : SmoothLieGroupScalarFunction (E := E) (G := G))
+    (hf : f ∈ smoothUnitaryMatrixCoefficientRealCoreCandidate (E := E) (G := G)) :
+    ∀ᶠ t : NNReal in nhdsWithin 0 (Set.Ioi 0),
+      ‖twoDimensionalSelectedLoopHeatDifferenceQuotientLinearMap bridge t
+          (smoothLieGroupScalarToContinuousLinearMap f)‖ ≤
+        ‖twoDimensionalSelectedLoopPairingGeneratorLinearMap
+          (realLaplacian := realLaplacian) f‖ + 1 :=
+  twoDimensionalSelectedLoop_smoothMatrixCoefficientCore_eventually_pointwiseNormBound
+    bridge f hf
+
+omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- The coefficient-specific reduction uses exactly the constructed matrix-coefficient range. -/
 theorem exact_smoothMatrixCoefficientGraphCore_reduction_core
     (data : TwoDimensionalSelectedLoopSmoothMatrixCoefficientGraphCoreData bridge) :
