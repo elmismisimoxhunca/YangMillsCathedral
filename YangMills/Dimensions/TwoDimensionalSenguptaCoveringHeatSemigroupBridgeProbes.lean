@@ -11,11 +11,11 @@ namespace YangMills.Dimensions.TwoDimensionalSenguptaCoveringHeatSemigroupBridge
 
 open MeasureTheory
 open YangMills.Mathematics
-open scoped ENNReal
+open scoped ENNReal Manifold ContDiff
 
 noncomputable section
 
-universe uG uCover uGauge uSample uConnection uCurve uEdge uRegion uSenguptaSample
+universe uG uCover uCoverE uGauge uSample uConnection uCurve uEdge uRegion uSenguptaSample
 
 variable
     {G : Type uG} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
@@ -42,7 +42,46 @@ variable
       (planarSemigroup := planarSemigroup) (finiteLaw := finiteLaw)
       (coverDensity := coverDensity))
 
-omit [T2Space CoverGroup] [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
+variable
+    [SecondCountableTopology CoverGroup]
+    {CoverE : Type uCoverE} [NormedAddCommGroup CoverE] [NormedSpace ℝ CoverE]
+    [ChartedSpace CoverE CoverGroup]
+    [LieGroup (modelWithCornersSelf ℝ CoverE) ∞ CoverGroup]
+    {coverInner : Geometry.InvariantInnerProductData
+      (I := modelWithCornersSelf ℝ CoverE) (G := CoverGroup)}
+    {coverLaplacian : RightInvariantPairingComplexLaplacianData coverInner}
+    {coverHeatTrace : UnitaryMatrixDualHeatTraceSummabilityData (G := CoverGroup)}
+    (coverLaplacianBridge : UnitaryMatrixDualCasimirLaplacianBridgeData
+      coverInner coverLaplacian coverHeatTrace)
+    (coverPositivity : UnitaryMatrixDualCasimirHeatPositivityData coverHeatTrace)
+    (coverInitial : UnitaryMatrixDualCasimirHeatInitialIdentityData coverHeatTrace)
+    (projectionHeat : NormalizedCompactHaarDensitySemigroupHomData
+      (unitaryMatrixDualCasimirHeatDensitySemigroupData
+        coverLaplacianBridge coverPositivity coverInitial)
+      planarSemigroup.toNormalizedCompactHaarDensitySemigroupData finiteLaw.projection)
+
+/-- The Casimir spectral chain discharges the covering semigroup field exactly; only the supplied
+projection transport is retained. -/
+noncomputable def exact_spectral_covering_bridge :
+    TwoDimensionalSenguptaCoveringHeatSemigroupBridgeData
+      (planarSemigroup := planarSemigroup) (finiteLaw := finiteLaw)
+      (coverDensity := unitaryMatrixDualCasimirHeatDensityENNReal coverHeatTrace) :=
+  TwoDimensionalSenguptaCoveringHeatSemigroupBridgeData.ofCasimirSpectral
+    coverLaplacianBridge coverPositivity coverInitial projectionHeat
+
+include projectionHeat in
+omit [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
+/-- Hostile residual-debt probe: the spectral construction does not manufacture projection
+compatibility. -/
+theorem missing_spectral_projectionHeat_blocked
+    (missing : ¬Nonempty (NormalizedCompactHaarDensitySemigroupHomData
+      (unitaryMatrixDualCasimirHeatDensitySemigroupData
+        coverLaplacianBridge coverPositivity coverInitial)
+      planarSemigroup.toNormalizedCompactHaarDensitySemigroupData finiteLaw.projection)) : False :=
+  missing ⟨projectionHeat⟩
+
+omit [T2Space CoverGroup] [SecondCountableTopology CoverGroup]
+    [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
 /-- The covering bridge inhabitance audit exposes both exact dependent witnesses. -/
 theorem exact_covering_inhabitation_audit :
     Nonempty (TwoDimensionalSenguptaCoveringHeatSemigroupBridgeData
@@ -54,7 +93,8 @@ theorem exact_covering_inhabitation_audit :
   TwoDimensionalSenguptaCoveringHeatSemigroupBridgeData.nonempty_iff_coverSemigroup_projectionHeat
 
 include bridge in
-omit [T2Space CoverGroup] [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
+omit [T2Space CoverGroup] [SecondCountableTopology CoverGroup]
+    [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
 /-- The exact finite-law projection transports the cover density measure at every positive time. -/
 theorem exact_cover_measure_pushforward {t : ℝ} (ht : 0 < t) :
     Measure.map finiteLaw.projection
@@ -63,7 +103,8 @@ theorem exact_cover_measure_pushforward {t : ℝ} (ht : 0 < t) :
   bridge.map_coverMeasure ht
 
 include bridge in
-omit [T2Space CoverGroup] [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
+omit [T2Space CoverGroup] [SecondCountableTopology CoverGroup]
+    [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
 /-- Hostile covering-heat probe: a changed projected law is rejected. -/
 theorem changed_cover_measure_blocked
     {t : ℝ} (ht : 0 < t)
@@ -73,7 +114,8 @@ theorem changed_cover_measure_blocked
   changed (bridge.map_coverMeasure ht)
 
 include bridge in
-omit [T2Space CoverGroup] [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
+omit [T2Space CoverGroup] [SecondCountableTopology CoverGroup]
+    [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
 /-- Positive-time cover and planar measures are both normalized and nonzero. -/
 theorem exact_both_positive_time_probability {t : ℝ} (ht : 0 < t) :
     normalizedCompactHaarDensitySemigroupMeasure coverDensity t Set.univ = 1 ∧
