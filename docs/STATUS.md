@@ -5346,8 +5346,9 @@ constructs an explicit smooth central character range containing each component.
 proved conjugation-invariant, and noncentral smooth tests are explicitly excluded, so this range is
 not an all-smooth graph-core candidate on a nonabelian group. The correct algebraic shape is now
 constructed separately: explicitly bundled smooth irreducible unitary presentations provide smooth
-complex coefficients, their real/imaginary components, a dependent finite real synthesis range,
-exact row/column conjugation mixing, singleton inclusion, and conditional nontriviality. An explicit reusable
+complex coefficients, their real/imaginary components, a dependent finite real synthesis range
+bundled as an exact algebraic real submodule, exact row/column conjugation mixing, singleton
+inclusion, and conditional nontriviality. An explicit reusable
 coefficientwise Casimir bridge prevents the existing trace eigen-equation from being silently
 promoted to matrix entries; in isolation it remains uninhabited, while any supplied instance
 canonically yields both real-component Casimir equations, eigenvalue uniqueness from a diagonal
@@ -5361,7 +5362,8 @@ derivative forces the pairing-Laplacian Casimir equations on that same chain; ca
 coherence then constructs the generic complex coefficientwise bridge for the nested 2D data. A
 canonical finite coefficientwise heat-evolution linear map gives the exact positive-time operator on
 every finite real synthesis; its totalized coefficient-space difference quotient has a zero branch
-matching the ambient family and maps exactly to the positive ambient selected-loop quotient. Finite linearity proves the exact pairing generator on every finite synthesis and fills `core_generator`
+matching the ambient family and maps exactly to the positive ambient selected-loop quotient. Both
+evolution families are proved to remain in the unchanged algebraic coefficient core. Finite linearity proves the exact pairing generator on every finite synthesis and fills `core_generator`
 for the designated coefficient range. A smaller uninhabited reduction record now retains only smooth
 graph density and the eventual uniform graph bound before constructing the existing all-smooth
 stochastic endpoint; its exact `Nonempty` equivalence proves these two obligations, including one

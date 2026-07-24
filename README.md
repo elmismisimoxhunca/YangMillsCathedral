@@ -732,7 +732,7 @@ smooth tests, proved to have the exact real pairing-Laplacian Casimir eigenvalue
 synthesized into an explicit real smooth central character range. This range is proved conjugation-
 invariant and is therefore not proposed as a graph-dense core for all smooth tests on a nonabelian
 group. A separate finite real matrix-coefficient range is now constructed from explicitly bundled smooth
-irreducible unitary presentations, with dependent row/column indices, exact noncentral conjugation
+irreducible unitary presentations and bundled as an exact algebraic real submodule, with dependent row/column indices, exact noncentral conjugation
 mixing, singleton inclusion, and conditional nontriviality. A reusable coefficientwise
 Casimir bridge explicitly strengthens the trace equation to every matrix coordinate; in isolation it
 remains an honest uninhabited interface, and when supplied canonical real/complex coherence proves
@@ -745,7 +745,8 @@ differentiation derives their pairing-Laplacian Casimir equations on the same sp
 canonical real/complex coherence consequently constructs the generic coefficientwise bridge for
 this nested 2D data. A canonical finite coefficientwise heat-evolution linear map gives exact
 positive-time action on every finite real synthesis, and its totalized coefficient-space difference
-quotient maps exactly to the ambient selected-loop difference quotient. Finite linearity then proves generator
+quotient maps exactly to the ambient selected-loop difference quotient. Both finite heat evolution
+and every positive coefficient quotient remain inside that same algebraic core. Finite linearity then proves generator
 convergence on the entire smooth real coefficient range, so its `core_generator` obligation is no longer caller supplied. It does not
 assert that every continuous dual class has a smooth representative. No inhabitant of the graph-core
 record is constructed: an exact `Nonempty` audit proves that smooth graph density and one
