@@ -969,7 +969,8 @@ committed before higher layers depend on it.
   theorems. This central range is not an all-smooth graph-core candidate.
 - [x] Construct the finite real smooth matrix-coefficient range over explicitly bundled smooth
   irreducible presentations, retaining dependent row/column indices, exact conjugation mixing,
-  singleton inclusion, and conditional nontriviality without claiming quotient-dual coverage.
+  singleton inclusion, conditional nontriviality, and an exact algebraic real-submodule carrier
+  without claiming quotient-dual coverage or topological closure.
 - [x] Isolate the stronger coefficientwise Casimir/Laplacian identification as an explicit
   uninhabited bridge and conditionally derive the real/imaginary eigenvalue equations and exact
   finite-synthesis pairing-Laplacian action.
@@ -978,9 +979,11 @@ committed before higher layers depend on it.
   heat action plus the uniform-norm zero-time generator on every explicit complex coefficient.
 - [x] Transport that action to both real selected-loop coefficient components, use positive-time
   heat differentiation to derive their pairing-Laplacian Casimir equations, reconstruct the generic
-  complex coefficientwise bridge by canonical real/complex coherence, prove generator convergence
-  on every finite real synthesis and the entire designated coefficient range, and derive the
-  coefficient-specific graph-core reduction.
+  complex coefficientwise bridge by canonical real/complex coherence, prove exact finite heat and
+  difference-quotient evolution inside the unchanged algebraic core, prove generator convergence on
+  every finite real synthesis and the entire designated coefficient range, derive its pointwise
+  eventual norm bound, and derive the coefficient-specific graph-core reduction without conflating
+  that pointwise bound with a single uniform all-domain bound.
 - [ ] Prove smooth graph density and the required eventual uniform graph bound for that range; then construct the
   pairing-generator boundary-continuity witness and prove
   comparison of the exact pairing Laplacian with the geometric Laplace–Beltrami operator.

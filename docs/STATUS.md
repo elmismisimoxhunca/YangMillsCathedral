@@ -5363,7 +5363,10 @@ coherence then constructs the generic complex coefficientwise bridge for the nes
 canonical finite coefficientwise heat-evolution linear map gives the exact positive-time operator on
 every finite real synthesis; its totalized coefficient-space difference quotient has a zero branch
 matching the ambient family and maps exactly to the positive ambient selected-loop quotient. Both
-evolution families are proved to remain in the unchanged algebraic coefficient core. Finite linearity proves the exact pairing generator on every finite synthesis and fills `core_generator`
+evolution families are proved to remain in the unchanged algebraic coefficient core. Convergence
+also yields an eventual norm bound separately for each fixed core test; its vector-dependent event
+and bound do not supply the one uniform all-domain graph bound. Finite linearity proves the exact
+pairing generator on every finite synthesis and fills `core_generator`
 for the designated coefficient range. A smaller uninhabited reduction record now retains only smooth
 graph density and the eventual uniform graph bound before constructing the existing all-smooth
 stochastic endpoint; its exact `Nonempty` equivalence proves these two obligations, including one
