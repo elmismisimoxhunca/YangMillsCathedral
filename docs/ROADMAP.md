@@ -911,7 +911,9 @@ committed before higher layers depend on it.
   test. Define the exact past sigma-algebra as the supremum of every evaluation pullback at times
   `≤ s`, prove evaluation, monotonicity, ambient inclusion, and finite-cylinder measurability, and
   package the all-bounded-past-test weak Markov statement as an explicit monotone-class obligation.
-  Retain construction of that obligation and conditional-expectation packaging as separate steps.
+  Prove by conditional-expectation uniqueness that any supplied universal weak witness gives the
+  exact conditional Markov identity for this generated past. Retain construction of the universal
+  monotone-class witness as a separate step.
 - [x] Prove that the common Wilson chain forgets only global faithfulness and Wilson normalization to
   construct Driver's exact Villain common heat chain. Attach the still-uninhabited Theorem 7.2
   weak-limit contract to the literal spectral `Q_{ε²}` action at one positive spacing, deriving

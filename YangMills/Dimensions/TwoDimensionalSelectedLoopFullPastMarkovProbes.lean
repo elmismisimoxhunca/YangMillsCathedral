@@ -93,6 +93,39 @@ theorem exact_fullPast_arbitrary_test
       ∂bridge.brownian.probabilityMeasure :=
   data.fullPastWeakMarkov s t ht pastTest pastTest_measurable pastTest_bounded f
 
+omit [FiniteDimensional ℝ E] in
+/-- A supplied universal weak full-past witness determines the exact conditional expectation. -/
+theorem exact_fullPast_conditionalExpectation
+    (data : TwoDimensionalSelectedLoopFullPastMarkovData bridge)
+    (s t : NNReal) (ht : 0 < t) (f : C(G, ℝ)) :
+    MeasureTheory.condExp
+        (twoDimensionalSelectedLoopPastMeasurableSpace bridge.brownian s)
+        bridge.brownian.probabilityMeasure
+        (fun samplePoint => f (bridge.brownian.process (s + t) samplePoint)) =ᵐ[
+          bridge.brownian.probabilityMeasure]
+      fun samplePoint =>
+        bridge.spectralHeatKernel.kernelOperator.heatOperator (t : ℝ) f
+          (bridge.brownian.process s samplePoint) :=
+  data.fullPastConditionalMarkov s t ht f
+
+omit [FiniteDimensional ℝ E] in
+/-- Hostile conditional probe: replacing the predicted version by an a.e.-different function is
+incompatible with any supplied full-past witness. -/
+theorem changed_fullPast_conditionalExpectation_blocked
+    (data : TwoDimensionalSelectedLoopFullPastMarkovData bridge)
+    (s t : NNReal) (ht : 0 < t) (f : C(G, ℝ)) (changed : Ω → ℝ)
+    (changed_ne_exact : ¬ changed =ᵐ[bridge.brownian.probabilityMeasure]
+      fun samplePoint =>
+        bridge.spectralHeatKernel.kernelOperator.heatOperator (t : ℝ) f
+          (bridge.brownian.process s samplePoint))
+    (claimed :
+      MeasureTheory.condExp
+          (twoDimensionalSelectedLoopPastMeasurableSpace bridge.brownian s)
+          bridge.brownian.probabilityMeasure
+          (fun samplePoint => f (bridge.brownian.process (s + t) samplePoint)) =ᵐ[
+            bridge.brownian.probabilityMeasure] changed) : False :=
+  changed_ne_exact (claimed.symm.trans (data.fullPastConditionalMarkov s t ht f))
+
 omit [FiniteDimensional ℝ E] [MeasurableMul₂ G] [MeasurableInv G] in
 /-- Hostile full-past probe: a changed transition value contradicts any supplied full-past witness. -/
 theorem changed_fullPast_transition_blocked

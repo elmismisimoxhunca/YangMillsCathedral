@@ -5279,8 +5279,10 @@ space at `s` is now the supremum of the pullbacks by every `B(t)`, `t≤s`; incl
 measurable, these spaces increase with time and lie below the ambient sigma-algebra, and every proved
 finite cylinder is past-measurable and satisfies the exact transition test. The uninhabited
 `TwoDimensionalSelectedLoopFullPastMarkovData` requires that identity for every bounded real test
-measurable for this generated past. The missing monotone-class extension and conditional-expectation
-packaging remain explicit; no full conditional Markov theorem is constructed. Conditioning on the full past sigma-algebra and stochastic-generator identification remain explicit future proof debt. The
+measurable for this generated past. Conditional-expectation uniqueness proves that any supplied
+universal weak witness gives the exact conditional Markov identity for this generated past, with
+direct and changed-version hostile probes. Construction of the missing monotone-class extension
+remains explicit; stochastic-generator identification remains separate future proof debt. The
 common Wilson chain now forgets only its genuinely stronger global-faithfulness and normalization
 fields to construct Driver's exact Villain common heat chain. Uninhabited
 `TwoDimensionalSpectralVillainWeakLimitBridgeData` ties the unchanged Theorem 7.2 contract to the

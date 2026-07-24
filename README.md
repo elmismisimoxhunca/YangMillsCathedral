@@ -682,7 +682,9 @@ test from continuous to arbitrary explicitly bounded measurable real functions. 
 past sigma-algebra is now defined as the supremum of all evaluation pullbacks up to the current time;
 every such finite cylinder is proved past-measurable and satisfies the required identity. Extending
 from finite cylinders to every bounded full-past-measurable test remains an explicit uninhabited
-monotone-class obligation, so no full conditional Markov theorem is claimed. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
+monotone-class obligation. Conditional-expectation uniqueness now proves that any supplied universal
+weak witness satisfies the exact conditional Markov identity for the generated past; constructing
+the universal witness itself remains open. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
 marginals are derived, including exact equality at the selected area with the sampled loop-holonomy
 law. The metric bridge now transports the exact invariant pairing to every group tangent fiber by
 left Maurer–Cartan trivialization and proves its inverse, symmetry, strict positivity, and left/right
