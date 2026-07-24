@@ -722,8 +722,13 @@ derivative-smoothness interface, constructing smooth first/second derivatives, s
 Laplacians, and a continuous-valued pairing Laplacian. A definitional bridge to Mathlib's vector-
 valued exterior derivative proves first- and second-derivative linearity, finite-sum linearity, and
 finally packages the pairing Laplacian as the canonical algebraic linear map from the smooth domain
-into `C(G, ℝ)`, with no caller-supplied regularity witness. Missing graph density and the heat-
-quotient bound still prevent the algebraic core from filling the remaining all-smooth-tests boundary field. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
+into `C(G, ℝ)`, with no caller-supplied regularity witness. The spectral probability-measure formula
+also bundles every positive-time real heat operator and its right difference quotient as linear maps.
+`TwoDimensionalSelectedLoopPairingGraphCoreGeneratorData` now isolates exactly a designated smooth
+core, its graph density, an eventual uniform graph bound, and generator convergence on that core;
+these fields construct uniform generation on every smooth test and the existing stochastic generator
+endpoint. No inhabitant of this graph-core record is constructed: a suitable real smooth core, its
+core convergence, graph density, and the heat-quotient bound still prevent the algebraic core from filling the remaining all-smooth-tests boundary field. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
 marginals are derived, including exact equality at the selected area with the sampled loop-holonomy
 law. The metric bridge now transports the exact invariant pairing to every group tangent fiber by
 left Maurer–Cartan trivialization and proves its inverse, symmetry, strict positivity, and left/right

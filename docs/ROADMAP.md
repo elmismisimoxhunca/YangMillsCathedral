@@ -956,9 +956,14 @@ committed before higher layers depend on it.
   exterior derivative, prove additivity and real homogeneity through first derivatives, iterated
   derivatives, and finite-basis/pairing Laplacians, and package the exact pairing Laplacian as the
   algebraic linear map from the smooth proper domain into `C(G, ℝ)`.
-- [ ] Instantiate the closure theorem for an appropriate character-derived real core by proving graph density and
-  the required eventual heat-quotient graph bound; then extend the generator to the required smooth
-  domain, construct the pairing-generator boundary-continuity witness, and prove
+- [x] Use the exact spectral probability-measure formula to bundle every positive-time real heat
+  operator and its right difference quotient as algebraic linear maps on `C(G, ℝ)`. Instantiate the
+  abstract proper-domain closure API in an explicit record retaining a designated smooth core, graph
+  density, an eventual uniform graph bound, and generator convergence on the core; prove that this
+  record yields uniform generation on all smooth tests and the stochastic generator endpoint.
+- [ ] Construct an appropriate character-derived real smooth core and prove its core generator
+  convergence, graph density, and the required eventual heat-quotient graph bound; then construct the
+  pairing-generator boundary-continuity witness and prove
   comparison of the exact pairing Laplacian with the geometric Laplace–Beltrami operator.
 - [x] Prove that the common Wilson chain forgets only global faithfulness and Wilson normalization to
   construct Driver's exact Villain common heat chain. Attach the still-uninhabited Theorem 7.2

@@ -5328,9 +5328,15 @@ derivatives, smooth finite-basis/pairing Laplacians, and an exact `C(G, ℝ)` re
 is definitionally identified with Mathlib's vector-valued exterior derivative; its additive and
 scalar-multiplicative rules propagate through the smooth iterated derivatives and finite basis sum,
 proving pairing-Laplacian linearity and constructing the canonical algebraic linear map from the
-smooth domain into `C(G, ℝ)` without a caller-supplied regularity witness. Core graph density and the
-quotient bound remain unconstructed, so extension to every required smooth test and Laplace–Beltrami
-comparison remain open. The
+smooth domain into `C(G, ℝ)` without a caller-supplied regularity witness. The exact spectral
+probability-measure formula proves positive-time heat-operator additivity/homogeneity and bundles the
+operator and right difference quotient as linear maps on `C(G, ℝ)`. The concrete
+`TwoDimensionalSelectedLoopPairingGraphCoreGeneratorData` then retains a designated smooth core,
+graph density, an eventual uniform graph bound, and generator convergence on that core; the generic
+closure theorem derives uniform convergence for every smooth test, and point evaluation constructs
+the existing stochastic generator endpoint. No record inhabitant is built: a suitable real smooth
+core, its core convergence, graph density, and the quotient bound remain unconstructed, while
+Laplace–Beltrami comparison remains open. The
 common Wilson chain now forgets only its genuinely stronger global-faithfulness and normalization
 fields to construct Driver's exact Villain common heat chain. Uninhabited
 `TwoDimensionalSpectralVillainWeakLimitBridgeData` ties the unchanged Theorem 7.2 contract to the
