@@ -806,6 +806,15 @@ theorem missing_generalFactThreeFourier_operatorGenerator_blocked
 include generalFactThreeFourierData in
 omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
     [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in
+/-- The proposition-level joint acceptance reaches the existing direct operator-generator source
+acceptance after intentionally forgetting only general Fact 3 in the conclusion. -/
+noncomputable def exact_generalFactThreeFourier_implies_operatorGenerator :=
+  TwoDimensionalGeneralFactThreeSelectedFourierDerivativeCurrentStrengthSourceIndexedLiteratureAcceptance.implies_operatorGenerator
+    (acceptance := ⟨generalFactThreeFourierData⟩)
+
+include generalFactThreeFourierData in
+omit [T2Space CoverGroup] [Nonempty CurveS] [Fintype SenguptaTargetEdge]
+    [MeasurableMul₂ CoverGroup] [MeasurableInv CoverGroup] in
 /-- The joint acceptance remains rank two and rejects a 4D linear model. -/
 theorem exact_generalFactThreeFourier_dimension_contract :
     Module.finrank ℝ EG = 2 ∧
