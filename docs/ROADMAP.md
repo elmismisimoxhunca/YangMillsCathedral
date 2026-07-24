@@ -934,7 +934,12 @@ committed before higher layers depend on it.
   the existing spectral weak initial identity by complexification and real-part transport. Use
   Mathlib's one-sided derivative-extension theorem and slope characterization to construct the
   `NNReal` difference quotient from the single remaining pairing-generator limit.
-- [ ] Construct that pairing-generator boundary-continuity witness from spectral/Casimir estimates and prove
+- [x] Define the reusable complex Casimir heat convolution operator, prove exact diagonal action on
+  every selected irreducible character by unconditional uniform-series convolution, and construct
+  the scalar right-hand zero-time generator `-c_q/2`. Keep this explicitly at the algebraic selected-
+  character core rather than claiming an all-smooth-tests generator.
+- [ ] Extend the selected-character generator to the required smooth domain with justified graph-
+  norm/core convergence, construct the pairing-generator boundary-continuity witness, and prove
   comparison of the exact pairing Laplacian with the geometric Laplace–Beltrami operator.
 - [x] Prove that the common Wilson chain forgets only global faithfulness and Wilson normalization to
   construct Driver's exact Villain common heat chain. Attach the still-uninhabited Theorem 7.2

@@ -5304,9 +5304,12 @@ trajectory by complexification, real-part transport, and the exact spectral-meas
 formula. `TwoDimensionalSelectedLoopPairingGeneratorBoundaryContinuityData` retains only convergence
 of the explicit positive-time pairing-Laplacian derivative. Mathlib's one-sided derivative extension
 gives a derivative on `Ici 0`; its slope characterization and the `NNReal` coercion filter construct
-the required quotient. A changed-limit probe
-uses uniqueness of limits. Positive-time heat differentiation is explicitly not treated as a proof
-at time zero, and Laplace–Beltrami comparison remains open. The
+the required quotient. A changed-limit probe uses uniqueness of limits. Separately, the reusable
+`unitaryMatrixDualCasimirHeatComplexOperator` acts diagonally on every selected irreducible character
+with eigenvalue `exp(-tc_q/2)`, proved through unconditional uniform character convolution. Its
+scalar right-hand quotient converges to `-c_q/2`, with changed-limit hostility. This establishes only
+the selected-character core; graph-norm extension to every required smooth test and Laplace–Beltrami
+comparison remain open. The
 common Wilson chain now forgets only its genuinely stronger global-faithfulness and normalization
 fields to construct Driver's exact Villain common heat chain. Uninhabited
 `TwoDimensionalSpectralVillainWeakLimitBridgeData` ties the unchanged Theorem 7.2 contract to the

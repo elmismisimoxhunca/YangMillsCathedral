@@ -703,7 +703,12 @@ semantics are equivalent. Positive-time heat differentiation is not misused to f
 zero-time gap. Spectral weak convergence now derives right continuity of every scalar heat
 trajectory. `TwoDimensionalSelectedLoopPairingGeneratorBoundaryContinuityData` therefore retains
 only convergence of the explicit positive-time pairing-Laplacian derivative; Mathlib's one-sided
-derivative-extension theorem constructs the zero-time generator from that single remaining field. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
+derivative-extension theorem constructs the zero-time generator from that single remaining field. On the reusable spectral side,
+`unitaryMatrixDualCasimirHeatComplexOperator_character` proves exact diagonal heat action on every
+selected irreducible character using unconditional uniform-series convolution, and
+`tendsto_unitaryMatrixDualCasimirHeatEigenvalue_slope_zero` constructs its exact scalar `-c_q/2`
+zero-time generator. This is only the algebraic selected-character core and does not fill the
+remaining all-smooth-tests boundary field. One positive increment derives normalization of the process carrier, rather than storing it. Its one-time
 marginals are derived, including exact equality at the selected area with the sampled loop-holonomy
 law. The metric bridge now transports the exact invariant pairing to every group tangent fiber by
 left Maurer–Cartan trivialization and proves its inverse, symmetry, strict positivity, and left/right
