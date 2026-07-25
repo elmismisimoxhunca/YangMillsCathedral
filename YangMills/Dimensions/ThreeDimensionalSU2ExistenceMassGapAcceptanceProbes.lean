@@ -64,6 +64,17 @@ theorem exact_authoritative_gate :
       (exterior := exterior) (curvatureCertificate := curvatureCertificate) :=
   ⟨data⟩
 
+/-- The authoritative proposition exposes exactly one unchanged same-theory witness and its gap. -/
+theorem exact_component_decomposition :
+    ∃ (sameTheory : ThreeDimensionalSU2SameTheoryData.{uEG, uEP, uHP, uGauge,
+        uP, uLift, uH, uLabel}
+        (fieldData := fieldData) (inner := inner) (connection := connection)
+        (exterior := exterior) (curvatureCertificate := curvatureCertificate))
+      (gapThreshold : ℝ),
+      sameTheory.continuum.wightmanSurface.HasPhysicalMassGap gapThreshold :=
+  threeDimensionalSU2Acceptance_nonempty_iff_components.mp
+    (exact_authoritative_gate (data := data))
+
 /-- The three tiers remain definitionally connected rather than separately existential. -/
 theorem exact_dependent_tiers :
     Nonempty (ThreeDimensionalSU2ContinuumExistenceData.{uEG, uEP, uHP, uGauge,

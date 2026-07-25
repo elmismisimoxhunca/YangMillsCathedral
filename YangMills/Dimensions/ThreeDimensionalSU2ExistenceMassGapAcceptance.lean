@@ -122,6 +122,26 @@ def ThreeDimensionalSU2ExistenceMassGapAcceptance : Prop :=
     (fieldData := fieldData) (inner := inner) (connection := connection)
     (exterior := exterior) (curvatureCertificate := curvatureCertificate))
 
+/-- Exact component decomposition of the authoritative proposition. The same dependent
+`sameTheory` witness contains the continuum tier, and the gap predicate is indexed by that witness's
+unchanged Wightman surface and joint translation PVM. -/
+theorem threeDimensionalSU2Acceptance_nonempty_iff_components :
+    ThreeDimensionalSU2ExistenceMassGapAcceptance.{uEG, uEP, uHP, uGauge, uP,
+      uLift, uH, uLabel}
+      (fieldData := fieldData) (inner := inner) (connection := connection)
+      (exterior := exterior) (curvatureCertificate := curvatureCertificate) ↔
+    ∃ (sameTheory : ThreeDimensionalSU2SameTheoryData.{uEG, uEP, uHP, uGauge, uP,
+        uLift, uH, uLabel}
+        (fieldData := fieldData) (inner := inner) (connection := connection)
+        (exterior := exterior) (curvatureCertificate := curvatureCertificate))
+      (gapThreshold : ℝ),
+      sameTheory.continuum.wightmanSurface.HasPhysicalMassGap gapThreshold := by
+  constructor
+  · rintro ⟨data⟩
+    exact ⟨data.sameTheory, data.gapThreshold, data.physicalMassGap⟩
+  · rintro ⟨sameTheory, gapThreshold, physicalMassGap⟩
+    exact ⟨⟨sameTheory, gapThreshold, physicalMassGap⟩⟩
+
 namespace ThreeDimensionalSU2ExistenceMassGapAcceptanceData
 
 /-- The strongest gate projects definitionally to exact SU(2) gauge geometry. -/
