@@ -1702,9 +1702,10 @@ committed before higher layers depend on it.
     `SU(2) = Matrix.specialUnitaryGroup (Fin 2) ℂ`; require a continuous multiplicative equivalence
     from the geometric carrier plus the existing compact-simple Lie witness, with hostile
     determinant, surjectivity, injectivity, and topology probes. Construct no carrier or theory.
-  - [ ] Split continuum existence, same-theory reconstruction, gauge-invariant identification, and
-    same-PVM physical mass gap into exact dependent tiers, then expose one strongest SU(2) gate and
-    strict 2D/4D separation.
+  - [x] Split exact SU(2) classical/Wightman/observable continuum existence, strict Euclidean-to-
+    Minkowski same-theory coherence, and same-PVM physical mass gap into dependent tiers. Expose one
+    authoritative strongest uninhabited proposition, nonzero excitation projection, hostile gap and
+    spectrum probes, and strict 2D/4D dimension separation.
   - [ ] Prove the general metric-induced volume bridge to the committed coordinate Lebesgue measure;
     replace current strict Euclidean/reconstruction and Poincaré pre-cover surfaces with corrected
     source-facing OS-II/OS-I reconstruction and genuine covering interfaces before calling the

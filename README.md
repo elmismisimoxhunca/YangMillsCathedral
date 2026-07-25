@@ -1294,6 +1294,16 @@ witness. Surjectivity, injectivity, continuity in both directions, matrix size t
 determinant one are exposed and hostile-probed. No SU(2) carrier, equivalence, continuum theory,
 existence theorem, or mass gap is constructed.
 
+The authoritative bounded gate is now tiered as
+`ThreeDimensionalSU2ContinuumExistenceData`, `ThreeDimensionalSU2SameTheoryData`, and
+`ThreeDimensionalSU2ExistenceMassGapAcceptanceData`. The first joins exact SU(2) classical geometry
+to a nontrivial Wightman/local-observable theory with same-family `F²`; the second adds the explicit
+strict Euclidean family and Wick same-theory witness; the third requires a positive gap on that
+unchanged Wightman joint PVM, including a nonzero bounded excitation projection. Its proposition is
+only `Nonempty` of the strongest data and remains uninhabited. Probes reject nonpositive gaps,
+disconnected spectra, 2D/4D substitutions, and vacuous excitation sectors. The Euclidean tier is
+explicitly current strict-domain strength, not a claimed source-complete OS reconstruction.
+
 A parallel uninhabited four-dimensional current-strength core now fixes coordinate `ℝ⁴`, the
 canonical flat metric and coordinate Lebesgue measure, then dependently joins the same classical,
 carrier-exact OS-II `(E0′)` plus source-carrier OS-I `(E1)`–`(E4)` package, Wightman,

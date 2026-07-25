@@ -5872,9 +5872,19 @@ definition. `ThreeDimensionalSU2GaugeGroupData` requires one geometric gauge car
 existing compact-simple Lie witness and an explicit continuous multiplicative equivalence to that
 exact matrix subtype. Derived theorems and hostile probes enforce size two, unitarity, determinant
 one, bijectivity, and continuity in both directions. This constructs no carrier, continuum SU(2)
-theory, existence theorem, or mass gap. The remaining bounded work is to tier continuum existence,
-same-theory reconstruction, gauge-invariant identification, and same-PVM gap semantics into one
-authoritative uninhabited 3D SU(2) gate.
+theory, existence theorem, or mass gap.
+
+The bounded gate is now tiered. `ThreeDimensionalSU2ContinuumExistenceData` joins that exact SU(2)
+geometry and canonical `ℝ³` action to a nontrivial Wightman/local-observable theory with an exact
+same-family curvature-squared interpretation. `ThreeDimensionalSU2SameTheoryData` adds the current
+strict Euclidean family and explicit ordered Wick-continuation witness to the same full correlators.
+`ThreeDimensionalSU2ExistenceMassGapAcceptanceData` adds a positive physical gap on that unchanged
+joint translation PVM; its predicate includes a nonzero bounded positive-energy excitation
+projection. The authoritative proposition is only `Nonempty` of this strongest tier and remains
+uninhabited. Probes reject nonpositive thresholds, disconnected spectra, vacuous fields/`F²`, and
+2D/4D substitutions. The strict Euclidean field is accurately labeled current-strength rather than
+a source-complete OS reconstruction theorem. Remaining bounded work is the exact component audit,
+plug-in guide, and final 3D-focused verification.
 
 The preliminary `FourDimensionalCurrentStrengthUniversalAcceptance` declaration is intentionally
 qualified and uninhabited. No final source-complete acceptance declaration, placeholder inhabitance
