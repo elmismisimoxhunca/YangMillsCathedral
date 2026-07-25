@@ -5863,6 +5863,19 @@ Brownian bridge. Its exact decomposition, derived zero-time generator, forgetful
 witness is not constructed. The name remains explicitly `CurrentStrength`: the final source-complete 2D
 proposition and literature-only inhabitant are still open.
 
+## Bounded 3D SU(2) truth-teller pivot
+
+The open-ended 2D and unrestricted Fourier research tracks are frozen as supporting, explicitly
+nonfinal infrastructure. `SpecialUnitaryTwo` is now literally Mathlib's
+`Matrix.specialUnitaryGroup (Fin 2) ℂ`, matching Hall §2.4's unitary-matrix/determinant-one
+definition. `ThreeDimensionalSU2GaugeGroupData` requires one geometric gauge carrier to carry the
+existing compact-simple Lie witness and an explicit continuous multiplicative equivalence to that
+exact matrix subtype. Derived theorems and hostile probes enforce size two, unitarity, determinant
+one, bijectivity, and continuity in both directions. This constructs no carrier, continuum SU(2)
+theory, existence theorem, or mass gap. The remaining bounded work is to tier continuum existence,
+same-theory reconstruction, gauge-invariant identification, and same-PVM gap semantics into one
+authoritative uninhabited 3D SU(2) gate.
+
 The preliminary `FourDimensionalCurrentStrengthUniversalAcceptance` declaration is intentionally
 qualified and uninhabited. No final source-complete acceptance declaration, placeholder inhabitance
 theorem, or arbitrary structure is introduced merely to make the project appear complete.

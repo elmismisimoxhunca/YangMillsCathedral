@@ -1286,6 +1286,14 @@ It imports no lattice regulator, four-dimensional OS spatial-`ℝ³` tensor surf
 running-coupling data, and no inhabitant is constructed. The `CurrentStrength` qualifier retains the
 known OS-II/source-space reconstruction and genuine Poincaré-cover debts.
 
+The bounded three-dimensional truth-teller now fixes the physical gauge group specifically to
+literal matrix `SU(2) = Matrix.specialUnitaryGroup (Fin 2) ℂ`, following Hall's unitary-plus-
+determinant-one definition. A geometric gauge carrier must provide an explicit continuous
+multiplicative equivalence to that exact subtype and the existing compact-simple Lie geometry
+witness. Surjectivity, injectivity, continuity in both directions, matrix size two, unitarity, and
+determinant one are exposed and hostile-probed. No SU(2) carrier, equivalence, continuum theory,
+existence theorem, or mass gap is constructed.
+
 A parallel uninhabited four-dimensional current-strength core now fixes coordinate `ℝ⁴`, the
 canonical flat metric and coordinate Lebesgue measure, then dependently joins the same classical,
 carrier-exact OS-II `(E0′)` plus source-carrier OS-I `(E1)`–`(E4)` package, Wightman,
