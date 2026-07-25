@@ -11,7 +11,10 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 # This metaprogram intentionally refers to `sorryAx` in order to reject it after elaboration.
 # It is itself covered by the kernel-level audit invoked from `YangMills.lean`.
-SEMANTIC_AUDIT_MODULE = Path("YangMills/Audit.lean")
+SEMANTIC_AUDIT_MODULES = {
+    Path("YangMills/Audit.lean"),
+    Path("checker/YangMills/Audit.lean"),
+}
 FORBIDDEN = {
     "sorry": re.compile(r"(?<![A-Za-z0-9_])sorry(?![A-Za-z0-9_])"),
     "admit": re.compile(r"(?<![A-Za-z0-9_])admit(?![A-Za-z0-9_])"),
@@ -54,7 +57,7 @@ def main() -> int:
         return 1
     audited = 0
     for path in files:
-        if path.relative_to(ROOT) == SEMANTIC_AUDIT_MODULE:
+        if path.relative_to(ROOT) in SEMANTIC_AUDIT_MODULES:
             continue
         audited += 1
         try:
