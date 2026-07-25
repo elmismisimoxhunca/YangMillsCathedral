@@ -186,6 +186,38 @@ noncomputable def ofCasimirSpectralFourierMatrixBlocks
       finiteLaw.projection_isCoveringMap.continuous finiteLaw.projection_surjective
       physicalDensity blockIntegral)
 
+omit [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
+/-- Finite matrix and direct-sum linearity reduce covering transport to the raw row/column
+coefficients of each unchanged selected physical presentation. -/
+noncomputable def ofCasimirSpectralFourierRawCoefficients
+    [SecondCountableTopology CoverGroup] [T2Space G] [HasOuterApproxClosed G]
+    {CoverE : Type uCoverE} [NormedAddCommGroup CoverE] [NormedSpace ℝ CoverE]
+    [ChartedSpace CoverE CoverGroup]
+    [LieGroup (modelWithCornersSelf ℝ CoverE) ∞ CoverGroup]
+    {coverInner : Geometry.InvariantInnerProductData
+      (I := modelWithCornersSelf ℝ CoverE) (G := CoverGroup)}
+    {coverLaplacian : RightInvariantPairingComplexLaplacianData coverInner}
+    {coverHeatTrace : UnitaryMatrixDualHeatTraceSummabilityData (G := CoverGroup)}
+    (coverLaplacianBridge : UnitaryMatrixDualCasimirLaplacianBridgeData
+      coverInner coverLaplacian coverHeatTrace)
+    (coverPositivity : UnitaryMatrixDualCasimirHeatPositivityData coverHeatTrace)
+    (coverInitial : UnitaryMatrixDualCasimirHeatInitialIdentityData coverHeatTrace)
+    (physicalDensity : UnitaryMatrixDual.HasContinuousPeterWeylDensity G)
+    (rawCoefficientIntegral : ∀ t : ℝ, 0 < t → ∀ q : UnitaryMatrixDual G,
+      ∀ row column : Fin (unitaryMatrixDualDimension q),
+        (∫ g', unitaryMatrixDualRepresentation q (finiteLaw.projection g') row column
+          ∂normalizedCompactHaarDensitySemigroupMeasure
+            (unitaryMatrixDualCasimirHeatDensityENNReal coverHeatTrace) t) =
+        ∫ g, unitaryMatrixDualRepresentation q g row column
+          ∂normalizedCompactHaarDensitySemigroupMeasure law.selectedAreaDensity t) :
+    TwoDimensionalSenguptaCoveringHeatSemigroupBridgeData
+      (planarSemigroup := planarSemigroup) (finiteLaw := finiteLaw)
+      (coverDensity := unitaryMatrixDualCasimirHeatDensityENNReal coverHeatTrace) :=
+  ofCasimirSpectral coverLaplacianBridge coverPositivity coverInitial
+    (NormalizedCompactHaarDensitySemigroupHomData.of_continuousPeterWeylRawCoefficientIntegrals
+      finiteLaw.projection_isCoveringMap.continuous finiteLaw.projection_surjective
+      physicalDensity rawCoefficientIntegral)
+
 omit [T2Space CoverGroup] [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
 /-- Exact inhabitance audit: one covering-group density semigroup and a measure-level homomorphism
 to the unchanged planar semigroup through the finite law's exact projection. -/

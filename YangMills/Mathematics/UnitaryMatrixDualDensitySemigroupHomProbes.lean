@@ -80,6 +80,58 @@ theorem changed_measure_transport_blocked
 
 include sourceSemigroup targetSemigroup projection_continuous in
 omit [HasOuterApproxClosed H] in
+/-- Exact raw row/column identities extend to an arbitrary matrix in the unchanged selected
+presentation. -/
+theorem exact_matrixBlock_of_rawCoefficients
+    (rawCoefficientIntegral : ∀ t : ℝ, 0 < t → ∀ q : UnitaryMatrixDual H,
+      ∀ row column : Fin (unitaryMatrixDualDimension q),
+        (∫ g, unitaryMatrixDualRepresentation q (projection g) row column
+          ∂normalizedCompactHaarDensitySemigroupMeasure sourceDensity t) =
+        ∫ h, unitaryMatrixDualRepresentation q h row column
+          ∂normalizedCompactHaarDensitySemigroupMeasure targetDensity t)
+    {t : ℝ} (ht : 0 < t) (q : UnitaryMatrixDual H)
+    (A : Matrix (Fin (unitaryMatrixDualDimension q))
+      (Fin (unitaryMatrixDualDimension q)) ℂ) :
+    (∫ g, matrixCoefficientSynthesis (unitaryMatrixDualRepresentation q) A (projection g)
+      ∂normalizedCompactHaarDensitySemigroupMeasure sourceDensity t) =
+    ∫ h, matrixCoefficientSynthesis (unitaryMatrixDualRepresentation q) A h
+      ∂normalizedCompactHaarDensitySemigroupMeasure targetDensity t :=
+  matrixBlockIntegral_eq_of_rawCoefficients
+    (sourceSemigroup := sourceSemigroup) (targetSemigroup := targetSemigroup)
+    projection_continuous rawCoefficientIntegral t ht q A
+
+/-- Raw coefficient compatibility plus selected density constructs the exact semigroup homomorphism. -/
+noncomputable def exact_hom_of_continuousPeterWeyl_rawCoefficients
+    (rawCoefficientIntegral : ∀ t : ℝ, 0 < t → ∀ q : UnitaryMatrixDual H,
+      ∀ row column : Fin (unitaryMatrixDualDimension q),
+        (∫ g, unitaryMatrixDualRepresentation q (projection g) row column
+          ∂normalizedCompactHaarDensitySemigroupMeasure sourceDensity t) =
+        ∫ h, unitaryMatrixDualRepresentation q h row column
+          ∂normalizedCompactHaarDensitySemigroupMeasure targetDensity t) :
+    NormalizedCompactHaarDensitySemigroupHomData
+      sourceSemigroup targetSemigroup projection :=
+  NormalizedCompactHaarDensitySemigroupHomData.of_continuousPeterWeylRawCoefficientIntegrals
+    projection_continuous projection_surjective density rawCoefficientIntegral
+
+include sourceSemigroup targetSemigroup projection_continuous projection_surjective density in
+/-- Hostile raw-coefficient probe: changed transport is rejected after both finite linear extensions. -/
+theorem changed_measure_transport_of_rawCoefficients_blocked
+    (rawCoefficientIntegral : ∀ t : ℝ, 0 < t → ∀ q : UnitaryMatrixDual H,
+      ∀ row column : Fin (unitaryMatrixDualDimension q),
+        (∫ g, unitaryMatrixDualRepresentation q (projection g) row column
+          ∂normalizedCompactHaarDensitySemigroupMeasure sourceDensity t) =
+        ∫ h, unitaryMatrixDualRepresentation q h row column
+          ∂normalizedCompactHaarDensitySemigroupMeasure targetDensity t)
+    {t : ℝ} (ht : 0 < t)
+    (changed : Measure.map projection
+      (normalizedCompactHaarDensitySemigroupMeasure sourceDensity t) ≠
+      normalizedCompactHaarDensitySemigroupMeasure targetDensity t) : False :=
+  changed ((NormalizedCompactHaarDensitySemigroupHomData.of_continuousPeterWeylRawCoefficientIntegrals
+    (sourceSemigroup := sourceSemigroup) (targetSemigroup := targetSemigroup)
+    projection_continuous projection_surjective density rawCoefficientIntegral).map_measure t ht)
+
+include sourceSemigroup targetSemigroup projection_continuous in
+omit [HasOuterApproxClosed H] in
 /-- Exact one-block identities extend to every finite dual synthesis. -/
 theorem exact_coefficientSynthesis_of_matrixBlocks
     (blockIntegral : ∀ t : ℝ, 0 < t → ∀ q : UnitaryMatrixDual H,

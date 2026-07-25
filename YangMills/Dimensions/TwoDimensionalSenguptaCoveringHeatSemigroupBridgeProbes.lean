@@ -190,6 +190,24 @@ theorem missing_spectral_fourierMatrixBlocks_blocked
           ∂normalizedCompactHaarDensitySemigroupMeasure law.selectedAreaDensity t)) : False :=
   missing blockIntegral
 
+/-- Raw row/column compatibility in each unchanged selected physical presentation suffices for the
+spectral covering bridge. -/
+noncomputable def exact_spectral_covering_bridge_of_fourierRawCoefficients
+    [T2Space G] [HasOuterApproxClosed G]
+    (physicalDensity : UnitaryMatrixDual.HasContinuousPeterWeylDensity G)
+    (rawCoefficientIntegral : ∀ t : ℝ, 0 < t → ∀ q : UnitaryMatrixDual G,
+      ∀ row column : Fin (unitaryMatrixDualDimension q),
+        (∫ g', unitaryMatrixDualRepresentation q (finiteLaw.projection g') row column
+          ∂normalizedCompactHaarDensitySemigroupMeasure
+            (unitaryMatrixDualCasimirHeatDensityENNReal coverHeatTrace) t) =
+        ∫ g, unitaryMatrixDualRepresentation q g row column
+          ∂normalizedCompactHaarDensitySemigroupMeasure law.selectedAreaDensity t) :
+    TwoDimensionalSenguptaCoveringHeatSemigroupBridgeData
+      (planarSemigroup := planarSemigroup) (finiteLaw := finiteLaw)
+      (coverDensity := unitaryMatrixDualCasimirHeatDensityENNReal coverHeatTrace) :=
+  TwoDimensionalSenguptaCoveringHeatSemigroupBridgeData.ofCasimirSpectralFourierRawCoefficients
+    coverLaplacianBridge coverPositivity coverInitial physicalDensity rawCoefficientIntegral
+
 include projectionHeat in
 omit [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
 /-- Hostile residual-debt probe: the spectral construction does not manufacture projection

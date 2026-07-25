@@ -86,6 +86,56 @@ variable {G : Type uG} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
   {projection : G →* H}
 
 include sourceSemigroup targetSemigroup in
+/-- Entrywise integral compatibility for every selected raw row/column coefficient extends by
+finite matrix linearity to every coefficient-matrix synthesis in that same presentation. -/
+theorem matrixBlockIntegral_eq_of_rawCoefficients
+    (projection_continuous : Continuous projection)
+    (rawCoefficientIntegral : ∀ t : ℝ, 0 < t → ∀ q : UnitaryMatrixDual H,
+      ∀ row column : Fin (unitaryMatrixDualDimension q),
+        (∫ g, unitaryMatrixDualRepresentation q (projection g) row column
+          ∂normalizedCompactHaarDensitySemigroupMeasure sourceDensity t) =
+        ∫ h, unitaryMatrixDualRepresentation q h row column
+          ∂normalizedCompactHaarDensitySemigroupMeasure targetDensity t) :
+    ∀ t : ℝ, 0 < t → ∀ q : UnitaryMatrixDual H,
+      ∀ A : Matrix (Fin (unitaryMatrixDualDimension q))
+        (Fin (unitaryMatrixDualDimension q)) ℂ,
+        (∫ g, matrixCoefficientSynthesis (unitaryMatrixDualRepresentation q) A
+            (projection g)
+          ∂normalizedCompactHaarDensitySemigroupMeasure sourceDensity t) =
+        ∫ h, matrixCoefficientSynthesis (unitaryMatrixDualRepresentation q) A h
+          ∂normalizedCompactHaarDensitySemigroupMeasure targetDensity t := by
+  intro t ht q A
+  let μs := normalizedCompactHaarDensitySemigroupMeasure sourceDensity t
+  let μt := normalizedCompactHaarDensitySemigroupMeasure targetDensity t
+  letI : IsFiniteMeasure μs :=
+    ⟨by rw [sourceSemigroup.measure_univ ht]; exact ENNReal.one_lt_top⟩
+  letI : IsFiniteMeasure μt :=
+    ⟨by rw [targetSemigroup.measure_univ ht]; exact ENNReal.one_lt_top⟩
+  let Ls := compactContinuousMapPullbackIntegralCLM μs projection projection_continuous
+  let Lt := compactContinuousMapIntegralCLM μt
+  let c (row column : Fin (unitaryMatrixDualDimension q)) : C(H, ℂ) :=
+    continuousMatrixRepresentationCoefficient (unitaryMatrixDualRepresentation q)
+      (unitaryMatrixDualRepresentative q).continuous_representation row column
+  let synthesis : C(H, ℂ) :=
+    ⟨matrixCoefficientSynthesis (unitaryMatrixDualRepresentation q) A,
+      continuous_matrixCoefficientSynthesis _
+        (unitaryMatrixDualRepresentative q).continuous_representation A⟩
+  have synthesis_eq : synthesis =
+      ∑ row, ∑ column, A row column • c row column := by
+    ext h
+    simp [synthesis, c, matrixCoefficientSynthesis_apply,
+      continuousMatrixRepresentationCoefficient]
+  change Ls synthesis = Lt synthesis
+  rw [synthesis_eq]
+  simp only [map_sum, map_smul]
+  apply Finset.sum_congr rfl
+  intro row _
+  apply Finset.sum_congr rfl
+  intro column _
+  rw [show Ls (c row column) = Lt (c row column) by
+    exact rawCoefficientIntegral t ht q row column]
+
+include sourceSemigroup targetSemigroup in
 /-- Integral compatibility on every single selected representation block extends by finite direct-sum
 linearity to every finitely supported dual coefficient synthesis. -/
 theorem coefficientSynthesisIntegral_eq_of_matrixBlocks
@@ -216,6 +266,29 @@ noncomputable def of_continuousPeterWeylCoefficientIntegrals
       _ = ∫ h, f h
             ∂normalizedCompactHaarDensitySemigroupMeasure targetDensity t := by
           exact (integral_re hit).symm)
+
+/-- Raw selected row/column coefficient identities suffice after finite matrix/direct-sum
+linearity and selected continuous Peter--Weyl density. -/
+noncomputable def of_continuousPeterWeylRawCoefficientIntegrals
+    [HasOuterApproxClosed H]
+    (projection_continuous : Continuous projection)
+    (projection_surjective : Function.Surjective projection)
+    (density : UnitaryMatrixDual.HasContinuousPeterWeylDensity H)
+    (rawCoefficientIntegral : ∀ t : ℝ, 0 < t → ∀ q : UnitaryMatrixDual H,
+      ∀ row column : Fin (unitaryMatrixDualDimension q),
+        (∫ g, unitaryMatrixDualRepresentation q (projection g) row column
+          ∂normalizedCompactHaarDensitySemigroupMeasure sourceDensity t) =
+        ∫ h, unitaryMatrixDualRepresentation q h row column
+          ∂normalizedCompactHaarDensitySemigroupMeasure targetDensity t) :
+    NormalizedCompactHaarDensitySemigroupHomData
+      sourceSemigroup targetSemigroup projection :=
+  of_continuousPeterWeylCoefficientIntegrals projection_continuous projection_surjective density
+    (coefficientSynthesisIntegral_eq_of_matrixBlocks
+      (sourceSemigroup := sourceSemigroup) (targetSemigroup := targetSemigroup)
+      projection_continuous
+      (matrixBlockIntegral_eq_of_rawCoefficients
+        (sourceSemigroup := sourceSemigroup) (targetSemigroup := targetSemigroup)
+        projection_continuous rawCoefficientIntegral))
 
 /-- Single selected matrix-block identities suffice for exact semigroup transport after finite
 linearity and selected continuous Peter--Weyl density. -/
