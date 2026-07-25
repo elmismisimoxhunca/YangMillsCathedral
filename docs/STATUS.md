@@ -5602,7 +5602,11 @@ functionals on continuous complex tests; selected physical Peter–Weyl density 
 identity to exact compatibility on every finite selected matrix-coefficient synthesis. Finite
 matrix linearity and direct-sum induction reduce this further to one raw row/column coefficient in
 one unchanged selected physical representation presentation at a time. None of the analytic inputs,
-selected density, or residual raw-coefficient identities is constructed.
+selected density, or residual raw-coefficient identities is constructed. Independently, the
+positive Casimir spectral measure now has a proved exact expectation formula for every raw
+coefficient: `exp (-(t/2)c_[ρ]) ρ(1)ᵢⱼ`, giving the scalar on diagonal entries and zero off diagonal.
+Thus future covering transport can focus on pullback-presentation and Casimir-weight compatibility
+rather than reproving spectral integration.
 
 `TwoDimensionalSenguptaTriangulatedHeatFactorBridgeData` now supplies the boundary-conditioned
 finite-face formula used in the proof of Theorem 8.4: Definition 7.6's delta constraints are discharged

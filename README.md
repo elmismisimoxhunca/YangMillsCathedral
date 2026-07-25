@@ -1084,7 +1084,10 @@ functionals on continuous complex tests; selected physical Peter–Weyl density 
 identity to exact compatibility on every finite matrix-coefficient synthesis. Finite direct-sum
 matrix linearity and direct-sum induction reduce this further to one raw row/column coefficient in
 one unchanged selected physical representation presentation at a time. No analytic input,
-selected-density witness, or raw-coefficient identity is constructed. A further uninhabited bridge
+selected-density witness, or covering raw-coefficient identity is constructed. The conditional
+positive Casimir spectral measure now separately has an exact proved expectation formula for every
+raw coefficient, `exp (-(t/2)c_[ρ]) ρ(1)ᵢⱼ`; future covering transport therefore isolates the
+remaining pullback-presentation and Casimir-weight compatibility rather than spectral integration. A further uninhabited bridge
 now writes the stored region weights as the boundary-conditioned finite-face integrals used in the
 proof of Theorem 8.4: Definition 7.6's delta constraints are discharged by fixed external boundary
 values, internal edges are Haar-integrated, positive candidate-face areas sum to region area, each

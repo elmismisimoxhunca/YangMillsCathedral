@@ -1468,6 +1468,11 @@ committed before higher layers depend on it.
     this to one raw row/column coefficient in one unchanged selected representation presentation at
     a time. Construct none of the analytic inputs, selected density, or residual raw-coefficient
     identities.
+  - [x] Derive the exact raw matrix-coefficient expectation under the conditional positive Casimir
+    spectral measure by evaluating the diagonal convolution action at the identity and using
+    inversion symmetry. Retain the original presentation, row, and column; expose diagonal scalar
+    and off-diagonal zero forms. Leave pullback-representation and Casimir-weight compatibility for
+    covering transport explicit.
   - [x] Define the boundary-conditioned finite-face factor reduction used in the proof of Theorem
     8.4, with Definition 7.6's delta constraints discharged by fixed external values,
     Haar-integrated internal edges, positive candidate-face/region areas, three-traversal face words,
