@@ -1464,8 +1464,9 @@ committed before higher layers depend on it.
     homomorphism from equality against every bounded continuous real test using finite regular-measure
     extensionality. Package integration as bounded linear functionals on continuous complex tests
     and use selected physical Peter–Weyl density to reduce the residual identity to every finite
-    matrix-coefficient synthesis. Construct none of the analytic inputs, selected density, or
-    residual coefficient identities.
+    matrix-coefficient synthesis. Use direct-sum induction to reduce this to one arbitrary matrix in
+    one selected representation block at a time. Construct none of the analytic inputs, selected
+    density, or residual block identities.
   - [x] Define the boundary-conditioned finite-face factor reduction used in the proof of Theorem
     8.4, with Definition 7.6's delta constraints discharged by fixed external values,
     Haar-integrated internal edges, positive candidate-face/region areas, three-traversal face words,

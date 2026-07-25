@@ -5599,8 +5599,10 @@ Casimir/Laplacian, positivity, and weak-initial-identity inputs. The exact proje
 now derived from equality against every bounded continuous real test by finite regular-measure
 extensionality. A reusable Fourier bridge packages source/target integration as bounded linear
 functionals on continuous complex tests; selected physical Peter–Weyl density reduces that integral
-identity to exact compatibility on every finite selected matrix-coefficient synthesis. None of the
-analytic inputs, selected density, or residual coefficient identities is constructed.
+identity to exact compatibility on every finite selected matrix-coefficient synthesis. Finite
+direct-sum induction reduces this further to one arbitrary coefficient matrix in one selected
+physical representation block at a time. None of the analytic inputs, selected density, or residual
+block identities is constructed.
 
 `TwoDimensionalSenguptaTriangulatedHeatFactorBridgeData` now supplies the boundary-conditioned
 finite-face formula used in the proof of Theorem 8.4: Definition 7.6's delta constraints are discharged

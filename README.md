@@ -1081,8 +1081,9 @@ On the covering group this discharges the semigroup field. The exact projection 
 also derived from equality against every bounded continuous real test by finite regular-measure
 extensionality. A reusable Fourier bridge treats source and target integration as bounded linear
 functionals on continuous complex tests; selected physical Peter–Weyl density reduces the residual
-identity to exact compatibility on every finite matrix-coefficient synthesis. No analytic input,
-selected-density witness, or coefficient identity is constructed. A further uninhabited bridge
+identity to exact compatibility on every finite matrix-coefficient synthesis. Finite direct-sum
+induction reduces this further to one arbitrary matrix in one selected physical representation
+block at a time. No analytic input, selected-density witness, or block identity is constructed. A further uninhabited bridge
 now writes the stored region weights as the boundary-conditioned finite-face integrals used in the
 proof of Theorem 8.4: Definition 7.6's delta constraints are discharged by fixed external boundary
 values, internal edges are Haar-integrated, positive candidate-face areas sum to region area, each
