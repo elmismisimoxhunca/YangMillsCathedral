@@ -1460,9 +1460,10 @@ committed before higher layers depend on it.
     exactly into the cover semigroup and dependent measure-homomorphism witnesses.
   - [x] Assemble the conditional Casimir spectral density into that generic semigroup interface from
     the exact heat-trace, Casimir/Laplacian, positivity, and weak-initial-identity inputs. Use it to
-    discharge the Sengupta covering semigroup field while retaining the measure-level projection
-    homomorphism as explicit dependent debt. Construct none of the analytic inputs or projection
-    theorem.
+    discharge the Sengupta covering semigroup field. Derive the measure-level projection
+    homomorphism from equality against every bounded continuous real test using finite regular-measure
+    extensionality, retaining that integral identity as explicit dependent debt. Construct none of
+    the analytic inputs or residual integral theorem.
   - [x] Define the boundary-conditioned finite-face factor reduction used in the proof of Theorem
     8.4, with Definition 7.6's delta constraints discharged by fixed external values,
     Haar-integrated internal edges, positive candidate-face/region areas, three-traversal face words,

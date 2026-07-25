@@ -5595,8 +5595,9 @@ the missing cover-semigroup witness and its dependent measure-homomorphism witne
 Casimir spectral chain now assembles measurability, centrality, inversion symmetry, normalized mass,
 convolution addition, and weak identity into an exact reusable density-semigroup witness. Applied on
 the covering group, this discharges the cover-semigroup field from explicit heat-trace,
-Casimir/Laplacian, positivity, and weak-initial-identity inputs; the exact projection homomorphism
-remains caller-supplied. None of those analytic inputs or the projection theorem is constructed.
+Casimir/Laplacian, positivity, and weak-initial-identity inputs. The exact projection homomorphism may remain caller-supplied, or is
+now derived from equality against every bounded continuous real test by finite regular-measure
+extensionality. None of those analytic inputs or the residual integral identity is constructed.
 
 `TwoDimensionalSenguptaTriangulatedHeatFactorBridgeData` now supplies the boundary-conditioned
 finite-face formula used in the proof of Theorem 8.4: Definition 7.6's delta constraints are discharged
