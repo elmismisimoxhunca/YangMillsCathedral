@@ -1,0 +1,1273 @@
+Commun. math. Phys. 42, 281--305 (1975)
+© by Springer-Verlag 1975
+
+
+
+
+                Axioms for Euclidean Green's Functions II
+                                                 Konrad Osterwalder*
+         Jefferson Laboratory of Physics, Harvard University, Cambridge, Massachusetts, USA
+
+                                                Robert Schrader
+                        Institut ffir Theoretische Physik, Freie Universit~it Berlin, Berlin
+                                         with an Appendix by Stephen Summers
+
+                          Received December 3, 1974; in revised form January 16, 1975
+
+    Abstract. We give new (necessary and) sufficient conditions for Euclidean Green's functions to
+have analytic continuations to a relativistic field theory. These results extend and correct a previous
+paper.
+
+
+                                                     Table of Contents
+   I. Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                           281
+  II. Notations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                            283
+ III. The Equivalence Theorem Revisited . . . . . . . . . . . . . . . . . . . . . . . .                                                          285
+ IV. The Main Result: Another Reconstruction Theorem . . . . . . . . . . . . . . . . .                                                           287
+      IV.I Linear Growth Condition and Statement of Results                          .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   287
+      IV.2 Proof of Theorem E ' e R ' . . . . . . . . . . . . . . . . . . . . . . . . . .                                                        288
+ V. The Analytic Continuation . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                          289
+      V.1 Real Analyticity . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                           291
+      V.2 Towards the Real World . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                           293
+ VI. The Temperedness Estimate . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                             297
+      VI.1 From Distributions to Functions . . . . . . . . . . . . . . . . . . . . . . .                                                         297
+      VI.2 Continuing the Estimates . . . . . . . . . . . . . . . . . . . . . . . . . .                                                          301
+VII. Appendix . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                              303
+References . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                             305
+
+
+
+                                                        I. Introduct~n
+       T h e p a s s a g e to p u r e l y i m a g i n a r y t i m e s h a s p r o v e n to be a n e x t r e m e l y p o w e r f u l
+t o o l b o t h for t h e c o n s t r u c t i o n a n d for t h e d i s c u s s i o n o f r e l a t i v i s t i c q u a n t u m field
+t h e o r e t i c a l m o d e l s 1. O b v i o u s l y for s u c h a p r o c e d u r e to m a k e sense it is i m p o r t a n t
+to k n o w h o w to go b a c k a g a i n to r e a l time.
+       I n a p r e v i o u s p a p e r " A x i o m s for E u c l i d e a n G r e e n ' s f u n c t i o n s " [ 12] ( h e n c e f o r t h
+q u o t e d as O S I) w e c l a i m e d to h a v e f o u n d n e c e s s a r y a n d sufficient c o n d i t i o n s
+under which Euclidean Green's functions have analytic continuations whose
+b o u n d a r y v a l u e s d e f i n e a u n i q u e set o f W i g h t m a n d i s t r i b u t i o n s . T h e s e c o n d i t i o n s
+   * Supported in part by the National Science Foundation under Grant MPS73-05037 A01.
+   Alfred P. Sloan Foundation Fellow.
+  1 Forverificationofthisassertionthereadershouldconsultthe 1973 Erice Lectures on Constructive
+Quantum Field Theory [19], where also references and historical accounts can be found.
+282                         K. Osterwalder and R. Schrader
+
+were
+     (E0) Temperedness
+     (E l) Euclidean covariance
+     (E2) Positivity
+     (E3) Symmetry
+     (E4) Cluster property
+     As it turned out, a technical lemma (Lemma 8.8) in OS I is wrong (see Remark 2
+below) and at present it is an open question whether the conditions ( E 0 - E 4 )
+as introduced in OS I are sufficient to guarantee the existence of a Wightman
+theory. They are certainly necessary. In this paper we give two different sets of
+sufficient conditions.
+     In Chapter III we replace the temperedness condition (E0) by a much stronger
+distribution condition (E~0)and prove a new equivalence theorem: (E~0),(E 1 - E4)
+are necessary and sufficient conditions under which Euclidean Green's functions
+define a Wightman theory. Although E() restores the equivalence theorem E~--,R,
+this new condition is not suitable for application because it seems to be difficult
+to check. In Chapter IV we therefore introduce a condition (E0') which is only
+slightly different from the original (E0): instead of simply assuming temperedness
+we now postulate that, roughly speaking, the order of the distributions ~n (the
+Euclidean Green's functions) grows at most linearly in n, with bounds that grow
+no worse than ct(n!)~ for arbitrary e and ft. We call this the "linear growth
+condition". Assuming (E0'), ( E l - E 4 ) we can again reconstruct a Wightman
+theory with Wightman distributions ~13n which also obey a linear growth condition
+(RO'). The construction of the Wightman distributions requires two main steps:
+first we analytically continue the Euclidean Green's functions to complex times
+(Chapter V). Second we establish estimates for these analytic functions, which
+allow us to prove that their boundary values are tempered distributions: the
+Wightman distributions (Chapter VI). It is interesting to note that the analytic
+continuation alone can be done using the old temperedness condition (E0)
+together with covariance (El) and positivity (E2). It is only because the analytic
+continuation of one particular Schwinger function ~ , involves infinitely many ~k
+that we need some control over the growth of the order of ~k to obtain the necessary
+estimates. Our linear growth condition seems to be quite reasonable. It certainly
+holds for all field theory models for which the Wightman axioms have been
+established so far and a recent result of Glimm and Jaffe [7] shows that it will
+also hold for a ~o~ model, provided it exists, and if the two point function is a
+distribution in ~'(1Ra).
+    Remarks. l) The proof of Lemma 8.8 in OS I was first questioned by Simon
+[t6]. Subsequently one of us (R.S.) found the following counter example: F(x, y)
+= exp(-xy), x > 0, y > 0 is the Laplace transform of a tempered distribution in
+each variable separately, but not jointly.
+    2) A preliminary report of the results of this paper was presented by one of us
+(K.O.) at the 1973 Erice Summer School on Constructive Quantum Field Theory,
+see [13], p. 71. It should be pointed out that condition EO' in [13] was a linear
+growth condition on the difference variable Euclidean Green's functions. Condition
+EO' of this paper refers to the Euclidean Green's functions directly; it is more
+general, more natural and certainly more convenient for applications than
+E0' in [13].
+                            Axioms for Euclidean Green's Functions II                            283
+
+    3) The construction of the analytic continuation of Schwinger functions
+which satisfy E0, E 1, and E2 was found simultaneously by Glaser [6], who also
+eastablished the connection with his earlier work [5] on the interplay between
+positivity and anatyticity. H e too noted that in order to prove temperedness on
+the boundary of the analyticity domain an assumption stronger than E0 seems to be
+necessary, but he remarked that E 0 - E 4 lead to a modified Wightman theory
+with vacuum expectation values which are hyperfunctions but not necessarily
+tempered distributions.
+    4) Nelson's axioms [11] imply the Wightman axioms and hence by OS I
+also EO-E4. It is also easy to derive EO-E4 from Nelson's axioms directly;
+the crucial step is to prove positivity E2 using the Markoff and the reflection
+properties, see [19], p. 104. E0' seems to be related to Nelson's "scale condition",
+see Nelson [11]. On the other hand, to derive Nelson's axioms from E0', E 1 - E4
+one has to introduce additional assumptions, see Frbhlich [3] and Simon [15].
+Nelson's axioms are more restrictive than E0', E 1 - E4 and thus lead to a richer
+structure. On the other hand they seem to be harder to work with in constructive
+field theory: for none of the non-trivial models, constructed so far, has the Markoff
+property of Symanzik and Nelson (Relation (1) in [11]) been verified.
+    5) Though in this paper we deal with the theory of one real scalar field only,
+the results can be extended in an obvious way to theories with a denumerable
+number of arbitrary spinor fields, see Chapter 6 of OS I.
+    6) With the obvious changes the connections between subsets of the axioms
+for the Euclidean Green's functions and subsets of the Wightman axioms are as
+discussed in OS I.
+    7) Constantinescu and Thalheimer have extended the scheme of axioms
+EO/EO', E 1 - E 4 to Jaffe fields [1].
+    Acknowledgements.We thank Prof. A. Jaffe and Prof. K. Pohlmeyer for helpful discussions
+and Prof. V. Glaser for sending us a copy of his paper prior to publication. We also thank Prof.
+G.-F. Dell'Antonio for his warm hospitality at the Universit/t di Napoli, where part of this work was
+done.
+                                           II. Notations
+     In this section we introduce some (partially new) notation and restate a few
+technical results from OS I.
+     Unless stated otherwise, x denotes a point in tR4 with coordinates (x ° , x 1, x 2, x 3)
+-= (x °, ~). A point in IR4n will be written as
+                                  x_=(xl . . . . xn),   xi6~ 4
+For integrals we write f...d4"x or simply f...dx.
+   We will use the following open sets
+                    IR4+= { x e ~ 4 1 x ° > O }
+                    ~4+n={X_ e IR4n I~j  . 0 > 0 for all j = 1.... n}
+
+
+                    IR4<"= {x_e n~4~,"ll'xj+°1 > x ° for all j = 1, .. . n - 1}
+                    11~"= {x e IR4~lxi . x i for all 1 ____i<j<_n}
+                     C+ = { z s C l R e z > 0 }
+                     C~. = {(z 1, ...z,,)lzjsC+ for all j = I .... n}.
+284                          K. Osterwalder and R. Schrader
+
+      On the Schwartz space Sf(IR") we will work with the following norms
+                          Iflp = sup I(1 + x2)pie (D~-f) (x)l,                   (2.1)
+                                 x~IR rn
+                                 IZI-~P
+where p ~ Z + = {1, 2 .... } , f ~ 5a(lR"). We use the standard multiindex notation:
+
+-                                     \&,]        '
+                      1           1                         1
+    By 6ao(lR~') we denote the topological subspace of 6e(IR4") of all those functions
+which together with all their derivatives vanish on the complement ,-~IR~" of
+lR0
+  4~.
+    As in OS I we denote by ~.(_x) the Euclidean Green's functions and by ~,(__x)
+the Wightman distributions. The "difference variable" Euclidean Green's functions
+Sn-1 (.~) and Wightman distributions W._ 1(~) are formally defined by
+                                             =
+
+                                             =         g)
+
+respectively, where ck = Xk+ ~ - Xk, k = t .... n - 1. The Wightman axioms will be
+labelled as follows: (R0) Distribution property, (R 1) Relativistic invariance, (R2)
+Positivity, (R3) Local commutativity, (R4) Cluster property, and (R5) Spectral
+condition.
+    The remainder of this section will be needed in Chapter 111 only.
+    For 0 an open set in IR", 5e(O) denotes the subspace of 5e(IR") of functions with
+support in O, given the induced topology. The dual space of the topological
+quotient space 5e(lR")/Se(O) is the polar of 5P(O), which is the set of all tempered
+distributions with support in --~O. By 5e(0) we denote the set of C ~ functions
+on O which decrease strongly with all their derivatives as Ix}~ ~ in O and whose
+derivatives all have a continuous extension to the closure 0 of O. On 5e(0) we
+define a topology by the norms
+                          Igl.,o = sup I(1 + x2)p/2 (D~g) (x)l.                  (2.2)
+                                   x~O
+                                  I-al~P
+5e(0) is of course not a subspace of 5P(1Rm), but as the following lemma shows,
+an element in 5~(0) can always be regarded as the restriction to O of an element
+in 5°(IR").
+   Lemma2.1. Let 0 be an open set in IR". Then 5P(O) is isomorphic to
+~e(~m)/~(~ 0).
+    This lemma follows from the fact that the set of functions f+ in 5~(0) which
+are restrictions to 0 of functions f ~ 5e(lR") is dense in 5~(0) and from Whitney's
+extension theorem, see Whitney [21], H6rmander [9], Vladimirov [20] and also
+Lemma 8.1 in OS I. From Whitney's extension theorem it follows immediately
+that the norms
+                               ilgllp,o =        inf   Ig + hip                  (2.3)
+                                             h~(~O)
+
+are equivalent to the norms defined by (2.2), (9~ 5e(IR")). In particular, for
+0 = I,'2 --- {_xtx ° > 0 and (x°) z > 22, all i = 1.... n}, we have the following
+                          Axioms for Euclidean Green's Functions II                285
+
+    Lemma 2.2. Suppose f+ ~ Se(Vg) and p c Z+. Then there exists a function
+g ~ ~9°tp)(lR4n) such that g(~) = f+ (x_) for x_ ~ P++ and
+                            If+ fp,v~ < I[gllp,v, < 7[f+lep,v~                    (2.4)
+with ~ = 7(n, p)= [c2"(p + 1)] 2p+I for some constant c independent of n and p.
+   Here Ytp)(IR4n) is the closure of 2f(IR4") in the topology defined by the t" [p-
+norm. Notice that the first inequality in (2.4) is trivial. The second one is a sharp
+form of Whitney's extension theorem and follows from a detailed analysis of the
+proof given in [9]. We omit the details.
+   As an easy consequence of Lemmas 2.1 and 2.2 we get
+    Lemma 2.3. Let 17I/be a distribution in 2/'(lR 4"') with support in V2
+                                                                        i-~ such that
+for all f ~ ~T(IR4")                    [Iv(f)I ~ wlf]p.
+
+Then IV also defines a distribution in ~ ,77"d
+                                          (V.~), again denoted by IV, such that for
+all f+ ~ ~(Vg_)                 IIV(N+)I N w. Vl)"+i2p,~,                         (2.5)
+with 7 as in Lemma 2.2.
+    For f e ~(IR*+') and q e IR~" we define
+
+                                    -          (qj xj - tqjxj) f(.x_) d 4"x.      (2.6)
+                                         j=l
+
+The following lemma follows immediately from Lemma 8.2 in OS I.
+    Lemma 2.4. The map f -) f defined by (2.6) is a continuous map from 5P(IR4+~)
+to Se(IR4+~) with dense range and trivial kernel.
+   Now we define 5a(IR4+~) to be the linear space 2f0Ra+") equipped with the topology
+given by the family of seminorms
+                             Ifl~ = [flv,~+,,        p = 1, 2 .....               (2.7)
+Note that J(IR4+") is not complete. By Lemma 2.4 the topology of 2i(1R4+") is
+weaker than the original topology of 5e(IR4+") and hence
+                                   J'(~+") C ,Se,(~+,).                           (2.8)
+
+
+                       HI. The Equivalence Theorem Revisited
+   In this section we introduce a new distribution property (E~0)for the Euclidean
+Green's functions and prove that E~0 together with E t - E4 is equivalent to the
+usual Wightman axioms. The new condition is as follows
+                              % 5e;( 4n),                          = 1
+(E~0)                     and S,_ 1 ~ rg~'(lR4+('- 1)),        n = t, 2 .....
+
+    Theorem E,~R (revisited). The conditions EO, E 1 - E4 for the Euclidean
+Green's functions are equivalent to the Wightman axioms R O - R 5 for the 14qghtman
+distributions.
+286                              K. Osterwalder and R. Schrader
+
+    Although E'0 restores the equivalence theorem E*-*R, this new condition is
+not very satisfactory from the point of view of applications. In praxi the continuity
+of S,_ 1 with respect to the I" I:norms is a condition which seems to be difficult
+to check; as we shall see below, E0 immediately implies that S,_ 1 is the Fourier-
+Laplace transform of a distribution W, _ 1 that has the desired support properties.
+From the point of view of constructive quantum field theory the results of the
+next section will be the crucial ones.
+    We now turn to the proof of Theorem E+-+R.The derivation of E~0, E1 - E4
+from the Wightman axioms follows the arguments of OS I; all that remains to be
+verified is the additional condition S,_ 1 e ,9~'(1R*+("-1)). As in OS I, Chapter 5,
+we show that for f e 5°(IR*+"),
+                                      S,_ l ( f ) = I~,_ l ( f ) ,                      (3.1)
+where W,_ 1 is the Fourier transform of W,_ 1, interpreted as a distribution in
+5P'(IR*+"), see also Lemma 2.1. This implies that for some p,
+                                         IS,- l(f)[ < If[~                              (3.2)
+and hence S,_ 1 is an element in 5Y'0R*+("-1)).
+   Let us give an alternative and simple proof of (3,1)/(3.2). For _~e Ill*+("- 1), the
+function
+
+                                              k   j=l
+
+is an element of ~(Vg-1), depending continuously on _~. Thus by Lemma 2.3
+we may write S._ 1~) as
+                            S,,_ 1(~) = I/V,_l(h_~).                 (3.3)
+Then for f e ~(IR4+("- 1)) with compact support we define
+                             Sn_l(f)=y S,_l~) f~)d4("-a)~
+                                                                                         (3.4)
+                                    =S l'V,-l(h~_)f~)d4("-l) ~,
+    the right hand side of (3.4) being taken as an ordinary Riemann integral. We now
+    claim that for such f
+                            S I7¢,_ l(h_¢)f(~) d 4("- i)~ = ~,,_ l ( f ) ,               (3.5)
+    which proves (3.1) for a dense set in 5°(IR*+("- 1)) by continuity. For a proof of (3.5)
+    we write f a s
+                            f(q) = j" h~(!/)f~) d 4("- ~)~ ~ ~(V~2)
+and approximate it in ~(P-~g) by Riemann sums.
+                                                                                          4n
+    Now we show how to modify the proof of E R. Stamng            -
+                                                                      from S,_ 1 s 5:~r OR+  )
+we define l,~',-1 by (3. t). This defines W, -1 on a dense set of,Y'(~a~+") - see Lemma 2.4
+-  and by assumption E0, W,_ 1 is continuous with respect to the topology of
+5~OR*+"). Hence IV,_ 1 has a unique extension to a distribution in 5~'(IR*+"). The
+proof of the remaining Wightman axioms now proceeds as in OS I. Equations
+(3.3)/(3.4) are easily verified, which shows that the S, are indeed the Euclidean
+Green's functions of the Wightman theory thus obtained.
+                             A x i o m s for E u c l i d e a n G r e e n ' s F u n c t i o n s II                    287
+
+                IV. The Main Result: Another Reconstruction Theorem
+                IF.1. Linear Growth Condition and Statement of Results
+     As we have shown in the last chapter the equivalence E~--~R can be established
+if we are willing to introduce the distribution property E~0for the Euclidean Green's
+functions. In this chapter we show that we can avoid E~0 and the r-[\norms
+altogether.
+     A sequence {a,},~z. of positive numbers is said to be of factorial growth
+if there exist constants ~ and fl such that
+                                         o'. < ~(n !)8
+for all n e Z +.
+     We now define what we call the linear growth condition for the Euclidean
+  Green's functions.
+                  [~o - 1, ~ , e 5e~(IR4") and there exist s e Z+ and a sequence
+           (E0') [{°'"}/of factorial growth, such that
+                 [                                   [~.(f)[ =<a.lfl..s                                             (4.1)
+                 /
+                 [for all n E Z+, f ~ 5Po0R*").
+The following condition is slightly stronger than E0'.
+            Go = 1, ~ , E 5P'0R4") for all n ~ Z+, and there exist s e Z+ and a
+            sequence {a,} of factorial growth such thati~i
+
+    (E0")                              ]~,(A x f2"'" x L)[ N ~r,                              ILls                  (4.2)
+                                                                                      i=1
+
+           for all n e ]g+, J~~ Y(IR4).
+The following theorem contains the main result of this paper.
+   Theorem E' (or E " ) ~ R ' . a ) A sequence of distributions {~,};=o satisfying
+EO' (or Eft') and E 1 - E4 is the sequence of Euclidean Green's functions of a
+uniquely determined lfqghtman quantum field theory.
+   b) The Wightman distributions {~,} of that theory satisfy all the VCightman
+axioms R O - R5 and in addition
+                     there exists w E 2g+ and a sequence {e),} with 0 < o~, <__~ f,2
+                     for some constants ~, fl and all n ~ Z +, such that
+        (R0')                                      I~,(f)l N o),lf[,, w                                             (4.3)
+
+                for all f e 5~(1R4~).
+     Remarks. t. As Eft' implies E0' (see Appendix) it is sufficient to prove E ' e R ' .
+It is however worth noticing that a direct proof of E " ~ R' would be much simpler
+that the proof of E ' e R ' presented in this paper. This will be explained in the
+introduction to Chapter V. Clearly, E0' does not imply EO". Superficially speaking,
+while E0" requires ~,(x 1...x,) not to grow faster than [I(1-~X2) s/2 for large
+                                                                                                    i
+values of the arguments, EO' allows for a growth of the order of (1 + ; X 2 ) ns/2,
+                                                                                                        k   t   /
+
+and similarly for the singularities of 6 , at points of coinciding arguments.
+288                           K. Osterwalder and R. Schrader
+
+     2. In constructive quantum field theory EO" holds for all models for which
+E 0 - E4 has been verified so far, see Glimm, Jaffe, and Spencer [8] remark below
+Theorem 1.1.8, and Fr6hlich [3]. It is also reasonable to expect that E0" holds
+for models that live in the real world with three spatial dimensions: a recent result
+of Glimm and Jaffe [-7] shows that in a ((p4)4 model E0" would follow essentially
+from the fact that ~2 is an element of Y'(IRS).
+     3. Our methods do not allow for a factorial growth estimate on co, in RO'.
+On the other hand, assuming R0', R 1 - R 5 and co, of factorial growth, we can derive
+EO', E 1 - E4; but the bounds we obtain for o', are of the form efl"~. This follows
+easily by first applying (2.4) on h~ in Relation (3.4) and then using arguments of
+OS I with a sharpened version of Lemma 2.2 in OS I. Were it not for the obstacles
+of establishing the factorial growth bounds on o-, and c~, respectively, one could
+again prove an equivalence theorem E'*-~R'.
+
+                           IV.2. Proof of Theorem E'--* R'
+    In this section we explain how to reconstruct the Wightman distributions
+from a given set of Euclidean Green's functions satisfying E0', E1 (Euclidean
+invariance) and E2 (positivity) and verify the distribution property R0'. The
+remaining Wightman axioms can be established as in Sections 4.2-4.5 of OS I.
+The proofs of the theorems stated below will be given in subsequent chapters.
+    The existence of the Wightman distributions follows from an inductive
+construction of the analytic continuation of the Euclidean Green's functions and
+from bounds on these analytic continuations which are established inductively
+too. We always assume that we are given a sequence of Euclidean Green's functions
+{~,} satisfying EO', E 1 and E2. By S,_ 1 we denote the difference variable Green's
+functions. The initial step in our inductive procedure is to prove the following
+theorem.
+   Theorem 4.1. (Ao) Real Anatyticity: There are functions Sk((-) = Sk~ + itl)
+analytic in some complex neighborhood of IR4} such that for all f ~ 5°0R4+k)
+                              Sk(f)     = I Sk(~_.) f ( ~ ) d g k ~ •                   (4.4)
+      (TEo)   Temperedness Estimate: 7he functions Sk~ ) satisfy
+
+              tSk~)l<--_zk 1+ max I~jI 1+ ~ ~                       1+         (~o)-1   (4.5)
+                               l<j<=k                  i=l               j=l
+
+for some sequence Zk of factorial growth, some positive integer t (not depending on k)
+and all k eig+, all ~_~ IR4+k.
+    In the r'th step of the induction we construct open subsets r(,)
+                                                                "~k r~£(f~k and prove
+                                                                     v,,~+
+the following theorem.
+   Theorem 4.2. (A,) For fixed ~_- (~ .... ~) the functions Sk ~_° 1~_~)-- Sk (~ ) have
+an analytic continuation Sk(~0 I~) to the region ~0 = ~ 0 + i~ 0 e C k(,) . Sk(~0 I~) is
+continuous in the variables 4. -                        .    .     .     .
+   (rE,) F o r ( 0 ~ C k(r) an-d~'slR 3 k the functions Sk~ 0 I~_)satisfy
+              ISk~°lf)I<CkI(l +max1~l)(l + ~l(°l)(l + ~(Re(°)-t)lkt"                    (4.6)
+                           Axioms for Euclidean Green's Functions II                          289
+
+for some sequence ck, such that Ck <=C~flk2 for some c~, fl > O, some positive integer t',
+not dependin9 on k and r; and all k = 1, 2 . . . . .
+   The subsets C([) are increasing: C([)C C~k~+I);C~°) is just the k fold product
+of the positive real axis and most importantly, the union [ ) C ~ r) of all
+                                                                                   r
+the subsets is all of tEk. Parenthetically we remark that only the bounds T E r
+require the linear growth condition (4.2). For the other results the original
+temperedness condition (E0) of OS I is sufficient.
+   The final result of our induction is summarized in the next theorem.
+   Theorem 4.3. There are functions            Sk((0[~), analytic in the variables (o, con-
+tinuous in the variables ~_ for (O ~ k       and ~'~ lR 3g, such that (4.4) and (4.6) hold.
+By standard arguments (see Vladimirov [19], p. 235ff.) Theorem 4.3 implies that
+there exist unique distributions 17fk ~ 5P'(IR4k) with support in 1R4+k such that Sk
+are the Fourier-Laplace transform of them:
+                                                    k
+                   S k ~ ° l ~ ) : "[ l~k(q)exp [ - - j ~ t (~o qO_ i~j~j)]d4kq.
+
+As in OS I we conclude that l~k is the Fourier transform of the difference variable
+Wightman distribution Wk.
+    Furthermore, again using (4.6), we find that for h s Y(1R4k),
+                         Wk(h) - I Wk(~_)h g ) d4k ~
+                                = lira ySk(tl°+i~°l-~)h(~)d4k~
+                                   ~/o~0 +
+
+satisfies the inequality
+
+                                       IG(h)l = wk Ihlkt.                                   (4.7)
+
+for some sequence W'k<e'(fl')k~ and t"= --~     3t + 5, see Vladimirov [19], p. 235,
+Eq. (14).
+    It remains to derive R0' from (4.7). Let f ~ 5p (IR4 ~) and set h~ ~ ) = f ( x l , x 2... x,)
+where ~k = Xa + 1 -- xk for k = 1.... n - 1. Then
+                         t~3,(f)l = II W,,_ l(h~,) d4x,t
+                                  < w',-11 Ih~,l~c, d4xl ~ co, lflkc"
+for some new sequence co, < 7"(fl")"2 and t"' = t" + 4. This concludes our proof of
+Theorem E ~' R . '
+    In the remaining chapters we explain the inductive procedures in detail and
+prove Theorems 4.1 and 4.2.
+
+
+                               V. The Analytic Continuation
+    In this chapter we construct the analytic continuation of the Euclidean
+Green's functions to "real times" and prove (At) for r = 0, 1, 2, .... No use will be
+made of the linear growth condition E0' at this point; all we assume for the moment
+is E0, E1 (invariance) and E2 (positivity).
+290                                   K. Osterwalderand R. Schrader
+
+    As we have seen in Section IV.2 we have to analytically continue Sk~ ) - Sk(~° L~)
+in the "time variables"_~° only; the "spatial variables"_~ play the role of parameters.
+There are two different ways of dealing with the spatial variables in a rigorous
+fashion:
+    Method A: To treat the spatial variables as distributional variables throughout.
+More precisely for f/k (~ ~(]R3) and_f" = (fl . . ... f,~) we define with 4i° _o x i,o+ l__ x
+                           S,_ 1(40 If") = J"~n~)f1.(21)... f,,(x,) da"x.
+Positivity will play an important role in this and the next chapter, and S._ 1(_{0 I f )
+was defined such that it still satisfies a positivity condition"
+        I h,( x°, d °) S, + m-1 (_~, x° + x°', _~°'tOf" x f'~). hm(x °', d °') dx ° dx °"d~_° d~_°" > 0
+
+for all finite sequences {ho, h 1.... }, ho e 112,h, ~ ~9°(IR%) and all X}ke Y(IR3), where
+Of~x f m is the function
+                             Y,,,,(20" "fl .(~7,,)f1,,,(2,, + ,)--- f,,,,,,(-~,, +,,,),
+                       0
+and 40= (~0 1, 4,-2 .... 40)•
+    l~lethod B: To show that Sk(_~° [~) can be regarded as a continuous function of
+the spatial variables; this makes smearing out redundant.
+    Method A was sketched in [13]. It is simple, mainly because it allows for the
+reconstruction of the Wightman distributions without using SO4 invariance of the
+Euclidean Green's functions. The drawback of this method is that in order to
+derive a temperedness estimate for the analytically continued Euclidean Green's
+functions, we need a distribution assumption slightly stronger than E0', such as
+E0". Though it is true that E0" is most probably satisfied in all reasonable
+quantum field theory models - see Glimm and Jaffe [7] - the weaker assumption
+E0' is more satisfactory from an axiomatic point of view: besides being more
+general it does not make use of coinciding arguments of the Euclidean Green's
+functions. This justifies our use of the more complicated method B in this paper.
+Extending a geometrical argument of Glaser [6] we use SO 4 invariance to prove
+that the Sk are real analytic functions in all variables. Then we derive a tem-
+peredness estimate for these functions from their behaviour as distributions.
+    Let us first summarize some results of OS I (in a slightly changed notation).
+In terms of the difference variable Euclidean Green's functions Sk the positivity
+axiom E2 requires that for all finite sequences {fo,fl, f2,...}, fo ~ C, f~ ~ 5~(IR4+k)
+        ~fn(x, ~) S,+,~_1 ( - 0~, - 8x + x', ~_')fm(x', ~_')d'*xd'*x'd ~"- 1)~d4(m- 1)~,
+,,..,                                                                                              (5.1)
+          ~ 2 S,+m-l(fn'f')~O'
+where ~ = ( ~ .... ~.-~), 4' = (~'~.... ~'_ a), 8_~ = (0~1, ... 04._ ~), O~k = (-- 4°, ~+k)and
+finally_~ = (~,_ ~.... 4,).
+    As in OS I we construct a Hilbert space W and furthermore W-valued distri-
+butions T,(x,_~) such that for f ~ 5~(IR4+"),g ~ ~(IR4+")
+                      7s.(f) = l T,(x, ~_)f (x, ~_)d4 xd '*("- ')4 ~ Y¢~
+with scalar product
+                                    (T,(f), Tin(g))= S,+,._ x(f, g),
+                               Axioms for Euclidean Green's Functions II                              291
+
+
+or, in the sense of distributions,
+                      (~.(x, ~), ~m(=', E)) = S.+ m- 1(-- 0~, -- ~= + x', E ) -                      (5.2)
+The set of vectors T , ( f ) , f e 5e(IR4+"), n = 0 , l, 2 .... (for n = O , f must be in I12, of
+course) is total in ~ .
+    By the arguments of OS I, we can construct a weakly continuous semigroup
+of setf-adjoint contractions e -tt~ on .Xe t > 0, H = H* > 0, such that (in the sense
+of distributions)             e-tHg~,(X,~_) = T,((x ° + t, :~),_~).                        (5.3)
+
+F u r t h e r m o r e for z e ~;+ = (0, oo) + fiR
+          (7~,(x,~_),e-~ng~m(x',~_'))=_S,+m_~(-O~,(x°+x°'+z,-                         2 + 2'),_~')   (5.4)
+defines an analytic continuation of S,+,,_~ in the n'th time variable: by OS I
+the right hand side of (5.4) is an analytic function of the variable z = x ° + x °" + z
+for ~ e z > O , while still being a distribution in all the remaining variables. (It
+was at this point in OS I that the wrong L e m m a 8.8 was used to continue Sk
+in all the time variables simultaneously to the k-fold product o f ~ +.) In the following
+we use (5.4) and Euclidean covariance E2 to show that Sk(~_) is the restriction
+of a function Sk~), analytic in a complex neighborhood of 1R~+k, i.e. assertion (A0).
+
+                                          V. I. Real Analyticity
+      F o r 0 < 7 < hi4 we define
+                        IR4+(7) = { x = ( x ° , Y ) l x ° > 121 tg7},
+and
+                       1R4+"(7)= {x_ = (x l .... X,) IXk e IR4+(7), k = 1,... n} .
+       Obviously IR4+(re) is the largest cone in IR4+ which under an arbitrary rotation
+~ ( a , (p) about an axis a through the origin, by an angle ~0 < 7, stays in IR4+.Euclidean
+covariance implies that for any _~ 6 IR4+k(7) and 0 < (p < 7
+                                          Sk(N(a, q~) ~_)= S k g ) ,                                 (5.5)
+where N(a, ~0)_~= (N(a, qg) 41 .... N(a, (P) ~k).
+   F o r fixed 7 6 (0, re/4) let % = eu(7), # = 1.... 4, be four linearly independent
+vectors in IR4+(rc/2-7), the dual cone o f 1R4+(7). T h e n there are rotations
+Nu = N(a,, (Pu) with 0 < (p, < 7 such that
+                                           , ~ e , = (1, 0, 0, 0).                                   (5.6)
+                  0
+      N o w let _~ ~ IR4k(y) be fixed and _u= (ul, ... Uk), where ui = (u], u2i, u 3, u~),
+u}'s [0, Go). Writing _u-e for the vector       u~e, ....                      u~e u in lR4+k(=/2--~,) we
+now consider
+                                       0
+                                   Sk(.{ + U_. e)
+as a distribution in the variables u~. By (5.5) we find that for # = 1.... 4
+                                      0                     0
+                                  S k ~ + u_.e) = S k ( ~ , ~_+ u_ . ~ , e),                         (5.7)
+where ~tue stands for the four vectors ~ u e , , v = 1,...4. By (5.4) and (5.6) the right
+hand side of (5.7) can be analytically continued to C+ in each of the variables
+u~', i = 1.... k, (one at a time), while it is still a distribution in all the other u-variables.
+292                            K. Osterwalder and R. Schrader
+                                                                                    0
+Now we pass to variables s~ = lnuf and set ib(sl .... s~) = Sk(_~+_U. e). According
+to the above argument we can find functions
+                                     r ~ ( s l . . . . . ~ . . . . s~)
+which are analytic in r~ = s~ + itS, Jt~']< n/2, and have values in N' with respect
+to the variables sl .... ~, ...s~. All the Ti, analytically continue the same dis-
+tribution T. It follows now from the Malgrange-Zerner theorem, see Epstein [-2],
+which deals with a degenerate case of the well known "tube theorem" (see e.g.
+Vladimirov [19], p. 154), that there is an analytic function
+                                     r(_r) = T(rl, ..., r~)
+analytic in the convex envelope ~-- of the union of all the flat tubes
+              ~u={rl...r~[Imrfl<rc/2, r~=O for                           v+#     or j~-i},
+such that T continues all the Ti,. We find that ~--=                           lrl,...41~lImrfl<rc/21.
+Going back to the variables ul' and to S we have therefore shown that there exists
+a function
+                                                0
+                                           Sk(_{ + _w. e),
+analytic in                                                                                        (5.8)
+                                   {_w[~ largwfl < ~/2},
+                                                                                        0                0
+whose restriction to real arguments defines the distribution S ~ +_u. e), with _~
+and el,.., e4 playing the role of fixed parameter. Assertion (Ao) is now an immediate
+consequence.
+    For the benefit of Section VIA, where we establish the bound (TEo), we now
+derive an estimate on the size of the region of analyticity of the function Sk~)
+obtained above.
+      Lemma 5.1. For fixed ~_~IR4+k, the functions Sk(~ +() are analytic in the
+polydisc
+                      r ~ ) = ~Ll~ft<Q, for 1 <_i<k, 1___#<4},
+where
+                               c
+                      0= = ~-(t+            max l~'il1-1 ( t +
+
+for some constant c E (0, 1) independent of k or ~_.
+                                                    0
+      Proof. For given _~ we define V and ~ by
+                                    tg27 = min ~°/[~jl and
+                                           ~=<j~k                                                (5.10)
+                      0   0           0      0
+                     ; = (~1 . . . . ~k),    ¢i ----(½~O,~i), 1 < i --<k,
+and we choose the vectors e~, ...e 4 as follows:
+                                   el =(2ctg7, 1, t, 1)
+                                   e2 = (2ctgT, t, - 1, - 1)
+                                                                                                  (5. ~ t)
+                                   e3 = (2ctg7, - 1, 1, - 1)
+                                   e4 = (2ctg7, - 1, - 1, 1).
+                              A x i o m s for E u c l i d e a n G r e e n ' s F u n c t i o n s II                             293
+
+                                 o
+Obviously 0 < ~ < r~/4, _~e IR~+k(~), eu e 1R4+k(rc/2-- ~/) and                                      e l , •.. e 4   are linearly
+independent. (5.11) implies
+                             (1, 0, 0, 0) = 2 -a tgv(e~ + e2 + ea + e4)
+                             (0, t,0,0)=2-2(el                   +e 2-ea-e4)
+                                                                                                                           (5.t l')
+                             (0, O, 1, O) = 2- 2(e~ -- e 2 + e3 - e¢)
+                             (0, O, O, t) = 2-2(e~ -- e2 - e3 + e~)
+and
+                         0                              4
+                   ~=~+2-*~°tgy                    . ~ e,
+                                                     /t=l
+
+
+                           °
+               { i + ( i = ~/+ i(         2-*{°tg7 + 2 - 3 tg2(,~• + , 2 -o2                            a,,¢ ri ) e,       (5.t2)
+                         0        4
+                        -~i+ 2 w~e.,
+                                ,u=l
+
+where o-,, is equal to + 1 or - 1 and may be read offEq. (5.11'). It follows from (5.8)
+that Sk~ +_~) is analytic for those values of _~ for which ~ largwf[ <re/2. It
+                                                                                                         i,#
+                                                                                            7~
+therefore suffices to assume that for all i, # [argw~'l < ~-~-, which is implied by
+
+                                                 [ImwI'l     r~
+                                                 I R e w < 23--k"                                                          (5.13)
+
+By (5.12) the wl' are given as functions of the ~', and (5.13) is satisfied if we restrict
+(~' by
+
+
+By (5.10), tg7 < ½tg23, = ½ min
+                                     l=j=k
+                                               (~°/1~1)and hence Sk(~ + ~)is analytic if  --     -
+
+
+                                     I~1 < ~                ¢o. min(¢°/<J)                                                 (5.t4)
+
+This implies Lemma 5.1, with c = 2-97c.
+
+
+                                     V.2. Towards the Real World
+      Having established the real analyticity of Sk~) we now proceed to construct
+the analytic continuation Sk((° 1_~)of Sk in the time variables to the n-fold product
+o f t + . (Notice that i ~° are actually the times, hence at the boundary o f t + we will
+arrive at real times.) Our method is to verify inductively the following sequences
+of statements:
+      (AN) There are analytic continuations Sk(_(°i_~) of Sk~°l_~), which are
+continuous in _~elR 3k and analytic in _~oe C~N)C~;k+. For N = t, 2, ..., C~m is the
+envelope of holomorphy of
+           k      ~--
+  d~N)- U ((_~, x° + x°' + z,_~°')l(x°,_~°) E o ~ " - ' , (x°',_~°') ~ 1)-~-n+
+                                                                       '~("- 1, z e ¢ + I .
+         n=l
+                                                                                                                           (5.15)
+294                                  K. Osterwalder and R. Schrader
+
+      (PN) There are W-valued functions
+
+
+defined for (~,_~)~IR 3" and (x°,_~°)~ D(,m C(0, ~)x~E% -1, where for N = 1,2 ....
+                        D,(N) = {(x 0 , ~_o )Ix 0 > 0, go, 2x o, (o) ¢ c(N2_I},                         (5.16)
+such that the scalar product is given by
+                                                           +---
+  (t//n(XO,;0 i X, ~), ~m(X0', ; 0 ' I X',_~')) : Sn+ m_ 1(; O, x 0 --[-x°', ; ° ' 1 - - ~ , -- 3~ + x', ~).
+                                                                                                        (5.17)
+Notice that the passage from N - 1 to N takes place in (5.15), where C~m is defined
+in terms of the regions O~N-l). Later we will show that U C~m=~Ek+, which
+completes the analytic continuation.                           N
+    In the rest of this chapter the spatial variables will always play the role of
+parameters and we therefore drop them completely in our formulas. Continuity
+with respect to them will be evident at each step. Also we will drop the super-
+scripts o, hence ~ will now stand for (~o.... ~o), etc.
+To start the induction we set
+                        C(O) _ ~r [arg~i =0, i = 1.... k},
+                         k --/_~                                                                        (5.18)
+                        D(,°) = {(x,()t x > 0, arg(i = 0, i = 1.... n - t}.                             (5.19)
+Then (Ao) follows from the results of Section V.1. We claim that (Po) follows from
+(A0) and (5.2). Notice that (5.2) was valid in the sense of distributions only, while
+(Po) asserts that it also holds in the sense of functions, i.e., pointwise. For a proof
+smear both sides of (5.2) with two functions fv e 5P(IR4+"),gv e 5¢(1R4+"),which as v
+tends to infinity tend to &functions and take the limit.
+    Now assume (AN) and (PN) have been verified for 0 _<N _< M - 1. We will
+prove (AM) and (Pu).
+    By (PM-1) we can define
+                     S , + m _ l C , x + x' + z,~')=(T,(x,~_), e -~H T,,(x; ~_'))
+for (x,~) E O(,M- 1) and (x',(') e O~M- 1); this analytically extends Sk, k = n + m - 1,
+to C~M) and hence, because C(kM) is the envelope of holomorphy of ~M), there is an
+analytic extension of Sk into C~~). This proves (AM).
+                               o o      D(M),                                                             o o
+      Now take a point (x, 0 e                  defined by (5.16)~ and observe that with (x,()
+                                                                                         0
+the whole cone of points of the form (x, () with x > 0, ]arg ~i] ~ [arg ~i[, i = 1,... n - 1,
+is contained in D~M). We therefore can find points ~i ¢ (0, co) and numbers r~ > 0,
+such that the whole polydisc
+                         P = {(x,_Olx = ° , l ( i -     ~il<ri, i = 1 , . . . n -   1}
+                           0 0
+is contained in D(.M) and (x, (_) ~ P, see figure below.
+                                  0 0
+Now we define the vector T.(x, (_) by
+                                            0
+                              o 0                               ( al l      ] o 0
+                         T,(x, 0 = lira Z              ~-(      ~-~_~ T,/(x,_~),                         (5.20)
+                                       t--,~ i~_l<t
+                                             /~,~~cornptex
+                              A x i o m s for E u c l i d e a n G r e e n ' s F u n c t i o n s lI
+
+
+                                                                                     ¢i- p,Qne
+                                                                                                                    295
+
+
+
+
+                                                                   Fig. 1
+
+
+
+
+where the derivatives of the vector ~, are taken in the strong Hilbert space topology.
+The right hand side of (5.20) converges in norm, for
+                 o
+
+                          \                  (x°,_¢)
+                                         o                     o                                                  (5.21)
+
+                              t<l,IZ                               /~!         032 0_~'-~ $2"-~(~'2:~'-~'   =,¢
+                              t<lPl
+and the right hand side of(5.21) is just the remainder term of the Taylor expansion
+            O   0 0                                       '-        0
+of Sz,_l(~,2x,~_) about the point ~ , 2 x , ~ ) and thus tends to zero as we let t
+go to infinite. Relation (5.17) follows easily from (5.20). This establishes (P~).
+    Finally we have to prove that U C~m = Ck+- But this is a consequence of the
+                                                      N
+following stronger result, which we will need in Section VI.2.
+      Lemma 5.2. For all N, n, k ~ Z +,
+      (a) D~,m contains the set
+
+                       {(x,.~)lx > 0, targ ¢~1< o(i, N), 1 _< i < n - 1},
+
+      (b) C~~) contains the set
+                                   {_~1larg~,l < ~(i, N), l < i < k } ,
+where
+                                   o(i,N)=                               -2-NZ              ,
+                                                                               t=O
+and
+                                      i~I(Nt--2N                         Jot     i>N.
+                                     ,=0\t/
+    Proof. By construction the regions COgm and D~m are mapped onto tubular
+domains under the transformation ~ = e ~ = e ~'+~°'. We define cks) and d~,N) to
+be the closure of the bases of these tubes:
+
+             c~m = {_vlvi = Im w~, 1 < i < k, (e~' ... e w~) e C~m } -
+                                                                                                                  (5.22)
+            d(,m = {(0, v_)lvi = Im wi, 1 < i < n - 1, (e "° , e~*, ... e~-- *) ~ D(,m } - .
+
+Note that c~m and d(,m are subsets of [ - =/2, rt/2] k and of [ - rt/2, ~/2]" respectively.
+296                                                      K. Osterwalder and R. Schrader
+
+F r o m the inductive definitions (5.15/16), (5.18/19), and from the tube theorem
+we find for r = 1, 2...
+C~km= convex hull of
+      { v _ l v _ = ( _ v ,2'v , v , , ) , w h e r e ( O , v _ , ) s d ( N - 1 ) , ( O , v _ , , )        e dk-.+
+                                                                                                             ( N - l ) 1, Ivl < =/2}   (5.23)
+d ~ m = {(0, v)[(--_~, 0,_v) ~ c(2N,)_,}                                                                                               (5.24)
+and
+                                               d °) = {(0.... 0)}, d~,° ) = {(0,...0)}.                                                (5.25)
+Observe that all the sets c~m and d~N) are convex. M o r e o v e r if (vl, ... Vk)E C~m
+(or d~m), then the whole hyperrectangle with corners (_+ vl .... _+ Vk) is also con-
+tained in c~m (d~m resp.).
+    F o r a p r o o f of L e m m a 5.2 we show inductively that the points (0, vl .... v,_ 1)
+with Ivil = Q(i, N) are in d(f ). This establishes part (a); part (b) follows from (a)
+and the equation S , ~ ) = (f2, 7J,+ l(x,_~)).
+    We first construct a function hT, i = 1, 2, ..., N = 1,2, ..., such that for all
+s >=O, t => 1,                              wN(s, t) =- (0, O, ... O, hx,h2,N N . .. h~) • ~.,+~.a(m                                   (5.26)
+
+We choose h ° = 0 for all i. By (5.25), w°(s, t) e -¢+~.~(°)Suppose now we have already
+constructed h~ for all i > 1 and N = 1.... M, such that (5.26) holds. T h e n by (5.23)
+the following points are contained in ~,.(M+
+                                          2 ( s t ~)
+                                                  )-- 1
+
+                                      (-    h~
+                                             M, ..        - h M,. - h M,
+                                                                       . O.... .O, n/Z, h M, . h M_I)
+                                                                                   "Trot
+and
+                                      ( - h~_l . . . . hf, - re/2, ~ ,                               hf, h 7 .... h~).
+                                                                                        2t-1
+        z,( M + I ) ; e
+Because ~z(~+o_po       convex it also contains the point
+         ( _ ½ ( h M +hsM_l), . . . . g(h
+                                      1 2 M + h~), - ½(hi
+                                                        M + ~z/2), ~ ,                                                ½(re/2 + hiM),
+                                                                                                            2t-1
+
+                                                                                                     1  M
+                                                                                                     g(h, + hM        1 M
+                                                                                                             2 ), ...~(h~_ 1 + hy)).
+This means [-by (5.24)] that with
+                                                      h° = 0 ,                                       i = 1 , 2 ....
+                                                h~ +1 = ½(h~ + n/2)                                                                    (5.27)
+                                                hM+l
+                                                 •    = g1( h M
+                                                              i + h iM
+                                                                     -0,                             i = 2,3, ...
+the points w M+ 1(s, t) defined by (5.26) are again ;~
+                                                    111 ,~(M+
+                                                        W,t -~ S 1)
+
+    We take (5.27) as inductive definition of h~. A simple calculation shows that
+the solution of (5.27) is
+
+                                                h~ =               1 - 2-N'                           = o(i, N ) .
+                                                                                   t=0
+
+       F r o m (5.26) we now conclude that in particular all the points
+                                                        wN(n - 1, l) = (0, has .... h,-1)
+
+are in d(,N). This ends the p r o o f of L e m m a 5.2.
+                         A x i o m s for E u c l i d e a n G r e e n ' s F u n c t i o n s II           297
+
+
+    For later purposes we remark that Q(i, N)=> 2 (1 - 2-N/27~), where
+
+
+                                   ~ = max 2- n/2 ~                                                   (5.28)
+                                             N>--1                I'=0
+
+Hence (b) of Lemma (5.2) implies the following corollary.
+    Corollary 5.3. C(kN) contains the set
+
+                  {_(, larg(,[ < max {0, 2 (1 - 2-N/2y,)}, 1 __--<i < k } .
+
+
+
+                            VI. The Temperedness Estimate
+    In this chapter we derive the estimates (4.6) for the analytic continuation
+SR((_.Ot~_)of the Euclidean Green's functions. It is at this stage only that we have to
+use the linear growth condition. We point out that using EO" instead of E0'
+would simplify and shorten our argument considerably.
+    In a first step we derive from (Eft) the temperedness estimate (4.5) on the real
+analytic functions Sk~). This is the most complicated part of this chapter and it
+will be discussed in Section VI. 1. The estimate (4.6) for the analytically continued
+functions Sk((°I~ will be proven by induction in Section VI.2.
+
+                         I11.1. From Distributions to Functions
+    At a first glance it might look rather trivial to derive an estimate of the type
+(4.5) from E0' and from the fact that Sk(f) is given by the ordinary Riemann
+integral SSk(.{)f(~_)d~, with Sk(~)e C% say. The following example however
+illustrates that more detailed information about Sk(~_) must be available for (4.5)
+                                                                             o
+to be true: Let T(x) be a positive C ® approximation of the function T(x) that
+equals ex for x e [n, n + e-2"], n e g+, and that is 0 otherwise. Then [S T(x)f(x)dx[
+   sup If(x)l for all f e ~(IR), but T(x) is not polynomially bounded.
+    x
+     In Section V.1 we constructed the function Sk(~ + ~), analytic in the polydisc
+/~        _    # <                                   ,4k
+   (~) = {(] I(i[  ~}, where ¢ was a function of~ e]R+,  see (5.9), Lemma 5.1. By the
+mean value theorem for harmonic functions (see e.g. Stein, Weiss [18])
+
+                      Sk(~ + ( ) = 1071-k ~ Sk(~_+(+Z_Z) dOfx),                                        (6.1)
+                                                     t"d7
+
+where 07 denotes the surface of the unit sphere in 1124, 07 = {zEtl~4[ [z[2
+    4                   2 4                                k
+--- ~ [z"[2=l}andlOTl=-~.n   is its surface area; df2(z)= I-I dO(z~),where
+   /t=l                                                                                         i=1
+ df2(zi) is the element of surface area on I27. Furthermore r z = (rlz 1 . . . . . rkZk)
+with r i > 0 such that 1(i[+ r i < O- Here and in the following _~ and Q = Q(~) take
+fixed values. Notice that 0 is always less than 1. Let now h(-) be a positive C ~
+function with support in [½, 1] such that for some c > 0, p > 1
+
+                          [hl,<c(n!F                and         Sh(r)rT dr= l .                        (6.2)
+298                                  K. Osterwalder and R. Schrader
+
+Such a function h exists (for any p > t) by the theorem of Carleman-Mandelbrojt-
+                                                             /
+
+
+Ostrowski, see e.g. Mandelbrojt [10] (take e.g. k(x)=const, e x p [ - ( x -         ½)-~]
+                                                             \
+
+
+
+• exp [ - (i - x) - P] with fl > - -              We now set for z s ~4
+                                      p-i-
+                                a~(z) = ra71-~ . (sQ- ~)8 h(8~ - ~Jzl)
+and
+                                ko(z) = I a o ( z - z') go(z') cl8 z'
+                         kQ(2, y ' ) = I go(Z -- z') g o ( f )   d4 x ' ,
+
+where dS z ' =- d4 x' d4 y ', z' = x' + i y'. Hence
+
+                                    supp k o ~ {z ~ (l~4][zl < ~/4},
+and                                                                                  (6.3)
+                                               Sko(z) dSz = 1 .
+Notice that k o is a function of [zT only. We therefore may combine (6.1) and (6.3)
+to obtain with kQ(z) = I-I ko(zi),
+                            i
+
+                            Sk~ + () = S Sk~ + ~ +__z)ko(~ ) d8kz ,                  (6.4)
+
+whenever [~i! < Q/2, i = 1.... , k. By Fubini's theorem the order of integration on
+the right hand side of (6.4) is arbitrary. We thus may define
+                       Tk(~ +(_) = ISk(~ +~_ + x) kQ(.X.+ i£,2') d4kx                (6.5)
+such that (6.4) becomes
+                           Sk~ +~_) = .[ Tk~ +~_ + i.2) d'*kyd4ky ' .                (6.6)
+(Notice that Tk depends on y and y' also via ko.) Finally taking into account the
+support properties of k o and of 90 we find that the integration in (6.6) goes only
+over the region where IYil< 0/4, lY~I< ~/8 and therefore
+                                   ISk(~)[< sup ITk~+iy.)[.                          (6.7)
+                                                Isd < of4-
+                                                lY~[< 0/8
+
+The remainder of this section is devoted to the derivation of a bound on T k which
+combined with (6.7) gives the temperedness estimate (4.5).
+    The main idea is simple. By (65), Tk~) is a regularization of (the distribu-
+tion) S k. Just as Sk, Tk satisfies some positivity property; in other words, Tk~ )
+can be written as the scalar product (iv1, ~2) of two vectors in W. Then ( ~ , e - , n ~v2)
+defines an analytic continuation of Tk~) in one variable (as in Section V. 1), whose
+absolute value is bounded by ll~eall-11~211. Bounds on I['e,ll follow from E0'.
+Repeating this procedure 4k times we obtain analytic continuations of Tk~) in
+4k linearly independent directions. Analytic completion then leads to the function
+Tk(~ + ~_), the modulus of which we can estimate by using the maximum principle.
+This wilt give the bound (4.5) on Sk(¢) by (6.7).
+                                           o
+    For given ~ elR4+k we define _~, 7, Nu e SO4 and the vectors el .... e4 as in (5.6),
+(5.10/11). We use O~(YCux + iy) = Üo(x + iy); ko(Y¢,x + iy, y') = ko(x + iy, y') and
+                                 A x i o m s for E u c l i d e a n G r e e n ' s F u n c t i o n s II                                299
+
+
+we simply write go(x) and ko(x ) for go(x + iy) and ke(x + iy, y') respectively. Then
+using Euclidean covariance and (6.5) we find for all u~ ~ 0, and 1 < n -< k, 1 < # N 4,
+              0                        0
+           Tk(~_ +__ue)= Tk(~_~ +_ug/~ e)
+                                                         0
+                      = I Sk({) ko(~_ - 92.~_ - u_gNu e) d 4*
+                      = I k s ( - O~ -.2) g~(- Ox - ,l,). Sk(- 0~, - Ox + x', ~')
+                         • go(x') ko(~'-'2') d 4("- 1) ~d4(k~-'d'4xd4_x.'                  .                                    {6.8}
+                                                                                                          0
+Here '2=(21 .... 2,-1) and .2'=(2.+1,...2k), where 2 i = ~ , ¢ i + u i ~ , e e l R 4                                             and
+1 ___n _<k. For later purposes we remark that
+                         2        0
+
+
+                                   0
+                             __-<2~z+2(4ctg2,+3)(~uf) 2 , by(5.11)                                                               (6.9)
+
+
+
+
+as ctg?__<2(t + ctg2~)=< 2cQ -~ by (5.9) and (5.10).
+                                o
+    Equation (6.8) exhibits TQ(~+_ue) as the scalar product (TI, T2) of the two
+vectors
+                                                                     n--1
+                  Tl=IT,(x,            ~_)g~(-Sx-2.)                 11 k e ( - O ¢ . - i -             2,)dxd~
+and                                                              k-,i=1                                                        (6.10)
+                  ~'2 = l ~k-.+~ (X', ~') g0(X') l ] k0(~i- '~,+ i)dx' d~'.
+                                                                 i=1
+
+
+   As in Section V.t we find the analytic continuation of Tk in the variable u,~
+by sandwiching e -~"H between T~ and T2" for _we N,,, where
+        ~,,-{wel124kllargw~.l<~/2, argw~=O                                     for         i4=n         or/and        v4:#},
+                                       0
+                                 Tk(~_ + we) = (T1, e-~"H T2),                                 and                             (6.tl)
+                             0
+                      Irk(~ +_we)l < [l~ll" 117~211, uniformly in                                         v,".
+We defer the proof that by E0' for some sequence a, of factorial growth,
+
+                                 ]l~xll < a , o -"¢s+s~ 1 +                           2.            .                          (6.12)
+                                                                               i=1
+
+
+and correspondingly for ItT2t I (with n being replaced by k - n + 1                                                    and i         )'-~
+                                \                                                                                              i=1
+
+by     ~     22 . Combining (6.9) and (6.12) with (6.11) we find for _wsN, u,
+     i=n+l
+
+                   lrk~+_we)l                                       1+ .                       1+4.,          '   '
+300                                  K. Osterwalder   a n d R. S c h r a d e r
+
+
+where a~ is again of factorial growth. This bound holds uniformly in the parameters
+~,~' on which T, also depends. In order to get the last factor in the expression on
+the r.h.s, of (6.13) we have used that 1 + Z u~ ~[t + E w~i. We now may study the
+functions
+                          R~(_r) - (i + Y~w~)-k~ Tk(~_+ we),
+
+ ~--lnw~', which is analytic in the tube 3".. = {_rt[Imr~[< n/2, Imr~=O for i:#n
+Fi - -
+or/and v 4: p.} and whose modulus is uniformly bounded there by
+
+
+
+For Im_r = 0, the functions R~"(r) are all equal, independent of n, # [namely,
+equal to (1      +Zurl-k r (_                Hence the Malgrange-Zerner theorem applies
+                                                                                                       o
+and there is a function Rkk), analytic in the convex envelope ~- of 3 - = U J-~,,
+                                                                                                               n#
+which continues all the R~"k). We claim that IRk(r)[ is again bounded by (6.14)
+                                                                                                   •   0               0
+for all_r in ~ . For a proof let us assume Rk(r.) takes a value A at a point _r • ~- ,-~~ ,
+which it does not take in ~ . Then (Rk(r.)--A)-1 is analytic in an open neigh-
+borhood J- C 3- of ~- but not in all of Y. This is impossible, because ~- is the
+envelope of holomorphy of ~ . Hence
+                                     sup [Rk(Y,)t= SU~ [Rk(Z)[                                                      (6.15)
+
+and the assertion follows. The function
+                                      0
+                                Tk(~_+ w_e)-- (1 + Ewe) ksRk(ln_w)
+                                 0
+analytically continues TR(~ + u_e) to the domain @ = t_w[~ [argw~[< n/2t and it
+                                                                                 t     t,v                 ]
+satisfies the bound (6.13) for all _w~ ~.
+                                                           o
+         Now we go back to (6.7) and use (5.12): _~+ i~ --_~ + _we, where
+
+                                                                 ~ a~,y~)
+                     w f = 2 - 4 ~ ° t g ~ + i ( 2-3 tgTy°+ 2-2 ,=1
+
+and, as tg~ < t, [yO[< 0/4, l~[ < 0/4,
+                                           Iwfl < ~ ~ 0
+                     0 2
+Also note that (~i) = (1~o)2 + ~2 <(~i)2. Hence from (6.13), (6.7), and (5.9)we get
+                                             .}.      ~. 2 ks/2 1 "~                   "~ k~] ks
+                                                                                           /
+                                                                                                                    (6.16)
+                       <z k (1+ maxl~'~l) 1 + 2 ~                       1+           (~o)-~
+
+for some sequence Zk of factorial growth and t--5(s + 8). Inequality (6.16) is the
+temperedness estimate (4.5).
+                                 Axioms for Euclidean Green's Functions II                                         301
+
+    It remains to prove the bound (6.12)on 11~1 It and tl~u2tt respectively. From
+(6.10) and (5.2) we get
+                                 n--1
+
+ti~I tl2 = f ~ ( - ~ x - 2,) I] k~(- ~¢,- 4,) 82~-~ ( - ~ , - ~x + x',_~')
+                                  i=1
+                                  n-1
+
+         • gQ(- 8 x ' - 2,) l-I k o ( - 8 ~ ' , - i - hi) dxdx'd~d¢'
+                                  i=1
+                                 n-1
+
+       = Igo(- x , -         2,,) I-I ko(xi+ 1 - x i -          hD ~ 2 , ( x l , . . . x,, y , , . . , yl)
+                                 i=l
+                                  n--1
+                                                                                                                (6.17)
+         •   90(- Oy, - 2,) 1--[ ke(- 9(Yi- Yi+ 1) - 2i) dxdy
+                                      i=I
+
+
+
+       ----~2."        sup            1+        x~ +       y~       l ) ~ o o ( x . - X.) 1-I ko(x~- x~+ ~ - 'tk
+                       x,r       I\         '          "                                    i=l
+                  I~_1+I~1<=2ns
+                                  .--1
+
+         • D~go(y,,-          4.) ~ k o ( y i - Y i + l - 4,)I.
+                                  i=1
+
+By (6.3), the function under the sup in (6.17) is nonzero only if
+                [x~- 4,[ < 0/8, Ixi - xi+ 1 - hi[ < Q/4 for i = 1.... n - 1
+
+and similarly for Yl. This implies that Ix.I < I,~.l+Q/S. Ix~l<                                     Y. I,~jI+(n-1)~/4
+                                                                                                   j=l
+and [as ( n - 1)Q/4 is always smaller than 1]
+
+                               l't- i=1       ~ y2 ~8n2(1 + i=,
+                                     ~ X2-t" i=1             ~ 22)"                                             (6.18)
+Furthermore by (6.213), for some c > 0
+                         sup ID~gQI+ suplD~kQI < c(t~l!)~(8C 1)i~l+8.
+This together with (6.17/18) yields (6.12).
+   This completes the proof of the temperedness estimate (4.5).
+
+                                        VI.2. Continuing the Estimates
+    In this section we prove the temperedness estimates (TER) for k e Z + . In
+essence we will repeat the arguments of Section V.2 but carrying along the estimates
+on the analytic functions Sk((°~). Our main tool will be the maximum principle,
+see (6.15). In order to dispose of the spatial variables _~ we let ~v,, be the Banach
+space of all continuous functions on R an, satisfying
+                             Ilflll,= ~ul~. (1 + lm_~iax,t~l)-Pf~) < oo.                                         (6.t9)
+Then Sk(~°l .) are real analytic functions in the _~o variables, for G° > 0, with values
+in ~kt,k. By (4.5)
+
+                       IlSk(-¢'°l')ll~'< ~kak [( i + kY~° ) (-1 + ~(~°)-
+                                                                   k 1)] k'                                      (6,20)
+302                                        K. Osterwalder and R. Schrader
+
+for some constants a > 0; fl > 0. We write Sk~°[ .) simply as S k ~ °) or as Sk~)-- thus
+suppressing the superscript 0.
+    Suppose now we have already shown that S k i t ") = S,(_O defines a real analytic
+function from C~m to ~kt,k- Then we define
+
+                    Sk,~(~) = ( 1 +~-'-~J+e))-kt(k-1               +E-1)-k'Sk~ +_0,                      (6.21)
+
+where _e is the vector (e.... e), e > 0. Now let k = n + m - 1, (x,_0 ~ D~,m; (x,~')ED~)
+and z = x + i y ~_ff~ +. Then the Schwarz inequality
+             '
+ilSk~,2x,_~)llk,             - 2x, g)l[(2,,-1)cllS2,,- l (_(~., 2x,_~,)11(2,,- x),)-~
+                 <([iS2,_ 1(_~,                                                                          (6.22)
+is an immediate consequence of PN, Eq. (5.17), and of the definition (6.19) of the
+norms II'llp. Inequality (6.22) holds for S.~ as well: For k = n + m - l,
+IlSk,~,2z,_()llk,=(llS2,,-1,=~,2x,_OIl(2,,-1),"                   [ISz,,-1,~((',2x,'_~ )11(2,,- 1),)~:   (6.23)
+To get (6.23) from (6.22), we only have to prove that for R e ~ > 0, Re('i > 0, x > 0,
+
+       1+           ~-~+ 2z + 2            (~                                                            (6.24)
+               1                      1
+
+> ( 2 n - l ) -1 1 + 2                Re~+2x                   (2m-t) -t 1+2 ~ Re~+2x
+                              1                                                     1
+
+and
+            (k-1 + e - 1 ) Z k ~ [(2n-- 1) -a + e - l ] 2"-~ [(2m-- 1) -1 + e - ~ ] z"-~ .               (6.25)
+Clearly (6.24) follows if we can show that
+
+                   k -1 1 +               Re(i+2x+              Re~'~     >r.h.s. of(6.24).              (6.26)
+                                  1
+
+Both inequalities (6.25) and (6.26) can be brought into the form
+
+                                            r----~-s /     ~                                             (6.27)
+
+for A and B both positive; (6.27) follows from the convexity of the function
+f ( x ) = lnx.
+       We now claim that for ~ ~ C~m,
+                                                IISk,~)ll k*----<~k ~k" 2~kN                             (6.28)
+with ~ and fl as in (6.20). We prove (6.28) by induction. For N = 0, (6.28) follows from
+inequality (6.20). Now assume we have verified inequality (6.28) for N = 0, 1, ... M
+and for all k~7Z.+, all e > 0 . Then for (x,_O~D~ M), (x,_(')eD~ ~), z = x + i y ~ + ,
+k = n + m - 1, we have by (6.23) and the induction assumption
+         IlSk,~, 2z,_(')llk~
+              < [~(2n - 1)a(2"- 1) if(2,- l)~t. ~(2m - 1)a(zm- 1) if(z,,- ~)~t]~                         (6.29)
+                   < ~k/~. ffk(~+ 1).
+                               Axioms for Euclidean Green's Functions II                    303
+
+As C(kM+ 1) is just the envelope of holomorphy of the region
+       ~(M+I)=        (.J      {(~,2z,~,)t(x,~_)~D(M),(x,£,)eD(mM),z=x+iyeC+}          '
+                  n+m-- l =k
+
+we can use the maximum principle (see (6.15) and e.g. Vladimirov [19] p. 178),
+to conclude that (6.28) holds for N = M + 1. We argue first point-wise, i.e. for fixed
+values of the spatial variables _~ and then take the norms 11"llkr
+    Our finat step will be to eliminate N from the right hand side of (6.28). (Notice
+that the right hand side of (4.6) does not depend on N either [) For a given d e c k
+we want to find an N = N(_() such that _~eCff). Choose s such that ]arg(r ] < [arg(sI
+for all 1 < r < k. Now
+                                        Reds
+                       larg(J + arc sin       = z~/2, hence
+                                                  GI
+                            [arg~s] < 2 ( 1      Re~         2)
+                                    =                 I~sl   z:     "
+
+Choose the integer N = NG) such that [-with Vk as in (5.28)]
+
+                               2_N/Zyk_~ -Re(~
+                                          - . - - 2 =<2 -(N- 1)/2~)k,                  (6.30)
+
+Then by Corollary 5.3, ( e Cff ). Inserting (6.30) in (6.28) shows that
+
+           llSk,~(_(0 ) l l k t ~ k ak 7'k rc f(° I
+                                        ]/~ Re( °
+
+                         <-_~k ak               • [(1 + ZI~°l)(1 + Z(Re(°) - 1)]2ak.
+
+We combine this with (6.21), choose e = ½ m i n R e ~ ° and "undo" the norm ]]'llk,
+to get for (0 eck+, _~elR3k,
+
+                  lI&(~°)IIk~ <                  (k- 1 + ~- ~)k~ tt&,~(_(o -_e)tlk,
+and
+         ISk(~°l_~)l< ck 0 + max]¢~) k'" [(1 + ZI(°])(1 + X(Re¢°)- 1)](2~+0k'          (6.31)
+
+where Ck=ak(P-0k(VkrC)ZPk 2(t-a)k. From (5.28) one easily gets 7k<e k for some
+c > 1, and hence ck<ab k~ for some constants a, b > 0 . Inequality (6.31) is the
+desired temperedness estimate (4.6) with t' = 2fl + t.
+
+                                Appendix(by Stephen Summers)
+      Theorem. Condition E0" implies E0'.
+      Proof. We prove the equivalent statement that for T e Y'(1R') with
+
+                                  IT(f1 x f2 x ...f,)l ~ h Jfklr                           (At)
+                                                                  k=l
+304                                  K. Osterwalder and R. Schrader
+
+for all fi ~ 5e(IR) and some fixed r, it follows that
+                                              1T(g)l < c" Iol,-~                                   (m2)
+for all g e O°(IR"), some fixed constant c not depending on n or g and t = 2 r + 7.
+    We use a Hermite expansion for .7, see Schwartz [14]. (Hermite expansion
+can also be used to prove the nuclear theorem, Simon [17].) Writing ~ for
+Hi~ @Hi2... @Hi,, where H i is the i-th Hermite function, we get
+                                                 T(g) = E zi~t
+                                                             i
+
+where "!= (il .... i,), ik ~ Z+, and z i = T(Hi), Yi = j'/-/i(x) g(x) d"x. We set (1 + J)
+
+= I~I (1 + iz) and obtain
+      k=l
+
+                   IT(g)l < E (1 + j)-2 I(1 + i) -s z.~l1(1 + i y +z ~1
+                              !                                                                    (A3)
+                           < c 7 sup I(1 + i) -~ z_il"sup I(1 + _/)~+z 7_~t,
+
+
+where c~ = ~ (1 + j)- z =                (1 + i)-2         . To finish the proof, we have to determine
+              i                 i
+s such that I(1 + J)-'~hl is uniformly bounded in j.
+                       !
+  Introdudnga~=~(XkT-Ok),              we have                         a2Hik=l/i+ikHi~+, and akHik
+                      v-
+= ]/~kIti~_ ~, aka ~ Hik = (1 + ik) H~ = (1 + X2 -- 02) Hi~. Furthermore (dropping the
+index k for the moment)
+             IHil,= su__~I[(l +x2)'/20~gill~
+
+                  <=cz su~ llxaO~H~llz (Sobolevinequality)
+                       /~<r+l
+                                                                                                   (A4)
+                  <c3 sup Ila -+ ...a+-Hillz                 (<it+      1 factors a + or a - )
+                  < c3 ]//(i+ 1)(i+2)...(i+2r+ 1)<c4(1 + i)'+1 .
+Here and in the following Cm denote constants that depend on r only. By (At)
+and (A4),
+                          Ihl = IT(H~)I < [-[ Ing~l~
+                                                                 k
+                                                         + i ~+ 1 .                                (A5)
+                                            _-__4(1        _)
+Choosing s = r + 1, we dominate the second factor in (A3) by c~. Finally
+                  _)
+            t(1 q_i~+27il= ~(kI~I(l + xk2 - c~z)S+2Hik(xk)) g(x) dx
+
+                           < c~ sup I(1 + xZ) "/2 ~ (1 + x z - O~y+Zg(x)l                          (A6)
+                                    x~p'4                       k= 1
+
+                           < c~           sup            t(t + xZ) "(~+~+2) D~-g(x)I < c~ }gt,,,
+                                    I~l < 2 ( s + 2)-n
+                                 Axioms for Euclidean Green's Functions II                          305
+
+w h e r e t = 2 s + 5 = 2 r + 7, a n d
+
+                   C~ = 15(1 "[- X2) -n/2 Hi_(X) dnx.I <[I~II2(S(1 + x2)-ndnx)~.
+
+S u b s t i t u t i n g (A5) a n d (A6) w e o b t a i n (A2).
+
+
+                                                  References
+ 1. Constantinescu, F., Thalheimer, W.: Euclidean Green's functions for Jaffe fields. Commun. math.
+    Phys. 38, 299--316 (1974)
+ 2. Epstein, H.: Some analytic properties of scattering amplitudes in quantum field theory. In:
+    Chretien, M., Deser, S. (Eds.): Brandeis lectures 1965, Vol. I. New York: Gordon and Breach 1966
+ 3. Fr6hlich, J.: Schwinger functions and their generating functionals. Helv. Phys. Acta 47, 265 (1974)
+ 4. Gelfand, I. M., Shilov, G. E,: Generalized functions, Vol. II, p. 227. New York and London: Academic
+    Press 1968
+ 5. Glaser,V. : The positivity condition in momentum space. In: Problems of theoretical physics.
+    Moscow: Nauka 1969
+ 6. Glaser, V.: On the equivalence of the Euclidean and Wightman formulations of field theory.
+    Commun. Math. Phys. 37, 257 (1974)
+ 7. Glimm, J., Jaffe, A. : A remark on the existence of (o44. Phys. Rev. Lett. 33, 4 4 0 4 4 1 (1974)
+ 8. Glimm, J., Jaffe, A., Spencer, T.: The Wightman axioms and particle structure in the P(~o)2
+    quantum field model. Ann. Math. 100, 585 (1974)
+ 9. H6rmander, L. : On the division of distributions by polynomials. Arkiv Mat. 3, 555 (1958)
+10. Mandelbrojt, S.: S6ries adh6rentes, r6gularisation des suites, applications. Paris: Gauthier-
+    Villars 1952
+11. Nelson, E.: Construction of quantum fields from Markoff fields. J. Funct. Anal. 12, 97 (1973)
+12. Osterwalder, K., Schrader, R. : Axioms for Euclidean Green's functions. Commun. math. Phys.
+    31, 83 (1973)
+13. Osterwalder, K. : Euclidean Green's functions and Wightman distributions. In: Velo, G., Wight-
+    man, A. S. (Eds.): Constructive quantum field theory, Lecture notes in physics. Berlin-Heidelberg-
+    New York: Springer 1973
+14. Schwartz, L.: Th6orie des distributions, p. 260. Paris: Hermann 1966
+15. Simon, B.: Positivity of the Hamiltonian semigroup and the construction of Euclidean region
+    fields. Helv. Phys. Acta 46, 686 (1973)
+16. Simon, B.: Private communication
+17. Simon, B. : Distributions and their hermite expansions. J. Math. Phys. 12, 140 (1971)
+18. Stein, M., Weiss, G.: Fourier analysis on Euclidean spaces, p. 38. Princeton University Press 1971
+19. Velo, G., Wightman, A. S. (Eds.): Constructive quantum field theory, Lecture notes in physics.
+    Berlin-Heidelberg-New York: Springer 1973
+20. Vladimirov, V. S. : Methods of the theory of functions of several complex variables. Cambridge
+    and London: MIT Press 1966
+21. Whitney, H.: Analytic extensions of differentiable functions defined in closed sets. Trans. Amer.
+    Math. Soc. 36, 63 (1934)
+
+Communicated by A. S. Wightman                             Konrad Osterwalder
+                                                           Jefferson Laboratory of Physics
+                                                           Harvard University
+                                                           Cambridge, Mass. 02138, USA
+
+                                                           Robert Schrader
+                                                           Institut ffir Theoretische Physik
+                                                           Freie Universit~tt Berlin
+                                                           D- 1000 Berlin
+

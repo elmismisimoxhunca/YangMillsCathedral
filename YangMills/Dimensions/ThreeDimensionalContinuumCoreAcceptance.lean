@@ -4,19 +4,10 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Sebastian Rodrigo
 -/
 
-import YangMills.Classical.CanonicalEuclideanMetric
-import YangMills.Classical.EuclideanAction
-import YangMills.Euclidean.SchwingerEuclideanCandidate
-import YangMills.Geometry.LieGroup
+import YangMills.Dimensions.ThreeDimensionalCheckerFoundation
 import YangMills.Minkowski.LocalObservableCovarianceCoverage
 import YangMills.Minkowski.PhysicalMassGapSupremum
-import YangMills.Minkowski.ScalarWightmanAxiomSurface
 import YangMills.Minkowski.StressEnergyTranslationWard
-import YangMills.Minkowski.WightmanJointTemperedCorrelators
-import YangMills.Minkowski.WightmanLocalObservableCoherence
-import YangMills.Minkowski.WightmanRelativeAnalyticCorrelators
-import YangMills.Observables.CurvatureSquaredInterpretation
-import YangMills.Reconstruction.StrictOrderedWickContinuation
 
 /-!
 # Three-dimensional current-strength continuum core acceptance
@@ -45,13 +36,6 @@ open scoped Manifold ContDiff
 universe uEG uEP uHP uGauge uP uLift uH uLabel
 
 noncomputable section
-
-/-- Exact classical coordinate base for the three-dimensional core. -/
-abbrev ThreeDimensionalEuclideanBase := EuclideanDimension.three.Spacetime
-
-/-- Self model for the exact three-dimensional Euclidean coordinate base. -/
-abbrev threeDimensionalEuclideanModel :=
-  modelWithCornersSelf ℝ ThreeDimensionalEuclideanBase
 
 variable
     {EG : Type uEG} [NormedAddCommGroup EG] [NormedSpace ℝ EG]

@@ -1,0 +1,1392 @@
+Commun. math. Phys. 31, 83-112 (1973)
+© by Springer-Verlag 1973
+
+
+
+
+            Axioms for Euclidean Green's Functions
+                      Konrad Osterwalder* and Robert Schrader**
+          Lyman Laboratory of Physics, Harvard University, Cambridge, Mass. USA
+
+                                          Received December 18, 1972
+
+
+    Abstract. We establish necessary and sufficient conditions for Euclidean Green's
+functions to define a unique Wightman field theory.
+
+
+
+                                                    Contents
+1. Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                             83
+2. Test Functions and Distributions . . . . . . . . . . . . . . . . . . . . .                                           85
+3. The Axioms, Main Theorems . . . . . . . . . . . . . . . . . . . . . . .                                              87
+4. Theorem E ~ R . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                              90
+   4.1. Construction of the Wightman Distributions . . . . . . . . . . . . . .                                          90
+   4.2. Lorentz Covariance and Spectrum Condition . . . . . . . . . . . . . .                                           94
+   4.3. Positivity . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                            94
+   4.4. Cluster Property . . . . . . . . . . . . . . . . . . . . . . . . . .                                            96
+   4.5. Locality . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                            97
+5. Theorem R ~ E . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                              97
+6. Arbitrary Spinor Fields . . . . . . . . . . . . . . . . . . . . . . . . .                                           !02
+7. Application . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                             105
+8. Technicalities . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                            105
+
+
+
+
+                                                 1. Introduction
+       I n a r e l a t i v i s t i c q u a n t u m field t h e o r y t h e i n d e f i n i t e m e t r i c o f
+M i n k o w s k i s p a c e c a u s e s m a n y p r o b l e m s w h i c h c o u l d be a v o i d e d by
+r e p l a c i n g the t i m e t by it or the e n e r g y E by iE, t h e r e b y p a s s i n g f r o m
+M i n k o w s k i s p a c e to E u c l i d e a n space. T h i s i d e a was first u s e d by D y s o n
+[31 in p e r t u r b a t i o n t h e o r y . H e c o n t i n u e d the F e y n m a n i n t e g r a n d s
+a n a l y t i c a l l y t o i m a g i n a r y e n e r g i e s in o r d e r to m o v e the p a t h s of i n t e g r a t i o n
+a w a y f r o m the m a s s shell s i n g u l a r i t i e s of the c a u s a l p r o p a g a t o r s .
+S c h w i n g e r [ 2 1 , 2 2 ] s t u d i e d the a n a l y t i c c o n t i n u a t i o n of t i m e o r d e r e d
+
+       * Supported by the National Science Foundation under grant GP 31239X.
+   ** Supported in part by the Air Force Office of Scientific Research, contract
+AF 44620-70-C-0030.
+84                      K: Osterwalderand R. Schrader:
+
+Green's functions to imaginary" times and their transformation properties
+under the Euclidean group. He determined the Euclidean Green's
+functions (Schwinger functions) as solutions of certain differential
+equations. In axiomatic field theory it followed from investigations by
+Wightman [28], by Hall and Wightman [10] and by Jost [13] that the
+Green's functions (Wightman distributions) are boundary values of
+functions (Wightman functions) which are analytic in the permuted
+extended tubes. The Euclidean Green's functions could then be defined
+as the restriction of the Wightman functions to points with imaginary
+time and real space components [20, 24]. Symanzik [24, 25] advocated
+a purely Euclidean approach to quantum field theory: he realized, that
+given a formal Lagrangian density, the construction of Euclidean Green's
+functions might be simpler than the direct construction of Wightman
+distributions. Postponing the problem of continuing back to real time
+he studied the Euclidean Green's functions for models with boson
+self-interaction and established a useful connection to classical statistical
+mechanics. An abstract formulation was introduced by Nelson [15, 17].
+He described Euclidean boson quantum field theory as a Markoff
+process: the Euclidean fields are random variables and the Green's
+functions are expectations of products of random variables. Starting
+from a Euclidean Markoff field, which in addition satisfies certain
+regularity conditions, Nelson reconstructed a relativistic quantum field
+theory obeying the Wightman axioms.
+    In this paper we give necessary and sufficient conditions under which
+Euclidean Green's functions have analytic continuations whose boundary
+values define a unique set of Wightman distributions. These conditions
+are
+     (E0) Temperedness,
+     (E 1) Euclidean covariance,
+     (E2) Positivity,
+     (E3) Symmet{y,
+     (E 4) Cluster property.
+Surprisingly, Wightman's spectrum condition is a consequence of
+(E 0), (E 1) and (E 2). Using (E 2) we construct a Hilbert space 5U. By (E 1)
+there exists a semigroup T', t > 0, on J~, whose matrix elements by (E0)
+grow at most polynomialty as t goes to infinity. Hence T ~is a contraction
+semigroup and T ~= e-~H, where H > 0. This gives the spectrum condition.
+Furthermore T ~,R e v > 0 , defines a holomorphic semigroup which we
+use to construct the analytic continuation of the Euclidean Green's
+functions and the Wightman distributions. All the Wightman axioms
+follow easily. The Hilbert space S turns out to be the Hilbert space of
+Wightman's reconstruction theorem. The following chart connecting
+                      Axioms for Euclidean Green's Functions                         85
+
+the Euclidean axioms and the relativistic (Wightman) axioms gives the
+main theorem of this paper.
+
+                  Euclidean                            Relativistic
+                  Temperedness~                     [-Temper~dness-
+
+                 iCovariance || ,
+                  Positivity j
+
+                  [ ] + Symmetry . . . . . .
+                                                    jCovariance
+                                                    ]Positivity
+                                                    [_Spectrum
+                                                     [ ] + Locality
+                  [ ] + Cluster  *                , [ ] + Cluster
+
+
+    Some of our methods have been inspired by Nelson's work [16].
+Properties (E1),(E3) and (E4) are obvious "continuations" of the
+Wightman axioms and have been known for a long time, [21, 24].
+Symanzik [25] has introduced a positivity condition which is different
+from (E2). His condition is necessary for the existence of Euclidean
+field operators. It is probably true only for a restricted class of models
+and does not necessarily allow a reconstruction of the Wightman theory.
+    Our paper is organized as follows. In Chapter 2 we introduce some
+test function spaces and their duals. In Chapter 3 we formulate the
+axioms for Euclidean Green's functions and state our main theorems,
+which we prove in Chapters 4 and 5. Chapters 3-5 deal only with a
+single hermitean scalar field. The generalization to arbitrary spinor fields
+is given in Chapter6. In Chapter 7 we make some remarks about
+possible applications of our results to constructive field theory. In
+Chapter 8 we give the proofs of some previously used technical lemmas.
+
+
+
+
+                     2. Test Functions and Distributions
+    In this chapter we introduce some test function spaces and their
+dual spaces. They are all related to Schwartz's space .Y.
+    We use the notation x for a point in IR4 whose coordinates in a
+fixed frame of reference are given by (x °, x l, x 2, x 3) = (x °, __x). We call
+the direction of e 0 = (1,_0) "time direction", all directions orthogonal to
+                                                                          3
+e o are "space directions". The scalar product x - y = x ° y ° - ~ xky k
+                                                                               k=l
+= x ° y ° -_x 2 is always the Minkowski inner product. We also use the
+standard notation
+
+          D ~ = (~xO)~l... (0x3)~4,' ,         where     ~ = (~1, c~2, ..- e4,),
+86                          K. Osterwalder and R. Schrader:
+
+ak>O, la] = Zc~k. For f ~ 50(IR4") we define the Y-norm If Ira by
+                     If Ira= sup 1(1 + JxJZ)"/zf(~)(xl .... x,)l,
+                            xi ~ IR4
+                            Lc~l~m
+where ]xl 2 = ~ (y~)2 and f(~) = D~Z.
+               i,k
+    Let °Se(1R4")be the space of test functions f ~ 5P(IR4") with the property
+that f ( x 1 . . . . x,) together with all its partial derivatives f(~)(x I .... x,)
+vanish if x i = x) for some 1 < i < j < n. o y (1R4,) equipped with the induced
+topology of 5~(IR4") is a closed subspace of,Y(R4"). We also define closed
+subspaces of °5~(IR4") by 5Pst(IR4")={fESf(lR4");f(~)(x 1.... x.)=O for
+all c~ unless s < x ° < x2° <-.- < x ° < t},
+                             ~ + (jR4 n) = ~ 0 co (1R4 n),
+
+                             j < (~4.) = y _ co co ( ~ 4 . ) ,
+all with the induced topology of Y(IR4").
+     We define 5~(IR+)CSP(IR) to be the space of the functions f ~ 5#(IR)
+with s u p p f C IR+ = [0, ~). By 5P(IR4+)we denote the completed topologi-
+cal tensor product 5P(IR+) (~ 5P(IR3); i.e. f ~ 5e (IR4+) if f ~ 5P(IR4) and
+s u p p f C {x; x ° > 0}. We also define 5P(ItC) = {f sZP(IR); s u p p f C {x:x =<0}}.
+     Finally we introduce the topological quotient space 5e(lR+)
+= 5P(1R)/5~(IR_), see e.g. [19], Chapter V. Let f be an element in 5P(IR),
+then the equivalence class { f + 5~(IR_)}, denoted by f+, is an element in
+5P(IR)/5~(IR_). We think of f+ as being the restriction f(x)IlR+ of f(x)
+to the right half line 1R+. Because 5P(1R) is a Frechet space and ,~(IR_)
+is a closed subspace, 5P(N+) is again a Frechet space and thus complete,
+[19], Chapter VI, Proposition 13. The topology of 5P(N+) is given by
+the denumerable set of seminorms
+                             If+l;,=           inf     If+g1,,.                 (2.1)
+                                           0~,9'(~-)
+The seminorms (2.1) are not very convenient for actual calculations,
+but by Lemma 8.1 they can always be replaced by the equivalent set
+of seminorms
+                   If+ I~ = sup (1 + x2)m/2 If(~)(x)l.          (2.2)
+                                       x__>O
+
+The space 5~(N+) is isomorphic to the space of all functions defined on
+[0, m) that are infinitely differentiable (right derivatives at x = 0) and
+of fast decrease at infinity, if we equip this space with the topology defined
+by the seminorms (2.2). Without danger of confusion we may simply
+identify this space with 5P(~+). An element in the dual space 5P'(N+) is a
+distribution in cJ'(IR) with support in 1R+ = [0, Go). We also define
+5P(~d+) as the completed topological tensor product cJ(~,+)@SP(1R3).
+An element f+ e j(~4+) is thus the restriction of some f e 5~(IR4) to
+                        Axioms for Euclidean Green's Functions                         87
+
+1R+ x IR3. Let ~ , be one of the test function spaces introduced above.
+Then we denote by @ . ~ . the n fold completed topological tensor
+product of 30.. We abbreviate @.SP(IR4+) by Y(IR4+TM) and ® . ~ ( N ~ ) by
+j(~4+-.). All the spaces introduced here are nuclear spaces, [5] I, § 3.6.
+Thus e.g. any continuous bilinear functional T on ~ ( N + ) x ~ ( I R 3)
+defines a unique distribution in y,(~4+), etc,
+    We also introduce the spaces _Y, _~+, S < and _J(-N4+'). An element f
+in _Y(d<+, _~(N~/))is a sequence f = { f o , f l , f ~ , . . - } with f0 ~ (1],f ~ Y(1R~")
+(Sp<+ (IR4.), ~(~4+..)), n = 1, 2 ..... and all but finitely many fn's are equal
+to zero. We equip the spaces 0y, d + , _2/'< and d(N4+ ") with the direct
+sum topologies induced by the topologies of S~(IR4"), ,c/+ (IR4"), ~ < (1R4")
+and J(~3+'") respectively, and we write J = @~(IR4"), etc. These
+                                                              tt
+topologies have the property that a linear map t from d (_~<+,S(N4+))
+into a convex space ~ is continuous if and only if It o j,] is a continuous
+map from SP(1R4") (Y<+(IR4"), ~(IP.~' ")) into ~-, for n = 0, 1, 2 .... We have
+denoted by J. the natural injection of Se(1R4") (~+<(1R4n),~ 4 - . ) )              into
+_J(_~<+, Z(N~)). See [1.9], Chapter V, § 6, and also [1], appendix.
+      On f f we define involutions
+                f~f*           by     f*(_x 1.... x.) = f.(x ..... ~1),
+and
+            f ~ Of        by        (Of). (~ .... Xn) = f.(~X~ .... 9X.),
+where ,~x=(-x°,_x) and            means complex conjugation. Following
+[1-1 for f , 9 ~_~, we define f x g ~ _ ~ by
+
+                               (f xa_),= ~ f,,-~×~.
+                                            ~:o
+
+In particular for f,_q e _~+, we find that (O j*)x_q e_~<.
+    Finally we introduce some notational conventions. If f is in some
+space ~ , and T is in the dual space ~ . of A". then we use both T ( f )
+and ~ T ( ~ .... x..)f(x.~ .... x..) d4"x to denote the value of T in f.
+    Let f ~ ~(IR4"), R e SO~, a e IR~ and let = an element in P., the group
+of permutations of n objects (the letter 6 . will be used elsewhere). Then
+we define f(..,m and f~ by f<~,m(_x~.... x.) = f(Rx~ +.a .... Rx'.+a), and
+f~(_x~.... .x.)=f(_x~) .... _X~(n). Also we define f+(x~ .... x.) to be the
+restriction of f(x~ .... x.) to the subset {$~ .... _x.;x ° > 0 .... x°__>0} of
+IR~", and we sometimes write f+(x~ .... x.) as f(x~ .... x.)~{x ° >0}.
+
+                         3. The Axioms, Main Theorems
+   In this chapter we formulate the axioms for the Euclidean Green's
+functions { ~ . } . We also state our main theorems.
+88                               K. Osterwalder and R. Schrader:
+
+    We shall assume that { 6 .}.=o   09
+                                         is a sequence of distributions
+6.(~xl, ... x.) with the following properties (n = 1, 2 .... ):
+    EO: Distributions
+                                 6o-    1,    6 . e °SP'(IR4").
+     E 1 : Euclidean Invarianee
+           6 . ( f ) = 6.(f(a,g)), for all R ~ S04, a E IR4, f ~ °5~(IR4").
+
+     E 2: Positivity
+
+                   Y~ 6,+m(O f * × f~) >=O,            for all     fe_Se+.
+                  n, m
+
+
+     E 3 ' Symmetry
+     6.(f)= 6.(f~),              for all permutations     rceP.,       all   fe°5~(1R4").
+
+     E4: Cluster Property
+           lim ~ {6,+re(Of* x g,,(~a, 1)) - 6 , ( O f * ) 6,.(gin)} = 0,
+           J, --+ O0 I'l~m                     ~
+
+           for all           f,_g E _5°+ ,   a = (0,a),     aaIR 3 .
+For completeness we also list the axioms for the Wightman distributions
+{~13,},~o as they are given on p. 117 of 1-23]. The ~3 n are supposed to be
+distributions with the properties
+    R0: Temperedness,
+    R 1 : Relativistic invariance,
+    R2: Positivity,
+    R 3 : Local commutativity,
+    R4: Cluster property,
+    R 5: Spectral condition.
+    We do not list hermiticity as an extra condition, because we do not
+have to make a distinction between linear and nonlinear conditions.
+    The main results of this paper are the following theorems.
+    Theorem E ~ R . To a given sequence of Euclidean Green's functions
+satisfying E 0 - E 4 , there corresponds a unique sequence of V~ghtman
+distributions with the properties R 0 - R 5.
+    Theorem R ~ E . To a given sequence of Wightman distributions
+satisfying R 0 - R 5 , there corresponds a unique sequence of Euclidean
+Green's functions with the properties E 0 - E 4.
+
+                                             Remarks
+   1. The choice of °SP'(IR4n) as distribution space for the 6n is natural
+because it makes the correspondence between {6,} and {~3,} unique.
+                               Axioms for Euclidean Green's Functions                 89
+
+Indeed, two sequences { 6,} and { ~',} of Euclidean Green's functions with
+the properties that 6 , and ~', are in 5°'(IR4") and that 6 , - ~'n has support
+in {x 1.... G;~xi=~) for some l < = i < j < n } , lead to the same set of
+Wightman distributions. Equivalently we may say that the Wightman
+distributions tell us nothing about the Euclidean Green's functions
+in points of coinciding arguments.
+     2. Even if the properties (E 2) and (E4) seem to depend on the choice
+of the "time direction" fo in 1114,property (E 1) shows that this dependence
+is only spurious and that (E2) and (E4) have to hold for any choice of
+e o. We have chosen the non covariant formulation (E4) of the cluster
+property only for convenience. Without any change in our results we
+could replace (E 4) by the following covariant condition.
+
+    E4':         lim { ~ . + , . ( f x g(.ca,1))-- ~,,(f) ~m(g)} = 0 ,              (3.1)
+                ) . ---~ o O
+
+
+
+             for all f ~ °SPc(IR4"),              g ~ °Yc(lR4m),        a ~ IR4 .
+
+(°SPc(IR4") is the set of all elements in °5°(1R4") with compact support).
+    However there seems to be no covariant formulation of the positivity
+condition, because the "time inversion operator" O enters (E2) in a
+crucial way.
+    We remark that exponential vanishing of the expression on the
+left hand side of (3.1) is equivalent with a mass gap in the relativistic
+theory, see Ref. [9].
+     3. It follows from the proofs of our theorems that property (E0)
+could be replaced by the weaker - but non covariant - condition
+
+   E0':                                 6,, e 5P~ (IR4").
+    This condition becomes important if we want to prove the equiv-
+alence of subsets of the axioms, in particular if these subsets do not
+contain symmetry (E3) and locality (R3) respectively. More precisely
+our theorems remain true if we replace { E 0 - E 4 1 R 0 - R 5 } by either of
+    (a) {E0', E 1, E21R0, R 1, R2, R5},
+    (b) { E 0 - E 3 1 R 0 - R 3 , R5},
+    (c) {g0', g 1, g2, g 4 ] R 0 , R 1, e 2 , R4, e5}.
+    (See also chart on p. 85). This follows from Chapters 4 and 5.
+    4. Obviously the translation scheme E*-~R may be extended to the
+case where the theory has additional symmetry properties. In particular
+the symmetries P, C and T of the relativistic theory can be expressed
+as symmetry properties of the Euclidean Green's functions. The symmetry
+property of the Euclidean Green's functions corresponding to P C T
+is an immediate consequence of axioms (E 1) and (E 3). This is the well
+known P C T theorem.
+90                            K. Osterwalder and R. Schrader:
+
+                                   4. Theorem E ~ R
+      In this chapter we prove theorem E ~ R . Given a sequence of
+Euclidean Green's functions satisfying (E 0)-(E 4) we construct explicitly
+a sequence of Wightman distributions satisfying (R0)-(R5). The main
+steps in this construction are the following:
+      a) Using (E0) and (E2) we define a positive semi-definite form
+(.f,_,q) = ~ ~n+m(Of£* X gin) on ~ ÷ x_~+. After dividing out the vectors
+         n, m
+of norm zero we obtain a pre Hilbert space, whose completion we denote
+by J,(.
+     b) By (E0) and (El) there exists a one parameter semigroup
+{ T ~= e-tH}t> o of self-adjoint contractions on ~ , which can be extended
+to a holomorphic semigroup T ~, Re z > 0. With the help of this holo-
+morphic semigroup we show that the Euclidean Green's functions are
+the Fourier-Laplace transforms of distributions ~ , in 5 °' which have
+certain support properties. We define ~,,, the Fourier transforms of
+~ , , to be the Wightman distributions. (R0) follows immediately.
+     c) Euclidean invariance (E 1) of ~ , now implies relativistic invariance
+(R 1) of ~1~,, and the support properties of ~ , give the spectrum condi-
+tion (R 5).
+      d) Using positivity (E2) we prove positivity (R2), and we wilt show
+that the Hilbert space ~f, constructed at the beginning, is the Hilbert
+space of Wightman's reconstruction theorem.
+      e) Using the cluster property (E4) we prove the cluster property
+(R4) and
+      f) Using symmetry (E3) and a theorem in Ref. [12], p. 83, we show
+local commutativity (R 3).
+
+                4.1. Construction of the t4qghtman Distributions
+    Let { n},,=o be a sequence of distributions satisfying conditions
+(E0)-(E4). As a preliminary step of our construction we use (E0) and
+the translation invariance (E 1) of ~ , to conclude that there exists a
+unique sequence of distributions S,(~l .... {,) in 5O'(IR4"") such that for
+f(x.1 .... x.) e 9"< (IR4 "")
+           ~ , ( f ) = ~ f ( ~ q , . . , x,) S,_ l(xz - x~l,.., x, - x,_ 1) d4"x.
+In the sense of distributions this means
+~,(~q .... ~x,)--S,-l(Zc2-~xl .... ~ . - ~ x . - O ,       for x ° < x ° < . . . < x , . o   (4.1)
+The distributions S, are invariant under SO,, in a restricted sense:
+                           S n ( R ~ l , "'" R ~ n ) = Sn(~l, "'" ~n),                       (4.2)
+provided 4° > 0 and (R ~k)° > 0, k = 1.... n.
+                                Axioms for Euclidean Green's Functions                    91
+
+      Now we define on _50+ x d + a sesquilinear form by
+
+                                   (.f,_,q) = ~ ~ , , + , , ( O f * x gin)"            (4.3)
+                                                n,m
+
+
+This form is positive semidefinite due to (E 2), it is linear in _g, antilinear
+in f and it satisfies (f,_9)= (g,f), for all f,_g s U+. Denoting by Y the
+set of vectors in _~+ of norm zero, ~4/"= { f ~ ~ + ; II_f II~ = (_f,f) = 0}, we
+define W to be the Hilbert space completion of the quotient space
+J+/AC By v we denote the canonical injection of d + into f , . Then for
+f,q~Z+,
+                                         (v(f), v(g__))x- = ( f , g) ,                 (4.4)
+and the range of v, denoted by ~o is a dense subset of X . By (E0), v is a
+continuous map from _50+ onto ~o.
+   F o r f e _5,°+ and ,a = (0, a), we define Us(q)_f by
+                         (0s(q)_f)° ( ~ . . . . x,,) = L(,x~ - a . . . . ~ , -   a).
+By (E 1), for/,__9 a 50+,
+
+                                     if, (J,(q) g)= (O~(-a)_f ,~) ,
+and
+                                      (us(q) f , Us(q) 9.._)=( f , g) .
+Thus extension of
+                                         Us(q) v(_f)= v(Us(q)_f)                       (4.5)
+by continuity leads to a unitary representation Us(q) in • of the three
+dimensional translation group (translations in space directions).
+    For translations in the time direction the situation is different
+because the sesquilinear form (4.3) and hence the scalar product in Y
+involves a time inversion O. For t > 0 we define the map ~t from 5°+
+into itself by
+                 (~,t_f), (x 1.... x,) = f~(_xI - , t .... ,x, -_t), (4.6)
+where _t= (t,O). By (El) and definition (4.3), for f,g,~_~+ and t > 0 ,
+
+                                           i Z ~ " g )_ = ( T" y' , _g).               (4.7)
+
+Furthermore for s, t > 0 we have
+                                               p,p~= pt+s.
+By (4.1), we find that for f e _~+,
+
+       I(Z f ' 7 ) l =     oZ, SL(o~ ..... O~_l)L(yl, ... y,,)
+
+                         "" "Y,,, - Y,,- 1) d 4 " x d # ' Y                            (4.8)
+                         < P(t),
+92                             K. Osterwalder and R. Schrader:
+
+for some polynomial P(t), which depends on f . This follows from the
+facts that S,, + ,_ 1 is in ~,Cf"l'iD4(m+tLt,+n- 1)'i:,and that_f has only a finite number
+of nonvanishing components. We can improve inequality (4.8) by a
+repeated application of the Schwarz inequality and of (4.7) and (4.8).
+
+                       i(_f,           UII II~'fl]
+                                    --Ilfll (f,n-I
+
+                                                ]~ 2 - k
+                                       ll!ti
+                                               n-1
+                                                Z 2 -k
+                                    _<_Ilfll ,=o           (P(2"t)) 2-" ,
+
+for all n = 1, 2 .... Taking the limit as n-+oo we obtain
+                                    I(f, Ttf)l <=it_s il ~ .                        (4.9)
+It follows from (4.9) that ~t maps one equivalence class mod J onto
+another equivalence class rood J . Thus for t > 0
+                                                 = v( y)
+defines a continuous one paremater semigroup {7~}t>_o of operators
+on @o C Y and Tg is positive, symmetric and has norm smaller or
+equal to one. Therefore T~ has a self-adjoint extension, denoted by T',
+and {T t }t=>o is a weakly continuous one parameter semigroup of self-
+adjoint contractions on Jig. Let H be the infinitesimal generator of T t.
+It is a positive self-adjoint operator on X and we can define the one
+parameter group of unitary operators T ~ = e ~n, - oo < s < oo. This is the
+unitary representation of the time translation group and we set
+                      U(a) = T i : O~(_q),            a = (a °,_a) e IR4 .
+This defines a unitary representation of the four dimensional translation
+group in X .
+       The family T~= T~T i~, z = t + is, is a holomorphic semigroup for
+R e z = t > 0 , uniformly bounded and strongly continuous for Rez__>0.
+We can use this holomorphic semigroup to construct the analytic
+continuation of the Euclidean Green's functions.
+       Let f , , = (0 ..... fro, 0...) and 9 = (0 ..... g,, 0...) be vectors in _5Q. Then
+f , . ~ ~+tqR4m'),g,~ 5°+ (IR4") and Of*xg,~+~<(IR4("+")). Thus for t > 0
+fixed and h E 5:(IR), the mapping
+                  ( O f * x g,, h)-+ ~ (v(fm), T '+i'v (g,))~ h(s) ds              (4.10)
+defines a continuous linear functional on 5:<(IR4(m+"))QS:(IR), by the
+nuclear theorem. Moreover, for any _a~ tRa, a ° > 0,
+      (v(fm) ' T,+is(v,~Ou~(.q))v(en))~ = (T ,o Us(-_.a)v(f~), T'+i~v(g,))~. . .
+                                  Axioms           for Euclidean   Green's      Functions                                  93
+
+
+We conclude that the right hand side of (4.10) can be written as
+  [.(v(f,,), T t+i" v(g,)):~ h(s) ds
+          = .[ JT,,(~ x- ...... 0-xl) g,(Yl .... _y,,)h(s)                                                            (4.11)
+              S(m)
+                n + m - 1 t(v-
+                            ~ 2 - - ~l' "- ",Yl + ~t - x~ , , . . , y., -_Y.-1 Is) d4"xd4"y ds
+
+where ~,,+,,-1~1,~(m)
+                 ~ ... ~,,+,-lls) is a distribution in the dual space of
+Y(IR4+'(~n+n- t))@J(lR) and a continuous function of s when smeared in
+all the other variables. Furthermore
+               S(,-)
+                r n + n - - t L ~t~
+                                  l~    '''    L,+.-1 lO)= S,,+,-l(~l,
+                                               ~                   ~   - . . ~,,+.-1).
+                                                                             ~
+
+
+Now let hm(~,... ~ m - 1 , _ ~ m , ~ r n + l .... ~m+n-1) be an                                              element       in
+5~(IR4+'("-~))~)~_~(IR3)~)5°(1R 4'("-1)) and set for t > 0
+    S(m)(t = ~o, s I hm) = .[S(,,m)+,_ l ( ~1 .... Is) h,,(~ .... _~. . . . . ~,, +,-1)
+                                                                          d4~1 ....       d3~m ... d4~m+n_l .
+It follows from (4.11) that for fixed h,~, S(~)(t, slhm) is a distribution
+in the dual space of ~(1R+)@2P(IR) and satisfies the Cauchy-Rie-
+mann equation for t > 0, - co < s < co. Hence by Lemma 8.7 there is a
+distribution S(")(c~lh,, ) in 5P'(~,+) such that S (m) is the Fourier-
+Laplace transform of S("~. S(m)(t, s lh,~) = ~ e-~(t+i~S('~)(o~l h,,)dcq and
+S,(,-)+ n - l ~ l ~t~, . . (t,~,.),
+                              . . . .    ~,,+,-tts) is the analytic continuation of
+S~+~-t(~x,..-(t, Am), ... ~m+~-~) in the time component of the m-th
+variable. Lemma 8.8 shows that under these circumstances we can
+analytically continue Sm+,_~ simultaneously in the time components
+of all variables and that there exists a uniquely determined distribution
+ Wn(ql ....           q n ) in 5P'(N4+"') such that
+
+                                    ~ (¢OqO--~_~kqk)~-
+
+
+
+
+               S,({I,... ~,) = ~ e ~=~             Wn(ql .... q,,) da"q.                                              (4.12)
+Now we define the Wightman distributions ~3~ by
+                                              n-I
+                                       --i     Z (xk+~--_xk)qk      ~
+    ~]~n(~l ....     ~a)---ye                 k=~                  W n - t ( q 1. . . . q n _ l ) d 4 ( n - l ) q .   (4.13)
+
+According to the results of Chapter 2, [see the discussion following
+Eq. (2.2)] Id/,(ql .... q,,) is a distribution in 5e'(IR4") with support in
+{,ql .... ,q,;q ° > 0 .... q°>0}. In Section4.2 we prove that for A~Lr+,
+W,(Aq~ .... A q , ) = lYV,(cll .... q,). Hence the support of W, is in
+{q~ .... q , ; q _ ~ V + .... q , ~ V + } , where K~ is the forward light cone.
+This is the spectrum condition (R5). Temperedness (R0) follows from
+(4.13).
+94                              K. Osterwalder and R. Schrader:
+
+                4.2. Lorentz Covariance and Spectrum Condition
+    Translation invariance of 923n(x1.... x,) follows from definition (4.13).
+Thus relativistic invariance (R t) and also the spectrum condition (R5)
+follow if we can prove that for all A e L~+,
+                          W,(Aq~ .... A q,,)= W,(q~ .... q,),
+or equivalently if we can prove that for 0 < i < j < 3,
+                                   X~j ~/,,(q~ .... q,,) = 0,                          (4.t4)
+where X~j are the operators
+
+                          k=l        c~q~ +q~                   ,   j=1,2,3
+
+
+                 X~j= ~ (q~ c?__                   . ) _0_          1<i</=<3.
+                        k=l         0qJ -- qkJ ~3q~ '                =
+
+F r o m Eq. (4.2) we conclude that for 0 < i < j < 3,
+                                   Y~jS,(~ .... {,) = 0 ,                              (4.1 5)
+where
+
+
+
+On the other hand we get from Eq. (4.12)
+                                            n
+                                      --    ~, (~OkqO--i{kqk)
+            Yi~S,(~I .... {,)=S e ~=1                   -- XijlT¢,(ql,... qn) d4"q,    (4.16)
+for 1 _< i < j < 3, and
+      --                               _    ~   (~OqO--i~kqk)
+           YojS.(~I ..... ~,) = i.[ e ~=~                - " Xo~ITf,(ql .... q,) d4"q, (4.17)
+
+f o r j = 1, 2, 3. [ T o prove Eq. (4.16) we use the definitions of the Fourier
+transform and of the derivative of a distribution; to prove (4.17) we also
+need L e m m a 8.4.]
+       Eq. (4.14) is now a consequence of Eqs. (4. t 5 - 1 7 ) and of the uniqueness
+theorem for Laplace and Fourier transforms of distributions.
+
+
+
+                                           4.3. Positivity
+   In this section we prove the positivity condition (R2). We have to
+show that for a l l f e
+                             ~ . + . , ( f * x f,,)             (4.18)
+                                    n,m
+                              Axioms for EuclideanGreen's Functions                                    95
+
+is nonnegative. The idea of the proof is simple. We show that any element
+. f ~ y defines a vector u(f) in the Hilbert space •, constructed in
+Section 4.1, and that the norm of u(j) is given by (4.18). We also show
+that the set @1 = { u ( f ) ; f e Z } is dense in Y . Hence H is the Hilbert
+space of Wightman's reconstruction theorem.
+      For f ~ 50+ (IR4") we define f* ~ Y(IR~+") by
+                         ft(gl,   X2   --   ~1,   "'"    ~Xn - -   ~x.-t) = f(~xl .... x.).        (4..19)
+ Then f o r f ~ _ ~ + we define2gby                                "     oo .
+                                                            --     E   (~kqk--~kqk)
+             J~(ql .... qn)=Sf2(_~l .... ~_,)e ~=i                              - - d4"~I{q°>0}.   (4.20)
+    Lemma 4.1. The map f-+_f for f ~ 2~+ is a continuous map of ,_5/'+
+onto a dense subset £Y of d(N4+). The kernel of this map is {0}.
+   Proof. It suffices to show that for n = 1, 2 ..... f , , ~ f , is a continuous
+map of 50+ (tR4") onto a dense subset J + (IR4") of 5P(N4+"') and that the
+kernel of this map is {0}. The map f , , ~ f 2 , defined by (4.19) is an iso-
+morphism ofSQ (IR4") onto Y(IR4+' "), therefore the lemma follows if we can
+prove that f 2 ~ f , is a continuous map of 5~(tR~+") onto a dense subset
+J+(IR 4") of St(N4+"") with kernel {0}. But this is an easy consequence of
+Lemma 8.2 and the fact that the Fourier transform is a homomorphism
+of 5P(1R) onto itself.
+    In Section 4.t we have introduced a continuous map v from _SQ
+onto a dense subset ~o of .~4. By Lemma 4.1, the map w defined by
+                                  w('f)= v(f),                     for      fed+,                  (4.21)
+is a map from the dense subset _~+ of _j(~4+.) onto ~o C X . We want
+to show that w can be extended to a continuous map g, from all of
+_5~(N4+') onto a dense subset ~1 of f . This follows from
+         Lemma 4.2. The map w is continuous.
+         Proof. L e t f , g E_J+. Then, by (4.21) and by (4.3),
+                            (w(f), %0)). = (<f),
+                                                        = (f, ._q)                                 (4.22)
+                                                        = 2 ~n+m(6)fl* X fro)"
+                                                          n,m
+
+
+We rewrite the last expression of (4.22) in terms o f f , and gin- By (4.1)
+and (4.12) we find that this expression equals
+ Z Sf](Ox.,-0~.._~ ..... -a~a)g*m(~.+x,,,~.+, .... ~..+m-,)                                        (4.23)
+n . rn
+             n+m     1
+
+
+•        e     k=l                     +m-z(q.x .... q.,+m Od4("+"-~)q d4~"+" ~)~d4x..
+96                                K. Osterwalderand R. Schrader:
+
+Interchanging the order of integration in (4.23) we obtain
+                      Z t f . ( q . , q . - 1 .... q,)0m(qo,  ....
+                      ","                                                     (4.24)
+                       v~',+~_dq~, ... q,+~_Od4("+m-l~q.
+                              •
+
+
+
+
+For the space components ~,2,3 and @2,3 the change in the order of
+integration is justified by the definition of the Fourier transform of a
+distribution. For the time components 3° and qO we refer to Lemma 8.4.
+    By Lemma 4.1, f , and 0m are elements in Y(g.I~") and 5P(N4+"m)
+respectively, and thus f , ( q ..... ql) gm(qj,, --- q,+,,-1) is in 5P~4+" ~,+,,-1)).
+On the other hand 14),+,,_ 1 is a distribution in 5P'(IR~+'("+"-I)). This
+proves Lemma 4.2.
+    From Eq. (4.24) we conclude that for any h,_k e _~(~4+.)
+(N~), N~)):¢                                                                  (4.25)
+= Z ~ h,(q. ..... q l) k,,(q,,.., q,+m-O lZV,+m-l(ql .... q n+m-1) d4(n+m-1)q.
+        n~rtl
+
+
+           Now let f s _5e and define f by (f), = J~ and
+                                         n
+                                     -i 5" _qk¢.~
+                   J~(.q~.... q,)=~ e "=~ .(2(.~ .... ~.,) d4"~ I{q° > 0},    (4.26)
+where f,* is defined as in (4.19). Obviously f , is the restriction to {qO ~ 0}
+of a test function in 5P(IR4") and is therefore an element in 5~(IR4'").
+Furthermore the set { j ; f e _30} is equal to U(N~-'), Therefore we may
+define a map u : ~ ~ 3ff by
+                                    f -, u(f) = ~(_f) e ~{.                   (4.27)
+The range of u is ~ (= range of N), which is a dense subset of ~ .
+   Substituting (4.13) and (4,26) in (4.18) we find that f o r f ~ S ,
+          ~ff~,+~(f* x f,,)
+n, ?n
+
+= 2 ~L(qn .... q l ) L ( q ..... q n+m-1) I~/n+m-l(ql .... q.n+m-1) d'*(n+rn-')q
+        tl , ttl
+
+
+
+= (~v(_f), N(f))~ = (u(f), u(f)):¢,                                           (4.28)
+where the second Eq. in(4.28) follows from (4.25). From Eq.(4.28)
+we now get the positivity condition (R 2). The density of ~ in W implies
+that f is the Hilbert space of Wightman's reconstruction theorem [23].
+
+                                    4.4. Cluster Property
+   In this section we derive the cluster property (R4) from the cluster
+property (E4). Using (4.22) we rewrite (E4) in vector notation:
+                      lim (w(f), L~()~) w(_0))~= (w(_f), f2)~ ((2, w(_O))x,   (4.29)
+                          Axioms tot EuclideanGreen's Functions                     97
+
+forf,__gs~+. The vacuum vector f2 is defined to be v({1,0,0 .... }). By
+continuity (4.29) remains true if we replace w(Jx) and w(_~) by arbitrary
+vectors in af, in particular we find that for all _h,_k~
+
+                lim (u(_h.), G(;~_a) u(_k_))~ = (u(_h_),f2)~ (f2, u~))a r .     (4.30)
+                )~-* oo
+
+
+Eq. (4.30) is the cluster property (R4) in vector notation.
+
+
+                                       4.5. Locality
+  For R e z ° = 0 , Im__zk=0 and Zk--Zk, 4=0, if k4:k', we define the
+Wightman function by
+
+                      ~ n ( ~ .... ~n) = % ( ( i ? , Z O .... (iz°,zn)).
+Then ~I3,(zl ... z~) is symmetric in its arguments and has an L~+ invariant,
+single valued, symmetric analytic continuation into the domain
+S~={zl,...~z,l(Z~(k)--Z~(k_l))~%,k=l .... n, for some permutation
+~z(1), ... re(n) of 1.... n}. 3; is the forward tube {z; Imz ~ V+}. This follows
+easily from the symmetry property (E2) for the Euclidean Green's
+functions and Eqs.(4.1), (4.12) and (4.14). Using the Bargmann Halt
+Wightman theorem, [113], we conclude that ~[B,(z1.... zn) allows even a
+single valued, symmetric L_~((12) invariant analytic continuation into
+the domain $nP -         ~     AS~. Now we use a theorem in Ref. [12] (p. 83,
+                      AsL+ (C)
+second theorem) to conclude that the boundary distributions 2B~(xl, ... x,)
+of 2B,(z 1.... Zn) satisfy the locality condition (R3).
+
+
+
+                                   5. Theorem R - , E
+    In this chapter we start from a relativistic field theory given by a
+sequence {~93n}~_o of Wightman distributions, satisfying axioms
+(R0)-(R 5), and we construct a sequence {~}~=o of Euclidean Green's
+functions with the properties (E0)-(E4).
+    It is well known that the Wightman distribution ~3n is the boundary
+value of the Wightman function ~13n(z1..... zn) which is analytic, single
+valued, symmetric and iL÷(C) invariant for (z 1..... zn) 6 S~, see [12],
+p. 83. $~ contains the set
+        E°={(ga .... z~):Im(~zk--Zk_l)~V+                  forall     l<k<n},
+and it is invariant under permutations of (~1 .... Zn). Hence it contains
+the set 6°n= {(z1.... z,) : Re z° = 0, Im_zk = 0, zk 4: Zk' for all 1 < k < k' < n}.
+Points in C, are called Euclidean points. The restriction of the Wightman
+98                             K. Osterwalder and R. Schrader:
+
+functions to Euclidean points defines the Euclidean Green's functions.
+We set Co = ~Bo = 1 and
+
+                 ~,(x 1.... x,) = ~ , ( ( - i x ° , x 0 ..... ( - i x ° , x , ) ) ,   (5.1)
+
+for (x 1.... x,,) ~ ~,, - {x 1 ... x n ; x~ ~ x j for all 1 < i < j __<n}.
+     The ~n, n = 0, 1..... are the Euclidean Green's functions and we have
+to verify that they have the properties (E0)-(E4). By (5.1), ~n(xl, ... G)
+is an analytic function, invariant under permutations of the arguments
+xl .... G, which is (E3). It is invariant under translations, because ~ ,
+is. It is furthermore invariant under the action of the subgroup of those
+elements in L+((E) which map Euclidean points in Euclidean points.
+But this subgroup of L+ (112)is just the group of Euclidean rotations. This
+proves (E 1).
+     Now we prove (E0). Obviously the linear space °~(lR4") of all func-
+tions in 5:(IR4~) with compact support in f2n is dense in °~(IR4"), and
+~,(~xl .... G) is a continuous, uniformly bounded function on any
+compact subset of (2n. Hence the Riemannian integral
+                    ~ , ( f ) = S ~ , ( x l .... G) f(x~ .... x,,) d4nx               (5.2)
+defines a linear functional on °5:~OR4% which is symmetric under permuta-
+tions of the arguments x~, ... G and invariant under i S O 4. (Note that
+(;~,... G)--+(RXl+a .... R ~ , + q ) , R e S 0 4 , qeIR4, maps a compact
+set K in f2, onto another compact set K' in ~,.)
+   Proposition 5.1. For n = 1, 2..... there exists a constant c and a number
+m such that for all f e °5:~(1R4")
+                                       1~,(/)[ < clf],,.                              (5.3)
+Postponing the proof of the proposition, we use it together with the
+density of °~(IR4") in °5:(IR4") to extend ~ , to a distribution in °5:'(1R4"),
+proving (E0). By continuity this distribution, again denoted by ~,, has
+the invariance property (E 1) and the symmetry property (E 3). Positivity
+(E 2) follows from the arguments given in Section 4.3. Let f ~ _5:+. Then
+according to (4.22) and (4.24)
+
+       ~n+m(O f * x f~)                                                               (5.4)
+n,m
+
+= Z S?,(q~..... q x)f~(q,,.., q,+,,_~)17V,+,,_~(q~ .... q,+,n_t)d4("+~-~)q.
+      n,m
+
+
+Axiom (R 2) implies that (5.4) is nonnegative because for f s _5:+, f , is in
+5:(1R4+"") and can therefore be interpreted as the restriction to {qO > 0} of
+some function 9,(~ql .... q,) in 5:(IR4"). The cluster property (E4) follows
+from (R4) by the arguments of Section 4.4: (R4) implies that
+                            A x i o m s for Euclidean Green's F u n c t i o n s                           99
+
+
+lim [-(F, Us(2a ) G) - (F, £2) (f2, G)] = 0                 for     all    F, G ~ J~f, and              this
+2--~"oo
+implies (E 4).
+   N o w we return to Proposition 5.1. Its proof has a geometrical and an
+analytical part. Let us do geometry first.
+      L e m m a 5.2. For n = 2, 3, ... there exist N = N(n) < c~ unit vectors
+e x .... eu in IR¢ and a constant A > 0, dependin 9 on n, such that for all
+(xl .... x . ) e 0,,
+                     max min [(ek, ~Xi-- Xj)[ > Ae(~x~, ... ~,)- 1,      (5.5)
+                        k        i<j
+
+where ( , )     is the Euclidean scalar product, and
+
+
+
+
+    Proof. Pick N > 3 . 2 - 1 n ( n - 1) vectors e~ .... e N such that any four
+of them span IR¢. N o w take (x I .... x,) e .c2, and define 2-1 n(n - 1) unit
+vectors
+                              x~ - xj
+                     f i j - l~q x jl,      l<=i<j<=n.
+
+Then each of the vectors f~j is orthogonal to at most 3 vectors e,, e,, et,
+and because of the choice of N, (eM, f ~ ) 4 : 0 for at least one
+M ~ { I, 2 .... N} and all f/~, i.e.
+
+           h ( f ) = max m!nl<ek,fij)[ > 0              for all      f = { f i e .... . f , - 1 , } .
+                    k       ~j
+
+As (Xl,... x,) varies over f2,, f varies over the 2 - 1 n ( n - 1) fold tensor
+product of the unit sphere in IR4, which is a compact set, and we have
+h ( f ) > 0. Thus there is a constant A > 0 such that h ( f ) > A, for all f,
+i.e. for all (~1 . . . . *~n) @ ~'~n
+                                 rnkax m!n ( e k, ~xl--.xj]) _>A.
+                                        ~ \       [xi -      -
+
+Using the inequality ~(x 1 ... x,) > ixi - xjl- t for all 1 < i < j < n, we
+prove (5.5).
+    We choose N unit vectors as in L e m m a 5.3. These vectors remain
+fixed for the remainder of the proof. Then we define N . n ! open subsets
+of O,, by
+          £2k~={(x 1.... X,);(fk, X~(j+I)--X~(~))>0                       for all      l<j<n},
+
+where rc is an element in the p e r m u t a t i o n group P, of n elements and
+k = 1.... N. The f2k~ obviously cover f2,.
+    F o r the analytic part of the proof of Proposition 5.1 we have to
+define a partition of unity on (2,: Let z ~ C~(IR) be such that 0 < z < _ 1
+100                           K. Osterwalder and R. Schrader:
+
+and z ( x ) = 0 for x < ½ ; ~(x)= 1, for x ~ l . Then we define 2k,>__0 on
+f2, by                     .-t
+       2k~(Xl .... X,)= l~ z ( A - l o ( x l .... x,) (ek,-x,(j+l)-- ~x=(i)>),
+                             j=l
+where A is as in (5.5). Obviously supp~k,~ C Ok~. From Lemma 5.2 we now
+conclude that for any (x 1. . . . x,) ~ f2, there exists k, u such that
+)~k~(~q ..-X,)= 1, and therefore
+
+                                   k,~
+on f2,. Now we can define
+          ~(k~(~X1. . . . ~,) = ~ku(~l, " " ~ , ) [ k , ~     ~ k ' n ' ( ~ l , " " ~,)t -1 ,   (5.6)
+
+and ;(k= is well defined and nonnegative on f2, ; ~ Zk, = 1 on O,, i.e. Zk=
+defines a partition of unity on f2,. For fE°Se~(IR4") we can now write
+
+                                   ~ . ( f ) = Y, ~.()~k.f),                                    (5.7)
+                                               k,g
+and for a proof of Proposition 5.1 it suffices to estimate a single term
+in the sum on the right hand side of (5.7). Using (5.2), and the symmetry
+and SO,, invariance of 6 . we write
+         e , ( Z k , f ) = S e,(X~l .... ~,) (Zk~f)(~Cl . . . . LC,)d4"x
+                                                                                                (5.8)
+                      = .[ ~.(_xl . . . . ~,,) ( z k . f ) ( ~0 , R ) ( -x 1, ... x.)d'"x,
+where u' is the inverse permutation of 7t and R e SO~ is chosen such that
+R-~ek is the unit vector in the time direction, i.e. R - l e k = ( 1 , ~ . As Zk,
+has its support in Ok~, (zkuf)(Q,R)      "   has its support in f2< ={x~. .. . x,;
+x ° + l - x ° > O , j = l .... n - l } , and is therefore in Sf<(lR4")c~°Se~(IR4").
+To finish the proof of Proposition 5.1 we need two more lemmas
+    Lemma 5.3. The restriction of ~,(~t .... x,) to f2< defines a distribu-
+tion in 6f.~(IR4").
+   Lemma 5.4. For all m 1 ~ 0 there exist constants c and m depending
+only on m~, such that
+                          I;~k,flm~ < clfl,~,
+for all k = 1.... N, u ~ P,, f ~°~f~(IR4").
+    We use Lemma 5.3 to show that there exist constants c and m~ such
+that (using 5.8)
+                         =          f)(0,R))l                    (5.9)
+                         = cl(zk~f)(o,R)t,~ = ClZk=flm~
+and Proposition 5.1 follows from (5.7), (5.9) and Lemma 5.4.
+                     Axioms for Euclidean Green's Functions                        101
+
+
+   Proof of Lemma 5.3: For (x 1.... x,) ~ f2< we can write
+
+                              n-1
+
+
+                    = .[e ~='               W . - l ( q l ... q.-1) d4('-t)q,
+
+where {k = _xk+i - x k and ¢o > 0 for (x 1.... x.) ~ (2<. It suffices to prove
+that S._1(~1 .... ~.-1) is in 5f'(IR4+"). By the nuclear theorem and the
+support properties of 14z,,_1(ql .... q.-1) we only need to show that for
+W(q) e 5f'(N+) and g~(q) = e-¢q(q >__0), the function S(¢) = W(g~) ~ (~ > O)
+defines a distribution in 5~'(IR+). But for ~ > 0
+
+                    IW(g¢)l < Cl tg¢t"
+
+                              < cl sup(1 + q)" ~ dq ~'
+                                                    T e_¢q
+                                    q>0
+
+
+                              _<_c2(1 + ~m) sup(1 + q)me-eq
+                                           q>-0
+
+                              < c3(1 -/- ~m) (1 + ~-m),
+
+for some constants c i and m. N o w let f 6 2P(IR+). Because f ( x ) vanishes
+together with all its derivatives f(~)(x) at x = 0 , we can write it as
+        Xn
+f ( x ) = - ~ . f(')(Yx) for any n __>0 and some y~, 0 < Yx < x. Then we find
+that for some constants c~
+
+
+o f(~) W(ge) d~ < c a o (1 + ~") (1 + ~-m)If(~)l d~
+                  _-<c 4 sup(1 + ~,~+2 + ~-m) If(¢)l
+                       ~>0
+
+                  < c 4 sup {(1 + ~" +2) [f(~)l} + sup        -~          (~)(y¢
+                       \~>0                          ~>0              •
+
+
+                  =<csIflm+2
+This proves the assertion and thus L e m m a 5.3.
+    Proof of Lemma 5.4. We use the following estimates on derivatives
+of Zk~ :
+                   ]Z~(~x1 .... ~Xn)[=< c~o(~xI .... x,) I~1
+
+                                           i<j
+
+Then the lemma follows from arguments similar to those given at the end
+of the p r o o f of L e m m a 5.3.
+102                                  K. Osterwalder and R. Schrader:
+
+                                    6. Arbitrary Spinor Fields
+    In this chapter we generalize the axioms (E0)-(E4) to include
+arbitrary spinor fields. We also show how to modify the arguments of
+Chapters 4 and 5 to prove theorems E - ~ R and R-~E in this general
+situation.
+    The Wightman distributions are given by
+                     ~f[~vk(X1 . . . .       Xn)~__- (~, ~ (k,) (x~) ....   ~ .(ko)(.,)~2).
+                                                                                    x               (6.1)
+Here ~')(x.i) stands for one of the finite number of fields that describe the
+theory, vi represents a set of dotted and undotted indices (~1 .... amk,,
+/~1.... fi,k,) and describes the spinor character of the field labeled by k i.
+Finally v stands for the set v 1.... v, and k stands for the set kj .... k,.
+    Let S(A, B) be a finite dimensional analytic representation of
+SL(2,(E)xSL(2,~), the universal covering group of L+(~). Then
+S(A, A) is a representation of SL(2, ¢), the universal covering group of
+U+, and all finite dimensional continuous representations of SL(2,~)
+may be obtained in this way. The transformation properties of the fields
+are given by
+                                                           (k,)l--
+ U({a, A}) ~p~')(x) U({a, A})-I = ~ S(k,)(A-1 .~- 1],a i l~,u      "
+                                                             ,, (/l(A, --
+                                                                       A)x + a)
+                                      #i
+a ~ IR4, A ~ SL(2, ~). U is a unitary representation of the inhomogeneous
+SL(2, rE) and S(k')(A, B) is a finite dimensional analytic representation of
+SL(2,C) x SL(2,~). Furthermore A(A, B) is given by A(A~-~z=A~B r
+                3
+where ~= ~ z"a ~ and z ~ C 4. For notational convenience we denote
+              #=0
+the adjoint fields ~v~')(x)* by ~k~)(~), where v* =(ili .... fl,k~, kl .... k~,).
+We have to require that S(k~)(A,B)~'=s(-k')(A,B)~i. Relativistic co-
+variance leads to
+(R1)   ~9~vk(X 1 . . . .    X,)=         ESk(A-1, A - l ~ # k ( A X l + a            .... Axn+a),
+                                         #
+
+for all A ~SL(2,~), Q~IR 4. Here A =A(A, A) and Sk(A, B) is a finite
+dimensional analytic representation of SL(2, ~ ) x SL(2, C). Again using
+formula (5.1) to define the Euclidean Green's function we find that the
+covariance axiom (E 1) becomes
+(El)   ~ k ( ~ l .... _x,)= E Sk(U -1, V-1)v~ ~uk(Rx1 -I- a .... Rx., + a.) ,
+                                         #
+
+for all  U, V~SU(2), a_elR4. Here R = R ( U , V) is defined by
+A(U, V)(-ix°,x_)=(-i(Rx)°,Rx) and is a homomorphism of SU(2)
+x SU(2)onto SO,,. Note that SU(2)xSU(2) is the universal covering
+group of SO,,. Hence Sk(U, V) defines a continuous finite dimensional
+                               Axioms for Euclidean Green's Functions                                       103
+
+
+(one or two valued) representation of SO,,. Axiom (E0) remains of course
+unchanged and its derivation from the Wightman axioms is as in
+Chapter 5. Axiom (E 3) becomes
+(E3)    ~ k ( ~ .... G) = a ~ff,(x-~(x).... _x~(,))
+for all permutations re. Here a = + 1 and ~=(v~(~) .... v~(,)),
+/¢ = (k~(1).... k~(,)), [14]. A reformulation of the nonlinear axioms (E2)
+and (E4) requires some modifications of the notation introduced in
+Chapter 2. In the following _50+ will denote the set of all finite sequences
+f = (fo, fl, f2 .... ) where fo ~ C and each f , is a sequence of elements
+f.,~k ~ 5Q(IR,,"), with vk as before. Also for 2;~ _~+ we redefine f * by
+                           (f'I~)n, vk(X I . . . . ~Xn)= f,, ~*k*(_X. . . . . .X0 ,                       (6.2)
+where v* = (v* .... v*) and k* = ( - k ..... - k 0. Furthermore for .a ~ IR,,
+we define f(~) by
+                       ( f ~ ) . , ~ ( . ~ .... _x,,)= L , , ~ ( . x ~ - . a .... _~.-.a).
+The remaining axioms can now be written as
+(E2)    Z ,~.kt(O(_f ).,~kxfm,.e)>0,                              forall         f~_J+.
+        n, m
+         vk
+
+
+
+
+(E4)    l i m Z {~.ke(O(f*)..~kX 9m, ue(X.,)
+                n, m
+                 vk
+                ue                                            -- ~ k ( O ( f * ) . ,   vk) ~ue(gm, u,)} = 0 ,
+        for all        f , _ g E y + , a = ( 0 , a),_a~IR 3.
+(E 2) and (E 4) follow from the Wightman axioms as in Chapter 5.
+    To reconstruct the Wightman distributions from a set of Euclidean
+Green's functions obeying (E0)-(E4) we proceed as in Chapter 4. The
+only step which has to be modified is the derivation of Lorentz co-
+variance of ~3~k from Euclidean covariance of ~ k - Given the Euclidean
+covariance of S~k(~l .... _~,- 1) = ~ k ( x l .... x,), _~i= xi+~ -- _x,, 4 ° > 0, we
+have to prove the Lorentz covariance of l~k(_ql .... G), where
+                                                   n
+                                              --   E   ({OqO--i~kqk)      ~
+
+               S~k(~_l.... ~_,)= ~ e k=~                                 W,k(q.l .... q,) d4"q.          (6.3)
+First we note that any element A in SL(2, C) can be written as A = UH,
+where U ~ S U(2) and H is positive. Hence it is sufficient to prove that
+~/*k(_q~.... .q,)= ~ Sk(U, U)u~#uk(A-I(U, U)q.~ .... A-~(U, U)q,),                                       (6.4)
+                          ,u
+
+and
+17V~k(q_~.... q,) = ~ S k(H, fI)"~ Wuk (A -~ (H, ffI) q.~.... A -1 (H, H) q,),                           (6.5)
+104                           K, Osterwalder and R. Schrader:
+
+for all U s SU(2) and all positive H. Eq. (6.4) follows immediately from
+(6.3) and (E 1) with V replaced by U, because A(U, U) leaves the zero
+component invariant. To prove Eq. (6.5) we consider the one parameter
+group H(q~)=Cosh---~ + Sinh---~ e . g of hermitian operators, where _e
+is a fixed unit vector in IR3 and - oo < q~< co. Then it suffices to show
+that for A(q~)= A(H(q~),/~(rp)), the expression
+ d
+do ~ Sk(H(qo)' r~(q~)~~V.k(A- ~(q~)q~.... A - ~(~)q,,)l~=o
+        (.
+= ~u dIt~do 8A~OSk(A,B)~ + d9
+                                      d&p OB,p (A,B)"~)                      V~/uk(qx.... q,)
+
+
+                             (A-lqi)"                      )ak(ql.... q.)                (6.6)
+vanishes.          +            do           8q~ ~o=o            -       -
+
+      Let V(q~)= cos ~ - + / s i n @_e.g be a one parameter group in SU(2)
+with e fixed, as above. Then Euclidean covariance of S~k implies that for
+R((p) = R(V((p), t V((p))
+      d
+O= ~      ~ Sk(V(~o),'V((p))~S~,k(R-I((p)~I .... R - l(~o){,)[e=o
+
+         ( dV~ 8Sk (A,B)~ + d~V~ 8Sk         )
+ =~         d o 8A~          dcp 8B~¢ (A, B)~                                 S#k(~l,... ~n)
+
+                              63c~
+
+
+From the definition of H(cp) and V(q)) we get
+
+                        dH~t~ ~=0               dV~
+                        de           = --i      d(p       ~o=o= ½(fff)~,
+and                                                                                      (6.8)
+                        d H ~ ~=o = - i         dtV~
+                         de                     de        e=o = ½('ga)~p "
+Furthermore
+
+             £     do         aq r         =-      E d q ° 0--~--             8
+             i,~                                    i       Oql +q]                 '
+and                                              1=<~=<3                                 (6.9)
+
+             i,a                      =0              i
+                                                 1<j=<3
+                       Axioms for Euclidean Green's Functions                         105
+
+Now we insert (6.8) and (6.9) in (6.6) and (6.7) respectively. Then the
+vanishing of(6.6) follows from (6.3) and (6.7) by the arguments of Section 3.
+
+
+                                   7. Application
+   By theorem E-~R, a relativistic quantum field theory model can be
+obtained by constructing a set of Euclidean Green's functions, satisfying
+(E0)-(E4). Formally the Euclidean Green's functions are given by
+    ~ n formal(.X1 . . . . ~Xn)= (~C'~E,A(1)(N1) ... A("}(~n)e-Vf2E)/(£2~, e-rg2e),
+where OE is the Euclidean no particle state, Ai(x,i) are free Euclidean
+fields and V is the Euclidean action, [21] and [18]. By introducing
+a volume cutoff h and an ultraviolet cutoff ~ we make ~n,h,~ well defined
+objects. We define ~n as the limit of ~n,h,~ as ~--+oo, and h ~ l . To
+complete the program we would have to show that this limit exists and
+has properties (E0)-(E4). Euclidean covariance (E 1) follows once the
+uniqueness of the limit is established. All the other axioms are expected
+to hold for the cutoff Green's functions, independently of ~ and h.
+Estimates are needed to prove this assertion for (E0) (distribution
+property) and (E4) (cluster property). For superrenormalizable models
+the necessary techniques have been developed by Glimm and Jaffe [7, 8]
+and by Dimock, Glimm and Spencer [9, 2]. On the other hand, for
+models involving boson-fermion interactions, (E 2) (symmetry) and (E 3)
+(positivity) are trivially satisfied for a large class of cutoffs. The symmetry
+property follows from the fact that free Euclidean bose and fermi fields
+commute, respectively anticommute, with or without ultraviolet cutoff.
+If there is no ultraviolet cutoff in time direction then positivity (E3)
+follows from the Feynman-Kac formula and the relation connecting the
+Euclidean action V with its adjoint, [18].
+
+
+                                 8. Technicalities
+   In this chapter we state and - where necessary - prove some technical
+lemmas, used in earlier chapters.
+   Lemma 8.1. (see p. 86). The se~ of seminorms on SP(N+)
+                         If+[~ = sup(1 + x2) m/2 ]f<~)(x)[,
+                                  x_->0
+
+m = 1,2 .... is equivalent to the set of seminorms lf+l'~.
+   Proof. Obviously for f s 2/~(IR),
+                        [f+[~=      inf   ]f+g[m>=lf+r~.
+106                           K. O s t e r w a l d e r a n d R. S c h r a d e r :
+
+
+Thus it remains to prove that for a given m we can find c and n such that
+for all f e 5e(IR),              !    ,   tl
+                                          If+lm<clLI..                                               (8.1)
+
+Let ~(m)(lR_) be the closure of Se(IR_) with respect to the [ [m-norm. Then
+                             If+ t~,=               inf            If + gl,,.                        (8.2)
+                                            g~Sf(m+     1)(g(_ )
+
+Let go(x) be a C °O function such that 0 _<_g0(x) < 1, go(x) = 0 for x < - 1,
+go(x) = 1 for x > - l-.
+                    2 N o w we define
+
+
+                      /o=o
+                      tO,      for        x>0.
+Certainly 9 ~ 6a(~+ 1)(1R-), and
+
+             If + g l ~ < s u p ( l + x2) ~/2 D ~ go(x) ~ f(~)(O
+                            x<O                                           et=O
+                            /l__<m
+
+                            + sup(1 + x2) ''/2 If(a)(x)l
+                               x>O
+                                ~_<m                                                                 (8.3)
+                        -----C 1 sup f(:)(0) + If+ h;,
+                                a<m+l
+
+
+                        _-__c l f + l ~ + l ,
+
+for some constants % and c, depending on go and m but not on f. Ineq.
+(8.t) follows from (8.2) and (8.3). Our proof of (8.3) is an adapted version
+of H6rmanders proof of Whitney's extension theorem see [27] and [11].
+      Lemma 8.2. Suppose g(x) ~ 5e(IR+) and define 0 by
+                            (#(q) = ~ e -qx 9(x) dx ~ {q ~ 0).
+Then 0 6 5P(~+) and !7--+0 is a continuous map of 5~(IR+) onto a dense
+subset J of 5f(N+). The kernel of this map is {0}.
+      Proof. The integral S e-qX 9(x) dx is uniformly convergent for q > 0,
+thus (1 +q)'~D~O(q)= ~ e -q* 1 +                               ( ( - x ) ' 9 ( x ) ) d x ~ {q_>_0}. In par-
+ticular (see (2.2))
+              101~,--<sup I(1 + q)m D ~0(q)J
+                      q>0
+                      ~_<m                                                                           (8.4)
+
+                      C 1 ] g l m + 2 sup 7 e-q~(1 + xZ)-a dx <:~ C219]m+ 2 ,
+                                      q~O O
+                      Axioms for Euclidean Green's Functions             107
+
+
+for some constants c t and c 2. Ineq. (8.4) proves that 0 e ~(~,+) and that
+the map g~O is continuous. In order to prove that the range 5~ of this
+map is dense in 5P(IR+) we take a distribution We Y'(N+) with the
+property that W(O)=0 for all g e 5P(IR+) and show that this implies
+W - 0 . As W is in Y'(~+) it is a distribution in 5~'(IR) with support in
+[0, oo) and its Fourier-Laplace transform .(e~qW(q) dq= W(z) is an
+analytic function in { z : I m z > 0 } . Now we need the following well
+known lemma.
+    Lemma 8.3 (I-26], p. 23). Suppose We Y'(IR) and supp WC [0, oo).
+Then
+                                 w=       Z                            (8.5)
+                                         e<M
+
+where #~(q) are measures of power increase with support in [0, oo).
+   Remark. We say a measure # is of power increase of order • if
+j" [d (x)l (1 + Ix[) < oo for some ~ > 0.
+     Using (8.5) and the definition of 0 we now can write for g e 5°(IR+)
+                    W(O) = •        .( (y e-qXx~g(x) dx)d#~(q).        (8.6)
+                             a<=M
+We claim that
+                      j"(~ [e-~Xx~ g(x)] dx) ]d#~(q)[< ~ ,             (8.7)
+thus by Fubini's theorem we can change the order of integration in (8.6)
+and obtain
+                    W(g) = Z        .( (,( e-qXD~ dlz~(q))g(x) dx
+                                     o                                 (8.8)
+                         :          (ix) a(x) dx,
+                             0
+
+and we suppose (8.8) to vanish for all geSe(IR+). As ff/(ix) is a real
+analytic function of x > 0, (8.8) implies that W(ix) = 0 for x > 0 and hence
+ !~(z) = 0 for Im z > 0. By the uniqueness of the Laplace-Fourier transform
+we conclude that the distribution W is identically zero, which proves the
+density of 5P in 5~(N+). The last statement of the lemma is obvious.
+It remains to prove Ineq. (8.7). Suppose #~ is of increase of order fi > 0.
+Then
+           (~ e-qXlx ~a(x)l dx) Id~(q)l
+            < sup((1 + q)~ J e-q~[x ~g(x)[ dx) ~ td/~(q)[ (t + q) e
+              q>O
+
+            < c 1 ~ (sup(1 +q)~e -q~) ]x~ff(x)ldx                      (8.9)
+                 o \q~o
+
+            --<c a ~ Ix -~+~ g(x)] dx <=c 3 sup(1 + x 2) x-~[g(x)[,
+                 O                             x>O
+108                      K. Osterwalder and R. Schrader:
+
+
+for some constants % ?,. Hence it suffices to show that sup lxko(x)l
+                                                                     x>_O
+is finite for any integer k. For nonnegative k this is trivial as g e 5°(1R+)•
+For negative k we use the fact that 9(x) vanishes with all its derivatives
+                                           x-k
+at x = 0 and can be written as 9(x) = ( _ k) ! 9(-k+ 1)(yx)' where y~ E [0, x).
+Hence
+               sup Ixk g(x)l = (lkl !)- 1 sup Ig(-k+ :)(Y~)I < o0.
+               x>_O                     x>0
+
+This proves inequality (8.7).
+   The first part of the following lemma is equivalent to Eq. (8.8).
+We leave out the proof of the second part.
+    Lemma 8.4 Suppose W e 9°'(IR) and supp W C [0, co) and denote by
+f~(q) the restriction of e -q~ to {q >=0}. Then W(~ f~(.) g(x) dx)
+                                                          d
+= ~g(x) W(f~(.))dx for all gs~(IR+). Furthermore ~           W(f~(.))
+
+
+
+    Remark. Lemmas 8.1-8.4 can immediately be generalized to the case
+of several variables.
+   Lemma 8.5 ([26], p. 31). Let T(t, s) be a distribution in the dual
+space of 3:(IR+)® ~(IR) and suppose that .for t > 0 its real and imaginary
+parts satisfy the Cauchy-Riemann conditions
+
+              --~-ReT=~t       ImT,     -~-ImT=-             Rer.
+
+Then T(t, s) = G(z), z = t + is, for some function G which is analytic in the
+open right half plane {z : Re z > 0}.
+   Lemma 8.6 ([26], p. 239). Let G(z) be a function, analytic in the open
+right half plane, satisfying the inequality
+
+                           IG(z)[---M(1 + [z[)p t -~ ,                      (8.1o)
+
+for some positive constants M, ~, fl and for t = R e z > 0 . Then G(z) is the
+Fourier-Laplace transform G(z)= ~ e-'~d(~)d~ of some distribution
+
+    Lemma 8.7 Let T(t, s) be as in Lemma 8.5. Then there is a distribution
+  e 5:'(N+), such that T is the Fourier-Laplace transform of G,
+        r(t,s)= le-~(~+is)~(~)d~=a(~) for                t>0, r=t+is.
+G(z) is hoIomorphic for Rez >0.
+                           Axioms for Euclidean Green's Functions                                109
+
+    Proof. By L e m m a 8.5, T(t, s)= G(z) for some function G which is
+analytic in the open right half plane. We prove that G('c) satisfies in-
+equality (8.10) for some positive constants M, a, ft. Then L e m m a 8.7
+follows from L e m m a 8.6. Let % = to + iso, to > 0. Then for all r e (0, to)
+                                            1 2~
+                            G(zo) = ~          ~ G(z o + re i~°)dq~ .
+                                                  o
+
+Let h(r) be a C ~° function with compact support in [¼, 43-] and suppose
+   h(r)r d r = 1. Then hto(r) = to 2 h(tolr) has its support in "]to                     3t°-]" and
+                                                                   4'               t_    4  A
+
+.I hto(r) r dr = 1. Furthermore by Fubini's theorem
+
+                G(zo)=@~hto(r)[i~G(zo+rei~°)dqo]rdr
+
+                       _     t      G(% + t + is)hto(]~ + s z) dt ds
+                            27c
+                          1
+                       = 2re "[ T(t, s) h,o(]/(t - to) 2 + (s - So)2) dt ds.
+
+Hence by the properties of T there is an 5P-norm I Im and a constant c,
+such that
+               16(%)1 _-<clh,o(]//(2'. - t0) 2 + ( . . . . So)Z)]m . (8.11)
+
+Inequality (8.10) follows from (8.11). This proves Lemma 8.7.
+   Lemma 8.8          Let S,,({ 1.... ~,0 be a distribution in 5~'(1R4+"), and set for
+m = 1, 2, ... n,
+          (m)     0
+        S~ (~m, fm)= ~S(~ 1 .... ~,,)fm(~l .... {,~-~,_~m, {,,+l "' ~,)
+                       d4~l .. d4~,,_1 d3~md4~m+t ... d4~n,
+
+.for Jm~SP(IR4"~"-I))~)5~_~,.(IR3)@~9°(IR4('~-")). Assume that for all fm
+and m = 1, 2 . . . n, S(y)(~ °, f,,) can be extended to a function S,*(m)(~,,fm)°
+which is analytic in {(o = ~o + .1r/m,  o 4,,o > 0} and that ~(,,) is the Fourier-
+Laplace transform of a distribution S.
+                                    ~("~(q,,,,
+                                          o fro)in 5P'(N+),
+                      ^(m) 0
+                      S.  (~m,f,.)= [_e - ~ O q O _~(rn)(aO
+                                                    . . _ . . , , . ,f, ~ d q O .
+Then S,(.~a .... {.) is the Fourier-Laplace tranfform of a distribution
+wo% "" 9) in y(Va~+°),
+                                             n
+
+                                          - X (~%g--i~_kq_k) ~
+                S,({~ .... {,) = ~ e ~='                         W,(q.,... q,) de"q.        (8.12)
+110                         K . O s t e r w a l d e r a n d R. S c h r a d e r :
+
+
+   Proof. We prove the lemma for n = 2; the proof for arbitrary n is
+then straightforward. Let f~ (_~, .~2)e ~(lR3) @ S~(IR~+)and h(~ °) e S~(IR+).
+Then
+            S2(h x f~)= ~ $2(~1, ~2) h(~°)fl(~_~, _~2)d ~ d4~2
+                                                                                     (8.13)
+                           = ~ h(¢ °) ([. e-¢%Os(~)(q]',f1) dq °)d¢ ° ,
+
+for some distribution S~t)(q°,fO ~ 5~'(~,+), according to the assumption
+of the Iemma. By Lemma 8.4 we can change the order of integration in
+(8.13) and obtain
+                   S:(hx f~) = [. h(qt)
+                                  ~ o $2~(1)(q~,fO
+                                              o    dq ° ,          (8.14)
+
+where h(qO)= y e-qO~Oh(~O) d~O ~{qO>0 } is an element in ~(~,+). By
+Lemma 8.2 the right hand side of (8.14) defines a bilinear continuous
+functional on ~(~, +) x (50 (IR3) ~) y (IR~+))and thus by the nuclear theorem
+a unique distribution Wi~ ~(ql,_~l,
+                              o      ~2) in the dual space of Y(N+)@ ~(tR 3)
+@S~(IR~+). Taking the Fourier transform with respect to _~, we obtain
+
+                   $2(~1,~2)=
+                         ~    ~,~-q?¢?+iql¢llZg)l,,
+                               ~        - -    2~,~1, ~:~2 !~d4q
+
+
+where W~(ql,~2) is now a distribution in the dual space of
+~(N4+) @ ~(IR4+). Now take f ( ~ ) 6 SP(IR4+),9(~0) e SP(IR+), h(!2) 6 b°(N3).
+Then j~q~)= f e-q°~?-i-q'-¢l f(,~) d4:1 ) {q0> 0} is in ~(N4+) and
+S2(f x 9 ~<h)= i;V~(fx 9 x h). According to the assumption of the
+lemma,
+          W~ 1~ ( f ~, ~ z0, h ) ~ f l ~ ( q.l ' ~2'-~2)
+                                                  o       ~     _ d 4 qld3¢2
+                                                         f(~qOh(~z)
+
+is a real analytic function in ~0 > 0 and it can be written as W~(j~ ~0, h)
+= ~.e-¢°q°~ 17~.21{2
+                  ~J, u2,"° h)dq ° for some distribution W~
+                                                         ~2 (f,- q2,
+                                                                  0 h) in SP'(1R+).
+As before we obtain
+                                         o [dE2[{
+                   Sz( f x 9 x h) = ~ 9(q2)         ~o h)dqO
+                                             2 '~3~ ~/2~
+                                                                                     (8.15)
+
+and the right hand side of (8.15) defines a bilinear continuous functional
+on S~(~d+)x SP(~,+)x 5P(IR3) and thus a distribution l,V~(ql,q~,_~2)in
+the dual space of ~(~4+)(~ ~(N+)~) ~(IR3). Taking the Fourier transform
+with respect to _~2 we finally obtain
+
+          $2( f x O x h)= [.f(q_l)O(q °) h(q2) [ / g 2 ( q l , q 2 ) d 4 q x d4q2,   (8.16)
+
+where ~l(q 1, _qz) is now a distribution in y(N4+.2), and h is the Fourier
+transform of h. Again by L e m m a 8.4 we obtain (8.12) from (8.16).
+                        Axioms for Euclidean Green's Functions                        111
+
+     Acknowledgements. We are extremely grateful to Prof. A. Jaffe for proposing this
+work and for calling our attention to the many advantages of a Euclidean approach to
+constructive quantum field theory. We also thank him for his permanent interest in our
+work and for many fruitful conversations. It is a pleasure to thank Prof. L. Ehrenpreis
+for a very helpful conversation.
+
+
+
+                                       References
+ t. Borchers, H.J.: On structure of the algebra of field operators. Nuovo Cimento 24,
+    214 (1962).
+ 2. Dimoek, J , Glimm, J.: Measures on the Schwartz distribution space and applications
+    to quantum field theory (to appear).
+ 3. Dyson, F.J.: The S matrix in quantum electrodynamics. Phys. Rev. 75, 1736 (t949).
+ 4. Feldman, L : A relativistic Feynman-Kac formula. Harvard preprint (1972).
+ 5. Gelfand, I.M., Shilov, G.E.: Generalized functions, Vol. 2. New York: AcademSc
+    Press 1964.
+ 6. Glimm, J., Jaffe, A. : Quantum field theory models, in the 1970 Les Houches lectures.
+    Dewitt, C , Stora, R. (Ed.). New York: Gordon and Breach Science Publishers 1971.
+ 7. Glimm, J., Jaffe, A.: Positivity of the ¢ ~ Hamiltonian, preprint 1972.
+ 8. Glimm, J., Jaffe, A. : The 2~0~quantum field theory without cutoffs IV. J. Math. Phys.
+    13, 1568 (1972).
+ 9. Glimm, J., Spencer, T.: The Wightman axioms and the mass gap for the @ go)2
+    quantum field theory, preprint (1972).
+10. Hall, D., Wightman, A. S.: A theorem on invariant analytic functions with applications
+    to relativistic quantum field theory. Mat.-Fys. Medd. Danske Vid. Setsk. 31, No. 5
+    (1951).
+11. H6rmander, L. : On the division of distributions by polynomials. Arkiv Mat. 3, 555
+    (1958).
+12. Jost, R.: The general theory of quantized fields. Amer. Math. Soc. Publ., Providence
+    R. I., 1965.
+13. Jost, R.: Eine Bemerkung zum CTP-Theorem. Helv. Phys. Acta 30, 409 (1957).
+14. Jost, R.: Das Pauli-Prinzip und die Lorentz-Gruppe. In: Theoretical physics in the
+    twentieth century, ed. Fierz, M., Weisskopf, V. New York: Interscience Publ. 1960.
+15. Nelson, E.: Quantum fields and Markoff fields. Amer. Math. Soc. Summer Institute
+    on PDE, held at Berkeley, 1971.
+t6. Nelson, E.: Construction of quantum fields from Markoff fietds, preprint (1972).
+17. Nelson, E.: The free Markoff field, preprint (1972).
+18. Osterwalder, K., Schrader, R. : Euclidean Fermi fields and a Feynman-Kac formula
+    for Boson-Fermion models, Helv. Phys. Acta, to appear, and Phys. Rev. Lett. 29, 1423
+     (1972).
+19. Robertson, A. P., Robertson, W. J. : Topological vector spaces. London and New York:
+    Cambridge Univ. Press 1964.
+20. Ruelle, D. : Connection between Wightman functions and Green functions in P-space.
+    Nuovo Cimento 19, 356 (I961).
+2t. Schwinger, J.: On the Euclidean structure of relativistic field theory. Proc. Natl.
+    Acad. Sci. U.S. 44, 956 (1958).
+22. Schwinger, J.: Euclidean quantum electrodynamics. Phys. Rev. 115, 721 (1959).
+23. Streater, R.F., Wightman, A.S.: PCT, spin and statistics and all that. New York:
+    Benjamin 1964.
+24. Symanzik, K.: Euclidean quantum field theory. I. Equations for a scalar model.
+    J. Math. Phys. 7, 510 (1966).
+t12     K. Osterwalder and R. Schrader: Axioms for Euclidean Green's Functions
+
+25. Symanzik, K. : Euclidean quantum field theory. In: Proceedings of the International
+    School of Physics "ENRICO FERMI", Varenna Course XLV, ed. Jost, R. New York:
+    Academic Press 1969.
+26. Vladimirov, V. S.: Methods of the theory of functions of several complex variables.
+    Cambridge and London: MIT Press I966.
+27. Whitney, H. : Analytic extensions of differentiable functions defined in closed sets.
+    Trans. Amer. Math. Soc, 36, 63 (1934).
+28. Wightman, A.S.: Quantum field theory and analytic functions of several complex
+    variables. J. Indian Math. Soc. 24, 625 (1960).
+
+                                          Konrad Osterwalder
+                                          Lyman Laboratory of Physics
+                                          Harvard University
+                                          Cambridge, Mass. 02138, USA
+

@@ -1,0 +1,8 @@
+{
+  "method": "POST",
+  "url": "https://api.mathpix.com/v3/pdf",
+  "file_field": "file",
+  "file_path": "/root/atiyah1978.pdf",
+  "file_sha256": "7076a56585fe2663829949eb63b623619a3946645789f27b2190fc481516d100",
+  "options_json": "{\"conversion_formats\": {\"tex.zip\": true}, \"math_inline_delimiters\": [\"$\", \"$\"], \"rm_spaces\": false}"
+}

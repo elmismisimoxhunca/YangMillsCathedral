@@ -1,0 +1,1769 @@
+           Matematisk-f'vsiske Meddelelse r
+                              udgivet a f
+
+   Det Kongelige Danske Videnskabernes Selska b
+                          Bind 31, no. 5
+        Mat . Fys. Medd . Dan . Vid . Seisk. 31, no . 5 (1957 )
+
+
+
+
+  A THEOREM ON INVARIAN T
+  ANALYTIC FUNCTIONS WIT H
+APPLICATIONS TO RELATIVISTI C
+   QUANTUM FIELD THEOR Y
+
+                                  BY
+
+
+
+             D . HALL and A . S . WIGHTMA N
+
+
+
+
+                        København 195 7
+             i kommission hos Ejnar Munksgaard
+                                      Synopsis .
+      The paper is in three parts of which the first two are mathematical . In th e
+first part, a detailed proof is given of a previously announced theorem : an analyti c
+function of n four vector variables invariant under the orthochronous Lorent z
+group is an analytic function of their scalar products . The second part is devote d
+to a preliminary study of the domain of analyticity of such invariant analyti c
+functions . The third part applies the preceding results to quantum field theory .
+It is shown that the vacuum expectation value (WO, ç ( xi) • • • (19(x n) Fo)           =
+F (n) (xi . . . . xn) where q) (x) is neutral scalar field, is an analytic function of th e
+real variables xj - x j + l , j = 1, . . . n-1 in a region where all these vectors ar e
+space-like. IL is shown that the values of F (n) for all values of its arguments ar e
+uniquely determined in terms of its values for space-like separations, and that ,
+for n = 2, 3, 4, F (fl) is determined from its values at points where all times ar e
+equal. These results are applied to prove generalizations of two theorems of R . HAAG.
+In effect, these theorems show that, to give different physical predictions, tw o
+theories of an interacting field which satisfies the canonical commutation relations
+must use inequivalent representations of the commutation relations .
+
+
+
+
+                                   Printed in Denmark .
+                             Bianco Lunos Bogtrykkeri A/S .
+                                      Introduction .
+
+  n a preceding paper s , the second-named author showed that the mai n
+I  content of a relativistic quantum theory of a scalar field, ç(x), is con-
+tained in the vacuum expectation values, F (n) , defined b y
+
+         F (n > (x s , . . . xn) _ ( T0 , T(x1) . . .   ( xn) T0), n = 1, 2, . . .
+where To is the vacuum state . It was shown there that, as a consequenc e
+of the transformation law of the field under space-time translations an d
+the absence of negative energy states, the .distributions F (n) are boundary
+values of analytic functions . The analysis of the structure of the P a ) wa s
+carried further, using a theorem, quoted there without proof, which ma y
+be stated roughly as follows : an analytic function of n four-vector variable s
+invariant under the orthrochronous Lorentz group is an analytic functio n
+of their scalar products .
+     The first part of the present paper is devoted to a proof of this theorem .
+Because the techniques introduced in the proof have further useful appli-
+cations in quantum field theory, we have given a detailed exposition .
+   The second part of the paper contains a preliminary study of the set ,
+Ti n , of symmetric n x n complex matrices, Z, defined by Zjk =zj -z k , j, k = 1 ,
+.     n, where z1 , . . . z n are complex four vectors of the for m
+with j and nj real and nj in the interior of the future light cone (this set o f
+      .   z n is called the tube) . According to the theorem proved in the firs t
+part of the paper, the set En is a domain of analyticity of the invarian t
+analytic function which has the physical F (n > as its boundary value whe n
+all ni --)- 0 . It is shown that there are points, zs, .        z n , on the boundar y
+of the tube which yield matrices, zi •zi , of scalar products lying in the interio r
+of I n . From this simple geometrical fact, it follows that an invariant functio n
+analytic in the tube cannot have an arbitrary invariant distribution a s
+boundary value . In fact, it turns out that the boundary value has to be a n
+analytic function of the real variables el • k , j, k= 1, . . . n in a certain domai n
+                                                                                 1*
+4                                                                                Nr . 5
+and that the analytic function is uniquely determined once its values ar e
+known in certain subdomains of the boundary of the tube .
+      In the third part of the paper, the results of the preceding sec-
+tions are applied to the vacuum expectation values of a scalar field . It i s
+shown that F (n) (x l , . . . x n ) is an analytic function of the real variable s
+( .xi -x5+i)(xk-xk+I),j,k=1, . . .n-1 when all xi - .x j+1 are space-like and lie
+in a certain region . It is further shown that the values of F( n > for all values o f
+its arguments are uniquely determined in terms of its values for space-lik e
+separation . For the cases n=2, 3, 4, an even stronger result is obtained :
+F(n) is determined everywhere from its values at points where all the time s
+(x i o), j= 1 . . . . n are equal . These results are applied to prove generalization s
+of two theorems of R . HAAG, which can be stated roughly as follows : First ,
+let there be given two theories of a field which transforms as a scalar unde r
+the rotations and translations of three space at a fixed time . Suppose tha t
+the canonical variables of the theories are unitary equivalent at that tim e
+via a unitary transformation V. Then, the representations of the Euclidea n
+group of the two theories are unitary equivalent via V . Second, if the tw o
+theories just described are, in addition, invariant under the inhomogeneou s
+Lorentz group and have no negative energy states and unique vacuum states ,
+then the vacuum expectation values (Po, 99(x1 ) . . . (p(x n )T) are identica l
+in the two theories for n= 1, 2, 3, 4 . The paper closes with a discussion o f
+the physical significance of this generalized Haag's theorem .
+      We want to emphasize that the main results of the paper, as far as th e
+structure of the F (n ) are concerned (its determination everywhere in term s
+of its values for space-like separated arguments), are valid in both local an d
+non-local field theory .
+      1 . An Invariant Analytic Function of Vectors is an Analyti c
+                           Function of Scalar Products .
+
+    The following theorem was stated without proof in I .
+
+Theorem I .
+    Let f be a complex valued function of n four-vector variables, z 3 =
+                                                                         $1- in 3 ,
+j= 1, . . . n, where and z) are real . Suppose f is analytic in the tube dc -
+                             3
+fined by
+                   co < 3iL < O0, j= 1, . . . n,  0, 1, 2, 3 ;
+              '7 3 in the future cone, i . e . 17 21 >0,7730 >0, j = 1, . . . n
+
+
+and invariant under the orthochronous homogeneous Lorentz group, L t :
+
+                     A z ,, . . . ,z n ) = f(Azl , . . . Az,,) for A e L t .              (1 )
+
+Then, f is a function of the scalar products z3 ï ze, j, k = l n . It is analyti c
+on the complex variety, Tt n , over which the scalar products vary when th e
+vectors z i , . . . zn vary over the tube .
+
+Outline of the Proof .
+    If a function is analytic in the tube and satisfies (1) for A e L t , the n
+(Lemma 1) it also satisfies (1) when A is an arbitrary complex Lorent z
+transformation, i . e ., a matrix A IL , ,u,v = 0, 1, 2, 3, whose elements are comple x
+numbers satisfying A TA =1, which mean s
+
+                                         3
+                                              Am' 1il"'v , _ g'v .                        (2)
+                                    Fa   =o
+
+We call the set of such matrices the complex Lorentz group, S? . Furthermore,
+if Az t , . . . Az n lies outside the future tube, (1) defines a single valued analyti c
+continuation of the function f originally given . We shall refer to the set o f
+points liz i , . . . Az n , for A r i, and z i , . . . z n in the tube, as the extended tube .
+G                                                                              Nr. 5
+
+   Next, (Lemma 2), we examine the sets of n vectors z 1 , . . . z n and      . . .
+which satisfy
+                     z?zk= j     j, k=1 . . . n .                                 (3 )
+
+If the n x n matrix of the scalar products has rank three or four, there exist s
+a complex Lorentz transformation A. such tha t
+
+                              Az,-C i   i=1, . . . n .
+
+If the rank is two or one, the connection between z i and            is more com -
+plicated :
+                               Az=-       a i w,
+
+where the a i , i= 1, . . . n are complex numbers and w is a vector of zer o
+length orthogonal to Az i and          i= 1, . . . n . For points at which the ran k
+is three or four, the invariance of an analytic function, f, of n vectors z 1 ,
+. . . z n , clearly implies the single valuedness of f regarded as a function o f
+the scalar products (3) . For points where the rank is two or one, a furthe r
+argument is necessary and is supplied . Thus, f is a single valued functio n
+everywhere on the variety, SJJi n defined by the scalar products zizx , j, k =1 ,
+. . . n . The points of i rt are labeled by the 1/2 n(n+1) scalar products . ,,
+can be regarded as an algebraic variety in the space of all complex n x n
+symmetric matrices . In fact, it turns out to be an open subset of the set o f
+all complex symmetric matrices of rank 4 and, as such, has dimensio n
+1 (n -1), 3 (n= 2), 4 n - 6 (n > 3) .
+      In order to be able to connect the continuity properties of invariant func-
+tions of vectors with their corresponding properties regarded as function s
+of scalar products, it is necessary to investigate the connection betwee n
+neighbourhoods of sets of vectors and neighbourhoods of their sets of scala r
+products (Lemma 3) . This connection is quite a simple one at points o f
+  Jt,, where the rank is three or four, but where it is two or one the situatio n
+is quite delicate, because the structure of the set of points in the space o f
+ the vectors which map into a given point of 9)4 is essentially more complicated .
+ Nevertheless, the proof of the continuity of f as a function on 7t,„ can be ,
+ and is, carried out .
+       To complete the proof of the theorem, it remains to show that f is analyti c
+ on 9X,1 . For n 4, analyticity is a perfectly straightforward notion becaus e
+   t1, is an open set in complex Euclidean 1 /2 n (n +1) space . However, for n > 5 ,
+ M t, is an open set on a 4 n- 6 dimensional algebraic variety and the notio n
+N r. 5                                                                                      7
+
+of analyticity requires some explanation . For a point P of R ,,(> 5) fo r
+which the rank is four, the tangent space to ~J2 n at P has dimension 4 n - 6 .
+(Recall that the tangent space to Mn at P is the linear manifold of the spac e
+of all complex symmetric matrices spanned by the tangent vectors to JJ 1
+at P.) Sufficiently small neighbourhoods of P on 9)4 can be put in analyti c
+one to one correspondence with sufficiently small neighbourhoods in th e
+tangent space . Near such points, f can be regarded as defined in a neighbour -
+hood of the origin in a complex (4 n - 6)-dimensional Euclidean space an d
+its analyticity defined in the well-known way . The points of ~J2 n , n > 5 ,
+where the rank is less than four are singular in the terminology of algebrai c
+geometry 2* . For them, the tangent vector space has dimension 1/2 n (n =1 )
+and neighbourhoods are not locally Euclidean . (The reader may find it helpfu l
+to think of the example of the light cone . In that case, the point where th e
+tips of the past and future cones touch is singular and its neighbourhood s
+are not locally Euclidean . However, it should be borne in mind that
+ the actual situation is much more complicated since singular points onl y
+ appear on M o for n> 5 and in the simplest case, n = 5, already form a variety
+ of 24 (real) dimensions .) Evidently, the above definition of analyticity doe s
+ not apply at such a point . It is not impossible to extend the notion of ana-
+ lyticity to apply there . In fact, one can do it in a number of different ways .
+ However, it can happen that physically important consequences of ordinar y
+ analyticity do not hold for "generalized analyticity" . In the following, w e
+ prove analyticity at, all points of Tt,, for n<4, analyticity at non-singula r
+ points for n> 5, and boundedness and continuity at singular points fo r
+ n > 5, and that is what is to be understood by "analytic on JJi n " in the state -
+ ment of the theorem . It actually is sufficient to guarantee analyticity in th e
+ sense of BOCHNER and MARTIN S
+      The proof of the analyticity is completed in four steps . First, differentia l
+ equations are derived which f satisfies by virtue of its invariance under L t
+ or (Lemma 4) . The scalar products z i . zp j=1, . . . n, considered a s
+ functions of the vectors z1 , . . . z n , satisfy these differential equations . Next,
+ it is shown that, in a neighbourhood of a point of 7Jt n at which the scala r
+ products span all solutions of the differential equations, f is expandable i n
+ a power series of appropriately chosen scalar products (Lemma 5) . Lemmas 6
+  and 7 then show that at every non-exceptional point the scalar product s
+ satisfy the conditions of Lemma 5 . Finally, to complete the proof, a theore m
+
+     * For n < 4, we shall refer to the points P of Tin at which the rank is less than maximu m
+ as exceptional although, for n C 4, they are not singular in the sense of algebraic geometry .
+8                                                                                Nr . 5
+
+on removable singularities is used to show that f is analytic even at th e
+exceptional points for n< 4 .
+
+
+Lemma I .
+    Let f(z 1 , . . . z n ) be analytic in the tube and invariant under the ortho-
+chronous real Lorentz group, L t . Then, fis also invariant under the comple x
+Lorentz group 2, as long as Az 1 , . . . Az,, is in the tube . When Az1 , . . . Az n
+lies out of the tube, the relation f (Az1 , . . . Azn ) = f (z 1 . . . z,,) defines a
+single valued analytic continuation of f to the extended tube .
+
+
+Proof .
+       Let z1 , . . . z,, he a fixed point of the tube . Then, for all A in a suitabl e
+neighbourhood of the identity in 2, Az i , . . . Az,, again lies in the tube . I n
+some sub-neighbourhood, N, we can introduce canonical coordinate s
+X1 1 , . .2 6 such that'
+       1. As A runs over N, 21 , . . . A6 vary over a neighbourhood N' of th e
+origin in the complex six-dimensional Euclidean space with (complex )
+coordinates 21, . . . 2 6 .
+       2. The subset of N, for which A eL f , is the subset of N' for which th e
+      . . . 26 are real .
+       3. The matrix elements At`, (and therefore the vector components Y
+Ai',, z"') are analytic functions of 1 i , . . . 26 .                              '  o
+       Since an analytic function of analytic functions is again analytic, f (Az 1 ,
+. . . Az n ) is an analytic function of 2 1 , . . 26 in N' . Furthermore it has th e
+property that for real 2 1 , . . .2 6 it is constant . Therefore it is also constan t
+for complex 2 1 , . . . 26 in N ' ° .
+       Thus, for AeNc , equation (1) is satisfied .
+       This result can be extended immediately in two ways . First, the argument
+applies when A runs over the neighbourhood Is.N of the space inversion ,
+A=Is . Second, (1) also holds if Az 1 , . . . Az,, can be connected to z1 , . . z n
+by a curve
+               11(t)z i , . . .A(t)z,, ; O<t<1 ; A(0)=1 ; A(1)=A ,
+
+lying entirely within the tube and such that it can be covered by a finit e
+number of overlapping neighbourhoods :A.(t .1)Nzi, . . . A(t~)Nz n , lying withi n
+the tube .
+   However, this last argument by no means completes the proof of (1) ,
+because it is not clear that all pairs of points z 1 , . . . z,, and Az i , . . .11.zn ,
+Nr .5                                                                                          9
+
+each of which is in the tube, can be connected by a curve of the sort describe d
+above . (If A is improper, it is 18 z l , . . . Is z n and 112 1 ,           . Azn , which have
+to be connected by the curve . For simplicity of statement, we consider onl y
+proper A in the rest of this proof . The extension to improper A is trivial) .
+We shall give an explicit construction of such a curve at the end of th e
+proof of this Lemma . Assuming the construction for the present, we hav e
+completed the proof of the first statement of the Lemma .
+     The existence of curves of the above described type is closely connecte d
+with the possibility of making a single valued analytic continuation o f
+f(zl , . . . z n ) to the extended tube . For, starting from a fixed point z l , . . . . zn
+of the tube, we can extend the analytic function f(Az 1 , . . . Azn ) of A ove r
+the whole complex Lorentz group, 2 . (It is the simplest possible analyti c
+ function on 2, a constant .) f is then defined for points 11zî, . . . Azn of th e
+extended tube . Starting from a different point zi                       z ;t of the tube, f ca n
+be defined for the points Mzi, . . . Mzn , Me 2 . If it happens that for som e
+A and M, Azi = Mzß, j =l, . . .n, the single valuedness of the extension of f
+would be insured by : f (z 1 , . . . z n ) = f (zi, . . . z n ) = f (M -1 Az1 , . . .   M zn) .
+It is just this identity which is guaranteed by our postponed constructio n
+of curves, and therefore f as extended is single valued .
+      The analyticity of f in the extended tube at Az 1 , . . . Az n follows from its
+analyticity at in the tube, because the partial derivatives a t
+112 1 , . . . Ann are expressible in terms of partial derivatives at z l , . . . . z n , e .g . ,
+
+                  af                                 a f(21, . . . 2n) a (2 1 ) v
+              ä (~21>~
+                       (A2 1 , . .
+                                               v   o     a (21)v      a (A z l)F, '
+This completes the proof of the second statement of the Lemma .
+     It remains to construct a curve A(t)z 1 , . . . A(t)zn ; 0<t<1, A(t) e 2 ,
+beginning at an arbitrary point of the tube z 1 , . . . z n , ending at the poin t
+Az l , . . . Azn of the tube, and lying entirely within the tube . The existenc e
+of such a curve is obvious if A is a real (orthochronous, proper) Lorent z
+transformation, because every such transformation leaves the tube invarian t
+and their set is connected .
+     For A. complex, the required calculations are simpler in a two dimen-
+sional matrix formalism in which the four vector is represented by th e
+matrix                                  :1
+                               + Z3          Iz2,    711 G7 2
+                       Z         i ::2
+                                                                              (4)
+                            21 +        no - ,3
+                                                  1/ L21 L22)
+
+Then the most general proper complex Lorentz transformation is of th e
+form z l' - z'1`, where the four vector z '1 belongs to a matrix, Z', given b y
+10                                                                       Nr. 5
+                                Z ' = AZB` .                               (5 )
+Here A and B are 2 x 2 matrices of determinant one. In particular, the most
+general (orthochronous, proper) real Lorentz transformation is of this for m
+with A= B . This last fact permits us to simplify our problem . Note that (5 )
+can be «ritten                 Z ' _ (AB -1) BZB"                          (6 )
+so that the most general complex Lorentz transformation is of the form o f
+a real Lorentz transformation followed by a complex Lorentz transfor-
+mation of the special form
+                                   Z ' = CZ .                               (7)
+It therefore suffices to consider complex Lorentz transformations of thi s
+special form . The problem can he simplified further by making a suitable
+real Lorentz transformation of the final vectors
+                        Z' --~ DZ' D = (DCD- 1 ) DZD '
+
+By suitable choice of D, we can bring C into triangular form . In fact, unles s
+the proper values of C are equal, C can be diagonalized . Thus, we can
+restrict our attention to C of the form
+
+                                                                            (8)
+and                               1T1 z
+                                    0 +1 )                                  (9)
+
+We shall prove that, if Z is in the tube and Z ' = CZ is in the tube where C
+is of the form (8) or (9), then C(t)Z is in the tube where
+                   exp[t(~ + iB)]       0              O Et< l ,
+           C(t)                                                          (10 )
+                 (       0        exp[-t(e+iB)]), =exp(e + iB),
+
+                                 (+ 1    i~
+                       C(t)=                    0<1<1 ,
+                                   0    +1
+respectively . Thus, it will be possible to choose the same curve independen t
+of the point Z. (Actually, it will be seen that the case of the minus sign in
+(11) can be excluded .)
+   The conditions which express in terms of the matrix Z ' the fact that th e
+vector z ' = - in ' lies in the tube are
+Nr .5                                                                                                        11
+
+                              - 4 (rß ' ) 2 = det (Z ' - Z ' "') < 0 ,                                     (12 )
+
+                                        =-        Imtr(Z' )>0,                                             (13)
+
+as can be derived by a simple computation . Our procedure will be to deter -
+mine all t and r in (8) and (9) consistent with (12) and (13) for fixe d
+in the tube . We shall see that, if t and r are consistent, so are st and tr fo r
+0 <1<1 .
+    Consider first the case (9) . Then, the condition (12) read s
+
+                                            rZ 21 -                       Z 21 , _ ( Z 12 - 221) + rZ2 2
+        0 > - 4 (n') 2 =det + (Zll - 711) +
+                           (2_ (Z21- Z 12)- 22 22,                                   ± ( Z22- 222 )
+
+                         = I r I 2 1 Z 221 2    (si * sr)+ det (Z - Z") ,
+
+                                where s =                21Z22 -722 71 2
+
+This inequality can he rewritten in the for m
+                                               4 Is1 2                2
+               Ir+ 1Z221-2 s1 2 --[IZ22 I                -I   Z 22I       (- det (Z--Z'.))]< 0
+which describes the interior of a circle in the r plane about the poin t
+
+                                               + 1   7221 2 s .
+
+    As far as the condition (13) is concerned, we note that it is satisfied by
+all points in the interior of the circle if it is satisfied by any one, becaus e
+the vector ri' must pass through a vector of zero length in order to chang e
+the sign of 1 0 . With the plus sign in (9), the condition (13) is always satis-
+fied and never for the minus sign, as one sees by considering the case T. = O .
+    Evidently, if the point r is in the interior of the allowed circle, the points
+tz, 0 < t < 1 will also be because the origin is in the circle and the circle i s
+convex .
+    Now we turn to the case (8) in which C is diagonal . Here, there are als o
+two two-dimensional domains of C's consistent with condition (12), one o f
+which is excluded by (13), as we shall see by a detailed consideration . Th e
+boundary of the allowed domain is convex in terms of the parameters o
+and 0 defined in (10) . This will have to he proved by a detailed computatio n
+since the boundary is not an elementary curve .
+    Condition (12) for the case (8) is
+
+                          0 > -4 (7)') 2 = Z121 2 m 2 + IZ2 1 I 2 IS1 2
+
+                     - ( Z 11 Z22 ~~      1 + Z ll Z22 St             1 ) + 2 Re (det Z) .                 (14 )
+12                                                                                             Nr . 5
+
+This condition is satisfied for -C if it is satisfied for C and, in particular ,
+since by assumption . it is satisfied for C = + 1, it is also satisfied for C _ -1 .
+For C = - 1, the vector z ' is not in the tube . Consequently, by the sam e
+type of continuity argument which we used in connection with equation (9) ,
+there must be at least two disconnected sets of C satisfying (14), one o f
+which does not satisfy (13) . Another consequence of (13), which we shal l
+use in the following, is Zî1 222 * O .
+    We divide the remainder of the argument into three parts .
+
+Case 1 .
+                                     Z12* 0 , Z21 '=O .
+    In this case, we can divide (14) by 217, 12 1 1 221 I, and introduce the new
+variables
+
+           co = arg ( 211 Z22),  = exp (e+ i O) ,
+                                     1 ),                                                 1
+           x =2 e- ln (I Z2111 Z121_      ip=2B-ao,                                             (15 )
+
+           v =-1 2211 -1 1 2121 --1 Re(detZ),p = 1 21111 22211 2121 -1 1 2211 -1 >o .
+Equation (14) then read s
+
+                              0>P = cosh x-(c cos y +v) .                                       (16 )
+
+Since P is periodic in y,, it suffices to consider (16) in the strip                    1y I   <.   7c ,
+- < y < , and show that it defines a convex region there .
+   There are two conditions on the coefficients p and v :
+
+                                           [Id<   1 -I-,u,                                      (17 )
+and
+                                            v+,u> 1 .                                           (18 )
+
+The first of these merely says the real part of the determinant of a matri x
+is less in absolute value than the sum of the absolute values of the term s
+which comprise the determinant . The second is a consequence of the fac t
+that for C =1, P < O by assumption, and therefore v +p cos o-o > 1 .
+    From (17) and (18) it follows that there exists an angle yo, 0<y o c"z ,
+such that
+                             v +p cos y o - 1 .
+
+For                               11VI<J   eo1, v+,u cos y>1 .                                  ( 19 )
+    The expression (16) for P makes it clear that its behaviour in x for fixed y is :
+if,ucosy,+v<1,P>Oforall x ;if,ucosy+v =1,P=0 fora = 0 andP> 0
+Nr .5                                                                                       13
+
+for x+0 ; if ,u cos y+v>1, P = 0 for some x1 = x i (y)>0 (and also for
+x = -x i), P< 0 for I x I < xl, and P> 0 for I x I > xi .
+
+    The discussion of the preceding two paragraphs shows that the set of x
+and y satisfying P< 0 in the strip < r, - oo < x< co, is connected and
+invariant under reflections in the x = 0 and y = 0 axes, being the domain :
+-xi(1P)<x<xi(y), -y o <y<IPo, where x i is given b y
+
+
+                               cosh xi     ,u cos y+9), xi >0 .                           (20 )
+
+To complete the argument we will show the convexity of the function x i
+as a function of y .
+   Differentiating (20) twice and eliminating the first derivative, x;, of x
+with respect to y, we find, for I y I< yo, (sinh x1)3 x i"- ,u Q ,
+where
+                   Q = cos y (sinh x1 ) 2 ,u (sin y) 2 cosh xi          (21 )
+
+                          = (u cos y + v) (u + v cos y) - cos y,                          (22 )
+or
+                        Q = ,uv (cos y +1) 2 - [ 1- (,u - v) 2 ] cos y .                  (23 )
+
+We assert that Q> 0 for j y I< y o . For 0 < y< -, this is an immediate con -
+
+sequence of (21), since both terms on the right hand side of (21) are positiv e
+there . For 1 /2 z < y< yo , we have cos yo< 0, and from (19), v = 1 +,u 'cos yob.
+Using this last fact, we see that, when ,u >v, ,u cos y v>0, ,u + v cos y > 0 an d
+- cos y> 0 so that (22) immediately implies Q > 0 . Again, when l < v, we
+use the form (23), and note that 1 - (u -v) 2 = (1-,u + v) (1 +,u -v), and
+t+v-u>0, and 1+,u-v = 1i(1-I cos 'NI) > 0, so Q>0 in this case too .
+
+
+Case II .
+                       Z12=0,       Z21 * 0 (or    Z12+0, Z21 =0) .
+     Here we define ao, e, 6, and y as in (15), but                    v, x as follow s
+
+            x   = - 2 O+ 1n   (2IZ21 I 2 ), 1u = I Z II II Z221 > 0 , v= -Re (det Z) .    (24 )
+
+Then, the basic inequality (14) takes the for m
+
+                                  0>P = ex       (u cos y + v),                           (25 )
+
+and the analogues of the inequalities (17) and (18) ar e
+14                                                                                Nr . 5
+
+                                             Ivl <ca                               ( 26 )
+and
+                                            v+p>0 .                                (27 )
+
+If Z12      0, Z21 = 0, then, in equation (24), replace the definition of x b y
+                       2
+x = 2 e+ In
+                ~212       .
+                               This case is essentially the same as that for Z 12 = 0
+
+and Z21  0 and will not be discussed further . )
+    A discussion analogous to that in Case I shows that the region of th e
+strip ' I  n,   oo<x<oo, as determined by P<0, is given b y
+
+                                 -oo<x<xi(v), IvI < vo < nz ,
+                           1.c cos yo + v = 0, and ey = ,u cos y + v
+
+Here, exp (2 x i ) xi          -,u Q , where Q = ,u + v cos y >0, so that the region i s
+convex .
+
+Case M .
+
+
+      Here the basic inequality i s
+
+                                    0>P = -(a cos 1P+v) ,
+
+with ,u, ? and v defined as in Case II . 1c and v satisfy the same inequalitie s
+ as in Case II, namely (26) and (27), so that there again exists a yo satisfying
+,u cos yo + v = 0, 0< y o   n, and the region permitted by P< 0 is the stri p
+  y < yo, - O ° x < oo which is obviously convex .
+     In each of these three cases we have proved that the region of x, y spac e
+ (or what is essentially the same thing since it is obtained by a translatio n
+ and change of scale, g, 0 space) permitted by conditions (12) and (13) i s
+ convex . Since these regions contain the point g = 0, 0 = 0, they also con -
+ tain the points te, t0, 0 < t 1, corresponding to the transformations (10 )
+ and (11) ; so the proof of Lemma 1 is complete .
+
+Lemma 2 .
+      Let _ 1 , . . . zn and        . . .    be any two sets of n vectors such tha t
+
+                                   = z a 'z5 =   . ;,   = 1, . . . n .              (28 )
+
+    If the rank of the n x n matrix Z is three or four (or, for n <1 2 if Z i s
+non-singular), then there exists a complex Lorentz transformation, A, suc h
+that
+Nr .5                                                                                          15
+
+                                   Azîi=1, . . .n .                                         (29 )
+    If the rank of Z is two or one (and n> 2 or n >1, respectively), a Ile
+satisfying (29) will not exist, in general, but there always exists a A satisfyin g
+                                          Az i =   +a i w,                                   (30 )
+where a i are complex numbers and w is a vector of zero length orthogona l
+to   and Azî, i = 1, .  n.
+
+
+Proof.
+   We note the known fact that, for a symmetric matrix, the rank deter -
+mined from principal minors is the same as the rank determined from al l
+minors' . Thus, if the rank of Z is r, there exist r vectors, say z 1 , . . .
+which have non-vanishing Gram determinan t
+
+                   0 + G (z 1 , . . . z r ) - det (zi • zj ), i, j- 1, . . . r .
+
+This result will be used tacitly many times in the following .
+      The first step in the proof is to establish the connection between th e
+condition, G(z1 . . . zr) + 0, and the linear independence of the set of vector s
+z l . . . z r . If G (z 1 . . . z r ) 0, then the set z 1 . . . z r is linearly independent .
+For a relation                              7
+
+                                               af z i = 0                               (31 )
+                                           j- 1
+would imply
+                            X a(z k •z .i ) = 0
+                            9= 1
+                                                        k=1 . . .r                           (32 )
+
+and these last equations have a non-trivial solution al . . . a r if and only
+if det (z? • z k ) = 0, j, k = 1 . . . r . The converse, that the linear independenc e
+of the set z 1 . . . z,. implies G(z 1 . . . z r ) * 0, is not true in general . For
+example,
+                             zl = (0, 1, 0, 0),   z2 = (1, 1, 1, 0 )
+is a pair of linearly independent vectors having zero Gram determinant .
+However, for r = 4, the converse holds, for G(z 1 . . . z4 ) = 0 implies that the
+equations (32) have a non-trivial solution a l , a 0 , a3 , a4 . This, in turn ,
+                                                         4
+implies that there is a vector of the form                     a i zj , with at least one al * 0 ,
+                                                        j= 1
+which is orthogonal to all z~ . If the z j were linearly independent, this las t
+                                    4
+would be impossible, since                a j zl would then be orthogonal to every vector .
+                                   ~= 1
+Thus, G(z 1      . z 4 ) = 0 implies that the set z 1 . . . z 4 is linearly dependent.
+16                                                                                   Nr . 5
+
+    Next, we show that, under certain circumstances, we can confine ou r
+attention to the case n < 4 . Let z i , . . . z n and       . . . Cn be two sets of vectors
+such that any r+l element subset of either is linearly dependent, and th e
+matrices zj • zx and Cj ' C x , j, k = 1, 2, . . . n , are equal and of rank r . For con-
+venience, we may suppose that G(z i , . . . z,,) O . Expand the zj , j = r +1, . . . n
+in terms of the z j , j =1, . . . r .
+
+                                       r
+                            zj =               a.j       j = r+1, . . . n .           (33 )
+                                      a=
+
+The a ji are expressible in terms of scalar products since they are the solu-
+tions of the linear equation s
+
+                                           r                j = r+1, . . . n
+                         z k zj   =
+                                      a-
+                                                ait; z   xk           ...r.
+                                                                                      (34 )
+
+The equations (34) have a unique solution because G( zi , . . . 2 .) * O . Thus ,
+we see that, if a Lorentz transformation A . can be found satisfying (29) o r
+(30) for j = 1, . . . r, it will also satisfy them for j = r+1, . . . n, provide d
+that the rank of z i • zj = ~2 • C j is r and there are at most r linearly independ -
+ent z i and ~z . These last provisos are always satisfied if r = 4 or 3 . Fo r
+r = 4, we have just established the equivalence of G(zl . . . z4 ) + 0 an d
+linear independence of the vectors z i , z2 , z3 , z4. By the very same argument ,
+it cannot happen that the rank of z t . zj is three and the number of linearly
+independent zj is four . The fact that there can be "extra" linearly independ-
+ ent vectors when the rank of z i . z j is one or two is the source of the possi-
+bility that (30), hut not (29), may hold .
+        Now we will construct a A satisfying (29) under the assumption of th e
+ preceding paragraph, i . e ., that there is at most a linearly independent set
+ of r z's and at most a linearly independent set of r C's and the matri x
+ z2 • zj = • Cj has rank r. Our preceding considerations assure us that it suf -
+ fices to consider the case n < 4 . The z i , i = 1, . . . n span an r-dimensiona l
+ linear manifold, M . For convenience, we let the Z1 , . . . z r be a linearly inde -
+ pendent set . Let the corresponding r-dimensional manifold spanned by th e
+ C , i = 1, . . . n be devoted by N. The orthogonal manifolds ML and NI
+ respectively, are 4-r dimensional and the intersections Mn Ml and Nn NI
+ contain only the vector zero . A proof of these last statements is obtained a s
+ follows . Supplement the vectors z l , . . . Z . by z l , . . . z4 _r and the vectors
+       . . . Cr b y , . C4_r so that the resulting sets are bases for the whol e
+ four-dimensional space . Then the r equations
+Nr .5                                                                                     17
+                                     4- r
+                      al ( z l       Zar+l (z i 'zi ) = 0 j 1, . . . r ,
+                l=1                  t=
+
+have rank r, so they have 4 - r linearly independent solution s
+
+                                          ( ai r   (Z2, a3, a 4) •
+Because the basis vectors are linearly independent, the vector s
+                                      r               4- r
+
+                                           al zl '    ~ al + rz l,
+                                     a=1              l= 1
+
+constitute a linearly independent 4-r element set . Consequently, M1 has
+dimension 4-r . That M fl Ml contains no non-zero vector is equivalent t o
+the statement that the equation s
+
+
+                                     al(zl•z~) =0            j=1, . . .                 (35 )
+                                 =
+
+have no non-trivial solution . The analogous statements for N 1 and Nfl N-L
+are obtained by replacing zi by Ci in the above proof .
+    Notice that the Gram determinant of the entire basi s
+
+                                             . . . Zr , Z1 , .       z4- r
+
+is the product of the Gram determinants of the sets z 1 , . . . z r and z 1, . . . z 4 r
+so that the Gram determinant of        . . . z 4_ ,. is non-zero . A similar state -
+ment holds for the         . .     and we    want to use these facts to show
+that new bases z1, . . . z4' r and             for 1121 and N1 , respectively, ca n
+be chosen so that
+                         „    „
+                        zi ' Zl _                  ' Sj          = 1,   . . . 4 -I' .   (36)
+
+Consider 1111 . Since the Grain determinant of the z1, . . . z4_ r does not
+vanish, some scalar product of these vectors does not vanish, and, conse-
+quently, there is at least one vector of non-zero length in M1 . Adjust it s
+length to 1 and call it By induction, using the arguments of this and th e
+immediately preceding paragraph, we can construct z 1 , 4 ' , . . . 24 r or-
+thogonal to each other and of length one . An analogous construction hold s
+for the S1 , ~2 , . . . ~ 4-r • It is evidentlyT crucial for the success of the
+construction that at each stage the relevant Grain determinants are non-
+zero 7 .
+    Now we are in a position to define the A required by (29) as the comple x
+linear transformation determined by the equation s
+   Mat . Fys .Medd.Dan .Vid.Selsk .31 . 110. 5 .                            2
+18                                                                                                                Nr . 5
+
+                                       11zj =                    j=l, .r ,
+                                        ~ .z? ' =C,'             j     1, . . .4-r.
+A so defined preserves scalar products by virtue of (35) and (36) :
+                     r_                4-r                              r                4- r
+            A                ~ +
+                          aj ~j         Y aj+rzp                 [
+                                                                                                R
+                                                                                                N j+   zj r
+                                                                                                              )
+                  5=1                  5=1                            ,, =
+                                                                     ~f~ßjzj+ 5= 1
+                 r                                          4
+                                   /                         ~              RR
+                >       a jfl     k (A zj) . (A zk ) +               aj+rN k+r(
+                                                                                      ll.z j ' )•(11.z 7c )
+               j,k=l                                        ,k - I
+                 r                                  -r
+                             RR         5-                      //~      rr      rr
+                        ajNkj           sk +             aj-P r ~ l~k-7r~j
+               j,k =1                          j,k= 1
+                 r
+           _    Y
+
+
+
+It is therefore the required Lorentz transformation, and the proof of Lemma 2
+is complete for the rank three and four cases .
+      For rank two and one we must deal with the cases in which the numbe r
+of linearly independent z j (or ) is larger than the rank of the matri x
+z j •z k . That we cannot expect to find a A satisfying (29) in this case is clea r
+from the example z 1 = (1, 0, 0, 0), z 9 = (1, 1, i, 0) ;          = (1, 0, 0, 0),
+     = (1, 0, 0, 0) of vectors satisfying (28) with a matrix of rank one ; a A
+certainly cannot carry linearly independent vectors (the z's) into linearly de -
+pendent vectors (the c's) .
+       Let Z be of rank r = 1, or 2, and let n >r . There is a subset of r vector s
+z i with non-vanishing Gram determinant . They span a subspace which w e
+call Ml . It is a subspace of M, the subspace spanned by all z'i , i = 1, . . . n ,
+whose dimension we denote by in . The corresponding subspaces for th e
+vectors we denote by N] (of dimension r) and N (of dimension rn ' ) .
+ßecause Ml and Ni have non-vanishing Gram determinants there is a uniqu e
+decomposition of the vectors z 2 an d
+
+                        z i = z i +zi '         i   = 1, . . . n, zzeiVI1 , 4 ' eM11 f1 M
+                        Ci             +Cz '    i = 1, . . .n,              eN 1 , ~ aeN11 f1N .
+
+Now the rank of the matrices                  j = 1, . . . n must be zero ,
+since the rank of z ;- . and ~~ ~~ is already r . Furthermore, the sub-
+Nr .5                                                1                                 9
+
+spaces M1'- n 4I and N1'- n N of the 4 -r dimensional spaces 1-t1'-, and N1' can at
+most be one-dimensional since they are isotropic and Ml - and N1' have non -
+vanishing Grammian 7 . Thus, zi ' = y i co', i = 1, . . . n, y l , . . . y n comple x
+numbers and (w ' ) 2 = 0, w ' z; = 0, i = 1, . . . n, and similarly             = Si w ,
+w 2 = 0 - a) .          = 1, . . . n . Incidentally, we see that the dimensions HI and
+m ' of M and N are r +1 at most .
+       Now we choose an orthonormal basis w i , i = 1, . . . 4-r for M1' an d
+rj i , i = 1, . . . 4 -r for Nll so that w ' and w lie in the subspaces spanne d
+by w l , w 2 and 971, 7Î2 respectively . For r = 2, no construction is required t o
+obtain this property of w's and r1's . For r =1, we know the construction i s
+possible because there has to be at least one vector of non-zero length ortho-
+gonal to w ' (or w) and we can take it suitably normalized to be w 3 (or
+                                                                                   ah) .
+Since w' is a linear combination of w l and w 2 and of zero length, it must b e
+of the form a (w1 ± i w 2) and by changing the sign of w 2 , if necessary, we can
+arrange it so that w' = a (w i +i w2 ) . Similarly, w = b (a7 i + i rj2 ) .
+       Finally, the Lorentz transformation A required by (30) is the linea r
+transformation defined b y
+         Azi, =       for the r vectors zi and which span M1 and N1
+         11w î =a7i   i=1,2, . . .,4-r .
+
+That this is indeed a Lorentz transformation follows by an argument lik e
+that used for the higher ranks . That A satisfies (30) follows from the com -
+putation
+                       Az k = Az k -~- yk a (Aw l + i Aw 2 )
+               ( S k -å k w ) + Yk a ( Th -1 u 2 )
+
+                  + (yk a - å k b ) (T1-IH I n2)         k = 1, . . . n .
+
+Therefore, when the rank r of z i • z I is one or two, there exists a Lorentz trans -
+formation, A, such that the Az, and          differ by multiples of a fixed vecto r
+orthogonal to all Az i and      i = 1, . . . n, and of length zero . This com -
+pletes the proof.
+    To round out the information provided by Lemma 2, we make thre e
+additional remarks . First of all, if Z is an arbitrary complex symmetri c
+n x n matrix of rank r < 4, it can be written in the for m
+
+                              Zip =                  =      . . . n,               (38 )
+where S 1, . . . are four vectors which span a linear manifold M of dimen-
+sion r. This follows immediately from the standard theorem of algebr a
+which says that, if Z is a complex symmetric n x n matrix of rank r, ther e
+exists a non-singular n x n matrix S such that
+                                                                                  2*
+20                                                                                                           Nr . 5
+
+
+
+
+                                                                  0 1 S
+                                                                          T
+                                            Z=S{               01~0                                           (39 )
+
+where the one in the upper left hand corner of the matrix indicated in curl y
+brackets stands for the r x r unit matri x8 . One can then take the component s
+    as S.i1 , j552 , . . . i S j , followed by 4-r zeros . Equation (39) then reduce s
+to (38) . At most r of these vectors can be linearly independent and, in fact ,
+exactly r are because otherwise Z would have rank less than r .
+    Our second remark is that, if the point ~ 1 + a 1 w, . . .         + a n w is in th e
+tube and w 2 = 0 = w, j = 1, . . . n, then w and               are of the form
+                    co = a(w 1 -1- i w 2 ), where w l and w 2 are real and
+                                      w     =       2 = - 1 , wl'w 2 =0 ,
+
+                     =            co, where ~f w 1 = 0 =                         j= 1, . . . n ,
+                            and           . . .        is a point of the tube .
+To prove these statements, we split w into its real and imaginary parts :
+w = q+ ir . Then, w2 = o implies q2 = r 2 and q -r = 0 so that q and r
+are either light-like and collinear or space-like and orthogonal . The first
+alternative cannot occur, because the requirement w • ; = 0 would the n
+force q and r to be orthogonal to a time-like vector, and the first half o f
+(40) follows if we choose co l and w 2 as q and r normalized to length minu s
+one . The second half is easily seen if the real and imaginary parts of t
+are expanded in terns of wi and co t as follows :
+
+               el7> (0lH_ ,Q~J)w2-I- $j ,         where        30•w,
+                                                                '      =0=~~   w 2 , j=1,       . . .   n,
+                                                                                                              (40 )
+       h       aiå)wl+ 621) w +n; where ; w1 = 0 -
+                                  2
+                                                                                 w 2 , j = 1, . . . n . 1
+           =                            ai
+
+The orthogonality condition ( .i - iaij ) w = 0 then leads directly to a ? ) = Pz' )
+and 62' ) _ - Pi), and therefor e
+
+                                -1.1)1      _        - i n; + (e1') - 16Î7)l (w 1 ± i w 2 ) .
+If we write                it remains to verify that the point 5?,-j., . . . ra i s
+in the tube . Because          w, . . . ~, + a n w lies in the tube by assumption ,
+the squares of the lengths of the imaginary parts of t + aj w, j = 1, . . . n are
+positive :
+                                                     v                        (41 )
+                          w1
+                         [yij-(ß;                 ß5 w 2)] 2                   0:0'
+                                                                 ~~'2-(ß ;')2->0,
+
+
+where (ß .i + al ) a = + iß" with ß; and ßi' real, and ßl and a define d
+in (40) . Clearly, (41) implies 7h2 > 0 . Furthermore, ß,'' and ß ; can be con-
+tinuously decreased to zero without (41) losing its validity . Consequently,
+Nr . 5                                                                                  21
+
+if the imaginary part of 6-j ' + aj w points into the forward cone, so must tha t
+of     so that the point fix, . . .   is in the tube .
+     Our third remark is that, if        j = 1, . . . n and w have the propertie s
+                                                            w22.
+w = a (w t + i w2 ), with co, and w 2 real and w21 = - 1 =       co l • w 2 = 0 *co l -
+0 = C;• w 2 for j = . . . n, then there exists a one-parameter family o f
+Lorentz transformations A(0), 0 c O            co with the properties A(0) =
+    j =1, . . . n and A(0) w       e °w. The transformation A(0) is defined as
+the identity on vectors orthogonal to w l and w2 , bu t
+
+                           A (0) w 1 = w 1 cos i 0 - w 2 sin i 0
+                                                                                      (42)
+                           A(0)w 2 = w1 sin iO+w 2 cos i0 .
+With its definition completed by linearity, A(0) is a Lorentz transformatio n
+with the required properties .
+       Two important consequences follow immediately from these remarks .
+ The first is that, if a point 4 -1 +, . . .           + an w with w 2 = 0, w'5 = 0 ,
+                n
+j = 1, . . . lies in the extended tube, then all points of the form sl+ aiw ,
+                                          a
+ . . . +anw do also, where al, . . . n are arbitrary complex numbers . Sinc e
+ ~ 1 -1-a 1 w, . . . 5 n +anw is in the extended tube, there exists a complex Lorent z
+ transformation A such that AU-1 + a 11J w, . . . A%-n + anAw is in the tube . Using
+ the second remark, we may then write Azj + a;Aw as AC? + (ßj + aj' )Aw, wher e
+11~i , . . . Ain is a point of the tube, and Aw = a (wl + i w 2 ) , w1 = - 1 = w .2 an d
+ w 1 • w 2 = Azj w 1 = A4j w2 = 0, j = 1, . . . n. Using the third remark, we ob -
+ tain a family of transformations A(O) such tha t
+             A(0)[A ;+a'Aw] =A'+é°(ßj+a 'I)Aw, j = 1, . . . n.
+These equations say that the point A~1 +aiAw, . . .                         an' Aw can b e
+brought arbitrarily near to the point AWI, . . . Ain (which lies in the tube)
+by a complex Lorentz transformation . Therefore, the point A 1 + aiAw ,
+. . . Ag-1 -I- a 'nAw and, consequently, the point ~1 + azw, . . . ~n -I- anw lie in th e
+extended tube .
+      The second consequence is that an invariant analytic function (satisfyin g
+the hypotheses of Lemma 1) is necessarily single-valued on Mn . For point s
+of Mn where the rank of zti •zj i, j - 1, . . . n is three or min (3, n) the state -
+ment follows immediately, because f(z 1 , . . . zn) = f(~ 1, . . . .n) is a con -
+sequence of zi • zj =                i, j = 1, . . . n, since, by Lemma 2 there exists a
+AE 2 such that Azj = S j , j = 1, . . . n. For zi • zj , i, j = 1, . . . n, of rank 2,
+n>2, or 1, n> 1, we know by Lemma 2 that z i • zj =                           implies Azj
+Sj  +  aj w,   j  = 1, . . . n, so to show   the   single valuedness of f at such points o f
+M n it suffices to show that
+22                                                                                                 Nr . 5
+
+                   fG- 1,   . . .   ~~a) =   f\~1+alw, . . . ~     92
+                                                                        +a n w ) .                 (43)
+
+Furthermore, without loss of generality, we may restrict ourselves to the cas e
+in which and co have the properties w = a (col + i w 2 ) with w t and w 2 real
+and 4 =w2=-1, w l •w 2 -=0, and•w 1 =0=s t w2,j=1, . . .n . By in-
+troducing the 11(0) defined in our third remark above, we ge t
+
+                                      n) - f(~l + al w, . .             a7i w)
+     = f(11(0) 1 , . . .A(0)         -f(A(0) 1 +a 11t(0)w, . . .11(0)ß,L+a.,z11(0)w )
+          f(-1,    Sn)-fl~l+ale              . . . Sn,+ a ,ne °co) .
+From the continuity of f at  . . . 7z , we see that the Iast expression vanishe s
+in the limit as 0 -> oo, which proves (43) .
+       Now we turn to the connection between the topology of the vector s
+z 1 , . . . z n and the topology on Ti .
+                                      n
+
+Lemma 3 .
+      Let Z be an n x n complex symmetric matrix of rank r, 1 < r < 4 and w
+an arbitrary real positive number . Then there exists a set of n four vector s
+zl , . . .
+            z7L and a neighbourhood of them consisting of the four-vectors z t +v 1 ,
+
+      z 12 + v n with
+
+                       Iv/1 1<w       j= 1, . . . n ; u=0,1,2,3                                    (44)
+
+such that Zii = z i •z j , i, j = 1, . . . n and t:he' matrices,                     defined b y
+
+                      %i7 = ( zi -I- v i )       vO, i. j, = 1 . . . n,                            (45 )
+cover a neighbourhood of Z in the set of complex symmetric matrices of ran k
+< 4, i .e ., for suitably chosen y >0, every complex symmetric matrix Z ' o f
+rank 4 which satisfies
+
+                            'Z,5 j <r7            i, j = 1, . . . n
+is of the form (45) with vl satisfying (44) .
+
+
+Proof .
+   The direct determination of the vectors v i , i = 1, . . . n satisfying (45 )
+would be somewhat involved, so we make a series of transformations t o
+reduce the problem to a simpler one .
+   We know from the first remark following Lemma 2 that the matrix Z
+may be written as a matrix of scalar products : Zi7 = zi • z2 , i, j = 1, . . . n ,
+Nr . 5                                                                                    23
+
+where, if Z has rank r, the vectors z 3 , j = 1, . . . n span a linear manifold o f
+dimension r . That being the case, there exists an r-element linearly independ -
+ent subset of the n vectors which may as well, for convenience, be take n
+as z 1 , . . . z r . A new set of z's, which we denote by j = 1, . . . n, is de -
+fined by
+                        z3 = z 3 j = 1, . . . r
+
+                      0          ° z3 -                a3kzlc, J = r +l, . . .n .
+                                               k   1
+This linear transformation from z's to z " s has determinant 1 and is there -
+fore non-singular . Subsequent to this transformation, we carry out a linea r
+transformation on the subspace M which normalizes and orthogonalizes th e
+z ;, j = 1, . . . r . The product of these two transformations is given by a
+matrix A which has the property
+                                            r
+                                            1 ~ 0
+                                AZAT r(
+                                           0 ~ 0
+
+Now, since A is non-singular, it maps neighbourhoods of z 1 , . . . z n into neigh -
+                                           n
+bourhoods of         A 13 z3 ,       An3z3 and neighbourhoods of Z into ' neigh -
+                3= 1           3 = 1
+bourhoods of AZAT i n an invertible manner . Thus, it suffices to prov e
+Lemma 3, in the cas e that the first r of the vectors z3 are orthonorma l
+and the rest are zero .
+     This first simplification of the problem uses a transformation, A, whic h
+depends only on the z ) , but not on which point in the neighbourhood of th e
+z 3 is under consideration . The second transformation we make will b e
+different for each Z', and makes the first r of the vectors z 3 + v3 orthogonal
+to the rest .
+     Define a new set of v3 by the equations
+
+                             v 3 j = 1, . . . r ,
+                                       r
+                                     R /
+                      v3 = v3 - ~ ß3k  \zk + v k) .~ ° r -I- 1, . . . n ,
+                                k= 1
+where -the numbers ß3k, j = r+ 1 , . . . n, k = 1, . . . r, are determined fro m
+the condition
+              v.1•(zx+vx)=0,
+               '               j = r + 1, . . . n, k=1, . . .r .            (46 )
+
+An elementary calculation yield s
+
+             ß3i =               (Z,
+                           Z3x             1) ki        j =r+1, . . .n, I = 1, . . .r ,
+                     k=1
+24                                                                                             Nr . 5
+
+where the indicated matrix inverse means the inverse of the r x r matri x
+Zak , j, k = 1 , . . . r . The simplification of the problem achieved in the pre -
+ceding paragraph enables us to write Z' = Z + B where Zjk = b jk , j, k = 1, . . . r ,
+%jk =0 , j, k>r . When the . matrix elements of B satisfy BJk <, j, k                 . .1 1
+and n is sufficiently small, the estimates I Za k 1 <      j = r + 1, . . . n, k = 1, . . . r ,
+and I (Z '-1 )kl - bkl I <n (1 -rn)- i, k, 1 = 1, . . . r, hold, so that the trans -
+formation from the v ' s to the v " s has an inverse and carries small neighbour -
+hoods of the origin in v space into small neighborhoods in v ' space, and vic e
+versa . Thus the problem has been reduced to that of finding vi, . . . vn
+satisfying
+                 +vD•(zk+vk) l(zj+U~) Uk                       11   I0         B1
+                 v5 . ( zk + v k) ~ v 'j vk )                  , 0 ! 0         0 10
+                                                                                  B2               (47 )
+
+where the dividing line in the matrix is at the r th row and column an d
+
+          ( B 1)jk = B jk ,        j, k = 1, . . . r, whil e
+
+          ( B 2)jk = Bak               (Z' )jl ( Z 1 )lm (Z' )m k    .J,k'   r +t, . . .12 .
+                              1,     =1
+       When I Bjkl <ai, j, k = r-I-1, . . . n we have I (B2)jkI <                   (1 - r 0-1 .
+    The simple expedient of requiring vk, k =                t o o have vanishin g
+components beyond the     rlh and vk, k = r+1, . . . n, vanishing component s
+before the (r + 1)st in a basis in. which the vectors z k , k = 1 , 2, . . . r, ar e
+the first r coordinate axes guarantees the orthogonality relations (46) . Th e
+problem of satisfying the upper left hand . corner of the relation (47) then
+reads in r x r matrix form
+                                         (1+v')(l+v')T= 1+B 1 ,
+where 1 + v' is the r x r matrix whose k th row is composed of the component s
+of z k +vk . By making the special choice of the components of vk, k -1 ,
+2 . . . r, which makes 1 + v' symmetric, we are led to the solutio n
+                                                           i
+                                            1+v'= [1+B 1 ] k
+
+the right hand side being defined by its power series about the matrix B 1 = O .
+This series converges for sufficiently small 7p and leads to components of v '
+which satisfy I (v ' )t < (1 -ray) -1 , j = 1, . . . r .
+    To be sure that the lower right hand corner problem has a solution i n
+terms of vectors with only 4 - r components, we have to be sure that the ran k
+of B2 is < 4 - r . This follows immediately by an argument which we use d
+Nr .5                                                                                        25
+
+several times in the proof of Lemma 2 . The right hand side of (47) is a
+matrix of rank < 4 . The r x r matrix 1 + B l is of rank r, therefore B 2 is o f
+rank 6 4 r . (Compute the determinant of all principal minors of the righ t
+hand side of (47), which have i + B 1 in their upper left hand corner . They
+vanish if they have more than four rows and columns .) Then, by the theore m
+quoted in (39), we know v, , k = r +1, . . . n, exist such that; v k • vi = (B 2 ) kl ,
+k, I = r+1, . . . n . Of course, there is a variety of sets of vectors vJ~, k =
+r +1, . . . zi satisfying this last relation . We have to be sure that sets can b e
+chosen so that their components are uniformly small when the matri x
+elements of B 2 are small . It can be shown that the v' k can always be chose n
+so that
+                               .L~ ,,s:., 82[(4 r> 17
+                           ~1)k                       [sup I(B2)i)I]~•         (48 )
+
+Collecting the estimates of the vk and I (B 2 ) i3 we see that, when rj is suf-
+ficiently small, components of the v i satisfying (45) can always be chose n
+so as to satisfy (44) .
+    Lemmas 1 and 2 enabled us to prove that an invariant analytic function ,
+f, (satisfying the hypotheses of the theorem) is necessarily a single-value d
+function on Mn. The continuity of f on nll is an immediate consequenc e
+of Lemma 3, because it demonstrates that small neighbourhoods of an y
+point, P, oncan have pre-images in the space of vectors which are smal l
+neighbourhoods of a pre-image of P.
+    We now turn to the proof of the analyticity of f o n
+
+
+Lemma 4 .
+    If f(zi ,  . zn ) is a function of the vector variables z l , . . . z,., analyti c
+in the tube (extended tube) and invariant under transformations of L t ,
+then the following equations are satisfied at every point of the tube (ex -
+tended tube) .               ,Z
+                                    ~' f      f
+                                                        a
+                                    (z 3 ~      z ;,,        = O.                          (49 )
+                              3-1                       åz
+Proof .
+   Let A (a), - co < a<oo, be any one parameter subgroup of real Lorent z
+transformations, and z1 , . . . zn a point of the tube (extended tube) . Dif-
+ferentiating the identity
+
+     * The inequality (48) can be proved by going through the classical induction proof of (39 )
+estimating the size of each term. We are indebted to V . BARGMANN for pointing out (48), as wel l
+as showing us a version of the proof of this Lemma which we have followed rather closely .
+26                                                                              Nr . 5
+
+                     f (11(a) z1 , . . . !1(a) z n   = f (zi,   . . . zn)
+with respect to a, we obtai n
+
+                    df                af         a( A (a)
+                                                      aa
+                                                                     0.
+                    da          a(11(a)zj),"
+At a = 0, we have
+
+                                    a s
+
+where A , is a real 4 x 4 matrix satisfying ,
+
+                                                                                 (50 )
+
+and defining the one parameter subgroup . Hence
+
+                                                 a
+                                   ~~ Fcv zj v
+                                  j=1            az=
+                                                  9
+                                                     O.                          (51)
+
+Now, any real 4 x 4 matrix satisfying (50) generates a one parameter sub -
+group, so we may take A to have zero matrix elements except for a fixe d
+pair 7 12" and 2,12 , then (51) reduces to (49) and the Lemma is proved .
+  Considered for fixed z k , the equations (49) are a set of linear equations
+                            a
+in the 4 n unknowns a z: j = 1, . . . n, ,i = 0, 1, 2, 3 . There are at most 6
+
+independent equations . The derivatives of any invariant function must
+satisfy this set of equations at each point of the tube (extended tube) . O f
+course, the coefficient matrix of the equations varies from point to point .
+
+
+Lemma 5 .
+    If at a point, z 1 , . . . z n , of the extended tube, the number of linearl y
+independent solutions of the equations (49) is e and this e dimensional linea r
+manifold of solutions is spanned by the solutions which come from scalar
+products, then any invariant analytic function, f, may be represented in a
+neighbourhood of z 1 , . . . zn of the extended tube as a convergent power
+series in the e scalar products, i .e ., f is an analytic function of the e scalar
+products at z 1, . . .
+
+
+Proof .
+     In the customary nomenclature, a set of analytic functions PI) i = 1 ,
+. . . m < 4 n. of the four-vector variables z 1 , . . . z n is functionally independent
+Nr .5                                                                                                                  27
+                                                                         apt )
+at the point z 1 , . . . zn if the Jacobian matrix - - (i = 1, . . . m labels rows ;
+j = 1, . . . n, Fa = 0, 1, 2, 3 label columns) has rank ni at z 1 , . . . z,, . In other
+words, the nn rows of the Jacobian matrix regarded as 4 n componen t
+vectors with components labeled by j and ii are linearly independent . Since
+functional independence at a point is equivalent to the requirement that th e
+determinant of some ni x ni minor of the Jacobian matrix be different fro m
+zero, functional independence at a point implies functional independenc e
+in some neighbourhood of the point .
+    In this terminology, the hypothesis of the Lemma is that e functionally
+independent scalar products exist . We shall denote these scalar product s
+by f (z) , i = 1, . . . e . Since the Jacobian matrix has rank e, there exists a e
+element subset, T, of the 4 n variables z3 /', j = 1, . . . n, ,a = 0, 1, 2, 3, such
+that the determinant of the square matri x
+                                        Of(i) i=1,
+                                       . . .0, s T
+is non-zero .
+     Then, by the implicit function theorem for several complex variables ,
+the zit e T are analytic functions of f (i) i = 1   e in a neighbourhood of
+f(i) (z 1 , . . . z n) an d
+
+                   f (z i , .      .                             f (e) , h (1) , . . . h(4n -e) ) ,
+                                            = g (f (i) , . . .
+
+where g is analytic in the variables f (0 , i = 1, . . . and h ( ' ) , j = 1, . . . 4 n - e
+in a neighbourhood o f
+                 zn ), . .        f(~)(zi , . . . z n ), h(1 > (zi , . . . ti n ), . . . h(4 n - e )(z i , . . . z n ) .
+             .
+The variables h (j) are the zf -which are not in T. The variables
+
+                       f'         i=        . . .eand11             j            . .4n- o
+are obviously functionally independent in a neighbourhood of z i , . . . z n .
+    The derivatives of f can now be expressed in terms of the derivative s
+of g as follows :                      4 nie 0g ah ( k )
+                    of        O g Op)
+                             az         x      a fd) az .        + k=l. ah( k) a z
+
+However, according to the hypothesis of the Lemma, at the point z 1 , . . . z n
+     * See B and M, p . 39, theorem 9 .
+28                                                                                                                     Nr . 5
+
+                                       of                       af(i )
+
+
+                                      az~
+                                                             aia z F.c
+                                                     ti=1             7
+                                        7
+Hence,
+                             y                  a f(Z)       4 n- Q       ag              ah")
+                                       a                                                               0.
+                        1 äf(i)            2)   az
+                                                         +
+                                                                          h       (i)     az !
+                                                     y        l=1                           7
+
+
+                                                                                      a f (i)                         a 17 ('i )
+
+But regarded as vectors with 4n components,                                               z        = 1, . . . e and
+                                                                          N ,         a                               a,
+
+
+
+i = 1, . . . 4 n - e are linearly independent . (That is what the functiona l
+independence of the f (i) and h (i) means .) Therefore, their coefficients in this
+equation must vanish . In particular,
+
+                                 aq
+                                             . . .4n-e ,
+                             ô h (i>=0, i=1,
+
+so g is independent of the I& and the Lemma is proved .
+
+
+Lemma 6 .
+    Let N be the maximum number of linearly independent vectors con-
+tained in the set of 4-vectors z 1 , . . . zn , then the set of six linear equation s
+
+
+                        zi,a X,v- zw Xjm,) = 0 ,a, v = 0, 1, 2,                                         3 ,a<v           (52 )
+
+for the 4 n quantities Xj2 , ,j = 1, . . . n, cc = 0, 1, 2, 3 has the ran k
+
+                             N                   1               2            1               >3   1
+
+                            rank                 3               5                I           6
+
+Proof .
+    If R is a non-singular linear transformation of four dimensional space ,
+it is clear that the set of equations (52) has the same rank as the se t
+
+                   [(Rzj )p (RXI ).v        (Rzi )v (RXf )IL ] = 0, u i v = 0, 1, 2, 3
+             1=1
+for the 4 n quantities (RXA, . Then, with a suitable choice of R, the last
+(4 - N) components of vectors Rz j , j = 1    n can be made to vanish .
+Having reduced the problem to this simplified form, we drop the R an d
+assume the last 4 -N of the components of the Zl vanish .
+    To find the number of linearly independent equations (52), consider a
+possible linear dependence among the m
+Nr .5                                                                                       29
+                              3
+                                       aµv
+                              ~
+                           ,« . .7 = 0   7
+                                           ~
+                                           =1
+                                              z    (   iFE
+                                                             w - `wX1m) = 0
+                                                             X
+
+
+                            Fa< v
+
+for all Xi k , i . e . ,
+                  3                 3
+                                        xv         _
+                                  X          `dv
+                                                                 =1, . . .n,x=0,1,2, 3
+                   0              =oa
+                  <k          k <v
+or
+                                        Azz =O, 1=1, . . .n ,
+where we have written
+
+                       A vl` =Al" =<v,                                 =0,,a,v=0, 1,2,3 .
+
+Thus, the rank of the equations (52) is six minus the number of linearl y
+independent skew symmetric matrices, A such that Az t = 0, i = 1, 2, . . . n .
+
+The most general A has the form (°      ) where A' is an arbitrary anti -
+                                   0 A'
+symmetric (4-N) x (4-N) matrix . The numbers tabulated in the Lemm a
+are just six minus the number of linearly independent A' .
+
+
+Lemma 7 .
+    Let z 1 , . . . zn be a set of n four-vectors of which some four-elemen t
+subset (or n element subset if n< 4) is linearly independent . Then, the num -
+ber of linearly independent solutions of equations (52) which arise fro m
+scalar products T M of the four vectors according t o
+                                                          (_ )     E
+
+                                                   Xw - ,
+                                                       Ôz w
+
+is 4n-6 if n. > 3, is 3 if n = 2, and i if n = 1 .
+
+
+Proof .
+     It is clear that, for n > 3, not more than 4 n -0 linearly independen t
+solutions of equations (52) can be obtained from scalar products becaus e
+there are at most 4 n- 6 functionally independent scalar products .
+This follows immediately from equation (34), which expresses z k •zi , k, 1> 5
+in terms ofzz• zi ,wherei=1,2, . . .n,j=1,2,3,4 . Of these 4n, 6, namel y
+         i > j , i = 1, 2, 3, 4 are expressible in terms of the rest . For n = 3, 2, 1
+it is obvious that there are respectively 6, 3 and 1 independent scalar pro -
+ducts at most and therefore 6, 3, and 1 linearly independent solutions o f
+(52) at most .
+30                                                                                   Nr . 5
+
+    To show that these upper limits on the number of solutions are actuall y
+realized under the hypothesis of the Lemma, we proceed as follows .
+    Denote a vector in the space of solutions of (52) by (S 1 , . . . fi n ) wher e
+the are four-dimensional vectors . This notation is chosen so that a n
+                                                      F       O'               OF
+invariant analytic function F generates a solution      . . .         wher e
+                                                                           1   F)        z   i
+                                                        OF
+stands for the four-dimensional vector with components, vm . In this nota-
+
+tion, the solution of (52) which comes from the scalar product zj •zk i s
+
+                       (0, . . . 0, zk , 0, . . . 0, zj , 0, . . . 0),                (53 )
+                           jth place k
+                                           th place
+                                                                >
+and from w, 2j
+                            (0, . . . 0, 2 zj , 0, . . . 0) ,                         (54 )
+                           jth plac e
+
+
+By convention, we will accept (54) as the value of (53) for j = k .
+   The most general solution of (52) arising from scalar products is of th e
+form                    'a
+        G m, . . .         ajk (0, . . . 0, z k , 0, . . . 0, zj , 0, . . . 0) .
+                            j,k = 1
+Here, evidently                                2a
+
+                                   ~j =
+                                  ,7=- j              z jlc + a kj) 'k ,
+                                             k= 1
+so that the antisymmetric part of the matrix au, does not contribute an d
+a jk may as well be chosen symmetric .
+     Now, for convenience, let the first four zj (or first n if n< 4) be the linearl y
+independent set whose existence is assumed in the Lemma . Then we ca n
+write                           m
+                        zk=       hkt'l, k= 1, . . .n ,                          (55 )
+                              t=
+where in = min (4,n) and b is an n x !n matrix of rank In . Substituting (55 )
+into the expression for the solution vector we see that, in the basis fo r
+solution vectors provided by (z 1 , ti t , . . . zt „) , lj = 1, . . . In , j = 1, . . . n ,
+the most general solution arising from scalar products is of the form of a n
+n x ni matrix AB, where A is an arbitrary symmetric n x n matrix and B i s
+a fixed n x nl matrix of rank m .
+    To count the number of linearly independent AB simply, write B as th e
+product of a non-singular n x n matrix B' and the n x m matrix whose first
+In rows form the unit matrix and whose last n - in are zero :
+Nr .5                                                                               31
+
+
+                                          B-B ' ~ 1) .
+                                                      ,Ol
+
+This is always possible because B is of rank ni . The number of linearly
+independent matrices AB is the same as the number of linearly independen t
+matrices
+                               (B')TAB' ( 6 ) ,
+                                          0
+
+i . e ., the same as the number of linearly independent matrices of the form
+
+                                              (Si
+                                              ,S2 )
+
+where S 2 is an arbitrary (n - nn) x ni matrix and S 1 is an arbitrary symmetri c
+m x m matrix . There are obviously ni (n - m) + In (ni + 1) linearly independ-
+ent of these, which immediately yields the statement of the Lemma .
+
+Completion of the proof .
+     Lemmas 1 to 7 establish the single valuedness, boundedness, and con-
+tinuity of f everywhere on 91 n , and its analyticity on 93i at every non -
+exceptional point, i . e ., every point where the matrix z i • z3 , i,j = 1, 2 . . . n ,
+has the maximum possible rank, min (4,11) . To complete the proof of th e
+theorem, we want to show that in those cases where the set of exceptiona l
+points is not singular in the sense of algebraic geometry, viz . n = 1, 2, 3, 4 ,
+f' is also analytic there . For this purpose, we use a standard theorem o n
+removable singularities which asserts* : Let f he a function which is analyti c
+in a neighbourhood of a point, P, with the possible exception of a variet y
+passing through P, the variety being defined as the set of zeros of a functio n
+analytic in the neighbourhood of P . Suppose that f is continuous or merel y
+bounded throughout the neighbourhood of P. Then f is analytic throughou t
+ the neighbourhood of P . In our case, the variety is obtained by setting th e
+analytic function (let (z i • z .) = O . The required analyticity and continuit y
+ of f having been established by our Lemmas 1-7, the proof of the theore m
+is complete .
+
+                                    2 . The varieties 912n .
+    As we have seen in Lemma 3, every rank < 4 complex symmetric matri x
+is a matrix of scalar products of four vectors, so that Ti n is a subset of th e
+set of all complex symmetric n x n matrices of rank S 4 . The same Lemm a
+        * B and M, p . 173, theorem 5 .
+32                                                                                    Nr . 5
+
+shows that     n is an open subset . It is clearly connected because it is th e
+continuous image of a connected set, the tube . It is also simply connecte d
+by virtue of Lemma 3, although we shall forgo a formal proof . (The ide a
+is, given a closed curve on Mn which has to be shrunk to a point, to construc t
+a closed curve of vectors in the tube whose image in Ti n is the given curve .
+Then, because the tube is simply connected, the curve of vectors can b e
+shrunk to a point which implies that their image can be shrunk to a point . )
+Not every rank < 4 complex symmetric n x n matrix, Z, is in lD2,,, for exampl e
+if Z has real positive diagonal elements it is not in 9 N1, . We shall not attempt
+a quantitative characterization of 9J at this stage, but only remark that i t
+need not be the natural domain of analyticity for the analytic function s
+which occur in field theory . For example, the first named author showed i n
+his thesis° that the local commutativity conditions, I equation (11), alway s
+make it possible to extend the analytic function determined by the three -
+fold vacuum expectation value (To (I) (x i ) T(x2 ) (x 3 ) Po) beyond 9:n 2 . On th e
+other hand, it is clear that such functions cannot in general he extended t o
+ all complex symmetric rank < 4, n x n matrices because they must have
+branch lines in order to conform with physical requirements . (See, fo r
+example, the discussion of F 121 (z12 ) in I, Section 4 . )
+     The restriction to n x n matrices of rank < 4 is of course no restriction
+at all for n < 4 so the %t,, for n < 4 are open sets in Euclidean 1/2 n (n + 1 )
+ space . For n < 5 the restriction to rank < 4 on an n x n matrix Z ii can h e
+stated
+                                 / 1a,1 . . . Za ,j,,
+                            (let                      = 0
+                                   Z ?;21 . . Z15 7
+for each pair of f i v e element subsets i i , . . . i5 and j i , . . . j5 of 1, 2, . . . n .
+The tangent spaces of 9J are determined by taking the differential of th e
+left hand side of (56) . The result is a set of linear equations for the dZ ij
+whose coefficients are determinants of 4 x 4 minors of Z. At any point o f
+E n where all determinants of 4 x 4 principal minors of Z vanish, thes e
+equations are satisfied for any choice of dZz l . Consequently, at such a sin -
+gular point, the tangent space is 1/2 n (n + 1) dimensional . On the other hand ,
+as we learned in Lemma 7, the dimension at a non-singular point is 4 n - 6 .
+      Now we want to study the relation of the points ofi,z to those of the form
+Zij = real, i, j = 1, . . . n . We will refer to such Z as physical becaus e
+the arguments of the physically given vacuum expectation values are real
+vectors . We remark that every physical point Z is either in the interior o f
+ J2 n or on its boundary, because ~ k is the limit of (~ - ii 5) ( k ilk) as
+Nr .5                                                                                               33
+
+the 0 approach zero . No physical point Z can be in the interior of lilt i f
+any of the vectors Sj , j = 1, 2, . . ., n (of which Z is the set of scalar products )
+is light-like or time-like . To see this, consider a general pointgi
+j = 1, 2, . . . n of the tube . The corresponding point of En is given b y
+
+                                   Zjk -                        ik - I W3   1Îk + 173"   4) •
+If Z ' is to be real, it is necessary that each of the &' be space-like since i t
+is orthogonal to a vector inside the light cone . But then the diagonal elements
+of Z',               = 1, . . . n, are negative so that Z ' can be a physical poin t
+Z, Zjk =           j,x = 1, . . . n only if the vectors & j satisfy & =        -     On         4
+the other hand, as we now will show, some physical points with space-lik e
+     do lie in the interior of 3J2,, . Since this is a fact of considerable physica l
+significance, and the geometrical relationships are rather involved, it i s
+worth introducing some notation to describe the situation . We denote b y
+S . the set of all physical points, Z, which arise from space like vectors ,
+i .e . of the form Zjk = j          j, k= 1, . . . n with &j real and space-like . Th e
+subset of S,L which arises from            j     1, . . . n, lying in a space-like thre e
+dimensional linear manifold, we will denote by Tn . We will also call T.
+the equal time-manifold since it is the set of matrices whose elements ca n
+ be taken as scalar products of vectors arising from vectors & j =
+j = 1, . . . n., where the xi have equal first components .
+      We first prove that a subset of Tn lies in the interior of E n , and the n
+pass to neighbourhoods of that subset . Consider the vectors $ ;-iai j , j = 1 ,
+ .     n, where )il = ajri, CC] is a real positive number, z/ is a real unit vecto r
+ in the direction of the time axis, and             j = 1, . . . n are real vectors with
+ zero component in the time direction and in one space direction, say th e
+ direction of the third axis . Then ,
+
+                         z' =                           (Sk- i )ik) =
+                                                                        g'4-ajak = skj •
+where &j is defined as &3'. plus a vector along the third axis with component aj .
+The vectors &j evidently all have zero time components, so that Z' i s
+in Tn . Although the point sa l , . . . &n does not lie in the tube, it must, b y
+Lemmas 2 and 3, lie in the eXtended tube . Furthermore, by suitable choic e
+of the components of & 3' , j = 1, . . . n, it can be arranged that Z ' has ran k
+three . By Lemma 3, it then follows that vectors lying in neighbourhoods o f
+& j have scalar products which cover full neighbourhoods of Z' in IIJ2 n . Thus ,
+
+the fact that the particular points Z' chosen above lie in In implies that th e
+physical points which arise from all . 4 1 , . . . En lying in a suitably smal l
+    Mat . Fys . Medd . Dan .Vid. Selsk . 31, no . 5 .                                               3
+34                                                                                        Nr . 5
+
+neighbourhood of the chosen                 also lie in    This shows that Tn n 9 n .
+and    Sn   n Un have  the same   dimension   as  T n and S n , respectively .
+
+     Not all of S n lies in 92,z , but we will not attempt to prove this now no r
+to characterize those points of S . which lie on the boundary of l)2 n . W e
+content ourselves here with the simplest consequences of the precedin g
+results on T. and Sn . The set Sn fl ~n has been shown to be of the sam e
+dimension as S n and to contain, for suitably chosen e, all real symmetri c
+matrices Z ' of rank 4 satisfying ~ Zak - • k ~ < e . This set is a real environ -
+ment for an analytic function defined on Mn ; an analytic function f i s
+uniquely determined all over Ti n if its values are given on this set . We shall
+see in the next section that this result has important physical consequences .
+     The points of T, z are always of rank 3 so that for n ~ 5, Tn fl n lie s
+in the singular subset of 9N„n where the ordinary definition of analyticit y
+fails . The set T4 n 9J24 is of (real) dimension nine while S4 n ll4 is of dimensio n
+ten so that T4 fl R4 is not a real environment . On the other hand, T i fl M I ,
+ T2 fl M. 2 and T3 fl l3 have the same dimension as Si fl JJl , S 2 fl •9Jl 2 an d
+S3 n JJ2 3 , so that they form real environments for analytic functions on M I ,
+9J12 , and M 3 , respectively .
+
+
+                              3 . Physical Applications .
+   Some physical applications of the theorem of Section 1 were alread y
+discussed in I (See, for example, the formulation of local commutativit y
+given in I equation (11) .) They arise, like those to be discussed below ,
+when the theorem is applied to the invariant analytic functio n
+
+                                     F (n) (z i , z 2 , . . . zn-1 )
+
+whose boundary value, as all 71 2 ->-0, j - 1, 2, . . . n, is the vacuum expect-
+ation value
+              Fe")        (i . . .
+                          si n- i) = ( To, cP (x i) . . . 95' ( xn) 'o )
+
+Here, in a notation somewhat different from I, we have writte n
+
+                   zj _       ig j and &i = xi - x~ i i           j-   1, . . . n-1 .
+
+    The first consequence of the theorem is that F ( '' ) ( 1 , . . . $n,_i) is an ana-
+lytic function of the real variables Zig _ z • s~~ i, j = 1, . . . n-1 in an ope n
+subset of the set where all j are space-like, i, e . in the notation of the precedin g
+section, as long as Z belongs to a certain open subset of S n _ 1 n J2n_i . This con -
+    * See B and M, pp . 33-34, for the definition of a real environment in Euclidean space . Th e
+same definition works here because a neighbourhood of a non-singular point in Mn is essentially
+a Euclidean neighbourhood.
+Nr .5                                                                                               35
+
+elusion follows immediately from the analysis which showed that S n _ 1 flt n_ 1
+is a real environment in iPt n1 . (Recall that Ti n is the set of all comple x
+symmetric matrices of the form zi •z .i , i, j = 1, 2, . . . n, with z i in the tube .
+Of course, on Ti n for n > 5, the ordinary definition of analyticity has n o
+meaning at the exceptional points where the rank of z i •zj is less than 4 . Se e
+the discussion in the outline of the proof in Section 1 .
+    Furthermore,'the vacuum expectation valu e
+
+                         ( To , ,r ( x 1) . . . qP (fi n) T 0 )
+is uniquely determined from its values for space-like separated x 1 , . . . x n . I t
+is possible to regard this result as a quantitative formulation of the intuitiv e
+feeling that in a Lorentz invariant theory the equivalence of descriptions i n
+different Lorentz frames should somehow restrict the possible correlation s
+between the values of physical quantities at different points in space time .
+    For F (2) (e 1 ),           2), and F0>(1, / 3) an even more striking result
+holds :
+                ( T0 , (x i) iP ( x2) T 0), ( T 0 , T ( xi) (P ( x 2) m (x3) T 0) ,
+and                       (1 0 , rP ( x l) iP (X 2) T (x3) (P (x 4) 7j 0)
+are uniquely determined from their values ut equal times, i . e., in the notation
+of the preceding section from their values for Z 13 _ $i . $3 with ZrT1 , T2 ,T3,
+respectively . We want to emphasize that all three of these results hold i n
+both local and non-local field theory .
+    The most important application of the 'preceding remarks we know o f
+is to the proof of the following theorems which are extensions of results
+stated by R . HAAG 1 0
+
+Theorem (Generalized HAAG's Theorem First Part) .
+   Let two theories (distinguished by a subscript j = 1, 2) of a neutral
+scalar field be given whose canonical variables are related at time t by a
+unitary transformation, V :
+
+             U~ å   R)(p i      , t)Uf ;å, R)-1=9~(Rx+å, t)                   1 =1, 2          (57 )
+             U.; (å, R),zi j (x, t)R) -1 =n ~Rx+c, t)                         j       1, 2 .   (58)
+(Transformation law of field variable and canonical conjugate unde r
+Euclidean transformation . )
+                                                       1 1~(x -
+                    { 75 (x, t), (P i ( y , t ))   =              J)        =1 1, 2
+                                                                                               (59 )
+                -T3. ( x , t), .Tcjy, t)J - 0,         [Trx, t), (p .(->y t)~ = 0
+                                                                        ~
+
+                                 (Commutation Relations)
+                                                                                               3*
+36                                                                                          1\ r . 5
+
+               T2   (1, t) = V4't ~x, t) V -1      7c2   (x, t) = V, 1         t) V -i .     (60 )
+
+Dere (, a, R) represents the Euclidean transformation : rotate by R and trans -
+late by å; the unitary transformations, L'(å, R), give the correspondin g
+transformations of the states in the two theories .
+    Then
+                         U2 (' R)=VU1 (z R) V -1 .                   (61 )
+
+If each of the theories contains a unique normalizable state W0j , j =1, 2 ,
+invariant under Euclidean transformation :
+
+                              U (r.r, R    Ito)    7-fo)          J =1 , 2 ,
+then
+                                          c P02
+                                                  = ViW
+                                                           0i ,
+
+where c is a constant of absolute value I .
+
+
+Proof .
+     From (57), (58), and (60) we can easily derive that the operator s
+
+                                 Ul (   c R) -1 V-1 U2 (            R)V                       (62 )
+
+commute with q) 1 (*, t) and       t) for all                 x.
+                                               Because the i and 7 i for m
+an irreducible set s of operators, (62) must be a constant multiple of th e
+identity operator : w (å, R) 1 an d
+
+                            U 2 (å R) = w          R) VU1 (å R)V -1 .                         (63 )
+
+From (63), it follows that (     R) - w (, R) is a continuous unitary on e
+dimensional representation of the Euclidean group and therefore w (å R) =1 . 1 1
+This completes the proof of the first half of the theorem . To prove the secon d
+half, note that
+                               L, 1( c R) oI = o l
+and (63) imply
+                           U2 (å R)V f01 =VT 01 .
+
+Thus, by the uniqueness of 11'02, V W,» is a multiple, c , of q'02 • Since V
+is unitary, I c = 1 .
+
+     * That (p l (Z, t) and 7tx ( .z t) form an irreducible set is what we mean by our assumptio n
+that the theory is a theory of the scalar field (p l . This assumption is made for simplicity . In a
+theory in which the field ço l interacted with a spinor field, y, one would only have to introduce
+the hypothesis that T,.,         i,
+                                 v, form an irreducible set, together with the appropriate exten-
+sion of (57) . . . (61), to obtain an analogous theorem .
+Nr .5                                                                                                37
+
+    It should be noticed that only the properties of the fields and state s
+under Euclidean transformation at time t have been used in the proof o f
+the theorem . To one accustomed to the formalism of non-relativistic quantu m
+mechanics, the conclusion of the theorem is in no way surprising ; V alway s
+exists in such theories . Of course, there, V is a function of time, and physic -
+ally different theories will give a different time dependence for V . The sur -
+prise comes when, following HAAG, one combines the preceding assump-
+tions with those of relativistic invariance .
+
+Theorem (Generalized HAAG ' S Theorem Part II) .
+    Let two theories of a neutral scalar field be given satisfying the hypo -
+theses of the preceding theorem . Let the theories be invariant under inhomo-
+geneous Lorentz transformations (a,A) and suppose the fields transform a s
+follows :
+              U1 (a,4.)991 (x) U1 (a,A) -1 = T j (Ax+a) j = 1, 2 .        (64 )
+
+Suppose further that the states Poi are invariant under in homogeneou s
+Lorentz transformation
+
+                              U.l (a, A) Ÿfoi              j = 1, 2,                            (65 )
+
+and that no states of negative energy exist.
+    Then the first four vacuum expectation values are equal in the tw o
+theories .
+          ( P Ol , T1 (°r l) . . . 9) 1 \`~ya) 71 01) _ (n2 , ç2 ( xl) . . . T2 ( x n) W-02)    (66 )
+
+Proof.
+    From the preceding theorem we have for equal times xi = .x2 = . . =                          :
+  (1 01, 81(x1) . . . 4~1( x m) p oi) _ ( Vt ol, V m1(x 1) V               Vrp 1( x n) V   1VW o1 )
+                                (   02,    (x1) . . . Ç0 2(xn) If 02) •
+Thus, all vacuum expectation values are equal for equal times in the tw o
+theories . For n =1, 2, 3, 4, equality for all times x° + + . . . + x° fol -
+lows from equality for equal times by the argument presented earlier i n
+this section . This completes the proof . The hypotheses about the absenc e
+of negative energy states and the existence of the vacuum are necessary i n
+order that the vacuum expectation values be boundary values of analyti c
+functions to which our previous analysis applies .
+    It should be noticed that we have not made the assumption that the tw o
+theories transform according to equivalent representations of the inhomc)-
+38                                                                                 Nr . 5
+
+geneous Lorentz group ; our hypotheses do not exclude a priori the possi-
+bility that the two theories have different bound states, for example . Further ,
+we have not assumed any particular transformation law for the operators r
+under Lorentz transformations and time translations . Only the behaviour o f
+z(, t) for one particular time under Euclidean transformations is needed .
+    The uniqueness of the vacuum state is crucial to the argument . If it
+were possible to form normalizable states of zero three-momentum fro m
+states of mass greater than zero, the hypothesis of a unique normalizabl e
+state of zero three-momentum would be unnatural and the second theore m
+physically trivial . V could then carry iP 01 into a superposition of Po, an d
+those other states of zero three-momentum . However, Wigner's analysis o f
+the unitary representations of the inhomogeneous Lorentz group 12 shows
+that states can never be normalizable which are superpositions of states o f
+mass greater than zero and have zero three-momentum, and Haag's theore m
+is very far from physically trivial .
+    As a particular case one can take the field ca l to be a free field satisfyin g
+
+               ( q +nt 2 ) sr ( x ) = 0 , [ (Pi( x ) , (p1(y)J   i-t
+                                                                       4 (x - O)
+Then we conclude : no theory of interaction exists in which the ordinar y
+representation of the annihilation and creation operators is used and the firs t
+four vacuum expectation values differ from their free field values . If relativisti c
+theories of interaction exist with vacuum expectation values, F (n) , differen t
+from the free field values for n = 1, 2, 3, G., either they must use other repre-
+sentations of the canonical commutation relations or they do not satisfy th e
+ canonical commutation relations al all . (This is essentially HAAG ' S con-
+ clusion 10 .) This result shows that the situation which was found by WIGHT -
+ MIAN and ScHwEBEn l3 in a special non-relativistic example is typical o f
+
+relativistic theories of interaction which satisfy the canonical commutatio n
+relations (if such exist at all) : For each different value of the coupling con-
+ stant one must use an inequivalent representation of the commutation rela-
+ tions (assuming that different values of the coupling constant will give ris e
+ to some difference in the vacuum expectation values F (n) for n = 1, 2, 3, 4 . )
+ Of course, the converse is not true ; inequivalent representations of the com-
+ mutation relations need not always give rise to physically distinct theories .
+     From both the aesthetic and physical point of view, the version of th e
+ generalized Haag ' s theorem proved here is somewhat deficient because i t
+ only asserts the equality of the first four vacuum expectation values . It seem s
+ physically plausible that two theories in which the two-particle propagator ,
+ the vertex part, and the two-particle scattering for all energies are identical
+Nr .5                                                                            39
+
+(as they must be if the first four vacuum expectation values are identical )
+should be completely identical . On this basis, one would conjecture th e
+aesthetically more satisfying result that all vacuum expectation values coin-
+cide, which would (from the work of I Section 5) indeed imply the physica l
+equivalence of the two theories . To prove this result along the lines of th e
+present paper would require one to establish a unique analytic continuatio n
+out of the equal time-manifold T. into 2 n ; it would require an analysis
+going essentially beyond what we have presented in . Section 1 . (In fact, it
+is not difficult to see that under the hypothesis of Section 1, the analyti c
+continuation is not unique for n > 4.)
+     A second matter which the present paper leaves untouched is the questio n
+of the existence of theories which use representations of the commutatio n
+relations different from those of a free field . If it turns out that no such repre-
+sentation gives rise to a relativistically invariant theory which is physicall y
+interesting, that would be very strong evidence of the incompatibility of th e
+ canonical commutation relations, relativistic invariance and interaction . I n
+ fact, it would show that the fact that a field strength renormalization con-
+ stant is infinite in quantum electrodynamics u4 is not a special consequenc e
+ of the Hamiltonian of the theory, but a general result arising from relativisti c
+invariance. .
+
+Acknowledgement.
+    The authors wish to express their deep gratitude and indebtedness t o
+V . BARGMANN . His remarks led to the elimination of essential errors in th e
+original proof of the theorem of Section 1 and his suggestions have strongl y
+influenced the present form of the proof . They also thank a number of othe r
+physicists and mathematicians for helpful discussions . Part of this paper i s
+based on part of the Princeton thesis (1956) of the first-named author . Th e
+second-named author is a National Science Foundation Fellow on sabbatica l
+leave from Princeton University . He thanks Professor NIELS Bonn for th e
+hospitality extended to him at the Institute for Theoretical Physics, Univer-
+sity of Copenhagen .
+                                          References .
+1. A . S . WIGHTMAN, Phys . Rev . 101, 860 (1956) . This paper will be referred to as I .
+   We adopt the notation of I, except when it is explicitly stated otherwise .
+2. See, for example, S . LEFsnnTz, Algebraic Geometry, Princeton Press (1953) ,
+   pp . 35-40 .
+3. S . BOCHNER and W . T . MARTIN, Annals of Math . 57, 490 (1953) .
+4. For proof of these statements, see L . PONTRJAGIN, Topological Groups, Prince-
+   ton Press (1939), Chapters VI and IX . See especially pp . 265-66 .
+5. For a proof of this basic property of analytic functions, see S . BOCHNER an d
+   W . T . MARTIN, Several Complex Variables, Princeton Press (1948), p . 34 ,
+   theorem 4 . We shall refer to this book as B and M .
+6. See, for example, L . KRONECKER, Journal für Reine u . Angew . Math . 72, 15 2
+   (1870) or C . C . MAC DUFFEE, Ergebnisse der Math. 2, 364 (1933) .
+7. The constructions of these paragraphs are given in detail, because they solv e
+   a problem in linear algebra not standard hi the physical literature . They ar e
+   well known in the mathematical literature . See, for example, E . WITT, Journa l
+   für Math . 174, 31 (1936) or C . CHEVALLEY, The Algebraic Theory of Spinors ,
+   Columbia Ihliversity Press, New York (1954), pp . 8-15 . The essential point s
+   are the following . Even for a complex valued scalar product such as z . w =
+   zi,,, wP, provided it is non-degenerate (i . e . provided z• w = 0 for all vectors w
+   implies z = 0), it remains true that a linear manifold and its orthogonal mani -
+   fold 1W have dimensions satisfyin g
+                                     dim M+ dim 11/1 1 = 4 .
+   However, unlike the ease with a positive scalar product, it can happen that .
+   M and M l have non-zero vectors in common ; then M and Ml do not toge-
+   ther span the whole space . A necessary and sufficient condition that Mn M l = (0 )
+   is that M have a basis whose Gram determinant is not zero . Then, all base s
+   for M, and M l as well, have non-vanishing Gram determinant . In that case ,
+   a general vector has a unique decomposition into a sum of a vector in M an d
+   a vector in M me . There is a simple formula for the projection of a vector v int o
+   a subspace with basis v l , . . . , v .
+                                                                    1 c     \
+
+
+
+                       ---I G (v i . . . u m) j-1 det             pm . e'
+
+                                                                     o
+                                                        vi   Um
+Nr . 5                                                                                       41
+
+    If a subspace has the property that every vector in it is of zero length, it is
+    called isotropic. Isotropic subspaces can have dimensions no larger than hal f
+    the dimension of the whole space . Most of these results follow directly fro m
+    arguments of the type given in the preceding paragraphs of the proof . They
+    will be used without comment in the remainder of the proof .
+ 8. See, for example, C . C . MACDuFFEE, Ref . 6, p . 408, theorem 34 .1 .
+ 9. D . HALL, thesis, Princeton (1956), Chapter III, unpublished .
+10. R . HAAG, Mat . Fys . Medd . Dan . Vid . Selsk . 29, no . 12 (1955), especially pp . 30-32 .
+    In the opinion of the present authors, HAAG's proof is, at least in part, inconclu-
+    sive . We thank Dr . HAAG for a correspondence on the matter . It will not escape th e
+    discerning reader of HAAG ' S paper that, while we have generalized his results ,
+    eliminated one of his assumptions (the asymptotic condition), completed hi s
+    proofs, and sharpened his conclusions, the essential physical points are HAAG ' S .
+11. This result follows from a determination of all representations of the Euclidea n
+    group implicit in theorems of G . MACxEY, Annals of Math . 55, 101 (1951) . It
+    is also not difficult to construct a simple direct proof .
+12. E . P .WIGNER, Annals of Math . 40, 149 (1939) .
+13. A . S . WIGHTMAN and S . SCHWERER., Phys . Rev . 98, 812 (1955) . See especially
+    p . 824 .
+14. G . KALLÉN, CERN/T/GK3, report, unpublished .
+
+
+
+
+                               Indleveret til selskabet den 15 . marts 1957.
+                                Færdig tt'a trykkeriet den 2 . oktober 1957 .
+

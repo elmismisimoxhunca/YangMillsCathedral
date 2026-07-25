@@ -1,0 +1,301 @@
+  SPECTRAL RESOLUTION OF GROUPS OF UNITARY OPERATORS
+
+                              BY WARREN AMBROSE
+   Introduction. This paper discusses a spectral resolution theorem for groups
+of unitary operators, where the group involved is any locally compact Abelian
+topological group. If the group is specialized to be the real line our theorem
+becomes the well-known Stone theorem on 1-parameter groups of unitary opera-
+tors, while if the group is specialized to be the integers it becomes the usual
+spectral resolution of a single unitary operator and its powers. We assume the
+Pontrjagin duality theorem, a nominal amount of operator theory (in Hilbert
+space) and the Herglotz-Bochner-Weil theorem on the representation of positive
+definite functions.
+
+   1. Preliminaries. We begin by establishing some notation which will be fixed
+throughout the first part of this paper. (7 will be a locally compact Abelian
+topological group (not necessarily separable) and G* will be its character group.
+
+
+functions defined on G* we shall use and       .
+We shall use x and y for points in G and and i" for points in G*; for (complex-
+valued) functions defined on G we shall use f and g while for (complex-valued)
+                                                 L and L* will be the usual Banach
+spaces of (complex-valued) functions of integrable p-th power defined on G and
+G* respectively while L and L* will be the Banach spaces of continuous func-
+tions (on G and G* respectively) which, for each > 0, are less than outside
+some compact set. By a Borel set we shall mean a set in the Borel field deter-
+mined by the collection of open sets and by a Borel function a function which
+is measurable with respectto the Borel sets. The symbol [x, $] will stand for
+the "character function" between G and G*, i.e., that function on G X G* which
+sets up the duality relation between G and G*.
+   By a regular measure on G* we shall mean a countably additive non-negative
+set function m defined for all Borel sets and having the following property: if
+B* is any Borel set, then re(B*)      inf m(O*), this inf being taken over all open
+O* which contain B*. If re(G*) <          we say m is a finite measure. A function
+f(x) on G is called positive definite if it is continuous and if for every finite set
+xl,       x. of points in G the matrix (ai;) defined by ai f(x x,) is positive
+definite. In these terms we can state the Herglotz-Bochner-Weil representation
+theorem as follows:
+  I. f(x) is positive definite if and only if there exists a finite regular measure m
+on G* for which
+
+                              f(x)     f Ix, ] m(d).
+  Received July 23, 1943.
+                                         589
+590                              WARREN AMBROSE
+
+   This statement is not quite the same as that given in the book of A. Weil [2
+but can be derived easily from it.
+   By a complex measure we shall mean a set function m defined for all Borel
+sets, and of the form m ml m i(m3 m4), where the m are finite regular
+measures. We shall have occasion to use the following easily proved fact:
+  II. If g(x) is any function of the form
+
+                               g(x)
+                                       f Ix, ] m(d),
+where m is a complex measure, then the complex measure m is uniquely determined.
+   The group of operators whose spectral resolution we shall establish will be
+denoted by lUg}. Precisely speaking we have a Hilbert space (not necessarily
+separable) and for each x in G we have a unitary perator Ux acting on this
+Hilbert space, and UxU
+                ,         .     U/, for all x, y. Points in this Hilbert space will_
+
+
+   and .
+be denoted by          and     We shall assume in proving our spectral theorems
+that U is weakly continuous in x, i.e., that (Ua, ) is continuous in x for each
+
+    The term "operator" will always mean a bounded linear everywhere-defined
+transformation of this Hilbert space into itself, and if V is an operator then
+Ill V II1 will denote its bound. If V is an operator such that (V, ) (, V)
+for all a,/, then we shall call V real, or Hermitiaa. If V and V’ a’e Hermitian
+                                              ,
+operators with (V, ) >_ (V’a, ) for all then we shall write V >_ V’. We
+recall here the well-known fact that, if L(, ) is a bounded Hemitian-bilinear
+functional, then there exists a Hermitian operator V with L(, )             (Va, ).
+    Before going on to the technical details of the paper we make the followin
+comments. Our proof of Theorem 1 uses the Herglot-Bochner-Weil representa-
+tion theorem in the same way as Bochner [1] previously used the corresponding.
+theorem for functions of a real variable to obtain Stone’s theorem. If U is
+group translation on G (i.e., our Hilbert space is L(G), where G is the group
+over which the parameter x ranges and U is defined by Uxf(y)              f(yx)), then_
+the Fourier transform V carries U into a group U: acting on L(G*). This.
+group U: is that defined by U ()
+that defined by E(B*)         ..,    where  .[x, ](.) and its spectral resolution is.
+                                                 is the characteristic function of B*.
+It is interesting to ask if any similarity with this situation remains in the case.
+of non-Abelian groups since there one has both the group of unitary operators
+given by group translation and the spectral family defined on this same way.
+Only one has no related U and no dual group. In a later paper we hope to show
+that these matters, in the case of compact groups, are related to the Tannaka
+duality theorem and also have some meaning for n0n-compact locally compact
+non-Abelian groups.
+
+   2. The spectral theorem. By a spectrel family on G* we shall mean a family
+of operators {E(B*)}, one for each Borel set B*, with the following properties"
+                                SPECTRAL RESOLUTION                                591
+
+  (1) Each E(B*) is a projection operator.
+  (2) E(null set) 0.
+  (3) E(G*) I.
+  (4) E(B* )E(B*       E(B* B* ).
+  (5) If B*        B* and the B* are disjoint, then E(B*)        E(B*).
+  (6) E(B*)      inf E(O*), this inf being taken over all open 0* containing B*
+(and this equality meaning, too, that this inf always exists).
+We can now state and prove our principal spectral theorem:
+  THEOREM 1. If Ux i8 weakly continuous, then there is a unique spectral family
+{E(B*) such that
+(2.1)                             Ux    f Ix, ] E(d)
+(this equality holding in the sense that the usual approximating sums for an integral,
+when formed in terms of the operators and functions under this integral sign, con-
+verge uniformly to U). An operator commutes with every U if and only if it
+commutes with every E(B*).
+    Proof. It is trivial that, for each a, (Uxa, a) is a positive definite function and
+hence, by I, has an integral representation:
+
+(2.2)                        (U., .)      f [x, ] m.(d0.
+,Because  (Ua, ) is a linear combination of terms of the form (U’, "), by taking
+     a, B, -{- B, and
+            a           a  i, it follows that for each and 5 there exists a com-
+                                                          a
+plex measure m,.a such that
+
+(2.3)                       (U, )        f Ix, ] m,.a(d).
+The uniqueness of this representation then implies that (for each Borel set B*)
+m,.(B*) is a bilinear functional and also
+(2.4)                           m,.(B*)       ma.,(B*).
+Such a functional satisfies the Schwarz inequality:
+(2.5)               m,.(B*) 12 <_ m,.,(B*)m.(B*).
+Remembering that m,(B*)    m, ,(B*) is a measure and using (2.2) with
+x       0, wehave
+(2.6)                     m.(B*) <_ m,(G*)       ]] II 2.
+Then (2.5) and (2.6) together show that m..(B*) is a bounded, as well as bilinear,
+fimctional. We conclude that for each Borel set B* there is a real operator (it.
+is real because of (2.4)) E(B*) such that (E(B*)a, )      m,.(B*).
+592                               WARREN AMBROSE
+
+  We shall now show that, if B* and B* are any two Borel sets, then E(B*B*)
+E (B*) E (B*). We have
+
+                                     f   ix, [y, ](E(d$)o, )
+so defining the complex measure n(B*) by
+
+(2.7)                     n(B*)      f ](E(d)a, B),
+                                    B*
+                                         [y,
+
+we have
+
+                           (u./.,, #)      f Ix, ] n(d).
+We also have
+
+(2.8)                  (U/,, )       f Ix, ](E(d)U.., ).
+By the uniqueness theorem we conclude that, for every Borel set B*,
+
+(2.9)                 f[y, ](E(d)a, )          (E(B*)U,,a, ).
+
+This is the same as saying that, if we define F(B*) (for all Borel sets B* in terms
+of an arbitrary fixed Borel set B*) by
+(2.10)                         F(B*)       E(B*B* ),
+then
+
+(2.11)                J [y, ](F(d)a, )         (E(B*)U,a, ).
+  We also have, however,
+
+(2.12)    (E(B* )Uo, )       (U,o, E(B* ))       f Ix, ](E(d)a, E(B* )).
+From (2.11) and (2.12) we conclude that (for any Borel set B*)
+(2.13)               (F(B*)o, )         (E(B*)o, E(B*)).
+Using (2.10), (2.13) and the reality of the E(B*), we conclude that E(B*B*)
+E(B* )E(B* ).
+   The last paragraph showed that our family {E(B*)} has properties (1) and
+(4) of a spectral family, and from the fact that our original ms (B*) was a regular
+measure we conclude that it has properties (2), (5) and (6). Property (3) is
+implied by (2.2). Hence our family E(B*)} is a spectral family.
+                             SPECTRAL RESOLUTION                               593
+
+  We already have (2.2) and it is easy to show that the integral
+
+                                    fix, ] E(d)
+exists (in the sense mentioned in the statement of this theorem) so we conclude
+that (2.1) is true. The uniqueness of the spectral family {E(B*) is clear because
+if a spectral family satisfies (2.1) then it will satisfy (2.2) and we already know
+the uniqueness of the representation (2.2).
+   Now let V be any operator. If V commutes with every Ux, then (U, Va, )
+(Ua, V*) and hence by the uniqueness of our representation we have
+(E(B*) V, )         (E(B*), V*), so V commutes with every E(B*). If V com-
+mutes with every E(B*) we can show in the same way that V commutes with
+every Ux. Hence the theorem is proved.
+
+   3. The operational calculus. We shall say that a Borel function () is es-
+sentially bounded (with respect to the spectral family {E(B*)} of the given
+group {Ux}) if there exists a constant k such that E([I :> k]) 0. For each
+such we define an operator V by
+
+(3.1)                           V         f () E(d)
+(where again the integral stands for the limit, in the sense of the strong topology
+of operator space, of the usual approximating sums).
+  THEOREM 2. The correspondence ---, V defined for all essentially bounded
+Borel functions by (3.1) has the following properties:
+  (a) Va,+b aV, + bV
+  (b) V,        V,V
+  (c)   v     v*,
+  (d) if q is real, then V, is real,
+  (e) if q >_ b, then V >__ V,
+  (f) if[     =- 1, then V, is unitary,
+  (g) if q  the characteristic function of the Borel set B*, then V, E(B*),
+  (h) V,III   III <-
+                  the essential bound of lo ],
+  (i) if () is the Fourier transform of f(x) 51 then (for all a and ),
+
+                          (ra, )      f f(x)(U,a, )   dx.
+
+  The proof is obvious.
+
+   4. Spectral resolution for subgroups and quotient groups. In this section we
+shall be concerned with the spectral resolution of a group of unitary operators
+  U in case the group parameter x runs over some group, but Ux really depends
+,594                               WARREN AMBROSE
+
+on some subgroup or quotient group of the full group.           We set up the following
+notation:
+  G   group, with points 5,
+  G
+  G*
+      closed subgroup of G, with points x,
+       character group of G, with subsets
+                                                 *
+                                             and points           ,
+  G’
+  G*
+       that subgroup of G which annihilates G,
+       GIG’ character group of G, with subsets B* and points
+    U} group of unitary operators, defined for 5 G,
+                                                                          ,
+   {(*)      spectral resolution of U}.
+As before, we assume that G, and hence all the other groups here, are locally
+compact and Abelian.
+  We shall have to consider the natural mapping of G* into G* taking each
+   *  into that coset of "*/G’ to which belongs. We define, for each Borel set
+B*, the operator E(B*) by
+(4.I)                               T’(B *)    E(B*),
+where
+        *   is the origin of B* under the mapping
+                                                        *
+                                                      G*.
+                                                            -
+   When we are given U}, 5 running through G, we can consider the subgroup
+  Ux }, x running through G. The following theorem gives the spectral resolution
+of Ux} in terms of the spectral resolution of {U}.
+   THEOREM 3. The spectral resolution of {Ux} is the family {E(B*)} defined by
+(4.1).
+   Proof. It can be immediately verified from (4.1) that {E(B*)} has the prop-
+erties (1)-(6) of 2, and hence is a spectral family. We have
+
+                                  U      f [5, ] E(d-).
+For
+osets G’
+            x
+                ,
+                G, the function [x, ] is a function of G*, i..e., it depends only on the
+                    so by (4.1) we can write
+
+
+
+
+The uniqueness of the spectral resolution then shows that {E(B*) is the spectral
+resolution of Ux }.
+  We now consider {U} for all 5 G but suppose that U depends only on
+G/G, i.e., U is constant on the cosets G       x. The following theorem shows
+that in this case the spectrum is contained in G’.
+  THEOREM 4. If V depends only on G/G, then, for any Borel set B*, E(B*)
+E(B*G’).
+                                 SPECTRAL RESOLUTION                                    595
+
+
+
+
+                     __
+   Proof. We consider the subgroup {U with x                G. Since U          I for x G
+-the spectral resolution of {U is defined by
+(4.2)               E(B*)      I if 0 B*,        E(B*)      0 if 0 B*.
+By Theorem 3 we have
+(4.3)                               E(B*)       -(-*)
+
+                                                         O, (4.2) *
+where
+(}
+         * is the originB*ofandB* 0under
+      B* means G’
+                                         the natural mapping of
+                                    i B* means G’B*
+                                                                    onto G*. Since
+                                                                  and (4.3) together
+establish the theorem.
+
+                                        REFERENCES
+1. S. BOCI-INER, Spektralzerlegung linearer Scharen unitdrer Operatoren, Sitzungsberichte der
+         Preussischen Akademie der Wissenschaften, 1933, pp. 371-376.
+2. A. WEIL, L’integration dans les groupes topologiques, Paris, 1936.
+
+     UNIVERSITY OF MICHIGAN.
+
