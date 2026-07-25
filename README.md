@@ -1082,8 +1082,9 @@ also derived from equality against every bounded continuous real test by finite 
 extensionality. A reusable Fourier bridge treats source and target integration as bounded linear
 functionals on continuous complex tests; selected physical Peter–Weyl density reduces the residual
 identity to exact compatibility on every finite matrix-coefficient synthesis. Finite direct-sum
-induction reduces this further to one arbitrary matrix in one selected physical representation
-block at a time. No analytic input, selected-density witness, or block identity is constructed. A further uninhabited bridge
+matrix linearity and direct-sum induction reduce this further to one raw row/column coefficient in
+one unchanged selected physical representation presentation at a time. No analytic input,
+selected-density witness, or raw-coefficient identity is constructed. A further uninhabited bridge
 now writes the stored region weights as the boundary-conditioned finite-face integrals used in the
 proof of Theorem 8.4: Definition 7.6's delta constraints are discharged by fixed external boundary
 values, internal edges are Haar-integrated, positive candidate-face areas sum to region area, each

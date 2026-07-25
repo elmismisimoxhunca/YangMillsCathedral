@@ -5600,9 +5600,9 @@ now derived from equality against every bounded continuous real test by finite r
 extensionality. A reusable Fourier bridge packages source/target integration as bounded linear
 functionals on continuous complex tests; selected physical Peter–Weyl density reduces that integral
 identity to exact compatibility on every finite selected matrix-coefficient synthesis. Finite
-direct-sum induction reduces this further to one arbitrary coefficient matrix in one selected
-physical representation block at a time. None of the analytic inputs, selected density, or residual
-block identities is constructed.
+matrix linearity and direct-sum induction reduce this further to one raw row/column coefficient in
+one unchanged selected physical representation presentation at a time. None of the analytic inputs,
+selected density, or residual raw-coefficient identities is constructed.
 
 `TwoDimensionalSenguptaTriangulatedHeatFactorBridgeData` now supplies the boundary-conditioned
 finite-face formula used in the proof of Theorem 8.4: Definition 7.6's delta constraints are discharged
