@@ -1462,8 +1462,10 @@ committed before higher layers depend on it.
     the exact heat-trace, Casimir/Laplacian, positivity, and weak-initial-identity inputs. Use it to
     discharge the Sengupta covering semigroup field. Derive the measure-level projection
     homomorphism from equality against every bounded continuous real test using finite regular-measure
-    extensionality, retaining that integral identity as explicit dependent debt. Construct none of
-    the analytic inputs or residual integral theorem.
+    extensionality. Package integration as bounded linear functionals on continuous complex tests
+    and use selected physical Peter–Weyl density to reduce the residual identity to every finite
+    matrix-coefficient synthesis. Construct none of the analytic inputs, selected density, or
+    residual coefficient identities.
   - [x] Define the boundary-conditioned finite-face factor reduction used in the proof of Theorem
     8.4, with Definition 7.6's delta constraints discharged by fixed external values,
     Haar-integrated internal edges, positive candidate-face/region areas, three-traversal face words,

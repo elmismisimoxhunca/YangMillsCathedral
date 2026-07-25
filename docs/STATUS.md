@@ -5597,7 +5597,10 @@ convolution addition, and weak identity into an exact reusable density-semigroup
 the covering group, this discharges the cover-semigroup field from explicit heat-trace,
 Casimir/Laplacian, positivity, and weak-initial-identity inputs. The exact projection homomorphism may remain caller-supplied, or is
 now derived from equality against every bounded continuous real test by finite regular-measure
-extensionality. None of those analytic inputs or the residual integral identity is constructed.
+extensionality. A reusable Fourier bridge packages source/target integration as bounded linear
+functionals on continuous complex tests; selected physical Peter–Weyl density reduces that integral
+identity to exact compatibility on every finite selected matrix-coefficient synthesis. None of the
+analytic inputs, selected density, or residual coefficient identities is constructed.
 
 `TwoDimensionalSenguptaTriangulatedHeatFactorBridgeData` now supplies the boundary-conditioned
 finite-face formula used in the proof of Theorem 8.4: Definition 7.6's delta constraints are discharged
