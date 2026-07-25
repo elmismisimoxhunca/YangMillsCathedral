@@ -11,7 +11,7 @@ namespace YangMills.Dimensions.TwoDimensionalSenguptaCoveringHeatSemigroupBridge
 
 open MeasureTheory
 open YangMills.Mathematics
-open scoped ENNReal Manifold ContDiff
+open scoped ENNReal Manifold ContDiff BoundedContinuousFunction
 
 noncomputable section
 
@@ -68,6 +68,40 @@ noncomputable def exact_spectral_covering_bridge :
       (coverDensity := unitaryMatrixDualCasimirHeatDensityENNReal coverHeatTrace) :=
   TwoDimensionalSenguptaCoveringHeatSemigroupBridgeData.ofCasimirSpectral
     coverLaplacianBridge coverPositivity coverInitial projectionHeat
+
+/-- Bounded-continuous real-test transport suffices for the exact spectral covering bridge. -/
+noncomputable def exact_spectral_covering_bridge_of_integralTests
+    [HasOuterApproxClosed G]
+    (integralProjection : ∀ t : ℝ, 0 < t → ∀ f : G →ᵇ ℝ,
+      (∫ g', f (finiteLaw.projection g')
+        ∂normalizedCompactHaarDensitySemigroupMeasure
+          (unitaryMatrixDualCasimirHeatDensityENNReal coverHeatTrace) t) =
+      ∫ g, f g
+        ∂normalizedCompactHaarDensitySemigroupMeasure law.selectedAreaDensity t) :
+    TwoDimensionalSenguptaCoveringHeatSemigroupBridgeData
+      (planarSemigroup := planarSemigroup) (finiteLaw := finiteLaw)
+      (coverDensity := unitaryMatrixDualCasimirHeatDensityENNReal coverHeatTrace) :=
+  TwoDimensionalSenguptaCoveringHeatSemigroupBridgeData.ofCasimirSpectralIntegralTests
+    coverLaplacianBridge coverPositivity coverInitial integralProjection
+
+include planarSemigroup coverLaplacianBridge coverPositivity coverInitial in
+omit [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
+/-- Hostile extensionality probe: the integral-test constructor rejects a changed projected law. -/
+theorem changed_spectral_projection_of_integralTests_blocked
+    [HasOuterApproxClosed G]
+    (integralProjection : ∀ t : ℝ, 0 < t → ∀ f : G →ᵇ ℝ,
+      (∫ g', f (finiteLaw.projection g')
+        ∂normalizedCompactHaarDensitySemigroupMeasure
+          (unitaryMatrixDualCasimirHeatDensityENNReal coverHeatTrace) t) =
+      ∫ g, f g
+        ∂normalizedCompactHaarDensitySemigroupMeasure law.selectedAreaDensity t)
+    {t : ℝ} (ht : 0 < t)
+    (changed : Measure.map finiteLaw.projection
+      (normalizedCompactHaarDensitySemigroupMeasure
+        (unitaryMatrixDualCasimirHeatDensityENNReal coverHeatTrace) t) ≠
+      normalizedCompactHaarDensitySemigroupMeasure law.selectedAreaDensity t) : False :=
+  changed ((TwoDimensionalSenguptaCoveringHeatSemigroupBridgeData.ofCasimirSpectralIntegralTests
+    (planarSemigroup := planarSemigroup) coverLaplacianBridge coverPositivity coverInitial integralProjection).map_coverMeasure ht)
 
 include projectionHeat in
 omit [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in

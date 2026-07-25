@@ -25,7 +25,7 @@ namespace YangMills.Dimensions
 
 open MeasureTheory
 open YangMills.Mathematics
-open scoped ENNReal Manifold ContDiff
+open scoped ENNReal Manifold ContDiff BoundedContinuousFunction
 
 noncomputable section
 
@@ -87,6 +87,36 @@ noncomputable def ofCasimirSpectral
   coverSemigroup := unitaryMatrixDualCasimirHeatDensitySemigroupData
     coverLaplacianBridge coverPositivity coverInitial
   projectionHeat := projectionHeat
+
+omit [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
+/-- It suffices to supply projection compatibility against every bounded continuous real test. The
+exact positive-time measure pushforward is then derived by finite regular-measure extensionality. -/
+noncomputable def ofCasimirSpectralIntegralTests
+    [SecondCountableTopology CoverGroup] [HasOuterApproxClosed G]
+    {CoverE : Type uCoverE} [NormedAddCommGroup CoverE] [NormedSpace ℝ CoverE]
+    [ChartedSpace CoverE CoverGroup]
+    [LieGroup (modelWithCornersSelf ℝ CoverE) ∞ CoverGroup]
+    {coverInner : Geometry.InvariantInnerProductData
+      (I := modelWithCornersSelf ℝ CoverE) (G := CoverGroup)}
+    {coverLaplacian : RightInvariantPairingComplexLaplacianData coverInner}
+    {coverHeatTrace : UnitaryMatrixDualHeatTraceSummabilityData (G := CoverGroup)}
+    (coverLaplacianBridge : UnitaryMatrixDualCasimirLaplacianBridgeData
+      coverInner coverLaplacian coverHeatTrace)
+    (coverPositivity : UnitaryMatrixDualCasimirHeatPositivityData coverHeatTrace)
+    (coverInitial : UnitaryMatrixDualCasimirHeatInitialIdentityData coverHeatTrace)
+    (integralProjection : ∀ t : ℝ, 0 < t → ∀ f : G →ᵇ ℝ,
+      (∫ g', f (finiteLaw.projection g')
+        ∂normalizedCompactHaarDensitySemigroupMeasure
+          (unitaryMatrixDualCasimirHeatDensityENNReal coverHeatTrace) t) =
+      ∫ g, f g
+        ∂normalizedCompactHaarDensitySemigroupMeasure law.selectedAreaDensity t) :
+    TwoDimensionalSenguptaCoveringHeatSemigroupBridgeData
+      (planarSemigroup := planarSemigroup) (finiteLaw := finiteLaw)
+      (coverDensity := unitaryMatrixDualCasimirHeatDensityENNReal coverHeatTrace) :=
+  ofCasimirSpectral coverLaplacianBridge coverPositivity coverInitial
+    (NormalizedCompactHaarDensitySemigroupHomData.of_integral_comp_projection
+      finiteLaw.projection_isCoveringMap.continuous.measurable
+      finiteLaw.projection_surjective integralProjection)
 
 omit [T2Space CoverGroup] [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
 /-- Exact inhabitance audit: one covering-group density semigroup and a measure-level homomorphism

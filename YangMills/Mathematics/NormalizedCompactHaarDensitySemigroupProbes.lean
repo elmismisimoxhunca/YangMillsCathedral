@@ -10,7 +10,7 @@ import YangMills.Mathematics.NormalizedCompactHaarDensitySemigroup
 namespace YangMills.Mathematics.NormalizedCompactHaarDensitySemigroup.Probes
 
 open MeasureTheory
-open scoped ENNReal
+open scoped ENNReal BoundedContinuousFunction
 
 noncomputable section
 
@@ -70,6 +70,42 @@ theorem changed_projected_measure_blocked
   changed (hom.map_measure t ht)
 
 end Hom
+
+section HomFromTests
+
+variable {H : Type*} [Group H] [TopologicalSpace H] [IsTopologicalGroup H]
+  [CompactSpace H] [MeasurableSpace H] [BorelSpace H] [HasOuterApproxClosed H]
+  {targetDensity : ℝ → H → ℝ≥0∞}
+  {sourceData : NormalizedCompactHaarDensitySemigroupData density}
+  {targetData : NormalizedCompactHaarDensitySemigroupData targetDensity}
+  {projection : G →* H}
+  (projection_measurable : Measurable projection)
+  (projection_surjective : Function.Surjective projection)
+  (integralIdentity : ∀ t : ℝ, 0 < t → ∀ f : H →ᵇ ℝ,
+    (∫ g, f (projection g)
+      ∂normalizedCompactHaarDensitySemigroupMeasure density t) =
+    ∫ h, f h ∂normalizedCompactHaarDensitySemigroupMeasure targetDensity t)
+
+include projection_measurable projection_surjective integralIdentity in
+/-- Bounded-continuous real-test equality suffices to construct the exact measure homomorphism. -/
+noncomputable def exact_hom_of_integral_tests :
+    NormalizedCompactHaarDensitySemigroupHomData sourceData targetData projection :=
+  NormalizedCompactHaarDensitySemigroupHomData.of_integral_comp_projection
+    projection_measurable projection_surjective integralIdentity
+
+include sourceData targetData projection_measurable projection_surjective integralIdentity in
+/-- Hostile extensionality probe: a changed projected measure is rejected even when transport was
+supplied only against bounded continuous real tests. -/
+theorem changed_projected_measure_of_integral_tests_blocked
+    {t : ℝ} (ht : 0 < t)
+    (changed : Measure.map projection
+        (normalizedCompactHaarDensitySemigroupMeasure density t) ≠
+      normalizedCompactHaarDensitySemigroupMeasure targetDensity t) : False :=
+  changed ((NormalizedCompactHaarDensitySemigroupHomData.of_integral_comp_projection
+    (sourceSemigroup := sourceData) (targetSemigroup := targetData)
+    projection_measurable projection_surjective integralIdentity).map_measure t ht)
+
+end HomFromTests
 
 end
 

@@ -3,6 +3,7 @@ Copyright (c) 2026 YangMillsDefinition contributors. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: YangMillsDefinition contributors
 -/
+import Mathlib.MeasureTheory.Measure.HasOuterApproxClosed
 import Mathlib.Topology.Basic
 import YangMills.Mathematics.NormalizedCompactHaarConvolution
 
@@ -18,7 +19,7 @@ by a Laplacian.
 namespace YangMills.Mathematics
 
 open MeasureTheory Filter
-open scoped ENNReal
+open scoped ENNReal BoundedContinuousFunction
 
 noncomputable section
 
@@ -92,6 +93,39 @@ structure NormalizedCompactHaarDensitySemigroupHomData
       normalizedCompactHaarDensitySemigroupMeasure targetDensity t
 
 namespace NormalizedCompactHaarDensitySemigroupHomData
+
+/-- Construct exact measure transport from equality against every bounded continuous real test.
+Finite positive-time mass is derived from the two normalized semigroup records. -/
+noncomputable def of_integral_comp_projection
+    [HasOuterApproxClosed H]
+    {sourceDensity : ℝ → G → ℝ≥0∞} {targetDensity : ℝ → H → ℝ≥0∞}
+    {sourceSemigroup : NormalizedCompactHaarDensitySemigroupData sourceDensity}
+    {targetSemigroup : NormalizedCompactHaarDensitySemigroupData targetDensity}
+    {projection : G →* H}
+    (projection_measurable : Measurable projection)
+    (projection_surjective : Function.Surjective projection)
+    (integral_comp_projection : ∀ t : ℝ, 0 < t → ∀ f : H →ᵇ ℝ,
+      (∫ g, f (projection g)
+        ∂normalizedCompactHaarDensitySemigroupMeasure sourceDensity t) =
+      ∫ h, f h ∂normalizedCompactHaarDensitySemigroupMeasure targetDensity t) :
+    NormalizedCompactHaarDensitySemigroupHomData
+      sourceSemigroup targetSemigroup projection where
+  projection_measurable := projection_measurable
+  projection_surjective := projection_surjective
+  map_measure := by
+    intro t ht
+    let μs := normalizedCompactHaarDensitySemigroupMeasure sourceDensity t
+    let μt := normalizedCompactHaarDensitySemigroupMeasure targetDensity t
+    letI : IsFiniteMeasure μs :=
+      ⟨by rw [sourceSemigroup.measure_univ ht]; exact ENNReal.one_lt_top⟩
+    letI : IsFiniteMeasure μt :=
+      ⟨by rw [targetSemigroup.measure_univ ht]; exact ENNReal.one_lt_top⟩
+    letI : IsFiniteMeasure (Measure.map projection μs) := by infer_instance
+    apply ext_of_forall_integral_eq_of_IsFiniteMeasure
+    intro f
+    rw [integral_map projection_measurable.aemeasurable
+      f.continuous.aestronglyMeasurable]
+    exact integral_comp_projection t ht f
 
 /-- Continuous-test form of exact positive-time semigroup transport. -/
 theorem integral_comp_projection
