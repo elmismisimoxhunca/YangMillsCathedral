@@ -1690,7 +1690,7 @@ committed before higher layers depend on it.
     equivalence with four-dimensional Euclidean spacetime.
   - [ ] Add final-proposition-level hostile separation proving that even an inhabited final 2D
     proposition cannot inhabit, imply, or be coerced into the 4D Clay acceptance proposition.
-- [ ] Add a nontrivial but uninhabited `d = 3` continuum acceptance contract.
+- [x] Add a bounded, nontrivial but intentionally uninhabited `d = 3` SU(2) continuum acceptance contract.
   - [x] Add a current-strength continuum core hard-wired to coordinate `ℝ³` with coordinate
     Lebesgue action measure, dependently joining compact-simple gauge/classical data, strict
     Euclidean and Wightman chains, strict Wick coherence, one coherent covariant local family,
@@ -1706,10 +1706,16 @@ committed before higher layers depend on it.
     Minkowski same-theory coherence, and same-PVM physical mass gap into dependent tiers. Expose one
     authoritative strongest uninhabited proposition, nonzero excitation projection, hostile gap and
     spectrum probes, and strict 2D/4D dimension separation.
-  - [ ] Prove the general metric-induced volume bridge to the committed coordinate Lebesgue measure;
-    replace current strict Euclidean/reconstruction and Poincaré pre-cover surfaces with corrected
-    source-facing OS-II/OS-I reconstruction and genuine covering interfaces before calling the
-    three-dimensional contract complete.
+  - [x] Add an exact component decomposition, proof-carrying plug-in report with `PASS`,
+    `INCOMPLETE`, and `DIMENSION MISMATCH`, hostile diagnostics, and a conditional candidate guide.
+  - [x] Extract the exact transitive checker closure into the independently buildable `checker/`
+    package; verify closure minimality, no frozen-track imports, source hashes, kernel axioms, and a
+    build with the legacy source tree hidden.
+  - [x] Run seven partitioned Luna audits plus a skeptical Luna review against pinned Mathlib and
+    record the conservative A/B/C extraction and PR sequence in `docs/MATHLIB_EXTRACTION_AUDIT.md`.
+  - [ ] Frozen/nonblocking research: prove metric-volume comparison or a universal corrected OS
+    reconstruction theorem only in a future project. Neither is a completion requirement for this
+    current-strength supplied-witness checker.
 - [ ] Add the full `d = 4` Clay acceptance contract.
   - [x] Add an uninhabited current-strength core on canonical coordinate `ℝ⁴`, joining the exact
     classical/action, carrier-exact OS-II `(E0′)` and source-carrier OS-I `(E1)`–`(E4)`, exact-source

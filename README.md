@@ -1304,6 +1304,15 @@ only `Nonempty` of the strongest data and remains uninhabited. Probes reject non
 disconnected spectra, 2D/4D substitutions, and vacuous excitation sectors. The Euclidean tier is
 explicitly current strict-domain strength, not a claimed source-complete OS reconstruction.
 
+`ThreeDimensionalSU2PluginReport` is the proof-carrying candidate surface: `PASS` stores the exact
+strongest data, while `INCOMPLETE` and `DIMENSION MISMATCH` remain honest diagnostics. The
+conditional template constructs nothing. The independently buildable `checker/` package contains
+the exact 114-module project closure, 17 verified source manifests, the plug-in guide, a closure
+verifier, and a kernel-level axiom audit; its build was verified with the legacy `YangMills/` tree
+hidden. Frozen 2D, unrestricted Fourier, lattice, renormalization, and broad multidimensional tracks
+are absent. `docs/MATHLIB_EXTRACTION_AUDIT.md` separately records seven Luna scouting reports and a
+conservative dependency-ordered plan for small upstream proposals; no Mathlib PR has been opened.
+
 A parallel uninhabited four-dimensional current-strength core now fixes coordinate `ℝ⁴`, the
 canonical flat metric and coordinate Lebesgue measure, then dependently joins the same classical,
 carrier-exact OS-II `(E0′)` plus source-carrier OS-I `(E1)`–`(E4)` package, Wightman,

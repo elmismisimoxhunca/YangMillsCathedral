@@ -5883,8 +5883,21 @@ joint translation PVM; its predicate includes a nonzero bounded positive-energy 
 projection. The authoritative proposition is only `Nonempty` of this strongest tier and remains
 uninhabited. Probes reject nonpositive thresholds, disconnected spectra, vacuous fields/`F²`, and
 2D/4D substitutions. The strict Euclidean field is accurately labeled current-strength rather than
-a source-complete OS reconstruction theorem. Remaining bounded work is the exact component audit,
-plug-in guide, and final 3D-focused verification.
+a source-complete OS reconstruction theorem.
+
+The exact component decomposition and `ThreeDimensionalSU2PluginReport` now expose a proof-carrying
+`PASS`; `INCOMPLETE` and `DIMENSION MISMATCH` cannot yield acceptance data. The conditional candidate
+template supplies no witness. `checker/` contains the exact reachable 114-module project closure
+(15,043 Lean lines), 17 source manifests, the guide, and independent closure/source/kernel audits.
+`lake build YangMillsChecker` passed with 3,271 jobs and kernel-audited 2,326 `YangMills`
+declarations; hiding the legacy `YangMills/` directory did not affect that build. The full monorepo
+also rebuilt with 4,678 jobs and kernel-audited 16,723 declarations.
+
+Seven Luna scouts and one final Luna reviewer compared non-checker general mathematics with pinned
+Mathlib `v4.31.0`. `docs/MATHLIB_EXTRACTION_AUDIT.md` records a conservative small-PR plan, corrects
+the finite-increment telescope against existing `List.prod_range_div'`, separates generic checker
+dependencies, and rejects conditional Peter--Weyl/Casimir and bespoke physics APIs. No upstream PR
+has been opened.
 
 The preliminary `FourDimensionalCurrentStrengthUniversalAcceptance` declaration is intentionally
 qualified and uninhabited. No final source-complete acceptance declaration, placeholder inhabitance
