@@ -145,6 +145,51 @@ theorem changed_spectral_projection_of_fourierCoefficients_blocked
     (planarSemigroup := planarSemigroup) coverLaplacianBridge coverPositivity coverInitial
     physicalDensity coefficientIntegral).map_coverMeasure ht)
 
+/-- One selected physical representation block at a time suffices after finite direct-sum
+linearity. -/
+noncomputable def exact_spectral_covering_bridge_of_fourierMatrixBlocks
+    [T2Space G] [HasOuterApproxClosed G]
+    (physicalDensity : UnitaryMatrixDual.HasContinuousPeterWeylDensity G)
+    (blockIntegral : ∀ t : ℝ, 0 < t → ∀ q : UnitaryMatrixDual G,
+      ∀ A : Matrix (Fin (unitaryMatrixDualDimension q))
+        (Fin (unitaryMatrixDualDimension q)) ℂ,
+        (∫ g', matrixCoefficientSynthesis (unitaryMatrixDualRepresentation q) A
+            (finiteLaw.projection g')
+          ∂normalizedCompactHaarDensitySemigroupMeasure
+            (unitaryMatrixDualCasimirHeatDensityENNReal coverHeatTrace) t) =
+        ∫ g, matrixCoefficientSynthesis (unitaryMatrixDualRepresentation q) A g
+          ∂normalizedCompactHaarDensitySemigroupMeasure law.selectedAreaDensity t) :
+    TwoDimensionalSenguptaCoveringHeatSemigroupBridgeData
+      (planarSemigroup := planarSemigroup) (finiteLaw := finiteLaw)
+      (coverDensity := unitaryMatrixDualCasimirHeatDensityENNReal coverHeatTrace) :=
+  TwoDimensionalSenguptaCoveringHeatSemigroupBridgeData.ofCasimirSpectralFourierMatrixBlocks
+    coverLaplacianBridge coverPositivity coverInitial physicalDensity blockIntegral
+
+omit [T2Space CoverGroup] [Fintype Curve] [Nonempty Curve] [DecidableEq Edge]
+    [SecondCountableTopology CoverGroup] in
+/-- Hostile residual-debt probe: matrix-block compatibility remains explicit. -/
+theorem missing_spectral_fourierMatrixBlocks_blocked
+    [T2Space G] [HasOuterApproxClosed G]
+    (blockIntegral : ∀ t : ℝ, 0 < t → ∀ q : UnitaryMatrixDual G,
+      ∀ A : Matrix (Fin (unitaryMatrixDualDimension q))
+        (Fin (unitaryMatrixDualDimension q)) ℂ,
+        (∫ g', matrixCoefficientSynthesis (unitaryMatrixDualRepresentation q) A
+            (finiteLaw.projection g')
+          ∂normalizedCompactHaarDensitySemigroupMeasure
+            (unitaryMatrixDualCasimirHeatDensityENNReal coverHeatTrace) t) =
+        ∫ g, matrixCoefficientSynthesis (unitaryMatrixDualRepresentation q) A g
+          ∂normalizedCompactHaarDensitySemigroupMeasure law.selectedAreaDensity t)
+    (missing : ¬(∀ t : ℝ, 0 < t → ∀ q : UnitaryMatrixDual G,
+      ∀ A : Matrix (Fin (unitaryMatrixDualDimension q))
+        (Fin (unitaryMatrixDualDimension q)) ℂ,
+        (∫ g', matrixCoefficientSynthesis (unitaryMatrixDualRepresentation q) A
+            (finiteLaw.projection g')
+          ∂normalizedCompactHaarDensitySemigroupMeasure
+            (unitaryMatrixDualCasimirHeatDensityENNReal coverHeatTrace) t) =
+        ∫ g, matrixCoefficientSynthesis (unitaryMatrixDualRepresentation q) A g
+          ∂normalizedCompactHaarDensitySemigroupMeasure law.selectedAreaDensity t)) : False :=
+  missing blockIntegral
+
 include projectionHeat in
 omit [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
 /-- Hostile residual-debt probe: the spectral construction does not manufacture projection

@@ -86,6 +86,47 @@ variable {G : Type uG} [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
   {projection : G →* H}
 
 include sourceSemigroup targetSemigroup in
+/-- Integral compatibility on every single selected representation block extends by finite direct-sum
+linearity to every finitely supported dual coefficient synthesis. -/
+theorem coefficientSynthesisIntegral_eq_of_matrixBlocks
+    (projection_continuous : Continuous projection)
+    (blockIntegral : ∀ t : ℝ, 0 < t → ∀ q : UnitaryMatrixDual H,
+      ∀ A : Matrix (Fin (unitaryMatrixDualDimension q))
+        (Fin (unitaryMatrixDualDimension q)) ℂ,
+        (∫ g, matrixCoefficientSynthesis (unitaryMatrixDualRepresentation q) A
+            (projection g)
+          ∂normalizedCompactHaarDensitySemigroupMeasure sourceDensity t) =
+        ∫ h, matrixCoefficientSynthesis (unitaryMatrixDualRepresentation q) A h
+          ∂normalizedCompactHaarDensitySemigroupMeasure targetDensity t) :
+    ∀ t : ℝ, 0 < t → ∀ A : UnitaryMatrixDualCoefficientSpace H,
+      (∫ g, unitaryMatrixDualContinuousCoefficientSynthesis H A (projection g)
+        ∂normalizedCompactHaarDensitySemigroupMeasure sourceDensity t) =
+      ∫ h, unitaryMatrixDualContinuousCoefficientSynthesis H A h
+        ∂normalizedCompactHaarDensitySemigroupMeasure targetDensity t := by
+  intro t ht
+  let μs := normalizedCompactHaarDensitySemigroupMeasure sourceDensity t
+  let μt := normalizedCompactHaarDensitySemigroupMeasure targetDensity t
+  letI : IsFiniteMeasure μs :=
+    ⟨by rw [sourceSemigroup.measure_univ ht]; exact ENNReal.one_lt_top⟩
+  letI : IsFiniteMeasure μt :=
+    ⟨by rw [targetSemigroup.measure_univ ht]; exact ENNReal.one_lt_top⟩
+  let Ls := compactContinuousMapPullbackIntegralCLM μs projection projection_continuous
+  let Lt := compactContinuousMapIntegralCLM μt
+  intro A
+  change Ls (unitaryMatrixDualContinuousCoefficientSynthesis H A) =
+    Lt (unitaryMatrixDualContinuousCoefficientSynthesis H A)
+  induction A using DirectSum.induction_on with
+  | zero => simp
+  | add A B hA hB => simp only [map_add, hA, hB]
+  | of q A =>
+      change (∫ g, unitaryMatrixDualCoefficientSynthesis H
+          (unitaryMatrixDualCoefficientSingle q A) (projection g) ∂μs) =
+        ∫ h, unitaryMatrixDualCoefficientSynthesis H
+          (unitaryMatrixDualCoefficientSingle q A) h ∂μt
+      rw [unitaryMatrixDualCoefficientSynthesis_single]
+      exact blockIntegral t ht q A
+
+include sourceSemigroup targetSemigroup in
 /-- Selected Peter--Weyl density promotes finite coefficient-synthesis compatibility to every
 continuous complex test. -/
 theorem integral_comp_projection_eq_of_continuousPeterWeyl
@@ -175,6 +216,28 @@ noncomputable def of_continuousPeterWeylCoefficientIntegrals
       _ = ∫ h, f h
             ∂normalizedCompactHaarDensitySemigroupMeasure targetDensity t := by
           exact (integral_re hit).symm)
+
+/-- Single selected matrix-block identities suffice for exact semigroup transport after finite
+linearity and selected continuous Peter--Weyl density. -/
+noncomputable def of_continuousPeterWeylMatrixBlockIntegrals
+    [HasOuterApproxClosed H]
+    (projection_continuous : Continuous projection)
+    (projection_surjective : Function.Surjective projection)
+    (density : UnitaryMatrixDual.HasContinuousPeterWeylDensity H)
+    (blockIntegral : ∀ t : ℝ, 0 < t → ∀ q : UnitaryMatrixDual H,
+      ∀ A : Matrix (Fin (unitaryMatrixDualDimension q))
+        (Fin (unitaryMatrixDualDimension q)) ℂ,
+        (∫ g, matrixCoefficientSynthesis (unitaryMatrixDualRepresentation q) A
+            (projection g)
+          ∂normalizedCompactHaarDensitySemigroupMeasure sourceDensity t) =
+        ∫ h, matrixCoefficientSynthesis (unitaryMatrixDualRepresentation q) A h
+          ∂normalizedCompactHaarDensitySemigroupMeasure targetDensity t) :
+    NormalizedCompactHaarDensitySemigroupHomData
+      sourceSemigroup targetSemigroup projection :=
+  of_continuousPeterWeylCoefficientIntegrals projection_continuous projection_surjective density
+    (coefficientSynthesisIntegral_eq_of_matrixBlocks
+      (sourceSemigroup := sourceSemigroup) (targetSemigroup := targetSemigroup)
+      projection_continuous blockIntegral)
 
 end NormalizedCompactHaarDensitySemigroupHomData
 
