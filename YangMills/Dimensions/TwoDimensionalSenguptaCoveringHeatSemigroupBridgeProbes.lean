@@ -103,6 +103,48 @@ theorem changed_spectral_projection_of_integralTests_blocked
   changed ((TwoDimensionalSenguptaCoveringHeatSemigroupBridgeData.ofCasimirSpectralIntegralTests
     (planarSemigroup := planarSemigroup) coverLaplacianBridge coverPositivity coverInitial integralProjection).map_coverMeasure ht)
 
+/-- Selected physical Peter--Weyl density reduces covering transport to finite coefficient tests. -/
+noncomputable def exact_spectral_covering_bridge_of_fourierCoefficients
+    [T2Space G] [HasOuterApproxClosed G]
+    (physicalDensity : UnitaryMatrixDual.HasContinuousPeterWeylDensity G)
+    (coefficientIntegral : ∀ t : ℝ, 0 < t →
+      ∀ A : UnitaryMatrixDualCoefficientSpace G,
+        (∫ g', unitaryMatrixDualContinuousCoefficientSynthesis G A
+            (finiteLaw.projection g')
+          ∂normalizedCompactHaarDensitySemigroupMeasure
+            (unitaryMatrixDualCasimirHeatDensityENNReal coverHeatTrace) t) =
+        ∫ g, unitaryMatrixDualContinuousCoefficientSynthesis G A g
+          ∂normalizedCompactHaarDensitySemigroupMeasure law.selectedAreaDensity t) :
+    TwoDimensionalSenguptaCoveringHeatSemigroupBridgeData
+      (planarSemigroup := planarSemigroup) (finiteLaw := finiteLaw)
+      (coverDensity := unitaryMatrixDualCasimirHeatDensityENNReal coverHeatTrace) :=
+  TwoDimensionalSenguptaCoveringHeatSemigroupBridgeData.ofCasimirSpectralFourierCoefficients
+    coverLaplacianBridge coverPositivity coverInitial physicalDensity coefficientIntegral
+
+include planarSemigroup coverLaplacianBridge coverPositivity coverInitial in
+omit [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
+/-- Hostile Fourier-facing probe: changed measure transport is rejected after coefficient-density
+extension. -/
+theorem changed_spectral_projection_of_fourierCoefficients_blocked
+    [T2Space G] [HasOuterApproxClosed G]
+    (physicalDensity : UnitaryMatrixDual.HasContinuousPeterWeylDensity G)
+    (coefficientIntegral : ∀ t : ℝ, 0 < t →
+      ∀ A : UnitaryMatrixDualCoefficientSpace G,
+        (∫ g', unitaryMatrixDualContinuousCoefficientSynthesis G A
+            (finiteLaw.projection g')
+          ∂normalizedCompactHaarDensitySemigroupMeasure
+            (unitaryMatrixDualCasimirHeatDensityENNReal coverHeatTrace) t) =
+        ∫ g, unitaryMatrixDualContinuousCoefficientSynthesis G A g
+          ∂normalizedCompactHaarDensitySemigroupMeasure law.selectedAreaDensity t)
+    {t : ℝ} (ht : 0 < t)
+    (changed : Measure.map finiteLaw.projection
+      (normalizedCompactHaarDensitySemigroupMeasure
+        (unitaryMatrixDualCasimirHeatDensityENNReal coverHeatTrace) t) ≠
+      normalizedCompactHaarDensitySemigroupMeasure law.selectedAreaDensity t) : False :=
+  changed ((TwoDimensionalSenguptaCoveringHeatSemigroupBridgeData.ofCasimirSpectralFourierCoefficients
+    (planarSemigroup := planarSemigroup) coverLaplacianBridge coverPositivity coverInitial
+    physicalDensity coefficientIntegral).map_coverMeasure ht)
+
 include projectionHeat in
 omit [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
 /-- Hostile residual-debt probe: the spectral construction does not manufacture projection

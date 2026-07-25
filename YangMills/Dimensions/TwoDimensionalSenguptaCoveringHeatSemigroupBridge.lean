@@ -6,6 +6,7 @@ Authors: YangMillsDefinition contributors
 import YangMills.Dimensions.TwoDimensionalSelectedLoopConvolutionSemigroup
 import YangMills.Dimensions.TwoDimensionalSenguptaCompactSurfaceFiniteHolonomyLaw
 import YangMills.Mathematics.UnitaryMatrixDualCasimirHeatDensitySemigroup
+import YangMills.Mathematics.UnitaryMatrixDualDensitySemigroupHom
 
 /-!
 # Covering-group heat-semigroup bridge for Sengupta
@@ -117,6 +118,39 @@ noncomputable def ofCasimirSpectralIntegralTests
     (NormalizedCompactHaarDensitySemigroupHomData.of_integral_comp_projection
       finiteLaw.projection_isCoveringMap.continuous.measurable
       finiteLaw.projection_surjective integralProjection)
+
+omit [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
+/-- Selected continuous Peter--Weyl density reduces projection compatibility further to exact
+integral identities on finite physical-group matrix-coefficient syntheses. -/
+noncomputable def ofCasimirSpectralFourierCoefficients
+    [SecondCountableTopology CoverGroup] [T2Space G] [HasOuterApproxClosed G]
+    {CoverE : Type uCoverE} [NormedAddCommGroup CoverE] [NormedSpace ℝ CoverE]
+    [ChartedSpace CoverE CoverGroup]
+    [LieGroup (modelWithCornersSelf ℝ CoverE) ∞ CoverGroup]
+    {coverInner : Geometry.InvariantInnerProductData
+      (I := modelWithCornersSelf ℝ CoverE) (G := CoverGroup)}
+    {coverLaplacian : RightInvariantPairingComplexLaplacianData coverInner}
+    {coverHeatTrace : UnitaryMatrixDualHeatTraceSummabilityData (G := CoverGroup)}
+    (coverLaplacianBridge : UnitaryMatrixDualCasimirLaplacianBridgeData
+      coverInner coverLaplacian coverHeatTrace)
+    (coverPositivity : UnitaryMatrixDualCasimirHeatPositivityData coverHeatTrace)
+    (coverInitial : UnitaryMatrixDualCasimirHeatInitialIdentityData coverHeatTrace)
+    (physicalDensity : UnitaryMatrixDual.HasContinuousPeterWeylDensity G)
+    (coefficientIntegral : ∀ t : ℝ, 0 < t →
+      ∀ A : UnitaryMatrixDualCoefficientSpace G,
+        (∫ g', unitaryMatrixDualContinuousCoefficientSynthesis G A
+            (finiteLaw.projection g')
+          ∂normalizedCompactHaarDensitySemigroupMeasure
+            (unitaryMatrixDualCasimirHeatDensityENNReal coverHeatTrace) t) =
+        ∫ g, unitaryMatrixDualContinuousCoefficientSynthesis G A g
+          ∂normalizedCompactHaarDensitySemigroupMeasure law.selectedAreaDensity t) :
+    TwoDimensionalSenguptaCoveringHeatSemigroupBridgeData
+      (planarSemigroup := planarSemigroup) (finiteLaw := finiteLaw)
+      (coverDensity := unitaryMatrixDualCasimirHeatDensityENNReal coverHeatTrace) :=
+  ofCasimirSpectral coverLaplacianBridge coverPositivity coverInitial
+    (NormalizedCompactHaarDensitySemigroupHomData.of_continuousPeterWeylCoefficientIntegrals
+      finiteLaw.projection_isCoveringMap.continuous finiteLaw.projection_surjective
+      physicalDensity coefficientIntegral)
 
 omit [T2Space CoverGroup] [Fintype Curve] [Nonempty Curve] [DecidableEq Edge] in
 /-- Exact inhabitance audit: one covering-group density semigroup and a measure-level homomorphism
