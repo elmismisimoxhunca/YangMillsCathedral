@@ -1355,3 +1355,10 @@ closes the known acquisition gap for rigorous 2D evidence, Hodge/volume, Poincar
 extended-tube, and composite-operator/BRST mixing work; it does not implement those remaining Lean
 interfaces. See `docs/SUPPLIED_SOURCE_INGESTION_AUDIT.md`. Source acquisition constructs
 no Euclidean, lattice, observable, renormalized, or Wightman theory.
+
+## License
+
+The original content of this repository is licensed under the
+[Creative Commons Attribution-ShareAlike 4.0 International License](LICENSE). Retained third-party
+papers and source artifacts remain subject to their original rights and are not relicensed; see each
+artifact's `SOURCE.md` record.
