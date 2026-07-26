@@ -22,9 +22,9 @@ Mathlib revision, not maintainer preapproval.
   duplicate searches. This changed some scout rankings; in particular the finite increment
   telescope is a specialization of existing `List.prod_range_div'` after replacing `f k` by the
   inverse-valued family.
-- `checker/CHECKER_FILES.txt` and all `*Probes.lean` files are excluded from the immediate
-  extraction pool. Generic checker dependencies are listed separately so they are not accidentally
-  deleted.
+- `CHECKER_FILES.txt` in the separate `YangMills3DTruthTeller` repository and all `*Probes.lean`
+  files are excluded from the immediate extraction pool. Generic checker dependencies are listed
+  separately so they are not accidentally deleted.
 
 Raw advisory reports are retained under `docs/mathlib-audit/`. They are evidence inputs, not the
 final adjudication.

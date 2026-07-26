@@ -1,2 +1,0 @@
-ad75c9e9c2f5f66d7dfd3d4b061ccc6f9232fe4bb27b095c1ae39671fe04230e  invariant_analytic_functions.pdf
-b214c94b0190a05bc0b503ed9efeac756d83ca23abf32bfb6c57994494bd33ac  invariant_analytic_functions.txt

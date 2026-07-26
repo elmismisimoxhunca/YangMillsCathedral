@@ -1306,11 +1306,12 @@ explicitly current strict-domain strength, not a claimed source-complete OS reco
 
 `ThreeDimensionalSU2PluginReport` is the proof-carrying candidate surface: `PASS` stores the exact
 strongest data, while `INCOMPLETE` and `DIMENSION MISMATCH` remain honest diagnostics. The
-conditional template constructs nothing. The independently buildable `checker/` package contains
-the exact 114-module project closure, 17 verified source manifests, the plug-in guide, a closure
-verifier, and a kernel-level axiom audit; its build was verified with the legacy `YangMills/` tree
-hidden. Frozen 2D, unrestricted Fourier, lattice, renormalization, and broad multidimensional tracks
-are absent. `docs/MATHLIB_EXTRACTION_AUDIT.md` separately records seven Luna scouting reports and a
+conditional template constructs nothing. The independently buildable `YangMills3DTruthTeller`
+repository contains the exact extracted 114-module project closure, 17 verified source manifests,
+the plug-in guide, a closure verifier, and a kernel-level axiom audit. Its
+`truth-teller-import-3306ec3` tag identifies the exact former `checker/` tree from Cathedral commit
+`3306ec3`; regenerable Lake dependencies and build products are excluded. Frozen 2D, unrestricted
+Fourier, lattice, renormalization, and broad multidimensional tracks are absent. `docs/MATHLIB_EXTRACTION_AUDIT.md` separately records seven Luna scouting reports and a
 conservative dependency-ordered plan for small upstream proposals; no Mathlib PR has been opened.
 
 A parallel uninhabited four-dimensional current-strength core now fixes coordinate `ℝ⁴`, the

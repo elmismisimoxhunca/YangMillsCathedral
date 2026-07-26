@@ -3,6 +3,10 @@
 Audit date: 2026-07-25  
 Branch: `cathedral`
 
+> **Repository split note (2026-07-26).** This document records the pre-split audit, so its
+> `checker/` paths are historical locators in Cathedral commit `3306ec3`. That exact tree now forms
+> the separate `YangMills3DTruthTeller` repository and is tagged `truth-teller-import-3306ec3` there.
+
 ## Objective restated as concrete deliverables
 
 1. Finish a bounded proof-carrying plug-in checker for a future 3D SU(2) construction without

@@ -1,2 +1,0 @@
-53283f194e81b482f09f53428fe6cef275a03551e6e9a9124c9c59940a06d86b  classical_chern_simons_part1.pdf
-9a82c96d7d186a06c45b908a7c65f3ad6f91d923e8690019b3d66898842bdd71  classical_chern_simons_part1.txt

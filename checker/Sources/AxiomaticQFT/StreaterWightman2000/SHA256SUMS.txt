@@ -1,2 +1,0 @@
-98dc436e383b4e50ef3b6d82f3948b912b64c67b2d6e64bef6dcf7f9feb8012f  pct_spin_statistics_all_that.pdf
-e20ddff0093d1409b22dbe7c8e6cbc6fe475032b091aaae5a120e65dd1764dad  pct_spin_statistics_all_that.txt

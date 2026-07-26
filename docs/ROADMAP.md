@@ -1708,9 +1708,9 @@ committed before higher layers depend on it.
     spectrum probes, and strict 2D/4D dimension separation.
   - [x] Add an exact component decomposition, proof-carrying plug-in report with `PASS`,
     `INCOMPLETE`, and `DIMENSION MISMATCH`, hostile diagnostics, and a conditional candidate guide.
-  - [x] Extract the exact transitive checker closure into the independently buildable `checker/`
-    package; verify closure minimality, no frozen-track imports, source hashes, kernel axioms, and a
-    build with the legacy source tree hidden.
+  - [x] Extract the exact transitive checker closure into the independently buildable
+    `YangMills3DTruthTeller` repository; verify closure minimality, no frozen-track imports, source
+    hashes, kernel axioms, and a standalone build. The import tag records Cathedral commit `3306ec3`.
   - [x] Run seven partitioned Luna audits plus a skeptical Luna review against pinned Mathlib and
     record the conservative A/B/C extraction and PR sequence in `docs/MATHLIB_EXTRACTION_AUDIT.md`.
   - [ ] Frozen/nonblocking research: prove metric-volume comparison or a universal corrected OS

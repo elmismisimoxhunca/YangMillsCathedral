@@ -1,2 +1,0 @@
-2be9f80ed20b18b361c759d386dfd6804d5f9b31cb94b547a29883fa78f8f7f1  hall_lie_groups_notes.pdf
-980dc81b0bf058d447755277a6ee7580f955823d546ce81ee6156737888129eb  hall_lie_groups_notes.txt

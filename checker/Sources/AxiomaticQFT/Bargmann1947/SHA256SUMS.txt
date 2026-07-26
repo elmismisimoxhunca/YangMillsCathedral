@@ -1,2 +1,0 @@
-4aad6b0d9b514fad2e1f97f7c8f940ffc490438f67e8808dbc34609fda7d2cee  irreducible_unitary_lorentz.pdf
-b99a0fa9887400b0fc21ab585b63b0e6af9738d289648f1ae6f24b59d4a67b26  irreducible_unitary_lorentz.txt

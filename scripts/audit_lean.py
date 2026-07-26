@@ -13,7 +13,6 @@ ROOT = Path(__file__).resolve().parents[1]
 # It is itself covered by the kernel-level audit invoked from `YangMills.lean`.
 SEMANTIC_AUDIT_MODULES = {
     Path("YangMills/Audit.lean"),
-    Path("checker/YangMills/Audit.lean"),
 }
 FORBIDDEN = {
     "sorry": re.compile(r"(?<![A-Za-z0-9_])sorry(?![A-Za-z0-9_])"),

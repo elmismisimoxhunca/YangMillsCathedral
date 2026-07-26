@@ -1,2 +1,0 @@
-3558403ca14c11e382f73a09e548222708540bfdf478cf96aa11c52d43e23e09  yangmills_official.pdf
-da5105c9a42aeaadedcdb59274b74f432d21083cd50fe0912a6294f7bb4f4df7  yangmills_official.txt

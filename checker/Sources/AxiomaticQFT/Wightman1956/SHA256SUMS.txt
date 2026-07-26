@@ -1,2 +1,0 @@
-ac354c65e81cd328b25e682ba19bad8fd5b1825da2110aaf3ca73388cf338c25  vacuum_expectation_values.pdf
-d4e798ac7d57a83d207623154c6888d6317052cfc558e1341f9d960af33a97d0  vacuum_expectation_values.txt

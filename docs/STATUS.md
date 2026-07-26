@@ -5887,11 +5887,12 @@ a source-complete OS reconstruction theorem.
 
 The exact component decomposition and `ThreeDimensionalSU2PluginReport` now expose a proof-carrying
 `PASS`; `INCOMPLETE` and `DIMENSION MISMATCH` cannot yield acceptance data. The conditional candidate
-template supplies no witness. `checker/` contains the exact reachable 114-module project closure
-(15,043 Lean lines), 17 source manifests, the guide, and independent closure/source/kernel audits.
-`lake build YangMillsChecker` passed with 3,271 jobs and kernel-audited 2,326 `YangMills`
-declarations; hiding the legacy `YangMills/` directory did not affect that build. The full monorepo
-also rebuilt with 4,678 jobs and kernel-audited 16,723 declarations.
+template supplies no witness. The separate `YangMills3DTruthTeller` repository contains the exact
+reachable 114-module project closure (15,043 Lean lines), 17 source manifests, the guide, and
+independent closure/source/kernel audits. Its `truth-teller-import-3306ec3` tag identifies the exact
+former `checker/` tree from Cathedral commit `3306ec3`. `lake build YangMillsChecker` passed there
+with 3,271 jobs and kernel-audited 2,326 `YangMills` declarations; the full Cathedral also rebuilt
+with 4,678 jobs and kernel-audited 16,723 declarations.
 
 Seven Luna scouts and one final Luna reviewer compared non-checker general mathematics with pinned
 Mathlib `v4.31.0`. `docs/MATHLIB_EXTRACTION_AUDIT.md` records a conservative small-PR plan, corrects
